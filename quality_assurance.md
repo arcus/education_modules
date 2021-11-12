@@ -1,25 +1,25 @@
 # Quality Assurance for modules
 
-When a module creator is ready to request that their module be included, they will create a Pull Request (PR).  This begins the work of quality assurance.
+When a module creator is ready to request that their module be included, they will create a Pull Request (PR).  This begins the work of quality assurance.  As someone who is reviewing the modules created by others, it's important to have use a consistent method for evaluating content.
 
-# Create an Issue
+## Step 1: Create an Issue
 
-Go to https://github.com/arcus/education_modules/issues
+* Click on "Issues" or go to https://github.com/arcus/education_modules/issues.
+* Choose "New Issue" (or if your screen is small, just "New").  This is a green button on the right side:
+![Screenshot of where to click for a new issue](media/new_issue.png)
+* Give your issue a good title: "QA" plus the proposed directory name from the PR. For example, if the PR includes a new module with the directory named "reproducibility", the title would be "QA reproducibility".)
+* In the "Write" tab area, paste the following (from `# Module Quality Assurance Report for PR #[put in the PR number here] ` to `* [ ] description or quote, line ___ in file ____`).  In square brackets, remove the square brackets and their contents and replace with the appropriate values.
 
-New Issue (green button) - screenshot Here
-
-Give title: QA [proposed directory name] (example QA reproducibility)
-
-In body, put the title "Module Quality Assurance Report" plus number of the PR (preceded by hash #) and GH will auto link it on the first line
-
-# Module Quality Assurance Report for PR #[pr#]  
+```
+# Module Quality Assurance Report for PR #[PR number here]  
 ----
-Date: yyyy-mm-dd
-Reviewer: your name
-Name of Module: take from the title of the main markdown in the PR
-Current Liascript URL: [makes it easy for reviewers to look at content as learners will]
+Date: [yyyy-mm-dd]
+Reviewer: [your name]
+Name of Module: [take from the title of the main markdown in the PR]
+Current Liascript URL: [makes it easy for reviewers and authors to look at content as learners will]
 Current Version of Module (use the latest commit value):  [click on the PR and get the clickable short link to the latest commit -- add screenshot here]
-Checklist Reports:
+
+# Checklist Reports:
 
 ## Content
 
@@ -68,24 +68,26 @@ List here any internal references (stated or hyperlinked) that work now because 
 * [ ] description or quote, line ___ in file ____
 * [ ] description or quote, line ___ in file ____
 * [ ] description or quote, line ___ in file ____
+```
+* Click on the "Preview" tab to see if everything is rendering nicely and there are at least two clickable links -- one to the PR (the top line in the issue) and one to the commit version (6th line).
+* Click "Submit new issue".
 
+## Step 2: Go through checklists
 
-Click "Submit new issue" (don't worry about doing the checkboxes ahead of time, the issue creator and maybe PR reviewers? check on this can do them at any point after creating the issue)
+Once you create the issue, then go through and actually evaluate the checklists.  
 
-Once you create the issue, then go through and actually evaluate the checklists and communicate with the author using comments on the issue (put in screenshot) and @ the author.  Be as precise as possible (e.g. what file, what line, what problem are you referring to?)
+If you're convinced a checklist item is complete, you can click the checkbox without editing the text of the issue -- simply click in the checkbox as if it were a checkbox on any web page.  Helpfully, you will see the number of "tasks" at the top of the issue reflect what's been marked as complete.
 
-The author may make fixes to their code and commit to the branch.  This will simply update their PR.  This means that you will want to change the version in the top part of the issue (show screenshot of how to edit the main issue) with the commit hash for the now current version.
+![Screenshot of task counters](media/task_counter.png)
 
-Once you are satisfied with the quality of the module (don't worry, it can always be improved, this is a best effort only, no perfection expected or implied), the last thing to do before the PR is to make sure that any changes to references within the material relating to the branch name are resolved (see the last bit of the copy-paste issue code).  Issue a final comment reminding the author to handle this in a new commit.  Check that commit and if all is well, approve the PR.
+If there are problems to resolve before a checklist item is complete, communicate with the author using comments on the issue and @ the author.  Be as precise as possible (e.g. what file, what line, what problem are you referring to?).
+
+![Screenshot of issue comment](media/issue_comment.png)
+
+The author may make fixes to their code and commit to the branch.  This will simply update their PR with newer commits.  This means that you will want to change the version in the top part of the issue (show screenshot of how to edit the main issue) with the commit hash for the now current version.  In GitHub, when you look at the PR, the most recent commit is the lowest one down on the page:
+
+![Screenshot of PR with multiple commits](media/pr_with_multiple_commits.png)
+
+Once you are satisfied with the quality of the module (don't worry, it can always be improved, this is a best effort only, no perfection expected or implied), the last thing to do before the PR is to make sure that any changes to references within the material relating to the branch name are resolved (see the last bit of the copy-paste issue code).  Issue a final comment reminding the author to handle this in a new commit.  Check that commit and if all is well, approve the PR and close the issue.
 
 In general we should not delete issues or comments on issues, because they provide a useful history of the project.
-
-
-Technical Issues (ie. links work, media plays work…etc.):
-General Suggestions for Improvement:
-
-
-
-Technical Issues (ie. links work, media plays work…etc.):
-
-General Suggestions for Improvement:
