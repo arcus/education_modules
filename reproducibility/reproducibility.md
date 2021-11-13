@@ -453,10 +453,7 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-Learning Objectives:
----
+In the beginning, we stated some learning objectives:
 
 After completion of this module, learners will be able to:
 
@@ -464,12 +461,10 @@ After completion of this module, learners will be able to:
 * Argue in support of a data analysis method that helps research be more reproducible
 * Argue in support of a method in the organization and description of documents, datasets, and other files that helps research be more reproducible
 
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
+Now that you've completed this module, we ask you to fill out a brief (5 minutes or less) survey to let us know:
 
 * If we achieved the learning objectives
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Reproducibility,+Generalizability,+and Reuse:+How+Technology+Can+Help%22)!
-
-Remember to change the redcap link so that the module name is correct for this module!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Reproducibility,+Generalizability,+and+Reuse:+How+Technology+Can+Help%22)!
