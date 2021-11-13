@@ -24,7 +24,7 @@ This module provides learners with an approachable introduction to the concepts 
 
 ### Details
 
-**Estimated time to completion**: 1 hour didactic instruction, 1 hour personal work.
+**Estimated time to completion**: 1 hour
 
 **Pre-requisites**: It is helpful if learners have conducted research, are familiar with -- by reading or writing -- peer-reviewed literature, and have experience using data and methods developed by other people.  There is no need to have any specific scientific or medical domain knowledge or technical background.    
 
@@ -83,7 +83,7 @@ We propose an approach that is more gate **opening** than gate **keeping** and i
 
 <div style = "margin: 2rem auto; max-width: 50%; font-size:0.8em; align: center;">
 
-![XKCD Cartoon](media/ten_thousand_2x.png)
+![XKCD Cartoon, the text of which begins "I try not to make fun of people for admitting they don't know things."  The cartoon depicts sharing knowledge as something fun.](media/ten_thousand_2x.png)
 
 (Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1053.)
 
@@ -129,7 +129,7 @@ When describing a multi-step task that should be able to be carried out by other
  </div>
 
 <div style = "margin: 2rem; max-width: 50%; float:left;">
-![Humorous illustration of "how to draw a horse"](media/horse.png)
+![Humorous illustration of "how to draw a horse" which shows trivial complexity until the final step, "add small details".  This last step is not explained but provides most of the drawing of the horse.](media/horse.png)
 
 Courtesy of artist. [Original work](https://oktop.tumblr.com/post/15352780846)
 
@@ -178,7 +178,7 @@ In early 2016, a policy requiring the consideration of sex as a biological varia
 
 <div class = "hint">
 
-Listen to Janine Clayton speak about scientific rigor and female animal inclusion (5 minute listen): https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals.
+[Listen to Janine Clayton speak about scientific rigor and female animal inclusion (5 minute listen).](https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals).  A partial transcript accompanies the audio.
 
 </div>
 
@@ -223,7 +223,7 @@ As you listen to the video, try to identify problematic research practices which
 
 </div>
 
-!?[A Data Management and Sharing Snafu](https://www.youtube.com/watch?v=66oNv_DJuPc?cc_load_policy=1)
+!?[A Data Management and Sharing Snafu, which depicts an interaction between two scientists, drawn as cartoon animals](https://www.youtube.com/watch?v=66oNv_DJuPc?cc_load_policy=1)
 
 ## Tools for Better Practices
 
@@ -287,7 +287,7 @@ REDCap is one example of software that explicitly creates a data dictionary that
 
 <div class = "hint">
 
-Discover:  Arcus has a team of librarians and archivists who have created materials to help CHOP scientists with data management.  See "Research Data Management Resources" at https://www.research.chop.edu/arcus/resources.  These materials tend to be very practical and can be used right away to improve data management!
+Discover:  The Arcus program at the Children's Hospital of Philadelphia has a team of librarians and archivists who have created materials to help CHOP scientists with data management.  Their [Research Data Management Resources](https://www.research.chop.edu/arcus/resources) tend to be very practical and can be used right away to improve data management!
 
 </div>
 
@@ -303,9 +303,9 @@ We won't go into details at this point, but one of the helpful aspects of git is
 
 <div style = "margin: 2rem auto; max-width: 50%; font-size:0.8em; align: center;">
 
-![XKCD Cartoon](media/git_commit_2x.png)
+![XKCD Cartoon showing a git commit history that devolves into messages like "my hands are just typing words".  Captioned "As a project drags on, my git commit messages get less and less informative."](media/git_commit_2x.png)
 
-(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1296.)
+(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1296 .)
 
 </div>
 
@@ -358,8 +358,8 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 
 ### For Excel Users
 
-* An Arcus educator shares some harm reduction techniques for Excel users: https://education.arcus.chop.edu/excel-caveats/
-* A former user of Excel shares why he's moved on to using scripted code and gives helpful hints to those still using Excel: https://education.arcus.chop.edu/the-spreadsheet-betrayal/
+* An educator for the Arcus program at the Children's Hospital of Philadelphia [shares some harm reduction techniques for Excel users](https://education.arcus.chop.edu/excel-caveats/)
+* A former user of Excel [shares why he's moved on to using scripted code and gives helpful hints to those still using Excel](https://education.arcus.chop.edu/the-spreadsheet-betrayal/)
 
 ### Mentioned in This Module
 
