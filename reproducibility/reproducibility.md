@@ -209,7 +209,7 @@ Survey results from a recent poll conducted by Arcus librarians and archivists (
 
 <div class = "hint">
 
-Read more: Want to get a quick overview of some of the privacy practices that regulate responsible data sharing?  Check out this brief article: https://education.arcus.chop.edu/privacy-overview/
+Read more: Want to get a quick overview of some of the privacy practices that regulate responsible data sharing?  Check out [a brief article with an overview of privacy practices related to data sharing in research](https://education.arcus.chop.edu/privacy-overview/).
 
 </div>
 
@@ -287,7 +287,7 @@ REDCap is one example of software that explicitly creates a data dictionary that
 
 <div class = "hint">
 
-Discover:  The Arcus program at the Children's Hospital of Philadelphia has a team of librarians and archivists who have created materials to help CHOP scientists with data management.  Their [Research Data Management Resources](https://www.research.chop.edu/arcus/resources) tend to be very practical and can be used right away to improve data management!
+Discover:  The Arcus program at Children's Hospital of Philadelphia has a team of librarians and archivists who have created materials to help CHOP scientists with data management.  Their [Research Data Management Resources](https://www.research.chop.edu/arcus/resources) tend to be very practical and can be used right away to improve data management!
 
 </div>
 
@@ -297,7 +297,7 @@ Version control is the discipline of tracking changes to files in a way that cap
 
 Many of us use "home grown" version control systems, such as using file names to capture who most recently added comments to a grant proposal or the date of a particular data download.  The difficulty with this is that each member of a team or lab may use different file naming protocols, and within a few months, the number of files can proliferate wildly.  Collaborators may feel unsure about deleting old versions of files, and data and file hoarding leads to delays and confusion.
 
-Technological solutions for version control have been around for decades, and one system in particular has won the bulk of the market share in version control -- **git**.  Git is free, open source version control software.  Part of the Clinical Decision Support rotation of the Clinical Informatics fellowship includes a brief training in the use of git, especially in the context of the use of **GitHub** software, which is used by many software and data workers because of how well it integrates with git and expands its capabilities by way of proprietary add-ons.  
+Technological solutions for version control have been around for decades, and one system in particular has won the bulk of the market share in version control -- **git**.  Git is free, open source version control software.  
 
 We won't go into details at this point, but one of the helpful aspects of git is that it allows you to see what changed, when, and by whom, in your files, along with a helpful (we hope) comment describing the change.  See below for a humorous interpretation (which isn't that far off the mark).
 
@@ -309,7 +309,9 @@ We won't go into details at this point, but one of the helpful aspects of git is
 
 </div>
 
-Git and GitHub are distinct organizations with different products.  Git is a free, open-source version control system, and GitHub is a company that provides services to make it easier to use git for software development and related uses.  GitHub has free tier use as well as paid services.  At CHOP, we have an [enterprise version of GitHub](https://github.research.chop.edu) that is accessible only on the CHOP network.  Additionally, some CHOP users use [GitHub.com](https://github.com), which is a public website run by GitHub.  Finally, many git users find that the [GitHub Desktop](https://desktop.github.com/) software is useful for working with git.
+Git and GitHub are distinct organizations with different products.  Git is a free, open-source version control system, and GitHub is a company that provides services to make it easier to use git for software development and related uses.  GitHub has free tier use as well as paid services.  
+
+Some institutions, [including Children's Hospital of Philadelphia](https://github.research.chop.edu), pay for an enterprise version of GitHub that may be accessible only to institutional users on a secure network, and not available to the general public.  For science that can be more broadly shared, many researchers use the publicly available [GitHub.com](https://github.com), which is a website run by GitHub.  As an example of another GitHub resource, many git users find that the [GitHub Desktop](https://desktop.github.com/) software is useful for working with git on their local computers.
 
 ### Dependency Management
 
@@ -358,7 +360,7 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 
 ### For Excel Users
 
-* An educator for the Arcus program at the Children's Hospital of Philadelphia [shares some harm reduction techniques for Excel users](https://education.arcus.chop.edu/excel-caveats/)
+* An educator for the Arcus program at Children's Hospital of Philadelphia [shares some harm reduction techniques for Excel users](https://education.arcus.chop.edu/excel-caveats/)
 * A former user of Excel [shares why he's moved on to using scripted code and gives helpful hints to those still using Excel](https://education.arcus.chop.edu/the-spreadsheet-betrayal/)
 
 ### Mentioned in This Module
