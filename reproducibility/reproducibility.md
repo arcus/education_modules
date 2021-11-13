@@ -107,7 +107,11 @@ True or False: If you're a driven, intelligent researcher, you're unlikely to ex
 [(X)] FALSE
 
 <div class = "answer">
+
+<details><summary>Click to see an explanation of the answer.</summary>
+
 FALSE!  Failure is something that people who work a lot with technology have to become comfortable with.  You can even think of the process of writing code as failing a lot until you get things right, then moving on to failing on the next project.  Error codes, mistakes, and confusion with new methods can be frustrating, especially if you have a lot of confidence and competence in your current way of working.  It's easier said than done, but you might find it helpful to recall that failure is a critically important tool in science, even if it's a tool we don't love to talk about.
+</details>
 </div>
 </div>
 
@@ -173,6 +177,9 @@ Who benefits from reproducible research practices?  Choose all that apply.
 [[?]] There are multiple correct answers!
 
 <div class = "answer">
+
+<details><summary>Click to see an explanation of the answer.</summary>
+
 All of these groups benefit!  
 
 Researchers who publish novel studies that can be reproduced will benefit from having more of their peers use their methods, data, and statistical approaches, which means more citations and greater influence.  Researchers may also be able to get their manuscripts into higher reputation journals than if their research was not reproducible.
@@ -184,7 +191,7 @@ Journal editors and peer reviewers benefit when submitters use reproducible meth
 Taxpayers benefit when government funded research has the greatest generalizability and highest quality.  Reproducible methods allow a single funded study to have a ripple effect that will continue to influence scientific knowledge well into the future.
 
 Authors of meta-analyses benefit from reproducible practices like data and script sharing, because it allows them to check the findings asserted within a manuscript, compare its findings to those of other manuscripts, and discover differences between analyses that may point to the best methods to use in the practice of science in a given area.
-
+</details>
 </div>
 </div>
 
@@ -281,7 +288,7 @@ In the "Data Management and Sharing Snafu" on the previous page, we hear some co
 [[?]] Hint: We consider three of these to be problems with potential technological fixes!
 
 <div class = "answer">
-<details><summary>Click to see answer!</summary>
+<details><summary>Click to see an explanation of the answer.</summary>
 
 While technology alone can't motivate researchers to change some behavior, like being skeptical about data sharing in general or turfing much of the hard work of analysis to junior researchers, technology can help save us from ourselves in other ways.
 
