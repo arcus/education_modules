@@ -52,12 +52,12 @@ Contents
 * [Tools for Better Practices](#Tools-for-Better-Practices)
 
   * [Scripts](#Scripts)
-  * [Data management and metadata](#Data-management-and-metadata)]
+  * [Data management and metadata](#Data-management-and-metadata)
   * [Version Control](#Version-Control)
   * [Dependency Management](#Dependency-Management)
 * [Additional Materials](#Additional-Materials)
 
-  * [Center for Open Science](#Center-for-Open_Science)
+  * [Center for Open Science](#Center-for-Open-Science)
   * [John Oliver](#John-Oliver)
   * [For Excel Users](#For-Excel-Users)
   * [Mentioned in This Module](#Mentioned-in-This-Module)
@@ -83,7 +83,7 @@ We propose an approach that is more gate **opening** than gate **keeping** and i
 
 <div style = "margin: 2rem auto; max-width: 50%; font-size:0.8em; align: center;">
 
-![XKCD Cartoon](img/ten_thousand_2x.png)
+![XKCD Cartoon](media/ten_thousand_2x.png)
 
 (Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1053.)
 
@@ -129,7 +129,7 @@ When describing a multi-step task that should be able to be carried out by other
  </div>
 
 <div style = "margin: 2rem; max-width: 50%; float:left;">
-![Humorous illustration of "how to draw a horse"](img/horse.png)
+![Humorous illustration of "how to draw a horse"](media/horse.png)
 
 Courtesy of artist. [Original work](https://oktop.tumblr.com/post/15352780846)
 
@@ -303,7 +303,7 @@ We won't go into details at this point, but one of the helpful aspects of git is
 
 <div style = "margin: 2rem auto; max-width: 50%; font-size:0.8em; align: center;">
 
-![XKCD Cartoon](img/git_commit_2x.png)
+![XKCD Cartoon](media/git_commit_2x.png)
 
 (Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1296.)
 
