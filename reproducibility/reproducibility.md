@@ -269,9 +269,10 @@ Here we aim to provide a broad overview of how some tools and practices (scripts
 
 Areas we won't cover here, but are critical to the consistent production of reproducible science, include researcher bias, research incentivization, publication bias, research culture, mentorship, and more.  While we assert that proper use of technology is a **necessary** part of reproducible science, technology alone is not **sufficient**.
 
+<div class = "question">
+
 In the "Data Management and Sharing Snafu" on the previous page, we hear some common researcher errors that are hard to prevent with technology, such as a tendency to gloss over questions with a bit of arrogance: "Everything you need to know is in the article...".  However, technology would have helped solve some of the problems that Dr. Judy Benign had to deal with.  Which of these problems are examples of the kinds of problems that may have a potential technological fix?
 
-<div class = "question">
 [[ ]] Unwillingness to share data
 [[X]] Lack of clarity about what variable names mean
 [[X]] Not remembering where data is located
@@ -280,6 +281,8 @@ In the "Data Management and Sharing Snafu" on the previous page, we hear some co
 [[?]] Hint: We consider three of these to be problems with potential technological fixes!
 
 <div class = "answer">
+<details><summary>Click to see answer!</summary>
+
 While technology alone can't motivate researchers to change some behavior, like being skeptical about data sharing in general or turfing much of the hard work of analysis to junior researchers, technology can help save us from ourselves in other ways.
 
 For example, it's understandable that short variable names may be hard to connect to their full meaning, and the creation of a **data dictionary** might have helped avoid the problem of trying to decode the meaning of "SAM1" and "SAM2".  
@@ -287,6 +290,7 @@ For example, it's understandable that short variable names may be hard to connec
 Researchers are busy, lab churn is a fact of life, and staff like research assistants and postdocs can move on in the middle of a project.  That's why consistently applying **data management** best practices such as shared drives, version controlled repositories, or automated backup can be helpful in preventing misplaced files.  
 
 The careful listing of **dependencies** like software can help quantify the risk of data becoming unusable, and data management practices can include saving plain text versions of encoded data, so that if a proprietary data format is no longer easily usable, a version of the data exists that can still have some utility.
+</details>
 </div>
 </div>
 
