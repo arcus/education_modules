@@ -99,6 +99,18 @@ As learners, we ask that you build your core competencies and non-technical skil
 * Becoming aware of the physical and psychological markers of fatigue, frustration, and the need for a break.
 * Recalling your own ability to master difficult material.  The fact that something feels staggeringly difficult today doesn't mean it will always be so challenging.
 
+
+<div class = "question">
+True or False: If you're a driven, intelligent researcher, you're unlikely to experience failure as you learn skills like writing code.
+
+[( )] TRUE
+[(X)] FALSE
+
+<div class = "answer">
+FALSE!  Failure is something that people who work a lot with technology have to become comfortable with.  You can even think of the process of writing code as failing a lot until you get things right, then moving on to failing on the next project.  Error codes, mistakes, and confusion with new methods can be frustrating, especially if you have a lot of confidence and competence in your current way of working.  It's easier said than done, but you might find it helpful to recall that failure is a critically important tool in science, even if it's a tool we don't love to talk about.
+</div>
+</div>
+
 ## Concepts
 
 The concepts of **reproducibility**, **generalizability**, and **reuse** will frame the problem space that we'll describe in this module.  We'll define these terms and give some examples.  
@@ -148,6 +160,32 @@ Examples of reproducibility problems exist at small and large scale.  Importantl
 
 Think about it: when have you been frustrated by a process or study that had poor reproducibility?  Have you ever put **yourself** in a bad situation because you didn't think ahead to how you'd need to replicate your actions?
 
+</div>
+
+<div class = "question">
+Who benefits from reproducible research practices?  Choose all that apply.
+
+[(X)] The original authors of novel research
+[(X)] Patient populations
+[(X)] Journal editors and peer reviewers
+[(X)] Taxpayers
+[(X)] Authors of meta-analyses
+[(?)] There are multiple correct answers!
+
+<div class = "answer">
+All of these groups benefit!  
+
+Researchers who publish novel studies that can be reproduced will benefit from having more of their peers use their methods, data, and statistical approaches, which means more citations and greater influence.  Researchers may also be able to get their manuscripts into higher reputation journals than if their research was not reproducible.
+
+Patient populations benefit from evidence based research that is robust and demonstrated in multiple settings by various teams.  Reproducible research is a key part of translating findings to clinical care.
+
+Journal editors and peer reviewers benefit when submitters use reproducible methods because they can more quickly assess the quality of the research, test the statistical assumptions, and ensure that work can be tested by future investigation.  
+
+Taxpayers benefit when government funded research has the greatest generalizability and highest quality.  Reproducible methods allow a single funded study to have a ripple effect that will continue to influence scientific knowledge well into the future.
+
+Authors of meta-analyses benefit from reproducible practices like data and script sharing, because it allows them to check the findings asserted within a manuscript, compare its findings to those of other manuscripts, and discover differences between analyses that may point to the best methods to use in the practice of science in a given area.
+
+</div>
 </div>
 
 ### Generalizability
@@ -231,6 +269,25 @@ Here we aim to provide a broad overview of how some tools and practices (scripts
 
 Areas we won't cover here, but are critical to the consistent production of reproducible science, include researcher bias, research incentivization, publication bias, research culture, mentorship, and more.  While we assert that proper use of technology is a **necessary** part of reproducible science, technology alone is not **sufficient**.
 
+In the "Data Management and Sharing Snafu" on the previous page, we hear some common researcher errors that are hard to prevent with technology, such as a tendency to gloss over questions with a bit of arrogance: "Everything you need to know is in the article...".  However, technology would have helped solve some of the problems that Dr. Judy Benign had to deal with.  Which of these problems are examples of the kinds of problems that may have a potential technological fix?
+
+[[ ]] Unwillingness to share data
+[[X]] Lack of clarity about what variable names mean
+[[X]] Not remembering where data is located
+[[X]] Software becoming unavailable
+[[ ]] Mentors relying on postdocs to do most of the work
+[[?]] Hint: We consider three of these to be problems with potential technological fixes!
+
+<div class = "answer">
+While technology alone can't motivate researchers to change some behavior, like being skeptical about data sharing in general or turfing much of the hard work of analysis to junior researchers, technology can help save us from ourselves in other ways.
+
+For example, it's understandable that short variable names may be hard to connect to their full meaning, and the creation of a **data dictionary** might have helped avoid the problem of trying to decode the meaning of "SAM1" and "SAM2".  
+
+Researchers are busy, lab churn is a fact of life, and staff like research assistants and postdocs can move on in the middle of a project.  That's why consistently applying **data management** best practices such as shared drives, version controlled repositories, or automated backup can be helpful in preventing misplaced files.  
+
+The careful listing of **dependencies** like software can help quantify the risk of data becoming unusable, and data management practices can include saving plain text versions of encoded data, so that if a proprietary data format is no longer easily usable, a version of the data exists that can still have some utility.
+</div>
+
 ### Scripts
 
 **Scripts**, in this context, are a series of computer code instructions that handle elements of research such as:
@@ -253,11 +310,12 @@ It's worth considering the words of an archaeological team that wrote an article
 
 >However, while many researchers do this work by pointing and clicking using off-the-shelf software, we tried as much as possible to write scripts in the R programming language.<br/><br/>Pointing and clicking generally leaves no traces of important decisions made during data analysis. Mouse-driven analyses leave the researcher with a final result, but none of the steps to get that result is saved. This makes it difficult to retrace the steps of an analysis, and check the assumptions made by the researcher. <br/><br/> ... <br/><br/>It's easy to understand why many researchers prefer point-and-click over writing scripts for their data analysis. Often that's what they were taught as students. It's hard work and time-consuming to learn new analysis tools among the pressures of teaching, applying for grants, doing fieldwork and writing publications. Despite these challenges, there is an accelerating shift away from point-and-click toward scripted analyses in many areas of science.
 
+
 ### Data management and metadata
 
 **Data management** includes the organization, annotation, and preservation of data and metadata related to your research or clinical project.
 
-Data management is a critical pain point for many data users.  What's the best way to wrangle the data files needed to carry out a project?  Should documents be stored in a common drive?  Using what kinds of subfolders?  How should researchers deal with emails that are sent back and forth between researchers to define a specific cohort?  How should analysts describe and how data is analyzed?  Even a small project organized by a single researcher can be complex, and when a team of several researchers and supporting staff are involved, individual data management practices can collide.  A few topics that fall under the category of data management include:
+Data management is a critical pain point for many data users.  What's the best way to wrangle the data files needed to carry out a project?  Should documents be stored in a common drive?  Using what kinds of subfolders?  How should researchers deal with emails that are sent back and forth between researchers to define a specific cohort?  What is the long-term storage strategy for this data?  Are there ways to save the data in multiple formats to accomodate unknown future needs?  Even a small project organized by a single researcher can be complex, and when a team of several researchers and supporting staff are involved, individual data management practices can collide.  A few topics that fall under the category of data management include:
 
 * File naming standards for project files
 * The format in which data is collected, and where it is stored
@@ -266,7 +324,7 @@ Data management is a critical pain point for many data users.  What's the best w
 * How processes and procedures are stored and kept up to date
 * Who has access to what assets and when that access expires
 
-Importantly, NIH will require data sharing & management plan for all grants starting Jan 2023, and it's worth practicing the skills for developing a robust plan.
+Importantly, NIH will require data sharing & management plan for all grants starting January 2023, and it's worth practicing the skills for developing a robust plan.
 
 **Metadata** is, in its simplest definition, data about data. Some examples of metadata might include:
 
@@ -315,7 +373,7 @@ Some institutions, [including Children's Hospital of Philadelphia](https://githu
 
 ### Dependency Management
 
-If you've ever created a slide show in one computer only to have it look terrible in another, you know the problem that **dependencies** can cause.  Dependencies are requirements such as (in our slide show example) having the same fonts installed, having a default group of settings turned on, having the same verison of PowerPoint or other software running, and having access to particular image or sound files.  Dependencies that are well-documented and understood will help make research more reproducible.  Dependencies that are undocumented or not known about will inevitably cause problems.  Sometimes it isn't clear whether something is a hard dependency (this value or program *must* be the same as what you used) or just a circumstance (you used a particular version of Python but there's no reason to think that previous or subsequent versions wouldn't work just as well).  For this reason, recording both known and possible dependencies is a helpful practice. Common dependencies in research and data analytics include:
+If you've ever created a slide show in one computer only to have it look terrible in another, you know the problem that **dependencies** can cause.  Dependencies are requirements such as (in our slide show example) having the same fonts installed, having a default group of settings turned on, having the same version of PowerPoint or other software running, and having access to particular image or sound files.  Dependencies that are well-documented and understood will help make research more reproducible.  Dependencies that are undocumented or not known about will inevitably cause problems.  Sometimes it isn't clear whether something is a hard dependency (this value or program *must* be the same as what you used) or just a circumstance (you used a particular version of Python but there's no reason to think that previous or subsequent versions wouldn't work just as well).  For this reason, recording both known and possible dependencies is a helpful practice. Common dependencies in research and data analytics include:
 
 * Operating system: does your use of particular software require the use of Microsoft Windows 10 or later?
 * Regional data formatting: does your analysis assume that decimal values use a period, not a comma, to set off the decimal value?
