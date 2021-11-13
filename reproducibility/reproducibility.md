@@ -165,12 +165,12 @@ Think about it: when have you been frustrated by a process or study that had poo
 <div class = "question">
 Who benefits from reproducible research practices?  Choose all that apply.
 
-[(X)] The original authors of novel research
-[(X)] Patient populations
-[(X)] Journal editors and peer reviewers
-[(X)] Taxpayers
-[(X)] Authors of meta-analyses
-[(?)] There are multiple correct answers!
+[[X]] The original authors of novel research
+[[X]] Patient populations
+[[X]] Journal editors and peer reviewers
+[[X]] Taxpayers
+[[X]] Authors of meta-analyses
+[[?]] There are multiple correct answers!
 
 <div class = "answer">
 All of these groups benefit!  
@@ -271,6 +271,7 @@ Areas we won't cover here, but are critical to the consistent production of repr
 
 In the "Data Management and Sharing Snafu" on the previous page, we hear some common researcher errors that are hard to prevent with technology, such as a tendency to gloss over questions with a bit of arrogance: "Everything you need to know is in the article...".  However, technology would have helped solve some of the problems that Dr. Judy Benign had to deal with.  Which of these problems are examples of the kinds of problems that may have a potential technological fix?
 
+<div class = "question">
 [[ ]] Unwillingness to share data
 [[X]] Lack of clarity about what variable names mean
 [[X]] Not remembering where data is located
@@ -286,6 +287,7 @@ For example, it's understandable that short variable names may be hard to connec
 Researchers are busy, lab churn is a fact of life, and staff like research assistants and postdocs can move on in the middle of a project.  That's why consistently applying **data management** best practices such as shared drives, version controlled repositories, or automated backup can be helpful in preventing misplaced files.  
 
 The careful listing of **dependencies** like software can help quantify the risk of data becoming unusable, and data management practices can include saving plain text versions of encoded data, so that if a proprietary data format is no longer easily usable, a version of the data exists that can still have some utility.
+</div>
 </div>
 
 ### Scripts
