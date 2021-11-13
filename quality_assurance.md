@@ -1,6 +1,6 @@
 # Quality Assurance for modules
 
-When a module creator is ready to request that their module be included, they will create a Pull Request (PR).  This begins the work of quality assurance.  As someone who is reviewing the modules created by others, it's important to have use a consistent method for evaluating content.  This work is exacting and can be tedious.  It's probably worthwhile to look at other QA issues that have successfully been closed to see a bit more information about the level of detail other reviewers provide.
+When a module creator is ready to request that their module be included, they will create a Pull Request (PR).  This begins the work of quality assurance.  As someone who is reviewing the modules created by others, it's important to have use a consistent method for evaluating content.  This work is exacting and can be tedious.  It's probably worthwhile to look at other QA issues that have successfully been closed to see a bit more information about the level of detail other reviewers provide.  To see a sample issue, look at https://github.com/arcus/education_modules/issues/9.  To see a completed review, check out https://github.com/arcus/education_modules/issues/11.
 
 ## Step 1: Create an Issue
 
