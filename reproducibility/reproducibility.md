@@ -1,18 +1,18 @@
 <!--
-author:   Joy Payton, Arcus Education, Children's Hospital of Philadelphia
+author:   Joy Payton
 email:    paytonk@chop.edu
-version:  0.0.2
+version:  1.0.0
 language: en
 narrator: US English Female
 comment:  Reproducibility is essential to scientific efforts.  Generalizability and data reuse are also important for the application and expansion of scientific inquiry. Technology can help achieve these goals.
-link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/custom.css
-logo: https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
-icon: https://github.com/arcus/education_fellows/raw/main/img/favicon.ico
+link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
+logo: https://github.com/arcus/education_modules/raw/main/assets/media/chop-icon.png
+icon: https://github.com/arcus/education_modules/raw/main/assets/media/favicon.ico
 -->
 
 # Reproducibility, Generalizability, and Reuse: How Technology Can Help
 
-<div class = "hint">
+<div class = "overview">
 
 ## Overview
 
@@ -33,8 +33,8 @@ This module provides learners with an approachable introduction to the concepts 
 **Learning Objectives**:  After completion of this module, learners will be able to:
 
 * Explain the importance of conducting research that is **reproducible** (can be re-done by a different, unaffiliated scientist)
-* Give an example of a data analysis method that helps research be more reproducible
-* Give an example of a method in the organization and description of documents, datasets, and other files that helps research be more reproducible
+* Argue in support of a data analysis method that helps research be more reproducible
+* Argue in support of a method in the organization and description of documents, datasets, and other files that helps research be more reproducible
 
 </div>
 
@@ -61,6 +61,7 @@ Contents
   * [John Oliver](#John-Oliver)
   * [For Excel Users](#For-Excel-Users)
   * [Mentioned in This Module](#Mentioned-in-This-Module)
+* [Feedback](#Feedback)
 
 ## Before We Get Started
 
@@ -378,3 +379,26 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 * [Enterprise GitHub](https://github.research.chop.edu)
 * [GitHub.com](https://github.com)
 * [GitHub Desktop](https://desktop.github.com/)
+
+## Feedback
+
+In the beginning, we stated some goals.
+
+Learning Objectives:
+---
+
+After completion of this module, learners will be able to:
+
+* Explain the importance of conducting research that is **reproducible** (can be re-done by a different, unaffiliated scientist)
+* Argue in support of a data analysis method that helps research be more reproducible
+* Argue in support of a method in the organization and description of documents, datasets, and other files that helps research be more reproducible
+
+We ask you to fill out a brief (5 minutes or less) survey to let us know:
+
+* If we achieved the learning objectives
+* If the module difficulty was appropriate
+* If we gave you the experience you expected
+
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Module+Template%22)!
+
+Remember to change the redcap link so that the module name is correct for this module!
