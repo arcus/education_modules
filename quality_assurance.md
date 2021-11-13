@@ -1,6 +1,6 @@
 # Quality Assurance for modules
 
-When a module creator is ready to request that their module be included, they will create a Pull Request (PR).  This begins the work of quality assurance.  As someone who is reviewing the modules created by others, it's important to have use a consistent method for evaluating content.
+When a module creator is ready to request that their module be included, they will create a Pull Request (PR).  This begins the work of quality assurance.  As someone who is reviewing the modules created by others, it's important to have use a consistent method for evaluating content.  This work is exacting and can be tedious.  It's probably worthwhile to look at other QA issues that have successfully been closed to see a bit more information about the level of detail other reviewers provide. 
 
 ## Step 1: Create an Issue
 
@@ -21,6 +21,17 @@ Current Version of Module (use the latest commit value):  [click on the PR and g
 
 # Checklist Reports:
 
+## Structural elements
+
+* [ ] YAML top section filled in with name, email, language, narrator, title, and comment (blurb) filled out appropriately.
+* [ ] YAML top section includes proper link to CSS (currently https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css).
+* [ ] YAML top section has a version of at least 1.0.0 (first public version).
+* [ ] Title is the first line and is the only level-1 header in the document.
+* [ ] Overview section immediately follows Title, surrounded in div with class overview, and has filled in sections including an intro blurb, Estimated time to completion, Pre-requisites, Learning objectives, and Contents.
+* [ ] Contents within Overview reflect accurately the sections and the links in the contents section work.
+* [ ] Sections following Overview all have content (no pages with just header and no additional text / media material).
+* [ ] Final section is Feedback.
+
 ## Content
 
 * [ ] Good amount of content, both in terms of the complexity/usefulness of the material covered and the time estimate
@@ -34,11 +45,11 @@ Current Version of Module (use the latest commit value):  [click on the PR and g
 * [ ] Avoids unnecessarily gendered language (e.g. uses "they" singular rather than "he or she" for an unknown person).
 * [ ] Informative link text (e.g. instead of "To learn more about python, click [here](www.example.com)", say "Read this article to [learn more about python](www.example.com).")
 * [ ] Includes accurately formatted and functional link to feedback form.
+* [ ] Spelling and grammar are correct.
 
 ## Organization
 
 * [ ] Clear, informative headers and sensible hierarchical structure (the TOC in the left margin should give a good overview of the content convered)
-* [ ] Adheres to the module template structure
 * [ ] Uses specially formatted highlight boxes consistently and appropriately
 * [ ] Short, digestible pieces --- avoids long paragraphs and breaks long sections up with sub-headers
 
@@ -69,6 +80,7 @@ List here any internal references (stated or hyperlinked) that work now because 
 * [ ] description or quote, line ___ in file ____
 * [ ] description or quote, line ___ in file ____
 ```
+
 * Click on the "Preview" tab to see if everything is rendering nicely and there are at least two clickable links -- one to the PR (the top line in the issue) and one to the commit version (6th line).
 * Click "Submit new issue".
 
