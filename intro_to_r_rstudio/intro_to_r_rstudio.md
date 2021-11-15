@@ -44,8 +44,8 @@ If you're interested in working with data (that could be many things, such as br
 ====
 
 * [Lesson Preparation](#Lesson-Preparation)
-* [What is R?](#What-is-R)
-* [What is RStudio?](#What-is-RStudio)
+* [What is R?](#What-is-R?)
+* [What is RStudio?](#What-is-RStudio?)
 * [Starting RStudio](#Starting-RStudio)
 * [Using a File](#Using-a-File)
 * [Why Use R and RStudio?](#Why-Use-R-and-RStudio)
@@ -388,13 +388,13 @@ Experiment with editor settings (font size and theme), and if you want to try it
 
 ### Hands-On Activities Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/O8rKGHXSXlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!?[Hands on Activity](https://www.youtube.com/embed/O8rKGHXSXlc)
 
 ### Researchers: Why R?
 
 You can stop this video after around 4 minutes.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ids4FO5nTBE?start=439" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!?[Researchers: Why Use R?](https://www.youtube.com/embed/Ids4FO5nTBE?start=439?cc_load_policy=1)
 
 ## Feedback
 
