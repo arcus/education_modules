@@ -267,11 +267,11 @@ It may take a while to execute, and you might see a red "Stop Sign" emblem appea
 
 ### Data Frames
 
-By running line 15, you have instructed the computer to read in a csv using `read_csv` and to add that data to a new **data frame** object, which will be called `breast_cancer_data`.  
+By running line 15, you have instructed the computer to read in a csv using `read_csv` and to add that data to a new **data frame** object, which will be called `breast_cancer_data`.  Technically, this is a special kind of data frame called a **tibble**, but we won't talk about what makes a tibble special right now.  It's enough to remember that you can bring in data that's already in rows and columns, like a .csv, and make it into an R data frame.
 
-Data frames consist of data arranged into rows and columns, like a spreadsheet.  Each row is an observation (in our case, a patient) and each column is a measurement (like age and insulin values).
+Data frames (including special kinds of data frames like tibbles) consist of data arranged into rows and columns.  The combination of rows and columns is often called a table, and you'll sometimes hear people refer to "tabular", or table shaped, data.  Data frames can look much like a spreadsheet that you might use Excel for.  Each row is an observation (in our case, a patient) and each column is a measurement (like age and insulin values).
 
-The new object, `breast_cancer_data`, appears in your "Environment" tab in the upper right pane.  You can click on the small blue icon beside the name of the object to see the structure of the data frame (column names and data types stored in the columns).
+The new data frame / tibble object, `breast_cancer_data`, appears in your "Environment" tab in the upper right pane.  You can click on the small blue icon beside the name of the object to see the structure of the data frame (column names and data types stored in the columns).
 
 You can also click on the name of the object to open a view of the data in the Source pane.  Or, in your R code, you can do the same thing using the `View` command.
 
@@ -280,12 +280,43 @@ You can also click on the name of the object to open a view of the data in the S
 Now run the next few lines of code.  You can:
 
 * Run them one by one, using the Run button, or
-* Use a keyboard shortcut (command or control + the enter key) to run code one line at a time, or
+* Use a keyboard shortcut (command or control and the enter key) to run code one line at a time, or
 * Highlight several complete lines of code (don't start in the middle of a line!) and click the Run button to run all of them.
 
 It won't hurt to run these lines several times, so try various methods!
 
 What does the `hist` command accomplish?  The `summary` command? `View`?  
+
+
+<div class = "question">
+
+Where can you find more information about your data frame?  Try figuring this out by working in RStudio and trying out the various methods!
+
+[[X]] Use the `View` command to open a view into the data frame, like `View(my_data)`.
+[[X]] In the Environment tab of the Environment/History/Connections pane (usually in the upper right), click on the blue arrow to the left of the name of the data frame to see what columns it contains.
+[[ ]] Use the `Show` command to open a display of the data frame, like `Show(my_data)`
+[[X]] In the Environment tab of the Environment/History/Connections pane (usually in the upper right), click on the name of the data frame to see a view into the data.
+[[?]] Hint: Only one of these methods won't work!
+
+
+<div class = "answer">
+<details><summary>Click to see an explanation of the answer.</summary>
+
+RStudio gives you several methods to take a peek inside your data.  You can use code, such as:
+
+* `head(my_data)` : shows the first few rows of the data frame called `my_data`
+* `tail(my_data)` : shows the last few rows of the data frame called `my_data`
+* `View(my_data)` : opens a view of `my_data` that you can scroll through and search through
+* `str(my_data)` : shows the structure of the data frame called `my_data`
+
+You can also use point-and-click for viewing data, including:
+
+* Clicking on the name of a data frame listed in the Environment tab
+* Clicking on the "expand" arrow to the left of the name of a data frame listed in the environment tab
+
+</details>
+</div>
+</div>
 
 ## Why Use R and RStudio?
 
@@ -312,7 +343,6 @@ Want to hear more?  Watch around 4 minutes of one of our optional additional res
 *5 minute hands-on*
 
 We're only going to touch on three of many useful tools here.  When time permits, you may want to explore more.  In the meantime, however, let's consider what we've learned so far about R scripts:
-
 
 <div class = "question">
 
@@ -389,6 +419,7 @@ Experiment with editor settings (font size and theme), and if you want to try it
 ### Hands-On Activities Demo
 
 !?[Hands on Activity](https://www.youtube.com/embed/O8rKGHXSXlc)
+
 
 ### Researchers: Why R?
 
