@@ -149,7 +149,7 @@ Above, you can see that the R console had to open a new program (in a Mac, it's 
 * How can I get more information on how to use the `hist` command?
 * How can I save my work for later re-use and expansion?
 
-Using the R.app or R console tool means very basic, bare-bones support for you as someone who is trying to write code.
+Using the R.app, also known as the R console tool, means very basic, bare-bones support for you as someone who is trying to write code.
 
 ### With RStudio
 
@@ -169,7 +169,7 @@ Using RStudio, you:
   - Operating system terminal
   - And much more!  
 
-RStudio is the preferred method for most uses of R, and it's generally what we use to teach.
+RStudio is the preferred method for most uses of R, and it's generally what we use to teach.  We will only scratch the surface of this tool in this module, and we won't get to some important topics you may have already heard of, like R Markdown.
 
 ## Starting RStudio
 
@@ -177,7 +177,7 @@ RStudio is the preferred method for most uses of R, and it's generally what we u
 
 You don't have to have R and RStudio installed on your local computer to learn how to use them.  We've provided a simple environment you can use.  It will probably take a few minutes to load up, especially if it's "cold" (hasn't been used by anyone lately).  
 
-This is not because R or RStudio is slow, but because we're using a free system that allows us to create new computing environments when needed.  This generous offering comes at no cost, and in order to save money, systems are built only when requested.  R and RStudio on your own computer will open much faster!
+This is not because R or RStudio is slow, but because we're using a free system that allows us to create new computing environments when needed.  This generous offering comes at no cost thanks to government funding and industry sponsorship, and in order to save money, systems are built only when requested.  R and RStudio on your own computer will open much faster!
 
 If you already clicked on the "launch binder" button as the first activity, you can simply open that tab on your browser.
 
@@ -235,9 +235,11 @@ Before you are ready to write your own code, you might find it useful to work wi
 
 There are several ways to write R code using RStudio.  We'll start with an R **script**.  
 
-An R script is a text file that includes all the R code and any comments that you want to save in a file so you don't lose track of a process.  
+An R script is a file that includes all the R code and any comments that you want to save in a file so you don't lose track of a process.  
 
-For example, let's say that we know we'll want to work on some data stored in a .csv file, and it will take us several days or weeks to slowly write the code.  We can use an R script to store what we've figured out so far.
+For example, let's say that we know we'll want to work on some data stored in a .csv file, and it will take us several days or weeks to slowly write the code.  We can use an R script to store what we've figured out so far.  
+
+Keeping this script means that in a few months, after having forgotten what we did, all the instructions and code for how to analyze our data are still together in a single file we can run again on our updated data.
 
 <div class = "hint">
 
