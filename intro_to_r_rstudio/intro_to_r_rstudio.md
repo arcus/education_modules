@@ -2,9 +2,9 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  0.0.1
+version:  1.0.0
 language: en
-narrator: UK English Female
+narrator: US English Female
 title: Introduction to R and RStudio
 comment:  Learn about the statistical programming language R and a very helpful tool for working with R called RStudio.
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
@@ -40,9 +40,8 @@ If you're interested in working with data (that could be many things, such as br
 
 </div>
 
-## Contents
-
-Feel free to check these off as you go!  
+**Contents**
+====
 
 * [Lesson Preparation](#Lesson-Preparation)
 * [What is R?](#What-is-R)
@@ -123,6 +122,24 @@ You can write R code and execute it in many ways, including using the command li
 *10 minute read*
 
 RStudio is an **IDE**, or **Integrated Development Environment**, which pulls together (integrates) useful tools like help files, image viewers,  data previews, and version control for people writing (developing) code, and it puts all these tools together in a visually pleasing and helpful environment.  It's an add-on tool that makes working with R easier because it gives extra help and context.
+
+
+<div class = "question">
+
+Which of these correctly describes the relationship between R and RStudio?
+
+[[ ]] R is a free, open source language used for data analysis, while RStudio is a related language that costs money but comes with a support agreement
+[[X]] R is a free, open source language used for data analysis, and RStudio is software that makes R easier to use by adding tools and scaffolding
+[[ ]] R is a mathematical and statistical system of notation, and RStudio is a free, open source language used for data analysis that uses R for statistics
+[[ ]] R is a mathematical and statistical system of notation, and RStudio converts software like Stata or SPSS to use R as the underlying paradigm
+
+<div class = "answer">
+<details><summary>Click to see an explanation of the answer.</summary>
+
+R is a language that was specifically designed for the statistical analysis of data.  It's free and open source, and while you can use it alone, it's much easier to use RStudio software to help you write R code more quickly.  RStudio also comes with additional bells and whistles that will help you create documentation of your data analysis and statistical thinking.
+</details>
+</div>
+</div>
 
 ### Without RStudio
 
@@ -224,7 +241,7 @@ Try describing RStudio's appearance out loud to yourself.  This may seem silly b
 
 Before you are ready to write your own code, you might find it useful to work with an existing file.
 
-There are several ways to write R code using RStudio.  We'll start with an R script.  An R script is a text file that includes all the R code and any comments that you want to save in a file so you don't lose track of a process.  For example, let's say that we know we'll want to work on some data stored in a .csv file, and it will take us several days or weeks to slowly write the code.  We can use an R script to store what we've figured out so far.
+There are several ways to write R code using RStudio.  We'll start with an R **script**.  An R script is a text file that includes all the R code and any comments that you want to save in a file so you don't lose track of a process.  For example, let's say that we know we'll want to work on some data stored in a .csv file, and it will take us several days or weeks to slowly write the code.  We can use an R script to store what we've figured out so far.
 
 <div class = "hint">
 
@@ -296,7 +313,34 @@ Want to hear more?  Watch around 4 minutes of one of our optional additional res
 
 *5 minute hands-on*
 
-We're only going to touch on three of many useful tools here.  When time permits, you may want to explore more.
+We're only going to touch on three of many useful tools here.  When time permits, you may want to explore more.  In the meantime, however, let's consider what we've learned so far about R scripts:
+
+
+<div class = "question">
+
+Which of the following are accurate descriptions of R scripts?  Check all that apply!
+
+[[X]] R scripts allow you to capture each step you do in data ingestion, data cleaning and preparation, and statistical analysis.
+[[X]] R scripts make it easier for you to re-run your analysis if more data comes in or you need to check your work.
+[[ ]] R scripts allow you to avoid writing code entirely and just describe what you want to happen in regular English.  The translator engine of R converts your instructions into code.
+[[X]] R scripts usually open in the upper left pane of RStudio unless you decide to rearrange the panes.
+[[ ]] R scripts can only contain code, never any extra helper text that contextualize or explain the code for humans.
+[[ ]] R scripts can only be created in the R app or in command line, not in RStudio.
+[[?]] Hint: Three of these things are accurate descriptions!
+
+
+<div class = "answer">
+<details><summary>Click to see an explanation of the answer.</summary>
+
+R scripts do in fact allow you to record not only the concrete steps you do, but also allow you to include comments that give human-readable explanations of what you're doing.  This makes it much easier for you to re-run your analysis or share your methods with others.
+
+You do still have to learn how to write code, because there's no "magic wand" just yet that will allow you do describe what you want in English and have software translate that into R code.
+
+R scripts work great in the RStudio software and generally will appear (once opened) in the upper left pane of RStudio.   
+</details>
+</div>
+</div>
+
 
 ### Help
 
