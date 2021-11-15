@@ -8,7 +8,7 @@ When a module creator is ready to request that their module be included, they wi
 * Choose "New Issue" (or if your screen is small, just "New").  This is a green button on the right side:
 ![Screenshot of where to click for a new issue](media/new_issue.png)
 * Give your issue a good title: "QA" plus the proposed directory name from the PR. For example, if the PR includes a new module with the directory named "reproducibility", the title would be "QA reproducibility".)
-* In the "Write" tab area, paste the following (from `# Module Quality Assurance Report for PR #[put in the PR number here] ` to `* [ ] description or quote, line ___ in file ____`).  Where square brackets appear, remove the square brackets and their contents and replace with the appropriate values.  To see what this looks like in a real issue, see To see a completed review, check out https://github.com/arcus/education_modules/issues/11.
+* In the "Write" tab area, paste the following (from `# Module Quality Assurance Report for PR #[put in the PR number here] ` to `* [ ] description or quote, line ___ in file ____`).  Where square brackets appear, remove the square brackets and their contents and replace with the appropriate values. To see a completed review, check out https://github.com/arcus/education_modules/issues/11.
 
 ```
 # Module Quality Assurance Report for PR #[PR number here]  
