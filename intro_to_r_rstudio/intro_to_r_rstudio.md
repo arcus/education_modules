@@ -71,8 +71,6 @@ Here's the link.  You don't have to do anything except come back here once the l
 
 <a href = "https://binder.pangeo.io/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://binder.pangeo.io/badge_logo.svg"></a> **← Click the "launch binder" button!**
 
-[Go back to the table of contents](#Contents)
-
 ## What is R?
 
 *5 minute read*
@@ -115,14 +113,11 @@ summary(breast_cancer_data$HOMA)
 
 You can write R code and execute it in many ways, including using the command line, the R console, and in a Jupyter notebook.  Here, however, we're going to concentrate on using RStudio.
 
-[Go back to the table of contents](#Contents)
-
 ## What is RStudio?
 
 *10 minute read*
 
 RStudio is an **IDE**, or **Integrated Development Environment**, which pulls together (integrates) useful tools like help files, image viewers,  data previews, and version control for people writing (developing) code, and it puts all these tools together in a visually pleasing and helpful environment.  It's an add-on tool that makes working with R easier because it gives extra help and context.
-
 
 <div class = "question">
 
@@ -145,8 +140,7 @@ R is a language that was specifically designed for the statistical analysis of d
 
 We could run the code above in a simple **R console**, which is what you get when you install R by itself without using RStudio.  This isn't the most user friendly experience! In the screen recording shown below, we are **not** using RStudio, but rather the R Console.
 
-|![R.app, or the R Console](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/r_console.gif?raw=true)|
-|--|
+![R.app, or the R Console](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/r_console.gif?raw=true)
 
 Above, you can see that the R console had to open a new program (in a Mac, it's the Quartz viewer) to display the histogram.  You can't tell much about the `breast_cancer_data` datset and you don't get tips and support around using R.  For example, here are some questions you may have after watching the animation above.
 
@@ -161,14 +155,13 @@ Using the R.app or R console tool means very basic, bare-bones support for you a
 
 On the other hand, you could run the same code in RStudio and see something like this:
 
-|![Running code in RStudio](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio.gif?raw=true)|
-|--|
+![Running code in RStudio](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio.gif?raw=true)
 
 Using RStudio, you:
 
-* Can easily create a script to save your code for reuse later (it's currently "Untitled1")
+* Can easily create a **script** to save your code for reuse later (it's currently "Untitled1")
 * Get a sneak peek at the data to help you to decide what to do next (here we have 116 rows of 10 columns)
-* See the plot in the same window as everything else
+* See the plot in the same application window as everything else
 * Can use other helpful tools, like
   - File browser
   - Help tab
@@ -178,13 +171,13 @@ Using RStudio, you:
 
 RStudio is the preferred method for most uses of R, and it's generally what we use to teach.
 
-[Go back to the table of contents](#Contents)
-
 ## Starting RStudio
 
 *10 minutes hands-on*
 
 You don't have to have R and RStudio installed on your local computer to learn how to use them.  We've provided a simple environment you can use.  It will probably take a few minutes to load up, especially if it's "cold" (hasn't been used by anyone lately).  
+
+This is not because R or RStudio is slow, but because we're using a free system that allows us to create new computing environments when needed.  This generous offering comes at no cost, and in order to save money, systems are built only when requested.  R and RStudio on your own computer will open much faster!
 
 If you already clicked on the "launch binder" button as the first activity, you can simply open that tab on your browser.
 
@@ -222,8 +215,7 @@ A to-do list for you to consider:
 
 While things are loading, you might see an image like this, and it might stay this way for a few minutes.  Be patient!  If you have a few friends to do this together with, it can help speed things up, since the environment will have been recently used and ready to deploy more quickly.
 
-|![Pangeo Load Screen](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/pangeo.png?raw=true)|
-|--|
+![Pangeo Load Screen](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/pangeo.png?raw=true)
 
 ### Finally Loaded!
 
@@ -241,13 +233,17 @@ Try describing RStudio's appearance out loud to yourself.  This may seem silly b
 
 Before you are ready to write your own code, you might find it useful to work with an existing file.
 
-There are several ways to write R code using RStudio.  We'll start with an R **script**.  An R script is a text file that includes all the R code and any comments that you want to save in a file so you don't lose track of a process.  For example, let's say that we know we'll want to work on some data stored in a .csv file, and it will take us several days or weeks to slowly write the code.  We can use an R script to store what we've figured out so far.
+There are several ways to write R code using RStudio.  We'll start with an R **script**.  
+
+An R script is a text file that includes all the R code and any comments that you want to save in a file so you don't lose track of a process.  
+
+For example, let's say that we know we'll want to work on some data stored in a .csv file, and it will take us several days or weeks to slowly write the code.  We can use an R script to store what we've figured out so far.
 
 <div class = "hint">
 
 Pro tip:  You'll recognize an R script because it ends in `.R`!</div>
 
-In the lower right of your RStudio window, you should see a pane that has tabs marked "Files", "Plots", "Packages", "Help", and "Viewer".  Click on the "Files" tab, open the name of this course (`intro_to_r_rstudio`) and find the R script.  Remember that R scripts end with the file extension `.R`.
+In the lower right of your RStudio window, you should see a pane that has tabs marked "Files", "Plots", "Packages", "Help", and "Viewer".  Click on the "Files" tab, click on the name of this course (`intro_to_r_rstudio`) to open that folder, and find the R script.  Remember that R scripts end with the file extension `.R`.
 
 Did you find it?  It's called `intro_to_R.R`.  Click on the file name and it will open in a new "Source" pane which will appear as the upper left pane.  You should see something similar to the graphic below.
 
@@ -346,7 +342,7 @@ R scripts work great in the RStudio software and generally will appear (once ope
 
 Within RStudio, click on the "Help" tab in the lower right pane.  Choose one promising help topic to click on.  It appears as a new tab or window in your browser.
 
-![Search boxes in RStudio Help tab](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media//search_boxes_rstudio.png?raw=true)
+![Search boxes in RStudio Help tab](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/search_boxes_rstudio.png?raw=true)
 
 There are two search boxes related to help.  The one on the left, just above the help text, includes the phrase "Find in Topic".  This is for searching within the help article you're looking at currently.
 
