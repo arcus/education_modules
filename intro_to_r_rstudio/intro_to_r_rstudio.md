@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
+version:  1.0.1
 language: en
 narrator: US English Female
 title: Introduction to R and RStudio
@@ -84,13 +84,14 @@ library(tidyverse)
 breast_cancer_data <- read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/00451/dataR2.csv")
 hist(breast_cancer_data$Resistin)
 summary(breast_cancer_data$HOMA)
+
 ```
 
 Ideally, R code includes helpful hints along the way to help readers understand what's happening.  We can do that using **comments**, which are lines that the computer knows to ignore and not treat as code.
 
 For example, the following may be a bit easier to understand, even if you are brand new to R.
 
-<div class = "question" style = "min-height: 5rem;">
+<div class = "question" style = "min-height: 6rem;">
 What distinguishes a comment from code in the sample below?</div>
 
 ```r
@@ -109,6 +110,7 @@ hist(breast_cancer_data$Resistin)
 # Show quartiles / mean of HOMA values
 
 summary(breast_cancer_data$HOMA)
+
 ```
 
 You can write R code and execute it in many ways, including using the command line, the R console, and in a Jupyter notebook.  Here, however, we're going to concentrate on using RStudio.
