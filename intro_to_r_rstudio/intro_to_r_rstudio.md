@@ -145,7 +145,7 @@ R is a language that was specifically designed for the statistical analysis of d
 
 We could run the code above in a simple **R console**, which is what you get when you install R by itself without using RStudio.  This isn't the most user friendly experience! In the screen recording shown below, we are **not** using RStudio, but rather the R Console.
 
-|![R.app, or the R Console](https://github.com/arcus/education-modules/blob/main/objective_3_1/r_intensive/intro_to_r_rstudio/images/r_console.gif?raw=true)|
+|![R.app, or the R Console](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/r_console.gif?raw=true)|
 |--|
 
 Above, you can see that the R console had to open a new program (in a Mac, it's the Quartz viewer) to display the histogram.  You can't tell much about the `breast_cancer_data` datset and you don't get tips and support around using R.  For example, here are some questions you may have after watching the animation above.
@@ -161,7 +161,7 @@ Using the R.app or R console tool means very basic, bare-bones support for you a
 
 On the other hand, you could run the same code in RStudio and see something like this:
 
-|![RStudio](https://github.com/arcus/education-modules/blob/main/objective_3_1/r_intensive/intro_to_r_rstudio/images/rstudio.gif?raw=true)|
+|![Running code in RStudio](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio.gif?raw=true)|
 |--|
 
 Using RStudio, you:
@@ -222,14 +222,14 @@ A to-do list for you to consider:
 
 While things are loading, you might see an image like this, and it might stay this way for a few minutes.  Be patient!  If you have a few friends to do this together with, it can help speed things up, since the environment will have been recently used and ready to deploy more quickly.
 
-|![Pangeo Load Screen](https://github.com/arcus/education-modules/blob/main/objective_3_1/r_intensive/intro_to_r_rstudio/images/pangeo.png?raw=true)|
+|![Pangeo Load Screen](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/pangeo.png?raw=true)|
 |--|
 
 ### Finally Loaded!
 
 Once your environment has loaded, you will be able to see something like the following:
 
-![RStudio Environment](https://github.com/arcus/education-modules/blob/main/objective_3_1/r_intensive/intro_to_r_rstudio/images/rstudio_pangeo.png?raw=true)
+![RStudio Environment](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio_pangeo.png?raw=true)
 
 Take a look around.  What do you see?  How would you describe the layout of panes and tabs to another person?  What do you think the different parts do?
 
@@ -251,19 +251,19 @@ In the lower right of your RStudio window, you should see a pane that has tabs m
 
 Did you find it?  It's called `intro_to_R.R`.  Click on the file name and it will open in a new "Source" pane which will appear as the upper left pane.  You should see something similar to the graphic below.
 
-![RStudio source pane displays R script](https://github.com/arcus/education-modules/blob/main/objective_3_1/r_intensive/intro_to_r_rstudio/images/source_pane.png?raw=true)
+![RStudio source pane displays R script](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/source_pane.png?raw=true)
 
 ### Running Code in RStudio
 
 Use your mouse to add a cursor (be careful not to highlight text) somewhere in lines 1-8.  These lines make up our first comments.  Then, click "Run" in the upper right corner of the Source pane:
 
-![Running code in the Source pane using the Run button](https://github.com/arcus/education-modules/blob/main/objective_3_1/r_intensive/intro_to_r_rstudio/images/rstudio_run.gif?raw=true)
+![Running code in the Source pane using the Run button](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio_run.gif?raw=true)
 
 What do you see now in the Console (the bottom left pane)?  Remember that comments are ignored by R, so the first line of actual R code that could be run was line 10.  That's what ends up running (or executing) in the console!
 
 Click to move the cursor to a point in line 15 and click the "Run" button again.  
 
-![Running code in the Source pane using the Run button](https://github.com/arcus/education-modules/blob/main/objective_3_1/r_intensive/intro_to_r_rstudio/images/rstudio_run_line_15.gif?raw=true)
+![Running code in the Source pane using the Run button](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio_run_line_15.gif?raw=true)
 
 It may take a while to execute, and you might see a red "Stop Sign" emblem appear in the upper right of your console pane.  When you see the stop sign, you know that something is still running and you have the option of stopping it (but don't, this time).
 
@@ -346,7 +346,7 @@ R scripts work great in the RStudio software and generally will appear (once ope
 
 Within RStudio, click on the "Help" tab in the lower right pane.  Choose one promising help topic to click on.  It appears as a new tab or window in your browser.
 
-![Search boxes in RStudio Help tab](https://github.com/arcus/education-modules/blob/main/objective_3_1/r_intensive/intro_to_r_rstudio/images/search_boxes_rstudio.png?raw=true)
+![Search boxes in RStudio Help tab](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media//search_boxes_rstudio.png?raw=true)
 
 There are two search boxes related to help.  The one on the left, just above the help text, includes the phrase "Find in Topic".  This is for searching within the help article you're looking at currently.
 
@@ -358,7 +358,7 @@ Within RStudio, click on the "History" tab in the upper right pane.  The command
 
 Choose one of the commands by clicking on it, and choose the "To Console" button.  The code should now appear in the console in the lower left pane, ready for you to hit enter and run that command anew.
 
-![History Tab](https://github.com/arcus/education-modules/blob/main/objective_3_1/r_intensive/intro_to_r_rstudio/images//history_rstudio.png?raw=true)
+![History Tab](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/history_rstudio.png?raw=true)
 
 ### Display
 
