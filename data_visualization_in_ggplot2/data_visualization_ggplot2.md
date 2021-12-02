@@ -7,7 +7,7 @@ language: en
 narrator: UK English Female
 title: Data Visualization in ggplot2
 comment:  This module includes code and explanations for several popular data visualizations, using R's ggplot2 package. It also includes examples of how to modify ggplot2 plots to customize them for different uses (e.g. adhering to journal requirements for visualizations).
-long_description: You can use the ggplot2 library in R to make many different kinds of data visualizations (also called plots, or charts), including scatterplots, histograms, line plots, bar plots, and heatmaps. This module provides an example of each of these kinds of plots, including R code to make them using the ggplot2 library. It may be hard to follow if you are brand new to R, but it is appropriate for beginners with at least a small amount of R experience.
+long_description: You can use the ggplot2 library in R to make many different kinds of data visualizations (also called plots, or charts), including scatterplots, histograms, line plots, trendlines, and heatmaps. This module provides an example of each of these kinds of plots, including R code to make them using the ggplot2 library. It may be hard to follow if you are brand new to R, but it is appropriate for beginners with at least a small amount of R experience.
 
 link: https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
 
@@ -16,7 +16,6 @@ link: https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modu
 
 <div class = "overview">
 # Overview
-
 @comment
 
 **Is this module right for me?** @long_description
@@ -29,9 +28,9 @@ This module assumes some familiarity with principles of data visualizations as a
 
 This module also assumes some basic familiarity with R, including
 
-* [installing and loading packages](link)
-* [reading in data](link)
-* manipulating data frames, including [calculating new columns](link), and [pivoting from wide format to long](link)
+* [installing and loading packages](https://r4ds.had.co.nz/data-visualisation.html#prerequisites-1)
+* [reading in data](https://r4ds.had.co.nz/data-import.html)
+* manipulating data frames, including [calculating new columns](https://r4ds.had.co.nz/transform.html#add-new-variables-with-mutate), and [pivoting from wide format to long](https://r4ds.had.co.nz/tidy-data.html#longer)
 * some [statistical tests](link)
 
 If you are brand new to R (or want a refresher) consider starting with [Intro to R](link) first.
@@ -51,10 +50,10 @@ This module makes use of [pangeo binder](https://binder.pangeo.io/) for interact
 
 If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity now. It will open in a new tab or window, and you can simply return here to continue learning, while the environment finishes loading. Here is the link:
 
-[![Open Binder environment](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/roseh-data-viz-module?urlpath=rstudio){:target="_blank"} **Click the "launch binder" button!**
+[![Open Binder environment.](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/roseh-data-viz-module?urlpath=rstudio) **Click the "launch binder" button!**
 
 
-You don't have to do anything except come back here once the link opens in a new tab or window.
+You don't have to do anything except come back here after opening the link opens in a new tab or window.
 
 ## Making plots in ggplot2
 
@@ -80,6 +79,10 @@ plot(wt, mpg, data = mtcars)
 ```
 
 In ggplot2, use the ggplot() function to generate an empty base plot, and then you **add** each of the elements FINISH
+
+<div class = "learnmore">
+To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf)
+</div>
 
 ## Scatterplots
 
@@ -117,7 +120,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
 
 ```
 
-![Basic scatter plot, with age on the x-axis and glucose on the y-axis](media/ggplot_scatter_1.png)
+![Basic scatter plot, with age on the x-axis and glucose on the y-axis.](media/ggplot_scatter_1.png)
 
 ### Using color for continuous variables
 
@@ -130,7 +133,7 @@ ggplot(breast_cancer_data(y=Glucose, x=Age, color = BMI)) +
 
 ```
 
-![Age and glucose scatter plot, with color gradient showing BMI](media/ggplot_scatter_2.png)
+![Age and glucose scatter plot, with color gradient showing BMI.](media/ggplot_scatter_2.png)
 
 Note that when you add an aesthetic for color (or shape, line type, alpha, or size), it will automatically add a legend to your plot.
 
@@ -156,7 +159,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor)
 
 ```
 
-![Age and glucose scatter plot, with color showing classification](media/ggplot_scatter_3.png)
+![Age and glucose scatter plot, with color showing classification.](media/ggplot_scatter_3.png)
 
 ### Distinguish groups more clearly with custom colors and shape
 
@@ -175,7 +178,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor)
 
 ```
 
-![Age and glucose scatter plot, with color showing classification as yellow and blue](media/ggplot_scatter_4.png)
+![Age and glucose scatter plot, with color showing classification as yellow and blue.](media/ggplot_scatter_4.png)
 
 <div class = "important">
 Tip: Don't use color alone to convey important information in your plots because if your end users are unable to distinguish the colors, the plot loses its value. Instead, double-up color information with another element, such as shape, to make the different groups easier to distinguish. For help selecting colors that are most likely to work for users with color vision deficiencies, [read about the colorspace package in R](https://arxiv.org/abs/1903.06490).
@@ -192,7 +195,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
 
 ```
 
-![Age and glucose scatter plot, with color showing classification as yellow dots and blue triangles](media/ggplot_scatter_5.png)
+![Age and glucose scatter plot, with color showing classification as yellow dots and blue triangles.](media/ggplot_scatter_5.png)
 
 ### Changing background color with theme
 
@@ -208,7 +211,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
 
 ```
 
-![Age and glucose scatterplot, with color showing classification as yellow dots and blue triangles and a white background](media/ggplot_scatter_6.png)
+![Age and glucose scatterplot, with color showing classification as yellow dots and blue triangles and a white background.](media/ggplot_scatter_6.png)
 
 ### Custom colors for continuous variables
 
@@ -222,7 +225,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = BMI)) +
   theme_bw()
 ```
 
-![Age and glucose scatterplot, with color gradient from grey to red showing BMI and a white background](media/ggplot_scatter_7.png)
+![Age and glucose scatterplot, with color gradient from grey to red showing BMI and a white background.](media/ggplot_scatter_7.png)
 
 ### Quiz: Scatterplots
 
@@ -279,7 +282,7 @@ ggplot(breast_cancer_data, mapping = aes(x=Glucose)) +
   theme_bw()
 ```
 
-![Histogram showing the distribution of glucose values](media/ggplot_hist_1.png)
+![Histogram showing the distribution of glucose values.](media/ggplot_hist_1.png)
 
 Note that we can use theme_bw() again to make a white background, as we did with the scatter plots.
 
@@ -295,7 +298,7 @@ ggplot(breast_cancer_data, mapping = aes(x=Glucose)) +
 
 ```
 
-![Histogram showing the distribution of glucose values with few bins](media/ggplot_hist_2.png)
+![Histogram showing the distribution of glucose values with few bins.](media/ggplot_hist_2.png)
 
 ```r
 # try more bins
@@ -305,7 +308,7 @@ ggplot(breast_cancer_data, mapping = aes(x=Glucose)) +
 
 ```
 
-![Histogram showing the distribution of glucose values with many bins](media/ggplot_hist_3.png)
+![Histogram showing the distribution of glucose values with many bins.](media/ggplot_hist_3.png)
 
 ### Using color to show groups
 
@@ -326,7 +329,7 @@ ggplot(breast_cancer_data, mapping = aes(x=Glucose, fill = Class_factor)) +
 
 ```
 
-![Histogram showing the distribution of glucose values, with Class 1 in yellow and Class 2 in blue, stacked](media/ggplot_hist_4.png)
+![Histogram showing the distribution of glucose values, with Class 1 in yellow and Class 2 in blue, stacked.](media/ggplot_hist_4.png)
 
 You may be noticing that the distribution for Class 1 appears to be stacked on top of the distribution for Class 2. This makes it easy to still see the overall distribution across both classification groups, but it makes it hard to see what the Class 1 distribution is like on its own. You can have ggplot display both groups as if they were each their own histogram instead of stacking by changing the position argument in the geom_histogram() function. It defaults to "stacked", but if you make it "identity", then it will plot by the height of each bin within each group rather than both groups added together.
 
@@ -345,7 +348,7 @@ ggplot(breast_cancer_data, mapping = aes(x=Glucose, fill = Class_factor)) +
   theme_bw()
 ```
 
-![Histogram showing the distribution of glucose values, with Class 1 in yellow and Class 2 in blue, not stacked](media/ggplot_hist_5.png)
+![Histogram showing the distribution of glucose values, with Class 1 in yellow and Class 2 in blue, not stacked.](media/ggplot_hist_5.png)
 
 ### Transforming axes
 
@@ -358,7 +361,7 @@ ggplot(breast_cancer_data, mapping = aes(x=Insulin)) +
   theme_bw()
 ```
 
-![Histogram showing the distribution of insulin values](media/ggplot_hist_6.png)
+![Histogram showing the distribution of insulin values.](media/ggplot_hist_6.png)
 
 This is a variable with positive skew. That means that the bulk of the data are clustered at the left end of the range between 0 and 10, with a long tail extending up toward 60.
 
@@ -372,7 +375,7 @@ ggplot(breast_cancer_data, mapping = aes(x=Insulin)) +
   theme_bw()
 ```
 
-![Histogram showing the distribution of insulin values with a log10 transformation to correct positive skew](media/ggplot_hist_7.png)
+![Histogram showing the distribution of insulin values with a log10 transformation to correct positive skew.](media/ggplot_hist_7.png)
 
 Note the scale on the x-axis. Fully half of the plot now shows the 0-10 range, allowing us to better see what the distribution there is like.
 
@@ -424,15 +427,116 @@ There are a few common transformations with their own ggplot2 functions, but the
 
 ## Line Plots
 
-Line plots are especially useful when you want to show data points that are connected in a meaningful way. The most common application is repeated measures over time, such as when patients are measured on a given variable (plotted on the y-axis) at several times (plotted along the x-axis), and each line would represent one patient, or a summary across a group of patients.
+Line plots are especially useful when you want to show data points that are connected in a meaningful way. The most common application is repeated measures over time (also called time series data), such as when patients are measured on a given variable (plotted on the y-axis) at several times (plotted along the x-axis), and each line would represent one patient, or a summary across a group of patients.
 
 <div class = "important">
 A word of caution: You may see line plots where the data points don't actually share a meaningful theoretical connection (e.g. all being from the same patient, or the same group). Although it's not uncommon, this is generally not considered good practice and you may receive pushback from reviewers or readers.
 </div>
 
+<div class = "learnmore">
+A more detailed [tutorial on plotting time series in ggplot2](https://www.r-graph-gallery.com/279-plotting-time-series-with-ggplot2.html), including options for changing the way dates display along the x-axis.
+</div>
+
+### Data for line plots
+
+The breast cancer data we've used for the other examples doesn't include any variables that would make sense for a line plot. Instead, for this example we'll use one of the [datasets that comes built-in with R](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html), called `Seatbelts`. It contains some publicly available data about road deaths in the UK from 1969 to 1984. The wearing of seatbelts was made compulsory in the UK in Jan 1983, so this is an interesting period over which to measure driver safety.
+
+This dataset comes already installed in R, so you don't need to download it to be able to use it.
+
+To learn more about the Seatbelts data, pull up its help documentation in R by running the following command:
+
+```r
+?Seatbelts
+```
+
+This data file is actually a special time series object in R, rather than being a regular dataframe. Before we use it for visualization, we'll turn it into a dataframe, and add a column that gives the date of each record. This is not a step you would likely need to take with your own data since most data will import into R as a dataframe by default, not a time series object.
+
+```r
+seatbelt_data <- Seatbelts %>%
+  as.data.frame() %>%
+  # add a column specifying the date
+  mutate(date = seq(from = as.Date("1969-01-01"), to = as.Date("1984-12-01"), by="month"))
+
+```
+
 ### Basic line plot
 
+```r
+ggplot(seatbelt_data, mapping = aes(x = date, y=drivers)) +
+  geom_line() +
+  theme_bw()
+```
+
+![Basic line plot showing the number of driver deaths over time, with date on the x-axis and drivers on the y-axis.](media/ggplot_line_1.png)
+
 ### Using color and line type to show groups
+
+If you want multiple lines on one plot, there are two ways to achieve that.
+
+The first is to add more `geom_line` layers, each with one variable you want plotted. The second is to convert the dataframe into long format, so the variables you want to plot are represented as two columns, one indicating the variable name and a second indicating the value.
+
+### Option 1: Multiple layers
+
+```r
+ggplot(seatbelt_data, mapping = aes(x = date)) +
+  geom_line(mapping = aes(y=drivers), color = "red", linetype = 1) +
+  geom_line(mapping = aes(y=front), color = "blue", linetype = 2) +
+  geom_line(mapping = aes(y=rear), color = "darkgreen", linetype = 3) +
+  theme_bw()
+```
+
+Note that we've added an aesthetic mapping to each of the `geom_line` layers. Plot layers will inherit the aesthetic mapping set in the orginal `ggplot` command, or you can override it for just that layer by putting a new aesthetic mapping in. In this case, each layer inherits the same x-axis, but gets its own separate y-axis variable.
+
+![Line plot with date on the x-axis and drivers on the y-axis, showing three lines: a solid red line, a dashed blue line, and a dotted green line.](media/ggplot_line_2.png)
+
+There are a couple things about this plot that aren't quite ideal:
+
+- The y-axis is labeled "drivers" because that was the first geom layer we put in. The other two lines aren't for drivers, though, they're for front and rear seat passengers. It would be better to have an axis label that described all three lines well, like "deaths".
+- We have to set color and line type individually for each layer. In some cases, that may be your preference, but in others it's more convenient to have colors and line types selected automatically for you without you having to set them.
+- There is no legend showing which variable goes with each color and line type. We could [create a legend manually](https://community.rstudio.com/t/adding-manual-legend-to-ggplot2/41651/3), or we could provide that information in notes below the chart, but it's usually more convenient to have a legend generated automatically.
+
+#### Option 2: Convert data to long format
+
+The second way to create a line plot with several variables is to [convert the data from wide format to long](https://r4ds.had.co.nz/tidy-data.html#longer). This means we'll take the three variables we want to plot (drivers, front, and rear), and convert them into two columns: one that indicates which variable it is (drivers, front, or rear), and another that gives how many deaths occurred.
+
+This is called long format because it will make the data longer and narrower (more rows, fewer columns). In this case, since we have three variables for each time point, the new dataframe will end up being three times as many rows as before. This format is generally harder for humans to read, but it's usually much easier to work with for plotting. There are many cases where you'll find [converting data to a long format makes plotting it easier](https://scc.ms.unimelb.edu.au/resources-list/simple-r-scripts-for-analysis/r-scripts).
+
+To convert the seatbelt dataframe to long format, we'll use the `pivot_longer` function:
+
+```r
+seatbelt_data_long <- seatbelt_data %>%
+  pivot_longer(cols = c(drivers, front, rear), names_to = "seat", values_to = "deaths")
+
+```
+
+In the code above, we are taking the three specified columns (drivers, front, rear), and pivoting them into two columnsm one called seat, and one called deaths.
+
+Then we can use the new long dataframe to plot the data with separate lines for each seat.
+
+```r
+ggplot(seatbelt_data_long, mapping = aes(x=date, y=deaths, color = seat, linetype = seat)) +
+  geom_line() +
+  theme_bw()
+```
+
+Note that now there is only one `geom_line` layer, but the aesthetic mapping is more complex --- it includes both x and y axes, but also color and linetype are set to vary by seat.
+
+![Line plot with date on the x-axis and deaths on the y-axis, showing three lines: a solid red line, a dashed blue line, and a dotted green line, and a legend to the right of the plot.](media/ggplot_line_3.png)
+
+### Adding a reference line
+
+It is possible to add a reference line to any ggplot visualization by adding a layer. We'll add a reference line here to indicate when the seatbelt law was passed (Jan 1983), since we might expect to see the number of deaths decrease after that date.
+
+There are two different functions for adding reference lines in ggplot2: `geom_hline` for horizontal reference lines, and `geom_vline` for vertical reference lines. We'll use `geom_vline` here since we want the line to mark a specific date on the x-axis.
+
+```r
+ggplot(seatbelt_data, mapping = aes(x = date, y=drivers)) +
+  geom_line() +
+  geom_vline(xintercept = as.Date("1983-01-031"), linetype = 2, color = "red") +
+  theme_bw()
+```
+
+![Line plot showing the number of driver deaths over time, with date on the x-axis and drivers on the y-axis. There is a vertical dashed line at January 1983.](media/ggplot_line_4.png)
 
 ### Quiz: Line Plots
 
