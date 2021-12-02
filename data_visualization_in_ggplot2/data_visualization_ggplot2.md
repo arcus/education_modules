@@ -540,11 +540,32 @@ ggplot(seatbelt_data, mapping = aes(x = date, y=drivers)) +
 
 ### Quiz: Line Plots
 
+What is the geom function for creating a line plot in ggplot2?
+
+[[geom_line()]]
+<script>
+  let input = "@input".trim();
+  input == "geom_line()" || input == "geom_line";
+</script>
+
+True or False: Line plots are usually appropriate as an alternative to scatterplots.
+
+[( )] TRUE
+[(X)] FALSE
 ***********************************************************************
 <div class = "answer">
-
+Line plots and scatterplots are generally used for different kinds of data, so a line plot is usually not a good alternative to a scatterplot. Line plots are used to communicate **meaningfully connected** data, most often repeated observations over time.
 </div>
 ***********************************************************************
+
+Modify the code from the first example, the [basic line plot](#basic-line-plot), to add a horizontal reference line at 1000 deaths. Make it a dashed line.
+
+```r  -Solution
+ggplot(seatbelt_data, mapping = aes(x = date, y=drivers)) +
+  geom_line() +
+  geom_hline(yintercept=1000, linetype = 2) +
+  theme_bw()
+```
 
 ## Trend Lines
 

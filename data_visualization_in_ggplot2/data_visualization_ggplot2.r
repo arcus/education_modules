@@ -127,7 +127,7 @@ ggplot(seatbelt_data, mapping = aes(x = date)) +
   geom_line(mapping = aes(y=rear), color = "darkgreen", linetype = 3) +
   theme_bw()
 
-# option 2: make variable part of aes()
+# option 2: convert data to long format
 seatbelt_data_long <- seatbelt_data %>% 
   pivot_longer(cols = c(drivers, front, rear), names_to = "seat", values_to = "deaths")
 ggplot(seatbelt_data_long, mapping = aes(x=date, y=deaths, color = seat, linetype = seat)) + 
