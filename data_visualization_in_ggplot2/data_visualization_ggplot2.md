@@ -7,6 +7,8 @@ language: en
 narrator: UK English Female
 title: Data Visualization in ggplot2
 comment:  This module includes code and explanations for several popular data visualizations, using R's ggplot2 package. It also includes examples of how to modify ggplot2 plots to customize them for different uses (e.g. adhering to journal requirements for visualizations).
+long_description: You can use the ggplot2 library in R to make many different kinds of data visualizations (also called plots, or charts), including scatterplots, histograms, line plots, bar plots, and heatmaps. This module provides an example of each of these kinds of plots, including R code to make them using the ggplot2 library. It may be hard to follow if you are brand new to R, but it is appropriate for beginners with at least a small amount of R experience.
+
 link: https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
 
 -->
@@ -16,6 +18,8 @@ link: https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modu
 # Overview
 
 @comment
+
+**Is this module right for me?** @long_description
 
 **Estimated time to completion:** 1 hr
 
@@ -40,8 +44,6 @@ After completion of this module, learners will be able to:
 * customize some elements of a plot, and know where to look to learn how to customize others
 </div>
 
-Content:
-=======
 
 ## Lesson Preparation
 
