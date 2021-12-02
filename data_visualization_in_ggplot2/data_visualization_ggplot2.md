@@ -15,7 +15,7 @@ link: https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modu
 <div class = "overview">
 # Overview
 
-This module includes code and explanations for several popular data visualizations, using R's ggplot2 package. It also includes examples of how to modify ggplot2 plots to customize them for different uses (e.g. adhering to journal requirements for visualizations).
+@comment
 
 **Estimated time to completion:** 1 hr
 
@@ -77,7 +77,7 @@ If you've already used R for other tasks, you may feel like the R code for ggplo
 plot(wt, mpg, data = mtcars)
 ```
 
-In ggplot2, use the ggplot() function to generate an empty base plot, and then you **add** each of the elements
+In ggplot2, use the ggplot() function to generate an empty base plot, and then you **add** each of the elements FINISH
 
 ## Scatterplots
 
@@ -106,11 +106,11 @@ breast_cancer_data <- read_csv("https://archive.ics.uci.edu/ml/machine-learning-
 
 ```
 
-To make any plot using ggplot2, we start by specifying the variables we'll be using and how --- this information is called the aesthetics, and is included in the aes() argument of the ggplot2 command. Here, the important aesthetics are just x and y. After setting the aesthetics with the ggplot() command, then we add a "layer" specifying how we want ggplot2 to plot this information, in our case as a scatterplot, which is specified using geom_point().
+To make any plot using ggplot2, we start by specifying the variables we'll be using and how --- this information is called the [aesthetic mapping](https://ggplot2.tidyverse.org/reference/aes.html), and is included by using the aes() function in the mapping argument of the ggplot2 command. Here, the important aesthetics are just x and y. After setting the aesthetics with the ggplot() command, then we add a layer specifying how we want ggplot2 to plot this information, in our case as a scatterplot, which is specified using geom_point().
 
 ```r
 # basic scatter plot
-ggplot(breast_cancer_data, aes(y=Glucose, x=Age)) +
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
   geom_point()
 
 ```
@@ -123,7 +123,7 @@ Let's try adding information about a third variable by using color. ggplot2 uses
 
 ```r
 # use color to add information about a continuous variable
-ggplot(breast_cancer_data, aes(y=Glucose, x=Age, color = BMI)) +
+ggplot(breast_cancer_data(y=Glucose, x=Age, color = BMI)) +
   geom_point()
 
 ```
@@ -149,7 +149,7 @@ breast_cancer_data <- breast_cancer_data %>%
                                  labels = c("Class 1", "Class 2")))
 
 # use color to add information about a categorical variable
-ggplot(breast_cancer_data, aes(y=Glucose, x=Age, color = Class_factor)) +
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor)) +
   geom_point()
 
 ```
@@ -167,7 +167,7 @@ So far, we've been sticking to ggplot's default color scheme, but you can contro
 class_colors <- c(`Class 1` = "#FEB648", `Class 2` = "#3390FF")
 
 # add a layer with scale_color_manual to specify the colors you want to use
-ggplot(breast_cancer_data, aes(y=Glucose, x=Age, color = Class_factor)) +
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor)) +
   geom_point() +
   scale_color_manual(values = class_colors)
 
@@ -183,7 +183,7 @@ We'll improve this plot by using shape and color together to mark the Classifica
 
 ```r
 # add shape as a second signal to distinguish Classification
-ggplot(breast_cancer_data, aes(y=Glucose, x=Age, color = Class_factor,
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
                                shape = Class_factor)) +
   geom_point() +
   scale_color_manual(values = class_colors)
@@ -198,7 +198,7 @@ Finally, we can control the background (and other aspects of the plot's general 
 
 ```r
 # change the theme to theme_bw()
-ggplot(breast_cancer_data, aes(y=Glucose, x=Age, color = Class_factor,
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
                                shape = Class_factor)) +
   geom_point() +
   scale_color_manual(values = class_colors) +
@@ -214,7 +214,7 @@ We can also manually control the color for a continuous variable, such as BMI. T
 
 ```r
 # manually adjust color for a continuous variable
-ggplot(breast_cancer_data, aes(y=Glucose, x=Age, color = BMI)) +
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = BMI)) +
   geom_point() +
   scale_color_gradient(low = "lightgrey", high ="darkred") +
   theme_bw()
@@ -272,7 +272,7 @@ Because histograms show just one variable, the only aesthetic they require is x.
 
 ```r
 # a basic histogram
-ggplot(breast_cancer_data, aes(x=Glucose)) +
+ggplot(breast_cancer_data, mapping = aes(x=Glucose)) +
   geom_histogram() +
   theme_bw()
 ```
@@ -287,7 +287,7 @@ The appearance of a histogram can change a lot depending on the number of bins y
 
 ```r
 # try fewer bins
-ggplot(breast_cancer_data, aes(x=Glucose)) +
+ggplot(breast_cancer_data, mapping = aes(x=Glucose)) +
   geom_histogram(bins=10) +
   theme_bw()
 
@@ -297,7 +297,7 @@ ggplot(breast_cancer_data, aes(x=Glucose)) +
 
 ```r
 # try more bins
-ggplot(breast_cancer_data, aes(x=Glucose)) +
+ggplot(breast_cancer_data, mapping = aes(x=Glucose)) +
   geom_histogram(bins=100) +
   theme_bw()
 
@@ -317,7 +317,7 @@ Note that we can set fill manually, just as we did with color in the scatterplot
 
 ```r
 # use color to show Classification as well
-ggplot(breast_cancer_data, aes(x=Glucose, fill = Class_factor)) +
+ggplot(breast_cancer_data, mapping = aes(x=Glucose, fill = Class_factor)) +
   geom_histogram(bins=30) +
   scale_fill_manual(values = class_colors) +
   theme_bw()
@@ -337,7 +337,7 @@ Tip: When your data overlap on a plot, use alpha to make them more transparent.
 ```r
 # plot as two overlapping histograms, rather than stacked bins
 # use alpha to control transparency
-ggplot(breast_cancer_data, aes(x=Glucose, fill = Class_factor)) +
+ggplot(breast_cancer_data, mapping = aes(x=Glucose, fill = Class_factor)) +
   geom_histogram(bins=30, alpha = .5, position = "identity") +
   scale_fill_manual(values = class_colors) +
   theme_bw()
@@ -351,7 +351,7 @@ Let's take a look at another variable in the breast cancer data, Insulin:
 
 ```r
 # a histogram of a positively skewed variable
-ggplot(breast_cancer_data, aes(x=Insulin)) +
+ggplot(breast_cancer_data, mapping = aes(x=Insulin)) +
   geom_histogram(bins=30) +
   theme_bw()
 ```
@@ -364,7 +364,7 @@ You may want to adjust the scale so that you can see more of the detail in the 0
 
 ```r
 # transform the x-axis to show more detail at lower values
-ggplot(breast_cancer_data, aes(x=Insulin)) +
+ggplot(breast_cancer_data, mapping = aes(x=Insulin)) +
   geom_histogram(bins=30) +
   scale_x_continuous(trans = "log10") +
   theme_bw()
