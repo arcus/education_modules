@@ -6,7 +6,8 @@ version:  0.0.2
 language: en
 narrator: UK English Female
 title: Introduction to Python
-comment:  This module introduces the Python programming language and demonstrates how to write Python code in the Jupyter notebook.
+comment:  This module introduces the Python programming language, explores why Python is useful in research, and demonstrates how to write Python code in a Jupyter notebook (and why you might want to).
+long_description: Python is a versatile programming language that is frequently used for data analysis, machine learning, web development, and more. If are interested in learning about any of these topics and are new to programming, are joining a team where Python is used, or have just heard about Python and are looking for a general introduction to the language, this module is a good place to start. This is appropriate for someone at the beginner level.
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
 -->
 
@@ -16,7 +17,13 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/mod
 
 ## Overview
 
-In this module, learners will become familiar with Python code, explore why they might want to use it in their research, and practice using Python in a notebook. This module is appropriate for a learner at the beginner level.
+@comment
+
+### Is this module right for me?
+
+@long_description
+
+### Details
 
 **Estimated time to completion**: ~ 30 min
 
@@ -30,27 +37,6 @@ In this module, learners will become familiar with Python code, explore why they
 * Download Python to their own computers
 
 </div>
-
-Content:
-=======
-
-* [Preparation](#Preparation) (2 min activity)
-
-* [The Python Programming Language](#The-Python-Programming-Language) (2 min read)
-
-* [Python Code](#Python-Code) (3 min read)
-
-* [Python Scripts](#Python-Scripts) (3 min read)
-
-* [Jupyter Notebooks](#Jupyter-Notebooks) (2 min read)
-
-* [Using a Jupyter Notebook](#Using-a-Jupyter-Notebook) (10 min activity)
-
-* [Next Steps](#Next-Steps) (2 min read)
-
-   * [Further Reading](#Further-Reading) (1 min read)
-
-* [Feedback](#Feedback) (5 min survey)
 
 ### Preparation
 
