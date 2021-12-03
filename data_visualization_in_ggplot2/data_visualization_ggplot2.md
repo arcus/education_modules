@@ -685,7 +685,7 @@ Note that unlike geom\_smooth, geom\_abline doesn't draw a confidence interval a
 
 The third approach for drawing trend lines actually uses the same geom we used for line plots, geom\_line. It takes advantage of the fact that R returns the predicted values for any model as a hidden piece of the model results --- that means you can use those predicted values to plot a line, which will draw any trendline produced by your model.
 
-Just as with [the geom\_abline approach](#method-2-geom_abline), first you need a model object. We can use the same model we saved for the geom\_abline plot. This time, though, instead of pulling out the coefficients for the intercept and slope to draw a line that way, we'll use the fitted values.
+Just as with [the geom\_abline approach](#method-2:-geom_abline), first you need a model object. We can use the same model we saved for the geom\_abline plot. This time, though, instead of pulling out the coefficients for the intercept and slope to draw a line that way, we'll use the fitted values.
 
 The fitted values are the expected outcome (Glucose) value for each observation in the data, based on the predictor(s) (in this case, just Age). If we connect all of the fitted values, that is the trend line from the model.
 
@@ -736,7 +736,7 @@ One good strategy is to generate trend lines a couple different ways while you'r
 </div>
 ***********************************************************************
 
-Modify the code from [the first example in the geom\_smooth approach](#method-1-geom_smooth) to change the appearance of the trend line it draws. Make it black, and make it a dashed line. (Hint: See the examples in the [line plots](#line-plots) section for a reminder of setting color and line type.)
+Modify the code from [the first example in the geom\_smooth approach](#method-1:-geom_smooth) to change the appearance of the trend line it draws. Make it black, and make it a dashed line. (Hint: See the examples in the [line plots](#line-plots) section for a reminder of setting color and line type.)
 
 ```r  -Solution
 ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
