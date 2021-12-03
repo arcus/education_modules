@@ -475,7 +475,7 @@ If you want multiple lines on one plot, there are two ways to achieve that.
 
 The first is to add more `geom_line` layers, each with one variable you want plotted. The second is to convert the dataframe into long format, so the variables you want to plot are represented as two columns, one indicating the variable name and a second indicating the value.
 
-### Option 1: Multiple layers
+#### Option 1: Multiple layers
 
 ```r
 ggplot(seatbelt_data, mapping = aes(x = date)) +
@@ -564,6 +564,17 @@ Modify the code from the first example, the [basic line plot](#basic-line-plot),
 ggplot(seatbelt_data, mapping = aes(x = date, y=drivers)) +
   geom_line() +
   geom_hline(yintercept=1000, linetype = 2) +
+  theme_bw()
+```
+
+Modify the code from the [long data version of the plot with multiple lines](#option-2) so that you control the colors used for the three lines. You can set them to anything you like. (Hint: You can use the same approach we used in the scatterplot section to [distinguish groups more clearly with custom colors and shape](#distinguish-groups-more-clearly-with-custom-colors-and-shape).)
+
+```r  -Solution
+colors <- c(drivers = "#FEB648", front = , "#7B085D", rear = "#3390FF")
+
+ggplot(seatbelt_data_long, mapping = aes(x=date, y=deaths, color = seat, linetype = seat)) +
+  geom_line() +
+  scale_color_manual(values = colors) +
   theme_bw()
 ```
 
