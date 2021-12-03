@@ -113,7 +113,7 @@ breast_cancer_data <- read_csv("https://archive.ics.uci.edu/ml/machine-learning-
 
 ### Basic scatterplot
 
-To make any plot using ggplot2, we start by specifying the variables we'll be using and how --- this information is called the [aesthetic mapping](https://ggplot2.tidyverse.org/reference/aes.html), and is included by using the aes() function in the mapping argument of the ggplot2 command. Here, the important aesthetics are just x and y. After setting the aesthetics with the ggplot() command, then we add a layer specifying how we want ggplot2 to plot this information, in our case as a scatterplot, which is specified using geom_point().
+To make any plot using ggplot2, we start by specifying the variables we'll be using and how --- this information is called the [aesthetic mapping](https://ggplot2.tidyverse.org/reference/aes.html), and is included by using the aes() function in the mapping argument of the ggplot2 command. Here, the important aesthetics are just x and y. After setting the aesthetics with the ggplot() command, then we add a layer specifying how we want ggplot2 to plot this information, in our case as a scatterplot, which is specified using geom\_point().
 
 ```r
 # basic scatter plot
@@ -333,7 +333,7 @@ ggplot(breast_cancer_data, mapping = aes(x=Glucose, fill = Class_factor)) +
 
 ![Histogram showing the distribution of glucose values, with Class 1 in yellow and Class 2 in blue, stacked.](media/ggplot_hist_4.png)
 
-You may be noticing that the distribution for Class 1 appears to be stacked on top of the distribution for Class 2. This makes it easy to still see the overall distribution across both classification groups, but it makes it hard to see what the Class 1 distribution is like on its own. You can have ggplot display both groups as if they were each their own histogram instead of stacking by changing the position argument in the geom_histogram() function. It defaults to "stacked", but if you make it "identity", then it will plot by the height of each bin within each group rather than both groups added together.
+You may be noticing that the distribution for Class 1 appears to be stacked on top of the distribution for Class 2. This makes it easy to still see the overall distribution across both classification groups, but it makes it hard to see what the Class 1 distribution is like on its own. You can have ggplot display both groups as if they were each their own histogram instead of stacking by changing the position argument in the geom\_histogram() function. It defaults to "stacked", but if you make it "identity", then it will plot by the height of each bin within each group rather than both groups added together.
 
 If we do this, we'll also need to control the transparency in the plot --- otherwise one distribution will obscure the other where they overlap. Alpha is a value between 0 (totally transparent) and 1 (totally opaque), and it defaults to 1. We'll try it at .5 here to see if that lets us see both distributions well enough.
 
@@ -586,9 +586,9 @@ Trend lines look like line plots, but they are different in one key way: They sh
 
 Trend lines are used to show the overall trend in a scatterplot. Sometimes, the scatterplot points themselves are omitted and just the trend lines are shown to keep the visualization as clean as possible, but they're still implied.
 
-### Method 1: geom_smooth
+### Method 1: geom\_smooth
 
-Because trend lines are such a useful visual summary, ggplot2 provides several built-in functions to add trend lines to your plots quickly and easily. These functions are available in the geom_smooth() command. If you add a geom_smooth layer to a scatterplot, it will show a trend line.
+Because trend lines are such a useful visual summary, ggplot2 provides several built-in functions to add trend lines to your plots quickly and easily. These functions are available in the geom\_smooth() command. If you add a geom\_smooth layer to a scatterplot, it will show a trend line.
 
 ```r
 ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
@@ -600,7 +600,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
 
 ![Scatterplot with age on the x-axis and glucose on the y-axis, and a curving trend line running through the points, with a shaded grey band around it.](media/ggplot_trend_1.png)
 
-By default[^1](Actually, the default is only a loess curve for 1000 or fewer observations; it switches to a generalized additive model if you have more.), geom_smooth() uses a loess curve to summarize your data, rather than a straight linear regression best fit line. To see a linear trendline, set the `method` argument to "lm" (short for linear model) in the geom_smooth command.
+By default[^1](Actually, the default is only a loess curve for 1000 or fewer observations; it switches to a generalized additive model if you have more.), geom\_smooth() uses a loess curve to summarize your data, rather than a straight linear regression best fit line. To see a linear trendline, set the `method` argument to "lm" (short for linear model) in the geom\_smooth command.
 
 ```r
 ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
@@ -612,7 +612,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
 
 ![Scatterplot with age on the x-axis and glucose on the y-axis, and a straight trend line running through the points, with a shaded grey band around it.](media/ggplot_trend_2.png)
 
-What happens to the trend line if you make the underlying scatterplot more complicated? Let's try using geom_smooth to put a trend line on the scatterplot we made [distinguishing groups with custom colors and shape](#distinguish-groups-more-clearly-with-custom-colors-and-shape).
+What happens to the trend line if you make the underlying scatterplot more complicated? Let's try using geom\_smooth to put a trend line on the scatterplot we made [distinguishing groups with custom colors and shape](#distinguish-groups-more-clearly-with-custom-colors-and-shape).
 
 ```r
 ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
@@ -626,9 +626,9 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
 
 ![Scatterplot with age on the x-axis and glucose on the y-axis, showing Class 1 as yellow dots and Class 2 as blue triangles and two straight trend lines running through each set of points (yellow and blue, respectively), with shaded grey bands around them.](media/ggplot_trend_3.png)
 
-Note that the color aesthetic affects the line drawn by geom_smooth as well. Each layer inherits the aesthetic mappings from the original ggplot command, so geom_smooth is drawn using x, y, and Class (set by color, which affects lines, and shape which has no effect on lines) --- that means we automatically get a trend line fit within each Class.
+Note that the color aesthetic affects the line drawn by geom\_smooth as well. Each layer inherits the aesthetic mappings from the original ggplot command, so geom\_smooth is drawn using x, y, and Class (set by color, which affects lines, and shape which has no effect on lines) --- that means we automatically get a trend line fit within each Class.
 
-The grey confidence interval around the trend lines doesn't change, though, because that is controlled by fill, not color (for a reminder about color vs fill in ggplot2, see how we changed color in the [histograms](#histograms)). To make the confidence interval match the Class color as well, add a fill aesthetic. You can add it either to the ggplot command at the top, or you could put a `aes()` mapping into the geom_smooth layer itself.
+The grey confidence interval around the trend lines doesn't change, though, because that is controlled by fill, not color (for a reminder about color vs fill in ggplot2, see how we changed color in the [histograms](#histograms)). To make the confidence interval match the Class color as well, add a fill aesthetic. You can add it either to the ggplot command at the top, or you could put a `aes()` mapping into the geom\_smooth layer itself.
 
 ```r
 ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor, fill = Class_factor,
@@ -642,18 +642,18 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
 
 ![Scatterplot with age on the x-axis and glucose on the y-axis, showing Class 1 as yellow dots and Class 2 as blue triangles and two straight trend lines running through each set of points (yellow and blue, respectively), with shaded yellow and blue translucent bands around them.](media/ggplot_trend_4.png)
 
-### Method 2: geom_abline
+### Method 2: geom\_abline
 
 Rather than having ggplot2 run a linear regression for you, you may prefer to use the coefficients from your model to draw the line of best fit directly.
 
 This is especially handy if your model differs from ggplot2's, or if you're not sure what model ggplot2 is running and you want to make sure your plotted trend line matches the model you ran.
 
-The geom_abline() function allows you to specify a y-intercept and slope (which you can pull from your model coefficients) and it will draw a line accordingly.
+The geom\_abline() function allows you to specify a y-intercept and slope (which you can pull from your model coefficients) and it will draw a line accordingly.
 
 The first step is to run the linear model you want to get trend lines from. We won't step through how to run linear models in R here.
 
 <div class = "learnmore">
-For a more in-depth example of linear regression models in R, including using geom_abline to draw linear trend lines, see this [Arcus Education post on ordinary linear regression](https://education.arcus.chop.edu/ordinary_linear_regression/).
+For a more in-depth example of linear regression models in R, including using geom\_abline to draw linear trend lines, see this [Arcus Education post on ordinary linear regression](https://education.arcus.chop.edu/ordinary_linear_regression/).
 </div>
 
 ```r
@@ -666,7 +666,7 @@ model$coefficients
 
 Briefly, this code estimates a linear model from the breast_cancer_data dataframe, with Glucose as the outcome and Age as the predictor and saves it as an object named `model`. We can see the coefficients estimated from the model by running `model$coefficients`.
 
-We can then use those coefficients in a geom_abline layer on our scatterplot to draw this trend line.
+We can then use those coefficients in a geom\_abline layer on our scatterplot to draw this trend line.
 
 ```r
 ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
@@ -679,17 +679,17 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
 
 ![Scatterplot with age on the x-axis and glucose on the y-axis, and a straight black trend line running through the points.](media/ggplot_trend_5.png)
 
-Note that unlike geom_smooth, geom_abline doesn't draw a confidence interval around the trend line. Also note that since we're drawing the trend line manually, changing the underlying scatterplot won't affect the line drawn by geom_abline --- if we were to add color and shape aesthetics, it would still just draw this same single black line.
+Note that unlike geom\_smooth, geom\_abline doesn't draw a confidence interval around the trend line. Also note that since we're drawing the trend line manually, changing the underlying scatterplot won't affect the line drawn by geom\_abline --- if we were to add color and shape aesthetics, it would still just draw this same single black line.
 
-### Method 3: geom_line
+### Method 3: geom\_line
 
-The third approach for drawing trend lines actually uses the same geom we used for line plots, geom_line. It takes advantage of the fact that R returns the predicted values for any model as a hidden piece of the model results --- that means you can use those predicted values to plot a line, which will draw any trendline produced by your model.
+The third approach for drawing trend lines actually uses the same geom we used for line plots, geom\_line. It takes advantage of the fact that R returns the predicted values for any model as a hidden piece of the model results --- that means you can use those predicted values to plot a line, which will draw any trendline produced by your model.
 
-Just as with [the geom_abline approach](#method-2-geom_abline), first you need a model object. We can use the same model we saved for the geom_abline plot. This time, though, instead of pulling out the coefficients for the intercept and slope to draw a line that way, we'll use the fitted values.
+Just as with [the geom\_abline approach](#method-2-geom_abline), first you need a model object. We can use the same model we saved for the geom\_abline plot. This time, though, instead of pulling out the coefficients for the intercept and slope to draw a line that way, we'll use the fitted values.
 
 The fitted values are the expected outcome (Glucose) value for each observation in the data, based on the predictor(s) (in this case, just Age). If we connect all of the fitted values, that is the trend line from the model.
 
-Recall from the section on [line plots](#line-plots) that the geom_line function connects points in a line. So we'll add a geom_line layer and set its aesthetic mapping to use Age as the x-axis and `model$fitted.values` for the y-axis. It will inherit `x=Age` from the aesthetic mapping in the original ggplot command, but we want to override the y mapping and replace it with `y=model$fitted.values` for just the geom_line layer.
+Recall from the section on [line plots](#line-plots) that the geom\_line function connects points in a line. So we'll add a geom\_line layer and set its aesthetic mapping to use Age as the x-axis and `model$fitted.values` for the y-axis. It will inherit `x=Age` from the aesthetic mapping in the original ggplot command, but we want to override the y mapping and replace it with `y=model$fitted.values` for just the geom\_line layer.
 
 ```r
 ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
@@ -705,7 +705,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
 There's a second way to get predicted values from a model, the `predict` function. So `predict(model)` will give you the same set of fitted values as `model$fitted.values`. The `predict` function gives you a little more flexibility (for example, to get fitted values from a different dataset from the one you originally trained the model on), but at the default settings it will give you the exact same results as `model$fitted.values`.
 </div>
 
-Note that the results from the geom_abline approach and the geom_line approach look very similar, but there's one important difference: The geom_abline approach will draw lines that extend all the way from one edge of your plot to the other, while geom_line (like geom_smooth) will only draw the trend line across the range of the observed data. This means geom_abline can imply predictions outside of the observed range, which is often okay but sometimes not what you want.
+Note that the results from the geom\_abline approach and the geom\_line approach look very similar, but there's one important difference: The geom\_abline approach will draw lines that extend all the way from one edge of your plot to the other, while geom\_line (like geom\_smooth) will only draw the trend line across the range of the observed data. This means geom\_abline can imply predictions outside of the observed range, which is often okay but sometimes not what you want.
 
 ### Quiz: Trend Lines
 
@@ -718,25 +718,25 @@ What is the geom function for creating a trend line in ggplot2?
 </script>
 ***********************************************************************
 <div class = "answer">
-This is a little bit of a trick question (sorry!) since there is no single correct answer: geom_smooth(), geom_line(), geom_abline() all work to create trend lines!
+This is a little bit of a trick question (sorry!) since there is no single correct answer: geom\_smooth(), geom\_line(), geom\_abline() all work to create trend lines!
 
-If you use geom_abline or geom_line, you need to first run the model, and then use the model results in your ggplot commands. The geom_smooth function actually runs a model for you behind the scenes. Another difference is that geom_smooth can print a confidence interval around your trend line, but geom_line and geom_abline just draw the line itself.
+If you use geom\_abline or geom\_line, you need to first run the model, and then use the model results in your ggplot commands. The geom\_smooth function actually runs a model for you behind the scenes. Another difference is that geom\_smooth can print a confidence interval around your trend line, but geom\_line and geom\_abline just draw the line itself.
 </div>
 ***********************************************************************
 
-True or False: If you wanted to, you could use geom_abline or geom_line to draw a totally unrelated trend line on a scatterplot (e.g. one derived from different data).
+True or False: If you wanted to, you could use geom\_abline or geom\_line to draw a totally unrelated trend line on a scatterplot (e.g. one derived from different data).
 
 [(X)] TRUE
 [( )] FALSE
 ***********************************************************************
 <div class = "answer">
-True! And this is an important point, because this can happen by accident. If you run several models in your code, always double check to make sure you're referencing the correct model to get the coefficients (for geom_abline) or fitted values (for geom_line) when you create the trend line.
+True! And this is an important point, because this can happen by accident. If you run several models in your code, always double check to make sure you're referencing the correct model to get the coefficients (for geom\_abline) or fitted values (for geom\_line) when you create the trend line.
 
-One good strategy is to generate trend lines a couple different ways while you're working and check to make sure they all look the same. For example, add a trend line using geom_smooth, and then run that model yourself and try to generate the same trend line using geom_line or geom_abline. That way you can confirm that you know the details of the model that geom_smooth is using.  
+One good strategy is to generate trend lines a couple different ways while you're working and check to make sure they all look the same. For example, add a trend line using geom\_smooth, and then run that model yourself and try to generate the same trend line using geom\_line or geom\_abline. That way you can confirm that you know the details of the model that geom\_smooth is using.  
 </div>
 ***********************************************************************
 
-Modify the code from [the first example in the geom_smooth approach](#method-1-geom_smooth) to change the appearance of the trend line it draws. Make it black, and make it a dashed line. (Hint: See the examples in the [line plots](#line-plots) section for a reminder of setting color and line type.)
+Modify the code from [the first example in the geom\_smooth approach](#method-1-geom_smooth) to change the appearance of the trend line it draws. Make it black, and make it a dashed line. (Hint: See the examples in the [line plots](#line-plots) section for a reminder of setting color and line type.)
 
 ```r  -Solution
 ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
