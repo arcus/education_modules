@@ -144,3 +144,46 @@ ggplot(seatbelt_data, mapping = aes(x = date, y=drivers)) +
 # ---------------
 # Trend lines
 # ---------------
+
+# Method 1: geom_smooth
+
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_point() + 
+  geom_smooth() + 
+  theme_bw()
+
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_point() + 
+  geom_smooth(method = "lm") + 
+  theme_bw()
+
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
+                                         shape = Class_factor)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  scale_color_manual(values = class_colors) + 
+  theme_bw()
+
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor, fill = Class_factor,
+                                         shape = Class_factor)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  scale_color_manual(values = class_colors) + 
+  theme_bw()
+
+# Method 2: geom_abline
+
+# run a linear model
+model <- lm(Glucose ~ Age, data = breast_cancer_data)
+# print the coefficients estimated from the model, so you can see what they are
+model$coefficients
+
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_point() + 
+  geom_abline(intercept = model$coefficients[1], 
+              slope = model$coefficients[2]) + 
+  theme_bw()
+
+
+# Method 3: geom_line
+
