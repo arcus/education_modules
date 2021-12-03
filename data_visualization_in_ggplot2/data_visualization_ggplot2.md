@@ -10,8 +10,11 @@ comment:  This module includes code and explanations for several popular data vi
 long_description: You can use the ggplot2 library in R to make many different kinds of data visualizations (also called plots, or charts), including scatterplots, histograms, line plots, and trend lines. This module provides an example of each of these kinds of plots, including R code to make them using the ggplot2 library. It may be hard to follow if you are brand new to R, but it is appropriate for beginners with at least a small amount of R experience.
 
 @learning_objectives
+
   - use ggplot2 to create several common data visualizations
   - customize some elements of a plot, and know where to look to learn how to customize others
+
+testing
 @end
 
 link: https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
