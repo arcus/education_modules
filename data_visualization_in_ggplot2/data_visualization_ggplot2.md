@@ -709,13 +709,41 @@ Note that the results from the geom_abline approach and the geom_line approach l
 
 ### Quiz: Trend Lines
 
+What is the geom function for creating a trend line in ggplot2?
 
-
+[[geom_smooth(), geom_line(), geom_abline() all work!]]
+<script>
+  let input = "@input".trim();
+  /geom_smooth|geom_line|geom_abline/.test(input);
+</script>
 ***********************************************************************
 <div class = "answer">
+This is a little bit of a trick question (sorry!) since there is no single correct answer: geom_smooth(), geom_line(), geom_abline() all work to create trend lines!
 
+If you use geom_abline or geom_line, you need to first run the model, and then use the model results in your ggplot commands. The geom_smooth function actually runs a model for you behind the scenes. Another difference is that geom_smooth can print a confidence interval around your trend line, but geom_line and geom_abline just draw the line itself.
 </div>
 ***********************************************************************
+
+True or False: If you wanted to, you could use geom_abline or geom_line to draw a totally unrelated trend line on a scatterplot (e.g. one derived from different data).
+
+[(X)] TRUE
+[( )] FALSE
+***********************************************************************
+<div class = "answer">
+True! And this is an important point, because this can happen by accident. If you run several models in your code, always double check to make sure you're referencing the correct model to get the coefficients (for geom_abline) or fitted values (for geom_line) when you create the trend line.
+
+One good strategy is to generate trend lines a couple different ways while you're working and check to make sure they all look the same. For example, add a trend line using geom_smooth, and then run that model yourself and try to generate the same trend line using geom_line or geom_abline. That way you can confirm that you know the details of the model that geom_smooth is using.  
+</div>
+***********************************************************************
+
+Modify the code from [the first example in the geom_smooth approach](#method-1-geom_smooth) to change the appearance of the trend line it draws. Make it black, and make it a dashed line. (Hint: See the examples in the [line plots](#line-plots) section for a reminder of setting color and line type.)
+
+```r  -Solution
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_point() +
+  geom_smooth(color = "black", linetype = 2) +
+  theme_bw()
+```
 
 ## Additional Resources
 
