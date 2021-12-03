@@ -617,7 +617,8 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
 What happens to the trend line if you make the underlying scatterplot more complicated? Let's try using geom\_smooth to put a trend line on the scatterplot we made [distinguishing groups with custom colors and shape](#distinguish-groups-more-clearly-with-custom-colors-and-shape).
 
 ```r
-ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age,
+                                         color = Class_factor,
                                          shape = Class_factor)) +
   geom_point() +
   geom_smooth(method = "lm") +
@@ -633,7 +634,9 @@ Note that the color aesthetic affects the line drawn by geom\_smooth as well. Ea
 The grey confidence interval around the trend lines doesn't change, though, because that is controlled by fill, not color (for a reminder about color vs fill in ggplot2, see how we changed color in the [histograms](#histograms)). To make the confidence interval match the Class color as well, add a fill aesthetic. You can add it either to the ggplot command at the top, or you could put a `aes()` mapping into the geom\_smooth layer itself.
 
 ```r
-ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor, fill = Class_factor,
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age,
+                                         color = Class_factor,
+                                         fill = Class_factor,
                                          shape = Class_factor)) +
   geom_point() +
   geom_smooth(method = "lm") +
