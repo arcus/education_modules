@@ -14,7 +14,8 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
   geom_point()
 
 # use color to add information about a continuous variable
-ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = BMI)) +
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, 
+                                         color = BMI)) +
   geom_point()
 
 # the Classification variable is currently treated as numeric,
@@ -25,7 +26,8 @@ breast_cancer_data <- breast_cancer_data %>%
                                  labels = c("Class 1", "Class 2")))
 
 # use color to add information about a categorical variable
-ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor)) +
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, 
+                                         color = Class_factor)) +
   geom_point()
 
 # save the colors you want to use as a vector
@@ -34,19 +36,22 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor)
 class_colors <- c(`Class 1` = "#FEB648", `Class 2` = "#3390FF")
 
 # add a layer with scale_color_manual to specify the colors you want to use
-ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor)) +
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, 
+                                         color = Class_factor)) +
   geom_point() +
   scale_color_manual(values = class_colors)
 
 # add shape as a second signal to distinguish Classification
-ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
-                               shape = Class_factor)) +
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, 
+                                         color = Class_factor,
+                                         shape = Class_factor)) +
   geom_point() +
   scale_color_manual(values = class_colors)
 
 # change the theme to theme_bw()
-ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
-                               shape = Class_factor)) +
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, 
+                                         color = Class_factor,
+                                         shape = Class_factor)) +
   geom_point() +
   scale_color_manual(values = class_colors) +
   theme_bw()
@@ -111,7 +116,9 @@ ggplot(breast_cancer_data, mapping = aes(x=Insulin)) +
 seatbelt_data <- Seatbelts %>% 
   as.data.frame() %>%
   # add a column specifying the date
-  mutate(date = seq(from = as.Date("1969-01-01"), to = as.Date("1984-12-01"), by="month"))
+  mutate(date = seq(from = as.Date("1969-01-01"), 
+                    to = as.Date("1984-12-01"), 
+                    by="month"))
 
 # basic line plot
 ggplot(seatbelt_data, mapping = aes(x = date, y=drivers)) + 
@@ -130,7 +137,9 @@ ggplot(seatbelt_data, mapping = aes(x = date)) +
 # option 2: convert data to long format
 seatbelt_data_long <- seatbelt_data %>% 
   pivot_longer(cols = c(drivers, front, rear), names_to = "seat", values_to = "deaths")
-ggplot(seatbelt_data_long, mapping = aes(x=date, y=deaths, color = seat, linetype = seat)) + 
+ggplot(seatbelt_data_long, mapping = aes(x=date, y=deaths, 
+                                         color = seat, 
+                                         linetype = seat)) + 
   geom_line() + 
   theme_bw()
 
@@ -157,14 +166,17 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
   geom_smooth(method = "lm") + 
   theme_bw()
 
-ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, 
+                                         color = Class_factor,
                                          shape = Class_factor)) +
   geom_point() +
   geom_smooth(method = "lm") +
   scale_color_manual(values = class_colors) + 
   theme_bw()
 
-ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor, fill = Class_factor,
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, 
+                                         color = Class_factor, 
+                                         fill = Class_factor,
                                          shape = Class_factor)) +
   geom_point() +
   geom_smooth(method = "lm") +
@@ -187,3 +199,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
 
 # Method 3: geom_line
 
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_point() + 
+  geom_line(mapping = aes(y=model$fitted.values)) + 
+  theme_bw()

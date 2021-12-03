@@ -78,7 +78,9 @@ If you've already used R for other tasks, you may feel like the R code for ggplo
 plot(wt, mpg, data = mtcars)
 ```
 
-In ggplot2, use the ggplot() function to generate an empty base plot, and then you **add** each of the elements FINISH
+In ggplot2, you use the ggplot() function to generate an empty base plot, and then you **add** each of the elements of the plot as a layer. For example, to generate a scatterplot, you start with a command like `ggplot(breast_cancer_data, mapping = aes(x=Age, y=Glucose))` to set up the basic information for the plot, and then you add a layer saying what kind of plot you want to draw, like `+ geom_point()`.
+
+At first, this seems like more work than just using a single command in another plotting system (e.g. in base R, `plot(Glucose ~ Age, data = breast_cancer_data)` will give you a scatterplot), and it is true that ggplot visualizations are often more lines of code than other kinds of visualizations. The idea of breaking a plot into different kinds of pieces and applying each as a layer has some advantages, though, in that it makes it easier to tweak plots to get exactly what you want --- this is important both for generating plots that can be made to adhere to formatting rules (like for a journal article submission), and because tweaking a plot and re-visualizing the data is a powerful way to explore trends and patterns when you're analyzing a data set.
 
 <div class = "learnmore">
 To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf)
@@ -477,7 +479,7 @@ If you want multiple lines on one plot, there are two ways to achieve that.
 
 The first is to add more `geom_line` layers, each with one variable you want plotted. The second is to convert the dataframe into long format, so the variables you want to plot are represented as two columns, one indicating the variable name and a second indicating the value.
 
-#### Option 1: Multiple layers
+#### Method 1: Multiple layers
 
 ```r
 ggplot(seatbelt_data, mapping = aes(x = date)) +
@@ -497,7 +499,7 @@ There are a couple things about this plot that aren't quite ideal:
 - We have to set color and line type individually for each layer. In some cases, that may be your preference, but in others it's more convenient to have colors and line types selected automatically for you without you having to set them.
 - There is no legend showing which variable goes with each color and line type. We could [create a legend manually](https://community.rstudio.com/t/adding-manual-legend-to-ggplot2/41651/3), or we could provide that information in notes below the chart, but it's usually more convenient to have a legend generated automatically.
 
-#### Option 2: Convert data to long format
+#### Method 2: Convert data to long format
 
 The second way to create a line plot with several variables is to [convert the data from wide format to long](https://r4ds.had.co.nz/tidy-data.html#longer). This means we'll take the three variables we want to plot (drivers, front, and rear), and convert them into two columns: one that indicates which variable it is (drivers, front, or rear), and another that gives how many deaths occurred.
 
@@ -569,7 +571,7 @@ ggplot(seatbelt_data, mapping = aes(x = date, y=drivers)) +
   theme_bw()
 ```
 
-Modify the code from the [long data version of the plot with multiple lines](#option-2) so that you control the colors used for the three lines. You can set them to anything you like. (Hint: You can use the same approach we used in the scatterplot section to [distinguish groups more clearly with custom colors and shape](#distinguish-groups-more-clearly-with-custom-colors-and-shape).)
+Modify the code from the [long data version of the plot with multiple lines](#method-2:-convert-data-to-long-format) so that you control the colors used for the three lines. You can set them to anything you like. (Hint: You can use the same approach we used in the scatterplot section to [distinguish groups more clearly with custom colors and shape](#distinguish-groups-more-clearly-with-custom-colors-and-shape).)
 
 ```r  -Solution
 colors <- c(drivers = "#FEB648", front = , "#7B085D", rear = "#3390FF")
@@ -582,7 +584,7 @@ ggplot(seatbelt_data_long, mapping = aes(x=date, y=deaths, color = seat, linetyp
 
 ## Trend Lines
 
-Trend lines look like line plots, but they are different in one key way: They show a **summary* of other data (usually a linear model), rather than plotting data directly.
+Trend lines look like line plots, but they are different in one key way: They show a **summary** of other data (usually a linear model), rather than plotting data directly.
 
 Trend lines are used to show the overall trend in a scatterplot. Sometimes, the scatterplot points themselves are omitted and just the trend lines are shown to keep the visualization as clean as possible, but they're still implied.
 
@@ -743,6 +745,46 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
   geom_point() +
   geom_smooth(color = "black", linetype = 2) +
   theme_bw()
+```
+
+Write code to draw a linear trend line showing the relationship between Age and Glucose, but create a plot with just the line, no scatterplot underneath. Try it each of the three ways, using geom\_smooth, geom\_abline, and geom\_line.
+
+```r  -Solution using geom_smooth
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_smooth(method = "lm") +
+  theme_bw()
+```
+```r  -Solution using geom_abline
+# note that this doesn't actually plot a line, since there are no observations to set the x and y scales
+# you'll see a blank plot
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_abline(intercept = model$coefficients[1], slope = model$coefficients[2]) +
+  theme_bw()
+
+# you can set the x and y scales yourself manually by adding a layer for each
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_abline(intercept = model$coefficients[1], slope = model$coefficients[2]) +
+  scale_y_continuous(limits = c(min(breast_cancer_data$Glucose), max(breast_cancer_data$Glucose))) +
+  scale_x_continuous(limits = c(min(breast_cancer_data$Age), max(breast_cancer_data$Age))) +
+  theme_bw()
+
+```
+```r  -Solution using geom_line
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_line(mapping = aes(y=model$fitted.values)) +
+  theme_bw()
+```
+```r  -Another solution, using alpha
+# you can also make any element of a plot invisible by setting its alpha to 0
+# in this case, we can make the dots of the scatterplot disappear from any of the plots we made above
+# for example:
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_point(alpha = 0) +
+  geom_line(mapping = aes(y=model$fitted.values)) +
+  theme_bw()
+
+# this has the advantage of keeping the scales for the plot consistent
+# and it means you don't have to set the scales manually when using geom_abline
 ```
 
 ## Additional Resources
