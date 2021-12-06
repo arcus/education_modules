@@ -33,16 +33,16 @@ link: https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modu
 
 **Pre-requisites**
 
-This module assumes some familiarity with principles of data visualizations as applied in the ggplot2 library. If you've used ggplot2 (or python's seaborn) a little already and are just looking to extend your skills, this module should be right for you. If you are brand new to ggplot2 and seaborn, start with the overview of [data visualizations in open source software](link) first, and then come back here.
+This module assumes some familiarity with principles of data visualizations as applied in the ggplot2 library. If you've used ggplot2 (or python's seaborn) a little already and are just looking to extend your skills, this module should be right for you. If you are brand new to ggplot2 and seaborn, start with the overview of [data visualizations in open source software](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization.md) first, and then come back here.
 
 This module also assumes some basic familiarity with R, including
 
 * [installing and loading packages](https://r4ds.had.co.nz/data-visualisation.html#prerequisites-1)
 * [reading in data](https://r4ds.had.co.nz/data-import.html)
 * manipulating data frames, including [calculating new columns](https://r4ds.had.co.nz/transform.html#add-new-variables-with-mutate), and [pivoting from wide format to long](https://r4ds.had.co.nz/tidy-data.html#longer)
-* some [statistical tests](link), especially linear regression
+* some [statistical tests](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md), especially linear regression
 
-If you are brand new to R (or want a refresher) consider starting with [Intro to R](link) first.
+If you are brand new to R (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md) first.
 
 **Learning Objectives**
 
@@ -53,7 +53,7 @@ If you are brand new to R (or want a refresher) consider starting with [Intro to
 
 ## Lesson Preparation
 
-This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in R. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection. If you have R already installed on your computer and you prefer to work through code examples there, you can [download all the code for this module to run offline](link).
+This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in R. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection. If you have R already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.r" download>download the code for this module to run offline</a>.
 
 If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity now. Use right-click to open it in a new tab or window, and you can simply return here to continue learning while the environment finishes loading. Here is the link:
 
@@ -839,7 +839,7 @@ For an excellent quick reference, see the [ggplot2 cheatsheet](https://ggplot2.t
 
 For more detail on controlling color in ggplot2, refer to the [ggplot2 book](https://ggplot2-book.org/scale-colour.html), available for free online.
 
-To learn how to make plots in python using seaborn, see [data visualization in seaborn](link).
+To learn how to make plots in python using seaborn, see [data visualization in seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_viz_seaborn/data_visualization_in_seaborn.md).
 
 ## Feedback
 
