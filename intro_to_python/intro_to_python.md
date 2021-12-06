@@ -91,7 +91,7 @@ Python can be written in several ways. You can write Python code interactively u
 
 If you have Python installed on your computer, you can use your computer's Command Line or Terminal program to write Python code interactively using a Python **interpreter** by typing `python3`:
 <div style = "margin: 1rem; width: 750;">
-![An example of Python code in the Terminal with the code 7 + 8 and print("Hello World!")](media/python-interactive.png?raw=true)
+![An example of Python code in the Terminal with the code 7 + 8 and print("Hello World!").](media/python-interactive.png?raw=true)
 </div>
 
 Using Python interactively in the terminal can be useful if you want to quickly test out short pieces of code. Most of the time, though, you'll either be creating Python scripts or using a notebook instead.
@@ -102,7 +102,7 @@ Instead of writing instructions one at a time, for more complex tasks you might 
 
 Here is a short script written in the Spyder IDE:
 <div style = "margin: 1rem; width: 750;">
-![An example of Python code written in Spyder with the code name=input("What is your name?") and print("Welcome to Intro to Python, "+name+"!")](media/python-in-spyder.png?raw=true)
+![An example of Python code written in Spyder with the code name=input("What is your name?") and print("Welcome to Intro to Python, "+name+"!").](media/python-in-spyder.png?raw=true)
 </div>
 
 In the above example, our script asks for input of a user's name using the `input()` function, stores that input in a variable we've called `name`, and prints out a welcome message to the screen that includes the name the user entered using the code `print("Welcome to Intro to Python, "+name+"!")`.
@@ -111,7 +111,7 @@ In the script above you can also see lines of text marked with a pound sign `#` 
 
 The Spyder IDE has a console where you can see the output of your script without having to run it in the Command Prompt/Terminal. As you can see in the screenshot below, all we had to do was create the file one time and then run that file instead of typing in the code interactively. This can save you time and effort if you have a task you know you'll want to perform repeatedly. In the Spyder IDE there is a "run" button (a green arrow in menu at the top) but you could also run the same file in your Terminal/Command Line by typing the command `python` followed by the file name of your Python script.
 <div style = "margin: 1rem; width: 750;">
-![The output of Python code in the Spyder console](media/python-spyder-console.png?raw=true)
+![The output of Python code in the Spyder console.](media/python-spyder-console.png?raw=true)
 </div>
 
 In this case, when you run the code we wrote before in the Spyder console, you'll be asked for an input value (I've supplied the name "Pythonista"). If you hit "Enter", the output of the second line of code will appear: `Welcome to Intro to Python, Pythonista!`.
@@ -183,7 +183,7 @@ Alternatively, you can [install Python using Anaconda](https://www.anaconda.com/
 
 Once you've downloaded Anaconda, you can open the Anaconda Navigator; when you do, you'll see the the window below. Now you have access to lots of tools for working with Python!
 <div style = "margin: 1rem; width: 750;">
-![Anaconda Navigator interface](media/anaconda.png?raw=true)
+![Anaconda Navigator interface.](media/anaconda.png?raw=true)
 </div>
 
 ### Knowledge Check 4
