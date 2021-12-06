@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.0
+version:  1.1.0
 language: en
 narrator: UK English Female
 title: Data Visualization in ggplot2
@@ -130,6 +130,13 @@ And then read in the data set:
 breast_cancer_data <- read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/00451/dataR2.csv")
 
 ```
+
+<div class="learnmore">
+Run the above code yourself in binder (see [lesson preparation](#lesson-preparation) for links to start the binder instance) or on your own computer.
+
+In the data_visualization_ggplot2.r file, the code at the top of the file includes these library commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
+</div>
+
 
 ### Basic scatterplot
 
