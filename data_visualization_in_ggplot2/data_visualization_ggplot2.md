@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  0.0.1
+version:  1.0.0
 language: en
 narrator: UK English Female
 title: Data Visualization in ggplot2
