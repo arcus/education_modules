@@ -94,14 +94,14 @@ To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "
 
 ### Working through interactive coding examples
 
-Hopefully your [binder instance](#lesson-preparation) is done loading now! If not, be patient --- it can take quite a while some times.
+Hopefully your [binder instance](#lesson-preparation) is done loading now! If not, be patient --- it can take as long as 20 or 30 minutes some times if the files haven't been used recently.
 
 When it is ready, you should see the RStudio application running in your browser. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "data_viz_in_ggplot", and open the .r file in that subfolder.
 
 All of the example code in this module is in that data_visualization_ggplot2.r file. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
 
 <div class = "important">
-Note that binder instances aren't stable. When you close the window or if it idles too long, it may erase all of your work. If you want to save any code or output you come up with while working in binder, you need to copy-paste the code to a new file to save it on your computer. 
+Note that binder instances aren't stable. When you close the window or if it idles too long, it may erase all of your work. If you want to save any code or output you come up with while working in binder, you need to copy-paste the code to a new file to save it on your computer.
 </div>
 
 ## Scatterplots
