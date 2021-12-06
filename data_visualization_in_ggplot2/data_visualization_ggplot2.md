@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  0.0.1
+version:  1.0.0
 language: en
 narrator: UK English Female
 title: Data Visualization in ggplot2
@@ -40,7 +40,7 @@ This module also assumes some basic familiarity with R, including
 * [installing and loading packages](https://r4ds.had.co.nz/data-visualisation.html#prerequisites-1)
 * [reading in data](https://r4ds.had.co.nz/data-import.html)
 * manipulating data frames, including [calculating new columns](https://r4ds.had.co.nz/transform.html#add-new-variables-with-mutate), and [pivoting from wide format to long](https://r4ds.had.co.nz/tidy-data.html#longer)
-* some [statistical tests](link)
+* some [statistical tests](link), especially linear regression
 
 If you are brand new to R (or want a refresher) consider starting with [Intro to R](link) first.
 
@@ -85,9 +85,9 @@ If you've already used R for other tasks, you may feel like the R code for ggplo
 plot(wt, mpg, data = mtcars)
 ```
 
-In ggplot2, you use the ggplot() function to generate an empty base plot, and then you **add** each of the elements of the plot as a layer. For example, to generate a scatterplot, you start with a command like `ggplot(breast_cancer_data, mapping = aes(x=Age, y=Glucose))` to set up the basic information for the plot, and then you add a layer saying what kind of plot you want to draw, like `+ geom_point()`.
+In ggplot2, you use the ggplot() function to generate an empty base plot, and then you **add** each of the elements of the plot as a layer. For example, to generate a scatterplot, you start with a command like `ggplot(mtcars, mapping = aes(x=mpg, y=wt))` to set up the basic information for the plot, and then you add a layer saying what kind of plot you want to draw, like `+ geom_point()` to indicate a scatterplot.
 
-At first, this seems like more work than just using a single command in another plotting system (e.g. in base R, `plot(Glucose ~ Age, data = breast_cancer_data)` will give you a scatterplot), and it is true that ggplot visualizations are often more lines of code than other kinds of visualizations. The idea of breaking a plot into different kinds of pieces and applying each as a layer has some advantages, though, in that it makes it easier to tweak plots to get exactly what you want --- this is important both for generating plots that can be made to adhere to formatting rules (like for a journal article submission), and because tweaking a plot and re-visualizing the data is a powerful way to explore trends and patterns when you're analyzing a data set.
+At first, this seems like more work than just using a single command in another plotting system, and it is true that ggplot visualizations are often more lines of code than other kinds of visualizations. The idea of breaking a plot into different kinds of pieces and applying each as a layer has some advantages, though, in that it makes it easier to tweak plots to get exactly what you want --- this is important both for generating plots that can be made to adhere to formatting rules (like for a journal article submission), and because tweaking a plot and re-visualizing the data is a powerful way to explore trends and patterns when you're analyzing a data set.
 
 <div class = "learnmore">
 To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf)
@@ -110,7 +110,7 @@ library(ggplot2)
 ```
 
 <div class = "learnmore">
-The readr and dplyr packages, like ggplot2 are part of the [tidyverse](https://www.tidyverse.org/), a set of R packages for data science. Check out the free R for Data Science book online to learn more about both readr (the [data import](https://r4ds.had.co.nz/data-import.html) chapter) and dplyr (the [data transformation](https://r4ds.had.co.nz/transform.html) chapter).
+The readr and dplyr packages, like ggplot2, are part of the [tidyverse](https://www.tidyverse.org/), a set of R packages for data science. Check out the free R for Data Science book online to learn more about both readr (the [data import](https://r4ds.had.co.nz/data-import.html) chapter) and dplyr (the [data transformation](https://r4ds.had.co.nz/transform.html) chapter).
 </div>
 
 And then read in the data set:
@@ -125,13 +125,12 @@ breast_cancer_data <- read_csv("https://archive.ics.uci.edu/ml/machine-learning-
 To make any plot using ggplot2, we start by specifying the variables we'll be using and how --- this information is called the [aesthetic mapping](https://ggplot2.tidyverse.org/reference/aes.html), and is included by using the aes() function in the mapping argument of the ggplot2 command. Here, the important aesthetics are just x and y. After setting the aesthetics with the ggplot() command, then we add a layer specifying how we want ggplot2 to plot this information, in our case as a scatterplot, which is specified using geom\_point().
 
 ```r
-# basic scatter plot
 ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
   geom_point()
 
 ```
 
-![Basic scatter plot, with age on the x-axis and glucose on the y-axis.](media/ggplot_scatter_1.png)
+![Basic scatterplot, with age on the x-axis and glucose on the y-axis. Age appears to run from approximately 25 to 90, and most glucose scores are between 75 and 100 with a few outliers between 150 and 200. There are 116 observations plotted, with a very slight positive trend.](media/ggplot_scatter_1.png)
 
 ### Using color for continuous variables
 
@@ -144,7 +143,7 @@ ggplot(breast_cancer_data(y=Glucose, x=Age, color = BMI)) +
 
 ```
 
-![Age and glucose scatter plot, with color gradient showing BMI.](media/ggplot_scatter_2.png)
+![Age and glucose scatterplot, with color gradient showing BMI.](media/ggplot_scatter_2.png)
 
 Note that when you add an aesthetic for color (or shape, line type, alpha, or size), it will automatically add a legend to your plot.
 
@@ -153,7 +152,7 @@ Note that when you add an aesthetic for color (or shape, line type, alpha, or si
 Now let's look at using color for a categorical variable. In this case, the variable is a categorical one (Classification, 1 or 2), but it isn't properly coded as a factor in the data frame. We'll fix that first and then send the corrected dataframe to the ggplot command.
 
 <div class = "important">
-Tip: It's generally much easier to make any necessary changes to the data, such as mutating variables, before sending it to the plotting command.
+Tip: It's generally much easier to make any necessary changes to the dataframe, such as mutating variables, before sending it to the plotting command.
 </div>
 
 ```r
@@ -170,11 +169,11 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor)
 
 ```
 
-![Age and glucose scatter plot, with color showing classification.](media/ggplot_scatter_3.png)
+![Age and glucose scatterplot, with color showing classification.](media/ggplot_scatter_3.png)
 
 ### Distinguish groups more clearly with custom colors and shape
 
-So far, we've been sticking to ggplot's default color scheme, but you can control what colors are used in your plots. There are a number of [excellent](https://ggplot2-book.org/scale-colour.html) [tutorials](https://ggplot2-book.org/scale-colour.html) [available](https://www.r-graph-gallery.com/ggplot2-color.html) about how to control the colors in your ggplot visualizations. Here we'll just show one approach, using colors you specify by hand.
+So far, we've been sticking to ggplot's default color scheme, but you can control what colors are used in your plots. There are a number of excellent tutorials available about how to control the colors in your ggplot visualizations (here is one [color in ggplot tutorial]((https://blogs.uoregon.edu/rclub/2015/02/17/picking-pretty-plot-palates/)), and [another color in ggplot tutorial](https://www.r-graph-gallery.com/ggplot2-color.html)). Here we'll just show one approach, using colors you specify by hand.
 
 ```r
 # save the colors you want to use as a vector
@@ -189,7 +188,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor)
 
 ```
 
-![Age and glucose scatter plot, with color showing classification as yellow and blue.](media/ggplot_scatter_4.png)
+![Age and glucose scatterplot, with color showing classification as yellow and blue.](media/ggplot_scatter_4.png)
 
 <div class = "important">
 Tip: Don't use color alone to convey important information in your plots because if your end users are unable to distinguish the colors, the plot loses its value. Instead, double-up color information with another element, such as shape, to make the different groups easier to distinguish. For help selecting colors that are most likely to work for users with color vision deficiencies, [read about the colorspace package in R](https://arxiv.org/abs/1903.06490).
@@ -206,11 +205,15 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
 
 ```
 
-![Age and glucose scatter plot, with color showing classification as yellow dots and blue triangles.](media/ggplot_scatter_5.png)
+![Age and glucose scatterplot, with color showing classification as yellow dots and blue triangles.](media/ggplot_scatter_5.png)
 
 ### Changing background color with theme
 
 Finally, we can control the background (and other aspects of the plot's general appearance) by adjusting the theme. There are quite a lot of [pre-made themes available](https://ggplot2-book.org/polishing.html#themes), or you can [specify your own](https://ggplot2-book.org/polishing.html#modifying-theme-components). I'll use the theme called theme_bw().
+
+<div class = "learnmore">
+Some journals or other organizations have pre-made ggplot2 themes available that you can apply to make your plots adhere to their aesthetic guidelines. It's worth asking! For more information about using themes and modifying them to meet journal requirements, see the [figures chaper in Writing Papers with R and Friends](https://bookdown.org/content/43652694-3819-41d2-9e70-8cfc8dd25fd1/figures.html).  
+</div>
 
 ```r
 # change the theme to theme_bw()
@@ -275,6 +278,21 @@ Which of the following can be used to manually set the color for a **numeric** v
 `scale_color_gradient()` is for continuous variables, and `scale_color_manual()` is for categorical variables (factors).
 </div>
 ***********************************************************************
+
+Modify the code from the example above under [changing the background color with theme](#changing-background-color-with-theme) to apply a different theme. Add another layer to the plot with `theme(legend.position = "bottom")`. (Note: see the ggplot2 website for more on [modifying the legend for a plot](https://ggplot2.tidyverse.org/reference/guides.html).)
+
+```r -Solution
+# Note this is just one possible solution!
+# If your code generates a plot you like, that's a good solution.
+
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
+                               shape = Class_factor)) +
+  geom_point() +
+  scale_color_manual(values = class_colors) +
+  theme_classic() +
+  theme(legend.position = "bottom")
+
+```
 
 ## Histograms
 
@@ -520,7 +538,7 @@ seatbelt_data_long <- seatbelt_data %>%
 
 ```
 
-In the code above, we are taking the three specified columns (drivers, front, rear), and pivoting them into two columnsm one called seat, and one called deaths.
+In the code above, we are taking the three specified columns (drivers, front, rear), and pivoting them into two columns, one called seat and one called deaths.
 
 Then we can use the new long dataframe to plot the data with separate lines for each seat.
 
@@ -803,7 +821,7 @@ For an excellent quick reference, see the [ggplot2 cheatsheet](https://ggplot2.t
 
 For more detail on controlling color in ggplot2, refer to the [ggplot2 book](https://ggplot2-book.org/scale-colour.html), available for free online.
 
-To learn how to make these plots in python using seaborn, see Data visualization in seaborn (coming soon).
+To learn how to make plots in python using seaborn, see [data visualization in seaborn](link).
 
 ## Feedback
 
