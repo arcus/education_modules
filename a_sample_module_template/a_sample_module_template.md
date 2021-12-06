@@ -6,7 +6,20 @@ version:  0.0.1
 language: en
 narrator: UK English Female
 title: Module Title
-comment:  This module demonstrates several cool things, and this is a description.
+comment:  This is a short, focused description of the module.
+long_description: This is a longer description, which should be understandable for a lay auidience. It will print under "Is this module right for me?" in the overview.
+
+@learning_objectives  
+
+After completion of this module, learners will be able to:
+
+- identify key elements
+- create a product
+- do a task
+- articulate the rationale for something
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
 
 -->
@@ -15,12 +28,15 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/mod
 
 (Note that the title is the only level-1 header in the document)
 
+To see how to use this template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6).
+To see what it looks like rendered via LiaScript, [click here](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6#1) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
+
 <div class = "overview">
 
 ## Overview
+@comment
 
-Include text here describing the point of the module. To see how to use this template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6).
-To see what it looks like rendered via LiaScript, [click here](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6#1) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
+**Is this module right for me?** @long_description
 
 **Estimated time to completion:**
 
@@ -36,41 +52,21 @@ If relevant, you can include recommendations for somewhere else to start if the 
 
 **Learning Objectives**
 
-After completion of this module, learners will be able to:
-
-* identify key elements
-* create a product
-* do a task
-* articulate the rationale for something
+@learning_objectives
 
 For help articulating learning objectives, see [this guide to learning objectives, including lots of example verbs](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/).
 
 </div>
 
-Contents:
-====
-
-* [Preparation](#Preparation) (2 min activity)
-* [Section one](#section-one) (2 min read)
-* Link to each section in your module and include a time estimate
-* If you have subsections you'll need to insert a blank line between your parent and the child elements....
-* [Section](#Section)
-* [Section](#Section)
-
-  * [Subsection](#Subsection)
-  * [Subsection](#Subsection)
-  * [Subsection](#Subsection)
-* [Section](#Section)
-
 ## Lesson Preparation
 
 If your module includes code learners may want to run, then give links to a pangeo binder here so they can start it up now. Also provide a link to the raw code so learners can download the code itself and run it on their own machines or copy it into a cloud server.
 
-This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in R and python. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection. If you have R and/or python already installed on your computer and you prefer to work through code examples there, you can [download all the code for this module to run offline](https://github.com/this_module_repo).
+This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in R and python. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection. If you have R and/or python already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.r" download>download the code for this module to run offline</a>.
 
-If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity. It will open in a new tab or window, and you can simply return here to continue learning, while the environment finishes loading. Here are the links:
+If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity. We recommend using right-click to open it in a new tab or window, and then returning here to continue learning while the environment finishes loading. Here is the link:
 
-[![Link to start Binder environment](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_intensive/main?urlpath=rstudio) **Click the "launch binder" button!**
+[![Link to start Binder environment](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/main?urlpath=rstudio) **Click the "launch binder" button!**
 
 You don't have to do anything except come back here once the link opens in a new tab or window.
 
@@ -78,26 +74,26 @@ You don't have to do anything except come back here once the link opens in a new
 
 Note that liascript will create a new page at each level 1, 2, or 3 header, so to avoid a page with only a header and no content, include text after each header before the next.
 
-Text after level 1 headers provides a good opportunity to give a sentence or two of overview, explain the structure of the coming content, and/or get preliminaries out of the way. You can provide visual structure to your content without starting a new page by using `===` or `---` to define subsequent header levels (note that these won't show up in the table of contents, though!), as for the sub-sections in the [Overview](#overview).
+Text after level 2 headers provides a good opportunity to give a sentence or two of overview, explain the structure of the coming content, and/or get preliminaries out of the way.
 
 ## Including Media
 
 
-![A valueable image, and this is its alt text](https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG "Here is a subtitle that will display beneath the image.")
+![A valuable image, and this is its alt text.](https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG "Here is a subtitle that will display beneath the image.")
 
 
-You can link to images online with their url, or locally with the file path, e.g. `![image caption](img/my_image.png)`
+You can link to images online with their url, or locally with the file path, e.g. `![image caption](media/my_image.png)`
 
 If you want to provide several images in a gallery, just make a "paragraph" of image links and LiaScript will render it as a gallery:
 
-![img1](https://upload.wikimedia.org/wikipedia/commons/6/68/Ailuropoda_melanoleuca_%28Panda_g%C3%A9ant%29_-_445.jpg) ![img2](https://upload.wikimedia.org/wikipedia/commons/2/2d/Panda_giganti_al_Giant_Panda_Breeding_Research_Base_Chengdu.jpg) ![img3](https://upload.wikimedia.org/wikipedia/commons/1/12/BabyPandaAtSDZ.jpg)
+![img1 alt text.](https://upload.wikimedia.org/wikipedia/commons/6/68/Ailuropoda_melanoleuca_%28Panda_g%C3%A9ant%29_-_445.jpg) ![img2 alt text.](https://upload.wikimedia.org/wikipedia/commons/2/2d/Panda_giganti_al_Giant_Panda_Breeding_Research_Base_Chengdu.jpg) ![img3 alt text.](https://upload.wikimedia.org/wikipedia/commons/1/12/BabyPandaAtSDZ.jpg)
 
 
-!?[This video is hosted on youtube](https://www.youtube.com/watch?v=iIAO4Htzn8M)
+!?[This video is hosted on youtube.](https://www.youtube.com/watch?v=iIAO4Htzn8M)
 
-You can also embed local videos, just as with images: `!?[An embedded video](vid/intro.mp4 "This is its subtitle")`
+You can also embed local videos, just as with images: `!?[An embedded video.](vid/intro.mp4 "This is its subtitle")`
 
-In theory, you should be able to embed just about anything. Read more [here](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md#24)
+In theory, you should be able to embed just about anything. Read more [here](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md#24).
 
 You can also include movies, audio, and any other embedded content in galleries just by putting the links for them all in a paragraph.
 
@@ -191,13 +187,15 @@ Short answer/text response. Note that, without any additional script, to get it 
 
 [[right answer]]
 [[?]] Hint: The answer is "right answer"
-***********************************************************************
+***
 <div class = "answer">
 This is extra text that will show up after the learner clicks to have the correct answer revealed. It can be as long as you like, and allows any markdown formatting (you can embed pictures or videos, links, etc.).
 
 Use `<div class = "answer">` to mark these sections with special styling, so that they're visually distinct from the rest of the quiz. The style for `"answer"` is defined in the css file.
+
+For this context to show up automatically when the learner answers the question correctly or clicks to have the right answer revealed, it needs to be surrounded by `***` (at least three, but you can use more if you want a more visually distinct horizontal marker in your md file).
 </div>
-***********************************************************************
+***
 
 We can allow some flexibility in what we accept as correct answers for text by adding a little script after the answer, though. For the following, either "right answer" or "correct answer" (not case sensitive) will be accepted:
 
@@ -206,11 +204,11 @@ We can allow some flexibility in what we accept as correct answers for text by a
   let input = "@input".trim().toLowerCase();
   input == "right answer" || input == "correct answer";
 </script>
-***********************************************************************
+***
 <div class = "answer">
 For this question, either "right answer" or "correct answer" (not case sensitive) counts as correct.
 </div>
-***********************************************************************
+***
 
 This question accepts any of several items from a list of possible correct answers. It is not case sensitive (that's the little `i` at the end of the regex).
 
@@ -220,7 +218,7 @@ This question accepts any of several items from a list of possible correct answe
   let input = "@input".trim();
   /item1|item2|item3|item4/i.test(input);
 </script>
-***********************************************************************
+***
 <div class = "answer">
 With flexible answers like this, it's definitely a good idea to include a follow-up to help the learner put their answer in context.
 
@@ -228,9 +226,9 @@ For example, if the question was "Name one or more colors" with acceptable answe
 
 Reiterate what the correct answer or answers should be, and try to anticipate likely wrong answers so you can explain why they're not correct.
 </div>
-***********************************************************************
+***
 
-There are also questions that allow you to select from a drop down, but I don't know why that would be preferable over regular multiple choice. [Read more about quiz syntax here.](https://liascript.github.io/course/?https://raw.githubusercontent.com/andre-dietrich/e-Learning-2019/master/README.md#10)
+There are also questions that allow you to select from a drop down, but I don't know why that would be preferable over regular multiple choice. [Read more about quiz syntax here.](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#quizzes)
 
 Note that you can use any markdown formatting you want in quizzes, including bold, links, math, etc.
 
@@ -270,18 +268,11 @@ The last section of the module content should be a list of additional resources,
 
 ## Feedback
 
-The last section in the module is for feedback. Restate the learning objectives here and then provide a link to the feedback survey, like this:
-
 In the beginning, we stated some goals.
 
-Learning Objectives:
----
+**Learning Objectives:**
 
-After completion of this module, learners will be able to:
-
-* identify key elements
-* do a task
-* articulate the rationale for something
+@learning_objectives
 
 We ask you to fill out a brief (5 minutes or less) survey to let us know:
 
