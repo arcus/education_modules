@@ -11,8 +11,8 @@ long_description: You can use the ggplot2 library in R to make many different ki
 
 @learning_objectives
 
-  - use ggplot2 to create several common data visualizations
-  - customize some elements of a plot, and know where to look to learn how to customize others
+- use ggplot2 to create several common data visualizations
+- customize some elements of a plot, and know where to look to learn how to customize others
 
 @end
 
