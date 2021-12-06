@@ -55,10 +55,9 @@ If you are brand new to R (or want a refresher) consider starting with [Intro to
 
 This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in R. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection. If you have R already installed on your computer and you prefer to work through code examples there, you can [download all the code for this module to run offline](link).
 
-If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity now. It will open in a new tab or window, and you can simply return here to continue learning, while the environment finishes loading. Here is the link:
+If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity now. Use right-click to open it in a new tab or window, and you can simply return here to continue learning while the environment finishes loading. Here is the link:
 
 [![Open Binder environment.](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/roseh-data-viz-module?urlpath=rstudio) **Click the "launch binder" button!**
-
 
 You don't have to do anything except come back here after opening the link opens in a new tab or window.
 
@@ -91,6 +90,18 @@ At first, this seems like more work than just using a single command in another 
 
 <div class = "learnmore">
 To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf)
+</div>
+
+### Working through interactive coding examples
+
+Hopefully your [binder instance](#lesson-preparation) is done loading now! If not, be patient --- it can take quite a while some times.
+
+When it is ready, you should see the RStudio application running in your browser. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "data_viz_in_ggplot", and open the .r file in that subfolder.
+
+All of the example code in this module is in that data_visualization_ggplot2.r file. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
+
+<div class = "important">
+Note that binder instances aren't stable. When you close the window or if it idles too long, it may erase all of your work. If you want to save any code or output you come up with while working in binder, you need to copy-paste the code to a new file to save it on your computer. 
 </div>
 
 ## Scatterplots
