@@ -92,7 +92,7 @@ At first, this seems like more work than just using a single command in another 
 To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf)
 </div>
 
-### Working through interactive coding examples
+## Working through interactive coding examples
 
 Hopefully your [binder instance](#lesson-preparation) is done loading now! If not, be patient --- it can take as long as 20 or 30 minutes some times if the files haven't been used recently.
 
