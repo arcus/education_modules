@@ -87,7 +87,7 @@ While Python is human-readable and free, it is not point-and-click software, and
 
 ## Python Code
 
-Python can be written in several ways. You can write Python code interactively using your computer's Terminal program or Command Line, you can write scripts that include Python code, or you can create Python notebooks using Jupyter or Google Colaboratory (or "Colab" for short). In most cases, you'll need to start with downloading Python to your computer (the exception will be if you are using cloud-based solutions like Google Colab). Which you choose will come down to personal preference and your specific goals.
+Python can be written in several ways. You can write Python code interactively using your computer's Terminal program or Command Line, you can write scripts that include Python code, or you can create Python notebooks using [Jupyter](https://jupyter.org/) or [Google Colaboratory](https://colab.research.google.com/?utm_source=scs-index) (or "Colab" for short). In most cases, you'll need to start with downloading Python to your computer (the exception will be if you are using cloud-based solutions like Google Colab). Which you choose will come down to personal preference and your specific goals.
 
 If you have Python installed on your computer, you can use your computer's Command Line or Terminal program to write Python code interactively using a Python **interpreter** by typing `python3`:
 <div style = "margin: 1rem; width: 750;">
@@ -120,7 +120,7 @@ When you save a Python script, you'll use the file extension .py, and so to run 
 
 ## Jupyter Notebooks
 
-If you are interested in using Python for data analysis, you might want to write Python in a Jupyter notebook (which was previously called an IPython notebook). There are a couple of reasons why you should consider using Jupyter notebooks:
+If you are interested in using Python for data analysis, you might want to write Python in a [Jupyter notebook](https://jupyter.org/) (which was previously called an IPython notebook). There are a couple of reasons why you should consider using Jupyter notebooks:
 
 - Notebooks provide the best of both worlds between interactive and scripted code: code is written in chunks that can be run individually, with any output displayed beneath the code chunk.
 
@@ -203,15 +203,13 @@ You can download Python directly to your computer, use Anaconda to download Pyth
 </div>
 ***********************************************************************
 
-### Further Reading
+### Additional Resources
 
-If you want to continue with this Python Intensive Series, or learn a bit more about other data science topics, here are some places to go next:
+For a beginner-friendly walk-through of writing Python scripts, [Hello World! Your Very First Computer Program](https://youtu.be/cV-QwT4fV7M) delivered by Jeff Pennington is an excellent introduction if you've got an hour to spend.
 
-- Data Science in Python (coming soon!)
-- Data Visualization with Python (coming soon!)
-- Intro to Machine Learning with Python (coming soon!)
-- Notebooks (coming soon!)
-- Why Open Source? (coming soon!)
+[python.org](https://www.python.org/) is a great resource for documentation, FAQ's, and tutorials for beginners, as well as information about what is happening in the wider Python community. Check it out and explore!
+
+If you're curious about using Python in the cloud, check out this [short article about cloud tools for programming](https://education.arcus.chop.edu/r-python-cloud/) that includes an example of a notebook written in Google Colab.
 
 ## Feedback
 
@@ -219,12 +217,9 @@ If you want to continue with this Python Intensive Series, or learn a bit more a
 
 At the beginning of this module we described the following goals:
 
-**Learning Objectives**: After completion of this module, learners will be able to:
+**Learning Objectives**:
 
-* Describe what Python is and why they might want to use it for research
-* Recognize Python code
-* Write text and simple code in a Jupyter notebook
-* Download Python using the Anaconda distribution
+@learning_objectives
 
 We ask you to fill out a brief (5 minutes or less) survey to let us know:
 
