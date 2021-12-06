@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.0
+version:  0.0.1
 language: en
 narrator: UK English Female
 title: Data Visualization in ggplot2
@@ -12,6 +12,8 @@ long_description: You can use the ggplot2 library in R to make many different ki
 @learning_objectives
 
 Learning Objectives  
+
+After completion of this module, learners will be able to:
 
 - use ggplot2 to create several common data visualizations
 - customize some elements of a plot, and know where to look to learn how to customize others
