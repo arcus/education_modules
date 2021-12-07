@@ -51,7 +51,7 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/mod
 
 For the hands-on activity in this module, we will be using an online environment containing a Jupyter notebook. To load the environment, open the link below in a new tab:
 
-<a href = "https://binder.pangeo.io/v2/gh/arcus/education_r25_notebooks/main?filepath=python_notebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://binder.pangeo.io/badge_logo.svg"></a> **← Click the "launch binder" button!**
+<a href = "https://binder.pangeo.io/v2/gh/arcus/education_modules/intro_to_python?filepath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://binder.pangeo.io/badge_logo.svg"></a> **← Click the "launch binder" button!**
 
 
 The environment takes a few minutes to load, so be patient. Read through the next couple of sections while you wait! We won't need the online environment until the ["Using a Jupyter Notebook" section](#Using-a-Jupyter-Notebook).
@@ -133,7 +133,7 @@ Interested in learning how to write Python code in a Jupyter notebook? Continue 
 
 This is a hands-on activity! Feel free to pop over to that tab you opened in the [Preparation section](#Preparation) to get started. Need the link again? Here it is:
 
-<a href = "https://binder.pangeo.io/v2/gh/arcus/education_r25_notebooks/main?filepath=python_notebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://binder.pangeo.io/badge_logo.svg"></a> **← Click the "launch binder" button!**
+<a href = "https://binder.pangeo.io/v2/gh/arcus/education_modules/intro_to_python?filepath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://binder.pangeo.io/badge_logo.svg"></a> **← Click the "launch binder" button!**
 
 ### Knowledge Check 2
 
