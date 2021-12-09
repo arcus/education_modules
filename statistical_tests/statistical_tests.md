@@ -2,11 +2,24 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  0.0.1
+version:  1.0.0
 language: en
 narrator: UK English Female
 title: Statistical Tests in Open Source Software
 comment:  This module provides an overview of the most commonly used kinds of statistical tests and links to code for running many of them in both R and python.
+
+long_description: This module contains a curated list of links to tutorials and examples of many common statistical tests in both R and python. If you want to use R or python for data analysis but aren't sure how to write code for the statistical tests you want to run, this is a great place to start. This will be an especially valuable resource for people who have experience conducting analysis in other software (e.g. SAS, SPSS, MPlus, Matlab) and are looking to move to R and/or python. If you are new to data analysis, this module provides some structure to help you think about which statistical tests to run, and examples of code to execute them. It doesn't cover the statistical theory itself, though, so you'll need to do some additional reading before applying the code for any tests you don't already understand (there are recommended resources for learning statistical techniques at the end of the module).
+
+@learning_objectives  
+
+After completion of this module, learners will be able to:
+
+- Use four key questions to help determine which statistical tests will be most appropriate in a given situation
+- Discuss general differences between running statistical tests in R vs. python
+- Quickly find the code they need to be able to run most common statistical tests in R or python
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
 
 -->
@@ -16,41 +29,22 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/mod
 <div class = "overview">
 
 ## Overview
+@comment
 
-This module provides an overview of the most commonly used kinds of statistical tests and links to code for running many of them in both R and python.
+**Is this module right for me?** @long_description
 
 **Estimated time to completion**: 20 minutes (although reading through the linked tutorials may take much longer, depending on which tests you choose to read about)
 
 **Pre-requisites**:
 
 * Learners should already be familiar with the purpose and assumptions of any test they intend to run --- this module covers the "how" only, not the "why".
-* This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/objective_3_1/r_intensive/intro_to_r_rstudio/intro_to_r_rstudio.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/objective_3_1/python_intensive/Intro-to-python.md) first and then coming back here.
+* This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md) first and then coming back here.
 
-**Learning Objectives**:  After completion of this module, learners will be able to:
+**Learning Objectives**:  
 
-* Use four key questions to help determine which statistical tests will be most appropriate in a given situation
-* Discuss general differences between running statistical tests in R vs. python
-* Quickly find the code they need to be able to run most common statistical tests in R or python
+@learning_objectives
 
 </div>
-
-Contents:
-====
-
-* [R vs python](#r-vs-python) (1 min read)
-* [Thinking About Statistical Tests](#thinking-about-statistical-tests) (1 min read)
-* [Example Code for Statistical Tests](#example-code-for-statistical-tests) (1 min read)
-
-  * [No Distinct Outcome](#no-distinct-outcome) (2 min read)
-  * [Continuous Outcomes](#continuous-outcomes) (3 min read)
-  * [Nonparametric Tests](#nonparametric-tests) (2 min read)
-  * [Categorical Outcomes](#categorical-outcomes) (2 min read)
-  * [Other Tests](#other-tests) (2 min read)
-
-* [Additional Resources](#additional-resources) (1 min read)
-
-  * [Learning Statistics](#learning-statistics) (2 min read)
-  * [Resources for Other Software](#resources-for-other-software) (1 min read)
 
 
 ## R vs python
@@ -180,7 +174,7 @@ True or False: R and python are equally user-friendly for running most statistic
 [(X)] FALSE
 ***********************************************************************
 <div class = "answer">
-While both R and python are excellent languages for data science, R was built specifically with statistical analysis in mind, where as python is a general purpose programming language. That often means the code to run a test in R may be shorter and easier to read than it would be in python, and the resulting output may be more informative.
+While both R and python are excellent languages for data science, R was built specifically with statistical analysis in mind, whereas python is a general purpose programming language. That often means the code to run a test in R may be shorter and easier to read than it would be in python, and the resulting output may be more informative.
 
 That said, excellent statistical analysis tools do exist in python (see the many links in this module), and if you want additional tests or more detailed output, you can always write the code yourself.
 </div>
@@ -251,9 +245,9 @@ Prof. Chatti was planning to run a regression model, but they're working with da
 
 ## Additional Resources
 
-If you want to learn more about basics of programming in R or python, you may like our [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/objective_3_1/r_intensive/intro_to_r_rstudio/intro_to_r_rstudio.md) series or our [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/objective_3_1/python_intensive/Intro-to-python.md) series.
+If you want to learn more about basics of programming in R or python, you may like our [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md) series.
 
-We also have material on [data visualization in R and python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/objective_3_1/r25_data_visualization_in_open_source_tools/data_visualization.md)
+We also have material on [data visualization in R and python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization.md)
 
 ### Learning statistics
 
@@ -269,7 +263,9 @@ Note that the recommendations above all focus on statistics specifically rather 
 
 ### Resources for Other Software
 
-We recommend sticking to open source software whenever possible (to read about why check out [our explanation in the Intro to R module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/objective_3_1/r_intensive/intro_to_r_rstudio/intro_to_r_rstudio.md#15)). That said, if you're used to working in non-open source statistical software, like SPSS or Stata, you may find it helpful to see the commands and output from those environments to compare to approaches in R and/or python. UCLA's Institute for Digital Research and Education has an excellent set of posts of [annotated output for most common statistical tests in Stata, SAS, SPSS, and Mplus](https://stats.idre.ucla.edu/other/annotatedoutput/) as well as several [data analysis examples](https://stats.idre.ucla.edu/other/dae/), which include a little more background on the techniques used.
+We recommend sticking to open source software whenever possible (to read about why check out [our explanation in the Intro to R module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md#why-use-r-and-rstudio?)).
+
+That said, if you're used to working in non-open source statistical software, like SPSS or Stata, you may find it helpful to see the commands and output from those environments to compare to approaches in R and/or python. UCLA's Institute for Digital Research and Education has an excellent set of posts of [annotated output for most common statistical tests in Stata, SAS, SPSS, and Mplus](https://stats.idre.ucla.edu/other/annotatedoutput/) as well as several [data analysis examples](https://stats.idre.ucla.edu/other/dae/), which include a little more background on the techniques used.
 
 ## Feedback
 
@@ -277,11 +273,7 @@ In the beginning, we stated some goals.
 
 **Learning Objectives:**  
 
-After completion of this module, learners will be able to:
-
-* Use four key questions to help determine which statistical tests will be most appropriate in a given situation
-* Discuss general differences between running statistical tests in R vs. python
-* Quickly find the code they need to be able to run most common statistical tests in R or python
+@learning_objectives
 
 We ask you to fill out a brief (5 minutes or less) survey to let us know:
 
