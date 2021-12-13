@@ -26,11 +26,11 @@ Notes for JP^2 to gather necessary resources to prepare the git education module
   * individual workers who want to keep all their steps
   * groups that need to coordinate change
 * 3 modules to start. Each module will be on its own branch in education_modules. Each JP will work on each subset of each module.
-  * Demystifying Git/Github
+  * [Demystifying Git/Github](https://github.com/arcus/education_modules/tree/demystifying_git)
     * What is it? Why use it?
-  * Setting up Git
+  * [Setting up Git](https://github.com/arcus/education_modules/tree/setting_up_git)
     * installation, signing up, various companies, BB GH, etc
-  * Good Enough Git  
+  * [Good Enough Git](https://github.com/arcus/education_modules/tree/good_enough_git)  
     * "Doing git badly"
     * focus on streamlined process for getting off the ground without necessarily using "best practices" yet
       * Set expectations for gatekeeping and bro culture in Git/Github and bracing yourself for stack overflow
