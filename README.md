@@ -10,13 +10,13 @@ These materials have been created for the purpose of sharing them widely with th
 
 The training materials here are built in [markdown](https://www.markdownguide.org/), and you can use the Liascript markdown renderer to make them into attractive, configurable training modules.  To use Liascript, go to https://liascript.io and enter the url of the (raw) markdown.
 
-For example, to use the training included in [data_visualization_in_ggplot2](data_visualization_in_ggplot2/data_visualization_ggplot2.md), navigate to https://liascript.io add the url for the "raw" version of [data_visualization_in_ggplot2](data_visualization_in_ggplot2/data_visualization_ggplot2.md), which is https://raw.githubusercontent.com/arcus/education-modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md.  Together, that gives you this combined url: https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md
+For example, to use the training included in [data_visualization_in_ggplot2](data_visualization_in_ggplot2/data_visualization_ggplot2.md), navigate to https://liascript.io add the url for the "raw" version of [data_visualization_in_ggplot2](data_visualization_in_ggplot2/data_visualization_ggplot2.md), which is https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md.  Together, that gives you this combined url: https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md
 
 ## Links to Repository Contents
 
 ||||
 |--|--|--|
-|Data Visualization in ggplot2|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md)| [Markdown](data_visualization_in_ggplot2/data_visualization_ggplot2.md)|
+|Data Visualization in ggplot2|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md)| [Markdown](data_visualization_in_ggplot2/data_visualization_ggplot2.md)|
 |Data Visualization in Open Source Software|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/data_visualization_in_open_source_software/data_visualization.md) | [Markdown](data_visualization_in_open_source_software/data_visualization.md) |
 |Data Visualization in Seaborn|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/data_visualization_in_seaborn/data_visualization_seaborn.md) | [Markdown](data_visualization_in_seaborn/data_visualization_seaborn.md)|
 |Intro to R and RStudio|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md) | [Markdown](intro_to_r_rstudio/intro_to_r_rstudio.md)|
