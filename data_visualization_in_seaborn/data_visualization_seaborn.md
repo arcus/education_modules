@@ -57,16 +57,25 @@ If you are brand new to python (or want a refresher) consider starting with [Int
 </div>
 
 ## Lesson Preparation
+<!--
+@@@block-comments
 
 This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in python. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection.
 
+@end
+-->
+
 If you have python already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_seaborn.ipynb" download>download the code for this module to run offline</a>.
 
+<!--
+@@@block-comments
 If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity. We recommend using right-click to open it in a new tab or window, and then returning here to continue learning while the environment finishes loading. Here is the link:
 
 [![Link to start Binder environment](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/main?urlpath=rstudio) **Click the "launch binder" button!**
 
 You don't have to do anything except come back here once the link opens in a new tab or window.
+@end
+-->
 
 ## Making plots using seaborn
 
@@ -81,6 +90,8 @@ import seaborn as sns
 
 ## Working through interactive coding examples
 
+<!--
+@@@block-comments
 Hopefully your [binder instance](#lesson-preparation) is done loading now! If not, be patient --- it can take as long as 20 or 30 minutes some times if the files haven't been used recently.
 
 When it is ready, you should see a jupyter notebook in your browser with the code for this module. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
@@ -88,8 +99,14 @@ When it is ready, you should see a jupyter notebook in your browser with the cod
 <div class = "important">
 Note that binder instances aren't stable. When you close the window or if it idles too long, it may erase all of your work. If you want to save any code or output you come up with while working in binder, you need to copy-paste the code to a new file to save it on your computer.
 </div>
+@end
+-->
 
 ## Scatterplots
+
+Scatterplots show the relationship between two continuous variables, one on the x-axis and one on the y-axis. Because they show each individual data point as a marker, they also provide a handy way to check visually for outliers.
+
+For more background on scatterplots, watch [this Kahn Academy series](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-data/cc-8th-scatter-plots/v/constructing-scatter-plot).
 
 ### Basic scatterplot
 
@@ -120,7 +137,6 @@ sns.relplot(data = breast_cancer_data,
 Note that adding hue to the command automatically adds a legend to your plot as well.
 
 ### Using color to show groups
-
 
 Now let's look at using color for a categorical variable. In this case, the variable is a categorical one (Classification, 1 or 2), but it isn't properly coded as categorical in the data. We'll fix that first and then send the corrected dataframe to the plotting command.
 
@@ -172,7 +188,7 @@ sns.relplot(data = breast_cancer_data,
 Rather than changing the palatte for each individual plot, you may want to change the default color palatte for all of the plots you're generating. To do that, use `set_theme` to change the default settings for seaborn plots.
 
 ```Python
-# to set the colorblind palette as default for all of our plots
+# to set the colorblind palette as default
 sns.set_theme(palette="colorblind")
 ```
 
@@ -186,13 +202,13 @@ The seaborn library has many different built-in color palattes to choose from. T
 
 The seaborn library handles the appearance of plots with two kinds of functions: style, and context.
 
-- style refers to things like background color, gridlines, and axis ticks
-- context refers to the visual scale of the plot, such as the size of the font used for axis labels
+- `style` refers to things like background color, gridlines, and axis ticks
+- `context` refers to the visual scale of the plot, such as the size of the font used for axis labels
 
 Seaborn controls style and context separately so that you can get a plot that has all the style elements you want, and then you can present that same plot scaled appropriately in different contexts --- for example, if you want to include it in a slide deck presentation, you probably want the fonts much larger and the lines heavier than you would if you wanted to include it as a figure in a paper. In this case, you would leave all of the style settings the same, but change context to "talk" to scale it for the slide deck and "paper" to scale it for use in the paper.
 
 <div class = "learnmore">
-To learn more about options for style and context, see the [seaborn tutorial on controlling figure aesthetics](https://seaborn.pydata.org/tutorial/aesthetics.html).
+We'll show a quick example of changing style and context here, but there are many more options available. To learn more about tweaking style and context, see the [seaborn tutorial on controlling figure aesthetics](https://seaborn.pydata.org/tutorial/aesthetics.html).
 </div>
 
 #### Setting plot style
@@ -227,6 +243,30 @@ sns.set_context("notebook")
 
 ### Quiz: Scatterplots
 
+What is the command to create a scatterplot in seaborn?
+
+[[sns.relplot()]]
+<script>
+  let input = "@input".trim();
+  /relplot/.test(input) || /regplot/.test(input);
+</script>
+***
+<div class = "answer">
+By default, the `relplot` command creates a scatterplot (although it can also be used to create [line plots](#line-plots)). You can also use `regplot` to create scatterplots, as we'll see in the [trend lines](#trend-lines) section.
+
+Note the `sns` before the function name. That's because we imported the seaborn library with an alias, as is conventional. See [making plots in seaborn](#making-plots-in-seaborn).
+</div>
+***
+
+True or False: The only two crucial arguments to supply (in addition to providing the data) for a scatterplot are x and y.
+
+[(X)] TRUE
+[( )] FALSE
+***
+<div class = "answer">
+While x and y are the only two **crucial** arguments for you to supply the plotting function, you may want to include others, such as hue and style, to communicate information about additional variables in the data.
+</div>
+***
 
 ## Histograms
 
