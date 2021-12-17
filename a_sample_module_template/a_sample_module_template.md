@@ -20,7 +20,7 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles_icons.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
 
