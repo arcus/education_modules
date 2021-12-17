@@ -104,21 +104,31 @@ You can also include movies, audio, and any other embedded content in galleries 
 Paragraph text
 
 <div class = "important">
-Include special notes with different formatting. This style is for important points and key ideas.
+Include special notes with different formatting. This style is for important points and key ideas. For example:
+
+Tip: It's generally much easier to make any necessary changes to the dataframe, such as mutating variables, before sending it to the plotting command.
 </div>
 
 More text
 
-<div class = "quote">
-This style is for a quote.
+<div class = "care">
+This style is for content related to compassion, self-care, and motivation. For example:
 
-&mdash; Maya Angelou, <cite>And Still I Rise</cite>
+This is a topic with a tremendous amount of jargon, which can make resources you may find online hard to understand for folks new to the field. When that happens it's easy to feel like there's something wrong with you if you don't get it, but that's not the case! Those kinds of gatekeeping explanations are a failure on the part of the writer, not the learner.
+</div>
+
+<div class = "help">
+This style is for educational first aid --- "help I'm lost!" suggestions. For example:
+
+Feeling overwhelmed? It takes a long time to learn git, so don't be disheartened if it doesn't click initially. Just focus on stage, commit, and push. Ignore the rest for now, until you've had a chance to practice just the stage-commit-push process several times.
 </div>
 
 More text
 
 <div class = "warning">
-This style alerts users to potential pitfalls.
+This style alerts users to potential pitfalls. For example:
+
+A common mistake when using `filter` is to write = when you mean ==. Remember that = is for argument assignment, and == is for testing equality in conditions. If you get them mixed up, your code won't run!
 </div>
 
 More text
@@ -130,7 +140,11 @@ This style alerts users resources for further learning, especially links to a mo
 More text
 
 <div class = "options">
-This style is for an aside to let learners know there's another possible approach (e.g. "You could also skip setting up an OSF account completely and just use github to publish and share your research products, but many people prefer to have OSF links available" or "To do this in R instead of python, see this other module")
+This style is for an aside to let learners know there's another possible approach. For example:
+
+You could also skip setting up an OSF account completely and just use github to publish and share your research products, but many people prefer to have OSF links available.
+
+To do this in R instead of python, see this other module.
 </div>
 
 There's an additional style of highlight, "answer", that is used in quizzes.
