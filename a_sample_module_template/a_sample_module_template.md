@@ -22,11 +22,15 @@ After completion of this module, learners will be able to:
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
 
+script: https://kit.fontawesome.com/83b2343bd4.js
+
 -->
 
 # Title
 
 (Note that the title is the only level-1 header in the document)
+
+<i class="fas fa-thumbs-up fa-5x"></i>
 
 To see how to use this template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6).
 To see what it looks like rendered via LiaScript, [click here](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6#1) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
