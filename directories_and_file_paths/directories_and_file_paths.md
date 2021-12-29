@@ -6,14 +6,15 @@ version:  0.0.1
 language: en
 narrator: UK English Female
 title: Directories and File Paths
-comment:  
-long_description:
+comment: In this module, learners will explore what a directory is and how to describe the location of a file using its file path.   
+long_description: When doing data analysis in a programming language like R or Python, figuring out how to point the program to the file you need can be confusing. This module will help you learn about how files and folders are organized on your computer, how to describe the location of your file in a couple of different ways, and name files and folders in a descriptive and systematic way.
 @learning_objectives  
 
 After completion of this module, learners will be able to:
 - Describe what a directory is
 - Distinguish between a relative file path and an absolute file path
 - Describe the location of a file using its file path
+- Describe a few methods of naming files and folders
 
 @end
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
@@ -40,10 +41,6 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/mod
 @learning_objectives
 
 </div>
-
-
-## Introduction
-
 
 
 ## Files and folders
@@ -91,13 +88,13 @@ The simplest file paths might just be the name of the file you're trying to acce
 
 ### Relative paths
 
-As the name might suggest, a **relative file path** is one that points to a location relative to a reference point. An example of a relative file path might be "data/my-data.csv". The important thing to remember when using relative paths is that for it to work, the language you're programming in needs to have a frame of reference to start from. It's a bit like giving directions to a brand new coworker about where to find your stapler. You might tell them that it is in the bottom drawer of your desk in your office. This works well if your coworker is on the same floor as you, since they can see that there is an office with your name on it, a desk in that office, and drawers in that desk. If your coworker is in another building, however, these directions aren't very helpful! You'd have to include the name of the building and the floor where your office is.
+As the name suggests, a **relative file path** is one that points to a location relative to a reference point. An example of a relative file path might be "data/my-data.csv". The important thing to remember when using relative paths is that for it to work, the language you're programming in needs to have a frame of reference to start from. It's a bit like giving directions to a brand new coworker about where to find your stapler. You might tell them that it is in the bottom drawer of your desk in your office. This works well if your coworker is on the same floor as you, since they can see that there is an office with your name on it, a desk in that office, and drawers in that desk. If your coworker is in another building, however, these directions aren't very helpful! You'd have to include the name of the building and the floor where your office is.
 
 This illustrates a concept called a **working directory**. A working directory is really just another file path that sets the default for a process. In our example above, you could say that the working directory would include the floor of the building where your office is and the address of the building. From that frame of reference, you can access all sorts of things on the floor of that particular building with just a few directions.
 
 ### Absolute paths
 
-While relative file paths require a frame of reference to start looking for a file, an **absolute file path** does not-- it already includes everything that the computer might need to find the file. Using the example above, the absolute path to your stapler would include not only where in your office it is, but also the floor number, the building name, the street the building is on, the city it's in, the county, the state, and finally the country. For a coworker who works in the same building that you do, this level of detail might seem unnecessary, or even overwhelming! However, if there was no frame of reference to start from, these directions would let anyone in the world find your stapler.
+While relative file paths require a frame of reference to start looking for a file, an **absolute file path** does not-- it already includes everything that the computer might need to find the file. Using the example above, the absolute path to your stapler would include not only where in your office it is, but also the floor number, the building name, the street the building is on, the city it's in, the county, the state, and the country. For a coworker who works in the same building that you do, this level of detail might seem unnecessary, or even overwhelming! However, if there was no frame of reference to start from, these directions would let anyone in the world find your stapler.
 
 An example of an absolute file path to our file my-data.csv might look something like this:
 
@@ -105,10 +102,10 @@ An example of an absolute file path to our file my-data.csv might look something
 
 ### So which kind file path should I use?
 
-By now, you may be wondering whether absolute file paths or relative file paths are better, and the answer is, it depends! When referring to a file in an R or Python script, which type of file path you use will depend on the purpose of the script and who will look at it or use it in the future. Absolute file paths can be useful because you don't have to know what working directory you're in-- you just have to know where the file is. However, as you might have noticed, absolute paths include things like the username of the user account and other folders that may exist on your computer and not anyone else's. If you are the only one using a script, and never plan on running from any other location, you might choose to use an absolute path, since no matter where your program lives on your computer, R or Python can find the file. However, if you are working with collaborators or have plans to make your script public, using a relative path might be a better choice. If you keep every file that you need in a single project folder (which could have several subfolders) and maintain/share that folder as a unit, then you can use file paths that are relative to where the script is being run, and it shouldn't matter where a collaborator saves the folder on their own computer. This is the reproducible choice!
+By now, you may be wondering whether absolute file paths or relative file paths are better, and the answer is, it depends! When referring to a file in an R or Python script, for example, which type of file path you use will depend on the purpose of the script and who will look at it or use it in the future. Absolute file paths can be useful because you don't have to know what working directory you're in-- you just have to know where the file is. However, as you might have noticed, absolute paths include things like the username of the user account and other folders that may exist on your computer and not anyone else's. If you are the only one using a script, and never plan on running from any other location, you might choose to use an absolute path, since no matter where your program lives on your computer, R or Python can find the file. However, if you are working with collaborators or have plans to make your script public, using a relative path might be a better choice. If you keep every file that you need in a single project folder (which could have several subfolders) and maintain/share that folder as a unit, then you can use file paths that are relative to where the script is being run, and it shouldn't matter where a collaborator saves the folder on their own computer. This is the reproducible choice!
 
 <div class = "important">
-While it might be tempting, in general it's best to avoid setting your working directory in scripts, especially ones you might share. The working directory you set may not exist on any other computer, and hardcoding it can cause problems later.
+When writing a script in a programming language like R or Python, it's possible to write code that sets your working directory to a specific location each time the script is run. While this might be tempting, in general it's not a great idea, especially in scripts you might share. The working directory you set may not exist on any other computer, and hardcoding it can cause problems later.
 </div>
 
 ## Naming Conventions
@@ -134,7 +131,7 @@ There are some common naming conventions you'll often see in computer programmin
 * snake_case: This convention separates words with an underscore, with all letters being lowercase (like my_awesome_script.py). Notably, this is the convention in the Python and tidyverse R style guides (though other naming styles will also work).
 * kebab-case: This convention is similar to snake_case, except words are separated by dashes instead of underscores (like my-awesome-script.py)
 
-This is certainly not an exhaustive list, but these are some of the most common naming conventions you'll encounter. Some developers have a strong preference for one versus another; generally, the most important thing is that your team is internally consistent. If you're joining a new team, ask about their file names preferences.
+This is certainly not an exhaustive list, but these are some of the most common naming conventions you'll encounter. Some developers have a strong preference for one versus another; generally, the most important thing is that you and your team are internally consistent. If you're joining a new team, ask about their file naming preferences.
 
 ## Feedback
 
