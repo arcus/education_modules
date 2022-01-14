@@ -81,7 +81,7 @@ You don't have to do anything except come back here once the link opens in a new
 
 To use the seaborn library to make visualizations, you need to import it.
 
-By convention, you import it with the shorthand `sns`. This is optional, but we do recommend you do that because when you look at seaborn code online, you'll nearly always see it with that same abbreviation; following that convention will make your code more comprable to examples you see online.
+By convention, you import it with the shorthand `sns`. This is optional, but we do recommend you do that because when you look at seaborn code online, you'll nearly always see it with that same abbreviation; following that convention will make your code more comparable to examples you see online.
 
 ```Python
 import seaborn as sns
@@ -108,6 +108,42 @@ Scatterplots show the relationship between two continuous variables, one on the 
 
 For more background on scatterplots, watch [this Kahn Academy series](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-data/cc-8th-scatter-plots/v/constructing-scatter-plot).
 
+### The data
+
+First, we need to load the modules we'll be using:
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+```
+
+<div class = "learnmore">
+The pandas module
+</div>
+
+And then read in the data set:
+
+```python
+covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+
+```
+
+These data are from a a COVID-19 serological survey conducted in Yaounde, Cameroon (Nwosu, K., Fokam, J., Wanda, F. et al., 2021[^1](Kene David Nwosu, Joseph Fokam, Franck Wanda, Lucien Mama, Erol Orel, Nicolas Ray, Jeanine Meke, Armel Tassegning, Desire Takou, Eric Mimbe, Beat Stoll, Josselin Guillebert, Eric Comte, Olivia Keiser, & Laura Ciaffi. (2021). kendavidn/yaounde_serocovpop_shared: Initial release (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.5218965)). The authors have made all of the code and data publicly available under a [creative commons 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode) to facilitate re-use.
+
+
+<div class="learnmore">
+To learn more about the study, see the [zenodo page for this dataset](https://zenodo.org/record/5218965#.YeBq2RPMITW). You can read the published article online: [](https://www.nature.com/articles/s41467-021-25946-0)
+</div>
+
+<div class="learnmore">
+Run the above code yourself in binder (see [lesson preparation](#lesson-preparation) for links to start the binder instance) or on your own computer.
+
+In the data_visualization_seaborn.ipynb file, the code at the top of the file includes these import commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
+</div>
+
 ### Basic scatterplot
 
 The seaborn library includes a powerful function called `relplot`, short for "relationships plot" because it's designed to highlight relationships among variables in the data.
@@ -115,10 +151,10 @@ The seaborn library includes a powerful function called `relplot`, short for "re
 If you provide `relplot` with two continuous variables, it will default to making a scatterplot. Here we'll plot age and glucose.
 
 ```Python
-sns.relplot(data = breast_cancer_data,
-            x="Age", y="Glucose")
+sns.relplot(data = covid_data,
+            x="val_age", y="val_height_cm")
 ```
-![Basic scatterplot, with age on the x-axis and glucose on the y-axis. Age appears to run from approximately 25 to 90, and most glucose scores are between 75 and 120 with a few outliers between 150 and 200. There are 116 observations plotted, with a very slight positive trend.](media/seaborn_scatter_1.png)
+![Basic scatterplot, with age on the x-axis and height on the y-axis. Age appears to run from approximately 5 to 80. Height increases sharply from 100-120 cm at 5 years old to an average of approximately 160 cm at about 20 years old, and then holds steady from 20 to 80 years old. There are 1011 observations plotted, with the majority of observations between 5 and roughly 50 years old. There are a few notable outliers with height values that are much lower than the rest, at roughly 60-80 cm. ](media/seaborn_scatter_1.png)
 
 <div class = "options">
 You can also create scatterplots with a similar function: `regplot` (short for "regression plot"). We'll take a look at `regplot` more closely in the [trend lines](#trend-lines) section.
@@ -126,35 +162,43 @@ You can also create scatterplots with a similar function: `regplot` (short for "
 
 ### Using color for continuous variables
 
-Let's try adding information about a third variable, BMI, by using color.
+Let's try adding information about a third variable, weight, by using color.
 
 ```Python
-sns.relplot(data = breast_cancer_data,
-            x="Age", y="Glucose", hue="BMI")
+sns.relplot(data = covid_data,
+            x="val_age", y="val_height_cm", hue="val_weight_kg")
 ```
-![Age and glucose scatterplot from the previous figure, but with BMI represented by a color scale ranging from a very light pink (BMI=20) to a dark purple (BMI=36). No clear relationship between BMI and the other variables is apparent in the plot.](media/seaborn_scatter_2.png)
+![Age and height scatterplot from the previous figure, but with weight represented by a color scale ranging from a very light pink (25 kg) to a dark purple (150 kg). Weight appears to correlate with both age and height, such that taller and older participants are also heavier. The three outliers with very small heights also have very high weights, suggesting they may represent typos during data entry.](media/seaborn_scatter_2.png)
 
 Note that adding hue to the command automatically adds a legend to your plot as well.
 
 ### Using color to show groups
 
-Now let's look at using color for a categorical variable. In this case, the variable is a categorical one (Classification, 1 or 2), but it isn't properly coded as categorical in the data. We'll fix that first and then send the corrected dataframe to the plotting command.
+Now let's look at using color for a categorical variable. In this case, the variable is a categorical one (is_smoker, with options ex_fumeur, fumeur, and non_fumeur, referring to former smokers, current smokers, and non-smokers, respectively).
 
-<div class = "important">
-Tip: It's generally much easier to make any necessary changes to the dataframe, such as mutating variables, before sending it to the plotting command.
-</div>
+The values entered for is_smoker in the data are actually much longer than we need them to be --- they include the text of the option after the shorthand for it (e.g. former smokers are indicated by "ex_fumeur__j_ai_fum__mais_ne_fume_plus"). We don't want that additional text in the plot, so we'll recode that variable now.
 
 ```Python
-# note that Classification is treated as a numeric variable in the data, but it should really be categorical
-# convert the Classification column to categorical
-breast_cancer_data["Classification"] = breast_cancer_data["Classification"].astype("category")
 
-
-sns.relplot(data = breast_cancer_data,
-            x="Age", y="Glucose",
-            hue="Classification")
 ```
-![Age and glucose scatterplot again, but with Classification represented by color, with Classification 1 as blue and Classification 2 as a muted orange. Classification 2 samples appear to have with higher glucose readings on average than Classification 1 samples.](media/seaborn_scatter_3.png)
+
+<div class = "learnmore">
+For a refresher, see this tutorial on [recording variables in a pandas dataframe](https://www.sfu.ca/~mjbrydon/tutorials/BAinPy/05_recode.html#replacing-values-from-a-list).
+</div>
+
+Then we can update our scatterplot to use is_smoker for color.
+
+```Python
+sns.relplot(data = covid_data,
+            x="val_age", y="val_height_cm",
+            hue="is_smoker")
+```
+![Age and height scatterplot again, but with "is smoker" represented by color, with non-smoker as blue, smoker as a muted orange, and ex-smoker as green. Most of the observations are non-smokers.](media/seaborn_scatter_3.png)
+
+
+<div class = "important">
+Tip: It's generally much easier to make any necessary changes to the dataframe, such as modifying variables, before sending it to the plotting command.
+</div>
 
 ### Distinguish groups more clearly with color and shape
 
@@ -165,9 +209,9 @@ Tip: Don't use color alone to convey important information in your plots because
 </div>
 
 ```Python
-sns.relplot(data = breast_cancer_data,
-            x="Age", y="Glucose",
-            hue="Classification", style = "Classification")
+sns.relplot(data = covid_data,
+            x="val_age", y="val_height_cm",
+            hue="is_smoker", style = "is_smoker")
 ```
 ![Age and glucose scatterplot from the previous figure, with Classification represented using both color and shape: blue circles for Classification 1 and orange x's for Classification 2.](media/seaborn_scatter_4.png)
 
@@ -178,7 +222,7 @@ The seaborn library includes many color palettes to choose from, or you can spec
 Here we'll try switching from the default color palette to a version that is easier to distinguish for people with some types of colorblindness (although remember that even when using a palette that is supposedly colorblind friendly, you should still avoid using color on its own to display important information).
 
 ```Python
-sns.relplot(data = breast_cancer_data,
+sns.relplot(data = covid_data,
             x="Age", y="Glucose",
             hue="Classification", style = "Classification",
            palette = "colorblind")
@@ -217,7 +261,7 @@ We'll show a quick example of changing style and context here, but there are man
 # there are 5 preset seaborn themes: darkgrid, whitegrid, dark, white, and ticks
 sns.set_style("white")
 
-sns.relplot(data = breast_cancer_data,
+sns.relplot(data = covid_data,
             x="Age", y="Glucose",
             hue="Classification", style = "Classification")
 ```
@@ -230,7 +274,7 @@ sns.relplot(data = breast_cancer_data,
 # there are 4 different contexts available: notebook (default), paper, talk, and poster
 sns.set_context("poster")
 
-sns.relplot(data = breast_cancer_data,
+sns.relplot(data = covid_data,
             x="Age", y="Glucose",
             hue="Classification", style = "Classification")
 ```
@@ -270,9 +314,28 @@ While x and y are the only two **crucial** arguments for you to supply the plott
 
 ## Histograms
 
+### Change the number of bins
+
+### Using color to show groups
+
+<div class = "options">
+You can also use `displot` to create [density plots](https://seaborn.pydata.org/tutorial/distributions.html#kernel-density-estimation) instead of histograms.
+</div>
+
+### Quiz: Histograms
+
 ## Line Plots
 
+### Quiz: Line Plots
+
 ## Trend Lines
+
+### Quiz: Trend Lines
+
+## Assignment
+
+<div class = "important">
+</div>
 
 ## Additional Resources
 
