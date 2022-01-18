@@ -209,7 +209,7 @@ h2, h3, h4 {
 
     > li {
       &:before {
-        content: "\EA22";
+        content: "\2022";
         color: rgb(var(--color-highlight-dark));
         font-family: "icon";
         left: 0;
