@@ -4,7 +4,7 @@ email:    paytonk@chop.edu
 version:  1.1
 language: en
 narrator: US English Female
-title: "R Basics: Transforming Data With `dplyr`"
+title: R Basics: Transforming Data With dplyr
 comment:  Learn how to transform (or wrangle) data using R's `dplyr` package.
 long_description: Do you want to learn how to work with tabular (table-shaped, with rows and columns) data in R?  In this module you'll learn in particular how to select just the rows and columns you want to work with, how to create new columns, and how to create multi-step transformations to get your data ready for visualization or statistical analysis.  This module teaches the use of the `dplyr` package, which is part of the `tidyverse` suite of packages.
 
@@ -22,6 +22,7 @@ After completion of this module, learners will be able to:
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
 
 -->
+
 # @title
 
 <div class = "overview">
