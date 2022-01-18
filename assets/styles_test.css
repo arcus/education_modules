@@ -205,13 +205,13 @@ h2, h3, h4 {
   }
 
   &--unordered {
-    list-style-type: circle;
-/
+    list-style-type: none;
+
     > li {
       &:before {
-        /*content: "\EA0D";
+        content: "\EA22";
         color: rgb(var(--color-highlight-dark));
-        font-family: "icon";*/
+        font-family: "icon";
         left: 0;
         position: absolute;
       }
