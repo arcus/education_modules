@@ -47,6 +47,7 @@ To see what it looks like rendered via LiaScript, [click here](https://liascript
 List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
 
 * one skill we have [another module for, linked here](https://education.arcus.chop.edu)
+    * Unordered list test
 * some familiarity with [a topic](https://education.arcus.chop.edu)
 * understanding of [one thing](https://education.arcus.chop.edu) and [another](https://education.arcus.chop.edu)
 
