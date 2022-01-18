@@ -36,6 +36,7 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/mod
 <div class = "overview">
 
 ## Overview
+
 @comment
 
 **Is this module right for me?** @long_description
@@ -74,7 +75,7 @@ JOY
 JOY
 
 
-## `dplyr`
+## The `dplyr` Package
 
 ![The dplyr logo is shown: three sets of futuristic, colorful needlenose pliers that appear to be moving upward and to the right.  The word "dplyr" appears in the upper left of the logo, which is in the shape of a hexagon.](media/dplyr_logo.png)
 
@@ -92,7 +93,7 @@ Let's look at how you can subset a data frame (choose only certain columns and/o
 
 `filter()` reshapes data so that it includes only the rows that meet your conditions. ![A grey colored data frame of four rows and a header row, with two rows selected (as indicated by a blue color), is transformed into a data frame of two selected (blue colored) rows, along with a header.](media/dplyr_filter.png)
 
-## `select()`
+## Using `select()`
 
 Let's look at `select()` first. Select extracts columns from a data frame, using the column **name**.
 
