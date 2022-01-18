@@ -31,7 +31,7 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/mod
 }
 </style>
 
-# @title
+# R Basics: Transforming Data With dplyr
 
 <div class = "overview">
 
@@ -53,8 +53,6 @@ Some experience of using the RStudio IDE and writing R code is necessary to unde
 **Learning Objectives**
 
 @learning_objectives
-
-For help articulating learning objectives, see [this guide to learning objectives, including lots of example verbs](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/).
 
 </div>
 
