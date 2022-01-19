@@ -119,9 +119,7 @@ What is the difference between an absolute file path and a relative file path?
 
 ********************************
 <div class = "answer">
-
 Neither absolute nor relative file paths are "better"-- which you choose will depend on how you will be using or sharing your script. With an absolute path, all of the information to find your file **on your own computer** will be included in the file path. With a relative path, the file path will be in relation to a reference point. Often, relative file paths are used in scripts that will be shared or run on multiple computers.
-
 </div>
 ********************************
 
@@ -136,7 +134,7 @@ When you're working with files and folders in a programming language like R or P
 There are a few best practices for file naming:  
 
 * Names should be descriptive, giving information about what the file contains.
-* Avoid spaces and special characters, (such as ! @ # $ % ^ & * ( ) ; : < > ? . , [ ] { } ' " |): some software can't recognize or work with files that contains spaces or special characters, and in general operating systems don't allow special characters in file names.
+* Avoid spaces and special characters, (such as ! @ # $ % ^ & * ( ) ; : < > ? . , [ ] { } ' "): some software can't recognize or work with files that contains spaces or special characters, and in general operating systems don't allow special characters in file names.
 * File names shouldn't be too long; some operating systems have limits to how many characters a file name can contain.
 * If you include dates in your file names, use the unambiguous ISO 8601 standard (YYYYMMDD; see https://www.iso.org/iso-8601-date-and-time-format.html for more details).
 * If you are not using versioning software (like git) for version control, consider including the version number in the file name.
@@ -166,11 +164,9 @@ Mica has written an R script to extract from a patient cohort some data about al
 
 ********************************
 <div class = "answer">
-
 There are a few things that make Mica's file name unideal! Spaces in file names are not always supported or are painful to deal with in some software. Special characters (in this case "!" and "/") are not allowed in most operating systems. Even though Mica included a date in their file name, generally a good idea, we can't be sure if the format was MM/DD/YYYY or DD/MM/YYYY because they didn't use the ISO 8601 standard, which is always YYYYMMDD. Additionally, `my awesome R script 03/04/21!.R` doesn't tell us anything about what the script actually does! While that might be fine in the short term, in the long term it will likely lead to some confusion. However, there isn't a rule that you can't include "R" in the name of an R script, though with the `.R` file extension, it's not necessary.
 
 Can you think of a few alternative names for the file above that would be more descriptive and follow the best practices we listed previously?
-
 </div>
 ********************************
 
