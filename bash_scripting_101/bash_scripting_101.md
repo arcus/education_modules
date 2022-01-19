@@ -79,10 +79,10 @@ Familarility with locating files and folders stored in a directory system. Famil
 
 What is the name of the pre-installed program used to run shell scripts on a Mac?
 
-[[]] Together
-[[]] MSL (Mac Subsystem for Linux)
-[[X]] Terminal
-[[]] Ubuntu
+[( )] Together
+[( )] MSL (Mac Subsystem for Linux)
+[(X)] Terminal
+[( )] Ubuntu
 
 ---
 
@@ -169,9 +169,9 @@ The sort command is used to categorize files in bash.
 What character passes the output of one command to the next command in a sequence?
 
 [[X]] |
-[[]] &
-[[]] +
-[[]] -
+[( )] &
+[( )] +
+[( )] -
 
 ---
 
