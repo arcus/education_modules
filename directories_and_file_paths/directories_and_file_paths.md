@@ -134,7 +134,7 @@ When you're working with files and folders in a programming language like R or P
 There are a few best practices for file naming:  
 
 * Names should be descriptive, giving information about what the file contains.
-* Avoid spaces and special characters, (such as ! @ # $ % ^ & * ( ) ; : < > ? . , [ ] { } ' "): some software can't recognize or work with files that contains spaces or special characters, and in general operating systems don't allow special characters in file names.
+* Avoid spaces and special characters, (such as ! @ # $ % ^ & * ( ) ; : < > ? . , [ ] { } ' " |): some software can't recognize or work with files that contains spaces or special characters, and in general operating systems don't allow special characters in file names.
 * File names shouldn't be too long; some operating systems have limits to how many characters a file name can contain.
 * If you include dates in your file names, use the unambiguous ISO 8601 standard (YYYYMMDD; see https://www.iso.org/iso-8601-date-and-time-format.html for more details).
 * If you are not using versioning software (like git) for version control, consider including the version number in the file name.
