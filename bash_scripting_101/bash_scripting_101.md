@@ -47,7 +47,7 @@ Familarility with locating files and folders stored in a directory system. Famil
 
 ## What is the shell? Why would I use it?
 
-`![The Shell](media/shell_home.png)`
+![The Shell](media/shell_home.png)
 
 - Bash or unix shell is a free command line language and the default login shell for most Linux machines. The execution of shell commands is known as shell scripting.
 - Shell scripting’s portable, user friendly syntax belies its power.
@@ -60,7 +60,7 @@ Familarility with locating files and folders stored in a directory system. Famil
 
 ### Mac Installation
 
-`![Finding the Terminal](media/terminal_in_mac.png)`
+![Finding the Terminal](media/terminal_in_mac.png)
 
 - On a Mac machine, bash is the default login shell in the Terminal command line program.
 - Type terminal in your Mac spotlight search to pull up this program for the first time though it likely already launches in dock on your machine.
@@ -68,7 +68,7 @@ Familarility with locating files and folders stored in a directory system. Famil
 
 ### Windows Installation
 
-`![Windows Settings to Configure](media/on_windows.png)`
+![Windows Settings to Configure](media/on_windows.png)
 
 - On a Windows machine, the WSL (Windows Subsystem for Linux) has Ubuntu, which is just a widely used flavor of Bash, installed as its default shell scripting environment. This is automatically installed on any Windows computer running Windows 10 or greater.
 - To confirm this feature is enabled, check to see if developer mode is enabled in settings and WSL is turned on in Features.
@@ -99,7 +99,7 @@ WSL is the Windows utility for running shell. Ubuntu is a well known Linux opera
 - It is recommended that you use the native user directory in the home directory on your computer. Your user directory contains a folder named “bin” which is the root directory of any unix like operating system.
 - Bin is short for “binary” and is where you can store any configuration or executable files for programs you run on the CLI. This will be a good place to store bash scripts (.sh files) once you have become comfortable executing commands and learning syntax.
 
-`![Find your home directory](media/user_directory.png)`
+![Find your home directory](media/user_directory.png)
 
 ## Useful Commands and Syntax
 
@@ -109,7 +109,7 @@ WSL is the Windows utility for running shell. Ubuntu is a well known Linux opera
 - Mkdir: create a new directory at the folder level
 - Cd:change directory
 - Echo: prints out text in the terminal window- especially useful for declaring environment variables which reveal permissions and what strings can be passed.
-  `![Echo variable example](media/echo_example.png)`
+  ![Echo variable example](media/echo_example.png)
 
 - Touch: creates a new file
   `touch file 1` will create a single new file
@@ -118,13 +118,13 @@ WSL is the Windows utility for running shell. Ubuntu is a well known Linux opera
   `grep 'panda' file 1 file 2 file 3` will search for the word "panda" in the three files we just created.
 - Man:reveals function of a given command
 
-  `![Grep output with some options displayed](media/grep_output.png)`
+  ![Grep output with some options displayed](media/grep_output.png)
 
 - Mv: move or rename a directory and allows for batch processing
   `mv *.txt folder` will move all files with a .txt file extension into a folder for example.
 - Less: view contents of a file without opening a separate editor
 
-  `![Less of basic python script](media/less_sample.png)`
+  ![Less of basic python script](media/less_sample.png)
 
 - Cat:very powerful three part function that allows a reader to view, combine (concatenate), or create a new version of a file
   - `cat file 1 file 2` will display the contents of both files on separate lines.
@@ -133,7 +133,7 @@ WSL is the Windows utility for running shell. Ubuntu is a well known Linux opera
   - `cat file 2` will now confirm if the content in file 1 was successfully appended to the end of file 2.
 - Head: read first ten lines of a file - useful for checking logs or doing other QA
 
-  `![Head of slightly less basic python script](media/head_sample.png)`
+  ![Head of slightly less basic python script](media/head_sample.png)
 
 ### Knowledge Check 2
 
@@ -182,7 +182,7 @@ Stringing commands together in bash is quite easy if you know your pipes :).
 </div>
 ***********************************************************************
 
-# Permissions and working with other users
+## Permissions and working with other users
 
 - Chmod or change mode is used to set the permissions on a file or directory.
 - The three basic permissions are **read** - access the contents of a file **write** - modify the contents of a file or directory and **execute** - run a bash script on a file or directory.
