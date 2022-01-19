@@ -191,54 +191,7 @@ h2, h3, h4 {
     padding: 0 0.5rem;
 }
 
-.lia-list {
-  &--unordered,
-  &--ordered {
-    margin-left: 2rem;
-    padding-left: 2rem;
-    position: relative;
-
-    ul,
-    ol {
-      margin-left: 0;
-    }
+.lia-list--unordered
+  > li:before {
+    content: "\25CF";
   }
-
-  &--unordered {
-    list-style-type: circle;
-/
-    > li {
-      &:before {
-        /*content: "\EA0D";
-        color: rgb(var(--color-highlight-dark));
-        font-family: "icon";*/
-        left: 0;
-        position: absolute;
-      }
-
-      > p {
-        display: block;
-      }
-    }
-
-    ul li ul li {
-      padding-left: 1rem;
-      &:before {
-        content: "\EA22";
-      }
-    }
-  }
-
-  &--ordered {
-    > li {
-      &::marker {
-        color: rgb(var(--color-highlight-dark));
-      }
-
-      > * {
-        left: 1rem;
-        position: relative;
-      }
-    }
-  }
-}

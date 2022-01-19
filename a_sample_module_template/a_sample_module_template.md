@@ -7,7 +7,7 @@ language: en
 narrator: UK English Female
 title: Module Title
 comment:  This is a short, focused description of the module.
-long_description: This is a longer description, which should be understandable for a lay auidience. It will print under "Is this module right for me?" in the overview.
+long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
 
 @learning_objectives  
 
@@ -20,7 +20,7 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles_test.css
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
 
@@ -47,9 +47,6 @@ To see what it looks like rendered via LiaScript, [click here](https://liascript
 List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
 
 * one skill we have [another module for, linked here](https://education.arcus.chop.edu)
-
-    * Unordered list test
-    
 * some familiarity with [a topic](https://education.arcus.chop.edu)
 * understanding of [one thing](https://education.arcus.chop.edu) and [another](https://education.arcus.chop.edu)
 
