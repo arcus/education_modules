@@ -190,3 +190,8 @@ h2, h3, h4 {
     margin-bottom: 0;
     padding: 0 0.5rem;
 }
+
+.lia-list--unordered
+  > li:before {
+    content: "\25CF";
+  }

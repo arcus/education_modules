@@ -7,7 +7,7 @@ language: en
 narrator: UK English Female
 title: Module Title
 comment:  This is a short, focused description of the module.
-long_description: This is a longer description, which should be understandable for a lay auidience. It will print under "Is this module right for me?" in the overview.
+long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
 
 @learning_objectives  
 
