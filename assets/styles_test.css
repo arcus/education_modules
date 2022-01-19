@@ -193,8 +193,5 @@ h2, h3, h4 {
 
 .lia-list--unordered
   > li:before {
-    content: "\2022";
+    content: "\25CF";
   }
-  ul li ul li:before {
-    content: "\25E6"
-    }
