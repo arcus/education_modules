@@ -168,7 +168,7 @@ The sort command is used to categorize files in bash.
 
 What character passes the output of one command to the next command in a sequence?
 
-[[X]] |
+[(X)] |
 [( )] &
 [( )] +
 [( )] -
@@ -195,10 +195,10 @@ Stringing commands together in bash is quite easy if you know your pipes :).
 
 Which numerical sequence grants no restrictions on permissions and should generally be avoided?
 
-[[]] 755
-[[]] 666
-[[]] 700
-[[X]] 777
+[( )] 755
+[( )] 666
+[( )] 700
+[(X)] 777
 
 ---
 
