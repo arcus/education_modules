@@ -11,13 +11,14 @@ long_description: When doing data analysis in a programming language like R or P
 @learning_objectives  
 
 After completion of this module, learners will be able to:
+
 - Describe what a directory is
 - Distinguish between a relative file path and an absolute file path
 - Describe the location of a file using its file path
 - Describe a few best practices and conventions of naming files and folders
 
 @end
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 -->
 
 # Directories and File Paths
@@ -50,7 +51,7 @@ If you've ever saved a file on your computer, you probably have some familiarity
 On your computer, you can have a mix of files and folders within folders. This is a hierarchical filing system; if you map it out, it looks like a tree.
 
 <div style = "margin: 1rem; width: 750;">
-![Diagram of a hierarchical file structure](media/files-and-folders.png?raw=true)
+![Diagram of a hierarchical file structure](media/files_and_folders.png?raw=true)
 </div>
 
 Here is another representation, this time of how the file structure might look on your computer:
@@ -117,12 +118,12 @@ What is the difference between an absolute file path and a relative file path?
 [(X)] Absolute file paths contain all of the information about the location of the file, while relative file paths are relative to the current location, or working directory.
 
 ********************************
-
 <div class = "answer">
 
 Neither absolute nor relative file paths are "better"-- which you choose will depend on how you will be using or sharing your script. With an absolute path, all of the information to find your file **on your own computer** will be included in the file path. With a relative path, the file path will be in relation to a reference point. Often, relative file paths are used in scripts that will be shared or run on multiple computers.
 
 </div>
+********************************
 
 ## Naming Best Practices and Conventions
 
@@ -163,6 +164,7 @@ Mica has written an R script to extract from a patient cohort some data about al
 [[X]] The file name is not descriptive.
 [[X]] The file name contains a date that is ambiguous (doesn't use the ISO 8601 standard).
 
+********************************
 <div class = "answer">
 
 There are a few things that make Mica's file name unideal! Spaces in file names are not always supported or are painful to deal with in some software. Special characters (in this case "!" and "/") are not allowed in most operating systems. Even though Mica included a date in their file name, generally a good idea, we can't be sure if the format was MM/DD/YYYY or DD/MM/YYYY because they didn't use the ISO 8601 standard, which is always YYYYMMDD. Additionally, `my awesome R script 03/04/21!.R` doesn't tell us anything about what the script actually does! While that might be fine in the short term, in the long term it will likely lead to some confusion. However, there isn't a rule that you can't include "R" in the name of an R script, though with the `.R` file extension, it's not necessary.
@@ -170,6 +172,7 @@ There are a few things that make Mica's file name unideal! Spaces in file names 
 Can you think of a few alternative names for the file above that would be more descriptive and follow the best practices we listed previously?
 
 </div>
+********************************
 
 ## Feedback
 
