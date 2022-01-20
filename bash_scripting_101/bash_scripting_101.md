@@ -146,7 +146,7 @@ WSL is the Windows utility for running shell. Ubuntu is a well known Linux opera
 Select the three functions contained in the cat command?
 
 [[X]] View
-[[]] Categorize
+[[ ]] Categorize
 [[X]] Concatenate
 [[X]] Create New Version
 
@@ -174,7 +174,7 @@ The sort command is used to categorize files in bash.
 
 What character passes the output of one command to the next command in a sequence?
 
-[(X)] |
+[(X)] \|
 [( )] &
 [( )] +
 [( )] -
