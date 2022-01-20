@@ -17,8 +17,10 @@ After completion of this module, learners will be able to:
 - Know how to access the command line and execute bash scripting commands in the linux shell environment
 - Know how to modify permissions on shared files and directories in bash
 @end
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
 
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+
+script: https://kit.fontawesome.com/83b2343bd4.js
 -->
 
 # Command Line 101
@@ -37,7 +39,7 @@ If you're interested in harnessing the power of well-organized files and folders
 
 **Pre-requisites**
 
-Familarility with locating files and folders stored in a directory system. Familiarity using a command line interface to execute code is recommended but not required.
+Familarility with locating files and folders stored in a directory system. Familiarity using a command line interface to execute code is recommended but not required. This course is designed to be equally useful for those with experience running code as well as for those who are total newbies.
 
 **Learning Objectives**
 
@@ -51,12 +53,13 @@ Familarility with locating files and folders stored in a directory system. Famil
 
 - Bash or unix shell is a free command line language and the default login shell for most Linux machines. The execution of shell commands is known as shell scripting.
 - Shell scripting’s portable, user friendly syntax belies its power.
+- Straightforward bash command line interfaces are available pre-installed on both Mac and Windows machines and can be readily accessed by just searching in the correct place.
 - Commands easily mastered on one’s local machine or on a training data set can be scaled up to working with large volumes of data in a high performance computing (hpc) or cloud hosted environment.
 - Adoption of shell scripting, also reinforces the importance of having well-structured and well-named files and file directory structures.
 
 ## How do I get it?
 
-- It is very easy to run bash on a Mac or Windows machine. (In fact you may have already done some shell scripting without evening realizing it).
+- To reiterate, it is very easy, even intuitive, to run bash on a Mac or Windows machine. (In fact you may have already done some shell scripting without even realizing it).
 
 ### Mac Installation
 
@@ -64,7 +67,7 @@ Familarility with locating files and folders stored in a directory system. Famil
 
 - On a Mac machine, bash is the default login shell in the Terminal command line program.
 - Type terminal in your Mac spotlight search to pull up this program for the first time though it likely already launches in dock on your machine.
-- It should be noted that Mac’s with the Catalina Operating System or later are running zsh instead of bash. That said, zsh is functionally a later and greater version of bash but key differences are noted [here](https://medium.com/@harrison.miller13_28580/bash-vs-z-shell-a-tale-of-two-command-line-shells-c65bb66e4658).
+- It should be noted that Mac’s with the Catalina Operating System or later are running zsh instead of bash. That said, zsh is [functionally a later and greater version of bash with some key differences noted](https://medium.com/@harrison.miller13_28580/bash-vs-z-shell-a-tale-of-two-command-line-shells-c65bb66e4658).
 
 ### Windows Installation
 
@@ -72,7 +75,7 @@ Familarility with locating files and folders stored in a directory system. Famil
 
 - On a Windows machine, the WSL (Windows Subsystem for Linux) has Ubuntu, which is just a widely used flavor of Bash, installed as its default shell scripting environment. This is automatically installed on any Windows computer running Windows 10 or greater.
 - To confirm this feature is enabled, check to see if developer mode is enabled in settings and WSL is turned on in Features.
-- Search Bash in Cortana to launch WSL for the first time and click “Y” when asked to install Ubuntu for the first time. Find detailed WSL instructions [here](https://docs.microsoft.com/en-us/windows/wsl/).
+- Search Bash in Cortana to launch WSL for the first time and click “Y” when asked to install Ubuntu for the first time. [Microsoft has their own internal documentation on WSL which features additional visual resources and FAQS](https://docs.microsoft.com/en-us/windows/wsl/).
 - Create a username and password when prompted and now you are ready to do some shell scripting! These user credentials have no bearing on your Windows user name and will be automatically logged in for future sessions.
 
 ### Knowledge Check 1
@@ -103,12 +106,15 @@ WSL is the Windows utility for running shell. Ubuntu is a well known Linux opera
 
 ## Useful Commands and Syntax
 
+- In our installation section, we covered how accessing CLI tools to run bash scripts is quite uncomplicated on either operating system. Similarly, bash commands and syntax are approachable and integrate well to allow for a gradual increasing in the complexity of utilities run.
+
 ### Commands
 
 - Ls: list directory contents
 - Mkdir: create a new directory at the folder level
 - Cd:change directory
-- Echo: prints out text in the terminal window- especially useful for declaring environment variables which reveal permissions and what strings can be passed.
+- Echo: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
+
   ![Echo variable example](media/echo_example.png)
 
 - Touch: creates a new file
@@ -211,7 +217,7 @@ Giving all users access to manipulate files and directories in any way doesn't t
 
 ## Mounting external file shares and basic navigation
 
-- When you mount something you are placing access to a file directory system within your root file system structure, giving yourself a fixed location by which to access files. This is not unlike the C: or D: drives visible in Windows.
+- When you mount something you are placing access to a file directory system within your root file system structure, giving yourself a fixed location by which to access files. This is not unlike the C: or D: drives visible in Windows or the Mac HD icon on a Mac.
 - `cd/mnt/file_path` opens up access to this external directory within the shell scripting window. As long as permissions have been appropriately granted, you can now collaborate with colleagues in the mounted file directory.
 
 ## Additional Resources
@@ -241,4 +247,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 - If the module difficulty was appropriate
 - If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Intro+to+Python%22)!
+We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Command+Line+101%22)!
