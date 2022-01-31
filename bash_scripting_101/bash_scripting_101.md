@@ -113,7 +113,7 @@ In our installation section, we covered how accessing CLI tools to run bash scri
 - `Cd`: change directory
 - `Echo`: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
 
-  ![Echo variable example demonstrating how to print and set the price of a pint](media/echo_example.png)
+  ![Echo variable example demonstrating how to print and set the price of a pint](media/echo_example_large.png)
 
 - `Touch`: creates a new file
 
@@ -126,7 +126,7 @@ In our installation section, we covered how accessing CLI tools to run bash scri
 
 - `Man`: reveals function of a given command
 
-  ![Grep man command output with the full definition and some options displayed](media/grep_output.png)
+  ![Grep man command output with the full definition and some options displayed](media/grep_output_large.png)
 
 - `Mv`: move or rename a directory and allows for batch processing
   `mv *.txt folder` will move all files with a .txt file extension into a folder for example.
@@ -141,7 +141,7 @@ In our installation section, we covered how accessing CLI tools to run bash scri
   - `cat file 1 >> file 2` will append the contents of file 1 at the end of file 2.
   - `cat file 2` will now confirm if the content in file 1 was successfully appended to the end of file 2.
 
-  ![Head output of slightly less basic python script that organizes a picnic gathering menu amongst three friends](media/head_example.png)
+  ![Head output of slightly less basic python script that organizes a picnic gathering menu amongst three friends](media/head_example_small.png)
 
 ### Knowledge Check 2
 
