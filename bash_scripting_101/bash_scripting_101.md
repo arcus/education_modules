@@ -132,9 +132,7 @@ In our installation section, we covered how accessing CLI tools to run bash scri
   `mv *.txt folder` will move all files with a .txt file extension into a folder for example.
 - `Less`: view contents of a file without opening a separate editor
 
-<div style = "margin: 1rem; width: 750;">
-  ![Less of basic python script that says hello and prompts a dialogue for an individual's name and age](media/less_sample.png)
-</div>
+  ![Less of basic python script that says hello and prompts a dialogue for an individual's name and age](media/less_sample_small.png)
 
 - `Cat`: very powerful three part function that allows a reader to view, combine (concatenate), or create a new version of a file
 
