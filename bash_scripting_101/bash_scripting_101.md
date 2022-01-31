@@ -49,9 +49,9 @@ Familarility with locating files and folders stored in a directory system. Famil
 
 ## What is the shell? Why would I use it?
 
-![The Shell](media/shell_home.png)
+![Home directory of the shell in the default homebrew theme](media/shell_home.png)
 
-- Bash or unix shell is a free command line language and the default login shell for most Linux machines. The execution of shell commands is known as shell scripting.
+- Bash or unix shell is a free command line language and the default login shell for most Linux machines. A command line interface or CLI allows a user to pass a series of text (commands) to a program in order to execute code. The execution of shell commands is known as shell scripting.
 - Shell scripting’s portable, user friendly syntax belies its power.
 - Straightforward bash command line interfaces are available pre-installed on both Mac and Windows machines and can be readily accessed by just searching in the correct place.
 - Commands easily mastered on one’s local machine or on a training data set can be scaled up to working with large volumes of data in a high performance computing (hpc) or cloud hosted environment.
@@ -63,7 +63,7 @@ Familarility with locating files and folders stored in a directory system. Famil
 
 ### Mac Installation
 
-![Finding the Terminal](media/terminal_in_mac.png)
+![How to locate the terminal in Spotlight on a Mac](media/terminal_in_mac.png)
 
 - On a Mac machine, bash is the default login shell in the Terminal command line program.
 - Type terminal in your Mac spotlight search to pull up this program for the first time though it likely already launches in dock on your machine.
@@ -71,7 +71,7 @@ Familarility with locating files and folders stored in a directory system. Famil
 
 ### Windows Installation
 
-![Windows Settings to Configure](media/on_windows.png)
+![Confirm these Windows settings to enable shell scripting capabilities](media/on_windows.png)
 
 - On a Windows machine, the WSL (Windows Subsystem for Linux) has Ubuntu, which is just a widely used flavor of Bash, installed as its default shell scripting environment. This is automatically installed on any Windows computer running Windows 10 or greater.
 - To confirm this feature is enabled, check to see if developer mode is enabled in settings and WSL is turned on in Features.
@@ -102,7 +102,7 @@ WSL is the Windows utility for running shell. Ubuntu is a well known Linux opera
 - It is recommended that you use the native user directory in the home directory on your computer. Your user directory contains a folder named “bin” which is the root directory of any unix like operating system.
 - Bin is short for “binary” and is where you can store any configuration or executable files for programs you run on the CLI. This will be a good place to store bash scripts (.sh files) once you have become comfortable executing commands and learning syntax.
 
-![Find your home directory](media/user_directory.png)
+![Accessing the user/home directory on a Mac](media/user_directory.png)
 
 ## Useful Commands and Syntax
 
@@ -112,41 +112,41 @@ WSL is the Windows utility for running shell. Ubuntu is a well known Linux opera
 
 - Ls: list directory contents
 - Mkdir: create a new directory at the folder level
-- Cd:change directory
+- Cd: change directory
 - Echo: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
 
-  ![Echo variable example](media/echo_example.png)
+  ![Echo variable example demonstrating how to print and set the price of a pint](media/echo_example.png)
 
 - Touch: creates a new file
   `touch file 1` will create a single new file
   `touch file 1 file 2 file 3` will create multiple uniquely named files at once
-- Grep:powerful search function to locate a string or pattern within a file or in a directory. Grep stands for global regular expression print.
+- Grep: powerful search function to locate a string or pattern within a file or in a directory. Grep stands for global regular expression print.
   `grep 'panda' file 1 file 2 file 3` will search for the word "panda" in the three files we just created.
-- Man:reveals function of a given command
+- Man: reveals function of a given command
 
-  ![Grep output with some options displayed](media/grep_output.png)
+  ![Grep man command output with the full definition and some options displayed](media/grep_output.png)
 
 - Mv: move or rename a directory and allows for batch processing
   `mv *.txt folder` will move all files with a .txt file extension into a folder for example.
 - Less: view contents of a file without opening a separate editor
 
-  ![Less of basic python script](media/less_sample.png)
+  ![Less of basic python script that says hello and prompts a dialogue for an individual's name and age](media/less_sample.png)
 
-- Cat:very powerful three part function that allows a reader to view, combine (concatenate), or create a new version of a file
+- Cat: very powerful three part function that allows a reader to view, combine (concatenate), or create a new version of a file
   - `cat file 1 file 2` will display the contents of both files on separate lines.
   - `cat > file 4` will create a new file named file 4
   - `cat file 1 >> file 2` will append the contents of file 1 at the end of file 2.
   - `cat file 2` will now confirm if the content in file 1 was successfully appended to the end of file 2.
 - Head: read first ten lines of a file - useful for checking logs or doing other QA
 
-  ![Head of slightly less basic python script](media/head_sample.png)
+  ![Head output of slightly less basic python script that organizes a picnic gathering menu amongst three friends](media/head_sample.png)
 
 ### Knowledge Check 2
 
 Select the three functions contained in the cat command?
 
 [[X]] View
-[[ ]] Categorize
+[[]] Categorize
 [[X]] Concatenate
 [[X]] Create New Version
 
@@ -195,7 +195,7 @@ Stringing commands together in bash is quite easy if you know your pipes :).
 - [Consult this documentation and table for guidance on how to apply useful file and directory level permissions](https://linuxcommand.org/lc3_lts0090.php)
 - Chown: change file ownership
 - Chgrp: change group ownership
-- Sudo - assume super user privileges on an as needed basis. **Proceed with caution** This is decidedly not best data security practices but might need to be invoked as you continue to learn bash as permissioning can be quite granular and dynamic.
+<div class = "important"> - Sudo - assume super user privileges on an as needed basis. **Proceed with caution** This is decidedly not best data security practices but might need to be invoked as you continue to learn bash as permissioning can be quite granular and dynamic. </div>
 
 ### Knowledge Check 4
 
@@ -219,6 +219,12 @@ Giving all users access to manipulate files and directories in any way doesn't t
 
 - When you mount something you are placing access to a file directory system within your root file system structure, giving yourself a fixed location by which to access files. This is not unlike the C: or D: drives visible in Windows or the Mac HD icon on a Mac.
 - `cd/mnt/file_path` opens up access to this external directory within the shell scripting window. As long as permissions have been appropriately granted, you can now collaborate with colleagues in the mounted file directory.
+
+## Glossary
+
+- Binary or Executable File: A file that causes a computer to follow a series of tasks represented in encoded instructions. It should be noted that .bin is the preferred Mac extension and .exe is the preferred Windows extension.
+- Unix: Widely used class of computer operating systems which support multitasking and multiusers.
+- Linux: Open source operating system modeled on Unix. Bash is one type of Linux.
 
 ## Additional Resources
 
