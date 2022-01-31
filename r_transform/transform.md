@@ -75,11 +75,11 @@ JOY
 
 ## The `dplyr` Package
 
-![The dplyr logo is shown: three sets of futuristic, colorful needlenose pliers that appear to be moving upward and to the right.  The word "dplyr" appears in the upper left of the logo, which is in the shape of a hexagon.](media/dplyr_logo.png)
+![The dplyr logo is shown: three sets of futuristic, colorful pliers that appear to be moving upward and to the right.  The word "dplyr" appears in the upper left of the logo, which is in the shape of a hexagon.](media/dplyr_logo.png)
 
 `dplyr` (pronounced dee-ply-er, a play on words with "data" and "pliers") is a useful R package we'll discuss.
 
-## Subsetting Columns vs Rows
+## Subsetting Columns or Rows
 
 Often, you have a large data frame but only want to create a graph or analyze data from only a small part of it. The `dplyr` package, part of the larger `[tidyverse](https://www.tidyverse.org/)` set of packages, works great for this purpose.
 
@@ -91,7 +91,7 @@ Let's look at how you can subset a data frame (choose only certain columns and/o
 
 `filter()` reshapes data so that it includes only the rows that meet your conditions. ![A grey colored data frame of four rows and a header row, with two rows selected (as indicated by a blue color), is transformed into a data frame of two selected (blue colored) rows, along with a header.](media/dplyr_filter.png)
 
-## Using `select()`
+## The `select()` Function
 
 Let's look at `select()` first. Select extracts columns from a data frame, using the column **name**.
 
@@ -141,7 +141,7 @@ Answer (E) is not correct, because we know (D) is incorrect.
 </div>
 </div>
 
-## `filter()`
+## The `filter()` Function
 
 One of the most important `dplyr` functions to know about is `filter()`. `filter()` extracts rows, and it does that based on **logical criteria**, or a **condition** that can be evaluated to be true (keep that row as part of our subset) or false (don't keep that row).
 
@@ -172,7 +172,7 @@ That's why we use double equals in the context of a logical test that compares t
 If you use the wrong kind of equals, you’ll get an error.  This is a very common mistake, and one you're almost guaranteed to accidentally commit at one point or another!
 </div>
 
-## Logical operators
+## Logical Operators
 
 Here are some important logical operators to know about. They will all come in handy when you’re filtering rows of a data frame. `x` and `y` each represent expressions, which could be column names or constant values or a combination thereof.
 
@@ -437,4 +437,4 @@ Beyond dplyr, there are a number of other `[tidyverse](https://www.tidyverse.org
 * `purrr` offers advanced functionality to automate complex data transformations
 * `dbplyr` allows you to interact with a table inside a database as if it were a data frame
 
-![A set of five hexagonal logos: one each for tidyr (futuristic brooms fly up and to the right), lubridate (a calendar and clock), stringr (a violin), purrr (a hand-drawn sketch of a cat), and dbplyr (futuristic groove-joint pliers flying up and to the right)](media/tidyverse_logos.png)
+![A set of five hexagonal logos: one each for tidyr (futuristic brooms fly up and to the right), lubridate (a calendar and clock), stringr (a violin), purrr (a hand-drawn sketch of a cat), and dbplyr (futuristic channellock pliers flying up and to the right)](media/tidyverse_logos.png)
