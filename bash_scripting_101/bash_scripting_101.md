@@ -6,7 +6,7 @@ version:  1.0.0
 language: en
 narrator: UK English Female
 title: Command Line 101
-comment:  This course will focus on accessing a command line program and running shell scripts on your home computer, learning how to execute useful commands and recognize basic syntax, and, finally,how to set permissions in a way that leads to collaborating on a shared file directory with colleagues.
+comment:  This course will focus on accessing a command line program and running shell scripts on your home computer, learning how to execute useful commands and recognize basic syntax, and, finally, learning how to set permissions in a way that leads to collaborating on a shared file directory with colleagues.
 long_description:
 @learning_objectives
 
@@ -39,7 +39,7 @@ If you're interested in harnessing the power of well-organized files and folders
 
 **Pre-requisites**
 
-Familarility with locating files and folders stored in a directory system. Familiarity using a command line interface to execute code is recommended but not required. This course is designed to be equally useful for those with experience running code as well as for those who are total newbies.
+Learners should be familiar with locating files and folders stored in a directory system. Familiarity with using a command line interface to execute code is recommended but not required. This course is designed to be equally useful for those with experience running code as well as for those who are total newbies.
 
 **Learning Objectives**
 
@@ -59,7 +59,7 @@ Familarility with locating files and folders stored in a directory system. Famil
 
 ## How do I get it?
 
-- To reiterate, it is very easy, even intuitive, to run bash on a Mac or Windows machine. (In fact you may have already done some shell scripting without even realizing it).
+To reiterate, it is very easy, even intuitive, to run bash on a Mac or Windows machine. (In fact you may have already done some shell scripting without even realizing it).
 
 ### Mac Installation
 
@@ -86,9 +86,7 @@ What is the name of the pre-installed program used to run shell scripts on a Mac
 [( )] MSL (Mac Subsystem for Linux)
 [(X)] Terminal
 [( )] Ubuntu
-
----
-
+***********************************************************************
 <div class = "answer">
 
 WSL is the Windows utility for running shell. Ubuntu is a well known Linux operating system that is often used as the default shell scripting environment.
@@ -106,51 +104,54 @@ WSL is the Windows utility for running shell. Ubuntu is a well known Linux opera
 
 ## Useful Commands and Syntax
 
-- In our installation section, we covered how accessing CLI tools to run bash scripts is quite uncomplicated on either operating system. Similarly, bash commands and syntax are approachable and integrate well to allow for a gradual increasing in the complexity of utilities run.
+In our installation section, we covered how accessing CLI tools to run bash scripts is quite uncomplicated on either operating system. Similarly, bash commands and syntax are approachable and integrate well to allow for a gradual increasing in the complexity of utilities run.
 
 ### Commands
 
-- Ls: list directory contents
-- Mkdir: create a new directory at the folder level
-- Cd: change directory
-- Echo: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
+- `Ls`: list directory contents
+- `Mkdir`: create a new directory at the folder level
+- `Cd`: change directory
+- `Echo`: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
 
   ![Echo variable example demonstrating how to print and set the price of a pint](media/echo_example.png)
 
-- Touch: creates a new file
-  `touch file 1` will create a single new file
-  `touch file 1 file 2 file 3` will create multiple uniquely named files at once
-- Grep: powerful search function to locate a string or pattern within a file or in a directory. Grep stands for global regular expression print.
-  `grep 'panda' file 1 file 2 file 3` will search for the word "panda" in the three files we just created.
-- Man: reveals function of a given command
+- `Touch`: creates a new file
+
+  - `touch file 1` will create a single new file
+  - `touch file 1 file 2 file 3` will create multiple uniquely named files at once
+
+- `Grep`: powerful search function to locate a string or pattern within a file or in a directory. Grep stands for global regular expression print.
+
+  - `grep 'panda' file 1 file 2 file 3` will search for the word "panda" in the three files we just created.
+
+- `Man`: reveals function of a given command
 
   ![Grep man command output with the full definition and some options displayed](media/grep_output.png)
 
-- Mv: move or rename a directory and allows for batch processing
+- `Mv`: move or rename a directory and allows for batch processing
   `mv *.txt folder` will move all files with a .txt file extension into a folder for example.
-- Less: view contents of a file without opening a separate editor
+- `Less`: view contents of a file without opening a separate editor
 
   ![Less of basic python script that says hello and prompts a dialogue for an individual's name and age](media/less_sample.png)
 
-- Cat: very powerful three part function that allows a reader to view, combine (concatenate), or create a new version of a file
+- `Cat`: very powerful three part function that allows a reader to view, combine (concatenate), or create a new version of a file
+
   - `cat file 1 file 2` will display the contents of both files on separate lines.
   - `cat > file 4` will create a new file named file 4
   - `cat file 1 >> file 2` will append the contents of file 1 at the end of file 2.
   - `cat file 2` will now confirm if the content in file 1 was successfully appended to the end of file 2.
-- Head: read first ten lines of a file - useful for checking logs or doing other QA
 
-  ![Head output of slightly less basic python script that organizes a picnic gathering menu amongst three friends](media/head_sample.png)
+  ![Head output of slightly less basic python script that organizes a picnic gathering menu amongst three friends](media/head_example.png)
 
 ### Knowledge Check 2
 
 Select the three functions contained in the cat command?
 
 [[X]] View
-[[]] Categorize
+[[ ]] Categorize
 [[X]] Concatenate
 [[X]] Create New Version
-
----
+***********************************************************************
 
 <div class = "answer">
 
@@ -161,14 +162,14 @@ The sort command is used to categorize files in bash.
 
 ### Syntax
 
-- '>' takes the output of the command you executed in the terminal and places it in a new file
-- | takes the output of one command and passes it to the next command in the sequence. Allows for integrating of commands
-- ~ shortcut for your home directory
-- . shortcut for your current directory
-- .. shortcut for your previous directory
+- `>` takes the output of the command you executed in the terminal and places it in a new file
+- `|` takes the output of one command and passes it to the next command in the sequence. Allows for integrating of commands
+- `~` shortcut for your home directory
+- `.` shortcut for your current directory
+- `..` shortcut for your previous directory
   The above three shortcuts are highly useful for executing scripts in the proper location once you are collaborating in an active project with multiple files and folders.
-- '\*' character sequence wildcard. Very useful in running a command on all files with a given file extension as demonstrated in the mv example above.
-- $ used to define a variable expression as used in the echo example above.
+- `*` character sequence wildcard. Very useful in running a command on all files with a given file extension as demonstrated in the mv example above.
+- `$` used to define a variable expression as used in the echo example above.
 
 ### Knowledge Check 3
 
@@ -178,8 +179,7 @@ What character passes the output of one command to the next command in a sequenc
 [( )] &
 [( )] +
 [( )] -
-
----
+***********************************************************************
 
 <div class = "answer">
 
@@ -190,12 +190,21 @@ Stringing commands together in bash is quite easy if you know your pipes :).
 
 ## Permissions and working with other users
 
-- Chmod or change mode is used to set the permissions on a file or directory.
-- The three basic permissions are **read** - access the contents of a file **write** - modify the contents of a file or directory and **execute** - run a bash script on a file or directory.
+- `Chmod` or change mode is used to set the permissions on a file or directory.
+- The three basic permissions are:
+
+  - **read** - access the contents of a file
+  - **write** - modify the contents of a file or directory
+  - **execute** - run a bash script on a file or directory.
+
 - [Consult this documentation and table for guidance on how to apply useful file and directory level permissions](https://linuxcommand.org/lc3_lts0090.php)
-- Chown: change file ownership
-- Chgrp: change group ownership
-<div class = "important"> - Sudo - assume super user privileges on an as needed basis. **Proceed with caution** This is decidedly not best data security practices but might need to be invoked as you continue to learn bash as permissioning can be quite granular and dynamic. </div>
+- `Chown`: change file ownership
+- `Chgrp`: change group ownership
+- `Sudo` - assume super user privileges on an as-needed basis.
+
+<div class = "warning">
+**Proceed with caution!** Using the `Sudo` command is decidedly not best data security practices, but might need to be invoked as you continue to learn bash, as permissioning can be quite granular and dynamic.
+</div>
 
 ### Knowledge Check 4
 
@@ -205,12 +214,10 @@ Which numerical sequence grants no restrictions on permissions and should genera
 [( )] 666
 [( )] 700
 [(X)] 777
-
----
-
+***********************************************************************
 <div class = "answer">
 
-Giving all users access to manipulate files and directories in any way doesn't tend to lead to great outcomes. 755 in which the file owner can read, write, while enabling all others permissioned users to read and execute a file is a safer and more productive option to choose.
+Giving all users access to manipulate files and directories in any way doesn't tend to lead to great outcomes. 755, in which the file owner can read, write, while enabling all other permissioned users to read and execute a file, is a safer and more productive option to choose.
 
 </div>
 ***********************************************************************
