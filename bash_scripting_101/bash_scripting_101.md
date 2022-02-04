@@ -53,13 +53,24 @@ Learners should be familiar with locating files and folders stored in a director
 
 ![Home directory of the shell in the default homebrew theme.](media/shell_home.png)
 
-- Bash or unix shell is a free command line language and the default login shell for most Linux machines. A command line interface or CLI allows a user to pass a series of text (commands) to a program in order to execute code. The execution of shell commands is known as shell scripting.
-- Shell scripting’s portable, user friendly syntax belies its power.
-- Straightforward bash command line interfaces are available pre-installed on both Mac and Windows machines and can be readily accessed by just searching in the correct place.
+Bash or unix shell is a free command line language and the default login shell for most Linux machines. A command line interface or CLI allows a user to pass a series of text (commands) to a program in order to execute code. The execution of shell commands is known as shell scripting.
+
+<div class = "learnmore">
+**Why is it called a "shell"?** Your computer has an operating system (OS), most commonly either Windows, Mac, or Linux. The core for the OS itself is called the kernel; it's the heart of how everything works in your computer, but you can't actually interface with it directly as a user. Programs that are designed to work with your OS can communicate with the kernel (Word, RStudio, Chrome, etc.), but if you want to do something outside of one of those programs you can't connect to the kernel directly yourself. That's where a shell comes in.
+
+The shell is like a layer outside the kernel that you as a user can communicate with. You can type commands in the shell, and it will execute them for you in the kernel. Back when computers were newer and there were few ready programs available, the shell was the primary way to get stuff done on a computer.
+
+To learn more, check out this post for [an excellent breakdown of the difference between the shell and the kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/). 
+</div>
+
+Shell scripting’s portable, user friendly syntax belies its power.
+
+Straightforward bash command line interfaces are available pre-installed on both Mac and Windows machines and can be readily accessed by just searching in the correct place.
+
+There are several ways shell scripting can be useful to researchers and others working with data:
+
 - Commands easily mastered on one’s local machine or on a training data set can be scaled up to working with large volumes of data in a high performance computing (hpc) or cloud hosted environment.
-
-* Shell scripts can also call on multiple other programming languages like R and python, to build pipelines that run across several software applications as well as enable a user to have greater facility with tools like git and docker.
-
+- Shell scripts can also call on multiple other programming languages like R and python, to build pipelines that run across several software applications as well as enable a user to have greater facility with tools like git and docker.
 - Adoption of shell scripting, also reinforces the importance of having well-structured and well-named files and file directory structures.
 
 ## How do I get it?
