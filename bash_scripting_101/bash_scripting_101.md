@@ -49,7 +49,7 @@ Learners should be familiar with locating files and folders stored in a director
 
 ## What is the shell? Why would I use it?
 
-![Home directory of the shell in the default homebrew theme](media/shell_home.png)
+![Home directory of the shell in the default homebrew theme.](media/shell_home.png)
 
 - Bash or unix shell is a free command line language and the default login shell for most Linux machines. A command line interface or CLI allows a user to pass a series of text (commands) to a program in order to execute code. The execution of shell commands is known as shell scripting.
 - Shell scripting’s portable, user friendly syntax belies its power.
@@ -66,7 +66,7 @@ To reiterate, it is very easy, even intuitive, to run bash on a Mac or Windows m
 
 ### Mac Installation
 
-![How to locate the terminal in Spotlight on a Mac](media/terminal_in_mac.png)
+![How to locate the terminal in Spotlight on a Mac.](media/terminal_in_mac.png)
 
 - On a Mac machine, bash is the default login shell in the Terminal command line program.
 - Type terminal in your Mac spotlight search to pull up this program for the first time though it likely already launches in dock on your machine.
@@ -74,7 +74,7 @@ To reiterate, it is very easy, even intuitive, to run bash on a Mac or Windows m
 
 ### Windows Installation
 
-![Confirm these Windows settings to enable shell scripting capabilities](media/on_windows.png)
+![Confirm these Windows settings to enable shell scripting capabilities.](media/on_windows.png)
 
 - On a Windows machine, the WSL (Windows Subsystem for Linux) has Ubuntu, which is just a widely used flavor of Bash, installed as its default shell scripting environment. This is automatically installed on any Windows computer running Windows 10 or greater.
 - To confirm this feature is enabled, check to see if developer mode is enabled in settings and WSL is turned on in Features.
@@ -105,7 +105,7 @@ WSL is the Windows utility for running shell. Ubuntu is a well known Linux opera
 - It is recommended that you use the native user directory in the home directory on your computer. Your user directory contains a folder named “bin” which is the root directory of any unix like operating system.
 - Bin is short for “binary” and is where you can store any configuration or executable files for programs you run on the CLI. This will be a good place to store bash scripts (.sh files) once you have become comfortable executing commands and learning syntax.
 
-![Accessing the user/home directory on a Mac](media/user_directory.png)
+![Accessing the user/home directory on a Mac.](media/user_directory.png)
 
 ## Useful Commands and Syntax
 
@@ -118,7 +118,7 @@ In our installation section, we covered how accessing CLI tools to run bash scri
 - `Cd`: change directory
 - `Echo`: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
 
-  ![Echo variable example demonstrating how to print and set the price of a pint](media/echo_example_large.png)
+  ![Echo variable example demonstrating how to print and set the price of a pint.](media/echo_example_large.png)
 
 - `Touch`: creates a new file
 
@@ -131,13 +131,13 @@ In our installation section, we covered how accessing CLI tools to run bash scri
 
 - `Man`: reveals function of a given command
 
-  ![Grep man command output with the full definition and some options displayed](media/grep_output_large.png)
+  ![Grep man command output with the full definition and some options displayed.](media/grep_output_large.png)
 
 - `Mv`: move or rename a directory and allows for batch processing
   `mv *.txt folder` will move all files with a .txt file extension into a folder for example.
 - `Less`: view contents of a file without opening a separate editor
 
-  ![Less of basic python script that says hello and prompts a dialogue for an individual's name and age](media/less_sample_small.png)
+  ![Less of basic python script that says hello and prompts a dialogue for an individual's name and age.](media/less_sample_small.png)
 
 - `Cat`: very powerful three part function that allows a reader to view, combine (concatenate), or create a new version of a file
 
@@ -146,7 +146,7 @@ In our installation section, we covered how accessing CLI tools to run bash scri
   - `cat file 1 >> file 2` will append the contents of file 1 at the end of file 2.
   - `cat file 2` will now confirm if the content in file 1 was successfully appended to the end of file 2.
 
-  ![Head output of slightly less basic python script that organizes a picnic gathering menu amongst three friends](media/head_example_small.png)
+  ![Head output of slightly less basic python script that organizes a picnic gathering menu amongst three friends.](media/head_example_small.png)
 
 ### Knowledge Check 2
 
