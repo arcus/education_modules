@@ -22,15 +22,6 @@ After completion of this module, learners will be able to:
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
 
 -->
-<style>
-.lia-code--inline {
-
-    border: none;
-    color: rgb(var(--color-text));
-    padding: 0px;
-}
-</style>
-
 # R Basics: Transforming Data With dplyr
 
 <div class = "overview">
@@ -62,7 +53,7 @@ The data we will use in this module is a data frame called `covid_testing`, whic
 
 This is what that data looks like:
 
-![A screen capture of what the covid\_testing data frame looks like in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: mrn, first\_name, last\_name, gender, pan_day, test_id, clinic_name, and result.](media/covid_testing_df.png)
+![A screen capture of what the covid\_testing data frame looks like in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: mrn, first\\_name, last\\_name, gender, pan_day, test_id, clinic_name, and result.](media/covid_testing_df.png)
 
 You will be asked to do some code-based exercises at the end of this module, but you may find it useful to use the sample code and data throughout the module.
 
