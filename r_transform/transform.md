@@ -53,7 +53,7 @@ The data we will use in this module is a data frame called `covid_testing`, whic
 
 This is what that data looks like:
 
-![A screen capture of what the covid\_testing data frame looks like in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: mrn, first\\_name, last\\_name, gender, pan_day, test_id, clinic_name, and result.](media/covid_testing_df.png)
+![A screen capture of what the covid\_testing data frame looks like in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: mrn, first\_name, last\_name, gender, pan_day, test_id, clinic_name, and result.](media/covid_testing_df.png)
 
 You will be asked to do some code-based exercises at the end of this module, but you may find it useful to use the sample code and data throughout the module.
 
@@ -100,7 +100,7 @@ For example, take the following code:
 
 This `select` statement will take the data frame `covid_testing`, and return a new data frame that only has the columns `mrn` and `last_name`, shown here in blue to help you visualize this transformation:
 
-![On the left, the first few columns of the covid_testing data frame are shown: mrn, first_name, last_name, and gender.  This is followed by an arrow pointing to a new data frame on the right, which only has the two selected / blue columns, namely mrn and last_name.](media/select_covid_example.png)
+![On the left, the first few columns of the covid_testing data frame are shown: mrn, first\_name, last\_name, and gender.  This is followed by an arrow pointing to a new data frame on the right, which only has the two selected / blue columns, namely mrn and last_name.](media/select_covid_example.png)
 
 An important point to note here is that `select` **will not modify the original data frame**.
 
@@ -148,7 +148,7 @@ To give you an example: the logical test here is whether or not the `mrn` value 
 
 This filter statement will return a data frame that only contains the 4th row, in which the logical condition is **true**, as shown on the right.
 
-![On the left, the first few columns of the covid_testing data frame are shown: mrn, first_name, and last_name.  The first three rows are labeled "False", while the forth row is labeled "True" and colored blue, and there the mrn value matches the one we're trying to match.  This data frame is followed by an arrow pointing to a new data frame on the right, which only has the one selected / blue row, the one that had the matching mrn value.](media/filter_covid_example.png)
+![On the left, the first few columns of the covid\_testing data frame are shown: mrn, first\_name, and last\_name.  The first three rows are labeled "False", while the forth row is labeled "True" and colored blue, and there the mrn value matches the one we're trying to match.  This data frame is followed by an arrow pointing to a new data frame on the right, which only has the one selected / blue row, the one that had the matching mrn value.](media/filter_covid_example.png)
 
 
 <div class = "warning">
@@ -253,7 +253,7 @@ covid_testing %>% filter(     , pan_day <= 10)
 
 And here's a nicer image of the same idea:
 
-![](media/pipe_mini.png)
+![Image in which an arrow connects the first object, covid\_testing, to its new location as the first argument in the filter statement.](media/pipe_mini.png)
 
 Here, for example, the pipe operator takes the object on its left, here the `covid_testing` data frame, and inserts it as the first argument of the function on its right ... in our case, the `filter()` function.
 
@@ -368,7 +368,7 @@ mutate(covid_testing,
 
 Upon executing the code, `mutate()` creates the new column and fills each row with the result of the calculation:
 
-![On the left, two columns of the covid_testing data frame are shown: mrn and col_rec_tat.  The first few rows are given.  This data frame is followed by an arrow pointing to a new data frame on the right, which is the same as the one on the left with the exception of a new column, titled "col_rec_tat_mins", which has appropriate values filled in.](media/mutate_covid_example.png)
+![On the left, two columns of the covid_testing data frame are shown: mrn and col\_rec\_tat.  The first few rows are given.  This data frame is followed by an arrow pointing to a new data frame on the right, which is the same as the one on the left with the exception of a new column, titled "col\_rec\_tat\_mins", which has appropriate values filled in.](media/mutate_covid_example.png)
 
 ## Put Your Knowledge to Work!
 
@@ -398,11 +398,11 @@ We’ve only scratched the surface of data transformation functions in dplyr. Ot
 
 function | graphic
 ---|---
-`arrange()`, which sorts a data frame (for example, alphabetically by `last_name`) | ![](media/arrange_mini.png)
-`add_row()`, which adds rows to a data frame | ![](media/add_row_mini.png)
-`group_by()` and `summarize()`, which allow you to create data summaries such as means, medians, sums, etc.| ![](media/group_by_summarise_mini.png)
-`bind_cols()` and `bind_rows()`, which allow you to combine data frames by row or column| ![](media/bind_cols_mini.png)`
-`_join()` functions including `left_join()` that combine data frames by looking up matching values from one table in another | ![](media/left_join_mini.png)`
+`arrange()`, which sorts a data frame (for example, alphabetically by `last_name`) | ![Small image that shows a data frame with rows initially mixed and then with rows sorted in order](media/arrange_mini.png)
+`add_row()`, which adds rows to a data frame | ![Small image that shows a data frame with three rows transformed to one with four rows.](media/add_row_mini.png)
+`group_by()` and `summarize()`, which allow you to create data summaries such as means, medians, sums, etc.| ![Small image that shows a data frame broken up into three smaller data frames, then re-assembled with a summary row for each of the three smaller data frames.](media/group_by_summarise_mini.png)
+`bind_cols()` and `bind_rows()`, which allow you to combine data frames by row or column| ![Small image illustrating two data frames that are combined horizontally.](media/bind_cols_mini.png)`
+`_join()` functions including `left_join()` that combine data frames by looking up matching values from one table in another | ![Small image that shows two data frames which are combined using only the rows in which there is data for the given observation in both tables](media/left_join_mini.png)`
 
 <div class = "options">
 You may notice here and elsewhere that we include "British" spellings (e.g. `summarise()`) for some functions.  "American" spellings (`summarize()`) also work, and both spellings trigger the same function.  Feel free to use either.
