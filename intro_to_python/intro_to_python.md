@@ -20,7 +20,7 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script:   https://code.jquery.com/jquery-3.6.0.slim.min.js
 
