@@ -131,9 +131,7 @@ What are some reasons to consider using Python for data analysis? Select all tha
 [[X]] The Python community has lots of resources to help you get started.
 ***********************************************************************
 <div class = "answer">
-
 While Python is human-readable and free, it is not point-and-click software, and it can take some time and effort to learn how to write Python code. Don't worry, there are lots of resources out there to help you learn!
-
 </div>
 ***********************************************************************
 
@@ -206,11 +204,8 @@ Which of the following is **not** an example of Python code?
 [( )] `list(range(1, 100))`
 [( )] `height = input("How tall are you?")`
 ***********************************************************************
-
 <div class = "answer">
-
 Python uses functions that contain instructions that tell the computer what it is supposed to do, and these functions are the name of the function followed by the **arguments** in parentheses. Arguments are information that the person writing the code (you!) provide to tell the function what data to perform its task on and more specificity on how exactly to perform the task. `print()`, `list()`, `range()`, and `input()` are just a few of Python's built-in functions! [You can read more about Python's built-in functions here](https://docs.python.org/3/library/functions.html).
-
 </div>
 ***********************************************************************
 
@@ -223,11 +218,8 @@ What are the components of a Jupyter notebook? Select all that apply.
 [[X]] Text cells written in Markdown
 [[ ]] A console where you can write lines of code interactively
 ***********************************************************************
-
 <div class = "answer">
-
 Jupyter notebooks contain code cells and text cells. The code cells are written in Python and can contain as much or as little code as you want; the output of the code can be displayed directly beneath the code cell and the code can be edited and re-run at any time. The text cells are written in Markdown language and can provide more context and reasoning than can easily be done using comments. Additionally, using Markdown allows you to add useful formatting to your text. Jupyter notebooks do not have console, but since you can run each code cell independently, you don't really need one!
-
 </div>
 ***********************************************************************
 
