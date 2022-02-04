@@ -55,6 +55,9 @@ Learners should be familiar with locating files and folders stored in a director
 - Shell scripting’s portable, user friendly syntax belies its power.
 - Straightforward bash command line interfaces are available pre-installed on both Mac and Windows machines and can be readily accessed by just searching in the correct place.
 - Commands easily mastered on one’s local machine or on a training data set can be scaled up to working with large volumes of data in a high performance computing (hpc) or cloud hosted environment.
+
+* Shell scripts can also call on multiple other programming languages like R and python, to build pipelines that run across several software applications as well as enable a user to have greater facility with tools like git and docker.
+
 - Adoption of shell scripting, also reinforces the importance of having well-structured and well-named files and file directory structures.
 
 ## How do I get it?
@@ -86,7 +89,9 @@ What is the name of the pre-installed program used to run shell scripts on a Mac
 [( )] MSL (Mac Subsystem for Linux)
 [(X)] Terminal
 [( )] Ubuntu
-***********************************************************************
+
+---
+
 <div class = "answer">
 
 WSL is the Windows utility for running shell. Ubuntu is a well known Linux operating system that is often used as the default shell scripting environment.
@@ -148,10 +153,11 @@ In our installation section, we covered how accessing CLI tools to run bash scri
 Select the three functions contained in the cat command?
 
 [[X]] View
-[[ ]] Categorize
+[[]] Categorize
 [[X]] Concatenate
 [[X]] Create New Version
-***********************************************************************
+
+---
 
 <div class = "answer">
 
@@ -179,7 +185,8 @@ What character passes the output of one command to the next command in a sequenc
 [( )] &
 [( )] +
 [( )] -
-***********************************************************************
+
+---
 
 <div class = "answer">
 
@@ -215,7 +222,9 @@ Which numerical sequence grants no restrictions on permissions and should genera
 [( )] 700
 [(X)] 777
 [[?]] Hint: Check out the link to the file permissions documentation on the previous page!
-***********************************************************************
+
+---
+
 <div class = "answer">
 
 Giving all users access to manipulate files and directories in any way doesn't tend to lead to great outcomes. 755, in which the file owner can read, write, while enabling all other permissioned users to read and execute a file, is a safer and more productive option to choose.
@@ -232,10 +241,11 @@ Giving all users access to manipulate files and directories in any way doesn't t
 
 - Binary or Executable File: A file that causes a computer to follow a series of tasks represented in encoded instructions. It should be noted that .bin is the preferred Mac extension and .exe is the preferred Windows extension.
 - Unix: Widely used class of computer operating systems which support multitasking and multiusers.
-- Linux: Open source operating system modeled on Unix. Bash is one type of Linux.
+- Linux: Open source operating system modeled on Unix. Bash is the most common shell for Linux.
 
 ## Additional Resources
 
+- [Brief Illustration of the Difference between Shell and Kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/)
 - [Exhaustive Wiki of Linux Filesystem Hierarchy](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/index.html)
 - [Reinforce Your New Knowledge through this Learing the Shell Page](https://linuxcommand.org/lc3_learning_the_shell.php)
 - [Unix Command Line I Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/3/)
