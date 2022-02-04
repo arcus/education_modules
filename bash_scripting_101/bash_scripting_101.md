@@ -7,7 +7,9 @@ language: en
 narrator: UK English Female
 title: Command Line 101
 comment:  This course will focus on accessing a command line program and running shell scripts on your home computer, learning how to execute useful commands and recognize basic syntax, and, finally, learning how to set permissions in a way that leads to collaborating on a shared file directory with colleagues.
-long_description:
+
+long_description: This module is for people interested in harnessing the power of well-organized files and folders and who want to try a relatively accessible programming language.
+
 @learning_objectives
 
 After completion of this module, learners will be able to:
@@ -33,7 +35,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?**
 
-If you're interested in harnessing the power of well-organized files and folders and want to try a relatively accessible programming language.
+@long_description
 
 **Estimated time to completion:** ~30 minutes
 
