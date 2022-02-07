@@ -22,7 +22,9 @@ After completion of this module, learners will be able to:
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
-script:   https://code.jquery.com/jquery-3.6.0.slim.min.js
+script:  https://kit.fontawesome.com/83b2343bd4.js
+
+script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 @gifPreload
 <script>
