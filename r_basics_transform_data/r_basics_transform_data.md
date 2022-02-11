@@ -18,6 +18,7 @@ After completion of this module, learners will be able to:
 - Use the "pipe" syntax to link a series of transformations in a "pipeline" that performs desired changes to a data frame
 
 @end
+script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 @gifPreload
 <script>
