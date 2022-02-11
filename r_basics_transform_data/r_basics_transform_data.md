@@ -124,12 +124,15 @@ On the next page, you'll learn how to get access to the sample code.
 
 If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how:
 
+
 * Open RStudio and open a new project (File > New Project)
 * Select Version Control, then Git
 * Drop this link into the "Repository URL": https://github.com/arcus/education_r_environment
 * Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
 * Click to select the "Open in new session" checkbox
 * Click "Create Project"
+
+**Want to watch this process?  Click on the image below to play an animated gif.**
 
 <div style="display:none">@gifPreload</div>
 
