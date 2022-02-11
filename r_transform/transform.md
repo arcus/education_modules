@@ -53,7 +53,7 @@ The data we will use in this module is a data frame called `covid_testing`, whic
 
 This is what that data looks like:
 
-![A screen capture of what the covid\_testing data frame looks like in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: mrn, first\_name, last\_name, gender, pan_day, test_id, clinic_name, and result.](media/covid_testing_df.png)
+![A screen capture of what the `covid_testing` data frame looks like in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)
 
 You will be asked to do some code-based exercises at the end of this module, but you may find it useful to use the sample code and data throughout the module.
 
@@ -66,7 +66,7 @@ JOY
 
 ## The `dplyr` Package
 
-![The dplyr logo is shown: three sets of futuristic, colorful pliers that appear to be moving upward and to the right.  The word "dplyr" appears in the upper left of the logo, which is in the shape of a hexagon.](media/dplyr_logo.png)
+![`dplyr` logo: three sets of futuristic, colorful pliers that appear to be moving upward and to the right.  The word "dplyr" appears in the upper left of the logo, which is in the shape of a hexagon.](media/dplyr_logo.png)
 
 `dplyr` (pronounced dee-ply-er, a play on words with "data" and "pliers") is a useful R package we'll discuss.
 
@@ -100,7 +100,7 @@ For example, take the following code:
 
 This `select` statement will take the data frame `covid_testing`, and return a new data frame that only has the columns `mrn` and `last_name`, shown here in blue to help you visualize this transformation:
 
-![On the left, the first few columns of the covid_testing data frame are shown: mrn, first\_name, last\_name, and gender.  This is followed by an arrow pointing to a new data frame on the right, which only has the two selected / blue columns, namely mrn and last_name.](media/select_covid_example.png)
+![On the left, the first few columns of the covid_testing data frame: `mrn`, `first_name`, `last_name`, and `gender`.  This is followed by an arrow pointing to a new data frame on the right, which only has the two selected / blue columns, namely `mrn` and `last_name`.](media/select_covid_example.png)
 
 An important point to note here is that `select` **will not modify the original data frame**.
 
