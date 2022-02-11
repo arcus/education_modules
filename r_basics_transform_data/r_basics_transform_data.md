@@ -131,7 +131,7 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/intro_to_python/intro_to_python/media/python_interactive.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/intro_to_python/intro_to_python/media/python_interactive.gif?raw=true">
+  <img src="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.gif?raw=true">
 
 <figcaption>Click on the image to play the demo of the above steps!</figcaption>
 </figure>
