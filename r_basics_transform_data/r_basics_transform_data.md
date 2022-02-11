@@ -97,7 +97,7 @@ Some experience of using the RStudio IDE and writing R code is necessary to unde
 
 </div>
 
-## Lesson Preparation
+## Lesson Preparation: Our Data
 
 The data we will use in this module is a data frame called `covid_testing`, which consists of fabricated (completely fake) demographic and testing data for Covid tests early in the Covid-19 pandemic.
 
@@ -107,13 +107,15 @@ This is what that data looks like:
 
 You will be asked to do some code-based exercises at the **end** of this module, but you may find it useful to use the sample code and data throughout the module.
 
-Here's how to get access to the sample code.  
+On the next page, you'll learn how to get access to the sample code.  
+
+## Lesson Preparation: Our RStudio Environment
 
 <h3>Option 1: Work in the Cloud</h3>
 
 **First**, we need to create a small container in the cloud for you to work in just using your web browser.  Click "Launch binder" below.  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
 
-<a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://binder.pangeo.io/badge_logo.svg"></a> **← Click the "launch binder" button!**
+  <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"></a> **← Click the "launch binder" button!**
 
 **Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, click on the folder called "R Basics: Transforming Data".
 
