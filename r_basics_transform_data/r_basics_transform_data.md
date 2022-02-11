@@ -70,7 +70,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 </script>
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 -->
 # R Basics: Transforming Data With dplyr
