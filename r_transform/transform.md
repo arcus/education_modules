@@ -148,7 +148,7 @@ To give you an example: the logical test here is whether or not the `mrn` value 
 
 This filter statement will return a data frame that only contains the 4th row, in which the logical condition is **true**, as shown on the right.
 
-![On the left, the first few columns of the covid\_testing data frame are shown: mrn, first\_name, and last\_name.  The first three rows are labeled "False", while the forth row is labeled "True" and colored blue, and there the mrn value matches the one we're trying to match.  This data frame is followed by an arrow pointing to a new data frame on the right, which only has the one selected / blue row, the one that had the matching mrn value.](media/filter_covid_example.png)
+![On the left, the first few columns of the `covid_testing` data frame: `mrn`, `first_name`, and `last_name`.  The first three rows are labeled "False", while the forth row is labeled "True" and colored blue, and there, the mrn value matches the one we're trying to match.  This data frame is followed by an arrow pointing to a new data frame on the right, which only has the one selected / blue row, the one that had the matching mrn value.](media/filter_covid_example.png)
 
 
 <div class = "warning">
@@ -253,7 +253,7 @@ covid_testing %>% filter(     , pan_day <= 10)
 
 And here's a nicer image of the same idea:
 
-![Image in which an arrow connects the first object, covid\_testing, to its new location as the first argument in the filter statement.](media/pipe_mini.png)
+![Image in which an arrow connects the first object, `covid_testing`, to its new location as the first argument in the filter statement.](media/pipe_mini.png)
 
 Here, for example, the pipe operator takes the object on its left, here the `covid_testing` data frame, and inserts it as the first argument of the function on its right ... in our case, the `filter()` function.
 
@@ -368,7 +368,7 @@ mutate(covid_testing,
 
 Upon executing the code, `mutate()` creates the new column and fills each row with the result of the calculation:
 
-![On the left, two columns of the covid_testing data frame are shown: mrn and col\_rec\_tat.  The first few rows are given.  This data frame is followed by an arrow pointing to a new data frame on the right, which is the same as the one on the left with the exception of a new column, titled "col\_rec\_tat\_mins", which has appropriate values filled in.](media/mutate_covid_example.png)
+![On the left, two columns of the `covid_testing` data frame are shown: mrn and `col_rec_tat`.  The first few rows are given.  This data frame is followed by an arrow pointing to a new data frame on the right, which is the same as the one on the left with the exception of a new column, titled `col_rec_tat_mins`, which has appropriate values filled in.](media/mutate_covid_example.png)
 
 ## Put Your Knowledge to Work!
 
