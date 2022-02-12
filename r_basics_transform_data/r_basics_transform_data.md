@@ -118,6 +118,12 @@ On the next page, you'll learn how to get access to the sample code.
 
   <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"></a> **← Click the "launch binder" button!**
 
+<div class = "hint" style = "align-items: center; display: flex;">
+
+<div style = "margin: 2rem; max-width: 50%"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
+<div style = "margin: 2rem; max-width: 50%"> ![Binder loading screen](media/binder_loading.gif)</div>
+</div>
+
 **Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, click on the folder called "R Basics: Transforming Data".
 
 <h3>Option 2: Work on Your Computer</h3>
@@ -131,7 +137,7 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 * Click to select the "Open in new session" checkbox
 * Click "Create Project"
 
-**Want to watch this process?  Click on the image below to play an animated gif.**
+**Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
 
 <div style="display:none">@gifPreload</div>
 
