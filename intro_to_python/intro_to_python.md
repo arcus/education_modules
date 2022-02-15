@@ -273,8 +273,6 @@ If you're curious about using Python in the cloud, check out this [short article
 
 At the beginning of this module we described the following goals:
 
-**Learning Objectives**:
-
 @learning_objectives
 
 We ask you to fill out a brief (5 minutes or less) survey to let us know:
