@@ -120,18 +120,18 @@ On the next page, you'll learn how to get access to the sample code.
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
+<div style = "margin: 1rem; max-width: 45%; float:right;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
 <div style = "margin: 1rem; max-width: 45%; float:right;"> ![Binder loading screen](media/binder_loading.gif)</div>
 </div>
 
-**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, click on the folder called "R Basics: Transforming Data".
+**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r_basics_transform_data".  That's the code for this module!
 
 ![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)
 
 
 <h3>Option 2: Work on Your Computer</h3>
 
-If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.
+If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
 
 * In RStudio, open a new project (File, New Project)
 * Select Version Control, then Git
@@ -139,6 +139,7 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 * Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
 * Click to select the "Open in new session" checkbox
 * Click "Create Project"
+* In the file area to the lower right, you'll see, among multiple choices, the folder called "r_basics_transform_data".  That's the code for this module!
 
 **Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
 
@@ -154,9 +155,12 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 
 ## The `dplyr` Package
 
+`dplyr` (pronounced dee-ply-er, a play on words with "data" and "pliers") is a useful R package we'll discuss.  The various functions we'll use, like `select`, `filter`, and `mutate` are all functions that belong to the `dplyr` package.  In R, we bring in the functionality of a package by using the `library()` command.  Because `dplyr` forms part of the `tidyverse` suite of packages, we can bring in the useful functions of `dplyr` by either using the `library(dplyr)` command or the `library(tidyverse)` command.
+
+Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`.  But if you're using the course materials in your own computer's installation of RStudio, it's possible you don't have `tidyverse` installed.  If you get a message telling you that there's no package installed with that name, issue this command: `install.packages("tidyverse")`.
+
 ![`dplyr` logo: three sets of futuristic, colorful pliers that appear to be moving upward and to the right.  The word "dplyr" appears in the upper left of the logo, which is in the shape of a hexagon.](media/dplyr_logo.png)
 
-`dplyr` (pronounced dee-ply-er, a play on words with "data" and "pliers") is a useful R package we'll discuss.
 
 ## Subsetting Columns or Rows
 
