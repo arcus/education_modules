@@ -126,7 +126,7 @@ On the next page, you'll learn how to get access to the sample code.
 
 **Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, click on the folder called "R Basics: Transforming Data".
 
-![](media/binder_rstudio.png)
+![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)
 
 <h3>Option 2: Work on Your Computer</h3>
 
