@@ -105,7 +105,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 For the hands-on activity in this module, we will be using an online environment containing a Jupyter notebook. To load the environment, open the link below in a new tab:
 
-<a href = "https://mybinder.org/v2/gh/arcus/education_modules/intro_to_python?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg"></a> **← Click the "launch binder" button!**
+<a href = "https://mybinder.org/v2/gh/arcus/education_modules/main?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg"></a> **← Click the "launch binder" button!**
 
 
 The environment takes a few minutes to load, so be patient. Read through the next couple of sections while you wait! We won't need the online environment until the ["Using a Jupyter Notebook" section](#Using-a-Jupyter-Notebook).
@@ -146,7 +146,7 @@ If you have Python installed on your computer, you can use your computer's Comma
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/intro_to_python/intro_to_python/media/python_interactive.png?raw=true" height="500" width="800" alt="An example of Python code in the Terminal with the code 7 + 8, print('Hello World!'), and list(range(0,10))." data-alt="https://github.com/arcus/education_modules/blob/intro_to_python/intro_to_python/media/python_interactive.gif?raw=true">
+  <img src="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_interactive.png?raw=true" height="500" width="800" alt="An example of Python code in the Terminal with the code 7 + 8, print('Hello World!'), and list(range(0,10))." data-alt="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_interactive.gif?raw=true">
 
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
@@ -171,7 +171,7 @@ The Spyder IDE has a console where you can see the output of your script without
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/intro_to_python/intro_to_python/media/python_spyder_console.png?raw=true" height="500" width="800" alt="Running a Python script in Spyder, showing a user typing 'Pythonista' in response to the prompt and showing the output 'Welcome to Intro to Python, Pythonista!'" data-alt="https://github.com/arcus/education_modules/blob/intro_to_python/intro_to_python/media/python_spyder_console.gif?raw=true">
+  <img src="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_spyder_console.png?raw=true" height="500" width="800" alt="Running a Python script in Spyder, showing a user typing 'Pythonista' in response to the prompt and showing the output 'Welcome to Intro to Python, Pythonista!'" data-alt="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_spyder_console.gif?raw=true">
 
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
@@ -195,7 +195,7 @@ Interested in learning how to write Python code in a Jupyter notebook? Continue 
 
 This is a hands-on activity! Feel free to pop over to that tab you opened in the [Preparation section](#Preparation) to get started. Need the link again? Here it is:
 
-<a href = "https://mybinder.org/v2/gh/arcus/education_modules/intro_to_python?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg"></a> **← Click the "launch binder" button!**
+<a href = "https://mybinder.org/v2/gh/arcus/education_modules/main?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg"></a> **← Click the "launch binder" button!**
 
 ### Knowledge Check 2
 
