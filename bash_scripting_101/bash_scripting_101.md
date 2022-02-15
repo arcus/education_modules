@@ -60,39 +60,37 @@ Bash or unix shell is a free command line language and the default login shell f
 
 The shell is like a layer outside the kernel that you as a user can communicate with. You can type commands in the shell, and it will execute them for you in the kernel. Back when computers were newer and there were few ready programs available, the shell was the primary way to get stuff done on a computer.
 
-To learn more, check out this post for [an excellent breakdown of the difference between the shell and the kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/). 
+To learn more, check out this post for [an excellent breakdown of the difference between the shell and the kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/).
 </div>
 
-Shell scripting’s portable, user friendly syntax belies its power.
-
-Straightforward bash command line interfaces are available pre-installed on both Mac and Windows machines and can be readily accessed by just searching in the correct place.
+Shell scripting’s portable, user-friendly syntax belies its power. Straightforward bash command line interfaces are available pre-installed on both Mac and Windows machines and can be readily accessed by just searching in the correct place.
 
 There are several ways shell scripting can be useful to researchers and others working with data:
 
-- Commands easily mastered on one’s local machine or on a training data set can be scaled up to working with large volumes of data in a high performance computing (hpc) or cloud hosted environment.
-- Shell scripts can also call on multiple other programming languages like R and python, to build pipelines that run across several software applications as well as enable a user to have greater facility with tools like git and docker.
-- Adoption of shell scripting, also reinforces the importance of having well-structured and well-named files and file directory structures.
+- Commands run on one’s local machine or on a training data set can be scaled up to working with large volumes of data in a high performance computing (hpc) or cloud hosted environment.
+- Shell scripts can also call on multiple other programming languages, like R and python, to build pipelines that run across several software applications as well as enable a user to have greater facility with tools like git and docker.
+- Adoption of shell scripting also reinforces the importance of having well-structured and well-named files and file directory structures.
 
 ## How do I get it?
 
-To reiterate, it is very easy, even intuitive, to run bash on a Mac or Windows machine. (In fact you may have already done some shell scripting without even realizing it).
+Everything that is necessary to run bash on your Mac or Windows machine is probably already installed; in fact, you may have done some shell without even realizing it!
 
 ### Mac Installation
 
 ![How to locate the terminal in Spotlight on a Mac.](media/terminal_in_mac.png)
 
 - On a Mac machine, bash is the default login shell in the Terminal command line program.
-- Type terminal in your Mac spotlight search to pull up this program for the first time though it likely already launches in dock on your machine.
-- It should be noted that Mac’s with the Catalina Operating System or later are running zsh instead of bash. That said, zsh is [functionally a later and greater version of bash with some key differences noted](https://medium.com/@harrison.miller13_28580/bash-vs-z-shell-a-tale-of-two-command-line-shells-c65bb66e4658).
+- Type "terminal" in your Mac spotlight search to pull up this program for the first time (though it might already launch in the dock on your machine).
+- It should be noted that Macs with the Catalina Operating System or later are running zsh instead of bash. That said, zsh is [functionally a later and greater version of bash with some key differences noted](https://medium.com/@harrison.miller13_28580/bash-vs-z-shell-a-tale-of-two-command-line-shells-c65bb66e4658).
 
 ### Windows Installation
 
 ![Confirm these Windows settings to enable shell scripting capabilities.](media/on_windows.png)
 
-- On a Windows machine, the WSL (Windows Subsystem for Linux) has Ubuntu, which is just a widely used flavor of Bash, installed as its default shell scripting environment. This is automatically installed on any Windows computer running Windows 10 or greater.
+- On a Windows machine, the WSL (Windows Subsystem for Linux) has Ubuntu, which is just a widely used flavor of Bash, installed as its default shell scripting environment. This is automatically installed on any Windows computer running Windows 10 or later.
 - To confirm this feature is enabled, check to see if developer mode is enabled in settings and WSL is turned on in Features.
 - Search Bash in Cortana to launch WSL for the first time and click “Y” when asked to install Ubuntu for the first time. [Microsoft has their own internal documentation on WSL which features additional visual resources and FAQS](https://docs.microsoft.com/en-us/windows/wsl/).
-- Create a username and password when prompted and now you are ready to do some shell scripting! These user credentials have no bearing on your Windows user name and will be automatically logged in for future sessions.
+- Create a username and password when prompted and now you are ready to do some shell scripting! These user credentials have no bearing on your Windows user name and you will be automatically logged in for future sessions.
 
 ### Knowledge Check 1
 
@@ -102,9 +100,7 @@ What is the name of the pre-installed program used to run shell scripts on a Mac
 [( )] MSL (Mac Subsystem for Linux)
 [(X)] Terminal
 [( )] Ubuntu
-
----
-
+***********************************************************************
 <div class = "answer">
 
 WSL is the Windows utility for running shell. Ubuntu is a well known Linux operating system that is often used as the default shell scripting environment.
@@ -152,7 +148,7 @@ In our installation section, we covered how accessing CLI tools to run bash scri
 
   ![Less of basic python script that says hello and prompts a dialogue for an individual's name and age.](media/less_sample_small.png)
 
-- `Cat`: very powerful three part function that allows a reader to view, combine (concatenate), or create a new version of a file
+- `Cat`: very powerful three-part function that allows a reader to view, combine (concatenate), or create a new version of a file
 
   - `cat file 1 file 2` will display the contents of both files on separate lines.
   - `cat > file 4` will create a new file named file 4
@@ -163,18 +159,16 @@ In our installation section, we covered how accessing CLI tools to run bash scri
 
 ### Knowledge Check 2
 
-Select the three functions contained in the cat command?
+Select the three functions of the `cat` command?
 
 [[X]] View
-[[]] Categorize
+[[ ]] Categorize
 [[X]] Concatenate
 [[X]] Create New Version
-
----
-
+***********************************************************************
 <div class = "answer">
 
-The sort command is used to categorize files in bash.
+The `sort` command is used to categorize files in bash.
 
 </div>
 ***********************************************************************
@@ -198,12 +192,10 @@ What character passes the output of one command to the next command in a sequenc
 [( )] &
 [( )] +
 [( )] -
-
----
-
+***********************************************************************
 <div class = "answer">
 
-Stringing commands together in bash is quite easy if you know your pipes :).
+This character is called a **pipe**, and it's name is a great way to visualize what it does: the output from the command to the left flows into the commands to the right through the pipe to create a pipeline :)
 
 </div>
 ***********************************************************************
@@ -223,7 +215,7 @@ Stringing commands together in bash is quite easy if you know your pipes :).
 - `Sudo` - assume super user privileges on an as-needed basis.
 
 <div class = "warning">
-**Proceed with caution!** Using the `Sudo` command is decidedly not best data security practices, but might need to be invoked as you continue to learn bash, as permissioning can be quite granular and dynamic.
+**Proceed with caution!** Using the `Sudo` command is decidedly not best data security practice, but might need to be invoked as you continue to learn bash, as permissioning can be quite granular and dynamic.
 </div>
 
 ### Knowledge Check 4
@@ -235,9 +227,7 @@ Which numerical sequence grants no restrictions on permissions and should genera
 [( )] 700
 [(X)] 777
 [[?]] Hint: Check out the link to the file permissions documentation on the previous page!
-
----
-
+***********************************************************************
 <div class = "answer">
 
 Giving all users access to manipulate files and directories in any way doesn't tend to lead to great outcomes. 755, in which the file owner can read, write, while enabling all other permissioned users to read and execute a file, is a safer and more productive option to choose.
