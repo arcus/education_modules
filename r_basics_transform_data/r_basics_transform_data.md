@@ -120,13 +120,14 @@ On the next page, you'll learn how to get access to the sample code.
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
-<div style = "margin: 2rem; max-width: 50%;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
-<div style = "margin: 2rem; max-width: 50%; float:left;"> ![Binder loading screen](media/binder_loading.gif)</div>
+<div style = "margin: 1rem; max-width: 45%;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
+<div style = "margin: 1rem; max-width: 45%; float:right;"> ![Binder loading screen](media/binder_loading.gif)</div>
 </div>
 
 **Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, click on the folder called "R Basics: Transforming Data".
 
 ![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)
+
 
 <h3>Option 2: Work on Your Computer</h3>
 
