@@ -6,14 +6,14 @@ version:  0.0.1
 language: en
 narrator: UK English Female
 title: Creating your Git Repository
-comment:  Create a new repository and keep track of the files in it.
-long_description: This module will teach you how to create a git repository, add files to it, update files in it, and keep track of those changes in a clear and organized manner.
+comment:  Create a new Git repository and get started with version control.
+long_description: You have heard that version control is important for reproducible research and are ready to start tracking your files. This module will teach you how to create a Git repository, add files to it, update files in it, and keep track of those changes in a clear and organized manner.
 
 @learning_objectives
 
 After completion of this module, learners will be able to:
 
-- Create a git repository
+- Create a Git repository
 - Update files in the repository
 - Write short helpful descriptions to track the changes
 
@@ -50,9 +50,6 @@ If you would prefer to work through this module on your own computer, you can fi
 **Learning Objectives**
 
 @learning_objectives
-
-For help articulating learning objectives, see [this guide to learning objectives, including lots of example verbs](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/).
-
 </div>
 
 ## Lesson Preparation
@@ -84,6 +81,7 @@ Courtesy NASA/JPL-Caltech.
 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en).
 
 
+## Initializing the repository
 
 First, let's create a directory in `Desktop` folder for our work and then move into that directory:
 
@@ -135,6 +133,8 @@ Git uses this special subdirectory to store all the information about the projec
 including all files and sub-directories located within the project's directory.
 If we ever delete the `.git` subdirectory,
 we will lose the project's history.
+
+## Creating the  `main` branch
 
 Next, we will change the default branch to be called `main`.
 This might be the default branch depending on your settings and version
