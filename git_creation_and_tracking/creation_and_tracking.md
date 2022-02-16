@@ -46,7 +46,7 @@ To see what it looks like rendered via LiaScript, [click here](https://liascript
 Before you start this module, make sure you have
 
 * Configured Git on your computer. See [this module](https://education.arcus.chop.edu) to learn how.
-* The ability to edit .txt documents. Click [here](https://swcarpentry.github.io/shell-novice/03-create/) for an introduction to editing text files from the command line.
+* The ability to edit .txt documents. Click [here](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file) for an introduction to editing text files using `nano`.
 
 If you would prefer to work through this module on your own computer, you can find a module on Bash 101 [here](link to bash 101 module).
 
@@ -60,15 +60,9 @@ For help articulating learning objectives, see [this guide to learning objective
 
 ## Lesson Preparation
 
-If your module includes code learners may want to run, then give links to a pangeo binder here so they can start it up now. Also provide a link to the raw code so learners can download the code itself and run it on their own machines or copy it into a cloud server.
+Here we include information about a virtual box/command line emulator learners can use to do exercises.
 
-This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in R and python. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection. If you have R and/or python already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.r" download>download the code for this module to run offline</a>.
-
-If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity. We recommend using right-click to open it in a new tab or window, and then returning here to continue learning while the environment finishes loading. Here is the link:
-
-[![Link to start Binder environment](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/main?urlpath=rstudio) **Click the "launch binder" button!**
-
-You don't have to do anything except come back here once the link opens in a new tab or window.
+If you prefer to run these examples on your own machine, open a command line interface (CLI).
 
 ## Creating a Repository
 
