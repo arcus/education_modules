@@ -81,7 +81,7 @@ Courtesy NASA/JPL-Caltech.
 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en).
 
 
-## Initializing the repository
+### Initializing the repository
 
 First, let's create a directory in `Desktop` folder for our work and then move into that directory:
 
@@ -134,7 +134,7 @@ including all files and sub-directories located within the project's directory.
 If we ever delete the `.git` subdirectory,
 we will lose the project's history.
 
-## Creating the  `main` branch
+### Creating the  `main` branch
 
 Next, we will change the default branch to be called `main`.
 This might be the default branch depending on your settings and version
@@ -170,52 +170,54 @@ nothing to commit (create/copy files and use "git add" to track)
 If you are using a different version of `git`, the exact
 wording of the output might be slightly different.
 
-> ## Places to Create Git Repositories
+### Knowledge check
+
+Along with tracking information about planets (the project we have already created),
+Dracula would also like to track information about moons.
+Despite Wolfman's concerns, Dracula creates a `moons` project inside his `planets`
+project with the following sequence of commands:
+~~~
+$ cd ~/Desktop   # return to Desktop directory
+$ cd planets     # go into planets directory, which is already a Git repository
+$ ls -a          # ensure the .git subdirectory is still present in the planets directory
+$ mkdir moons    # make a subdirectory planets/moons
+$ cd moons       # go into moons subdirectory
+$ git init       # make the moons subdirectory a Git repository
+$ ls -a          # ensure the .git subdirectory is present indicating we have created a new Git repository
+~~~
+{: .language-bash}
+Is the `git init` command, run inside the `moons` subdirectory, required for
+tracking files stored in the `moons` subdirectory?
+
+[[]]Yes, running `git init` inside the `moons` subdirectory is necessary.
+[[]]It is not necessary to run `git init` inside `moons` but it can't hurt.
+[[X]]No, `moons` was already tracked as a subdirectory of `planets` and running `git init` inside `moons` could interfere with version control.
+
+> ## Solution
 >
-> Along with tracking information about planets (the project we have already created),
-> Dracula would also like to track information about moons.
-> Despite Wolfman's concerns, Dracula creates a `moons` project inside his `planets`
-> project with the following sequence of commands:
+> No. Dracula does not need to make the `moons` subdirectory a Git repository
+> because the `planets` repository will track all files, sub-directories, and
+> subdirectory files under the `planets` directory.  Thus, in order to track
+> all information about moons, Dracula only needed to add the `moons` subdirectory
+> to the `planets` directory.
+>
+> Additionally, Git repositories can interfere with each other if they are "nested":
+> the outer repository will try to version-control
+> the inner repository. Therefore, it's best to create each new Git
+> repository in a separate directory. To be sure that there is no conflicting
+> repository in the directory, check the output of `git status`. If it looks
+> like the following, you are good to go to create a new repository as shown
+> above:
 >
 > ~~~
-> $ cd ~/Desktop   # return to Desktop directory
-> $ cd planets     # go into planets directory, which is already a Git repository
-> $ ls -a          # ensure the .git subdirectory is still present in the planets directory
-> $ mkdir moons    # make a subdirectory planets/moons
-> $ cd moons       # go into moons subdirectory
-> $ git init       # make the moons subdirectory a Git repository
-> $ ls -a          # ensure the .git subdirectory is present indicating we have created a new Git repository
+> $ git status
 > ~~~
 > {: .language-bash}
->
-> Is the `git init` command, run inside the `moons` subdirectory, required for
-> tracking files stored in the `moons` subdirectory?
->
-> > ## Solution
-> >
-> > No. Dracula does not need to make the `moons` subdirectory a Git repository
-> > because the `planets` repository will track all files, sub-directories, and
-> > subdirectory files under the `planets` directory.  Thus, in order to track
-> > all information about moons, Dracula only needed to add the `moons` subdirectory
-> > to the `planets` directory.
-> >
-> > Additionally, Git repositories can interfere with each other if they are "nested":
-> > the outer repository will try to version-control
-> > the inner repository. Therefore, it's best to create each new Git
-> > repository in a separate directory. To be sure that there is no conflicting
-> > repository in the directory, check the output of `git status`. If it looks
-> > like the following, you are good to go to create a new repository as shown
-> > above:
-> >
-> > ~~~
-> > $ git status
-> > ~~~
-> > {: .language-bash}
-> > ~~~
-> > fatal: Not a git repository (or any of the parent directories): .git
-> > ~~~
-> > {: .output}
-> {: .solution}
+> ~~~
+> fatal: Not a git repository (or any of the parent directories): .git
+> ~~~
+> {: .output}
+ {: .solution}
 {: .challenge}
 > ## Correcting `git init` Mistakes
 > Wolfman explains to Dracula how a nested repository is redundant and may cause confusion
