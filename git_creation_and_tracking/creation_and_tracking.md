@@ -190,79 +190,70 @@ $ ls -a          # ensure the .git subdirectory is present indicating we have cr
 Is the `git init` command, run inside the `moons` subdirectory, required for
 tracking files stored in the `moons` subdirectory?
 
-[(X)] This answer is right
-[( )] This is wrong
-[( )] Also wrong
-[[?]] Hint: Provide a hint here if you like. Hints are marked with the ?
-[[?]] Hint: You can include as many hints as you want.
-
-Why won't this render?
-
 [( )] Yes, running `git init` inside the `moons` subdirectory is necessary.
 [( )] It is not necessary to run `git init` inside `moons` but it can't hurt.
 [(X)] No, `moons` was already tracked as a subdirectory of `planets` and running `git init` inside `moons` could interfere with version control.
 
+***
+<div class = "answer">
 
-> ## Solution
+No. Dracula does not need to make the `moons` subdirectory a Git repository
+because the `planets` repository will track all files, sub-directories, and
+subdirectory files under the `planets` directory.  Thus, in order to track
+all information about moons, Dracula only needed to add the `moons` subdirectory
+to the `planets` directory.
+
+Additionally, Git repositories can interfere with each other if they are "nested":
+the outer repository will try to version-control
+the inner repository. Therefore, it's best to create each new Git
+repository in a separate directory. To be sure that there is no conflicting
+repository in the directory, check the output of `git status`. If it looks
+like the following, you are good to go to create a new repository as shown
+above:
+
+```r
+$ git status
+```
+
+```r
+fatal: Not a git repository (or any of the parent directories): .git
+```
+
+ </div>
+ ***
+## Correcting `git init` Mistakes
+Wolfman explains to Dracula how a nested repository is redundant and may cause confusion
+down the road. Dracula would like to remove the nested repository. How can Dracula undo
+his last `git init` in the `moons` subdirectory?
+> ## Solution -- USE WITH CAUTION!
 >
-> No. Dracula does not need to make the `moons` subdirectory a Git repository
-> because the `planets` repository will track all files, sub-directories, and
-> subdirectory files under the `planets` directory.  Thus, in order to track
-> all information about moons, Dracula only needed to add the `moons` subdirectory
-> to the `planets` directory.
->
-> Additionally, Git repositories can interfere with each other if they are "nested":
-> the outer repository will try to version-control
-> the inner repository. Therefore, it's best to create each new Git
-> repository in a separate directory. To be sure that there is no conflicting
-> repository in the directory, check the output of `git status`. If it looks
-> like the following, you are good to go to create a new repository as shown
-> above:
->
+> ### Background
+> Removing files from a Git repository needs to be done with caution. But we have not learned
+> yet how to tell Git to track a particular file; we will learn this in the next episode. Files
+> that are not tracked by Git can easily be removed like any other "ordinary" files with
 > ~~~
-> $ git status
+> $ rm filename
 > ~~~
 > {: .language-bash}
-> ~~~
-> fatal: Not a git repository (or any of the parent directories): .git
-> ~~~
-> {: .output}
- {: .solution}
-{: .challenge}
-> ## Correcting `git init` Mistakes
-> Wolfman explains to Dracula how a nested repository is redundant and may cause confusion
-> down the road. Dracula would like to remove the nested repository. How can Dracula undo
-> his last `git init` in the `moons` subdirectory?
 >
-> > ## Solution -- USE WITH CAUTION!
-> >
-> > ### Background
-> > Removing files from a Git repository needs to be done with caution. But we have not learned
-> > yet how to tell Git to track a particular file; we will learn this in the next episode. Files
-> > that are not tracked by Git can easily be removed like any other "ordinary" files with
-> > ~~~
-> > $ rm filename
-> > ~~~
-> > {: .language-bash}
-> >
-> > Similarly a directory can be removed using `rm -r dirname` or `rm -rf dirname`.
-> > If the files or folder being removed in this fashion are tracked by Git, then their removal
-> > becomes another change that we will need to track, as we will see in the next episode.
-> >
-> > ### Solution
-> > Git keeps all of its files in the `.git` directory.
-> > To recover from this little mistake, Dracula can just remove the `.git`
-> > folder in the moons subdirectory by running the following command from inside the `planets` directory:
-> >
-> > ~~~
-> > $ rm -rf moons/.git
-> > ~~~
-> > {: .language-bash}
-> >
-> > But be careful! Running this command in the wrong directory will remove
-> > the entire Git history of a project you might want to keep.
-> > Therefore, always check your current directory using the command `pwd`.
-> {: .solution}
+> Similarly a directory can be removed using `rm -r dirname` or `rm -rf dirname`.
+> If the files or folder being removed in this fashion are tracked by Git, then their removal
+> becomes another change that we will need to track, as we will see in the next episode.
+>
+> ### Solution
+> Git keeps all of its files in the `.git` directory.
+> To recover from this little mistake, Dracula can just remove the `.git`
+> folder in the moons subdirectory by running the following command from inside the `planets` directory:
+>
+> ~~~
+> $ rm -rf moons/.git
+> ~~~
+> {: .language-bash}
+>
+> But be careful! Running this command in the wrong directory will remove
+> the entire Git history of a project you might want to keep.
+> Therefore, always check your current directory using the command `pwd`.
+{: .solution}
 {: .challenge}
 
 ## Module Content
