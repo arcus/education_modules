@@ -225,11 +225,20 @@ Not a git repository (or any of the parent directories):
 
 <div class = "help">
 What if you forgot to check `git status` and accidentally created a repository nested in another repository?
-This the one time you want to *carefully* delete a `.git` file.
-</div>
+You can fix this by removing the `.git` file from the inner repository. Take another look at Dracula's code from our last example:
 
-<div class = "warning">
-Be careful to remove *only* the `.git` file you want to remove. In our example, Dracula will should check that he is in the planets directory by running `pwd` and getting the output:
+```r
+$ cd ~/Desktop   # return to Desktop directory
+$ cd planets     # go into planets directory, which is already a Git repository
+$ ls -a          # ensure the .git subdirectory is still present in the planets directory
+$ mkdir moons    # make a subdirectory planets/moons
+$ cd moons       # go into moons subdirectory
+$ git init       # make the moons subdirectory a Git repository
+$ ls -a          # ensure the .git subdirectory is present indicating we have created a new Git repository
+```
+
+Dracula has created two tracking files, `planets/.git` which he should keep, and `planets/moons/.git` which should be removed.
+Dracula can do this by running `pwd` and getting the output:
 
 ```r
 Users/Dracula/planets
