@@ -190,8 +190,8 @@ $ ls -a          # ensure the .git subdirectory is present indicating we have cr
 Is the `git init` command, run inside the `moons` subdirectory, required for
 tracking files stored in the `moons` subdirectory?
 
-[()] Yes, running `git init` inside the `moons` subdirectory is necessary.
-[()] It is not necessary to run `git init` inside `moons` but it can't hurt.
+[( )] Yes, running `git init` inside the `moons` subdirectory is necessary.
+[( )] It is not necessary to run `git init` inside `moons` but it can't hurt.
 [(X)] No, `moons` was already tracked as a subdirectory of `planets` and running `git init` inside `moons` could interfere with version control.
 
 
