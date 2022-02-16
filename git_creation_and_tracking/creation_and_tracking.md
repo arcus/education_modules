@@ -27,17 +27,14 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 # Creating your Git Repository
 
-(Note that the title is the only level-1 header in the document)
-
-To see how to use this template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6).
-To see what it looks like rendered via LiaScript, [click here](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6#1) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
-
 <div class = "overview">
 
 ## Overview
 @comment
 
-**Is this module right for me?** @long_description
+**Is this module right for me?**
+
+@long_description
 
 **Estimated time to completion:**
 
@@ -45,7 +42,7 @@ To see what it looks like rendered via LiaScript, [click here](https://liascript
 
 Before you start this module, make sure you have
 
-* Configured Git on your computer. See [this module](https://education.arcus.chop.edu) to learn how.
+* Configured Git *on your computer*. See [this module](https://education.arcus.chop.edu) to learn how.
 * The ability to edit .txt documents. Click [here](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file) for an introduction to editing text files using `nano`.
 
 If you would prefer to work through this module on your own computer, you can find a module on Bash 101 [here](link to bash 101 module).
