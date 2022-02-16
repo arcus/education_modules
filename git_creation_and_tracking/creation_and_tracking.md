@@ -193,7 +193,6 @@ tracking files stored in the `moons` subdirectory?
 [( )] Yes, running `git init` inside the `moons` subdirectory is necessary.
 [( )] It is not necessary to run `git init` inside `moons` but it can't hurt.
 [(X)] No, `moons` was already tracked as a subdirectory of `planets` and running `git init` inside `moons` could interfere with version control.
-
 ***
 <div class = "answer">
 
@@ -218,9 +217,9 @@ $ git status
 ```r
 fatal: Not a git repository (or any of the parent directories): .git
 ```
-
  </div>
  ***
+ 
 ## Correcting `git init` Mistakes
 Wolfman explains to Dracula how a nested repository is redundant and may cause confusion
 down the road. Dracula would like to remove the nested repository. How can Dracula undo
