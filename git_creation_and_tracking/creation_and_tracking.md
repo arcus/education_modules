@@ -196,7 +196,7 @@ tracking files stored in the `moons` subdirectory?
 [[?]] Hint: Provide a hint here if you like. Hints are marked with the ?
 [[?]] Hint: You can include as many hints as you want.
 
-why won't this render?
+Why won't this render?
 
 [( )] Yes, running `git init` inside the `moons` subdirectory is necessary.
 [( )] It is not necessary to run `git init` inside `moons` but it can't hurt.
