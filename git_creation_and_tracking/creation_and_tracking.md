@@ -177,7 +177,7 @@ Dracula would also like to track information about moons.
 Despite Wolfman's concerns, Dracula creates a `moons` project inside his `planets`
 project with the following sequence of commands:
 
-```
+```r
 $ cd ~/Desktop   # return to Desktop directory
 $ cd planets     # go into planets directory, which is already a Git repository
 $ ls -a          # ensure the .git subdirectory is still present in the planets directory
@@ -186,7 +186,6 @@ $ cd moons       # go into moons subdirectory
 $ git init       # make the moons subdirectory a Git repository
 $ ls -a          # ensure the .git subdirectory is present indicating we have created a new Git repository
 ```
-{: .language-bash}
 
 Is the `git init` command, run inside the `moons` subdirectory, required for
 tracking files stored in the `moons` subdirectory?
