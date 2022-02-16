@@ -214,8 +214,14 @@ $ git status
 ```
 
 ```r
-fatal: Not a git repository (or any of the parent directories): .git
+fatal:
+Not a git repository (or any of the parent directories):
+.git
 ```
+ </div>
+ ***
+
+### Fixing a nested `init`
 
 <div class = "help">
 What if you forgot to check `git status` and accidentally created a repository nested in another repository?
@@ -223,10 +229,7 @@ This the one time you want to *carefully* delete a `.git` file.
 </div>
 
 <div class = "warning">
-Be careful to remove *only* the `.git` file you want to remove. In our example, Dracula will should check that he is in the planets directory:
-```r
-$ pwd
-```
+Be careful to remove *only* the `.git` file you want to remove. In our example, Dracula will should check that he is in the planets directory by running `pwd` and getting the output:
 
 ```r
 Users/Dracula/planets
@@ -237,8 +240,6 @@ before running:
 $ rm -rf moons/.git
 ```
 </div>
- </div>
- ***
 
 ## Module Content
 
