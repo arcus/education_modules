@@ -85,21 +85,21 @@ Courtesy NASA/JPL-Caltech.
 
 First, let's create a directory in `Desktop` folder for our work and then move into that directory:
 
-~~~
+
+```r
 $ cd ~/Desktop
 $ mkdir planets
 $ cd planets
-~~~
-{: .language-bash}
+```
 
 Then we tell Git to make `planets` a [repository]({{ page.root }}{% link reference.md %}#repository)
 -- a place where Git can store versions of our files:
 
 
-~~~
+```r
 $ git init
-~~~
-{: .language-bash}
+```
+
 
 It is important to note that `git init` will create a repository that
 includes subdirectories and their files---there is no need to create
@@ -111,23 +111,21 @@ repository are completely separate processes.
 If we use `ls` to show the directory's contents,
 it appears that nothing has changed:
 
-~~~
+```r
 $ ls
-~~~
-{: .language-bash}
+```
+
 
 But if we add the `-a` flag to show everything,
 we can see that Git has created a hidden directory within `planets` called `.git`:
 
-~~~
+```r
 $ ls -a
-~~~
-{: .language-bash}
+```
 
-~~~
+```r
 .	..	.git
-~~~
-{: .output}
+```
 
 Git uses this special subdirectory to store all the information about the project,
 including all files and sub-directories located within the project's directory.
@@ -141,31 +139,27 @@ This might be the default branch depending on your settings and version
 of git.
 See the [setup episode](02-setup.md) for more information on this change.
 
-~~~
+```r
 git checkout -b main
-~~~
-{: .language-bash}
-~~~
+```
+```r
 Switched to a new branch 'main'
-~~~
-{: .output}
+```
 
 
 We can check that everything is set up correctly
 by asking Git to tell us the status of our project:
 
-~~~
+```r
 $ git status
-~~~
-{: .language-bash}
-~~~
+```
+```r
 On branch main
 
 No commits yet
 
 nothing to commit (create/copy files and use "git add" to track)
-~~~
-{: .output}
+```
 
 If you are using a different version of `git`, the exact
 wording of the output might be slightly different.
