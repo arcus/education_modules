@@ -48,8 +48,7 @@ Before you start this module, make sure you have
 * Configured Git on your computer. See [this module](https://education.arcus.chop.edu) to learn how.
 * The ability to edit .txt documents. Click [here](https://swcarpentry.github.io/shell-novice/03-create/) for an introduction to editing text files from the command line.
 
-
-You will need to use a Command Line Interface (CLI). If you are on a Mac, you can use **Terminal**, Windows machines use **Command Prompt** or **Windows PowerShell**. If you haven't used the command line before, you can learn how to use it to move around [here](https://swcarpentry.github.io/shell-novice/01-intro/index.html).
+If you would prefer to work through this module on your own computer, you can find a module on Bash 101 [here](link to bash 101 module).
 
 **Learning Objectives**
 
