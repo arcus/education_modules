@@ -195,7 +195,6 @@ tracking files stored in the `moons` subdirectory?
 [(X)] No, `moons` was already tracked as a subdirectory of `planets` and running `git init` inside `moons` could interfere with version control.
 ***
 <div class = "answer">
-
 No. Dracula does not need to make the `moons` subdirectory a Git repository
 because the `planets` repository will track all files, sub-directories, and
 subdirectory files under the `planets` directory.  Thus, in order to track
@@ -217,43 +216,29 @@ $ git status
 ```r
 fatal: Not a git repository (or any of the parent directories): .git
 ```
+
+<div class = "help">
+What if you forgot to check `git status` and accidentally created a repository nested in another repository?
+This the one time you want to *carefully* delete a `.git` file.
+</div>
+
+<div class = "warning">
+Be careful to remove *only* the `.git` file you want to remove. In our example, Dracula will should check that he is in the planets directory:
+```r
+$ pwd
+```
+
+```r
+Users/Dracula/planets
+```
+before running:
+
+```r
+$ rm -rf moons/.git
+```
+</div>
  </div>
  ***
- 
-## Correcting `git init` Mistakes
-Wolfman explains to Dracula how a nested repository is redundant and may cause confusion
-down the road. Dracula would like to remove the nested repository. How can Dracula undo
-his last `git init` in the `moons` subdirectory?
-> ## Solution -- USE WITH CAUTION!
->
-> ### Background
-> Removing files from a Git repository needs to be done with caution. But we have not learned
-> yet how to tell Git to track a particular file; we will learn this in the next episode. Files
-> that are not tracked by Git can easily be removed like any other "ordinary" files with
-> ~~~
-> $ rm filename
-> ~~~
-> {: .language-bash}
->
-> Similarly a directory can be removed using `rm -r dirname` or `rm -rf dirname`.
-> If the files or folder being removed in this fashion are tracked by Git, then their removal
-> becomes another change that we will need to track, as we will see in the next episode.
->
-> ### Solution
-> Git keeps all of its files in the `.git` directory.
-> To recover from this little mistake, Dracula can just remove the `.git`
-> folder in the moons subdirectory by running the following command from inside the `planets` directory:
->
-> ~~~
-> $ rm -rf moons/.git
-> ~~~
-> {: .language-bash}
->
-> But be careful! Running this command in the wrong directory will remove
-> the entire Git history of a project you might want to keep.
-> Therefore, always check your current directory using the command `pwd`.
-{: .solution}
-{: .challenge}
 
 ## Module Content
 
