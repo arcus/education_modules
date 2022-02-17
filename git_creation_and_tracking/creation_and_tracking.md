@@ -160,7 +160,8 @@ nothing to commit (create/copy files and use "git add" to track)
 If you are using a different version of `git`, the exact
 wording of the output might be slightly different.
 
-### Knowledge check
+### Knowledge Check 1
+
 What command should go in the blank in order to create a new Git repository?
 
 ```console
@@ -253,6 +254,24 @@ before running:
 $ rm -rf moons/.git
 ```
 </div>
+
+## Tracking changes
+
+ It might seem like making changes and documenting them are two different things, but the entire point of version control is to document every change you make!
+
+### Executing Git workflow
+ Put stuff from swcarpentries here.
+
+### Knowledge Check 2
+A quiz!
+
+### Understanding the Git workflow
+ Put stuff from swcarpentries here.
+
+### Knowledge Check 3
+Another quiz!
+### Telling Git not to track some files
+Extra how-to without a quiz.
 
 ## Module Content
 
