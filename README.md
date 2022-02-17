@@ -16,6 +16,7 @@ For example, to use the training included in [data_visualization_in_ggplot2](dat
 
 ||||
 |--|--|--|
+|Command Line 101|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md)|[Markdown](bash_scripting_101/bash_scripting_101.md)|
 |Data Visualization in ggplot2|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md)| [Markdown](data_visualization_in_ggplot2/data_visualization_ggplot2.md)|
 |Data Visualization in Open Source Software|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/data_visualization_in_open_source_software/data_visualization.md) | [Markdown](data_visualization_in_open_source_software/data_visualization.md) |
 |Data Visualization in Seaborn|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/data_visualization_in_seaborn/data_visualization_seaborn.md) | [Markdown](data_visualization_in_seaborn/data_visualization_seaborn.md)|
