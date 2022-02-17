@@ -86,7 +86,7 @@ Courtesy NASA/JPL-Caltech.
 First, let's create a directory in `Desktop` folder for our work and then move into that directory:
 
 
-```r
+```console
 $ cd ~/Desktop
 $ mkdir planets
 $ cd planets
@@ -96,7 +96,7 @@ Then we tell Git to make `planets` a [repository]({{ page.root }}{% link referen
 -- a place where Git can store versions of our files:
 
 
-```r
+```console
 $ git init
 ```
 
@@ -111,7 +111,7 @@ repository are completely separate processes.
 If we use `ls` to show the directory's contents,
 it appears that nothing has changed:
 
-```r
+```console
 $ ls
 ```
 
@@ -119,11 +119,9 @@ $ ls
 But if we add the `-a` flag to show everything,
 we can see that Git has created a hidden directory within `planets` called `.git`:
 
-```r
+```console
 $ ls -a
-```
 
-```r
 .	..	.git
 ```
 
@@ -139,10 +137,9 @@ This might be the default branch depending on your settings and version
 of git.
 See the [setup episode](02-setup.md) for more information on this change.
 
-```r
+```console
 git checkout -b main
-```
-```r
+
 Switched to a new branch 'main'
 ```
 
@@ -150,10 +147,9 @@ Switched to a new branch 'main'
 We can check that everything is set up correctly
 by asking Git to tell us the status of our project:
 
-```r
+```console
 $ git status
-```
-```r
+
 On branch main
 
 No commits yet
@@ -171,7 +167,7 @@ Dracula would also like to track information about moons.
 Despite Wolfman's concerns, Dracula creates a `moons` project inside his `planets`
 project with the following sequence of commands:
 
-```r
+```console
 $ cd ~/Desktop   # return to Desktop directory
 $ cd planets     # go into planets directory, which is already a Git repository
 $ ls -a          # ensure the .git subdirectory is still present in the planets directory
@@ -203,11 +199,9 @@ repository in the directory, check the output of `git status`. If it looks
 like the following, you are good to go to create a new repository as shown
 above:
 
-```r
+```console
 $ git status
-```
 
-```r
 fatal:
 Not a git repository (or any of the parent directories):
 .git
@@ -221,7 +215,7 @@ Not a git repository (or any of the parent directories):
 What if you forgot to check `git status` and accidentally created a repository nested in another repository?
 You can fix this by removing the `.git` file from the inner repository. Take another look at Dracula's code from our last example:
 
-```r
+```console
 $ cd ~/Desktop   # return to Desktop directory
 $ cd planets     # go into planets directory, which is already a Git repository
 $ ls -a          # ensure the .git subdirectory is still present in the planets directory
@@ -234,12 +228,12 @@ $ ls -a          # ensure the .git subdirectory is present indicating we have cr
 Dracula has created two tracking files, `planets/.git` which he should keep, and `planets/moons/.git` which should be removed.
 Dracula can do this by running `pwd` and getting the output:
 
-```r
+```console
 Users/Dracula/planets
 ```
 before running:
 
-```r
+```console
 $ rm -rf moons/.git
 ```
 </div>
