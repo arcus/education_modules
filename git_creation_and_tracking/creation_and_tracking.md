@@ -161,6 +161,22 @@ If you are using a different version of `git`, the exact
 wording of the output might be slightly different.
 
 ### Knowledge check
+What command should go in the blank in order to create a new Git repository?
+
+```console
+$ cd ~/Desktop      # return to the Desktop directory
+$ mkdir planets     # make the planets directory
+$ cd planets        # go into the newly created planets directory
+$ __________        # make the planets directory a Git repository
+
+```
+[[git init]]
+***
+<div class = "answer">
+By initializing the Git repository inside the planets directory, Git will track every file inside planets.
+</div>
+***
+
 
 Along with tracking information about planets (the project we have already created),
 Dracula would also like to track information about moons.
