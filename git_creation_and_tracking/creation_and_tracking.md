@@ -534,20 +534,33 @@ nothing to commit, working directory clean
 A quiz! One question on add/commit order, one question on good commit messages.
 
 Which sequence of commands would track the changes you made to `myFile.txt`?
+*figure out how to have options be
 
 [( )] `$ git commit -m "my short, descriptive message"`
 [(X)] `$ git add myFile.txt` then `$ git commit -m "my short, descriptive message"`
 [( )] `$ git commit -m "my short, descriptive message"` then `$ git add myFile.txt`
 [( )] `$ git add -m "my short, descriptive message"` then `$ git commit myFile.txt`
 
+***
+<div class = 'answer'>
+You must run the `git add` command before you can commit. We will discuss what the difference is between these steps in the [next section](#understanding_the_git_workflow).
+</div>
+***
 
 With each commit, we want to leave a short, descriptive, message describing the changes we make. Which of these would be the *best* commit message?
 
 [( )] "updates"
-[( )] "add comments on Martian atmosphere"
-[( )] "add a line that the Martian atmosphere is only 1% oxygen"
 [( )] "The Martian atmosphere is only 1% oxygen."
+[( )] "add a line that the Martian atmosphere is only 1% oxygen"
+[(X)] "add comments on Martian atmosphere"
 
+
+
+***
+<div class = "answer">
+The commit message should describe what this commit does. If you want to know the line by line changes you should use the `diff` command. The purpose of the message is so that you know what you changed without having to read all the individual changes, which is especially helpful if you edited many lines or files.
+</div>
+***
 
 ### Understanding the Git workflow
  There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, but you will remember them better if you understand what each is doing.
