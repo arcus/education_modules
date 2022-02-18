@@ -162,7 +162,7 @@ wording of the output might be slightly different.
 
 ### Knowledge Check 1
 
-What command should go in the blank in order to create a new Git repository?
+What command Dracula enter in the blank in order to create a new Git repository?
 
 ```console
 $ cd ~/Desktop      # return to the Desktop directory
@@ -246,7 +246,7 @@ Dracula has created two tracking files, `planets/.git` which he should keep, and
 Dracula can do this by running `pwd` and getting the output:
 
 ```console
-Users/Dracula/planets
+/Users/Dracula/Desktop/planets
 ```
 before running:
 
@@ -257,19 +257,163 @@ $ rm -rf moons/.git
 
 ## Tracking changes
 
- It might seem like making changes and documenting them are two different things, but the entire point of version control is to document every change you make!
+ It might seem like *making* changes and *documenting* them are two different things, but the entire point of version control is to document every change you make!
 
 ### Executing Git workflow
- Put stuff from swcarpentries here.
+Let's follow along with Dracula to add a file to the planets directory with notes about Mars.
+
+First let's make sure we're still in the right directory.
+You should be in the `planets` directory.
+
+```console
+$ cd ~/Desktop/planets
+```
+
+Let's create a file called `mars.txt` that contains some notes
+about the Red Planet's suitability as a base.
+We'll use `nano` to edit the file;
+you can use whatever editor you like.
+In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). For a refresher on text editors, check out ["Which Editor?"](https://swcarpentry.github.io/shell-novice/03-create/) in [The Unix Shell](https://swcarpentry.github.io/shell-novice/) lesson.
+
+```console
+$ nano mars.txt
+```
+
+Type the text below into the `mars.txt` file:
+
+
+```console
+Cold and dry, but everything is my favorite color
+```
+
+
+Let's first verify that the file was properly created by running the list command (`ls`):
+
+
+```console
+$ ls
+
+mars.txt
+```
+
+
+
+`mars.txt` contains a single line, which we can see by running:
+
+
+```console
+$ cat mars.txt
+
+Cold and dry, but everything is my favorite color
+```
+
+
+If we check the status of our project again,
+Git tells us that it's noticed the new file:
+
+~~~
+$ git status
+
+On branch main
+
+No commits yet
+
+Untracked files:
+   (use "git add <file>..." to include in what will be committed)
+
+	mars.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+~~~
+{: .output}
+
+The "untracked files" message means that there's a file in the directory
+that Git isn't keeping track of.
+We can tell Git to track a file using `git add`:
+
+~~~
+$ git add mars.txt
+~~~
+{: .language-bash}
+
+and then check that the right thing happened:
+
+~~~
+$ git status
+~~~
+{: .language-bash}
+
+~~~
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   mars.txt
+
+~~~
+{: .output}
+
+Git now knows that it's supposed to keep track of `mars.txt`,
+but it hasn't recorded these changes as a commit yet.
+To get it to do that,
+we need to run one more command:
+
+~~~
+$ git commit -m "Start notes on Mars as a base"
+~~~
+{: .language-bash}
+
+~~~
+[main (root-commit) f22b25e] Start notes on Mars as a base
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mars.txt
+~~~
+{: .output}
+
+When we run `git commit`,
+Git takes everything we have told it to save by using `git add`
+and stores a copy permanently inside the special `.git` directory.
+This permanent copy is called a [commit]({{ page.root }}{% link reference.md %}#commit)
+(or [revision]({{ page.root }}{% link reference.md %}#revision)) and its short identifier is `f22b25e`. Your commit may have another identifier.
+
+We use the `-m` flag (for "message")
+to record a short, descriptive, and specific comment that will help us remember later on what we did and why.
+If we just run `git commit` without the `-m` option,
+Git will launch `nano` (or whatever other editor we configured as `core.editor`)
+so that we can write a longer message.
+
+[Good commit messages][commit-messages] start with a brief (<50 characters) statement about the
+changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will" <commit message here>.
+If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
+
+If we run `git status` now:
+
+~~~
+$ git status
+~~~
+{: .language-bash}
+
+~~~
+On branch main
+nothing to commit, working directory clean
+~~~
+{: .output}
 
 ### Knowledge Check 2
-A quiz!
+A quiz! One question on add/commit/push order, one question on good commit messages.
 
 ### Understanding the Git workflow
- Put stuff from swcarpentries here.
+ There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, but you will remember them better if you understand what each is doing.
+
+#### Put stuff from swcarpentries here.
+images, and words, and metaphors
 
 ### Knowledge Check 3
-Another quiz!
+Another quiz! This one about figuring out why something wasn't staged or didn't change things.
+
 ### Telling Git not to track some files
 Extra how-to without a quiz.
 
