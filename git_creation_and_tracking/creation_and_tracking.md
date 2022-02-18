@@ -14,7 +14,7 @@ long_description: You have heard that version control is important for reproduci
 After completion of this module, learners will be able to:
 
 - Create a Git repository
-- Update files in the repository
+- Add and make changes to files in the repository
 - Write short helpful descriptions to track the changes
 
 @end
@@ -259,7 +259,7 @@ $ rm -rf moons/.git
 
  It might seem like *making* changes and *documenting* them are two different things, but the entire point of version control is to document every change you make!
 
-### Executing Git workflow
+### Tell Git to track a file
 Let's follow along with Dracula to add a file to the planets directory with notes about Mars.
 
 First let's make sure we're still in the right directory.
@@ -390,8 +390,12 @@ On branch main
 nothing to commit, working directory clean
 ```
 
+### Keeping track of changes to a file
+
+Go through the edit/commit cycle twice, how to write good commit messages here
+
 ### Knowledge Check 2
-A quiz! One question on add/commit/push order, one question on good commit messages.
+A quiz! One question on add/commit order, one question on good commit messages.
 
 ### Understanding the Git workflow
  There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, but you will remember them better if you understand what each is doing.
