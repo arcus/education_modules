@@ -382,7 +382,7 @@ If you want to go into more detail, add a blank line between the summary line an
 
 If we run `git status` now:
 
-```console
+```
 $ git status
 
 On branch main
@@ -401,7 +401,7 @@ If we want to know what we've done recently,
 we can ask Git to show us the project's history using `git log`:
 
 
-```console
+```
 $ git log
 f22b25e3233b4645dabd0d81e651fe074bd8e73b
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
@@ -520,10 +520,28 @@ $ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
 [main 34961b1] Add concerns about effects of Mars' moons on Wolfman
  1 file changed, 1 insertion(+)
 ```
+To double check that everything worked, you can run `git status` see:
 
+```
+$ git status
+
+On branch main
+
+nothing to commit, working directory clean
+```
 
 ### Knowledge Check 2
 A quiz! One question on add/commit order, one question on good commit messages.
+
+**create a drag and drop quiz here?**
+Put the commands in the order that would track your changes in Git.
+[( )] ```
+$ git add myFile.txt
+$ git commit -m "my short, descriptive message"
+```
+[( )] `git add myFile.txt`
+[( )] `git log`
+[( )] `git status`
 
 ### Understanding the Git workflow
  There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, but you will remember them better if you understand what each is doing.
