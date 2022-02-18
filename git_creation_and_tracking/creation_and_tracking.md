@@ -298,7 +298,7 @@ mars.txt
 
 
 
-`mars.txt` contains a single line, which we can see by running:
+`mars.txt` contains a single line, which we can see by running `cat`:
 
 
 ```console
@@ -311,7 +311,7 @@ Cold and dry, but everything is my favorite color
 If we check the status of our project again,
 Git tells us that it's noticed the new file:
 
-~~~
+```console
 $ git status
 
 On branch main
@@ -324,26 +324,21 @@ Untracked files:
 	mars.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
-~~~
-{: .output}
+```
 
-The "untracked files" message means that there's a file in the directory
-that Git isn't keeping track of.
+The "untracked files" message means that there's a file in the directory that Git isn't keeping track of.
 We can tell Git to track a file using `git add`:
 
-~~~
+
+```console
 $ git add mars.txt
-~~~
-{: .language-bash}
+```
 
-and then check that the right thing happened:
+and then use `git status` to check that the right thing happened:
 
-~~~
+```console
 $ git status
-~~~
-{: .language-bash}
 
-~~~
 On branch main
 
 No commits yet
@@ -352,26 +347,22 @@ Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
 
 	new file:   mars.txt
-
-~~~
-{: .output}
+```
 
 Git now knows that it's supposed to keep track of `mars.txt`,
 but it hasn't recorded these changes as a commit yet.
-To get it to do that,
-we need to run one more command:
+To get it to do that, we need to run one more command. Enter this into the console:
 
-~~~
+```console
 $ git commit -m "Start notes on Mars as a base"
-~~~
-{: .language-bash}
+```
+The console output will look like this, though your unique identifiers (f22b25e and 100644) will be different.
 
-~~~
+```console
 [main (root-commit) f22b25e] Start notes on Mars as a base
  1 file changed, 1 insertion(+)
  create mode 100644 mars.txt
-~~~
-{: .output}
+```
 
 When we run `git commit`,
 Git takes everything we have told it to save by using `git add`
@@ -391,16 +382,13 @@ If you want to go into more detail, add a blank line between the summary line an
 
 If we run `git status` now:
 
-~~~
+```console
 $ git status
-~~~
-{: .language-bash}
 
-~~~
 On branch main
+
 nothing to commit, working directory clean
-~~~
-{: .output}
+```
 
 ### Knowledge Check 2
 A quiz! One question on add/commit/push order, one question on good commit messages.
