@@ -564,7 +564,7 @@ The commit message should describe what this commit does. If you want to know th
 
  We will discuss each part of this diagram and the connections.
 
- Possible metaphor to run by people:
+Possible metaphor to run by people:
 
 1. creating artwork by hand (editing files)
 2. putting paper in a scanner's intake slot (add)
