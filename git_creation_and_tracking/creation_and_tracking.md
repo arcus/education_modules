@@ -246,7 +246,7 @@ Dracula has created two tracking files, `planets/.git` which he should keep, and
 Dracula can do this by running `pwd` and getting the output:
 
 ```console
-/Users/Dracula/Desktop/planets
+/Users/vlad/Desktop/planets
 ```
 before running:
 
@@ -560,8 +560,22 @@ The commit message should describe what this commit does. If you want to know th
 ### Understanding the Git workflow
  There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, but you will remember them better if you understand what each is doing.
 
-#### Put stuff from swcarpentries here.
+ *diagram of file->staging->commit to repository here, make it as simple as possible*
+
+ We will discuss each part of this diagram and the connections.
+ 
+ Possible metaphor to run by people:
+ 1. creating artwork by hand (editing files)
+ 2. putting paper in a scanner's intake slot (add)
+ 3. scanning to create a *perfect* digital copy of the added artwork (commit)
+ 4. uploading images to cloud storage (push)
+ 5. printing out updated images from the cloud to work on (pull)
+
+#### `git add` stages files
 images, and words, and metaphors
+
+#### `git commit` updates the repository
+images, words, and metaphors
 
 ### Knowledge Check 3
 Another quiz! This one about figuring out why something wasn't staged or didn't change things.
