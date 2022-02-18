@@ -533,28 +533,20 @@ nothing to commit, working directory clean
 ### Knowledge Check 2
 A quiz! One question on add/commit order, one question on good commit messages.
 
-**create a drag and drop quiz here?**
-
 Which sequence of commands would track the changes you made to `myFile.txt`?
+
 [( )]
-```
-$ git commit -m "my short, descriptive message"
-```
+`$ git commit -m "my short, descriptive message"`
 
-[(X)]```
-$ git add myFile.txt
-$ git commit -m "my short, descriptive message"
-```
+[(X)]
+`$ git add myFile.txt`
+then
+`$ git commit -m "my short, descriptive message"`
 
-[( )]```
-$ git commit -m "my short, descriptive message"
-$ git add myFile.txt
-```
+[( )]`$ git commit -m "my short, descriptive message"` then
+`$ git add myFile.txt`
 
-[( )]```
-$ git add -m "my short, descriptive message"
-$ git commit myFile.txt
-```
+[( )] `$ git add -m "my short, descriptive message"` then `$ git commit myFile.txt`
 
 ### Understanding the Git workflow
  There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, but you will remember them better if you understand what each is doing.
