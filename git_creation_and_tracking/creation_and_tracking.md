@@ -537,8 +537,17 @@ Which sequence of commands would track the changes you made to `myFile.txt`?
 
 [( )] `$ git commit -m "my short, descriptive message"`
 [(X)] `$ git add myFile.txt` then `$ git commit -m "my short, descriptive message"`
-[( )]`$ git commit -m "my short, descriptive message"` then `$ git add myFile.txt`
+[( )] `$ git commit -m "my short, descriptive message"` then `$ git add myFile.txt`
 [( )] `$ git add -m "my short, descriptive message"` then `$ git commit myFile.txt`
+
+
+With each commit, we want to leave a short, descriptive, message describing the changes we make. Which of these would be the *best* commit message?
+
+[( )] "updates"
+[( )] "add comments on Martian atmosphere"
+[( )] "add a line that the Martian atmosphere is only 1% oxygen"
+[( )] "The Martian atmosphere is only 1% oxygen."
+
 
 ### Understanding the Git workflow
  There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, but you will remember them better if you understand what each is doing.
