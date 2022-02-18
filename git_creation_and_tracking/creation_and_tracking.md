@@ -486,10 +486,10 @@ It is actually a series of commands for tools like editors and `patch`
 telling them how to reconstruct one file given the other. Nevertheless we can gain some useful information
 if we break it down into pieces:
 
-  1. The first line tells us that Git is producing output similar to the Unix `diff` command comparing the old and new versions of the file.
-  2. The second line tells exactly which versions of the file Git is comparing; `df0654a` and `315bf3a` are unique computer-generated labels for those versions.
-  3. The third and fourth lines once again show the name of the file being changed.
-  4. The remaining lines are the most interesting, they show us the actual differences and the lines on which they occur. In particular, the `+` marker in the first column shows where we added a line.
+1. The first line tells us that Git is producing output similar to the Unix `diff` command comparing the old and new versions of the file.
+2. The second line tells exactly which versions of the file Git is comparing; `df0654a` and `315bf3a` are unique computer-generated labels for those versions.
+3. The third and fourth lines once again show the name of the file being changed.
+4. The remaining lines are the most interesting, they show us the actual differences and the lines on which they occur. In particular, the `+` marker in the first column shows where we added a line.
 </div>
 
 <div class = 'warning'>
@@ -563,7 +563,7 @@ The commit message should describe what this commit does. If you want to know th
  *diagram of file->staging->commit to repository here, make it as simple as possible*
 
  We will discuss each part of this diagram and the connections.
- 
+
  Possible metaphor to run by people:
  1. creating artwork by hand (editing files)
  2. putting paper in a scanner's intake slot (add)
