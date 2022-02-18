@@ -531,7 +531,6 @@ nothing to commit, working directory clean
 ```
 
 ### Knowledge Check 2
-A quiz! One question on add/commit order, one question on good commit messages.
 
 Which sequence of commands would track the changes you made to `myFile.txt`?
 *figure out how to have options be code blocks*
@@ -542,7 +541,7 @@ Which sequence of commands would track the changes you made to `myFile.txt`?
 [( )] `$ git add -m "my short, descriptive message"` then `$ git commit myFile.txt`
 ***
 <div class = 'answer'>
-You must run the `git add` command before you can commit. We will discuss what the difference is between these steps in the [next section](#understanding_the_git_workflow).
+You must run the `git add` command before you can commit. We will discuss what the difference is between these steps in the [next section](understanding_the_git_workflow).
 </div>
 ***
 
