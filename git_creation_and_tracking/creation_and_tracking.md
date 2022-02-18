@@ -535,17 +535,9 @@ A quiz! One question on add/commit order, one question on good commit messages.
 
 Which sequence of commands would track the changes you made to `myFile.txt`?
 
-[( )]
-`$ git commit -m "my short, descriptive message"`
-
-[(X)]
-`$ git add myFile.txt`
-then
-`$ git commit -m "my short, descriptive message"`
-
-[( )]`$ git commit -m "my short, descriptive message"` then
-`$ git add myFile.txt`
-
+[( )] `$ git commit -m "my short, descriptive message"`
+[(X)] `$ git add myFile.txt` then `$ git commit -m "my short, descriptive message"`
+[( )]`$ git commit -m "my short, descriptive message"` then `$ git add myFile.txt`
 [( )] `$ git add -m "my short, descriptive message"` then `$ git commit myFile.txt`
 
 ### Understanding the Git workflow
