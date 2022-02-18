@@ -534,7 +534,7 @@ nothing to commit, working directory clean
 A quiz! One question on add/commit order, one question on good commit messages.
 
 Which sequence of commands would track the changes you made to `myFile.txt`?
-*figure out how to have options be
+*figure out how to have options be code blocks*
 
 [( )] `$ git commit -m "my short, descriptive message"`
 [(X)] `$ git add myFile.txt` then `$ git commit -m "my short, descriptive message"`
