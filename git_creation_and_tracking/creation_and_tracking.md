@@ -541,7 +541,7 @@ Which sequence of commands would track the changes you made to `myFile.txt`?
 [( )] `$ git add -m "my short, descriptive message"` then `$ git commit myFile.txt`
 ***
 <div class = 'answer'>
-You must run the `git add` command before you can commit. We will discuss what the difference is between these steps in the [next section](understanding_the_git_workflow).
+You must run the `git add` command before you can commit. We will discuss what the difference is between these steps in the [next section](#understanding-the-git-workflow).
 </div>
 ***
 
