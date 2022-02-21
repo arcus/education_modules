@@ -54,7 +54,7 @@ This module is for you if:
 
 ## Lesson Preparation
 
-*We need some sort of virtual box here, probably the best way (if possible) would be to have virtual box that can come preloaded with all of the commands from the previous module so that learners can explore the history without having to go through that entire module, especially if they did it a while back, or already know that stuff.*
+*We need some sort of virtual box here, probably the best way (if possible) would be to have virtual box that can come preloaded with all of the commands from the previous module so that learners can explore the history without having to go through that entire module, especially if they did it a while back, or already know that stuff. Having something just checkout a particular head in the chain of the modules could then be used for later modules, by checking out later or earlier heads.*
 
 If you are coming to this module directly from the [previous one](link) and still have that console open, you can continue using that console instead.
 
