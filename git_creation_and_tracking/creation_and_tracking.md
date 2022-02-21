@@ -532,7 +532,7 @@ nothing to commit, working directory clean
 
 ### Knowledge Check 2
 
-Which sequence of commands would track the changes you made to `myFile.txt`?
+1. Which sequence of commands would track the changes you made to `myFile.txt`?
 *figure out how to have options be code blocks*
 
 [( )] `$ git commit -m "my short, descriptive message"`
@@ -545,7 +545,7 @@ You must run the `git add` command before you can commit. We will discuss what t
 </div>
 ***
 
-With each commit, we want to leave a short, descriptive, message describing the changes we make. Which of these would be the *best* commit message?
+2. With each commit, we want to leave a short, descriptive, message describing the changes we make. Which of these would be the *best* commit message?
 
 [( )] "updates"
 [( )] "The Martian atmosphere is only 1% oxygen."
@@ -566,11 +566,13 @@ The commit message should describe what this commit does. If you want to know th
 
 Possible metaphor to run by people:
 
-1. creating artwork by hand (editing files)
-2. putting paper in a scanner's intake slot (add)
-3. scanning to create a *perfect* digital copy of the added artwork (commit)
-4. uploading images to cloud storage (push)
-5. printing out updated images from the cloud to work on (pull)
+1. creating 2D artwork/drawing by hand (editing files)
+2. putting the drawings in a scanner's intake slot (**add**)
+3. scanning to create a *perfect* digital copy of the added artwork (**commit**)
+4. uploading scans to cloud storage (**push**)
+5. printing out updated images from the cloud to work on (**pull**I’m )
+6. I draw a flower in one corner, you draw a boat in another corner of drawing 1,  and our friend draws an animal on drawing 2, all of our changes **merge** happily!
+7. I make the animal on drawing 2 into an angry sheep, while you turn it into a happy sloth, we can’t merge the drawings and must resolve this **conflict**!
 
 #### `git add` stages files
 images, and words, and metaphors
