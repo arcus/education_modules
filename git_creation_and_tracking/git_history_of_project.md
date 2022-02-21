@@ -6,8 +6,10 @@ version:  0.0.1
 language: en
 narrator: UK English Female
 title: Module Title
-comment:  This is a short, focused description of the module.
-long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
+comment:  This module will teach you how to look at past versions of your work on Git, compare versions, and return to former versions.
+long_description: You know that version control is important. You know how to save your work to your Git repository. Now you are ready to look at and compare different versions of your work.
+
+In this module you will you will learn how to navigate through the commits you have made to Git. You will also learn how to compare current code with past code, and, if necessary, revert to an earlier version of your work.
 
 @learning_objectives  
 
@@ -40,19 +42,16 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
+This module is for you if:
 
-* one skill we have [another module for, linked here](https://education.arcus.chop.edu)
-* some familiarity with [a topic](https://education.arcus.chop.edu)
-* understanding of [one thing](https://education.arcus.chop.edu) and [another](https://education.arcus.chop.edu)
+* You know that version control is important. (See [module](module) to learn why version control is important.)
+* You know how to save your work to your Git repository. (See [module](module) to learn how to create a Git repository and put your work into it.)
+* You want to learn how to see and compare different versions of your work.
 
-If relevant, you can include recommendations for somewhere else to start if the learner doesn't have these prereqs. For example: If you are brand new to R or python (or want a refresher) consider starting with [Intro to R](link) or [Intro to python](link) first and then coming back here.
 
 **Learning Objectives**
 
 @learning_objectives
-
-For help articulating learning objectives, see [this guide to learning objectives, including lots of example verbs](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/).
 
 </div>
 
