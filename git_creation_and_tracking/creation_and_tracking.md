@@ -522,26 +522,22 @@ nothing to commit, working directory clean
 ### Knowledge Check 2
 
 1. What sequence of commands would track the changes you made to `myFile.txt`?
-``` +a
-$ git commit -m "my short, descriptive message"
-```
-``` +b
-$ git add myFile.txt
-```
 
-``` +c 
-$ git add -m "my short, descriptive message"
-```
-``` +d
-$ git commit myFile.txt
-```
-[( )] `$ git commit -m "my short, descriptive message"`
-[(X)] `$ git add myFile.txt` then `$ git commit -m "my short, descriptive message"`
-[( )] `$ git commit -m "my short, descriptive message"` then `$ git add myFile.txt`
-[( )] `$ git add -m "my short, descriptive message"` then `$ git commit myFile.txt`
+  a. `$ git add myFile.txt`
+
+  b. `$ git commit myFile.txt`
+
+  c. `$ git add -m "my short, descriptive message"`
+
+  d. `$ git commit -m "my short, descriptive message"`
+
+[( )] First run a, then b
+[(X)] First run a, then d
+[( )] First run c, then b
+[( )] First run c, then d
 ***
 <div class = 'answer'>
-You must run the `git add` command before you can commit. We will discuss what the difference is between these steps in the [next section](#understanding-the-git-workflow).
+You must run the `git add` to tell Git to stage `myFile.txt`, then you can commit the changes an leave your short, descriptive message. We will discuss how to think of these steps in the [next section](#understanding-the-git-workflow).
 </div>
 ***
 
