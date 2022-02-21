@@ -58,15 +58,9 @@ For help articulating learning objectives, see [this guide to learning objective
 
 ## Lesson Preparation
 
-If your module includes code learners may want to run, then give links to a pangeo binder here so they can start it up now. Also provide a link to the raw code so learners can download the code itself and run it on their own machines or copy it into a cloud server.
+We need some sort of virtual box here, probably the best way (if possible) would be to have virtual box that can come preloaded with all of the commands from the previous module so that learners can explore the history without having to go through that entire module, especially if they did it a while back, or already know that stuff.
 
-This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in R and python. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection. If you have R and/or python already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.r" download>download the code for this module to run offline</a>.
-
-If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity. We recommend using right-click to open it in a new tab or window, and then returning here to continue learning while the environment finishes loading. Here is the link:
-
-[![Link to start Binder environment](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/main?urlpath=rstudio) **Click the "launch binder" button!**
-
-You don't have to do anything except come back here once the link opens in a new tab or window.
+If you are coming to this module directly from the [previous one](link) and still have that console open, you can continue using that console instead.
 
 ## Seeing prior commits
 Keeping track of all versions and being able to see and compare them is the entire point of using version control on a project you are working on alone. It is also a huge part of working on a project with others, but we will get to that part in [module](module).
@@ -77,26 +71,41 @@ There are generally two ways to refer to past commits:
 - Using the commit number assigned to a particular `commit`.
 
 ### Using HEAD
+
 swcarpentry stuff
+
 ### Using the commit number
+
 swcarpentry stuff
+
 ### Knowledge Check 1
+
 How would you look at a particular commit?
 Which two commands could you use to look at the most recent commit?
 
 ## Comparing prior commits
+
 Using `diff` command to compare current version with HEAD and earlier HEADs.
 
 ### Knowledge Check 2
+
 compare a file at two different times
 
 ## Undoing changes with Git
+
 One big reason we save older versions of our work is so that we can go back to an earlier version if something we did doesn't work out.
+
 ### Changes not yet committed
+
 Using the git checkout command, big warnings about including the file name so you don't lose things you didn't want to lose.
+
 ### Revert to an earlier version
+
 Big warnings around this part!!
+
 ### Knowledge Check 3
+
+quiz!
 
 ## Additional Resources
 
