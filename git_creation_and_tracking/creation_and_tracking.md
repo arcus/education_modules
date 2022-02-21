@@ -591,7 +591,7 @@ Let's create a few dummy files:
 $ mkdir results
 $ touch a.dat b.dat c.dat results/a.out results/b.out
 ```
-and see what Git says:
+The `touch` command opens, saves, and closes the files without changing them. Since they didn't previously exist, `touch` is also creating them. Now if we check the status of our repository we see:
 
 ```
 $ git status
@@ -614,12 +614,7 @@ What's worse,
 having them all listed could distract us from changes that actually matter,
 so let's tell Git to ignore them.
 
-We do this by creating a file in the root directory of our project called `.gitignore`:
-
-```
-$ nano .gitignore
-$ cat .gitignore
-```
+We do this by creating a file in the root directory of our project called `.gitignore`. Each line in this file is a rule for a type of file Git should ignore. Use your favorite text editor to make `.gitignore` contain the two lines:
 
 ```
 *.dat
@@ -658,6 +653,7 @@ $ git commit -m "Ignore data files and the results folder."
 $ git status
 
 On branch main
+
 nothing to commit, working directory clean
 ```
 
@@ -667,7 +663,9 @@ As a bonus, using `.gitignore` helps us avoid accidentally adding files to the r
 $ git add a.dat
 
 The following paths are ignored by one of your .gitignore files:
-a.dat
+
+    a.dat
+
 Use -f if you really want to add them.
 ```
 
@@ -683,10 +681,10 @@ On branch main
 Ignored files:
  (use "git add -f <file>..." to include in what will be committed)
 
-        a.dat
-        b.dat
-        c.dat
-        results/
+    a.dat
+    b.dat
+    c.dat
+    results/
 
 nothing to commit, working directory clean
 ```
