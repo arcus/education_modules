@@ -7,9 +7,8 @@ language: en
 narrator: UK English Female
 title: Module Title
 comment:  This module will teach you how to look at past versions of your work on Git, compare versions, and return to former versions.
-long_description: You know that version control is important. You know how to save your work to your Git repository. Now you are ready to look at and compare different versions of your work.
 
-In this module you will you will learn how to navigate through the commits you have made to Git. You will also learn how to compare current code with past code, and, if necessary, revert to an earlier version of your work.
+long_description: You know that version control is important. You know how to save your work to your Git repository. Now you are ready to look at and compare different versions of your work. In this module you will you will learn how to navigate through the commits you have made to Git. You will also learn how to compare current code with past code, and, if necessary, revert to an earlier version of your work.
 
 @learning_objectives  
 
