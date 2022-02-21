@@ -495,23 +495,12 @@ if we break it down into pieces:
 <div class = 'warning'>
 If we immediately commit this change using `git commit` what will happen?
 
-```
-$ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
+Git won't commit because we didn't use `git add` first! Git will give you a message reminding you to use `git add`.
 
-On branch main
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   mars.txt
-
-no changes added to commit (use "git add" and/or "git commit -a")
-```
-Git won't commit because we didn't use `git add` first!
 </div>
 
 
-To make sure our changes are tracked we must use `git add` first:
+Let's try adding the file and then committing the changes:
 
 ```
 $ git add mars.txt
@@ -532,9 +521,20 @@ nothing to commit, working directory clean
 
 ### Knowledge Check 2
 
-1. Which sequence of commands would track the changes you made to `myFile.txt`?
-*figure out how to have options be code blocks*
+1. What sequence of commands would track the changes you made to `myFile.txt`?
+``` +a
+$ git commit -m "my short, descriptive message"
+```
+``` +b
+$ git add myFile.txt
+```
 
+``` +c 
+$ git add -m "my short, descriptive message"
+```
+``` +d
+$ git commit myFile.txt
+```
 [( )] `$ git commit -m "my short, descriptive message"`
 [(X)] `$ git add myFile.txt` then `$ git commit -m "my short, descriptive message"`
 [( )] `$ git commit -m "my short, descriptive message"` then `$ git add myFile.txt`
@@ -570,7 +570,7 @@ Possible metaphor to run by people:
 2. putting the drawings in a scanner's intake slot (**add**)
 3. scanning to create a *perfect* digital copy of the added artwork (**commit**)
 4. uploading scans to cloud storage (**push**)
-5. printing out updated images from the cloud to work on (**pull**I’m )
+5. printing out updated images from the cloud to work on (**pull**)
 6. I draw a flower in one corner, you draw a boat in another corner of drawing 1,  and our friend draws an animal on drawing 2, all of our changes **merge** happily!
 7. I make the animal on drawing 2 into an angry sheep, while you turn it into a happy sloth, we can’t merge the drawings and must resolve this **conflict**!
 
