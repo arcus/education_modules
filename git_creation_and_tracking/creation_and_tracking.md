@@ -664,7 +664,7 @@ $ git add a.dat
 
 The following paths are ignored by one of your .gitignore files:
 
-    a.dat
+  a.dat
 
 Use -f if you really want to add them.
 ```
@@ -681,10 +681,10 @@ On branch main
 Ignored files:
  (use "git add -f <file>..." to include in what will be committed)
 
-    a.dat
-    b.dat
-    c.dat
-    results/
+ a.dat
+ b.dat
+ c.dat
+ results/
 
 nothing to commit, working directory clean
 ```
