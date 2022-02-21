@@ -54,7 +54,7 @@ This module is for you if:
 
 ## Lesson Preparation
 
-We need some sort of virtual box here, probably the best way (if possible) would be to have virtual box that can come preloaded with all of the commands from the previous module so that learners can explore the history without having to go through that entire module, especially if they did it a while back, or already know that stuff.
+*We need some sort of virtual box here, probably the best way (if possible) would be to have virtual box that can come preloaded with all of the commands from the previous module so that learners can explore the history without having to go through that entire module, especially if they did it a while back, or already know that stuff.*
 
 If you are coming to this module directly from the [previous one](link) and still have that console open, you can continue using that console instead.
 
@@ -66,13 +66,19 @@ There are generally two ways to refer to past commits:
 - Using HEAD to see the latest `commit` and or the commit that was $n$ steps earlier.
 - Using the commit number assigned to a particular `commit`.
 
+*This needs a really good picture; the stack of disks that swcarpentry has is pretty meh... but once a good picture is made, we can easily refer to the two different ways to access a particular*`commit`.
+
 ### Using HEAD
 
-swcarpentry stuff
+Example of `git show HEAD` and `git show HEAD~1`
+
+Update and commit, then `git show HEAD` and `git show HEAD~1` AND `git show HEAD~2`
 
 ### Using the commit number
 
-swcarpentry stuff
+Knowing how far back a commit was could be very easy if it was one or two back, but maybe you don't remember how many commits you want to go back, but you do know what change you want to look at.
+
+Using `git log` to find the right commit message (hey, good reason to write good messages!) and identify the commit number, then use the commit number to show that change. Also `git log -n 5` for only the last 5 commits.
 
 ### Knowledge Check 1
 
