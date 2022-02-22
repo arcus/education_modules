@@ -59,6 +59,7 @@ This module is for you if:
 If you are coming to this module directly from the [previous one](link) and still have that console open, you can continue using that console instead.
 
 ## Seeing prior commits
+
 Keeping track of all versions and being able to see and compare them is the entire point of using version control on a project you are working on alone. It is also a huge part of working on a project with others, but we will get to that part in [module](module).
 
 There are generally two ways to refer to past commits:
