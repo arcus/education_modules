@@ -76,19 +76,38 @@ There are generally two ways to refer to past commits:
 
 ### Using HEAD
 
-Example of `git show HEAD` and `git show HEAD~1`
+The `HEAD` is the most recently committed version of your repository. It won't include any changes that haven't been committed to the repository yet. You can the state of your project as of that most recent commit by entering `git show HEAD`.
+
+Example of `git show HEAD`
+
+Maybe you want to look one step further back into your work. By using `HEAD~n` you can look back $n$ checkpoints in your repository.
+
+For example, to look back just one commit before the most recent checkpoint, use `git show HEAD~1`:
+
+Example of `git show HEAD~1`
+
+If instead you wanted to look back three checkpoints (the most recent and then two before that) you would enter `git show HEAD~2`.
 
 *IMAGE: The same stack of 3 white flat boxes, now the top box is labeled `HEAD`, the middle box `HEAD~1` and the bottom `HEAD~2`*
 
-Update and commit, then `git show HEAD` and `git show HEAD~1` AND `git show HEAD~2`
+Using `HEAD` to refer to your commits can be great for looking at recent versions of your repository. But be careful, each time you commit to the repository, you are creating a new most-recent-version that is now the `HEAD` and every older version moves one layer down in the stack.
 
 *IMAGE: The same stack of 3 flat white boxes now has a 4th red box on top. This red box is labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`*
 
 ### Using the commit number
 
-Knowing how far back a commit was could be very easy if it was one or two back, but maybe you don't remember how many commits you want to go back, but you do know what change you want to look at.
+If there is a particular commit you want to look back on and are not sure how far back it was, having to refer to it as `HEAD~n` could get extremely frustrating, especially since $n$ will continue to change as you work more on your project and make more commits. Luckily there is another way to refer to a particular commit, using its commit number.
 
-Using `git log` to find the right commit message (hey, good reason to write good messages!) and identify the commit number, then use the commit number to show that change. Also `git log -n 5` for only the last 5 commits.
+When you enter `git commit -m "short descriptive message"` no output appears, but Git gives that commit a unique identifier, its commit number. By typing `git log` we can see ALL of the previous commits. Since that might be a lot of output to deal with, we will just ask for the last 3 commits using `git log -n 3`. The number after `-n` is how many commits you want displayed from the log.
+
+*Example, 3 entries, long numbers, etc.*
+
+This code isn't primarily meant for humans to read, but there is a lot of useful information we can find in it.
+
+The first thing to notice is that all of your commit messages are here. This is a good reminder to write clear and concise messages because future you may be very grateful when trying to figure out where exactly past you introduced a particular issue.
+
+Now look at the 
+
 
 *IMAGE: On the left, the same stack of 3 white boxes but now each is labeled with a different commit numbers. On the right are the three white boxes with the new red box on top. The red box also has a commit number, but the commit numbers on the white boxes have not changed from the picture on the left.*
 
