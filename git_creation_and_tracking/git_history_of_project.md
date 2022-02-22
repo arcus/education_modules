@@ -62,27 +62,35 @@ If you are coming to this module directly from the [previous one](link) and stil
 
 Keeping track of all versions and being able to see and compare them is the entire point of using version control on a project you are working on alone. It is also a huge part of working on a project with others, but we will get to that part in [module](module).
 
+Each time you `commit` to Git, you are marking the current state of your project as a checkpoint that you can return to. You will hear these states referred to as *commits*.
+
 <div class = "options">
 There are generally two ways to refer to past commits:
 
-- Using HEAD to see the latest `commit` and or the commit that was $n$ steps earlier.
+- Using HEAD to see the latest `commit` or the commit that was $n$ steps earlier.
 - Using the commit number assigned to a particular `commit`.
 
 </div>
 
-*This needs a really good picture; the stack of disks that swcarpentry has is pretty meh... but once a good picture is made, we can easily refer to the two different ways to access a particular*`commit`.
+*IMAGE: a stack of 3 flat white boxes, stacked on top of each other with open air in between. The top box is labeled "last committed version of the repo", the middle box is labeled "next to last version of the repo" and the bottom is labeled "previous version of the repo". There are three dots below the lowest box indicating that this pattern continues.*
 
 ### Using HEAD
 
 Example of `git show HEAD` and `git show HEAD~1`
 
+*IMAGE: The same stack of 3 white flat boxes, now the top box is labeled `HEAD`, the middle box `HEAD~1` and the bottom `HEAD~2`*
+
 Update and commit, then `git show HEAD` and `git show HEAD~1` AND `git show HEAD~2`
+
+*IMAGE: The same stack of 3 flat white boxes now has a 4th red box on top. This red box is labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`*
 
 ### Using the commit number
 
 Knowing how far back a commit was could be very easy if it was one or two back, but maybe you don't remember how many commits you want to go back, but you do know what change you want to look at.
 
 Using `git log` to find the right commit message (hey, good reason to write good messages!) and identify the commit number, then use the commit number to show that change. Also `git log -n 5` for only the last 5 commits.
+
+*IMAGE: On the left, the same stack of 3 white boxes but now each is labeled with a different commit numbers. On the right are the three white boxes with the new red box on top. The red box also has a commit number, but the commit numbers on the white boxes have not changed from the picture on the left.*
 
 ### Knowledge Check 1
 
