@@ -14,7 +14,7 @@ After completion of this module, learners will be able to:
 
 - Identify and use the HEAD of a repository.
 - Identify and use Git commit numbers.
-- Compare various versions of tracked files.
+- Compare versions of tracked files.
 - Restore old versions of files.
 
 @end
@@ -62,10 +62,13 @@ If you are coming to this module directly from the [previous one](link) and stil
 
 Keeping track of all versions and being able to see and compare them is the entire point of using version control on a project you are working on alone. It is also a huge part of working on a project with others, but we will get to that part in [module](module).
 
+<div class = "options">
 There are generally two ways to refer to past commits:
 
 - Using HEAD to see the latest `commit` and or the commit that was $n$ steps earlier.
 - Using the commit number assigned to a particular `commit`.
+
+</div>
 
 *This needs a really good picture; the stack of disks that swcarpentry has is pretty meh... but once a good picture is made, we can easily refer to the two different ways to access a particular*`commit`.
 
