@@ -556,11 +556,17 @@ The commit message should describe what this commit does. If you want to know th
 ### Understanding the Git workflow
  There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, but you will remember them better if you understand what each is doing.
 
- *diagram of file->staging->commit to repository here, make it as simple as possible*
+ To get started we will use a metaphor about creating a digital version of a drawing. Imagine you are working on an art project that involves creating drawings on paper with pens, pencils, and markers. You want to have a record of how this project progresses, and have access to a copier/scanner that can make and save perfect digital copies of your work.
 
- We will discuss each part of this diagram and the connections.
+ Creating and editing your files on your computer is like drawing on paper at your desk. There is a single copy of your work stored on your computer, but no record of the changes you are making. You can always create a new file, or take out a new piece of paper, but no record of that new file exists yet.
 
-Possible metaphor to run by people:
+ The `git add` command is how you designate what files will be added to the permanent record of your project. This step is called **staging**. In our art project metaphor, `git add` is putting all the drawings you want a record of into the scanner's intake slot. You can stage as many files and folders as you want.
+
+ There isn't a record of your staged files until you commit them using `git commit`. This is like telling the scanner to actually scan all of the staged drawings in its intake slot. Note that if you left a drawing on your desk instead of putting it in the scanner, it won't get scanned. Now there is a record of this version of your project. The same way that the scanner now has a digital record of the current state of your art, Git stores a record of the state of your repository when you commit.
+
+ *IMAGE with 3 sections: On the left a stick figure is drawing with paper and pencils on a desk. This image is labeled "creating and editing files". The middle image shows the stick figure putting their artwork into a copier/scanner intake slot and is labeled "staging files using `git add`". The third image shows the artwork being scanned by the machine and is labeled "`git commit` creates a record of the staged artwork's current state."*
+
+[//] # (Possible metaphor to run by people:
 
 1. creating 2D artwork/drawing by hand (editing files)
 2. putting the drawings in a scanner's intake slot (**add**)
@@ -568,16 +574,20 @@ Possible metaphor to run by people:
 4. uploading scans to cloud storage (**push**)
 5. printing out updated images from the cloud to work on (**pull**)
 6. I draw a flower in one corner, you draw a boat in another corner of drawing 1,  and our friend draws an animal on drawing 2, all of our changes **merge** happily!
-7. I make the animal on drawing 2 into an angry sheep, while you turn it into a happy sloth, we can’t merge the drawings and must resolve this **conflict**!
-
-#### `git add` stages files
-images, and words, and metaphors
-
-#### `git commit` updates the repository
-images, words, and metaphors
+7. I make the animal on drawing 2 into an angry sheep, while you turn it into a happy sloth, we can’t merge the drawings and must resolve this **conflict**!)
 
 ### Knowledge Check 3
-Another quiz! This one about figuring out why something wasn't staged or didn't change things.
+What does the `git commit` command do?
+[[ ]] Stages files so that their current version can be recorded.
+[[ ]] Creates a record of the current version of all files in the repository.
+[[X]] Creates a record of the current version of all of the staged files in the repository.
+***
+<div class = "answer">
+The `git commit` command will only create a record of the files that you have *already staged.*
+
+There are options you can use to automatically stage all files. Entering `git commit -a` or `git commit --all` will automatically stage all files that Git knows about and then commit them. But it will not save any new files that Git doesn't yet know about. In our artwork metaphor, if you started a new drawing on another sheet of paper, `git commit -a` would not put the new drawing into the slot and scan it, but it would scan the current version of every drawing that had previously been scanned.
+</div>
+***
 
 ### Telling Git not to track some files
 What if we have files that we do not want Git to track for us,
