@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.1
+version:  1.2
 language: en
 narrator: US English Female
 title: R Basics: Transforming Data With dplyr
@@ -121,11 +121,11 @@ On the next page, you'll learn how to get access to the sample code.
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:right;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
-<div style = "margin: 1rem auto; max-width: 45%; float:right;"> ![Binder loading screen](media/binder_loading.gif)</div>
+<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
+<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen](media/binder_loading.gif)</div>
 </div>
 
-**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r_basics_transform_data".  That's the code for this module!
+**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
 
 ![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)
 
@@ -176,10 +176,9 @@ Let's look at how you can subset a data frame (choose only certain columns and/o
 
 **Let's see what you remember!**
 
+
 <div class = "question">
-
 Which of the following are true statements about "dplyr"?  Check all that apply!
-
 [[X]] dplyr is part of the tidyverse suite of packages
 [[ ]] tidyverse is part of the dplyr suite of packages
 [[ ]] dplyr provides a number of functions good for providing data privacy
@@ -214,9 +213,9 @@ This `select` statement will take the data frame `covid_testing`, and return a n
 
 ![On the left, the first few columns of the covid_testing data frame: `mrn`, `first_name`, `last_name`, and `gender`.  This is followed by an arrow pointing to a new data frame on the right, which only has the two selected / blue columns, namely `mrn` and `last_name`.](media/select_covid_example.png)
 
-An important point to note here is that `select` **will not modify the original data frame**.
+An important point to note here is that `select` **will not modify the original data frame** but simply returns the altered data frame you asked for, without saving it automatically.
 
-If you write the `select` statement like this it will simply print out the result in the console or in your R Markdown document. If you want to *capture* the modified data frame you need to assign it to a named object.
+If you write the `select` statement like this it will simply print out the result in the console or in your R Markdown document. If you want to **capture** the modified data frame you need to **assign** it to a named object.
 
 <div class = "question">
 Which of the following will select the `first_name` column from the `covid_testing` data frame and capture the result in a data frame named `newdata`?
