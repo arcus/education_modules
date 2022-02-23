@@ -76,11 +76,11 @@ You are going to learn about two ways to refer to past commits:
 
 ### Using HEAD
 
-The `HEAD` is the most recently committed version of your repository. It won't include any changes that haven't been committed to the repository yet. You can the state of your project as of that most recent commit by entering `git show HEAD`.
+The `HEAD` refers to the most recently commit to your repository. It won't include any changes that haven't been committed to the repository yet. You can see that most recent commit by entering `git show HEAD`.
 
 **EXAMPLE: `git show HEAD`**
 
-<div class = "care">
+<div class = "help">
 Sometimes a command will output many lines of code that may not be relevant to you. For example the `show` command will output not just the commit message, but also every single change that you made in that commit. If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press "q" to skip to the end of that output.
 </div>
 
@@ -130,10 +130,11 @@ show output here
 
 Which of the following commands would show you the *most recent* commit you made?
 
- [(X)] `git show HEAD`
- [( )] `git show HEAD~1`
- [(X)] `git show "######"`
- [( )] `git show "&&&&&&&"`
+[(X)] `git show HEAD`
+[( )] `git show HEAD~1`
+[(X)] `git show "######"`
+[( )] `git show "&&&&&&&"`
+
 ***
 <div class ="answer">
 The *most recent* commit is the current `HEAD` and its commit number is "######". Either of these commands will give the same output. The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show "&&&&&&&"` may not show you anything since it is not the first six digits of a known commit number (and likely not the first six digits of any commit number).
