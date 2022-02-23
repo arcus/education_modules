@@ -54,7 +54,7 @@ This module is for you if:
 
 ## Lesson Preparation
 
-*We need some sort of virtual box here, probably the best way (if possible) would be to have virtual box that can come preloaded with all of the commands from the previous module so that learners can explore the history without having to go through that entire module, especially if they did it a while back, or already know that stuff. Having something just checkout a particular head in the chain of the modules could then be used for later modules, by checking out later or earlier heads.*
+*We need some sort of emulator here, probably the best way (if possible) would be to have an emulator that can come preloaded with all of the commands from the previous module so that learners can explore the history without having to go through that entire module, especially if they did it a while back, or already know that stuff. Having something just checkout a particular head in the chain of the modules could then be used for later modules, by checking out later or earlier heads.*
 
 If you are coming to this module directly from the [previous one](link) and still have that console open, you can continue using that console instead.
 
@@ -65,7 +65,7 @@ Keeping track of all versions and being able to see and compare them is the enti
 Each time you `commit` to Git, you are marking the current state of your project as a checkpoint that you can return to. You will hear these states referred to as *commits*.
 
 <div class = "options">
-There are generally two ways to refer to past commits:
+You are going to learn about two ways to refer to past commits:
 
 - Using HEAD to see the latest `commit` or the commit that was $n$ steps earlier.
 - Using the commit number assigned to a particular `commit`.
@@ -78,13 +78,13 @@ There are generally two ways to refer to past commits:
 
 The `HEAD` is the most recently committed version of your repository. It won't include any changes that haven't been committed to the repository yet. You can the state of your project as of that most recent commit by entering `git show HEAD`.
 
-Example of `git show HEAD`
+**EXAMPLE: `git show HEAD`**
 
 Maybe you want to look one step further back into your work. By using `HEAD~n` you can look back $n$ checkpoints in your repository.
 
 For example, to look back just one commit before the most recent checkpoint, use `git show HEAD~1`:
 
-Example of `git show HEAD~1`
+**EXAMPLE:  `git show HEAD~1`**
 
 If instead you wanted to look back three checkpoints (the most recent and then two before that) you would enter `git show HEAD~2`.
 
@@ -100,21 +100,45 @@ If there is a particular commit you want to look back on and are not sure how fa
 
 When you enter `git commit -m "short descriptive message"` no output appears, but Git gives that commit a unique identifier, its commit number. By typing `git log` we can see ALL of the previous commits. Since that might be a lot of output to deal with, we will just ask for the last 3 commits using `git log -n 3`. The number after `-n` is how many commits you want displayed from the log.
 
-*Example, 3 entries, long numbers, etc.*
+**EXAMPLE: 3 entries, long numbers, etc.**
 
 This code isn't primarily meant for humans to read, but there is a lot of useful information we can find in it.
 
 The first thing to notice is that all of your commit messages are here. This is a good reminder to write clear and concise messages because future you may be very grateful when trying to figure out where exactly past you introduced a particular issue.
 
-Now look at the 
+When you identify which commit you want to look at, the commit number is the unique 40 digit string of letters and numbers above it after the word "commit".
 
+**Annotation of the previous example showing where the commit number is with description of where the commit number is as well**
+
+Now that we have found the unique identifier of the commit we want to examine, we can use it with `git show`. Don't worry, you won't need to type all 40 digits, the first six will suffice.
+
+**Example of `git show "#######"`**
+
+The commit number doesn't change as you update your repository.
 
 *IMAGE: On the left, the same stack of 3 white boxes but now each is labeled with a different commit numbers. On the right are the three white boxes with the new red box on top. The red box also has a commit number, but the commit numbers on the white boxes have not changed from the picture on the left.*
 
 ### Knowledge Check 1
 
-How would you look at a particular commit?
-Which two commands could you use to look at the most recent commit?
+The output from `git log -n 2`is:
+
+```
+show output here
+```
+Which of the following commands would show you the *most recent* commit you made?
+[[ ]] `git show HEAD`
+[[ ]] `git show HEAD~1`
+[[ ]] `git show "######"`
+[[ ]] `git show "&&&&&&&"`
+***
+<div class ="answer">
+The *most recent* commit is the current `HEAD` and its commit number is "######". Either of these commands will give the same output. The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show "&&&&&&&"` may not show you anything since it is not the first six digits of a known commit number (and likely not the first six digits of any commit number).
+
+<div class = "care">
+The error you would get from typing `git show "&&&&&&&"` starts with the word "fatal". In this case the word may be scary, but all it is saying is that it could not complete executing the command. You did not harm anything.
+</div>
+</div>
+***
 
 ## Comparing prior commits
 
