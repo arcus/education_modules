@@ -174,8 +174,7 @@ Let's look at how you can subset a data frame (choose only certain columns and/o
 
 ## The `select()` Function
 
-**Let's see what you remember!**
-
+Let's see what you remember about dplyr!
 
 <div class = "question">
 Which of the following are true statements about "dplyr"?  Check all that apply!
