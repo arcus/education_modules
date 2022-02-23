@@ -154,11 +154,17 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 
 ## The `dplyr` Package
 
+<div style = "margin: 1rem; max-width: 75%; float:left;">
 `dplyr` (pronounced dee-ply-er, a play on words with "data" and "pliers") is a useful R package we'll discuss.  The various functions we'll use, like `select`, `filter`, and `mutate` are all functions that belong to the `dplyr` package.  In R, we bring in the functionality of a package by using the `library()` command.  Because `dplyr` forms part of the `tidyverse` suite of packages, we can bring in the useful functions of `dplyr` by either using the `library(dplyr)` command or the `library(tidyverse)` command.
 
 Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`.  But if you're using the course materials in your own computer's installation of RStudio, it's possible you don't have `tidyverse` installed.  If you get a message telling you that there's no package installed with that name, issue this command: `install.packages("tidyverse")`.
+</div>
+<div style = "margin: 1rem auto; max-width: 20%; float:left;">
+![`dplyr` logo: three sets of futuristic, colorful pliers that appear to be moving upward and to the right.  The word "dplyr" appears in the upper left of the logo, which is in the shape of a hexagon.](media/dplyr_logo.png)</div>
+</div>
 
-![`dplyr` logo: three sets of futuristic, colorful pliers that appear to be moving upward and to the right.  The word "dplyr" appears in the upper left of the logo, which is in the shape of a hexagon.](media/dplyr_logo.png)
+
+
 
 ## Subsetting Columns or Rows
 
