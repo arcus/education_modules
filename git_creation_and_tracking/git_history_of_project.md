@@ -130,10 +130,10 @@ show output here
 
 Which of the following commands would show you the *most recent* commit you made?
 
-[[X]] `git show HEAD`
-[[ ]] `git show HEAD~1`
-[[X]] `git show "######"`
-[[ ]] `git show "&&&&&&&"`
+- [[X]] `git show HEAD`
+- [[ ]] `git show HEAD~1`
+- [[X]] `git show "######"`
+- [[ ]] `git show "&&&&&&&"`
 ***
 <div class ="answer">
 The *most recent* commit is the current `HEAD` and its commit number is "######". Either of these commands will give the same output. The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show "&&&&&&&"` may not show you anything since it is not the first six digits of a known commit number (and likely not the first six digits of any commit number).
