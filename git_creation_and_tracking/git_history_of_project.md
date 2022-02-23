@@ -80,6 +80,10 @@ The `HEAD` is the most recently committed version of your repository. It won't i
 
 **EXAMPLE: `git show HEAD`**
 
+<div class = "care">
+Sometimes a command will output many lines of code that may not be relevant to you. For example the `show` command will output not just the commit message, but also every single change that you made in that commit. If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press "q" to skip to the end of that output.
+</div>
+
 Maybe you want to look one step further back into your work. By using `HEAD~n` you can look back $n$ checkpoints in your repository.
 
 For example, to look back just one commit before the most recent checkpoint, use `git show HEAD~1`:
@@ -102,7 +106,9 @@ When you enter `git commit -m "short descriptive message"` no output appears, bu
 
 **EXAMPLE: 3 entries, long numbers, etc.**
 
-This code isn't primarily meant for humans to read, but there is a lot of useful information we can find in it.
+If you forget to include the `-n 3` flag and just type `git log` you can always jump to the end by pressing "q". If you have been working on this project for a while, using the arrow keys to scroll down may take a prohibitively long time.
+
+
 
 The first thing to notice is that all of your commit messages are here. This is a good reminder to write clear and concise messages because future you may be very grateful when trying to figure out where exactly past you introduced a particular issue.
 
@@ -141,6 +147,10 @@ The error you would get from typing `git show "&&&&&&&"` starts with the word "f
 ***
 
 ## Comparing prior commits
+
+When you commit code to Git, it doesn't create a brand new copy of your files from scratch. Instead it records the differences between the version of each file that it already has stored, and the new version. You can think of it as the instructions for transforming the previous version of your repository into the new version.
+
+*IMAGE: The three white boxes are shown with a large green arrow pointing from each box to the box above it. The green arrows are the changes between the versions.*
 
 Using `diff` command to compare current version with HEAD and earlier HEADs.
 
