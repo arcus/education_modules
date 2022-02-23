@@ -67,7 +67,7 @@ Each time you `commit` to Git, you are marking the current state of your project
 <div class = "options">
 You are going to learn about two ways to refer to past commits:
 
-- Using HEAD to see the latest `commit` or the commit that was $n$ steps earlier.
+- Using HEAD to refer to the latest `commit`.
 - Using the commit number assigned to a particular `commit`.
 
 </div>
@@ -144,11 +144,18 @@ The *most recent* commit is the current `HEAD` and its commit number is "######"
 The error you get from entering a non-existent commit number starts with the word "fatal."  The word may be scary, but, in this case, all it is saying is that it could not execute the command. You did not harm anything!
 </div>
 
-## Comparing prior commits
+### Technical details for the intrigued
 
 When you commit code to Git, it doesn't create a brand new copy of your files from scratch. Instead it records the differences between the version of each file that it already has stored, and the new version. You can think of it as the instructions for transforming the previous version of your repository into the new version.
 
 *IMAGE: The three white boxes are shown with a large green arrow pointing from each box to the box above it. The green arrows are the changes between the versions.*
+
+You could think of each commit not as a checkpoint, but the instructions on how to get to the next checkpoint. The entire repository can be built by following a series of instructions (commits) in order. Similarly you can determine the precise state of an earlier version by following the instructions backwards.
+
+## Comparing prior commits
+
+You might have noticed that `diff` was the first word after your commit message when you entered `git show HEAD`. The lines after that are the changes that you made with that commit. By typing `git diff HEAD`.... **work through behavior here, there will be a big divergence in this behavior between command line git and github desktop**
+
 
 Using `diff` command to compare current version with HEAD and earlier HEADs.
 
