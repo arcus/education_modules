@@ -87,10 +87,11 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/sty
 
 **Pre-requisites**
 
-Some experience of using the RStudio IDE and writing R code is necessary to understand and use this material.  If you do not have this experience, consider
+Minimal experience of using the RStudio IDE and writing R code is necessary to understand and use this material.  If you can understand and do the following, you'll be able to complete this course:
 
-* [R and RStudio: tools and vocabulary](https://education.arcus.chop.edu)
-* [R Basics: Visualizing Data](https://education.arcus.chop.edu)
+* Run a command that's provided to you in the console
+* Use the Environment tab to find a data frame and learn more about it
+* Insert a new code chunk in an R Markdown document
 
 **Learning Objectives**
 
@@ -121,7 +122,7 @@ On the next page, you'll learn how to get access to the sample code.
 <div class = "hint" style = "align-items: center; display: flex;">
 
 <div style = "margin: 1rem; max-width: 45%; float:right;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
-<div style = "margin: 1rem; max-width: 45%; float:right;"> ![Binder loading screen](media/binder_loading.gif)</div>
+<div style = "margin: 1rem auto; max-width: 45%; float:right;"> ![Binder loading screen](media/binder_loading.gif)</div>
 </div>
 
 **Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r_basics_transform_data".  That's the code for this module!
@@ -151,8 +152,6 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 <figcaption>Click on the image to play the demo of the above steps!</figcaption>
 </figure>
 
-
-
 ## The `dplyr` Package
 
 `dplyr` (pronounced dee-ply-er, a play on words with "data" and "pliers") is a useful R package we'll discuss.  The various functions we'll use, like `select`, `filter`, and `mutate` are all functions that belong to the `dplyr` package.  In R, we bring in the functionality of a package by using the `library()` command.  Because `dplyr` forms part of the `tidyverse` suite of packages, we can bring in the useful functions of `dplyr` by either using the `library(dplyr)` command or the `library(tidyverse)` command.
@@ -161,10 +160,9 @@ Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`. 
 
 ![`dplyr` logo: three sets of futuristic, colorful pliers that appear to be moving upward and to the right.  The word "dplyr" appears in the upper left of the logo, which is in the shape of a hexagon.](media/dplyr_logo.png)
 
-
 ## Subsetting Columns or Rows
 
-Often, you have a large data frame but only want to create a graph or analyze data from only a small part of it. The `dplyr` package, part of the larger `[tidyverse](https://www.tidyverse.org/)` set of packages, works great for this purpose.
+Often, you have a large data frame but want to create a graph or analyze data from only a small part of it. The `dplyr` package, part of the larger `[tidyverse](https://www.tidyverse.org/)` set of packages, works great for this purpose.
 
 Let's look at how you can subset a data frame (choose only certain columns and/or rows) by using `dplyr`.
 
@@ -175,6 +173,28 @@ Let's look at how you can subset a data frame (choose only certain columns and/o
 `filter()` reshapes data so that it includes only the rows that meet your conditions. ![A grey colored data frame of four rows and a header row, with two rows selected (as indicated by a blue color), is transformed into a data frame of two selected (blue colored) rows, along with a header.](media/dplyr_filter.png)
 
 ## The `select()` Function
+
+**Let's see what you remember!**
+
+<div class = "question">
+
+Which of the following are true statements about "dplyr"?  Check all that apply!
+
+[[X]] dplyr is part of the tidyverse suite of packages
+[[ ]] tidyverse is part of the dplyr suite of packages
+[[ ]] dplyr provides a number of functions good for providing data privacy
+[[X]] dplyr provides a number of functions good for getting precise subsets of data from a data frame
+[[ ]] dplyr includes the function `select()`, which can be used to subset either rows or columns
+[[?]] There are multiple correct answers!
+
+<div class = "answer">
+<details><summary>Click to see an explanation of the answer.</summary>
+
+dplyr is one of several packages that together make up the tidyverse suite of packages.  dplyr is intended to help with data reshaping -- for example, removing unneeded rows from a data frame, selecting some columns and not others, or creating a new column for a data frame.
+
+</details>
+</div>
+
 
 Let's look at `select()` first. Select extracts columns from a data frame, using the column **name**.
 
