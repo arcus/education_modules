@@ -141,7 +141,7 @@ The *most recent* commit is the current `HEAD` and its commit number is "######"
 ***
 
 <div class = "help">
-The error you get from entering a non-existent commit number starts with the word "fatal". In this case the word may be scary, but all it is saying is that it could not complete executing the command. You did not harm anything!
+The error you get from entering a non-existent commit number starts with the word "fatal."  The word may be scary, but, in this case, all it is saying is that it could not execute the command. You did not harm anything!
 </div>
 
 ## Comparing prior commits
