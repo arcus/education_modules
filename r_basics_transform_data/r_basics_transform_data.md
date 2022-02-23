@@ -71,7 +71,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 @end
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-
+script: https://kit.fontawesome.com/83b2343bd4.js
 -->
 # R Basics: Transforming Data With dplyr
 
@@ -211,7 +211,7 @@ For example, take the following code:
 
 This `select` statement will take the data frame `covid_testing`, and return a new data frame that only has the columns `mrn` and `last_name`, shown here in blue to help you visualize this transformation:
 
-![On the left, the first few columns of the covid_testing data frame: `mrn`, `first_name`, `last_name`, and `gender`.  This is followed by an arrow pointing to a new data frame on the right, which only has the two selected / blue columns, namely `mrn` and `last_name`.](media/select_covid_example.png)
+![On the left, the first few columns of the `covid_testing` data frame: `mrn`, `first_name`, `last_name`, and `gender`.  This is followed by an arrow pointing to a new data frame on the right, which only has the two selected / blue columns, namely `mrn` and `last_name`.](media/select_covid_example.png)
 
 An important point to note here is that `select` **will not modify the original data frame** but simply returns the altered data frame you asked for, without saving it automatically.
 
