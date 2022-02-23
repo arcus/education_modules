@@ -86,11 +86,7 @@ Sometimes a command will output many lines of code that may not be relevant to y
 
 Maybe you want to look one step further back into your work. By using `HEAD~n` you can look back $n$ checkpoints in your repository.
 
-For example, to look back just one commit before the most recent checkpoint, use `git show HEAD~1`:
-
-**EXAMPLE:  `git show HEAD~1`**
-
-If instead you wanted to look back three checkpoints (the most recent and then two before that) you would enter `git show HEAD~2`.
+For example, to look back just one commit before the most recent checkpoint, use `git show HEAD~1`. If instead you wanted to look back three checkpoints (the most recent and then two before that) you would enter `git show HEAD~2`.
 
 *IMAGE: The same stack of 3 white flat boxes, now the top box is labeled `HEAD`, the middle box `HEAD~1` and the bottom `HEAD~2`*
 
@@ -131,11 +127,12 @@ The output from `git log -n 2`is:
 ```
 show output here
 ```
+
 Which of the following commands would show you the *most recent* commit you made?
-[[ ]] `git show HEAD`
-[[ ]] `git show HEAD~1`
-[[ ]] `git show "######"`
-[[ ]] `git show "&&&&&&&"`
+[(X)] `git show HEAD`
+[( )] `git show HEAD~1`
+[(X)] `git show "######"`
+[( )] `git show "&&&&&&&"`
 ***
 <div class ="answer">
 The *most recent* commit is the current `HEAD` and its commit number is "######". Either of these commands will give the same output. The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show "&&&&&&&"` may not show you anything since it is not the first six digits of a known commit number (and likely not the first six digits of any commit number).
