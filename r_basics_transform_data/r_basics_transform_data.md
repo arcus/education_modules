@@ -203,9 +203,13 @@ We extract columns by name with code that looks like this, and we replace the th
 
 `select(data_frame, ...)`
 
+For example, in the next section we'll unpack the following code:
+
+`select(covid_testing, mrn, last_name)`
+
 ## `select()` Example
 
-For example, take the following code:
+Let's examine the following code:
 
 `select(covid_testing, mrn, last_name)`
 
@@ -251,9 +255,15 @@ Like `select()`, `filter()` takes a data frame as its first argument. The second
 
 To extract rows that meet logical criteria, we write code that looks like this, and we replace the three dots with the condition we want to test for each row:
 
-`filter(data_frame, condition)`
+`filter(data_frame, ...)`
+
+For example, we'll take a look at this code in the next section:
+`filter(covid_testing, mrn==5000083)`
 
 ## `filter()` Example
+
+Let's think over:
+`filter(covid_testing, mrn==5000083)`
 
 To give you an example: the logical test here is whether or not the `mrn` value is equal to the 5000083. This is **false** for the first three rows.  In these rows, the `mrn` value is something else.  For the 4th row, however, it is **true** that the `mrn` value is equal to the 5000083.
 
@@ -278,7 +288,7 @@ If you use the wrong kind of equals, you’ll get an error.  This is a very comm
 
 Here are some important logical operators to know about. They will all come in handy when you’re filtering rows of a data frame. `x` and `y` each represent expressions, which could be column names or constant values or a combination thereof.
 
-|---|---|---|
+|---|---|---
 |logical expression | means | example
 |x < y |less than| pan_day < 10
 |x > y|greater than| mrn > 5001000
