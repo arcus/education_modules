@@ -162,7 +162,7 @@ Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`. 
 
 ## Subsetting Columns or Rows
 
-Often, you have a large data frame but want to create a graph or analyze data from only a small part of it. The `dplyr` package, part of the larger `[tidyverse](https://www.tidyverse.org/)` set of packages, works great for this purpose.
+Often, you have a large data frame but want to create a graph or analyze data from only a small part of it. The `dplyr` package, part of the larger [tidyverse](https://www.tidyverse.org/) set of packages, works great for this purpose.
 
 Let's look at how you can subset a data frame (choose only certain columns and/or rows) by using `dplyr`.
 
