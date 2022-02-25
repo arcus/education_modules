@@ -195,7 +195,6 @@ style = "max-width: 600px;"
 Let's see what you remember about dplyr!
 
 <div class = "question">
-
 Which of the following are true statements about "dplyr"?  Check all that apply!
 
 [[X]] dplyr is part of the tidyverse suite of packages
@@ -212,7 +211,7 @@ The dplyr package is one of several packages that together make up the tidyverse
 
 </details>
 </div>
-
+</div>
 
 Let's look at `select()` first. The `select()` function extracts **columns** from a data frame, using the column **name(s)** as argument(s).
 
