@@ -167,10 +167,6 @@ Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`. 
 </div>
 <div style = "margin: 1rem auto; max-width: 20%; float:left;">
 ![`dplyr` logo: three sets of futuristic, colorful pliers that appear to be moving upward and to the right.  The word "dplyr" appears in the upper left of the logo, which is in the shape of a hexagon.](media/dplyr_logo.png)</div>
-</div>
-
-
-
 
 ## Subsetting Columns or Rows
 
@@ -192,7 +188,9 @@ style = "max-width: 600px;"
 Let's see what you remember about dplyr!
 
 <div class = "question">
+
 Which of the following are true statements about "dplyr"?  Check all that apply!
+
 [[X]] dplyr is part of the tidyverse suite of packages
 [[ ]] tidyverse is part of the dplyr suite of packages
 [[ ]] dplyr provides a number of functions good for providing data privacy
