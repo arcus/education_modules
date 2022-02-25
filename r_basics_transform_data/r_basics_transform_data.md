@@ -158,6 +158,13 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
 </figure>
 
+If it's been a while since you downloaded this project to your computer, and you want to get any new and improved files that have been placed there in the meantime:
+
+* Open your project.
+* In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
+
+![Git button menu with choices to pull and push branches](media/pull_branches.png)  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)
+
 ## The `dplyr` Package
 
 <div style = "margin: 1rem; max-width: 75%; float:left;">
@@ -195,19 +202,19 @@ Which of the following are true statements about "dplyr"?  Check all that apply!
 [[ ]] tidyverse is part of the dplyr suite of packages
 [[ ]] dplyr provides a number of functions good for providing data privacy
 [[X]] dplyr provides a number of functions good for getting precise subsets of data from a data frame
-[[ ]] dplyr includes the function `select()`, which can be used to subset either rows or columns
+[[ ]] dplyr includes the function `select()`, which can be used to subset both rows or columns
 [[?]] There are multiple correct answers!
 
 <div class = "answer">
 <details><summary>Click to see an explanation of the answer.</summary>
 
-dplyr is one of several packages that together make up the tidyverse suite of packages.  dplyr is intended to help with data reshaping -- for example, removing unneeded rows from a data frame, selecting some columns and not others, or creating a new column for a data frame.
+The dplyr package is one of several packages that together make up the tidyverse suite of packages, not the other way around. Additionally, dplyr is intended to help with data reshaping -- for example, removing unneeded rows from a data frame, selecting some columns and not others, or creating a new column for a data frame.  It's not a package related to data privacy.  Finally, while dplyr does include the `select()` function, it's not true that `select()` works on both rows and columns.
 
 </details>
 </div>
 
 
-Let's look at `select()` first. Select extracts columns from a data frame, using the column **name**.
+Let's look at `select()` first. The `select()` function extracts **columns** from a data frame, using the column **name(s)** as argument(s).
 
 `select()` takes a data frame as its first argument. After that it takes any number of additional arguments that specify the names of the columns that you want to pick.
 
@@ -227,7 +234,9 @@ Let's examine the following code:
 
 This `select` statement will take the data frame `covid_testing`, and return a new data frame that only has the columns `mrn` and `last_name`, shown here in blue to help you visualize this transformation:
 
-![On the left, the first few columns of the `covid_testing` data frame: `mrn`, `first_name`, `last_name`, and `gender`.  This is followed by an arrow pointing to a new data frame on the right, which only has the two selected / blue columns, namely `mrn` and `last_name`.](media/select_covid_example.png)
+![On the left, the first few columns of the `covid_testing` data frame: `mrn`, `first_name`, `last_name`, and `gender`.  This is followed by an arrow pointing to a new data frame on the right, which only has the two selected / blue columns, namely `mrn` and `last_name`.](media/select_covid_example.png)<!--
+style = "max-width: 800px;"
+-->
 
 An important point to note here is that `select` **will not modify the original data frame** but simply returns the altered data frame you asked for, without saving it automatically.
 
@@ -270,12 +279,12 @@ To extract rows that meet logical criteria, we write code that looks like this, 
 `filter(data_frame, ...)`
 
 For example, we'll take a look at this code in the next section:
-`filter(covid_testing, mrn==5000083)`
+`filter(covid_testing, mrn == 5000083)`
 
 ## `filter()` Example
 
 Let's think over:
-`filter(covid_testing, mrn==5000083)`
+`filter(covid_testing, mrn == 5000083)`
 
 To give you an example: the logical test here is whether or not the `mrn` value is equal to the 5000083. This is **false** for the first three rows.  In these rows, the `mrn` value is something else.  For the 4th row, however, it is **true** that the `mrn` value is equal to the 5000083.
 
@@ -293,15 +302,35 @@ The double equals sign does not assign, but compares.  It asks "**are** these th
 
 That's why we use double equals in the context of a logical test that compares the left hand side, e.g. `mrn`, with the right hand side, e.g. 5000083, to check whether or not they are the same.
 
-If you use the wrong kind of equals, you’ll get an error.  This is a very common mistake, and one you're almost guaranteed to accidentally commit at one point or another!
+If you use the wrong kind of equals, you’ll get an error.  This is a very common mistake, and one you're almost guaranteed to accidentally commit at one point or another!  This is what some of those scary errors look like:
+
+<code style = "color:darkred;">
+Error: Problem with `filter()` input `..1`.
+x Input `..1` is named.
+ℹ This usually means that you've used `=` instead of `==`.
+</code>
+
+OR
+
+<code style = "color:darkred;">
+Error: unexpected '='
+</code>
+
+OR
+
+<code style = "color:darkred;">
+invalid (do_set) left-hand side to assignment
+</code>
+
 </div>
 
 ## Logical Operators
 
 Here are some important logical operators to know about. They will all come in handy when you’re filtering rows of a data frame. `x` and `y` each represent expressions, which could be column names or constant values or a combination thereof.
 
-|---|---|---
+
 |logical expression | means | example
+|---|---|---
 |x < y |less than| pan_day < 10
 |x > y|greater than| mrn > 5001000
 |x == y|equal to| first_name == last_name
@@ -376,17 +405,9 @@ One of the most powerful concepts in the `tidyverse` suite of packages is the pi
 
 The pipe operator passes the **object on its left** as the **first argument** to the **function on its right**.
 
-Here's an all-text "drawing" of what that looks like:
+Here's a drawing of what that looks like:
 
-```
-       ╭-------------------╮
-       ↑                   ↓
-covid_testing %>% filter(     , pan_day <= 10)
-```
-
-And here's a nicer image of the same idea:
-
-![Image in which an arrow connects the first object, `covid_testing`, to its new location as the first argument in the filter statement.](media/pipe_mini.png)
+![An arrow connects the first object, `covid_testing`, to its new location as the first argument in the filter statement.](media/pipe_mini.png)
 
 Here, for example, the pipe operator takes the object on its left, here the `covid_testing` data frame, and inserts it as the first argument of the function on its right ... in our case, the `filter()` function.
 
