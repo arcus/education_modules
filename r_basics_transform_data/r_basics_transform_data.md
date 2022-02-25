@@ -440,7 +440,7 @@ For example, here we start with `covid_testing`, then `select` the `last_name` a
 covid_testing %>%
   select(last_name, result) %>%
   filter(result == "positive")
-```<!-- style = "border: none;" -->
+``` <!-- style = "border: none;" -->
 
 <div class = "options">
 You might wonder why we've put each step in its own line.  Is this a requirement?  No, it's not.  Many R users like to use **whitespace** (new lines, tabs, spaces, indents) to make their code more human readable.  But these two code snippets work exactly the same way:
