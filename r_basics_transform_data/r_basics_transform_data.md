@@ -335,11 +335,11 @@ logical expression | means | example
 ---|---|---
 `x < y` | less than | `pan_day < 10`
 `x > y`| greater than | `mrn > 5001000`
-x == y | equal to | first_name == last_name
-x <= y | less than or equal to | mrn <= 5000000
-x >= y | greater than or equal to | pan_day >= 30
-x != y | not equal to | test_id != "covid"
-is.na(x) | a missing value | is.na(clinic_name)
+`x == y` | equal to | `first_name == last_name`
+`x <= y` | less than or equal to | `mrn <= 5000000`
+`x >= y` | greater than or equal to | `pan_day >= 30`
+`x != y` | not equal to | `test_id != "covid"`
+`is.na(x)` | a missing value | `is.na(clinic_name)`
 
 We've already seen the double equals `==`. Note the less than or and greater than operators. These operators also come as "or equal to" versions.
 
@@ -527,13 +527,61 @@ Upon executing the code, `mutate()` creates the new column and fills each row wi
 
 ![On the left, two columns of the `covid_testing` data frame are shown: mrn and `col_rec_tat`.  The first few rows are given.  This data frame is followed by an arrow pointing to a new data frame on the right, which is the same as the one on the left with the exception of a new column, titled `col_rec_tat_mins`, which has appropriate values filled in.](media/mutate_covid_example.png)
 
-## Put Your Knowledge to Work!
+## Let's Make Sure You're Connected!
 
-If you haven't already opened the R environment with the sample data and scripts, here are some instructions for how to do that:
+If you're already set up in RStudio with the materials for this course (we had some instructions early on), you can skip this page and go ahead to the next!
 
-JOY
-JOY
-JOY
+<h3>Option 1: Work in the Cloud</h3>
+
+This might work well for you if you don't want to, or can't, install R and RStudio on your computer.  The benefit is that you don't have to install anything, but one negative is that this option requires a bit of waiting for your environment to come online.
+
+**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
+
+  <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"></a> **← Click the "launch binder" button!**
+
+<div class = "hint" style = "align-items: center; display: flex;">
+
+<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
+<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen](media/binder_loading.gif)<!--
+style = "border: 1px solid rgb(var(--color-highlight));"-->
+</div>
+</div>
+
+**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
+
+![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
+style = "border: 1px solid rgb(var(--color-highlight));"-->
+
+
+<h3>Option 2: Work on Your Computer</h3>
+
+If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
+
+* In RStudio, open a new project (File, New Project)
+* Select Version Control, then Git
+* Drop this link into the "Repository URL": https://github.com/arcus/education_r_environment
+* Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
+* Click to select the "Open in new session" checkbox
+* Click "Create Project"
+* In the file area to the lower right, you'll see, among multiple choices, the folder called "r_basics_transform_data".  That's the code for this module!
+
+**Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
+
+<div style="display:none">@gifPreload</div>
+
+<figure>
+  <img src="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+
+<figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
+</figure>
+
+If it's been a while since you downloaded this project to your computer, and you want to get any new and improved files that have been placed there in the meantime:
+
+* Open your project.
+* In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
+
+![Git button menu with choices to pull and push branches](media/pull_branches.png)  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)
+
 
 Please open `Transform.Rmd` and work through the exercises.  Once you're finished, or if you're stuck, try looking at the solutions in... JOY
 
