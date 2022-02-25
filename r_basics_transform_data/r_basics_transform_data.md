@@ -290,8 +290,8 @@ To give you an example: the logical test here is whether or not the `mrn` value 
 
 This filter statement will return a data frame that only contains the 4th row, in which the logical condition is **true**, as shown on the right.
 
-![On the left, the first few columns of the `covid_testing` data frame: `mrn`, `first_name`, and `last_name`.  The first three rows are labeled "False", while the forth row is labeled "True" and colored blue, and there, the mrn value matches the one we're trying to match.  This data frame is followed by an arrow pointing to a new data frame on the right, which only has the one selected / blue row, the one that had the matching mrn value.](media/filter_covid_example.png)
-
+![On the left, the first few columns of the `covid_testing data frame: mrn, first_name, and last_name`.  The first three rows are labeled "False", while the forth row is labeled "True" and colored blue, and there, the mrn value matches the one we're trying to match.  This data frame is followed by an arrow pointing to a new data frame on the right, which only has the one selected / blue row, the one that had the matching mrn value.](media/filter_covid_example.png)<!--
+style = "max-width:1000px;"-->
 
 <div class = "warning">
 One common issue to be aware of is the difference between the single equals (=) and the double equals (==) operators.
@@ -328,17 +328,15 @@ invalid (do_set) left-hand side to assignment
 
 Here are some important logical operators to know about. They will all come in handy when you’re filtering rows of a data frame. `x` and `y` each represent expressions, which could be column names or constant values or a combination thereof.
 
-
-|logical expression | means | example
-|---|---|---
-|x < y |less than| pan_day < 10
-|x > y|greater than| mrn > 5001000
-|x == y|equal to| first_name == last_name
-|x <= y|less than or equal to| mrn <= 5000000
-|x >= y|greater than or equal to| pan_day >= 30
-|x != y|not equal to| test_id != "covid"
-|is.na(x)|a missing value| is.na(clinic_name)
-
+logical expression | means | example
+---|---|---
+x < y |less than| pan_day < 10
+x > y|greater than| mrn > 5001000
+x == y|equal to| first_name == last_name
+x <= y|less than or equal to| mrn <= 5000000
+x >= y|greater than or equal to| pan_day >= 30
+x != y|not equal to| test_id != "covid"
+is.na(x)|a missing value| is.na(clinic_name)
 
 We've already seen the double equals `==`. Note the less than or and greater than operators. These operators also come as "or equal to" versions.
 
@@ -407,7 +405,9 @@ The pipe operator passes the **object on its left** as the **first argument** to
 
 Here's a drawing of what that looks like:
 
-![An arrow connects the first object, `covid_testing`, to its new location as the first argument in the filter statement.](media/pipe_mini.png)
+![An arrow connects the first object, `covid_testing`, to its new location as the first argument in the filter statement.](media/pipe_mini.png)<!--
+style = "max-width:600px;"-->
+
 
 Here, for example, the pipe operator takes the object on its left, here the `covid_testing` data frame, and inserts it as the first argument of the function on its right ... in our case, the `filter()` function.
 
