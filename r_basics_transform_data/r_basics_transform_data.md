@@ -582,8 +582,19 @@ If it's been a while since you downloaded this project to your computer, and you
 
 ![Git button menu with choices to pull and push branches](media/pull_branches.png)  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)
 
+## Work On Data Transformation
 
-Please open `Transform.Rmd` and work through the exercises.  Once you're finished, or if you're stuck, try looking at the solutions in... JOY
+Within the `r_basics_transform_data` folder, please open the `exercises` folder and then open `transform.Rmd` to work through the exercises.  You'll see something like the below.
+![RStudio window showing transform.Rmd](media/r_transform_exercise.png)
+
+To work in this file:
+
+(1) Run the first code chunk by clicking the green "play" button (look at line 6).  This gives you the data frame with fake Covid testing data, the data we've been using for our instruction in this module so far.
+(2) For each of the three code chunks below the first one, please read the instructions before the code chunk and then add the right code to the code chunk to make it work.
+
+
+
+Once you're finished, or if you're stuck, try looking at the solutions in... JOY
 
 ## Recap
 
