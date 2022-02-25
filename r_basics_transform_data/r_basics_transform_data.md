@@ -105,7 +105,8 @@ The data we will use in this module is a data frame called `covid_testing`, whic
 
 This is what that data looks like:
 
-![A screen capture of what the `covid_testing` data frame looks like in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)
+![A screen capture of what the `covid_testing` data frame looks like in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)<!--
+style = "max-width:1000px;"-->
 
 You will be asked to do some code-based exercises at the **end** of this module, but you may find it useful to use the sample code and data throughout the module.
 
@@ -125,14 +126,14 @@ This might work well for you if you don't want to, or can't, install R and RStud
 
 <div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
 <div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen](media/binder_loading.gif)<!--
-style = "border: 1px solid rgb(var(--color-highlight));"
--->
+style = "border: 1px solid rgb(var(--color-highlight));"-->
 </div>
 </div>
 
 **Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
 
-![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)
+![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
+style = "border: 1px solid rgb(var(--color-highlight));"-->
 
 
 <h3>Option 2: Work on Your Computer</h3>
@@ -152,9 +153,9 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.gif?raw=true">
+  <img src="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
-<figcaption>Click on the image to play the demo of the above steps!</figcaption>
+<figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
 </figure>
 
 ## The `dplyr` Package
@@ -180,8 +181,7 @@ Let's look at how you can subset a data frame (choose only certain columns and/o
 `dplyr` provides two functions for subsetting data frames: `select()` for subsetting columns, and `filter()` for subsetting rows:
 
 `select()` reshapes data so that it includes only the columns you specify. ![A grey colored data frame of five columns, with three of them selected (as indicated by a blue color), is transformed into a data frame of three selected (blue colored) columns](media/dplyr_select.png)<!--
-style = "max-width:600px;"
--->
+style = "max-width:500px;"-->
 
 `filter()` reshapes data so that it includes only the rows that meet your conditions. ![A grey colored data frame of four rows and a header row, with two rows selected (as indicated by a blue color), is transformed into a data frame of two selected (blue colored) rows, along with a header.](media/dplyr_filter.png)<!--
 style = "max-width: 600px;"
