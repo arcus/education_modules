@@ -333,13 +333,13 @@ Here are some important logical operators to know about. They will all come in h
 
 logical expression | means | example
 ---|---|---
-`x < y` |less than| `pan_day < 10`
-`x > y`|greater than| `mrn > 5001000`
-x == y|equal to| first_name == last_name
-x <= y|less than or equal to| mrn <= 5000000
-x >= y|greater than or equal to| pan_day >= 30
-x != y|not equal to| test_id != "covid"
-is.na(x)|a missing value| is.na(clinic_name)
+`x < y` | less than | `pan_day < 10`
+`x > y`| greater than | `mrn > 5001000`
+x == y | equal to | first_name == last_name
+x <= y | less than or equal to | mrn <= 5000000
+x >= y | greater than or equal to | pan_day >= 30
+x != y | not equal to | test_id != "covid"
+is.na(x) | a missing value | is.na(clinic_name)
 
 We've already seen the double equals `==`. Note the less than or and greater than operators. These operators also come as "or equal to" versions.
 
