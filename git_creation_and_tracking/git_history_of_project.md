@@ -152,12 +152,12 @@ When you commit code to Git, it doesn't create a brand new copy of your files fr
 
 You could think of each commit not as a checkpoint, but the instructions on how to get to the next checkpoint. The entire repository can be built by following a series of instructions (commits) in order. Similarly you can determine the precise state of an earlier version by following the instructions backwards.
 
-## Comparing prior commits
+## Comparing files to prior commits
 
-You might have noticed that `diff` was the first word after your commit message when you entered `git show HEAD`. The lines after that are the changes that you made with that commit. By typing `git diff HEAD`.... **work through behavior here, there will be a big divergence  (haha `diff`) in this behavior between command line git and github desktop**
+You might have noticed that `diff` was the first word after your commit message when you entered `git show HEAD`. The lines after that are **all** the changes that you made with that commit. When comparing earlier versions with the current version, you are usually only going to want to look at one file at a time. By typing `git diff HEAD`.... **work through behavior here, there will be a big divergence  (haha `diff`) in this behavior between command line git and github desktop**
+*Or maybe we don't want to introduce github desktop at all, or just skip this section entirely for the github desktop module?*
 
-
-Using `diff` command to compare current version with HEAD and earlier HEADs.
+Using `diff` command to compare current version of `mars.txt` and earlier versions.
 
 ### Knowledge Check 2
 
