@@ -271,6 +271,10 @@ Answer (E) is not correct, because we know (D) is incorrect.
 
 One of the most important `dplyr` functions to know about is `filter()`. `filter()` extracts rows, and it does that based on **logical criteria**, or a **condition** that can be evaluated to be true (keep that row as part of our subset) or false (don't keep that row).
 
+![A grey colored data frame of four rows and a header row, with two rows selected (as indicated by a blue color), is transformed into a data frame of two selected (blue colored) rows, along with a header.](media/dplyr_filter.png)<!--
+style = "max-width: 600px;"
+-->
+
 Like `select()`, `filter()` takes a data frame as its first argument. The second argument is a condition or logical test. R then performs that logical test on each row of the dataset and returns all rows in which the logical test was true.
 
 To extract rows that meet logical criteria, we write code that looks like this, and we replace the three dots with the condition we want to test for each row:
@@ -376,8 +380,8 @@ When you do a comparison with a literal character string, such as "stark", that 
 Which of these would successfully filter the `covid_testing` data frame to only tests with positive results?
 
 [( )] A: `filter(covid_testing, result == positive)`
-[(X)] B: `filter(covid_testing, result = "positive")`
-[( )] C: `filter(covid_testing, result == "positive")`
+[( )] B: `filter(covid_testing, result = "positive")`
+[(X)] C: `filter(covid_testing, result == "positive")`
 [( )] D: `filter(covid_testing, positive == "result")`
 
 <div class = "answer">
@@ -420,7 +424,7 @@ is equivalent to:
 
 Those two lines of code are equivalent. In both cases we're taking the `covid_testing` data frame, passing it as the first argument to the `filter()` function, and adding a condition that we're filtering by.  In our case that condition is `pan_day` less than or equal to 10.
 
-Why would we use this way of typing our commands?  Are we complicating matters?  No, as you're about to see, this is a very useful way of writing commands.
+**Why would we use this way of typing our commands?**  Are we complicating matters?  No, as you're about to see, this is a very useful way of writing out the changes you make on a data frame in the order you want them to take place.
 
 ## Why Use the "Pipe" (`%>%`)
 
@@ -436,7 +440,7 @@ For example, here we start with `covid_testing`, then `select` the `last_name` a
 covid_testing %>%
   select(last_name, result) %>%
   filter(result == "positive")
-```
+```<!-- style = "border: none;" -->
 
 <div class = "options">
 You might wonder why we've put each step in its own line.  Is this a requirement?  No, it's not.  Many R users like to use **whitespace** (new lines, tabs, spaces, indents) to make their code more human readable.  But these two code snippets work exactly the same way:
