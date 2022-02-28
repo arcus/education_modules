@@ -331,16 +331,8 @@ invalid (do_set) left-hand side to assignment
 
 Here are some important logical operators to know about. They will all come in handy when you’re filtering rows of a data frame. `x` and `y` each represent expressions, which could be column names or constant values or a combination thereof.
 
-
-
-| Tables               |      Are      |  Cool |
-| -------------------- |:-------------:| -----:|
-| *** columns 3 is *** | right-aligned | $1600 |
-| ** column 2 is **    |   centered    |   $12 |
-| * zebra stripes *    |   are neat    |    $1 |
-
 | logical expression | means | example |
-| --- | --- | --- |
+| :---: | --- | --- |
 | `x < y` | less than | `pan_day < 10` |
 | `x > y`| greater than | `mrn > 5001000` |
 | `x == y` | equal to | `first_name == last_name` |
@@ -348,12 +340,13 @@ Here are some important logical operators to know about. They will all come in h
 | `x >= y` | greater than or equal to | `pan_day >= 30` |
 | `x != y` | not equal to | `test_id != "covid"` |
 | `is.na(x)` | a missing value | `is.na(clinic_name)` |
+| `!is.na(x)` | not a missing value | `!is.na(pan_day)` |
 
 We've already seen the double equals `==`. Note the less than or and greater than operators. These operators also come as "or equal to" versions.
 
 Use `!=` if you want to select rows in which a value is **not** equal to another value.   
 
-`is.na()` is how you can test for missing values (`NA` in R). This comes in handy when you want to remove missing values from your data, which we’ll see later.
+`is.na()` is how you can test for missing values (`NA` in R). This comes in handy when you want to remove missing values from your data, which we'll see later.
 
 <div class = "question">
 Write a `filter()` statement that returns a data frame containing only the rows from `covid_testing` in which the `last_name column` is NOT equal to "stark". Don't capture the returned data frame to assign it to an object.
@@ -406,6 +399,102 @@ D is not correct because it flips the positions of the comparison; the column na
 
 </details>
 </div>
+</div>
+
+## Filtering a Complex Condition
+
+Often, we want to filter data based on a combination of conditions.  For example, what if you want to preserve rows that meet one or both of the following conditions:
+
+* a male patient seen in the PICU
+* a patient seen in "oncology day hosp" in the first 20 days of the pandemic
+
+When we have complex conditions like this, we need to consider how to phrase these conditions using boolean logic.  Boolean operators include "and" (represented as `&` in R), "or" (in R, '|'), and "not" (`!`, as we've already seen).  "Or" here means "at least one of", not "exactly one of".
+
+We also have to consider using parenthesis to ensure the proper order of operations.  The order of operations for Boolean algebra, from highest to lowest priority is NOT, then AND, then OR.  Forgetting to account for order of operations is a common mistake by novice users of boolean logic.
+
+Let's go step by step.  First, let's convert each of our two conditions to code:
+
+* `gender == "male" & clinic_name == "picu"`  (Both must be true, so we use "and")
+* `clinic_name == "oncology day hosp" & pan_day <= 20` (Both must be true, so we use "and")
+
+Since each of our bullet points above contain internal boolean logic, let's encapsulate them in parentheses.  
+
+* `(gender == "male" & clinic_name == "picu")`  Now this is treated as a single unit which can be  True, False, or NA.
+* `(clinic_name == "oncology day hosp" & pan_day <= 20)` Now this is treated as a single unit which can be  True, False, or NA.
+
+Since we need either one but not both of the bulleted conditions to be true, we'll conjoin them using "OR":
+
+`(gender == "male" & clinic_name == "picu") | (clinic_name == "oncology day hosp" & pan_day <= 20)`
+
+Now we have a filter condition we can use!  If you're working in the code, try this:
+
+`filter(covid_testing,
+  (gender == "male" & clinic_name == "picu") |
+  (clinic_name == "oncology day hosp" & pan_day <= 20))`
+
+We added whitespace (carriage returns and indentation) above to make this a bit more readable, but you don't have to.
+
+<div class = "warning">
+What happens if you don't use parentheses to create smaller units in your boolean logic?  As long as you're using all "or" or all "and", you won't run into problems.
+
+For example, `filter(covid_testing, clinic_name == "clinical lab" & results == negative & last_name == "frey")` works as you might think... it gives you back rows of testing results (if there are any) which meet all three conditions.
+
+Similarly, `filter(covid_testing, clinic_name == "clinical lab" | results == negative | last_name == "frey")` will give you back rows where at least one of the conditions were met.
+
+But when you **mix** "and" and "or", or need to add a "not" to a combination of conditions, mistakes can happen.  And often, a mix of "and", "or", and "not" is exactly what we want to do.  
+
+Let's consider the case where you're interested in test results for males from the PICU or ED.
+
+We could write this in pseudocode (not true code, but a way of sketching out code ideas briefly) as "gender:male and clinic:PICU or clinic:ED".
+
+But we aren't done yet!  We need to consider whether we need to add parentheses.  Without parenthesis, we follow the order of operations standard in boolean logic: "and" is evaluated before "or".
+
+That means that without any added parentheses, we would **really** be asking for "(gender:male and clinic:PICU) or clinic:ED".  In other words, I want rows that are either "males seen in the PICU" or "anyone seen in the ED".  Is that actually what I want to ask for?  No!  We need to add a set of parentheses around the "this or that" clause, giving us "gender:male and (clinic:PICU or clinic:ED)".  
+
+Without adding our helpful parentheses, female patients and those missing a gender designation could be included, if their test was sourced from the ED.
+
+To see what this code would look like, consider these two filter operations, which differ only by the addition of parentheses.  First, let's do our search without adding parentheses around the "or" clause.  We end up with almost 3600 rows:
+
+``` r
+> filter(covid_testing, gender == "male" & clinic_name == "picu" | clinic_name == "emergency dept")
+# A tibble: 3,563 × 17
+       mrn first_name last_name gender pan_day test_id clinic_name result demo_group   age drive_thru_ind ct_value
+     <dbl> <chr>      <chr>     <chr>    <dbl> <chr>   <chr>       <chr>  <chr>      <dbl>          <dbl>    <dbl>
+ 1 5008967 rolley     karstark  male         8 covid   emergency … negat… patient      0.8              0       45
+ 2 5002158 ravella    frey      female       9 covid   emergency … negat… patient      0                0       45
+ 3 5004930 sarra      frey      female      10 covid   emergency … negat… patient      0.9              0       45
+ 4 5002083 weasel     tarly     female      10 covid   emergency … negat… patient     18                1       45
+ 5 5010468 chella     mormont   female      10 covid   emergency … negat… patient      0                0       45
+ 6 5000227 maege      sand      female      11 covid   emergency … negat… patient      0.9              0       45
+ 7 5002983 ronnel     snow      male        11 covid   emergency … negat… patient     18                0       45
+ 8 5006569 lanna      baelish   female      11 covid   emergency … negat… patient      1                0       45
+ 9 5004088 lennocks   greyjoy   male        11 covid   picu        negat… patient      4                1       45
+10 5008165 arianne    clegane   female      11 covid   emergency … negat… patient      1                0       45
+# … with 3,553 more rows, and 5 more variables: orderset <dbl>, payor_group <chr>, patient_class <chr>,
+#   col_rec_tat <dbl>, rec_ver_tat <dbl>
+```
+
+And for comparison, let's add parentheses around the "or" clause to accurately capture our true intent.  We get only around 1800 rows!  That's a big difference.
+
+``` r
+> filter(covid_testing, gender == "male" & (clinic_name == "picu" | clinic_name == "emergency dept"))
+# A tibble: 1,820 × 17
+       mrn first_name last_name gender pan_day test_id clinic_name result demo_group   age drive_thru_ind ct_value
+     <dbl> <chr>      <chr>     <chr>    <dbl> <chr>   <chr>       <chr>  <chr>      <dbl>          <dbl>    <dbl>
+ 1 5008967 rolley     karstark  male         8 covid   emergency … negat… patient      0.8              0     45  
+ 2 5002983 ronnel     snow      male        11 covid   emergency … negat… patient     18                0     45  
+ 3 5004088 lennocks   greyjoy   male        11 covid   picu        negat… patient      4                1     45  
+ 4 5008878 hullen     stark     male        11 covid   emergency … negat… patient      1                0     45  
+ 5 5004652 woth       martell   male        11 covid   emergency … negat… patient     18                1     45  
+ 6 5010986 brenett    karstark  male        11 covid   emergency … negat… patient     18                0     45  
+ 7 5011560 ulwyck     stark     male        11 covid   emergency … negat… patient      1                0     45  
+ 8 5000140 walton     kettlebl… male        11 covid   emergency … negat… patient     13                0     45  
+ 9 5000902 owen       seaworth  male        12 covid   emergency … posit… patient      0.1              0     33.0
+10 5002573 glendon    lannister male        12 covid   emergency … posit… patient     18                0     31.2
+# … with 1,810 more rows, and 5 more variables: orderset <dbl>, payor_group <chr>, patient_class <chr>,
+#   col_rec_tat <dbl>, rec_ver_tat <dbl>
+```
+
 </div>
 
 ## The "Pipe" Operator (`%>%`)
