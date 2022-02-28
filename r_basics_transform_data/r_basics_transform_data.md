@@ -333,6 +333,9 @@ Here are some important logical operators to know about. They will all come in h
 
 logical expression | means | example
 ---|---|---
+1 | 2 | 3
+
+
 `x < y` | less than | `pan_day < 10`
 `x > y`| greater than | `mrn > 5001000`
 `x == y` | equal to | `first_name == last_name`
