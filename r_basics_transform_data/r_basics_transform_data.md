@@ -408,9 +408,20 @@ Often, we want to filter data based on a combination of conditions.  For example
 * a male patient seen in the PICU
 * a patient seen in "oncology day hosp" in the first 20 days of the pandemic
 
-When we have complex conditions like this, we need to consider how to phrase these conditions using boolean logic.  Boolean operators include "and" (represented as `&` in R), "or" (in R, '|'), and "not" (`!`, as we've already seen).  "Or" here means "at least one of", not "exactly one of".
+When we have complex conditions like this, we need to consider how to phrase these conditions using **boolean logic** (also known as **boolean algebra**), which is the system of symbols and rules for interpreting the True/False value of a condition.  Boolean operators include "and" (represented as `&` in R), "or" (in R, `|`), and "not" (`!`, as we've already seen).  "Or" here means "at least one of", not "exactly one of".  
 
-We also have to consider using parenthesis to ensure the proper order of operations.  The order of operations for Boolean algebra, from highest to lowest priority is NOT, then AND, then OR.  Forgetting to account for order of operations is a common mistake by novice users of boolean logic.
+Here's a "truth table" to help you understand these operators:
+
+| Operator | Rule | Example |
+| --- | --- | --- |
+| AND (`&` in R) | True if and only if both sides are True | "Rabbits are mammals and rabbits are quadrupeds" is True |
+| AND (`&` in R) | False if one or both sides are False | "Rabbits are mammals and rabbits are bipeds" is False |
+| OR (`|` in R) | True if at least one side is True | "Rabbits are reptiles or rabbits are quadrupeds" is True |
+| OR (`|` in R) | False if and only if both sides are False | "Rabbits are reptiles or rabbits are bipeds" is False |
+| NOT (`!` in R) | Turns True into False and False into True | ! "Rabbits are reptiles" is True, ! "Rabbits are mammals" is False
+
+
+We also have to consider using parenthesis to ensure the proper order of operations.  The order of operations for boolean algebra, from highest to lowest priority is NOT, then AND, then OR.  Forgetting to account for order of operations is a common mistake by novice users of boolean logic.
 
 Let's go step by step.  First, let's convert each of our two conditions to code:
 
@@ -428,9 +439,11 @@ Since we need either one but not both of the bulleted conditions to be true, we'
 
 Now we have a filter condition we can use!  If you're working in the code, try this:
 
-`filter(covid_testing,
+```
+filter(covid_testing,
   (gender == "male" & clinic_name == "picu") |
-  (clinic_name == "oncology day hosp" & pan_day <= 20))`
+  (clinic_name == "oncology day hosp" & pan_day <= 20))
+```
 
 We added whitespace (carriage returns and indentation) above to make this a bit more readable, but you don't have to.
 
@@ -441,7 +454,7 @@ For example, `filter(covid_testing, clinic_name == "clinical lab" & results == n
 
 Similarly, `filter(covid_testing, clinic_name == "clinical lab" | results == negative | last_name == "frey")` will give you back rows where at least one of the conditions were met.
 
-But when you **mix** "and" and "or", or need to add a "not" to a combination of conditions, mistakes can happen.  And often, a mix of "and", "or", and "not" is exactly what we want to do.  
+But when you **mix** "and" and "or", or need to add a "not" to a combination of conditions, mistakes can happen when **your** interpretation of the logic differs from the **computer's** interpretation of the logic, based on the order of operations in boolean logic.  And often, a mix of "and", "or", and "not" is exactly what we want to do.  
 
 Let's consider the case where you're interested in test results for males from the PICU or ED.
 
