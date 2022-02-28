@@ -408,32 +408,32 @@ Often, we want to filter data based on a combination of conditions.  For example
 * a male patient seen in the PICU
 * a patient seen in "oncology day hosp" in the first 20 days of the pandemic
 
-When we have complex conditions like this, we need to consider how to phrase these conditions using **boolean logic** (also known as **boolean algebra**), which is the system of symbols and rules for interpreting the True/False value of a condition.  Boolean operators include "and" (represented as `&` in R), "or" (in R, `|`), and "not" (`!`, as we've already seen).  "Or" here means "at least one of", not "exactly one of".  
+When we have complex conditions like this, we need to consider how to phrase these conditions using **boolean logic** (also known as **boolean algebra**), which is the system of symbols and rules for interpreting the True/False value of a condition.  Boolean operators include AND (represented as `&` in R), OR (in R, `|`), and NOT (`!`, as we've already seen).  OR here means "at least one of", not "exactly one of".  
 
 Here's a "truth table" to help you understand these operators:
 
 | Operator | Rule | Example |
 | --- | --- | --- |
-| AND (`&` in R) | True if and only if both sides are True | "Rabbits are mammals and rabbits are quadrupeds" is True |
-| AND (`&` in R) | False if one or both sides are False | "Rabbits are mammals and rabbits are bipeds" is False |
-| OR (`|` in R) | True if at least one side is True | "Rabbits are reptiles or rabbits are quadrupeds" is True |
-| OR (`|` in R) | False if and only if both sides are False | "Rabbits are reptiles or rabbits are bipeds" is False |
-| NOT (`!` in R) | Turns True into False and False into True | ! "Rabbits are reptiles" is True, ! "Rabbits are mammals" is False
+| AND (`&` in R) | True if and only if both sides are True | "Rabbits are mammals AND rabbits are quadrupeds" is True |
+| AND (`&` in R) | False if one or both sides are False | "Rabbits are mammals AND rabbits are bipeds" is False |
+| OR (`|` in R) | True if at least one side is True | "Rabbits are reptiles OR rabbits are quadrupeds" is True |
+| OR (`|` in R) | False if and only if both sides are False | "Rabbits are reptiles OR rabbits are bipeds" is False |
+| NOT (`!` in R) | Turns True into False and False into True | ! "Rabbits are reptiles" is True, ! "Rabbits are mammals" is False |
 
 
 We also have to consider using parenthesis to ensure the proper order of operations.  The order of operations for boolean algebra, from highest to lowest priority is NOT, then AND, then OR.  Forgetting to account for order of operations is a common mistake by novice users of boolean logic.
 
 Let's go step by step.  First, let's convert each of our two conditions to code:
 
-* `gender == "male" & clinic_name == "picu"`  (Both must be true, so we use "and")
-* `clinic_name == "oncology day hosp" & pan_day <= 20` (Both must be true, so we use "and")
+* `gender == "male" & clinic_name == "picu"`  (Both must be true, so we use AND)
+* `clinic_name == "oncology day hosp" & pan_day <= 20` (Both must be true, so we use AND)
 
 Since each of our bullet points above contain internal boolean logic, let's encapsulate them in parentheses.  
 
-* `(gender == "male" & clinic_name == "picu")`  Now this is treated as a single unit which can be  True, False, or NA.
+* `(gender == "male" & clinic_name == "picu")`  Now this is treated as a single unit which can be True, False, or NA.
 * `(clinic_name == "oncology day hosp" & pan_day <= 20)` Now this is treated as a single unit which can be  True, False, or NA.
 
-Since we need either one but not both of the bulleted conditions to be true, we'll conjoin them using "OR":
+Since we need either one but not both of the bulleted conditions to be true, we'll conjoin them using OR:
 
 `(gender == "male" & clinic_name == "picu") | (clinic_name == "oncology day hosp" & pan_day <= 20)`
 
@@ -458,13 +458,13 @@ But when you **mix** "and" and "or", or need to add a "not" to a combination of 
 
 Let's consider the case where you're interested in test results for males from the PICU or ED.
 
-We could write this in pseudocode (not true code, but a way of sketching out code ideas briefly) as "gender:male and clinic:PICU or clinic:ED".
+We could write this in pseudocode (not true code, but a way of sketching out code ideas briefly) as "gender:male AND clinic:PICU OR clinic:ED".
 
-But we aren't done yet!  We need to consider whether we need to add parentheses.  Without parenthesis, we follow the order of operations standard in boolean logic: "and" is evaluated before "or".
+But we aren't done yet!  We need to consider whether we need to add parentheses.  Without parenthesis, we follow the order of operations standard in boolean logic: AND is evaluated before OR.
 
-That means that without any added parentheses, we would **really** be asking for "(gender:male and clinic:PICU) or clinic:ED".  In other words, I want rows that are either "males seen in the PICU" or "anyone seen in the ED".  Is that actually what I want to ask for?  No!  We need to add a set of parentheses around the "this or that" clause, giving us "gender:male and (clinic:PICU or clinic:ED)".  
+That means that without any added parentheses, we would **really** be asking for "(gender:male AND clinic:PICU) OR clinic:ED".  In other words, I want rows that are either "males seen in the PICU" or "anyone seen in the ED".  Is that actually what I want to ask for?  No!  We need to add a set of parentheses around the "this OR that" clause, giving us "gender:male AND (clinic:PICU OR clinic:ED)".  
 
-Without adding our helpful parentheses, female patients and those missing a gender designation could be included, if their test was sourced from the ED.
+Without adding our helpful parentheses, non-male patients could be included, if their test was sourced from the ED.
 
 To see what this code would look like, consider these two filter operations, which differ only by the addition of parentheses.  First, let's do our search without adding parentheses around the "or" clause.  We end up with almost 3600 rows:
 
