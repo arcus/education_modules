@@ -78,7 +78,25 @@ You are going to learn about two ways to refer to past commits:
 
 The `HEAD` refers to the most recently commit to your repository. It won't include any changes that haven't been committed to the repository yet. You can see that most recent commit by entering `git show HEAD`.
 
-**EXAMPLE: `git show HEAD`**
+The last thing that Dracula committed in the previous module was the `.gitignore` file in which he told Git not to track certain files:
+
+```
+$ git show HEAD
+commit 65f447e949e53edc0db08b93670d2e2b35fa6c22 (HEAD -> main)
+Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Date:   Mon Feb 28 11:47:17 2022 -0500
+
+    Ignore data files and the results folder.
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..f451386
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++*.dat
++results/
+```
 
 <div class = "help">
 Sometimes a command will output many lines of code that may not be relevant to you. For example the `show` command will output not just the commit message, but also every single change that you made in that commit. If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press "q" to skip to the end of that output.
@@ -100,21 +118,54 @@ If there is a particular commit you want to look back on and are not sure how fa
 
 When you enter `git commit -m "short descriptive message"` no output appears, but Git gives that commit a unique identifier, its commit number. By typing `git log` we can see ALL of the previous commits. Since that might be a lot of output to deal with, we will just ask for the last 3 commits using `git log -n 3`. The number after `-n` is how many commits you want displayed from the log.
 
-**EXAMPLE: 3 entries, long numbers, etc.**
+Let's see what that output looks like for Dracula:
+
+```
+$ git log -n 3
+commit 65f447e949e53edc0db08b93670d2e2b35fa6c22 (HEAD -> main)
+Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Date:   Mon Feb 28 11:47:17 2022 -0500
+
+    Ignore data files and the results folder.
+
+commit 0d4b23c688dbbf87cff3cfa9425a7dfd9a6e6280
+Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Date:   Mon Feb 28 11:42:41 2022 -0500
+
+    Add concerns about effects of Mars' moons of Wolfman
+
+commit 7cd0f422d373516d968c8fe4b90401dfee4d52a6
+Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Date:   Mon Feb 28 11:39:24 2022 -0500
+
+    Start notes on Mars as a base
+```
 
 If you forget to include the `-n 3` flag and just type `git log` you can always jump to the end by pressing "q". If you have been working on this project for a while, using the arrow keys to scroll down may take a prohibitively long time.
 
+The first thing to notice is that **all** of your commit messages are here. This is a good reminder to write clear and concise messages because future you may be very grateful when trying to figure out where exactly past you introduced a particular issue.
 
-
-The first thing to notice is that all of your commit messages are here. This is a good reminder to write clear and concise messages because future you may be very grateful when trying to figure out where exactly past you introduced a particular issue.
-
-When you identify which commit you want to look at, the commit number is the unique 40 digit string of letters and numbers above it after the word "commit".
-
-**Annotation of the previous example showing where the commit number is with description of where the commit number is as well**
+The second thing to notice is the structure of each entry in the log: commit, Author, Date, message.
+When you identify which commit you want to look at, the commit number is the unique 40 digit string of letters and numbers above it after the word "commit". In Dracula's repository, the unique identifier for the commit in which he "add[ed] concerns about effects of Mars' moons on Wolfman" is `0d4b23c688dbbf87cff3cfa9425a7dfd9a6e6280`.
 
 Now that we have found the unique identifier of the commit we want to examine, we can use it with `git show`. Don't worry, you won't need to type all 40 digits, the first six will suffice.
 
-**Example of `git show "#######"`**
+```
+$git show 0d4b23
+commit 0d4b23c688dbbf87cff3cfa9425a7dfd9a6e6280
+Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Date:   Mon Feb 28 11:42:41 2022 -0500
+
+    Add concerns about effects of Mars' moons of Wolfman
+
+diff --git a/mars.txt b/mars.txt
+index df0654a..315bf3a 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1 +1,2 @@
+ Cold and dry, but everything is my favorite color
++The two moons may be a problem for Wolfman
+```
 
 The commit number doesn't change as you update your repository.
 
@@ -125,18 +176,29 @@ The commit number doesn't change as you update your repository.
 The output from `git log -n 2`is:
 
 ```
-show output here
+$ git log -n 2
+commit 65f447e949e53edc0db08b93670d2e2b35fa6c22 (HEAD -> main)
+Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Date:   Mon Feb 28 11:47:17 2022 -0500
+
+    Ignore data files and the results folder.
+
+commit 0d4b23c688dbbf87cff3cfa9425a7dfd9a6e6280
+Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Date:   Mon Feb 28 11:42:41 2022 -0500
+
+    Add concerns about effects of Mars' moons of Wolfman
 ```
 
 Which of the following commands would show you the *most recent* commit you made?
 
 - [[X]] `git show HEAD`
 - [[ ]] `git show HEAD~1`
-- [[X]] `git show "######"`
-- [[ ]] `git show "&&&&&&&"`
+- [[X]] `git show 65f447`
+- [[ ]] `git show fa6c22`
 ***
 <div class ="answer">
-The *most recent* commit is the current `HEAD` and its commit number is "######". Either of these commands will give the same output. The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show "&&&&&&&"` may not show you anything since it is not the first six digits of a known commit number (and likely not the first six digits of any commit number).
+The *most recent* commit is the current `HEAD` and its commit number is `65f447`. Either of these commands will give the same output. The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show fa6c22` may not show you anything since it is not the first six digits of a known commit number (and likely not the first six digits of any commit number).
 </div>
 ***
 

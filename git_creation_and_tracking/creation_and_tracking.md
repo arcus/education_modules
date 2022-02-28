@@ -523,11 +523,11 @@ nothing to commit, working directory clean
 
 Just like any method of backing up or saving your work, the benefits of using Git for version control are only available if you regularly use them. In our example, we have been committing every time we add or change a line in a single file. That is going to be odious overkill for most projects.
 
-**Commit each chunk of changes** If you add a new section to a file, or change a certain item across multiple files, it is a good practice to commit those changes with a message describing them. If a commit message like `-m "add section on bears"` or `-m "reorder paragraphs from smallest to largest mammals"` accurately describes your changes, make sure you commit the changes so that you can find them again later!
+- **Commit each chunk of changes** If you add a new section to a file, or change a certain item across multiple files, it is a good practice to commit those changes with a message describing them. If a commit message like `-m "add section on bears"` or `-m "reorder paragraphs from smallest to largest mammals"` accurately describes your changes, make sure you commit the changes so that you can find them again later!
 
-**Commit before making any changes that could break your code** If your code currently works are you intend to add something new that may break it, make sure you commit so that you will be able to revert to the working version if needed.
+- **Commit before making any changes that could break your code** If your code currently works are you intend to add something new that may break it, make sure you commit so that you will be able to revert to the working version if needed.
 
-**Commit regularly** Even if you are only making very small changes, don't forget to commit at regular intervals, like before you switch tasks or end your work day.
+- **Commit regularly** Even if you are only making very small changes, don't forget to commit at regular intervals, like before you switch tasks or end your work day.
 
 ### Knowledge Check 2
 
@@ -668,8 +668,8 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 The only thing Git notices now is the newly-created `.gitignore` file.
 You might think we wouldn't want to track it,
-but everyone we're sharing our repository with will probably want to ignore
-the same things that we're ignoring.
+but if we share the repository, everyone we're sharing with will probably want to ignore
+the same things that we are ignoring.
 Let's add and commit `.gitignore`:
 
 ```
