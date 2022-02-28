@@ -72,7 +72,7 @@ You are going to learn about two ways to refer to past commits:
 
 </div>
 
-[The Commit Stack](./fig/Commit_stack.svg)
+![The Commit Stack](./fig/Commit_stack.svg)
 *IMAGE: a stack of 3 flat white boxes, stacked on top of each other with open air in between. The top box is labeled "last committed version of repository", the middle box is labeled "next to last version of repository" and the bottom is labeled "previous version of repository". There are three dots below the lowest box indicating that this pattern continues.*
 
 ### Using HEAD
