@@ -72,8 +72,7 @@ You are going to learn about two ways to refer to past commits:
 
 </div>
 
-![The Commit Stack](./fig/Commit_stack.svg)
-*IMAGE: a stack of 3 flat white boxes, stacked on top of each other with open air in between. The top box is labeled "last committed version of repository", the middle box is labeled "next to last version of repository" and the bottom is labeled "previous version of repository". There are three dots below the lowest box indicating that this pattern continues.*
+![The Commit Stack: a stack of 3 flat white boxes, stacked on top of each other with open air in between. The top box is labeled "last committed version of repository", the middle box is labeled "next to last version of repository" and the bottom is labeled "previous version of repository". There are three dots below the lowest box indicating that this pattern continues.](./fig/Commit_stack.svg)
 
 ### Using HEAD
 
@@ -107,11 +106,11 @@ Maybe you want to look one step further back into your work. By using `HEAD~n` y
 
 For example, to look back just one commit before the most recent checkpoint, use `git show HEAD~1`. If instead you wanted to look back three checkpoints (the most recent and then two before that) you would enter `git show HEAD~2`.
 
-*IMAGE: The same stack of 3 white flat boxes, now the top box is labeled `HEAD`, the middle box `HEAD~1` and the bottom `HEAD~2`*
+![IMAGE: The same stack of 3 white flat boxes, now the top box is labeled `HEAD`, the middle box `HEAD~1` and the bottom `HEAD~2`](./fig/Commit_stack_HEAD.svg)
 
 Using `HEAD` to refer to your commits can be great for looking at recent versions of your repository. But be careful, each time you commit to the repository, you are creating a new most-recent-version that is now the `HEAD` and every older version moves one layer down in the stack.
 
-*IMAGE: The same stack of 3 flat white boxes now has a 4th red box on top. This red box is labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`*
+![IMAGE: The same stack of 3 flat white boxes now has a 4th red box on top. This red box is labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`](./fig/Commit_stack_HEAD2.svg)
 
 ### Using the commit number
 
@@ -170,7 +169,7 @@ index df0654a..315bf3a 100644
 
 The commit number doesn't change as you update your repository.
 
-*IMAGE: On the left, the same stack of 3 white boxes but now each is labeled with a different commit numbers. On the right are the three white boxes with the new red box on top. The red box also has a commit number, but the commit numbers on the white boxes have not changed from the picture on the left.*
+![IMAGE: On the left, the same stack of 3 white boxes but now each is labeled with its six digit commit number. On the right are the three white boxes with the new red box on top. The red box also has a commit number, but the commit numbers on the white boxes have not changed from the picture on the left.](./fig/Commit_number.svg)
 
 ### Knowledge Check 1
 
