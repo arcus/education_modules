@@ -110,7 +110,7 @@ For example, to look back just one commit before the most recent checkpoint, use
 
 Using `HEAD` to refer to your commits can be great for looking at recent versions of your repository. But be careful, each time you commit to the repository, you are creating a new most-recent-version that is now the `HEAD` and every older version moves one layer down in the stack.
 
-![IMAGE: The same stack of 3 flat white boxes now has a 4th red box on top. This red box is labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`](./fig/Commit_stack_HEAD2.svg)
+![IMAGE: On the left, the same stack of 3 flat white boxes are labeled `HEAD`, `HEAD~1`,  and `HEAD~2`. An arrow points to a stack on the right made of the same stack of 3 flat white boxes with a 4th red box on top. This red box is labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`](./fig/Commit_stack_HEAD2.svg)
 
 ### Using the commit number
 
@@ -169,7 +169,7 @@ index df0654a..315bf3a 100644
 
 The commit number doesn't change as you update your repository.
 
-![IMAGE: On the left, the same stack of 3 white boxes but now each is labeled with its six digit commit number. On the right are the three white boxes with the new red box on top. The red box also has a commit number, but the commit numbers on the white boxes have not changed from the picture on the left.](./fig/Commit_number.svg)
+![IMAGE: On the left, the same stack of 3 white boxes but now each is labeled with its six digit commit number. An arrow points from this stack to the stack On the right where the three white boxes have a new red box on top. The red box also has a commit number, but the commit numbers on the white boxes have not changed from the picture on the left.](./fig/Commit_number.svg)
 
 ### Knowledge Check 1
 
@@ -210,7 +210,7 @@ The error you get from entering a non-existent commit number starts with the wor
 
 When you commit code to Git, it doesn't create a brand new copy of your files from scratch. Instead it records the differences between the version of each file that it already has stored, and the new version. You can think of it as the instructions for transforming the previous version of your repository into the new version.
 
-*IMAGE: The three white boxes are shown with a large green arrow pointing from each box to the box above it. The green arrows are labeled "the changes between the versions."*
+![The three white boxes are shown with a large green arrow pointing from each box to the box above it. The top box is labeled "Last committed version of repository" and the arrow pointing to it from the middle box is labeled "HEAD." The second box is labeled "Next to last version of repository" and the arrow pointing to it from the box below is labeled "HEAD~1." The bottom box is labeled "Previous version of repository" and the arrow pointing to it is labeled "HEAD~2." There are three dots under the boxes, and another three dots under the arrows indicating that this pattern continues.](./fig/Commits_are_pointers.svg)
 
 You could think of each commit not as a checkpoint, but the instructions on how to get to the next checkpoint. The entire repository can be built by following a series of instructions (commits) in order. Similarly you can determine the precise state of an earlier version by following the instructions backwards.
 
