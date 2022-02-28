@@ -72,7 +72,8 @@ You are going to learn about two ways to refer to past commits:
 
 </div>
 
-*IMAGE: a stack of 3 flat white boxes, stacked on top of each other with open air in between. The top box is labeled "last committed version of the repo", the middle box is labeled "next to last version of the repo" and the bottom is labeled "previous version of the repo". There are three dots below the lowest box indicating that this pattern continues.*
+[The Commit Stack](./fig/Commit_stack.svg)
+*IMAGE: a stack of 3 flat white boxes, stacked on top of each other with open air in between. The top box is labeled "last committed version of repository", the middle box is labeled "next to last version of repository" and the bottom is labeled "previous version of repository". There are three dots below the lowest box indicating that this pattern continues.*
 
 ### Using HEAD
 
@@ -99,7 +100,7 @@ index 0000000..f451386
 ```
 
 <div class = "help">
-Sometimes a command will output many lines of code that may not be relevant to you. For example the `show` command will output not just the commit message, but also every single change that you made in that commit. If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press "q" to skip to the end of that output.
+Sometimes a command will output many lines of code that may not be relevant to you. For example the `show` command will output not just the commit message, but also every single change that you made in that commit. If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press `q` to skip to the end of that output.
 </div>
 
 Maybe you want to look one step further back into your work. By using `HEAD~n` you can look back $n$ checkpoints in your repository.
@@ -141,7 +142,7 @@ Date:   Mon Feb 28 11:39:24 2022 -0500
     Start notes on Mars as a base
 ```
 
-If you forget to include the `-n 3` flag and just type `git log` you can always jump to the end by pressing "q". If you have been working on this project for a while, using the arrow keys to scroll down may take a prohibitively long time.
+If you forget to include the `-n 3` flag and just type `git log` you can always jump to the end by pressing `q`. If you have been working on this project for a while, using the arrow keys to scroll down may take a prohibitively long time.
 
 The first thing to notice is that **all** of your commit messages are here. This is a good reminder to write clear and concise messages because future you may be very grateful when trying to figure out where exactly past you introduced a particular issue.
 
