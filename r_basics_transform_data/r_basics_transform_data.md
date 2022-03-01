@@ -87,7 +87,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-Minimal experience of using the RStudio IDE and writing R code is necessary to understand and use this material.  If you can understand and do the following, you'll be able to complete this course:
+Minimal experience of using the RStudio IDE and writing R code (specifically, within an R Markdown document) is necessary to understand and use this material.  If you can understand and do the following, you'll be able to complete this course:
 
 * Run a command that's provided to you in the console
 * Use the Environment tab to find a data frame and learn more about it
@@ -158,12 +158,22 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
 </figure>
 
-If it's been a while since you downloaded this project to your computer, and you want to get any new and improved files that have been placed there in the meantime:
+If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime:
 
 * Open your project.
 * In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
 
-![Git button menu with choices to pull and push branches](media/pull_branches.png)  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)
+![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
+
+## How to Follow Along
+
+You can use this module in a couple of different ways:
+
+* If you have experience working in R markdown and want to try out some of the code we share with you as we go along, please go ahead and open the "r\_basics\_transform\_data" directory, then the "exercises" directory.  You can open "transform.Rmd" and add some code chunks for your own experimentation.  Or, create a new R Markdown file that begins with reading in the .csv file in the "exercises" directory.
+* Not sure you are ready to DIY?  Prefer to learn some concepts first, then do some hands-on work at the end?  Then just follow our steps and we'll guide you through the exercise file when you reach the end of the module.  No need to worry about trying out the code along the way.
+
+![RStudio showing the transform.Rmd file](media/rstudio_exercises.png)
+
 
 ## The `dplyr` Package
 
