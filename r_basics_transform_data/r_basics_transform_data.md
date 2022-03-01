@@ -448,13 +448,13 @@ filter(covid_testing,
 We added whitespace (carriage returns and indentation) above to make this a bit more readable, but you don't have to.
 
 <div class = "warning">
-What happens if you don't use parentheses to create smaller units in your boolean logic?  As long as you're using all "or" or all "and", you won't run into problems.
+What happens if you don't use parentheses to create smaller units in your boolean logic?  As long as you're using all OR or all AND, you won't run into problems.
 
 For example, `filter(covid_testing, clinic_name == "clinical lab" & results == negative & last_name == "frey")` works as you might think... it gives you back rows of testing results (if there are any) which meet all three conditions.
 
 Similarly, `filter(covid_testing, clinic_name == "clinical lab" | results == negative | last_name == "frey")` will give you back rows where at least one of the conditions were met.
 
-But when you **mix** "and" and "or", or need to add a "not" to a combination of conditions, mistakes can happen when **your** interpretation of the logic differs from the **computer's** interpretation of the logic, based on the order of operations in boolean logic.  And often, a mix of "and", "or", and "not" is exactly what we want to do.  
+But when you **mix** AND and OR, or need to add a NOT to a combination of conditions, mistakes can happen when **your** interpretation of the logic differs from the **computer's** interpretation of the logic, based on the order of operations in boolean logic.  And often, a mix of AND, OR, and NOT is exactly what we want to do.  
 
 Let's consider the case where you're interested in test results for males from the PICU or ED.
 
@@ -487,7 +487,7 @@ To see what this code would look like, consider these two filter operations, whi
 #   col_rec_tat <dbl>, rec_ver_tat <dbl>
 ```
 
-And for comparison, let's add parentheses around the "or" clause to accurately capture our true intent.  We get only around 1800 rows!  That's a big difference.
+And for comparison, let's add parentheses around the OR clause to accurately capture our true intent.  We get only around 1800 rows!  That's a big difference.
 
 ``` r
 > filter(covid_testing, gender == "male" & (clinic_name == "picu" | clinic_name == "emergency dept"))
