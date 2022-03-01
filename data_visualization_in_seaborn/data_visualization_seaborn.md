@@ -57,27 +57,22 @@ If you are brand new to python (or want a refresher) consider starting with [Int
 </div>
 
 ## Lesson Preparation
-<!--
-@@@block-comments
+
 
 This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in python. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection.
 
-@end
--->
 
 If you have python already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_seaborn.ipynb" download>download the code for this module to run offline</a>.
 
-<!--
-@@@block-comments
+
 If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity. We recommend using right-click to open it in a new tab or window, and then returning here to continue learning while the environment finishes loading. Here is the link:
 
 [![Link to start Binder environment](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/main?urlpath=rstudio) **Click the "launch binder" button!**
 
 You don't have to do anything except come back here once the link opens in a new tab or window.
-@end
--->
 
-## Making plots using seaborn
+
+### Importing seaborn
 
 To use the seaborn library to make visualizations, you need to import it.
 
@@ -88,10 +83,9 @@ import seaborn as sns
 ```
 
 
-## Working through interactive coding examples
+### Working through interactive coding examples
 
-<!--
-@@@block-comments
+
 Hopefully your [binder instance](#lesson-preparation) is done loading now! If not, be patient --- it can take as long as 20 or 30 minutes some times if the files haven't been used recently.
 
 When it is ready, you should see a jupyter notebook in your browser with the code for this module. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
@@ -99,14 +93,7 @@ When it is ready, you should see a jupyter notebook in your browser with the cod
 <div class = "important">
 Note that binder instances aren't stable. When you close the window or if it idles too long, it may erase all of your work. If you want to save any code or output you come up with while working in binder, you need to copy-paste the code to a new file to save it on your computer.
 </div>
-@end
--->
 
-## Scatterplots
-
-Scatterplots show the relationship between two continuous variables, one on the x-axis and one on the y-axis. Because they show each individual data point as a marker, they also provide a handy way to check visually for outliers.
-
-For more background on scatterplots, watch [this Kahn Academy series](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-data/cc-8th-scatter-plots/v/constructing-scatter-plot).
 
 ### The data
 
@@ -121,7 +108,11 @@ import seaborn as sns
 ```
 
 <div class = "learnmore">
-The pandas module
+The `pandas` module is for working with data in python. To learn more, see the [pandas guide](https://pandas.pydata.org/docs/getting_started/index.html).
+
+The `numpy` module has several useful functions for statistical calculations and other mathematical operations useful in scientific computing. To learn more, see the [numpy website](https://numpy.org/).
+
+The `seaborn` module is the plotting module that is the focus of this lesson, and it requires some pieces of `matplotlib`, since it is built as an extension to it.
 </div>
 
 And then read in the data set:
@@ -131,7 +122,7 @@ covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_se
 
 ```
 
-These data are from a a COVID-19 serological survey conducted in Yaounde, Cameroon (Nwosu, K., Fokam, J., Wanda, F. et al., 2021[^1](Kene David Nwosu, Joseph Fokam, Franck Wanda, Lucien Mama, Erol Orel, Nicolas Ray, Jeanine Meke, Armel Tassegning, Desire Takou, Eric Mimbe, Beat Stoll, Josselin Guillebert, Eric Comte, Olivia Keiser, & Laura Ciaffi. (2021). kendavidn/yaounde_serocovpop_shared: Initial release (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.5218965)). The authors have made all of the code and data publicly available under a [creative commons 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode) to facilitate re-use.
+These data are from a COVID-19 serological survey conducted in Yaounde, Cameroon (Nwosu, K., Fokam, J., Wanda, F. et al., 2021[^1](Kene David Nwosu, Joseph Fokam, Franck Wanda, Lucien Mama, Erol Orel, Nicolas Ray, Jeanine Meke, Armel Tassegning, Desire Takou, Eric Mimbe, Beat Stoll, Josselin Guillebert, Eric Comte, Olivia Keiser, & Laura Ciaffi. (2021). kendavidn/yaounde_serocovpop_shared: Initial release (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.5218965)). The authors have made all of the code and data publicly available under a [creative commons 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode) to facilitate re-use.
 
 
 <div class="learnmore">
@@ -143,6 +134,14 @@ Run the above code yourself in binder (see [lesson preparation](#lesson-preparat
 
 In the data_visualization_seaborn.ipynb file, the code at the top of the file includes these import commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
 </div>
+
+## Scatterplots
+
+Scatterplots show the relationship between two continuous variables, one on the x-axis and one on the y-axis. Because they show each individual data point as a marker, they also provide a handy way to check visually for outliers.
+
+For more background on scatterplots, watch [this Kahn Academy series](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-data/cc-8th-scatter-plots/v/constructing-scatter-plot).
+
+
 
 ### Basic scatterplot
 
