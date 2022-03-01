@@ -216,6 +216,30 @@ You could think of each commit not as a checkpoint, but the instructions on how 
 
 ## Comparing files to prior commits
 
+In order to have some more commits to compare, let's add a few more lines to our notes about Mars, and start a file of notes about Venus.
+
+First add a line to `mars.txt` so that it reads:
+
+```
+Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+```
+Let's add and commit this change:
+
+```
+$ git add mars.txt
+$ git commit -m "Discuss concerns about Mars' climate for Mummy"
+```
+
+Next let's add one more line to `mars.txt` so that it reads:
+```
+Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+An ill-considered change
+```
+
 You might have noticed that `diff` was the first word after your commit message when you entered `git show HEAD`. The lines after that are **all** the changes that you made with that commit. When comparing earlier versions with the current version, you are usually only going to want to look at one file at  a time. By typing `git diff HEAD`.... **work through behavior here, there will be a big divergence  (haha `diff`) in this behavior between command line git and github desktop**
 *Or maybe we don't want to introduce github desktop at all, or just skip this section entirely for the github desktop module?*
 
