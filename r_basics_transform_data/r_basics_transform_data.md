@@ -733,39 +733,35 @@ Not sure how to do that?  You can use the green "up" arrow in the file browser w
 
 In the first task, you were asked to create a dplyr pipeline:
 
-![Partially completed code from transform.R](media/task_1.png)
+![Partially completed code from transform.R](media/task_1.png)<!-- style = "max-width: 400px;" -->
 
-Here's the solution.  We start with `covid_testing` in the first line, then we apply a filter in the second line (making sure to use that double equals sign).  Finally, we finish our pipeline by using select to just give us the columns we're interested in.
+Here's the solution that should go inside that code block.  We start with `covid_testing` in the first line, then we apply a filter in the second line (making sure to use that double equals sign).  Finally, we finish our pipeline by using select to just give us the columns we're interested in.
 
-```
-```{r}
+``` r
 covid_testing %>%
   filter(clinic_name == "picu") %>%
   select(rec_ver_tat, pan_day)
-```\
 ```
 
 In the next task, you were asked to try using mutate:
 
-![Partially completed code from transform.R](media/task_2.png)
+![Partially completed code from transform.R](media/task_2.png)<!-- style = "max-width: 400px;" -->
 
-Here's the solution.  We begin the `mutate` statement with our first argument being the data frame we want to see altered, in our case `covid_testing`.  We then use a single equal to set a new value, `total_tat`, which is set equal to the sum of `col_rec_tat` and `rec_ver_tat`.
+Here's the solution that should go inside that code block.  We begin the `mutate` statement with our first argument being the data frame we want to see altered, in our case `covid_testing`.  We then use a single equal to set a new value, `total_tat`, which is set equal to the sum of `col_rec_tat` and `rec_ver_tat`.
 
-```
-```{r}
+```r
 mutate(covid_testing, total_tat = col_rec_tat + rec_ver_tat)
-```\
+
 ```
 
 Finally, we asked you to change that last code you just wrote:
 
-![Partially completed code from transform.R](media/task_3.png)
+![Partially completed code from transform.R](media/task_3.png)<!-- style = "max-width: 400px;" -->
 
 
 And here's that last solution!  It does the same thing as the second bit of code, but in a different (and some would argue, more useful, format).
 
 ```
-```{r}
 covid_testing %>%
   mutate(total_tat = col_rec_tat + rec_ver_tat)
 ```
@@ -775,7 +771,7 @@ covid_testing %>%
 To recap, `dplyr` is a package you can load in R that provides a grammar for transforming data frames. Some of the key `dplyr` functions are:
 
 | function | graphic |
-| --- | --- |
+| :---: | --- |
 | `select()`, which subsets columns by name | ![Image showing the transformation from a data frame of 4 columns to a data frame of 2  columns](media/select_mini.png)<!-- style = "max-width:200px;" --> |
 | `filter()`, which subsets rows by a logical condition | ![Image showing the transformation from a data frame of 6 rows to a data frame of 2 rows](media/filter_mini.png)<!-- style = "max-width:200px;" -->  |
 | `mutate()`, which creates new calculated columns | ![Image showing the creation of a new column in a data frame](media/mutate_mini.png)<!-- style = "max-width:200px;" -->  |
@@ -787,10 +783,10 @@ Additionally, `dplyr` and other `tidyverse` packages make use of the pipe operat
 We’ve only scratched the surface of data transformation functions in dplyr. Other important ones include:
 
 | function | graphic |
-| --- | --- |
+| :---: | --- |
 | `arrange()`, which sorts a data frame (for example, alphabetically by `last_name`) | ![Small image that shows a data frame with rows initially mixed and then with rows sorted in order](media/arrange_mini.png)<!-- style = "max-width:200px;" -->  |
 | `add_row()`, which adds rows to a data frame | ![Small image that shows a data frame with three rows transformed to one with four rows.](media/add_row_mini.png)<!-- style = "max-width:200px;" -->  |
-| `group_by()` and `summarize()`, which allow you to create data summaries such as means, medians, sums, etc.| ![Small image that shows a data frame broken up into three smaller data frames, then re-assembled with a summary row for each of the three smaller data frames.](media/group_by_summarise_mini.png)
+| `group_by()` and `summarize()`, which allow you to create data summaries such as means, medians, sums, etc.| ![Small image that shows a data frame broken up into three smaller data frames, then re-assembled with a summary row for each of the three smaller data frames.](media/group_by_summarise_mini.png)<!-- style = "max-width:200px;" -->  |
 | `bind_cols()` and `bind_rows()`, which allow you to combine data frames by row or column| ![Small image illustrating two data frames that are combined horizontally.](media/bind_cols_mini.png)<!-- style = "max-width:200px;" -->  |
 | `_join()` functions including `left_join()` that combine data frames by looking up matching values from one table in another | ![Small image that shows two data frames which are combined using only the rows in which there is data for the given observation in both tables](media/left_join_mini.png)<!-- style = "max-width:200px;" -->  |
 
@@ -818,7 +814,7 @@ Beyond dplyr, there are a number of other `[tidyverse](https://www.tidyverse.org
 * `purrr` offers advanced functionality to automate complex data transformations
 * `dbplyr` allows you to interact with a table inside a database as if it were a data frame
 
-![A set of five hexagonal logos: one each for tidyr (futuristic brooms fly up and to the right), lubridate (a calendar and clock), stringr (a violin), purrr (a hand-drawn sketch of a cat), and dbplyr (futuristic channellock pliers flying up and to the right)](media/tidyverse_logos.png)<!-- style = "max-width:800px;" -->  
+![A set of five hexagonal logos: one each for tidyr (futuristic brooms fly up and to the right), lubridate (a calendar and clock), stringr (a violin), purrr (a hand-drawn sketch of a cat), and dbplyr (futuristic channellock pliers flying up and to the right)](media/tidyverse_logos.png)<!-- style = "max-width:600px;" -->  
 
 ## Feedback
 
