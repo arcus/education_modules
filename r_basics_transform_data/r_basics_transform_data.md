@@ -308,8 +308,7 @@ To give you an example: the logical test here is whether or not the `mrn` value 
 
 This filter statement will return a data frame that only contains the 4th row, in which the logical condition is **true**, as shown on the right.
 
-![On the left, the first few columns of the `covid_testing data frame: mrn, first_name, and last_name`.  The first three rows are labeled "False", while the forth row is labeled "True" and colored blue, and there, the mrn value matches the one we're trying to match.  This data frame is followed by an arrow pointing to a new data frame on the right, which only has the one selected / blue row, the one that had the matching mrn value.](media/filter_covid_example.png)<!--
-style = "max-width:1000px;"-->
+![On the left, the first few columns of the `covid_testing data frame: mrn, first_name, and last_name`.  The first three rows are labeled "False", while the forth row is labeled "True" and colored blue, and there, the mrn value matches the one we're trying to match.  This data frame is followed by an arrow pointing to a new data frame on the right, which only has the one selected / blue row, the one that had the matching mrn value.](media/filter_covid_example.png)<!--style = "max-width:1000px;"-->
 
 <div class = "warning">
 One common issue to be aware of is the difference between the single equals (=) and the double equals (==) operators.
@@ -615,7 +614,7 @@ In the box below, rewrite the following statement with a pipe:
 
 ## Create New Columns With `mutate()`
 
-`mutate()` is an extremely useful `dplyr` function, and you can use it to make new variables / columns.
+`mutate()` is an extremely useful `dplyr` function, and you can use it to make new variables / columns.  That's what we'll use it for here.  You can also use `mutate()` to change existing columns (say, turn an entire column lowercase).  
 
 Like all `dplyr` functions, `mutate()` takes a data frame as its first argument. After that, you tell it what to name the new column and what should be in it. This is done using **name-value expressions**.
 
@@ -733,7 +732,7 @@ Not sure how to do that?  You can use the green "up" arrow in the file browser w
 
 In the first task, you were asked to create a dplyr pipeline:
 
-![Partially completed code from transform.R](media/task_1.png)<!-- style = "max-width: 400px;" -->
+![Partially completed code from transform.R](media/task_1.png)<!-- style = "max-width: 400px; border: 1px solid rgb(var(--color-highlight))" -->
 
 Here's the solution that should go inside that code block.  We start with `covid_testing` in the first line, then we apply a filter in the second line (making sure to use that double equals sign).  Finally, we finish our pipeline by using select to just give us the columns we're interested in.
 
@@ -745,7 +744,7 @@ covid_testing %>%
 
 In the next task, you were asked to try using mutate:
 
-![Partially completed code from transform.R](media/task_2.png)<!-- style = "max-width: 400px;" -->
+![Partially completed code from transform.R](media/task_2.png)<!-- style = "max-width: 400px; border: 1px solid rgb(var(--color-highlight))" -->
 
 Here's the solution that should go inside that code block.  We begin the `mutate` statement with our first argument being the data frame we want to see altered, in our case `covid_testing`.  We then use a single equal to set a new value, `total_tat`, which is set equal to the sum of `col_rec_tat` and `rec_ver_tat`.
 
@@ -756,7 +755,7 @@ mutate(covid_testing, total_tat = col_rec_tat + rec_ver_tat)
 
 Finally, we asked you to change that last code you just wrote:
 
-![Partially completed code from transform.R](media/task_3.png)<!-- style = "max-width: 400px;" -->
+![Partially completed code from transform.R](media/task_3.png)<!-- style = "max-width: 400px; border: 1px solid rgb(var(--color-highlight))" -->
 
 
 And here's that last solution!  It does the same thing as the second bit of code, but in a different (and some would argue, more useful, format).
@@ -774,7 +773,7 @@ To recap, `dplyr` is a package you can load in R that provides a grammar for tra
 | :---: | --- |
 | `select()`, which subsets columns by name | ![Image showing the transformation from a data frame of 4 columns to a data frame of 2  columns](media/select_mini.png)<!-- style = "max-width:200px;" --> |
 | `filter()`, which subsets rows by a logical condition | ![Image showing the transformation from a data frame of 6 rows to a data frame of 2 rows](media/filter_mini.png)<!-- style = "max-width:200px;" -->  |
-| `mutate()`, which creates new calculated columns | ![Image showing the creation of a new column in a data frame](media/mutate_mini.png)<!-- style = "max-width:200px;" -->  |
+| `mutate()`, which creates new calculated columns or changes existing columns | ![Image showing the creation of a new column in a data frame](media/mutate_mini.png)<!-- style = "max-width:200px;" -->  |
 
 Additionally, `dplyr` and other `tidyverse` packages make use of the pipe operator (`%>%`), which can be used to string together `dplyr` functions into a pipeline that performs several transformations.
 
@@ -791,14 +790,14 @@ We’ve only scratched the surface of data transformation functions in dplyr. Ot
 | `_join()` functions including `left_join()` that combine data frames by looking up matching values from one table in another | ![Small image that shows two data frames which are combined using only the rows in which there is data for the given observation in both tables](media/left_join_mini.png)<!-- style = "max-width:200px;" -->  |
 
 <div class = "options">
-You may notice here and elsewhere that we include "British" spellings (e.g. `summarise()`) for some functions.  "American" spellings (`summarize()`) also work, and both spellings trigger the same function.  Feel free to use either.
+You may notice here and elsewhere that we include international English spellings (e.g. `summarise()`) for some functions.  "American" spellings (`summarize()`) also work, and both spellings trigger the same function.  Feel free to use either.
 </div>
 
 ## `dplyr` Cheatsheet
 
 RStudio creates and distributes a number of cheatsheets for various purposes.  You can find them by clicking in the **Help menu** in RStudio -- try that now!  Here's a screenshot of the `dplyr` cheatsheet:
 
-![A very busy and complex sheet that is titled "Data Transformation with dplyr cheatsheet" and contains subsections titled "summarise cases", "group cases", "manipulate cases", and "manipulate variables"](media/dplyr_cheatsheet_snapshot.png)<!-- style = "max-width:800px;" -->  
+![A very busy and complex sheet that is titled "Data Transformation with dplyr cheatsheet" and contains subsections titled "summarise cases", "group cases", "manipulate cases", and "manipulate variables"](media/dplyr_cheatsheet_snapshot.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
 
 Note that in this cheatsheet they refer to "cases" to mean rows or observations and "variables" to mean columns.
 
@@ -806,7 +805,7 @@ You can also find cheatsheets [on the RStudio website](https://www.rstudio.com/r
 
 ## Beyond `dplyr`
 
-Beyond dplyr, there are a number of other `[tidyverse](https://www.tidyverse.org/)` packages that provide powerful tools for data transformation:
+Beyond dplyr, there are a number of other [`tidyverse`](https://www.tidyverse.org/) packages that provide powerful tools for data transformation:
 
 * `tidyr` provides functions that allow you to convert messy data frames into tidy ones
 * `lubridate` provides functions to manipulate times and dates
