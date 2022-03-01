@@ -169,6 +169,8 @@ If you already completed this work for a previous module, and it's been a while 
 
 ![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
 
+
+
 ## How to Follow Along
 
 You can use this module in a couple of different ways:
@@ -176,7 +178,7 @@ You can use this module in a couple of different ways:
 * If you have experience working in R markdown and want to try out some of the code we share with you as we go along, please go ahead and open the "r\_basics\_transform\_data" directory, then the "exercises" directory.  You can open "transform.Rmd" and add some code chunks for your own experimentation.  Or, create a new R Markdown file that begins with reading in the .csv file in the "exercises" directory.
 * Not sure you are ready to DIY?  Prefer to learn some concepts first, then do some hands-on work at the end?  Then just follow our steps and we'll guide you through the exercise file when you reach the end of the module.  No need to worry about trying out the code along the way.
 
-![RStudio showing the transform.Rmd file.  A text box suggests copying and pasting the first code chunk in transform.Rmd into a new R Markdown file, or adding chunks below the first chunk for experimentation.](media/rstudio_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
+![RStudio showing the transform.Rmd file.  A text box suggests copying and pasting the first code chunk in transform.Rmd into a new R Markdown file, or adding chunks below the first chunk for experimentation.](media/rstudio_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
 
 ## The `dplyr` Package
 
@@ -716,6 +718,7 @@ Within the `r_basics_transform_data` folder, please open the `exercises` folder 
 To work in this file:
 
 (1) Run the first code chunk by clicking the green "play" button (look at line 6).  This gives you the data frame with fake Covid testing data, the data we've been using for our instruction in this module so far.
+
 (2) For each of the three code chunks below the first one, please read the instructions before the code chunk and then add the right code to the code chunk to make it work.
 
 When you've done the best you can on your own, go to the next page, where we'll discuss the solutions.
@@ -739,17 +742,58 @@ Create a dplyr pipeline that:
 
 3. Selects the column with the received-to-verified turnaround time (`rec_ver_tat`) as well as the column with the day from start of the pandemic (`pan_day`)
 
-\`\`\`{r}
+```{r}
 ______ %>%
   filter(______) %>%
   select(______, ______)
-\`\`\`
+```
 
 ```
 
-Here's the solution:
+Here's the solution.  We start with `covid_testing` in the first line, then we apply a filter in the second line (making sure to use that double equals sign).  Finally, we finish our pipeline by using select to just give us the columns we're interested in.
 
+```
+\`\`\`{r}
+covid_testing %>%
+  filter(clinic_name == "picu") %>%
+  select(rec_ver_tat, pan_day)
+\`\`\`
+```
 
+In the next task, you were asked to try using mutate:
+
+```
+Add a column named "total_tat" to *covid_testing* that contains the total turnaround time (i.e. the sum of `col_rec_tat` and `rec_ver_tat`) for each test.
+
+\`\`\`{r}
+mutate(______, total_tat = ______)
+\`\`\`
+```
+
+Here's the solution.  We begin the `mutate` statement with our first argument being the data frame we want to see altered, in our case `covid_testing`.  We then use a single equal to set a new value, `total_tat`, which is set equal to the sum of `col_rec_tat` and `rec_ver_tat`.
+
+```{r}
+mutate(covid_testing, total_tat = col_rec_tat + rec_ver_tat)
+```
+
+Finally, we asked you to change that last code you just wrote:
+
+```
+Now re-write the previous code chunk to use the %>% operator.
+
+\`\`\`{r}
+
+\`\`\`
+```
+
+And here's that last solution!  It does the same thing as the second bit of code, but in a different (and some would argue, more useful, format).
+
+```
+\`\`\`{r}
+covid_testing %>%
+  mutate(total_tat = col_rec_tat + rec_ver_tat)
+\`\`\`
+```
 
 ## Recap
 
