@@ -105,14 +105,18 @@ The data we will use in this module is a data frame called `covid_testing`, whic
 
 This is what that data looks like:
 
-![A screen capture of what the `covid_testing` data frame looks like in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)<!--
-style = "max-width:1000px;"-->
+![The `covid_testing` data frame in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)<!--
+style = "max-width:800px;"-->
 
 You will be asked to do some code-based exercises at the **end** of this module, but you may find it useful to use the sample code and data throughout the module.
 
 On the next page, you'll learn how to get access to the sample code.  
 
 ## Lesson Preparation: Our RStudio Environment
+
+You can do this step now, if you like to follow along throughout and try out code as you go.  Or, we'll present this step again at the end, when we give you some concrete tasks to perform.  It's totally up to you!  
+
+Please read over both options before you start performing any actions, to make sure you pick the right option for you.
 
 <h3>Option 1: Work in the Cloud</h3>
 
@@ -133,7 +137,7 @@ style = "border: 1px solid rgb(var(--color-highlight));"-->
 **Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
 
 ![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
-style = "border: 1px solid rgb(var(--color-highlight));"-->
+style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
 
 
 <h3>Option 2: Work on Your Computer</h3>
@@ -146,7 +150,7 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 * Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
 * Click to select the "Open in new session" checkbox
 * Click "Create Project"
-* In the file area to the lower right, you'll see, among multiple choices, the folder called "r_basics_transform_data".  That's the code for this module!
+* In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
 
 **Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
 
@@ -172,8 +176,7 @@ You can use this module in a couple of different ways:
 * If you have experience working in R markdown and want to try out some of the code we share with you as we go along, please go ahead and open the "r\_basics\_transform\_data" directory, then the "exercises" directory.  You can open "transform.Rmd" and add some code chunks for your own experimentation.  Or, create a new R Markdown file that begins with reading in the .csv file in the "exercises" directory.
 * Not sure you are ready to DIY?  Prefer to learn some concepts first, then do some hands-on work at the end?  Then just follow our steps and we'll guide you through the exercise file when you reach the end of the module.  No need to worry about trying out the code along the way.
 
-![RStudio showing the transform.Rmd file](media/rstudio_exercises.png)
-
+![RStudio showing the transform.Rmd file.  A text box suggests copying and pasting the first code chunk in transform.Rmd into a new R Markdown file, or adding chunks below the first chunk for experimentation.](media/rstudio_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
 
 ## The `dplyr` Package
 
@@ -359,7 +362,7 @@ Use `!=` if you want to select rows in which a value is **not** equal to another
 `is.na()` is how you can test for missing values (`NA` in R). This comes in handy when you want to remove missing values from your data, which we'll see later.
 
 <div class = "question">
-Write a `filter()` statement that returns a data frame containing only the rows from `covid_testing` in which the `last_name column` is NOT equal to "stark". Don't capture the returned data frame to assign it to an object.
+In the box below, write a `filter()` statement that returns a data frame containing only the rows from `covid_testing` in which the `last_name column` is NOT equal to "stark". Don't capture the returned data frame to assign it to an object.
 
 [[filter(covid_testing, last_name != "stark")]]
 [[?]] Hint: We include a space after any comma and on either side of the comparison operator `!=`.  We also aren't assigning the results of this `filter` to a new object.
@@ -554,7 +557,7 @@ Here's why the pipe (`%>%`) is so useful.
 
 This makes it possible to create a pipeline in which a data frame object is handed from one `dplyr` function to the next.  The data frame result of step 1 becomes the data frame starting point for step 2, then the result of step 2 becomes the starting point for step 3, and so on.
 
-For example, here we start with `covid_testing`, then `select` the `last_name` and `result columns`, then `filter` to get rows where `result` is equal to "positive".
+For example, here we start with `covid_testing`, then `select` the `last_name` and `result` columns, then `filter` to get rows where `result` is equal to "positive".
 
 ```
 covid_testing %>%
@@ -588,7 +591,7 @@ By connecting logical steps, you can get a **pipeline** of data analysis steps w
 This approach to coding is powerful because it makes it much easier for someone who doesn't know R well to read and understand your code as a series of instructions.   
 
 <div class = "question">
-Rewrite the following statement with a pipe:
+In the box below, rewrite the following statement with a pipe:
 
 `select(mydata, first_name, last_name)`
 
@@ -645,11 +648,13 @@ mutate(covid_testing,
 
 Upon executing the code, `mutate()` creates the new column and fills each row with the result of the calculation:
 
-![On the left, two columns of the `covid_testing` data frame are shown: mrn and `col_rec_tat`.  The first few rows are given.  This data frame is followed by an arrow pointing to a new data frame on the right, which is the same as the one on the left with the exception of a new column, titled `col_rec_tat_mins`, which has appropriate values filled in.](media/mutate_covid_example.png)
+![On the left, two columns of the `covid_testing` data frame are shown: mrn and `col_rec_tat`.  The first few rows are given.  This data frame is followed by an arrow pointing to a new data frame on the right, which is the same as the one on the left with the exception of a new column, titled `col_rec_tat_mins`, which has appropriate values filled in.](media/mutate_covid_example.png)<!-- style = "max-width: 800px;" -->
 
 ## Let's Make Sure You're Connected!
 
 If you're already set up in RStudio with the materials for this course (we had some instructions early on), you can skip this page and go ahead to the next!
+
+If you haven't yet started to work in the files for this module, please read over both options below before choosing one to continue with.
 
 <h3>Option 1: Work in the Cloud</h3>
 
@@ -670,7 +675,7 @@ style = "border: 1px solid rgb(var(--color-highlight));"-->
 **Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
 
 ![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
-style = "border: 1px solid rgb(var(--color-highlight));"-->
+style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
 
 
 <h3>Option 2: Work on Your Computer</h3>
@@ -683,7 +688,7 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 * Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
 * Click to select the "Open in new session" checkbox
 * Click "Create Project"
-* In the file area to the lower right, you'll see, among multiple choices, the folder called "r_basics_transform_data".  That's the code for this module!
+* In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
 
 **Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
 
@@ -695,26 +700,56 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
 </figure>
 
-If it's been a while since you downloaded this project to your computer, and you want to get any new and improved files that have been placed there in the meantime:
+If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime:
 
 * Open your project.
 * In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
 
-![Git button menu with choices to pull and push branches](media/pull_branches.png)  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)
+![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
 
 ## Work On Data Transformation
 
 Within the `r_basics_transform_data` folder, please open the `exercises` folder and then open `transform.Rmd` to work through the exercises.  You'll see something like the below.
-![RStudio window showing transform.Rmd](media/r_transform_exercise.png)
+
+![RStudio window showing transform.Rmd](media/r_transform_exercise.png)<!-- style = "max-width: 800px; border: 1px solid rgb(var(--color-highlight))" -->
 
 To work in this file:
 
 (1) Run the first code chunk by clicking the green "play" button (look at line 6).  This gives you the data frame with fake Covid testing data, the data we've been using for our instruction in this module so far.
 (2) For each of the three code chunks below the first one, please read the instructions before the code chunk and then add the right code to the code chunk to make it work.
 
+When you've done the best you can on your own, go to the next page, where we'll discuss the solutions.
+
+## Solutions for Data transformation
+
+You can find the solution file in the "r\_basics\_transform\_data" directory, within "solutions".  Simply open the version of `transform.Rmd` in that folder to see the answers.  
+
+Not sure how to do that?  You can use the green "up" arrow in the file browser within RStudio, or click on the "breadcrumbs", to get from the "exercises" directory back up to the "r\_basics\_transform\_data" directory.  Then it's a snap to click to open "solutions".
+
+![RStudio file browser, with the "parent directory" up arrow and the breadcrumbs navigation highlighted](media/file_browser_navigation.png)
+
+In the first task, you were asked to create a dplyr pipeline:
+
+```
+Create a dplyr pipeline that:
+
+1. Starts with the *covid_testing* data frame, then
+
+2. Filters to tests that were sent from the PICU (Hint: `clinic_name` equal to "picu"), then
+
+3. Selects the column with the received-to-verified turnaround time (`rec_ver_tat`) as well as the column with the day from start of the pandemic (`pan_day`)
+
+\`\`\`{r}
+______ %>%
+  filter(______) %>%
+  select(______, ______)
+\`\`\`
+
+```
+
+Here's the solution:
 
 
-Once you're finished, or if you're stuck, try looking at the solutions in... JOY
 
 ## Recap
 
