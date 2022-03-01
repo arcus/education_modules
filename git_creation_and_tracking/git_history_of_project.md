@@ -102,7 +102,7 @@ index 0000000..f451386
 Sometimes a command will output many lines of code that may not be relevant to you. For example the `show` command will output not just the commit message, but also every single change that you made in that commit. If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press `q` to skip to the end of that output.
 </div>
 
-Maybe you want to look one step further back into your work. By using `HEAD~n` you can look back $n$ checkpoints in your repository.
+Maybe you want to look one step further back into your work. By using `HEAD~n` you can look back $n$ checkpoints in your repository. The `~` named "tilde" and pronounced "TIL-duh."
 
 For example, to look back just one commit before the most recent checkpoint, use `git show HEAD~1`. If instead you wanted to look back three checkpoints (the most recent and then two before that) you would enter `git show HEAD~2`.
 
@@ -216,7 +216,7 @@ You could think of each commit not as a checkpoint, but the instructions on how 
 
 ## Comparing files to prior commits
 
-You might have noticed that `diff` was the first word after your commit message when you entered `git show HEAD`. The lines after that are **all** the changes that you made with that commit. When comparing earlier versions with the current version, you are usually only going to want to look at one file at a time. By typing `git diff HEAD`.... **work through behavior here, there will be a big divergence  (haha `diff`) in this behavior between command line git and github desktop**
+You might have noticed that `diff` was the first word after your commit message when you entered `git show HEAD`. The lines after that are **all** the changes that you made with that commit. When comparing earlier versions with the current version, you are usually only going to want to look at one file at  a time. By typing `git diff HEAD`.... **work through behavior here, there will be a big divergence  (haha `diff`) in this behavior between command line git and github desktop**
 *Or maybe we don't want to introduce github desktop at all, or just skip this section entirely for the github desktop module?*
 
 Using `diff` command to compare current version of `mars.txt` and earlier versions.
