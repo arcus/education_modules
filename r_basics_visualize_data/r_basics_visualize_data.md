@@ -4,18 +4,17 @@ email:    paytonk@chop.edu
 version:  1.2
 language: en
 narrator: US English Female
-title: R Basics: Transforming Data With dplyr
-comment:  Learn how to transform (or wrangle) data using R's `dplyr` package.
-long_description: Do you want to learn how to work with tabular (table-shaped, with rows and columns) data in R?  In this module you'll learn in particular how to select just the rows and columns you want to work with, how to create new columns, and how to create multi-step transformations to get your data ready for visualization or statistical analysis.  This module teaches the use of the `dplyr` package, which is part of the `tidyverse` suite of packages.
+title: R Basics: Visualizing Data With ggplot2
+comment:  Learn how to visualize data using R's `ggplot2` package.
+long_description: Do you want to learn how to make some basic data visualizations in R?  In this module you'll learn about the "grammar of graphics" and the base code that you need to get started making any visualization using the basic ingredients of a tidy data frame, a geometric type, and some aesthetic mappings (we'll explain what all of those are).  This module teaches the use of the `ggplot2` package, which is part of the `tidyverse` suite of packages.
 
 @learning_objectives  
 
 After completion of this module, learners will be able to:
 
-- Write R code that uses the `dplyr` package to select only desired columns from a data frame
-- Write R code that uses the `dplyr` package to filter only rows that meet a certain condition from a data frame
-- Write R code that uses the `dplyr` package to create a new column in a data frame
-- Use the "pipe" syntax to link a series of transformations in a "pipeline" that performs desired changes to a data frame
+- Describe what makes a data frame "tidy"
+- Identify geometric types available in `ggplot2`
+- Write R code that creates basic data visualizations
 
 @end
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
@@ -73,7 +72,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 script: https://kit.fontawesome.com/83b2343bd4.js
 -->
-# R Basics: Transforming Data With dplyr
+# R Basics: Visualizing Data With ggplot2
 
 <div class = "overview">
 
@@ -92,6 +91,8 @@ Minimal experience of using the RStudio IDE and writing R code (specifically, wi
 * Run a command that's provided to you in the console
 * Use the Environment tab to find a data frame and learn more about it
 * Insert a new code chunk in an R Markdown document
+
+This course is designed for R beginners with minimal experience and it is not an advanced course in ggplot2.  If you have experience with ggplot2 already, you may find our "Data Visualization in ggplot2", which is more advanced, a better fit for your needs.
 
 **Learning Objectives**
 
@@ -134,7 +135,7 @@ style = "border: 1px solid rgb(var(--color-highlight));"-->
 </div>
 </div>
 
-**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
+**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_visualize\_data".  That's the code for this module!
 
 ![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
 style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
@@ -150,7 +151,7 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 * Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
 * Click to select the "Open in new session" checkbox
 * Click "Create Project"
-* In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
+* In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_visualize\_data".  That's the code for this module!
 
 **Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
 
