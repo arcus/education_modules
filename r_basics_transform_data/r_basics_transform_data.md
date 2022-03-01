@@ -729,7 +729,7 @@ You can find the solution file in the "r\_basics\_transform\_data" directory, wi
 
 Not sure how to do that?  You can use the green "up" arrow in the file browser within RStudio, or click on the "breadcrumbs", to get from the "exercises" directory back up to the "r\_basics\_transform\_data" directory.  Then it's a snap to click to open "solutions".
 
-![RStudio file browser, with the "parent directory" up arrow and the breadcrumbs navigation highlighted](media/file_browser_navigation.png)
+![RStudio file browser, with the "parent directory" up arrow and the breadcrumbs navigation highlighted](media/file_browser_navigation.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
 
 In the first task, you were asked to create a dplyr pipeline:
 
@@ -746,14 +746,14 @@ Create a dplyr pipeline that:
 ______ %>%
   filter(______) %>%
   select(______, ______)
-```
+\`\`\`
 
 ```
 
 Here's the solution.  We start with `covid_testing` in the first line, then we apply a filter in the second line (making sure to use that double equals sign).  Finally, we finish our pipeline by using select to just give us the columns we're interested in.
 
 ```
-\`\`\`{r}
+```{r}
 covid_testing %>%
   filter(clinic_name == "picu") %>%
   select(rec_ver_tat, pan_day)
@@ -765,15 +765,17 @@ In the next task, you were asked to try using mutate:
 ```
 Add a column named "total_tat" to *covid_testing* that contains the total turnaround time (i.e. the sum of `col_rec_tat` and `rec_ver_tat`) for each test.
 
-\`\`\`{r}
+```{r}
 mutate(______, total_tat = ______)
 \`\`\`
 ```
 
 Here's the solution.  We begin the `mutate` statement with our first argument being the data frame we want to see altered, in our case `covid_testing`.  We then use a single equal to set a new value, `total_tat`, which is set equal to the sum of `col_rec_tat` and `rec_ver_tat`.
 
+```
 ```{r}
 mutate(covid_testing, total_tat = col_rec_tat + rec_ver_tat)
+\`\`\`
 ```
 
 Finally, we asked you to change that last code you just wrote:
@@ -844,3 +846,19 @@ Beyond dplyr, there are a number of other `[tidyverse](https://www.tidyverse.org
 * `dbplyr` allows you to interact with a table inside a database as if it were a data frame
 
 ![A set of five hexagonal logos: one each for tidyr (futuristic brooms fly up and to the right), lubridate (a calendar and clock), stringr (a violin), purrr (a hand-drawn sketch of a cat), and dbplyr (futuristic channellock pliers flying up and to the right)](media/tidyverse_logos.png)
+
+## Feedback
+
+In the beginning, we stated some goals.
+
+**Learning Objectives:**
+
+@learning_objectives
+
+We ask you to fill out a brief (5 minutes or less) survey to let us know:
+
+* If we achieved the learning objectives
+* If the module difficulty was appropriate
+* If we gave you the experience you expected
+
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Basics+Transform+Data%22)!
