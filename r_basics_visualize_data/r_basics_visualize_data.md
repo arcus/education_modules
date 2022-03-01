@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.2
+version:  1.3
 language: en
 narrator: US English Female
 title: R Basics: Visualizing Data With ggplot2
@@ -727,7 +727,7 @@ When you've done the best you can on your own, go to the next page, where we'll 
 
 You can find the solution file in the "r\_basics\_transform\_data" directory, within "**solutions**".  Simply open the version of `transform.Rmd` in that folder to see the answers.  
 
-Not sure how to do that?  You can use the green "up" arrow in the file browser within RStudio, or click on the "breadcrumbs", to get from the "exercises" directory back up to the "r\_basics\_transform\_data" directory.  Then it's a snap to click to open "solutions".
+Not sure how to do that?  You can use the green "up" arrow in the file browser within RStudio, or click on the "breadcrumbs", to get from the "exercises" directory back up to the "r\_basics\_transform\_data" directory.  Then you can open the "solutions" directory and see the solution file `transform.Rmd`.
 
 ![RStudio file browser, with the "parent directory" up arrow and the breadcrumbs navigation highlighted](media/file_browser_navigation.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
 
