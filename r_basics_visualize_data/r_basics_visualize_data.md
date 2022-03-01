@@ -1,12 +1,12 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.2
+version:  0.4
 language: en
 narrator: US English Female
 title: R Basics: Visualizing Data With ggplot2
 comment:  Learn how to visualize data using R's `ggplot2` package.
-long_description: Do you want to learn how to make some basic data visualizations in R?  In this module you'll learn about the "grammar of graphics" and the base code that you need to get started making any visualization using the basic ingredients of a tidy data frame, a geometric type, and some aesthetic mappings (we'll explain what all of those are).  This module teaches the use of the `ggplot2` package, which is part of the `tidyverse` suite of packages.
+long_description: Do you want to learn how to make some basic data visualizations (graphs) in R?  In this module you'll learn about the "grammar of graphics" and the base code that you need to get started.  We'll use the basic ingredients of a tidy data frame, a geometric type, and some aesthetic mappings (we'll explain what all of those are).  This module teaches the use of the `ggplot2` package, which is part of the `tidyverse` suite of packages.
 
 @learning_objectives  
 
@@ -115,7 +115,7 @@ On the next page, you'll learn how to get access to the sample code.
 
 ## Lesson Preparation: Our RStudio Environment
 
-You can do this step now, if you like to follow along throughout and try out code as you go.  Or, we'll present this step again at the end, when we give you some concrete tasks to perform.  It's totally up to you!  
+Please do this step now, because we're going to ask you to follow along throughout and try out code as you go.  
 
 Please read over both options before you start performing any actions, to make sure you pick the right option for you.
 
@@ -158,7 +158,7 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/education_modules/blob/r_basics_visualize_data/r_basics_visualize_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_visualize_data/r_basics_visualize_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
 </figure>
@@ -176,37 +176,145 @@ If you already completed this work for a previous module, and it's been a while 
 
 You can use this module in a couple of different ways:
 
-* If you have experience working in R markdown and want to try out some of the code we share with you as we go along, please go ahead and open the "r\_basics\_transform\_data" directory, then the "exercises" directory.  You can open "transform.Rmd" and add some code chunks for your own experimentation.  Or, create a new R Markdown file that begins with reading in the .csv file in the "exercises" directory.
+* If you have experience working in R markdown and want to try out some of the code we share with you as we go along, please go ahead and open the "r\_basics\_visualize\_data" directory, then the "exercises" directory.  You can open "visualize.Rmd" and add some code chunks for your own experimentation.  Or, create a new R Markdown file that begins with reading in the .csv file in the "exercises" directory.
 * Not sure you are ready to DIY?  Prefer to learn some concepts first, then do some hands-on work at the end?  Then just follow our steps and we'll guide you through the exercise file when you reach the end of the module.  No need to worry about trying out the code along the way.
 
-![RStudio showing the transform.Rmd file.  A text box suggests copying and pasting the first code chunk in transform.Rmd into a new R Markdown file, or adding chunks below the first chunk for experimentation.](media/rstudio_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
+![RStudio showing the transform.Rmd file.  A text box suggests copying and pasting the first code chunk in visualize.Rmd into a new R Markdown file, or adding chunks below the first chunk for experimentation.](media/rstudio_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
 
-## The `dplyr` Package
+## Thinking Graphically From Data, Part 1
 
-<div style = "margin: 1rem; max-width: 75%; float:left;">
-`dplyr` (pronounced dee-ply-er, a play on words with "data" and "pliers") is a useful R package we'll discuss.  The various functions we'll use, like `select`, `filter`, and `mutate` are all functions that belong to the `dplyr` package.  In R, we bring in the functionality of a package by using the `library()` command.  Because `dplyr` forms part of the `tidyverse` suite of packages, we can bring in the useful functions of `dplyr` by either using the `library(dplyr)` command or the `library(tidyverse)` command.
+Let's try to imagine some **data visualizations** (also known as **plots** and **graphs**, and we may use all of these terms interchangably).
 
-Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`.  But if you're using the course materials in your own computer's installation of RStudio, it's possible you don't have `tidyverse` installed.  If you get a message telling you that there's no package installed with that name, issue this command: `install.packages("tidyverse")`.
+Consider the `covid_testing` data frame shown below, which we'll work on in the hands-on part of this module.  Think about what the columns mean and which columns you might like to see represented on a data visualization.
+
+![The `covid_testing` data frame in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)<!--
+style = "max-width:800px;"-->
+
+What do you think a plot would look like in which:
+
+* the x-axis represents `pan_day` (day of the pandemic), and
+* the y-axis represents the number of tests that were performed on that day?
+
+Take a few seconds and try to visualize this graph in your mind or doodle it on a piece of paper in front of you.
+
+## Thinking Graphically From Data, Part 2
+
+What we've asked you to imagine is a plot in which we have the **count** or the **frequency** of a test on the y axis, plotted against the pandemic day, represented by the x axis. Do you know the name of that type of plot that has the count of a thing on the y axis and the distribution of those counts along the x axis?
+
+Here's another example of that kind of plot:
+
+![A normally distributed or bell-shaped curve.  The x axis ranges from -3 to 3 while the y axis goes from 0 to 200](media/small_histogram.png)
+
+<div class = "question">
+In the box below, write what you think the name of this is (all lowercase, please).
+
+[[histogram]]
+[[?]] Hint: this word ends in "gram"
+
+<div class = "answer">
+<details><summary>Click to see an explanation of the answer.</summary>
+
+"histogram" is the right answer!  A histogram plots the frequency of something in terms of some other thing (for instance, a time value like days).  In our next section, we're going to build a histogram.
+</details>
 </div>
-<div style = "margin: 1rem auto; max-width: 20%; float:left;">
-![`dplyr` logo: three sets of futuristic, colorful pliers that appear to be moving upward and to the right.  The word "dplyr" appears in the upper left of the logo, which is in the shape of a hexagon.](media/dplyr_logo.png)</div>
+</div>
 
-## Subsetting Columns or Rows
+## Building Your First Histogram
 
-Often, you have a large data frame but want to create a graph or analyze data from only a small part of it. The `dplyr` package, part of the larger [tidyverse](https://www.tidyverse.org/) set of packages, works great for this purpose.
+Please go to your RStudio environment (either the version in the cloud or your local RStudio that you've prepared with a project containing our files for this module).  
 
-Let's look at how you can subset a data frame (choose only certain columns and/or rows) by using `dplyr`.
+Using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` folder, and then open the `exercises` folder.  You should then open `visualize.Rmd`, which will allow you to work alongside the sections of this module.
 
-`dplyr` provides two functions for subsetting data frames: `select()` for subsetting columns, and `filter()` for subsetting rows:
+![RStudio window showing visualize.Rmd](media/r_visualize_exercise.png)<!-- style = "max-width: 800px; border: 1px solid rgb(var(--color-highlight))" -->
 
-`select()` reshapes data so that it includes only the columns you specify. ![A grey colored data frame of five columns, with three of them selected (as indicated by a blue color), is transformed into a data frame of three selected (blue colored) columns](media/dplyr_select.png)<!--
-style = "max-width:500px;"-->
+To get started, let's first load up our fabricated data.  Run the first code chunk by clicking the green "play" button (look at line 10).  This gives you the data frame with fake Covid testing data, the data we will use for our instruction in this module.
 
-`filter()` reshapes data so that it includes only the rows that meet your conditions. ![A grey colored data frame of four rows and a header row, with two rows selected (as indicated by a blue color), is transformed into a data frame of two selected (blue colored) rows, along with a header.](media/dplyr_filter.png)<!--
-style = "max-width: 600px;"
--->
+For the next step, we'd like for you to go into the **console** to practice running some code there.  The console is usually in the lower left pane (or it might take up the whole left side, if you don't have any files open yet).
 
-## The `select()` Function
+In the console, please type in the following.  While you can certainly cut and paste, there is sometimes an advantage to typing the code by hand, because it helps you develop "muscle memory" about how to construct code.  Pay attention to the spelling, capitalization, and parentheses!  
+
+``` r
+
+ggplot(data = covid_testing) +
+  geom_histogram(mapping = aes(x = pan_day))
+
+```
+
+And yes, you can hit "Enter" after that plus sign and keep typing on the next line.  There will be a little plus sign on the second line that lets you know that the console is accepting the second line as a continuation of the first.  When you're finished, just hit "Enter" to run that code.  
+
+When you run the code, you'll  see a graph open up in the lower right pane, and your console should look something like this:
+
+![R console showing code and a red message that reads "`stat_bin()` using `bins = 30`. Pick better value with `binwidth`"](media/r_console.png)
+
+When you run this code, you get what looks like an error in the consol but is actually just a message (even though it's in a scary red color).
+
+R lets you know that when you ask it to draw a histogram, you should probably tell it how wide each bin should be, because this affects the granularity of the data displayed.  You can either set the number of bins (say, 10 bins or 100 bins) or you can set the bin width (like 1 to make a bin 1 day wide, 7 to make a bin one week wide, etc.)
+
+## The Power of Data visualizations
+
+![Histogram of covid tests by day of pandemic](media/covid_histogram.png)
+
+When we asked you to imagine what this plot might look like - the number of COVID tests that were performed on a given day over time – you might have imagined something like this. Initially you have very few tests that are being run, maybe because the pandemic hasn’t started yet and maybe also because the test isn’t yet broadly available. And at some point the number of tests shoots up and remains at a high level. But this simple visualization tells you so much more than that general shape. You can see that by 30 days, the testing ramp-up settles. And there appear to be some interesting things going on after day 60 that you might want to look into further.
+
+Even though this graph isn't publication-perfect (at least not yet), it's still very useful for honing your knowledge about the data.
+
+## Introducing ggplot2
+
+We'll be using the ggplot2 package for creating graphics. ggplot2 is part of the tidyverse so it will get loaded when you load the tidyverse package.
+
+ggplot2 (and its main function, plain old "ggplot" without the 2) provides a "**grammar of graphics**" for data visualization. The idea of having a "grammar" for something is actually pretty common in R. Essentially, there should be a consistent way to build any type of graph. This makes it easier to learn and also easier to for humans to read the code later and make sense of it. And that's super important because most people who use R are not programmers.
+
+The idea of the grammar of graphics is that you should be able to specify any type of graph by specifying the data that goes into it, a the type of graph that you want to make, and a mapping that describes how the data should be represented as visual marks on that graph.
+
+Having a consistent grammar means that once you learn how to make a histogram that knowledge can be applied to make a scatter plot with little extra effort. This makes it easy to generate lots of different graphs quickly which helps you understand your data more quickly.
+
+Also, ggplot2 graphs look great and the package can be used to generate publication-quality plots.
+
+![ggplot2 logo on a hexagon.  The logo consists of the word "ggplot2" superimposed on light grey graph paper with a line graph connecting blue dots of different shades](media/ggplot2_hex.png)
+
+## The ggplot() functions
+
+So here is a quick analysis of how we just used ggplot to make that histogram.
+
+
+<table>
+<tr><td>1) We always start with `ggplot()`.</td>
+<td><code style = "color: grey">
+<span style = "color: rgb(var(--color-text))">ggplot(</span>data = covid_testing<span style = "color: rgb(var(--color-text))">)</span> +
+  geom_histogram(mapping = aes(x = pan_day))
+<code>
+</td></tr>
+<tr><td>2) Give ggplot a **data frame** to start with, in this case, our `covid_testing` data frame.</td>
+<td><code style = "color: grey">
+ggplot(<span style = "color: rgb(var(--color-text))">data = covid_testing</span>) +
+  geom_histogram(mapping = aes(x = pan_day))
+<code>
+</td></tr>
+<tr><td>3) We build our plot across several different lines, so we include a `+` to say "wait, we're not done yet!"
+</td>
+<td><code style = "color: grey">
+ggplot(data = covid_testing) <span style = "color: rgb(var(--color-text))">+ </span>
+  geom_histogram(mapping = aes(x = pan_day))
+<code>
+</td></tr>
+<tr><td>4) In the second line, we describe what kind of geometric representation we want -- a histogram.
+</td>
+<td><code style = "color: grey">
+ggplot(data = covid_testing) +
+  <span style = "color: rgb(var(--color-text))">geom_histogram(</span>mapping = aes(x = pan_day)<span style = "color: rgb(var(--color-text))">)</span>
+<code>
+</td></tr>
+<tr><td>5) We also add some mappings, explaining which data from the data frame should be displayed in the histogram.  We use "aes" (short for "aesthetic" or "aesthetic mapping") to tell ggplot how to draw the visualization.  We only have to specify the x axis, because a histogram assumes that you're counting rows of data and will map that to the y axis.
+</td>
+<td><code style = "color: grey">
+ggplot(data = covid_testing) +
+  geom_histogram(<span style = "color: rgb(var(--color-text))">mapping = aes(x = pan_day)</span>)
+<code>
+</td></tr>
+</table>
+
+
+
 
 Let's see what you remember about dplyr!
 
