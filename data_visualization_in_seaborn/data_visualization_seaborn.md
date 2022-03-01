@@ -132,7 +132,7 @@ To learn more about the study, see the [zenodo page for this dataset](https://ze
 <div class="learnmore">
 Run the above code yourself in binder (see [lesson preparation](#lesson-preparation) for links to start the binder instance) or on your own computer.
 
-In the data_visualization_seaborn.ipynb file, the code at the top of the file includes these import commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
+In the data\_visualization\_seaborn.ipynb file, the code at the top of the file includes these import commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
 </div>
 
 ## Scatterplots
@@ -173,11 +173,16 @@ Note that adding hue to the command automatically adds a legend to your plot as 
 
 ### Using color to show groups
 
-Now let's look at using color for a categorical variable. In this case, the variable is a categorical one (is_smoker, with options ex_fumeur, fumeur, and non_fumeur, referring to former smokers, current smokers, and non-smokers, respectively).
+Now let's look at using color for a categorical variable. In this case, the variable is a categorical one (`is_smoker`, with options `ex_fumeur`, `fumeur`, and `non_fumeur`, referring to former smokers, current smokers, and non-smokers, respectively).
 
-The values entered for is_smoker in the data are actually much longer than we need them to be --- they include the text of the option after the shorthand for it (e.g. former smokers are indicated by "ex_fumeur__j_ai_fum__mais_ne_fume_plus"). We don't want that additional text in the plot, so we'll recode that variable now.
+The values entered for `is_smoker` in the data are actually much longer than we need them to be --- they include the text of the option after the shorthand for it (e.g. former smokers are indicated by `ex_fumeur__j_ai_fum__mais_ne_fume_plus`). We don't want that additional text in the plot, so we'll recode that variable now.
 
 ```Python
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
 
 ```
 
@@ -185,7 +190,7 @@ The values entered for is_smoker in the data are actually much longer than we ne
 For a refresher, see this tutorial on [recording variables in a pandas dataframe](https://www.sfu.ca/~mjbrydon/tutorials/BAinPy/05_recode.html#replacing-values-from-a-list).
 </div>
 
-Then we can update our scatterplot to use is_smoker for color.
+Then we can update our scatterplot to use `is_smoker` for color.
 
 ```Python
 sns.relplot(data = covid_data,
@@ -228,7 +233,7 @@ sns.relplot(data = covid_data,
 ```
 ![Age and glucose scatterplot from the previous figure, with Classification represented as blue circles for Classification 1 and orange x's for Classification 2. The shades of blue and orange are slightly different from in the previous plots.](media/seaborn_scatter_5.png)
 
-Rather than changing the palatte for each individual plot, you may want to change the default color palatte for all of the plots you're generating. To do that, use `set_theme` to change the default settings for seaborn plots.
+Rather than changing the palette for each individual plot, you may want to change the default color palatte for all of the plots you're generating. To do that, use `set_theme` to change the default settings for seaborn plots.
 
 ```Python
 # to set the colorblind palette as default
@@ -238,7 +243,7 @@ sns.set_theme(palette="colorblind")
 Now all of our plots will use the `colorblind` palette, unless we specify otherwise.
 
 <div class = "learnmore">
-The seaborn library has many different built-in color palattes to choose from. To learn more about setting custom colors in seaborn visualizations, see the [seaborn tutorial on color palettes](https://seaborn.pydata.org/tutorial/color_palettes.html).
+The seaborn library has many different built-in color palettes to choose from. To learn more about setting custom colors in seaborn visualizations, see the [seaborn tutorial on color palettes](https://seaborn.pydata.org/tutorial/color_palettes.html).
 </div>
 
 ### Controlling figure aesthetics
