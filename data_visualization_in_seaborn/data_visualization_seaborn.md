@@ -313,15 +313,119 @@ While x and y are the only two **crucial** arguments for you to supply the plott
 
 ## Histograms
 
+Histograms show the distribution of a continuous variable. The values of the variable are shown along the x-axis, and data are grouped into bins, with the height of each bin corresponding to the number of data points in that bin. In other words, it communicates where your data for a given variable fall within its range. It is a great way to quickly assess for symmetry vs skew, outliers, and less common issues like multimodality.
+
+We'll continue using the same data we explored to make scatter plots.
+
+### Basic histogram
+
+Because histograms show just one variable, the only aesthetic they require is x. The y-axis of the plot will just show the counts of observations in each bin on the x-axis. (Note that it is possible to provide `sns.displot` with y instead of x, in which case it will generate a sideways histogram.)
+
+```python
+sns.displot(covid_data, x="val_age")
+```
+
+![Histogram showing the distribution of age values.](media/seaborn_hist_1.png)
+
+
 ### Change the number of bins
+
+The appearance of a histogram can change a lot depending on the number of bins you use along the x-axis. It's a good idea to try a few different sets of bins to see what works well for communicating this distribution.
+
+```python
+sns.displot(covid_data, x="val_age", binwidth=1)
+
+```
+
+![Histogram showing the distribution of ages with many narrow bins, each representing a single year.](media/seaborn_hist_2.png)
+
+```python
+sns.displot(covid_data, x="val_age", binwidth=10)
+```
+
+![Histogram showing the distribution of ages with eight wide bins, each representing a decade.](media/seaborn_hist_3.png)
 
 ### Using color to show groups
 
+As with scatterplots, we can add information about an additional variable by using color. Let's put in the variable `is_smoker` for hue so we can see how the distribution of ages differs by smoking status.
+
+Note that seaborn is continuing to use the color palette we set when we were making scatter plots (see [custom colors](#custom-colors)). If you want to change the color palette, you can do so at any time.
+
+```python
+sns.displot(covid_data, x="val_age", hue="is_smoker")
+
+```
+
+![Histogram showing the distribution of ages, with non-smokers in blue, smokers in orange, and ex-smokers in green, overlaid.](media/seaborn_hist_4.png)
+
+You may be noticing that the distribution of non-smokers, which makes up the majority of the data, appears to be covering the other smaller groups. By default, seaborn plots each group as if they were each their own histogram, making each slightly translucent so you can see where distributions overlap. The height of each colored bar shows the count for that bin within that group.
+
+That's often the most useful way to plot multiple histograms, but in this case, it makes it hard to see the smoker and ex-smoker distributions clearly because they fall completely within the non-smoker distribution.
+
+You can control how `seaborn` plots the distributions with the `multiple` argument. To show stacked groups instead, use `multiple = "stack"`. This will put the three distributions one on top of the other, so the height of all three colors together in each bin corresponds to the total count across groups; the silhouette of this histogram will be identical to the original histogram without coloring by group.
+
+
+```python
+sns.displot(covid_data, x="val_age", hue="is_smoker", multiple="stack")
+```
+
+![Histogram showing the distribution of ages, with non-smokers in blue, smokers in orange, and ex-smokers in green, stacked.](media/seaborn_hist_5.png)
+
 <div class = "options">
-You can also use `displot` to create [density plots](https://seaborn.pydata.org/tutorial/distributions.html#kernel-density-estimation) instead of histograms.
+You can also use this same `displot` function to create [density plots](https://seaborn.pydata.org/tutorial/distributions.html#kernel-density-estimation) instead of histograms.
+</div>
+
+### Adding marginal histograms to other plots
+
+Some times you may wish to show a distribution as context for another plot, such as a scatter plot. You can add marginal histograms to a bivariate plot with the `jointplot` function.
+
+```python
+sns.jointplot(data=covid_data, x="val_age", y="val_height_cm")
+```
+
+![Age and height scatterplot from the previous section on scatter plots, but with two small histograms added, one along the top showing the distribution of ages and another along the right edge showing the distribution of heights.](media/seaborn_hist_6.png)
+
+By default, it plots x and y as a scatterplot, adding a marginal histogram for each.
+
+<div class = "learnmore">
+Learn more about a variety of ways to add marginal distribution information to plots in the [seaborn distributions tutorial](https://seaborn.pydata.org/tutorial/distributions.html#distribution-visualization-in-other-settings).
 </div>
 
 ### Quiz: Histograms
+
+Which of the following aesthetics can be used to plot a histogram using `displot`?
+
+[( )] x only
+[(X)] either x or y
+[( )] y only
+[( )] both x and y
+****
+<div class = "answer">
+Histograms can only make use of one dimension of data (x or y, but never both) because the other dimension will always be the count of observations in each bin. If you try to provide variables for both x and y, `seaborn` will plot a [bivariate distribution heatmap](https://seaborn.pydata.org/tutorial/distributions.html#visualizing-bivariate-distributions) instead of a histogram.
+
+In all of our examples, we used the x argument for our histograms, but it is possible to provide y instead. As an experiment, try generating one of the plots above, but substitute y for x and see what happens!
+</div>
+****
+
+True or False: To show multiple histograms for different subgroups on a single plot (e.g. age distributions for smokers, non-smokers, and ex-smokers), use the `jointplot` function.
+
+[( )] True
+[(X)] False
+****
+The `jointplot` function is for showing a bivariate plot with supplemental univariate distributions in the margins (for a review, see [adding marginal histograms to other plots](#adding-marginal-histograms-to-other-plots)).
+
+To show histograms for two or more subgroups in a single plot, use the `hue` argument to color each subgroup separately (for a review, see [using color to show groups](#using-color-to-show-groups)).
+****
+
+True or False: The default binwidth in `seaborn` should work well for most data sets.
+
+[( )] True
+[(X)] False
+****
+Not necessarily! The `seaborn` defaults are sensible, so that's often a good starting place, but it can be dangerous to accept the default bins without examining other options.  Changing the binwidth on a histogram can dramatically change the patterns highlighted in the data, so it's always a good idea to try multiple binwidths when you're making a histogram.
+
+You can read more about this issue in the [seaborn distributions tutorial](https://seaborn.pydata.org/tutorial/distributions.html#choosing-the-bin-size).
+****
 
 ## Line Plots
 
