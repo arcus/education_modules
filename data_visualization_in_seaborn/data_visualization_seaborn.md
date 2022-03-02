@@ -520,17 +520,141 @@ What argument do you add to include facets in a `seaborn` plot?
   /col|row/i.test(input);
 </script>
 ****
-You can add facets to a plot by including the arguments for `col`, `row`, or both. 
+You can add facets to a plot by including the arguments for `col`, `row`, or both.
 ****
 
 ## Trend Lines
 
-### Quiz: Trend Lines
+Trend lines look like line plots, but they are different in one key way: They show a **summary** of other data (usually a linear model), rather than plotting data directly.
 
-## Assignment
+Trend lines are used to show the overall trend in a scatterplot. Sometimes, the scatterplot points themselves are omitted and just the trend lines are shown to keep the visualization as clean as possible, but they're still implied.
+
+### Linear regression trend lines
+
+Because trend lines are such a useful visual summary, `seaborn` provides several options to add trend lines to your plots quickly and easily.
+
+<div class = "options">
+There are two very similar functions available for drawing trend lines: `regplot` and `lmplot`. For many use cases, they are close to identical. For simplicity, we'll stick to `lmplot` in this lesson. Try subbing in `regplot` instead and make note of how the plots differ.
+
+For more background on `regplot` vs. `lmplot`, see [the seaborn regression tutorial](https://seaborn.pydata.org/tutorial/regression.html#controlling-the-size-and-shape-of-the-plot).
+</div>
+
+```python
+sns.lmplot(data = covid_data,
+            x="val_age", y="val_height_cm")
+```
+
+![Scatterplot with age on the x-axis and height on the y-axis, and a straight trend line running through the points, with a lighter shaded band around it.](media/seaborn_trend_1.png)
+
+A couple things about this plot are not ideal:
+
+1. Overplotting. The density of the scatter plot makes it hard to see the trend line as it runs through the bulk of the data.
+2. The linear trend doesn't appear to be a very good description of the relationship between age and height. It systematically over-estimates height at the very young ages, then under-estimates through early adulthood and over-estimates again late in life.
+
+We can address the first issue by adjusting alpha for the scatterplot. Alpha ranges between 0 (totally transparent) and 1 (totally opaque).
 
 <div class = "important">
+Tip: When your data overlap too much on a plot, use alpha to make them more transparent.
 </div>
+
+We face a problem here, though: Since we're using a single function to draw both the scatter plot and the trend line, how do we adjust alpha for the scatter plot without affecting the line?
+
+The solution is to pass additional arguments to the `matplotlib` functions on which `seaborn` is built.
+
+Although `seaborn` is great at making many complex data visualizations smoothly and with very few lines of code, it sometimes lacks control of little details within those plots. It is built on top of the extremely powerful and flexible `matplotlib` library, however, so if you ever find yourself wanting more control of your `seaborn` visualizations, the answer is often to leverage the underlying `matplotlib` functions.
+
+<div class = "care">
+There is a much steeper learning curve for `matplotlib` compared to `seaborn`, however, and you may find you're happy with most `seaborn` plots without needing additional control --- don't bother with it if it feels too overwhelming. When you're ready to read more about `matplotlib`, start with their [introductory tutorials](https://matplotlib.org/stable/tutorials/index).
+</div>
+
+In this case, we can add an argument `scatter_kws` that passes additional "keyword arguments" to the `matplotlib` function drawing the scatter plot via a [python dictionary](https://www.w3schools.com/python/python_dictionaries.asp). There are [many possible keyword arguments](https://matplotlib.org/3.5.1/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D) you can use, but we'll just set `alpha` here.
+
+```Python
+sns.lmplot(data = covid_data,
+            x="val_age", y="val_height_cm",
+           scatter_kws={"alpha": .1})
+```
+
+![The same scatter plot with trend line as above, but now the points of the scatterplot are much lighter, making the darker trend line easier to see on top of them.](media/seaborn_trend_2.png)
+
+This solves the overplotting issue, but we still have the problem of the linear trend line not being a good fit for the data.
+
+### Polynomial regression trend lines
+
+One way to add more flexibility to a linear trend line is by adding [polynomial terms](https://www.theanalysisfactor.com/regression-modelshow-do-you-know-you-need-a-polynomial/) to the model. A second order polynomial model includes linear and quadratic terms, a third order polynomial model includes linear, quadratic, and cubic terms, and so on.
+
+We'll try adding a quadratic term here, to see if it looks like a second order polynomial linear regression is a better description of the data.
+
+```python
+sns.lmplot(data = covid_data,
+            x="val_age", y="val_height_cm",
+           scatter_kws={"alpha": .1},
+           order = 2)
+```
+
+![The scatter plot with age on the x-axis and height on the y-axis, but now the trend line drawn is a upside-down U shape.](media/seaborn_trend_3.png)
+
+This appears to be a slight improvement on the linear regression model, especially at the youngest ages, but it is still systematically over-estimating height for young children and, because the quadratic trend follows a smooth arc shape, it predicts a drop in height at the older ages which is neither supported by the data nor sensible from a theoretical standpoint. A model that suggests height peaks around 40 years of age and then drops off dramatically does not make practical sense.
+
+<div class = "warning">
+As you add higher order polynomials, your regression line is allowed to follow more subtle patterns in the data, but interpretation gets much messier. It can be tempting to add higher and higher order polynomials until you achieve excellent model fit, but it's generally not advisable.
+
+In general, polynomial models are a good choice when the polynomial relationship is **theoretically motivated**, which almost always means sticking to second or third order polynomials only.
+</div>
+
+### Lowess curve trend lines
+
+If you want a high level of flexibility in your trend line, you can achieve that with much less complexity by switching to a non-parametric approach like [local regression](https://en.wikipedia.org/wiki/Local_regression), one example of which is lowess ("locally weighted scatterplot smoothing") curves.
+
+<div class = "learnmore">
+For a deeper understanding of what is meant by parametric vs. non-parametric models, see section 2.1.2 of the book [Statistical Learning](https://hastie.su.domains/ISLR2/ISLRv2_website.pdf).
+</div>
+
+```python
+sns.lmplot(data = covid_data,
+            x="val_age", y="val_height_cm",
+           scatter_kws={"alpha": .1},
+           lowess=True)
+```
+
+![The same scatter plot with age on the x-axis and height on the y-axis, but now the trend line drawn rises sharply from age 0 to 20 then levels off and is close to horizontal through the oldest ages.](media/seaborn_trend_4.png)
+
+<div class = "learnmore">
+There are several more options for kinds of trend lines to draw in `seaborn`, including [logistic regression trend lines and robust regression trend lines](https://seaborn.pydata.org/tutorial/regression.html#fitting-different-kinds-of-models).
+</div>
+
+### Quiz: Trend Lines
+
+What function can you use to draw a scatterplot with trend line?
+
+[[regplot, lmplot]]
+<script>
+  let input = "@input".trim();
+  /regplot|lmplot/i.test(input);
+</script>
+****
+Either `regplot` or `lmplot` can be used to draw scatter plots with trend lines.
+****
+
+Modify the code from the final example, the [lowess curve trend line](#lowess-curve-trend-lines), to separate out respondents by smoking status (`is_smoker`) with a separate facet for each.
+
+```r  -Solution
+sns.lmplot(data = covid_data,
+            x="val_age", y="val_height_cm",
+           scatter_kws={"alpha": .1},
+           lowess=True,
+           col = 'is_smoker')
+```
+
+Modify the code from the final example, the [lowess curve trend line](#lowess-curve-trend-lines), to get separate trend lines for each smoking status (`is_smoker`), but all shown together on single plot. (Hint: Use color to distinguish the groups.)
+
+```r  -Solution
+sns.lmplot(data = covid_data,
+            x="val_age", y="val_height_cm",
+           scatter_kws={"alpha": .1},
+           lowess=True,
+           hue = 'is_smoker')
+```
 
 ## Additional Resources
 
@@ -545,6 +669,8 @@ We have several interactive python data science notebooks available on google co
 - [Network analysis and visualization with NetworkX](https://colab.research.google.com/github/arcus/education-materials/blob/master/network-viz/introduction.ipynb)
 
 You may find the [pandas cheatsheet (pdf)](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) helpful.
+
+To learn how to make plots in R using ggplot2, see [data visualization in ggplot2](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md).
 
 ## Feedback
 
