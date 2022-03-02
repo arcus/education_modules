@@ -272,13 +272,14 @@ Also, ggplot2 graphs look great and the package can be used to generate publicat
 
 ![ggplot2 logo on a hexagon.  The logo consists of the word "ggplot2" superimposed on light grey graph paper with a line graph connecting blue dots of different shades](media/ggplot2_hex.png)
 
-## The ggplot() functions
+## The ggplot() Function
 
 So here is a quick analysis of how we just used ggplot to make that histogram.
 
 <lia-keep>
-<table>
-<tr><td style = "width = 50%">1) We always start with `ggplot()`.</td>
+<table style = "width = 100%">
+<tr><th style = "width = 30%"></th><th></th></tr>
+<tr><td>1) We always start with `ggplot()`.</td>
 <td><code style = "color: rgba(var(--color-text)), 0.3">
 <span style = "color: rgb(var(--color-text))">ggplot(</span>data = covid_testing<span style = "color: rgb(var(--color-text))">)</span> +
   geom_histogram(mapping = aes(x = pan_day))
@@ -314,6 +315,27 @@ ggplot(data = covid_testing) +
 </table>
 </lia-keep>
 
+## A Template
+
+So that was a lot of information. Let's break this down to build up to a more general template. Here's a preview of that template, and we'll spend the few sections or so exploring it.
+
+You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details written in normal text. To fill in the details, you need to do 3 things:
+
+* Pick a **tidy data frame** (this contains the data you want to plot)
+* Pick a **geom function** (this is the type of plot you want to make), and
+* Write **aesthetic mappings** (and we'll go over what that means)
+
+<code>
+<b>ggplot(data = </b>data_frame<b>) +</b>
+  geom_function(<b>mapping = aes(</b>mappings<b>))</b>
+</code>
+
+Let's get started. The first detail is a "tidy" data frame which contains the data you want to plot.
+
+<code style = "color: rgba(var(--color-text)), 0.3">
+<b>ggplot(data = </b><span style = "color: rgb(var(--color-text))>data_frame</span><b>) +</b>
+  geom_function(<b>mapping = aes(</b>mappings<b>))</b>
+</code>
 
 
 Let's see what you remember about dplyr!
