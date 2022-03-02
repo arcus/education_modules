@@ -286,38 +286,40 @@ Also, ggplot2 graphs look great and the package can be used to generate publicat
 
 So here is a quick analysis of how we just used ggplot to make that histogram.
 
+![ggplot code annotated with the steps enumerated in the table below](media/ggplot_analysis.png)
+
 <lia-keep>
 <table style = "width = 100%">
-<tr><th style = "width = 30%"></th><th></th></tr>
+<tr><th style = "width = 35%"></th><th style = "width = 65%"></th></tr>
 <tr><td>1) We always start with `ggplot()`.</td>
-<td><code style = "color: rgba(var(--color-text), 0.3)">
+<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em;">
 <span style = "color: rgb(var(--color-text))">ggplot(</span>data = covid_testing<span style = "color: rgb(var(--color-text))">)</span> +
   geom_histogram(mapping = aes(x = pan_day))
 <code>
 </td></tr>
 <tr><td>2) Give ggplot a **data frame** to start with, in this case, our `covid_testing` data frame.</td>
-<td><code style = "color: rgba(var(--color-text), 0.3)">
+<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em;">
 ggplot(<span style = "color: rgb(var(--color-text))">data = covid_testing</span>) +
   geom_histogram(mapping = aes(x = pan_day))
 <code>
 </td></tr>
 <tr><td>3) We build our plot across several different lines, so we include a `+` to say "wait, we're not done yet!"
 </td>
-<td><code style = "color: rgba(var(--color-text), 0.3)">
+<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em;">
 ggplot(data = covid_testing) <span style = "color: rgb(var(--color-text))">+ </span>
   geom_histogram(mapping = aes(x = pan_day))
 <code>
 </td></tr>
 <tr><td>4) In the second line, we describe what kind of geometric representation we want -- a histogram.
 </td>
-<td><code style = "color: rgba(var(--color-text), 0.3)">
+<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em;">
 ggplot(data = covid_testing) +
   <span style = "color: rgb(var(--color-text))">geom_histogram(</span>mapping = aes(x = pan_day)<span style = "color: rgb(var(--color-text))">)</span>
 <code>
 </td></tr>
 <tr><td>5) We also add some mappings, explaining which data from the data frame should be displayed in the histogram.  We use "aes" (short for "aesthetic" or "aesthetic mapping") to tell ggplot how to draw the visualization.  We only have to specify the x axis, because a histogram assumes that you're counting rows of data and will map that to the y axis.
 </td>
-<td><code style = "color: rgba(var(--color-text), 0.3)">
+<td><pre style = "color: rgba(var(--color-text), 0.3); margin:1em;">
 ggplot(data = covid_testing) +
   geom_histogram(<span style = "color: rgb(var(--color-text))">mapping = aes(x = pan_day)</span>)
 <code>
@@ -329,11 +331,13 @@ ggplot(data = covid_testing) +
 
 So that was a lot of information. Let's break this down to build up to a more general template. Here's a preview of that template, and we'll spend the few sections or so exploring it.
 
-You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details written in normal text. To fill in the details, you need to do 3 things:
+![ggplot code annotated with the steps enumerated in the list below](media/ggplot_template.png)
 
-* Pick a **tidy data frame** (this contains the data you want to plot)
-* Pick a **geom function** (this is the type of plot you want to make), and
-* Write **aesthetic mappings** (and we'll go over what that means)
+You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details that match what you want. To fill in the details, you need to do 3 things:
+
+1) Pick a **tidy data frame** (this contains the data you want to plot)
+2) Pick a **geom function** (this is the type of plot you want to make), and
+3) Write **aesthetic mappings** (and we'll go over what that means)
 
 <lia-keep>
 <code>
@@ -341,6 +345,8 @@ You start with the code written in **bold** – **bold** in this template is the
   geom_function(<b>mapping = aes(</b>mappings<b>))</b>
 </code>
 </lia-keep>
+
+## Using our Template, Step 1
 
 Let's get started. The first detail is a "tidy" data frame which contains the data you want to plot.
 
@@ -350,6 +356,31 @@ Let's get started. The first detail is a "tidy" data frame which contains the da
   geom_function(<b>mapping = aes(</b>mappings<b>))</b>
 </code>
 </lia-keep>
+
+What do we mean by "tidy" data frame?
+
+A data set can take on a lot of different shapes with different styles of organizing data. But there is one method or shape that is best suited for data analysis, and that approach is called "tidy."
+
+A data set is tidy if:
+
+* Each variable is in its own column
+* Each observation is in its own row, and
+* Each value is in its own cell.
+
+The opposite of "tidy" is often called "messy." And often times a lot of the data analysis work is to convert "messy" data into "tidy data."" But for now, fortunately for us, the `covid_testing` data set is tidy already.
+
+Here's one simple example of tidy versus messy. If a column is called "name" and includes first names and last names, that's messy.  It can be difficult to extract just the first names or just the last names, since some people have more than one word forming their first name (José María, Mary Jo) and some people have more than one word forming their last name (de la Cruz, Bonham Carter).  A "tidy" approach would be to have one column for first names and one column for last names.
+
+To see a "messy" data frame and its "tidy" alternative, see [a brief 2018 article](https://education.arcus.chop.edu/tidyverse/) for a brief read, or, if you want a deeper dive,  there really isn't a better article than [Hadley Wickham's classic work](https://www.jstatsoft.org/article/view/v059i10).
+
+
+
+
+
+
+
+
+
 
 Let's see what you remember about dplyr!
 
