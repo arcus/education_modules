@@ -291,35 +291,35 @@ So here is a quick analysis of how we just used ggplot to make that histogram.
 <lia-keep>
 <table style = "width = 100%">
 <tr><th style = "width = 35%"></th><th style = "width = 65%"></th></tr>
-<tr><td>1) We always start with `ggplot()`.</td>
-<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em;">
+<tr style="padding: 1.5em;"><td>1) We always start with `ggplot()`.</td>
+<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
 <span style = "color: rgb(var(--color-text))">ggplot(</span>data = covid_testing<span style = "color: rgb(var(--color-text))">)</span> +
   geom_histogram(mapping = aes(x = pan_day))
 <code>
 </td></tr>
-<tr><td>2) Give ggplot a **data frame** to start with, in this case, our `covid_testing` data frame.</td>
-<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em;">
+<tr style="padding: 1.5em;"><td>2) Give ggplot a **data frame** to start with, in this case, our `covid_testing` data frame.</td>
+<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
 ggplot(<span style = "color: rgb(var(--color-text))">data = covid_testing</span>) +
   geom_histogram(mapping = aes(x = pan_day))
 <code>
 </td></tr>
-<tr><td>3) We build our plot across several different lines, so we include a `+` to say "wait, we're not done yet!"
+<tr style="padding: 1.5em;"><td>3) We build our plot across several different lines, so we include a `+` to say "wait, we're not done yet!"
 </td>
-<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em;">
+<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) <span style = "color: rgb(var(--color-text))">+ </span>
   geom_histogram(mapping = aes(x = pan_day))
 <code>
 </td></tr>
-<tr><td>4) In the second line, we describe what kind of geometric representation we want -- a histogram.
+<tr style="padding: 1.5em;"><td>4) In the second line, we describe what kind of geometric representation we want -- a histogram.
 </td>
-<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em;">
+<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) +
   <span style = "color: rgb(var(--color-text))">geom_histogram(</span>mapping = aes(x = pan_day)<span style = "color: rgb(var(--color-text))">)</span>
 <code>
 </td></tr>
-<tr><td>5) We also add some mappings, explaining which data from the data frame should be displayed in the histogram.  We use "aes" (short for "aesthetic" or "aesthetic mapping") to tell ggplot how to draw the visualization.  We only have to specify the x axis, because a histogram assumes that you're counting rows of data and will map that to the y axis.
+<tr style="padding: 1.5em;"><td>5) We also add some mappings, explaining which data from the data frame should be displayed in the histogram.  We use "aes" (short for "aesthetic" or "aesthetic mapping") to tell ggplot how to draw the visualization.  We only have to specify the x axis, because a histogram assumes that you're counting rows of data and will map that to the y axis.
 </td>
-<td><pre style = "color: rgba(var(--color-text), 0.3); margin:1em;">
+<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) +
   geom_histogram(<span style = "color: rgb(var(--color-text))">mapping = aes(x = pan_day)</span>)
 <code>
@@ -340,10 +340,10 @@ You start with the code written in **bold** – **bold** in this template is the
 3) Write **aesthetic mappings** (and we'll go over what that means)
 
 <lia-keep>
-<code>
+<pre>
 <b>ggplot(data = </b>data_frame<b>) +</b>
   geom_function(<b>mapping = aes(</b>mappings<b>))</b>
-</code>
+</pre>
 </lia-keep>
 
 ## Using our Template, Step 1
