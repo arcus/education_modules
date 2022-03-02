@@ -100,6 +100,8 @@ This course is designed for R beginners with minimal experience and it is not an
 
 </div>
 
+Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data workshop materials](https://skadauke.github.io/intro-to-r-for-clinicians-chop/).  We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.
+
 ## Lesson Preparation: Our Data
 
 The data we will use in this module is a data frame called `covid_testing`, which consists of fabricated (completely fake) demographic and testing data for Covid tests early in the Covid-19 pandemic.
@@ -351,7 +353,7 @@ You start with the code written in **bold** – **bold** in this template is the
 Let's get started. The first detail is a "tidy" data frame which contains the data you want to plot.
 
 <lia-keep>
-<code style = "color: rgba(var(--color-text), 0.3)">
+<code style = "color: rgba(var(--color-text), 0.3); font-size: 0.8em;">
 <b>ggplot(data = </b><span style = "color: rgb(var(--color-text))>data_frame</span><b>) +</b>
   geom_function(<b>mapping = aes(</b>mappings<b>))</b>
 </code>
@@ -373,47 +375,353 @@ Here's one simple example of tidy versus messy. If a column is called "name" and
 
 To see a "messy" data frame and its "tidy" alternative, see [a brief 2018 article](https://education.arcus.chop.edu/tidyverse/) for a brief read, or, if you want a deeper dive,  there really isn't a better article than [Hadley Wickham's classic work](https://www.jstatsoft.org/article/view/v059i10).
 
+## A Quick Check In!
 
+Let's see what you remember about tidy datasets!  Take a look at the sample table provided below.  It's similar to what you might see in a publication, and it's in a great format for humans... but it's not tidy enough to work with easily in a computational way.  This table shows the results of the "QPT" psychometric (something we made up) and shares pre- and post-treatment means and standard deviations for different kinds of research cohorts.
 
-
-
-
-
-
-
-
-Let's see what you remember about dplyr!
+<table border="1" cellpadding="0" cellspacing="0"><tbody><tr><td>
+            <p>&nbsp;</p>
+            </td>
+            <td colspan="2">
+            <p>Mean QPT - pretreatment</p>
+            </td>
+            <td colspan="2">
+            <p>SD QPT -- pretreatment</p>
+            </td>
+            <td colspan="2">
+            <p>Mean QPT - post-treatment</p>
+            </td>
+            <td colspan="2">
+            <p>SD QPT -- post-treatment</p>
+            </td>
+        </tr><tr><td>
+            <p>&nbsp;</p>
+            </td>
+            <td>
+            <p>m</p>
+            </td>
+            <td>
+            <p>f</p>
+            </td>
+            <td>
+            <p>m</p>
+            </td>
+            <td>
+            <p>f</p>
+            </td>
+            <td>
+            <p>m</p>
+            </td>
+            <td>
+            <p>f</p>
+            </td>
+            <td>
+            <p>m</p>
+            </td>
+            <td>
+            <p>f</p>
+            </td>
+        </tr><tr><td>
+            <p>Depression alone</p>
+            <p>(n=9m, 7f)</p>
+            </td>
+            <td>
+            <p>122</p>
+            </td>
+            <td>
+            <p>137</p>
+            </td>
+            <td>
+            <p>28.1</p>
+            </td>
+            <td>
+            <p>27.0</p>
+            </td>
+            <td>
+            <p>109</p>
+            </td>
+            <td>
+            <p>140</p>
+            </td>
+            <td>
+            <p>26.0</p>
+            </td>
+            <td>
+            <p>39.5</p>
+            </td>
+        </tr><tr><td>
+            <p>Depression with Anxiety (n=12m,8f)</p>
+            </td>
+            <td>
+            <p>130</p>
+            </td>
+            <td>
+            <p>145</p>
+            </td>
+            <td>
+            <p>25.0</p>
+            </td>
+            <td>
+            <p>19.8</p>
+            </td>
+            <td>
+            <p>103</p>
+            </td>
+            <td>
+            <p>142</p>
+            </td>
+            <td>
+            <p>24.9</p>
+            </td>
+            <td>
+            <p>40.1</p>
+            </td>
+        </tr><tr><td>
+            <p>Controls / Neither Depression nor Anxiety (n=10m, 10f)</p>
+            </td>
+            <td>
+            <p>107</p>
+            </td>
+            <td>
+            <p>110</p>
+            </td>
+            <td>
+            <p>15.8</p>
+            </td>
+            <td>
+            <p>13.9</p>
+            </td>
+            <td>
+            <p>88</p>
+            </td>
+            <td>
+            <p>95</p>
+            </td>
+            <td>
+            <p>21.8</p>
+            </td>
+            <td>
+            <p>20.6</p>
+            </td>
+        </tr><tr><td>
+            <p>Anxiety Alone (n=13m, 15f)</p>
+            </td>
+            <td>
+            <p>124</p>
+            </td>
+            <td>
+            <p>119</p>
+            </td>
+            <td>
+            <p>20.7</p>
+            </td>
+            <td>
+            <p>18.3</p>
+            </td>
+            <td>
+            <p>100</p>
+            </td>
+            <td>
+            <p>110</p>
+            </td>
+            <td>
+            <p>24.2</p>
+            </td>
+            <td>
+            <p>20.5</p>
+            </td>
+        </tr></tbody></table>
 
 <div class = "question">
-Which of the following are true statements about "dplyr"?  Check all that apply!
+Which of the following are ways to make this dataset "tidy"?  Check all that apply!
 
-[[X]] dplyr is part of the tidyverse suite of packages
-[[ ]] tidyverse is part of the dplyr suite of packages
-[[ ]] dplyr provides a number of functions good for providing data privacy
-[[X]] dplyr provides a number of functions good for getting precise subsets of data from a data frame
-[[ ]] dplyr includes the function `select()`, which can be used to subset both rows or columns
+[[X]] move "depression" status into a column instead of using it in a cell combined with other descriptors
+[[ ]] remove sex as a variable, since there's no way to detangle it from other variables
+[[ ]] ensure that each number has the same number of significant digits after the decimal point
+[[X]] make "timepoint" into a new column, with possible values including "pre" and "post"
+[[X]] increase the rows so that there are 16 rows representing 16 distinct cohorts
 [[?]] There are multiple correct answers!
 
 <div class = "answer">
 <details><summary>Click to see an explanation of the answer.</summary>
 
-The dplyr package is one of several packages that together make up the tidyverse suite of packages, not the other way around. Additionally, dplyr is intended to help with data reshaping -- for example, removing unneeded rows from a data frame, selecting some columns and not others, or creating a new column for a data frame.  It's not a package related to data privacy.  Finally, while dplyr does include the `select()` function, it's not true that `select()` works on both rows and columns.
+Depression status and timepoint should each become a column.  In fact, we suggest the following columns:
+
+* Depression +/- dx
+* Anxiety +/- dx
+* Sex
+* Timepoint (pre- vs post- treatment)
+* Mean QPT value
+* SD QPT value
+* n (count of participants in this group)
+
+There's no need to remove the sex variable, and the numerical values don't necessarily need to have the same number of significant digits to be considered "tidy".  Here's one way to make the table above into a tidy dataset ready for computational analysis:
+
+<table>
+  <thead>
+    <tr>
+      <th>Depression status</th>
+      <th>Anxiety status</th>
+      <th>Sex</th>
+      <th>Count</th>
+      <th>Timepoint</th>
+      <th>Mean QPT</th>
+      <th>SD QPT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pos</td>
+      <td>pos</td>
+      <td>m</td>
+      <td>12</td>
+      <td>pre</td>
+      <td>130</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>pos</td>
+      <td>pos</td>
+      <td>f</td>
+      <td>8</td>
+      <td>pre</td>
+      <td>145</td>
+      <td>19.8</td>
+    </tr>
+    <tr>
+      <td>pos</td>
+      <td>pos</td>
+      <td>m</td>
+      <td>12</td>
+      <td>post</td>
+      <td>103</td>
+      <td>24.9</td>
+    </tr>
+    <tr>
+      <td>pos</td>
+      <td>pos</td>
+      <td>f</td>
+      <td>8</td>
+      <td>post</td>
+      <td>142</td>
+      <td>40.1</td>
+    </tr>
+    <tr>
+      <td>pos</td>
+      <td>neg</td>
+      <td>m</td>
+      <td>9</td>
+      <td>pre</td>
+      <td>122</td>
+      <td>28.1</td>
+    </tr>
+    <tr>
+      <td>pos</td>
+      <td>neg</td>
+      <td>f</td>
+      <td>7</td>
+      <td>pre</td>
+      <td>137</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <td>pos</td>
+      <td>neg</td>
+      <td>m</td>
+      <td>9</td>
+      <td>post</td>
+      <td>109</td>
+      <td>26.0</td>
+    </tr>
+    <tr>
+      <td>pos</td>
+      <td>neg</td>
+      <td>v</td>
+      <td>7</td>
+      <td>post</td>
+      <td>140</td>
+      <td>39.5</td>
+    </tr>
+    <tr>
+      <td>neg</td>
+      <td>pos</td>
+      <td>m</td>
+      <td>13</td>
+      <td>pre</td>
+      <td>124</td>
+      <td>20.7</td>
+    </tr>
+    <tr>
+      <td>neg</td>
+      <td>pos</td>
+      <td>f</td>
+      <td>15</td>
+      <td>pre</td>
+      <td>119</td>
+      <td>18.3</td>
+    </tr>
+    <tr>
+      <td>neg</td>
+      <td>pos</td>
+      <td>m</td>
+      <td>13</td>
+      <td>post</td>
+      <td>100</td>
+      <td>24.2</td>
+    </tr>
+    <tr>
+      <td>neg</td>
+      <td>pos</td>
+      <td>f</td>
+      <td>15</td>
+      <td>post</td>
+      <td>110</td>
+      <td>20.5</td>
+    </tr>
+    <tr>
+      <td>neg</td>
+      <td>neg</td>
+      <td>m</td>
+      <td>10</td>
+      <td>pre</td>
+      <td>107</td>
+      <td>15.8</td>
+    </tr>
+    <tr>
+      <td>neg</td>
+      <td>neg</td>
+      <td>f</td>
+      <td>10</td>
+      <td>pre</td>
+      <td>110</td>
+      <td>13.9</td>
+    </tr>
+    <tr>
+      <td>neg</td>
+      <td>neg</td>
+      <td>m</td>
+      <td>10</td>
+      <td>post</td>
+      <td>88</td>
+      <td>21.8</td>
+    </tr>
+    <tr>
+      <td>neg</td>
+      <td>neg</td>
+      <td>f</td>
+      <td>10</td>
+      <td>post</td>
+      <td>95</td>
+      <td>20.6</td>
+    </tr>
+  </tbody>
+</table>
 
 </details>
 </div>
 </div>
 
-Let's look at `select()` first. The `select()` function extracts **columns** from a data frame, using the column **name(s)** as argument(s).
 
-`select()` takes a data frame as its first argument. After that it takes any number of additional arguments that specify the names of the columns that you want to pick.
-
-We extract columns by name with code that looks like this, and we replace the three dots with the names of the columns we want to keep:
-
-`select(data_frame, ...)`
-
-For example, in the next section we'll unpack the following code:
-
-`select(covid_testing, mrn, last_name)`
 
 ## `select()` Example
 
@@ -1036,4 +1344,6 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Basics+Transform+Data%22)!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Basics+Visualize+Data%22)!
+
+Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data workshop materials](https://skadauke.github.io/intro-to-r-for-clinicians-chop/).  We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.
