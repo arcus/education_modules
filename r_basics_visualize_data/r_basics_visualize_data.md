@@ -276,7 +276,7 @@ Also, ggplot2 graphs look great and the package can be used to generate publicat
 
 So here is a quick analysis of how we just used ggplot to make that histogram.
 
-
+<lia-keep>
 <table>
 <tr><td>1) We always start with `ggplot()`.</td>
 <td><code style = "color: grey">
@@ -312,7 +312,7 @@ ggplot(data = covid_testing) +
 <code>
 </td></tr>
 </table>
-
+</lia-keep>
 
 
 
