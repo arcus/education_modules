@@ -109,9 +109,9 @@ import seaborn as sns
 ```
 
 <div class = "learnmore">
-The `pandas` module is for working with data in python. To learn more, see the [pandas guide](https://pandas.pydata.org/docs/getting_started/index.html).
+The `pandas` module is for working with data in python. To learn more, see the [pandas guide](https://pandas.pydata.org/docs/getting_started/index.html). It is conventional to import `pandas` as `pd`.
 
-The `numpy` module has several useful functions for statistical calculations and other mathematical operations useful in scientific computing. To learn more, see the [numpy website](https://numpy.org/).
+The `numpy` module has several useful functions for statistical calculations and other mathematical operations useful in scientific computing. To learn more, see the [numpy website](https://numpy.org/). It is conventional to import `numpy` as `np`.
 
 The `seaborn` module is the plotting module that is the focus of this lesson, and it requires some pieces of `matplotlib`, since it is built as an extension to it.
 </div>
@@ -127,7 +127,7 @@ These data are from a COVID-19 serological survey conducted in Yaounde, Cameroon
 
 
 <div class="learnmore">
-To learn more about the study, see the [zenodo page for this dataset](https://zenodo.org/record/5218965#.YeBq2RPMITW). You can read the published article online: [](https://www.nature.com/articles/s41467-021-25946-0)
+To learn more about the study, see the [zenodo page for this dataset](https://zenodo.org/record/5218965#.YeBq2RPMITW). You can read the published article online: [SARS-CoV-2 antibody seroprevalence and associated risk factors in an urban district in Cameroon](https://www.nature.com/articles/s41467-021-25946-0).
 </div>
 
 <div class="learnmore">
@@ -423,7 +423,7 @@ The `jointplot` function is for showing a bivariate plot with supplemental univa
 To show histograms for two or more subgroups in a single plot, use the `hue` argument to color each subgroup separately (for a review, see [using color to show groups](#using-color-to-show-groups)).
 ****
 
-True or False: The default binwidth in `seaborn` should work well for most data sets.
+True or False: When making histograms, the default binwidth in `seaborn` is probably the best choice for most data sets.
 
 [( )] True
 [(X)] False
@@ -435,7 +435,93 @@ You can read more about this issue in the [seaborn distributions tutorial](https
 
 ## Line Plots
 
+Line plots are especially useful when you want to show data points that are connected in a meaningful way. The most common application is repeated measures over time (also called time series data), such as when patients are measured on a given variable (plotted on the y-axis) at several times (plotted along the x-axis), and each line would represent one patient, or a summary across a group of patients.
+
+<div class = "important">
+A word of caution: You may see line plots where the data points don't actually share a meaningful theoretical connection (e.g. all being from the same patient, or the same group). Although it's not uncommon, this is generally not considered good practice and you may receive pushback from reviewers or readers.
+</div>
+
+### Data for line plots
+
+The data we've been using for the other examples so far doesn't lend itself well to line plots. Instead, for this example we'll use [one of the datasets included with the seaborn module](http://seaborn.pydata.org/generated/seaborn.load_dataset.html#seaborn.load_dataset), called `fmri`. It contains the hemodynamic response (`signal`) at several timepoints for a number of subjects in response to two different events (`stim` and `cue`) in two brain regions (`parietal` and `frontal`).
+
+This dataset is a special example dataset for `seaborn`, so you don't need to download it separately. You can call it with the `load_dataset` function (although you will need an internet connection for that to work).
+
+```Python
+fmri = sns.load_dataset("fmri")
+```
+
+### Basic line plot
+
+```python
+sns.relplot(x="timepoint", y="signal", kind="line", data=fmri)
+```
+![Basic line plot showing the strength of the FMRI signal over time, with timepoint on the x-axis and signal on the y-axis.](media/seaborn_line_1.png)
+
+Note that by default `seaborn` aggregates across multiple observations at each time point, with a line at the mean and a 95% confidence interval shaded around it.
+
+In this case, we have several different subjects, and from each we have readings from two brain regions and in response to two events, so there are many observations at each timepoint. If there were only a single observation for each timepoint (more typical of standard time series data), then `relplot` would show a line connecting those observations and no confidence interval.
+
+### Using color and line type to show groups
+
+If you want to show multiple lines on a single plot, you can achieve that by adding arguments for `hue` (controls color) and `style` (controls line type, like solid or dashed), as we did for scatter plots and histograms.
+
+```python
+sns.relplot(x="timepoint", y="signal", hue="event", style="event", kind="line", data=fmri)
+```
+
+![Line plot with timepoint on the x-axis and signal on the y-axis, and two lines: a solid blue line for event = stim and a dashed yellow line for event = cue.](media/seaborn_line_2.png)
+
+### Using facets to compare plots
+
+If you want to make more than one version of a similar plot, consider using facets.
+
+In the current example, let's say we wanted to create two versions of the signal line plots for the two types of events: one showing the response in the parietal region, and one showing the response in the frontal region.
+
+You can add facets to a `seaborn` plot by adding an argument for either `col` (for columns) or `row` (for rows) --- or both, if you want to show several different facets.
+
+```python
+sns.relplot(x="timepoint", y="signal", hue="event", style="event", col = "region", kind="line", data=fmri)
+```
+
+![Two line plots, side by side, with timepoint on the x-axis and signal on the y-axis, and each showing two lines: a solid blue line for event = stim and a dashed yellow line for event = cue. The plot on the left says "region = parietal" at the top, and the plot on the right says "region = frontal" at the top.](media/seaborn_line_3.png)
+
+<div class = "learnmore">
+For many more examples of line plots, see the [seaborn relplot tutorial section on line plots](https://seaborn.pydata.org/tutorial/relational.html#emphasizing-continuity-with-line-plots).
+</div>
+
 ### Quiz: Line Plots
+
+True or False: You can create both scatter plots and line plots with the same function in `seaborn`.
+
+[(X)] TRUE
+[( )] FALSE
+****
+We used just one function, `relplot`, to make both scatter plots and line plots. Under the hood, there are actually two separate functions being used --- `scatterplot()` and `lineplot()`, which are equivalent to `relplot()` with `kind = "scatter"` (the default) and `kind = "line"`, respectively --- but it's nice to be able to stick to the higher-level `relplot` function for simplicity.
+
+Because they're both called by the `relplot` function, you can use the same additional variables (e.g. `hue`, `style`, `col`) applied to either scatter or line plots, and they work in much the same way.
+****
+
+True or False: Line plots are appropriate in most situations in which a scatter plot would work, so you can general pick whichever one you prefer.
+
+[( )] TRUE
+[(X)] FALSE
+****
+There are very few situations in which a scatter plot and line plot are equally appropriate.
+
+Line plots emphasize continuity and because of that are rarely used except for with data that have some kind of time component. Scatter plots are much more flexible and can work to show the relationship between almost any two continuous variables.  
+****
+
+What argument do you add to include facets in a `seaborn` plot?
+
+[[col, row]]
+<script>
+  let input = "@input".trim();
+  /col|row/i.test(input);
+</script>
+****
+You can add facets to a plot by including the arguments for `col`, `row`, or both. 
+****
 
 ## Trend Lines
 
