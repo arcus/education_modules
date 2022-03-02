@@ -335,18 +335,21 @@ You start with the code written in **bold** – **bold** in this template is the
 * Pick a **geom function** (this is the type of plot you want to make), and
 * Write **aesthetic mappings** (and we'll go over what that means)
 
+<lia-keep>
 <code>
 <b>ggplot(data = </b>data_frame<b>) +</b>
   geom_function(<b>mapping = aes(</b>mappings<b>))</b>
 </code>
+</lia-keep>
 
 Let's get started. The first detail is a "tidy" data frame which contains the data you want to plot.
 
-<code style = "color: rgba(var(--color-text)), 0.3">
+<lia-keep>
+<code style = "color: rgba(var(--color-text), 0.3)">
 <b>ggplot(data = </b><span style = "color: rgb(var(--color-text))>data_frame</span><b>) +</b>
   geom_function(<b>mapping = aes(</b>mappings<b>))</b>
 </code>
-
+</lia-keep>
 
 Let's see what you remember about dplyr!
 
