@@ -244,7 +244,7 @@ And yes, you can hit "Enter" after that plus sign and keep typing on the next li
 
 When you run the code, you'll  see a graph open up in the lower right pane, and your console should look something like this:
 
-![R console showing code and a red message that reads "`stat_bin()` using `bins = 30`. Pick better value with `binwidth`"](media/r_console.png)
+![R console showing code and a red message that reads "`stat_bin()` using `bins = 30`. Pick better value with `binwidth`"](media/r_console.png)<!-- style = "border: 1 px solid rgb(var(--color-highlight)); max-width:700px;" -->
 
 When you run this code, you get what looks like an error in the consol but is actually just a message (even though it's in a scary red color).
 
@@ -260,6 +260,11 @@ Even though this graph isn't publication-perfect (at least not yet), it's still 
 
 ## Introducing ggplot2
 
+<div style = "align-items: center; display: flex;">
+
+<div style = "margin: 1rem; max-width: 45%; float:left;">
+
+
 We'll be using the ggplot2 package for creating graphics. ggplot2 is part of the tidyverse so it will get loaded when you load the tidyverse package.
 
 ggplot2 (and its main function, plain old "ggplot" without the 2) provides a "**grammar of graphics**" for data visualization. The idea of having a "grammar" for something is actually pretty common in R. Essentially, there should be a consistent way to build any type of graph. This makes it easier to learn and also easier to for humans to read the code later and make sense of it. And that's super important because most people who use R are not programmers.
@@ -269,8 +274,13 @@ The idea of the grammar of graphics is that you should be able to specify any ty
 Having a consistent grammar means that once you learn how to make a histogram that knowledge can be applied to make a scatter plot with little extra effort. This makes it easy to generate lots of different graphs quickly which helps you understand your data more quickly.
 
 Also, ggplot2 graphs look great and the package can be used to generate publication-quality plots.
+</div>
+<div style = "margin: 1rem auto; max-width: 45%; float:left;">
 
 ![ggplot2 logo on a hexagon.  The logo consists of the word "ggplot2" superimposed on light grey graph paper with a line graph connecting blue dots of different shades](media/ggplot2_hex.png)
+
+</div>
+</div>
 
 ## The ggplot() Function
 
@@ -280,34 +290,34 @@ So here is a quick analysis of how we just used ggplot to make that histogram.
 <table style = "width = 100%">
 <tr><th style = "width = 30%"></th><th></th></tr>
 <tr><td>1) We always start with `ggplot()`.</td>
-<td><code style = "color: rgba(var(--color-text)), 0.3">
+<td><code style = "color: rgba(var(--color-text), 0.3)">
 <span style = "color: rgb(var(--color-text))">ggplot(</span>data = covid_testing<span style = "color: rgb(var(--color-text))">)</span> +
   geom_histogram(mapping = aes(x = pan_day))
 <code>
 </td></tr>
 <tr><td>2) Give ggplot a **data frame** to start with, in this case, our `covid_testing` data frame.</td>
-<td><code style = "color: rgba(var(--color-text)), 0.3">
+<td><code style = "color: rgba(var(--color-text), 0.3)">
 ggplot(<span style = "color: rgb(var(--color-text))">data = covid_testing</span>) +
   geom_histogram(mapping = aes(x = pan_day))
 <code>
 </td></tr>
 <tr><td>3) We build our plot across several different lines, so we include a `+` to say "wait, we're not done yet!"
 </td>
-<td><code style = "color: rgba(var(--color-text)), 0.3">
+<td><code style = "color: rgba(var(--color-text), 0.3)">
 ggplot(data = covid_testing) <span style = "color: rgb(var(--color-text))">+ </span>
   geom_histogram(mapping = aes(x = pan_day))
 <code>
 </td></tr>
 <tr><td>4) In the second line, we describe what kind of geometric representation we want -- a histogram.
 </td>
-<td><code style = "color: rgba(var(--color-text)), 0.3">
+<td><code style = "color: rgba(var(--color-text), 0.3)">
 ggplot(data = covid_testing) +
   <span style = "color: rgb(var(--color-text))">geom_histogram(</span>mapping = aes(x = pan_day)<span style = "color: rgb(var(--color-text))">)</span>
 <code>
 </td></tr>
 <tr><td>5) We also add some mappings, explaining which data from the data frame should be displayed in the histogram.  We use "aes" (short for "aesthetic" or "aesthetic mapping") to tell ggplot how to draw the visualization.  We only have to specify the x axis, because a histogram assumes that you're counting rows of data and will map that to the y axis.
 </td>
-<td><code style = "color: rgba(var(--color-text)), 0.3">
+<td><code style = "color: rgba(var(--color-text), 0.3)">
 ggplot(data = covid_testing) +
   geom_histogram(<span style = "color: rgb(var(--color-text))">mapping = aes(x = pan_day)</span>)
 <code>
