@@ -23,6 +23,7 @@ After completion of this module, learners will be able to:
 @end
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
@@ -187,7 +188,7 @@ covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
 ```
 
 <div class = "learnmore">
-For a refresher, see this tutorial on [recording variables in a pandas dataframe](https://www.sfu.ca/~mjbrydon/tutorials/BAinPy/05_recode.html#replacing-values-from-a-list).
+For a refresher, see this tutorial on [recoding variables in a pandas dataframe](https://www.sfu.ca/~mjbrydon/tutorials/BAinPy/05_recode.html#replacing-values-from-a-list).
 </div>
 
 Then we can update our scatterplot to use `is_smoker` for color.
