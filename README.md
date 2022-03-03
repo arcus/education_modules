@@ -18,12 +18,12 @@ For example, to use the training included in [data_visualization_in_ggplot2](dat
 |--|--|--|
 |Command Line 101|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md)|[Markdown](bash_scripting_101/bash_scripting_101.md)|
 |Data Visualization in ggplot2|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md)| [Markdown](data_visualization_in_ggplot2/data_visualization_ggplot2.md)|
-|Data Visualization in Open Source Software|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/data_visualization_in_open_source_software/data_visualization.md) | [Markdown](data_visualization_in_open_source_software/data_visualization.md) |
-|Data Visualization in Seaborn|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/data_visualization_in_seaborn/data_visualization_seaborn.md) | [Markdown](data_visualization_in_seaborn/data_visualization_seaborn.md)|
-|Intro to R and RStudio|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md) | [Markdown](intro_to_r_rstudio/intro_to_r_rstudio.md)|
+|Data Visualization in Open Source Software|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization.md) | [Markdown](data_visualization_in_open_source_software/data_visualization.md) |
+|Data Visualization in Seaborn|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_seaborn.md) | [Markdown](data_visualization_in_seaborn/data_visualization_seaborn.md)|
+|Intro to R and RStudio|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md) | [Markdown](intro_to_r_rstudio/intro_to_r_rstudio.md)|
 |Intro to Python|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md)| [Markdown](intro_to_python/intro_to_python.md)|
-|Reproducibility|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/reproducibility/reproducibility.md)| [Markdown](reproducibility/reproducibility.md)|
-|Statistical Tests|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/statistical_tests/statistical_tests.md)| [Markdown](statistical_tests/statistical_tests.md)|
+|Reproducibility|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/reproducibility/reproducibility.md)| [Markdown](reproducibility/reproducibility.md)|
+|Statistical Tests|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md)| [Markdown](statistical_tests/statistical_tests.md)|
 
 
 ## For Contributors
