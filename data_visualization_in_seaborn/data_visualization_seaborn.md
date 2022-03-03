@@ -7,18 +7,16 @@ language: en
 narrator: UK English Female
 title: Data visualizations in seaborn
 
-comment:  This module includes code and explanations for several popular data visualizations, using python's seaborn library. It also includes examples of how to modify seaborn plots to customize them for different uses (e.g. adhering to journal requirements for visualizations).  
+comment:  This module includes code and explanations for several popular data visualizations, using python's seaborn library. It also includes examples of how to modify seaborn plots to customize them for different uses.  
 
-long_description: FINISH
+long_description: You can use the seaborn module in python to make many different kinds of data visualizations (also called plots, or charts), including scatterplots, histograms, line plots, and trend lines. This module provides an example of each of these kinds of plots, including python code to make them using the seaborn module. It may be hard to follow if you are brand new to python, but it is appropriate for beginners with at least a small amount of python experience.
 
 @learning_objectives  
 
 After completion of this module, learners will be able to:
 
-- identify key elements
-- create a product
-- do a task
-- articulate the rationale for something
+- use seaborn to create several common data visualizations
+- customize some elements of a plot, and know where to look to learn how to customize others
 
 @end
 
@@ -40,14 +38,13 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This module assumes some familiarity with principles of data visualizations as applied in the seaborn library. If you've used seaborn (or R's ggplot2) a little already and are just looking to extend your skills, this module should be right for you. If you are brand new to ggplot2 and seaborn, start with the overview of [data visualizations in open source software](link) first, and then come back here.
+This module assumes some familiarity with principles of data visualizations. If you've done some data visualization programming before, especially using seaborn or R's ggplot2, this module should be right for you. If you are brand new to both ggplot2 and seaborn, start with the overview of [data visualizations in open source software](link) first, and then come back here.
 
 This module also assumes some basic familiarity with python, including
 
 * installing and importing libraries
 * reading in data
-* manipulating data frames, including calculating new columns, and pivoting from wide format to long
-* some [statistical tests](link)
+* manipulating data frames, including calculating new columns
 
 If you are brand new to python (or want a refresher) consider starting with [Intro to python](link) first.
 
@@ -60,18 +57,13 @@ If you are brand new to python (or want a refresher) consider starting with [Int
 ## Lesson Preparation
 
 
-This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in python. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection.
+For the hands-on activities in this module, we will be using an online environment containing a Jupyter notebook. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection.
 
+Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity. We recommend using right-click to open it in a new tab or window, and then returning here to continue learning while the environment finishes loading. Here is the link:
 
-If you have python already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_seaborn.ipynb" download>download the code for this module to run offline</a>.
+<a href = "https://mybinder.org/v2/gh/arcus/education_modules/data_viz_seaborn?labpath=data_visualization_in_seaborn%2Fnotebooks%2Fdata_visualization_seaborn.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg"></a> **← Click the "launch binder" button!**
 
-
-If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity. We recommend using right-click to open it in a new tab or window, and then returning here to continue learning while the environment finishes loading. Here is the link:
-
-[![Link to start Binder environment](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/main?urlpath=rstudio) **Click the "launch binder" button!**
-
-You don't have to do anything except come back here once the link opens in a new tab or window.
-
+If you have python already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/notebooks/data_visualization_seaborn.ipynb" download>download the code for this module to run offline</a>.
 
 ### Importing seaborn
 
@@ -82,7 +74,6 @@ By convention, you import it with the shorthand `sns`. This is optional, but we 
 ```Python
 import seaborn as sns
 ```
-
 
 ### Working through interactive coding examples
 
@@ -130,10 +121,10 @@ These data are from a COVID-19 serological survey conducted in Yaounde, Cameroon
 To learn more about the study, see the [zenodo page for this dataset](https://zenodo.org/record/5218965#.YeBq2RPMITW). You can read the published article online: [SARS-CoV-2 antibody seroprevalence and associated risk factors in an urban district in Cameroon](https://www.nature.com/articles/s41467-021-25946-0).
 </div>
 
-<div class="learnmore">
+<div class="important">
 Run the above code yourself in binder (see [lesson preparation](#lesson-preparation) for links to start the binder instance) or on your own computer.
 
-In the data\_visualization\_seaborn.ipynb file, the code at the top of the file includes these import commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
+In the data\_visualization\_seaborn.ipynb file, the code in the **Setup** section includes these import commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
 </div>
 
 ## Scatterplots
@@ -658,7 +649,11 @@ sns.lmplot(data = covid_data,
 
 ## Additional Resources
 
-We have several interactive python data science notebooks available on google colab.
+The creator of `seaborn`, [Michael Waskom](https://mwaskom.github.io/) maintains an excellent website with examples, explanations, tutorials, and more: [https://seaborn.pydata.org/](https://seaborn.pydata.org/)
+
+There are also many questions and answers about `seaborn` available on [stackoverflow](https://stackoverflow.com/questions/tagged/seaborn/) and [discourse](https://discourse.matplotlib.org/c/3rdparty/seaborn/21), so if you run into trouble that can be a good place to look for answers.
+
+We have several interactive python data science notebooks available on google colab, some of which use `seaborn`. They all provide excellent opportunities to pratice data science skill in python:
 
 - [Introduction to tabular .csv data with pandas](https://colab.research.google.com/github/arcus/education-materials/blob/master/tidy-csv-pandas/tidy-csv-pandas-full.ipynb)
 - [Exploring diagnostic data with python](https://colab.research.google.com/github/arcus/education-materials/blob/master/data-analysis-with-pandas/01-exploring-diagnostic-data-with-pandas.ipynb)
@@ -686,4 +681,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Data+Visualizations+in+Python%22)!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Data+Visualizations+in+seaborn%22)!
