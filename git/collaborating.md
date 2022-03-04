@@ -75,8 +75,7 @@ Next, the Collaborator needs to download a copy of the Owner’s repository to h
 The Collaborator doesn’t want to overwrite her own version of planets.git, so needs to clone the Owner’s repository to a different location than her own repository with the same name.
 
 To clone the Owner’s repo into her Desktop folder, the Collaborator enters:
-
-    ```console
+```console
 $ git clone git@github.com:vlad/planets.git ~/Desktop/vlad-planets
 ```
 Replace ‘vlad’ with the Owner’s username.
@@ -87,34 +86,30 @@ If you choose to clone without the clone path (`~/Desktop/vlad-planets`) specifi
 
 The Collaborator can now make a change in her clone of the Owner’s repository, exactly the same way as we’ve been doing before:
 
-
-    ```console
+```console
 $ cd ~/Desktop/vlad-planets
 $ nano pluto.txt
 $ cat pluto.txt
 ```
-
-    ```output
+```output
 It is so a planet!
 ```
 
-    ```console
+```console
 $ git add pluto.txt
 $ git commit -m "Add notes about Pluto"
 ```
-
-    ```output
+```output
  1 file changed, 1 insertion(+)
  create mode 100644 pluto.txt
 ```
 
 Then push the change to the Owner’s repository on GitHub:
 
-    ```console
+```console
 $ git push origin main
 ```
-
-    ```output
+```output
 Enumerating objects: 4, done.
 Counting objects: 4, done.
 Delta compression using up to 4 threads.
@@ -129,11 +124,10 @@ Note that we didn’t have to create a remote called `origin`: Git uses this nam
 Take a look at the Owner’s repository on GitHub again, and you should be able to see the new commit made by the Collaborator. You may need to refresh your browser to see the new commit.
 
 To download the Collaborator’s changes from GitHub, the Owner now enters:
-    ```console
+```console
 $ git push origin main
 ```
-
-    ```output
+```output
 remote: Enumerating objects: 4, done.
 remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (2/2), done.
@@ -151,7 +145,7 @@ Fast-forward
 
 Now the three repositories (Owner’s local, Collaborator’s local, and Owner’s on GitHub) are back in sync.
 
-### Some more notes about remotes**
+### Some more notes about remotes
   
 In this episode and the previous one, our local repository has had a single “remote”, called `origin`. A remote is a copy of the repository that is hosted somewhere else, that we can push to and pull from, and there’s no reason that you have to work with only one. For example, on some large projects you might have your own copy in your own GitHub account (you’d probably call this `origin`) and also the main “upstream” project repository (let’s call this `upstream` for the sake of examples). You would pull from `upstream` from time to time to get the latest updates that other people have committed.
 
