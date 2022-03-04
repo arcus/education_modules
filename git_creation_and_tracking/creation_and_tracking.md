@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  0.0.1
+version:  0.0.11
 language: en
 narrator: UK English Female
 title: Creating your Git Repository
