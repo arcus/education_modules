@@ -53,7 +53,8 @@ List any skills and knowledge needed to do this module here. When available, inc
 Open a web browser, like Chrome or Firefox 
 
 ## Create a remote repository
-Log in to GitHub, then click on the icon in the top right corner to create a new repository called planets:
+
+Log in to [GitHub](github.com), then click on the icon in the top right corner to create a new repository called planets:
 
 ![github-create-repo-01](./assets/media/remotes_step_01_images/github-create-repo-01.png)
 
@@ -62,7 +63,34 @@ Name your repository “planets” and then click “Create Repository”.
 Note: Since this repository will be connected to a local repository, it needs to be empty. Leave “Initialize this repository with a README” unchecked, and keep “None” as options for both “Add .gitignore” and “Add a license.” See the “GitHub License and README files” exercise below for a full explanation of why the repository needs to be empty.
 
 
+![github-create-repo-02](./assets/media/remotes_step_01_images/github-create-repo-02.png)
 
+
+As soon as the repository is created, GitHub displays a page with a URL and some information on how to configure your local repository:
+
+![github-create-repo-03](./assets/media/remotes_step_01_images/github-create-repo-03.png)
+
+This effectively does the following on GitHub’s servers:
+
+```console
+$ mkdir planets
+$ cd planets
+$ git init
+```
+
+If you remember back to the earlier episode where we added and committed our earlier work on mars.txt, we had a diagram of the local repository which looked like this:
+
+![git-staging-area-04.svg](./assets/media/remotes_step_01_images/git-staging-area-04.svg)
+
+Now that we have two repositories, we need a diagram like this:
+
+![git-freshly-made-github-repo-05.svg](./assets/media/remotes_step_01_images/git-freshly-made-github-repo-05.svg)
+
+Note that our local repository still contains our earlier work on mars.txt, but the remote repository on GitHub appears empty as it doesn’t contain any files yet.
+
+## Connect local to remote repository
+
+Now we connect the two repositories. We do this by making the GitHub repository a remote for the local repository. The home page of the repository on GitHub includes the URL string we need to identify it:
 
 ## Additional Resources
 
