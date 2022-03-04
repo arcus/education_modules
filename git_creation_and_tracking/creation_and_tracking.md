@@ -367,8 +367,8 @@ The console output will look like this, though your unique identifiers (f22b25e 
 When we run `git commit`,
 Git takes everything we have told it to save by using `git add`
 and stores a copy permanently inside the special `.git` directory.
-This permanent copy is called a [commit]({{ page.root }}{% link reference.md %}#commit)
-(or [revision]({{ page.root }}{% link reference.md %}#revision)) and its short identifier is `f22b25e`. Your commit may have another identifier.
+This permanent copy is called a **commit**
+(or **revision**) and its short identifier is `f22b25e`. Your commit may have another identifier.
 
 We use the `-m` flag (for "message")
 to record a short, descriptive, and specific comment that will help us remember later on what we did and why.
@@ -376,8 +376,8 @@ If we just run `git commit` without the `-m` option,
 Git will launch `nano` (or whatever other editor we configured as `core.editor`)
 so that we can write a longer message.
 
-[Good commit messages][commit-messages] start with a brief (<50 characters) statement about the
-changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will" <commit message here>.
+**Good commit messages** Commit messages start with a brief (<50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will...".
+
 If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
 
 If we run `git status` now:
@@ -591,7 +591,6 @@ What does the `git commit` command do?
  [[ ]] Stages files so that their current version can be recorded.
  [[ ]] Creates a record of the current version of all files in the repository.
  [[X]] Creates a record of the current version of all of the staged files in the repository.
-
 ***
 <div class = "answer">
 The `git commit` command will only create a record of the files that you have *already staged.*
