@@ -599,9 +599,10 @@ The commit message should describe what this commit does. If you want to know th
 
 What does the `git commit` command do?
 
-[[ ]] Stages files so that their current version can be recorded.
-[[ ]] Creates a record of the current version of all files in the repository.
-[[X]] Creates a record of the current version of all of the staged files in the repository.
+ [[ ]] Stages files so that their current version can be recorded.
+ [[ ]] Creates a record of the current version of all files in the repository.
+ [[X]] Creates a record of the current version of all of the staged files in the repository.
+ 
 ***
 <div class = "answer">
 The `git commit` command will only create a record of the files that you have *already staged.*
