@@ -115,7 +115,6 @@ We can check that the command has worked by running `git remote -v`:
 $ git remote -v
 ```
 
-
 ```output
 origin   git@github.com:vlad/planets.git (fetch)
 origin   git@github.com:vlad/planets.git (push)
@@ -128,6 +127,66 @@ We’ll discuss remotes in more detail in the next episode, while talking about 
 
 Now that authentication is setup, we can return to the remote. This command will push the changes from our local repository to the repository on GitHub:
 
+```console
+$ git push origin main
+```
+
+Since Dracula set up a passphrase, it will prompt him for it. If you completed advanced settings for your authentication, it will not prompt for a passphrase.
+
+
+```output
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (16/16), 1.45 KiB | 372.00 KiB/s, done.
+Total 16 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/vlad/planets.git
+ * [new branch]      main -> main
+```
+
+<div class = 'care'>
+*Proxy*
+  
+If the network you are connected to uses a proxy, there is a chance that your last command failed with “Could not resolve hostname” as the error message. To solve this issue, you need to tell Git about the proxy:
+ 
+  ```console
+$ git config --global http.proxy http://user:password@proxy.url
+$ git config --global https.proxy https://user:password@proxy.url
+```
+
+When you connect to another network that doesn’t use a proxy, you will need to tell Git to disable the proxy using:
+  
+    ```console
+$ git config --global --unset http.proxy
+$ git config --global --unset https.proxy
+```
+  
+</div>
+
+<div class = 'care'>
+*Password Managers*
+  
+If your operating system has a password manager configured, git push will try to use it when it needs your username and password. For example, this is the default behavior for Git Bash on Windows. If you want to type your username and password at the terminal instead of using a password manager, type:
+ 
+  ```console
+$ unset SSH_ASKPASS
+```
+
+in the terminal, before you run `git push`. Despite the name, Git uses SSH_ASKPASS for all credential entry, so you may want to unset `SSH_ASKPASS` whether you are using Git via SSH or https.
+
+You may also want to add `unset SSH_ASKPASS` at the end of your `~/.bashrc` to make Git default to using the terminal for usernames and passwords.
+  
+</div>
+
+
+Our local and remote repositories are now in this state:
+
+![github-repo-after-first-push_01](./assets/media/remotes_step_03_images/github-repo-after-first-push_01.svg)
+
+
+### the -u flag
 
 ## Additional Resources
 
