@@ -147,14 +147,14 @@ To https://github.com/vlad/planets.git
 ```
 
 <div class = 'care'>
-*Proxy*
+**Proxy**
   
 If the network you are connected to uses a proxy, there is a chance that your last command failed with “Could not resolve hostname” as the error message. To solve this issue, you need to tell Git about the proxy:
  
-  ```console
+`
 $ git config --global http.proxy http://user:password@proxy.url
 $ git config --global https.proxy https://user:password@proxy.url
-```
+`
 
 When you connect to another network that doesn’t use a proxy, you will need to tell Git to disable the proxy using:
   
@@ -166,7 +166,7 @@ $ git config --global --unset https.proxy
 </div>
 
 <div class = 'care'>
-*Password Managers*
+**Password Managers**
   
 If your operating system has a password manager configured, git push will try to use it when it needs your username and password. For example, this is the default behavior for Git Bash on Windows. If you want to type your username and password at the terminal instead of using a password manager, type:
  
