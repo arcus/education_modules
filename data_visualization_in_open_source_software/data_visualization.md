@@ -7,7 +7,21 @@ language: en
 narrator: UK English Female
 title: Data Visualization in Open Source Software
 comment:  This module introduces ggplot2 and seaborn, popular data visualization libraries in R and python, respectively. It lays the groundwork for using ggplot2 and seaborn by 1) highlighting common features of plots that can be manipulated in plot code and 2) discussing data preparation for plotting.
-link: https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
+
+long_description: This module introduces ggplot2 and seaborn, popular data visualization libraries in R and python, respectively. It lays the groundwork for using ggplot2 and seaborn by 1) highlighting common features of plots that can be manipulated in plot code and 2) discussing data preparation for plotting. This content will be most useful for people who have some experience creating data visualizations and/or reading plots presented in research articles or similar contexts. Some prior exposure to R and/or python is helpful but not required. This is appropriate for beginners.
+
+@learning_objectives
+
+After completion of this module, learners will be able to:
+
+* describe the role ggplot2 and seaborn play in the R and python programming languages, respectively
+* identify key elements in a plot that communicate information about the data
+* discuss possible data manipulation necessary to plot in either seaborn (for python) or ggplot2 (for R)
+
+@end
+
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+script:  https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 # Data Visualization in Open Source Software
@@ -15,7 +29,11 @@ link: https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modu
 <div class = "overview">
 ## Overview
 
-This module introduces ggplot2 and seaborn, popular data visualization libraries in R and python, respectively. It lays the groundwork for using ggplot2 and seaborn by 1) highlighting common features of plots that can be manipulated in plot code and 2) discussing data preparation for plotting.
+@comment
+
+**Is this module right for me?**
+
+@long_description
 
 **Estimated time to completion:** 20 min
 
@@ -32,25 +50,9 @@ This module also assumes some basic familiarity with either R or python, but is 
 
 **Learning Objectives**
 
-After completion of this module, learners will be able to:
+@learning_objectives
 
-* describe the role ggplot2 and seaborn play in the R and python programming languages, respectively
-* identify key elements in a plot that communicate information about the data
-* discuss possible data manipulation necessary to plot in either seaborn (for python) or ggplot2 (for R)
 </div>
-
-Content:
-=======
-
-* [Introduction to visualizing data](#introduction-to-visualizing-data) (1 min read)
-* [General tools for visualizing data](#general-tools-for-visualizing-data) (3 min read)
-* [Plotting libraries in R and python](#plotting-libraries-in-R-and-python) (3 min read)
-* [How plotting works in practice](#how-plotting-works-in-practice) (3 min read)
-* [A note about data structure](#a-note-about-data-structure) (1 min read)
-* [Accessible design for data visualization](#accessible-design-for-data-visualization) (2 min read)
-* [Knowledge check](#knowledge-check) (5 min quiz)
-* [Additional resources](#additional-resources) (1 min read)
-* [Feedback](#Feedback) (5 min survey)
 
 ## Introduction to visualizing data
 
@@ -80,14 +82,13 @@ In the examples in the next modules in this series, [Data visualization in ggplo
 
 ## Plotting libraries in R and python
 
-There are many options available for creating data visualizations. For this module, we'll focus on just one plotting library in each: ggplot2 in R and seaborn in python.
+There are many options available for creating data visualizations in R and python. For this module, we'll focus on just one plotting library in each: ggplot2 in R, and seaborn in python.
 
 ### ggplot2 in R
 
 R comes with plenty of plotting functions ready to go in base R, and for quick-and-dirty visualizations, that is usually the fastest option. The popular library [ggplot2](https://ggplot2.tidyverse.org/) provides much more flexibility and control over your visualizations, however, and if you're creating visualizations to share (e.g. in a manuscript or presentation), you'll probably find you need to switch to ggplot2 at some point anyway to get more control over the appearance of your visualizations.
 
-To get started with ggplot2 in R on your own machine, you'll need to install it (this has already been done for you in the pangeo binder instance we're using for hands-on activities in this module), and then load the library in R:
-
+To get started with ggplot2 in R on your own machine, you'll need to install it, and then load the library in R:
 
 ```r
 # You only need to install it once
@@ -105,16 +106,15 @@ For an excellent quick reference, see the [ggplot2 cheatsheet](https://ggplot2.t
 
 In python, there's a similar situation: The [seaborn](https://seaborn.pydata.org/) library is a plotting library that works on top of the more basic and powerful library [matplotlib](https://matplotlib.org/), making it easier to use for common data science applications. For some kinds of plots, you may be able to get what you want faster by just using matplotlib, but, just as with ggplot2 in R, you'll likely need seaborn to get publication-ready plots. To keep things simple, we'll just work in ggplot2 and seaborn from the beginning.
 
-To use seaborn in python on your own machine, you'll need to [install](https://seaborn.pydata.org/installing.html) it first (this has already been done for you in the pangeo binder instance we're using for hands-on activities in this module). You can use either PyPi (`pip install seaborn`) or Anaconda (`conda install seaborn`) to install it, whichever you use for your other python modules.
+To use seaborn in python on your own machine, you'll need to [install](https://seaborn.pydata.org/installing.html) it first. You can use either PyPi (`pip install seaborn`) or Anaconda (`conda install seaborn`) to install it, whichever you use for your other python modules.
 
 When you're ready to use seaborn in python, by convention, seaborn should be imported with the abbreviation sns (this isn't necessary for seaborn to work, but you'll see a lot of help documentation online using the sns abbreviation, so it's a good idea to get in the habit of doing that yourself, too, so that your code is similar to online examples):
-
 
 ```python
 import seaborn as sns
 ```
 
-seaborn is designed to work well with [pandas](https://pandas.pydata.org/) data structures, which are organized a little differently (and generally much better for data science purposes!) from the default data structures in python. If you're not using pandas dataframes, though, [you can still use seaborn](https://seaborn.pydata.org/tutorial/data_structure.html). We'll be using pandas dataframes in this module.
+The seaborn functions are designed to work well with [pandas](https://pandas.pydata.org/) data structures, which are organized a little differently (and generally much better for data science purposes!) from the default data structures in python. If you're not using pandas dataframes, though, [you can still use seaborn](https://seaborn.pydata.org/tutorial/data_structure.html).
 
 Because seaborn is built on top of matplotlib, it doesn't automatically show plots you create, it waits until you ask to see them. If you want to see the plots you're making, you need to either use the command `matplotlib.pyplot.show()` after each plot or, if you're using an interactive jupyter notebook you can put it in [matplotlib mode](https://ipython.readthedocs.io/en/stable/interactive/plotting.html).
 
@@ -177,17 +177,17 @@ Even those precautions won't help you reach people with severely limited or none
 
 In general, a [good principle for inclusive design](https://idrc.ocadu.ca/about/philosophy/) is providing **options** for your users so they can select for themselves the best way for them to interact with your content. Thinking about data visualizations, relevant additional options for accessing the information in your visualization may include the following:
 
-- Informative figure captions or note text explaining the visualization
+- Informative figure captions, alt text (for online visuals), or note text explaining the visualization
 - A "headline" title for your visualization that articulates the take-home message
 - A data table presenting the data shown in the chart (note that this may be in an appendix or similar)
-- A summary in your text of the important information in the visualization.
+- A summary in your text of the important information in the visualization
 
 For more guidance on accessible design of data visualizations, see this presentation by [Kent Eisenhuth](http://kenteisenhuth.com/), a user experience designer at Google. It's set to start at his discussion of how to provide a really valuable summary of a data visualization, but if you're interested you may like to scroll back and watch it from the beginning.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4zV9XqK0foM?start=2940" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-## Knowledge Check
+## Quiz
 
 Which of the following statements best describes the seaborn and ggplot2 libraries?
 
@@ -244,9 +244,9 @@ Although the first two answers seem plausible, they don't really describe a typi
 
 ## Additional Resources
 
-If you are brand new to R or python (or want a refresher), check out [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/objective_3_1/r_intensive/intro_to_r_rstudio/intro_to_r_rstudio.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/objective_3_1/python_intensive/Intro-to-python.md) to learn more about how to use each programming language. Before you can create visualizations of your own data, you'll need to be able to read data into R or python, and check and manipulate data frames.
+If you are brand new to R or python (or want a refresher), check out [Intro to R](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md) to learn more about how to use each programming language. Before you can create visualizations of your own data, you'll need to be able to read data into R or python, and check and manipulate data frames.
 
-If you're ready for more applied examples of data visualization, check out the next modules in this series: [Data Visualization in ggplot2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/objective_3_1/data_visualization_in_ggplot2/data_visualization_ggplot2.md#1), and Data Visualization in seaborn (coming soon).
+If you're ready for more applied examples of data visualization, check out the next modules in this series: [Data Visualization in ggplot2](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md), and [Data Visualization in seaborn](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_seaborn.md).
 
 ## Feedback
 
@@ -254,11 +254,7 @@ In the beginning, we stated some goals.
 
 **Learning Objectives**
 
-After completion of this module, learners will be able to:
-
-* describe the role ggplot2 and seaborn play in the R and python programming languages, respectively
-* identify key elements in a plot that communicate information about the data
-* discuss possible data manipulation necessary to plot in either seaborn (for python) or ggplot2 (for R)
+@learning_objectives
 
 We ask you to fill out a brief (5 minutes or less) survey to let us know:
 
