@@ -171,7 +171,7 @@ If you already completed this work for a previous module, and it's been a while 
 ![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
 
 <div class = "warning">
-If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r\_basics\_transform\_data` exercise files, you might want to save your version of `transform.Rmd` to `my_transform.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
+If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform.Rmd` to `my_transform.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
 </div>
 
 ## How to Follow Along
@@ -223,7 +223,7 @@ Please go to your RStudio environment (either the version in the cloud or your l
 
 If you haven't already: using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` folder, and then open the `exercises` folder.  You should then open `visualize.Rmd`, which will allow you to work alongside the sections of this module.
 
-![RStudio window showing visualize.Rmd](media/r_visualize_exercise.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
+![RStudio window showing visualize.Rmd](media/visualize_rmd.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
 
 To get started, let's first load up our fabricated data.  Run the first code chunk by clicking the green "play" button (look at line 10).  This gives you the data frame with fake Covid testing data, the data we will use for our instruction in this module.
 
@@ -326,8 +326,8 @@ ggplot(data = covid_testing) +
 </td>
 <td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) +
-  geom_histogram(mapping = aes(<span style = "color: rgb(var(--color-text)); font-weight: bold;">x = pan_day</span>)
-</pre>)
+  geom_histogram(mapping = aes(<span style = "color: rgb(var(--color-text)); font-weight: bold;">x = pan_day</span>))
+</pre>
 </td></tr>
 </table>
 </lia-keep>
@@ -370,7 +370,7 @@ What do we mean by "tidy" data frame?
 
 A data set can take on a lot of different shapes with different styles of organizing data. But there is one method or shape that is best suited for data analysis, and that approach is called "tidy."
 
-![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)
+![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)<!-- style = "max-width: 400px;" -->
 
 A data set is tidy if:
 
@@ -872,7 +872,7 @@ The distinction between visual elements that are "set" and those that are "mappe
 
 Using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` directory, and then open the `exercises` directory.  You should then open `visualize.Rmd`, which will allow you to work alongside the sections of this module.
 
-![RStudio window showing visualize.Rmd](media/r_visualize_exercise.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
+![RStudio window showing visualize.Rmd](media/visualize_rmd.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
 
 To get started, let's first load up our fabricated data.  Run the first code chunk by clicking the green "play" button (look at line 10).  This gives you the data frame with fake Covid testing data, the data we will use for our instruction in this module.  You may have already done this a few sections ago, but it won't hurt to do it again.
 
@@ -909,7 +909,7 @@ ggplot(data = covid_testing) +
   geom_histogram(mapping = aes(x = pan_day), binwidth = 1)
 ```
 
-Finally, for the third task, you had to create a new code chunk by using copy and paste, *and* you had to add an aesthetic mapping using "fill".  Complicated!
+Finally, for the third task, you had to create a new code chunk by using copy and paste, **and** you had to add an aesthetic mapping using "fill".  Complicated!
 
 ![Lines 58-60 of visualize.Rmd](media/task_3.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
@@ -930,10 +930,12 @@ In the third task you just completed (if you didn't actually do it, at least go 
 <div style = "margin: 1rem; max-width: 45%; float:left;"> ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)
 </div>
 <div style = "margin: 1rem auto; max-width: 45%; float:left;">
+
 <pre>
 ggplot(data = covid_testing) +
   geom_histogram(mapping = aes(x = pan_day, fill = result))
 </pre>
+
 </div>
 </div>
 
@@ -1023,16 +1025,171 @@ Run that code, and you should see something like this!
 
 ## Recap
 
-| | |
 | --- | --- |
 | ![ggplot2 logo on a hexagon.  The logo consists of the word "ggplot2" superimposed on light grey graph paper with a line graph connecting blue dots of different shades](media/ggplot2_hex.png)<!-- style = "max-width:150px;" --> | **ggplot2** is a package that provides a **grammar of graphics**. You can create any type of plot using a simple template to which you provide: |
 | ![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)<!-- style = "max-width:150px;" --> | 1. A **tidy data frame**, in which each variable is in its own column, each observation is in its own row, and each value is in its own cell; |
 | ![histogram of covid data](media/mini_histogram.png)<!-- style = "max-width:75px;" -->  ![frequency polygon of covid data](media/mini_freqpoly.png)<!-- style = "max-width:75px;" --> | 2. A **geom function**, which tells R what kind of plot to make; and |
 | ![Crossed X and Y axes](media/positions.png)<!-- style = "max-width:75px;" -->  ![Display of color choices](media/colors.png)<!-- style = "max-width:75px;" -->  | 3. **Aesthetic mappings**, which tell R how to represent data as graphical markings on the plot. |
-| ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)<!-- style = "max-width:75px;" -->   ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)<!-- style = "max-width:75px;" -->   | Aesthetics can be **mapped** to a variable or **set** to a constant value. |
+| ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)<!-- style = "max-width:75px;" -->   ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/blue_histogram.png)<!-- style = "max-width:75px;" -->   | Aesthetics can be **mapped** to a variable or **set** to a constant value. |
+
+## Additional Resources
+
+The last few sections of this module, including this page, include additional information that will help you on your way.  We'll start with saving plot images!
+
+<h3>Saving Plot Images<h3>
+
+To save a plot you've created in the console, you can go to the **Plots** pane on the bottom right of the RStudio window, click "Export", and select "Save as Image".
+
+To save a plot you've created by running some code inside an R notebook, you can **right-click** the plot and select "Save image as".
+
+![RStudio window with the two options illustrated and labeled: Plots, Export, Save as Image, and a right click "save image as"](saving_images.png)<!-- style = "max-width:700px;" -->
+
+## Position Adjustments
+
+We've only barely scratched the surface of what you can do with ggplots. For example, you can change how overlapping objects are arranged.  For example, instead of a stacked histogram, you can request side-by-side bars.
+
+```
+ggplot(covid_testing) +
+  geom_histogram(
+    mapping = aes(x = pan_day, fill = result),
+    position = position_dodge()
+  )
+```
+
+![Histogram that has, instead of a single bar for each bin, three -- one for invalid tests, one for negative tests, and one for positive tests.  Each is in a distinct color.](media/position_dodge.png)<!-- style = "max-width:700px;" -->
+
+## Themes
+
+You can use different themes which affect how non-data elements such as axes, gridlines, and background appear.
+
+```
+ggplot(covid_testing) +
+  geom_histogram(
+    mapping = aes(x = pan_day, fill = result),
+    position = position_dodge()
+  ) +
+  theme_light()
+```
+
+![Histogram with three bars per bin and a light-colored background](media/theme_light.png)<!-- style = "max-width:700px;" -->
+
+## Scales
+
+You can customize color scales.
+
+```
+library(colorspace)
+
+cols <- c(
+  "invalid" = "grey80",
+  qualitative_hcl(2, palette = "dark3")
+)
+
+ggplot(covid_testing) +
+  geom_histogram(
+    mapping = aes(x = pan_day, fill = result),
+    position = position_dodge()
+  ) +
+  theme_light() +
+  scale_fill_manual(values = cols)
+```
+
+![Histogram with three bars per bin and a light-colored background, but this time the colors of the three kinds of bars are different than we saw earlier.](media/color_scales.png)<!-- style = "max-width:700px;" -->
+
+## Facets
+
+You can facet your plot. That means breaking it into sub-plots by another variable, for example, gender or location in the hospital.
+
+```
+ggplot(covid_testing) +
+  geom_histogram(
+    mapping = aes(x = pan_day, fill = result)
+  ) +
+  theme_light() +
+  scale_fill_manual(values = cols) +
+  facet_wrap(~demo_group)
+```
+
+![Five small histograms, one for each demographic group represented in the data.  ](media/facets.png)<!-- style = "max-width:700px;" -->
+
+## Coordinate systems
+
+You can easily make radial plots or geographical maps.
+
+```
+ggplot(covid_testing) +
+  geom_histogram(
+    mapping = aes(x = pan_day, fill = result)
+  ) +
+  theme_light() +
+  scale_fill_manual(values = cols) +
+  facet_wrap(~demo_group) +
+  coord_polar()
+```
 
 
+![Five small histograms, one for each demographic group represented in the data, but instead of being on a grid, they are on a circular coordinate system.](media/coord_systems.png)<!-- style = "max-width:700px;" -->
 
+## Titles and Captions
+
+And you can add titles, subtitles, or annotations, and change the axis labels or the appearance.
+
+```
+ggplot(covid_testing) +
+  geom_histogram(
+    mapping = aes(x = pan_day, fill = result)
+  ) +
+  theme_light() +
+  scale_fill_manual(values = cols) +
+  facet_wrap(~demo_group) +
+  coord_polar() +
+  ggtitle(
+    label = "COVID19 test volume",
+    subtitle = "Displayed in polar coordinates, mostly to show off ggplot2"
+  )
+```
+
+![Five small circular histograms, with a shared title and subtitle](media/titles_captions.png)<!-- style = "max-width:700px;" -->
+
+## Adding New elements
+
+All of these elements, like position adjustments, themes, color scales, facets, coordinate systems, and text can be added to a ggplot command in the same way that we added a second geom layer – by writing a plus sign followed by a theme function, a scale function, a facet function, etc.
+
+```
+ggplot(data = data_frame) +                     # Required
+  geom_function(mapping = aes(mappings)) +      # Required
+  theme_function +                              # Optional
+  scale_function +                              # Optional
+  facet_function +                              # Optional
+  coordinate_function +                         # Optional
+  ...
+```
+
+## Cheat Sheet!
+
+The ggplot Cheat Sheet is great to have on hand as you're exploring your data. It reviews the basic template for building any plot and also lists the most useful geom functions.
+
+To find official cheat sheets, go to the Help menu and choose "Cheat Sheets"
+
+![RStudio help menu, with Cheat Sheets selected and the submenu option "Data Visualization with ggplot2" selected](media/cheat_sheets.png)<!-- style = "max-width:700px;" -->
+
+## Additional Reading
+
+![Book cover of Fundamentals of Data Visualization](media/fundamentals.png)<!-- style = "max-width:700px;" -->
+
+If you'd like to learn more about which graphics are most effective in specific situations, I highly recommend taking a look at *Fundamentals of Data Visualizations* by Claus Wilke. This is a very readable and recent primer on data visualization and figure design, and it's [available for free!](https://serialmentor.com/dataviz)
+
+## Survival Plots
+
+The `survminer` package extends `ggplot2` to make it straightforward to create publication-quality survival curves and risk tables.
+
+![survminer cheat sheet](media/survminer.png)<!-- style = "max-width:700px;" -->
+
+## A Grammar for Tables
+
+![hex icons for gt and gtsummary](media/gt_icons.png)<!-- style = "max-width:300px;" -->![attractive data table with subgroups and footnotes](media/gt_table.png)<!-- style = "max-width:500px;" -->
+
+The `gt` package provides a grammar for creating display tables, i.e. tables that you might want to show in a publication or on a summary report. The `gtsummary` package makes it trivial to generate publication-ready tables from a tidy data frame.
 
 ## Feedback
 
