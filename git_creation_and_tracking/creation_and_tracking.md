@@ -595,7 +595,10 @@ The commit message should describe what this commit does. If you want to know th
 
 There isn't a record of your staged files until you commit them using `git commit`. This is like telling the scanner to actually scan all of the staged drawings in its intake slot. Note that if you left a drawing on your desk instead of putting it in the scanner, it won't get scanned. Now there is a record of this version of your project. The same way that the scanner now has a digital record of the current state of your art, Git stores a record of the state of your repository when you commit.
 
-![The three images from above appear in order from left to right. The stick figure making the drawing is labeled "Files". An arrow labeled `git add smiley.art` points to the middle image of the drawing in the scanner intake slot, which is labeled "Staged files." An arrow labeled `git commit -m "create smiley.art"` points to the last image. This is a picture of the smiley face drawing saved to the disk in the scanner and is labeled "Committed files."](fig/scanner_metaphor.svg)
+![The three images from above appear in order from left to right. The stick figure making the drawing is labeled "Files". An arrow labeled `git add smiley.art` points to the middle image of the drawing in the scanner intake slot, which is labeled "Staged files." An arrow labeled `git commit -m "create smiley.art"` points to the last image. This is a picture of the smiley face drawing saved to the disk in the scanner and is labeled "Committed files."](fig/scanner_metaphor.svg)<!--
+style = "width: 300px;
+         border: 10px solid;"
+-->
 
 
 
