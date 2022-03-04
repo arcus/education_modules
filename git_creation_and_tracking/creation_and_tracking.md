@@ -735,7 +735,13 @@ There are options you can use to automatically stage all files. Entering `git co
 
 ## Additional Resources
 
-The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
+This module was based on examples from three of [Software Carpentry](https://software-carpentry.org)'s [lessons on using Git](https://swcarpentry.github.io/git-novice/). The story of Dracula and Wolfman's planned trip to Mars is borrowed from them, and more examples are available in the original lessons:
+
+ - Lesson 3: [Creating a Repository](https://swcarpentry.github.io/git-novice/03-create/index.html)
+ - Lesson 4: [Tracking Changes](https://swcarpentry.github.io/git-novice/04-changes/index.html)
+ - Lesson 6: [Ignoring Things](https://swcarpentry.github.io/git-novice/06-ignore/index.html)
+
+This module is also the third is a series of modules about Git created by Arcus Education and friends. While we suggest continuing with the next module in the series, [Exploring a Project's History](link/goes/here) the entire collection is available on the [Arcus website](link/goes/here)
 
 ## Feedback
 
