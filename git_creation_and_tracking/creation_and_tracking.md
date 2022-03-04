@@ -584,17 +584,6 @@ The commit message should describe what this commit does. If you want to know th
  ![The three images from above appear in order from left to right. The stick figure making the drawing is labeled "Files". An arrow labeled `git add smiley.art` points to the middle image of the drawing in the scanner intake slot, which is labeled "Staged files." An arrow labeled `git commit -m "create smiley.art"` points to the last image. This is a picture of the smiley face drawing saved to the disk in the scanner and is labeled "Committed files."](fig/scanner_metaphor.png)
 
 
-
-(Possible metaphor to run by people:
-
-1. creating 2D artwork/drawing by hand (editing files)
-2. putting the drawings in a scanner's intake slot (**add**)
-3. scanning to create a *perfect* digital copy of the added artwork (**commit**)
-4. uploading scans to cloud storage (**push**)
-5. printing out updated images from the cloud to work on (**pull**)
-6. I draw a flower in one corner, you draw a boat in another corner of drawing 1,  and our friend draws an animal on drawing 2, all of our changes **merge** happily!
-7. I make the animal on drawing 2 into an angry sheep, while you turn it into a happy sloth, we can’t merge the drawings and must resolve this **conflict**!)
-
 ### Quiz: `git` workflow
 
 What does the `git commit` command do?
@@ -602,7 +591,7 @@ What does the `git commit` command do?
  [[ ]] Stages files so that their current version can be recorded.
  [[ ]] Creates a record of the current version of all files in the repository.
  [[X]] Creates a record of the current version of all of the staged files in the repository.
- 
+
 ***
 <div class = "answer">
 The `git commit` command will only create a record of the files that you have *already staged.*
