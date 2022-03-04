@@ -171,7 +171,7 @@ If you already completed this work for a previous module, and it's been a while 
 ![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
 
 <div class = "warning">
-If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the r\_basics\_transform\_data exercise files, you might want to save your version of `transform.Rmd` to `my_transform.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
+If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r\_basics\_transform\_data` exercise files, you might want to save your version of `transform.Rmd` to `my_transform.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
 </div>
 
 ## How to Follow Along
@@ -186,8 +186,7 @@ Let's try to imagine some **data visualizations** (also known as **plots** and *
 
 Consider the `covid_testing` data frame shown below, which we'll work on in the hands-on part of this module.  Think about what the columns mean and which columns you might like to see represented on a data visualization.
 
-![The `covid_testing` data frame in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)<!--
-style = "max-width:800px;"-->
+![The `covid_testing` data frame in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)<!-- style = "max-width:800px;"-->
 
 What do you think a plot would look like in which:
 
@@ -232,7 +231,7 @@ For the next step, we'd like for you to go into the **console** to practice runn
 
 In the console, please type in the following.  While you can certainly cut and paste, there is sometimes an advantage to typing the code by hand, because it helps you develop "muscle memory" about how to construct code.  Pay attention to the spelling, capitalization, and parentheses!  
 
-``` r
+```r
 
 ggplot(data = covid_testing) +
   geom_histogram(mapping = aes(x = pan_day))
@@ -251,7 +250,7 @@ R lets you know that when you ask it to draw a histogram, you should probably te
 
 ## The Power of Data visualizations
 
-![Histogram of covid tests by day of pandemic](media/covid_histogram.png)<!-- style = "max-width: 900px;  -->
+![Histogram of covid tests by day of pandemic](media/covid_histogram.png)<!-- style = "max-width: 900px;"  -->
 
 When we asked you to imagine what this plot might look like - the number of Covid tests that were performed on a given day over time – you might have imagined something like this. Initially you have very few tests that are being run, maybe because the pandemic hasn't started yet or because the test isn't yet broadly available. And at some point the number of tests increases and remains at a high level. But this simple visualization tells you so much more than that general shape. You can see that by 30 days, the testing ramp-up settles. And there appear to be some interesting things going on after day 60 that you might want to look into further.
 
@@ -290,38 +289,38 @@ So here is a quick analysis of how we just used ggplot to make that histogram.
 <lia-keep>
 <table style = "width = 100%">
 <tr><th style = "width: 45%;"></th><th style = "width: 45%;"></th></tr>
-<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>1) We always start with `ggplot()`.</td>
-<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>1) We always start with <code>ggplot()</code>.</td>
+<td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
 <span style = "color: rgb(var(--color-text))">ggplot(</span>data = covid_testing<span style = "color: rgb(var(--color-text))">)</span> +
   geom_histogram(mapping = aes(x = pan_day))
-</code>
+</pre>
 </td></tr>
-<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>2) Give ggplot a **data frame** to start with, in this case, our `covid_testing` data frame.</td>
-<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>2) Give ggplot a <b>data frame</b> to start with, in this case, our <code>covid_testing</code> data frame.</td>
+<td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
 ggplot(<span style = "color: rgb(var(--color-text))">data = covid_testing</span>) +
   geom_histogram(mapping = aes(x = pan_day))
-<code>
+</pre>
 </td></tr>
-<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>3) We build our plot across several different lines, so we include a `+` to say "wait, we're not done yet!"
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>3) We build our plot across several different lines, so we include a <code>+</code> to say "wait, we're not done yet!"
 </td>
-<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
+<td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) <span style = "color: rgb(var(--color-text))">+ </span>
   geom_histogram(mapping = aes(x = pan_day))
-<code>
+</pre>
 </td></tr>
 <tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>4) In the second line, we describe what kind of geometric representation we want -- a histogram.
 </td>
-<td><pre style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
+<td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) +
   <span style = "color: rgb(var(--color-text))">geom_histogram(</span>mapping = aes(x = pan_day)<span style = "color: rgb(var(--color-text))">)</span>
 </pre>
 </td></tr>
 <tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>5) We also add some mappings, explaining which data from the data frame should be displayed in the histogram.  We use "aes" (short for "aesthetic" or "aesthetic mapping") to tell ggplot how to draw the visualization.  We only have to specify the x axis, because a histogram assumes that you're counting rows of data and will map that to the y axis.
 </td>
-<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
+<td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) +
   geom_histogram(<span style = "color: rgb(var(--color-text))">mapping = aes(x = pan_day)</span>)
-<code>
+</pre>
 </td></tr>
 </table>
 </lia-keep>
@@ -330,7 +329,7 @@ ggplot(data = covid_testing) +
 
 So that was a lot of information. Let's break this down to build up to a more general template. Here's a preview of that template, and we'll spend the few sections or so exploring it.
 
-![ggplot code annotated with the steps enumerated in the list below](media/ggplot_template.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:700px;" -->
+![ggplot code annotated with the steps enumerated in the list below](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
 
 You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details that match what you want. To fill in the details, you need to do 3 things:
 
@@ -354,10 +353,10 @@ In the next section, we'll talk about what it means to call a data frame "tidy".
 Let's get started. The first detail is a "tidy" data frame which contains the data you want to plot.
 
 <lia-keep>
-<code style = "color: rgba(var(--color-text), 0.3); font-size: 0.8em;">
+<pre style = "color: rgba(var(--color-text), 0.5); font-size: 0.8em;">
 <b>ggplot(data = </b><span style = "color: rgb(var(--color-text))>data_frame</span><b>) +</b>
   geom_function(<b>mapping = aes(</b>mappings<b>))</b>
-</code>
+</pre>
 </lia-keep>
 
 What do we mean by "tidy" data frame?
@@ -564,6 +563,7 @@ Depression status and timepoint should each become a column.  In fact, we sugges
 
 There's no need to remove the sex variable, and the numerical values don't necessarily need to have the same number of significant digits to be considered "tidy".  Here's one way to make the table above into a tidy dataset ready for computational analysis:
 
+<lia-keep>
 <table>
   <thead>
     <tr>
@@ -723,6 +723,7 @@ There's no need to remove the sex variable, and the numerical values don't neces
     </tr>
   </tbody>
 </table>
+</lia-keep>
 
 </details>
 </div>
@@ -733,7 +734,7 @@ There's no need to remove the sex variable, and the numerical values don't neces
 
 As a reminder, we put forth three steps in our `ggplot` template.
 
-![ggplot code annotated with the steps enumerated in the list below](media/ggplot_template.png)
+![ggplot code annotated with the steps enumerated in the list below](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
 
 You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details that match what you want. To fill in the details, you need to do 3 things:
 
@@ -760,20 +761,16 @@ Here are a few useful geom functions for visualizing clinical data, but there ar
 
 | Visual depiction | ggplot geom function |
 | --- | --- |
-| ![unlabeled histogram](media/geom_histogram_mini.png) | geom_histogram() |
-| ![unlabeled bar chart](media/geom_bar_mini.png) | geom_bar() |
-| ![unlabeled scatter plot with points](media/geom_point_mini.png) | geom_point() |
-| ![unlabeled dot plot](media/geom_dotplot_mini.png) | geom_dotplot() |
-| ![unlabeled box plot](media/geom_boxplot_mini.png) | geom_boxplot() |
-| ![unlabeled line graph](media/geom_line_mini.png) | geom_line() |
+| ![unlabeled histogram](media/geom_histogram_mini.png)<!-- style = "max-width:100px;" --> | geom_histogram() |
+| ![unlabeled bar chart](media/geom_bar_mini.png)<!-- style = "max-width:100px;" --> | geom_bar() |
+| ![unlabeled scatter plot with points](media/geom_point_mini.png)<!-- style = "max-width:100px;" --> | geom_point() |
+| ![unlabeled dot plot](media/geom_dotplot_mini.png)<!-- style = "max-width:100px;" --> | geom_dotplot() |
+| ![unlabeled box plot](media/geom_boxplot_mini.png)<!-- style = "max-width:100px;" --> | geom_boxplot() |
+| ![unlabeled line graph](media/geom_line_mini.png)<!-- style = "max-width:100px;" --> | geom_line() |
 
 ## Using our Template, Step 3
 
-As a reminder, we put forth three steps in our `ggplot` template.
-
-![ggplot code annotated with the steps enumerated in the list below](media/ggplot_template.png)
-
-You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details that match what you want. To fill in the details, you need to do 3 things:
+As a reminder, we put forth three steps in our `ggplot` template:
 
 1) Pick a **tidy data frame** (this contains the data you want to plot)
 
@@ -805,6 +802,7 @@ The mapping in ggplot would be within an **aes()**, or aesthetic mapping, and lo
 Note that R automatically figures out reasonable axis limits and a color scale, but you can fine tune this manually.
 
 Here's a visual that might help:
+
 ![Small table of data with columns a, b, and c, with arrows that point to the x and y axes of a small coordinate plane.  Each row also has a blue or green dot corresponding to the value in c.  "M" gets blue dots and "F" gets green dots.](media/abc_aesthetics.png)
 
 ## Aesthetic mappings
@@ -815,7 +813,9 @@ Let's do a quick check of your understanding of aesthetic mappings.  As a remind
 * A data visualization contains visual elements that **do change** with the data (for example, the height of a bar changes depending on the data, and the x and y position of a point on a scatter plot changes depending on the data).  **We "map" these visual elements.**
 
 Here are some aesthetic mappings to consider:
+
 ![A handful of aesthetic options including position, shape, size, color, line width, and line type.](media/aesthetic_mappings.png)
+
 From *Fundamentals of Data Visualization*, by Claus Wilke, licensed under CC-BY-NC-ND
 
 <div class = "question">
@@ -863,11 +863,11 @@ The distinction between visual elements that are "set" and those that are "mappe
 
 Using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` directory, and then open the `exercises` directory.  You should then open `visualize.Rmd`, which will allow you to work alongside the sections of this module.
 
-![RStudio window showing visualize.Rmd](media/r_visualize_exercise.png)<!-- style = "max-width: 800px; border: 1px solid rgb(var(--color-highlight))" -->
+![RStudio window showing visualize.Rmd](media/r_visualize_exercise.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
 
 To get started, let's first load up our fabricated data.  Run the first code chunk by clicking the green "play" button (look at line 10).  This gives you the data frame with fake Covid testing data, the data we will use for our instruction in this module.  You may have already done this a few sections ago, but it won't hurt to do it again.
 
-Then, work through the exercises in the visualize.Rmd file, adding and updating code as indicated.
+Then, work through the exercises in the `visualize.Rmd` file, adding and updating code as indicated.
 
 Stop when it says "Stop here".  We'll go over the solutions in the next section.
 
@@ -879,7 +879,7 @@ You had three tasks to complete.  We'll go through them one at a time.
 
 In your first task, you were asked to do what we already did once in this module: create a histogram of Covid tests as a function of `pan_day`.  There were three blanks to fill in, and three numbered instructions.
 
-![Lines 18-31 of visualize.Rmd](media/task_1.png)
+![Lines 18-31 of visualize.Rmd](media/task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 Here's the solution that you should place in that code chunk:
 
@@ -891,7 +891,7 @@ ggplot(data = covid_testing) +
 
 In the second task, you were asked to rework that code with a bin width ("binwidth" in code) that corresponded to daily counts:
 
-![Lines 44-50 of visualize.Rmd](media/task_2.png)
+![Lines 44-50 of visualize.Rmd](media/task_2.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 Here's the solution that you should place in that code chunk:
 
@@ -902,7 +902,7 @@ ggplot(data = covid_testing) +
 
 Finally, for the third task, you had to create a new code chunk by using copy and paste, *and* you had to add an aesthetic mapping using "fill".  Complicated!
 
-![Lines 58-60 of visualize.Rmd](media/task_3.png)
+![Lines 58-60 of visualize.Rmd](media/task_3.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 
 And here's the solution:
@@ -918,14 +918,14 @@ In the third task you just completed (if you didn't actually do it, at least go 
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;"> ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/blue_histogram.png)
+<div style = "margin: 1rem; max-width: 45%; float:left;"> ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/covid_histogram.png)
 
 </div>
 <div style = "margin: 1rem auto; max-width: 45%; float:left;">
-<code>
+<pre>
 ggplot(data = covid_testing) +
   geom_histogram(mapping = aes(x = pan_day, fill = result))
-</code>
+</pre>
 </div>
 </div>
 
