@@ -16,6 +16,7 @@ After completion of this module, learners will be able to:
 - Create a Git repository
 - Add and make changes to files in the repository
 - Write short helpful descriptions to track the changes
+- Understand what `add` and `commit` do.
 
 @end
 
@@ -45,7 +46,7 @@ Before you start this module, make sure you have
 * Configured Git *on your computer*. See [this module](https://education.arcus.chop.edu) to learn how.
 * The ability to edit .txt documents. Click [here](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file) for an introduction to editing text files using `nano`.
 
-If you would prefer to work through this module on your own computer, you can find a module on Bash 101 [here](link to bash 101 module).
+If you would prefer to work through this module on your own computer, we also have [module on Bash 101](/fill/in/path).
 
 **Learning Objectives**
 
@@ -90,7 +91,7 @@ vlad
 $
 ```
 
-The above codeblock tells you that when Dracula types `logname` and presses enter, the output is 'vlad', his username. Try entering `logname` in your own console. There will be other code in front of each `$` telling your computer who and where you are, but that will be different for everyone, it is customary to omit it from example code. We will also omit the `$` after the output.
+The above codeblock tells you that when Dracula types `logname` and presses enter, the output is 'vlad', his username. Try entering `logname` in your own console. There will be other code in front of each `$` describing who and where you are. Since the stuff before the `$` will be different for everyone, it is customary to omit it from example code. We will also omit the `$` after the output.
 
 ### Initializing the repository
 
@@ -146,7 +147,7 @@ we will lose the project's history.
 Next, we will change the default branch to be called `main`.
 This might be the default branch depending on your settings and version
 of git.
-See the [setup episode](02-setup.md) for more information on this change.
+See the [setup episode](/path/to/earlier/module) for more information on this change.
 
 ```console
 git checkout -b main
@@ -168,7 +169,7 @@ No commits yet
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
-If you are using a different version of `git`, the exact
+If you are using a different version of Git, the exact
 wording of the output might be slightly different.
 
 ### Quiz: `git init`
@@ -292,7 +293,7 @@ Let's create a file called `mars.txt` that contains some notes
 about the Red Planet's suitability as a base.
 We'll use `nano` to edit the file;
 you can use whatever editor you like.
-In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). For a refresher on text editors, check out ["Which Editor?"](https://swcarpentry.github.io/shell-novice/03-create/) in [The Unix Shell](https://swcarpentry.github.io/shell-novice/) lesson.
+In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). For a refresher on text editors, check out ["Which Editor?"](https://swcarpentry.github.io/shell-novice/03-create/) in [The Unix Shell lesson](https://swcarpentry.github.io/shell-novice/) by Software Carpentry.
 
 ```console
 $ nano mars.txt
@@ -399,7 +400,7 @@ so that we can write a longer message.
 
 If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
 
-If we run `git status` now:
+If we run `git status` now it tells us everything is up to date.
 
 ```
 $ git status
@@ -408,7 +409,7 @@ On branch main
 
 nothing to commit, working directory clean
 ```
-it tells us everything is up to date.
+
 
 ### Keeping track of your changes
 
