@@ -80,11 +80,11 @@ $ git init
 
 If you remember back to the earlier episode where we added and committed our earlier work on mars.txt, we had a diagram of the local repository which looked like this:
 
-![git-staging-area-04.svg](./assets/media/remotes_step_01_images/git-staging-area-04.svg)
+![git-staging-area-04](./assets/media/remotes_step_01_images/git-staging-area-04.svg)
 
 Now that we have two repositories, we need a diagram like this:
 
-![git-freshly-made-github-repo-05.svg](./assets/media/remotes_step_01_images/git-freshly-made-github-repo-05.svg)
+![git-freshly-made-github-repo-05](./assets/media/remotes_step_01_images/git-freshly-made-github-repo-05.svg)
 
 Note that our local repository still contains our earlier work on mars.txt, but the remote repository on GitHub appears empty as it doesn’t contain any files yet.
 
@@ -92,9 +92,47 @@ Note that our local repository still contains our earlier work on mars.txt, but 
 
 Now we connect the two repositories. We do this by making the GitHub repository a remote for the local repository. The home page of the repository on GitHub includes the URL string we need to identify it:
 
+![github-find-repo-string-01](./assets/media/remotes_step_02_images/github-find-repo-string-01.png)
+
+Click on the ‘SSH’ link to change the protocol from HTTPS to SSH.
+
+![github-change-repo-string-02](./assets/media/remotes_step_02_images/github-change-repo-string-02.png)
+
+Copy that URL from the browser, go into the local planets repository, and run this command:
+
+
+```console
+$ git remote add origin git@github.com:vlad/planets.git
+```
+
+Make sure to use the URL for your repository rather than Vlad’s: the only difference should be your username instead of `vlad`.
+
+`origin` is a local name used to refer to the remote repository. It could be called anything, but `origin` is a convention that is often used by default in git and GitHub, so it’s helpful to stick with this unless there’s a reason not to.
+
+We can check that the command has worked by running `git remote -v`:
+
+```console
+$ git remote -v
+```
+
+
+```output
+origin   git@github.com:vlad/planets.git (fetch)
+origin   git@github.com:vlad/planets.git (push)
+```
+
+We’ll discuss remotes in more detail in the next episode, while talking about how they might be used for collaboration.
+
+
+## Push local changes to a remote
+
+Now that authentication is setup, we can return to the remote. This command will push the changes from our local repository to the repository on GitHub:
+
+
 ## Additional Resources
 
-The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
+To learn more about SSH and its setup, refer to the Software carpentries episode [here](https://swcarpentry.github.io/git-novice/07-github/index.html#3-ssh-background-and-setup).
+
 
 ## Feedback
 
