@@ -605,13 +605,14 @@ like backup files created by our editor
 or intermediate files created during data analysis?
 Let's create a few dummy files:
 
-```console
+```
 $ mkdir results
 $ touch a.dat b.dat c.dat results/a.out results/b.out
 ```
+
 The `touch` command opens, saves, and closes the files without changing them. Since they didn't previously exist, `touch` is also creating them. Now if we check the status of our repository we see:
 
-```console
+```
 $ git status
 
 
@@ -647,7 +648,7 @@ Git would continue to track them.)
 Once we have created this file,
 the output of `git status` is much cleaner:
 
-```console
+```
 $ git status
 
 On branch main
@@ -665,7 +666,7 @@ but if we share the repository, everyone we're sharing with will probably want t
 the same things that we are ignoring.
 Let's add and commit `.gitignore`:
 
-```console
+```
 $ git add .gitignore
 $ git commit -m "Ignore data files and the results folder."
 $ git status
@@ -677,7 +678,7 @@ nothing to commit, working directory clean
 
 As a bonus, using `.gitignore` helps us avoid accidentally adding files to the repository that we don't want to track:
 
-```console
+```
 $ git add a.dat
 
 The following paths are ignored by one of your .gitignore files:
@@ -692,7 +693,7 @@ we can use `git add -f` to force Git to add something. For example,
 `git add -f a.dat`.
 We can also always see the status of ignored files if we want:
 
-```console
+```
 $ git status --ignored
 
 On branch main
