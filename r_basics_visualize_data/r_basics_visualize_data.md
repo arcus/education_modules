@@ -111,8 +111,6 @@ This is what that data looks like:
 ![The `covid_testing` data frame in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)<!--
 style = "max-width:800px;"-->
 
-You will be asked to do some code-based exercises at the **end** of this module, but you may find it useful to use the sample code and data throughout the module.
-
 On the next page, you'll learn how to get access to the sample code.  
 
 ## Lesson Preparation: Our RStudio Environment
@@ -172,16 +170,15 @@ If you already completed this work for a previous module, and it's been a while 
 
 ![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
 
-
+<div class = "warning">
+If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the r\_basics\_transform\_data exercise files, you might want to save your version of `transform.Rmd` to `my_transform.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
+</div>
 
 ## How to Follow Along
 
-You can use this module in a couple of different ways:
+Please go ahead and open the "r\_basics\_visualize\_data" directory in whichever RStudio environment you're working in, then the "exercises" directory.  You can open "visualize.Rmd" which will make you ready for our first hands-on activity in just a bit!
 
-* If you have experience working in R markdown and want to try out some of the code we share with you as we go along, please go ahead and open the "r\_basics\_visualize\_data" directory, then the "exercises" directory.  You can open "visualize.Rmd" and add some code chunks for your own experimentation.  Or, create a new R Markdown file that begins with reading in the .csv file in the "exercises" directory.
-* Not sure you are ready to DIY?  Prefer to learn some concepts first, then do some hands-on work at the end?  Then just follow our steps and we'll guide you through the exercise file when you reach the end of the module.  No need to worry about trying out the code along the way.
-
-![RStudio showing the transform.Rmd file.  A text box suggests copying and pasting the first code chunk in visualize.Rmd into a new R Markdown file, or adding chunks below the first chunk for experimentation.](media/rstudio_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
+![RStudio showing the visualize.Rmd file.](media/visualize_rmd.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
 
 ## Thinking Graphically From Data, Part 1
 
@@ -205,7 +202,7 @@ What we've asked you to imagine is a plot in which we have the **count** or the 
 
 Here's another example of that kind of plot:
 
-![A normally distributed or bell-shaped curve.  The x axis ranges from -3 to 3 while the y axis goes from 0 to 200](media/small_histogram.png)
+![A normally distributed or bell-shaped curve.  The x axis ranges from -3 to 3 while the y axis goes from 0 to 200](media/small_histogram.png)<!-- style = "max-width:800px;"-->
 
 <div class = "question">
 In the box below, write what you think the name of this is (all lowercase, please).
@@ -225,9 +222,9 @@ In the box below, write what you think the name of this is (all lowercase, pleas
 
 Please go to your RStudio environment (either the version in the cloud or your local RStudio that you've prepared with a project containing our files for this module).  
 
-Using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` folder, and then open the `exercises` folder.  You should then open `visualize.Rmd`, which will allow you to work alongside the sections of this module.
+If you haven't already: using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` folder, and then open the `exercises` folder.  You should then open `visualize.Rmd`, which will allow you to work alongside the sections of this module.
 
-![RStudio window showing visualize.Rmd](media/r_visualize_exercise.png)<!-- style = "max-width: 800px; border: 1px solid rgb(var(--color-highlight))" -->
+![RStudio window showing visualize.Rmd](media/r_visualize_exercise.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
 
 To get started, let's first load up our fabricated data.  Run the first code chunk by clicking the green "play" button (look at line 10).  This gives you the data frame with fake Covid testing data, the data we will use for our instruction in this module.
 
@@ -246,17 +243,17 @@ And yes, you can hit "Enter" after that plus sign and keep typing on the next li
 
 When you run the code, you'll  see a graph open up in the lower right pane, and your console should look something like this:
 
-![R console showing code and a red message that reads "`stat_bin()` using `bins = 30`. Pick better value with `binwidth`"](media/r_console.png)<!-- style = "border: 1 px solid rgb(var(--color-highlight)); max-width:700px;" -->
+![R console showing code and a red message that reads "`stat_bin()` using `bins = 30`. Pick better value with `binwidth`"](media/r_console.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:700px;" -->
 
-When you run this code, you get what looks like an error in the consol but is actually just a message (even though it's in a scary red color).
+When you run this code, you get what looks like an error in the console but is actually just a message (even though it's in a scary red color).
 
 R lets you know that when you ask it to draw a histogram, you should probably tell it how wide each bin should be, because this affects the granularity of the data displayed.  You can either set the number of bins (say, 10 bins or 100 bins) or you can set the bin width (like 1 to make a bin 1 day wide, 7 to make a bin one week wide, etc.)
 
 ## The Power of Data visualizations
 
-![Histogram of covid tests by day of pandemic](media/covid_histogram.png)
+![Histogram of covid tests by day of pandemic](media/covid_histogram.png)<!-- style = "max-width: 900px;  -->
 
-When we asked you to imagine what this plot might look like - the number of COVID tests that were performed on a given day over time – you might have imagined something like this. Initially you have very few tests that are being run, maybe because the pandemic hasn't started yet and maybe also because the test isn't yet broadly available. And at some point the number of tests shoots up and remains at a high level. But this simple visualization tells you so much more than that general shape. You can see that by 30 days, the testing ramp-up settles. And there appear to be some interesting things going on after day 60 that you might want to look into further.
+When we asked you to imagine what this plot might look like - the number of Covid tests that were performed on a given day over time – you might have imagined something like this. Initially you have very few tests that are being run, maybe because the pandemic hasn't started yet or because the test isn't yet broadly available. And at some point the number of tests increases and remains at a high level. But this simple visualization tells you so much more than that general shape. You can see that by 30 days, the testing ramp-up settles. And there appear to be some interesting things going on after day 60 that you might want to look into further.
 
 Even though this graph isn't publication-perfect (at least not yet), it's still very useful for honing your knowledge about the data.
 
@@ -264,7 +261,7 @@ Even though this graph isn't publication-perfect (at least not yet), it's still 
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;">
+<div style = "margin: 1rem; max-width: 65%; float:left;">
 
 
 We'll be using the ggplot2 package for creating graphics. ggplot2 is part of the tidyverse so it will get loaded when you load the tidyverse package.
@@ -277,7 +274,7 @@ Having a consistent grammar means that once you learn how to make a histogram th
 
 Also, ggplot2 graphs look great and the package can be used to generate publication-quality plots.
 </div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;">
+<div style = "margin: 1rem auto; max-width: 30%; float:left;">
 
 ![ggplot2 logo on a hexagon.  The logo consists of the word "ggplot2" superimposed on light grey graph paper with a line graph connecting blue dots of different shades](media/ggplot2_hex.png)
 
@@ -288,38 +285,38 @@ Also, ggplot2 graphs look great and the package can be used to generate publicat
 
 So here is a quick analysis of how we just used ggplot to make that histogram.
 
-![ggplot code annotated with the steps enumerated in the table below](media/ggplot_analysis.png)
+![ggplot code annotated with the steps enumerated in the table below](media/ggplot_analysis.png)<!-- style = "max-width: 600px;" -->
 
 <lia-keep>
 <table style = "width = 100%">
-<tr><th style = "width: 35%; border: 1px solid rgb(var(--color-text));"></th><th style = "width: 65%; border: 1px solid rgb(var(--color-text));"></th></tr>
-<tr style="padding: 1.5em;"><td>1) We always start with `ggplot()`.</td>
+<tr><th style = "width: 35%;"></th><th style = "width: 65%;"></th></tr>
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>1) We always start with `ggplot()`.</td>
 <td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
 <span style = "color: rgb(var(--color-text))">ggplot(</span>data = covid_testing<span style = "color: rgb(var(--color-text))">)</span> +
   geom_histogram(mapping = aes(x = pan_day))
 <code>
 </td></tr>
-<tr style="padding: 1.5em;"><td>2) Give ggplot a **data frame** to start with, in this case, our `covid_testing` data frame.</td>
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>2) Give ggplot a **data frame** to start with, in this case, our `covid_testing` data frame.</td>
 <td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
 ggplot(<span style = "color: rgb(var(--color-text))">data = covid_testing</span>) +
   geom_histogram(mapping = aes(x = pan_day))
 <code>
 </td></tr>
-<tr style="padding: 1.5em;"><td>3) We build our plot across several different lines, so we include a `+` to say "wait, we're not done yet!"
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>3) We build our plot across several different lines, so we include a `+` to say "wait, we're not done yet!"
 </td>
 <td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) <span style = "color: rgb(var(--color-text))">+ </span>
   geom_histogram(mapping = aes(x = pan_day))
 <code>
 </td></tr>
-<tr style="padding: 1.5em;"><td>4) In the second line, we describe what kind of geometric representation we want -- a histogram.
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>4) In the second line, we describe what kind of geometric representation we want -- a histogram.
 </td>
 <td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) +
   <span style = "color: rgb(var(--color-text))">geom_histogram(</span>mapping = aes(x = pan_day)<span style = "color: rgb(var(--color-text))">)</span>
 <code>
 </td></tr>
-<tr style="padding: 1.5em;"><td>5) We also add some mappings, explaining which data from the data frame should be displayed in the histogram.  We use "aes" (short for "aesthetic" or "aesthetic mapping") to tell ggplot how to draw the visualization.  We only have to specify the x axis, because a histogram assumes that you're counting rows of data and will map that to the y axis.
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>5) We also add some mappings, explaining which data from the data frame should be displayed in the histogram.  We use "aes" (short for "aesthetic" or "aesthetic mapping") to tell ggplot how to draw the visualization.  We only have to specify the x axis, because a histogram assumes that you're counting rows of data and will map that to the y axis.
 </td>
 <td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) +
