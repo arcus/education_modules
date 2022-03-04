@@ -582,7 +582,6 @@ The commit message should describe what this commit does. If you want to know th
 There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, but you will remember them better if you understand what each is doing.
 
 To get started we will use a metaphor about creating a digital version of a drawing. Imagine you are working on an art project that involves creating drawings on paper with pens, pencils, and markers. You want to have a record of how this project progresses, and have access to a copier/scanner that can make and save perfect digital copies of your work.
-
 ![IMAGE: stick figure creating a drawing of smiley face on piece of paper.](fig/create_files.svg)
 Creating and editing your files on your computer is like drawing on paper at your desk. There is a single copy of your work stored on your computer, but no record of the changes you are making. You can always create a new file, or take out a new piece of paper, but no record of that new file exists yet.
 ![IMAGE: the smiley face drawing from the previous picture is in a scanner's intake slot.](fig/stage_files.svg)
