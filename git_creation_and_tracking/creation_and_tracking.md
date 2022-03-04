@@ -602,6 +602,121 @@ The commit message should describe what this commit does. If you want to know th
 
  ![The three images from above appear in order from left to right. The stick figure making the drawing is labeled "Files". An arrow labeled `git add smiley.art` points to the middle image of the drawing in the scanner intake slot, which is labeled "Staged files." An arrow labeled `git commit -m "create smiley.art"` points to the last image. This is a picture of the smiley face drawing saved to the disk in the scanner and is labeled "Committed files."](fig/scanner_metaphor.png)
 
+ ### Telling Git not to track some files
+ What if we have files that we do not want Git to track for us,
+ like backup files created by our editor
+ or intermediate files created during data analysis?
+ Let's create a few dummy files:
+
+ ```
+ $ mkdir results
+ $ touch a.dat b.dat c.dat results/a.out results/b.out
+ ```
+ The `touch` command opens, saves, and closes the files without changing them. Since they didn't previously exist, `touch` is also creating them. Now if we check the status of our repository we see:
+
+ ```
+ $ git status
+
+
+ On branch main
+ Untracked files:
+   (use "git add <file>..." to include in what will be committed)
+
+ 	a.dat
+ 	b.dat
+ 	c.dat
+ 	results/
+
+ nothing added to commit but untracked files present (use "git add" to track)
+ ```
+
+ Putting these files under version control would be a waste of disk space.
+ What's worse,
+ having them all listed could distract us from changes that actually matter,
+ so let's tell Git to ignore them.
+
+ We do this by creating a file in the root directory of our project called `.gitignore`. Each line in this file is a rule for a type of file Git should ignore. Use your favorite text editor to make `.gitignore` contain the two lines:
+
+ ```
+ *.dat
+ results/
+ ```
+
+ These patterns tell Git to ignore any file whose name ends in `.dat`
+ and everything in the `results` directory.
+ (If any of these files were already being tracked,
+ Git would continue to track them.)
+
+ Once we have created this file,
+ the output of `git status` is much cleaner:
+
+ ```
+ $ git status
+
+ On branch main
+ Untracked files:
+   (use "git add <file>..." to include in what will be committed)
+
+ 	.gitignore
+
+ nothing added to commit but untracked files present (use "git add" to track)
+ ```
+
+ The only thing Git notices now is the newly-created `.gitignore` file.
+ You might think we wouldn't want to track it,
+ but if we share the repository, everyone we're sharing with will probably want to ignore
+ the same things that we are ignoring.
+ Let's add and commit `.gitignore`:
+
+ ```
+ $ git add .gitignore
+ $ git commit -m "Ignore data files and the results folder."
+ $ git status
+
+ On branch main
+
+ nothing to commit, working directory clean
+ ```
+
+ As a bonus, using `.gitignore` helps us avoid accidentally adding files to the repository that we don't want to track:
+
+ ```
+ $ git add a.dat
+
+ The following paths are ignored by one of your .gitignore files:
+
+   a.dat
+
+ Use -f if you really want to add them.
+ ```
+
+ If we really want to override our ignore settings,
+ we can use `git add -f` to force Git to add something. For example,
+ `git add -f a.dat`.
+ We can also always see the status of ignored files if we want:
+
+ ```
+ $ git status --ignored
+
+ On branch main
+ Ignored files:
+  (use "git add -f <file>..." to include in what will be committed)
+
+  a.dat
+  b.dat
+  c.dat
+  results/
+
+ nothing to commit, working directory clean
+ ```
+
+ <div class = "options">
+
+ For more details on how to use `.gitignore` to include or exclude particular files or folders check out Software Carpentry's [module](https://swcarpentry.github.io/git-novice/06-ignore/index.html) on this.
+
+ </div>
+
+
 
 ### Quiz: `git` workflow
 
@@ -617,120 +732,6 @@ The `git commit` command will only create a record of the files that you have *a
 There are options you can use to automatically stage all files. Entering `git commit -a` or `git commit --all` will automatically stage all files that Git knows about and then commit them. But it will not save any new files that Git doesn't yet know about. In our artwork metaphor, if you started a new drawing on another sheet of paper, `git commit -a` would not put the new drawing into the slot and scan it, but it would scan the current version of every drawing that had previously been scanned.
 </div>
 ***
-
-### Telling Git not to track some files
-What if we have files that we do not want Git to track for us,
-like backup files created by our editor
-or intermediate files created during data analysis?
-Let's create a few dummy files:
-
-```
-$ mkdir results
-$ touch a.dat b.dat c.dat results/a.out results/b.out
-```
-The `touch` command opens, saves, and closes the files without changing them. Since they didn't previously exist, `touch` is also creating them. Now if we check the status of our repository we see:
-
-```
-$ git status
-
-
-On branch main
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	a.dat
-	b.dat
-	c.dat
-	results/
-
-nothing added to commit but untracked files present (use "git add" to track)
-```
-
-Putting these files under version control would be a waste of disk space.
-What's worse,
-having them all listed could distract us from changes that actually matter,
-so let's tell Git to ignore them.
-
-We do this by creating a file in the root directory of our project called `.gitignore`. Each line in this file is a rule for a type of file Git should ignore. Use your favorite text editor to make `.gitignore` contain the two lines:
-
-```
-*.dat
-results/
-```
-
-These patterns tell Git to ignore any file whose name ends in `.dat`
-and everything in the `results` directory.
-(If any of these files were already being tracked,
-Git would continue to track them.)
-
-Once we have created this file,
-the output of `git status` is much cleaner:
-
-```
-$ git status
-
-On branch main
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	.gitignore
-
-nothing added to commit but untracked files present (use "git add" to track)
-```
-
-The only thing Git notices now is the newly-created `.gitignore` file.
-You might think we wouldn't want to track it,
-but if we share the repository, everyone we're sharing with will probably want to ignore
-the same things that we are ignoring.
-Let's add and commit `.gitignore`:
-
-```
-$ git add .gitignore
-$ git commit -m "Ignore data files and the results folder."
-$ git status
-
-On branch main
-
-nothing to commit, working directory clean
-```
-
-As a bonus, using `.gitignore` helps us avoid accidentally adding files to the repository that we don't want to track:
-
-```
-$ git add a.dat
-
-The following paths are ignored by one of your .gitignore files:
-
-  a.dat
-
-Use -f if you really want to add them.
-```
-
-If we really want to override our ignore settings,
-we can use `git add -f` to force Git to add something. For example,
-`git add -f a.dat`.
-We can also always see the status of ignored files if we want:
-
-```
-$ git status --ignored
-
-On branch main
-Ignored files:
- (use "git add -f <file>..." to include in what will be committed)
-
- a.dat
- b.dat
- c.dat
- results/
-
-nothing to commit, working directory clean
-```
-
-<div class = "options">
-
-For more details on how to use `.gitignore` to include or exclude particular files or folders check out Software Carpentry's [module](https://swcarpentry.github.io/git-novice/06-ignore/index.html) on this.
-
-</div>
 
 
 ## Additional Resources
