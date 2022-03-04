@@ -270,7 +270,13 @@ $ rm -rf moons/.git
 
  It might seem like *making* changes and *documenting* them are two different things, but the entire point of version control is to document every change you make.
 
- Just like any system that can help back-up or save your work, Git will only be helpful if you use it. In this section we will first teach you *how* to make a record of your changes, *where* those records are, and *when* you should be recording that you changed things.
+ Just like any system that can help back-up or save your work, Git will only be helpful if you use it. In this section we will first teach you
+
+ - *how* to make a record of your changes,
+
+ - *where* those records are, and
+
+ - *when* you should be recording that you changed things.
 
 ### Tell Git to track a file
 Let's follow along with Dracula to add a file to the planets directory with notes about Mars.
