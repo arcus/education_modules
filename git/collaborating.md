@@ -23,7 +23,7 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/mod
 
 -->
 
-# Remotes in GitHub
+# Collaborating
 
 
 <div class = "overview">
@@ -53,201 +53,185 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/mod
 - Open a web browser, like Chrome or Firefox 
 - Open a command line terminal 
 
-## Module Content
+## Collaboration
 
-Note that liascript will create a new page at each level 1, 2, or 3 header, so to avoid a page with only a header and no content, include text after each header before the next.
-
-Text after level 2 headers provides a good opportunity to give a sentence or two of overview, explain the structure of the coming content, and/or get preliminaries out of the way.
-
-## Including Media
-
-
-![A valuable image, and this is its alt text.](https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG "Here is a subtitle that will display beneath the image.")
-
-
-You can link to images online with their url, or locally with the file path, e.g. `![image caption](media/my_image.png)`
-
-If you want to provide several images in a gallery, just make a "paragraph" of image links and LiaScript will render it as a gallery:
-
-![img1 alt text.](https://upload.wikimedia.org/wikipedia/commons/6/68/Ailuropoda_melanoleuca_%28Panda_g%C3%A9ant%29_-_445.jpg) ![img2 alt text.](https://upload.wikimedia.org/wikipedia/commons/2/2d/Panda_giganti_al_Giant_Panda_Breeding_Research_Base_Chengdu.jpg) ![img3 alt text.](https://upload.wikimedia.org/wikipedia/commons/1/12/BabyPandaAtSDZ.jpg)
-
-
-!?[This video is hosted on youtube.](https://www.youtube.com/watch?v=iIAO4Htzn8M)
-
-You can also embed local videos, just as with images: `!?[An embedded video.](vid/intro.mp4 "This is its subtitle")`
-
-In theory, you should be able to embed just about anything. Read more [here](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md#24).
-
-You can also include movies, audio, and any other embedded content in galleries just by putting the links for them all in a paragraph.
-
-## Including highlight boxes
-
-Paragraph text
-
-<div class = "important">
-Include special notes with different formatting. This style is for important points and key ideas.
+<div class = 'care'>
+**Practicing by yourself**
+  
+If you’re working through this lesson on your own, you can carry on by opening a second terminal window. This window will represent your partner, working on another computer. You won’t need to give anyone access on GitHub, because both ‘partners’ are you.
+  
 </div>
 
-More text
+For the next step, get into pairs. One person will be the “Owner” and the other will be the “Collaborator”. The goal is that the Collaborator add changes into the Owner’s repository. We will switch roles at the end, so both persons will play Owner and Collaborator.
 
-<div class = "quote">
-This style is for a quote.
+The Owner needs to give the Collaborator access. On GitHub, click the settings button on the right, select Manage access, click Invite a collaborator, and then enter your partner’s username.
 
-&mdash; Maya Angelou, <cite>And Still I Rise</cite>
-</div>
+![github-add-collaborators-01](./assets/media/collaborating_images/github-add-collaborators-01.png)
 
-More text
+To accept access to the Owner’s repo, the Collaborator needs to go to https://github.com/notifications or check for email notification. Once there she can accept access to the Owner’s repo.
 
-<div class = "warning">
-This style alerts users to potential pitfalls.
-</div>
+Next, the Collaborator needs to download a copy of the Owner’s repository to her machine. This is called “cloning a repo”.
 
-More text
+The Collaborator doesn’t want to overwrite her own version of planets.git, so needs to clone the Owner’s repository to a different location than her own repository with the same name.
 
-<div class = "learnmore">
-This style alerts users resources for further learning, especially links to a more in-depth discussion of an issue that might be touched on only briefly in the module.
-</div>
+To clone the Owner’s repo into her Desktop folder, the Collaborator enters:
 
-More text
-
-<div class = "options">
-This style is for an aside to let learners know there's another possible approach (e.g. "You could also skip setting up an OSF account completely and just use github to publish and share your research products, but many people prefer to have OSF links available" or "To do this in R instead of python, see this other module")
-</div>
-
-There's an additional style of highlight, "answer", that is used in quizzes.
-
-## Including math
-
-I want to include a math statement here: $ 1 + \beta = 2 $
-
-## Including code
-
-Next comes some code. This code won't do anything (it's not interactive).
-
-```r
-# You only need to install it once
-install.packages("ggplot2")
-
-# You'll need to load the library anew for each R session
-library("ggplot2")
+    ```console
+$ git clone git@github.com:vlad/planets.git ~/Desktop/vlad-planets
 ```
-You don't have to specify the programming language, but you can, and it should help you get appropriate syntax highlighting.
+Replace ‘vlad’ with the Owner’s username.
 
-```python
-print("This is python code")
+If you choose to clone without the clone path (`~/Desktop/vlad-planets`) specified at the end, you will clone inside your own planets folder! Make sure to navigate to the Desktop folder first.
+
+![github-collaboration-02](./assets/media/collaborating_images/github-collaboration-02.svg)
+
+The Collaborator can now make a change in her clone of the Owner’s repository, exactly the same way as we’ve been doing before:
+
+
+    ```console
+$ cd ~/Desktop/vlad-planets
+$ nano pluto.txt
+$ cat pluto.txt
 ```
 
-It is possible to include interactive code, too! See [the Rextester template for LiaScript](https://github.com/LiaTemplates/Rextester).
+    ```output
+It is so a planet!
+```
 
-## Quiz 1
+    ```console
+$ git add pluto.txt
+$ git commit -m "Add notes about Pluto"
+```
 
-Quizzes are just more markdown text, so if you want it to show up on its own page, put a new header before it. Otherwise you can include quiz questions at the end of a section, or even interspersed with the rest of your content.
+    ```output
+ 1 file changed, 1 insertion(+)
+ create mode 100644 pluto.txt
+```
 
-Quizzes should connect directly to your learning objectives. Each quiz question should connect to one learning objective, and every learning objective should have at least one quiz question associated with it somewhere in the module.
+Then push the change to the Owner’s repository on GitHub:
 
-Here is the first question. It's multiple choice.
+    ```console
+$ git push origin main
+```
 
-[(X)] This answer is right
-[( )] This is wrong
-[( )] Also wrong
-[[?]] Hint: Provide a hint here if you like. Hints are marked with the ?
-[[?]] Hint: You can include as many hints as you want.
+    ```output
+Enumerating objects: 4, done.
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 306 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/vlad/planets.git
+   9272da5..29aba7c  main -> main
+```
+Note that we didn’t have to create a remote called `origin`: Git uses this name by default when we clone a repository. (This is why `origin` was a sensible choice earlier when we were setting up remotes by hand.)
 
-You can have questions with multiple correct answers. Select all of the following correct choices:
+Take a look at the Owner’s repository on GitHub again, and you should be able to see the new commit made by the Collaborator. You may need to refresh your browser to see the new commit.
 
-[[ ]] Not this one
-[[X]] This is one of the correct ones
-[[X]] Here's another correct one
-[[ ]] This one is wrong, though
-[[?]] Hint: Remember to select ALL of the correct choices.
+To download the Collaborator’s changes from GitHub, the Owner now enters:
+    ```console
+$ git push origin main
+```
 
-True or False: This statement is NOT true. ;)
+    ```output
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/vlad/planets
+ * branch            main     -> FETCH_HEAD
+   9272da5..29aba7c  main     -> origin/main
+Updating 9272da5..29aba7c
+Fast-forward
+ pluto.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 pluto.txt
+```
 
-[( )] TRUE
-[(X)] FALSE
+Now the three repositories (Owner’s local, Collaborator’s local, and Owner’s on GitHub) are back in sync.
 
-Short answer/text response. Note that, without any additional script, to get it marked "correct" the learner has to enter it exactly as you do.
+### Some more notes about remotes**
+  
+In this episode and the previous one, our local repository has had a single “remote”, called `origin`. A remote is a copy of the repository that is hosted somewhere else, that we can push to and pull from, and there’s no reason that you have to work with only one. For example, on some large projects you might have your own copy in your own GitHub account (you’d probably call this `origin`) and also the main “upstream” project repository (let’s call this `upstream` for the sake of examples). You would pull from `upstream` from time to time to get the latest updates that other people have committed.
 
-[[right answer]]
-[[?]] Hint: The answer is "right answer"
+Remember that the name you give to a remote only exists locally. It’s an alias that you choose - whether `origin`, or `upstream`, or `fred` - and not something intrinstic to the remote repository.
+
+The `git remote` family of commands is used to set up and alter the remotes associated with a repository. Here are some of the most useful ones:
+
+- git `remote -v` lists all the remotes that are configured (we already used this in the last episode)
+- git `remote add [name] [url]` is used to add a new remote
+- git `remote remove [name]` removes a remote. Note that it doesn’t affect the remote repository at all - it just removes the link to it from the local repo.
+- git `remote set-url [name] [newurl]` changes the URL that is associated with the remote. This is useful if it has moved, e.g. to a different GitHub account, or from GitHub to a different hosting service. Or, if we made a typo when adding it!
+- `git remote rename [oldname] [newname]` changes the local alias by which a remote is known - its name. For example, one could use this to change upstream to fred.
+ 
+### A Basic Collaborative Workflow
+  
+In practice, it is good to be sure that you have an updated version of the repository you are collaborating on, so you should `git pull` before making our changes. The basic collaborative workflow would be:
+
+- update your local repo with `git pull origin main`,
+- make your changes and stage them with `git add`,
+- commit your changes with git `commit -m`, and
+- upload the changes to GitHub with `git push origin main`
+
+It is better to make many commits with smaller changes rather than of one commit with massive changes: small commits are easier to read and review.
+
+
+### Review: Switch Roles
+
+Switch roles and repeat the whole process.
+
+[[GitHub GUI]]
 ***
 <div class = "answer">
-This is extra text that will show up after the learner clicks to have the correct answer revealed. It can be as long as you like, and allows any markdown formatting (you can embed pictures or videos, links, etc.).
-
-Use `<div class = "answer">` to mark these sections with special styling, so that they're visually distinct from the rest of the quiz. The style for `"answer"` is defined in the css file.
-
-For this context to show up automatically when the learner answers the question correctly or clicks to have the right answer revealed, it needs to be surrounded by `***` (at least three, but you can use more if you want a more visually distinct horizontal marker in your md file).
+Switching roles will allow you to practice both sides of the change process. 
 </div>
 ***
 
-We can allow some flexibility in what we accept as correct answers for text by adding a little script after the answer, though. For the following, either "right answer" or "correct answer" (not case sensitive) will be accepted:
 
-[[right answer]]
-<script>
-  let input = "@input".trim().toLowerCase();
-  input == "right answer" || input == "correct answer";
-</script>
+### Quiz: Review changes
+
+The Owner pushed commits to the repository without giving any information to the Collaborator. How can the Collaborator find out what has changed with command line? And on GitHub?
+
+[[Review changes]]
 ***
 <div class = "answer">
-For this question, either "right answer" or "correct answer" (not case sensitive) counts as correct.
+On the command line, the Collaborator can use `git fetch origin main` to get the remote changes into the local repository, but without merging them. Then by running `git diff main origin/main` the Collaborator will see the changes output in the terminal.
+
+On GitHub, the Collaborator can go to the repository and click on “commits” to view the most recent commits pushed to the repository.
 </div>
 ***
 
-This question accepts any of several items from a list of possible correct answers. It is not case sensitive (that's the little `i` at the end of the regex).
+### Comment Changes in GitHub
 
-[[this text will never show up if they type a right answer and click "Check", only if they click the checkmark button to reveal the answer]]
-[[?]] Hint: The answers are like "item1", "item2", etc.
-<script>
-  let input = "@input".trim();
-  /item1|item2|item3|item4/i.test(input);
-</script>
+The Collaborator has some questions about one line change made by the Owner and has some suggestions to propose.
+
+With GitHub, it is possible to comment the diff of a commit. Over the line of code to comment, a blue comment icon appears to open a comment window.
+
+The Collaborator posts its comments and suggestions using GitHub interface.
+
+
+### Quiz: Version History, Backup, and Version Control
+
+Some backup software can keep a history of the versions of your files. They also allows you to recover specific versions. How is this functionality different from version control? What are some of the benefits of using version control, Git, and GitHub?
+
+[[Version History, Backup, and Version Control]]
 ***
 <div class = "answer">
-With flexible answers like this, it's definitely a good idea to include a follow-up to help the learner put their answer in context.
-
-For example, if the question was "Name one or more colors" with acceptable answers including red, orange, yellow, green, blue, and purple, and they wrote "red, green, and the center of a black hole" that would be marked as correct because it contains at least one string from the acceptable list. Similarly, "hammered metal" would be marked as correct because it contains the string "red" ([you can prevent this if you want](https://www.w3schools.com/jsref/jsref_regexp_begin.asp)). On the other hand "teal, scarlet, indigo" would be marked wrong.
-
-Reiterate what the correct answer or answers should be, and try to anticipate likely wrong answers so you can explain why they're not correct.
+Version control provides a richer history of who made which changes than backup software. In version control, you are in control of what is committed when.You get to decide what the versions look like. Other people are also able to work within version control and you can all view and work with each others' changes. 
+  
 </div>
 ***
 
-There are also questions that allow you to select from a drop down, but I don't know why that would be preferable over regular multiple choice. [Read more about quiz syntax here.](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#quizzes)
+## Wrap-Up 
+- `git clone` copies a remote repository to create a local repository with a remote called `origin` automatically set up.
 
-Note that you can use any markdown formatting you want in quizzes, including bold, links, math, etc.
-
-Surveys (ungraded questions)
----
-
-You can ask questions with no graded answer as well. LiaScript calls these [surveys](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md#111).
-
-Here's an ungraded question with a text box three lines long:
-
-[[___ ___ ___]]
-
-Here's one that's just one line long:
-
-[[___]]
-
-Here's a multiple choice with no correct answer. What is your favorite Beatles album?
-
-[(rev)] Revolver
-[(wa)] The While Album
-[(ar)] Abbey Road
-[(sgtp)] Sgt. Pepper's Lonely Hearts Club Band
-
-Here's a survey multiple choice that lets you select more than one response. Which Beatles albums do you love super hard?
-
-[[rev]] Revolver
-[[wa]] The While Album
-[[ar]] Abbey Road
-[[sgtp]] Sgt. Pepper's Lonely Hearts Club Band
-
-Hints and follow-up explanations don't work for survey questions.
 
 
 ## Additional Resources
 
-The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
+To learn more about SSH and its setup, refer to the Software carpentries episode [here](https://swcarpentry.github.io/git-novice/07-github/index.html#3-ssh-background-and-setup).
+
 
 ## Feedback
 
