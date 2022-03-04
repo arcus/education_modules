@@ -63,7 +63,7 @@ If you prefer to run these examples on your own machine, open a command line int
 Once Git is configured,
 we can start using it.
 
-We will continue with the story of Wolfman and Dracula who are investigating if it
+Usually you will use Git to track the progress of a project. As we learn about Git, we will use the story of Wolfman and Dracula who are investigating if it
 is possible to send a planetary lander to Mars.
 
 ![motivatingexample](./fig/motivatingexample.png)
@@ -80,6 +80,17 @@ Courtesy NASA/JPL-Caltech.
 &copy; Luc Viatour / [https://lucnix.be](https://lucnix.be/) /
 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en).
 
+In all of our examples, we will see code as if it is written by Vlad Dracula. If you are practicing these steps as you move through this module, your name and email address will appear instead of Dracula's.
+
+To copy the code in the examples, enter everything after the dollar sign "$" into the command line, and then press the enter or return key. If the command has any output, it will not start with a dollar sign, but a new line where you can type after a dollar sign will appear.
+
+```console
+$logname
+vlad
+$
+```
+
+The above codeblock tells you that when Dracula types `logname` and presses enter, the output is 'vlad', his username. Try entering `logname` in your own console. There will be other code in front of each `$` telling your computer who and where you are, but that will be different for everyone, it is customary to omit it from example code.
 
 ### Initializing the repository
 
@@ -92,7 +103,7 @@ $ mkdir planets
 $ cd planets
 ```
 
-Then we tell Git to make `planets` a [repository]({{ page.root }}{% link reference.md %}#repository)
+Then we tell Git to make `planets` a **repository** (also called a **repo**)
 -- a place where Git can store versions of our files:
 
 
