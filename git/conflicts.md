@@ -52,7 +52,7 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/mod
 - Open a web browser, like Chrome or Firefox 
 - Open a command line terminal 
 
-## Collaboration
+## Conflicts
 
 As soon as people can work in parallel, they’ll likely step on each other’s toes. This will even happen with a single person: if we are working on a piece of software on both our laptop and a server in the lab, we could make different changes to each copy. Version control helps us manage these conflicts by giving us tools to resolve overlapping changes.
 
