@@ -222,7 +222,69 @@ The right-most button lets you view all of the files in the repository at the ti
 </div>
 ***
 
+<div class = 'care'>
+**Uploading files directly in GitHub browser**
+  
+Github also allows you to skip the command line and upload files directly to your repository without having to leave the browser. There are two options. First you can click the “Upload files” button in the toolbar at the top of the file tree. Or, you can drag and drop files from your desktop onto the file tree. You can read more about this on [this GitHub page](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
+  
+</div>
 
+### Quiz: GitHub Timestamp
+
+Create a remote repository on GitHub. Push the contents of your local repository to the remote. Make changes to your local repository and push these changes. Go to the repo you just created on GitHub and check the timestamps of the files. How does GitHub record times, and why?
+
+[[GitHub Timestamp]]
+***
+<div class = "answer">
+GitHub displays timestamps in a human readable relative format (i.e. “22 hours ago” or “three weeks ago”). However, if you hover over the timestamp, you can see the exact time at which the last change to the file occurred.
+</div>
+***
+
+### Quiz: Push vs. Commit
+
+In this module, we introduced the “git push” command. How is “git push” different from “git commit”?
+
+[[Push vs. Commit]]
+***
+<div class = "answer">
+When we push changes, we’re interacting with a remote repository to update it with the changes we’ve made locally (often this corresponds to sharing the changes we’ve made with others). Commit only updates your local repository.
+</div>
+***
+
+
+### Quiz: GitHub license and README files
+
+In this module, we learned about creating a remote repository on GitHub, but when you initialized your GitHub repo, you didn’t add a README.md or a license file. If you had, what do you think would have happened when you tried to link your local and remote repositories?
+
+[[GitHub license and README files]]
+***
+<div class = "answer">
+In this case, we’d see a merge conflict due to unrelated histories. When GitHub creates a README.md file, it performs a commit in the remote repository. When you try to pull the remote repository to your local repository, Git detects that they have histories that do not share a common origin and refuses to merge.
+
+   ```console
+$ git pull origin main
+```
+  
+     ```output
+warning: no common commits
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/vlad/planets
+ * branch            main     -> FETCH_HEAD
+ * [new branch]      main     -> origin/main
+fatal: refusing to merge unrelated histories
+```
+  
+</div>
+***
+
+## Wrap-Up 
+- A local Git repository can be connected to one or more remote repositories.
+- Use the SSH protocol to connect to remote repositories.
+- `git push` copies changes from a local repository to a remote repository.
+- `git pull` copies changes from a remote repository to a local repository.
 
 
 
