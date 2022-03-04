@@ -186,8 +186,32 @@ Our local and remote repositories are now in this state:
 
 ![github-repo-after-first-push_01](./assets/media/remotes_step_03_images/github-repo-after-first-push_01.svg)
 
+<div class = 'care'>
+**the -u flag**
 
-### the -u flag
+You may see a -u option used with git push in some documentation. This option is synonymous with the --set-upstream-to option for the git branch command, and is used to associate the current branch with a remote branch so that the git pull command can be used without any arguments. To do this, simply use git push -u origin main once the remote has been set up.
+  
+</div>  
+
+We can pull changes from the remote repository to the local one as well:
+
+  ```console
+$ git pull origin main
+```
+
+  ```output
+From https://github.com/vlad/planets
+ * branch            main     -> FETCH_HEAD
+Already up-to-date.
+```
+
+Pulling has no effect in this case because the two repositories are already synchronized. If someone else had pushed some changes to the repository on GitHub, though, this command would download them to our local repository.
+
+
+
+
+
+
 
 ## Additional Resources
 
