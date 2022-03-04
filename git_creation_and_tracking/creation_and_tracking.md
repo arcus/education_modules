@@ -160,7 +160,7 @@ nothing to commit (create/copy files and use "git add" to track)
 If you are using a different version of `git`, the exact
 wording of the output might be slightly different.
 
-### Quiz `git init`
+### Quiz: `git init`
 
 What command Dracula enter in the blank in order to create a new Git repository?
 
@@ -563,7 +563,7 @@ The commit message should describe what this commit does. If you want to know th
 </div>
 ***
 
-### Understanding the Git workflow
+## Understanding the Git workflow
 
  There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, but you will remember them better if you understand what each is doing.
 
@@ -583,7 +583,9 @@ The commit message should describe what this commit does. If you want to know th
 
  ![The three images from above appear in order from left to right. The stick figure making the drawing is labeled "Files". An arrow labeled `git add smiley.art` points to the middle image of the drawing in the scanner intake slot, which is labeled "Staged files." An arrow labeled `git commit -m "create smiley.art"` points to the last image. This is a picture of the smiley face drawing saved to the disk in the scanner and is labeled "Committed files."](fig/scanner_metaphor.png)
 
-[//] # (Possible metaphor to run by people:
+
+
+(Possible metaphor to run by people:
 
 1. creating 2D artwork/drawing by hand (editing files)
 2. putting the drawings in a scanner's intake slot (**add**)
@@ -594,7 +596,9 @@ The commit message should describe what this commit does. If you want to know th
 7. I make the animal on drawing 2 into an angry sheep, while you turn it into a happy sloth, we can’t merge the drawings and must resolve this **conflict**!)
 
 ### Quiz: `git` workflow
+
 What does the `git commit` command do?
+
 [[ ]] Stages files so that their current version can be recorded.
 [[ ]] Creates a record of the current version of all files in the repository.
 [[X]] Creates a record of the current version of all of the staged files in the repository.
