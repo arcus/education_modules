@@ -439,14 +439,8 @@ the commit's author,
 when it was created,
 and the log message Git was given when the commit was created.
 
-<div class = "help">
-Where Are My Changes?
-
-If we run `ls` at this point, we will still see just one file called `mars.txt`.
-That's because Git saves information about files' history
-in the special `.git` directory mentioned earlier
-so that our filesystem doesn't become cluttered
-(and so that we can't accidentally edit or delete an old version).
+<div class = 'help'>
+**Where Are My Changes?** If we run `ls` at this point, we will still see just one file called `mars.txt`. That's because Git saves information about files' history in the special `.git` directory mentioned earlier so that our filesystem doesn't become cluttered (and so that we can't accidentally edit or delete an old version).
 </div>
 
 Now suppose Dracula adds more information to the file.
