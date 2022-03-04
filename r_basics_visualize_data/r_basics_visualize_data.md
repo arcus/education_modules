@@ -72,7 +72,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 script: https://kit.fontawesome.com/83b2343bd4.js
 -->
-# R Basics: Visualizing Data With ggplot2
+# R Basics: Visualizing Data With `ggplot2`
 
 <div class = "overview">
 
@@ -92,7 +92,7 @@ Minimal experience of using the RStudio IDE and writing R code (specifically, wi
 * Use the Environment tab to find a data frame and learn more about it
 * Insert a new code chunk in an R Markdown document
 
-This course is designed for R beginners with minimal experience and it is not an advanced course in ggplot2.  If you have experience with ggplot2 already, you may find our "Data Visualization in ggplot2", which is more advanced, a better fit for your needs.
+This course is designed for R beginners with minimal experience and it is not an advanced course in `ggplot2`.  If you have experience with `ggplot2` already, you may find our ["Data Visualization in ggplot2"](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md), which is more advanced, a better fit for your needs.
 
 **Learning Objectives**
 
@@ -248,30 +248,30 @@ When you run this code, you get what looks like an error in the console but is a
 
 R lets you know that when you ask it to draw a histogram, you should probably tell it how wide each bin should be, because this affects the granularity of the data displayed.  You can either set the number of bins (say, 10 bins or 100 bins) or you can set the bin width (like 1 to make a bin 1 day wide, 7 to make a bin one week wide, etc.)
 
-## The Power of Data visualizations
+## The Power of Data Visualizations
 
-![Histogram of covid tests by day of pandemic](media/covid_histogram.png)<!-- style = "max-width: 900px;"  -->
+![Histogram of covid tests by day of pandemic](media/covid_histogram.png)<!-- style = "max-width: 800px;"  -->
 
 When we asked you to imagine what this plot might look like - the number of Covid tests that were performed on a given day over time – you might have imagined something like this. Initially you have very few tests that are being run, maybe because the pandemic hasn't started yet or because the test isn't yet broadly available. And at some point the number of tests increases and remains at a high level. But this simple visualization tells you so much more than that general shape. You can see that by 30 days, the testing ramp-up settles. And there appear to be some interesting things going on after day 60 that you might want to look into further.
 
 Even though this graph isn't publication-perfect (at least not yet), it's still very useful for honing your knowledge about the data.
 
-## Introducing ggplot2
+## Introducing `ggplot2`
 
 <div style = "align-items: center; display: flex;">
 
 <div style = "margin: 1rem; max-width: 65%; float:left;">
 
 
-We'll be using the ggplot2 package for creating graphics. ggplot2 is part of the tidyverse so it will get loaded when you load the tidyverse package.
+We'll be using the `ggplot2` package for creating graphics. `ggplot2` is part of the tidyverse so it will get loaded when you load the tidyverse package.
 
-ggplot2 (and its main function, plain old "ggplot" without the 2) provides a "**grammar of graphics**" for data visualization. The idea of having a "grammar" for something is actually pretty common in R. Essentially, there should be a consistent way to build any type of graph. This makes it easier to learn and also easier to for humans to read the code later and make sense of it. And that's super important because most people who use R are not programmers.
+`ggplot2` (and its main function, plain old `ggplot` without the 2) provides a "**grammar of graphics**" for data visualization. The idea of having a "grammar" for something is actually pretty common in R. Essentially, there should be a consistent way to build any type of graph. This makes it easier to learn and also easier to for humans to read the code later and make sense of it. And that's super important because most people who use R are not programmers.
 
 The idea of the grammar of graphics is that you should be able to specify any type of graph by specifying the data that goes into it, a the type of graph that you want to make, and a mapping that describes how the data should be represented as visual marks on that graph.
 
 Having a consistent grammar means that once you learn how to make a histogram that knowledge can be applied to make a scatter plot with little extra effort. This makes it easy to generate lots of different graphs quickly which helps you understand your data more quickly.
 
-Also, ggplot2 graphs look great and the package can be used to generate publication-quality plots.
+Also, `ggplot2` graphs look great and the package can be used to generate publication-quality plots.
 </div>
 <div style = "margin: 1rem auto; max-width: 30%; float:left;">
 
@@ -291,20 +291,20 @@ So here is a quick analysis of how we just used ggplot to make that histogram.
 <tr><th style = "width: 45%;"></th><th style = "width: 45%;"></th></tr>
 <tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>1) We always start with <code>ggplot()</code>.</td>
 <td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
-<span style = "color: rgb(var(--color-text))">ggplot(</span>data = covid_testing<span style = "color: rgb(var(--color-text))">)</span> +
+<span style = "color: rgb(var(--color-text)); font-weight: bold;">ggplot(</span>data = covid_testing<span style = "color: rgb(var(--color-text)); font-weight: bold;">)</span> +
   geom_histogram(mapping = aes(x = pan_day))
 </pre>
 </td></tr>
 <tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>2) Give ggplot a <b>data frame</b> to start with, in this case, our <code>covid_testing</code> data frame.</td>
 <td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
-ggplot(<span style = "color: rgb(var(--color-text))">data = covid_testing</span>) +
+ggplot(<span style = "color: rgb(var(--color-text)); font-weight: bold;">data = covid_testing</span>) +
   geom_histogram(mapping = aes(x = pan_day))
 </pre>
 </td></tr>
 <tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>3) We build our plot across several different lines, so we include a <code>+</code> to say "wait, we're not done yet!"
 </td>
 <td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
-ggplot(data = covid_testing) <span style = "color: rgb(var(--color-text))">+ </span>
+ggplot(data = covid_testing) <span style = "color: rgb(var(--color-text)); font-weight: bold;">+ </span>
   geom_histogram(mapping = aes(x = pan_day))
 </pre>
 </td></tr>
@@ -312,15 +312,22 @@ ggplot(data = covid_testing) <span style = "color: rgb(var(--color-text))">+ </s
 </td>
 <td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) +
-  <span style = "color: rgb(var(--color-text))">geom_histogram(</span>mapping = aes(x = pan_day)<span style = "color: rgb(var(--color-text))">)</span>
+  <span style = "color: rgb(var(--color-text)); font-weight: bold;">geom_histogram(</span>mapping = aes(x = pan_day)<span style = "color: rgb(var(--color-text)); font-weight: bold;">)</span>
 </pre>
 </td></tr>
-<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>5) We also add some mappings, explaining which data from the data frame should be displayed in the histogram.  We use "aes" (short for "aesthetic" or "aesthetic mapping") to tell ggplot how to draw the visualization.  We only have to specify the x axis, because a histogram assumes that you're counting rows of data and will map that to the y axis.
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>5) We also add some mappings, explaining which data from the data frame should be displayed in the histogram.  We use "aes" (short for "aesthetic" or "aesthetic mapping") to tell ggplot how to draw the visualization.
 </td>
 <td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) +
-  geom_histogram(<span style = "color: rgb(var(--color-text))">mapping = aes(x = pan_day)</span>)
+  geom_histogram(<span style = "color: rgb(var(--color-text)); font-weight: bold;">mapping = aes(</span>x = pan_day<span style = "color: rgb(var(--color-text)); font-weight: bold;">)</span>)
 </pre>
+</td></tr>
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>6) We only have to specify the <b>x axis</b>, because a histogram assumes that you're counting rows of data and will map that to the y axis.
+</td>
+<td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
+ggplot(data = covid_testing) +
+  geom_histogram(mapping = aes(<span style = "color: rgb(var(--color-text)); font-weight: bold;">x = pan_day</span>)
+</pre>)
 </td></tr>
 </table>
 </lia-keep>
@@ -354,7 +361,7 @@ Let's get started. The first detail is a "tidy" data frame which contains the da
 
 <lia-keep>
 <pre style = "color: rgba(var(--color-text), 0.5); font-size: 0.8em;">
-<b>ggplot(data = </b><span style = "color: rgb(var(--color-text))>data_frame</span><b>) +</b>
+<b>ggplot(data = </b><span style = "color: rgb(var(--color-text))">data_frame</span><b>) +</b>
   geom_function(<b>mapping = aes(</b>mappings<b>))</b>
 </pre>
 </lia-keep>
@@ -363,13 +370,15 @@ What do we mean by "tidy" data frame?
 
 A data set can take on a lot of different shapes with different styles of organizing data. But there is one method or shape that is best suited for data analysis, and that approach is called "tidy."
 
+![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)
+
 A data set is tidy if:
 
 * Each variable is in its own column
 * Each observation is in its own row, and
 * Each value is in its own cell.
 
-The opposite of "tidy" is often called "messy." And often times a lot of the data analysis work is to convert "messy" data into "tidy data."" But for now, fortunately for us, the `covid_testing` data set is tidy already.
+The opposite of "tidy" is often called "messy." And often times a lot of the data analysis work is to convert "messy" data into "tidy data." But for now, fortunately for us, the `covid_testing` data set is tidy already.
 
 Here's one simple example of tidy versus messy. If a column is called "name" and includes first names and last names, that's messy.  It can be difficult to extract just the first names or just the last names, since some people have more than one word forming their first name (José María, Mary Jo) and some people have more than one word forming their last name (de la Cruz, Bonham Carter).  A "tidy" approach would be to have one column for first names and one column for last names.
 
@@ -387,153 +396,153 @@ To see a "messy" data frame and its "tidy" alternative, see [a brief 2018 articl
 
 Let's see what you remember about tidy datasets!  Take a look at the sample table provided below.  It's similar to what you might see in a publication, and it's in a great format for humans... but it's not tidy enough to work with easily in a computational way.  This table shows the results of the "QPT" psychometric (something we made up) and shares pre- and post-treatment means and standard deviations for different kinds of research cohorts.
 
-<table border="1" cellpadding="0.5em" cellspacing="0"><tbody><tr><td>
+<table border="1" cellpadding="0.5em" cellspacing="0"><tbody><tr><td style="padding: 0.5em;">
             </td>
-            <td colspan="2">
+            <td colspan="2" style="padding: 0.5em;">
             <p>Mean QPT - pretreatment</p>
             </td>
-            <td colspan="2">
+            <td colspan="2" style="padding: 0.5em;">
             <p>SD QPT -- pretreatment</p>
             </td>
-            <td colspan="2">
+            <td colspan="2" style="padding: 0.5em;">
             <p>Mean QPT - post-treatment</p>
             </td>
-            <td colspan="2">
+            <td colspan="2" style="padding: 0.5em;">
             <p>SD QPT -- post-treatment</p>
             </td>
-        </tr><tr><td>
+        </tr><tr><td style="padding: 0.5em;">
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>m</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>f</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>m</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>f</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>m</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>f</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>m</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>f</p>
             </td>
-        </tr><tr><td>
+        </tr><tr><td style="padding: 0.5em;">
             <p>Depression alone</p>
             <p>(n=9m, 7f)</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>122</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>137</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>28.1</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>27.0</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>109</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>140</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>26.0</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>39.5</p>
             </td>
-        </tr><tr><td>
+        </tr><tr><td style="padding: 0.5em;">
             <p>Depression with Anxiety (n=12m,8f)</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>130</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>145</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>25.0</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>19.8</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>103</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>142</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>24.9</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>40.1</p>
             </td>
-        </tr><tr><td>
+        </tr><tr><td style="padding: 0.5em;">
             <p>Controls / Neither Depression nor Anxiety (n=10m, 10f)</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>107</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>110</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>15.8</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>13.9</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>88</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>95</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>21.8</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>20.6</p>
             </td>
-        </tr><tr><td>
+        </tr><tr><td style="padding: 0.5em;">
             <p>Anxiety Alone (n=13m, 15f)</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>124</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>119</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>20.7</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>18.3</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>100</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>110</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>24.2</p>
             </td>
-            <td>
+            <td style="padding: 0.5em;">
             <p>20.5</p>
             </td>
         </tr></tbody></table>
@@ -643,7 +652,7 @@ There's no need to remove the sex variable, and the numerical values don't neces
     <tr>
       <td>pos</td>
       <td>neg</td>
-      <td>v</td>
+      <td>f</td>
       <td>7</td>
       <td>post</td>
       <td>140</td>
@@ -814,7 +823,7 @@ Let's do a quick check of your understanding of aesthetic mappings.  As a remind
 
 Here are some aesthetic mappings to consider:
 
-![A handful of aesthetic options including position, shape, size, color, line width, and line type.](media/aesthetic_mappings.png)
+![A handful of aesthetic options including position, shape, size, color, line width, and line type.](media/aesthetic_mappings.png)<!-- style = "max-width:700px" -->
 
 From *Fundamentals of Data Visualization*, by Claus Wilke, licensed under CC-BY-NC-ND
 
@@ -918,8 +927,7 @@ In the third task you just completed (if you didn't actually do it, at least go 
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;"> ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/covid_histogram.png)
-
+<div style = "margin: 1rem; max-width: 45%; float:left;"> ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)
 </div>
 <div style = "margin: 1rem auto; max-width: 45%; float:left;">
 <pre>
@@ -935,7 +943,7 @@ In contrast, consider this plot. It's the same as the one you've created at the 
 
 To do this in ggplot, you can still use "fill", but:
 
-* Instead of setting it equal to a column / variable, you'll set it to a color, like "blue" or "#CCAABB" (if you use "hex" or "hexidecimal" RGB values)
+* Instead of setting it equal to a column / variable, you'll set it to a color, like "blue" or "#1111FF" (if you use "hex" or "hexidecimal" RGB values)
 * Instead of placing the "fill = " inside `aes()`, you'll move it outside of `aes()`.
 
 This is how you'd get an all-blue histogram:
@@ -947,7 +955,84 @@ ggplot(data = covid_testing) +
 
 Notice **where** the `fill =` appears and what it it set equal to!
 
-Importantly, R knows a lot of different colors by their English names.
+Importantly, R knows a lot of different colors by their English names.  To see them, you can use a [great cheat sheet](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf) that shows the color and the color name, or perhaps [this one](http://derekogle.com/NCGraphing/resources/colors).  For "hex" colors, there are a number of "color pickers" out there, like [Google's](https://g.co/kgs/hv1JrX).
+
+## Working With Geoms
+
+Consider: how are these two plots similar?  How are they different?
+
+<div style = "align-items: center; display: flex;">
+
+<div style = "margin: 1rem; max-width: 45%; float:left;"> ![histogram of covid data](media/mini_histogram.png)
+</div>
+<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![frequency polygon of covid data](media/mini_freqpoly.png)
+</div>
+</div>
+
+These two graphs share the same data, plotted on the same x and y axes.  What's different? What's different is that on the left, the data is shown as a histogram, and on the right, it's shown as what's called a frequency polygon.
+
+A geom function is a function that, given the data and aesthetic mappings, generates the **geometric object** used to represent the data.
+
+In the next exercise, you're going to work hands-on with geom functions.
+
+## Exercise Time!
+
+In your RStudio environment, you should already have `visualize.Rmd` open.  If not, please reopen it (within the "exercises" directory of the directory for this module).  Scroll down to `### Your Turn: Geom functions`, which should be around line 90 or so.
+
+![Lines 91-106 of visualize.Rmd](media/ex_2_task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+
+Then, work through the exercises from that point forward, running, adding, and updating code as indicated.  Hint: take advantage of code completion suggestions in RStudio to help you make an educated guess as to how to proceed, especially in the first task.
+
+We'll go over the solutions in the next section, and you can also look in the "solutions" folder and open `visualize.Rmd` to see the solution!
+
+## Solutions
+
+If you like, you can open the solutions version of visualize.Rmd by navigating in your file browser up one directory (to the `r_basics_visualize_data` directory), and then into the "solutions" directory, where you'll find a (completed!) solutions file also entitled visualize.Rmd.
+
+You had three tasks to complete.  We'll go through them one at a time.
+
+Your first task invited you to run a code chunk that creates a histogram and use that code as the basis of a new code chunk that creates a frequency polygon.  
+
+![Lines 91-106 of visualize.Rmd](media/ex_2_task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+
+This is the solution code:
+
+```
+ggplot(data = covid_testing) +
+  geom_freqpoly(mapping = aes(x = pan_day))
+```
+
+In your second task, you were asked to set the color of the line to "blue".  Note that lines have "color" and shapes have "fill" (for the inside) as well as optional "color" (for the edges).
+
+![Lines 110-115 of visualize.Rmd](media/ex_2_task_2.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+
+This is the proper code:
+
+```
+ggplot(data = covid_testing) +
+  geom_freqpoly(mapping = aes(x = pan_day), color = "blue")
+```
+
+Finally, you were asked to predict what the output of `ggplot` code using two different `geom_` functions would be:
+
+![Lines 122-131 of visualize.Rmd](media/ex_2_task_3.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+
+Run that code, and you should see something like this!
+
+![greyscale graph that shows both a histogram and a frequency polygon of the same covid data, overlaid](media/two_geoms.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+
+## Recap
+
+| | |
+| --- | --- |
+| ![ggplot2 logo on a hexagon.  The logo consists of the word "ggplot2" superimposed on light grey graph paper with a line graph connecting blue dots of different shades](media/ggplot2_hex.png)<!-- style = "max-width:150px;" --> | **ggplot2** is a package that provides a **grammar of graphics**. You can create any type of plot using a simple template to which you provide: |
+| ![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)<!-- style = "max-width:150px;" --> | 1. A **tidy data frame**, in which each variable is in its own column, each observation is in its own row, and each value is in its own cell; |
+| ![histogram of covid data](media/mini_histogram.png)<!-- style = "max-width:75px;" -->  ![frequency polygon of covid data](media/mini_freqpoly.png)<!-- style = "max-width:75px;" --> | 2. A **geom function**, which tells R what kind of plot to make; and |
+| ![Crossed X and Y axes](media/positions.png)<!-- style = "max-width:75px;" -->  ![Display of color choices](media/colors.png)<!-- style = "max-width:75px;" -->  | 3. **Aesthetic mappings**, which tell R how to represent data as graphical markings on the plot. |
+| ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)<!-- style = "max-width:75px;" -->   ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)<!-- style = "max-width:75px;" -->   | Aesthetics can be **mapped** to a variable or **set** to a constant value. |
+
+
+
 
 ## Feedback
 
