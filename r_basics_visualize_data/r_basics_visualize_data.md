@@ -256,7 +256,7 @@ R lets you know that when you ask it to draw a histogram, you should probably te
 
 ![Histogram of covid tests by day of pandemic](media/covid_histogram.png)
 
-When we asked you to imagine what this plot might look like - the number of COVID tests that were performed on a given day over time – you might have imagined something like this. Initially you have very few tests that are being run, maybe because the pandemic hasn’t started yet and maybe also because the test isn’t yet broadly available. And at some point the number of tests shoots up and remains at a high level. But this simple visualization tells you so much more than that general shape. You can see that by 30 days, the testing ramp-up settles. And there appear to be some interesting things going on after day 60 that you might want to look into further.
+When we asked you to imagine what this plot might look like - the number of COVID tests that were performed on a given day over time – you might have imagined something like this. Initially you have very few tests that are being run, maybe because the pandemic hasn't started yet and maybe also because the test isn't yet broadly available. And at some point the number of tests shoots up and remains at a high level. But this simple visualization tells you so much more than that general shape. You can see that by 30 days, the testing ramp-up settles. And there appear to be some interesting things going on after day 60 that you might want to look into further.
 
 Even though this graph isn't publication-perfect (at least not yet), it's still very useful for honing your knowledge about the data.
 
@@ -292,7 +292,7 @@ So here is a quick analysis of how we just used ggplot to make that histogram.
 
 <lia-keep>
 <table style = "width = 100%">
-<tr><th style = "width = 35%"></th><th style = "width = 65%"></th></tr>
+<tr><th style = "width: 35%; border: 1px solid rgb(var(--color-text));"></th><th style = "width: 65%; border: 1px solid rgb(var(--color-text));"></th></tr>
 <tr style="padding: 1.5em;"><td>1) We always start with `ggplot()`.</td>
 <td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
 <span style = "color: rgb(var(--color-text))">ggplot(</span>data = covid_testing<span style = "color: rgb(var(--color-text))">)</span> +
@@ -338,7 +338,9 @@ So that was a lot of information. Let's break this down to build up to a more ge
 You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details that match what you want. To fill in the details, you need to do 3 things:
 
 1) Pick a **tidy data frame** (this contains the data you want to plot)
+
 2) Pick a **geom function** (this is the type of plot you want to make), and
+
 3) Write **aesthetic mappings** (and we'll go over what that means)
 
 <lia-keep>
@@ -347,6 +349,8 @@ You start with the code written in **bold** – **bold** in this template is the
   geom_function(<b>mapping = aes(</b>mappings<b>))</b>
 </pre>
 </lia-keep>
+
+In the next section, we'll talk about what it means to call a data frame "tidy".
 
 ## Using our Template, Step 1
 
@@ -372,6 +376,14 @@ A data set is tidy if:
 The opposite of "tidy" is often called "messy." And often times a lot of the data analysis work is to convert "messy" data into "tidy data."" But for now, fortunately for us, the `covid_testing` data set is tidy already.
 
 Here's one simple example of tidy versus messy. If a column is called "name" and includes first names and last names, that's messy.  It can be difficult to extract just the first names or just the last names, since some people have more than one word forming their first name (José María, Mary Jo) and some people have more than one word forming their last name (de la Cruz, Bonham Carter).  A "tidy" approach would be to have one column for first names and one column for last names.
+
+[Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10) suggests that there are five common problems that occur to make data "messy":
+
+* Column headers are values, not variable names.
+* Multiple variables are stored in one column.
+* Variables are stored in both rows and columns.
+* Multiple types of observational units are stored in the same table.
+* A single observational unit is stored in multiple tables.
 
 To see a "messy" data frame and its "tidy" alternative, see [a brief 2018 article](https://education.arcus.chop.edu/tidyverse/) for a brief read, or, if you want a deeper dive,  there really isn't a better article than [Hadley Wickham's classic work](https://www.jstatsoft.org/article/view/v059i10).
 
@@ -722,613 +734,225 @@ There's no need to remove the sex variable, and the numerical values don't neces
 </div>
 
 
+## Using our Template, Step 2
 
-## `select()` Example
+As a reminder, we put forth three steps in our `ggplot` template.
 
-Let's examine the following code:
+![ggplot code annotated with the steps enumerated in the list below](media/ggplot_template.png)
 
-`select(covid_testing, mrn, last_name)`
+You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details that match what you want. To fill in the details, you need to do 3 things:
 
-This `select` statement will take the data frame `covid_testing`, and return a new data frame that only has the columns `mrn` and `last_name`, shown here in blue to help you visualize this transformation:
+1) Pick a **tidy data frame** (this contains the data you want to plot)
 
-![On the left, the first few columns of the `covid_testing` data frame: `mrn`, `first_name`, `last_name`, and `gender`.  This is followed by an arrow pointing to a new data frame on the right, which only has the two selected / blue columns, namely `mrn` and `last_name`.](media/select_covid_example.png)<!--
-style = "max-width: 800px;"
--->
+2) Pick a **geom function** (this is the type of plot you want to make), and
 
-An important point to note here is that `select` **will not modify the original data frame** but simply returns the altered data frame you asked for, without saving it automatically.
+3) Write **aesthetic mappings** (and we'll go over what that means)
 
-If you write the `select` statement like this it will simply print out the result in the console or in your R Markdown document. If you want to **capture** the modified data frame you need to **assign** it to a named object.
+<lia-keep>
+<pre>
+<b>ggplot(data = </b>data_frame<b>) +</b>
+  geom_function(<b>mapping = aes(</b>mappings<b>))</b>
+</pre>
+</lia-keep>
+
+Let's take on the second step: selecting a **geom function**.
+
+We'll go into more detail about what geom functions are, but for now, just know that you need to tell ggplot what type of graph you want, and you do that by picking the right `geom_` function.  And in RStudio, thanks to code completion suggestions, when you start typing `geom_`, you'll see a long list of possible ways to finish that term:
+
+![`RStudio autocomplete suggestions for geom_ appear, and include possibilities like geom_abline, geom_area, geom_bar, and so forth.  Hovering over one of the choices provides a contextual help window that describes how to use the geom.`](media/geom_autocomplete.png)
+
+Here are a few useful geom functions for visualizing clinical data, but there are many more. With these six you can make histograms, bar plots, scatter plots, dot plots, boxplots, and line graphs.
+
+| Visual depiction | ggplot geom function |
+| --- | --- |
+| ![unlabeled histogram](media/geom_histogram_mini.png) | geom_histogram() |
+| ![unlabeled bar chart](media/geom_bar_mini.png) | geom_bar() |
+| ![unlabeled scatter plot with points](media/geom_point_mini.png) | geom_point() |
+| ![unlabeled dot plot](media/geom_dotplot_mini.png) | geom_dotplot() |
+| ![unlabeled box plot](media/geom_boxplot_mini.png) | geom_boxplot() |
+| ![unlabeled line graph](media/geom_line_mini.png) | geom_line() |
+
+## Using our Template, Step 3
+
+As a reminder, we put forth three steps in our `ggplot` template.
+
+![ggplot code annotated with the steps enumerated in the list below](media/ggplot_template.png)
+
+You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details that match what you want. To fill in the details, you need to do 3 things:
+
+1) Pick a **tidy data frame** (this contains the data you want to plot)
+
+2) Pick a **geom function** (this is the type of plot you want to make), and
+
+3) Write **aesthetic mappings** (and we'll go over what that means)
+
+<lia-keep>
+<pre>
+<b>ggplot(data = </b>data_frame<b>) +</b>
+  geom_function(<b>mapping = aes(</b>mappings<b>))</b>
+</pre>
+</lia-keep>
+
+Let's take on the third step: writing aesthetic mappings.  This is where you tell R how you want the columns of the data frame represented as graphical markings on the plot.  It's important to start with a couple of important distinctions:
+
+* An **aesthetic** is something that you can see about a data element on a graphic, such as its **position** on an x/y grid, but also other features such as for example its **color**.
+* An **aesthetic mapping** is a rule that tells ggplot how to draw the data from a specific column of the data set on the plot.
+
+* A data visualization contains visual elements that **don't change** according to the data (for example, the color of the background of the graph, which doesn't vary based on the data).  **We can set these, but we don't "map" them.**
+* A data visualization contains visual elements that **do change** with the data (for example, the height of a bar changes depending on the data, and the x and y position of a point on a scatter plot changes depending on the data).  **We "map" these visual elements.**
+
+We'll keep thinking about these distinctions in the next few sections.  For now, let's consider an example aesthetic mapping, in a data frame with three columns, called "a", "b", and "c".  We can imagine mapping the values in column "a", which are numerical values, to the x axis.  With column "b", also numerical, we can map those values to the y axis.  And for column "c", which has categorical data with "M" and "F" values, we can imagine mapping that to colors.  
+
+The mapping in ggplot would be within an **aes()**, or aesthetic mapping, and looks like this:
+
+`aes(x = a, y = b, color = c)`
+
+Note that R automatically figures out reasonable axis limits and a color scale, but you can fine tune this manually.
+
+Here's a visual that might help:
+![Small table of data with columns a, b, and c, with arrows that point to the x and y axes of a small coordinate plane.  Each row also has a blue or green dot corresponding to the value in c.  "M" gets blue dots and "F" gets green dots.](media/abc_aesthetics.png)
+
+## Aesthetic mappings
+
+Let's do a quick check of your understanding of aesthetic mappings.  As a reminder:
+
+* A data visualization contains visual elements that **don't change** according to the data (for example, the color of the background of the graph, which doesn't vary based on the data).  **We can set these, but we don't "map" them.**
+* A data visualization contains visual elements that **do change** with the data (for example, the height of a bar changes depending on the data, and the x and y position of a point on a scatter plot changes depending on the data).  **We "map" these visual elements.**
+
+Here are some aesthetic mappings to consider:
+![A handful of aesthetic options including position, shape, size, color, line width, and line type.](media/aesthetic_mappings.png)
+From *Fundamentals of Data Visualization*, by Claus Wilke, licensed under CC-BY-NC-ND
 
 <div class = "question">
-Which of the following will select the `first_name` column from the `covid_testing` data frame and capture the result in a data frame named `newdata`?
+Which of the following elements of a graph could reasonably form part of an aesthetic mapping? Check all that apply!
 
-
-[( )] A: `newdata = select(first_name, covid_testing)`
-[(X)] B: `newdata <- select(covid_testing, first_name)`
-[( )] C: `select(newdata, covid_testing, first_name)`
-[( )] D: `newdata <- select(covid_testing, First_Name)`
-[( )] E: Both B and D
+[[ ]] The size of font used in the title of a plot
+[[X]] The size of a point on a scatterplot
+[[X]] The location of a point on a scatterplot
+[[ ]] The location of the caption on a graph
+[[ ]] The color of the font for the x-axis title
+[[ ]] The color of gridlines in the background of a graph
+[[X]] The color of a line that connects data points in a line graph
+[[X]] The color of paired bars in a bar chart
+[[X]] The line style (solid, dotted) in a line graph
+[[?]] There are multiple correct answers!
 
 <div class = "answer">
 <details><summary>Click to see an explanation of the answer.</summary>
 
-Answer (A) isn't correct, because the first argument that appears inside `select` represents the data frame, and `first_name` is not the name of a data frame.  Also, we notice that instead of an assignment arrow, we see an equals sign.  This isn't wrong *per se*, but it isn't advised.
+Elements that don't get their value from data don't form part of an aesthetic **mapping**.  For example, the size of the font I want for the title of a plot is based on what looks good, what is readable, and what my publisher asks for.  I can set that without looking at any of the actual data.  The same thing is true of the location of a caption.  I might left-justify it, or center it, or put it above or below the graph, but that's an aesthetic choice that doesn't have any relationship (or mapping) to the data I want to display.
 
-Answer (B) is correct: it uses the assignment arrow to create a new object called `newdata`, and the data that gets assigned to that object is the correct subset of the data frame called `covid_testing`, namely, a single column called `first_name`.
+Out of the list above, these are the visual elements that could be reasonably mapped back to the data I want to display:
 
-Answer (C) is not correct, because it does not create a new object, but instead tries to include the name of a new object within the `select` statement.  That won't work!
-
-Answer (D) is a bit of a trick.  It's incorrect because in R, capitalization matters.  It's a "case sensitive" language, and there is no column named "First_Name" with capital letters!
-
-Answer (E) is not correct, because we know (D) is incorrect.
-</details>
-</div>
-</div>
-
-## The `filter()` Function
-
-One of the most important `dplyr` functions to know about is `filter()`. `filter()` extracts rows, and it does that based on **logical criteria**, or a **condition** that can be evaluated to be true (keep that row as part of our subset) or false (don't keep that row).
-
-![A grey colored data frame of four rows and a header row, with two rows selected (as indicated by a blue color), is transformed into a data frame of two selected (blue colored) rows, along with a header.](media/dplyr_filter.png)<!--
-style = "max-width: 600px;"
--->
-
-Like `select()`, `filter()` takes a data frame as its first argument. The second argument is a condition or logical test. R then performs that logical test on each row of the dataset and returns all rows in which the logical test was true.
-
-To extract rows that meet logical criteria, we write code that looks like this, and we replace the three dots with the condition we want to test for each row:
-
-`filter(data_frame, ...)`
-
-For example, we'll take a look at this code in the next section:
-`filter(covid_testing, mrn == 5000083)`
-
-## `filter()` Example
-
-Let's think over:
-`filter(covid_testing, mrn == 5000083)`
-
-To give you an example: the logical test here is whether or not the `mrn` value is equal to the 5000083. This is **false** for the first three rows.  In these rows, the `mrn` value is something else.  For the 4th row, however, it is **true** that the `mrn` value is equal to the 5000083.
-
-This filter statement will return a data frame that only contains the 4th row, in which the logical condition is **true**, as shown on the right.
-
-![On the left, the first few columns of the `covid_testing data frame: mrn, first_name, and last_name`.  The first three rows are labeled "False", while the forth row is labeled "True" and colored blue, and there, the mrn value matches the one we're trying to match.  This data frame is followed by an arrow pointing to a new data frame on the right, which only has the one selected / blue row, the one that had the matching mrn value.](media/filter_covid_example.png)<!--
-style = "max-width:1000px;"-->
-
-<div class = "warning">
-One common issue to be aware of is the difference between the single equals (=) and the double equals (==) operators.
-
-In R, using a single equals sign assigns a value.  It asserts "these things **are** equal."
-
-The double equals sign does not assign, but compares.  It asks "**are** these things equal?".
-
-That's why we use double equals in the context of a logical test that compares the left hand side, e.g. `mrn`, with the right hand side, e.g. 5000083, to check whether or not they are the same.
-
-If you use the wrong kind of equals, you’ll get an error.  This is a very common mistake, and one you're almost guaranteed to accidentally commit at one point or another!  This is what some of those scary errors look like:
-
-<code style = "color:darkred;">
-Error: Problem with `filter()` input `..1`.
-x Input `..1` is named.
-ℹ This usually means that you've used `=` instead of `==`.
-</code>
-
-OR
-
-<code style = "color:darkred;">
-Error: unexpected '='
-</code>
-
-OR
-
-<code style = "color:darkred;">
-invalid (do_set) left-hand side to assignment
-</code>
-
-</div>
-
-## Logical Operators
-
-Here are some important logical operators to know about. They will all come in handy when you’re filtering rows of a data frame. `x` and `y` each represent expressions, which could be column names or constant values or a combination thereof.
-
-| logical expression | means | example |
-| :---: | --- | --- |
-| `x < y` | less than | `pan_day < 10` |
-| `x > y`| greater than | `mrn > 5001000` |
-| `x == y` | equal to | `first_name == last_name` |
-| `x <= y` | less than or equal to | `mrn <= 5000000` |
-| `x >= y` | greater than or equal to | `pan_day >= 30` |
-| `x != y` | not equal to | `test_id != "covid"` |
-| `is.na(x)` | a missing value | `is.na(clinic_name)` |
-| `!is.na(x)` | not a missing value | `!is.na(pan_day)` |
-
-We've already seen the double equals `==`. Note the less than or and greater than operators. These operators also come as "or equal to" versions.
-
-Use `!=` if you want to select rows in which a value is **not** equal to another value.   
-
-`is.na()` is how you can test for missing values (`NA` in R). This comes in handy when you want to remove missing values from your data, which we'll see later.
-
-<div class = "question">
-In the box below, write a `filter()` statement that returns a data frame containing only the rows from `covid_testing` in which the `last_name column` is NOT equal to "stark". Don't capture the returned data frame to assign it to an object.
-
-[[filter(covid_testing, last_name != "stark")]]
-[[?]] Hint: We include a space after any comma and on either side of the comparison operator `!=`.  We also aren't assigning the results of this `filter` to a new object.
-
-<div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
-
-`filter(covid_testing, last_name != "stark")` is correct:
-
-* it uses the `filter()` command
-* it puts the name of the data frame that will be filtered as the first argument, and follows that with a comma
-* after the comma, there is a logical condition that can be evaluated to be either true or false.
-* within the logical condition, we check whether it's true that the last_name value is not equal to the exact string "stark".
+* The size of a point on a scatterplot (for example, more cases = a bigger dot, fewer cases = a smaller dot)
+* The location of a point on a scatterplot (the x value could be the day of the pandemic and the y value could be the number of tests)
+* The color of a line that connects data points in a line graph (imagine a blue line that shows invalid tests over time, and a purple line that shows valid tests, both positive and negative, over time)
+* The color of paired bars in a bar chart (perhaps we have the number of male and female patients being tested each week, and use different colors to indicate the sex in a paired bar chart)
+* The line style (solid, dotted) in a line graph (we could have actual number of tests administered in a solid line and a machine learning prediction of number of tests in a dotted line)
 
 </details>
 </div>
 </div>
 
-<div class = "warning">
-When you do a comparison with a literal character string, such as "stark", that string needs to go inside quotes. A character string is anything that's not a number or a logical value such as TRUE and FALSE.  Quotes can be tricky in R, and practice makes perfect.
+There are actually a lot of aesthetic mapping possibilities, and they depend on the kind of plot you're making. For example, for a line graph you can define line width and line type, and for scatter plots you can define the shape of the dots.
 
-* 945 is not the same value as "945"
-* "TRUE" is not the same as "true", "True" or TRUE
-* "00321" is not the same as "321" or 321.
+Note that things like axis labels, fonts, and annotations aren't considered aesthetic mappings because they don't vary with each data element and therefore you can't map those things to a specific column of a data frame.
 
-</div>
+Complicating matters, sometimes you just set the way points or lines look, not by mapping them to data, but by setting them to a predetermined value no matter what.  For instance, if you wanted all the points in a scatter plot to be purple stars, regardless of the data represented, we would call this "setting" an aesthetic, not "mapping" it.  
 
-<div class = "question">
-Which of these would successfully filter the `covid_testing` data frame to only tests with positive results?
+Picking the best aesthetics for your graph is as much an art as it is a science. Claus Wilke's *Fundamentals of Data Visualization* is a great introduction to this topic.
 
-[( )] A: `filter(covid_testing, result == positive)`
-[( )] B: `filter(covid_testing, result = "positive")`
-[(X)] C: `filter(covid_testing, result == "positive")`
-[( )] D: `filter(covid_testing, positive == "result")`
+The distinction between visual elements that are "set" and those that are "mapped", and the code that each of these requires, is a common point of confusion and frustration for new users of ggplot, so if you're not solid on these concepts, give the last couple of sections a quick re-read before moving ahead.
 
-<div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
+## Exercise Time!
 
-A is not correct because "positive" is a character string that must appear in quotes (it's not a number or a logical value such as TRUE or FALSE).
+Using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` directory, and then open the `exercises` directory.  You should then open `visualize.Rmd`, which will allow you to work alongside the sections of this module.
 
-B is not correct because you're trying to do a comparison with a single equals.  You need a double equals here to compare!
+![RStudio window showing visualize.Rmd](media/r_visualize_exercise.png)<!-- style = "max-width: 800px; border: 1px solid rgb(var(--color-highlight))" -->
 
-C is correct.  It includes `filter()`, has the name of a data frame as the first argument, a comma, and a valid comparison.
+To get started, let's first load up our fabricated data.  Run the first code chunk by clicking the green "play" button (look at line 10).  This gives you the data frame with fake Covid testing data, the data we will use for our instruction in this module.  You may have already done this a few sections ago, but it won't hurt to do it again.
 
-D is not correct because it flips the positions of the comparison; the column name goes to the left and the comparator on the right.
+Then, work through the exercises in the visualize.Rmd file, adding and updating code as indicated.
 
+Stop when it says "Stop here".  We'll go over the solutions in the next section.
 
-</details>
-</div>
-</div>
+## Solutions
 
-## Filtering a Complex Condition
+If you like, you can open the solutions version of visualize.Rmd by navigating in your file browser up one directory (to the `r_basics_visualize_data` directory), and then into the "solutions" directory, where you'll find a (completed!) solutions file also entitled visualize.Rmd.
 
-Often, we want to filter data based on a combination of conditions.  For example, what if you want to preserve rows that meet one or both of the following conditions:
+You had three tasks to complete.  We'll go through them one at a time.
 
-* a male patient seen in the PICU
-* a patient seen in "oncology day hosp" in the first 20 days of the pandemic
+In your first task, you were asked to do what we already did once in this module: create a histogram of Covid tests as a function of `pan_day`.  There were three blanks to fill in, and three numbered instructions.
 
-When we have complex conditions like this, we need to consider how to phrase these conditions using **boolean logic** (also known as **boolean algebra**), which is the system of symbols and rules for interpreting the True/False value of a condition.  Boolean operators include AND (represented as `&` in R), OR (in R, `|`), and NOT (`!`, as we've already seen).  OR here means "at least one of", not "exactly one of".  
+![Lines 18-31 of visualize.Rmd](media/task_1.png)
 
-Here's a "truth table" to help you understand these operators:
-
-| Operator | Rule | Example |
-| --- | --- | --- |
-| AND (`&` in R) | True if and only if both sides are True | "Rabbits are mammals AND rabbits are quadrupeds" is True |
-| AND (`&` in R) | False if one or both sides are False | "Rabbits are mammals AND rabbits are bipeds" is False |
-| OR (`|` in R) | True if at least one side is True | "Rabbits are reptiles OR rabbits are quadrupeds" is True |
-| OR (`|` in R) | False if and only if both sides are False | "Rabbits are reptiles OR rabbits are bipeds" is False |
-| NOT (`!` in R) | Turns True into False and False into True | ! "Rabbits are reptiles" is True, ! "Rabbits are mammals" is False |
-
-
-We also have to consider using parenthesis to ensure the proper order of operations.  The order of operations for boolean algebra, from highest to lowest priority is NOT, then AND, then OR.  Forgetting to account for order of operations is a common mistake by novice users of boolean logic.
-
-Let's go step by step.  First, let's convert each of our two conditions to code:
-
-* `gender == "male" & clinic_name == "picu"`  (Both must be true, so we use AND)
-* `clinic_name == "oncology day hosp" & pan_day <= 20` (Both must be true, so we use AND)
-
-Since each of our bullet points above contain internal boolean logic, let's encapsulate them in parentheses.  
-
-* `(gender == "male" & clinic_name == "picu")`  Now this is treated as a single unit which can be True, False, or NA.
-* `(clinic_name == "oncology day hosp" & pan_day <= 20)` Now this is treated as a single unit which can be  True, False, or NA.
-
-Since we need either one but not both of the bulleted conditions to be true, we'll conjoin them using OR:
-
-`(gender == "male" & clinic_name == "picu") | (clinic_name == "oncology day hosp" & pan_day <= 20)`
-
-Now we have a filter condition we can use!  If you're working in the code, try this:
-
-```
-filter(covid_testing,
-  (gender == "male" & clinic_name == "picu") |
-  (clinic_name == "oncology day hosp" & pan_day <= 20))
-```
-
-We added whitespace (carriage returns and indentation) above to make this a bit more readable, but you don't have to.
-
-<div class = "warning">
-What happens if you don't use parentheses to create smaller units in your boolean logic?  As long as you're using all OR or all AND, you won't run into problems.
-
-For example, `filter(covid_testing, clinic_name == "clinical lab" & results == negative & last_name == "frey")` works as you might think... it gives you back rows of testing results (if there are any) which meet all three conditions.
-
-Similarly, `filter(covid_testing, clinic_name == "clinical lab" | results == negative | last_name == "frey")` will give you back rows where at least one of the conditions were met.
-
-But when you **mix** AND and OR, or need to add a NOT to a combination of conditions, mistakes can happen when **your** interpretation of the logic differs from the **computer's** interpretation of the logic, based on the order of operations in boolean logic.  And often, a mix of AND, OR, and NOT is exactly what we want to do.  
-
-Let's consider the case where you're interested in test results for males from the PICU or ED.
-
-We could write this in pseudocode (not true code, but a way of sketching out code ideas briefly) as "gender:male AND clinic:PICU OR clinic:ED".
-
-But we aren't done yet!  We need to consider whether we need to add parentheses.  Without parenthesis, we follow the order of operations standard in boolean logic: AND is evaluated before OR.
-
-That means that without any added parentheses, we would **really** be asking for "(gender:male AND clinic:PICU) OR clinic:ED".  In other words, I want rows that are either "males seen in the PICU" or "anyone seen in the ED".  Is that actually what I want to ask for?  No!  We need to add a set of parentheses around the "this OR that" clause, giving us "gender:male AND (clinic:PICU OR clinic:ED)".  
-
-Without adding our helpful parentheses, non-male patients could be included, if their test was sourced from the ED.
-
-To see what this code would look like, consider these two filter operations, which differ only by the addition of parentheses.  First, let's do our search without adding parentheses around the "or" clause.  We end up with almost 3600 rows:
+Here's the solution that you should place in that code chunk:
 
 ``` r
-> filter(covid_testing, gender == "male" & clinic_name == "picu" | clinic_name == "emergency dept")
-# A tibble: 3,563 × 17
-       mrn first_name last_name gender pan_day test_id clinic_name result demo_group   age drive_thru_ind ct_value
-     <dbl> <chr>      <chr>     <chr>    <dbl> <chr>   <chr>       <chr>  <chr>      <dbl>          <dbl>    <dbl>
- 1 5008967 rolley     karstark  male         8 covid   emergency … negat… patient      0.8              0       45
- 2 5002158 ravella    frey      female       9 covid   emergency … negat… patient      0                0       45
- 3 5004930 sarra      frey      female      10 covid   emergency … negat… patient      0.9              0       45
- 4 5002083 weasel     tarly     female      10 covid   emergency … negat… patient     18                1       45
- 5 5010468 chella     mormont   female      10 covid   emergency … negat… patient      0                0       45
- 6 5000227 maege      sand      female      11 covid   emergency … negat… patient      0.9              0       45
- 7 5002983 ronnel     snow      male        11 covid   emergency … negat… patient     18                0       45
- 8 5006569 lanna      baelish   female      11 covid   emergency … negat… patient      1                0       45
- 9 5004088 lennocks   greyjoy   male        11 covid   picu        negat… patient      4                1       45
-10 5008165 arianne    clegane   female      11 covid   emergency … negat… patient      1                0       45
-# … with 3,553 more rows, and 5 more variables: orderset <dbl>, payor_group <chr>, patient_class <chr>,
-#   col_rec_tat <dbl>, rec_ver_tat <dbl>
+ggplot(data = covid_testing) +
+  geom_histogram(mapping = aes(x = pan_day))
 ```
 
-And for comparison, let's add parentheses around the OR clause to accurately capture our true intent.  We get only around 1800 rows!  That's a big difference.
+
+In the second task, you were asked to rework that code with a bin width ("binwidth" in code) that corresponded to daily counts:
+
+![Lines 44-50 of visualize.Rmd](media/task_2.png)
+
+Here's the solution that you should place in that code chunk:
 
 ``` r
-> filter(covid_testing, gender == "male" & (clinic_name == "picu" | clinic_name == "emergency dept"))
-# A tibble: 1,820 × 17
-       mrn first_name last_name gender pan_day test_id clinic_name result demo_group   age drive_thru_ind ct_value
-     <dbl> <chr>      <chr>     <chr>    <dbl> <chr>   <chr>       <chr>  <chr>      <dbl>          <dbl>    <dbl>
- 1 5008967 rolley     karstark  male         8 covid   emergency … negat… patient      0.8              0     45  
- 2 5002983 ronnel     snow      male        11 covid   emergency … negat… patient     18                0     45  
- 3 5004088 lennocks   greyjoy   male        11 covid   picu        negat… patient      4                1     45  
- 4 5008878 hullen     stark     male        11 covid   emergency … negat… patient      1                0     45  
- 5 5004652 woth       martell   male        11 covid   emergency … negat… patient     18                1     45  
- 6 5010986 brenett    karstark  male        11 covid   emergency … negat… patient     18                0     45  
- 7 5011560 ulwyck     stark     male        11 covid   emergency … negat… patient      1                0     45  
- 8 5000140 walton     kettlebl… male        11 covid   emergency … negat… patient     13                0     45  
- 9 5000902 owen       seaworth  male        12 covid   emergency … posit… patient      0.1              0     33.0
-10 5002573 glendon    lannister male        12 covid   emergency … posit… patient     18                0     31.2
-# … with 1,810 more rows, and 5 more variables: orderset <dbl>, payor_group <chr>, patient_class <chr>,
-#   col_rec_tat <dbl>, rec_ver_tat <dbl>
+ggplot(data = covid_testing) +
+  geom_histogram(mapping = aes(x = pan_day), binwidth = 1)
 ```
+
+Finally, for the third task, you had to create a new code chunk by using copy and paste, *and* you had to add an aesthetic mapping using "fill".  Complicated!
+
+![Lines 58-60 of visualize.Rmd](media/task_3.png)
+
+
+And here's the solution:
+
+```
+ggplot(data = covid_testing) +
+  geom_histogram(mapping = aes(x = pan_day, fill = result), binwidth = 1)
+```
+
+## Setting vs. Mapping Aesthetics
+
+In the third task you just completed (if you didn't actually do it, at least go back one section and read about the three tasks), you **mapped** the fill aesthetic to the **result** variable, by writing "fill = result" inside the **aes()** function:
+
+<div style = "align-items: center; display: flex;">
+
+<div style = "margin: 1rem; max-width: 45%; float:left;"> ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/blue_histogram.png)
 
 </div>
-
-## The "Pipe" Operator (`%>%`)
-
-One of the most powerful concepts in the `tidyverse` suite of packages is the pipe operator, which is written as percent, greater than, percent (`%>%`).  
-
-The pipe operator passes the **object on its left** as the **first argument** to the **function on its right**.
-
-Here's a drawing of what that looks like:
-
-![An arrow connects the first object, `covid_testing`, to its new location as the first argument in the filter statement.](media/pipe_mini.png)<!--
-style = "max-width:600px;"-->
-
-
-Here, for example, the pipe operator takes the object on its left, here the `covid_testing` data frame, and inserts it as the first argument of the function on its right ... in our case, the `filter()` function.
-
-That means that this statement:
-
-`covid_testing %>% filter(pan_day <= 10)`
-
-is equivalent to:
-
-`filter(covid_testing, pan_day <= 10)`
-
-Those two lines of code are equivalent. In both cases we're taking the `covid_testing` data frame, passing it as the first argument to the `filter()` function, and adding a condition that we're filtering by.  In our case that condition is `pan_day` less than or equal to 10.
-
-**Why would we use this way of typing our commands?**  Are we complicating matters?  No, as you're about to see, this is a very useful way of writing out the changes you make on a data frame in the order you want them to take place.
-
-## Why Use the "Pipe" (`%>%`)
-
-Here's why the pipe (`%>%`) is so useful.
-
-"Tidy" functions like `select()`, `filter()`, and others we'll see later always have as first argument a data frame, and they always return a data frame as well.  Data frame in, data frame out.
-
-This makes it possible to create a pipeline in which a data frame object is handed from one `dplyr` function to the next.  The data frame result of step 1 becomes the data frame starting point for step 2, then the result of step 2 becomes the starting point for step 3, and so on.
-
-For example, here we start with `covid_testing`, then `select` the `last_name` and `result` columns, then `filter` to get rows where `result` is equal to "positive".
-
-```
-covid_testing %>%
-  select(last_name, result) %>%
-  filter(result == "positive")
-```
-
-<div class = "options">
-You might wonder why we've put each step in its own line.  Is this a requirement?  No, it's not.  Many R users like to use **whitespace** (new lines, tabs, spaces, indents) to make their code more human readable.  But these two code snippets work exactly the same way:
-
-**Option 1, Lots of Whitespace**
-
-```
-covid_testing %>%
-  select(last_name, result) %>%
-  filter(result == "positive")
-```
-
-**Option 2, No Whitespace at All**
-
-```
-covid_testing%>%select(last_name,result)%>%filter(result=="positive")
-```
-
-How you use whitespace is totally up to you, but we suggest that in a pipeline (steps in data transformation that are separated by `%>%`), each step appear in its own line, indented below the first step.
-
-</div>
-
-By connecting logical steps, you can get a **pipeline** of data analysis steps which are concise and also fairly human readable.  You can think of the `%>%` symbol as "then...", describing the steps in order.
-
-This approach to coding is powerful because it makes it much easier for someone who doesn't know R well to read and understand your code as a series of instructions.   
-
-<div class = "question">
-In the box below, rewrite the following statement with a pipe:
-
-`select(mydata, first_name, last_name)`
-
-[[mydata %>% select(first_name, last_name)]]
-[[?]] Hint: We include a space after any comma and on either side of the pipe `%>%`.  We also aren't assigning the results of this `select` to a new object.
-
-<div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
-
-`mydata %>% select(first_name, last_name)` is correct because:
-
-* It uses the pipe operator `%>%`
-* To the left of the pipe, there is the name of a data frame, in this case `mydata`.
-* To the right of the pipe, there is a `select()` function that includes additional arguments giving the names of the columns we want to keep.
-
-</details>
+<div style = "margin: 1rem auto; max-width: 45%; float:left;">
+<code>
+ggplot(data = covid_testing) +
+  geom_histogram(mapping = aes(x = pan_day, fill = result))
+</code>
 </div>
 </div>
 
-## Create New Columns With `mutate()`
+In contrast, consider this plot. It's the same as the one you've created at the beginning of the session, except the bars are blue, not black. So the difference is the "fill" aesthetic. But we're not really mapping the fill aesthetic to a variable here, because all bars are the same fill color. They don't represent the values of a column (or variable) of a data frame. Instead, we're setting it to a constant value, the color blue.
 
-`mutate()` is an extremely useful `dplyr` function, and you can use it to make new variables / columns.
+![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram are blue.](media/blue_histogram.png)
 
-Like all `dplyr` functions, `mutate()` takes a data frame as its first argument. After that, you tell it what to name the new column and what should be in it. This is done using **name-value expressions**.
+To do this in ggplot, you can still use "fill", but:
 
-In **name-value expression**, you have:
+* Instead of setting it equal to a column / variable, you'll set it to a color, like "blue" or "#CCAABB" (if you use "hex" or "hexidecimal" RGB values)
+* Instead of placing the "fill = " inside `aes()`, you'll move it outside of `aes()`.
 
-* a name
-* an equals sign (`=`), and
-* a value
-
-The **name** is the name of the new column that you'd like to create.
-
-Then you have a **single equals sign** - because you're assigning a value (`=`), you're not asking whether two things are equal (`==`).
-
-Then you have **value**. This can be a constant, e.g. 100, or a calculation that involves data from already existing columns.
-
-This is what it looks like:
-
-`mutate(data_frame, name = value)`
-
-## `mutate()` Example
-
-For example, let's take a look at one of the columns of `covid_testing` that we haven't looked at yet in this module: `col_rec_tat`.
-
-This column contains the specimen collection ("col") to received-in-lab ("rec") turn around time ("tat"), in hours. Let's create a new column, that contains the same data, but in minutes instead of hours.
-
-To do so, you write `mutate(covid_testing,` followed by a name-value expression. The left part is the new column name, which we could choose to be `col_rec_tat_mins`. Then we have a single equals sign. Then the calculation, which is `col_rec_tat` times 60.
+This is how you'd get an all-blue histogram:
 
 ```
-mutate(covid_testing,
-     col_rec_tat_mins = col_rec_tat * 60)
+ggplot(data = covid_testing) +
+  geom_histogram(mapping = aes(x = pan_day), fill = "blue")
 ```
 
-Upon executing the code, `mutate()` creates the new column and fills each row with the result of the calculation:
+Notice **where** the `fill =` appears and what it it set equal to!
 
-![On the left, two columns of the `covid_testing` data frame are shown: mrn and `col_rec_tat`.  The first few rows are given.  This data frame is followed by an arrow pointing to a new data frame on the right, which is the same as the one on the left with the exception of a new column, titled `col_rec_tat_mins`, which has appropriate values filled in.](media/mutate_covid_example.png)<!-- style = "max-width: 800px;" -->
-
-## Let's Make Sure You're Connected!
-
-If you're already set up in RStudio with the materials for this course (we had some instructions early on), you can skip this page and go ahead to the next!
-
-If you haven't yet started to work in the files for this module, please read over both options below before choosing one to continue with.
-
-<h3>Option 1: Work in the Cloud</h3>
-
-This might work well for you if you don't want to, or can't, install R and RStudio on your computer.  The benefit is that you don't have to install anything, but one negative is that this option requires a bit of waiting for your environment to come online.
-
-**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
-
-  <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"></a> **← Click the "launch binder" button!**
-
-<div class = "hint" style = "align-items: center; display: flex;">
-
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen](media/binder_loading.gif)<!--
-style = "border: 1px solid rgb(var(--color-highlight));"-->
-</div>
-</div>
-
-**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
-
-![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
-style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
-
-
-<h3>Option 2: Work on Your Computer</h3>
-
-If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
-
-* In RStudio, open a new project (File, New Project)
-* Select Version Control, then Git
-* Drop this link into the "Repository URL": https://github.com/arcus/education_r_environment
-* Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
-* Click to select the "Open in new session" checkbox
-* Click "Create Project"
-* In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
-
-**Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
-
-<div style="display:none">@gifPreload</div>
-
-<figure>
-  <img src="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
-
-<figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
-</figure>
-
-If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime:
-
-* Open your project.
-* In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
-
-![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
-
-## Work On Data Transformation
-
-Within the `r_basics_transform_data` folder, please open the `exercises` folder and then open `transform.Rmd` to work through the exercises.  You'll see something like the below.
-
-![RStudio window showing transform.Rmd](media/r_transform_exercise.png)<!-- style = "max-width: 800px; border: 1px solid rgb(var(--color-highlight))" -->
-
-To work in this file:
-
-(1) Run the first code chunk by clicking the green "play" button (look at line 6).  This gives you the data frame with fake Covid testing data, the data we've been using for our instruction in this module so far.
-
-(2) For each of the three code chunks below the first one, please read the instructions before the code chunk and then add the right code to the code chunk to make it work.
-
-When you've done the best you can on your own, go to the next page, where we'll discuss the solutions.
-
-## Solutions for Data transformation
-
-You can find the solution file in the "r\_basics\_transform\_data" directory, within "solutions".  Simply open the version of `transform.Rmd` in that folder to see the answers.  
-
-Not sure how to do that?  You can use the green "up" arrow in the file browser within RStudio, or click on the "breadcrumbs", to get from the "exercises" directory back up to the "r\_basics\_transform\_data" directory.  Then it's a snap to click to open "solutions".
-
-![RStudio file browser, with the "parent directory" up arrow and the breadcrumbs navigation highlighted](media/file_browser_navigation.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
-
-In the first task, you were asked to create a dplyr pipeline:
-
-```
-Create a dplyr pipeline that:
-
-1. Starts with the *covid_testing* data frame, then
-
-2. Filters to tests that were sent from the PICU (Hint: `clinic_name` equal to "picu"), then
-
-3. Selects the column with the received-to-verified turnaround time (`rec_ver_tat`) as well as the column with the day from start of the pandemic (`pan_day`)
-
-```{r}
-______ %>%
-  filter(______) %>%
-  select(______, ______)
-\`\`\`
-
-```
-
-Here's the solution.  We start with `covid_testing` in the first line, then we apply a filter in the second line (making sure to use that double equals sign).  Finally, we finish our pipeline by using select to just give us the columns we're interested in.
-
-```
-```{r}
-covid_testing %>%
-  filter(clinic_name == "picu") %>%
-  select(rec_ver_tat, pan_day)
-\`\`\`
-```
-
-In the next task, you were asked to try using mutate:
-
-```
-Add a column named "total_tat" to *covid_testing* that contains the total turnaround time (i.e. the sum of `col_rec_tat` and `rec_ver_tat`) for each test.
-
-```{r}
-mutate(______, total_tat = ______)
-\`\`\`
-```
-
-Here's the solution.  We begin the `mutate` statement with our first argument being the data frame we want to see altered, in our case `covid_testing`.  We then use a single equal to set a new value, `total_tat`, which is set equal to the sum of `col_rec_tat` and `rec_ver_tat`.
-
-```
-```{r}
-mutate(covid_testing, total_tat = col_rec_tat + rec_ver_tat)
-\`\`\`
-```
-
-Finally, we asked you to change that last code you just wrote:
-
-```
-Now re-write the previous code chunk to use the %>% operator.
-
-\`\`\`{r}
-
-\`\`\`
-```
-
-And here's that last solution!  It does the same thing as the second bit of code, but in a different (and some would argue, more useful, format).
-
-```
-\`\`\`{r}
-covid_testing %>%
-  mutate(total_tat = col_rec_tat + rec_ver_tat)
-\`\`\`
-```
-
-## Recap
-
-To recap, `dplyr` is a package you can load in R that provides a grammar for transforming data frames. Some of the key `dplyr` functions are:
-
-function | graphic
----|---
-`select()`, which subsets columns by name | ![Image showing the transformation from a data frame of 4 columns to a data frame of 2 columns](media/select_mini.png)
-`filter()`, which subsets rows by a logical condition | ![Image showing the transformation from a data frame of 6 rows to a data frame of 2 rows](media/filter_mini.png)
-`mutate()`, which creates new calculated columns | ![Image showing the creation of a new column in a data frame](media/mutate_mini.png)
-
-Additionally, `dplyr` and other `tidyverse` packages make use of the pipe operator (`%>%`), which can be used to string together `dplyr` functions into a pipeline that performs several transformations.
-
-## More `dplyr` functions
-
-We’ve only scratched the surface of data transformation functions in dplyr. Other important ones include:
-
-function | graphic
----|---
-`arrange()`, which sorts a data frame (for example, alphabetically by `last_name`) | ![Small image that shows a data frame with rows initially mixed and then with rows sorted in order](media/arrange_mini.png)
-`add_row()`, which adds rows to a data frame | ![Small image that shows a data frame with three rows transformed to one with four rows.](media/add_row_mini.png)
-`group_by()` and `summarize()`, which allow you to create data summaries such as means, medians, sums, etc.| ![Small image that shows a data frame broken up into three smaller data frames, then re-assembled with a summary row for each of the three smaller data frames.](media/group_by_summarise_mini.png)
-`bind_cols()` and `bind_rows()`, which allow you to combine data frames by row or column| ![Small image illustrating two data frames that are combined horizontally.](media/bind_cols_mini.png)`
-`_join()` functions including `left_join()` that combine data frames by looking up matching values from one table in another | ![Small image that shows two data frames which are combined using only the rows in which there is data for the given observation in both tables](media/left_join_mini.png)`
-
-<div class = "options">
-You may notice here and elsewhere that we include "British" spellings (e.g. `summarise()`) for some functions.  "American" spellings (`summarize()`) also work, and both spellings trigger the same function.  Feel free to use either.
-</div>
-
-## `dplyr` Cheatsheet
-
-RStudio creates and distributes a number of cheatsheets for various purposes.  You can find them by clicking in the Help menu in RStudio -- try that now!  Here's a screenshot of the `dplyr` cheatsheet:
-
-![A very busy and complex sheet that is titled "Data Transformation with dplyr cheatsheet" and contains subsections titled "summarise cases", "group cases", "manipulate cases", and "manipulate variables"](media/dplyr_cheatsheet_snapshot.png)
-
-Note that in this cheatsheet they refer to "cases" to mean rows or observations and "variables" to mean columns.
-
-You can also find cheatsheets [on the RStudio website](https://www.rstudio.com/resources/cheatsheets/).
-
-## Beyond `dplyr`
-
-Beyond dplyr, there are a number of other `[tidyverse](https://www.tidyverse.org/)` packages that provide powerful tools for data transformation:
-
-* `tidyr` provides functions that allow you to convert messy data frames into tidy ones
-* `lubridate` provides functions to manipulate times and dates
-* `stringr` provides tools for manipulating text strings
-* `purrr` offers advanced functionality to automate complex data transformations
-* `dbplyr` allows you to interact with a table inside a database as if it were a data frame
-
-![A set of five hexagonal logos: one each for tidyr (futuristic brooms fly up and to the right), lubridate (a calendar and clock), stringr (a violin), purrr (a hand-drawn sketch of a cat), and dbplyr (futuristic channellock pliers flying up and to the right)](media/tidyverse_logos.png)
+Importantly, R knows a lot of different colors by their English names.
 
 ## Feedback
 
