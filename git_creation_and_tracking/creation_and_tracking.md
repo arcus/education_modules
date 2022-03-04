@@ -597,7 +597,7 @@ The commit message should describe what this commit does. If you want to know th
 
  ![The three images from above appear in order from left to right. The stick figure making the drawing is labeled "Files". An arrow labeled `git add smiley.art` points to the middle image of the drawing in the scanner intake slot, which is labeled "Staged files." An arrow labeled `git commit -m "create smiley.art"` points to the last image. This is a picture of the smiley face drawing saved to the disk in the scanner and is labeled "Committed files."](fig/scanner_metaphor.svg)
 
-
+fdsa
 
 
 ### Telling Git not to track some files
