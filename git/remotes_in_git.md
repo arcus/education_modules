@@ -133,8 +133,8 @@ $ git push origin main
 
 Since Dracula set up a passphrase, it will prompt him for it. If you completed advanced settings for your authentication, it will not prompt for a passphrase.
 
-
-```output
+**Output**
+```
 Enumerating objects: 16, done.
 Counting objects: 100% (16/16), done.
 Delta compression using up to 8 threads.
