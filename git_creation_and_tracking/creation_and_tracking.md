@@ -160,7 +160,7 @@ nothing to commit (create/copy files and use "git add" to track)
 If you are using a different version of `git`, the exact
 wording of the output might be slightly different.
 
-### Knowledge Check 1
+### Quiz `git init`
 
 What command Dracula enter in the blank in order to create a new Git repository?
 
@@ -529,7 +529,7 @@ Just like any method of backing up or saving your work, the benefits of using Gi
 
 - **Commit regularly** Even if you are only making very small changes, don't forget to commit at regular intervals, like before you switch tasks or end your work day.
 
-### Knowledge Check 2
+### Quiz: `add` and `commit`
 
 1. What sequence of commands would track the changes you made to `myFile.txt`?
 
@@ -547,7 +547,7 @@ Just like any method of backing up or saving your work, the benefits of using Gi
 [( )] First run c, then d
 ***
 <div class = 'answer'>
-You must run the `git add` to tell Git to stage `myFile.txt`, then you can commit the changes an leave your short, descriptive message. We will discuss how to think of these steps in the [next section](#understanding-the-git-workflow).
+You must run the `git add` to tell Git to stage `myFile.txt`, then you can commit the changes and leave your short, descriptive message. We will discuss how to think of these steps in the [next section](#understanding-the-git-workflow).
 </div>
 ***
 
@@ -569,19 +569,19 @@ The commit message should describe what this commit does. If you want to know th
 
  To get started we will use a metaphor about creating a digital version of a drawing. Imagine you are working on an art project that involves creating drawings on paper with pens, pencils, and markers. You want to have a record of how this project progresses, and have access to a copier/scanner that can make and save perfect digital copies of your work.
 
-*IMAGE: stick figure at a desk drawing on piece of paper with a pen.*
+![IMAGE: stick figure creating a drawing of smiley face on piece of paper.](fig/create_files.png)
 
  Creating and editing your files on your computer is like drawing on paper at your desk. There is a single copy of your work stored on your computer, but no record of the changes you are making. You can always create a new file, or take out a new piece of paper, but no record of that new file exists yet.
 
-*IMAGE: stick figure putting the drawing from the previous picture into a scanner's intake slot.*
+![IMAGE: the smiley face drawing from the previous picture is in a scanner's intake slot.](fig/stage_files.png)
 
  The `git add` command is how you designate what files will be added to the permanent record of your project. This step is called **staging**. In our art project metaphor, `git add` is putting all the drawings you want a record of into the scanner's intake slot. You can stage as many files and folders as you want.
 
-*IMAGE: stick figure pressing the "SCAN" button on the scanner.*
+![IMAGE: the smiley face drawing is now saved on a disk inside the scanner.](fig/commit_files.png)
 
  There isn't a record of your staged files until you commit them using `git commit`. This is like telling the scanner to actually scan all of the staged drawings in its intake slot. Note that if you left a drawing on your desk instead of putting it in the scanner, it won't get scanned. Now there is a record of this version of your project. The same way that the scanner now has a digital record of the current state of your art, Git stores a record of the state of your repository when you commit.
 
- *IMAGE with 3 sections: On the left a stick figure is drawing with paper and pencils on a desk. This image is labeled "creating and editing files". The middle image shows the stick figure putting their artwork into a copier/scanner intake slot and is labeled "staging files using `git add`". The third image shows the artwork being scanned by the machine and is labeled "`git commit` creates a record of the staged artwork's current state."*
+ ![The three images from above appear in order from left to right. The stick figure making the drawing is labeled "Files". An arrow labeled `git add smiley.art` points to the middle image of the drawing in the scanner intake slot, which is labeled "Staged files." An arrow labeled `git commit -m "create smiley.art"` points to the last image. This is a picture of the smiley face drawing saved to the disk in the scanner and is labeled "Committed files."](fig/scanner_metaphor.png)
 
 [//] # (Possible metaphor to run by people:
 
@@ -593,7 +593,7 @@ The commit message should describe what this commit does. If you want to know th
 6. I draw a flower in one corner, you draw a boat in another corner of drawing 1,  and our friend draws an animal on drawing 2, all of our changes **merge** happily!
 7. I make the animal on drawing 2 into an angry sheep, while you turn it into a happy sloth, we can’t merge the drawings and must resolve this **conflict**!)
 
-### Knowledge Check 3
+### Quiz: `git` workflow
 What does the `git commit` command do?
 [[ ]] Stages files so that their current version can be recorded.
 [[ ]] Creates a record of the current version of all files in the repository.
