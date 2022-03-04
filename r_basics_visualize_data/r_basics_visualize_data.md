@@ -289,12 +289,12 @@ So here is a quick analysis of how we just used ggplot to make that histogram.
 
 <lia-keep>
 <table style = "width = 100%">
-<tr><th style = "width: 35%;"></th><th style = "width: 65%;"></th></tr>
+<tr><th style = "width: 45%;"></th><th style = "width: 45%;"></th></tr>
 <tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>1) We always start with `ggplot()`.</td>
 <td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
 <span style = "color: rgb(var(--color-text))">ggplot(</span>data = covid_testing<span style = "color: rgb(var(--color-text))">)</span> +
   geom_histogram(mapping = aes(x = pan_day))
-<code>
+</code>
 </td></tr>
 <tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>2) Give ggplot a **data frame** to start with, in this case, our `covid_testing` data frame.</td>
 <td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
@@ -311,10 +311,10 @@ ggplot(data = covid_testing) <span style = "color: rgb(var(--color-text))">+ </s
 </td></tr>
 <tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>4) In the second line, we describe what kind of geometric representation we want -- a histogram.
 </td>
-<td><code style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
+<td><pre style = "color: rgba(var(--color-text), 0.3); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) +
   <span style = "color: rgb(var(--color-text))">geom_histogram(</span>mapping = aes(x = pan_day)<span style = "color: rgb(var(--color-text))">)</span>
-<code>
+</pre>
 </td></tr>
 <tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>5) We also add some mappings, explaining which data from the data frame should be displayed in the histogram.  We use "aes" (short for "aesthetic" or "aesthetic mapping") to tell ggplot how to draw the visualization.  We only have to specify the x axis, because a histogram assumes that you're counting rows of data and will map that to the y axis.
 </td>
@@ -330,7 +330,7 @@ ggplot(data = covid_testing) +
 
 So that was a lot of information. Let's break this down to build up to a more general template. Here's a preview of that template, and we'll spend the few sections or so exploring it.
 
-![ggplot code annotated with the steps enumerated in the list below](media/ggplot_template.png)
+![ggplot code annotated with the steps enumerated in the list below](media/ggplot_template.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:700px;" -->
 
 You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details that match what you want. To fill in the details, you need to do 3 things:
 
@@ -388,8 +388,7 @@ To see a "messy" data frame and its "tidy" alternative, see [a brief 2018 articl
 
 Let's see what you remember about tidy datasets!  Take a look at the sample table provided below.  It's similar to what you might see in a publication, and it's in a great format for humans... but it's not tidy enough to work with easily in a computational way.  This table shows the results of the "QPT" psychometric (something we made up) and shares pre- and post-treatment means and standard deviations for different kinds of research cohorts.
 
-<table border="1" cellpadding="0" cellspacing="0"><tbody><tr><td>
-            <p>&nbsp;</p>
+<table border="1" cellpadding="0.5em" cellspacing="0"><tbody><tr><td>
             </td>
             <td colspan="2">
             <p>Mean QPT - pretreatment</p>
@@ -404,7 +403,6 @@ Let's see what you remember about tidy datasets!  Take a look at the sample tabl
             <p>SD QPT -- post-treatment</p>
             </td>
         </tr><tr><td>
-            <p>&nbsp;</p>
             </td>
             <td>
             <p>m</p>
