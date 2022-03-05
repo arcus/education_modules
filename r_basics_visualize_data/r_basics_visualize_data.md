@@ -360,8 +360,8 @@ In the next section, we'll talk about what it means to call a data frame "tidy".
 Let's get started. The first detail is a "tidy" data frame which contains the data you want to plot.
 
 <lia-keep>
-<pre style = "color: rgba(var(--color-text), 0.5); font-size: 0.8em;">
-<b>ggplot(data = </b><span style = "color: rgb(var(--color-text))">data_frame</span><b>) +</b>
+<pre>
+<b>ggplot(data = </b>data_frame<b>) +</b>
   geom_function(<b>mapping = aes(</b>mappings<b>))</b>
 </pre>
 </lia-keep>
@@ -572,172 +572,24 @@ Depression status and timepoint should each become a column.  In fact, we sugges
 
 There's no need to remove the sex variable, and the numerical values don't necessarily need to have the same number of significant digits to be considered "tidy".  Here's one way to make the table above into a tidy dataset ready for computational analysis:
 
-<lia-keep>
-<table>
-  <thead>
-    <tr>
-      <th>Depression status</th>
-      <th>Anxiety status</th>
-      <th>Sex</th>
-      <th>Count</th>
-      <th>Timepoint</th>
-      <th>Mean QPT</th>
-      <th>SD QPT</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>pos</td>
-      <td>pos</td>
-      <td>m</td>
-      <td>12</td>
-      <td>pre</td>
-      <td>130</td>
-      <td>25</td>
-    </tr>
-    <tr>
-      <td>pos</td>
-      <td>pos</td>
-      <td>f</td>
-      <td>8</td>
-      <td>pre</td>
-      <td>145</td>
-      <td>19.8</td>
-    </tr>
-    <tr>
-      <td>pos</td>
-      <td>pos</td>
-      <td>m</td>
-      <td>12</td>
-      <td>post</td>
-      <td>103</td>
-      <td>24.9</td>
-    </tr>
-    <tr>
-      <td>pos</td>
-      <td>pos</td>
-      <td>f</td>
-      <td>8</td>
-      <td>post</td>
-      <td>142</td>
-      <td>40.1</td>
-    </tr>
-    <tr>
-      <td>pos</td>
-      <td>neg</td>
-      <td>m</td>
-      <td>9</td>
-      <td>pre</td>
-      <td>122</td>
-      <td>28.1</td>
-    </tr>
-    <tr>
-      <td>pos</td>
-      <td>neg</td>
-      <td>f</td>
-      <td>7</td>
-      <td>pre</td>
-      <td>137</td>
-      <td>27.0</td>
-    </tr>
-    <tr>
-      <td>pos</td>
-      <td>neg</td>
-      <td>m</td>
-      <td>9</td>
-      <td>post</td>
-      <td>109</td>
-      <td>26.0</td>
-    </tr>
-    <tr>
-      <td>pos</td>
-      <td>neg</td>
-      <td>f</td>
-      <td>7</td>
-      <td>post</td>
-      <td>140</td>
-      <td>39.5</td>
-    </tr>
-    <tr>
-      <td>neg</td>
-      <td>pos</td>
-      <td>m</td>
-      <td>13</td>
-      <td>pre</td>
-      <td>124</td>
-      <td>20.7</td>
-    </tr>
-    <tr>
-      <td>neg</td>
-      <td>pos</td>
-      <td>f</td>
-      <td>15</td>
-      <td>pre</td>
-      <td>119</td>
-      <td>18.3</td>
-    </tr>
-    <tr>
-      <td>neg</td>
-      <td>pos</td>
-      <td>m</td>
-      <td>13</td>
-      <td>post</td>
-      <td>100</td>
-      <td>24.2</td>
-    </tr>
-    <tr>
-      <td>neg</td>
-      <td>pos</td>
-      <td>f</td>
-      <td>15</td>
-      <td>post</td>
-      <td>110</td>
-      <td>20.5</td>
-    </tr>
-    <tr>
-      <td>neg</td>
-      <td>neg</td>
-      <td>m</td>
-      <td>10</td>
-      <td>pre</td>
-      <td>107</td>
-      <td>15.8</td>
-    </tr>
-    <tr>
-      <td>neg</td>
-      <td>neg</td>
-      <td>f</td>
-      <td>10</td>
-      <td>pre</td>
-      <td>110</td>
-      <td>13.9</td>
-    </tr>
-    <tr>
-      <td>neg</td>
-      <td>neg</td>
-      <td>m</td>
-      <td>10</td>
-      <td>post</td>
-      <td>88</td>
-      <td>21.8</td>
-    </tr>
-    <tr>
-      <td>neg</td>
-      <td>neg</td>
-      <td>f</td>
-      <td>10</td>
-      <td>post</td>
-      <td>95</td>
-      <td>20.6</td>
-    </tr>
-  </tbody>
-</table>
-</lia-keep>
-
-</details>
-</div>
-</div>
-
+| Depression status | Anxiety status | Sex | Count | Timepoint | Mean QPT | SD QPT |
+| --- | --- | --- | --- | --- | --- | --- |
+| pos | pos | m | 12 | pre | 130 | 25 |
+| pos | pos | f | 8 | pre | 145 | 19.8 |
+| pos | pos | m | 12 | post | 103 | 24.9 |
+| pos | pos | f | 8 | post | 142 | 40.1 |
+| pos | neg | m | 9 | pre | 122 | 28.1 |
+| pos | neg | f | 7 | pre | 137 | 27.0 |
+| pos | neg | m | 9 | post | 109 | 26.0 |
+| pos | neg | f | 7 | post | 140 | 39.5 |
+| neg | pos | m | 13 | pre | 124 | 20.7 |
+| neg | pos | f | 15 | pre | 119 | 18.3 |
+| neg | pos | m | 13 | post | 100 | 24.2 |
+| neg | pos | f | 15 | post | 110 | 20.5 |
+| neg | neg | m | 10 | pre | 107 | 15.8 |
+| neg | neg | f | 10 | pre | 110 | 13.9 |
+| neg | neg | m | 10 | post | 88 | 21.8 |
+| neg | neg | f | 10 | post | 95 | 20.6 |
 
 ## Using our Template, Step 2
 
@@ -1025,9 +877,9 @@ Run that code, and you should see something like this!
 
 ## Recap
 
-| --- | --- |
-| ![ggplot2 logo on a hexagon.  The logo consists of the word "ggplot2" superimposed on light grey graph paper with a line graph connecting blue dots of different shades](media/ggplot2_hex.png)<!-- style = "max-width:150px;" --> | **ggplot2** is a package that provides a **grammar of graphics**. You can create any type of plot using a simple template to which you provide: |
-| ![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)<!-- style = "max-width:150px;" --> | 1. A **tidy data frame**, in which each variable is in its own column, each observation is in its own row, and each value is in its own cell; |
+
+| ![ggplot2 logo on a hexagon.  The logo consists of the word "ggplot2" superimposed on light grey graph paper with a line graph connecting blue dots of different shades](media/ggplot2_hex.png)<!-- style = "max-width:200px;" --> | **ggplot2** is a package that provides a **grammar of graphics**. You can create any type of plot using a simple template to which you provide: |
+| ![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)<!-- style = "max-width:200px;" --> | 1. A **tidy data frame**, in which each variable is in its own column, each observation is in its own row, and each value is in its own cell; |
 | ![histogram of covid data](media/mini_histogram.png)<!-- style = "max-width:75px;" -->  ![frequency polygon of covid data](media/mini_freqpoly.png)<!-- style = "max-width:75px;" --> | 2. A **geom function**, which tells R what kind of plot to make; and |
 | ![Crossed X and Y axes](media/positions.png)<!-- style = "max-width:75px;" -->  ![Display of color choices](media/colors.png)<!-- style = "max-width:75px;" -->  | 3. **Aesthetic mappings**, which tell R how to represent data as graphical markings on the plot. |
 | ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)<!-- style = "max-width:75px;" -->   ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/blue_histogram.png)<!-- style = "max-width:75px;" -->   | Aesthetics can be **mapped** to a variable or **set** to a constant value. |
