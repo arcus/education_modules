@@ -216,7 +216,7 @@ You could think of each commit not as a checkpoint, but the instructions on how 
 
 ## Comparing files to prior commits
 
-In order to have some more commits to compare, let's add a few more lines to our notes about Mars, and start a file of notes about Venus.
+In order to have some more commits to compare, let's add a few more lines to our notes about Mars.
 
 First add a line to `mars.txt` so that it reads:
 
@@ -241,18 +241,146 @@ An ill-considered change
 ```
 Notice that we did NOT add or commit that last change to `mars.txt`. When you are working on a large project, it is very easy to lose track in your head of when you last committed, or what changes you have made since. In this section we will see how to ask Git to tell us that information.
 
-### What is `diff`?
-
-You might have noticed that `diff` was the first word after your commit message when you entered `git show HEAD`. The lines after that are **all** the changes that you made with that commit. When comparing earlier versions with the current version, you are usually only going to want to look at one file at  a time. By typing `git diff HEAD`.... **work through behavior here, there will be a big divergence  (haha `diff`) in this behavior between command line git and github desktop**
-*Or maybe we don't want to introduce github desktop at all, or just skip this section entirely for the github desktop module?*
-
 ### Using `diff`
 
-Using `diff` command to compare current version of `mars.txt` and earlier versions.
+You might have noticed that `diff` was the first word after your commit message when you entered `git show HEAD`. The lines after that are **all** the changes that you made with that commit. When comparing earlier versions with the current version, you are usually only going to want to look at one file at  a time. By typing `git diff HEAD` you are asking to see all the differences between the current state of your tracked files and the most recently committed version. Let's give it a try:
+
+```console
+$git diff HEAD
+diff --git a/mars.txt b/mars.txt
+index b36abfd..93a3e13 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,3 +1,4 @@
+ Cold and dry, but everything is my favorite color
+ The two moons may be a problem for Wolfman
+ But the Mummy will appreciate the lack of humidity
++An ill-considered change
+```
+
+<div class = 'options'>
+Typing `git diff` will give you the same output as `git diff HEAD` because the Git's default is always to compare with `HEAD`.
+</div>
+
+There is a lot of information here, let's parse what each part means.
+
+```
+diff --git a/mars.txt b/mars.txt
+index b36abfd..93a3e13 100644
+--- a/mars.txt
++++ b/mars.txt
+```
+1. The first line tells us that Git is producing output similar to the Unix `diff` command comparing the old and new versions of the file.
+2. The second line tells exactly which versions of the file Git is comparing; `b36abfd` and `93a3e13` are unique computer-generated labels for those versions.
+3. The third and fourth lines once again show the name of the file being changed and assigns a symbol to each version. Lines that are in version a but not version b will be marked with a `-` and lines that are in version b but not version a will be marked with a '+'.
+
+```
+@@ -1,3 +1,4 @@
+ Cold and dry, but everything is my favorite color
+ The two moons may be a problem for Wolfman
+ But the Mummy will appreciate the lack of humidity
++An ill-considered change
+```
+
+4. The next line, surrounded by `@@` on both sides, tells you what lines of code you are going to see next. This sequence `@@ -1,3 +1,4 @@` translates to: from version a (`-`) show lines 1 through 3 and from version b(`+`) show lines 1 through 4.
+
+5. The remaining lines are the most interesting, they show us the actual differences and the lines on which they occur. In particular, the `+` marker in the first column shows that that line, "An ill-considered change" is in version b, but not version a.
+
+6. If you changed code in multiple parts of your file, you will see several of these sections, called **chunks**, showing the changes you made.
+
+### Comparing particular files or commits
+
+When you enter `git diff` or `git diff HEAD`  your console will show you all of the differences between your current working directory and the most recent commit. But if you have made several changes in multiple files, the output may be very hard to parse. Your output will contain a `diff` section for each file that changed, and a chunk, starting with `@@` for each section of that file that changed. This could be a huge amount of output to sift through to find the changes you care about!
+
+Helpfully, Git lets you ask for only the changes from a particular file. Let's add and change another file so we can see the power of this. Make sure you are in the planets directory, then enter:
+
+```console
+$ echo "Venus is too hot to be a suitable base" > venus.txt              # Add the line in quotes to the file venus.txt
+$ git add venus.txt
+```
+
+Now `venus.txt` is being tracked by Git, but has not yet been committed to the repository. If we enter `git diff HEAD` now, we will see both the changes we have made to `venus.txt`, and to `mars.txt`.
+
+To look at just the changes to one of them, we can enter `git diff HEAD venus.txt`:
+
+```console
+$git diff HEAD venus.txt
+diff --git a/venus.txt b/venus.txt
+index e69de29..73eca03 100644
+--- a/venus.txt
++++ b/venus.txt
+@@ -0,0 +1 @@
++Venus is too hot to be a suitable base
+```
+
+Now we can look at only the changes to `venus.txt`.
+
+You might also want to look at earlier changes from previous commits. By replacing `HEAD` with either `HEAD~1` or the unique six digit identifier for the previous commit, we can compare the current version in our working directory to that earlier version:
+
+```console
+$git diff HEAD~1 mars.txt
+diff --git a/mars.txt b/mars.txt
+index 315bf3a..93a3e13 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,2 +1,4 @@
+ Cold and dry, but everything is my favorite color
+ The two moons may be a problem for Wolfman
++But the Mummy will appreciate the lack of humidity
++An ill-considered change
+```
+
+Neither of the last two lines, (starting with the `+`) were present in the `mars.txt` file two commits ago.
+
 
 ### Quiz: using `diff`
 
-compare a file at two different times
+After working for a while, we might not remember where our last checkpoints were or what we have done since. What command should we enter to find out how the file `venus.txt` has changed since it was last committed?
+
+[[git diff HEAD venus.txt]]
+<script>
+  let input = "@input".trim().toLowerCase();
+  input == "git diff HEAD venus.txt" || input == "git diff venus.txt";
+</script>
+[[?]] Remember to specify the file you want to compare.
+***
+<div class= "answer">
+Both `git diff HEAD venus.txt` and `git diff HEAD venus.txt` will show you the differences between the current working version of `venus.txt` and the last committed version. If you know the commit number of your last commit, you could also use that: `git diff "######" venus.txt`.
+
+Omitting `venus.txt` will show you ALL changes that have been made to any file in the repository since the last commit.
+</div>
+***
+
+The output from your previous command is below:
+
+```console
+diff --git a/venus.txt b/venus.txt
+index 73eca03..4e274c9 100644
+--- a/venus.txt
++++ b/venus.txt
+@@ -1 +1,2 @@
+ Venus is too hot to be a suitable base
++No moons on Venus will confuse Wolfman
+```
+
+What do you know about the contents of `venus.txt`?
+
+[( )] You already committed the comment about Venus's lack of moons.
+[(X)] The current working version of `venus.txt` has two lines.
+[(X)] The last committed version of `venus.txt` has one line.
+[( )] No files other than `venus.txt` have been changed since the last commit.
+***
+<div class = "answer">
+*You already committed the comment about Venus's lack of moons.* FALSE The output is showing the difference between the most recent commit and the current working version. If you had already committed the comment about Venus's lack of moons, that line would not be marked with `+`.
+
+*The current working version of `venus.txt` has two lines.* TRUE The current working version of `venus.txt` contains all lines marked with a `+` as well as all lines that have no starting symbol.
+
+*The last committed version of `venus.txt` has one line.* TRUE The last committed version contains all unmarked lines. If there were any lines marked with `-`, those would also be in the last committed version of `venus.txt`.
+
+*No files other than `venus.txt` have been changed since the last* FALSE Because we only asked Git to tell us about differences in the `venus.txt` file, it didn't check for differences in other files. They could have been changed and that would not be reflected in the output.
+
+</div>
+***
 
 ## Undoing changes with Git
 
