@@ -171,7 +171,7 @@ The commit number doesn't change as you update your repository.
 
 ![IMAGE: On the left, the same stack of 3 white boxes but now each is labeled with its six digit commit number. An arrow points from this stack to the stack On the right where the three white boxes have a new red box on top. The red box also has a commit number, but the commit numbers on the white boxes have not changed from the picture on the left.](./fig/Commit_number.svg)
 
-### Knowledge Check 1
+### Quiz: finding a commit
 
 The output from `git log -n 2`is:
 
@@ -239,13 +239,18 @@ The two moons may be a problem for Wolfman
 But the Mummy will appreciate the lack of humidity
 An ill-considered change
 ```
+Notice that we did NOT add or commit that last change to `mars.txt`. When you are working on a large project, it is very easy to lose track in your head of when you last committed, or what changes you have made since. In this section we will see how to ask Git to tell us that information.
+
+### What is `diff`?
 
 You might have noticed that `diff` was the first word after your commit message when you entered `git show HEAD`. The lines after that are **all** the changes that you made with that commit. When comparing earlier versions with the current version, you are usually only going to want to look at one file at  a time. By typing `git diff HEAD`.... **work through behavior here, there will be a big divergence  (haha `diff`) in this behavior between command line git and github desktop**
 *Or maybe we don't want to introduce github desktop at all, or just skip this section entirely for the github desktop module?*
 
+### Using `diff`
+
 Using `diff` command to compare current version of `mars.txt` and earlier versions.
 
-### Knowledge Check 2
+### Quiz: using `diff`
 
 compare a file at two different times
 
@@ -261,7 +266,7 @@ Using the git checkout command, big warnings about including the file name so yo
 
 Big warnings around this part!!
 
-### Knowledge Check 3
+### Quiz: `checkout`
 
 quiz!
 
