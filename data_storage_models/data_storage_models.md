@@ -56,7 +56,7 @@ None, this module is intended for all end users regardless of their technical sk
 - If your storage setup isn't impeding you from getting your work done you probably haven't thought too deeply about modifying where you are storing things.
 - However your choice, might be limiting your ability to collaborate with colleagues, hampering your ability to scale up your research, or costing you valuable time and money.
 - This module will discuss the variety of storage options available to you and the benefits and drawbacks to storing your data and performing certain computational tasks in the options covered.
-- The aim of this module is to illustrate the breadth of options available, and to evince what computing activites should be performed in each type and to make the storage selection process straightforward for the end user.
+- The aim of this module is to illustrate the breadth of options available, and to evince what computing activities should be performed in each type and to make the storage selection process straightforward for the end user.
 
 ## Local Storage
 
@@ -103,7 +103,7 @@ For all its computational advantages, on premises network storage has significan
 
 - Removable storage devices like USB flash drives and external hard drives are a better option, though they require a USB drive to access files which could potentially become obsolete on your future personal computing device.
 - These devices also have an added advantage in that they have more storage space, offer better security in that they can be readily encrypted or password protected, and are less likely to suffer physical degradation.
-- That said, if you mislocate your external device, you have also misplaced your access to a backup copy.
+- That said, if you misplace your external device, you have also misplaced your access to a backup copy.
 
 ### Knowledge Check 2
 
@@ -127,7 +127,7 @@ Both optical discs and USB flash drives require playback media and can suffer ir
 ![Line illustration of multiple computers networked through servers.](media/noun-server-network-2409608.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 - We have covered the local storage options suitable for smaller files owned and maintained by you.
-- Now we will cover on premise resources that faciliate working with larger amounts of data and collaborating with multiple users.
+- Now we will cover on premise resources that facilitate working with larger amounts of data and collaborating with multiple users.
 
 ### Installation and Ongoing Maintenance
 
@@ -143,7 +143,7 @@ Both optical discs and USB flash drives require playback media and can suffer ir
 ![Line illustration of your IT department maintaining servers in a corporate data center.](media/noun-data-center-968730.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 - However, it is not just a mere flip of the switch to provide these resources, and it is a huge investment of time and upfront costs to get this kind of infrastructure in place.
-- If your organization is partnering with an external vendor, you might also be locked into their alloted technological constraints as well as be subject to time and cost intensive things like hardware, software, and licensing updates.
+- If your organization is partnering with an external vendor, you might also be locked into their allotted technological constraints as well as be subject to time and cost intensive things like hardware, software, and licensing updates.
 
 ### Knowledge Check 3
 
