@@ -342,7 +342,9 @@ After working for a while, we might not remember where our last checkpoints were
   let input = "@input".trim().toLowerCase();
   input == "git diff HEAD venus.txt" || input == "git diff venus.txt";
 </script>
+
 [[?]] Remember to specify the file you want to compare.
+
 ***
 <div class= "answer">
 Both `git diff HEAD venus.txt` and `git diff HEAD venus.txt` will show you the differences between the current working version of `venus.txt` and the last committed version. If you know the commit number of your last commit, you could also use that: `git diff "######" venus.txt`.
@@ -418,4 +420,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Module+Template%22)!
 
-Remember to change the redcap link so that the module name is correct for this module! 
+Remember to change the redcap link so that the module name is correct for this module!
