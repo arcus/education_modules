@@ -418,4 +418,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Module+Template%22)!
 
-Remember to change the redcap link so that the module name is correct for this module!
+Remember to change the redcap link so that the module name is correct for this module! 
