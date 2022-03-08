@@ -35,6 +35,6 @@ The author may make fixes to their code and commit to the branch.  This will sim
 
 ![On a pull request, the PR comment appears at the top. Below, commits appear as their commit summary followed by commit hash.](media/pr_with_multiple_commits.png)
 
-Once you are satisfied with the quality of the module (don't worry, it can always be improved, this is a best effort only, no perfection expected or implied), the last thing to do before the PR is to make sure that any changes to references within the material relating to the branch name are resolved (see the last bit of the copy-paste issue code).  Issue a final comment reminding the author to handle this in a new commit.  Check that commit and if all is well, approve the PR and close the issue.
+Once you are satisfied with the quality of the module (don't worry, it can always be improved, this is a best effort only, no perfection expected or implied), the last thing to do before the PR is to make sure that any changes to references within the material relating to the branch name are resolved (see the last bit of the copy-paste issue code).  Issue a final comment reminding the author to handle this in a new commit.  Check that commit and if all is well, update the commit value listed at top of the QA document to the most recent commit, approve the PR and close the issue.
 
 In general we should not delete issues or comments on issues, because they provide a useful history of the project.
