@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.1
+version:  1.2
 language: en
 narrator: US English Female
 comment:  This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **data reuse**, and how technical approaches can help make these goals more attainable.
@@ -70,7 +70,6 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 script: https://kit.fontawesome.com/83b2343bd4.js
-
 -->
 
 # Reproducibility, Generalizability, and Reuse: How Technology Can Help
@@ -485,11 +484,7 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 
 In the beginning, we stated some learning objectives:
 
-After completion of this module, learners will be able to:
-
-* Explain the importance of conducting research that is **reproducible** (can be re-done by a different, unaffiliated scientist)
-* Argue in support of a data analysis method that helps research be more reproducible
-* Argue in support of a method in the organization and description of documents, datasets, and other files that helps research be more reproducible
+@learning_objectives
 
 Now that you've completed this module, we ask you to fill out a brief (5 minutes or less) survey to let us know:
 
