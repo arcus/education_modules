@@ -91,7 +91,7 @@ vlad
 $
 ```
 
-The above codeblock tells you that when Dracula types `logname` and presses enter, the output is 'vlad', his username. Try entering `logname` in your own console. There will be other code in front of each `$` describing who and where you are. Since the stuff before the `$` will be different for everyone, it is customary to omit it from example code. We will also omit the `$` after the output.
+The **codeblock** above tells you that when Dracula types `logname` and presses enter, the output is 'vlad', his username. Try entering `logname` in your own console. There will be other code in front of each `$` describing who and where you are. Since the stuff before the `$` will be different for everyone, it is customary to omit it from example code. We will also omit the `$` after the output.
 
 ### Initializing the repository
 
@@ -120,7 +120,7 @@ subdirectories are present from the beginning or added later. Also, note
 that the creation of the `planets` directory and its initialization as a
 repository are completely separate processes.
 
-If we use `ls` to show the directory's contents,
+If we use `ls`, the **list** command, to show the directory's contents,
 it appears that nothing has changed:
 
 ```console
@@ -128,8 +128,8 @@ $ ls
 ```
 
 
-But if we add the `-a` flag to show everything,
-we can see that Git has created a hidden directory within `planets` called `.git`:
+Like many commands, `ls` can be modified using **flags**, very short bits of code that change some of the options on the command. If we add the `-a` flag to `ls`, we will be asking Git to list all files.
+Now we can see that Git has created a hidden directory within `planets` called `.git`:
 
 ```console
 $ ls -a
@@ -146,11 +146,11 @@ we will lose the project's history.
 
 Next, we will change the default branch to be called `main`.
 This might be the default branch depending on your settings and version
-of git.
+of Git.
 See the [setup episode](/path/to/earlier/module) for more information on this change.
 
 ```console
-git checkout -b main
+$ git checkout -b main
 
 Switched to a new branch 'main'
 ```
@@ -193,7 +193,7 @@ By initializing the Git repository inside the planets directory, Git will track 
 
 Along with tracking information about planets (the project we have already created),
 Dracula would also like to track information about moons.
-Despite Wolfman's concerns, Dracula creates a `moons` project inside his `planets`
+Dracula creates a `moons` project inside his `planets`
 project with the following sequence of commands:
 
 ```console
@@ -255,7 +255,7 @@ $ ls -a          # ensure the .git subdirectory is present indicating we have cr
 ```
 
 Dracula has created two tracking files, `planets/.git` which he should keep, and `planets/moons/.git` which should be removed.
-Dracula can do this by running `pwd` and getting the output:
+Dracula can do this by running `pwd` which will show the **present working directory** and getting the output:
 
 ```console
 /Users/vlad/Desktop/planets
@@ -376,7 +376,7 @@ To get it to do that, we need to run one more command. Enter this into the conso
 ```console
 $ git commit -m "Start notes on Mars as a base"
 ```
-The console output will look like this, though your unique identifiers (f22b25e and 100644) will be different.
+The console output will look like this, though your unique identifiers (f22b25e and 100644) may be different.
 
 ```console
 [main (root-commit) f22b25e] Start notes on Mars as a base
@@ -396,7 +396,7 @@ If we just run `git commit` without the `-m` option,
 Git will launch `nano` (or whatever other editor we configured as `core.editor`)
 so that we can write a longer message.
 
-**Good commit messages** Commit messages start with a brief (<50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will...".
+>  **Good commit messages** Commit messages start with a brief (<50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will...".
 
 If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
 
@@ -579,28 +579,29 @@ The commit message should describe what this commit does. If you want to know th
 
 ## Understanding the Git workflow
 
-There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, but you will remember them better if you understand what each is doing.
-
-To get started we will use a metaphor about creating a digital version of a drawing. Imagine you are working on an art project that involves creating drawings on paper with pens, pencils, and markers. You want to have a record of how this project progresses, and have access to a copier/scanner that can make and save perfect digital copies of your work.
-
-![IMAGE: stick figure creating a drawing of smiley face on piece of paper.](fig/create_files.svg)<!--
--->
-
-Creating and editing your files on your computer is like drawing on paper at your desk. There is a single copy of your work stored on your computer, but no record of the changes you are making. You can always create a new file, or take out a new piece of paper, but no record of that new file exists yet.
-
-![IMAGE: the smiley face drawing from the previous picture is in a scanner's intake slot.](fig/stage_files.svg)
-
-The `git add` command is how you designate what files will be added to the permanent record of your project. This step is called **staging**. In our art project metaphor, `git add` is putting all the drawings you want a record of into the scanner's intake slot. You can stage as many files and folders as you want.
-
-![IMAGE: the smiley face drawing is now saved on a disk inside the scanner.](fig/commit_files.svg)
-
-There isn't a record of your staged files until you commit them using `git commit`. This is like telling the scanner to actually scan all of the staged drawings in its intake slot. Note that if you left a drawing on your desk instead of putting it in the scanner, it won't get scanned. Now there is a record of this version of your project. The same way that the scanner now has a digital record of the current state of your art, Git stores a record of the state of your repository when you commit.
+There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, and that is what [many people do](https://xkcd.com/1597/). However you might remember them better if you understand what each is doing.
 
 
-### A metaphor for staging and committing files
+So far we have encountered files that in three states:
 
-![The three images from before appear in order from left to right. The stick figure making the drawing is labeled "Local files". An arrow labeled `git add smiley.art` points to the middle image of the drawing in the scanner intake slot, which is labeled "Staged files." An arrow labeled `git commit -m "create smiley.art"` points to the last image. This is a picture of the smiley face drawing saved to the disk in the scanner and is labeled "Committed files."](fig/scanner_metaphor.svg)<!--
--->
+**Working Directory** The working directory refers to the files you are currently working on, regardless of whether Git is tracking them. When you first create a new file, it exists solely in your working directory.
+
+**Staged Files** When you use the `git add file.txt` command to tell Git to keep track of your file, the file is now staged. Git is paying attention to the file, and knows what is in it, but has not yet created a record of its current state.
+
+**Committed Files** When you commit using the `git commit -m "short description of changes"` command, every file that had been staged is now committed. In other words, a record of the file is saved and you will be able to come back and see that exact version later on if you wish.
+
+As you work on your project, files will cycle through these different states. When you make a change to a file, that change is in your working directory until you restart the `add` and `commit` cycle. 
+
+**Is there a better way to think of this?** Lots of people have favorite metaphors for how Git works. Before checking out the selection on the next page, do you have any ideas for possible ways to understand the `add` and `commit` process in Git?
+[[____]]
+
+### A few metaphors for Git
+Metaphors for Git abound, and no metaphor has been good enough to become the "standard" example. If you are looking for a good metaphor to help you understand what Git is, here are some ones to consider:
+
+1. [A musical metaphor](link)
+2. [A moving houses metaphor](link)
+3. [A 2d artwork metaphor](link)
+4. ...
 
 
 
