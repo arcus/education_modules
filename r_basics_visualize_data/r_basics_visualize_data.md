@@ -102,7 +102,9 @@ This course is designed for R beginners with minimal experience and it is not an
 
 Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data workshop materials](https://skadauke.github.io/intro-to-r-for-clinicians-chop/).  We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.
 
-## Lesson Preparation: Our Data
+## Lesson Preparation
+
+Let's start by taking a peek at the data we'll be using.
 
 The data we will use in this module is a data frame called `covid_testing`, which consists of fabricated (completely fake) demographic and testing data for Covid tests early in the Covid-19 pandemic.
 
@@ -113,7 +115,7 @@ style = "max-width:800px;"-->
 
 On the next page, you'll learn how to get access to the sample code.  
 
-## Lesson Preparation: Our RStudio Environment
+### Lesson Preparation: Our RStudio Environment
 
 Please do this step now, because we're going to ask you to follow along throughout and try out code as you go.  
 
@@ -174,15 +176,15 @@ If you already completed this work for a previous module, and it's been a while 
 If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform.Rmd` to `my_transform.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
 </div>
 
-## How to Follow Along
+### How to Follow Along
 
 Please go ahead and open the "r\_basics\_visualize\_data" directory in whichever RStudio environment you're working in, then the "exercises" directory.  You can open "visualize.Rmd" which will make you ready for our first hands-on activity in just a bit!
 
 ![RStudio showing the visualize.Rmd file.](media/visualize_rmd.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
 
-## Thinking Graphically From Data, Part 1
+## Thinking Graphically From Data
 
-Let's try to imagine some **data visualizations** (also known as **plots** and **graphs**, and we may use all of these terms interchangably).
+Let's try to imagine some **data visualizations** (also known as **plots** and **graphs**, and we may use all of these terms interchangably).  
 
 Consider the `covid_testing` data frame shown below, which we'll work on in the hands-on part of this module.  Think about what the columns mean and which columns you might like to see represented on a data visualization.
 
@@ -195,7 +197,7 @@ What do you think a plot would look like in which:
 
 Take a few seconds and try to visualize this graph in your mind or doodle it on a piece of paper in front of you.
 
-## Thinking Graphically From Data, Part 2
+### Thinking Graphically From Data, Part 2
 
 What we've asked you to imagine is a plot in which we have the **count** or the **frequency** of a test on the y axis, plotted against the pandemic day, represented by the x axis. Do you know the name of that type of plot that has the count of a thing on the y axis and the distribution of those counts along the x axis?
 
@@ -217,7 +219,7 @@ In the box below, write what you think the name of this is (all lowercase, pleas
 </div>
 </div>
 
-## Building Your First Histogram
+### Building Your First Histogram
 
 Please go to your RStudio environment (either the version in the cloud or your local RStudio that you've prepared with a project containing our files for this module).  
 
@@ -248,7 +250,7 @@ When you run this code, you get what looks like an error in the console but is a
 
 R lets you know that when you ask it to draw a histogram, you should probably tell it how wide each bin should be, because this affects the granularity of the data displayed.  You can either set the number of bins (say, 10 bins or 100 bins) or you can set the bin width (like 1 to make a bin 1 day wide, 7 to make a bin one week wide, etc.)
 
-## The Power of Data Visualizations
+### The Power of Data Visualizations
 
 ![Histogram of covid tests by day of pandemic](media/covid_histogram.png)<!-- style = "max-width: 800px;"  -->
 
@@ -280,7 +282,7 @@ Also, `ggplot2` graphs look great and the package can be used to generate public
 </div>
 </div>
 
-## The ggplot() Function
+### The ggplot() Function
 
 So here is a quick analysis of how we just used ggplot to make that histogram.
 
@@ -332,7 +334,7 @@ ggplot(data = covid_testing) +
 </table>
 </lia-keep>
 
-## A Template
+### A Template
 
 So that was a lot of information. Let's break this down to build up to a more general template. Here's a preview of that template, and we'll spend the few sections or so exploring it.
 
@@ -355,7 +357,7 @@ You start with the code written in **bold** – **bold** in this template is the
 
 In the next section, we'll talk about what it means to call a data frame "tidy".
 
-## Using our Template, Step 1
+### Using our Template, Step 1
 
 Let's get started. The first detail is a "tidy" data frame which contains the data you want to plot.
 
@@ -392,7 +394,7 @@ Here's one simple example of tidy versus messy. If a column is called "name" and
 
 To see a "messy" data frame and its "tidy" alternative, see [a brief 2018 article](https://education.arcus.chop.edu/tidyverse/) for a brief read, or, if you want a deeper dive,  there really isn't a better article than [Hadley Wickham's classic work](https://www.jstatsoft.org/article/view/v059i10).
 
-## A Quick Check In!
+### A Quick Check In!
 
 Let's see what you remember about tidy datasets!  Take a look at the sample table provided below.  It's similar to what you might see in a publication, and it's in a great format for humans... but it's not tidy enough to work with easily in a computational way.  This table shows the results of the "QPT" psychometric (something we made up) and shares pre- and post-treatment means and standard deviations for different kinds of research cohorts.
 
@@ -591,7 +593,7 @@ There's no need to remove the sex variable, and the numerical values don't neces
 | neg | neg | m | 10 | post | 88 | 21.8 |
 | neg | neg | f | 10 | post | 95 | 20.6 |
 
-## Using our Template, Step 2
+### Using our Template, Step 2
 
 As a reminder, we put forth three steps in our `ggplot` template.
 
@@ -629,7 +631,7 @@ Here are a few useful geom functions for visualizing clinical data, but there ar
 | ![unlabeled box plot](media/geom_boxplot_mini.png)<!-- style = "max-width:100px;" --> | geom_boxplot() |
 | ![unlabeled line graph](media/geom_line_mini.png)<!-- style = "max-width:100px;" --> | geom_line() |
 
-## Using our Template, Step 3
+### Using our Template, Step 3
 
 As a reminder, we put forth three steps in our `ggplot` template:
 
@@ -666,7 +668,7 @@ Here's a visual that might help:
 
 ![Small table of data with columns a, b, and c, with arrows that point to the x and y axes of a small coordinate plane.  Each row also has a blue or green dot corresponding to the value in c.  "M" gets blue dots and "F" gets green dots.](media/abc_aesthetics.png)
 
-## Aesthetic mappings
+## Aesthetic Mappings
 
 Let's do a quick check of your understanding of aesthetic mappings.  As a reminder:
 
@@ -720,7 +722,7 @@ Picking the best aesthetics for your graph is as much an art as it is a science.
 
 The distinction between visual elements that are "set" and those that are "mapped", and the code that each of these requires, is a common point of confusion and frustration for new users of ggplot, so if you're not solid on these concepts, give the last couple of sections a quick re-read before moving ahead.
 
-## Exercise Time!
+### Exercise Time!
 
 Using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` directory, and then open the `exercises` directory.  You should then open `visualize.Rmd`, which will allow you to work alongside the sections of this module.
 
@@ -732,7 +734,7 @@ Then, work through the exercises in the `visualize.Rmd` file, adding and updatin
 
 Stop when it says "Stop here".  We'll go over the solutions in the next section.
 
-## Solutions
+### Solutions
 
 If you like, you can open the solutions version of visualize.Rmd by navigating in your file browser up one directory (to the `r_basics_visualize_data` directory), and then into the "solutions" directory, where you'll find a (completed!) solutions file also entitled visualize.Rmd.
 
@@ -773,7 +775,7 @@ ggplot(data = covid_testing) +
   geom_histogram(mapping = aes(x = pan_day, fill = result), binwidth = 1)
 ```
 
-## Setting vs. Mapping Aesthetics
+### Setting vs. Mapping Aesthetics
 
 In the third task you just completed (if you didn't actually do it, at least go back one section and read about the three tasks), you **mapped** the fill aesthetic to the **result** variable, by writing "fill = result" inside the **aes()** function:
 
@@ -829,7 +831,7 @@ A geom function is a function that, given the data and aesthetic mappings, gener
 
 In the next exercise, you're going to work hands-on with geom functions.
 
-## Exercise Time!
+### Exercise Time!
 
 In your RStudio environment, you should already have `visualize.Rmd` open.  If not, please reopen it (within the "exercises" directory of the directory for this module).  Scroll down to `### Your Turn: Geom functions`, which should be around line 90 or so.
 
@@ -839,7 +841,7 @@ Then, work through the exercises from that point forward, running, adding, and u
 
 We'll go over the solutions in the next section, and you can also look in the "solutions" folder and open `visualize.Rmd` to see the solution!
 
-## Solutions
+### Solutions
 
 If you like, you can open the solutions version of visualize.Rmd by navigating in your file browser up one directory (to the `r_basics_visualize_data` directory), and then into the "solutions" directory, where you'll find a (completed!) solutions file also entitled visualize.Rmd.
 
@@ -877,7 +879,6 @@ Run that code, and you should see something like this!
 
 ## Recap
 
-
 | ![ggplot2 logo on a hexagon.  The logo consists of the word "ggplot2" superimposed on light grey graph paper with a line graph connecting blue dots of different shades](media/ggplot2_hex.png)<!-- style = "max-width:200px;" --> | **ggplot2** is a package that provides a **grammar of graphics**. You can create any type of plot using a simple template to which you provide: |
 | ![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)<!-- style = "max-width:200px;" --> | 1. A **tidy data frame**, in which each variable is in its own column, each observation is in its own row, and each value is in its own cell; |
 | ![histogram of covid data](media/mini_histogram.png)<!-- style = "max-width:75px;" -->  ![frequency polygon of covid data](media/mini_freqpoly.png)<!-- style = "max-width:75px;" --> | 2. A **geom function**, which tells R what kind of plot to make; and |
@@ -896,7 +897,7 @@ To save a plot you've created by running some code inside an R notebook, you can
 
 ![RStudio window with the two options illustrated and labeled: Plots, Export, Save as Image, and a right click "save image as"](saving_images.png)<!-- style = "max-width:700px;" -->
 
-## Position Adjustments
+### Position Adjustments
 
 We've only barely scratched the surface of what you can do with ggplots. For example, you can change how overlapping objects are arranged.  For example, instead of a stacked histogram, you can request side-by-side bars.
 
@@ -910,7 +911,7 @@ ggplot(covid_testing) +
 
 ![Histogram that has, instead of a single bar for each bin, three -- one for invalid tests, one for negative tests, and one for positive tests.  Each is in a distinct color.](media/position_dodge.png)<!-- style = "max-width:700px;" -->
 
-## Themes
+### Themes
 
 You can use different themes which affect how non-data elements such as axes, gridlines, and background appear.
 
@@ -925,7 +926,7 @@ ggplot(covid_testing) +
 
 ![Histogram with three bars per bin and a light-colored background](media/theme_light.png)<!-- style = "max-width:700px;" -->
 
-## Scales
+### Scales
 
 You can customize color scales.
 
@@ -948,7 +949,7 @@ ggplot(covid_testing) +
 
 ![Histogram with three bars per bin and a light-colored background, but this time the colors of the three kinds of bars are different than we saw earlier.](media/color_scales.png)<!-- style = "max-width:700px;" -->
 
-## Facets
+### Facets
 
 You can facet your plot. That means breaking it into sub-plots by another variable, for example, gender or location in the hospital.
 
@@ -964,7 +965,7 @@ ggplot(covid_testing) +
 
 ![Five small histograms, one for each demographic group represented in the data.  ](media/facets.png)<!-- style = "max-width:700px;" -->
 
-## Coordinate systems
+### Coordinate systems
 
 You can easily make radial plots or geographical maps.
 
@@ -982,7 +983,7 @@ ggplot(covid_testing) +
 
 ![Five small histograms, one for each demographic group represented in the data, but instead of being on a grid, they are on a circular coordinate system.](media/coord_systems.png)<!-- style = "max-width:700px;" -->
 
-## Titles and Captions
+### Titles and Captions
 
 And you can add titles, subtitles, or annotations, and change the axis labels or the appearance.
 
@@ -1003,7 +1004,7 @@ ggplot(covid_testing) +
 
 ![Five small circular histograms, with a shared title and subtitle](media/titles_captions.png)<!-- style = "max-width:700px;" -->
 
-## Adding New elements
+### Adding New elements
 
 All of these elements, like position adjustments, themes, color scales, facets, coordinate systems, and text can be added to a ggplot command in the same way that we added a second geom layer – by writing a plus sign followed by a theme function, a scale function, a facet function, etc.
 
@@ -1017,7 +1018,7 @@ ggplot(data = data_frame) +                     # Required
   ...
 ```
 
-## Cheat Sheet!
+### Cheat Sheet!
 
 The ggplot Cheat Sheet is great to have on hand as you're exploring your data. It reviews the basic template for building any plot and also lists the most useful geom functions.
 
@@ -1025,19 +1026,19 @@ To find official cheat sheets, go to the Help menu and choose "Cheat Sheets"
 
 ![RStudio help menu, with Cheat Sheets selected and the submenu option "Data Visualization with ggplot2" selected](media/cheat_sheets.png)<!-- style = "max-width:700px;" -->
 
-## Additional Reading
+### Additional Reading
 
 ![Book cover of Fundamentals of Data Visualization](media/fundamentals.png)<!-- style = "max-width:700px;" -->
 
 If you'd like to learn more about which graphics are most effective in specific situations, I highly recommend taking a look at *Fundamentals of Data Visualizations* by Claus Wilke. This is a very readable and recent primer on data visualization and figure design, and it's [available for free!](https://serialmentor.com/dataviz)
 
-## Survival Plots
+### Survival Plots
 
 The `survminer` package extends `ggplot2` to make it straightforward to create publication-quality survival curves and risk tables.
 
 ![survminer cheat sheet](media/survminer.png)<!-- style = "max-width:700px;" -->
 
-## A Grammar for Tables
+### A Grammar for Tables
 
 ![hex icons for gt and gtsummary](media/gt_icons.png)<!-- style = "max-width:300px;" -->![attractive data table with subgroups and footnotes](media/gt_table.png)<!-- style = "max-width:500px;" -->
 
