@@ -592,7 +592,6 @@ So far we have encountered files that in three states:
 
 As you work on your project, files will cycle through these different states. When you make a change to a file, that change is in your working directory until you restart the `add` and `commit` cycle.
 
-***
 
 **Is there a better way to think of this?** Lots of people have favorite metaphors for how Git works. Before checking out the selection on the next page, do you have any ideas for possible ways to understand the `add` and `commit` process in Git?
 [[___ ___ ___ ___]]
