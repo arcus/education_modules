@@ -584,11 +584,12 @@ There were a lot of steps to getting our changes saved in Git! You could memoriz
 
 So far we have encountered files that in three states:
 
-**Working Directory** The working directory refers to the files you are currently working on, regardless of whether Git is tracking them. When you first create a new file, it exists solely in your working directory.
+- **Working Directory** The working directory refers to the files you are currently working on, regardless of whether Git is tracking them. When you first create a new file, it exists solely in your working directory.
 
-**Staged Files** When you use the `git add file.txt` command to tell Git to keep track of your file, the file is now staged. Git is paying attention to the file, and knows what is in it, but has not yet created a record of its current state.
+- **Staged Files** When you use the `git add file.txt` command to tell Git to keep track of your file, the file is now staged. Git is paying attention to the file, and knows what is in it, but has not yet created a record of its current state.
 
-**Committed Files** When you commit using the `git commit -m "short description of changes"` command, every file that had been staged is now committed. In other words, a record of the file is saved and you will be able to come back and see that exact version later on if you wish.
+
+- **Committed Files** When you commit using the `git commit -m "short description of changes"` command, every file that had been staged is now committed. In other words, a record of the file is saved and you will be able to come back and see that exact version later on if you wish.
 
 As you work on your project, files will cycle through these different states. When you make a change to a file, that change is in your working directory until you restart the `add` and `commit` cycle.
 
