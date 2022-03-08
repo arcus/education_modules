@@ -590,7 +590,9 @@ So far we have encountered files that in three states:
 
 **Committed Files** When you commit using the `git commit -m "short description of changes"` command, every file that had been staged is now committed. In other words, a record of the file is saved and you will be able to come back and see that exact version later on if you wish.
 
-As you work on your project, files will cycle through these different states. When you make a change to a file, that change is in your working directory until you restart the `add` and `commit` cycle. 
+As you work on your project, files will cycle through these different states. When you make a change to a file, that change is in your working directory until you restart the `add` and `commit` cycle.
+
+***
 
 **Is there a better way to think of this?** Lots of people have favorite metaphors for how Git works. Before checking out the selection on the next page, do you have any ideas for possible ways to understand the `add` and `commit` process in Git?
 [[____]]
