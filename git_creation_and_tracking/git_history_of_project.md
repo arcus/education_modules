@@ -343,9 +343,10 @@ After working for a while, we might not remember where our last checkpoints were
   let input = "@input".trim().toLowerCase();
   input == "git diff HEAD venus.txt" || input == "git diff venus.txt";
 </script>
+
 ***
 <div class= "answer">
-Both `git diff HEAD venus.txt` and `git diff HEAD venus.txt` will show you the differences between the current working version of `venus.txt` and the last committed version. If you know the commit number of your last commit, you could also use that: `git diff "######" venus.txt`.
+Both `git diff HEAD venus.txt` and `git diff venus.txt` will show you the differences between the current working version of `venus.txt` and the last committed version. If you know the commit number of your last commit, you could also use that: `git diff 000000 venus.txt`.
 
 
 Omitting `venus.txt` will show you ALL changes that have been made to any file in the repository since the last commit.
