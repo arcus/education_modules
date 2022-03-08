@@ -503,7 +503,7 @@ Luckily, she has been keeping track of her project’s versions using Git! Which
 [[X]] 2. `$ git checkout HEAD data_cruncher.py`
 [[ ]] 3. `$ git checkout HEAD~1 data_cruncher.py`
 [[X]] 4. `$ git checkout <unique ID of last commit> data_cruncher.py`
-[?] More than one answer can be correct.
+[[?]] More than one answer can be correct.
 ***
 <div class = "answer">
 The `checkout` command restores files from the repository, overwriting the files in your working directory. Answers 2 and 4 both restore the latest version in the repository of the file `data_cruncher.py`. Answer 2 uses `HEAD` to indicate the latest, whereas answer 4 uses the unique ID of the last commit, which is what `HEAD` means.
