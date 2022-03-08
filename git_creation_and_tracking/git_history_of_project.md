@@ -258,10 +258,6 @@ index b36abfd..93a3e13 100644
 +An ill-considered change
 ```
 
-<div class = 'options'>
-Typing `git diff` will give you the same output as `git diff HEAD` because the Git's default is always to compare with `HEAD`.
-</div>
-
 There is a lot of information here, let's parse what each part means.
 
 ```
@@ -290,7 +286,7 @@ index b36abfd..93a3e13 100644
 
 ### Comparing particular files or commits
 
-When you enter `git diff` or `git diff HEAD`  your console will show you all of the differences between your current working directory and the most recent commit. But if you have made several changes in multiple files, the output may be very hard to parse. Your output will contain a `diff` section for each file that changed, and a chunk, starting with `@@` for each section of that file that changed. This could be a huge amount of output to sift through to find the changes you care about!
+When you enter `git diff HEAD`  your console will show you all of the differences between your current working directory and the most recent commit. But if you have made several changes in multiple files, the output may be very hard to parse. Your output will contain a `diff` section for each file that changed, and a chunk, starting with `@@` for each section of that file that changed. This could be a huge amount of output to sift through to find the changes you care about!
 
 Helpfully, Git lets you ask for only the changes from a particular file. Let's add and change another file so we can see the power of this. Make sure you are in the planets directory, then enter:
 
