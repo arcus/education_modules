@@ -402,7 +402,7 @@ $git commit -m "Reject Mars as a base"
 
 Lastly let's add one more line at the beginning of `mars.txt` so that it reads:
 
-```
+```console
 Mars: Planet 4 from the sun
 Cold and dry, but everything is my favorite color
 The two moons may be a problem for Wolfman
