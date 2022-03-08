@@ -364,7 +364,7 @@ index 73eca03..4e274c9 100644
 +No moons on Venus will confuse Wolfman
 ```
 
-What do you know about the contents of `venus.txt`?
+What does this output tell you? Choose all of the the statements that the output tells you are true.
 
 [( )] You already committed the comment about Venus's lack of moons.
 [(X)] The current working version of `venus.txt` has two lines.
