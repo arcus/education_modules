@@ -595,7 +595,7 @@ As you work on your project, files will cycle through these different states. Wh
 ***
 
 **Is there a better way to think of this?** Lots of people have favorite metaphors for how Git works. Before checking out the selection on the next page, do you have any ideas for possible ways to understand the `add` and `commit` process in Git?
-[[___]]
+[[___ ___ ___ ___]]
 
 ### A few metaphors for Git
 Metaphors for Git abound, and no metaphor has been good enough to become the "standard" example. If you are looking for a good metaphor to help you understand what Git is, here are some ones to consider:
