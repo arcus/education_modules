@@ -337,11 +337,13 @@ Neither of the last two lines, (starting with the `+`) were present in the `mars
 
 After working for a while, we might not remember where our last checkpoints were or what we have done since. What command should we enter to find out how the file `venus.txt` has changed since it was last committed?
 
-[[git diff HEAD venus.txt]] <script>
+
+[[git diff HEAD venus.txt]]
+<script>
   let input = "@input".trim().toLowerCase();
   input == "git diff HEAD venus.txt" || input == "git diff venus.txt";
 </script>
-[[?]] Remember to specify the file you want to compare.
+
 ***
 <div class= "answer">
 Both `git diff HEAD venus.txt` and `git diff HEAD venus.txt` will show you the differences between the current working version of `venus.txt` and the last committed version. If you know the commit number of your last commit, you could also use that: `git diff "######" venus.txt`.
