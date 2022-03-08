@@ -1,6 +1,6 @@
 # Quality Assurance for modules
 
-When a module creator is ready to request that their module be included, they will create a Pull Request (PR).  This begins the work of quality assurance.  As someone who is reviewing the modules created by others, it's important to have use a consistent method for evaluating content.  This work is exacting and can be tedious.  It's probably worthwhile to look at other QA issues that have successfully been closed to see a bit more information about the level of detail other reviewers provide. To see a completed review, check out https://github.com/arcus/education_modules/issues/11.
+When a module creator is ready to request that their module be included, they will create a Pull Request (PR).  This begins the work of quality assurance.  As someone who is reviewing the modules created by others, it's important to have use a consistent method for evaluating content.  This work is exacting and can be tedious.  It's probably worthwhile to look at other QA issues that have successfully been closed to see a bit more information about the level of detail other reviewers provide. To see a completed review, check out https://github.com/arcus/education_modules/issues/53.
 
 ## Step 1: Create an Issue
 
@@ -9,14 +9,14 @@ When a module creator is ready to request that their module be included, they wi
 ![Arcus/education_modules repo issues page shows the green "New issue" button on the right side above the list of open issues](media/new_issue.png)
 * Title the issue as "QA" plus the proposed directory name from the PR.
   * For example, if the PR includes a new module with the directory named "reproducibility", the title would be "QA reproducibility".)
-* In the "Write" tab area, paste the entire text of the [quality assurance template](https://github.com/arcus/education_modules/blob/main/quality_assurance_template.md) (from `# Module Quality Assurance Report for PR #[put in the PR number here] ` to `* [ ] description or quote, line ___ in file ____`).  
+* In the "Write" tab area, paste the text of the [quality assurance template](https://github.com/arcus/education_modules/blob/main/quality_assurance_template.md) (from `# Module Quality Assurance Report for PR #[put in the PR number here] ` to `* [ ] description or quote, line ___ in file ____` Do not include the three back ticks at the beginning or end of the file.).  
 
-* Where curly brackets appear, remove the curly brackets and their contents and replace with the appropriate values. To see a completed review, check out https://github.com/arcus/education_modules/issues/11.
+* Where curly brackets appear, remove the curly brackets and their contents and replace with the appropriate values. To see a completed review, check out https://github.com/arcus/education_modules/issues/53.
   * To find the clickable short link to the latest commit, open the pull request and click the "commits" tab. That page will show all commits to the pull request. If there are multiple commits to the PR, the newest will be at the bottom of the page. Click the button next to the commit value.
   ![On the right side of the commits list there's a button with an image of two squares overlaid to the left of the commit value.](media/commit_hash.png)
   * When you paste this into the issue it will appear as a long string of letters and numbers -- don't worry, GitHub will automatically format this into the clickable short link.
 
-* Click on the "Preview" tab to see if everything is rendering nicely and there are at least two clickable links -- one to the PR (the top line in the issue) and one to the commit version (6th line).
+* Click on the "Preview" tab to see if everything is rendering nicely and there are at least two clickable links -- one to the PR (the top line in the issue) and one to the commit version (8th line).
 * Click "Submit new issue".
 
 ## Step 2: Go through checklists
