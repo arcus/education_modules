@@ -99,7 +99,9 @@ Minimal experience of using the RStudio IDE and writing R code (specifically, wi
 
 </div>
 
-## Lesson Preparation: Our Data
+## Lesson Preparation
+
+Let's start by taking a peek at the data we'll be using.
 
 The data we will use in this module is a data frame called `covid_testing`, which consists of fabricated (completely fake) demographic and testing data for Covid tests early in the Covid-19 pandemic.
 
@@ -112,7 +114,7 @@ You will be asked to do some code-based exercises at the **end** of this module,
 
 On the next page, you'll learn how to get access to the sample code.  
 
-## Lesson Preparation: Our RStudio Environment
+### Lesson Preparation: Our RStudio Environment
 
 You can do this step now, if you like to follow along throughout and try out code as you go.  Or, we'll present this step again at the end, when we give you some concrete tasks to perform.  It's totally up to you!  
 
@@ -169,9 +171,7 @@ If you already completed this work for a previous module, and it's been a while 
 
 ![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
 
-
-
-## How to Follow Along
+### How to Follow Along
 
 You can use this module in a couple of different ways:
 
@@ -180,15 +180,18 @@ You can use this module in a couple of different ways:
 
 ![RStudio showing the transform.Rmd file.  A text box suggests copying and pasting the first code chunk in transform.Rmd into a new R Markdown file, or adding chunks below the first chunk for experimentation.](media/rstudio_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
 
-## The `dplyr` Package
+### The `dplyr` Package
 
 <div style = "margin: 1rem; max-width: 75%; float:left;">
 `dplyr` (pronounced dee-ply-er, a play on words with "data" and "pliers") is a useful R package we'll discuss.  The various functions we'll use, like `select`, `filter`, and `mutate` are all functions that belong to the `dplyr` package.  In R, we bring in the functionality of a package by using the `library()` command.  Because `dplyr` forms part of the `tidyverse` suite of packages, we can bring in the useful functions of `dplyr` by either using the `library(dplyr)` command or the `library(tidyverse)` command.
-
-Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`.  But if you're using the course materials in your own computer's installation of RStudio, it's possible you don't have `tidyverse` installed.  If you get a message telling you that there's no package installed with that name, issue this command: `install.packages("tidyverse")`.
 </div>
 <div style = "margin: 1rem auto; max-width: 20%; float:left;">
 ![`dplyr` logo: three sets of futuristic, colorful pliers that appear to be moving upward and to the right.  The word "dplyr" appears in the upper left of the logo, which is in the shape of a hexagon.](media/dplyr_logo.png)</div>
+
+<div class = "warning">
+Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`.  But if you're using the course materials in your own computer's installation of RStudio, it's possible you don't have `tidyverse` installed.  If you get a message telling you that there's no package installed with that name, issue this command: `install.packages("tidyverse")`.
+</div>
+
 
 ## Subsetting Columns or Rows
 
@@ -205,7 +208,7 @@ style = "max-width:500px;"-->
 style = "max-width: 600px;"
 -->
 
-## The `select()` Function
+### The `select()` Function
 
 Let's see what you remember about dplyr!
 
@@ -240,7 +243,7 @@ For example, in the next section we'll unpack the following code:
 
 `select(covid_testing, mrn, last_name)`
 
-## `select()` Example
+### `select()` Example
 
 Let's examine the following code:
 
@@ -282,7 +285,7 @@ Answer (E) is not correct, because we know (D) is incorrect.
 </div>
 </div>
 
-## The `filter()` Function
+### The `filter()` Function
 
 One of the most important `dplyr` functions to know about is `filter()`. `filter()` extracts rows, and it does that based on **logical criteria**, or a **condition** that can be evaluated to be true (keep that row as part of our subset) or false (don't keep that row).
 
@@ -299,7 +302,7 @@ To extract rows that meet logical criteria, we write code that looks like this, 
 For example, we'll take a look at this code in the next section:
 `filter(covid_testing, mrn == 5000083)`
 
-## `filter()` Example
+### `filter()` Example
 
 Let's think over:
 `filter(covid_testing, mrn == 5000083)`
@@ -341,7 +344,7 @@ invalid (do_set) left-hand side to assignment
 
 </div>
 
-## Logical Operators
+### Logical Operators
 
 Here are some important logical operators to know about. They will all come in handy when you’re filtering rows of a data frame. `x` and `y` each represent expressions, which could be column names or constant values or a combination thereof.
 
@@ -415,7 +418,7 @@ D is not correct because it flips the positions of the comparison; the column na
 </div>
 </div>
 
-## Filtering a Complex Condition
+### Filtering a Complex Condition
 
 Often, we want to filter data based on a combination of conditions.  For example, what if you want to preserve rows that meet one or both of the following conditions:
 
@@ -550,7 +553,7 @@ Those two lines of code are equivalent. In both cases we're taking the `covid_te
 
 **Why would we use this way of typing our commands?**  Are we complicating matters?  No, as you're about to see, this is a very useful way of writing out the changes you make on a data frame in the order you want them to take place.
 
-## Why Use the "Pipe" (`%>%`)
+### Why Use the "Pipe" (`%>%`)
 
 Here's why the pipe (`%>%`) is so useful.
 
@@ -634,7 +637,7 @@ This is what it looks like:
 
 `mutate(data_frame, name = value)`
 
-## `mutate()` Example
+### `mutate()` Example
 
 For example, let's take a look at one of the columns of `covid_testing` that we haven't looked at yet in this module: `col_rec_tat`.
 
@@ -651,7 +654,9 @@ Upon executing the code, `mutate()` creates the new column and fills each row wi
 
 ![On the left, two columns of the `covid_testing` data frame are shown: mrn and `col_rec_tat`.  The first few rows are given.  This data frame is followed by an arrow pointing to a new data frame on the right, which is the same as the one on the left with the exception of a new column, titled `col_rec_tat_mins`, which has appropriate values filled in.](media/mutate_covid_example.png)<!-- style = "max-width: 800px;" -->
 
-## Let's Make Sure You're Connected!
+## Exercises
+
+<h3>A Setup Reminder</h3>
 
 If you're already set up in RStudio with the materials for this course (we had some instructions early on), you can skip this page and go ahead to the next!
 
@@ -708,7 +713,7 @@ If you already completed this work for a previous module, and it's been a while 
 
 ![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
 
-## Work On Data Transformation
+### Work On Data Transformation
 
 Within the `r_basics_transform_data` folder, please open the `exercises` folder and then open `transform.Rmd` to work through the exercises.  You'll see something like the below.
 
@@ -722,7 +727,11 @@ To work in this file:
 
 When you've done the best you can on your own, go to the next page, where we'll discuss the solutions.
 
-## Solutions for Data transformation
+<div class = "warning">
+Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`.  But if you're using the course materials in your own computer's installation of RStudio, it's possible you don't have `tidyverse` installed.  If you get a message telling you that there's no package installed with that name, issue this command: `install.packages("tidyverse")`.
+</div>
+
+### Solutions for Data Transformation
 
 You can find the solution file in the "r\_basics\_transform\_data" directory, within "**solutions**".  Simply open the version of `transform.Rmd` in that folder to see the answers.  
 
@@ -777,7 +786,7 @@ To recap, `dplyr` is a package you can load in R that provides a grammar for tra
 
 Additionally, `dplyr` and other `tidyverse` packages make use of the pipe operator (`%>%`), which can be used to string together `dplyr` functions into a pipeline that performs several transformations.
 
-## More `dplyr` functions
+### More `dplyr` functions
 
 We’ve only scratched the surface of data transformation functions in dplyr. Other important ones include:
 
@@ -793,7 +802,7 @@ We’ve only scratched the surface of data transformation functions in dplyr. Ot
 You may notice here and elsewhere that we include international English spellings (e.g. `summarise()`) for some functions.  "American" spellings (`summarize()`) also work, and both spellings trigger the same function.  Feel free to use either.
 </div>
 
-## `dplyr` Cheatsheet
+### `dplyr` Cheatsheet
 
 RStudio creates and distributes a number of cheatsheets for various purposes.  You can find them by clicking in the **Help menu** in RStudio -- try that now!  Here's a screenshot of the `dplyr` cheatsheet:
 
@@ -803,7 +812,7 @@ Note that in this cheatsheet they refer to "cases" to mean rows or observations 
 
 You can also find cheatsheets [on the RStudio website](https://www.rstudio.com/resources/cheatsheets/).
 
-## Beyond `dplyr`
+### Beyond `dplyr`
 
 Beyond dplyr, there are a number of other [`tidyverse`](https://www.tidyverse.org/) packages that provide powerful tools for data transformation:
 
