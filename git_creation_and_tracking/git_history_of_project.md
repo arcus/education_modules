@@ -337,19 +337,15 @@ Neither of the last two lines, (starting with the `+`) were present in the `mars
 
 After working for a while, we might not remember where our last checkpoints were or what we have done since. What command should we enter to find out how the file `venus.txt` has changed since it was last committed?
 
-
 [[git diff HEAD venus.txt]]
-<script>
-  let input = "@input".trim().toLowerCase();
-  input == "git diff HEAD venus.txt" || input == "git diff venus.txt";
-</script>
-
 ***
 <div class= "answer">
-Both `git diff HEAD venus.txt` and `git diff venus.txt` will show you the differences between the current working version of `venus.txt` and the last committed version. If you know the commit number of your last commit, you could also use that: `git diff 000000 venus.txt`.
+The command `git diff HEAD venus.txt` will show you the differences between the current working version of `venus.txt` and the last committed version. If you know the commit number of your last commit, you could also use that: `git diff 000000 venus.txt`.
 
 
 Omitting `venus.txt` will show you ALL changes that have been made to any file in the repository since the last commit.
+
+Omitting both the commit number and `HEAD`, i.e. entering `git diff venus.txt` will at this moment give you the same output, but has a different behavior in conjunction with some commands we will learn later in this module so we don't suggest using it. 
 </div>
 ***
 
@@ -386,15 +382,117 @@ What does this output tell you? Choose all of the the statements that the output
 
 ## Undoing changes with Git
 
-One big reason we save older versions of our work is so that we can go back to an earlier version if something we did doesn't work out.
+One big reason we save older versions of our work is so that we can go back to an earlier version if something we did doesn't work out. This is also why it is so important to commit your code regularly. You can't return a checkpoint in your work unless you marked it as a checkpoint in the first place!
+
+The file `mars.txt` should now contain four lines:
+
+```
+Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+An ill-considered change
+```
+
+Make sure to add and commit the most recent changes:
+
+```
+$git add mars.txt
+$git commit -m "Reject Mars as a base"
+```
+
+Lastly let's add one more line at the beginning of `mars.txt` so that it reads:
+
+```
+Mars: Planet 4 from the sun
+Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+An ill-considered change
+```
+
+You can use `cat mars.txt` to check that all five lines are currently present in the file.
 
 ### Changes not yet committed
 
-Using the git checkout command, big warnings about including the file name so you don't lose things you didn't want to lose.
+The command `git checkout` has a number of uses, one of which is to use it to return a file to the state it was after the last commit.
 
-### Revert to an earlier version
+If you enter
+```
+$git checkout HEAD mars.txt
+```
+the file on Mars will return to its last committed state. Let's check what it looks like after that command using `cat`:
 
-Big warnings around this part!!
+```
+$cat mars.txt
+Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+An ill-considered change
+```
+
+The file is back to being only four lines long, and if we now check how it differs from the `HEAD` we see that it doesn't differ at all. The command `$git diff HEAD mars.txt ` has no output!
+
+So what happened to that line about Mars being 4th from the sun? It is gone! Completely gone. It wasn't committed so Git never created a record of its existence. This can be extremely useful if, say, your code was working when you last committed and you just want to throw out all the changes you made since then.
+
+### Committed changes
+
+If you already committed the changes that you now no longer want, you can go back to earlier checkpoints in your work too!
+
+The same commit number that lets you see the differences between your current working version of a file and earlier versions will also work with the `checkout` command.
+
+Recall that earlier in this module we investigated the following commit:
+
+```
+commit 0d4b23c688dbbf87cff3cfa9425a7dfd9a6e6280
+Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Date:   Mon Feb 28 11:42:41 2022 -0500
+
+    Add concerns about effects of Mars' moons of Wolfman
+```
+
+We have added two lines to `mars.txt` since that commit, which we can check using the `diff` command:
+
+```console
+$git diff 0d4b23 mars.txt
+diff --git a/mars.txt b/mars.txt
+index 315bf3a..93a3e13 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,2 +1,4 @@
+ Cold and dry, but everything is my favorite color
+ The two moons may be a problem for Wolfman
++But the Mummy will appreciate the lack of humidity
++An ill-considered change
+```
+
+To get rid of all of those changes, enter the commit number instead of `HEAD` after the `checkout` command:
+
+```console
+$git checkout 0d4b23 mars.txt
+```
+
+Now use `cat` to examine the contents of `mars.txt`. It only contains the first two lines. You are now working with this version of `mars.txt`. What do you think will happen if you enter `git diff HEAD mars.txt`?
+
+<div class = "warning">
+If you forget to specify which file you want to check out and instead enter `git checkout 0d4b23` you will get the following message:
+
+```
+Note: checking out '0d4b23'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+ git checkout -b <new-branch-name>
+
+HEAD is now at 0d4b23 Add concerns about effects of Mars' moons of Wolfman
+```
+
+The "detached HEAD" is like "look, but don’t touch" here, so you shouldn’t make any changes in this state. After investigating your repo’s past state, reattach your `HEAD` with `git checkout main`.
+</div>
 
 ### Quiz: `checkout`
 
