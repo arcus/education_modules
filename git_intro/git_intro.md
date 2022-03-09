@@ -57,7 +57,7 @@ to keep track of what one person did and when.
 Even if you aren't collaborating with other people,
 automated version control is much better than this situation:
 
-![Comic showing a student revising a paper called Final.doc on their computer. The student gives it to their advisor, who provides feedback for a new version, which is then called FINAL_rev.2.doc. They go back and forth several times, adding more comments and renaming the file each time with increasingly more complex names: FINAL_rev.6.COMMENTS.doc, FINAL_rev.8.comments5.CORRECTIONS.doc, FINAL_rev.18.comments7.corrections9.MORE.30.doc, FINAL_rev22.comments49.corrections.10#@$%why did i come to grad school????.doc.](media/phd101212s.png "'Piled Higher and Deeper' by Jorge Cham, http://www.phdcomics.com")
+![Comic showing a student revising a paper called Final.doc on their computer. The student gives it to their advisor, who provides feedback for a new version, which is then called FINAL\_rev.2.doc. They go back and forth several times, adding more comments and renaming the file each time with increasingly more complex names: FINAL\_rev.6.COMMENTS.doc, FINAL\_rev.8.comments5.CORRECTIONS.doc, FINAL\_rev.18.comments7.corrections9.MORE.30.doc, FINAL\_rev22.comments49.corrections.10 why did i come to grad school????.doc.](media/phd101212s.png "'notFinal.doc' by Jorge Cham [www.phdcomics.com](https://phdcomics.com/comics/archive.php?comicid=1531)")
 
 We've all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document. Some word processors let us deal with this a little better, such as
 Microsoft Word's [Track Changes](https://support.office.com/en-us/article/Track-changes-in-Word-197ba630-0f5f-4a8e-9a77-3712475e806a),
