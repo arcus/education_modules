@@ -92,9 +92,7 @@ Unless multiple users make changes to the same section of the document - a confl
 
 A version control system is a tool that keeps track of these changes for us, effectively creating different versions of our files. It allows us to decide which changes will be made to the next version (each record of these changes is called a [commit](https://swcarpentry.github.io/git-novice/reference.html#commit), and keeps useful metadata about them.
 
-The complete history of commits for a particular project and their metadata make up a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository).
-
-Repositories can be kept in sync across different computers, facilitating
+The complete history of commits for a particular project and their metadata make up a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository). Repositories can be kept in sync across different computers, facilitating
 collaboration among different people.
 
 <div class = "learnmore">
@@ -103,14 +101,14 @@ collaboration among different people.
 Automated version control systems are nothing new.
 Tools like [RCS](https://en.wikipedia.org/wiki/Revision_Control_System), [CVS](https://en.wikipedia.org/wiki/Concurrent_Versions_System), or [Subversion](https://en.wikipedia.org/wiki/Apache_Subversion) have been around since the early 1980s and are used by many large companies.
 However, many of these are now considered legacy systems (i.e., outdated) due to various limitations in their capabilities.
-More modern systems, such as Git and [Mercurial](https://swcarpentry.github.io/hg-novice/), are *distributed*, meaning that they do not need a centralized server to host the repository.
+More modern systems, such as Git and [Mercurial](https://swcarpentry.github.io/hg-novice/), are **distributed**, meaning that they do not need a centralized server to host the repository.
 These modern systems also include powerful merging tools that make it possible for
 multiple authors to work on the same files concurrently.
 </div>
 
 ## Quiz: Version control
 
-Imagine you drafted an excellent paragraph for a paper you are writing, but later ruin it. How would you retrieve the *excellent* version of your conclusion? Is it even possible? Take a moment to write your thoughts in the box below, then click the checkmark to see our solution.
+Imagine you drafted an excellent paragraph for a paper you are writing, but later ruin it. How would you retrieve the **excellent** version of your conclusion? Is it even possible? Take a moment to write your thoughts in the box below, then click the checkmark to see our solution.
 
 [[answer]]
 <script>
@@ -119,7 +117,7 @@ Imagine you drafted an excellent paragraph for a paper you are writing, but late
 </script>
 ***
 <div class = "answer">
-Recovering the excellent version is only possible if you created a copy of the old version of the paper. The danger of losing good versions often leads to the problematic workflow illustrated in the PhD Comics cartoon at the top of this page.
+Recovering the excellent version is only possible if you created a copy of the old version of the paper. The danger of losing good versions often leads to the problematic workflow illustrated in the PhD Comics cartoon at the beginning of this lesson.
 
 (Note that because of the open-ended nature of this question, we can't automatically grade your response. It will show up as correct no matter what you write.)
 </div>
