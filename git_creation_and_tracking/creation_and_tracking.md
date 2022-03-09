@@ -605,8 +605,6 @@ Metaphors for Git abound, and no metaphor has been good enough to become the "st
 4. ...
 
 
-
-
 ### Telling Git not to track some files
 
 What if we have files that we do not want Git to track for us,
