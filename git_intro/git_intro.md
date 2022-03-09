@@ -2,12 +2,17 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  0.0.1
+version:  1.0.1
+module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Intro to Version Control
-comment:  This is a short, focused description of the module.
-long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
+
+comment:  An introduction to what version control systems do and why you might want to use one.
+
+long_description: Version control systems allow you to keep track of the history of changes to a text document (e.g. writing, code, and more). Version control is an increasingly important tool for scientists and scientific writers of all disciplines; it has the potential to make your work more transparent, more reproducible, and more efficient. This module is appropriate for beginners with no previous exposure to version control.
+
+estimated_time: 10 min
 
 @learning_objectives
 
@@ -32,7 +37,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** 10 min
+**Estimated time to completion:** @estimated_time
 
 **Pre-requisites**
 
