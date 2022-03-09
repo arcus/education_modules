@@ -26,6 +26,7 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
   * [ ] only level-1 header in the entire document.
 * [ ] Overview section immediately following Title
   * [ ] surrounded in div with class overview
+  * [ ] Comment is at the top of the Overview, linked from YAML rather than rewritten
   * [ ] "Is this module right for me?" contents linked from long_description YAML rather than rewritten
   * [ ] "Estimated time to completion" contents linked from estimated_time YAML rather than rewritten
   * [ ] Prerequisites listed
