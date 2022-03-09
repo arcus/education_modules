@@ -64,9 +64,9 @@ If the module includes code that learners may want to run:
 
 ## Formative assessment
 
-* [ ] Frequent [formative assessment](https://carpentries.github.io/instructor-training/02-practice-learning/#identifying-and-correcting-misconceptions) in the form of knowledge checks (referred to as quizzes) and/or hands-on exercises
+* [ ] Frequent [formative assessment](https://carpentries.github.io/instructor-training/02-practice-learning/#identifying-and-correcting-misconceptions) in the form of quizzes and/or hands-on exercises
 * [ ] Clear explanations available after questions unless the nature of the question itself or answer options makes it unnecessary (e.g. a T/F question may not always require follow-up explanation)
-* [ ] Knowledge check questions and hands-on exercises relate directly to learning objectives
+* [ ] Quiz questions and hands-on exercises relate directly to learning objectives
 * [ ] Every learning objective has at least one associated question
 * [ ] Questions can be answered based on the content within the module alone; learners should not need to have read or consulted any of the linked external resources
 
