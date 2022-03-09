@@ -722,7 +722,7 @@ For more details on how to use `.gitignore` to include or exclude particular fil
 
 
 
-### Quiz: `git` workflow
+### Quiz: Git workflow
 
 What does the `git commit` command do?
 
