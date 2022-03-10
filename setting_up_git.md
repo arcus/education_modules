@@ -296,11 +296,16 @@ Asking a peer (in person, or via an online community of practice) is probably th
 </div>
 ***
 
+<details>
+
+<summary>**Curious about this `alias` option?**</summary>
+
 <div class = "learnmore">
-In case you're curious, this command is an example of [how to set aliases in git](https://www.atlassian.com/git/tutorials/git-alias), something we didn't cover in this lesson.
+This command is an example of [how to set aliases in git](https://www.atlassian.com/git/tutorials/git-alias), something we didn't cover in this lesson.
 
 Basically, aliases are shortcuts you can write for yourself so you don't have to type out full git commands every time. We won't be using aliases in the lessons here, but you may like to set some up on your own computer if that sounds attractive to you!
 </div>
+</details>
 
 ## Additional Resources
 
