@@ -42,9 +42,12 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
+This module assumes that you...
+
 - Have used the command line interface (CLI) on your computer before
 - Have Git installed on your computer (note that it is probably installed already even if you've never used it)
 - Have an account on github.com (you can [sign up now](https://github.com/signup) if you haven't yet --- it's free)
+- Have at least a rough idea of what version control is, even if you've never used it before
 
 
 **Learning Objectives**
@@ -78,6 +81,12 @@ $ git config --global user.email "vlad@tran.sylvan.ia"
 ```
 <div class = "warning">
 Please use your own name and email address instead of Dracula's.
+</div>
+
+<div class = "help">
+**Help! I'm getting errors already!**
+
+Although git comes already installed on many machines, it may not be installed on yours yet. To check, try running `git --version`. If that returns an error, you likely need to install git before continuing: here are installation insructions for Windows, Mac, and Linux from the [git website](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), and from [Software Carpentries](https://carpentries.github.io/workshop-template/#git). Either set of instructions should work fine, but if you have trouble with one then try the other.
 </div>
 
 This user name and email will be associated with your subsequent Git activity,
@@ -276,7 +285,7 @@ Basically, aliases are shortcuts you can write for yourself so you don't have to
 
 ## Additional Resources
 
-If you're new to the command line (or want a refresher), you may like to read through [Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md), a general resource on using the command line with no specific focus on git. 
+If you're new to the command line (or want a refresher), you may like to read through [Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md), a general resource on using the command line with no specific focus on git.
 
 Although the content here focuses on command line git, you may prefer to use the GitHub Desktop program instead. See the instructions posted on GitHub.com for how to [install and configure GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop).
 
