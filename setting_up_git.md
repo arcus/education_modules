@@ -191,8 +191,7 @@ $ git config --global init.defaultBranch main
 Source file changes are associated with a "branch."
 For new learners in this lesson, it's enough to know that branches exist, and this lesson uses one branch.
 By default, Git will create a branch called `master`
-when you create a new repository with `git init` (as explained in the next Episode). This term evokes
-the racist practice of human slavery and the
+when you create a new repository with `git init` (as explained in the next lesson in this series). This term evokes the racist practice of human slavery and the
 [software development community](https://github.com/github/renaming)  has moved to adopt
 more inclusive language.
 
@@ -295,6 +294,8 @@ Basically, aliases are shortcuts you can write for yourself so you don't have to
 </div>
 
 ## Additional Resources
+
+This module is based closely on the [Setting up Git](https://swcarpentry.github.io/git-novice/02-setup/index.html) lesson published by [Software Carpentry](https://software-carpentry.org/). Much appreciation to Carpentries for developing the content and sharing it under a creative commons license!
 
 If you're new to the command line (or want a refresher), you may like to read through [Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md), a general resource on using the command line with no specific focus on git.
 
