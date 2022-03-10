@@ -276,7 +276,7 @@ Basically, aliases are shortcuts you can write for yourself so you don't have to
 
 ## Additional Resources
 
-
+Although the content here focuses on command line git, you may prefer to use the GitHub Desktop program instead. See the instructions posted on GitHub.com for how to [install and configure GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop).
 
 ## Feedback
 
