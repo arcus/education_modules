@@ -50,7 +50,7 @@ None, this module is intended for all end users regardless of their technical sk
 
 ## Why should I care about how and where I store my data?
 
-![Anarchic looking Windows desktop with far too many many icons and applications.](media/messy_desktop.png)
+`![Anarchic looking Windows desktop with far too many many icons and applications.](media/messy_desktop.png)`
 
 - You might have a chaotic looking desktop littered with document icons or you might already be storing your files in the cloud.
 - If your storage setup isn't impeding you from getting your work done you probably haven't thought too deeply about modifying where you are storing things.
@@ -82,7 +82,8 @@ What is true of desktop storage?
 [( )] Requires in house IT staff or vendor support to maintain the technical infrastructure
 [(X)] Once you have made the resource investment, making changes is quite easy
 [( )] Files can be only accessed over the network or through a VPN client
-****
+
+---
 
 <div class = "answer">
 
@@ -95,7 +96,7 @@ For all its computational advantages, on premises network storage has significan
 
 - Another form of local storage that allows your files to be both accessed on additional computers and backed up at a location other than your personal computer is removable media or **expandable storage**. - This a great option for backing up files you access daily that are personally maintained and owned by you.
 
-![Line illustration of the increasingly hard to find CD/DVD Drive.](media/noun-cd-rom-1620956.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+`![The increasingly hard to find CD/DVD Drive.](media/noun-cd-rom-1620956.png)`<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 - Most removable media types require a playback reader including popular optical disc storage formats like CDs or DVDs. These formats should largely be avoided since most modern computers are not even equipped with CD or DVD drives, their storage allotment is limited, and they can easily become damaged and unplayable.
 
@@ -113,7 +114,8 @@ Why are USB flash drives a preferable removable media format than CDs or DVDs?
 [( )] If they become physically damaged, data can still be accessed
 [( )] They have less storage space than an optical disc format
 [(X)] Many popular options offer enhanced security like password protection and data encryption
-****
+
+---
 
 <div class = "answer">
 
@@ -140,7 +142,7 @@ Both optical discs and USB flash drives require playback media and can suffer ir
 - It should be noted that while multiple users can atomically update a data object, multiple users cannot be working on the same file at the same time.
 - All things considered, this is a much improved way of collaborating with a peer than physically walking a file over to them.
 
-![Line illustration of your IT department maintaining servers in a corporate data center.](media/noun-data-center-968730.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+`![Your trusty IT department maintaining servers in a corporate data center.](media/noun-data-center-968730.png)`<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 - However, it is not just a mere flip of the switch to provide these resources, and it is a huge investment of time and upfront costs to get this kind of infrastructure in place.
 - If your organization is partnering with an external vendor, you might also be locked into their allotted technological constraints as well as be subject to time and cost intensive things like hardware, software, and licensing updates.
@@ -153,7 +155,8 @@ What is not true of on premises network storage?
 [( )] Requires in house IT staff or vendor support to maintain the technical infrastructure
 [(X)] Once you have made the resource investment, making changes is quite easy
 [( )] Files can be only accessed over the network or through a VPN client
-****
+
+---
 
 <div class = "answer">
 
@@ -191,7 +194,8 @@ True or False: Cost of storage in the cloud is inversely related to how instantl
 
 [( )] TRUE
 [(X)] FALSE
-****
+
+---
 
 <div class = "answer">
 
@@ -211,7 +215,10 @@ The most economical storage in the cloud is coldline or archival tier storage. T
 
 ## Additional Resources
 
-The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
+- [CDW Resource on Various Data Storage Types and their Features](https://www.cdw.com/content/cdw/en/articles/datacenter/what-is-data-storage.html)
+- [Comprehensive Cloud Storage Overview](https://www.techtarget.com/searchstorage/definition/cloud-storage)
+- [Concise Breakdown of On Premises vs. Clould Storage Differences](https://www.microsoft.com/en-us/microsoft-365/business-insights-ideas/resources/cloud-storage-vs-on-premises-servers)
+- [Recommended Practices for Storing Data on Removable Media](https://staysafeonline.org/blog/security-best-practices-for-removable-media-and-devices/)
 
 ## Feedback
 
