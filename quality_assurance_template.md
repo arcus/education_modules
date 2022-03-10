@@ -21,7 +21,7 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
   * [ ] comment appropriately filled out
   * [ ] long_description appropriately filled out
   * [ ] learning_objectives appropriately filled out
-  * [ ] link to CSS (currently https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css)
+  * [ ] link to CSS (currently https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css)
   * [ ] script to Font Awesome kit (currently https://kit.fontawesome.com/83b2343bd4.js)
 * [ ] Title is the first line after the end of the YAML
   * [ ] only level-1 header in the entire document.
