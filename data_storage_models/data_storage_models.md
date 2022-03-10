@@ -50,7 +50,7 @@ None, this module is intended for all end users regardless of their technical sk
 
 ## Why should I care about how and where I store my data?
 
-`![Anarchic looking Windows desktop with far too many many icons and applications.](media/messy_desktop.png)`
+![Windows desktop with many icons and applications.](media/messy_desktop.png "If this anarchic looking desktop feels familiar, you're likely relying on local storage.")
 
 - You might have a chaotic looking desktop littered with document icons or you might already be storing your files in the cloud.
 - If your storage setup isn't impeding you from getting your work done you probably haven't thought too deeply about modifying where you are storing things.
@@ -82,9 +82,7 @@ What is true of desktop storage?
 [( )] Requires in house IT staff or vendor support to maintain the technical infrastructure
 [(X)] Once you have made the resource investment, making changes is quite easy
 [( )] Files can be only accessed over the network or through a VPN client
-
----
-
+***
 <div class = "answer">
 
 For all its computational advantages, on premises network storage has significant up front costs and you are generally trapped into a pretty rigid setup once you have made the selection.
@@ -96,11 +94,11 @@ For all its computational advantages, on premises network storage has significan
 
 - Another form of local storage that allows your files to be both accessed on additional computers and backed up at a location other than your personal computer is removable media or **expandable storage**. - This a great option for backing up files you access daily that are personally maintained and owned by you.
 
-`![The increasingly hard to find CD/DVD Drive.](media/noun-cd-rom-1620956.png)`<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+![CD/DVD Drive.](media/noun-cd-rom-1620956.png "The increasingly hard to find CD/DVD Drive.")<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 - Most removable media types require a playback reader including popular optical disc storage formats like CDs or DVDs. These formats should largely be avoided since most modern computers are not even equipped with CD or DVD drives, their storage allotment is limited, and they can easily become damaged and unplayable.
 
-![Line illustration of a flash drive showing its durability but need for a USB reader.](media/noun-flash-drive-1294007.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+![Flash drive.](media/noun-flash-drive-1294007.png "Flash drives are durable, but they require a USB reader.")<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 - Removable storage devices like USB flash drives and external hard drives are a better option, though they require a USB drive to access files which could potentially become obsolete on your future personal computing device.
 - These devices also have an added advantage in that they have more storage space, offer better security in that they can be readily encrypted or password protected, and are less likely to suffer physical degradation.
@@ -114,9 +112,7 @@ Why are USB flash drives a preferable removable media format than CDs or DVDs?
 [( )] If they become physically damaged, data can still be accessed
 [( )] They have less storage space than an optical disc format
 [(X)] Many popular options offer enhanced security like password protection and data encryption
-
----
-
+***
 <div class = "answer">
 
 Both optical discs and USB flash drives require playback media and can suffer irreparable physical degradation. USB flash drives actually have more storage space than CDs or DVDs, which is another reason they are a preferred removable media storage solution.
@@ -126,14 +122,14 @@ Both optical discs and USB flash drives require playback media and can suffer ir
 
 ## On Premises Network
 
-![Line illustration of multiple computers networked through servers.](media/noun-server-network-2409608.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+![Multiple computers networked through servers.](media/noun-server-network-2409608.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 - We have covered the local storage options suitable for smaller files owned and maintained by you.
 - Now we will cover on premise resources that facilitate working with larger amounts of data and collaborating with multiple users.
 
 ### Installation and Ongoing Maintenance
 
-![Line illustration of several stacked server icons.](media/noun-network-server-1769251.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+![Several stacked server icons.](media/noun-network-server-1769251.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 - **On Premises Storage** denotes your organization standing up servers hosted on site that are either maintained by your IT department or an external vendor.
 - Data is accessible over the network, including over a VPN (virtual private network) client while working remotely.
@@ -142,7 +138,7 @@ Both optical discs and USB flash drives require playback media and can suffer ir
 - It should be noted that while multiple users can atomically update a data object, multiple users cannot be working on the same file at the same time.
 - All things considered, this is a much improved way of collaborating with a peer than physically walking a file over to them.
 
-`![Your trusty IT department maintaining servers in a corporate data center.](media/noun-data-center-968730.png)`<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+![Person monitoring stacks of servers.](media/noun-data-center-968730.png "Your trusty IT department maintaining servers in a corporate data center.")<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 - However, it is not just a mere flip of the switch to provide these resources, and it is a huge investment of time and upfront costs to get this kind of infrastructure in place.
 - If your organization is partnering with an external vendor, you might also be locked into their allotted technological constraints as well as be subject to time and cost intensive things like hardware, software, and licensing updates.
@@ -155,9 +151,7 @@ What is not true of on premises network storage?
 [( )] Requires in house IT staff or vendor support to maintain the technical infrastructure
 [(X)] Once you have made the resource investment, making changes is quite easy
 [( )] Files can be only accessed over the network or through a VPN client
-
----
-
+***
 <div class = "answer">
 
 For all its computational advantages, on premises network storage has significant up front costs and you are generally trapped into a pretty rigid setup once you have made the selection.
@@ -167,20 +161,20 @@ For all its computational advantages, on premises network storage has significan
 
 ## Cloud Storage
 
-![Line illustration showing how cloud storage provides the same capacity and organization as a filing cabinet.](media/noun-cloud-storage-2190092.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+![A file cabinet in a cloud.](media/noun-cloud-storage-2190092.png "Cloud storage provides the same capacity and organization as a filing cabinet.")<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 - Cloud storage offers many of the same features as on premises storage in terms of allowing enterprise level technological capabilities as well as enhanced backup and security protocols.
 - However, it is important to be aware of the unique characteristics of cloud resources as well.
 
 ### Highly Customizable but Less Control
 
-![Line illustration showing how cloud storage facilitates multiple points of access from several types of secure computing devices.](media/noun-cloud-computing-968728.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+![People on multiple different devices all connecting to the same cloud.](media/noun-cloud-computing-968728.png "Cloud storage facilitates multiple points of access from several types of secure computing devices.")<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 - If you are already storing files in Google Drive or Microsoft OneDrive then you are already fully immersed in **cloud storage** technologies (whether you realize it or not) and have experienced firsthand how utilizing these tools unlocks the ability to work from anywhere and to dynamically collaborate with others on shared assets in real time.
 - Web hosted cloud storage frees information from being tethered to physical media while still providing the desired access controls.
 - Unlike on premises storage, which necessitate a huge immediate outlay and tremendous physical infrastructure and corresponding staffing, cloud storage presents a more hands off and flexible choice.
 
-![Line illustration of a human at the center of cloud computing infrastructure demonstrating that the service is not completely depersonalized.](media/noun-cloud-computing-2359913.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+![Human in a cloud at the center of a network.](media/noun-cloud-computing-2359913.png "Humans are still at the center of cloud computing --- the service is not completely depersonalized.")<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 - Cloud storage providers cover the hosting of these resources and have a variety of subscription models that are tailored to meet your operational needs and that can be modified as those needs change.
 - One of the biggest tradeoffs in using cloud storage is learning to move away from instant access to data, however this feature encourages more responsible data management and retention strategies.
@@ -194,9 +188,7 @@ True or False: Cost of storage in the cloud is inversely related to how instantl
 
 [( )] TRUE
 [(X)] FALSE
-
----
-
+***
 <div class = "answer">
 
 The most economical storage in the cloud is coldline or archival tier storage. This option can offer up to a several day retrieval time.
@@ -206,7 +198,7 @@ The most economical storage in the cloud is coldline or archival tier storage. T
 
 ### The Hybrid Storage Option
 
-![Line illustration showing connected lines between network storage and cloud computing icons displaying the hybrid storage option.](media/noun-cloud-computing-1955427.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+![Arrows connecting network storage and cloud computing in both directions.](media/noun-cloud-computing-1955427.png "The hybrid storage option uses both on premises and cloud storage.")<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 - We have covered how both on premises storage and cloud storage are equally adept at facilitating collaborative work on larger data holdings, but differ in terms of calculating costs, degrees of control, and flexibility.
 - It is possible to select a **hybrid storage** solution in which data is stored partially on premises and partially in the cloud and, if desired, in both places.
