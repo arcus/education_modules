@@ -195,12 +195,14 @@ when you create a new repository with `git init` (as explained in the next lesso
 [software development community](https://github.com/github/renaming)  has moved to adopt
 more inclusive language.
 
-In 2020, most Git code hosting services transitioned to using `main` as the default branch. As an example, any new repository that is opened in GitHub and GitLab default
-to `main`.  However, Git has not yet made the same change.  As a result, local repositories must be manually configured have the same main branch name as most cloud services.
+In 2020, most Git code hosting services transitioned to using `main` as the default branch. As an example, any new repository that is opened in GitHub and GitLab defaults to `main`.  
+However, Git has not yet made the same change.  As a result, local repositories must be manually configured have the same main branch name as most cloud services.
 
-For versions of Git prior to 2.28, the change can be made on an individual repository level.  The
-command for this is in the next episode.  Note that if this value is unset in your local Git
-configuration, the `init.defaultBranch` value defaults to `master`.
+<div class = "help">
+For versions of Git prior to 2.28, the change can be made on an individual repository level using `git branch -M main` if there are currently commits in the repository, or `git checkout -b main` if there are no commits/the repository is completely empty.
+</div>
+
+Note that if this value is unset in your local Git configuration, the `init.defaultBranch` value defaults to `master`.
 
 ### Check your global configurations
 
