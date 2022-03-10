@@ -41,9 +41,8 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 This module is for you if:
 
-* You know that version control is important. (See [module](module) to learn why version control is important.)
-* You know how to save your work to your Git repository. (See [module](module) to learn how to create a Git repository and put your work into it.)
-* You want to learn how to see and compare different versions of your work.
+* You know know how to create a Git repository and make changes using `add` and `commit`.
+* You want to learn how to compare different versions of your work and restore files to previous versions.
 
 
 **Learning Objectives**
@@ -67,7 +66,7 @@ Each time you `commit` to Git, you are marking the current state of your project
 <div class = "options">
 You are going to learn about two ways to refer to past commits:
 
-- Using HEAD to refer to the latest `commit`.
+- Using `HEAD` to refer to the latest `commit`.
 - Using the commit number assigned to a particular `commit`.
 
 </div>
