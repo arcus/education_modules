@@ -16,6 +16,7 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
   * [ ] email
   * [ ] module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md )
   * [ ] module_template_version number is up to date with the [current sample module](https://raw.githubusercontent.com/arcus/education_modules/main/a_sample_module_template/a_sample_module_template.md) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing with QA
+  * [ ] language
   * [ ] narrator
   * [ ] comment appropriately filled out
   * [ ] long_description appropriately filled out
