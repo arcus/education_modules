@@ -33,7 +33,7 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
   * [ ] Prerequisites listed
   * [ ] Learning objectives linked from learning_objectives YAML rather than rewritten
 * [ ] All sections following Overview have content (no pages with just header and no additional text / media material).
-* [ ] All quizzes start with a level 2 or 3 header structured as "Quiz: label" where "label" is a short (~ 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
+* [ ] All quizzes start with a level 2 or 3 header. If there is only one quiz in the module, it is labelled "Quiz", or if there are multiple, each header is structured as "Quiz: label" where "label" is a short (~ 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
 * [ ] Educational content ends with a section of additional resources
 * [ ] Final section is Feedback.
   * [ ] Learning objectives linked from YAML rather than rewritten
@@ -66,7 +66,7 @@ If the module includes code that learners may want to run:
 
 ## Formative assessment
 
-* [ ] Frequent [formative assessment](https://carpentries.github.io/instructor-training/02-practice-learning/#identifying-and-correcting-misconceptions) in the form of quizzes and/or hands-on exercises
+* [ ] Sufficient [formative assessment](https://carpentries.github.io/instructor-training/02-practice-learning/#identifying-and-correcting-misconceptions) in the form of quizzes and/or hands-on exercises
 * [ ] Clear explanations available after questions unless the nature of the question itself or answer options makes it unnecessary (e.g. a T/F question may not always require follow-up explanation)
 * [ ] Quiz questions and hands-on exercises relate directly to learning objectives
 * [ ] Every learning objective has at least one associated question
