@@ -99,7 +99,7 @@ $ mkdir planets
 $ cd planets
 ```
 
-Then we tell Git to make `planets` a **repository** (also called a **repo**)
+Then we tell Git to make `planets` a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository) (also called a **repo**)
 -- a place where Git can store versions of our files:
 
 
@@ -137,7 +137,7 @@ including all files and sub-directories located within the project's directory.
 If we ever delete the `.git` subdirectory,
 we will lose the project's history.
 
-### Creating the  `main` branch
+### Creating the `main` branch
 
 Next, we will change the default branch to be called `main`.
 This might be the default branch depending on your settings and version
