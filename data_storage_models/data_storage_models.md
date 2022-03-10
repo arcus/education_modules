@@ -74,7 +74,7 @@ None, this module is intended for all end users regardless of their technical sk
 - Moreover, a desktop, like your physical desk, can quickly become cluttered and hard to navigate and should never be where the bulk of your work is saved.
 - **Documents** folder storage is another default option on your personal computer that provides better security, organizing potential and backup than your desktop. This is a good storage choice for frequently updated and accessed smaller files that are critical to business operations and for which you are the sole contributor.
 
-### Knowledge Check 1
+### Quiz: Storage on your Computer
 
 What is true of desktop storage?
 
@@ -104,7 +104,7 @@ For all its computational advantages, on premises network storage has significan
 - These devices also have an added advantage in that they have more storage space, offer better security in that they can be readily encrypted or password protected, and are less likely to suffer physical degradation.
 - That said, if you misplace your external device, you have also misplaced your access to a backup copy.
 
-### Knowledge Check 2
+### Quiz: Removable Media
 
 Why are USB flash drives a preferable removable media format than CDs or DVDs?
 
@@ -143,7 +143,7 @@ Both optical discs and USB flash drives require playback media and can suffer ir
 - However, it is not just a mere flip of the switch to provide these resources, and it is a huge investment of time and upfront costs to get this kind of infrastructure in place.
 - If your organization is partnering with an external vendor, you might also be locked into their allotted technological constraints as well as be subject to time and cost intensive things like hardware, software, and licensing updates.
 
-### Knowledge Check 3
+### Quiz: On Premises Network
 
 What is not true of on premises network storage?
 
@@ -182,7 +182,7 @@ For all its computational advantages, on premises network storage has significan
 - Yet, having immediate access to all data in the cloud is extremely expensive and not a realistic business strategy. Accordingly, in a cloud storage model, speed of access to data is directly correlated with the cost.
 - Having to make thoughtful decisions like these as you work out your support agreement with your cloud service provider illustrates the compromises you must consider when storing data in the cloud.
 
-### Knowledge Check 4
+### Quiz: Cloud Storage
 
 True or False: Cost of storage in the cloud is inversely related to how instantly it can be accessed
 
