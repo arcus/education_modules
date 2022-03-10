@@ -76,8 +76,8 @@ where `verb` is what we actually want to do and `options` is additional optional
 Dracula sets up his new laptop:
 
 ```bash
-$ git config --global user.name "Vlad Dracula"
-$ git config --global user.email "vlad@tran.sylvan.ia"
+git config --global user.name "Vlad Dracula"
+git config --global user.email "vlad@tran.sylvan.ia"
 ```
 <div class = "warning">
 Please use your own name and email address instead of Dracula's.
@@ -127,13 +127,13 @@ The following settings are recommended:
 On macOS and Linux:
 
 ```bash
-$ git config --global core.autocrlf input
+git config --global core.autocrlf input
 ```
 
 And on Windows:
 
 ```bash
-$ git config --global core.autocrlf true
+git config --global core.autocrlf true
 ```
 
 ### Setting your text editor
@@ -143,7 +143,7 @@ Dracula also has to set his favorite text editor, following the table below.
 <div class = "options">
 If you have a text editor you're already familiar with, choose that.
 
-If you don't recognize any of the editors in the table below, we recommend setting your default editor for git to `nano`, using the following command: `$ git config --global core.editor "nano -w"`.
+If you don't recognize any of the editors in the table below, we recommend setting your default editor for git to `nano`, using the following command: `git config --global core.editor "nano -w"`.
 </div>
 
 It is possible to reconfigure the text editor for Git whenever you want to change it.
@@ -162,21 +162,21 @@ This is [a common problem that has frustrated many a new git user](https://stack
 
 | Editor             | Configuration command                            |
 |:-------------------|:-------------------------------------------------|
-| Atom | `$ git config --global core.editor "atom --wait"`|
-| nano               | `$ git config --global core.editor "nano -w"`    |
-| BBEdit (Mac, with command line tools) | `$ git config --global core.editor "bbedit -w"`    |
-| Sublime Text (Mac) | `$ git config --global core.editor "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"` |
-| Sublime Text (Win, 32-bit install) | `$ git config --global core.editor "'c:/program files (x86)/sublime text 3/sublime_text.exe' -w"` |
-| Sublime Text (Win, 64-bit install) | `$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"` |
-| Notepad (Win)    | `$ git config --global core.editor "c:/Windows/System32/notepad.exe"`|
-| Notepad++ (Win, 32-bit install)    | `$ git config --global core.editor "'c:/program files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
-| Notepad++ (Win, 64-bit install)    | `$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
-| Kate (Linux)       | `$ git config --global core.editor "kate"`       |
-| Gedit (Linux)      | `$ git config --global core.editor "gedit --wait --new-window"`   |
-| Scratch (Linux)       | `$ git config --global core.editor "scratch-text-editor"`  |
-| Emacs              | `$ git config --global core.editor "emacs"`   |
-| Vim                | `$ git config --global core.editor "vim"`   |
-| VS Code                | `$ git config --global core.editor "code --wait"`   |
+| Atom | `git config --global core.editor "atom --wait"`|
+| nano               | `git config --global core.editor "nano -w"`    |
+| BBEdit (Mac, with command line tools) | `git config --global core.editor "bbedit -w"`    |
+| Sublime Text (Mac) | `git config --global core.editor "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"` |
+| Sublime Text (Win, 32-bit install) | `git config --global core.editor "'c:/program files (x86)/sublime text 3/sublime_text.exe' -w"` |
+| Sublime Text (Win, 64-bit install) | `git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"` |
+| Notepad (Win)    | `git config --global core.editor "c:/Windows/System32/notepad.exe"`|
+| Notepad++ (Win, 32-bit install)    | `git config --global core.editor "'c:/program files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
+| Notepad++ (Win, 64-bit install)    | `git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
+| Kate (Linux)       | `git config --global core.editor "kate"`       |
+| Gedit (Linux)      | `git config --global core.editor "gedit --wait --new-window"`   |
+| Scratch (Linux)       | `git config --global core.editor "scratch-text-editor"`  |
+| Emacs              | `git config --global core.editor "emacs"`   |
+| Vim                | `git config --global core.editor "vim"`   |
+| VS Code                | `git config --global core.editor "code --wait"`   |
 
 
 ### Default branch naming
@@ -185,7 +185,7 @@ Git (2.28+) allows configuration of the name of the branch created when you init
 it matches GitHub, which is the cloud service he will eventually use.
 
 ```bash
-$ git config --global init.defaultBranch main
+git config --global init.defaultBranch main
 ```
 
 Source file changes are associated with a "branch."
@@ -211,7 +211,7 @@ The commands we just ran in the sections above only need to be run once: the fla
 You can check your settings at any time:
 
 ```bash
-$ git config --list
+git config --list
 ```
 
 You can change your configuration as many times as you want: use the same commands to choose another editor or update your email address.
@@ -223,15 +223,15 @@ In some networks you need to use a
 [proxy](https://en.wikipedia.org/wiki/Proxy_server). If this is the case, you may also need to tell Git about the proxy:
 
 ```bash
-$ git config --global http.proxy proxy-url
-$ git config --global https.proxy proxy-url
+git config --global http.proxy proxy-url
+git config --global https.proxy proxy-url
 ```
 
 To disable the proxy, use
 
 ```bash
-$ git config --global --unset http.proxy
-$ git config --global --unset https.proxy
+git config --global --unset http.proxy
+git config --global --unset https.proxy
 ```
 </div>
 
@@ -241,19 +241,25 @@ Always remember that if you forget the subcommands or options of a `git` command
 `git <command> --help`, e.g.:
 
 ```bash
-$ git config -h
-$ git config --help
+git config -h
+git config --help
 ```
 
-<div class = "important">
-While viewing the manual, remember the `:` is a prompt waiting for commands and you can press `Q` to exit the manual.
+<div class = "options">
+** -h vs --help**
+
+The `-h` flag returns a list of options for that command. It's most useful when you already know what a command does and you want a reminder of how to use it. The `--help` flag pulls up the full git documentation for a command, so it's a better choice if you want to learn more about what the command does.
 </div>
 
 More generally, you can get the list of available `git` commands and further resources of the Git manual typing:
 
 ```bash
-$ git help
+git help
 ```
+
+<div class = "important">
+While viewing the manual, remember the `:` is a prompt waiting for commands and you can press `Q` to exit the manual.
+</div>
 
 ## Quiz
 
@@ -274,14 +280,15 @@ Importantly, 'global' only refers to within your account on your machine; if you
 
 If you wanted to learn more about the command above, which of the following would be good places to start? Select all that apply.
 
-[[X]] `git config -h`
+[[ ]] `git config -h`
+[[X]] `git config --help`
 [[X]] Google it
 [[X]] Ask a friend, or post a question in an online community forum
 ***
 <div class = "answer">
-All of these are great ideas!
+Remember that `git config -h` will show you a list of the options you can use for `config`, whereas `git config --help` will bring up the full documentation for `config`, not just a list of options. In this case, we need information about what the command does, so a list of options won't be helpful; the documentation might provide an answer, though!
 
-In this particular case, the help file for `git config` won't tell you what you want to know about the global settings for aliases, so that will be a dead end here. But sometimes the git help files will have exactly what you need, so it's never a bad idea to check!
+In this particular case, `git config --help` won't tell you what you want to know about the global settings for aliases, so that will be a dead end here. But sometimes the git help files will have exactly what you need, so it's never a bad idea to check!
 
 Googling it is also never a bad idea. There are tons of great git resources available online, and for common problems you're likely to find a useable answer quickly. Keep in mind that there are lots of very advanced git users posting things online as well, though, and if you get unlucky you could end up with search results that are not at all user-friendly for beginners. When that happens, remind yourself that kind of gatekeeping is a failure on the part of the writer, not something wrong with you as a learner, and keep searching to find a good answer to your question somewhere else.
 
