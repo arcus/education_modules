@@ -26,7 +26,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
-# Creating your Git Repository
+# Creating a Git Repository
 
 <div class = "overview">
 
@@ -43,10 +43,8 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 Before you start this module, make sure you have
 
-* Configured Git *on your computer*. See [this module](https://education.arcus.chop.edu) to learn how.
-* The ability to edit .txt documents. Click [here](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file) for an introduction to editing text files using `nano`.
-
-If you would prefer to work through this module on your own computer, we also have [module on Bash 101](/fill/in/path).
+* Configured Git on your computer. See [this module](https://education.arcus.chop.edu) to learn how.
+* The ability to edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file).
 
 **Learning Objectives**
 
@@ -55,14 +53,11 @@ If you would prefer to work through this module on your own computer, we also ha
 
 ## Lesson Preparation
 
-Here we include information about a virtual box/command line emulator learners can use to do exercises.
+If you have Git configured on your computer, all of the exercises in this module can be done in the same console you used to configure Git.
 
-If you prefer to run these examples on your own machine, open a command line interface (CLI).
+If you do need to get Git configured on your computer the [name of module]( ) module will help you get set up.
 
 ## Creating a Repository
-
-Once Git is configured,
-we can start using it.
 
 Usually you will use Git to track the progress of a project. As we learn about Git, we will use the story of Wolfman and Dracula who are investigating if it
 is possible to send a planetary lander to Mars.
