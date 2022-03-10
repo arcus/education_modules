@@ -175,7 +175,7 @@ Quizzes are just more markdown text, so if you want it to show up on its own pag
 
 Quizzes should connect directly to your learning objectives. Each quiz question should connect to one learning objective, and every learning objective should have at least one quiz question associated with it somewhere in the module.
 
-Quizzes should always be navigable from the sidebar, meaning they should be labeled with a level 2 or 3 header. The header should be structured as "Quiz: label" where "label" is a short (ideally 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
+Quizzes should always be navigable from the sidebar, meaning they should be labeled with a level 2 or 3 header. If there is only one quiz in the module, it should be labelled as "Quiz". If there is more than one each header should be structured as "Quiz: label" where "label" is a short (ideally 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
 
 Here is the first question. It's multiple choice.
 
