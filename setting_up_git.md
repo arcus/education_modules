@@ -81,6 +81,8 @@ $ git config --global user.email "vlad@tran.sylvan.ia"
 ```
 <div class = "warning">
 Please use your own name and email address instead of Dracula's.
+
+You should use the same email you used to set up your account on [github.com](https://github.com/).
 </div>
 
 <div class = "help">
@@ -100,10 +102,10 @@ after this lesson will include this information.
 For this lesson, we will be interacting with [GitHub](https://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account.
 
 <div class = "options">
-If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-email-preferences/setting-your-commit-email-address].
-</div>
+If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-email-preferences/setting-your-commit-email-address).
 
 If you elect to use a private email address with GitHub, then use that same email address for the `user.email` value, e.g. `username@users.noreply.github.com` replacing `username` with your GitHub one.
+</div>
 
 ### Handling line endings
 
@@ -136,7 +138,27 @@ $ git config --global core.autocrlf true
 
 ### Setting your text editor
 
-Dracula also has to set his favorite text editor, following this table:
+Dracula also has to set his favorite text editor, following the table below.
+
+<div class = "options">
+If you have a text editor you're already familiar with, choose that.
+
+If you don't recognize any of the editors in the table below, we recommend setting your default editor for git to `nano`, using the following command: `$ git config --global core.editor "nano -w"`.
+</div>
+
+It is possible to reconfigure the text editor for Git whenever you want to change it.
+
+<div class = "help">
+**Exiting Vim**
+
+Note that Vim is the default editor for many programs, including git.
+
+If you haven't used Vim before and wish to exit a session without saving your changes, press `Esc` then type `:q!` and hit `Enter` or `↵` or on Macs, `Return`.
+If you want to save your changes and quit, press `Esc` then type `:wq` and hit `Enter` or `↵` or on Macs, `Return`.
+
+This is [a common problem that has frustrated many a new git user](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/)! You are not alone.
+</div>
+
 
 | Editor             | Configuration command                            |
 |:-------------------|:-------------------------------------------------|
@@ -156,17 +178,6 @@ Dracula also has to set his favorite text editor, following this table:
 | Vim                | `$ git config --global core.editor "vim"`   |
 | VS Code                | `$ git config --global core.editor "code --wait"`   |
 
-It is possible to reconfigure the text editor for Git whenever you want to change it.
-
-
-<div class = "help">
-**Exiting Vim**
-
-Note that Vim is the default editor for many programs. If you haven't used Vim before and wish to exit a session without saving your changes, press `Esc` then type `:q!` and hit `Enter` or `↵` or on Macs, `Return`.
-If you want to save your changes and quit, press `Esc` then type `:wq` and hit `Enter` or `↵` or on Macs, `Return`.
-
-This is [a common problem that has frustrated many a new git user](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/)! You are not alone.
-</div>
 
 ### Default branch naming
 
