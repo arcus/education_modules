@@ -6,15 +6,20 @@ Reviewer: {your name}
 qa_template_version: 2.0.0
 Name of Module: {take from the title of the main markdown in the PR}
 Current Liascript URL: {makes it easy for reviewers and authors to look at content as learners will}
-Current Version of Module (use the latest commit value):  {click on the PR and get the clickable short link to the latest commit -- see [quality_assurance_guide.md](https://github.com/arcus/education_modules/blob/main/quality_assurance_guide.md)}
+Current Version of Module (use the latest commit value):  {click on the PR and get the clickable short link to the latest commit -- see [quality_assurance_guide.md](quality_assurance_guide.md)}
 
 # Checklist Reports:
 
-## Organization
+## [Directory structure](how_to.md/#Begin-Writing)
+* [ ] Folder and file names use lowercase and underscores (no dashes)
+* [ ] Main module directory folder name is identical to the name of the module content markdown file.
+* [ ] Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
+
+## Module Organization
 * [ ] YAML is at the very top of the file
   * [ ] author name
   * [ ] email
-  * [ ] module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md )
+  * [ ] module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](versioning_guidelines.md)
   * [ ] module_template_version number is up to date with the [current sample module](https://raw.githubusercontent.com/arcus/education_modules/main/a_sample_module_template/a_sample_module_template.md) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing with QA
   * [ ] language
   * [ ] narrator
@@ -30,16 +35,16 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
   * [ ] Comment is at the top of the Overview, linked from YAML rather than rewritten
   * [ ] "Is this module right for me?" contents linked from long_description YAML rather than rewritten
   * [ ] "Estimated time to completion" contents linked from estimated_time YAML rather than rewritten
-  * [ ] Prerequisites listed
+  * [ ] Prerequisites listed and do not require learner to have specifically attained those skills through any of our other modules.
   * [ ] Learning objectives linked from learning_objectives YAML rather than rewritten
 * [ ] All sections following Overview have content (no pages with just header and no additional text / media material).
 * [ ] All quizzes start with a level 2 or 3 header. If there is only one quiz in the module, it is labelled "Quiz", or if there are multiple, each header is structured as "Quiz: label" where "label" is a short (~ 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
-* [ ] Educational content ends with a section of additional resources
+* [ ] Educational content ends with a section of additional resources, both ours and outside sources
 * [ ] Final section is Feedback.
   * [ ] Learning objectives linked from YAML rather than rewritten
   * [ ] Feedback link is updated appropriately to automatically fill in the module name when clicked by learner.
 
-## Content
+## Module Content
 
 * [ ] Complexity of the material covered seems appropriate given prerequisites.
 * [ ] Time estimate appears accurate for a learner of the targeted level.
