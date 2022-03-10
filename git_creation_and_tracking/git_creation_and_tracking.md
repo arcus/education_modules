@@ -55,14 +55,14 @@ Before you start this module, make sure you have
 
 If you have Git configured on your computer, all of the exercises in this module can be done in the same console you used to configure Git.
 
-If you do need to get Git configured on your computer the [name of module]( ) module will help you get set up.
+If you need to get Git configured on your computer the [name of module](link/to/previous/module) module will help you get set up in about 15 minutes.
 
 ## Creating a Repository
 
 Usually you will use Git to track the progress of a project. As we learn about Git, we will use the story of Wolfman and Dracula who are investigating if it
 is possible to send a planetary lander to Mars.
 
-![motivatingexample](./fig/motivatingexample.png)
+![motivatingexample](media/motivatingexample.png)
 [Werewolf vs dracula](https://www.deviantart.com/b-maze/art/Werewolf-vs-Dracula-124893530)
 by [b-maze](https://www.deviantart.com/b-maze) / [Deviant Art](https://www.deviantart.com/).
 [Mars](https://en.wikipedia.org/wiki/File:OSIRIS_Mars_true_color.jpg) by European Space Agency /
