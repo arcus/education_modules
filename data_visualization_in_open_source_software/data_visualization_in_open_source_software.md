@@ -48,8 +48,6 @@ This module assumes some familiarity with data and statistics, in particular
 
 * familiarity with some different kinds of plots, although deep understanding is not needed --- people who are used to seeing plots presented in research articles will be sufficiently prepared
 * the distinction between [continuous and categorical variables](https://education.arcus.chop.edu/variable-types/)
-* concepts used to describe a variable such as its distribution and range
-* concepts related to statistical tests such as outliers and correlation
 
 This module also assumes some basic familiarity with either R or python, but is appropriate for beginners.
 
@@ -89,13 +87,13 @@ Before we dive into how plotting works in practice, though, we'll explore some p
 
 ## Plotting libraries in R and python
 
-There are many options available for creating data visualizations in R and python. For this module, we'll focus on just one plotting library in each: ggplot2 in R, and seaborn in python.
+There are many options available for creating data visualizations in R and python. For this module, we'll focus on just one plotting library in each: `ggplot2` in R, and `seaborn` in python.
 
-### ggplot2 in R
+### `ggplot2` in R
 
-R comes with plenty of plotting functions ready to go in base R, and for quick-and-dirty visualizations, that is usually the fastest option. The popular library [ggplot2](https://ggplot2.tidyverse.org/) provides much more flexibility and control over your visualizations, however, and if you're creating visualizations to share (e.g. in a manuscript or presentation), you'll probably find you need to switch to ggplot2 at some point anyway to get more control over the appearance of your visualizations.
+R comes with plenty of plotting functions ready to go in base R, and for quick-and-dirty visualizations, that is usually the fastest option. The popular library [`ggplot2`](https://ggplot2.tidyverse.org/) provides much more flexibility and control over your visualizations, however, and if you're creating visualizations to share (e.g. in a manuscript or presentation), you'll probably find you need to switch to `ggplot2` at some point anyway to get more control over the appearance of your visualizations.
 
-To get started with ggplot2 in R on your own machine, you'll need to install it, and then load the library in R:
+To get started with `ggplot2` in R on your own machine, you'll need to install it, and then load the library in R:
 
 ```r
 # You only need to install it once
@@ -105,32 +103,32 @@ install.packages("ggplot2")
 library("ggplot2")
 ```
 
-The ggplot2 package is part of the [tidyverse](https://www.tidyverse.org/) of R packages, and is designed to work well with other tidyverse libraries like dplyr and tidyr, all of which work together to streamline common data science workflows in R. It's also fine to use ggplot2 on its own, though.
+The `ggplot2` package is part of the [tidyverse](https://www.tidyverse.org/) of R packages, and is designed to work well with other tidyverse libraries like dplyr and tidyr, all of which work together to streamline common data science workflows in R. It's also fine to use `ggplot2` on its own, though.
 
-For an excellent quick reference, see the [ggplot2 cheatsheet](https://ggplot2.tidyverse.org/#cheatsheet). It includes a tremendous amount of information in a very compact format, so it's not great for people just getting started with ggplot2, but it's a valuable reference to keep on hand for when you start making plots for your own analyses.
+For an excellent quick reference, see the [`ggplot2` cheatsheet](https://ggplot2.tidyverse.org/#cheatsheet). It includes a tremendous amount of information in a very compact format, so it's not great for people just getting started with `ggplot2`, but it's a valuable reference to keep on hand for when you start making plots for your own analyses.
 
-### seaborn in python
+### `seaborn` in python
 
-In python, there's a similar situation: The [seaborn](https://seaborn.pydata.org/) library is a plotting library that works on top of the more basic and powerful library [matplotlib](https://matplotlib.org/), making it easier to use for common data science applications.
+In python, there's a similar situation: The [`seaborn`](https://seaborn.pydata.org/) library is a plotting library that works on top of the more basic and powerful library [matplotlib](https://matplotlib.org/), making it easier to use for common data science applications.
 
-To use seaborn in python on your own machine, you'll need to [install seaborn](https://seaborn.pydata.org/installing.html) it first. You can use either PyPi (`pip install seaborn`) or Anaconda (`conda install seaborn`) to install it, whichever you use for your other python modules.
+To use `seaborn` in python on your own machine, you'll need to [install `seaborn`](https://seaborn.pydata.org/installing.html) it first. You can use either PyPi (`pip install seaborn`) or Anaconda (`conda install seaborn`) to install it, whichever you use for your other python modules.
 
-When you're ready to use seaborn in python, by convention, seaborn should be imported with the abbreviation sns (this isn't necessary for seaborn to work, but you'll see a lot of help documentation online using the sns abbreviation, so it's a good idea to get in the habit of doing that yourself, too, so that your code is similar to online examples):
+When you're ready to use `seaborn` in python, by convention, `seaborn` should be imported with the abbreviation sns (this isn't necessary for `seaborn` to work, but you'll see a lot of help documentation online using the sns abbreviation, so it's a good idea to get in the habit of doing that yourself, too, so that your code is similar to online examples):
 
 ```python
 import seaborn as sns
 ```
 
-The seaborn functions are designed to work well with [pandas](https://pandas.pydata.org/) data structures, which are organized a little differently (and generally much better for data science purposes!) from the default data structures in python. If you're not using pandas dataframes, though, [you can still use seaborn](https://seaborn.pydata.org/tutorial/data_structure.html).
+The `seaborn` functions are designed to work well with [pandas](https://pandas.pydata.org/) data structures, which are organized a little differently (and generally much better for data science purposes!) from the default data structures in python. If you're not using pandas dataframes, though, [you can still use `seaborn`](https://seaborn.pydata.org/tutorial/data_structure.html).
 
-Because seaborn is built on top of matplotlib, it doesn't automatically show plots you create, it waits until you ask to see them. If you want to see the plots you're making, you need to either use the command `matplotlib.pyplot.show()` after each plot or, if you're using an interactive jupyter notebook you can put it in [matplotlib mode](https://ipython.readthedocs.io/en/stable/interactive/plotting.html).
+Because `seaborn` is built on top of matplotlib, it doesn't automatically show plots you create, it waits until you ask to see them. If you want to see the plots you're making, you need to either use the command `matplotlib.pyplot.show()` after each plot or, if you're using an interactive jupyter notebook you can put it in [matplotlib mode](https://ipython.readthedocs.io/en/stable/interactive/plotting.html).
 
 ## How plotting works in practice
 
 Often, the best way to get the visualization you want is by finding an existing example that's similar to what you want and then copying that code and modifying it as needed.
 
 <div class = "care">
-Don't expect to become fully "fluent" in either ggplot2 or seaborn! They are complex and powerful systems, with lots and lots of detail. Even experienced programmers frequently rely on google to get their plotting code just right.
+Don't expect to become fully "fluent" in either `ggplot2` or `seaborn`! They are complex and powerful systems, with lots and lots of detail. Even experienced programmers frequently rely on google to get their plotting code just right.
 </div>
 
 ### Selecting the right plot for your data
@@ -148,7 +146,7 @@ Google's Material Design provides a [good overview of most kinds of plots and th
 
 ### Data visualization workflow
 
-Here is a good workflow for creating a new data visualization using ggplot2 or seaborn:
+Here is a good workflow for creating a new data visualization using `ggplot2` or `seaborn`:
 
 1. Spend time carefully thinking through the plot you want to create, as covered in [the previous section](#selecting-the-right-plot-for-your-data). For many people, this means drawing a sketch (a great excuse to keep colored pencils at your desk!). Include as many details as you can, like labels, facets, and scales.
 2. Search (online or through the help documentation) for the basic commands to make the kind of plot you're thinking of (scatterplot, line plot, box plot, etc.). If you're an experienced user, this may be a step you can do without google, at least for plots you make frequently.
@@ -160,7 +158,7 @@ Here is a good workflow for creating a new data visualization using ggplot2 or s
 
 For both step 2 and 4 in the data visualization workflow, browsing galleries of example plots will save you tons of time.
 
-There are many examples of seaborn visualizations with code online, including the large [example gallery on the seaborn website](https://seaborn.pydata.org/examples/index.html). Likewise, there are lots of great [example ggpolot2 plots with code](https://www.r-graph-gallery.com/ggplot2-package.html).
+There are many examples of `seaborn` visualizations with code online, including the large [example gallery on the `seaborn` website](https://seaborn.pydata.org/examples/index.html). Likewise, there are lots of great [example ggpolot2 plots with code](https://www.r-graph-gallery.com/ggplot2-package.html).
 
 
 ## A note about data structure
@@ -196,16 +194,16 @@ For more guidance on accessible design of data visualizations, see this presenta
 
 ## Quiz
 
-Which of the following statements best describes the seaborn and ggplot2 libraries?
+Which of the following statements best describes the `seaborn` and `ggplot2` libraries?
 
 [(X)] They are designed to integrate well with other popular data science libraries
 [( )] They have basic plotting functions that are quick to use but offer little control
 [( )] They come standard in base python or R, respectively, so you don't have to install them before use
 ****
 <div class = "answer">
-Both seaborn and ggplot2 are powerful libraries designed for use in data science. Because they offer so much flexibility, they can be difficult to learn initially, but if you'll be producing data visualizations for use in publications and presentations you'll be glad you put in the time to learn to use them.
+Both `seaborn` and `ggplot2` are powerful libraries designed for use in data science. Because they offer so much flexibility, they can be difficult to learn initially, but if you'll be producing data visualizations for use in publications and presentations you'll be glad you put in the time to learn to use them.
 
-Neither ggplot2 nor seaborn are included when you install R or python, so you'll need to install them before the first time you use them. You should also periodically check for updates and install the newest versions of these and other packages you rely on.
+Neither `ggplot2` nor `seaborn` are included when you install R or python, so you'll need to install them before the first time you use them. You should also periodically check for updates and install the newest versions of these and other packages you rely on.
 </div>
 ****
 
@@ -244,7 +242,7 @@ Which of the following statements is the **most** true of a typical workflow for
 <div class = "answer">
 Although the first two answers seem plausible, they don't really describe a typical workflow:
 
-- Everyone, including experts, reuses code from example plots and previous visualizations (that's why [galleries of example plots](#data-visualization-workflow) are so popular!). You shouldn't expect to be able to write ggplot2 or seaborn code from a blank slate. As with so many programming skills, the main difference between a ggplot2/seaborn expert and a novice is that the expert knows exactly what to google!
+- Everyone, including experts, reuses code from example plots and previous visualizations (that's why [galleries of example plots](#data-visualization-workflow) are so popular!). You shouldn't expect to be able to write `ggplot2` or `seaborn` code from a blank slate. As with so many programming skills, the main difference between a `ggplot2`/`seaborn` expert and a novice is that the expert knows exactly what to google!
 - Although planning a plot carefully before you start is a good idea and will save you time, don't expect that it will save you from having to re-work it. Creating a good visualization is almost always an iterative process --- that's one reason it's such an advantage to do your plotting in a scripted language like R or python! If you want to make a small change to a plot, you don't have to start from scratch, you can just tweak the code and re-run it.
 </div>
 ****
