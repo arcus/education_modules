@@ -2,21 +2,26 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  0.0.1
+version:  1.0.0
+module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Data Visualization in Open Source Software
-comment:  This module introduces ggplot2 and seaborn, popular data visualization libraries in R and python, respectively. It lays the groundwork for using ggplot2 and seaborn by 1) highlighting common features of plots that can be manipulated in plot code and 2) discussing data preparation for plotting.
+comment:   Introduction to two common open source data visualization libraries: ggplot2 and seaborn.
 
 long_description: This module introduces ggplot2 and seaborn, popular data visualization libraries in R and python, respectively. It lays the groundwork for using ggplot2 and seaborn by 1) highlighting common features of plots that can be manipulated in plot code and 2) discussing data preparation for plotting. This content will be most useful for people who have some experience creating data visualizations and/or reading plots presented in research articles or similar contexts. Some prior exposure to R and/or python is helpful but not required. This is appropriate for beginners.
+
+estimated_time: 20 minutes
 
 @learning_objectives
 
 After completion of this module, learners will be able to:
 
-* describe the role ggplot2 and seaborn play in the R and python programming languages, respectively
 * identify key elements in a plot that communicate information about the data
-* discuss possible data manipulation necessary to plot in either seaborn (for python) or ggplot2 (for R)
+* describe the role ggplot2 and seaborn play in the R and python programming languages, respectively
+* describe a typical data vizualization workflow
+* recognize how data structure may impact the creation of data vizualizations
+* list some best practices for creating accessible vizualizations
 
 @end
 
@@ -56,15 +61,19 @@ This module also assumes some basic familiarity with either R or python, but is 
 
 ## Introduction to visualizing data
 
-The value of a good visualization is that it can show **a lot of information** at once, much more than you get from descriptive statistics or model parameter estimates, but in a way that is **simple to interpret**. A good visual will be clean, informative, and easy to read. To display information visually, you can use a few different tools.
+The value of a good visualization is that it can show **a lot of information** at once, much more than you get from descriptive statistics or model parameter estimates, but in a way that is **simple to interpret**. A good visual will be clean, informative, and easy to read.
 
-## General tools for visualizing data
+To display information visually, you can use a few different tools, each of which corresponds to an element of the plot.
 
-The most basic tool is **position on a dimension**. Most plots make use of two dimensions, the x-axis and the y-axis, and you can communicate data values by where you depict data markers physically on the plot. For example, each of the dots in a scatterplot tell you what that data point's values are (at least roughly) for the variables plotted on the two axes. A typical barplot gives group membership along one axis (usually x) and shows counts along the other. In geographical data, the axes themselves are generally not shown in preference for displaying a map, but the implied axes are latitude and longitude.
+## Plot elements
+
+The most basic plot element used to communicate information about your data is **position on a dimension**.
+
+Most plots make use of two dimensions, the x-axis and the y-axis, and you can communicate data values by where you depict data markers physically on the plot. For example, each of the dots in a scatterplot tell you what that data point's values are (at least roughly) for the variables plotted on the two axes. A typical barplot gives group membership along one axis (usually x) and shows counts along the other. In geographical data, the axes themselves are generally not shown in preference for displaying a map, but the implied axes are latitude and longitude.
 
 ![A scatter plot, showing each patient's age along the x-axis and their glucose level on the y-axis](media/intro_1.png "A scatter plot, showing each patient's age along the x-axis and their glucose level on the y-axis")
 
-Analysts frequently find themselves in situations where they want to depict more than two dimensions at a time, though. While it is possible to create 3D plots and animated plots, there are often simpler ways to express additional dimensions --- and simpler is nearly always better when it comes to visualizations!
+Analysts frequently find themselves in situations where they want to depict more than two dimensions at a time. While it is possible to create 3D plots and animated plots, there are often simpler ways to express additional dimensions --- and simpler is nearly always better when it comes to visualizations!
 
 You can use **color** to communicate either continuous (e.g. darker = higher value) or categorical values (e.g. red = "no" and blue = "yes"). **Shape** (e.g. circle, triangle, cross) or **line type** (e.g. solid or dashed) can also indicate category membership and have the advantage of not relying on end users' ability to distinguish color. **Size** is often used to indicate count or population values.
 
@@ -74,11 +83,9 @@ Another valuable tool is **faceting**. This is when similar plots (that share on
 
 ![Two scatter plots side by side showing age vs glucose levels for patients in Class 1 (left) and Class 2 (right). The y-axis is aligned to facilitate comparison across groups.](media/intro_3.png "Two scatter plots side by side showing age vs glucose levels for patients in Class 1 (left) and Class 2 (right). The y-axis is aligned to facilitate comparison across groups.")
 
-[Overplotting](https://www.data-to-viz.com/caveat/overplotting.html) occurs when your data are obscuring each other on the plot. Two solutions for this are adjusting **alpha**, which allows you to control the level of transparency, or **jittering**, which introduces random noise to your data to spread the points out from each other somewhat. Note that jittering works best in situations where only one dimension is meaningful and you can jitter on the other (sometimes called "stripcharts"). Another solution is plotting only a sample of your data (e.g. select a random 10% of cases) or, if you have meaningful groups, using faceting.
+Most of these plot elements can be applied across a wide range of kinds of visualizations. Knowing how to identify these key plot elements will help you select effective visualizations for your own data.
 
-Most of these tools can be applied across a wide range of kinds of visualizations.
-
-In the examples in the next modules in this series, [Data visualization in ggplot2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education-modules/main/objective_3_1/data_visualization_in_ggplot2/data_visualization_ggplot2.md#1) and Data visualization in seaborn (coming soon), we'll walk through applying these tools in some of the most common kinds of plots.
+Before we dive into how plotting works in practice, though, we'll explore some popular open source tools for data visualization.
 
 ## Plotting libraries in R and python
 
@@ -104,9 +111,9 @@ For an excellent quick reference, see the [ggplot2 cheatsheet](https://ggplot2.t
 
 ### seaborn in python
 
-In python, there's a similar situation: The [seaborn](https://seaborn.pydata.org/) library is a plotting library that works on top of the more basic and powerful library [matplotlib](https://matplotlib.org/), making it easier to use for common data science applications. For some kinds of plots, you may be able to get what you want faster by just using matplotlib, but, just as with ggplot2 in R, you'll likely need seaborn to get publication-ready plots. To keep things simple, we'll just work in ggplot2 and seaborn from the beginning.
+In python, there's a similar situation: The [seaborn](https://seaborn.pydata.org/) library is a plotting library that works on top of the more basic and powerful library [matplotlib](https://matplotlib.org/), making it easier to use for common data science applications.
 
-To use seaborn in python on your own machine, you'll need to [install](https://seaborn.pydata.org/installing.html) it first. You can use either PyPi (`pip install seaborn`) or Anaconda (`conda install seaborn`) to install it, whichever you use for your other python modules.
+To use seaborn in python on your own machine, you'll need to [install seaborn](https://seaborn.pydata.org/installing.html) it first. You can use either PyPi (`pip install seaborn`) or Anaconda (`conda install seaborn`) to install it, whichever you use for your other python modules.
 
 When you're ready to use seaborn in python, by convention, seaborn should be imported with the abbreviation sns (this isn't necessary for seaborn to work, but you'll see a lot of help documentation online using the sns abbreviation, so it's a good idea to get in the habit of doing that yourself, too, so that your code is similar to online examples):
 
@@ -122,7 +129,7 @@ Because seaborn is built on top of matplotlib, it doesn't automatically show plo
 
 Often, the best way to get the visualization you want is by finding an existing example that's similar to what you want and then copying that code and modifying it as needed.
 
-<div class = "important">
+<div class = "care">
 Don't expect to become fully "fluent" in either ggplot2 or seaborn! They are complex and powerful systems, with lots and lots of detail. Even experienced programmers frequently rely on google to get their plotting code just right.
 </div>
 
@@ -143,15 +150,15 @@ Google's Material Design provides a [good overview of most kinds of plots and th
 
 Here is a good workflow for creating a new data visualization using ggplot2 or seaborn:
 
-1. Spend time carefully [thinking through the plot you want to create](#selecting-the-right-plot-for-your-data). For many people, this means drawing a sketch (a great excuse to keep colored pencils at your desk!). Include as many details as you can, like labels, facets, and scales.
+1. Spend time carefully thinking through the plot you want to create, as covered in [the previous section](#selecting-the-right-plot-for-your-data). For many people, this means drawing a sketch (a great excuse to keep colored pencils at your desk!). Include as many details as you can, like labels, facets, and scales.
 2. Search (online or through the help documentation) for the basic commands to make the kind of plot you're thinking of (scatterplot, line plot, box plot, etc.). If you're an experienced user, this may be a step you can do without google, at least for plots you make frequently.
 3. Using what you found in step 2, write out code to generate a basic version of your plot. Don't worry about appearance at this stage, the goal is just to get the basic structure down. You'll likely try a few different versions, tweaking the code and re-running it, before you get what you want.
 4. Once you have the structure of the plot in place, turn your attention to appearance (labels, colors, themes, axes, etc.). You'll likely need to return to your search engine to get these details right.
 5. Admire your beautiful visualization! And be grateful all the work you just did is saved in your code, so it will be easy for others (including Future You) to recreate your plot and make other similar ones.
 
-### Galleries of example plots
+**Galleries of example plots**
 
-For both step 2 and 4 in the [data visualization workflow](#data-visualization-workflow), browsing galleries of example plots will save you tons of time.
+For both step 2 and 4 in the data visualization workflow, browsing galleries of example plots will save you tons of time.
 
 There are many examples of seaborn visualizations with code online, including the large [example gallery on the seaborn website](https://seaborn.pydata.org/examples/index.html). Likewise, there are lots of great [example ggpolot2 plots with code](https://www.r-graph-gallery.com/ggplot2-package.html).
 
@@ -160,7 +167,7 @@ There are many examples of seaborn visualizations with code online, including th
 
 In most cases, it is easier to plot with data that is in [long form](https://argoshare.is.ed.ac.uk/healthyr_book/reshaping-data-long-vs-wide-format.html), where each variable is represented in only one column. If you have repeated measures (e.g. several encounters for each patient), that means each subject may have several rows, one for each observation. This is different from how humans typically prefer to read data, so if you're used to examining your data in a speadsheet-like view, you probably don't keep it in long format --- you would need to first transform your data frame to long format (often called "pivoting") before using it in a plotting function.
 
-<div class = "important">
+<div class = "warning">
 When you look for example plotting code, pay careful attention to the format of the data being used. You may need to perform some transformations on your data before you can use the example code.
 </div>
 
@@ -171,7 +178,7 @@ Some data visualizations are just for your own eyes (for example, during data ex
 There are some basic best practice guidelines you can use to make your visualizations more accessible, especially for people with limited ability to distinguish color or folks working with a screen or printer that doesn't render color well, for example:
 
 - Avoid using color as the sole indicator for important information. Instead, double color up with a second indicator like shape or line type.
-- Keep visualizations clean and simple, avoiding unnecessary visual clutter. In other words, keep the [data-to-ink ratio](#https://infovis-wiki.net/wiki/Data-Ink_Ratio) high.
+- Keep visualizations clean and simple, avoiding unnecessary visual clutter. In other words, keep the [data-to-ink ratio](https://infovis-wiki.net/wiki/Data-Ink_Ratio) high.
 
 Even those precautions won't help you reach people with severely limited or nonexistent visual access, though.
 
@@ -194,53 +201,53 @@ Which of the following statements best describes the seaborn and ggplot2 librari
 [(X)] They are designed to integrate well with other popular data science libraries
 [( )] They have basic plotting functions that are quick to use but offer little control
 [( )] They come standard in base python or R, respectively, so you don't have to install them before use
-***********************************************************************
+****
 <div class = "answer">
 Both seaborn and ggplot2 are powerful libraries designed for use in data science. Because they offer so much flexibility, they can be difficult to learn initially, but if you'll be producing data visualizations for use in publications and presentations you'll be glad you put in the time to learn to use them.
 
 Neither ggplot2 nor seaborn are included when you install R or python, so you'll need to install them before the first time you use them. You should also periodically check for updates and install the newest versions of these and other packages you rely on.
 </div>
-***********************************************************************
+****
 
 True or False: It's generally NOT necessary to reformat data before plotting.
 
 [( )] TRUE
 [(X)] FALSE
-***********************************************************************
+****
 <div class = "answer">
 Although some data reformatting can be completed as part of the plotting code, in many cases it will be necessary (or at least a lot easier!) to do any data manipulation before plotting.
 </div>
-***********************************************************************
+****
 
 List as many plot elements as you can that can be used as tools to communicate data values.
 
 [[color, position on axis/dimension, shape, line type, size, facet]]
-[[?]] Hint: Go back to [General tools for visualizing data](#general-tools-for-visualizing-data) and pay special attention to the **bold** terms.
+[[?]] Hint: Go back to [Plot elements](#plot-elements) and pay special attention to the **bold** terms.
 <script>
   let input = "@input".trim();
   /color|dimension|shape|line type|size|facet/i.test(input);
 </script>
-***********************************************************************
+****
 <div class = "answer">
 Correct answers include color, position on axis/dimension, shape, line type, size, and facet. If you got at least a couple items from the above list, give yourself a pat on the back!
 </div>
-***********************************************************************
+****
 
-Which of the following are most true of a typical workflow for building new data visualizations?
+Which of the following statements is the **most** true of a typical workflow for building new data visualizations?
 
-[( )] People new to data visualization should start by copying code from example plots until they're able to write plot code themselves
+[( )] People new to data visualization should start by copying code from example plots, but as they get better they'll be able to write plot code themselves
 [( )] It's best to plan your plot carefully from the beginning so that you can get it right the first time and don't have to re-work it
 [(X)] You should pick a plot type that is a good fit both for the types of variables you have and what idea you want your plot to communicate
 [[?]] Hint: Although all of these answers have some element of truth to them, only one is **completely** true.
 [[?]] Hint: See [data visualization workflow](#data-visualization-workflow) for a review.
-***********************************************************************
+****
 <div class = "answer">
 Although the first two answers seem plausible, they don't really describe a typical workflow:
 
-- Everyone, including experts, reuses code from example plots and previous visualizations (that's why [galleries of example plots](#galleries-of-example-plots) are so popular!). You shouldn't expect to be able to write ggplot2 or seaborn code from a blank slate. As with so many programming skills, the main difference between a ggplot2/seaborn expert and a novice is that the expert knows exactly what to google!
+- Everyone, including experts, reuses code from example plots and previous visualizations (that's why [galleries of example plots](#data-visualization-workflow) are so popular!). You shouldn't expect to be able to write ggplot2 or seaborn code from a blank slate. As with so many programming skills, the main difference between a ggplot2/seaborn expert and a novice is that the expert knows exactly what to google!
 - Although planning a plot carefully before you start is a good idea and will save you time, don't expect that it will save you from having to re-work it. Creating a good visualization is almost always an iterative process --- that's one reason it's such an advantage to do your plotting in a scripted language like R or python! If you want to make a small change to a plot, you don't have to start from scratch, you can just tweak the code and re-run it.
 </div>
-***********************************************************************
+****
 
 ## Additional Resources
 
