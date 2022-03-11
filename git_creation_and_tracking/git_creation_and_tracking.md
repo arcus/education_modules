@@ -2,12 +2,15 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  0.0.11
+version:  1.0.0
+module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Creating your Git Repository
 comment:  Create a new Git repository and get started with version control.
-long_description: You have heard that version control is important for reproducible research and are ready to start tracking your files. This module will teach you how to create a Git repository, add files to it, update files in it, and keep track of those changes in a clear and organized manner.
+long_description: If you have Git set up on your computer and are ready to start tracking your files then this module is for you. This module will teach you how to create a Git repository, add files to it, update files in it, and keep track of those changes in a clear and organized manner.
+
+estimated_time: 1 hour
 
 @learning_objectives
 
@@ -15,7 +18,7 @@ After completion of this module, learners will be able to:
 
 - Create a Git repository
 - Add and make changes to files in the repository
-- Write short helpful descriptions to track the changes
+- Write short helpful descriptions, called "commit messages" to track the changes
 - Understand what `add` and `commit` do.
 
 @end
@@ -41,10 +44,11 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-Before you start this module, make sure you have
+Before you start this module, make sure you
 
-* Configured Git on your computer. See [this module](https://education.arcus.chop.edu) to learn how.
-* The ability to edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file).
+* Know how to access a command line interface (CLI) on your computer.
+* Configure Git on your computer.
+* The ability to edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file), one of many text editors that you can access directly from the command line interface (CLI).
 
 **Learning Objectives**
 
@@ -53,16 +57,18 @@ Before you start this module, make sure you have
 
 ## Lesson Preparation
 
-If you have Git configured on your computer, all of the exercises in this module can be done in the same console you used to configure Git.
+Open a new command line interface on your computer. All exercises in this module will be done in this interface.
 
-If you need to get Git configured on your computer the [name of module](link/to/previous/module) module will help you get set up in about 15 minutes.
+If you are not sure if Git is configured on your computer, enter `git config --list` into your interface. The last two lines of output should show your `user.name` and `user.email`. If these are correct you are all ready to start the module!
+
+If you need to get Git configured on your computer the [Setting Up Git](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/rmh-git-setup/git_setup/setting_up_git.md#1) module will help you get set up in about 20 minutes.
 
 ## Creating a Repository
 
 Usually you will use Git to track the progress of a project. As we learn about Git, we will use the story of Wolfman and Dracula who are investigating if it
 is possible to send a planetary lander to Mars.
 
-![motivatingexample](media/motivatingexample.png)
+![A collage of the project we will use as a motivating example. Figures include Dracula, a werewolf, a mummy, and several planets and moons.](media/motivatingexample.png)
 [Werewolf vs dracula](https://www.deviantart.com/b-maze/art/Werewolf-vs-Dracula-124893530)
 by [b-maze](https://www.deviantart.com/b-maze) / [Deviant Art](https://www.deviantart.com/).
 [Mars](https://en.wikipedia.org/wiki/File:OSIRIS_Mars_true_color.jpg) by European Space Agency /
@@ -139,17 +145,14 @@ we will lose the project's history.
 
 ### Creating the `main` branch
 
-Next, we will change the default branch to be called `main`.
-This might be the default branch depending on your settings and version
-of Git.
-See the [setup episode](/path/to/earlier/module) for more information on this change.
+The `main` branch is likely to be the default branch depending on your settings and version
+of Git. But just to be sure, we will change the default branch to be called `main`:
 
 ```console
 $ git checkout -b main
 
 Switched to a new branch 'main'
 ```
-
 
 We can check that everything is set up correctly
 by asking Git to tell us the status of our project:
@@ -167,6 +170,8 @@ nothing to commit (create/copy files and use "git add" to track)
 If you are using a different version of Git, the exact
 wording of the output might be slightly different.
 
+
+
 ### Quiz: `git init`
 
 What command Dracula enter in the blank in order to create a new Git repository?
@@ -181,7 +186,7 @@ $ __________        # make the planets directory a Git repository
 [[git init]]
 ***
 <div class = "answer">
-By initializing the Git repository inside the planets directory, Git will track every file inside planets.
+By initializing the Git repository inside the planets directory with the `git init` command, Git will track every file inside planets.
 </div>
 ***
 
@@ -495,7 +500,7 @@ It is actually a series of commands for tools like editors and `patch`
 telling them how to reconstruct one file given the other. Nevertheless we can gain some useful information
 if we break it down into pieces:
 
-  1. The first line tells us that Git is producing output similar to the Unix `diff` command comparing the old and new versions of the file.
+  1. The first line tells us that Git is comparing the old and new versions of the file `mars.txt`.
   2. The second line tells exactly which versions of the file Git is comparing; `df0654a` and `315bf3a` are unique computer-generated labels for those versions.
   3. The third and fourth lines once again show the name of the file being changed.
   4. The remaining lines are the most interesting, they show us the actual differences and the lines on which they occur. In particular, the `+` marker in the first column shows where we added a line.
@@ -532,7 +537,7 @@ nothing to commit, working directory clean
 
 Just like any method of backing up or saving your work, the benefits of using Git for version control are only available if you regularly use them. In our example, we have been committing every time we add or change a line in a single file. That is going to be odious overkill for most projects.
 
-- **Commit each chunk of changes** If you add a new section to a file, or change a certain item across multiple files, it is a good practice to commit those changes with a message describing them. If a commit message like `-m "add section on bears"` or `-m "reorder paragraphs from smallest to largest mammals"` accurately describes your changes, make sure you commit the changes so that you can find them again later!
+- **Commit each chunk of changes** If you add a new section to a file, or change a certain item across multiple files, it is a good practice to commit those changes with a message describing them. If a commit message like `-m "add section on atmosphere"` or `-m "reorder paragraphs on moons from smallest to largest moon"` accurately describes your changes, make sure you commit the changes so that you can find them again later!
 
 - **Commit before making any changes that could break your code** If your code currently works are you intend to add something new that may break it, make sure you commit so that you will be able to revert to the working version if needed.
 
@@ -592,13 +597,15 @@ As you work on your project, files will cycle through these different states. Wh
 **Is there a better way to think of this?** Lots of people have favorite metaphors for how Git works. Before checking out the selection on the next page, do you have any ideas for possible ways to understand the `add` and `commit` process in Git?
 
 ### A few metaphors for Git
-Metaphors for Git abound, and no metaphor has been good enough to become the "standard" example. If you are looking for a good metaphor to help you understand what Git is, here are some ones to consider:
 
-1. [A musical metaphor](link)
-2. [A moving houses metaphor](link)
-3. [A 2d artwork metaphor](link)
-4. ...
+Metaphors for Git abound, and no metaphor has been great enough to become the "standard" example. If you are looking for a good enough metaphor to help you understand what Git is, here are some ones to consider:
 
+1. [A musical metaphor video on YouTube](https://www.youtube.com/watch?v=S9Do2p4PwtE) <5 minutes
+2. [A poetry metaphor video on YouTube](https://www.youtube.com/watch?v=BCQHnlnPusY) ~14 minutes
+3. [A metaphor about building a house](https://towardsdatascience.com/a-simple-story-to-explain-version-control-to-anyone-5ab4197cebbc) blog post
+4. [A metaphor about photo albums](https://www.freecodecamp.org/news/git-the-laymans-guide-to-understanding-the-core-concepts/) article
+
+Remember a metaphor doesn't need to be perfect to be helpful. If you find or come up with one that helps you understand the workflow, use it!
 
 ### Telling Git not to track some files
 
@@ -711,7 +718,7 @@ nothing to commit, working directory clean
 ```
 
 
-For more details on how to use `.gitignore` to include or exclude particular files or folders check out Software Carpentry's [module](https://swcarpentry.github.io/git-novice/06-ignore/index.html) on this.
+For more details on how to use `.gitignore` to include or exclude particular files or folders check out Software Carpentry's [lesson on Ignoring Things](https://swcarpentry.github.io/git-novice/06-ignore/index.html).
 
 
 
@@ -757,6 +764,6 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Module+Template%22)!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Creating+your+Git+Repository%22)!
 
 Remember to change the redcap link so that the module name is correct for this module!
