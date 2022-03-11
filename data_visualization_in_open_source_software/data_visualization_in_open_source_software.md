@@ -247,6 +247,22 @@ Although the first two answers seem plausible, they don't really describe a typi
 </div>
 ****
 
+Which of the following are good strategies to extend the accessibility of your data visualizations? Select all that apply.
+ [[X]] Avoid using color as the sole means of distinguishing important information
+ [[X]] Provide informative alt text (for online visuals) or captions
+ [[X]] Avoid cluttered, complex visuals
+ [[X]] Present the information from the plot in alternate forms (a data table in an appendix, narrative description in the text, etc.)
+ ***
+<div class = "answer">
+All of these are good strategies!
+
+In general, review your work asking yourself "If the reader didn't have visual access, would this still communicate everything I intend it to?" It may not always be possible to make your work maximally accessible, but there's often a lot you can do to improve it.
+
+**Note**: We've discussed visual accessibility exclusively here because that is a common stumbling block for data visualizations, but access is much more than vision. For broader guidelines on creating accessible content, see the [Web Content Accessibiility Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) and [The Inclusive Learning Design Handbook](https://handbook.floeproject.org/about/).
+ </div>
+ ***
+
+
 ## Additional Resources
 
 If you are brand new to R or python (or want a refresher), check out [Intro to R](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md) to learn more about how to use each programming language. Before you can create visualizations of your own data, you'll need to be able to read data into R or python, and check and manipulate data frames.
