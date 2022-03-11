@@ -69,17 +69,17 @@ The most basic plot element used to communicate information about your data is *
 
 Most plots make use of two dimensions, the x-axis and the y-axis, and you can communicate data values by where you depict data markers physically on the plot. For example, each of the dots in a scatterplot tell you what that data point's values are (at least roughly) for the variables plotted on the two axes. A typical barplot gives group membership along one axis (usually x) and shows counts along the other. In geographical data, the axes themselves are generally not shown in preference for displaying a map, but the implied axes are latitude and longitude.
 
-![A scatter plot, showing each patient's age along the x-axis and their glucose level on the y-axis](media/intro_1.png "A scatter plot, showing each patient's age along the x-axis and their glucose level on the y-axis")
+![A scatter plot, showing each patient's age along the x-axis and their glucose level on the y-axis.](media/intro_1.png)
 
 Analysts frequently find themselves in situations where they want to depict more than two dimensions at a time. While it is possible to create 3D plots and animated plots, there are often simpler ways to express additional dimensions --- and simpler is nearly always better when it comes to visualizations!
 
 You can use **color** to communicate either continuous (e.g. darker = higher value) or categorical values (e.g. red = "no" and blue = "yes"). **Shape** (e.g. circle, triangle, cross) or **line type** (e.g. solid or dashed) can also indicate category membership and have the advantage of not relying on end users' ability to distinguish color. **Size** is often used to indicate count or population values.
 
-![A scatter plot of age vs glucose with lines of best fit, with patients in Class 1 shown as yellow dots with a solid best fit line, and Class 2 as blue triangles with a blue dashed line](media/intro_2.png "A scatter plot of age vs glucose with lines of best fit, with patients in Class 1 shown as yellow dots with a solid best fit line, and Class 2 as blue triangles with a blue dashed line")
+![A scatter plot of age vs glucose with lines of best fit, with patients in Class 1 shown as yellow dots with a solid best fit line, and Class 2 as blue triangles with a blue dashed line.](media/intro_2.png)
 
 Another valuable tool is **faceting**. This is when similar plots (that share one or both axes) are lined up next to each other to facilitate comparison. For example, when you want to show the relationship between two variables, X and Y, for several different subsets of the data, you can generate a scatter plot of X and Y for each subset of the data as its own facet. If you have more than two or three groups, faceting generally produces clearer plots than using color or shape to distinguish groups.
 
-![Two scatter plots side by side showing age vs glucose levels for patients in Class 1 (left) and Class 2 (right). The y-axis is aligned to facilitate comparison across groups.](media/intro_3.png "Two scatter plots side by side showing age vs glucose levels for patients in Class 1 (left) and Class 2 (right). The y-axis is aligned to facilitate comparison across groups.")
+![Two scatter plots side by side showing age vs glucose levels for patients in Class 1 (left) and Class 2 (right). The y-axis is aligned to facilitate comparison across groups.](media/intro_3.png)
 
 Most of these plot elements can be applied across a wide range of kinds of visualizations. Knowing how to identify these key plot elements will help you select effective visualizations for your own data.
 
