@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0
+version:  1.0.0
 language: en
 narrator: US English Female
 title: R Basics: Introduction
@@ -269,7 +269,8 @@ If you already completed this work for a previous module, and it's been a while 
 * Open your project.
 * In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
 
-![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
+![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->  
+![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
 
 <div class = "warning">
 If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform.Rmd` to `my_transform.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
@@ -409,9 +410,10 @@ When you click the play button in a chunk, as shown above, the code will execute
 
 The second way to execute code is to convert the entire R Markdown document into HTML (or another target format).  For now we'll stick to HTML because it's the default and usually what you want. This process of converting R Markdown into a target format is called "rendering" or "knitting" – the mental model here is that you're knitting together marked up text, code, and results into a nicely formatted document that you can then present or share with others.
 
-To **knit** a document, click the button that says "Knit" next to a blue ball of yarn on the top of the Editor pane.
+To **knit** a document, click the button that says "Knit" next to a blue ball of yarn on the top of the Editor pane.  Then in a few moments, a rendered document will be shown:
 
-![RStudio window with the knit button indicated](media/knit_button.png)<!-- style = "max-width:600px;" -->![Result of knitting, the start of an html document with headers and code](media/rendered_markdown.png)<!-- style = "max-width:600px;"-->
+![RStudio window with the knit button indicated](media/knit_button.png)<!-- style = "max-width:600px;"-->
+![Result of knitting, the start of an html document with headers and code](media/rendered_markdown.png)<!-- style = "max-width:600px;"-->
 
 ### R Markdown in Detail
 
@@ -505,13 +507,13 @@ The basic tenets of "tidy" data analysis include:
 ### Packages
 
 <div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 55%; float:left;">
+<div style = "margin: 1rem; max-width: 70%; float:left;">
 The Tidyverse is package (a collection of functions, data, and help documentation) that we can use to extend the functionality of R.
 
 You can download and **install** a package with the command `install.packages`. So let's say you want to install a package named "tidyverse". You would go to the R Console and type `install.packages("tidyverse")`. Each package you want to use needs to be installed only once on each computer. On our RStudio Server, you won't need to install any packages for this course (I have installed them for you). If you're using R on your own computer, however, you will have to install packages.
 
 </div>
-<div style = "margin: 1rem; max-width: 40%; float:left;">
+<div style = "margin: 1rem; max-width: 30%; float:left;">
 
 ![Tidyverse represented as a few help documents, some functions, and some data tables](media/tidyverse.png)<!-- style = "max-width:200px;" -->
 </div>
@@ -597,6 +599,7 @@ Which of the following statements are accurate?
 [[?]] Hint: multiple correct answers!
 
 <div class = "answer">
+
 <details><summary>Click to see an explanation of the answer.</summary>
 
 Functions can have zero, one, or many inputs.  An example of a function taking zero inputs is `getwd()`, which tells you what R considers its current "working directory".
@@ -665,7 +668,7 @@ The `result` column holds that information. We can apply a filter to that column
 
 Let's recap what we have covered in this session.
 
-![R logo](media/r_logo.png)<!-- style="max-width:150px; margin:2em auto;" --> ![RStudio logo](media/rstudio_logo.png)<!-- style="max-width:150px; margin:2em auto;" --> ![R Markdown logo](media/r__markdown_logo.png)<!-- style="max-width:150px; margin:2em auto;" -->
+![R logo](media/r_logo.png)<!-- style="max-width:300px; margin:2em auto;" --> ![RStudio logo](media/rstudio_logo.png)<!-- style="max-width:300px; margin:2em auto;" -->![R Markdown logo](media/r__markdown_logo.png)<!-- style="max-width:300px; margin:2em auto;" -->
 
 We started by defining and differentiating **R** (the programming language) from **RStudio** (the integrated development environment -- IDE -- or editor) and **R Markdown** (the document format we use for reproducible data analysis). Then we explored RStudio and R Markdown more closely.
 
