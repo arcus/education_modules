@@ -275,14 +275,14 @@ If you already completed this work for a previous module, and it's been a while 
 If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform.Rmd` to `my_transform.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
 </div>
 
-## Reproducible Data Analysis and R Markdown
+## Consequences of Irreproducibility
 
 <div style = "align-items: center; display: flex;">
 
 <div style = "margin: 1rem; max-width: 65%; float:left;">
 Before we jump into coding, we want to talk about **reproducibility**. One of the most powerful aspects of working in the R environment is that it makes it straightforward to produce **reproducible data analyses**.
 
-Consider the following case study.
+Consider the following case study, which highlights potential consequences of **irreproducibile** research.
 
 In the mid-2000s, researchers at Duke University tried to use microarray gene expression data of tumor cells to predict sensitivity to chemotherapeutic agents. This approach generated a lot of excitement at the time, and the resulting work was published in high-profile journals.
 
@@ -301,10 +301,36 @@ In the end, 18 papers were retracted, and Duke settled more than 10 lawsuits for
 
 Two biostatisticians at MD Anderson uncovered these mistakes in painstaking work. Let's look at one of the errors they found.
 
-What you see here are the names of are a few of the hundreds of microarray probe sets – each roughly corresponds to a gene – that the Duke investigators reported tp predict sensitivity to 5-fluorouracil. ![ List of codes that are a combination of letters and numbers](media/duke_probes.png)
+What you see here are the names of are a few of the hundreds of microarray probe sets – each roughly corresponds to a gene – that the Duke investigators reported tp predict sensitivity to 5-fluorouracil.
 
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 65%; float:left;">
+What you see here are the names of are a few of the hundreds of microarray probe sets – each roughly corresponds to a gene – that the Duke investigators reported tp predict sensitivity to 5-fluorouracil.
+</div>
+<div style = "margin: 1rem; max-width: 30%; float:left;">
+<pre>
+"1881_at"
+"31321_at"
+"31725_s_at"
+"32307_r_at"
+</pre>
+</div>
+</div>
+
+<div style = "align-items: center; display: flex;">
+
+<div style = "margin: 1rem; max-width: 65%; float:left;">
 And here are the probe sets that the MD Anderson team got. You can see that they're not the same.
-![List of codes that are a combination of letters and numbers, but the number is one higher than the Duke list](mdanderson_probes.png)
+</div>
+<div style = "margin: 1rem; max-width: 30%; float:left;">
+<pre>
+"1882_g_at"
+"31322_at"
+"31726_at"
+"32308_r_at"
+</pre>
+</div>
+</div>
 
 You might notice a pattern: the number of the probe set that Duke reported is always one less than the number of the probe that MD Anderson found when they re-did the analysis.
 
@@ -326,11 +352,11 @@ A key issue in this case study is that the Duke investigators used "point and cl
 
 This prevented peers and independent investigators from catching errors in the analysis, until it was too late.
 
-![Logo of Microsoft Excel](media/excel_logo.png)
+![Logo of Microsoft Excel](media/excel_logo.png)<!-- style = "max-width:200px" -->
 
 And the Duke case study is only one example where the barrier to reproducibility was that people used graphical user interface "point-and-click" type tools for analyzing large and complicated sets of data. Excel doesn't record user actions and because of this, is fundamentally not reproducible.
 
-## Reproducible Research
+### Future You
 
 Reproducibility doesn't only help people **outside** a study understand how things were done.  They also help the initial conduct of research as well.  Consider the following 3 statements and ask yourself if they sound familiar.
 
@@ -341,20 +367,28 @@ Reproducibility doesn't only help people **outside** a study understand how thin
 **Your closest collaborator is you from 6 months ago...**
 ...  but they don't answer your emails.
 
-Additionally, we've already seen how irreproducibility can cause real harm to human subjects, something we all want to avoid.
+Additionally, we've already seen how irreproducibility can cause real harm to human subjects, something we all want to avoid.  
 
-### R Markdown
+In short, reproducible research can reduce harm for subjects, science, and scientists.  There are tools to help you conduct research data analysis in a way that helps your future collaborators, including future you, understand and extend your work.  A great tool for reproducible research is the use of R Markdown to record your research steps.
+
+## R Markdown
 
 Now that we have convinced you (we hope) that reproducibility is important, how do you undertake a reproducible analysis? One answer to this is **R Markdown**.
 
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 65%; float:left;">
 R Markdown lets you write computer code mixed in with English (or other human language) narrative annotation that documents the purpose of the code and details about the decisions you made in your analysis.
 
 R Markdown is quickly becoming the standard for reproducible data analysis. A primary aim of this module is to teach you to use R Markdown and to encourage you to start working it into your day to day data workflows.
- ![Logo of R Markdown](media/r_markdown_logo.png)
+</div>
+<div style = "margin: 1rem; max-width: 30%; float:left;">
+![Logo of R Markdown](media/r_markdown_logo.png)<!-- style = "max-width: 200px;" -->
+</div>
+</div>
 
 R Markdown documents are composed of 3 basic types of building blocks.
 
-![An R Markdown file, divided into three sections: header, text, and code.](media/r_markdown_anatomy.png)
+![An R Markdown file, divided into three sections: header, text, and code.](media/r_markdown_anatomy.png)<!-- style = "max-width: 900px;" -->
 
 The first is the **header** which includes information about the document, such as its title, author, and the desired output format when the document is rendered. A lot of this information is optional so a header can be pretty short, as this one here, or much longer.
 
@@ -366,7 +400,7 @@ So how do you execute the code in the code chunks?  There are a couple of ways.
 
 The first is to run the code in a single code chunk. And you do this by clicking the green right-pointing triangle on the top right of the chunk. This symbol looks like a "play" button.  There are other symbols, too, including one that means "run all the code chunks that came before this one".
 
-![A code chunk with a green play button indicated](media/run_chunk.png)
+![A code chunk with a green play button indicated](media/run_chunk.png)<!-- style = "max-width: 600px;" -->
 
 When you click the play button in a chunk, as shown above, the code will execute.  Then, immediately below the code chunk, you will see any results of the code printed on your screen.  In this case, you would see some statistics about a normal distribution.
 
@@ -374,7 +408,7 @@ The second way to execute code is to convert the entire R Markdown document into
 
 To **knit** a document, click the button that says "Knit" next to a blue ball of yarn on the top of the Editor pane.
 
-![RStudio window with the knit button indicated](media/knit_button.png)<!-- style = max-width:400px;-->![Result of knitting, the start of an html document with headers and code](media/rendered_markdown.png)<!-- style = max-width:400px;-->
+![RStudio window with the knit button indicated](media/knit_button.png)<!-- style = max-width:600px;-->![Result of knitting, the start of an html document with headers and code](media/rendered_markdown.png)<!-- style = max-width:600px;-->
 
 ### R Markdown in Detail
 
@@ -404,9 +438,9 @@ So let's practice creating an R Markdown document, running a code chunk, and kni
 
 ### Practicing R Markdown
 
-If you haven't already, please open RStudio, either on your own computer or in our temporary environment online.
+If you haven't already, go ahead and begin your RStudio session, as explained in the section [Lesson Preparation: Our RStudio Environment](#lesson-preparation-our-rstudio-environment).
 
-In RStudio, please:
+Ready to go? Open RStudio, either on your own computer or in our temporary environment online.  Then:
 
 * Go to the File menu, choose "New File", and finally select "R Markdown". Click OK.  This will give you a handy template which is used to show you a working example of a simple R Markdown document.
 * Run each code chunk in order by clicking the green "play" button at the top of each chunk.  Notice what happens!
