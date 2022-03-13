@@ -447,15 +447,15 @@ Ready to go? Open RStudio, either on your own computer or in our temporary envir
 
 * Go to the File menu, choose "New File", and finally select "R Markdown". Click OK.  This will give you a handy template which is used to show you a working example of a simple R Markdown document.  You will be asked to provide a title and author, and you can choose any values you like, such as "Test" or "My First Markdown".
 
-![File, New File, R Markdown menu](media/new_r_markdown.png)<!-- style = "max-width: 400px;" -->
+![File, New File, R Markdown menu](media/new_r_markdown.png)<!-- style = "max-width: 400px; padding-left: 3em; border: 1px solid rgb(var(--color-highlight));" -->
 
 * Run each code chunk in order by clicking the green "play" button at the top right corner of each chunk.  Notice what happens!
 
-![Mouse hovering over "play" button in chunk](media/run_current_chunk.png)<!-- style = "max-width: 400px;" -->
+![Mouse hovering over "play" button in chunk](media/run_current_chunk.png)<!-- style = "max-width: 400px; padding-left: 3em; border: 1px solid rgb(var(--color-highlight));" -->
 
 * Knit the document, using the "Knit" button at the top of the screen. You will be prompted to provide a name for your file.  Type "test" and click "Save".  
 
-![Mouse hovering over "knit" button in menu](media/knit_current_document.png)<!-- style = "max-width: 400px;" -->
+![Mouse hovering over "knit" button in menu](media/knit_current_document.png)<!-- style = "max-width: 400px; padding-left: 3em; border: 1px solid rgb(var(--color-highlight));" -->
 
 * Once your document is knitted, it will open in HTML (you might see a prompt about "pop up windows" if you're using RStudio in the cloud, so please do permit pop-up windows).   Take a look at the HTML output.  Can you see the relationship between what's in the R Markdown document and the resulting HTML output?
 
@@ -465,7 +465,7 @@ Look in the "Files" pane in the lower right of RStudio and you'll see that we sa
 
 Now that we are familiar with how to create R Markdown documents we can begin the process of performing data analysis in R in earnest by importing a clinical data set.
 
-![The data analysis pipeline, which begins with Import, then Tidy, then three actions that form a circle that repeat: Visualize, Model, and Transform.  The pipeline ends with "Communicate".](media/pipeline_import.png)<!-- style = max-width:500px;-->
+![`The data analysis pipeline, which begins with Import, then Tidy, then three actions that form a circle that repeat: Visualize, Model, and Transform.  The pipeline ends with "Communicate".`](media/pipeline_import.png)<!-- style = "max-width:500px;"-->
 
 The first step in the data analysis pipeline is to bring in, or **import**, the data to your environment, which for the purposes of this module is R.
 
@@ -495,7 +495,7 @@ The tidyverse is a set of tools that has become the de facto standard for doing 
 </div>
 <div style = "margin: 1rem; max-width: 25%; float:left;">
 
-![Tidyverse logo](media/tidyverse_logo.png)<!-- style = max-width:500px;-->
+![Tidyverse logo](media/tidyverse_logo.png)<!-- style = "max-width:300px; margin-left: 3em;" -->
 </div>
 </div>
 
@@ -518,7 +518,7 @@ You can download and **install** a package with the command `install.packages`. 
 </div>
 <div style = "margin: 1rem; max-width: 50%; float:left;">
 
-![Tidyverse represented as a few help documents, some functions, and some data tables](media/tidyverse.png)<!-- style = max-width:500px;-->
+![Tidyverse represented as a few help documents, some functions, and some data tables](media/tidyverse.png)<!-- style = "max-width:400px;""-->
 </div>
 </div>
 
@@ -537,7 +537,7 @@ Here is how you use the `read_csv` function to read a CSV file into a data frame
 ``` r
 data_frame <- read_csv(file_name)
 ```
-![A csv file on the far right is directed by an arrow to a data frame with rows and columns on the left](media/csv_import.png)<!-- style = max-width:500px;-->
+![A csv file on the far right is directed by an arrow to a data frame with rows and columns on the left](media/csv_import.png)<!-- style = "max-width:500px;" -->
 
 You start with the name of the object you want to hold the data, then you type a leftward arrow symbol using the less than and dash symbols, then "read_csv" and then the file name in parentheses.
 
@@ -557,7 +557,7 @@ A function can have zero, one, or many arguments. If there is more than one argu
 
 The output of the read_csv function is a data frame object. You will usually want to *capture* that data frame inside of a named object so you can use it as the input for other functions, for example to summarize or visualize your data.
 
-![`The code is annotated. "data_frame" is labeled "object", the leftward arrow <- is labeled "assignment operator", "read_csv" is labeled "function", and "file_name" is labeled "argument".](media/function_breakdown.png)<!-- style = max-width:700px;-->
+![`The code is annotated. "data_frame" is labeled "object", the leftward arrow <- is labeled "assignment operator", "read_csv" is labeled "function", and "file_name" is labeled "argument".](media/function_breakdown.png)<!-- style = "max-width:700px;" -->
 
 To put the output of the `read_csv` function into a named object, we use the **assignment operator**.
 
@@ -570,8 +570,11 @@ Consider this line of code:
 ``` r
 covid_testing <- read_csv("covid_testing.csv")
 ```
+<div class = "warning">
+We could speak aloud the line of code above saying "covid underscore testing gets read underscore csv of covid underscore testing dot csv", or we could gloss over the underscores and just say "covid testing" and "read csv".  When we talk with others about R, this is often what we do, so just be aware that you sometimes have to intuit underscores when someone is reading aloud or talking through a code issue.
+</div>
 
-We could speak this aloud saying "covid underscore testing gets read underscore csv of covid underscore testing dot csv", or we could gloss over the underscores and just say "covid testing" and "read csv".  When you're talking with others about R, this is often what we do, so just be aware that you sometimes have to intuit underscores when someone is reading aloud or talking through a code issue.
+<h3>Quotes</h3>
 
 You might notice that one of our "covid testing" objects is put in quotes and the other one isn't.
 
@@ -589,16 +592,22 @@ Sometimes, either quoting or not quoting works. This is one of the things where 
 
 
 <div class = "question">
-In the box below, write what you think the name of this is (all lowercase, please).
 
-[[histogram]]
-[[?]] Hint: this word ends in "gram"
+Which of the following statements are accurate?
+
+[[X]] Functions use zero or more inputs called arguments
+[[ ]] Functions use one or more inputs called arguments
+[[ ]] You must install a package before using it in each new session of R
+[[X]] You must load a package before using it in each new session of R
+[[X]] The `install.packages()` function requires putting the package name in quotes
+[[?]] Hint: multiple correct answers!
 
 <div class = "answer">
 <details><summary>Click to see an explanation of the answer.</summary>
 
-"histogram" is the right answer!  A histogram plots the frequency of something in terms of some other thing (for instance, a time value like days).  In our next section, we're going to build a histogram.
-</details>
+Functions can have zero, one, or many inputs.  An example of a function taking zero inputs is `getwd()`, which tells you what R considers its current "working directory".
+
+You only need to install a package using `install.packages()` **once** per computer (unless the package has a new update that you want to install).  You do, however, have to load a package using `library()` before its functions are available to you.  That means loading it each time you start a new session of R.  **When you knit a document, that counts as a separate session**, so make sure and put a `library()` in place for each package you use in your code in each R Markdown document you create.  Oh, and yep, for `install.packages()` you do indeed have to put quotes around the name of the package.
 </div>
 </div>
 
@@ -618,7 +627,6 @@ Read through the instructions and complete the assigned tasks:
 You can open the `introduction_solutions.Rmd` file to see the answers.
 
 To import data, you run the cell indicated.  Click on the image below to show a short clip of what this looks like.
-
 
 <div style="display:none">@gifPreload</div>
 
