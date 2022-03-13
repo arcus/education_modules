@@ -7,6 +7,7 @@ narrator: US English Female
 title: R Basics: Visualizing Data With ggplot2
 comment:  Learn how to visualize data using R's `ggplot2` package.
 long_description: Do you want to learn how to make some basic data visualizations (graphs) in R?  In this module you'll learn about the "grammar of graphics" and the base code that you need to get started.  We'll use the basic ingredients of a tidy data frame, a geometric type, and some aesthetic mappings (we'll explain what all of those are).  This module teaches the use of the `ggplot2` package, which is part of the `tidyverse` suite of packages.
+estimated_time: 1 hour
 
 @learning_objectives  
 
@@ -82,7 +83,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** 1 hour
+**Estimated time to completion:** @estimated_time
 
 **Pre-requisites**
 
@@ -173,14 +174,14 @@ If you already completed this work for a previous module, and it's been a while 
 ![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
 
 <div class = "warning">
-If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform.Rmd` to `my_transform.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
+If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.
 </div>
 
 ### How to Follow Along
 
-Please go ahead and open the "r\_basics\_visualize\_data" directory in whichever RStudio environment you're working in, then the "exercises" directory.  You can open "visualize.Rmd" which will make you ready for our first hands-on activity in just a bit!
+Please go ahead and open the "r\_basics\_visualize\_data" directory in whichever RStudio environment you're working in. You can open "visualize_exercises.Rmd" which will make you ready for our first hands-on activity in just a bit!
 
-![RStudio showing the visualize.Rmd file.](media/visualize_rmd.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
+![RStudio showing the visualize_exercises.Rmd file.](media/visualize_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
 
 ## Thinking Graphically From Data
 
@@ -223,9 +224,9 @@ In the box below, write what you think the name of this is (all lowercase, pleas
 
 Please go to your RStudio environment (either the version in the cloud or your local RStudio that you've prepared with a project containing our files for this module).  
 
-If you haven't already: using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` folder, and then open the `exercises` folder.  You should then open `visualize.Rmd`, which will allow you to work alongside the sections of this module.
+If you haven't already: using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` folder, and then open `visualize_exercises.Rmd`, which will allow you to work alongside the sections of this module.
 
-![RStudio window showing visualize.Rmd](media/visualize_rmd.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
+![`RStudio window showing visualize_exercises.Rmd`](media/visualize_exercises.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
 
 To get started, let's first load up our fabricated data.  Run the first code chunk by clicking the green "play" button (look at line 10).  This gives you the data frame with fake Covid testing data, the data we will use for our instruction in this module.
 
@@ -724,25 +725,25 @@ The distinction between visual elements that are "set" and those that are "mappe
 
 ### Exercise Time!
 
-Using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` directory, and then open the `exercises` directory.  You should then open `visualize.Rmd`, which will allow you to work alongside the sections of this module.
+Using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` directory, and then open `visualize_exercises.Rmd`, which will allow you to work alongside the sections of this module.
 
-![RStudio window showing visualize.Rmd](media/visualize_rmd.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
+![RStudio window showing visualize_exercises.Rmd](media/visualize_exercises.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
 
 To get started, let's first load up our fabricated data.  Run the first code chunk by clicking the green "play" button (look at line 10).  This gives you the data frame with fake Covid testing data, the data we will use for our instruction in this module.  You may have already done this a few sections ago, but it won't hurt to do it again.
 
-Then, work through the exercises in the `visualize.Rmd` file, adding and updating code as indicated.
+Then, work through the exercises in the `visualize_exercises.Rmd` file, adding and updating code as indicated.
 
 Stop when it says "Stop here".  We'll go over the solutions in the next section.
 
 ### Solutions
 
-If you like, you can open the solutions version of visualize.Rmd by navigating in your file browser up one directory (to the `r_basics_visualize_data` directory), and then into the "solutions" directory, where you'll find a (completed!) solutions file also entitled visualize.Rmd.
+If you like, you can open the solutions version of `visualize_exercises.Rmd` by using your file browser to open `visualize_solutions.Rmd`.
 
 You had three tasks to complete.  We'll go through them one at a time.
 
 In your first task, you were asked to do what we already did once in this module: create a histogram of Covid tests as a function of `pan_day`.  There were three blanks to fill in, and three numbered instructions.
 
-![Lines 18-31 of visualize.Rmd](media/task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![Lines 18-31 of visualize_exercises.Rmd](media/task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 Here's the solution that you should place in that code chunk:
 
@@ -754,7 +755,7 @@ ggplot(data = covid_testing) +
 
 In the second task, you were asked to rework that code with a bin width ("binwidth" in code) that corresponded to daily counts:
 
-![Lines 44-50 of visualize.Rmd](media/task_2.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![Lines 44-50 of visualize_exercises.Rmd](media/task_2.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 Here's the solution that you should place in that code chunk:
 
@@ -765,7 +766,7 @@ ggplot(data = covid_testing) +
 
 Finally, for the third task, you had to create a new code chunk by using copy and paste, **and** you had to add an aesthetic mapping using "fill".  Complicated!
 
-![Lines 58-60 of visualize.Rmd](media/task_3.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![Lines 58-60 of visualize_exercises.Rmd](media/task_3.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 
 And here's the solution:
@@ -833,23 +834,23 @@ In the next exercise, you're going to work hands-on with geom functions.
 
 ### Exercise Time!
 
-In your RStudio environment, you should already have `visualize.Rmd` open.  If not, please reopen it (within the "exercises" directory of the directory for this module).  Scroll down to `### Your Turn: Geom functions`, which should be around line 90 or so.
+In your RStudio environment, you should already have `visualize_exercises.Rmd` open.  If not, please reopen it.  Scroll down to `### Your Turn: Geom functions`, which should be around line 90 or so.
 
-![Lines 91-106 of visualize.Rmd](media/ex_2_task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![Lines 91-106 of visualize_exercises.Rmd](media/ex_2_task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 Then, work through the exercises from that point forward, running, adding, and updating code as indicated.  Hint: take advantage of code completion suggestions in RStudio to help you make an educated guess as to how to proceed, especially in the first task.
 
-We'll go over the solutions in the next section, and you can also look in the "solutions" folder and open `visualize.Rmd` to see the solution!
+We'll go over the solutions in the next section, and you can also look in the RStudio file browser and open `visualize_solutions.Rmd` to see the solution!
 
 ### Solutions
 
-If you like, you can open the solutions version of visualize.Rmd by navigating in your file browser up one directory (to the `r_basics_visualize_data` directory), and then into the "solutions" directory, where you'll find a (completed!) solutions file also entitled visualize.Rmd.
+If you like, you can open the solutions version of `visualize_exercises.Rmd` by using your file browser to open `visualize_solutions.Rmd`.
 
 You had three tasks to complete.  We'll go through them one at a time.
 
 Your first task invited you to run a code chunk that creates a histogram and use that code as the basis of a new code chunk that creates a frequency polygon.  
 
-![Lines 91-106 of visualize.Rmd](media/ex_2_task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![Lines 91-106 of visualize_exercises.Rmd](media/ex_2_task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 This is the solution code:
 
@@ -860,7 +861,7 @@ ggplot(data = covid_testing) +
 
 In your second task, you were asked to set the color of the line to "blue".  Note that lines have "color" and shapes have "fill" (for the inside) as well as optional "color" (for the edges).
 
-![Lines 110-115 of visualize.Rmd](media/ex_2_task_2.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![Lines 110-115 of visualize_exercises.Rmd](media/ex_2_task_2.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 This is the proper code:
 
@@ -871,7 +872,7 @@ ggplot(data = covid_testing) +
 
 Finally, you were asked to predict what the output of `ggplot` code using two different `geom_` functions would be:
 
-![Lines 122-131 of visualize.Rmd](media/ex_2_task_3.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![Lines 122-131 of visualize_exercises.Rmd](media/ex_2_task_3.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 Run that code, and you should see something like this!
 
