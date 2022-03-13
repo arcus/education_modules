@@ -397,7 +397,7 @@ R Markdown documents are composed of 3 basic types of building blocks.
 
 The first is the **header** which includes information about the document, such as its title, author, and the desired output format when the document is rendered. A lot of this information is optional so a header can be pretty short, as this one here, or much longer.
 
-The second type of building block is **text**. Text can include special kinds of marks that add styling, such as for example hashtags that turn a line of text into a header, and others.
+The second type of building block is **text**. Text can include special kinds of marks (Markdown) that add styling.  This includes hash marks that turn a line of text into a header, asterisks that can create italics, lines of dashes that turn into horizontal lines, and more.
 
 The third is **code chunks**.  Code chunks contain R code that can be executed to output results.
 
@@ -433,7 +433,7 @@ Below these images, we'll explain what each part of the R Markdown includes in a
 
 Again, the first block is the **header** section. We're telling R Markdown that the title should be "My Markdown Document" and that when the document is rendered, we want to output to be an "html_document". That's the default. You can see that in the resulting HTML document there's the title "My Markdown Document" in large type letters.  The header is enclosed on both sides with three dashes, and the data inside is in a format called "YAML" (rhymes with Hammill).  YAML, according to most people, stands for "Yet Another Markup Language", and it consists of a named field, a colon, and the value for that field.  
 
-Here we also have some narrative **text** with marks such as hashtags and asterisks. You can see that having a hashtag at the beginning of a line makes this line a header, and the more hashtags you write, the smaller the header. Also, you can see that, depending on where you write it, with an asterisk you can make bulleted lists or text that is rendered in italics or bold.  This system of using special marks to indicate how text should look is called **Markdown**.
+Here we also have some narrative **text** with marks such as hash marks and asterisks. You can see that having a hash mark at the beginning of a line makes this line a header, and the more hash marks you write, the smaller the header. Also, you can see that, depending on where you write it, with an asterisk you can make bulleted lists or text that is rendered in italics or bold.  This system of using special marks to indicate how text should look is called **Markdown**.
 
 Then we get to the code chunks. Don't worry about the contents of the code for now - in brief, the first code chunk asks R to generate 100 random values and then print out some summary statistics. The knitted document shows us our code in a gray box to make it visually distinct from the text; and then immediately after, the results of that code after it was executed.  Code chunks are enclosed by three "backticks" (not single quotes), and the letter "r" enclosed in curly braces. Check out your keyboard now to see if you can find the backtick.  It's likely in a corner of your keyboard, and in many layouts it travels alongside the tilde (~) symbol.  The letter "r" enclosed in curly braces tells RStudio what language is being used, in our case, the R language.  
 
@@ -486,7 +486,6 @@ This data structure is called **rectangular** or **"tabular"** because it falls 
 Also note that this particular .csv file has a **header** row that instead of data, has a name for each column. .csv files often have such a header row and unless we specify otherwise, when we import this data, R assumes the first line is a header row.  Not all .csv files have headers, however, so be aware that you might run across these at some point.
 
 ### The Tidyverse
-
 
 <div style = "align-items: center; display: flex;">
 <div style = "margin: 1rem; max-width: 75%; float:left;">
@@ -607,7 +606,59 @@ In the box below, write what you think the name of this is (all lowercase, pleas
 
 ### Hands-On: Import Data
 
-In the Files pane, click on the directory called "exercises". Open the R Markdown file titled  01 – Introduction.Rmd
+Please go ahead and open the "r\_basics\_visualize\_data" directory in whichever RStudio environment you're working in. You can open `introduction_exercises.Rmd`.  Instructions for this exercise are in the text of the R Markdown document.
+
+![`The first few lines of the introduction_exercises.Rmd file`](media/introduction_exercises.png)<!-- style = "max-width:700px;" -->
+
+Read through the instructions and complete the assigned tasks:
+
+* import data from a .csv file
+* use the RStudio data viewer to answer some questions
+
+### Solutions
+
+You can open the `introduction_solutions.Rmd` file to see the answers.
+
+To import data, you run the cell indicated.  Click on the image below to show a short clip of what this looks like.
+
+
+<div style="display:none">@gifPreload</div>
+
+<figure>
+  <img src="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/run_import_chunk.png?raw=true" height="540" width="878" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/run_import_chunk.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+
+<figcaption style = "font-size: 1em;">Click on the image to play the demo of running the chunk that imports data.</figcaption>
+</figure>
+
+To answer the questions using the file viewer, click on the name of a data frame (like `covid_testing`) to open a view into the data in a new tab.  Click on the image below to show a short clip of what this looks like.
+
+<div style="display:none">@gifPreload</div>
+
+<figure>
+  <img src="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/viewer.png?raw=true" height="540" width="878" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/viewer.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+
+<figcaption style = "font-size: 1em;">Click on the image to play the demo of opening a viewer of a data frame.</figcaption>
+</figure>
+
+Here are the answers to the questions posed in `introduction_exercises.Rmd`:
+
+1. How many rows are in the data frame? How many columns?
+
+There are 15,524 rows and 17 columns. This information can be seen at the bottom of the Data Viewer, and also in the Environment pane. Note that in R parlance, rows are observations, and columns are variables.
+
+2. Go ahead and try to edit one of the values in this viewer. You will find that you can't. It would have been easy for the RStudio programmers to allow editing of specific values, but they decided not to add that feature. Why do you think this was designed that way?
+
+This would encourage point-and-click workflows that are not reproducible.
+
+3. Each row in *covid_testing* represents a single COVID19 test. The value in the *pan_day* column indicates the day (after the start of the pandemic) on which the test sample was taken. On which "pandemic day" was the first test sample taken? The last?
+
+If you sort the table by `pan_day` and then look at the very top and the very bottom, you will find out the first "pandemic day" was 4, and the last one was 107. You can sort the data in the Data Viewer by clicking on the column header.
+
+Important: this doesn't actually change the data in the `covid_testing` data frame!
+
+4. How many tests overall were positive? How many positive tests were there in the first 30 days of the pandemic? (Hint: look at the Filter button)
+
+The `result` column holds that information. We can apply a filter to that column to only show us rows where the value in the `result` column is "positive". Click on Filter and enter "positive" in the text field that appears below the `result` header. You will now see that the bottom line of the data viewer reads "Showing 1 to [some number] of 865 entries, 17 total columns (filtered from 15,524 total entries)". So there were 865 positive tests, out of 15,524 total.
 
 
 ## Recap
