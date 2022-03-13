@@ -661,7 +661,6 @@ Important: this doesn't actually change the data in the `covid_testing` data fra
 
 The `result` column holds that information. We can apply a filter to that column to only show us rows where the value in the `result` column is "positive". Click on Filter and enter "positive" in the text field that appears below the `result` header. You will now see that the bottom line of the data viewer reads "Showing 1 to [some number] of 865 entries, 17 total columns (filtered from 15,524 total entries)". So there were 865 positive tests, out of 15,524 total.
 
-
 ## Recap
 
 Let's recap what we have covered in this session.
@@ -670,22 +669,41 @@ Let's recap what we have covered in this session.
 
 We started by defining and differentiating **R** (the programming language) from **RStudio** (the integrated development environment -- IDE -- or editor) and **R Markdown** (the document format we use for reproducible data analysis). Then we explored RStudio and R Markdown more closely.
 
-We then looked at how
-
-Packages extend the functionality of R. Install with install.packages() and load with library().
-Functions do stuff. They accept Arguments as input and return an Output. Capture an output in an Object using the assignment operator ( <- ).
-Importing Data is the first step of data analysis. Use read_csv() from the tidyverse package to import data stored in a CSV file.
-
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 30%; float:left;">
+![The tidyverse package is shown alongside a brown box representing a package](media/packages.png)<!-- style = "max-width: 400px;" -->
+</div>
+<div style = "margin: 1rem; max-width: 70%; float:left;">
+Packages extend the functionality of R. Install with `install.packages()` and load with `library()`.
+</div>
+</div>
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 30%; float:left;">
+![`The read_csv function is shown with its parts labeled`](media/function_breakdown.png)<!-- style = "max-width: 400px;" -->
+</div>
+<div style = "margin: 1rem; max-width: 70%; float:left;">
+Functions do stuff. They accept Arguments as input and return an Output. Capture an output in an Object using the assignment operator (` <- `).
+</div>
+</div>
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 30%; float:left;">
+![csv file is transformed into a data frame](media/csv_import.png)<!-- style = "max-width: 400px;" -->
+</div>
+<div style = "margin: 1rem; max-width: 70%; float:left;">
+Importing Data is the first step of data analysis. Use `read_csv()` from the tidyverse package to import data stored in a CSV file.
+</div>
+</div>
 
 
 ## Additional Resources
 
 <h3>Cheat Sheets</h3>
-RStudio's Data Import cheat sheet helps with importing data from file types similar to CSV but with other delimiters.
 
-To find official cheat sheets, go to the Help menu and choose "Cheat Sheets"
+RStudio's Data Import cheat sheet helps with importing data from file types similar to CSV but with other delimiters.  Cheat sheets for the RStudio IDE and Markdown can reinforce what you've learned so far in this module.
 
-![RStudio help menu, with Cheat Sheets selected and the submenu option "Data Visualization with ggplot2" selected](media/cheat_sheets.png)<!-- style = "max-width:700px;" -->
+To find official cheat sheets, go to the Help menu and choose "Cheat Sheets".  You can look around the short list provided.  You can also "Browse", and in the RStudio website you'll find other cheat sheets as well, including one for
+
+![RStudio help menu, with Cheat Sheets selected and the submenu option "Browse Cheat Sheets" selected](media/cheat_sheet_browse.png)<!-- style = "max-width:700px;" -->
 
 ### More Data Types
 
