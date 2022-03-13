@@ -107,7 +107,7 @@ We begin by presenting three terms that may be new to you, or you may have heard
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 25%; float:left; padding:4em;"> ![R Logo](media/r_logo.png)
+<div style = "margin: 1rem; max-width: 25%; float:left; padding-right:4em;"> ![R Logo](media/r_logo.png)
 </div>
 <div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
@@ -127,7 +127,7 @@ There is also an open and welcoming community of R users, which is just as impor
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 25%; float:left; padding:4em;"> ![RStudio Logo](media/rstudio_logo.png)
+<div style = "margin: 1rem; max-width: 25%; float:left; padding-right:4em;"> ![RStudio Logo](media/rstudio_logo.png)
 </div>
 <div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
@@ -140,7 +140,7 @@ Then, there's **RStudio**. RStudio is the name of a company and also the name of
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 25%; float:left; padding:4em;"> ![R Markdown logo](media/r_markdown_logo.png)
+<div style = "margin: 1rem; max-width: 25%; float:left; padding-right:4em;"> ![R Markdown logo](media/r_markdown_logo.png)
 </div>
 <div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
@@ -159,7 +159,7 @@ There are two versions of RStudio.
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 25%; float:left; padding:3em;"> ![RStudio logo in a cloud](media/rstudio_cloud.png)
+<div style = "margin: 1rem; max-width: 25%; float:left; padding-right:4em;"> ![RStudio logo in a cloud](media/rstudio_cloud.png)
 </div>
 <div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
@@ -169,7 +169,7 @@ RStudio Server – a version of the RStudio IDE that can be accessed from a web 
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 25%; float:left; padding:3em;"> ![RStudio logo on a laptop](media/rstudio_desktop.png)
+<div style = "margin: 1rem; max-width: 25%; float:left; padding-right:4em;"> ![RStudio logo on a laptop](media/rstudio_desktop.png)
 </div>
 <div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
@@ -384,7 +384,7 @@ R Markdown lets you write computer code mixed in with English (or other human la
 
 R Markdown is quickly becoming the standard for reproducible data analysis. A primary aim of this module is to teach you to use R Markdown and to encourage you to start working it into your day to day data workflows.
 </div>
-<div style = "margin: 1rem; max-width: 30%; float:left; padding: 0em 4em;">
+<div style = "margin: 1rem; max-width: 30%; float:left; padding-left:4em;">
 ![Logo of R Markdown](media/r_markdown_logo.png)<!-- style = "max-width: 200px;" -->
 </div>
 </div>
@@ -411,7 +411,7 @@ The second way to execute code is to convert the entire R Markdown document into
 
 To **knit** a document, click the button that says "Knit" next to a blue ball of yarn on the top of the Editor pane.
 
-![RStudio window with the knit button indicated](media/knit_button.png)<!-- style = "max-width:600px;" --> ![Result of knitting, the start of an html document with headers and code](media/rendered_markdown.png)<!-- style = "max-width:600px;"-->
+![RStudio window with the knit button indicated](media/knit_button.png)<!-- style = "max-width:600px;" -->![Result of knitting, the start of an html document with headers and code](media/rendered_markdown.png)<!-- style = "max-width:600px;"-->
 
 ### R Markdown in Detail
 
