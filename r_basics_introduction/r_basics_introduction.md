@@ -107,7 +107,7 @@ We begin by presenting three terms that may be new to you, or you may have heard
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 25%; float:left;"> ![R Logo](media/r_logo.png)
+<div style = "margin: 1rem; max-width: 25%; float:left; padding:4em;"> ![R Logo](media/r_logo.png)
 </div>
 <div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
@@ -127,7 +127,7 @@ There is also an open and welcoming community of R users, which is just as impor
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 25%; float:left;"> ![RStudio Logo](media/rstudio_logo.png)
+<div style = "margin: 1rem; max-width: 25%; float:left; padding:4em;"> ![RStudio Logo](media/rstudio_logo.png)
 </div>
 <div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
@@ -140,7 +140,7 @@ Then, there's **RStudio**. RStudio is the name of a company and also the name of
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 25%; float:left;"> ![R Markdown logo](media/r_markdown_logo.png)
+<div style = "margin: 1rem; max-width: 25%; float:left; padding:4em;"> ![R Markdown logo](media/r_markdown_logo.png)
 </div>
 <div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
@@ -159,9 +159,9 @@ There are two versions of RStudio.
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;"> ![](media/rstudio_cloud.png)
+<div style = "margin: 1rem; max-width: 25%; float:left; padding:3em;"> ![RStudio logo in a cloud](media/rstudio_cloud.png)
 </div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;">
+<div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
 RStudio Server – a version of the RStudio IDE that can be accessed from a web browser. It's hosted on a server that could be on premises or in the cloud. We'll offer a version of RStudio in the cloud for use, in case you can't or don't want to download R and RStudio to your computer just yet.
 </div>
@@ -169,9 +169,9 @@ RStudio Server – a version of the RStudio IDE that can be accessed from a web 
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;"> ![](media/rstudio_desktop.png)
+<div style = "margin: 1rem; max-width: 25%; float:left; padding:3em;"> ![RStudio logo on a laptop](media/rstudio_desktop.png)
 </div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;">
+<div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
 RStudio Desktop – a version of the RStudio IDE that is installed on a personal device like your desktop or laptop. This is what you should use after the course to continue learning R and working on R projects. On the course website, I posted videos that show you how to install RStudio Desktop on a Mac or Windows computer.  
 
@@ -308,12 +308,14 @@ What you see here are the names of are a few of the hundreds of microarray probe
 What you see here are the names of are a few of the hundreds of microarray probe sets – each roughly corresponds to a gene – that the Duke investigators reported tp predict sensitivity to 5-fluorouracil.
 </div>
 <div style = "margin: 1rem; max-width: 30%; float:left;">
+<lia-keep>
 <pre>
 "1881_at"
 "31321_at"
 "31725_s_at"
 "32307_r_at"
 </pre>
+</lia-keep>
 </div>
 </div>
 
@@ -323,12 +325,14 @@ What you see here are the names of are a few of the hundreds of microarray probe
 And here are the probe sets that the MD Anderson team got. You can see that they're not the same.
 </div>
 <div style = "margin: 1rem; max-width: 30%; float:left;">
+<lia-keep>
 <pre>
 "1882_g_at"
 "31322_at"
 "31726_at"
 "32308_r_at"
 </pre>
+</lia-keep>
 </div>
 </div>
 
@@ -365,7 +369,8 @@ Reproducibility doesn't only help people **outside** a study understand how thin
 - Why did I decide to omit these six samples from my analysis?
 
 **Your closest collaborator is you from 6 months ago...**
-...  but they don't answer your emails.
+
+...  but they don't answer your emails!
 
 Additionally, we've already seen how irreproducibility can cause real harm to human subjects, something we all want to avoid.  
 
@@ -381,7 +386,7 @@ R Markdown lets you write computer code mixed in with English (or other human la
 
 R Markdown is quickly becoming the standard for reproducible data analysis. A primary aim of this module is to teach you to use R Markdown and to encourage you to start working it into your day to day data workflows.
 </div>
-<div style = "margin: 1rem; max-width: 30%; float:left;">
+<div style = "margin: 1rem; max-width: 30%; float:left; padding:4em;">
 ![Logo of R Markdown](media/r_markdown_logo.png)<!-- style = "max-width: 200px;" -->
 </div>
 </div>
@@ -408,7 +413,7 @@ The second way to execute code is to convert the entire R Markdown document into
 
 To **knit** a document, click the button that says "Knit" next to a blue ball of yarn on the top of the Editor pane.
 
-![RStudio window with the knit button indicated](media/knit_button.png)<!-- style = max-width:600px;-->![Result of knitting, the start of an html document with headers and code](media/rendered_markdown.png)<!-- style = max-width:600px;-->
+![RStudio window with the knit button indicated](media/knit_button.png)<!-- style = "max-width:600px;" --> ![Result of knitting, the start of an html document with headers and code](media/rendered_markdown.png)<!-- style = "max-width:600px;"-->
 
 ### R Markdown in Detail
 
@@ -438,13 +443,22 @@ So let's practice creating an R Markdown document, running a code chunk, and kni
 
 ### Practicing R Markdown
 
-If you haven't already, go ahead and begin your RStudio session, as explained in the section [Lesson Preparation: Our RStudio Environment](#lesson-preparation-our-rstudio-environment).
+If you haven't already, go ahead and begin your RStudio session, as explained in the section [Lesson Preparation: Our RStudio Environment](#5).
 
 Ready to go? Open RStudio, either on your own computer or in our temporary environment online.  Then:
 
-* Go to the File menu, choose "New File", and finally select "R Markdown". Click OK.  This will give you a handy template which is used to show you a working example of a simple R Markdown document.
-* Run each code chunk in order by clicking the green "play" button at the top of each chunk.  Notice what happens!
+* Go to the File menu, choose "New File", and finally select "R Markdown". Click OK.  This will give you a handy template which is used to show you a working example of a simple R Markdown document.  You will be asked to provide a title and author, and you can choose any values you like, such as "Test" or "My First Markdown".
+
+![File, New File, R Markdown menu](media/new_r_markdown.png)<!-- style = "max-width: 400px;" -->
+
+* Run each code chunk in order by clicking the green "play" button at the top right corner of each chunk.  Notice what happens!
+
+![Mouse hovering over "play" button in chunk](media/run_current_chunk.png)<!-- style = "max-width: 400px;" -->
+
 * Knit the document, using the "Knit" button at the top of the screen. You will be prompted to provide a name for your file.  Type "test" and click "Save".  
+
+![Mouse hovering over "knit" button in menu](media/knit_current_document.png)<!-- style = "max-width: 400px;" -->
+
 * Once your document is knitted, it will open in HTML (you might see a prompt about "pop up windows" if you're using RStudio in the cloud, so please do permit pop-up windows).   Take a look at the HTML output.  Can you see the relationship between what's in the R Markdown document and the resulting HTML output?
 
 Look in the "Files" pane in the lower right of RStudio and you'll see that we saved test.Rmd (R Markdown file) and test.html (knitted HTML file). You might wonder why you want to deal with two files. The file ending in "Rmd" is your **source code** that includes what you're doing with data.  It makes sense to share this file with data analysts and other R coders.  The HTML is a presentation format that doesn't require R knowledge or the R program, since it can be viewed in a regular HTML browser.  This makes sense to share with stakeholders who don't need to work with the code but are more interested in the findings -- people like your boss or a publisher.
@@ -453,31 +467,42 @@ Look in the "Files" pane in the lower right of RStudio and you'll see that we sa
 
 Now that we are familiar with how to create R Markdown documents we can begin the process of performing data analysis in R in earnest by importing a clinical data set.
 
-![The data analysis pipeline, which begins with Import, then Tidy, then three actions that form a circle that repeat: Visualize, Model, and Transform.  The pipeline ends with "Communicate".](media/pipeline_import.png)<!-- style = max-width:700px;-->
+![The data analysis pipeline, which begins with Import, then Tidy, then three actions that form a circle that repeat: Visualize, Model, and Transform.  The pipeline ends with "Communicate".](media/pipeline_import.png)<!-- style = max-width:500px;-->
 
 The first step in the data analysis pipeline is to bring in, or **import**, the data to your environment, which for the purposes of this module is R.
 
-In this module, we'll work with a fabticated (completely made up) data set consisting of COVID-19 laboratory test results from a hypothetical infectious disease diagnostics lab. This data is stored as a **CSV file**.
+In this module, we'll work with a fabricated (completely made up) data set consisting of COVID-19 laboratory test results from a hypothetical infectious disease diagnostics lab. This data is stored as a **CSV file**.
 
-So what's a CSV file? CSV stands for comma-separated values.
+So what's a .csv file? CSV stands for **comma-separated values**.  When we say this aloud, we just say each letter: C - S - V.  
 
-A CSV file is a plain text file, which means you can open it in a text editor and look at it.
+A .csv file is a plain text file, which means you can open it in a text editor and look at it.  This is different than how you may have opened .csv files in the past, using Microsoft Excel or another spreadsheet program.  Let's take a look at what the raw data looks like when we open it in a text editor.
 
 ![plain text image of a csv file](media/csv.png)<!-- style = max-width:500px;-->
 
-Here we have a CSV file with the names, medical record numbers, and dates of birth for three fictional "patients".
+Here we have a .csv file with the names, medical record numbers, and dates of birth for three fictional "patients".
 
 This data structure is called **rectangular** or **"tabular"** because it falls into rows and columns, often called a table, where each row has the same number of columns, and each columns has the same number of rows.
 
-Also note that this particular CSV file has a header row that instead of data, has a descriptor of what kinds of data are found in each column. CSV files often (but not always) have such a header row.
+Also note that this particular .csv file has a **header** row that instead of data, has a name for each column. .csv files often have such a header row and unless we specify otherwise, when we import this data, R assumes the first line is a header row.  Not all .csv files have headers, however, so be aware that you might run across these at some point.
 
 ### The Tidyverse
+
+
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 75%; float:left;">
 
 To import our CSV data, we need some additional data analysis tools.  In this course, we will be leveraging the **tidyverse**.
 
 The tidyverse is a set of tools that has become the de facto standard for doing data science with R.  It relies on the use of "tidy" data and "tidy" data analysis techniques.
 
+</div>
+<div style = "margin: 1rem; max-width: 25%; float:left;">
+
 ![Tidyverse logo](media/tidyverse_logo.png)<!-- style = max-width:500px;-->
+</div>
+</div>
+
+
 
 The basic tenets of "tidy" data analysis include:
 
