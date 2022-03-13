@@ -7,6 +7,7 @@ narrator: US English Female
 title: R Basics: Transforming Data With dplyr
 comment:  Learn how to transform (or wrangle) data using R's `dplyr` package.
 long_description: Do you want to learn how to work with tabular (table-shaped, with rows and columns) data in R?  In this module you'll learn in particular how to select just the rows and columns you want to work with, how to create new columns, and how to create multi-step transformations to get your data ready for visualization or statistical analysis.  This module teaches the use of the `dplyr` package, which is part of the `tidyverse` suite of packages.
+estimated_time: 1 hour
 
 @learning_objectives  
 
@@ -83,7 +84,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** 1 hour
+**Estimated time to completion:** @estimated_time
 
 **Pre-requisites**
 
@@ -177,10 +178,10 @@ If you already completed this work for a previous module, and it's been a while 
 
 You can use this module in a couple of different ways:
 
-* If you have experience working in R markdown and want to try out some of the code we share with you as we go along, please go ahead and open the "r\_basics\_transform\_data" directory, then the "exercises" directory.  You can open "transform.Rmd" and add some code chunks for your own experimentation.  Or, create a new R Markdown file that begins with reading in the .csv file in the "exercises" directory.
+* If you have experience working in R markdown and want to try out some of the code we share with you as we go along, please go ahead and open the "r\_basics\_transform\_data" directory, then open `transform_exercises.Rmd` and add some code chunks for your own experimentation.  Or, create a new R Markdown file that begins with reading in the .csv file in the "exercises" directory.
 * Not sure you are ready to DIY?  Prefer to learn some concepts first, then do some hands-on work at the end?  Then just follow our steps and we'll guide you through the exercise file when you reach the end of the module.  No need to worry about trying out the code along the way.
 
-![RStudio showing the transform.Rmd file.  A text box suggests copying and pasting the first code chunk in transform.Rmd into a new R Markdown file, or adding chunks below the first chunk for experimentation.](media/rstudio_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
+![RStudio showing the transform_exercises.Rmd file.  A text box suggests copying and pasting the first code chunk in transform_exercises.Rmd into a new R Markdown file, or adding chunks below the first chunk for experimentation.](media/rstudio_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
 
 ### The `dplyr` Package
 
@@ -717,9 +718,9 @@ If you already completed this work for a previous module, and it's been a while 
 
 ### Work On Data Transformation
 
-Within the `r_basics_transform_data` folder, please open the `exercises` folder and then open `transform.Rmd` to work through the exercises.  You'll see something like the below.
+Within the `r_basics_transform_data` folder, please open `transform_exercises.Rmd` to work through the exercises.  You'll see something like the below.
 
-![RStudio window showing transform.Rmd](media/r_transform_exercise.png)<!-- style = "max-width: 800px; border: 1px solid rgb(var(--color-highlight))" -->
+![RStudio window showing transform_exercises.Rmd](media/r_transform_exercise.png)<!-- style = "max-width: 800px; border: 1px solid rgb(var(--color-highlight))" -->
 
 To work in this file:
 
@@ -735,11 +736,7 @@ Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`. 
 
 ### Solutions for Data Transformation
 
-You can find the solution file in the "r\_basics\_transform\_data" directory, within "**solutions**".  Simply open the version of `transform.Rmd` in that folder to see the answers.  
-
-Not sure how to do that?  You can use the green "up" arrow in the file browser within RStudio, or click on the "breadcrumbs", to get from the "exercises" directory back up to the "r\_basics\_transform\_data" directory.  Then you can open the "solutions" directory and see the solution file `transform.Rmd`.
-
-![RStudio file browser, with the "parent directory" up arrow and the breadcrumbs navigation highlighted](media/file_browser_navigation.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
+You can find the solution file in the "r\_basics\_transform\_data" directory.  Simply open `transform_solutions.Rmd` in that folder to see the answers.  
 
 In the first task, you were asked to create a dplyr pipeline:
 
