@@ -447,15 +447,15 @@ Ready to go? Open RStudio, either on your own computer or in our temporary envir
 
 * Go to the File menu, choose "New File", and finally select "R Markdown". Click OK.  This will give you a handy template which is used to show you a working example of a simple R Markdown document.  You will be asked to provide a title and author, and you can choose any values you like, such as "Test" or "My First Markdown".
 
-![File, New File, R Markdown menu](media/new_r_markdown.png)<!-- style = "max-width: 400px; padding-left: 3em; border: 1px solid rgb(var(--color-highlight));" -->
+![File, New File, R Markdown menu](media/new_r_markdown.png)<!-- style = "max-width: 400px; margin-left: 3em; border: 1px solid rgb(var(--color-highlight));" -->
 
 * Run each code chunk in order by clicking the green "play" button at the top right corner of each chunk.  Notice what happens!
 
-![Mouse hovering over "play" button in chunk](media/run_current_chunk.png)<!-- style = "max-width: 400px; padding-left: 3em; border: 1px solid rgb(var(--color-highlight));" -->
+![Mouse hovering over "play" button in chunk](media/run_current_chunk.png)<!-- style = "max-width: 400px; margin-left: 3em; border: 1px solid rgb(var(--color-highlight));" -->
 
 * Knit the document, using the "Knit" button at the top of the screen. You will be prompted to provide a name for your file.  Type "test" and click "Save".  
 
-![Mouse hovering over "knit" button in menu](media/knit_current_document.png)<!-- style = "max-width: 400px; padding-left: 3em; border: 1px solid rgb(var(--color-highlight));" -->
+![Mouse hovering over "knit" button in menu](media/knit_current_document.png)<!-- style = "max-width: 400px; margin-left: 3em; border: 1px solid rgb(var(--color-highlight));" -->
 
 * Once your document is knitted, it will open in HTML (you might see a prompt about "pop up windows" if you're using RStudio in the cloud, so please do permit pop-up windows).   Take a look at the HTML output.  Can you see the relationship between what's in the R Markdown document and the resulting HTML output?
 
@@ -475,7 +475,7 @@ So what's a .csv file? CSV stands for **comma-separated values**.  When we say t
 
 A .csv file is a plain text file, which means you can open it in a text editor and look at it.  This is different than how you may have opened .csv files in the past, using Microsoft Excel or another spreadsheet program.  Let's take a look at what the raw data looks like when we open it in a text editor.
 
-![plain text image of a csv file](media/csv.png)<!-- style = max-width:500px;-->
+![plain text image of a csv file](media/csv.png)<!-- style = "max-width:500px;" -->
 
 Here we have a .csv file with the names, medical record numbers, and dates of birth for three fictional "patients".
 
@@ -487,19 +487,14 @@ Also note that this particular .csv file has a **header** row that instead of da
 
 <div style = "align-items: center; display: flex;">
 <div style = "margin: 1rem; max-width: 75%; float:left;">
-
 To import our CSV data, we need some additional data analysis tools.  In this course, we will be leveraging the **tidyverse**.
 
 The tidyverse is a set of tools that has become the de facto standard for doing data science with R.  It relies on the use of "tidy" data and "tidy" data analysis techniques.
-
 </div>
 <div style = "margin: 1rem; max-width: 25%; float:left;">
-
-![Tidyverse logo](media/tidyverse_logo.png)<!-- style = "max-width:300px; margin-left: 3em;" -->
+![Tidyverse logo](media/tidyverse_logo.png)<!-- style = "max-width:300px;" -->
 </div>
 </div>
-
-
 
 The basic tenets of "tidy" data analysis include:
 
@@ -510,15 +505,15 @@ The basic tenets of "tidy" data analysis include:
 ### Packages
 
 <div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 50%; float:left;">
+<div style = "margin: 1rem; max-width: 55%; float:left;">
 The Tidyverse is package (a collection of functions, data, and help documentation) that we can use to extend the functionality of R.
 
 You can download and **install** a package with the command `install.packages`. So let's say you want to install a package named "tidyverse". You would go to the R Console and type `install.packages("tidyverse")`. Each package you want to use needs to be installed only once on each computer. On our RStudio Server, you won't need to install any packages for this course (I have installed them for you). If you're using R on your own computer, however, you will have to install packages.
 
 </div>
-<div style = "margin: 1rem; max-width: 50%; float:left;">
+<div style = "margin: 1rem; max-width: 40%; float:left;">
 
-![Tidyverse represented as a few help documents, some functions, and some data tables](media/tidyverse.png)<!-- style = "max-width:400px;""-->
+![Tidyverse represented as a few help documents, some functions, and some data tables](media/tidyverse.png)<!-- style = "max-width:200px;" -->
 </div>
 </div>
 
@@ -557,7 +552,7 @@ A function can have zero, one, or many arguments. If there is more than one argu
 
 The output of the read_csv function is a data frame object. You will usually want to *capture* that data frame inside of a named object so you can use it as the input for other functions, for example to summarize or visualize your data.
 
-![`The code is annotated. "data_frame" is labeled "object", the leftward arrow <- is labeled "assignment operator", "read_csv" is labeled "function", and "file_name" is labeled "argument".](media/function_breakdown.png)<!-- style = "max-width:700px;" -->
+![`The code is annotated. "data_frame" is labeled "object", the leftward arrow <- is labeled "assignment operator", "read_csv" is labeled "function", and "file_name" is labeled "argument".](media/function_breakdown.png)<!-- style = "max-width:500px;" -->
 
 To put the output of the `read_csv` function into a named object, we use the **assignment operator**.
 
@@ -590,7 +585,6 @@ Sometimes, either quoting or not quoting works. This is one of the things where 
 
 ### Quiz: Packages and Functions
 
-
 <div class = "question">
 
 Which of the following statements are accurate?
@@ -608,6 +602,7 @@ Which of the following statements are accurate?
 Functions can have zero, one, or many inputs.  An example of a function taking zero inputs is `getwd()`, which tells you what R considers its current "working directory".
 
 You only need to install a package using `install.packages()` **once** per computer (unless the package has a new update that you want to install).  You do, however, have to load a package using `library()` before its functions are available to you.  That means loading it each time you start a new session of R.  **When you knit a document, that counts as a separate session**, so make sure and put a `library()` in place for each package you use in your code in each R Markdown document you create.  Oh, and yep, for `install.packages()` you do indeed have to put quotes around the name of the package.
+
 </div>
 </div>
 
@@ -671,7 +666,7 @@ The `result` column holds that information. We can apply a filter to that column
 
 Let's recap what we have covered in this session.
 
-![R logo](media/r_logo.png)<!-- style="max-width:150px; margin:2em auto;" -->![RStudio logo](media/rstudio_logo.png)<!-- style="max-width:150px; margin:2em auto;" -->![R Markdown logo](media/r__markdown_logo.png)<!-- style="max-width:150px; margin:2em auto;" -->
+![R logo](media/r_logo.png)<!-- style="max-width:150px; margin:2em auto;" --> ![RStudio logo](media/rstudio_logo.png)<!-- style="max-width:150px; margin:2em auto;" --> ![R Markdown logo](media/r__markdown_logo.png)<!-- style="max-width:150px; margin:2em auto;" -->
 
 We started by defining and differentiating **R** (the programming language) from **RStudio** (the integrated development environment -- IDE -- or editor) and **R Markdown** (the document format we use for reproducible data analysis). Then we explored RStudio and R Markdown more closely.
 
@@ -721,7 +716,7 @@ You can also connect to a large number of **databases** directly in R to pull yo
 In addition to HTML, R Markdown documents can be "knitted" into a number of additional formats including PDF, Microsoft Word, PowerPoint, and even interactive dashboards.
 </div>
 <div style = "margin: 1rem; max-width: 50%; float:left;">
-![R Markdown logo surrounded by the logos of output document options, including HTML5, .pdf, and others.](media/document_output.png)<!-- style = "max-width: 200px;" -->
+![R Markdown logo surrounded by the logos of output document options, including HTML5, .pdf, and others.](media/document_output.png)<!-- style = "max-width: 400px;" -->
 </div>
 </div>
 
@@ -734,7 +729,7 @@ So you can mix code chunks written in R with code chunks written in, say, Python
 <div style = "align-items: center; display: flex;">
 
 <div style = "margin: 1rem; max-width: 50%; float:left;">
-![R logo with cartoon snake](media/r_python.png)
+![R logo with cartoon snake](media/r_python.png)<!-- style = "max-width: 400px;" -->
 </div>
 <div style = "margin: 1rem; max-width: 50%; float:left;">
 
