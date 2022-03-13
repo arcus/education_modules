@@ -301,11 +301,9 @@ In the end, 18 papers were retracted, and Duke settled more than 10 lawsuits for
 
 Two biostatisticians at MD Anderson uncovered these mistakes in painstaking work. Let's look at one of the errors they found.
 
-What you see here are the names of are a few of the hundreds of microarray probe sets – each roughly corresponds to a gene – that the Duke investigators reported tp predict sensitivity to 5-fluorouracil.
-
 <div style = "align-items: center; display: flex;">
 <div style = "margin: 1rem; max-width: 65%; float:left;">
-What you see here are the names of are a few of the hundreds of microarray probe sets – each roughly corresponds to a gene – that the Duke investigators reported tp predict sensitivity to 5-fluorouracil.
+What you see here are the names of are a few of the hundreds of microarray probe sets – each roughly corresponds to a gene – that the Duke investigators reported to predict sensitivity to 5-fluorouracil.
 </div>
 <div style = "margin: 1rem; max-width: 30%; float:left;">
 <lia-keep>
@@ -386,7 +384,7 @@ R Markdown lets you write computer code mixed in with English (or other human la
 
 R Markdown is quickly becoming the standard for reproducible data analysis. A primary aim of this module is to teach you to use R Markdown and to encourage you to start working it into your day to day data workflows.
 </div>
-<div style = "margin: 1rem; max-width: 30%; float:left; padding:4em;">
+<div style = "margin: 1rem; max-width: 30%; float:left; padding: 0em 4em;">
 ![Logo of R Markdown](media/r_markdown_logo.png)<!-- style = "max-width: 200px;" -->
 </div>
 </div>
