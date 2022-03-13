@@ -5,15 +5,18 @@ version:  1.0
 language: en
 narrator: US English Female
 title: R Basics: Introduction
-comment:  Learn how to visualize data using R's `ggplot2` package.
-long_description: Are you brand new to R, and ready to get started?  This module teaches the basics of R, RStudio, and R Markdown.
+comment:  Introduction to R and hands-on first steps for brand new beginners.
+long_description: Are you brand new to R, and ready to get started?  This module teaches concepts and vocabulary related to R, RStudio, and R Markdown.  It also includes some introductory-level hands-on work in RStudio.  This is a good course if you know that you want to use R but haven't ever used it, or you've barely used it and need a refresher on the basics.
+estimated_time: 1 hour
 
 @learning_objectives  
 
 After completion of this module, learners will be able to:
 
-- Define "R", "RStudio", and "R Markdown"
+- Define and differentiate "R", "RStudio", and "R Markdown"
+- Install and load packages in R
 - Create a simple R Markdown file and its associated output document
+- Import a .csv file as a data frame
 
 
 @end
@@ -104,11 +107,11 @@ We begin by presenting three terms that may be new to you, or you may have heard
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;"> ![R Logo](media/r_logo.png)
+<div style = "margin: 1rem; max-width: 25%; float:left;"> ![R Logo](media/r_logo.png)
 </div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;">
+<div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
-**R**
+<h3>R</h3>
 
 The first is **R**. R is a statistical programming language that's great for doing data analysis. There are a lot of features that make R great:  
 
@@ -124,11 +127,11 @@ There is also an open and welcoming community of R users, which is just as impor
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;"> ![RStudio Logo](media/rstudio_logo.png)
+<div style = "margin: 1rem; max-width: 25%; float:left;"> ![RStudio Logo](media/rstudio_logo.png)
 </div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;">
+<div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
-**RStudio**
+<h3>RStudio</h3>
 
 Then, there's **RStudio**. RStudio is the name of a company and also the name of a piece of software this company makes (and makes available for free). You can think of RStudio as a fancy text editor for writing R code. The technical term for a fancy text editor for writing code is "Integrated Development Environment", or IDE (you pronounce each letter, eye-dee-ee). You can run RStudio on Mac, Windows, or Linux. It can run on a local computer like your laptop, or on a server that users can access using a web browser.
 
@@ -137,13 +140,13 @@ Then, there's **RStudio**. RStudio is the name of a company and also the name of
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;"> ![R Markdown logo](media/r_markdown_logo.png)
+<div style = "margin: 1rem; max-width: 25%; float:left;"> ![R Markdown logo](media/r_markdown_logo.png)
 </div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;">
+<div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
-**R Markdown**
+<h3>R Markdown</h3>
 
-Finally there's **R Markdown**. R Markdown is a **computational document**, an example of **literate programming**. A computational document is a document that has executable code inside of it, and as we'll discuss shortly, it's a great way to perform data analysis in a reproducible fashion. You'll also hear this called "literate programming" or "literate statistical programming", because an R Markdown document contains both human language (it's literate) as well as computer code (programming).  With R Markdown, we will usually write that executable code using the R language. I say usually because it's actually possible to write code in Python, C++, SQL, and other languages inside of an R Markdown document.  That goes beyond the scope of this module, but it's helpful to remember that R Markdown is quite flexible.
+Finally there's **R Markdown**. R Markdown is a **computational document**, an example of **literate programming**. A computational document is a document that has executable code inside of it, and as we'll discuss shortly, it's a great way to perform data analysis in a reproducible fashion. You'll also hear this called "literate programming" or "literate statistical programming", because an R Markdown document contains both human language (it's literate) as well as computer code (programming).  With R Markdown, we will usually write that executable code using the R language. However, it's actually possible to write code in Python, C++, SQL, and other languages inside of an R Markdown document.  That goes beyond the scope of this module, but it's helpful to remember that R Markdown is quite flexible.
 
 </div>
 </div>
@@ -177,7 +180,7 @@ RStudio Desktop – a version of the RStudio IDE that is installed on a personal
 
 Here's what the RStudio window looks like.
 
-![](media/rstudio_desktop.png)<!-- style = "max-width:900px;" -->
+![](media/rstudio_panes.png)<!-- style = "max-width:900px;" -->
 
 On the top left is the **Editor**. This is where you enter code.
 
@@ -545,7 +548,7 @@ In the box below, write what you think the name of this is (all lowercase, pleas
 
 ### Hands-On: Import Data
 
-In the Files pane, click on the directory called "exercises". Open the R Markdown file titled   01 – Introduction.Rmd
+In the Files pane, click on the directory called "exercises". Open the R Markdown file titled  01 – Introduction.Rmd
 
 
 ## Recap
