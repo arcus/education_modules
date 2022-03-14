@@ -53,9 +53,18 @@ This module is for you if:
 
 ## Lesson Preparation
 
-*We need some sort of emulator here, probably the best way (if possible) would be to have an emulator that can come preloaded with all of the commands from the previous module so that learners can explore the history without having to go through that entire module, especially if they did it a while back, or already know that stuff. Having something just checkout a particular head in the chain of the modules could then be used for later modules, by checking out later or earlier heads.*
+The purpose of this module is to learn how to explore the history of a Git repository that has already been created. We are going to download Dracula's repository in which he started documenting the pros and cons of moving with his friends to Mars. Open up your command line interface and type:
 
-If you are coming to this module directly from the [previous one](link) and still have that console open, you can continue using that console instead.
+```console
+git clone https://www.github.com/arcus/planets
+```
+
+This should be a very fast download. Now if you type `ls` you should see a folder titled `planets`. Navigate into the planets directory. This is the directory we will be exploring throughout the module.
+
+<div class = "options">
+If you have a repository that you have committed to several times such as the one created in the previous module in this series, you can use this module as a framework for exploring that instead.
+Alternatively, you can clone any repository you find [github.com](github.com) using the `git clone https://www.github.com/repository/path` and explore how it was created!
+</div>
 
 ## Seeing prior commits
 
@@ -63,15 +72,14 @@ Keeping track of all versions and being able to see and compare them is the enti
 
 Each time you `commit` to Git, you are marking the current state of your project as a checkpoint that you can return to. You will hear these states referred to as *commits*.
 
-<div class = "options">
+
 You are going to learn about two ways to refer to past commits:
 
 - Using `HEAD` to refer to the latest `commit`.
 - Using the commit number assigned to a particular `commit`.
 
-</div>
 
-![The Commit Stack: a stack of 3 flat white boxes, stacked on top of each other with open air in between. The top box is labeled "last committed version of repository", the middle box is labeled "next to last version of repository" and the bottom is labeled "previous version of repository". There are three dots below the lowest box indicating that this pattern continues.](./fig/Commit_stack.svg)
+![The Commit Stack: 3 flat white boxes, stacked on top of each other. The top box is labeled "last committed version of repository", the middle box is labeled "next to last version of repository" and the bottom is labeled "previous version of repository". Three dots below the lowest box indicate that this pattern continues.](media/Commit_stack.svg)
 
 ### Using HEAD
 
@@ -105,11 +113,11 @@ Maybe you want to look one step further back into your work. By using `HEAD~n` y
 
 For example, to look back just one commit before the most recent checkpoint, use `git show HEAD~1`. If instead you wanted to look back three checkpoints (the most recent and then two before that) you would enter `git show HEAD~2`.
 
-![IMAGE: The same stack of 3 white flat boxes, now the top box is labeled `HEAD`, the middle box `HEAD~1` and the bottom `HEAD~2`](./fig/Commit_stack_HEAD.svg)
+![The stack of 3 white flat boxes, now the top box is labeled `HEAD`, the middle box `HEAD~1` and the bottom `HEAD~2`](media/Commit_stack_HEAD.svg)
 
 Using `HEAD` to refer to your commits can be great for looking at recent versions of your repository. But be careful, each time you commit to the repository, you are creating a new most-recent-version that is now the `HEAD` and every older version moves one layer down in the stack.
 
-![IMAGE: On the left, the same stack of 3 flat white boxes are labeled `HEAD`, `HEAD~1`,  and `HEAD~2`. An arrow points to a stack on the right made of the same stack of 3 flat white boxes with a 4th red box on top. This red box is labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`](./fig/Commit_stack_HEAD2.svg)
+![On the left, the stack of 3 flat white boxes are labeled `HEAD`, `HEAD~1`,  and `HEAD~2`. An arrow points to a stack on the right made of the 3 white boxes with a 4th red box now on top. This red box is labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`](media/Commit_stack_HEAD2.svg)
 
 ### Using the commit number
 
@@ -140,7 +148,7 @@ Date:   Mon Feb 28 11:39:24 2022 -0500
     Start notes on Mars as a base
 ```
 
-If you forget to include the `-n 3` flag and just type `git log` you can always jump to the end by pressing `q`. If you have been working on this project for a while, using the arrow keys to scroll down may take a prohibitively long time.
+If you forget to include the `-n 3` flag and just type `git log` you can always jump to the end by pressing `q`. If you have been working on a project for a while, using the arrow keys to scroll down may take a prohibitively long time.
 
 The first thing to notice is that **all** of your commit messages are here. This is a good reminder to write clear and concise messages because future you may be very grateful when trying to figure out where exactly past you introduced a particular issue.
 
