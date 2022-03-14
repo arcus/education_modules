@@ -9,6 +9,8 @@ title: Exploring the History of your Git Repository
 comment:  This module will teach you how to look at past versions of your work on Git, compare versions, and return to former versions.
 long_description: You know that version control is important. You know how to save your work to your Git repository. Now you are ready to look at and compare different versions of your work. In this module you will you will learn how to navigate through the commits you have made to Git. You will also learn how to compare current code with past code, and, if necessary, revert to an earlier version of your work.
 
+@estimated_time: 50 minutes
+
 @learning_objectives  
 After completion of this module, learners will be able to:
 
@@ -36,12 +38,13 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 **Is this module right for me?** @long_description
 
 **Estimated time to completion:**
+@estimated_time
 
 **Pre-requisites**
 
 This module is for you if:
 
-* You know know how to create a Git repository and make changes using `add` and `commit`.
+* You know know how to create a Git repository and make changes using `add` and `commit` from a command line interface (CLI)
 * You want to learn how to compare different versions of your work and restore files to previous versions.
 
 
@@ -61,9 +64,29 @@ git clone https://www.github.com/arcus/planets
 
 This should be a very fast download. Now if you type `ls` you should see a folder titled `planets`. Navigate into the planets directory. This is the directory we will be exploring throughout the module.
 
+![A collage of the project we will use as a motivating example. Figures include Dracula, a werewolf, a mummy, and several planets and moons.](media/motivatingexample.png)
+[Werewolf vs dracula](https://www.deviantart.com/b-maze/art/Werewolf-vs-Dracula-124893530)
+by [b-maze](https://www.deviantart.com/b-maze) / [Deviant Art](https://www.deviantart.com/).
+[Mars](https://en.wikipedia.org/wiki/File:OSIRIS_Mars_true_color.jpg) by European Space Agency /
+[CC-BY-SA 3.0 IGO](https://creativecommons.org/licenses/by/3.0/deed.en).
+[Pluto](https://commons.wikimedia.org/wiki/File:PIA19873-Pluto-NewHorizons-FlyingPastImage-20150714-transparent.png) /
+Courtesy NASA/JPL-Caltech.
+[Mummy](https://commons.wikimedia.org/wiki/File:Mummy_icon_-_Noun_Project_4070.svg)
+&copy; Gilad Fried / [The Noun Project](https://thenounproject.com/) /
+[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/deed.en).
+[Moon](https://commons.wikimedia.org/wiki/File:Lune_ico.png)
+&copy; Luc Viatour / [https://lucnix.be](https://lucnix.be/) /
+[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en).
+
 <div class = "options">
 If you have a repository that you have committed to several times such as the one created in the previous module in this series, you can use this module as a framework for exploring that instead.
-Alternatively, you can clone any repository you find [github.com](github.com) using the `git clone https://www.github.com/repository/path` and explore how it was created!
+Alternatively, you can clone any repository you find on [GitHub](https://github.com) using the
+
+```
+git clone https://www.github.com/repository/path
+```
+
+and explore how it was created!
 </div>
 
 ## Seeing prior commits
@@ -89,9 +112,9 @@ The last thing that Dracula committed in the previous module was the `.gitignore
 
 ```
 $ git show HEAD
-commit 65f447e949e53edc0db08b93670d2e2b35fa6c22 (HEAD -> main)
+commit 584977a18319f539f3f5ecde6176db2ba0081cd9 (HEAD -> main, origin/main)
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Feb 28 11:47:17 2022 -0500
+Date:   Mon Mar 14 14:59:40 2022 -0400
 
     Ignore data files and the results folder.
 
@@ -129,21 +152,21 @@ Let's see what that output looks like for Dracula:
 
 ```
 $ git log -n 3
-commit 65f447e949e53edc0db08b93670d2e2b35fa6c22 (HEAD -> main)
+commit 584977a18319f539f3f5ecde6176db2ba0081cd9 (HEAD -> main, origin/main)
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Feb 28 11:47:17 2022 -0500
+Date:   Mon Mar 14 14:59:40 2022 -0400
 
     Ignore data files and the results folder.
 
-commit 0d4b23c688dbbf87cff3cfa9425a7dfd9a6e6280
+commit fe532b097861acb8bd3d7f221d6ee741249dc8f0
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Feb 28 11:42:41 2022 -0500
+Date:   Mon Mar 14 14:58:17 2022 -0400
 
-    Add concerns about effects of Mars' moons of Wolfman
+    Add concerns about effects of Mars' moons on Wolfman
 
-commit 7cd0f422d373516d968c8fe4b90401dfee4d52a6
+commit c3fe500d96fa9114210320f3cac0a0d9fd58d33c
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Feb 28 11:39:24 2022 -0500
+Date:   Mon Mar 14 14:57:09 2022 -0400
 
     Start notes on Mars as a base
 ```
@@ -153,17 +176,16 @@ If you forget to include the `-n 3` flag and just type `git log` you can always 
 The first thing to notice is that **all** of your commit messages are here. This is a good reminder to write clear and concise messages because future you may be very grateful when trying to figure out where exactly past you introduced a particular issue.
 
 The second thing to notice is the structure of each entry in the log: commit, Author, Date, message.
-When you identify which commit you want to look at, the commit number is the unique 40 digit string of letters and numbers above it after the word "commit". In Dracula's repository, the unique identifier for the commit in which he "add[ed] concerns about effects of Mars' moons on Wolfman" is `0d4b23c688dbbf87cff3cfa9425a7dfd9a6e6280`.
+When you identify which commit you want to look at, the commit number is the unique 40 digit string of letters and numbers above it after the word "commit". In Dracula's repository, the unique identifier for the commit in which he "add[ed] concerns about effects of Mars' moons on Wolfman" is `fe532b097861acb8bd3d7f221d6ee741249dc8f0`.
 
 Now that we have found the unique identifier of the commit we want to examine, we can use it with `git show`. Don't worry, you won't need to type all 40 digits, the first six will suffice.
 
 ```
-$git show 0d4b23
-commit 0d4b23c688dbbf87cff3cfa9425a7dfd9a6e6280
+commit fe532b097861acb8bd3d7f221d6ee741249dc8f0
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Feb 28 11:42:41 2022 -0500
+Date:   Mon Mar 14 14:58:17 2022 -0400
 
-    Add concerns about effects of Mars' moons of Wolfman
+    Add concerns about effects of Mars' moons on Wolfman
 
 diff --git a/mars.txt b/mars.txt
 index df0654a..315bf3a 100644
@@ -176,7 +198,7 @@ index df0654a..315bf3a 100644
 
 The commit number doesn't change as you update your repository.
 
-![IMAGE: On the left, the same stack of 3 white boxes but now each is labeled with its six digit commit number. An arrow points from this stack to the stack On the right where the three white boxes have a new red box on top. The red box also has a commit number, but the commit numbers on the white boxes have not changed from the picture on the left.](./fig/Commit_number.svg)
+![On the left is the stack of 3 boxes, each labeled with its six digit commit number. An arrow points from this stack to the stack on the right where the three white boxes have a red box on top. The red box also has a commit number, but the commit numbers on the white boxes have not changed from the picture on the left.](media/Commit_number.svg)
 
 ### Quiz: finding a commit
 
@@ -184,28 +206,28 @@ The output from `git log -n 2`is:
 
 ```
 $ git log -n 2
-commit 65f447e949e53edc0db08b93670d2e2b35fa6c22 (HEAD -> main)
+commit 584977a18319f539f3f5ecde6176db2ba0081cd9 (HEAD -> main, origin/main)
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Feb 28 11:47:17 2022 -0500
+Date:   Mon Mar 14 14:59:40 2022 -0400
 
     Ignore data files and the results folder.
 
-commit 0d4b23c688dbbf87cff3cfa9425a7dfd9a6e6280
+commit fe532b097861acb8bd3d7f221d6ee741249dc8f0
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Feb 28 11:42:41 2022 -0500
+Date:   Mon Mar 14 14:58:17 2022 -0400
 
-    Add concerns about effects of Mars' moons of Wolfman
+    Add concerns about effects of Mars' moons on Wolfman
 ```
 
 Which of the following commands would show you the *most recent* commit you made?
 
 - [[X]] `git show HEAD`
 - [[ ]] `git show HEAD~1`
-- [[X]] `git show 65f447`
-- [[ ]] `git show fa6c22`
+- [[X]] `git show 584977`
+- [[ ]] `git show 081cd9`
 ***
 <div class ="answer">
-The *most recent* commit is the current `HEAD` and its commit number is `65f447`. Either of these commands will give the same output. The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show fa6c22` may not show you anything since it is not the first six digits of a known commit number (and likely not the first six digits of any commit number).
+The *most recent* commit is the current `HEAD` and its commit number is `65f447`. Either of these commands will give the same output. The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show 081cd9` may not show you anything since it is not the first six digits of a known commit number (and likely not the first six digits of any commit number).
 </div>
 ***
 
@@ -217,13 +239,13 @@ The error you get from entering a non-existent commit number starts with the wor
 
 When you commit code to Git, it doesn't create a brand new copy of your files from scratch. Instead it records the differences between the version of each file that it already has stored, and the new version. You can think of it as the instructions for transforming the previous version of your repository into the new version.
 
-![The three white boxes are shown with a large green arrow pointing from each box to the box above it. The top box is labeled "Last committed version of repository" and the arrow pointing to it from the middle box is labeled "HEAD." The second box is labeled "Next to last version of repository" and the arrow pointing to it from the box below is labeled "HEAD~1." The bottom box is labeled "Previous version of repository" and the arrow pointing to it is labeled "HEAD~2." There are three dots under the boxes, and another three dots under the arrows indicating that this pattern continues.](./fig/Commits_are_pointers.svg)
+![The three white boxes are shown with a large green arrow pointing from each box to the box above it. The top box is labeled "Last committed version of repository" and the arrow pointing to it from the middle box is labeled "HEAD." The second box is labeled "Next to last version of repository" and the arrow pointing to it from the box below is labeled "HEAD~1." The bottom box is labeled "Previous version of repository" and the arrow pointing to it is labeled "HEAD~2." There are three dots under the boxes, and another three dots under the arrows indicating that this pattern continues.](media/Commits_are_pointers.svg)
 
 You could think of each commit not as a checkpoint, but the instructions on how to get to the next checkpoint. The entire repository can be built by following a series of instructions (commits) in order. Similarly you can determine the precise state of an earlier version by following the instructions backwards.
 
 ## Comparing files to prior commits
 
-In order to have some more commits to compare, let's add a few more lines to our notes about Mars.
+In order to have some more commits to compare, let's add a few more lines to Dracula's notes about Mars.
 
 First add a line to `mars.txt` so that it reads:
 
@@ -248,12 +270,22 @@ An ill-considered change
 ```
 Notice that we did NOT add or commit that last change to `mars.txt`. When you are working on a large project, it is very easy to lose track in your head of when you last committed, or what changes you have made since. In this section we will see how to ask Git to tell us that information.
 
+<div class = "warning">
+The commits that you make might have *different* commit numbers than the commit numbers in the examples. Be sure to use the first six digits of the commit number in YOUR log.
+</div>
+
+<div class = "learnmore">
+Because these files now exist on your computer, you can change them and commit those changes. The author of the new commits will be you, not Vlad Dracula. You can use `git log` to see which of you made which commit.
+
+This is a preview of how Git lets you work with collaborators to create a project together.
+</div>
+
 ### Using `diff`
 
 You might have noticed that `diff` was the first word after your commit message when you entered `git show HEAD`. The lines after that are **all** the changes that you made with that commit. When comparing earlier versions with the current version, you are usually only going to want to look at one file at  a time. By typing `git diff HEAD` you are asking to see all the differences between the current state of your tracked files and the most recently committed version. Let's give it a try:
 
 ```console
-$git diff HEAD
+$ git diff HEAD
 diff --git a/mars.txt b/mars.txt
 index b36abfd..93a3e13 100644
 --- a/mars.txt
@@ -275,7 +307,7 @@ index b36abfd..93a3e13 100644
 ```
 1. The first line tells us that Git is producing output similar to the Unix `diff` command comparing the old and new versions of the file.
 2. The second line tells exactly which versions of the file Git is comparing; `b36abfd` and `93a3e13` are unique computer-generated labels for those versions.
-3. The third and fourth lines once again show the name of the file being changed and assigns a symbol to each version. Lines that are in version a but not version b will be marked with a `-` and lines that are in version b but not version a will be marked with a '+'.
+3. The third and fourth lines once again show the name of the file being changed and assigns a symbol to each version. Lines that are in version `a` but not version `b` will be marked with a `-` and lines that are in version `b` but not version `a` will be marked with a '+'.
 
 ```
 @@ -1,3 +1,4 @@
@@ -287,7 +319,7 @@ index b36abfd..93a3e13 100644
 
 4. The next line, surrounded by `@@` on both sides, tells you what lines of code you are going to see next. This sequence `@@ -1,3 +1,4 @@` translates to: from version a (`-`) show lines 1 through 3 and from version b(`+`) show lines 1 through 4.
 
-5. The remaining lines are the most interesting, they show us the actual differences and the lines on which they occur. In particular, the `+` marker in the first column shows that that line, "An ill-considered change" is in version b, but not version a.
+5. The remaining lines are the most interesting, they show us the actual differences and the lines on which they occur. In particular, the `+` marker in the first column shows that that line, "An ill-considered change" is in version `b`, but not version `a`.
 
 6. If you changed code in multiple parts of your file, you will see several of these sections, called **chunks**, showing the changes you made.
 
@@ -316,12 +348,12 @@ index e69de29..73eca03 100644
 +Venus is too hot to be a suitable base
 ```
 
-Now we can look at only the changes to `venus.txt`.
+Now we see only the changes to `venus.txt`.
 
 You might also want to look at earlier changes from previous commits. By replacing `HEAD` with either `HEAD~1` or the unique six digit identifier for the previous commit, we can compare the current version in our working directory to that earlier version:
 
 ```console
-$git diff HEAD~1 mars.txt
+$ git diff HEAD~1 mars.txt
 diff --git a/mars.txt b/mars.txt
 index 315bf3a..93a3e13 100644
 --- a/mars.txt
@@ -343,7 +375,7 @@ After working for a while, we might not remember where our last checkpoints were
 [[git diff HEAD venus.txt]]
 ***
 <div class= "answer">
-The command `git diff HEAD venus.txt` will show you the differences between the current working version of `venus.txt` and the last committed version. If you know the commit number of your last commit, you could also use that: `git diff 000000 venus.txt`.
+The command `git diff HEAD venus.txt` will show you the differences between the current working version of `venus.txt` and the last committed version. If you know the 6-digit commit number of your last commit, you could also use that: `git diff c0mm1t venus.txt`.
 
 
 Omitting `venus.txt` will show you ALL changes that have been made to any file in the repository since the last commit.
@@ -380,6 +412,7 @@ What does this output tell you? Choose all of the the statements that the output
 
 *No files other than `venus.txt` have been changed since the last* FALSE Because we only asked Git to tell us about differences in the `venus.txt` file, it didn't check for differences in other files. They could have been changed and that would not be reflected in the output.
 
+You must have committed, and then added the last line to `venus.txt`.
 </div>
 ***
 
@@ -421,7 +454,7 @@ The command `git checkout` has a number of uses, one of which is to use it to re
 
 If you enter
 ```
-$git checkout HEAD mars.txt
+$ git checkout HEAD mars.txt
 ```
 the file on Mars will return to its last committed state. Let's check what it looks like after that command using `cat`:
 
@@ -446,17 +479,17 @@ The same commit number that lets you see the differences between your current wo
 Recall that earlier in this module we investigated the following commit:
 
 ```
-commit 0d4b23c688dbbf87cff3cfa9425a7dfd9a6e6280
+commit fe532b097861acb8bd3d7f221d6ee741249dc8f0
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Feb 28 11:42:41 2022 -0500
+Date:   Mon Mar 14 14:58:17 2022 -0400
 
-    Add concerns about effects of Mars' moons of Wolfman
+    Add concerns about effects of Mars' moons on Wolfman
 ```
 
 We have added two lines to `mars.txt` since that commit, which we can check using the `diff` command:
 
 ```console
-$git diff 0d4b23 mars.txt
+$git diff fe532b mars.txt
 diff --git a/mars.txt b/mars.txt
 index 315bf3a..93a3e13 100644
 --- a/mars.txt
@@ -471,16 +504,16 @@ index 315bf3a..93a3e13 100644
 To get rid of all of those changes, enter the commit number instead of `HEAD` after the `checkout` command:
 
 ```console
-$git checkout 0d4b23 mars.txt
+$git checkout fe532b mars.txt
 ```
 
 Now use `cat` to examine the contents of `mars.txt`. It only contains the first two lines. You are now working with this version of `mars.txt`. What do you think will happen if you enter `git diff HEAD mars.txt`?
 
 <div class = "warning">
-If you forget to specify which file you want to check out and instead enter `git checkout 0d4b23` you will get the following message:
+If you forget to specify which file you want to check out and instead enter `git checkout fe532b` you will get the following message:
 
 ```
-Note: checking out '0d4b23'.
+Note: checking out 'fe532b'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -512,9 +545,7 @@ Luckily, she has been keeping track of her project’s versions using Git! Which
 The `checkout` command restores files from the repository, overwriting the files in your working directory. Answers 2 and 4 both restore the latest version in the repository of the file `data_cruncher.py`. Answer 2 uses `HEAD` to indicate the latest, whereas answer 4 uses the unique ID of the last commit, which is what `HEAD` means.
 
 
-
 Answer 3 gets the version of `data_cruncher.py` from the commit before `HEAD`, which is NOT what we wanted.
-
 
 
 Answer 1 can be dangerous! Without a `filename`, `git checkout` will restore all files in the current directory (and all directories below it) to their state at the commit specified. This command will restore `data_cruncher.py` to the latest commit version, but it will also restore any other files that are changed to that version, erasing any changes you may have made to those files! As discussed above, you are left in a detached HEAD state, and you don’t want to be there.
@@ -544,6 +575,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Module+Template%22)!
-
-Remember to change the redcap link so that the module name is correct for this module!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Exploring+the+History+of+your+Git+Repository%22)!
