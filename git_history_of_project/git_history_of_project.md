@@ -241,7 +241,7 @@ Which of the following commands would show you the *most recent* commit you made
 <div class ="answer">
 The *most recent* commit is the current `HEAD` and its commit number is `584977`. Since both refer to the same commit, you can use either.
 
-The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show 081cd9` may not show you anything since it is not the *first* six digits of a known commit number (and likely not the first six digits of any commit number).
+The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show 081cd9` will give you an error since `081cd9` it is not the *first* six digits of a known commit number.
 </div>
 ***
 
@@ -300,7 +300,7 @@ This is a preview of how Git lets you work with collaborators to create a projec
 
 You might have noticed that `diff` was the first word after your commit message when you entered `git show HEAD`. The lines after that are **all** the changes that you made with that commit. When comparing earlier versions with the current version, you are usually only going to want to look at one file at  a time. By typing `git diff HEAD` you are asking to see all the differences between the current state of your tracked files and the most recently committed version. Let's give it a try:
 
-```console
+```
 $ git diff HEAD
 diff --git a/mars.txt b/mars.txt
 index b36abfd..93a3e13 100644
@@ -563,7 +563,7 @@ HEAD is now at 0d4b23 Add concerns about effects of Mars' moons of Wolfman
 
 The "detached HEAD" is like "look, but don’t touch" here, so you shouldn’t make any changes in this state.
 
-If you enjoyed the [Technical Details section](#Technical_details_for_the_intrigued), you can think of the `git checkout HEAD` command as changing where the `HEAD` arrow points to.
+If you enjoyed the [Technical Details section](#technical_details_for_the_intrigued), you can think of the `git checkout HEAD` command as changing where the `HEAD` arrow points to.
 
 After investigating your repo’s past state, reattach your `HEAD` with the command `git checkout main`.
 </div>
