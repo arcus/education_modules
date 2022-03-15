@@ -42,13 +42,15 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Estimated time to completion:**
 
+@estimated_time
+
 **Pre-requisites**
 
 Before you start this module, make sure you
 
 * Know how to access a command line interface (CLI) on your computer.
-* Configure Git on your computer.
-* The ability to edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file), one of many text editors that you can access directly from the command line interface (CLI).
+* Have Git configured on your computer.
+* Can edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file), one of many text editors that you can access directly from the command line interface (CLI).
 
 **Learning Objectives**
 
@@ -76,10 +78,10 @@ by [b-maze](https://www.deviantart.com/b-maze) / [Deviant Art](https://www.devia
 [Pluto](https://commons.wikimedia.org/wiki/File:PIA19873-Pluto-NewHorizons-FlyingPastImage-20150714-transparent.png) /
 Courtesy NASA/JPL-Caltech.
 [Mummy](https://commons.wikimedia.org/wiki/File:Mummy_icon_-_Noun_Project_4070.svg)
-&copy; Gilad Fried / [The Noun Project](https://thenounproject.com/) /
+$\copyright$; Gilad Fried / [The Noun Project](https://thenounproject.com/) /
 [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/deed.en).
 [Moon](https://commons.wikimedia.org/wiki/File:Lune_ico.png)
-&copy; Luc Viatour / [https://lucnix.be](https://lucnix.be/) /
+$\copyright$; Luc Viatour / [https://lucnix.be](https://lucnix.be/) /
 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en).
 
 In all of our examples, we will see code as if it is written by Vlad Dracula. If you are practicing these steps as you move through this module, your name and email address will appear instead of Dracula's.
@@ -396,7 +398,7 @@ If we just run `git commit` without the `-m` option,
 Git will launch `nano` (or whatever other editor we configured as `core.editor`)
 so that we can write a longer message.
 
->  **Good commit messages** Commit messages start with a brief (<50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will...".
+   **Good commit messages** Commit messages start with a brief (<50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will...".
 
 If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
 
@@ -523,7 +525,8 @@ $ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
 [main 34961b1] Add concerns about effects of Mars' moons on Wolfman
  1 file changed, 1 insertion(+)
 ```
-To double check that everything worked, you can run `git status` see:
+
+Double check that everything worked by running `git status`:
 
 ```
 $ git status
@@ -599,7 +602,6 @@ As you work on your project, files will cycle through these different states. Wh
 ### A few metaphors for Git
 
 Metaphors for Git abound, and no metaphor has been great enough to become the "standard" example. If you are looking for a good enough metaphor to help you understand what Git is, here are some ones to consider:
-
 1. [A musical metaphor video on YouTube](https://www.youtube.com/watch?v=S9Do2p4PwtE) <5 minutes
 2. [A poetry metaphor video on YouTube](https://www.youtube.com/watch?v=BCQHnlnPusY) ~14 minutes
 3. [A metaphor about building a house](https://towardsdatascience.com/a-simple-story-to-explain-version-control-to-anyone-5ab4197cebbc) blog post
@@ -765,5 +767,3 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If we gave you the experience you expected
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Creating+your+Git+Repository%22)!
-
-Remember to change the redcap link so that the module name is correct for this module!
