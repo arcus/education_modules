@@ -75,7 +75,7 @@ Courtesy NASA/JPL-Caltech.
 $\copyright$; Gilad Fried / [The Noun Project](https://thenounproject.com/) /
 [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/deed.en).
 [Moon](https://commons.wikimedia.org/wiki/File:Lune_ico.png)
-&copy; Luc Viatour / [https://lucnix.be](https://lucnix.be/) /
+$\copyright$; Luc Viatour / [https://lucnix.be](https://lucnix.be/) /
 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en).
 
 <div class = "options">
@@ -109,8 +109,6 @@ You are going to learn about two ways to refer to past commits:
 
 The `HEAD` refers to the most recently commit to your repository. It won't include any changes that haven't been committed to the repository yet. You can see that most recent commit by entering `git show HEAD`.
 
-The last thing that Dracula committed in the previous module was the `.gitignore` file in which he told Git not to track certain files:
-
 ```
 $ git show HEAD
 commit 584977a18319f539f3f5ecde6176db2ba0081cd9 (HEAD -> main, origin/main)
@@ -129,13 +127,21 @@ index 0000000..f451386
 +results/
 ```
 
-<div class = "help">
-Sometimes a command will output many lines of code that may not be relevant to you. For example the `show` command will output not just the commit message, but also every single change that you made in that commit. If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press `q` to skip to the end of that output.
+The last thing that Dracula committed to the planets repository was the `.gitignore` file in which he told Git to "Ignore data files and the results folder."
+
+<div class = "care">
+Sometimes a command will output many lines of code that may not be relevant to you. For example the `show` command will output not just the commit message, but also every single change that you made in that commit.
+
+The more you see this type of output, the more comfortable you will get with extracting the information you need and ignoring the rest.
 </div>
 
-Maybe you want to look one step further back into your work. By using `HEAD~n` you can look back $n$ checkpoints in your repository. The `~` symbol is named "tilde" and pronounced "TIL-duh."
+<div class = "important">
+If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press `q` to skip to the end of that output.
+</div>
 
-For example, to look back just one commit before the most recent checkpoint, use `git show HEAD~1`. If instead you wanted to look back three checkpoints (the most recent and then two before that) you would enter `git show HEAD~2`.
+Maybe you want to look one step further back into your work. By using `HEAD~n` you can look back n checkpoints in your repository. The `~` symbol is named "tilde" and pronounced "TIL-duh."
+
+For example, to look back just one commit before the most recent checkpoint, use `git show HEAD~1`. If instead you wanted to look back three checkpoints (two commits before the most recent commit) you would enter `git show HEAD~2`.
 
 ![The stack of 3 white flat boxes. Now the top box is labeled `HEAD`, the middle box `HEAD~1` and the bottom `HEAD~2`](media/Commit_stack_HEAD.svg)
 
@@ -145,7 +151,7 @@ Using `HEAD` to refer to your commits can be great for looking at recent version
 
 ### Using the commit number
 
-If there is a particular commit you want to look back on and are not sure how far back it was, having to refer to it as `HEAD~n` could get extremely frustrating, especially since $n$ will continue to change as you work more on your project and make more commits. Luckily there is another way to refer to a particular commit, using its commit number.
+If there is a particular commit you want to look back on and are not sure how far back it was, having to refer to it as `HEAD~n` could get extremely frustrating, especially since n will continue to change as you work more on your project and make more commits. Luckily there is another way to refer to a particular commit, using its commit number.
 
 When you enter `git commit -m "short descriptive message"` no output appears, but Git gives that commit a unique identifier, its commit number. By typing `git log` we can see ALL of the previous commits. Since that might be a lot of output to deal with, we will just ask for the last 3 commits using `git log -n 3`. The number after `-n` is how many commits you want displayed from the log.
 
@@ -174,18 +180,18 @@ Date:   Mon Mar 14 14:57:09 2022 -0400
 
 If you forget to include the `-n 3` flag and just type `git log` you can always jump to the end by pressing `q`. If you have been working on a project for a while, using the arrow keys to scroll down may take a prohibitively long time.
 
-The first thing to notice is that **all** of your commit messages are here. This is a good reminder to write clear and concise messages because future you may be very grateful when trying to figure out where exactly past you introduced a particular issue.
+The first thing to notice is that all of your commit messages are here. This is a good reminder to write clear and concise messages because future you may be very grateful when trying to figure out where exactly past you introduced a particular issue.
 
 The second thing to notice is the structure of each entry in the log: commit, Author, Date, message.
 When you identify which commit you want to look at, the commit number is the unique 40 digit string of letters and numbers above it after the word "commit". In Dracula's repository, the unique identifier for the commit in which he "add[ed] concerns about effects of Mars' moons on Wolfman" is `fe532b097861acb8bd3d7f221d6ee741249dc8f0`.
 
 <div class = "warning">
-If you are using the repo you created in an earlier module, the your commits might have *different* commit numbers than the commit numbers in the examples. Be sure to use the first six digits of the commit number in YOUR log.
+If you are using the repo you created in an earlier module,  your commits might have different commit numbers than the commit numbers in the examples. Be sure to use the commit number in YOUR log.
 </div>
 
 Now that we have found the unique identifier of the commit we want to examine, we can use it with `git show`. Don't worry, you won't need to type all 40 digits, the first six will suffice.
 
-```console
+```
 $ git show fe532b
 commit fe532b097861acb8bd3d7f221d6ee741249dc8f0
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
@@ -202,7 +208,7 @@ index df0654a..315bf3a 100644
 +The two moons may be a problem for Wolfman
 ```
 
-The commit number doesn't change as you update your repository.
+Unlike `HEAD`, the commit number doesn't change as you update your repository.
 
 ![On the left is the stack of 3 boxes, each labeled with its six digit commit number. An arrow points from this stack to the stack on the right where the three white boxes have a red box on top. The red box also has a commit number, but the commit numbers on the white boxes have not changed from the picture on the left.](media/Commit_number.svg)
 
@@ -210,7 +216,7 @@ The commit number doesn't change as you update your repository.
 
 The output from `git log -n 2` is:
 
-```console
+```
 $ git log -n 2
 commit 584977a18319f539f3f5ecde6176db2ba0081cd9 (HEAD -> main, origin/main)
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
@@ -245,12 +251,12 @@ The error you get from entering a non-existent commit number starts with the wor
 
 ### Technical details for the intrigued
 
-<div class+ "learnmore">
-When you commit code to Git, it doesn't create a brand new copy of your files from scratch. Instead it records the differences between the version of each file that it already has stored, and the new version. You can think of it as the instructions for transforming the previous version of your repository into the new version.
-
-![The three white boxes are shown with a large green arrow pointing from each box to the box above it. The top box is labeled "Last committed version of repository" and the arrow pointing to it from the middle box is labeled "HEAD." The second box is labeled "Next to last version of repository" and the arrow pointing to it from the box below is labeled "HEAD~1." The bottom box is labeled "Previous version of repository" and the arrow pointing to it is labeled "HEAD~2." There are three dots under the boxes, and another three dots under the arrows indicating that this pattern continues.](media/Commits_are_pointers.svg)
+<div class = "learnmore">
+When you commit code to Git, it doesn't create a brand new copy of your files from scratch. Instead it records the differences between the version of each file that it already has stored, and the new version.
 
 You could think of each commit not as a checkpoint, but the instructions on how to get to the next checkpoint. The entire repository can be built by following a series of instructions (commits) in order. Similarly you can determine the precise state of an earlier version by following the instructions backwards.
+
+![The three white boxes are shown with a large green arrow pointing from each box to the box above it. The top box is labeled "Last committed version of repository" and the arrow pointing to it from the middle box is labeled "HEAD." The second box is labeled "Next to last version of repository" and the arrow pointing to it from the box below is labeled "HEAD~1." The bottom box is labeled "Previous version of repository" and the arrow pointing to it is labeled "HEAD~2." There are three dots under the boxes, and another three dots under the arrows indicating that this pattern continues.](media/Commits_are_pointers.svg)
 </div>
 
 ## Comparing files to prior commits
@@ -266,7 +272,7 @@ But the Mummy will appreciate the lack of humidity
 ```
 Let's add and commit this change:
 
-```console
+```
 $ git add mars.txt
 $ git commit -m "Discuss concerns about Mars' climate for Mummy"
 ```
@@ -283,6 +289,8 @@ An ill-considered change
 Notice that we did NOT add or commit that last change to `mars.txt`. When you are working on a large project, it is very easy to lose track in your head of when you last committed, or what changes you have made since. In this section we will see how to ask Git to tell us that information.
 
 <div class = "learnmore">
+You can change things in the `planets` directory that you downloaded from GitHub!
+
 Because these files now exist on your computer, you can change them and commit those changes. The author of the new commits will be you, not Vlad Dracula. You can use `git log` to see which of you made which commit.
 
 This is a preview of how Git lets you work with collaborators to create a project together.
@@ -305,7 +313,7 @@ index b36abfd..93a3e13 100644
 +An ill-considered change
 ```
 
-There is a lot of information here, let's parse what each part means.
+There is a lot of information here so we will go through what each of the parts means.
 
 
 ```
@@ -330,7 +338,7 @@ index b36abfd..93a3e13 100644
 @@ -1,3 +1,4 @@
 ```
 
-4. The next line, surrounded by `@@` on both sides, tells you what lines of code you are going to see next. This sequence `@@ -1,3 +1,4 @@` translates to: from version a (`-`) show lines 1 through 3 and from version b(`+`) show lines 1 through 4.
+4. The next line, surrounded by `@@` on both sides, tells you what lines of code you are going to see next. This sequence `-1,3 +1,4` translates to: from version a (`-`) show lines 1 through 3 and from version b (`+`) show lines 1 through 4.
 
 ```
 Cold and dry, but everything is my favorite color
@@ -349,16 +357,16 @@ When you enter `git diff HEAD`  your console will show you all of the difference
 
 Helpfully, Git lets you ask for only the changes from a particular file. Let's add and change another file so we can see the power of this. Make sure you are in the planets directory, then enter this code to start a new file `venus.txt` with one line in it:
 
-```console
+```
 $ echo "Venus is too hot to be a suitable base" > venus.txt
 $ git add venus.txt
 ```
 
 Now `venus.txt` is being tracked by Git, but has not yet been committed to the repository. If we were to enter `git diff HEAD` now, we would see both the changes we have made to `venus.txt`, and to `mars.txt`.
 
-To look at just the changes to one of them, we can enter `git diff HEAD venus.txt`:
+To look at just the changes to the file about Venus, we can enter `git diff HEAD venus.txt`:
 
-```console
+```
 $ git diff HEAD venus.txt
 diff --git a/venus.txt b/venus.txt
 index e69de29..73eca03 100644
@@ -372,7 +380,7 @@ Now we see only the changes to `venus.txt`.
 
 You might also want to look at earlier changes from previous commits. By replacing `HEAD` with either `HEAD~1` or the unique six digit identifier for the previous commit, we can compare the current version in our working directory to that earlier version:
 
-```console
+```
 $ git diff HEAD~1 mars.txt
 diff --git a/mars.txt b/mars.txt
 index 315bf3a..93a3e13 100644
@@ -406,7 +414,7 @@ Omitting both the commit number and `HEAD`, i.e. entering `git diff venus.txt` w
 
 The output from your previous command is below:
 
-```console
+```
 diff --git a/venus.txt b/venus.txt
 index 73eca03..4e274c9 100644
 --- a/venus.txt
@@ -432,7 +440,7 @@ What does this output tell you? Choose all of the the statements that the output
 
 *No files other than `venus.txt` have been changed since the last* FALSE Because we only asked Git to tell us about differences in the `venus.txt` file, it didn't check for differences in other files. They could have been changed and that would not be reflected in the output.
 
-You must have committed, and then added the last line to `venus.txt`.
+You can conclude from this output that you must have committed, and then added the last line to `venus.txt`.
 </div>
 ***
 
@@ -488,13 +496,13 @@ But the Mummy will appreciate the lack of humidity
 An ill-considered change
 ```
 
-The file is back to being only four lines long, and if we now check how it differs from the `HEAD` we see that it doesn't differ at all. The command `git diff HEAD mars.txt ` has no output!
+The file is back to being only four lines long, and if we now check how it differs from the `HEAD` we see that it doesn't differ at all. The command `git diff HEAD mars.txt` has no output!
 
 So what happened to that line about Mars being 4th from the sun? It is gone! Completely gone. It wasn't committed so Git never created a record of its existence. This can be extremely useful if, say, your code was working when you last committed and you just want to throw out all the changes you made since then.
 
 ### Committed changes
 
-If you already committed the changes that you now no longer want, you can go back to earlier checkpoints in your work too!
+If you already committed the changes that you no longer want, you can go back to earlier checkpoints in your work too!
 
 The same commit number that lets you see the differences between your current working version of a file and earlier versions will also work with the `checkout` command.
 
@@ -510,8 +518,8 @@ Date:   Mon Mar 14 14:58:17 2022 -0400
 
 We have added two lines to `mars.txt` since that commit, which we can check using the `diff` command:
 
-```console
-$git diff fe532b mars.txt
+```
+$ git diff fe532b mars.txt
 diff --git a/mars.txt b/mars.txt
 index 315bf3a..93a3e13 100644
 --- a/mars.txt
@@ -529,7 +537,11 @@ To get rid of all of those changes, enter the commit number instead of `HEAD` af
 $ git checkout fe532b mars.txt
 ```
 
-Now use `cat` to examine the contents of `mars.txt`. It only contains the first two lines. You are now working with this version of `mars.txt`. What do you think will happen if you enter `git diff HEAD mars.txt`?
+Now use `cat` to examine the contents of `mars.txt`. It only contains the first two lines. You are now working with this version of `mars.txt`. What do you think will happen if you enter `git diff HEAD mars.txt`? When you think you know, enter that into your command line and see if you were right!
+
+Don't forget to `add` and `commit` the "new" version of your file `mars.txt` just like you would do with any changes you made.
+
+### Detached `HEAD`
 
 <div class = "warning">
 If you forget to specify which file you want to check out and instead enter `git checkout fe532b` you will get the following message:
@@ -574,18 +586,18 @@ The `checkout` command restores files from the repository, overwriting the files
 Answer 3 gets the version of `data_cruncher.py` from the commit before `HEAD`, which is NOT what we wanted.
 
 
-Answer 1 can be dangerous! Use `git checkout main` to reattach `HEAD` before you make any more changes.
+Answer 1 will result in a detached `HEAD`! Use `git checkout main` to reattach `HEAD` before you make any more changes.
 </div>
 ***
 
 
 ## Additional Resources
 
-This module was based on examples from three of [Software Carpentry](https://software-carpentry.org)'s [lessons on using Git](https://swcarpentry.github.io/git-novice/). The story of Dracula and Wolfman's planned trip to Mars is borrowed from them, and more examples are available in the original lesson:
+This module was based on examples from [Software Carpentry](https://software-carpentry.org)'s [lessons on using Git](https://swcarpentry.github.io/git-novice/). The story of Dracula and Wolfman's planned trip to Mars is borrowed from them, and more examples are available in the original lesson:
 
  - Lesson 5: [Exploring History](https://swcarpentry.github.io/git-novice/05-history/index.html)
 
-This module is also the third is a series of modules about Git created by Arcus Education and friends. We suggest continuing with the next module in the series on [working with others in Git](link/goes/here) and the entire collection is available on the [Arcus website](link/goes/here)
+This module is also the fourth in a series of modules about Git created by Arcus Education and friends. We suggest continuing with the next module in the series on [working with others in Git](link/goes/here) and the entire collection is available on the [Arcus website](link/goes/here)
 
 ## Feedback
 
