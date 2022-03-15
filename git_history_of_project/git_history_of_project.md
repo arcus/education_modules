@@ -72,7 +72,7 @@ by [b-maze](https://www.deviantart.com/b-maze) / [Deviant Art](https://www.devia
 [Pluto](https://commons.wikimedia.org/wiki/File:PIA19873-Pluto-NewHorizons-FlyingPastImage-20150714-transparent.png) /
 Courtesy NASA/JPL-Caltech.
 [Mummy](https://commons.wikimedia.org/wiki/File:Mummy_icon_-_Noun_Project_4070.svg)
-$ \copyright $; Gilad Fried / [The Noun Project](https://thenounproject.com/) /
+$\copyright$; Gilad Fried / [The Noun Project](https://thenounproject.com/) /
 [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/deed.en).
 [Moon](https://commons.wikimedia.org/wiki/File:Lune_ico.png)
 &copy; Luc Viatour / [https://lucnix.be](https://lucnix.be/) /
