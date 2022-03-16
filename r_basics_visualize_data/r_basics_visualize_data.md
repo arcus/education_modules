@@ -116,7 +116,7 @@ style = "max-width:800px;"-->
 
 On the next page, you'll learn how to get access to the sample code.  
 
-### Lesson Preparation: Our RStudio Environment
+### Our RStudio Environment
 
 Please do this step now, because we're going to ask you to follow along throughout and try out code as you go.  
 
