@@ -3,6 +3,7 @@ author:   Joy Payton
 email:    paytonk@chop.edu
 version:  1.0.0
 language: en
+module_template_version: 2.0.0
 narrator: US English Female
 title: R Basics: Visualizing Data With ggplot2
 comment:  Learn how to visualize data using R's `ggplot2` package.
@@ -171,7 +172,7 @@ If you already completed this work for a previous module, and it's been a while 
 * Open your project.
 * In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
 
-![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
+![Version control button in RStudio menu at top of window drops down with choices to pull and push branches.](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools tab in the highest level menu bar drops down with choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
 
 <div class = "warning">
 If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.
@@ -222,15 +223,11 @@ In the box below, write what you think the name of this is (all lowercase, pleas
 
 ### Building Your First Histogram
 
-Please go to your RStudio environment (either the version in the cloud or your local RStudio that you've prepared with a project containing our files for this module).  
-
-If you haven't already: using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` folder, and then open `visualize_exercises.Rmd`, which will allow you to work alongside the sections of this module.
-
-![`RStudio window showing visualize_exercises.Rmd`](media/visualize_exercises.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
-
-To get started, let's first load up our fabricated data.  Run the first code chunk by clicking the green "play" button (look at line 10).  This gives you the data frame with fake Covid testing data, the data we will use for our instruction in this module.
+To get started, let's first load up our fabricated data.  In the `visualize_exercises.Rmd` file, run the first code chunk by clicking the green "play" button (look at line 10).  This gives you the data frame with fake Covid testing data, which we will use for our instruction in this module.
 
 For the next step, we'd like for you to go into the **console** to practice running some code there.  The console is usually in the lower left pane (or it might take up the whole left side, if you don't have any files open yet).
+
+Don't panic if the code we ask you to input seems incomprehensible right now or you get an error message.  We'll walk you through what it all means!
 
 In the console, please type in the following.  While you can certainly cut and paste, there is sometimes an advantage to typing the code by hand, because it helps you develop "muscle memory" about how to construct code.  Pay attention to the spelling, capitalization, and parentheses!  
 
@@ -298,7 +295,7 @@ So here is a quick analysis of how we just used ggplot to make that histogram.
   geom_histogram(mapping = aes(x = pan_day))
 </pre>
 </td></tr>
-<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>2) Give ggplot a <b>data frame</b> to start with, in this case, our <code>covid_testing</code> data frame.</td>
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>2)In the parentheses just after ggplot, give it a <b>data frame</b> to start with, in this case, our <code>covid_testing</code> data frame.</td>
 <td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
 ggplot(<span style = "color: rgb(var(--color-text)); font-weight: bold;">data = covid_testing</span>) +
   geom_histogram(mapping = aes(x = pan_day))
@@ -311,7 +308,7 @@ ggplot(data = covid_testing) <span style = "color: rgb(var(--color-text)); font-
   geom_histogram(mapping = aes(x = pan_day))
 </pre>
 </td></tr>
-<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>4) In the second line, we describe what kind of geometric representation we want -- a histogram.
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>4) In the second line, we describe what kind of geometric representation we want -- a histogram, which we communicate to R using  <code>geom_histogram()</code>.
 </td>
 <td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) +
@@ -339,7 +336,7 @@ ggplot(data = covid_testing) +
 
 So that was a lot of information. Let's break this down to build up to a more general template. Here's a preview of that template, and we'll spend the few sections or so exploring it.
 
-![ggplot code annotated with the steps enumerated in the list below](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
+![""](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
 
 You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details that match what you want. To fill in the details, you need to do 3 things:
 
