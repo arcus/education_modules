@@ -552,9 +552,9 @@ In the third task you just completed (if you didn't actually do it, at least go 
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;"> ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)
+<div style = "margin: 1rem; max-width: 35%; float:left;"> ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)
 </div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;">
+<div style = "margin: 1rem auto; max-width: 55%; float:left;">
 <lia-keep>
 <pre>
 ggplot(data = covid_testing) +
