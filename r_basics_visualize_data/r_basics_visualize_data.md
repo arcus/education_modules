@@ -131,7 +131,7 @@ This might work well for you if you don't want to, or can't, install R and RStud
 
 **First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
 
-<a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank">![Launch Binder](media/badge_logo.svg)</a><b>← Click the "launch binder" button!</b>
+<a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank">![Launch Binder](media/badge_logo.svg) <b>Click to launch binder</b></a>
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
@@ -363,7 +363,7 @@ In the next section, we'll talk about what it means to call a data frame "tidy".
 
 Let's get started. The first detail is a "tidy" data frame which contains the data you want to plot.  It replaces the generic `data_frame` in our template (shown again below).
 
-![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
+![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:400px;" -->
 
 What do we mean by "tidy" data frame?
 
@@ -377,7 +377,7 @@ A data set is tidy if:
 * Each observation is in its own row, and
 * Each value is in its own cell.
 
-The opposite of "tidy" is often called "messy." And often times a lot of the data analysis work is to convert "messy" data into "tidy data." But for now, fortunately for us, the `covid_testing` data set is tidy already.
+The opposite of "tidy" is often called "messy." Often, much of the data analysis work is to convert "messy" data into "tidy data." But for now, fortunately for us, the `covid_testing` data set is tidy already.
 
 Here's one simple example of tidy versus messy. If a column is called "name" and includes first names and last names, that's messy.  It can be difficult to extract just the first names or just the last names, since some people have more than one word forming their first name (José María, Leigh Ann) and some people have more than one word forming their last name (de la Cruz, Bonham Carter).  A "tidy" approach would be to have one column for first names and one column for last names.
 
@@ -554,9 +554,9 @@ Which of the following are ways to make this dataset "tidy"?  Check all that app
 [[X]] make "timepoint" into a new column, with possible values including "pre" and "post"
 [[X]] increase the rows so that there are 16 rows representing 16 distinct cohorts
 [[?]] There are multiple correct answers!
-
+<lia-keep>
 <div class = "answer">
-
+</lia-keep>
 <details><summary>Click to see an explanation of the answer.</summary>
 
 Depression status and timepoint should each become a column.  In fact, we suggest the following columns:
@@ -602,7 +602,7 @@ As a reminder, we put forth three steps in our `ggplot` template:
 
 3) Write **aesthetic mappings** (which columns of the data you want to see added to the plot, and how you want them visualized)
 
-![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
+![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:400px;" -->
 
 Let's take on the second step: selecting a **geom function**.
 
@@ -632,7 +632,8 @@ As a reminder, we put forth three steps in our `ggplot` template:
 
 3) Write **aesthetic mappings** (which columns of the data you want to see added to the plot, and how you want them visualized)
 
-![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
+![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:400px;" -->
+
 Let's take on the third step: writing aesthetic mappings.  This is where you tell R how you want the columns of the data frame represented as graphical markings on the plot.  It's important to start with a couple of important distinctions:
 
 * An **aesthetic** is something that you can see about a data element on a graphic, such as its **position** on an x/y grid, but also other features such as for example its **color**.
@@ -1004,7 +1005,9 @@ The `survminer` package extends `ggplot2` to make it straightforward to create p
 
 ### A Grammar for Tables
 
-![hex icons for gt and gtsummary](media/gt_icons.png)<!-- style = "max-width:300px;" -->![attractive data table with subgroups and footnotes](media/gt_table.png)<!-- style = "max-width:500px;" -->
+![hex icons for gt and gtsummary](media/gt_icons.png)<!-- style = "max-width:300px;" -->
+
+![attractive data table with subgroups and footnotes](media/gt_table.png)<!-- style = "max-width:500px;" -->
 
 The `gt` package provides a grammar for creating display tables, i.e. tables that you might want to show in a publication or on a summary report. The `gtsummary` package makes it trivial to generate publication-ready tables from a tidy data frame.
 
@@ -1019,9 +1022,9 @@ The `gt` package provides a grammar for creating display tables, i.e. tables tha
 
 ## Additional Resources
 
-![Book cover of Fundamentals of Data Visualization](media/fundamentals.png)<!-- style = "max-width:700px;" -->
+![Book cover of Fundamentals of Data Visualization](media/fundamentals.png)<!-- style = "max-width:400px;" -->
 
-If you'd like to learn more about which graphics are most effective in specific situations, we recommend taking a look at *Fundamentals of Data Visualizations* by Claus Wilke. This is a very readable and recent primer on data visualization and figure design, and it's [available for free!](https://serialmentor.com/dataviz)<!-- style = "max-width:400px;" -->
+If you'd like to learn more about which graphics are most effective in specific situations, we recommend taking a look at *Fundamentals of Data Visualizations* by Claus Wilke. This is a very readable and recent primer on data visualization and figure design, and it's [available for free!](https://serialmentor.com/dataviz)
 
 ### Cheat Sheet!
 
