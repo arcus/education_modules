@@ -94,6 +94,8 @@ Minimal experience of using the RStudio IDE and writing R code (specifically, wi
 * Use the Environment tab to find a data frame and learn more about it
 * Insert a new code chunk in an R Markdown document
 
+One potential way to get these basic skills is to take our [R Basics: Introduction](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) course.
+
 This course is designed for R beginners with minimal experience and it is not an advanced course in `ggplot2`.  If you have experience with `ggplot2` already, you may find our ["Data Visualization in ggplot2"](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md), which is more advanced, a better fit for your needs.
 
 **Learning Objectives**
@@ -190,7 +192,7 @@ Let's try to imagine some **data visualizations** (also known as **plots** and *
 
 Consider the `covid_testing` data frame shown below, which we'll work on in the hands-on part of this module.  Think about what the columns mean and which columns you might like to see represented on a data visualization.
 
-![The `covid_testing` data frame in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)<!-- style = "max-width:800px;"-->
+![The first 8 columns of the covid_testing data frame are shown: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)<!-- style = "max-width:800px;"-->
 
 What do you think a plot would look like in which:
 
@@ -315,14 +317,14 @@ ggplot(data = covid_testing) +
   <span style = "color: rgb(var(--color-text)); font-weight: bold;">geom_histogram(</span>mapping = aes(x = pan_day)<span style = "color: rgb(var(--color-text)); font-weight: bold;">)</span>
 </pre>
 </td></tr>
-<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>5) We also add some mappings, explaining which data from the data frame should be displayed in the histogram.  We use "aes" (short for "aesthetic" or "aesthetic mapping") to tell ggplot how to draw the visualization.
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>5)  We also add some mappings inside the parentheses of `geom_histogram`, explaining which data from the data frame should be displayed in the histogram.  We use `aes()` (short for "aesthetic" or "aesthetic mapping") to tell ggplot how to draw the visualization.
 </td>
 <td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) +
   geom_histogram(<span style = "color: rgb(var(--color-text)); font-weight: bold;">mapping = aes(</span>x = pan_day<span style = "color: rgb(var(--color-text)); font-weight: bold;">)</span>)
 </pre>
 </td></tr>
-<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>6) We only have to specify the <b>x axis</b>, because a histogram assumes that you're counting rows of data and will map that to the y axis.
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>6) Inside the parentheses of "aes" we specify the x-axis by including "x = variable". We only have to specify the <b>x axis</b>, because a histogram assumes that you're counting rows of data and will map that to the y axis.
 </td>
 <td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) +
@@ -355,7 +357,7 @@ You start with the code written in **bold** – **bold** in this template is the
 
 In the next section, we'll talk about what it means to call a data frame "tidy".
 
-### Using our Template, Step 1
+### Template, Step 1
 
 Let's get started. The first detail is a "tidy" data frame which contains the data you want to plot.
 
@@ -368,7 +370,7 @@ Let's get started. The first detail is a "tidy" data frame which contains the da
 
 What do we mean by "tidy" data frame?
 
-A data set can take on a lot of different shapes with different styles of organizing data. But there is one method or shape that is best suited for data analysis, and that approach is called "tidy."
+A data set can take on a lot of different shapes with different styles of organizing data. The one method or shape that is best suited for data analysis is known as "tidy".
 
 ![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)<!-- style = "max-width: 400px;" -->
 
@@ -382,7 +384,7 @@ The opposite of "tidy" is often called "messy." And often times a lot of the dat
 
 Here's one simple example of tidy versus messy. If a column is called "name" and includes first names and last names, that's messy.  It can be difficult to extract just the first names or just the last names, since some people have more than one word forming their first name (José María, Mary Jo) and some people have more than one word forming their last name (de la Cruz, Bonham Carter).  A "tidy" approach would be to have one column for first names and one column for last names.
 
-[Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10) suggests that there are five common problems that occur to make data "messy":
+[Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10) (a statistician who is prominent in the R world -- you'll likely become familiar with his name as you continue your R journey) suggests that there are five common problems that occur to make data "messy":
 
 * Column headers are values, not variable names.
 * Multiple variables are stored in one column.
@@ -392,7 +394,7 @@ Here's one simple example of tidy versus messy. If a column is called "name" and
 
 To see a "messy" data frame and its "tidy" alternative, see [a brief 2018 article](https://education.arcus.chop.edu/tidyverse/) for a brief read, or, if you want a deeper dive,  there really isn't a better article than [Hadley Wickham's classic work](https://www.jstatsoft.org/article/view/v059i10).
 
-### A Quick Check In!
+### Quiz: Tidy Data
 
 Let's see what you remember about tidy datasets!  Take a look at the sample table provided below.  It's similar to what you might see in a publication, and it's in a great format for humans... but it's not tidy enough to work with easily in a computational way.  This table shows the results of the "QPT" psychometric (something we made up) and shares pre- and post-treatment means and standard deviations for different kinds of research cohorts.
 
@@ -547,7 +549,6 @@ Let's see what you remember about tidy datasets!  Take a look at the sample tabl
             </td>
         </tr></tbody></table>
 
-<div class = "question">
 Which of the following are ways to make this dataset "tidy"?  Check all that apply!
 
 [[X]] move "depression" status into a column instead of using it in a cell combined with other descriptors
@@ -591,15 +592,17 @@ There's no need to remove the sex variable, and the numerical values don't neces
 | neg | neg | m | 10 | post | 88 | 21.8 |
 | neg | neg | f | 10 | post | 95 | 20.6 |
 
-### Using our Template, Step 2
+</div>
+
+### Template, Step 2
 
 As a reminder, we put forth three steps in our `ggplot` template.
 
-![ggplot code annotated with the steps enumerated in the list below](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
+![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
 
 You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details that match what you want. To fill in the details, you need to do 3 things:
 
-1) Pick a **tidy data frame** (this contains the data you want to plot)
+1) 1) Pick a **tidy data frame** (this contains the data you want to plot, and we'll go over what makes a data frame tidy in the next section)
 
 2) Pick a **geom function** (this is the type of plot you want to make), and
 
@@ -883,9 +886,9 @@ Run that code, and you should see something like this!
 | ![Crossed X and Y axes](media/positions.png)<!-- style = "max-width:75px;" -->  ![Display of color choices](media/colors.png)<!-- style = "max-width:75px;" -->  | 3. **Aesthetic mappings**, which tell R how to represent data as graphical markings on the plot. |
 | ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)<!-- style = "max-width:75px;" -->   ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/blue_histogram.png)<!-- style = "max-width:75px;" -->   | Aesthetics can be **mapped** to a variable or **set** to a constant value. |
 
-## Additional Resources
+## More Visualization Options
 
-The last few sections of this module, including this page, include additional information that will help you on your way.  We'll start with saving plot images!
+The next few sections of this module include additional information that will help you on your way, presented a bit more briefly than we've done so far.  We'll start with saving plot images!
 
 <h3>Saving Plot Images<h3>
 
@@ -1016,20 +1019,6 @@ ggplot(data = data_frame) +                     # Required
   ...
 ```
 
-### Cheat Sheet!
-
-The ggplot Cheat Sheet is great to have on hand as you're exploring your data. It reviews the basic template for building any plot and also lists the most useful geom functions.
-
-To find official cheat sheets, go to the Help menu and choose "Cheat Sheets"
-
-![RStudio help menu, with Cheat Sheets selected and the submenu option "Data Visualization with ggplot2" selected](media/cheat_sheets.png)<!-- style = "max-width:700px;" -->
-
-### Additional Reading
-
-![Book cover of Fundamentals of Data Visualization](media/fundamentals.png)<!-- style = "max-width:700px;" -->
-
-If you'd like to learn more about which graphics are most effective in specific situations, I highly recommend taking a look at *Fundamentals of Data Visualizations* by Claus Wilke. This is a very readable and recent primer on data visualization and figure design, and it's [available for free!](https://serialmentor.com/dataviz)
-
 ### Survival Plots
 
 The `survminer` package extends `ggplot2` to make it straightforward to create publication-quality survival curves and risk tables.
@@ -1041,6 +1030,20 @@ The `survminer` package extends `ggplot2` to make it straightforward to create p
 ![hex icons for gt and gtsummary](media/gt_icons.png)<!-- style = "max-width:300px;" -->![attractive data table with subgroups and footnotes](media/gt_table.png)<!-- style = "max-width:500px;" -->
 
 The `gt` package provides a grammar for creating display tables, i.e. tables that you might want to show in a publication or on a summary report. The `gtsummary` package makes it trivial to generate publication-ready tables from a tidy data frame.
+
+## Additional Resources
+
+![Book cover of Fundamentals of Data Visualization](media/fundamentals.png)<!-- style = "max-width:700px;" -->
+
+If you'd like to learn more about which graphics are most effective in specific situations, I highly recommend taking a look at *Fundamentals of Data Visualizations* by Claus Wilke. This is a very readable and recent primer on data visualization and figure design, and it's [available for free!](https://serialmentor.com/dataviz)
+
+### Cheat Sheet!
+
+The ggplot Cheat Sheet is great to have on hand as you're exploring your data. It reviews the basic template for building any plot and also lists the most useful geom functions.
+
+To find official cheat sheets, go to the Help menu and choose "Cheat Sheets".  There are many to choose from!
+
+![RStudio help menu, with Cheat Sheets selected and the submenu option "Data Visualization with ggplot2" selected](media/cheat_sheets.png)<!-- style = "max-width:700px;" -->
 
 ## Feedback
 
