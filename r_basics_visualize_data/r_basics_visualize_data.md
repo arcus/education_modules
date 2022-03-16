@@ -131,7 +131,7 @@ This might work well for you if you don't want to, or can't, install R and RStud
 
 **First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
 
-  <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"></a> **← Click the "launch binder" button!**
+<a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank">![Launch Binder](media/badge_logo.svg)</a> **← Click the "launch binder" button!**
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
@@ -174,9 +174,8 @@ If you already completed this work for a previous module, and it's been a while 
 * Open your project.
 * In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
 
-![Version control button in RStudio menu at top of window drops down with choices to pull and push branches.](media/pull_branches.png)
-
-![Tools tab in the highest level menu bar drops down with choices to pull and push branches.](media/pull_branches_2.png)
+![Version control button in RStudio menu at top of window drops down with choices to pull and push branches.](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
+![Tools tab in the highest level menu bar drops down with choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
 
 <div class = "warning">
 If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.
