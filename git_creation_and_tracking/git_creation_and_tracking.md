@@ -61,6 +61,10 @@ Before you start this module, make sure you
 
 Open a new command line interface on your computer. All exercises in this module will be done in this interface.
 
+<div class = "warning">
+If you are on a Windows machine, make sure you are in the Git Bash application. The Command Prompt (cmd) will not recognize the commands we are using in this module.  
+</div>
+
 If you are not sure if Git is configured on your computer, enter `git config --list` into your interface. The last two lines of output should show your `user.name` and `user.email`. If these are correct you are all ready to start the module!
 
 If you need to get Git configured on your computer the [Setting Up Git](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/rmh-git-setup/git_setup/setting_up_git.md#1) module will help you get set up in about 20 minutes.
