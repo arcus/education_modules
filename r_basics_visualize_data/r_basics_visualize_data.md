@@ -174,7 +174,9 @@ If you already completed this work for a previous module, and it's been a while 
 * Open your project.
 * In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
 
-![Version control button in RStudio menu at top of window drops down with choices to pull and push branches.](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools tab in the highest level menu bar drops down with choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
+![Version control button in RStudio menu at top of window drops down with choices to pull and push branches.](media/pull_branches.png)
+
+![Tools tab in the highest level menu bar drops down with choices to pull and push branches.](media/pull_branches_2.png)
 
 <div class = "warning">
 If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.
@@ -184,7 +186,7 @@ If you're pulling branches after having worked in previous modules, you might ha
 
 Please go ahead and open the "r\_basics\_visualize\_data" directory in whichever RStudio environment you're working in. You can open "visualize_exercises.Rmd" which will make you ready for our first hands-on activity in just a bit!
 
-![RStudio showing the visualize_exercises.Rmd file.](media/visualize_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
+![`RStudio showing the visualize_exercises.Rmd file`](media/visualize_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
 
 ## Thinking Graphically From Data
 
@@ -192,7 +194,7 @@ Let's try to imagine some **data visualizations** (also known as **plots** and *
 
 Consider the `covid_testing` data frame shown below, which we'll work on in the hands-on part of this module.  Think about what the columns mean and which columns you might like to see represented on a data visualization.
 
-![The first 8 columns of the covid_testing data frame are shown: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)<!-- style = "max-width:800px;"-->
+![The first 8 columns of the `covid_testing` data frame are shown: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)<!-- style = "max-width:800px;"-->
 
 What do you think a plot would look like in which:
 
@@ -303,7 +305,7 @@ ggplot(<span style = "color: rgb(var(--color-text)); font-weight: bold;">data = 
   geom_histogram(mapping = aes(x = pan_day))
 </pre>
 </td></tr>
-<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>3) We build our plot across several different lines, so we include a <code>+</code> to say "wait, we're not done yet!"
+<tr style="padding: 3em; border: 1px solid rgb(var(--color-text));"><td>3) We build our plot across several different lines, so we include a plus sign (<code>+</code>) at the end of the line to say "wait, we're not done yet!"
 </td>
 <td><pre style = "color: rgba(var(--color-text), 0.5); margin:1em; font-size:0.8em;">
 ggplot(data = covid_testing) <span style = "color: rgb(var(--color-text)); font-weight: bold;">+ </span>
@@ -336,37 +338,32 @@ ggplot(data = covid_testing) +
 
 ### A Template
 
-So that was a lot of information. Let's break this down to build up to a more general template. Here's a preview of that template, and we'll spend the few sections or so exploring it.
+So that was a lot of information on the specific use case of working with the `covid_testing` data frame. We explained that in six steps on the last page, but once you have the pattern in mind, you mostly have to think about three main tasks:
 
-![""](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
+1) Pick a **tidy data frame** (this contains the data you want to plot, organized in a tidy way) and add it to the first line, where we see `ggplot(data = )`
 
-You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details that match what you want. To fill in the details, you need to do 3 things:
+2) Pick a **geom function** (this is the type of plot you want to make), and add it as a new line (like we did with `geom_histogram`)
 
-1) Pick a **tidy data frame** (this contains the data you want to plot)
+3) Write **aesthetic mappings** (which columns of the data you want to see added to the plot, and how you want them visualized)
 
-2) Pick a **geom function** (this is the type of plot you want to make), and
+Here's a visual of what that a template looks like, with those three tasks:
 
-3) Write **aesthetic mappings** (and we'll go over what that means)
+![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
 
-<lia-keep>
-<pre>
-<b>ggplot(data = </b>data_frame<b>) +</b>
-  geom_function(<b>mapping = aes(</b>mappings<b>))</b>
-</pre>
-</lia-keep>
+And here is the template in case you want to copy and paste it.  The first task, of picking a data frame, would change the first line of the template, and the second and third tasks would change the second line.  You don't have to indent the second line, but it's a good idea, because it visually reminds you that it's the continuation of an earlier line of code.
+
+```
+ggplot(data = data_frame) +
+  geom_function(mapping = aes(mappings))
+```
 
 In the next section, we'll talk about what it means to call a data frame "tidy".
 
 ### Template, Step 1
 
-Let's get started. The first detail is a "tidy" data frame which contains the data you want to plot.
+Let's get started. The first detail is a "tidy" data frame which contains the data you want to plot.  It replaces the generic `data_frame` in our template (shown again below).
 
-<lia-keep>
-<pre>
-<b>ggplot(data = </b>data_frame<b>) +</b>
-  geom_function(<b>mapping = aes(</b>mappings<b>))</b>
-</pre>
-</lia-keep>
+![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
 
 What do we mean by "tidy" data frame?
 
@@ -382,7 +379,7 @@ A data set is tidy if:
 
 The opposite of "tidy" is often called "messy." And often times a lot of the data analysis work is to convert "messy" data into "tidy data." But for now, fortunately for us, the `covid_testing` data set is tidy already.
 
-Here's one simple example of tidy versus messy. If a column is called "name" and includes first names and last names, that's messy.  It can be difficult to extract just the first names or just the last names, since some people have more than one word forming their first name (José María, Mary Jo) and some people have more than one word forming their last name (de la Cruz, Bonham Carter).  A "tidy" approach would be to have one column for first names and one column for last names.
+Here's one simple example of tidy versus messy. If a column is called "name" and includes first names and last names, that's messy.  It can be difficult to extract just the first names or just the last names, since some people have more than one word forming their first name (José María, Leigh Ann) and some people have more than one word forming their last name (de la Cruz, Bonham Carter).  A "tidy" approach would be to have one column for first names and one column for last names.
 
 [Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10) (a statistician who is prominent in the R world -- you'll likely become familiar with his name as you continue your R journey) suggests that there are five common problems that occur to make data "messy":
 
@@ -559,6 +556,7 @@ Which of the following are ways to make this dataset "tidy"?  Check all that app
 [[?]] There are multiple correct answers!
 
 <div class = "answer">
+
 <details><summary>Click to see an explanation of the answer.</summary>
 
 Depression status and timepoint should each become a column.  In fact, we suggest the following columns:
@@ -596,24 +594,15 @@ There's no need to remove the sex variable, and the numerical values don't neces
 
 ### Template, Step 2
 
-As a reminder, we put forth three steps in our `ggplot` template.
+As a reminder, we put forth three steps in our `ggplot` template:
+
+1) Pick a **tidy data frame** (this contains the data you want to plot, organized in a tidy way) and add it to the first line, where we see `ggplot(data = )`
+
+2) Pick a **geom function** (this is the type of plot you want to make), and add it as a new line (like we did with `geom_histogram`)
+
+3) Write **aesthetic mappings** (which columns of the data you want to see added to the plot, and how you want them visualized)
 
 ![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
-
-You start with the code written in **bold** – **bold** in this template is the constant part - and fill in the details that match what you want. To fill in the details, you need to do 3 things:
-
-1) 1) Pick a **tidy data frame** (this contains the data you want to plot, and we'll go over what makes a data frame tidy in the next section)
-
-2) Pick a **geom function** (this is the type of plot you want to make), and
-
-3) Write **aesthetic mappings** (and we'll go over what that means)
-
-<lia-keep>
-<pre>
-<b>ggplot(data = </b>data_frame<b>) +</b>
-  geom_function(<b>mapping = aes(</b>mappings<b>))</b>
-</pre>
-</lia-keep>
 
 Let's take on the second step: selecting a **geom function**.
 
@@ -634,21 +623,16 @@ Here are a few useful geom functions for visualizing clinical data, but there ar
 
 ### Using our Template, Step 3
 
+
 As a reminder, we put forth three steps in our `ggplot` template:
 
-1) Pick a **tidy data frame** (this contains the data you want to plot)
+1) Pick a **tidy data frame** (this contains the data you want to plot, organized in a tidy way) and add it to the first line, where we see `ggplot(data = )`
 
-2) Pick a **geom function** (this is the type of plot you want to make), and
+2) Pick a **geom function** (this is the type of plot you want to make), and add it as a new line (like we did with `geom_histogram`)
 
-3) Write **aesthetic mappings** (and we'll go over what that means)
+3) Write **aesthetic mappings** (which columns of the data you want to see added to the plot, and how you want them visualized)
 
-<lia-keep>
-<pre>
-<b>ggplot(data = </b>data_frame<b>) +</b>
-  geom_function(<b>mapping = aes(</b>mappings<b>))</b>
-</pre>
-</lia-keep>
-
+![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:700px;" -->
 Let's take on the third step: writing aesthetic mappings.  This is where you tell R how you want the columns of the data frame represented as graphical markings on the plot.  It's important to start with a couple of important distinctions:
 
 * An **aesthetic** is something that you can see about a data element on a graphic, such as its **position** on an x/y grid, but also other features such as for example its **color**.
@@ -725,9 +709,9 @@ The distinction between visual elements that are "set" and those that are "mappe
 
 ### Exercise Time!
 
-Using your RStudio file browser (one of the tabs that usually appears in the lower right), please find and open the `r_basics_visualize_data` directory, and then open `visualize_exercises.Rmd`, which will allow you to work alongside the sections of this module.
+Using your RStudio file browser (one of the tabs that usually appears in the lower right pane of RStudio), please find and open the `r_basics_visualize_data` directory, and then open `visualize_exercises.Rmd`, which will allow you to work alongside the sections of this module.
 
-![RStudio window showing visualize_exercises.Rmd](media/visualize_exercises.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
+![`RStudio window showing visualize_exercises.Rmd`](media/visualize_exercises.png)<!-- style = "max-width: 600px; border: 1px solid rgb(var(--color-highlight))" -->
 
 To get started, let's first load up our fabricated data.  Run the first code chunk by clicking the green "play" button (look at line 10).  This gives you the data frame with fake Covid testing data, the data we will use for our instruction in this module.  You may have already done this a few sections ago, but it won't hurt to do it again.
 
@@ -737,7 +721,7 @@ Stop when it says "Stop here".  We'll go over the solutions in the next section.
 
 ### Solutions
 
-If you like, you can open the solutions version of `visualize_exercises.Rmd` by using your file browser to open `visualize_solutions.Rmd`.
+If you like, you can open the solutions version of `visualize_exercises.Rmd` by using your RStudio file browser to open `visualize_solutions.Rmd`.
 
 You had three tasks to complete.  We'll go through them one at a time.
 
@@ -785,18 +769,18 @@ In the third task you just completed (if you didn't actually do it, at least go 
 <div style = "margin: 1rem; max-width: 45%; float:left;"> ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)
 </div>
 <div style = "margin: 1rem auto; max-width: 45%; float:left;">
-
+<lia-keep>
 <pre>
 ggplot(data = covid_testing) +
   geom_histogram(mapping = aes(x = pan_day, fill = result))
 </pre>
-
+</lia-keep>
 </div>
 </div>
 
 In contrast, consider this plot. It's the same as the one you've created at the beginning of the session, except the bars are blue, not black. So the difference is the "fill" aesthetic. But we're not really mapping the fill aesthetic to a variable here, because all bars are the same fill color. They don't represent the values of a column (or variable) of a data frame. Instead, we're setting it to a constant value, the color blue.
 
-![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram are blue.](media/blue_histogram.png)
+![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram are blue.](media/blue_histogram.png)<!-- style = "max-width: 800px;" -->
 
 To do this in ggplot, you can still use "fill", but:
 
@@ -878,25 +862,18 @@ Run that code, and you should see something like this!
 
 ![greyscale graph that shows both a histogram and a frequency polygon of the same covid data, overlaid](media/two_geoms.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
-## Recap
-
-| ![ggplot2 logo on a hexagon.  The logo consists of the word "ggplot2" superimposed on light grey graph paper with a line graph connecting blue dots of different shades](media/ggplot2_hex.png)<!-- style = "max-width:200px;" --> | **ggplot2** is a package that provides a **grammar of graphics**. You can create any type of plot using a simple template to which you provide: |
-| ![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)<!-- style = "max-width:200px;" --> | 1. A **tidy data frame**, in which each variable is in its own column, each observation is in its own row, and each value is in its own cell; |
-| ![histogram of covid data](media/mini_histogram.png)<!-- style = "max-width:75px;" -->  ![frequency polygon of covid data](media/mini_freqpoly.png)<!-- style = "max-width:75px;" --> | 2. A **geom function**, which tells R what kind of plot to make; and |
-| ![Crossed X and Y axes](media/positions.png)<!-- style = "max-width:75px;" -->  ![Display of color choices](media/colors.png)<!-- style = "max-width:75px;" -->  | 3. **Aesthetic mappings**, which tell R how to represent data as graphical markings on the plot. |
-| ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)<!-- style = "max-width:75px;" -->   ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/blue_histogram.png)<!-- style = "max-width:75px;" -->   | Aesthetics can be **mapped** to a variable or **set** to a constant value. |
 
 ## More Visualization Options
 
 The next few sections of this module include additional information that will help you on your way, presented a bit more briefly than we've done so far.  We'll start with saving plot images!
 
-<h3>Saving Plot Images<h3>
+<h3>Saving Plot Images</h3>
 
 To save a plot you've created in the console, you can go to the **Plots** pane on the bottom right of the RStudio window, click "Export", and select "Save as Image".
 
 To save a plot you've created by running some code inside an R notebook, you can **right-click** the plot and select "Save image as".
 
-![RStudio window with the two options illustrated and labeled: Plots, Export, Save as Image, and a right click "save image as"](saving_images.png)<!-- style = "max-width:700px;" -->
+![RStudio window with the two options illustrated and labeled: Plots, Export, Save as Image, and a right click "save image as"](media/saving_images.png)<!-- style = "max-width:700px;" -->
 
 ### Position Adjustments
 
@@ -1031,11 +1008,20 @@ The `survminer` package extends `ggplot2` to make it straightforward to create p
 
 The `gt` package provides a grammar for creating display tables, i.e. tables that you might want to show in a publication or on a summary report. The `gtsummary` package makes it trivial to generate publication-ready tables from a tidy data frame.
 
+## Recap
+
+| ![ggplot2 logo on a hexagon.  The logo consists of the word "ggplot2" superimposed on light grey graph paper with a line graph connecting blue dots of different shades](media/ggplot2_hex.png)<!-- style = "max-width:200px;" --> | **ggplot2** is a package that provides a **grammar of graphics**. You can create any type of plot using a simple template to which you provide: |
+| ![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)<!-- style = "max-width:200px;" --> | 1. A **tidy data frame**, in which each variable is in its own column, each observation is in its own row, and each value is in its own cell; |
+| ![histogram of covid data](media/mini_histogram.png)<!-- style = "max-width:75px;" -->  ![frequency polygon of covid data](media/mini_freqpoly.png)<!-- style = "max-width:75px;" --> | 2. A **geom function**, which tells R what kind of plot to make; and |
+| ![Crossed X and Y axes](media/positions.png)<!-- style = "max-width:75px;" -->  ![Display of color choices](media/colors.png)<!-- style = "max-width:75px;" -->  | 3. **Aesthetic mappings**, which tell R how to represent data as graphical markings on the plot. |
+| ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)<!-- style = "max-width:75px;" -->   ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/blue_histogram.png)<!-- style = "max-width:75px;" -->   | Aesthetics can be **mapped** to a variable or **set** to a constant value. |
+| | Additionally, you can do things like change theme, color palette, coordinate systems, facet your graph, and more! |
+
 ## Additional Resources
 
 ![Book cover of Fundamentals of Data Visualization](media/fundamentals.png)<!-- style = "max-width:700px;" -->
 
-If you'd like to learn more about which graphics are most effective in specific situations, I highly recommend taking a look at *Fundamentals of Data Visualizations* by Claus Wilke. This is a very readable and recent primer on data visualization and figure design, and it's [available for free!](https://serialmentor.com/dataviz)
+If you'd like to learn more about which graphics are most effective in specific situations, we recommend taking a look at *Fundamentals of Data Visualizations* by Claus Wilke. This is a very readable and recent primer on data visualization and figure design, and it's [available for free!](https://serialmentor.com/dataviz)<!-- style = "max-width:400px;" -->
 
 ### Cheat Sheet!
 
