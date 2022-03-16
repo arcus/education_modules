@@ -342,18 +342,7 @@ ggplot(data = covid_testing) +
 
 ### A Template
 
-So that was a lot of information on the specific use case of working with the `covid_testing` data frame. We explained that in six steps on the last page, but once you have the pattern in mind, you mostly have to think about three main tasks.  
-
-<div class = "hint">
-
-Below, we talk about "tidy" data, which we won't cover in detail in this module.  It's sufficient at this point to know that tidy data is in a rectangular shape with rows and columns, and:
-
-* Columns each measure just one thing (so, no "doubling up" with first and last name or race and gender) and
-* Rows each constitute a single observation (like a single patient or a single measurement of rainfall amount on a given day)
-
-The sample data we're going to work with in this module is already "tidy".  
-
-</div>
+So that was a lot of information on the specific use case of working with the `covid_testing` data frame. We explained that in six steps on the last page, but once you have the pattern in mind, you mostly have to think about three main tasks.  We'll explain each step in the following sections.
 
 1) Pick a **tidy data frame** (this contains the data you want to plot, organized in a tidy way) and add it to the first line, where we see `ggplot(data = )`
 
@@ -380,17 +369,18 @@ Let's get started. The first detail is a "tidy" data frame which contains the da
 
 ![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:400px;" -->
 
-What do we mean by "tidy" data frame?
-
 A data set can take on a lot of different shapes with different styles of organizing data. The one method or shape that is best suited for data analysis is known as "tidy".
 
 ![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)<!-- style = "max-width: 400px;" -->
 
-A data set is tidy if:
+We won't cover "tidy" data in detail in this module.  It's sufficient at this point to know that tidy data is in a rectangular shape with rows and columns, and:
 
-* Each variable is in its own column
-* Each observation is in its own row, and
-* Each value is in its own cell.
+* Columns each measure just one thing (so, no "doubling up" with first and last name or race and gender) and
+* Rows each constitute a single observation (like a single patient, or a single vial, or a single city block)
+* Each value is in its own cell (again, no doubling up values or merging of cells)
+
+The sample data we're going to work with in this module, the `covid_testing` data is already "tidy".  So our first step is easy: we are going to choose the `covid_testing` data frame and put that as our tidy data frame.
+
 
 ### Template, Step 2
 
