@@ -344,7 +344,7 @@ ggplot(data = covid_testing) +
 
 So that was a lot of information on the specific use case of working with the `covid_testing` data frame. We explained that in six steps on the last page, but once you have the pattern in mind, you mostly have to think about three main tasks.  
 
-<div class = "tip">
+<div class = "hint">
 
 Below, we talk about "tidy" data, which we won't cover in detail in this module.  It's sufficient at this point to know that tidy data is in a rectangular shape with rows and columns, and:
 
@@ -380,6 +380,17 @@ Let's get started. The first detail is a "tidy" data frame which contains the da
 
 ![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:400px;" -->
 
+What do we mean by "tidy" data frame?
+
+A data set can take on a lot of different shapes with different styles of organizing data. The one method or shape that is best suited for data analysis is known as "tidy".
+
+![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)<!-- style = "max-width: 400px;" -->
+
+A data set is tidy if:
+
+* Each variable is in its own column
+* Each observation is in its own row, and
+* Each value is in its own cell.
 
 ### Template, Step 2
 
