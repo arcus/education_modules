@@ -131,7 +131,9 @@ This might work well for you if you don't want to, or can't, install R and RStud
 
 **First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
 
-<a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank">![Launch Binder](media/badge_logo.svg) <b>Click to launch binder</b></a>
+<a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank">
+<b>Click to launch binder →</b>![Launch Binder](media/badge_logo.svg)
+</a>
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
