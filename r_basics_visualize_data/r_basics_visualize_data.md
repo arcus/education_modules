@@ -341,6 +341,7 @@ ggplot(data = covid_testing) +
 So that was a lot of information on the specific use case of working with the `covid_testing` data frame. We explained that in six steps on the last page, but once you have the pattern in mind, you mostly have to think about three main tasks.  
 
 <div class = "tip">
+
 Below, we talk about "tidy" data, which we won't cover in detail in this module.  It's sufficient at this point to know that tidy data is in a rectangular shape with rows and columns, and:
 
 * Columns each measure just one thing (so, no "doubling up" with first and last name or race and gender) and
@@ -348,7 +349,7 @@ Below, we talk about "tidy" data, which we won't cover in detail in this module.
 
 The sample data we're going to work with in this module is already "tidy".  
 
-</tip>
+</div>
 
 1) Pick a **tidy data frame** (this contains the data you want to plot, organized in a tidy way) and add it to the first line, where we see `ggplot(data = )`
 
