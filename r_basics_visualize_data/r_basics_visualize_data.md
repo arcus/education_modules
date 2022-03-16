@@ -133,7 +133,7 @@ This might work well for you if you don't want to, or can't, install R and RStud
 
 <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank">
 
-**Click to launch binder →**![Launch Binder](media/badge_logo.svg)
+![Launch Binder](media/badge_logo.svg)**Click to launch binder**
 
 </a>
 
