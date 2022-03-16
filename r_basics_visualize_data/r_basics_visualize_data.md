@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  0.4
+version:  1.0.0
 language: en
 narrator: US English Female
 title: R Basics: Visualizing Data With ggplot2
@@ -743,7 +743,7 @@ You had three tasks to complete.  We'll go through them one at a time.
 
 In your first task, you were asked to do what we already did once in this module: create a histogram of Covid tests as a function of `pan_day`.  There were three blanks to fill in, and three numbered instructions.
 
-![Lines 18-31 of visualize_exercises.Rmd](media/task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![`Lines 18-31 of visualize_exercises.Rmd`](media/task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 Here's the solution that you should place in that code chunk:
 
@@ -755,7 +755,7 @@ ggplot(data = covid_testing) +
 
 In the second task, you were asked to rework that code with a bin width ("binwidth" in code) that corresponded to daily counts:
 
-![Lines 44-50 of visualize_exercises.Rmd](media/task_2.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![`Lines 44-50 of visualize_exercises.Rmd`](media/task_2.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 Here's the solution that you should place in that code chunk:
 
@@ -766,7 +766,7 @@ ggplot(data = covid_testing) +
 
 Finally, for the third task, you had to create a new code chunk by using copy and paste, **and** you had to add an aesthetic mapping using "fill".  Complicated!
 
-![Lines 58-60 of visualize_exercises.Rmd](media/task_3.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![`Lines 58-60 of visualize_exercises.Rmd`](media/task_3.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 
 And here's the solution:
@@ -836,7 +836,7 @@ In the next exercise, you're going to work hands-on with geom functions.
 
 In your RStudio environment, you should already have `visualize_exercises.Rmd` open.  If not, please reopen it.  Scroll down to `### Your Turn: Geom functions`, which should be around line 90 or so.
 
-![Lines 91-106 of visualize_exercises.Rmd](media/ex_2_task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![`Lines 91-106 of visualize_exercises.Rmd`](media/ex_2_task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 Then, work through the exercises from that point forward, running, adding, and updating code as indicated.  Hint: take advantage of code completion suggestions in RStudio to help you make an educated guess as to how to proceed, especially in the first task.
 
@@ -850,7 +850,7 @@ You had three tasks to complete.  We'll go through them one at a time.
 
 Your first task invited you to run a code chunk that creates a histogram and use that code as the basis of a new code chunk that creates a frequency polygon.  
 
-![Lines 91-106 of visualize_exercises.Rmd](media/ex_2_task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![`Lines 91-106 of visualize_exercises.Rmd`](media/ex_2_task_1.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 This is the solution code:
 
@@ -861,7 +861,7 @@ ggplot(data = covid_testing) +
 
 In your second task, you were asked to set the color of the line to "blue".  Note that lines have "color" and shapes have "fill" (for the inside) as well as optional "color" (for the edges).
 
-![Lines 110-115 of visualize_exercises.Rmd](media/ex_2_task_2.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![`Lines 110-115 of visualize_exercises.Rmd`](media/ex_2_task_2.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 This is the proper code:
 
@@ -872,7 +872,7 @@ ggplot(data = covid_testing) +
 
 Finally, you were asked to predict what the output of `ggplot` code using two different `geom_` functions would be:
 
-![Lines 122-131 of visualize_exercises.Rmd](media/ex_2_task_3.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
+![`Lines 122-131 of visualize_exercises.Rmd`](media/ex_2_task_3.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
 Run that code, and you should see something like this!
 
