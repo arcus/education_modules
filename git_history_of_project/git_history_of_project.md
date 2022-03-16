@@ -58,11 +58,15 @@ This module is for you if:
 
 The purpose of this module is to learn how to explore the history of a Git repository that has already been created. We are going to download Dracula's repository in which he started documenting the pros and cons of moving with his friends to Mars. Open up your command line interface and type:
 
-```console
+```
 git clone https://www.github.com/arcus/planets
 ```
 
 This should be a very fast download. Now if you type `ls` you should see a folder titled `planets`. Navigate into the planets directory. This is the directory we will be exploring throughout the module.
+
+<div class = "warning">
+If you are on a Windows machine, make sure you are in the Git Bash application. The Command Prompt (cmd) will not recognize the commands we are using in this module, including `ls`. 
+</div>
 
 ![A collage of the project we will use as a motivating example. Figures include Dracula, a werewolf, a mummy, and several planets and moons.](media/motivatingexample.png)
 [Werewolf vs dracula](https://www.deviantart.com/b-maze/art/Werewolf-vs-Dracula-124893530)
