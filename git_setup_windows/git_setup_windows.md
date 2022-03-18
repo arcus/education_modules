@@ -58,7 +58,7 @@ Since Windows machines do not come with `git` pre-installed, you will need to do
 
 When you open the `.exe` file you may be asked to confirm that you want to run it. Click the `Run` button to begin the installation process.
 
-![Security warning window. Select the "Run" button in the middle to continue](media/01run.exe.png)
+![Security warning window. Select the "Run" button in the middle to continue](media/01run.exe.png)<!-- style = "max-width:300px;" -->
 
 <div class = "important">
 There are several helpful settings that you can choose in the Setup phase that will be useful in the future. However it is also possible to install with default settings and update them from the command line later.
@@ -68,53 +68,35 @@ There are several helpful settings that you can choose in the Setup phase that w
 
 While most of of the default options will work just fine, there are 16 screens to click through and there are settings to change on a few of them. Let's go through them one by one.
 
-1. ![GNU public liscense screen](media/02public_liscense.png)
-
-2. ![Select destination location screen](media/03select_destination.png)
-
-3. They should already be checked, but make sure that Windows Explorer integration and Git Bash are both checked on this screen. ![Select components screen](media/04select_components.png)
-
-
-4. ![Select Start Menu Folder screen](media/05select_folder.png)
-
-5. If you have a favorite text editor such as Atom, go ahead and select that. You can scroll up for more options like `nano`, or select Notepad, which will feel the most familiar if you are used to word processing programs. ![Choosing the default editor screen. The "Use Notepad as Git's default editor" option is selected from the dropdown menu.](media/06default_editor.png)
-
-
-6. On this screen you want to change the default branch name to "main" to match with the conventions of GitHub. ![Branch naming screen. The second option, "Override the default branch name for new responses" is selected and the word "main" is entered into the text box.](media/07branch_naming.png)
-
-
-7. Allowing 3rd parties, such as GitHub Desktop, may be extremely useful to you in the future, so we recommend selecting this option. ![Adjusting your PATH screen. The second option, "Git from the command line and also from 3rd-party software" is selected](media/08path.png)
-
-
-8. You can click next on each of the subsequent screens: ![SSH screen](media/09ssh.png)
-
-
-9. ![HTTPS screen](media/10https.png)
-
-10. ![Configuring line ending conversions screen](media/11line_endings.png)
-
-11. ![Configuring terminal emulator screen](media/12terminal_emulator.png)
-
-12. ![Behavior of `git pull` screen](media/13git_pull.png)
-
-13. ![Choose a credential helper screen](media/14credential.png)
-
-14. ![Extra options screen](media/15extra_options.png)
-
-15. ![Experimental options screen](media/16experimental_options.png)
-
-16. Click "Finish" to complete the installation. ![Final screen, select "Finish" in the lower right to complete setup](media/17finish.png)
+| Instructions | Screen |
+| :---: | --- |
+| Click "Next" in the lower right. | ![GNU public license screen](media/02public_license.png)<!-- style = "max-width:200px;" --> |
+| If you want to choose a different location for Git, you can do that on this screen. Click "Next" in the lower right. | ![Select destination location screen](media/03select_destination.png)<!-- style = "max-width:200px;" -->  |
+| They should already be checked, but make sure that Windows Explorer integration and Git Bash are both checked on this screen. | ![Select components screen](media/04select_components.png)<!-- style = "max-width:200px;" -->  |
+| Click "Next" in the lower right. | ![Select Start Menu Folder screen](media/05select_folder.png)<!-- style = "max-width:200px;" --> |
+| If you have a favorite text editor such as Atom, go ahead and select that. You can scroll up for more options like `nano`, or select Notepad, which will feel the most familiar if you are used to word processing programs. | ![Choosing the default editor screen. The "Use Notepad as Git's default editor" option is selected from the dropdown menu.](media/06default_editor.png)<!-- style = "max-width:200px;" -->|
+| On this screen you want to change the default branch name to "main" to match with the conventions of GitHub. | ![Branch naming screen. The second option, "Override the default branch name for new responses" is selected and the word "main" is entered into the text box.](media/07branch_naming.png)<!-- style = "max-width:200px;" -->|
+| Allowing 3rd parties, such as GitHub Desktop, may be extremely useful to you in the future, so we recommend selecting this option. | ![Adjusting your PATH screen. The second option, "Git from the command line and also from 3rd-party software" is selected](media/08path.png)<!-- style = "max-width:200px;" -->|
+| You can click "Next" on each of the subsequent screens. | ![SSH screen](media/09ssh.png)<!-- style = "max-width:200px;" -->|
+|Click "Next" in the lower right of the screen.| ![HTTPS screen](media/10https.png)<!-- style = "max-width:200px;" -->|
+|Click "Next" in the lower right of the screen.| ![Configuring line ending conversions screen](media/11line_endings.png)<!-- style = "max-width:200px;" -->|
+|Click "Next" in the lower right of the screen.| ![Configuring terminal emulator screen](media/12terminal_emulator.png)<!-- style = "max-width:200px;" -->|
+|Click "Next" in the lower right of the screen.| ![Behavior of `git pull` screen](media/13git_pull.png)<!-- style = "max-width:200px;" -->|
+|Click "Next" in the lower right of the screen.| ![Choose a credential helper screen](media/14credential.png)<!-- style = "max-width:200px;" -->|
+|Click "Next" in the lower right of the screen.| ![Extra options screen](media/15extra_options.png)<!-- style = "max-width:200px;" -->|
+|Click "Next" in the lower right of the screen.| ![Experimental options screen](media/16experimental_options.png)<!-- style = "max-width:200px;" -->|
+|Click "Finish" to complete the installation.|  ![Final screen, select "Finish" in the lower right to complete setup](media/17finish.png)<!-- style = "max-width:200px;" -->|
 
 
 ## Global configurations
 
 You will interact with Git through the Git Bash application, which should now appear when you search for it.
 
-![Windows search bar containing "Git Bash"](media/git_bash_start_menu.png)
+![Windows search bar containing "Git Bash"](media/git_bash_start_menu.png)<!-- style = "max-width:100px;" -->
 
 This application will open a new Git Bash console. It is here where you will enter all commands relating to Git.
 
-![A blank Git Bash window](media/git_bash_new.png)
+![A blank Git Bash window](media/git_bash_new.png)<!-- style = "max-width:200px;" -->
 
 When we use Git on a new computer for the first time, we need to configure a few things.
 Below are a few examples of configurations we will set as we get started with Git:
