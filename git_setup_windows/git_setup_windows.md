@@ -82,9 +82,7 @@ While most of of the default options will work just fine, there are 16 screens t
 
 7. Allowing 3rd parties, such as GitHub Desktop, may be extremely useful to you in the future, so we recommend selecting this option. ![Adjusting your PATH screen. The second option, "Git from the command line and also from 3rd-party software" is selected](media/08path.png)
 
-You can click next on each of the subsequent screens:
-
-8. ![SSH screen](media/09ssh.png)
+8. You can click next on each of the subsequent screens: ![SSH screen](media/09ssh.png)
 
 9. ![HTTPS screen](media/10https.png)
 
@@ -100,7 +98,7 @@ You can click next on each of the subsequent screens:
 
 15. ![Experimental options screen](media/16experimental_options.png)
 
-16. ![Final screen, select "Finish" in the lower right to complete setup](media/17finish.png)
+16. Click "Finish" to complete the installation. ![Final screen, select "Finish" in the lower right to complete setup](media/17finish.png)
 
 
 ## Global configurations
