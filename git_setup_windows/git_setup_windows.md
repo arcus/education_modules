@@ -10,9 +10,9 @@ title: Setting Up Git on Windows
 
 comment: This module provides recommendations and examples to help new users configure git on their Windows computer for the first time.
 
-long_description: If you're ready to start using the Git version control system, this lesson will walk you through how to get set up. This lesson should be a good fit for people who already have an idea of what version control is (although may not have any experience using it yet), and know how to open the command line interface (CLI) on their computer. No previous experience with Git is expected. This lesson is specific to Windows machines, if you are using Mac or Linux, please follow along with the [set-up guide for those computers]().
+long_description: If you're ready to start using the Git version control system, this lesson will walk you through how to get set up. This lesson should be a good fit for people who already have an idea of what version control is but may not have any experience using it yet. No previous experience with Git is expected. This lesson is specific to Windows machines, If you are using Mac or Linux, please follow along with the [set-up guide for those computers]( ).
 
-estimated_time: 20 min
+estimated_time: 25 min
 
 @learning_objectives  
 
@@ -68,7 +68,7 @@ There are several helpful settings that you can choose in the Setup phase that w
 
 While most of of the default options will work just fine, there are 16 screens to click through and there are settings to change on a few of them. Let's go through them one by one.
 
-1. ![GNU public liscense screen](media/02public_liscense.png)
+1. ![GNU public liscense screen](media/02public_liscense.png =100x20)
 
 2. ![Select destination location screen](media/03select_destination.png)
 
