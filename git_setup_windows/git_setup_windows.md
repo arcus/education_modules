@@ -30,7 +30,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
-# Setting Up Git
+# Setting Up Git on Windows
 
 <div class = "overview">
 
