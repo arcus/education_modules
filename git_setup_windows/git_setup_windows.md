@@ -94,11 +94,11 @@ While most of of the default options will work just fine, there are 16 screens t
 You will interact with Git through the Git Bash application, which should now appear when you search for it. This application will open a new Git Bash console. It is here where you will enter all commands relating to Git.
 </div>
 <div style = "margin: 1rem auto; max-width: 25%; float:right;">
-![Windows search bar containing "Git Bash"](media/git_bash_start_menu.png)<!-- style = "max-width:200px;" -->
+![Windows search bar containing "Git Bash"](media/git_bash_start_menu.png)
 </div>
 
 ---
-The cursor after the `$` is where you will enter commands into this commmand line interface (CLI).
+This is the command line interface you should use for Git. All commands are typed following the `$` and run by pressing `Enter`.
 ![A blank Git Bash window](media/git_bash_new.png)<!-- style = "max-width:400px;" -->
 
 ## Global configurations
