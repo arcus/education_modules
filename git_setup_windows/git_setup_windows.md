@@ -68,7 +68,7 @@ There are several helpful settings that you can choose in the Setup phase that w
 
 While most of of the default options will work just fine, there are 16 screens to click through and there are settings to change on a few of them. Let's go through them one by one.
 
-1. ![GNU public liscense screen](media/02public_liscense.png =100x20)
+1. ![GNU public liscense screen](media/02public_liscense.png)
 
 2. ![Select destination location screen](media/03select_destination.png)
 
