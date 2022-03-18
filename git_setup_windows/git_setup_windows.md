@@ -205,7 +205,7 @@ This is [a common problem that has frustrated many a new git user](https://stack
 
 ### Default branch naming
 
-Git (2.28+) allows configuration of the name of the branch created when you initialize any new repository.  Dracula decides to use that feature to set it to `main` so
+Git (2.28+) allows configuration of the name of the branch created when you initialize any new repository.  Our friend Dracula decides to use that feature to set it to `main` so
 it matches GitHub, which is the cloud service he will eventually use. If you already changed the default branch name when installing Git, you can skip this step.
 
 ```bash
