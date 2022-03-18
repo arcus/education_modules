@@ -70,7 +70,7 @@ While most of of the default options will work just fine, there are 16 screens t
 
 | Instructions | Screen |
 | :---: | --- |
-| 1. Click "Next" in the lower right. | ![GNU public license screen](media/02public_license.png)<!-- style = "max-width:400px;" --> |
+| 1. Click "Next" in the lower right. | ![GNU public license screen](media/02public_license.png)<!-- style = "max-width:400px;" border = 5px solid --> |
 | 2. If you want to choose a different location for Git, you can do that on this screen. Click "Next" in the lower right. | ![Select destination location screen](media/03select_destination.png)<!-- style = "max-width:400px;" -->  |
 | 3. They should already be checked, but make sure that Windows Explorer integration and Git Bash are both checked on this screen. | ![Select components screen](media/04select_components.png)<!-- style = "max-width:400px;" -->  |
 | 4. Click "Next" in the lower right. | ![Select Start Menu Folder screen](media/05select_folder.png)<!-- style = "max-width:400px;" --> |
