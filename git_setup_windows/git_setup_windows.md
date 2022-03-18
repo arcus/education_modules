@@ -94,7 +94,7 @@ You should now be all ready to use Git on your machine. Open up Git Bash to use 
 
 | Description | Screenshot |
 | -- | :--:|
-| You will interact with Git through the Git Bash application, which should now appear in your Start Menu as well as when you search for it. | ![Windows search bar containing "Git Bash"](media/git_bash_start_menu.png)<!-- style = "max-width:200px;" border = 5px solid -->  |
+| You will interact with Git through the Git Bash application, which should now appear in your Start Menu as well as when you search for it. | ![Windows search bar containing "Git Bash"](media/git_bash_start_menu.png)<!-- style = "max-width:200px;" border = 5px solid #000 -->  |
 | Clicking on Git Bash will open a new Git Bash console. It is here where you will enter all commands relating to Git. This is the command line interface you should use for Git. All commands are typed following the `$` and run by pressing `Enter`. | ![A blank Git Bash window](media/git_bash_new.png)<!-- style = "max-width:500px;"  border = 5px solid --> |
 
 
