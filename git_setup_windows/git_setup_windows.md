@@ -94,7 +94,7 @@ You should now be all ready to use Git on your machine. Open up Git Bash to use 
 
 | Description | Screenshot |
 | -- | :--:|
-| You will interact with Git through the Git Bash application, which should now appear in your Start Menu as well as when you search for it. | ![Windows search bar containing "Git Bash"](media/git_bash_start_menu.png)<!-- style = "max-width:200px; border = 25px solid #000000" -->  |
+| You will interact with Git through the Git Bash application, which should now appear in your Start Menu as well as when you search for it. | ![Windows search bar containing "Git Bash"](media/git_bash_start_menu.png)<!-- style = "max-width:200px; border = 25px solid black" -->  |
 | Clicking on Git Bash will open a new Git Bash console. It is here where you will enter all commands relating to Git. This is the command line interface you should use for Git. All commands are typed following the `$` and run by pressing `Enter`. | ![A blank Git Bash window](media/git_bash_new.png)<!-- style = "max-width:500px;"  border = 5px solid --> |
 
 
@@ -144,9 +144,7 @@ If you elect to use a private email address with GitHub, then use that same emai
 
 ### Handling line endings
 
-<div class = "learnmore">
 You already told Git how to handle line endings in one of those installation windows, but it never hurts to double check that your settings are correct.
-</div>
 
 As with other keys, when you hit `Enter` or `↵` or on Macs, `Return` on your keyboard,
 your computer encodes this input as a character.
