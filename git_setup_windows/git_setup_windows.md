@@ -88,7 +88,7 @@ While most of of the default options will work just fine, there are 16 screens t
 | 16. Click "Finish" to complete the installation.|  ![Final screen, select "Finish" in the lower right to complete setup](media/17finish.png)<!-- style = "max-width:400px;" -->|
 
 
-## Global configurations
+### Git Bash
 
 <div style = "margin: 1rem auto; max-width: 75%; float:left;">
 You will interact with Git through the Git Bash application, which should now appear when you search for it. This application will open a new Git Bash console. It is here where you will enter all commands relating to Git.
@@ -97,8 +97,12 @@ You will interact with Git through the Git Bash application, which should now ap
 ![Windows search bar containing "Git Bash"](media/git_bash_start_menu.png)<!-- style = "max-width:200px;" -->
 </div>
 
-
+---
+The cursor after the `$` is where you will enter commands into this commmand line interface (CLI).
 ![A blank Git Bash window](media/git_bash_new.png)<!-- style = "max-width:400px;" -->
+
+## Global configurations
+
 
 When we use Git on a new computer for the first time, we need to configure a few things.
 Below are a few examples of configurations we will set as we get started with Git:
