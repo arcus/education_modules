@@ -52,7 +52,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 </div>
 
-## Downloading `git`
+## Downloading Git
 
 Since Windows machines do not come with `git` pre-installed, you will need to download the latest version of [Git for Windows](https://git-scm.com/download/win).
 
@@ -64,7 +64,7 @@ When you open the `.exe` file you may be asked to confirm that you want to run i
 There are several helpful settings that you can choose in the Setup phase that will be useful in the future. However it is also possible to install with default settings and update them from the command line later.
 </div>
 
-### Selecting options in the Setup menu
+### Setting up Git
 
 While most of of the default options will work just fine, there are 16 screens to click through and there are settings to change on a few of them. Let's go through them one by one.
 
@@ -98,8 +98,9 @@ You will interact with Git through the Git Bash application, which should now ap
 </div>
 
 ---
-This is the command line interface you should use for Git. All commands are typed following the `$` and run by pressing `Enter`.
+
 ![A blank Git Bash window](media/git_bash_new.png)<!-- style = "max-width:400px;" -->
+This is the command line interface you should use for Git. All commands are typed following the `$` and run by pressing `Enter`.
 
 ## Global configurations
 
