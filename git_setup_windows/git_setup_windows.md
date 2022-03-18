@@ -90,17 +90,18 @@ While most of of the default options will work just fine, there are 16 screens t
 
 ### Git Bash
 
-<div style = "margin: 1rem auto; max-width: 75%; float:left;">
-You will interact with Git through the Git Bash application, which should now appear when you search for it. This application will open a new Git Bash console. It is here where you will enter all commands relating to Git.
-</div>
-<div style = "margin: 1rem auto; max-width: 25%; float:right;">
+
+<div style = "margin: 1rem auto; max-width: 20%; float:left;">
 ![Windows search bar containing "Git Bash"](media/git_bash_start_menu.png)
 </div>
+<div style = "margin: 1rem auto; max-width: 70%; float:right;">
+You will interact with Git through the Git Bash application, which should now appear when you search for it. This application will open a new Git Bash console. It is here where you will enter all commands relating to Git.
 
----
+This is the command line interface you should use for Git. All commands are typed following the `$` and run by pressing `Enter`.
 
 ![A blank Git Bash window](media/git_bash_new.png)<!-- style = "max-width:400px;" -->
-This is the command line interface you should use for Git. All commands are typed following the `$` and run by pressing `Enter`.
+</div>
+
 
 ## Global configurations
 
