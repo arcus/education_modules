@@ -8,13 +8,6 @@ h2, h3, h4 {
   margin: 1em;
 }
 
-.hint {
-  background-color: rgba(var(--lia-success),.15);
-  padding: 1em;
-  border: 2px dashed rgba(var(--color-highlight));
-  margin: 1em;
-}
-
 /* general info about how icons should render (see https://fontawesome.com/v5.15/how-to-use/on-the-web/advanced/css-pseudo-elements) */
 .icon::before {
   display: inline-block;
@@ -24,138 +17,71 @@ h2, h3, h4 {
   -webkit-font-smoothing: antialiased;
 }
 
-.important {
-  /*border-top: 6px solid rgba(var(--color-highlight));*/
+.important,
+.answer,
+.warning,
+.learnmore,
+.options,
+.help,
+.care,
+.hint
+{
   position: relative;
   padding: 1em 1em 1em 1em;
   margin: 3rem 0rem;
   display: table;
+  border: 1px solid rgba(var(--color-highlight));
+  width = 100%;
+}
+
+.important:before,
+.answer:before,
+.warning:before,
+.learnmore:before,
+.options:before,
+.help:before,
+.care:before,
+.hint:before
+{
+  display: table-cell;
+  vertical-align: middle;
+  padding: inherit;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 2.5em;
+  color: rgb(var(--color-highlight));
 }
 
 .important:before {
-  display: table-cell;
-  vertical-align: middle;
-  padding: inherit;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2.5em;
   content: "\f005";
-  color: rgb(var(--color-highlight));
-}
-
-.answer {
-  /*border-top: 6px solid rgba(var(--color-highlight));*/
-  position: relative;
-  padding: 1em 1em 1em 1em;
-  margin: 3rem 0rem;
-  display: table;
 }
 
 .answer:before {
-  display: table-cell;
-  vertical-align: middle;
-  padding: inherit;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2.5em;
   content: "\f058";
-  color: rgb(var(--color-highlight));
-}
-
-.warning {
-  /*border-top: 6px solid rgba(var(--color-highlight));*/
-  position: relative;
-  padding: 1em 1em 1em 1em;
-  margin: 3rem 0rem;
-  display: table;
 }
 
 .warning:before {
-  display: table-cell;
-  vertical-align: middle;
-  padding: inherit;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2.5em;
   content: "\f1e2";
-  color: rgb(var(--color-highlight));
-}
-
-.learnmore {
-  /*border-top: 6px solid rgba(var(--color-highlight));*/
-  position: relative;
-  padding: 1em 1em 1em 1em;
-  margin: 3rem 0rem;
-  display: table;
 }
 
 .learnmore:before {
-  display: table-cell;
-  vertical-align: middle;
-  padding: inherit;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2.5em;
   content: "\f4fb";
-  color: rgb(var(--color-highlight));
-}
-
-.options {
-  /*border-top: 6px solid rgba(var(--color-highlight));*/
-  position: relative;
-  padding: 1em 1em 1em 1em;
-  margin: 3rem 0rem;
-  display: table;
 }
 
 .options:before {
-  display: table-cell;
-  vertical-align: middle;
-  padding: inherit;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2.5em;
   content: "\f24e";
-  color: rgb(var(--color-highlight));
-}
-
-
-.help {
-  /*border-top: 6px solid rgba(var(--color-highlight));*/
-  position: relative;
-  padding: 1em 1em 1em 1em;
-  margin: 3rem 0rem;
-  display: table;
 }
 
 .help:before {
-  display: table-cell;
-  vertical-align: middle;
-  padding: inherit;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2.5em;
   content: "\f479";
-  color: rgb(var(--color-highlight));
-}
-
-.care {
-  /*border-top: 6px solid rgba(var(--color-highlight));*/
-  position: relative;
-  padding: 1em 1em 1em 1em;
-  margin: 3rem 0rem;
-  display: table;
 }
 
 .care:before {
-  display: table-cell;
-  vertical-align: middle;
-  padding: inherit;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2.5em;
   content: "\f004";
-  color: rgb(var(--color-highlight));
+}
+
+.hint:before {
+  content: "\f0eb";
 }
 
 .lia_header__logo {
