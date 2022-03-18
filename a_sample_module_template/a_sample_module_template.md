@@ -3,11 +3,13 @@
 author:   Your Name
 email:    email@chop.edu
 version:  0.0.1
+module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Module Title
 comment:  This is a short, focused description of the module.
 long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
+estimated_time: This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview
 
 @learning_objectives  
 
@@ -40,7 +42,7 @@ To see what it looks like rendered via LiaScript, [click here](https://liascript
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:**
+**Estimated time to completion:** @estimated_time
 
 **Pre-requisites**
 
@@ -167,11 +169,13 @@ print("This is python code")
 
 It is possible to include interactive code, too! See [the Rextester template for LiaScript](https://github.com/LiaTemplates/Rextester).
 
-## Quiz
+## Quiz: Quizzes
 
 Quizzes are just more markdown text, so if you want it to show up on its own page, put a new header before it. Otherwise you can include quiz questions at the end of a section, or even interspersed with the rest of your content.
 
 Quizzes should connect directly to your learning objectives. Each quiz question should connect to one learning objective, and every learning objective should have at least one quiz question associated with it somewhere in the module.
+
+Quizzes should always be navigable from the sidebar, meaning they should be labeled with a level 2 or 3 header. If there is only one quiz in the module, it should be labelled as "Quiz". If there is more than one each header should be structured as "Quiz: label" where "label" is a short (ideally 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
 
 Here is the first question. It's multiple choice.
 

@@ -1,13 +1,75 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.1
+version:  1.2
 language: en
 narrator: US English Female
-comment:  Reproducibility is essential to scientific efforts.  Generalizability and data reuse are also important for the application and expansion of scientific inquiry. Technology can help achieve these goals.
-link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
-logo: https://github.com/arcus/education_modules/raw/main/assets/media/chop-icon.png
-icon: https://github.com/arcus/education_modules/raw/main/assets/media/favicon.ico
+comment:  This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **data reuse**, and how technical approaches can help make these goals more attainable.
+long_description: **If you currently conduct research or expect to in the future**, the concepts we talk about here are important to grasp.  This material will help you understand much of the current literature and debate around how research should be conducted, and will provide you with a starting point for understanding why some practices (like writing code, even for researchers who have never programmed a computer) are gaining traction in the research field.  **If research doesn't form part of your future plans, but you want to *use* research** (for example, as a clinician or public health official), this material will help you form criteria for what research to consider the most rigorous and useful and help you understand why science can seem to vacillate or be self-contradictory.
+
+@learning_objectives  
+
+After completion of this module, learners will be able to:
+
+* Explain the importance of conducting research that is **reproducible** (can be re-done by a different, unaffiliated scientist)
+* Argue in support of a data analysis method that helps research be more reproducible
+* Argue in support of a method in the organization and description of documents, datasets, and other files that helps research be more reproducible
+
+@end
+script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
+
+@gifPreload
+<script>
+(function($) {
+
+  // Get the .gif images from the "data-alt".
+	var getGif = function() {
+		var gif = [];
+		$('img').each(function() {
+			var data = $(this).data('alt');
+			gif.push(data);
+		});
+		return gif;
+	}
+
+	var gif = getGif();
+
+	// Preload all the gif images.
+	var image = [];
+
+	$.each(gif, function(index) {
+		image[index]     = new Image();
+		image[index].src = gif[index];
+	});
+
+	// Change the image to .gif when clicked and vice versa.
+	$('figure').on('click', function() {
+
+		var $this   = $(this),
+				$index  = $this.index(),
+
+				$img    = $this.children('img'),
+				$imgSrc = $img.attr('src'),
+				$imgAlt = $img.attr('data-alt'),
+				$imgExt = $imgAlt.split('.');
+
+		if($imgExt[1] === 'gif') {
+			$img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
+		} else {
+			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
+		}
+
+		// Add play class to help with the styling.
+		$this.toggleClass('play');
+
+	});
+
+})(jQuery);
+</script>
+@end
+
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+script: https://kit.fontawesome.com/83b2343bd4.js
 -->
 
 # Reproducibility, Generalizability, and Reuse: How Technology Can Help
@@ -16,52 +78,19 @@ icon: https://github.com/arcus/education_modules/raw/main/assets/media/favicon.i
 
 ## Overview
 
-This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **data reuse**, and how technical approaches can help make these goals more attainable.
+@comment
 
-### Is this module right for me?
+**Is this module right for me?** @long_description
 
-**If you currently conduct research or expect to in the future**, the concepts we talk about here are important to grasp.  This material will help you understand much of the current literature and debate around how research should be conducted, and will provide you with a starting point for understanding why some practices (like writing code, even for researchers who have never programmed a computer) are gaining traction in the research field.  **If research doesn't form part of your future plans, but you want to *use* research** (for example, as a clinician or public health official), this material will help you form criteria for what research to consider the most rigorous and useful and help you understand why science can seem to vacillate or be self-contradictory.
-
-### Details
-
-**Estimated time to completion**: 1 hour
+**Estimated time to completion:** 1 hour
 
 **Pre-requisites**: It is helpful if learners have conducted research, are familiar with -- by reading or writing -- peer-reviewed literature, and have experience using data and methods developed by other people.  There is no need to have any specific scientific or medical domain knowledge or technical background.    
 
-**Format**: This module uses text and video and is intended to accompany an in-person or otherwise synchronous presentation.  Materials contained here will allow for review after a live session.
+**Learning Objectives**
 
-**Learning Objectives**:  After completion of this module, learners will be able to:
-
-* Explain the importance of conducting research that is **reproducible** (can be re-done by a different, unaffiliated scientist)
-* Argue in support of a data analysis method that helps research be more reproducible
-* Argue in support of a method in the organization and description of documents, datasets, and other files that helps research be more reproducible
+@learning_objectives
 
 </div>
-
-
-Contents
-========
-
-* [Before We Get Started](#Before-We-Get-Started)
-* [Concepts](#Concepts)
-
-  * [Reproducibility](#Reproducibility)
-  * [Generalizability](#Generalizability)
-  * [Reuse](#Reuse)
-  * [A Data Management and Sharing Snafu](#A-Data-Management-and-Sharing-Snafu)
-* [Tools for Better Practices](#Tools-for-Better-Practices)
-
-  * [Scripts](#Scripts)
-  * [Data management and metadata](#Data-management-and-metadata)
-  * [Version Control](#Version-Control)
-  * [Dependency Management](#Dependency-Management)
-* [Additional Materials](#Additional-Materials)
-
-  * [Center for Open Science](#Center-for-Open-Science)
-  * [John Oliver](#John-Oliver)
-  * [For Excel Users](#For-Excel-Users)
-  * [Mentioned in This Module](#Mentioned-in-This-Module)
-* [Feedback](#Feedback)
 
 ## Before We Get Started
 
@@ -455,11 +484,7 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 
 In the beginning, we stated some learning objectives:
 
-After completion of this module, learners will be able to:
-
-* Explain the importance of conducting research that is **reproducible** (can be re-done by a different, unaffiliated scientist)
-* Argue in support of a data analysis method that helps research be more reproducible
-* Argue in support of a method in the organization and description of documents, datasets, and other files that helps research be more reproducible
+@learning_objectives
 
 Now that you've completed this module, we ask you to fill out a brief (5 minutes or less) survey to let us know:
 
