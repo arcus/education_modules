@@ -74,15 +74,20 @@ While most of of the default options will work just fine, there are 16 screens t
 
 3. They should already be checked, but make sure that Windows Explorer integration and Git Bash are both checked on this screen. ![Select components screen](media/04select_components.png)
 
+
 4. ![Select Start Menu Folder screen](media/05select_folder.png)
 
 5. If you have a favorite text editor such as Atom, go ahead and select that. You can scroll up for more options like `nano`, or select Notepad, which will feel the most familiar if you are used to word processing programs. ![Choosing the default editor screen. The "Use Notepad as Git's default editor" option is selected from the dropdown menu.](media/06default_editor.png)
 
+
 6. On this screen you want to change the default branch name to "main" to match with the conventions of GitHub. ![Branch naming screen. The second option, "Override the default branch name for new responses" is selected and the word "main" is entered into the text box.](media/07branch_naming.png)
+
 
 7. Allowing 3rd parties, such as GitHub Desktop, may be extremely useful to you in the future, so we recommend selecting this option. ![Adjusting your PATH screen. The second option, "Git from the command line and also from 3rd-party software" is selected](media/08path.png)
 
+
 8. You can click next on each of the subsequent screens: ![SSH screen](media/09ssh.png)
+
 
 9. ![HTTPS screen](media/10https.png)
 
