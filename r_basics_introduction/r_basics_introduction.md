@@ -654,7 +654,7 @@ There are 15,524 rows and 17 columns. This information can be seen at the bottom
 
 This would encourage point-and-click workflows that are not reproducible.
 
-3. Each row in *covid_testing* represents a single COVID19 test. The value in the *pan_day* column indicates the day (after the start of the pandemic) on which the test sample was taken. On which "pandemic day" was the first test sample taken? The last?
+3. Each row in `covid_testing` represents a single COVID19 test. The value in the `pan_day` column indicates the day (after the start of the pandemic) on which the test sample was taken. On which "pandemic day" was the first test sample taken? The last?
 
 If you sort the table by `pan_day` and then look at the very top and the very bottom, you will find out the first "pandemic day" was 4, and the last one was 107. You can sort the data in the Data Viewer by clicking on the column header.
 
@@ -724,8 +724,6 @@ covid_testing.info()
 ## Recap
 
 Let's recap what we have covered in this session.
-
-![""](media/r_logo.png)<!-- style="max-width:300px; margin:2em auto;" --> ![""](media/rstudio_logo.png)<!-- style="max-width:300px; margin:2em auto;" -->![""](media/r__markdown_logo.png)<!-- style="max-width:300px; margin:2em auto;" -->
 
 We started by defining and differentiating **R** (the programming language) from **RStudio** (the integrated development environment -- IDE -- or editor) and **R Markdown** (the document format we use for reproducible data analysis). Then we explored RStudio and R Markdown more closely.
 
