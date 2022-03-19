@@ -548,13 +548,13 @@ The input that goes into a function is called an **argument**. The argument to a
 
 A function can have zero, one, or many arguments. If there is more than one argument, we use commas to separate them. We'll see examples of that later.
 
-The output of the read_csv function is a data frame object. You will usually want to *capture* that data frame inside of a named object so you can use it as the input for other functions, for example to summarize or visualize your data.
-
-![`A line of code: data_frame less than dash read_csv open parentheses file_name close parentheses. The code is also annotated "data_frame" is labeled "object", the leftward arrow <- is labeled "assignment operator", "read_csv" is labeled "function", and "file_name" is labeled "argument".](media/function_breakdown.png)<!-- style = "max-width:500px;" -->
+The output of the `read_csv` function is a data frame object. You will usually want to *capture* that data frame inside of a named object so you can use it as the input for other functions, for example to summarize or visualize your data.
 
 To put the output of the `read_csv` function into a named object, we use the **assignment operator**.
 
 The assignment operator is a less than symbol followed by a dash and resembles an arrow pointing left. Some people like to pronounce the arrow with the word "gets."
+
+![`A line of code: data_frame less than dash read_csv open parentheses file_name close parentheses. The code is also annotated "data_frame" is labeled "object", the leftward arrow <- is labeled "assignment operator", "read_csv" is labeled "function", and "file_name" is labeled "argument".](media/function_breakdown.png)<!-- style = "max-width:500px;" -->
 
 Let's put these pieces together to load our covid data set.
 
@@ -583,9 +583,7 @@ Sometimes, either quoting or not quoting works. This is one of the things where 
 
 ### Quiz: Packages and Functions
 
-<lia-keep>
 <div class = "question">
-</lia-keep>
 
 Which of the following statements are accurate?
 
@@ -603,7 +601,7 @@ Functions can have zero, one, or many inputs.  An example of a function taking z
 
 You only need to install a package using `install.packages()` **once** per computer (unless the package has a new update that you want to install).  You do, however, have to load a package using `library()` before its functions are available to you.  That means loading it each time you start a new session of R.  **When you knit a document, that counts as a separate session**, so make sure and put a `library()` in place for each package you use in your code in each R Markdown document you create.  Oh, and yep, for `install.packages()` you do indeed have to put quotes around the name of the package.
 
-<lia-keep>
+</details>
 
 </div>
 </div>
