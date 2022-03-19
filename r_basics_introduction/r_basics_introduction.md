@@ -596,13 +596,8 @@ Which of the following statements are accurate?
 [[X]] The `install.packages()` function requires putting the package name in quotes
 [[?]] Hint: multiple correct answers!
 
-<lia-keep>
-
 <div class = "answer">
-
 <details><summary>Click to see an explanation of the answer.</summary>
-
-</lia-keep>
 
 Functions can have zero, one, or many inputs.  An example of a function taking zero inputs is `getwd()`, which tells you what R considers its current "working directory".
 
@@ -636,7 +631,7 @@ To import data, you run the cell indicated.  Click on the image below to show a 
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/run_import_chunk.png?raw=true" height="540" width="878" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/run_import_chunk.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/run_import_chunk.png?raw=true" height="540" width="878" alt="The file introduction_exercises.Rmd is open.  The user scrolls to line 17, which is the first line of a code chunk.  In the upper right corner of this code chunk, there is a green play button which is clicked." data-alt="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/run_import_chunk.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of running the chunk that imports data.</figcaption>
 </figure>
@@ -646,7 +641,7 @@ To answer the questions using the file viewer, click on the name of a data frame
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/viewer.png?raw=true" height="540" width="878" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/viewer.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/viewer.png?raw=true" height="540" width="878" alt="The mouse moves to the Environment pane of RStudio and the named object covid_testing is clicked, and a view into that data opens in the upper left pane of RStudio." data-alt="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/viewer.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of opening a viewer of a data frame.</figcaption>
 </figure>
