@@ -1,7 +1,8 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.2
+version:  1.0.0
+module_template_version: 2.0.0
 language: en
 narrator: US English Female
 title: R Basics: Transforming Data With dplyr
@@ -211,7 +212,7 @@ style = "max-width:500px;"-->
 style = "max-width: 600px;"
 -->
 
-### The `select()` Function
+### Quiz: `dplyr`
 
 Let's see what you remember about dplyr!
 
@@ -233,6 +234,9 @@ The dplyr package is one of several packages that together make up the tidyverse
 </details>
 </div>
 </div>
+
+
+### The `select()` Function
 
 Let's look at `select()` first. The `select()` function extracts **columns** from a data frame, using the column **name(s)** as argument(s).
 
@@ -261,6 +265,8 @@ style = "max-width: 800px;"
 An important point to note here is that `select` **will not modify the original data frame** but simply returns the altered data frame you asked for, without saving it automatically.
 
 If you write the `select` statement like this it will simply print out the result in the console or in your R Markdown document. If you want to **capture** the modified data frame you need to **assign** it to a named object.
+
+### Quiz: `select()`
 
 <div class = "question">
 Which of the following will select the `first_name` column from the `covid_testing` data frame and capture the result in a data frame named `newdata`?
@@ -367,6 +373,8 @@ We've already seen the double equals `==`. Note the less than or and greater tha
 Use `!=` if you want to select rows in which a value is **not** equal to another value.   
 
 `is.na()` is how you can test for missing values (`NA` in R). This comes in handy when you want to remove missing values from your data, which we'll see later.
+
+### Quiz: `filter()`
 
 <div class = "question">
 In the box below, write a `filter()` statement that returns a data frame containing only the rows from `covid_testing` in which the `last_name column` is NOT equal to "stark". Don't capture the returned data frame to assign it to an object.
