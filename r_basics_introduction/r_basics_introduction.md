@@ -427,11 +427,11 @@ Below these images, we'll explain what each part of the R Markdown includes in a
 
 <div style = "align-items: center; display: flex;">
 <div style = "margin: 1rem; max-width: 50%; float:left;">
-![25 lines of R Markdown](media/r_markdown_detail.png)
+![R Markdown code.  It begins with a short header enclosed by lines containing three dashes. Then text with a few special markdown characters alternates with code chunks.  Code chunks are preceded by a line with three backticks and the letter r in curly braces, and are followed by a line with three backticks. ](media/r_markdown_detail.png)
 </div>
 <div style = "margin: 1rem; max-width: 50%; float:left;">
 
-![A brief report with headers, some statistics, and a graph](media/rendered_detail.png)
+![A brief report that is created when the R Markdown code is rendered.  The R Markdown header appears in the form of a large title.  The R Markdown text appears as appropriately rendered text with bold, italics, and other decorations.  The code chunks are represented by code and code output, such as a graph.](media/rendered_detail.png)
 </div>
 </div>
 
@@ -583,7 +583,9 @@ Sometimes, either quoting or not quoting works. This is one of the things where 
 
 ### Quiz: Packages and Functions
 
+<lia-keep>
 <div class = "question">
+</lia-keep>
 
 Which of the following statements are accurate?
 
@@ -594,16 +596,24 @@ Which of the following statements are accurate?
 [[X]] The `install.packages()` function requires putting the package name in quotes
 [[?]] Hint: multiple correct answers!
 
+<lia-keep>
+
 <div class = "answer">
 
 <details><summary>Click to see an explanation of the answer.</summary>
+
+</lia-keep>
 
 Functions can have zero, one, or many inputs.  An example of a function taking zero inputs is `getwd()`, which tells you what R considers its current "working directory".
 
 You only need to install a package using `install.packages()` **once** per computer (unless the package has a new update that you want to install).  You do, however, have to load a package using `library()` before its functions are available to you.  That means loading it each time you start a new session of R.  **When you knit a document, that counts as a separate session**, so make sure and put a `library()` in place for each package you use in your code in each R Markdown document you create.  Oh, and yep, for `install.packages()` you do indeed have to put quotes around the name of the package.
 
+<lia-keep>
+
 </div>
 </div>
+
+</lia-keep>
 
 ### Hands-On: Import Data
 
