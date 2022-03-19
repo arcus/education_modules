@@ -104,11 +104,11 @@ Material for this module was adapted, with permission, from [Stephan Kadauke's R
 
 ## Terminology: The Three "R"s of This Module
 
-We begin by presenting three distinct but interrelated terms: R, RStudio, and R Markdown.
+We begin by presenting three distinct but interrelated terms: R, RStudio, and R Markdown.  
 
 <div style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 25%; float:left; padding-right:4em;"> ![R Logo](media/r_logo.png)
+<div style = "margin: 1rem; max-width: 25%; float:left; padding-right:4em;"> ![""](media/r_logo.png)
 </div>
 <div style = "margin: 1rem auto; max-width: 75%; float:left;">
 
@@ -276,12 +276,14 @@ If you already completed this work for a previous module, and it's been a while 
 If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform.Rmd` to `my_transform.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
 </div>
 
-## Consequences of Irreproducibility
+## Motivation: Reproducible Research
 
 <div style = "align-items: center; display: flex;">
 
 <div style = "margin: 1rem; max-width: 65%; float:left;">
-Before we jump into coding, we want to talk about **reproducibility**. One of the most powerful aspects of working in the R environment is that it makes it straightforward to produce **reproducible data analyses**.
+Now that you know a bit more about the vocabulary and computing environment we'll be using, we want to contextualize **why** you might want to use R, RStudio, and R Markdown, even though you may have worked with data before in other software.
+
+One of the most important reasons to learn R is to improve the **reproducibility** of your research. One of the most powerful aspects of working in the R environment is that it makes it straightforward to produce **reproducible data analyses**, which will reduce risk and make "future you" much happier.
 
 Consider the following case study, which highlights potential consequences of **irreproducibile** research.
 
@@ -379,7 +381,7 @@ In short, reproducible research can reduce harm for subjects, science, and scien
 
 ## R Markdown
 
-Now that we have convinced you (we hope) that reproducibility is important, how do you undertake a reproducible analysis? One answer to this is **R Markdown**.
+Now that we have convinced you (we hope) that reproducibility is important, how do you undertake a reproducible analysis using the R language? One answer to this is **R Markdown**.
 
 <div style = "align-items: center; display: flex;">
 <div style = "margin: 1rem; max-width: 65%; float:left;">
