@@ -134,7 +134,7 @@ This might work well for you if you don't want to, or can't, install R and RStud
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
+<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
 <div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen](media/binder_loading.gif)<!--
 style = "border: 1px solid rgb(var(--color-highlight));"-->
 </div>
@@ -173,7 +173,9 @@ If you already completed this work for a previous module, and it's been a while 
 * Open your project.
 * In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
 
-![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
+![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;" -->  
+
+![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;" -->
 
 ### How to Follow Along
 
@@ -212,11 +214,12 @@ style = "max-width:500px;"-->
 style = "max-width: 600px;"
 -->
 
-### Quiz: `dplyr`
+### Quiz: `dplyr()`
 
 Let's see what you remember about dplyr!
 
 <div class = "question">
+
 Which of the following are true statements about "dplyr"?  Check all that apply!
 
 [[X]] dplyr is part of the tidyverse suite of packages
@@ -720,7 +723,7 @@ This might work well for you if you don't want to, or can't, install R and RStud
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
+<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
 <div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen](media/binder_loading.gif)<!--
 style = "border: 1px solid rgb(var(--color-highlight));"-->
 </div>
