@@ -605,6 +605,8 @@ By connecting logical steps, you can get a **pipeline** of data analysis steps w
 
 This approach to coding is powerful because it makes it much easier for someone who doesn't know R well to read and understand your code as a series of instructions.   
 
+### Quiz: `%>%`
+
 <div class = "question">
 In the box below, rewrite the following statement with a pipe:
 
@@ -628,7 +630,7 @@ In the box below, rewrite the following statement with a pipe:
 
 ## Create New Columns With `mutate()`
 
-`mutate()` is an extremely useful `dplyr` function, and you can use it to make new variables / columns.  That's what we'll use it for here.  You can also use `mutate()` to change existing columns (say, turn an entire column lowercase).  
+`mutate()` is an extremely useful `dplyr` function, and you can use it to make new variables / columns.  That's what we'll use it for here.  You can also use `mutate()` to change existing columns (say, turn an entire column lowercase or round or scale a numeric value).  
 
 Like all `dplyr` functions, `mutate()` takes a data frame as its first argument. After that, you tell it what to name the new column and what should be in it. This is done using **name-value expressions**.
 
@@ -664,6 +666,37 @@ mutate(covid_testing,
 Upon executing the code, `mutate()` creates the new column and fills each row with the result of the calculation:
 
 ![On the left, two columns of the `covid_testing` data frame are shown: mrn and `col_rec_tat`.  The first few rows are given.  This data frame is followed by an arrow pointing to a new data frame on the right, which is the same as the one on the left with the exception of a new column, titled `col_rec_tat_mins`, which has appropriate values filled in.](media/mutate_covid_example.png)<!-- style = "max-width: 800px;" -->
+
+If, on the other hand, you wanted to change an **existing** column using `mutate()`, you could do it like this.  This command takes the column ct_value, which currently holds decimal values, rounds it to the nearest whole number, and then uses that as the new set of values for ct_value.
+
+```
+mutate(covid_testing,
+     ct_value = round(ct_value))
+```
+
+### Quiz: `mutate()`
+
+Which of the following can you accomplish with `mutate()`?
+
+<div class = "question">
+Which of the following are true statements about "dplyr"?  Check all that apply!
+
+[[X]] create a new column that uses existing data to calculate the new column's value
+[[X]] create a new column that is uniform (has the same value for each row)
+[[X]] change an existing column from mixed case to all lower case
+[[X]] change an existing column from a decimal value to an integer value
+[[ ]] transpose a data frame, so that rows become columns and columns become rows
+[[?]] There are multiple correct answers!
+
+<div class = "answer">
+<details><summary>Click to see an explanation of the answer.</summary>
+
+`mutate()` works well as a method for altering existing columns (for instance, changing the case of a string field to all lower case or all upper case, or rounding numbers).  It's also useful for creating new columns.  You can use existing columns to create a new column, based on some calculation (say, if you want to add two columns to create the new column) or entirely new data (such as adding a new column, "hospital_name" that says "city general" for every row).
+
+</details>
+</div>
+</div>
+
 
 ## Exercises
 
@@ -785,19 +818,8 @@ covid_testing %>%
   mutate(total_tat = col_rec_tat + rec_ver_tat)
 ```
 
-## Recap
 
-To recap, `dplyr` is a package you can load in R that provides a grammar for transforming data frames. Some of the key `dplyr` functions are:
-
-| function | graphic |
-| :---: | --- |
-| `select()`, which subsets columns by name | ![Image showing the transformation from a data frame of 4 columns to a data frame of 2  columns](media/select_mini.png)<!-- style = "max-width:200px;" --> |
-| `filter()`, which subsets rows by a logical condition | ![Image showing the transformation from a data frame of 6 rows to a data frame of 2 rows](media/filter_mini.png)<!-- style = "max-width:200px;" -->  |
-| `mutate()`, which creates new calculated columns or changes existing columns | ![Image showing the creation of a new column in a data frame](media/mutate_mini.png)<!-- style = "max-width:200px;" -->  |
-
-Additionally, `dplyr` and other `tidyverse` packages make use of the pipe operator (`%>%`), which can be used to string together `dplyr` functions into a pipeline that performs several transformations.
-
-### More `dplyr` functions
+## More `dplyr` functions
 
 We’ve only scratched the surface of data transformation functions in dplyr. Other important ones include:
 
@@ -813,7 +835,24 @@ We’ve only scratched the surface of data transformation functions in dplyr. Ot
 You may notice here and elsewhere that we include international English spellings (e.g. `summarise()`) for some functions.  "American" spellings (`summarize()`) also work, and both spellings trigger the same function.  Feel free to use either.
 </div>
 
-### `dplyr` Cheatsheet
+
+## Recap
+
+To recap, `dplyr` is a package you can load in R that provides a grammar for transforming data frames. Some of the key `dplyr` functions are:
+
+| function | graphic |
+| :---: | --- |
+| `select()`, which subsets columns by name | ![Image showing the transformation from a data frame of 4 columns to a data frame of 2  columns](media/select_mini.png)<!-- style = "max-width:200px;" --> |
+| `filter()`, which subsets rows by a logical condition | ![Image showing the transformation from a data frame of 6 rows to a data frame of 2 rows](media/filter_mini.png)<!-- style = "max-width:200px;" -->  |
+| `mutate()`, which creates new calculated columns or changes existing columns | ![Image showing the creation of a new column in a data frame](media/mutate_mini.png)<!-- style = "max-width:200px;" -->  |
+
+Additionally, `dplyr` and other `tidyverse` packages make use of the pipe operator (`%>%`), which can be used to string together `dplyr` functions into a pipeline that performs several transformations.
+
+Other `dplyr` functions include `arrange()`, `add_row()`, `group_by()` (especially helpful when combined with `summarize()`), `bind_cols()` and `bind_rows()`, and `_join()` functions.
+
+## Additional Resources
+
+<h3>`dplyr` Cheatsheet</h3>
 
 RStudio creates and distributes a number of cheatsheets for various purposes.  You can find them by clicking in the **Help menu** in RStudio -- try that now!  Here's a screenshot of the `dplyr` cheatsheet:
 
