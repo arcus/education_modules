@@ -179,7 +179,7 @@ As we mentioned on the previous page, there are two versions of RStudio:
 </div>
 </div>
 
-It's important to note that regardless of which version of RStudio that you use, you will be accessing the same general product -- there's no functionality in RStudio Server that you can't get in RStudio Desktop, or vice versa. 
+It's important to note that regardless of which version of RStudio that you use, you will be accessing the same general product -- there's no functionality in RStudio Server that you can't get in RStudio Desktop, or vice versa.
 
 Here's what the RStudio window looks like, regardless of version.
 
@@ -195,7 +195,6 @@ Finally, on the bottom right is where you find your **Files** and related tabs. 
 
 ### Quiz: The Three "R"s
 
-
 <div class = "question">
 
 Which of the following are true?
@@ -210,12 +209,11 @@ Which of the following are true?
 <div class = "answer">
 <details><summary>Click to see an explanation of the answer.</summary>
 
-R is a programming language that is free and open source.  It's a good idea to use RStudio, which is an editor or IDE (Integrated Development Environment) to write your R code.  You can use a "server" edition at your institution or via RStudio.cloud, or you can download RStudio to your own computer.  One kind of document you can write in RStudio is an R Markdown document, which allows you to weave together human language, written in Markdown, along with computer code. 
+R is a programming language that is free and open source.  It's a good idea to use RStudio, which is an editor or IDE (Integrated Development Environment) to write your R code.  You can use a "server" edition at your institution or via RStudio.cloud, or you can download RStudio to your own computer.  One kind of document you can write in RStudio is an R Markdown document, which allows you to weave together human language, written in Markdown, along with computer code.
 
 </details>
 </div>
 </div>
-
 
 ## Lesson Preparation: Our RStudio Environment
 
@@ -243,7 +241,6 @@ style = "border: 1px solid rgb(var(--color-highlight));"-->
 
 ![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
 style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
-
 
 <h3>Option 2: Work on Your Computer</h3>
 
@@ -338,7 +335,7 @@ And here are the probe sets that the MD Anderson team got. You can see that they
 </div>
 </div>
 
-Can you see what went wrong? 
+Can you see what went wrong?
 
 If you look at the values long enough, you might notice a pattern: the number of the probe set that Duke reported is always one less than the number of the probe that MD Anderson found when they re-did the analysis.
 
@@ -448,7 +445,7 @@ Now let's practice creating an R Markdown document, running a code chunk, and kn
 
 ### Practicing R Markdown
 
-Go back to the RStudio session you opened earlier in this module. 
+Go back to the RStudio session you opened earlier in this module.
 Then:
 
 * Go to the File menu, choose "New File", and finally select "R Markdown". Click OK.  This will give you a handy template which is used to show you a working example of a simple R Markdown document.  You will be asked to provide a title and author, and you can choose any values you like, such as "Test" or "My First Markdown".
@@ -465,12 +462,44 @@ Then:
 
 * Once your document is knitted, it will open in HTML (if you're using RStudio Server, you might see a prompt about "pop up windows" -- be sure to permit pop-up windows).   Take a look at the HTML output.  Can you see the relationship between what's in the R Markdown document and the resulting HTML output?
 
-In the "Files" pane in the lower right of RStudio, there's now two new files: test.Rmd, the R Markdown file which you created and saved, and also test.html, which is the knitted HTML file. 
+In the "Files" pane in the lower right of RStudio, there's now two new files: test.Rmd, the R Markdown file which you created and saved, and also test.html, which is the knitted HTML file.
 
 You might wonder why you want to deal with two files. The file ending in "Rmd" is your **source code** that includes what you're doing with data.  It makes sense to share this file with data analysts and other R coders.  The HTML is a presentation format that doesn't require R knowledge or the R program, since it can be viewed in a regular HTML browser.  This makes sense to share with stakeholders who don't need to work with the code but are more interested in the findings -- people like your boss or a publisher.
 
-## Importing Data
+## Packages
 
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 70%; float:left;">
+The **tidyverse** is package (a collection of functions, data, and help documentation) that we can use to extend the innate functionality of R, which is often referred to as "base R".  In fact, tidyverse is special because it includes a suite of interrelated packages that work together to do a number of tasks related to importing, reshaping, visualizing, and analyzing data.
+
+You can download and **install** a package with the command `install.packages`. For example, to install the tidyverse package, you would go to the R Console and type `install.packages("tidyverse")`. Each package you want to use needs to be installed only once on each computer.
+
+<div class = "warning">
+
+On our RStudio Server, you won't need to install any packages for this course (as we have installed them for you). If you're using R on your own computer, however, you will have to install packages.
+
+</div>
+
+</div>
+<div style = "margin: 1rem; max-width: 30%; float:left;">
+
+![""](media/tidyverse.png)<!-- style = "max-width:200px;" -->
+</div>
+</div>
+<div class = "warning">
+
+Make sure you include the quotes around tidyverse. When to use quotes is a tricky topic that we will talk about more later in this module, but for now, keep in mind that you will *always* need to put quotes around the name of a package whenever using `install.packages()`.
+
+</div>
+
+After you've installed the package, in order to use the functions that it provides, you also need to **load** the package into the computer's memory. This is done with the command `library`. So to enable all the functions in the "tidyverse" package, you type `library("tidyverse")`. Packages remain loaded until you quit or restart the R program. Every time you start a new R session you have to load each package that you want to use again, and you need to put your `library` statements in the R documents that you write, preferably near the top of the file.  We'll use functions within the `tidyverse` package in this module when we import data, so it's useful to learn about packages now.
+
+Congratulations, you've just learned your first two R commands - `install.packages` and `library`.
+
+One of the great things about R is that there are tens of thousands of packages that are free to download and use.  
+
+
+## Importing Data
 
 ![`The data analysis pipeline, which begins with Import, then Tidy, then three actions that form a circle that repeat: Visualize, Model, and Transform.  The pipeline ends with "Communicate".`](media/pipeline_import.png)<!-- style = "max-width:500px;"-->
 
@@ -489,48 +518,6 @@ Here we have a .csv file with the names, medical record numbers, and dates of bi
 This data structure is called **rectangular** or **"tabular"** because it falls into rows and columns, often called a table, where each row has the same number of columns, and each columns has the same number of rows.
 
 Also note that this particular .csv file has a **header** row that instead of data, has a name for each column. .csv files often have such a header row and unless we specify otherwise, when we import this data, R assumes the first line is a header row.  Not all .csv files have headers, however, so be aware that you might run across these at some point.
-
-### The Tidyverse
-
-<div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 75%; float:left;">
-To import our CSV data, we need some additional data analysis tools.  In this course, we will be leveraging the **tidyverse**.
-
-The tidyverse is a set of tools that has become the de facto standard for doing data science with R.  It relies on the use of "tidy" data and "tidy" data analysis techniques.
-</div>
-<div style = "margin: 1rem; max-width: 25%; float:left;">
-![""](media/tidyverse_logo.png)<!-- style = "max-width:300px;" -->
-</div>
-</div>
-
-The basic tenets of "tidy" data analysis include:
-
-* Data should be organized in a consistent, standardized way. Each row is an observation, and each column is a variable. This is a very common way to organize data in a spreadsheet and might sound familiar from how you may already organize data in tools like Excel.
-* Programming code that acts on the data should be consistent, concise, and sound like human language as much as possible.
-* Each data analysis can be broken down into a series of atomic steps, such as "select this column" or "arrange the data by the values in that column". An arbitrarily complex data analysis can be broken down as a pipeline of atomic steps.
-
-### Packages
-
-<div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 70%; float:left;">
-The Tidyverse is package (a collection of functions, data, and help documentation) that we can use to extend the innate functionality of R, which is often referred to as "base R".
-
-You can download and **install** a package with the command `install.packages`. For example, to install the tidyverse package, you would go to the R Console and type `install.packages("tidyverse")`. Each package you want to use needs to be installed only once on each computer. On our RStudio Server, you won't need to install any packages for this course (I have installed them for you). If you're using R on your own computer, however, you will have to install packages.
-
-</div>
-<div style = "margin: 1rem; max-width: 30%; float:left;">
-
-![""](media/tidyverse.png)<!-- style = "max-width:200px;" -->
-</div>
-</div>
-<div class = "warning">
-Make sure you include the quotes around tidyverse. When to use quotes is a tricky topic that we will talk about more later in this module, but for now, keep in mind that you will *always* need to put quotes around the name of a package whenever using install.packages
-</div>
-After you've installed the package, in order to use the functions that it provides, you also need to **load** the package into the computer's memory. This is done with the command `library`. So to enable all the functions in the "tidyverse" package, you type `library("tidyverse")`. Packages remain loaded until you quit or restart the R program. Every time you start a new R session you have to load each package that you want to use again, and you need to put your `library` statements in the R documents that you write, preferably near the top fof the file.
-
-Congratulations, you've just learned your first two R commands - `install.packages` and `library`.
-
-One of the great things about R is that there are tens of thousands of packages, and virtually all of them are free to download and use, including all the packages we use in our modules.
 
 ### Reading CSV Files
 
@@ -590,7 +577,7 @@ To be honest, quotes in R can be super confusing. A couple of rules are:
 * Names of packages, when you're installing especially, use quotes
 * But in `library`, putting the package name in quotes is optional!
 
-Sometimes, either quoting or not quoting works. This is one of the things where you will get a good sense but not until after some trial and error. If a line of code you're working on doesn't seem to be working as you expect, sometimes adding or removing quotes can be a good place to start when trying to figure it out. 
+Sometimes, either quoting or not quoting works. This is one of the things where you will get a good sense but not until after some trial and error. If a line of code you're working on doesn't seem to be working as you expect, sometimes adding or removing quotes can be a good place to start when trying to figure it out.
 
 ### Quiz: Packages and Functions
 
@@ -626,7 +613,7 @@ Read through the instructions and complete the assigned tasks:
 
 * import data from a .csv file
 * use the RStudio data viewer to answer some questions
-Whenever you're done, come back to this page. We will go over the solutions in the next section. 
+Whenever you're done, come back to this page. We will go over the solutions in the next section.
 
 ### Solutions
 
@@ -671,50 +658,6 @@ Important: this doesn't actually change the data in the `covid_testing` data fra
 4. How many tests overall were positive? How many positive tests were there in the first 30 days of the pandemic? (Hint: look at the Filter button)
 
 The `result` column holds that information. We can apply a filter to that column to only show us rows where the value in the `result` column is "positive". Click on Filter and enter "positive" in the text field that appears below the `result` header. You will now see that the bottom line of the data viewer reads "Showing 1 to [some number] of 865 entries, 17 total columns (filtered from 15,524 total entries)". So there were 865 positive tests, out of 15,524 total.
-
-## Recap
-
-Let's recap what we have covered in this session.
-
-![""](media/r_logo.png)<!-- style="max-width:300px; margin:2em auto;" --> ![""](media/rstudio_logo.png)<!-- style="max-width:300px; margin:2em auto;" -->![""](media/r__markdown_logo.png)<!-- style="max-width:300px; margin:2em auto;" -->
-
-We started by defining and differentiating **R** (the programming language) from **RStudio** (the integrated development environment -- IDE -- or editor) and **R Markdown** (the document format we use for reproducible data analysis). Then we explored RStudio and R Markdown more closely.
-
-<div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 30%; float:left;">
-![""](media/packages.png)<!-- style = "max-width: 400px;" -->
-</div>
-<div style = "margin: 1rem; max-width: 70%; float:left;">
-Packages extend the functionality of R. Install with `install.packages()` and load with `library()`.
-</div>
-</div>
-<div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 30%; float:left;">
-![""](media/function_breakdown.png)<!-- style = "max-width: 400px;" -->
-</div>
-<div style = "margin: 1rem; max-width: 70%; float:left;">
-Functions do stuff. They accept Arguments as input and return an Output. Capture an output in an Object using the assignment operator (` <- `).
-</div>
-</div>
-<div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 30%; float:left;">
-![""](media/csv_import.png)<!-- style = "max-width: 400px;" -->
-</div>
-<div style = "margin: 1rem; max-width: 70%; float:left;">
-Importing Data is the first step of data analysis. Use `read_csv()` from the tidyverse package to import data stored in a CSV file.
-</div>
-</div>
-
-
-## Additional Resources
-
-<h3>Cheat Sheets</h3>
-
-RStudio's Data Import cheat sheet helps with importing data from file types similar to CSV but with other delimiters.  Cheat sheets for the RStudio IDE and Markdown can reinforce what you've learned so far in this module.
-
-To find official cheat sheets, go to the Help menu and choose "Cheat Sheets".  You can look around the short list provided.  You can also "Browse", and in the RStudio website you'll find other cheat sheets as well, including one for
-
-![RStudio help menu, with Cheat Sheets selected and the submenu option "Browse Cheat Sheets" selected](media/cheat_sheet_browse.png)<!-- style = "max-width:700px;" -->
 
 ### More Data Types
 
@@ -772,6 +715,50 @@ covid_testing.info()
 </lia-keep>
 </div>
 </div>
+
+## Recap
+
+Let's recap what we have covered in this session.
+
+![""](media/r_logo.png)<!-- style="max-width:300px; margin:2em auto;" --> ![""](media/rstudio_logo.png)<!-- style="max-width:300px; margin:2em auto;" -->![""](media/r__markdown_logo.png)<!-- style="max-width:300px; margin:2em auto;" -->
+
+We started by defining and differentiating **R** (the programming language) from **RStudio** (the integrated development environment -- IDE -- or editor) and **R Markdown** (the document format we use for reproducible data analysis). Then we explored RStudio and R Markdown more closely.
+
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 30%; float:left;">
+![""](media/packages.png)<!-- style = "max-width: 400px;" -->
+</div>
+<div style = "margin: 1rem; max-width: 70%; float:left;">
+Packages extend the functionality of R. Install with `install.packages()` and load with `library()`.
+</div>
+</div>
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 30%; float:left;">
+![""](media/function_breakdown.png)<!-- style = "max-width: 400px;" -->
+</div>
+<div style = "margin: 1rem; max-width: 70%; float:left;">
+Functions do stuff. They accept Arguments as input and return an Output. Capture an output in an Object using the assignment operator (` <- `).
+</div>
+</div>
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 30%; float:left;">
+![""](media/csv_import.png)<!-- style = "max-width: 400px;" -->
+</div>
+<div style = "margin: 1rem; max-width: 70%; float:left;">
+Importing Data is the first step of data analysis. Use `read_csv()` from the tidyverse package to import data stored in a CSV file.
+</div>
+</div>
+
+## Additional Resources
+
+<h3>Cheat Sheets</h3>
+
+To find official cheat sheets, go to the Help menu in RStudio and choose "Cheat Sheets".  You can look around the short list provided, which includes great options for beginners such as "RStudio IDE Cheat Sheet", "R Markdown Cheat Sheet", and more.  You can also "Browse", and in the RStudio website you'll find other cheat sheets as well, including the Data Import cheat sheet.
+
+RStudio's Data Import cheat sheet helps with importing data from file types similar to CSV but with other delimiters (for example, TSV, or tab-delimited values files).  Cheat sheets for the RStudio IDE and Markdown can reinforce what you've learned so far in this module and help you extend your capabilities.
+
+![RStudio help menu, with Cheat Sheets selected and the submenu option "Browse Cheat Sheets" selected](media/cheat_sheet_browse.png)<!-- style = "max-width:700px;" -->
+
 
 ## Feedback
 
