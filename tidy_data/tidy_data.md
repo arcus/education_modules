@@ -46,30 +46,110 @@ Experience working with rectangular data (data in rows and columns) will be help
 
 @learning_objectives
 
-For help articulating learning objectives, see [this guide to learning objectives, including lots of example verbs](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/).
-
 </div>
 
 
-## Tidy Data
+## Rectangular Data
 
-What do we mean by "tidy" data frame?
+What do we mean by "tidy" data?
 
-A data set can take on a lot of different shapes with different styles of organizing data. The one method or shape that is best suited for data analysis is known as "tidy".
+To begin with, we're talking specifically about **"rectangular" data**.  Rectangular data (or "tabular" data, from the word "table") has rows and columns.  This is a very typical kind of data for many disciplines, but it's not the only data out there.  Here's a few examples of data that are incredibly important but are not rectangular / tabular:
 
-![Table with rows and columns.  The data is not visible, although headers are, and include mrn, gender, `test_id`, and result. In each row and column, an arrow spans the entire row or entire column.](media/tidy_data.png)<!-- style = "max-width: 400px;" -->
+* Wave form data, such as electrocardiogram data
+* Recordings of audio and/or video, such as videorecordings of babies at play
+* Text used in textual analysis or natural language processing (NLP), such as clinical notes or the text of Senate bills
+* Genomic data such as FASTQ or BAM files
 
-A data set is tidy if:
+Rectangular data is by no means the only data that matters to biomedical researchers.  This module, however, is limited in scope to only rectangular data.  Here are some common examples of rectangular data:
+
+* Demographic data about patients stored in an electronic health record, in which each row represents a patient, and each column stores a specific demographic fact, such as the date of birth.
+* Biosample data in a lab management system, in which each row represents a specific sample and each column represents information about what the sample is and how and when it was obtained.
+* Questionnaire data in which each row represents a test taker, with one column for the subject id, one column for the date and time of administration, and each column thereafter representing a question which is answered on a Likert scale (say, from 1-5).
+
+You can probably come up with many examples of rectangular data in your own research.  If you've ever worked with data in rows and columns, as in a .csv file, Excel spreadsheet, or Google Sheet, you know what rectangular data looks like.
+
+### A Specific Organization
+
+A rectangular data set can take on a lot of different rectangular shapes with different styles of organizing data. Some disciplines have specific types of summary tables, for example, that customarily appear in published manuscripts.  The one method or shape that is best suited for data analysis is known as "tidy".
+
+A data set is tidy, [according to Hadley Wickham and Garrett Grolemund](https://r4ds.had.co.nz/tidy-data.html#tidy-data-1), if:
 
 * Each variable is in its own column
 * Each observation is in its own row, and
-* Each value is in its own cell.
+* Each value is in its own cell
 
-The opposite of "tidy" is often called "messy." Often, much of the data analysis work is to convert "messy" data into "tidy data." But for now, fortunately for us, the `covid_testing` data set is tidy already.
+The words "variable", "observation", and "value" are common words to researchers, but let's look closely at them regardless.
 
-Here's one simple example of tidy versus messy. If a column is called "name" and includes first names and last names, that's messy.  It can be difficult to extract just the first names or just the last names, since some people have more than one word forming their first name (José María, Leigh Ann) and some people have more than one word forming their last name (de la Cruz, Bonham Carter).  A "tidy" approach would be to have one column for first names and one column for last names.
+* A *variable* is a characteristic being measured, like
+  - weight in grams
+  - amount of rain in inches
+  - homeroom paint color
+  - whether a subject has a history of pulmonary embolism
 
-[Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10) (a statistician who is prominent in the R world -- you'll likely become familiar with his name as you continue your R journey) suggests that there are five common problems that occur to make data "messy":
+* Each *observation* (thing with measurable characteristics) is in its own row, such as:
+  - individual newborn wombat
+  - specific day of history
+  - elementary school class
+  - individual human subject
+
+* Each *value* (a number or category or word that provides the measurement) is in its own cell
+  - an integer
+  - a decimal numbers
+  - a category like "blue", "green", or "yellow"
+  - a True/False value
+
+The three rules of tidy data may seem to apply to almost every rectangular data set, but these three requirements are more rigorous than they appear at first glance.  
+
+<h4>Variables in Columns</h4>
+
+For example, is "blood pressure" a single variable?  It consists of two numerical values representing arterial pressure at two different stages in the heart's cycle of pumping blood.  Maybe we should think about that as two measurements, each with its own column.
+
+What about name?  Well, in most cultures, names consist of a family name (in the U.S., the last name or names) and a given name or names.  
+
+Giving each variable, each piece of data that you're measuring, its own column, requires some forethought.  It's not always clear what a single, atomic measurement is, and it can depend on context.  
+
+<h4>Observations in Rows</h4>
+
+If we think about "observation", that can also be a bit tricky.  Do measurements of a single human subject constitute a single observation?  What if the measurements are taken over the span of 30 years?  Is it better to say that an observation is a single human on a single day?  A single hospital encounter?  Knowing whether data is tidy in terms of its rows can be complex.
+
+<h4>Values in Cells</h4>
+
+What about cells?  Is it at least easy to tell if each value is in its own cell?  Well, sometimes.  But consider the case where a mouse identification code is composed of a few letters that indicate its genetic lineage, a number that represents where it was bred, and another series of letters and numbers indicating where it was housed and its type of diet.  A single identifier can hold lots of information.  Also, if you've ever used Excel, you might have used text colors or highlighting to indicate values that seem surprising or possibly mistaken.  For example, a gestational age in weeks of 50 that's in a bright red color might be two actual values: the recorded value of gestational age and a marker that points out its data quality or trustworthiness.
+
+### Data Collection
+
+The opposite of "tidy" is often called "messy." That isn't intended to be pejorative, just descriptive.  We often start with messy data, and as we've described, it's not always obvious what the correct "tidy" approach is. It's often said that **around 80% of the time we spend in data analysis** consists of cleaning up and rearranging messy data and getting it in a format that is helpful for analysis.  That can be surprising to people who are beginning to learn data analysis, and it indicates why it's so important to think about how data is structured long before trying to perform statistical tests or creating figures for manuscripts.  Even well-structured, tidy data often has to be reshaped for specific purposes, and it's much more complicated when you add messy data into the mix.
+
+It's much easier to begin with a tidy structure when data collection begins, rather than tidying up messy data later.  Here's one simple example of that. If a column is called "name" and includes first names and last names, that's messy.  It can be difficult to extract just the first names or just the last names, since some people have more than one word forming their first name (José María, Leigh Ann) and some people have more than one word forming their last name (de la Cruz, Bonham Carter).  If you know your subjects or patients well, you might be able to use your knowledge of their families or cultures to make a row-by-row separation, but what if you have 500 subjects? Fifty thousand subjects?
+
+A "tidy" approach would be to begin data collection with, at the minimum, one column for first names and one column for last names.  In case you do need the entire name (for example, to address an envelope), remember that it's much easier to re-unite two or more fields that are stored separately than to try to define the rules of separating tangled-up data.  
+
+<div class = "hint">
+This point is crucial enough that we want to make it stand out:
+
+**Uniting values is simpler than separating them.**
+
+It's impossible to tease out individual grades from an average, but if you have the individual grades, it's straightforward to calculate the average.  Names from two columns can be united by adding a space between them.  Values from a "systolic" and "diastolic" column can be united with a slash between them.  It is better to err on the side of being overly careful in separating out variables.
+
+</div>
+
+Another mistake that commonly occurs in human subjects research is the collection of race data with an assumption that a single value adequately captures race, such as "Asian", "Black", and so forth.  If a subject identifies with multiple races, "multiracial" could be added, for example.  But what if you want to study a genetic variant that occurs disproportionately in people of sub-sarahan African descent, and you're interested in all subjects with Black racial heritage, regardless of whether they identify with other races as well?  "Multiracial" does not answer your question about race, and unless you can track down your subject, there's no way to disentangle the wealth of information in the word "multiracial".
+
+<div class = "warning">
+An aside about race: in addition to making for more difficult use of race data, collecting data as a single value does not comply with federal standards.  Human subjects (or their representatives) should be able to endorse any race they identify as their own.  Therefore, it's much more helpful to begin right away with a True / False endorsement column for each race, so that you can identify easily who fits into various categories based on particular race identification, counts, or specific combinations:
+
+  * White only
+  * Indigenous and one other race
+  * Non white, single race
+  * Number of races 3 or higher
+  * etc.
+
+An additional, important question that can be a source of disagreement in demographic and disparity research is what specific groups constitute races that can be endorsed.
+</div>
+
+## Sources of Messy Data
+
+Hadley Wickham, one of the authors mentioned in the last section, suggests in his [landmark work on tidy data](https://www.jstatsoft.org/article/view/v059i10) that there are five common problems that occur to make data "messy":
 
 * Column headers are values, not variable names.
 * Multiple variables are stored in one column.
@@ -77,7 +157,98 @@ Here's one simple example of tidy versus messy. If a column is called "name" and
 * Multiple types of observational units are stored in the same table.
 * A single observational unit is stored in multiple tables.
 
-To see a "messy" data frame and its "tidy" alternative, see [a brief 2018 article](https://education.arcus.chop.edu/tidyverse/) for a brief read, or, if you want a deeper dive,  there really isn't a better article than [Hadley Wickham's classic work](https://www.jstatsoft.org/article/view/v059i10).
+Let's take a look at each of these problems in turn.
+
+### Column Headers as Values
+
+Let's consider an example from section 3.1 of [Hadley's article](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/772).  
+
+<div class = "hint"> Note that in the world of R users, Hadley Wickham is considered such a singularly important and yet friendly figure that he is often referred to, simply, as "Hadley".
+</div>
+
+| religion | <$10k | $10–20k | $20–30k | $30–40k | $40–50k | $50–75k |
+| -------- | ----- | ------- | ------- | ------- | ------- | ------- |
+| Agnostic | 27 | 34 | 60 | 81 | 76 | 137 |
+| Atheist | 12 | 27 | 37 | 52 | 35 | 70 |
+| Buddhist | 27 | 21 | 30 | 34 | 33 | 58 |
+| Catholic | 418 | 617 | 732 | 670 | 638 | 1116 |
+| Don't know/refused | 15 | 14 | 15 | 11 | 10 | 35 |
+| Evangelical | Prot | 575 | 869 | 1064 | 982 | 881 | 1486 |
+| Hindu | 1 | 9 | 7 | 9 | 11 | 34 |
+| Historically | Black | Prot | 228 | 244 | 236 | 238 | 197 | 223 |
+| Jehovah's | Witness | 20 | 27 | 24 | 24 | 21 | 30 |
+| Jewish | 19 | 19 | 25 | 25 | 30 | 95 |
+
+The column headers in this table, taken from Pew Forum, contain values -- income values.  This table is readable for humans, and takes advantage of horizontal space on a page.  It makes sense that it would appear in a report for human consumption.  This data is "messy", however, because it violates one of the important rules about tidy data.
+
+While humans can make sense of this data, remember that computers must be told in sometimes agonizing detail what to do.  If we were to ask "which is the largest group?" using the table above, we'd have to say (in code, of course) something along the lines of "look inside each row, at columns 2-7, and take the largest value of all of those cells, and then take the value of the first column of the row with that largest-valued cell, and the column header of that cell, and that's your group".  
+
+What would a tidy format look like?  Consider this, which is the start of a tidy table:
+
+| religion | income | freq |
+| -------- | ------ | ---- |
+| Agnostic | <$10k | 27 |
+| Agnostic | $10–20k | 34 |
+| Agnostic | $20–30k | 60 |
+| Agnostic | $30–40k | 81 |
+| Agnostic | $40–50k | 76 |
+| Agnostic | $50–75k | 137 |
+| Agnostic | $75–100k | 122 |
+| Agnostic | $100–150k | 109 |
+| Agnostic | >150k | 84 |
+| Agnostic | Don't know/refused | 96 |
+
+You can tell that this table would be quite tall and narrow, not the most lovely on a journal page, but for computational purposes, it's more direct to find the largest group: "look in the 'freq' column, and find the largest number, then the two cells to the left of that value give the group identity."
+
+Again, the "messy" table isn't bad per se, but it's optimized for "looks good to people when viewed on a journal page", not optimized for computation.
+
+### Multiple Variables in One Column
+
+In section 3.2 of his article, Hadley shows data from the World Health Organization:
+ |
+| country | year | column | cases |
+| ------  | ---- | -----  | ----- |
+| AD | 2000 | m014 | 0 |
+| AD | 2000 | m1524 | 0 |
+| AD | 2000 | m2534 | 1 |
+| AD | 2000 | m3544 | 0 |
+| AD | 2000 | m4554 | 0 |
+| AD | 2000 | m5564 | 0 |
+| AD | 2000 | m65 | 0 |
+| AE | 2000 | m014 | 2 |
+| AE | 2000 | m1524 | 4 |
+| AE | 2000 | m2534 | 4 |
+| AE | 2000 | m3544 | 6 |
+| AE | 2000 | m4554 | 5 |
+| AE | 2000 | m5564 | 12 |
+| AE | 2000 | m65 | 10 |
+| AE | 2000 | f014 | 3 |
+
+The "column" is a hybrid: it contains sex (m or f) and age (0-14 years, 15-24 years, and so on).  It is in a condensed form that we would judge "messy".  Ideally, this data would look more like this:
+
+| country | year | sex | age | cases |
+| ------  | ---- | --- | --- | ----- |
+| AD | 2000 | m | 0–14 | 0 |
+| AD | 2000 | m | 15–24 | 0 |
+| AD | 2000 | m | 25–34 | 1 |
+| AD | 2000 | m | 35–44 | 0 |
+| AD | 2000 | m | 45–54 | 0 |
+| AD | 2000 | m | 55–64 | 0 |
+| AD | 2000 | m | 65+ | 0 |
+| AE | 2000 | m | 0–14 | 2 |
+| AE | 2000 | m | 15–24 | 4 |
+| AE | 2000 | m | 25–34 | 4 |
+| AE | 2000 | m | 35–44 | 6 |
+| AE | 2000 | m | 45–54 | 5 |
+| AE | 2000 | m | 55–64 | 12 |
+| AE | 2000 | m | 65+ | 10 |
+| AE | 2000 | f | 0-14 | 3 |
+
+Again, consider the difficulty of asking the question "what's the sum of all the cases for 15-24 year olds?".  In the "messy" version, you'd have to say "look for 1524 inside the value of 'column'", and figure out how to write that in code.  In the "tidy" version, you can say "find all the rows with a value of 15-24 in 'age'".
+
+###
+
+To see a "messy" data frame and its "tidy" alternative, see [a brief 2018 article](https://education.arcus.chop.edu/tidyverse/) for a brief read, or, if you want a deeper dive,  there really isn't a better article than [Hadley Wickham's classic work].
 
 ### Quiz: Tidy Data
 
