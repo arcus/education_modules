@@ -485,7 +485,6 @@ Let's do a quick check of your understanding of aesthetic mappings.  As a remind
 
 * Data visualization elements that **do change** with the data are **mapped** (for example, the height of a bar changes depending on the data, and the x and y position of a point on a scatter plot changes depending on the data).
 
-
 Here are some aesthetic mappings to consider:
 
 ![A handful of aesthetic options including position, shape, size, color, line width, and line type.](media/aesthetic_mappings.png)<!-- style = "max-width:700px" -->
@@ -587,7 +586,6 @@ ggplot(data = covid_testing) +
 
 In the third task you just completed, you **mapped** the fill aesthetic to the **result** variable, by writing "fill = result" inside the **aes()** function:
 
-
 <div style = "align-items: center; display: flex;">
 
 <div style = "margin: 1rem; max-width: 35%; float:left;"> ![Histogram of Covid tests as a function of `pan_day`.  The bars forming the histogram have three colors: a small blue section at the bottom, representing positive results, a much larger green section in the middle for negative results, and a tiny red section at the top for invalid test results.](media/multicolor_histogram.png)
@@ -686,15 +684,7 @@ Run that code, and you should see something like this!
 
 ![greyscale graph that shows both a histogram and a frequency polygon of the same covid data, overlaid](media/two_geoms.png)<!-- style = "max-width:700px; border: 1px solid rgb(var(--color-highlight))" -->
 
-
-## More Visualization Options
-
-The next few sections of this module include additional information to show you some of the possibilities for visualizations in R.  Don't worry about trying to memorize or fully understand how the code works -- this is just to give you some insight into what other things are possible with ggplot2.
-
-We'll start with saving plot images!
-
-
-<h3>Saving Plot Images</h3>
+## Saving Your Plot
 
 To save a plot you've created in the console, you can go to the **Plots** pane on the bottom right of the RStudio window, click "Export", and select "Save as Image".
 
@@ -702,7 +692,12 @@ To save a plot you've created by running some code inside an R notebook, you can
 
 ![RStudio window with the two options illustrated and labeled: Plots, Export, Save as Image, and a right click "save image as"](media/saving_images.png)<!-- style = "max-width:700px;" -->
 
-### Position Adjustments
+
+## More Visualization Options
+
+This section briefly presents additional information to show you some of the possibilities for visualizations in R.  Don't worry about trying to memorize or fully understand how the code works -- this is just to give you some insight into what other things are possible with ggplot2.
+
+<h3>Position Adjustments</h3>
 
 We've only barely scratched the surface of what you can do with ggplots. For example, you can change how overlapping objects are arranged.  For example, instead of a stacked histogram, you can request side-by-side bars.
 
@@ -716,7 +711,7 @@ ggplot(covid_testing) +
 
 ![Histogram that has, instead of a single bar for each bin, three -- one for invalid tests, one for negative tests, and one for positive tests.  Each is in a distinct color.](media/position_dodge.png)<!-- style = "max-width:700px;" -->
 
-### Themes
+<h3>Themes</h3>
 
 You can use different themes which affect how non-data elements such as axes, gridlines, and background appear.
 
@@ -731,7 +726,7 @@ ggplot(covid_testing) +
 
 ![Histogram with three bars per bin and a light-colored background](media/theme_light.png)<!-- style = "max-width:700px;" -->
 
-### Scales
+<h3>Scales</h3>
 
 You can customize color scales.
 
@@ -754,7 +749,7 @@ ggplot(covid_testing) +
 
 ![Histogram with three bars per bin and a light-colored background, but this time the colors of the three kinds of bars are different than we saw earlier.](media/color_scales.png)<!-- style = "max-width:700px;" -->
 
-### Facets
+<h3>Facets</h3>
 
 You can facet your plot. That means breaking it into sub-plots by another variable, for example, gender or location in the hospital.
 
@@ -770,25 +765,7 @@ ggplot(covid_testing) +
 
 ![Five small histograms, one for each demographic group represented in the data.  ](media/facets.png)<!-- style = "max-width:700px;" -->
 
-### Coordinate systems
-
-You can easily make radial plots or geographical maps.
-
-```
-ggplot(covid_testing) +
-  geom_histogram(
-    mapping = aes(x = pan_day, fill = result)
-  ) +
-  theme_light() +
-  scale_fill_manual(values = cols) +
-  facet_wrap(~demo_group) +
-  coord_polar()
-```
-
-
-![Five small histograms, one for each demographic group represented in the data, but instead of being on a grid, they are on a circular coordinate system.](media/coord_systems.png)<!-- style = "max-width:700px;" -->
-
-### Titles and Captions
+<h3>Titles and Captions<h3>
 
 And you can add titles, subtitles, or annotations, and change the axis labels or the appearance.
 
@@ -822,21 +799,6 @@ ggplot(data = data_frame) +                     # Required
   coordinate_function +                         # Optional
   ...
 ```
-
-### Survival Plots
-
-The `survminer` package extends `ggplot2` to make it straightforward to create publication-quality survival curves and risk tables.
-
-![survminer cheat sheet](media/survminer.png)<!-- style = "max-width:700px;" -->
-
-### A Grammar for Tables
-
-![hex icons for gt and gtsummary](media/gt_icons.png)<!-- style = "max-width:300px;" -->
-
-![attractive data table with subgroups and footnotes](media/gt_table.png)<!-- style = "max-width:500px;" -->
-
-The `gt` package provides a grammar for creating display tables, i.e. tables that you might want to show in a publication or on a summary report. The `gtsummary` package is useful for generating publication-ready tables from a tidy data frame.
-
 
 ## Recap
 
