@@ -474,6 +474,43 @@ In the "Files" pane in the lower right of RStudio, there's now two new files: te
 
 You might wonder why you want to deal with two files. The file ending in "Rmd" is your **source code** that includes what you're doing with data.  It makes sense to share this file with data analysts and other R coders.  The HTML is a presentation format that doesn't require R knowledge or the R program, since it can be viewed in a regular HTML browser.  This makes sense to share with stakeholders who don't need to work with the code but are more interested in the findings -- people like your boss or a publisher.
 
+### Additional Features
+
+<h3>Output Document Options</h3>
+
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 40%; float:left;">
+In addition to HTML, R Markdown documents can be "knitted" into a number of additional formats including PDF, Microsoft Word, PowerPoint, and even interactive dashboards.  We won't go into these additional formats in this module, but it's helpful to know that you can avoid error-prone cut and paste when you need to create documentation about your research and data analysis.
+</div>
+<div style = "margin: 1rem; max-width: 50%; float:left;">
+![""](media/document_output.png)<!-- style = "max-width: 400px;" -->
+</div>
+</div>
+
+<h3>Language Support</h3>
+
+In addition to R, R Markdown supports many other programming languages, including Python.
+
+So you can mix code chunks written in R with code chunks written in, say, SQL or Python.  While we won't get into the use of other languages in this module, it's useful to be aware of multiple language support, especially for teams in which some users prefer R and others Python.
+
+<div style = "align-items: center; display: flex;">
+
+<div style = "margin: 1rem; max-width: 50%; float:left;">
+![""](media/r_python.png)<!-- style = "max-width: 300px;" -->
+</div>
+<div style = "margin: 1rem; max-width: 50%; float:left;">
+
+<lia-keep>
+<pre>
+```{python}
+import pandas
+covid_testing.info()
+```
+</pre>
+</lia-keep>
+</div>
+</div>
+
 ## Packages
 
 <div style = "align-items: center; display: flex;">
@@ -687,43 +724,6 @@ Not all data is in CSV files, and fortunately R supports a huge number of other 
 You can also connect to a large number of **databases** directly in R to pull your data. For example, you can connect to SQL databases including MySQL and Oracle, as well as using APIs (application programming interfaces) for data collection applications like REDCap and websites with API access like PubMed or the New York Times.
 
 ![""](media/databases.png)
-
-### Additional Features
-
-<h3>Output Document Options</h3>
-
-<div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 50%; float:left;">
-In addition to HTML, R Markdown documents can be "knitted" into a number of additional formats including PDF, Microsoft Word, PowerPoint, and even interactive dashboards.
-</div>
-<div style = "margin: 1rem; max-width: 50%; float:left;">
-![""](media/document_output.png)<!-- style = "max-width: 400px;" -->
-</div>
-</div>
-
-<h3>Language Support</h3>
-
-Finally, in addition to R, R Markdown supports many other programming languages, including Python.
-
-So you can mix code chunks written in R with code chunks written in, say, Python:
-
-<div style = "align-items: center; display: flex;">
-
-<div style = "margin: 1rem; max-width: 50%; float:left;">
-![""](media/r_python.png)<!-- style = "max-width: 300px;" -->
-</div>
-<div style = "margin: 1rem; max-width: 50%; float:left;">
-
-<lia-keep>
-<pre>
-```{python}
-import pandas
-covid_testing.info()
-```
-</pre>
-</lia-keep>
-</div>
-</div>
 
 ## Recap
 
