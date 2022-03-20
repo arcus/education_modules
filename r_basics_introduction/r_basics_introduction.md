@@ -477,21 +477,18 @@ The **tidyverse** is package (a collection of functions, data, and help document
 
 You can download and **install** a package with the command `install.packages`. For example, to install the tidyverse package, you would go to the R Console and type `install.packages("tidyverse")`. Each package you want to use needs to be installed only once on each computer.
 
-<div class = "warning">
-
-On our RStudio Server, you won't need to install any packages for this course (as we have installed them for you). If you're using R on your own computer, however, you will have to install packages.
-
-</div>
-
 </div>
 <div style = "margin: 1rem; max-width: 30%; float:left;">
 
-![""](media/tidyverse.png)<!-- style = "max-width:200px;" -->
+![""](media/tidyverse.png)<!-- style = "max-width:170px;" -->
 </div>
 </div>
+
 <div class = "warning">
 
-Make sure you include the quotes around tidyverse. When to use quotes is a tricky topic that we will talk about more later in this module, but for now, keep in mind that you will *always* need to put quotes around the name of a package whenever using `install.packages()`.
+On our RStudio Server, you won't need to install any packages for this course (as we have installed them for you). If you're using R on your own computer, however, **you will have to install packages**.
+
+Make sure you **include the quotes** around tidyverse. When to use quotes is a tricky topic that we will talk about more later in this module, but for now, keep in mind that you will *always* need to put quotes around the name of a package whenever using `install.packages()`.
 
 </div>
 
@@ -607,8 +604,6 @@ You only need to install a package using `install.packages()` **once** per compu
 </div>
 </div>
 
-</lia-keep>
-
 ### Hands-On: Import Data
 
 Please go into the "r\_basics\_visualize\_data" directory in whichever RStudio environment you're working in and open `introduction_exercises.Rmd`.  Instructions for this exercise are in the text of the R Markdown document.
@@ -707,7 +702,7 @@ So you can mix code chunks written in R with code chunks written in, say, Python
 <div style = "align-items: center; display: flex;">
 
 <div style = "margin: 1rem; max-width: 50%; float:left;">
-![""](media/r_python.png)<!-- style = "max-width: 400px;" -->
+![""](media/r_python.png)<!-- style = "max-width: 300px;" -->
 </div>
 <div style = "margin: 1rem; max-width: 50%; float:left;">
 
@@ -729,24 +724,24 @@ Let's recap what we have covered in this session.
 We started by defining and differentiating **R** (the programming language) from **RStudio** (the integrated development environment -- IDE -- or editor) and **R Markdown** (the document format we use for reproducible data analysis). Then we explored RStudio and R Markdown more closely.
 
 <div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 30%; float:left;">
-![""](media/packages.png)<!-- style = "max-width: 400px;" -->
+<div style = "margin: 1rem; max-width: 25%; float:left;">
+![""](media/packages.png)<!-- style = "max-width: 100%;" -->
 </div>
 <div style = "margin: 1rem; max-width: 70%; float:left;">
 Packages extend the functionality of R. Install with `install.packages()` and load with `library()`.
 </div>
 </div>
 <div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 30%; float:left;">
-![""](media/function_breakdown.png)<!-- style = "max-width: 400px;" -->
+<div style = "margin: 1rem; max-width: 25%; float:left;">
+![""](media/function_breakdown.png)<!-- style = "max-width: 100%;" -->
 </div>
 <div style = "margin: 1rem; max-width: 70%; float:left;">
 Functions do stuff. They accept Arguments as input and return an Output. Capture an output in an Object using the assignment operator (` <- `).
 </div>
 </div>
 <div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 30%; float:left;">
-![""](media/csv_import.png)<!-- style = "max-width: 400px;" -->
+<div style = "margin: 1rem; max-width: 25%; float:left;">
+![""](media/csv_import.png)<!-- style = "max-width: 100%;" -->
 </div>
 <div style = "margin: 1rem; max-width: 70%; float:left;">
 Importing Data is the first step of data analysis. Use `read_csv()` from the tidyverse package to import data stored in a CSV file.
