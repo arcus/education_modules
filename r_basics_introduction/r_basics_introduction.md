@@ -416,9 +416,14 @@ The second way to execute code is to convert the entire R Markdown document into
 
 To **knit** a document, click the button that says "Knit" next to a blue ball of yarn on the top left of the Editor pane.  Then in a few moments, a rendered document will be shown:
 
-![""](media/knit_button.png)<!-- style = "max-width:600px;"-->
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 50%; float:left;">
+![""](media/knit_button.png)<!-- style = "max-width:90%;"-->
+</div>
+<div style = "margin: 1rem; max-width: 50%; float:left;">
+![Result of knitting, the start of an html document with headers and code](media/rendered_markdown.png)<!-- style = "max-width:90%;"-->
+</div>
 
-![Result of knitting, the start of an html document with headers and code](media/rendered_markdown.png)<!-- style = "max-width:600px;"-->
 
 ### R Markdown in Detail
 
@@ -502,6 +507,8 @@ One of the great things about R is that there are tens of thousands of packages 
 ## Importing Data
 
 ![`The data analysis pipeline, which begins with Import, then Tidy, then three actions that form a circle that repeat: Visualize, Model, and Transform.  The pipeline ends with "Communicate".`](media/pipeline_import.png)<!-- style = "max-width:500px;"-->
+<figcaption> Image taken from *R for Data Science* (https://r4ds.had.co.nz/introduction.html)</figcaption>
+
 
 The first step in the data analysis pipeline is to bring in, or **import**, the data to your environment, which for the purposes of this module is R.
 
