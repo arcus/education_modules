@@ -148,7 +148,8 @@ style = "border: 1px solid rgb(var(--color-highlight));"-->
 
 **Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_visualize\_data".  That's the code for this module!
 
-![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
+![RStudio as shown in the cloud platform Binder. The left side of the screen displays the "Console" tab. On the right there is a split between an "upper" and "lower" section. The upper section is the "Environment", which is empty. The lower section, "files", shows one file (environment.yml) and three folders (r_basics_introduction, r_basics_transform_data, r_basics_visualize_data)](media/binder_rstudio.png)<!--
+
 style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
 
 
