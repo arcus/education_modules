@@ -185,7 +185,8 @@ If you already completed this work for a previous module, and it's been a while 
 ![Tools tab in the highest level menu bar drops down with choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
 
 <div class = "warning">
-If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.
+If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, make copy of edited exercise files and name them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version as`my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code which will overwrite`transform_exercises.Rmd` but leave your changes in the newly named file intact.
+
 </div>
 
 ### How to Follow Along
