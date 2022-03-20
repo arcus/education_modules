@@ -452,7 +452,7 @@ Let's take on the third step: writing aesthetic mappings.  This is where you tel
 * An **aesthetic mapping** is a rule that tells ggplot how to draw the data from a specific column of the data set on the plot. These are elements that would result in a different looking visualization if you were to change the data being provided. For example, the height of a bar changes depending on the data, and the x and y position of a point on a scatter plot changes depending on the data).
 
 
-Of course, there are other visual elements of a data visualization that wouldn't automatically change if you change the data you provide. For example, the color of the background of the graph, or the label of the axes. R gives us a lot of control over these elements as well, however, since they aren't "mapped" to a specific quality of the data, we **"set"** them, rather than "map". 
+Of course, there are other visual elements of a data visualization that wouldn't automatically change if you change the data you provide. For example, the color of the background of the graph, or the label of the axes. R gives us a lot of control over these elements as well, however, since they aren't "mapped" to a specific quality of the data, we **"set"** them, rather than "map".
 * A data visualization contains visual elements that **do change** with the data (for example, the height of a bar changes depending on the data, and the x and y position of a point on a scatter plot changes depending on the data).  **We "map" these visual elements.**
 
 We'll keep thinking about these distinctions in the next few sections.  For now, let's consider an example aesthetic mapping, in a data frame with three columns, called "a", "b", and "c".  We can imagine mapping the values in column "a", which are numerical values, to the x axis.  With column "b", also numerical, we can map those values to the y axis.  And for column "c", which has categorical data with "M" and "F" values, we can imagine mapping that to colors.  
@@ -523,7 +523,7 @@ Complicating matters, sometimes you just set the way points or lines look, not b
 
 Picking the best aesthetics for your graph is as much an art as it is a science. Claus Wilke's *Fundamentals of Data Visualization* is a great introduction to this topic.
 
-The distinction between visual elements that are "set" and those that are "mapped", and the code that each of these requires, is a common point of confusion and frustration for new users of ggplot (and sometimes even more advanced users, too). If you're not solid on these concepts, feel free to give the last few sections a re-read before moving on, but also keep in mind that this is something that may also become clearer with more experience creating visualizations. 
+The distinction between visual elements that are "set" and those that are "mapped", and the code that each of these requires, is a common point of confusion and frustration for new users of ggplot (and sometimes even more advanced users, too). If you're not solid on these concepts, feel free to give the last few sections a re-read before moving on, but also keep in mind that this is something that may also become clearer with more experience creating visualizations.
 
 
 ### Exercise Time!
@@ -688,7 +688,7 @@ Run that code, and you should see something like this!
 
 ## More Visualization Options
 
-The next few sections of this module include additional information to show you some of the possibilities for visualizations in R.  Don't worry about trying to memorize or fully understand how the code works -- this is just to give you some insight into what other things are possible with ggplot2. 
+The next few sections of this module include additional information to show you some of the possibilities for visualizations in R.  Don't worry about trying to memorize or fully understand how the code works -- this is just to give you some insight into what other things are possible with ggplot2.
 
 We'll start with saving plot images!
 
@@ -855,8 +855,28 @@ The `gt` package provides a grammar for creating display tables, i.e. tables tha
 
 ![""](media/fundamentals.png)<!-- style = "max-width:400px;" -->
 
+If you'd like to learn more about which graphics are most effective in specific situations, we recommend taking a look at *Fundamentals of Data Visualizations* by Claus Wilke. This is a very readable and recent primer on data visualization and figure design, and it's [available for free!](https://serialmentor.com/dataviz).  Note that this is not a book about how to code in R.  Rather, it explains visual communication of data insights in a way that will help you regardless of the language you use.
 
-If you'd like to learn more about which graphics are most effective in specific situations, we recommend taking a look at *Fundamentals of Data Visualizations* by Claus Wilke. This is a very readable and recent primer on data visualization and figure design, and it's [available for free!](https://serialmentor.com/dataviz)
+### R for Data Science
+
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 60%; float:left;">
+*R for Data Science* is a free text that provides lots of helpful explanation and examples.  The [section on data visualization](https://r4ds.had.co.nz/data-visualisation.html) goes into much more detail than we were able to do in this brief module.  It also provides a number of exercises, if you enjoy learning by doing!
+
+The entire text is available [in English](https://r4ds.had.co.nz/) and [in Spanish](https://es.r4ds.hadley.nz/).
+</div>
+<div style = "margin: 1rem; max-width: 20%; float:left;">
+![Book Cover](media/r4ds.png)<!-- style = "max-width: 90%" -->
+</div>
+</div>
+
+### Articles
+
+Other potentially useful resources include articles written by the team that authored this module:
+
+* [ggplot Overview](https://education.arcus.chop.edu/ggplot-overview/) gives a few sample plots and the code used to generate them.
+* [Customizing ggplot2 Visualizations With ggThemeAssist](https://education.arcus.chop.edu/ggthemeassist/) explains how to use the `ggThemeAssist` "add-on" package within RStudio.
+* [R 4 Beginners Chapter 3 - Data Visualization with ggplot2](https://education.arcus.chop.edu/r-4-beginners-chapter-3/) and [R 4 Beginners Chapter 4 - Data Visualization with ggplot2, Part II](https://education.arcus.chop.edu/r-4-beginners-chapter-4/) are intended to accompany your use of [R for Data Science](https://r4ds.had.co.nz/), the book we mentioned in the previous page.
 
 ### Cheat Sheet!
 
@@ -883,4 +903,3 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Basics+Visualize+Data%22)!
 
 Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data workshop materials](https://skadauke.github.io/intro-to-r-for-clinicians-chop/).  We owe special thanks to Dr. Kadauke as well as the [R User Group](https://redcap.chop.edu/surveys/?s=NPY49R9ARF) at Children's Hospital of Philadelphia for their generosity in sharing these materials.
-
