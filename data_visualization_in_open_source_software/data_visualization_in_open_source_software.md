@@ -40,7 +40,7 @@ script:  https://kit.fontawesome.com/83b2343bd4.js
 
 @long_description
 
-**Estimated time to completion:** 20 min
+**Estimated time to completion:** @estimated_time
 
 **Pre-requisites**
 
@@ -91,7 +91,8 @@ There are many options available for creating data visualizations in R and pytho
 
 ### `ggplot2` in R
 
-R comes with plenty of plotting functions ready to go in base R, and for quick-and-dirty visualizations, that is usually the fastest option. The popular library [`ggplot2`](https://ggplot2.tidyverse.org/) provides much more flexibility and control over your visualizations, however, and if you're creating visualizations to share (e.g. in a manuscript or presentation), you'll probably find you need to switch to `ggplot2` at some point anyway to get more control over the appearance of your visualizations.
+R comes with plenty of plotting functions ready to go in base R (the set of functions you can use without needing to install any additional packages), and for quick-and-dirty visualizations, that is usually the fastest option.
+The popular library [`ggplot2`](https://ggplot2.tidyverse.org/) provides much more flexibility and control over your visualizations, however, and if you're creating visualizations to share (e.g. in a manuscript or presentation), you'll probably find you need to switch to `ggplot2` at some point anyway to get more control over the appearance of your visualizations.
 
 To get started with `ggplot2` in R on your own machine, you'll need to install it, and then load the library in R:
 
@@ -252,7 +253,7 @@ Which of the following are good strategies to extend the accessibility of your d
  [[X]] Provide informative alt text (for online visuals) or captions
  [[X]] Avoid cluttered, complex visuals
  [[X]] Present the information from the plot in alternate forms (a data table in an appendix, narrative description in the text, etc.)
- ***
+ ****
 <div class = "answer">
 All of these are good strategies!
 
