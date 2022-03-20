@@ -417,6 +417,7 @@ The second way to execute code is to convert the entire R Markdown document into
 To **knit** a document, click the button that says "Knit" next to a blue ball of yarn on the top left of the Editor pane.  Then in a few moments, a rendered document will be shown:
 
 ![""](media/knit_button.png)<!-- style = "max-width:600px;"-->
+
 ![Result of knitting, the start of an html document with headers and code](media/rendered_markdown.png)<!-- style = "max-width:600px;"-->
 
 ### R Markdown in Detail
