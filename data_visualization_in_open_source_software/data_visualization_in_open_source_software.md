@@ -75,7 +75,7 @@ Analysts frequently find themselves in situations where they want to depict more
 
 You can use **color** to communicate either continuous (e.g. darker = higher value) or categorical values (e.g. red = "no" and blue = "yes"). **Shape** (e.g. circle, triangle, cross) or **line type** (e.g. solid or dashed) can also indicate category membership and have the advantage of not relying on end users' ability to distinguish color. **Size** is often used to indicate count or population values.
 
-![A scatter plot of age vs glucose with lines of best fit, with patients in Class 1 shown as yellow dots with a solid best fit line, and Class 2 as blue triangles with a blue dashed line.](media/intro_2.png)
+![A scatter plot of age vs glucose with lines of best fit, with patients in Class 1 shown as yellow dots with a solid best fit line, and Class 2 as blue triangles with a dashed best fit line.](media/intro_2.png)
 
 Another valuable tool is **faceting**. This is when similar plots (that share one or both axes) are lined up next to each other to facilitate comparison. For example, when you want to show the relationship between two variables, X and Y, for several different subsets of the data, you can generate a scatter plot of X and Y for each subset of the data as its own facet. If you have more than two or three groups, faceting generally produces clearer plots than using color or shape to distinguish groups.
 
