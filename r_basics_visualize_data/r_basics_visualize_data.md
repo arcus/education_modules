@@ -382,8 +382,7 @@ ggplot(data = data_frame) +
 In the next section, we'll talk in more detail about the first step, selecting a tidy data frame.
 
 
-### Step 1: tidy data frame
-
+### Step 1: Tidy Data Frame
 
 Let's get started. The first detail is a "tidy" data frame which contains the data you want to plot.  It replaces the generic `data_frame` in our template (shown again below).
 
@@ -399,7 +398,7 @@ We won't cover "tidy" data in detail in this module.  It's sufficient at this po
 * Rows each constitute a single observation (like a single patient, or a single vial, or a single city block)
 * Each value is in its own cell (again, no doubling up values or merging of cells)
 
-The sample data we're going to work with in this module, the `covid_testing` data is already "tidy".  So our first step is easy: we are going to choose the `covid_testing` data frame and put that as our tidy data frame.
+The sample data we're going to work with in this module, the `covid_testing` data, is already "tidy".  So our first step is easy: we are going to choose the `covid_testing` data frame and put that as our tidy data frame.
 
 
 ### Step 2: geom function
@@ -413,7 +412,7 @@ As a reminder, we put forth three steps in our `ggplot` template:
 
 3) Write **aesthetic mappings** (which columns of the data you want to see added to the plot, and how you want them visualized)
 
-![`ggplot code follows a general template.  In the second line of code we add some geom_function with mapping = aes function inside its parentheses.`](media/ggplot_template.png)<!-- style = "max-width:400px;" -->
+![`ggplot code follows a general template.  In the second line of code we add some geom_function with mapping = aes function inside its parentheses.`](media/ggplot_template.png)<!-- style = "max-width:600px;" -->
 
 Let's take on the second step: selecting a **geom function**.
 
@@ -481,8 +480,7 @@ Here's a visual that might help:
 
 Let's do a quick check of your understanding of aesthetic mappings.  As a reminder:
 
-*Data visualization visual elements that **don't change** according to the data are **set** , not mapped.  (for example, the color of the background of the graph, which doesn't vary based on the data).
-
+* Data visualization visual elements that **don't change** according to the data are **set** , not mapped.  (for example, the color of the background of the graph, which doesn't vary based on the data).
 * Data visualization elements that **do change** with the data are **mapped** (for example, the height of a bar changes depending on the data, and the x and y position of a point on a scatter plot changes depending on the data).
 
 Here are some aesthetic mappings to consider:
@@ -765,26 +763,24 @@ ggplot(covid_testing) +
 
 ![Five small histograms, one for each demographic group represented in the data.  ](media/facets.png)<!-- style = "max-width:700px;" -->
 
-<h3>Titles and Captions<h3>
+<h3>Titles and Captions</h3>
 
 And you can add titles, subtitles, or annotations, and change the axis labels or the appearance.
 
 ```
 ggplot(covid_testing) +
-  geom_histogram(
-    mapping = aes(x = pan_day, fill = result)
-  ) +
-  theme_light() +
-  scale_fill_manual(values = cols) +
-  facet_wrap(~demo_group) +
-  coord_polar() +
-  ggtitle(
-    label = "COVID19 test volume",
-    subtitle = "Displayed in polar coordinates, mostly to show off ggplot2"
-  )
+    geom_histogram(
+        mapping = aes(x = pan_day, fill = result)
+    ) +
+    theme_light() +
+    facet_wrap(~demo_group) +
+    ggtitle(label = "COVID19 Test Volume",
+         subtitle = "Faceted by Demographic Group") +
+    xlab("Day of Pandemic") +
+    ylab("Number of Tests")
 ```
 
-![Five small circular histograms, with a shared title and subtitle](media/titles_captions.png)<!-- style = "max-width:700px;" -->
+![Faceted histogram with improved axis labels, title, and subtitle](media/titles_captions.png)<!-- style = "max-width:700px;" -->
 
 ### Adding New elements
 
