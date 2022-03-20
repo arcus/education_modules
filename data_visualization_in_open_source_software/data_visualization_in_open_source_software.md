@@ -260,7 +260,7 @@ In general, review your work asking yourself "If the reader didn't have visual a
 
 **Note**: We've discussed visual accessibility exclusively here because that is a common stumbling block for data visualizations, but access is much more than vision. For broader guidance on creating accessible content, see the [Web Content Accessibiility Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) and [The Inclusive Learning Design Handbook](https://handbook.floeproject.org/about/).
  </div>
- ***
+ ****
 
 
 ## Additional Resources
