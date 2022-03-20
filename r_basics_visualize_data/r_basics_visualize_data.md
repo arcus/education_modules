@@ -387,7 +387,7 @@ In the next section, we'll talk in more detail about the first step, selecting a
 
 Let's get started. The first detail is a "tidy" data frame which contains the data you want to plot.  It replaces the generic `data_frame` in our template (shown again below).
 
-![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:400px;" -->
+![`ggplot code follows a general template.  Here we begin with the ggplot() function with data = some_data_frame in its parentheses.`](media/ggplot_template.png)<!-- style = "max-width:400px;" -->
 
 A data set can take on a lot of different shapes with different styles of organizing data. The one method or shape that is best suited for data analysis is known as "tidy".
 
@@ -413,7 +413,7 @@ As a reminder, we put forth three steps in our `ggplot` template:
 
 3) Write **aesthetic mappings** (which columns of the data you want to see added to the plot, and how you want them visualized)
 
-![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:400px;" -->
+![`ggplot code follows a general template.  In the second line of code we add some geom_function with mapping = aes function inside its parentheses.`](media/ggplot_template.png)<!-- style = "max-width:400px;" -->
 
 Let's take on the second step: selecting a **geom function**.
 
@@ -446,16 +446,14 @@ As a reminder, we put forth three steps in our `ggplot` template:
 
 3) Write **aesthetic mappings** (which columns of the data you want to see added to the plot, and how you want them visualized)
 
-![`ggplot code follows a general template: the ggplot function with data = some_data_frame in its parentheses; a plus sign; some geom_function with mapping = aes function inside its parentheses; and inside the aes function parentheses are some aesthetic mappings. This general template is constant. The data frame, chosen geom_function, and the mappings vary depending on the situation.`](media/ggplot_template.png)<!-- style = "max-width:400px;" -->
+![`ggplot code follows a general template.  In the second line of code we add some geom_function with mapping = aes function inside its parentheses.`](media/ggplot_template.png)<!-- style = "max-width:400px;" -->
 
 Let's take on the third step: writing aesthetic mappings.  This is where you tell R how you want the columns of the data frame represented as graphical markings on the plot.  It's important to start with a couple of important distinctions:
 
 * An **aesthetic** is something that you can see about a data element on a graphic, such as its **position** on an x/y grid, but also other features such as for example its **color**.
 * An **aesthetic mapping** is a rule that tells ggplot how to draw the data from a specific column of the data set on the plot. These are elements that would result in a different looking visualization if you were to change the data being provided. For example, the height of a bar changes depending on the data, and the x and y position of a point on a scatter plot changes depending on the data).
 
-
 Of course, there are other visual elements of a data visualization that wouldn't automatically change if you change the data you provide. For example, the color of the background of the graph, or the label of the axes. R gives us a lot of control over these elements as well, however, since they aren't "mapped" to a specific quality of the data, we **"set"** them, rather than "map".
-* A data visualization contains visual elements that **do change** with the data (for example, the height of a bar changes depending on the data, and the x and y position of a point on a scatter plot changes depending on the data).  **We "map" these visual elements.**
 
 We'll keep thinking about these distinctions in the next few sections.  For now, let's consider an example aesthetic mapping, in a data frame with three columns, called "a", "b", and "c".  We can imagine mapping the values in column "a", which are numerical values, to the x axis.  With column "b", also numerical, we can map those values to the y axis.  And for column "c", which has categorical data with "M" and "F" values, we can imagine mapping that to colors.  
 
