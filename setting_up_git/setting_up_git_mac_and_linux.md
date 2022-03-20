@@ -215,6 +215,8 @@ To disable the proxy, use
 $ git config --global --unset http.proxy
 $ git config --global --unset https.proxy
 ```
+
+Not sure whether or not your network uses a proxy? [You should be able to check for a proxy by looking at the settings in your browser](https://smallbusiness.chron.com/behind-proxy-server-45919.html).
 </div>
 
 ## Git Help and Manual
