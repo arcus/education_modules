@@ -453,10 +453,10 @@ Let's take on the third step: writing aesthetic mappings.  This is where you tel
 * An **aesthetic** is something that you can see about a data element on a graphic, such as its **position** on an x/y grid, but also other features such as for example its **color**.
 * An **aesthetic mapping** is a rule that tells ggplot how to draw the data from a specific column of the data set on the plot. These are elements that would result in a different looking visualization if you were to change the data being provided. For example, the height of a bar changes depending on the data, and the x and y position of a point on a scatter plot changes depending on the data).
 
-Of course, there are other visual elements of a data visualization that wouldn't automatically change if you change the data you provide. For example, the color of the background of the graph, or the label of the axes. R gives us a lot of control over these elements as well, however, since they aren't "mapped" to a specific quality of the data, we **"set"** them, rather than "map".
+Of course, there are other visual elements of a data visualization that **wouldn't** automatically change if you change the data you provide. For example, the color of the background of the graph and the label of the axes won't change even if new data is added. R gives us a lot of control over these elements as well. Please note, however: since they aren't "mapped" to a specific quality of the data, we **"set"** them, rather than "map" them, which means we don't put these assignments inside `aes()`.
 
 <div class = "care">
-Don't worry if this distinction seems a bit fuzzy at first -- it can be tricky to grapple with, and will become clearer over time as you gain more experience manipulating visualizations in R. Even advanced coders sometimes set an aesthetic they meant to map, and vice versa. 
+Don't worry if this distinction seems a bit fuzzy at first -- it can be tricky to grapple with, and will become clearer over time as you gain more experience manipulating visualizations in R. Even advanced coders sometimes set an aesthetic they meant to map, and vice versa.
 </div>
 
 Let's consider an example in a data frame with three columns, called "a", "b", and "c".  
@@ -525,14 +525,7 @@ Out of the list above, these are the visual elements that could be reasonably ma
 
 There are actually a lot of aesthetic mapping possibilities, and they depend on the kind of plot you're making. For example, for a line graph you can define line width and line type, and for scatter plots you can define the shape of the dots.
 
-Note that things like axis labels, fonts, and annotations aren't considered aesthetic mappings because they don't vary with each data element and therefore you can't map those things to a specific column of a data frame.
-
-Complicating matters, sometimes you just set the way points or lines look, not by mapping them to data, but by setting them to a predetermined value no matter what.  For instance, if you wanted all the points in a scatter plot to be purple stars, regardless of the data represented, we would call this "setting" an aesthetic, not "mapping" it.  
-
-Picking the best aesthetics for your graph is as much an art as it is a science. Claus Wilke's *Fundamentals of Data Visualization* is a great introduction to this topic.
-
-The distinction between visual elements that are "set" and those that are "mapped", and the code that each of these requires, is a common point of confusion and frustration for new users of ggplot (and sometimes even more advanced users, too). If you're not solid on these concepts, feel free to give the last few sections a re-read before moving on, but also keep in mind that this is something that may also become clearer with more experience creating visualizations.
-
+Picking the best aesthetics for your graph is as much an art as it is a science. Claus Wilke's *[Fundamentals of Data Visualization](https://serialmentor.com/dataviz)* is a great introduction to this topic.
 
 ### Exercise Time!
 
