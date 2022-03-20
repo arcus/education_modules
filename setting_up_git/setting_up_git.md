@@ -53,6 +53,22 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 </div>
 
+## Lesson Preparation
+
+All of the commands for this lesson should be run in the command line interface (CLI) of your computer.
+You don't need to navigate to a particular directory or open anything else;
+you should be able to just open the CLI and run all of the commands in this lesson as they are written.
+
+Chances are very good that Git is already installed on your computer, even if you've never used it before.
+To check, run the following command:
+
+```bash
+git --version
+```
+
+You should get some brief message giving the version number of Git installed on your machine (e.g. `git version 2.24.3 (Apple Git-128)` or something similar).
+If you get an error message instead, you may need to [install Git](https://carpentries.github.io/workshop-template/#git) before continuing with the lesson.  
+
 ## Global configurations
 
 When we use Git on a new computer for the first time, we need to configure a few things.
@@ -156,7 +172,7 @@ It is possible to reconfigure the text editor for Git whenever you want to chang
 Note that Vim is the default editor for many programs. If you haven't used Vim before and wish to exit a session without saving your changes, press `Esc` then type `:q!` and hit `Enter` or `↵` or on Macs, `Return`.
 If you want to save your changes and quit, press `Esc` then type `:wq` and hit `Enter` or `↵` or on Macs, `Return`.
 
-This is [a common problem that has frustrated many a new git user](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/)! You are not alone.
+This is [a common problem that has frustrated many a new Git user](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/)! You are not alone.
 </div>
 
 ### Default branch naming
@@ -239,15 +255,15 @@ $ git help
 Without looking it up, what can you say about the following command? `git config --global alias.ci commit` Select all that apply.
 
 [[X]] It will change something in the global settings, meaning it will apply to all the projects in your user account on this computer
-[[ ]] You'll need to run this command each time you start a new git repository if you want it to take effect
+[[ ]] You'll need to run this command each time you start a new Git repository if you want it to take effect
 [[ ]] It will affect your settings on GitHub.com as well as on your local computer
 ***
 <div class = "answer">
-This command begins with `git config --global`, like most of the commands we ran during this lesson. The `--global` flag tells us this setting will be applied for all of the git projects on this user account on this computer (for a review of this topic, see [Check your global configurations](#check-your-global-configurations)).
+This command begins with `git config --global`, like most of the commands we ran during this lesson. The `--global` flag tells us this setting will be applied for all of the Git projects on this user account on this computer (for a review of this topic, see [Check your global configurations](#check-your-global-configurations)).
 
-Global configurations for git only need to be run once and then they will continue to apply until you undo them or replace them with new settings.
+Global configurations for Git only need to be run once and then they will continue to apply until you undo them or replace them with new settings.
 
-Importantly, 'global' only refers to within your account on your machine; if you use git on multiple machines, or when you use it in the cloud (for example, on GitHub.com), your global configuration settings from your personal machine won't apply.
+Importantly, 'global' only refers to within your account on your machine; if you use Git on multiple machines, or when you use it in the cloud (for example, on GitHub.com), your global configuration settings from your personal machine won't apply.
 </div>
 ***
 
@@ -260,23 +276,23 @@ If you wanted to learn more about the command above, which of the following woul
 <div class = "answer">
 All of these are great ideas!
 
-In this particular case, the help file for `git config` won't tell you what you want to know about the global settings for aliases, so that will be a dead end here. But sometimes the git help files will have exactly what you need, so it's never a bad idea to check!
+In this particular case, the help file for `git config` won't tell you what you want to know about the global settings for aliases, so that will be a dead end here. But sometimes the Git help files will have exactly what you need, so it's never a bad idea to check!
 
-Googling it is also never a bad idea. There are tons of great git resources available online, and for common problems you're likely to find a useable answer quickly. Keep in mind that there are lots of very advanced git users posting things online as well, though, and if you get unlucky you could end up with search results that are not at all user-friendly for beginners. When that happens, remind yourself that kind of gatekeeping is a failure on the part of the writer, not something wrong with you as a learner, and keep searching to find a good answer to your question somewhere else.
+Googling it is also never a bad idea. There are tons of great Git resources available online, and for common problems you're likely to find a useable answer quickly. Keep in mind that there are lots of very advanced Git users posting things online as well, though, and if you get unlucky you could end up with search results that are not at all user-friendly for beginners. When that happens, remind yourself that kind of gatekeeping is a failure on the part of the writer, not something wrong with you as a learner, and keep searching to find a good answer to your question somewhere else.
 
 Asking a peer (in person, or via an online community of practice) is probably the best strategy in a lot of situations, especially if the first two strategies don't yield useful results right away. If you feel embarrassed to ask a question, remind yourself that everyone is a beginner at some point and [asking for help is a great skill to practice](https://www.linkedin.com/pulse/20141027152039-95387062-why-you-should-never-feel-embarrassed-to-ask-questions)!
 </div>
 ***
 
 <div class = "learnmore">
-In case you're curious, this command is an example of [how to set aliases in git](https://www.atlassian.com/git/tutorials/git-alias), something we didn't cover in this lesson.
+In case you're curious, this command is an example of [how to set aliases in Git](https://www.atlassian.com/git/tutorials/git-alias), something we didn't cover in this lesson.
 
-Basically, aliases are shortcuts you can write for yourself so you don't have to type out full git commands every time. We won't be using aliases in the lessons here, but you may like to set some up on your own computer if that sounds attractive to you!
+Basically, aliases are shortcuts you can write for yourself so you don't have to type out full Git commands every time. We won't be using aliases in the lessons here, but you may like to set some up on your own computer if that sounds attractive to you!
 </div>
 
 ## Additional Resources
 
-Although the content here focuses on command line git, you may prefer to use the GitHub Desktop program instead. See the instructions posted on GitHub.com for how to [install and configure GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop).
+Although the content here focuses on command line Git, you may prefer to use the GitHub Desktop program instead. See the instructions posted on GitHub.com for how to [install and configure GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop).
 
 ## Feedback
 
