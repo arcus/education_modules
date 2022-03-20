@@ -258,26 +258,34 @@ Importantly, 'global' only refers to within your account on your machine; if you
 
 If you wanted to learn more about the command above, which of the following would be good places to start? Select all that apply.
 
-[[X]] `git config -h`
+[[ ]] `git config -h`
+[[X]] `git config --help`
 [[X]] Google it
 [[X]] Ask a friend, or post a question in an online community forum
-***
+****
 <div class = "answer">
-All of these are great ideas!
+Remember that  `-h` will pull up a list of the options for a command, while `--help` will bring up its full help documentation. In this case, knowing the list of options for `git config` won't help much since you need additional information about how the `global` option is working in this particular case, not just the fact that `global` is an option. In general, `-h` is good for when you already know pretty much what a command does but want a reminder of how to use it, whereas `--help` is better for learning about a new command.
 
-In this particular case, the help file for `git config` won't tell you what you want to know about the global settings for aliases, so that will be a dead end here. But sometimes the Git help files will have exactly what you need, so it's never a bad idea to check!
+In this particular case, the help file for `git config` won't tell you what you want to know about the global settings for aliases, so `git config --help` will turn out to be a dead end. But sometimes the Git help files will have exactly what you need, so it's never a bad idea to check!
 
 Googling it is also never a bad idea. There are tons of great Git resources available online, and for common problems you're likely to find a useable answer quickly. Keep in mind that there are lots of very advanced Git users posting things online as well, though, and if you get unlucky you could end up with search results that are not at all user-friendly for beginners. When that happens, remind yourself that kind of gatekeeping is a failure on the part of the writer, not something wrong with you as a learner, and keep searching to find a good answer to your question somewhere else.
 
 Asking a peer (in person, or via an online community of practice) is probably the best strategy in a lot of situations, especially if the first two strategies don't yield useful results right away. If you feel embarrassed to ask a question, remind yourself that everyone is a beginner at some point and [asking for help is a great skill to practice](https://www.linkedin.com/pulse/20141027152039-95387062-why-you-should-never-feel-embarrassed-to-ask-questions)!
 </div>
-***
+****
+
+<details>
+
+<summary>**Curious about that `alias` command? Click to learn more.**</summary>
 
 <div class = "learnmore">
-In case you're curious, this command is an example of [how to set aliases in Git](https://www.atlassian.com/git/tutorials/git-alias), something we didn't cover in this lesson.
+This command is an example of [how to set aliases in Git](https://www.atlassian.com/git/tutorials/git-alias), something we didn't cover in this lesson.
 
 Basically, aliases are shortcuts you can write for yourself so you don't have to type out full Git commands every time. We won't be using aliases in the lessons here, but you may like to set some up on your own computer if that sounds attractive to you!
 </div>
+
+</details>
+
 
 ## Additional Resources
 
