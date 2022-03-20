@@ -417,10 +417,10 @@ The second way to execute code is to convert the entire R Markdown document into
 To **knit** a document, click the button that says "Knit" next to a blue ball of yarn on the top left of the Editor pane.  Then in a few moments, a rendered document will be shown:
 
 <div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 50%; float:left;">
+<div style = "margin: 1rem; max-width: 45%; float:left;">
 ![""](media/knit_button.png)<!-- style = "max-width:90%;"-->
 </div>
-<div style = "margin: 1rem; max-width: 50%; float:left;">
+<div style = "margin: 1rem; max-width: 45%; float:left;">
 ![Result of knitting, the start of an html document with headers and code](media/rendered_markdown.png)<!-- style = "max-width:90%;"-->
 </div>
 
@@ -507,6 +507,7 @@ One of the great things about R is that there are tens of thousands of packages 
 ## Importing Data
 
 ![`The data analysis pipeline, which begins with Import, then Tidy, then three actions that form a circle that repeat: Visualize, Model, and Transform.  The pipeline ends with "Communicate".`](media/pipeline_import.png)<!-- style = "max-width:500px;"-->
+
 <figcaption> Image taken from *R for Data Science* (https://r4ds.had.co.nz/introduction.html)</figcaption>
 
 
@@ -769,12 +770,12 @@ RStudio's Data Import cheat sheet helps with importing data from file types simi
 
 
 <div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 65%; float:left;">
+<div style = "margin: 1rem; max-width: 60%; float:left;">
 *R for Data Science* is a free text that provides lots of helpful explanation and examples.  The [section on data import](https://r4ds.had.co.nz/data-import.html) goes into much more detail than we were able to do in this brief module.
 
 The entire text is available [in English](https://r4ds.had.co.nz/) and [in Spanish](https://es.r4ds.hadley.nz/).
 </div>
-<div style = "margin: 1rem; max-width: 30%; float:left;">
+<div style = "margin: 1rem; max-width: 20%; float:left;">
 ![Book Cover](media/r4ds.png)<!-- style = "max-width: 90%" -->
 </div>
 </div>
