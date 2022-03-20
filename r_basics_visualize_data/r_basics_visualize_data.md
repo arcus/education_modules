@@ -802,11 +802,11 @@ ggplot(data = data_frame) +                     # Required
 
 | ![""](media/tidy_data.png)<!-- style = "max-width:200px;" --> | 1. A **tidy data frame**, in which each variable is in its own column, each observation is in its own row, and each value is in its own cell; |
 
-| ![""](media/mini_histogram.png)<!-- style = "max-width:75px;" -->  ![frequency polygon of covid data](media/mini_freqpoly.png)<!-- style = "max-width:75px;" --> | 2. A **geom function**, which tells R what kind of plot to make; and |
+| ![""](media/mini_histogram.png)<!-- style = "max-width:200px;" -->  ![frequency polygon of covid data](media/mini_freqpoly.png)<!-- style = "max-width:200px;" --> | 2. A **geom function**, which tells R what kind of plot to make; and |
 
-| ![""](media/positions.png)<!-- style = "max-width:75px;" -->  ![""](media/colors.png)<!-- style = "max-width:75px;" -->  | 3. **Aesthetic mappings**, which tell R how to represent data as graphical markings on the plot. |
+| ![""](media/positions.png)<!-- style = "max-width:200px;" -->  ![""](media/colors.png)<!-- style = "max-width:200px;" -->  | 3. **Aesthetic mappings**, which tell R how to represent data as graphical markings on the plot. |
 
-| ![""](media/multicolor_histogram.png)<!-- style = "max-width:75px;" -->   ![""](media/blue_histogram.png)<!-- style = "max-width:75px;" -->   | Aesthetics can be **mapped** to a variable or **set** to a constant value. |
+| ![""](media/multicolor_histogram.png)<!-- style = "max-width:200px;" -->   ![""](media/blue_histogram.png)<!-- style = "max-width:200px;" -->   | Aesthetics can be **mapped** to a variable or **set** to a constant value. |
 
 | | Additionally, you can do things like change theme, color palette, coordinate systems, facet your graph, and more! |
 
