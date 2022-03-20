@@ -99,7 +99,7 @@ To get started with `ggplot2` in R on your own machine, you'll need to install i
 # You only need to install it once
 install.packages("ggplot2")
 
-# You'll need to load the library anew for each R session
+# You'll need to load the library again for each R session
 library("ggplot2")
 ```
 
