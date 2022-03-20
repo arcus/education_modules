@@ -266,7 +266,7 @@ In general, review your work asking yourself "If the reader didn't have visual a
 
 ## Additional Resources
 
-If you are brand new to R or python (or want a refresher), check out [Intro to R](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md) to learn more about how to use each programming language. Before you can create visualizations of your own data, you'll need to be able to read data into R or python, and check and manipulate data frames.
+If you are brand new to R or python (or want a refresher), check out [Intro to R](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md) to learn more about how to use each programming language. Before you can create visualizations of your own data, you'll need to be able to read data into R or python, and check and manipulate data frames.
 
 If you're ready for more applied examples of data visualization, check out the next modules in this series: [Data Visualization in ggplot2](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md), and [Data Visualization in seaborn](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_seaborn.md).
 
