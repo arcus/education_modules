@@ -12,7 +12,7 @@ comment: This module provides recommendations and examples to help new users con
 
 long_description: If you're ready to start using the Git version control system, this lesson will walk you through how to get set up. This lesson should be a good fit for people who already have an idea of what version control is (although may not have any experience using it yet), and know how to open the command line interface (CLI) on their computer. No previous experience with Git is expected.
 
-estimated_time: 20 min
+estimated_time: 15 min
 
 @learning_objectives  
 
