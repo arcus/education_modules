@@ -765,6 +765,19 @@ RStudio's Data Import cheat sheet helps with importing data from file types simi
 
 ![RStudio help menu, with Cheat Sheets selected and the submenu option "Browse Cheat Sheets" selected](media/cheat_sheet_browse.png)<!-- style = "max-width:700px;" -->
 
+### R for Data Science
+
+
+<div style = "align-items: center; display: flex;">
+<div style = "margin: 1rem; max-width: 65%; float:left;">
+*R for Data Science* is a free text that provides lots of helpful explanation and examples.  The [section on data import](https://r4ds.had.co.nz/data-import.html) goes into much more detail than we were able to do in this brief module.
+
+The entire text is available [in English](https://r4ds.had.co.nz/) and [in Spanish](https://es.r4ds.hadley.nz/).
+</div>
+<div style = "margin: 1rem; max-width: 30%; float:left;">
+![Book Cover](media/r4ds.png)<!-- style = "max-width: 90%" -->
+</div>
+</div>
 
 ## Feedback
 
