@@ -455,7 +455,15 @@ Let's take on the third step: writing aesthetic mappings.  This is where you tel
 
 Of course, there are other visual elements of a data visualization that wouldn't automatically change if you change the data you provide. For example, the color of the background of the graph, or the label of the axes. R gives us a lot of control over these elements as well, however, since they aren't "mapped" to a specific quality of the data, we **"set"** them, rather than "map".
 
-We'll keep thinking about these distinctions in the next few sections.  For now, let's consider an example aesthetic mapping, in a data frame with three columns, called "a", "b", and "c".  We can imagine mapping the values in column "a", which are numerical values, to the x axis.  With column "b", also numerical, we can map those values to the y axis.  And for column "c", which has categorical data with "M" and "F" values, we can imagine mapping that to colors.  
+<div class = "care">
+Don't worry if this distinction seems a bit fuzzy at first -- it can be tricky to grapple with, and will become clearer over time as you gain more experience manipulating visualizations in R. Even advanced coders sometimes set an aesthetic they meant to map, and vice versa. 
+</div>
+
+Let's consider an example in a data frame with three columns, called "a", "b", and "c".  
+We can imagine mapping the values in column "a", which are numerical values, to the x axis.  With column "b", also numerical, we can map those values to the y axis.  And for column "c", which has categorical data with "M" and "F" values, we can imagine mapping that to colors.  
+
+We may also want to set the size of the points on the graph to a certain value. While I'm sure you've seen visualizations where the size of a dot corresponds to something about the data, that's not what we want to do here -- we just want to customize the size of the dot to be a little bit bigger than the default, which is why this wouldn't be one of our "mappings" in this particular instance.
+
 
 The mapping in ggplot would be within an **aes()**, or aesthetic mapping, and looks like this:
 
