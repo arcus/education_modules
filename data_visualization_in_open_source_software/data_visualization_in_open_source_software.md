@@ -111,7 +111,7 @@ For an excellent quick reference, see the [`ggplot2` cheatsheet](https://ggplot2
 
 In python, there's a similar situation: The [`seaborn`](https://seaborn.pydata.org/) library is a plotting library that works on top of the more basic and powerful library [matplotlib](https://matplotlib.org/), making it easier to use for common data science applications.
 
-To use `seaborn` in python on your own machine, you'll need to [install `seaborn`](https://seaborn.pydata.org/installing.html) it first. You can use either PyPi (`pip install seaborn`) or Anaconda (`conda install seaborn`) to install it, whichever you use for your other python modules.
+To use `seaborn` in python on your own machine, you'll need to [install `seaborn`](https://seaborn.pydata.org/installing.html) first. You can use either PyPi (`pip install seaborn`) or Anaconda (`conda install seaborn`) to install it, whichever you use for your other python modules.
 
 When you're ready to use `seaborn` in python, by convention, `seaborn` should be imported with the abbreviation sns (this isn't necessary for `seaborn` to work, but you'll see a lot of help documentation online using the sns abbreviation, so it's a good idea to get in the habit of doing that yourself, too, so that your code is similar to online examples):
 
