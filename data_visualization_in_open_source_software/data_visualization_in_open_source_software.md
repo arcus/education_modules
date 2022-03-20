@@ -79,7 +79,7 @@ You can use **color** to communicate either continuous (e.g. darker = higher val
 
 Another valuable tool is **faceting**. This is when similar plots (that share one or both axes) are lined up next to each other to facilitate comparison. For example, when you want to show the relationship between two variables, X and Y, for several different subsets of the data, you can generate a scatter plot of X and Y for each subset of the data as its own facet. If you have more than two or three groups, faceting generally produces clearer plots than using color or shape to distinguish groups.
 
-![Two scatter plots side by side showing age vs glucose levels for patients in Class 1 (left) and Class 2 (right). The y-axis is aligned to facilitate comparison across groups.](media/intro_3.png)
+![The same data from above split into two separate scatter plots side by side, one for patients in Class 1 and one for Class 2. The y-axis is aligned to facilitate comparison across groups.](media/intro_3.png)
 
 Most of these plot elements can be applied across a wide range of kinds of visualizations. Knowing how to identify these key plot elements will help you select effective visualizations for your own data.
 
