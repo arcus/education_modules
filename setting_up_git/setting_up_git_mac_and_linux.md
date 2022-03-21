@@ -55,6 +55,10 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 ## Lesson Preparation
 
+<div class = "important">
+Note that this module is written specifically for people working on Mac or Linux computers. If you are using a Windows machine, you should reference [Git Setup for Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/git_setup_for_windows/git_setup_windows/git_setup_windows.md) instead.
+</div>
+
 All of the commands for this lesson should be run in the command line interface (CLI) of your computer.
 You don't need to navigate to a particular directory or open anything else;
 you should be able to just open the CLI and run all of the commands in this lesson as they are written.
