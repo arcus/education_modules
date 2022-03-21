@@ -612,7 +612,7 @@ Metaphors for Git abound, and no metaphor has been great enough to become the "s
 
 * A [poetry metaphor](https://www.youtube.com/watch?v=BCQHnlnPusY) video on YouTube ~14 minutes
 
-* A [musical metaphor](https://www.youtube.com/watch?v=S9Do2p4PwtE) video on YouTube <5 minutes
+* A [musical metaphor](https://www.youtube.com/watch?v=S9Do2p4PwtE) video on YouTube $<$5 minutes
 
 * A [metaphor about building a house](https://towardsdatascience.com/a-simple-story-to-explain-version-control-to-anyone-5ab4197cebbc) blog post
 
