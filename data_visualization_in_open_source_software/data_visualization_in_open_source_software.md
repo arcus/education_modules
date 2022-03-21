@@ -249,6 +249,7 @@ Although the first two answers seem plausible, they don't really describe a typi
 ****
 
 Which of the following are good strategies to extend the accessibility of your data visualizations? Select all that apply.
+
  [[X]] Avoid using color as the sole means of distinguishing important information
  [[X]] Provide informative alt text (for online visuals) or captions
  [[X]] Avoid cluttered, complex visuals
