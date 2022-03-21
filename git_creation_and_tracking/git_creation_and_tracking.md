@@ -10,7 +10,7 @@ title: Creating your Git Repository
 comment:  Create a new Git repository and get started with version control.
 long_description: If you have Git set up on your computer and are ready to start tracking your files then this module is for you. This module will teach you how to create a Git repository, add files to it, update files in it, and keep track of those changes in a clear and organized manner.
 
-estimated_time: 1 hour
+@estimated_time: 1 hour
 
 @learning_objectives
 
@@ -88,7 +88,7 @@ $\copyright$; Gilad Fried / [The Noun Project](https://thenounproject.com/) /
 $\copyright$; Luc Viatour / [https://lucnix.be](https://lucnix.be/) /
 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en).
 
-In all of our examples, we will see code as if it is written by Vlad Dracula. If you are practicing these steps as you move through this module, your name and email address will appear instead of Dracula's.
+In the examples, we will see code as if it is written by Vlad Dracula. If you are practicing these steps as you move through this module, your name and email address will appear instead of Dracula's.
 
 To copy the code in the examples, enter everything after the dollar sign "$" into the command line, and then press the enter or return key. If the command has any output, it will not start with a dollar sign, but a new line where you can type after a dollar sign will appear.
 
@@ -110,8 +110,10 @@ $ cd ~/Desktop
 $ mkdir planets
 $ cd planets
 ```
+The `cd` command means **change directory**, and `mkdir` tells the computer to **make** a **directory** with the name "planets." Once we have a `planets` directory, we use `cd` open that directory.
 
-Then we tell Git to make `planets` a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository) (also called a **repo**)
+
+Next we tell Git to make `planets` a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository) (also called a **repo**)
 -- a place where Git can store versions of our files:
 
 
