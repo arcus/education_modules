@@ -14,7 +14,7 @@ estimated_time: 45 minutes
 
 After completion of this module, learners will be able to:
 
-- Describe the three tenets of tidy data
+- Describe the three characteristics of tidy data
 - Describe how messy data could be transformed into tidy data
 - Describe the three tenets of tidy analysis
 
@@ -53,14 +53,15 @@ Experience working with rectangular data (data in rows and columns) will be help
 
 What do we mean by "tidy" data?
 
-To begin with, we're talking specifically about **"rectangular" data**.  Rectangular data (or "tabular" data, from the word "table") has rows and columns.  This is a very typical kind of data for many disciplines, but it's not the only data out there.  Here's a few examples of data that are incredibly important but are not rectangular / tabular:
+To begin with, we're talking specifically about **"rectangular" data**.  Rectangular data (or **"tabular"** data, from the word "table") has rows and columns.  This is a very typical kind of data for many disciplines, but it's not the only data out there.  Here's a few examples of data that are incredibly important but are not rectangular / tabular:
 
 * Wave form data, such as electrocardiogram data
 * Recordings of audio and/or video, such as videorecordings of babies at play
 * Text used in textual analysis or natural language processing (NLP), such as clinical notes or the text of Senate bills
 * Genomic data such as FASTQ or BAM files
+* Image data like photos of skin lesions
 
-Rectangular data is by no means the only data that matters to biomedical researchers.  This module, however, is limited in scope to only rectangular data.  Here are some common examples of rectangular data:
+Rectangular data is by no means the only data that matters to biomedical researchers -- we could have added many more bullet points above describing non-rectangular data that is critical for our research.  This module, however, is limited in scope to **only rectangular data**.  Here are some common examples of rectangular data:
 
 * Demographic data about patients stored in an electronic health record, in which each row represents a patient, and each column stores a specific demographic fact, such as the date of birth.
 * Biosample data in a lab management system, in which each row represents a specific sample and each column represents information about what the sample is and how and when it was obtained.
@@ -78,26 +79,32 @@ A data set is tidy, [according to Hadley Wickham and Garrett Grolemund](https://
 * Each observation is in its own row, and
 * Each value is in its own cell
 
+<div class = "hint">
+In a [previous work by Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10), a different third characteristic appears, and we think it's useful to mention here as another consideration.  This original third characteristic, however, is less critical to success than the three mentioned above, and we would argue it has been supplanted by the one listed above.  Still, it's something to keep in mind.  We'll touch on it a bit later in the module.
+
+* Each observational unit (topic) forms its own table
+</div>
+
 The words "variable", "observation", and "value" are common words to researchers, but let's look closely at them regardless.
 
-* A *variable* is a characteristic being measured, like
+* A **variable** is a characteristic being measured, like
 
   - weight in grams
   - amount of rain in inches
   - homeroom paint color
   - whether a subject has a history of pulmonary embolism
 
-* Each *observation* (thing with measurable characteristics) is in its own row, such as:
+* Each **observation** (thing with measurable characteristics) is in its own row, such as:
 
   - individual newborn wombat
   - specific day of history
   - elementary school class
   - individual human subject
 
-* Each *value* (a number or category or word that provides the measurement) is in its own cell
+* Each **value** (a number or category or word that provides the measurement) is in its own cell and could be something like:
 
   - an integer
-  - a decimal numbers
+  - a decimal number
   - a category like "blue", "green", or "yellow"
   - a True/False value
 
@@ -119,11 +126,11 @@ If we think about "observation", that can also be a bit tricky.  Do measurements
 
 What about cells?  Is it at least easy to tell if each value is in its own cell?  Well, sometimes.  But consider the case where a mouse identification code is composed of a few letters that indicate its genetic lineage, a number that represents where it was bred, and another series of letters and numbers indicating where it was housed and its type of diet.  A single identifier can hold lots of information.  Also, if you've ever used Excel, you might have used text colors or highlighting to indicate values that seem surprising or possibly mistaken.  For example, a gestational age in weeks of 50 that's in a bright red color might be two actual values: the recorded value of gestational age and a marker that points out its data quality or trustworthiness.
 
-### Data Collection
+### Start at Data Collection
 
 The opposite of "tidy" is often called "messy." That isn't intended to be pejorative, just descriptive.  We often start with messy data, and as we've described, it's not always obvious what the correct "tidy" approach is. It's often said that **around 80% of the time we spend in data analysis** consists of cleaning up and rearranging messy data and getting it in a format that is helpful for analysis.  That can be surprising to people who are beginning to learn data analysis, and it indicates why it's so important to think about how data is structured long before trying to perform statistical tests or creating figures for manuscripts.  Even well-structured, tidy data often has to be reshaped for specific purposes, and it's much more complicated when you add messy data into the mix.
 
-It's much easier to begin with a tidy structure when data collection begins, rather than tidying up messy data later.  Here's one simple example of that. If a column is called "name" and includes first names and last names, that's messy.  It can be difficult to extract just the first names or just the last names, since some people have more than one word forming their first name (José María, Leigh Ann) and some people have more than one word forming their last name (de la Cruz, Bonham Carter).  If you know your subjects or patients well, you might be able to use your knowledge of their families or cultures to make a row-by-row separation, but what if you have 500 subjects? Fifty thousand subjects?
+It's much easier to begin with a tidy structure when **data collection** begins, rather than tidying up messy data later.  Here's one simple example of that. If a column is called "name" and includes first names and last names, that's messy.  It can be difficult to extract just the first names or just the last names, since some people have more than one word forming their first name (José María, Leigh Ann) and some people have more than one word forming their last name (de la Cruz, Bonham Carter).  If you know your subjects or patients well, you might be able to use your knowledge of their families or cultures to make a row-by-row separation, but what if you have 500 subjects? Fifty thousand subjects?
 
 A "tidy" approach would be to begin data collection with, at the minimum, one column for first names and one column for last names.  In case you do need the entire name (for example, to address an envelope), remember that it's much easier to re-unite two or more fields that are stored separately than to try to define the rules of separating tangled-up data.  
 
@@ -150,6 +157,30 @@ An aside about race: in addition to making for more difficult use of race data, 
 An additional, important question that can be a source of disagreement in demographic and disparity research is what specific groups constitute races that can be endorsed.
 </div>
 
+### Quiz: Three Characteristics of Tidy Data
+
+
+<div class = "question">
+
+Which of the following are accurate statements about tidy data?
+
+[[X]] An observation is a single thing with measurable characteristics (like a mouse or a city)
+[[ ]] Observations should each be in their own column
+[[ ]] It's often a good idea to combine related data in a single cell, for instance, by encoding "4 year old female" as 4yf
+[[X]] "Height in meters" is an example of a variable.
+[[X]] Observations should each be in their own row
+[[?]] There are multiple correct answers!
+
+
+<div class = "answer">
+<details><summary>Click to see an explanation of the answer.</summary>
+
+An observation is a single thing with measurable characteristics, and each observation should be in its own row.  Variables, on the other hand, are things being measured, like height, color, score, count, and so on.  Variables should each be in their own column.  Values belong in cells, the intersection of rows and columns, and each cell should have one and only one value -- no combining!
+
+</details>
+</div>
+</div>
+
 ## Sources of Messy Data
 
 Hadley Wickham, one of the authors mentioned in the last section, suggests in his [landmark work on tidy data](https://www.jstatsoft.org/article/view/v059i10) that there are five common problems that occur to make data "messy":
@@ -162,11 +193,21 @@ Hadley Wickham, one of the authors mentioned in the last section, suggests in hi
 
 Let's take a look at each of these problems in turn.
 
+<div class = "hint">
+*Tidy Data* was published in 2014, and covers both the concepts around tidy data as well as the then state of the art code solutions in R for data reshaping.  In this module, we're not going to delve into the code examples provided by the article, for two reasons:
+
+* This module is intended to be code-free, making it useful for users of any programming language or none at all (this module can be useful just in terms of setting up data collection instruments well)
+* Since 2014, Hadley Wickham and others have developed new methods for data tidying
+
+So, if you choose to read along, concentrate on the principles, not the implementation details or code jargon.
+
+</div>
+
 ### Column Headers as Values
 
 Let's consider an example from section 3.1 of [Hadley's article](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/772).  The column headers in this table, taken from Pew Forum, contain values -- income values.  This table is readable for humans, and takes advantage of horizontal space on a page.  It makes sense that it would appear in a report for human consumption.  This data is messy, however, because it violates one of the important rules about tidy data.
 
-<div class = "hint"> Note that in the world of R users, Hadley Wickham is considered such a singularly important and yet friendly figure that he is often referred to, simply, as "Hadley".
+<div class = "hint"> Note that in the world of R users, Hadley Wickham is considered such a singularly important and yet friendly figure that he is often referred to simply as "Hadley".
 </div>
 
 | religion | <lia-keep><$10k</lia-keep> | <lia-keep>$10–20k</lia-keep> | <lia-keep>$20–30k</lia-keep> | <lia-keep>$30–40k</lia-keep> | <lia-keep>$40–50k</lia-keep> | <lia-keep>$50–75k</lia-keep> |
@@ -185,23 +226,24 @@ Let's consider an example from section 3.1 of [Hadley's article](https://www.jst
 
 While humans can make sense of this data, remember that computers must be told in sometimes agonizing detail what to do.  If we were to ask "which is the largest group?" using the table above, we'd have to say (in code, of course) something along the lines of "look inside each row, at columns 2-7, and take the largest value of all of those cells, and then take the value of the first column of the row with that largest-valued cell, and the column header of that cell, and that's your group".
 
+<lia-keep>
 <div class = "hint">
-
 <div style = "align-items: center; display: flex;">
-
 <div style = "margin: 1rem; max-width: 55%; float:left; padding-right:4em;">
+</lia-keep>
 
 Thinking in computer-ese, giving very detailed instruction, is a kind of **algorithmic thinking**.  An **algorithm** is simply a well-specified process that solves a problem.  It takes practice to think like a computer instead of like a person, and one of the fun things that many programmers like to do to help this process along is called "rubber duck debugging".  This involves explaining to, yes, a rubber duck (or other friendly yet not very smart collaborator, like your cat) exactly what you're trying to do and how to get there, following detailed rules.  It may seem silly, but give it a try!
-
+<lia-keep>
 </div>
 <div style = "margin: 1rem auto; max-width: 35%; float:left;">
+</lia-keep>
 ![Rubber duck](media/rubber_duck.png)
-
 <figcaption style = "font-size: 0.8em;">Image courtesy Steve Webel, https://www.flickr.com/photos/webel/306290032</figcaption>
+<lia-keep>
 </div>
 </div>
-
 </div>
+</lia-keep>
 
 What would a tidy format look like?  Consider this, which is the start of a tidy table.  In the interest of space, only the first handful of rows are shown.
 
@@ -224,7 +266,7 @@ Again, the messy table isn't bad *per se*, but it's optimized for "looks good to
 
 ### Multiple Variables in One Column
 
-In section 3.2 of his article, Hadley shows data from the World Health Organization.  In this dataset, related to tuberculosis, there's a column named, simply "column".  This "column" is a hybrid: it contains sex (m or f) and age (0-14 years, 15-24 years, and so on, to 65+).  It is in a condensed form that we would judge "messy".  See a shortened version of this messy data below:
+In section 3.2 of his article, Hadley shows data from the World Health Organization.  In this dataset, related to tuberculosis, there's a column named, simply "column".  This is not original WHO data, but represents an interim step in transforming the original data to a more tidy form.  This interim step (called "molten" data) has made some important improvements in the data, but more work needs to be done. The column entitled "column" is hybrid: it contains sex (m or f) and age (0-14 years, 15-24 years, and so on, to 65+).  It is in a condensed form that we would judge "messy".  See a shortened version of this messy data below:
 
 
 | country | year | column | cases |
@@ -286,7 +328,7 @@ As you look over this table, see if you can describe the algorithm (rule-based p
 A tidy version of this data is shown below.  Is it simpler now to ask for the maximum temperature on March 13, 2010?
 
 <div class = "hint">
-Notice how the date field is united here, which may seem to go against some of the principles we've argued for.  Dates are so frequently used, however, that it's very easy to extract, from a given date, the year, month, day, and even the day of the week, using computational methods.  Whether to break out a date into year, month, and day depends a lot on your use case (for example, are you planning on obtaining temperature averages across all of June, and comparing June low temperature averages across years?
+Notice how the date field is united in the tidy data below, which may seem to go against some of the principles we've argued for.  Dates are so frequently used, however, that it's very easy to extract, from a given date, the year, month, day, and even the day of the week, using computational methods.  Whether to break out a date into year, month, and day depends a lot on your use case.  For example, are you planning on obtaining temperature averages across all of June, and comparing June low temperature averages across years?
 </div>
 
 
@@ -303,13 +345,121 @@ Notice how the date field is united here, which may seem to go against some of t
 | MX17004 | 2010-04-27 | 36.3 | 16.7 |
 | MX17004 | 2010-05-27 | 33.2 | 18.2 |
 
+### Multiple Types in One Table (Optional)
+
+<div class = "hint">
+Remember that the original third rule of tidy data was replaced in later writings by Hadley Wickham?  Well, briefly, it's useful to bring up the original rule.  This section may be considered a bit optional for people working with .csv documents or spreadsheets, but the topic we're going to cover is important in the world of SQL databases, so we want to explain it.  Feel free to skip if it seems unhelpful!
+</div>
+
+<h4>"Normalized" Data</h4>
+
+If you've ever worked with SQL databases, you know that in SQL, it is very common to divide data into very specific topics.  For example, demographic information about patients may be stored in a table called "demographics", while a table called "medication_order" leaves out any mention of demographic information and concerns itself solely with information about the medication order (drug id number, prescribed dose, id of provider, etc.).  Patient details like age and sex are important for prescribers.  But rather than reiterate what is already known about the patient and add it anew in the medication_order table, a patient identifier is used, which can then allow for linking across tables.
+
+This division of data so that the minimum amount of data is reiterated in multiple places is called "normalization", and it's very useful, especially in large, complex data sets.  In these kinds of datasets (like Electronic Medical Records), it could be prohibitively costly (because of disk space and processing requirements) and error prone (because of the need to track down multiple copies for updated data) to continually add the data that exists in one table into new places.
+
+<h4>A Sample demographics table</h4>
+
+| patient_id | date_of_birth | sex | last_name | first_name |
+| -------    | -----------   | -   | ------    | ----- |
+| ABC123     | 1970-03-15    | M   | Bird      | Big |
+| TRSH789    | 1985-08-20    | M   | the Grouch | Oscar |
+| SMLE321    | 1990-12-12    | F   | Dawn      | Prairie |
+
+<h4>A Sample medication_order table</h4>
+
+| patient_id | provider_id | med_id | order_date |
+| -------    | -----------   | --- | ------    | ----- |
+| ABC123     | 491272    | 8000412   | 2021-05-15 |  
+| ABC123     | 491272  | 7960004   | 2022-02-01 |
+| SMLE321    | 223618    | 8000412 | 2020-08-19 |
+
+That brings us to what sometimes happens when people try to squeeze too much data into a single spreadsheet or .csv file: multiple topics treated in a single table.  When this happens we often see lots of repeated data, as Hadley points out in his example taken from Billboard.  The data below represents the state of the Billboard data *after* some initial tidying has taken place, but we can see that there is rather a lot of repeating data, even once the data has been reorganized.  This isn't a completely tidy dataset:
 
 
-To see a "messy" data frame and its "tidy" alternative, see [a brief 2018 article](https://education.arcus.chop.edu/tidyverse/) for a brief read, or, if you want a deeper dive,  there really isn't a better article than [Hadley Wickham's classic work].
+| year | artist | time | track | date | week | rank |
+| ---- | -----  | ---- | ----  | ---  | ---  | ---- |
+| 2000 | 2 Pac  | 4:22 | Baby Don't Cry | 2000-02-26 | 1 | 87 |
+| 2000 | 2 Pac  | 4:22 | Baby Don't Cry | 2000-03-04 | 2 | 82 |
+| 2000 | 2 Pac  | 4:22 | Baby Don't Cry | 2000-03-11 | 3 | 72 |
+| 2000 | 2Ge+her | 3:15 | The Hardest Part of ... | 2000-09-02 | 1 | 91 |
+| 2000 | 2Ge+her | 3:15 | The Hardest Part of ... | 2000-09-09 | 2 | 87 |
+| 2000 | 2Ge+her | 3:15 | The Hardest Part of ... | 2000-09-16 | 3 | 92 |
+| 2000 | 3 Doors Down | 3:53 | Kryptonite | 2000-04-08 | 1 | 81 |
+| 2000 | 3 Doors Down | 3:53 | Kryptonite | 2000-04-15 | 2 | 70 |
+| 2000 | 3 Doors Down | 3:53 | Kryptonite | 2000-04-22 | 3 | 68 |
 
-### Quiz: Tidy Data
+The songs keep repeating because we're really tracking two different topics here:
 
-Let's see what you remember about tidy datasets!  Take a look at the sample table provided below.  It's similar to what you might see in a publication, and it's in a great format for humans... but it's not tidy enough to work with easily in a computational way.  This table shows the results of the "QPT" psychometric (something we made up) and shares pre- and post-treatment means and standard deviations for different kinds of research cohorts.
+* Basic information about songs (these characteristics don't change over time)
+* Song popularity / top charts data
+
+If we were to abide by the suggestion that each topic belongs in its own table, we could instead have two tables, one for songs and one for ranking, using the id to connect data from the two tables.
+
+<h4>Song Data</h4>
+
+| id | artist | track | time |
+| -- | ----- | ----- | ----- |
+| 1 | 2 Pac   | Baby Don't Cry | 4:22 |  
+| 2 | 2Ge+her | The Hardest Part of ... | 3:15 |
+| 3 | 3 Doors Down | Kryptonite | 3:53 |
+
+
+<h4>Ranking Data</h4>
+
+| id | date | week | rank |
+| ----  | ---  | ---  | ---- |
+| 1 | 2000-02-26 | 1 | 87 |
+| 1 | 2000-03-04 | 2 | 82 |
+| 1 | 2000-03-11 | 3 | 72 |
+| 2 | 2000-09-02 | 1 | 91 |
+| 2 | 2000-09-09 | 2 | 87 |
+| 2 | 2000-09-16 | 3 | 92 |
+| 3 | 2000-04-08 | 1 | 81 |
+| 3 | 2000-04-15 | 2 | 70 |
+| 3 | 2000-04-22 | 3 | 68 |
+
+This means that we only have to correct a mispelled artist name or incorrect track duration in one place, rather than multiple locations.  This is especially important in SQL databases.  Still, this is more an issue of data storage and ease of updating, rather than cleaning up data for computation.  Consider this advice completely optional!
+
+### One type in multiple tables
+
+Occasionally we also have data that treat the same topic but are stored in separate tables.  For example, if you're participating in a multi-site study, you may have data that is structured identically but arrive in your inbox in separate files. Logically, you could imagine "stacking" this data vertically, and perhaps adding a new column that gives the data collection site:
+
+<h4>Clinic A</h4>
+
+| subject_id | dob | abc_score | xyz_score |
+| ---------- | --- | --------- | --------- |
+| 4123691    | 2009-08-12 | 87 | 4 |
+| 4296120    | 2005-10-04 | 82 | 5 |
+| 2934218    | 2008-03-28 | 70 | 4 |
+| 2098821    | 2008-12-10 | 88 | 3 |
+
+<h4>Clinic B</h4>
+
+| subject_id | dob | abc_score | xyz_score |
+| ---------- | --- | --------- | --------- |
+| 3396811    | 2010-12-29 | 78 | 4 |
+| 0129681    | 2010-01-02 | 80 | 3 |
+| 9766728    | 2007-07-10 | 77 | 3 |
+| 6382922    | 2008-03-20 | 90 | 5 |
+
+<h4>Combined Data</h4>
+
+| subject_id | dob | abc_score | xyz_score | collection_site |
+| ---------- | --- | --------- | --------- | -- |
+| 4123691    | 2009-08-12 | 87 | 4 | A |
+| 4296120    | 2005-10-04 | 82 | 5 | A |
+| 2934218    | 2008-03-28 | 70 | 4 | A |
+| 2098821    | 2008-12-10 | 88 | 3 | A |
+| 3396811    | 2010-12-29 | 78 | 4 | B |
+| 0129681    | 2010-01-02 | 80 | 3 | B |
+| 9766728    | 2007-07-10 | 77 | 3 | B |
+| 6382922    | 2008-03-20 | 90 | 5 | B |
+
+## Quiz: Tidying Data
+
+Now that we've looked at several examples of messy data and ways to rearrange the data to make it tidy, let's look at a fabricated example and try to diagnose some of its problems.
+
+Take a look at the sample table provided below.  It's similar to what you might see in a publication, and it's in a great format for humans... but it's not tidy enough to work with easily in a computational way.  This table shows the results of the "QPT" psychometric (something we made up) and shares pre- and post-treatment means and standard deviations for different kinds of research cohorts.
 
 <table border="1" cellpadding="0.5em" cellspacing="0"><tbody><tr><td style="padding: 0.5em;">
             </td>
@@ -462,6 +612,8 @@ Let's see what you remember about tidy datasets!  Take a look at the sample tabl
             </td>
         </tr></tbody></table>
 
+<div class = "question">
+
 Which of the following are ways to make this dataset "tidy"?  Check all that apply!
 
 [[X]] move "depression" status into a column instead of using it in a cell combined with other descriptors
@@ -470,9 +622,9 @@ Which of the following are ways to make this dataset "tidy"?  Check all that app
 [[X]] make "timepoint" into a new column, with possible values including "pre" and "post"
 [[X]] increase the rows so that there are 16 rows representing 16 distinct cohorts
 [[?]] There are multiple correct answers!
-<lia-keep>
+
+
 <div class = "answer">
-</lia-keep>
 <details><summary>Click to see an explanation of the answer.</summary>
 
 Depression status and timepoint should each become a column.  In fact, we suggest the following columns:
@@ -506,31 +658,41 @@ There's no need to remove the sex variable, and the numerical values don't neces
 | neg | neg | m | 10 | post | 88 | 21.8 |
 | neg | neg | f | 10 | post | 95 | 20.6 |
 
+</details>
+</div>
 </div>
 
-## The Tidyverse
+## Tidy Data Analysis
 
-<div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 75%; float:left;">
-To import our CSV data, we need some additional data analysis tools.  In this course, we will be leveraging the **tidyverse**.
-
-The tidyverse is a set of tools that has become the de facto standard for doing data science with R.  It relies on the use of "tidy" data and "tidy" data analysis techniques.
-</div>
-<div style = "margin: 1rem; max-width: 25%; float:left;">
-![""](media/tidyverse_logo.png)<!-- style = "max-width:300px;" -->
-</div>
-</div>
+In addition to data being tidy, data analysis itself has some tidy principles.  Tidy data analysis follows general principles that allow for research reproducibility, code readability, and the development of patterns of coding that are transferable from use case to use case.  We won't go into implementation detail here, but it's useful to keep in mind some tenets of tidy data analysis.  If you already use code to analyze data, consider whether your approaches adhere to these tenets.  If you don't use code yet, it might be helpful to jot these down to remind you of some guideposts as you learn.
 
 The basic tenets of "tidy" data analysis include:
 
-* Data should be organized in a consistent, standardized way. Each row is an observation, and each column is a variable. This is a very common way to organize data in a spreadsheet and might sound familiar from how you may already organize data in tools like Excel.
-* Programming code that acts on the data should be consistent, concise, and sound like human language as much as possible.
-* Each data analysis can be broken down into a series of atomic steps, such as "select this column" or "arrange the data by the values in that column". An arbitrarily complex data analysis can be broken down as a pipeline of atomic steps.
+<h3>Data should be organized in a tidy way</h3>
+
+Tidy data organization includes everything we've covered so far in this module!  If your data is in a tidy format (hopefully you get to handle data collection and can make it tidy from the start), it's possible to rearrange it in almost any number of ways, including making intentionally "messy" formats for publication.  Also, it's easier to write code on tidy data, because the algorithm (process) for analyzing data will be simpler.  Of course, here we've glossed over the hard work of getting messy data that you inherited transformed and cleaned up into tidy data.  This is hard work and you'll spend lots of time doing data cleanup to transform messy data into tidy data.  But once you've done that, the analysis portion of your work is much easier.
+
+<h3>Programming code that acts on the data should be consistent, concise, with predictable inputs and outputs, and sound like human language as much as possible.</h3>
+
+This is a dense topic that we won't explain in detail here, as the best way to demonstrate tidy code is through code examples, which we're intentionally avoiding here.  But it's helpful to point out that the shortest code isn't always the best code!  Some people like to play "code golf" - solving a problem in clever, obscure ways with as few lines of code as possible.  We urge you to consider that consise code doesn't mean "as short as possible", but rather "as long as needed to explain things well".  After all, data analysis code is intended for two audiences: the computer running the code and the people reading the code.  That's different than, say, the code that runs your operating system, which isn't designed to be read by people.  Consistency is also helpful for humans.  Naming data columns with the same case convention (such as camelCase or snake_case) is one way to be consistent and reduce the cognitive load on your reader.
+
+
+<h3>Each data analysis can be broken down into a series of atomic steps, such as "select this column" or "arrange the data by the values in that column". An arbitrarily complex data analysis can be broken down as a pipeline of atomic steps.</h3>
+
+Again, here it's important to highlight that clever, brief code that accomplishes three complex maneuvers by using a little-known command might be rewarding to discover and write, but often a headache to read and understand.  A great way to break things down into atomic text is to start off by writing "pseudocode", in which you write a series of operations that aren't in any computer code but instead in a sort of human language that is influenced by code.  For example:
+
+* create an empty table to hold aggregated results
+* separate the rows from our raw tidy data into groups by research arm (intervention_1, intervention_2, ... , intervention_7)
+* for each group:
+  * find the median abc_score
+  * count the number of observations that fall outside the interquartile range for xyz_score
+  * divide that count by the total number of observations for the group to find the proportion of extreme xyz scores
+  * store the group name (intervention_1, etc.), median abc_score, and proportion of extreme xyz_score as a row in our aggregated results table
+* with the new table, calculate the correlation between median abc_score and proportion of extreme_xyz score.
 
 
 ## Additional Resources
 
-The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
 
 ## Feedback
 
