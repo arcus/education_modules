@@ -164,7 +164,7 @@ Let's take a look at each of these problems in turn.
 
 ### Column Headers as Values
 
-Let's consider an example from section 3.1 of [Hadley's article](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/772).  
+Let's consider an example from section 3.1 of [Hadley's article](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/772).  The column headers in this table, taken from Pew Forum, contain values -- income values.  This table is readable for humans, and takes advantage of horizontal space on a page.  It makes sense that it would appear in a report for human consumption.  This data is messy, however, because it violates one of the important rules about tidy data.
 
 <div class = "hint"> Note that in the world of R users, Hadley Wickham is considered such a singularly important and yet friendly figure that he is often referred to, simply, as "Hadley".
 </div>
@@ -182,11 +182,28 @@ Let's consider an example from section 3.1 of [Hadley's article](https://www.jst
 | Jehovah's Witness | 20 | 27 | 24 | 24 | 21 | 30 |
 | Jewish | 19 | 19 | 25 | 25 | 30 | 95 |
 
-The column headers in this table, taken from Pew Forum, contain values -- income values.  This table is readable for humans, and takes advantage of horizontal space on a page.  It makes sense that it would appear in a report for human consumption.  This data is "messy", however, because it violates one of the important rules about tidy data.
 
-While humans can make sense of this data, remember that computers must be told in sometimes agonizing detail what to do.  If we were to ask "which is the largest group?" using the table above, we'd have to say (in code, of course) something along the lines of "look inside each row, at columns 2-7, and take the largest value of all of those cells, and then take the value of the first column of the row with that largest-valued cell, and the column header of that cell, and that's your group".  
+While humans can make sense of this data, remember that computers must be told in sometimes agonizing detail what to do.  If we were to ask "which is the largest group?" using the table above, we'd have to say (in code, of course) something along the lines of "look inside each row, at columns 2-7, and take the largest value of all of those cells, and then take the value of the first column of the row with that largest-valued cell, and the column header of that cell, and that's your group".
 
-What would a tidy format look like?  Consider this, which is the start of a tidy table:
+<div class = "hint">
+
+<div style = "align-items: center; display: flex;">
+
+<div style = "margin: 1rem; max-width: 55%; float:left; padding-right:4em;">
+
+Thinking in computer-ese, giving very detailed instruction, is a kind of **algorithmic thinking**.  An **algorithm** is simply a well-specified process that solves a problem.  It takes practice to think like a computer instead of like a person, and one of the fun things that many programmers like to do to help this process along is called "rubber duck debugging".  This involves explaining to, yes, a rubber duck (or other friendly yet not very smart collaborator, like your cat) exactly what you're trying to do and how to get there, following detailed rules.  It may seem silly, but give it a try!
+
+</div>
+<div style = "margin: 1rem auto; max-width: 35%; float:left;">
+![Rubber duck](media/rubber_duck.png)
+</div>
+</div>
+
+
+<figcaption style = "font-size: 0.8em;">Image courtesy Steve Webel, https://www.flickr.com/photos/webel/306290032</figcaption>
+</div>
+
+What would a tidy format look like?  Consider this, which is the start of a tidy table.  In the interest of space, only the first handful of rows are shown.
 
 | religion | income | freq |
 | -------- | ------ | ---- |
@@ -201,9 +218,9 @@ What would a tidy format look like?  Consider this, which is the start of a tidy
 | Agnostic | <lia-keep>>150k</lia-keep> | 84 |
 | Agnostic | Don't know/refused | 96 |
 
-You can tell that this table would be quite tall and narrow, not the most lovely on a journal page, but for computational purposes, it's more direct to find the largest group: "look in the 'freq' column, and find the largest number, then the two cells to the left of that value give the group identity."
+You can tell that this table would be quite tall and narrow, and not the most lovely on a journal page.  However, for computational purposes, this table layout makes it much simpler to find the largest group: "look in the 'freq' column, and find the largest number, then the two cells to the left of that value give the group identity."
 
-Again, the "messy" table isn't bad per se, but it's optimized for "looks good to people when viewed on a journal page", not optimized for computation.
+Again, the messy table isn't bad *per se*, but it's optimized for "looks good to people when viewed on a journal page", not optimized for computation.
 
 ### Multiple Variables in One Column
 
