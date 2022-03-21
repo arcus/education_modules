@@ -56,7 +56,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 ## Lesson Preparation
 
 <div class = "important">
-Note that this module is written specifically for people working on Mac or Linux computers. If you are using a Windows machine, you should reference [Git Setup for Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/git_setup_for_windows/git_setup_windows/git_setup_windows.md) instead.
+Note that this module is written specifically for people working on Mac or Linux computers. If you are using a Windows machine, you should reference [Git Setup for Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md) instead.
 </div>
 
 All of the commands for this lesson should be run in the command line interface (CLI) of your computer.
@@ -74,7 +74,7 @@ You should get some brief message giving the version number of Git installed on 
 If you get an error message instead, you may need to [install Git](https://carpentries.github.io/workshop-template/#git) before continuing with the lesson.  
 
 <div class = "important">
-If you don't have Git installed already, go ahead and try downloading it using the links above, but if you have problems talk to your own institution's tech support. Especially if your computer is was issued by your employer, they might have put up very high barriers to downloading and installing things.
+If you don't have Git installed already, go ahead and try downloading it using the links above, but if you have problems talk to your own institution's tech support. Especially if your computer was issued by your employer, they might have put up very high barriers to downloading and installing things.
 </div>
 
 ## Global configurations
