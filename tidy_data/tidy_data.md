@@ -196,11 +196,11 @@ Thinking in computer-ese, giving very detailed instruction, is a kind of **algor
 </div>
 <div style = "margin: 1rem auto; max-width: 35%; float:left;">
 ![Rubber duck](media/rubber_duck.png)
-</div>
-</div>
-
 
 <figcaption style = "font-size: 0.8em;">Image courtesy Steve Webel, https://www.flickr.com/photos/webel/306290032</figcaption>
+</div>
+</div>
+
 </div>
 
 What would a tidy format look like?  Consider this, which is the start of a tidy table.  In the interest of space, only the first handful of rows are shown.
@@ -237,9 +237,14 @@ In section 3.2 of his article, Hadley shows data from the World Health Organizat
 | AD | 2000 | m5564 | 0 |
 | AE | 2000 | f014 | 3 |
 
-Again, consider the difficulty of asking the question "what's the sum of all the cases for 15-24 year olds?".  In the "messy" version, you'd have to start off by identifying which cases are for 15-24 year olds.  In English, you'd say something like "look for 1524 inside the value of 'column'", and then you'd have to figure out how to write that in code, using some sort of string comparison.  That's not trivial code, and it requires you to understand the pattern of a letter followed by two, three, or four numbers, and understand where one number in the range given ends and another begins.  For example, you can't just say "put a dash after the first two numbers" to indicate the range.  That would mean 014 would be read as the range 01-4.  While you as a human might be able to make quick work of intepreting the data, what's happening cognitively is actually rather complex and hard to translate to computer code.
+Again, consider the difficulty of asking the question "what's the sum of all the cases for 15-24 year olds?".  In the messy version, you'd have to start off by identifying which cases are for 15-24 year olds.  
+In English, you'd say something like "look for 1524 inside the value of 'column'", and then you'd have to figure out how to write that in code, using some sort of string comparison.  That's not trivial code, and it requires you to understand the pattern of a letter followed by two, three, or four numbers, and understand where one number in the range given ends and another begins.  For example, you can't just say "put a dash after the first two numbers" to indicate the range.  That would mean 014 would be read as the range 01-4.  
 
-In the "tidy" version proposed below, you can begin much more simply: "find all the rows with a value of 15-24 in 'age'".  Computationally, finding an exact match is very simple, when compared to the complex pattern interpretation that would be required in the messy version of the data. Additionally, we would argue that the data below is much more "self documenting".  If you stumbled across this data with no additional information or codebook, it would be much more intuitive to have separate columns marked "sex" and "age", and you'd almost certainly interpret this data correctly.
+While you as a **human** might be able to make quick work of intepreting the data, what's happening cognitively is actually rather complex and hard to translate to **computer code**.
+
+In the "tidy" version proposed below, you can begin much more simply: "find all the rows with a value of 15-24 in 'age'".  Computationally, finding an exact match is very simple, when compared to the complex pattern interpretation that would be required in the messy version of the data.
+
+Additionally, we would argue that the data below is much more "self documenting".  If you stumbled across this data with no additional information or codebook, it would be much more intuitive to have separate columns marked "sex" and "age", and you'd almost certainly interpret this data correctly.
 
 
 | country | year | sex | age | cases |
@@ -258,22 +263,45 @@ In the "tidy" version proposed below, you can begin much more simply: "find all 
 
 This kind of messy data is exceptionally messy!
 
-The table below is an example of data in which values are stored not in cells but:
+The weather data below (note that only a handful of the three dozen columns are shown here) is an example of data in which values are stored not in cells but instead:
 
 * in columns (such as day of the month d1, d2 ... d31)
-* in rows (tmin and tmax indicating what's measured, the minimum or maximum temperature)
+* in rows (tmin rows and tmax rows indicating what's measured, the minimum or maximum temperature)
 
-id year month element d1 d2 d3 d4 d5 d6 d7 d8
-MX17004 2010 1 tmax — — — — — — — —
-MX17004 2010 1 tmin — — — — — — — —
-MX17004 2010 2 tmax — 27.3 24.1 — — — — —
-MX17004 2010 2 tmin — 14.4 14.4 — — — — —
-MX17004 2010 3 tmax — — — — 32.1 — — —
-MX17004 2010 3 tmin — — — — 14.2 — — —
-MX17004 2010 4 tmax — — — — — — — —
-MX17004 2010 4 tmin — — — — — — — —
-MX17004 2010 5 tmax — — — — — — — —
-MX17004 2010 5 tmin — — — — — — — —
+As you look over this table, see if you can describe the algorithm (rule-based process) by which you could ask for the maximum temperature on March 13, 2010, at the MX17004 station.  It's complicated and requires looking at column headers and multiple cells.
+
+| id | year | month | element | d1 | d2 | d3 | d4 | d5 | d6 | d7 | d8 |
+| -- | ---- | ----- | ------- | -- | -- | -- | -- | -- | -- | -- | -- |
+| MX17004 | 2010 | 1 | tmax | — | — | — | — | — | — | — | — |
+| MX17004 | 2010 | 1 | tmin | — | — | — | — | — | — | — | — |
+| MX17004 | 2010 | 2 | tmax | — | 27.3 | 24.1 | — | — | — | — | — |
+| MX17004 | 2010 | 2 | tmin | — | 14.4 | 14.4 | — | — | — | — | — |
+| MX17004 | 2010 | 3 | tmax | — | — | — | — | 32.1 | — | — | — |
+| MX17004 | 2010 | 3 | tmin | — | — | — | — | 14.2 | — | — | — |
+| MX17004 | 2010 | 4 | tmax | — | — | — | — | — | — | — | — |
+| MX17004 | 2010 | 4 | tmin | — | — | — | — | — | — | — | — |
+| MX17004 | 2010 | 5 | tmax | — | — | — | — | — | — | — | — |
+| MX17004 | 2010 | 5 | tmin | — | — | — | — | — | — | — | — |
+
+A tidy version of this data is shown below.  Is it simpler now to ask for the maximum temperature on March 13, 2010?
+
+<div class = "hint">
+Notice how the date field is united here, which may seem to go against some of the principles we've argued for.  Dates are so frequently used, however, that it's very easy to extract, from a given date, the year, month, day, and even the day of the week, using computational methods.  Whether to break out a date into year, month, and day depends a lot on your use case (for example, are you planning on obtaining temperature averages across all of June, and comparing June low temperature averages across years?
+</div>
+
+
+| id | date | tmax | tmin |
+| -- | -- | -- | --  |
+| MX17004 | 2010-01-30 | 27.8 | 14.5 |
+| MX17004 | 2010-02-02 | 27.3 | 14.4 |
+| MX17004 | 2010-02-03 | 24.1 | 14.4 |
+| MX17004 | 2010-02-11 | 29.7 | 13.4 |
+| MX17004 | 2010-02-23 | 29.9 | 10.7 |
+| MX17004 | 2010-03-05 | 32.1 | 14.2 |
+| MX17004 | 2010-03-10 | 34.5 | 16.8 |
+| MX17004 | 2010-03-16 | 31.1 | 17.6 |
+| MX17004 | 2010-04-27 | 36.3 | 16.7 |
+| MX17004 | 2010-05-27 | 33.2 | 18.2 |
 
 
 
