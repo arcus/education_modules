@@ -166,7 +166,7 @@ Let's consider an example from section 3.1 of [Hadley's article](https://www.jst
 <div class = "hint"> Note that in the world of R users, Hadley Wickham is considered such a singularly important and yet friendly figure that he is often referred to, simply, as "Hadley".
 </div>
 
-| religion | <$10k | $10–20k | $20–30k | $30–40k | $40–50k | $50–75k |
+| religion | "<$10k" | "$10–20k" | "$20–30k" | "$30–40k" | "$40–50k" | "$50–75k" |
 | -------- | ----- | ------- | ------- | ------- | ------- | ------- |
 | Agnostic | 27 | 34 | 60 | 81 | 76 | 137 |
 | Atheist | 12 | 27 | 37 | 52 | 35 | 70 |
@@ -246,7 +246,28 @@ The "column" is a hybrid: it contains sex (m or f) and age (0-14 years, 15-24 ye
 
 Again, consider the difficulty of asking the question "what's the sum of all the cases for 15-24 year olds?".  In the "messy" version, you'd have to say "look for 1524 inside the value of 'column'", and figure out how to write that in code.  In the "tidy" version, you can say "find all the rows with a value of 15-24 in 'age'".
 
-###
+### Variables Stored in Both Rows and Columns
+
+This kind of messy data is exceptionally messy!
+
+The table below is an example of data in which values are stored not in cells but:
+
+* in columns (such as day of the month d1, d2 ... d31)
+* in rows (tmin and tmax indicating what's measured, the minimum or maximum temperature)
+
+id year month element d1 d2 d3 d4 d5 d6 d7 d8
+MX17004 2010 1 tmax — — — — — — — —
+MX17004 2010 1 tmin — — — — — — — —
+MX17004 2010 2 tmax — 27.3 24.1 — — — — —
+MX17004 2010 2 tmin — 14.4 14.4 — — — — —
+MX17004 2010 3 tmax — — — — 32.1 — — —
+MX17004 2010 3 tmin — — — — 14.2 — — —
+MX17004 2010 4 tmax — — — — — — — —
+MX17004 2010 4 tmin — — — — — — — —
+MX17004 2010 5 tmax — — — — — — — —
+MX17004 2010 5 tmin — — — — — — — —
+
+
 
 To see a "messy" data frame and its "tidy" alternative, see [a brief 2018 article](https://education.arcus.chop.edu/tidyverse/) for a brief read, or, if you want a deeper dive,  there really isn't a better article than [Hadley Wickham's classic work].
 
