@@ -611,11 +611,10 @@ As you work on your project, files will cycle through these different states. Wh
 
 Metaphors for Git abound, and no metaphor has been great enough to become the "standard" example. If you are looking for a good enough metaphor to help you understand what Git is, here are some to consider:
 
-
-- A [musical metaphor](https://www.youtube.com/watch?v=S9Do2p4PwtE) video on YouTube <5 minutes
-- A [poetry metaphor](https://www.youtube.com/watch?v=BCQHnlnPusY) video on YouTube ~14 minutes
-- A [metaphor about building a house](https://towardsdatascience.com/a-simple-story-to-explain-version-control-to-anyone-5ab4197cebbc) blog post
-- A [metaphor about photo albums](https://www.freecodecamp.org/news/git-the-laymans-guide-to-understanding-the-core-concepts/) article
+  - A [musical metaphor](https://www.youtube.com/watch?v=S9Do2p4PwtE) video on YouTube <5 minutes
+  - A [poetry metaphor](https://www.youtube.com/watch?v=BCQHnlnPusY) video on YouTube ~14 minutes
+  - A [metaphor about building a house](https://towardsdatascience.com/a-simple-story-to-explain-version-control-to-anyone-5ab4197cebbc) blog post
+  - A [metaphor about photo albums](https://www.freecodecamp.org/news/git-the-laymans-guide-to-understanding-the-core-concepts/) article
 
 Remember a metaphor doesn't need to be perfect to be helpful. If you find or come up with one that helps you understand the workflow, use it!
 
