@@ -55,6 +55,10 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 ## Lesson Preparation
 
+<div class = "important">
+Note that this module is written specifically for people working on Mac or Linux computers. If you are using a Windows machine, you should reference [Git Setup for Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/git_setup_for_windows/git_setup_windows/git_setup_windows.md) instead.
+</div>
+
 All of the commands for this lesson should be run in the command line interface (CLI) of your computer.
 You don't need to navigate to a particular directory or open anything else;
 you should be able to just open the CLI and run all of the commands in this lesson as they are written.
@@ -68,6 +72,10 @@ git --version
 
 You should get some brief message giving the version number of Git installed on your machine (e.g. `git version 2.24.3 (Apple Git-128)` or something similar).
 If you get an error message instead, you may need to [install Git](https://carpentries.github.io/workshop-template/#git) before continuing with the lesson.  
+
+<div class = "important">
+If you don't have Git installed already, go ahead and try downloading it using the links above, but if you have problems talk to your own institution's tech support. Especially if your computer is was issued by your employer, they might have put up very high barriers to downloading and installing things.
+</div>
 
 ## Global configurations
 
@@ -216,7 +224,9 @@ $ git config --global --unset http.proxy
 $ git config --global --unset https.proxy
 ```
 
-Not sure whether or not your network uses a proxy? [You should be able to check for a proxy by looking at the settings in your browser](https://smallbusiness.chron.com/behind-proxy-server-45919.html).
+Not sure whether or not your network uses a proxy? You should be able to check for a proxy by looking at the settings in your browser. For example, [here's what the proxy settings look like for the FireFox browser](https://support.mozilla.org/en-US/kb/connection-settings-firefox). You can search online to find more examples of proxy settings in different browsers, or just open the Settings for whatever browser you're using and poke around to see if you can find proxy information.
+
+**Note**: If your network does use a proxy, or if you can't determine whether there's a proxy or not, you may need to contact your own institution's tech support team for help. In some cases, proxy settings can be complex; you may not be able to find good information relevant to your specific situation without talking to the team that manages your network.
 </div>
 
 ## Git Help and Manual
