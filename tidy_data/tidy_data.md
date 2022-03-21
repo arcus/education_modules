@@ -49,7 +49,7 @@ Experience working with rectangular data (data in rows and columns) will be help
 </div>
 
 
-## Rectangular Data
+## Data Shape
 
 What do we mean by "tidy" data?
 
@@ -68,7 +68,7 @@ Rectangular data is by no means the only data that matters to biomedical researc
 
 You can probably come up with many examples of rectangular data in your own research.  If you've ever worked with data in rows and columns, as in a .csv file, Excel spreadsheet, or Google Sheet, you know what rectangular data looks like.
 
-### A Specific Organization
+### Data Organization
 
 A rectangular data set can take on a lot of different rectangular shapes with different styles of organizing data. Some disciplines have specific types of summary tables, for example, that customarily appear in published manuscripts.  The one method or shape that is best suited for data analysis is known as "tidy".
 
@@ -81,18 +81,21 @@ A data set is tidy, [according to Hadley Wickham and Garrett Grolemund](https://
 The words "variable", "observation", and "value" are common words to researchers, but let's look closely at them regardless.
 
 * A *variable* is a characteristic being measured, like
+
   - weight in grams
   - amount of rain in inches
   - homeroom paint color
   - whether a subject has a history of pulmonary embolism
 
 * Each *observation* (thing with measurable characteristics) is in its own row, such as:
+
   - individual newborn wombat
   - specific day of history
   - elementary school class
   - individual human subject
 
 * Each *value* (a number or category or word that provides the measurement) is in its own cell
+
   - an integer
   - a decimal numbers
   - a category like "blue", "green", or "yellow"
@@ -138,11 +141,11 @@ Another mistake that commonly occurs in human subjects research is the collectio
 <div class = "warning">
 An aside about race: in addition to making for more difficult use of race data, collecting data as a single value does not comply with federal standards.  Human subjects (or their representatives) should be able to endorse any race they identify as their own.  Therefore, it's much more helpful to begin right away with a True / False endorsement column for each race, so that you can identify easily who fits into various categories based on particular race identification, counts, or specific combinations:
 
-  * White only
-  * Indigenous and one other race
-  * Non white, single race
-  * Number of races 3 or higher
-  * etc.
+* White only
+* Indigenous and one other race
+* Non white, single race
+* Number of races 3 or higher
+* etc.
 
 An additional, important question that can be a source of disagreement in demographic and disparity research is what specific groups constitute races that can be endorsed.
 </div>
@@ -166,17 +169,17 @@ Let's consider an example from section 3.1 of [Hadley's article](https://www.jst
 <div class = "hint"> Note that in the world of R users, Hadley Wickham is considered such a singularly important and yet friendly figure that he is often referred to, simply, as "Hadley".
 </div>
 
-| religion | "<$10k" | "$10–20k" | "$20–30k" | "$30–40k" | "$40–50k" | "$50–75k" |
+| religion | <lia-keep><$10k</lia-keep> | <lia-keep>$10–20k</lia-keep> | <lia-keep>$20–30k</lia-keep> | <lia-keep>$30–40k</lia-keep> | <lia-keep>$40–50k</lia-keep> | <lia-keep>$50–75k</lia-keep> |
 | -------- | ----- | ------- | ------- | ------- | ------- | ------- |
 | Agnostic | 27 | 34 | 60 | 81 | 76 | 137 |
 | Atheist | 12 | 27 | 37 | 52 | 35 | 70 |
 | Buddhist | 27 | 21 | 30 | 34 | 33 | 58 |
 | Catholic | 418 | 617 | 732 | 670 | 638 | 1116 |
 | Don't know/refused | 15 | 14 | 15 | 11 | 10 | 35 |
-| Evangelical | Prot | 575 | 869 | 1064 | 982 | 881 | 1486 |
+| Evangelical Prot | 575 | 869 | 1064 | 982 | 881 | 1486 |
 | Hindu | 1 | 9 | 7 | 9 | 11 | 34 |
-| Historically | Black | Prot | 228 | 244 | 236 | 238 | 197 | 223 |
-| Jehovah's | Witness | 20 | 27 | 24 | 24 | 21 | 30 |
+| Historically Black Prot | 228 | 244 | 236 | 238 | 197 | 223 |
+| Jehovah's Witness | 20 | 27 | 24 | 24 | 21 | 30 |
 | Jewish | 19 | 19 | 25 | 25 | 30 | 95 |
 
 The column headers in this table, taken from Pew Forum, contain values -- income values.  This table is readable for humans, and takes advantage of horizontal space on a page.  It makes sense that it would appear in a report for human consumption.  This data is "messy", however, because it violates one of the important rules about tidy data.
@@ -187,7 +190,7 @@ What would a tidy format look like?  Consider this, which is the start of a tidy
 
 | religion | income | freq |
 | -------- | ------ | ---- |
-| Agnostic | <$10k | 27 |
+| Agnostic | <lia-keep><$10k</lia-keep> | 27 |
 | Agnostic | $10–20k | 34 |
 | Agnostic | $20–30k | 60 |
 | Agnostic | $30–40k | 81 |
@@ -195,7 +198,7 @@ What would a tidy format look like?  Consider this, which is the start of a tidy
 | Agnostic | $50–75k | 137 |
 | Agnostic | $75–100k | 122 |
 | Agnostic | $100–150k | 109 |
-| Agnostic | >150k | 84 |
+| Agnostic | <lia-keep>>150k</lia-keep> | 84 |
 | Agnostic | Don't know/refused | 96 |
 
 You can tell that this table would be quite tall and narrow, not the most lovely on a journal page, but for computational purposes, it's more direct to find the largest group: "look in the 'freq' column, and find the largest number, then the two cells to the left of that value give the group identity."
@@ -204,8 +207,9 @@ Again, the "messy" table isn't bad per se, but it's optimized for "looks good to
 
 ### Multiple Variables in One Column
 
-In section 3.2 of his article, Hadley shows data from the World Health Organization:
- |
+In section 3.2 of his article, Hadley shows data from the World Health Organization.  In this dataset, related to tuberculosis, there's a column named, simply "column".  This "column" is a hybrid: it contains sex (m or f) and age (0-14 years, 15-24 years, and so on, to 65+).  It is in a condensed form that we would judge "messy".  See a shortened version of this messy data below:
+
+
 | country | year | column | cases |
 | ------  | ---- | -----  | ----- |
 | AD | 2000 | m014 | 0 |
@@ -214,17 +218,12 @@ In section 3.2 of his article, Hadley shows data from the World Health Organizat
 | AD | 2000 | m3544 | 0 |
 | AD | 2000 | m4554 | 0 |
 | AD | 2000 | m5564 | 0 |
-| AD | 2000 | m65 | 0 |
-| AE | 2000 | m014 | 2 |
-| AE | 2000 | m1524 | 4 |
-| AE | 2000 | m2534 | 4 |
-| AE | 2000 | m3544 | 6 |
-| AE | 2000 | m4554 | 5 |
-| AE | 2000 | m5564 | 12 |
-| AE | 2000 | m65 | 10 |
 | AE | 2000 | f014 | 3 |
 
-The "column" is a hybrid: it contains sex (m or f) and age (0-14 years, 15-24 years, and so on).  It is in a condensed form that we would judge "messy".  Ideally, this data would look more like this:
+Again, consider the difficulty of asking the question "what's the sum of all the cases for 15-24 year olds?".  In the "messy" version, you'd have to start off by identifying which cases are for 15-24 year olds.  In English, you'd say something like "look for 1524 inside the value of 'column'", and then you'd have to figure out how to write that in code, using some sort of string comparison.  That's not trivial code, and it requires you to understand the pattern of a letter followed by two, three, or four numbers, and understand where one number in the range given ends and another begins.  For example, you can't just say "put a dash after the first two numbers" to indicate the range.  That would mean 014 would be read as the range 01-4.  While you as a human might be able to make quick work of intepreting the data, what's happening cognitively is actually rather complex and hard to translate to computer code.
+
+In the "tidy" version proposed below, you can begin much more simply: "find all the rows with a value of 15-24 in 'age'".  Computationally, finding an exact match is very simple, when compared to the complex pattern interpretation that would be required in the messy version of the data. Additionally, we would argue that the data below is much more "self documenting".  If you stumbled across this data with no additional information or codebook, it would be much more intuitive to have separate columns marked "sex" and "age", and you'd almost certainly interpret this data correctly.
+
 
 | country | year | sex | age | cases |
 | ------  | ---- | --- | --- | ----- |
@@ -234,17 +233,9 @@ The "column" is a hybrid: it contains sex (m or f) and age (0-14 years, 15-24 ye
 | AD | 2000 | m | 35–44 | 0 |
 | AD | 2000 | m | 45–54 | 0 |
 | AD | 2000 | m | 55–64 | 0 |
-| AD | 2000 | m | 65+ | 0 |
-| AE | 2000 | m | 0–14 | 2 |
-| AE | 2000 | m | 15–24 | 4 |
-| AE | 2000 | m | 25–34 | 4 |
-| AE | 2000 | m | 35–44 | 6 |
-| AE | 2000 | m | 45–54 | 5 |
-| AE | 2000 | m | 55–64 | 12 |
-| AE | 2000 | m | 65+ | 10 |
 | AE | 2000 | f | 0-14 | 3 |
 
-Again, consider the difficulty of asking the question "what's the sum of all the cases for 15-24 year olds?".  In the "messy" version, you'd have to say "look for 1524 inside the value of 'column'", and figure out how to write that in code.  In the "tidy" version, you can say "find all the rows with a value of 15-24 in 'age'".
+
 
 ### Variables Stored in Both Rows and Columns
 
