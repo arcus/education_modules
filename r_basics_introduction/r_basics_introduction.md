@@ -434,17 +434,17 @@ Below these images, we'll explain what each part of the R Markdown includes in a
 
 <div style = "align-items: center; display: flex;">
 <div style = "margin: 1rem; max-width: 50%; float:left;">
-![R Markdown code.  It begins with a short header enclosed by lines containing three dashes. Then text with a few special markdown characters alternates with code chunks.  Code chunks are preceded by a line with three backticks and the letter r in curly braces, and are followed by a line with three backticks. ](media/r_markdown_detail.png)
+![R Markdown code beginning with a short header enclosed by lines containing three dashes. There are two fields: title and output. Then lines with some text featuring hash marks and asterisks. There are two code chunks which are preceded by a line with three backticks and the letter r in curly braces, and are followed by a line with three backticks. ](media/r_markdown_detail.png)
 </div>
 <div style = "margin: 1rem; max-width: 50%; float:left;">
 
-![A brief report that is created when the R Markdown code is rendered.  The R Markdown header appears in the form of a large title.  The R Markdown text appears as appropriately rendered text with bold, italics, and other decorations.  The code chunks are represented by code and code output, such as a graph.](media/rendered_detail.png)
+![A brief HTML report rendered from the previous R Markdown code.  The title field from the header appears in the form of a large title.  The R Markdown text appears as appropriately rendered text with bold, italics, and other decorations described below.  The code chunks are represented by code and code output, such as a graph.](media/rendered_detail.png)
 </div>
 </div>
 
-Again, the first block is the **header** section. We're telling R Markdown that the title should be "My Markdown Document" and that when the document is rendered, we want to output to be an "html_document". That's the default. You can see that in the resulting HTML document there's the title "My Markdown Document" in large type letters.  The header is enclosed on both sides with three dashes, and the data inside is in a format called "YAML" (rhymes with Hammill).  YAML, according to most people, stands for "Yet Another Markup Language", and it consists of a named field, a colon, and the value for that field.  
+Again, the first block is the **header** section. The line that starts with `title:` tells R Markdown that the title should be "My Markdown Document". The line starting with `output:` communicates that when the document is rendered, we want to output to be an "html_document". That's the default. In the resulting HTML document there's the title "My Markdown Document" in large type letters.  The header is enclosed on both sides with three dashes, and the data inside is in a format called "YAML" (rhymes with Hammill).  YAML, according to most people, stands for "Yet Another Markup Language", and it consists of a named field, a colon, and the value for that field.  
 
-Here we also have some narrative **text** with marks such as hash marks and asterisks. Having a hash mark at the beginning of a line makes that line a header, and the more hash marks you write, the smaller the header. Depending on where you write it, asterisks serve different functions. IF you use just one asterisk at the start of a line, it makes an item in a bulleted list. If you surround text on both sides by either one or two asterisks, the text renders as either italicized or bolded, respectively. This system of using special marks to indicate how text should look is called **Markdown**.
+Here we also have some narrative **text** with marks such as hash marks and asterisks. Having a hash mark at the beginning of a line makes that line a header, and the more hash marks you write, the smaller the header. Depending on where you write it, asterisks serve different functions. If you use just one asterisk at the start of a line, it makes an item in a bulleted list. If you surround text on both sides by either one or two asterisks, the text renders as either italicized or bolded, respectively. This system of using special marks to indicate how text should look is called **Markdown**.
 
 Then we get to the code chunks. Don't worry about the contents of the code for now - in brief, the first code chunk asks R to generate 100 random values and then print out some summary statistics. The knitted document shows us our code in a gray box to make it visually distinct from the text; and then immediately after, the results of that code after it was executed.  Code chunks are enclosed by three "backticks" (not single quotes), and the letter "r" enclosed in curly braces. Check out your keyboard now to see if you can find the backtick.  It's likely in a corner of your keyboard, and in many layouts it travels alongside the tilde (~) symbol.  The letter "r" enclosed in curly braces tells RStudio what language is being used, in our case, the R language.  
 
@@ -452,7 +452,7 @@ The second code chunk demonstrates that (1) in addition to text output, you can 
 
 Now let's practice creating an R Markdown document, running a code chunk, and knitting.
 
-### Practicing R Markdown
+### Hands-On: Practicing R Markdown
 
 Go back to the RStudio session you opened earlier in this module.
 Then:
@@ -557,7 +557,7 @@ So what's a .csv file? CSV stands for **comma-separated values**.  When we say t
 
 A .csv file is a plain text file, which means you can open it in a text editor and look at it.  This is different than how you may have opened .csv files in the past, using Microsoft Excel or another spreadsheet program.  Let's take a look at what the raw data looks like when we open it in a text editor.
 
-![when viewed as plain text, csv files are just values separated by commas within each "row", with each row returned on a new row. ](media/csv.png)<!-- style = "max-width:500px;" -->
+![when viewed as plain text, csv files are just values separated by commas within each "row", and each row returned on a new line. ](media/csv.png)<!-- style = "max-width:500px;" -->
 
 Here we have a .csv file with the names, medical record numbers, and dates of birth for three fictional "patients".
 
@@ -576,7 +576,7 @@ data_frame <- read_csv(file_name)
 ```
 ![""](media/csv_import.png)<!-- style = "max-width:500px;" -->
 
-You start with the name of the object you want to hold the data, then you type a leftward arrow symbol using the less than followed by a dash symbol, then "read_csv" and then the file name in parentheses.
+You start with the name of the object you want to hold the data, then you type a leftward arrow symbol using the less than symbol followed by a dash symbol, then "read_csv" and then the file name in parentheses.
 
 This code construct is exceedingly common in R, and it's a good moment to explain **functions**.
 
@@ -590,7 +590,7 @@ In the snippet of code that reads in a csv to create a data frame, we have a **f
 
 The input that goes into a function is called an **argument**. The argument to a function gets put in parentheses.
 
-A function can have zero, one, or many arguments. If there is more than one argument, we use commas to separate them. We'll see examples of that later.
+A function can have zero, one, or many arguments. If there is more than one argument, we use commas to separate them.
 
 The output of the `read_csv` function is a data frame object. You will usually want to *capture* that data frame inside of a named object so you can use it as the input for other functions, for example to summarize or visualize your data.
 
@@ -761,7 +761,7 @@ Importing Data is the first step of data analysis. Use `read_csv()` from the tid
 
 <h3>Cheat Sheets</h3>
 
-To find official cheat sheets, go to the Help menu in RStudio and choose "Cheat Sheets".  You can look around the short list provided, which includes great options for beginners such as "RStudio IDE Cheat Sheet", "R Markdown Cheat Sheet", and more.  You can also "Browse", and in the RStudio website you'll find other cheat sheets as well, including the Data Import cheat sheet.
+To find official cheat sheets, go to the Help menu in RStudio and choose "Cheat Sheets".  You can look around the short list provided, which includes great options for beginners such as "RStudio IDE Cheat Sheet", "R Markdown Cheat Sheet", and more.  You can also "Browse", and on the RStudio website you'll find other cheat sheets as well, including the Data Import cheat sheet.
 
 RStudio's Data Import cheat sheet helps with importing data from file types similar to CSV but with other delimiters (for example, TSV, or tab-delimited values files).  Cheat sheets for the RStudio IDE and Markdown can reinforce what you've learned so far in this module and help you extend your capabilities.
 
@@ -775,6 +775,7 @@ RStudio's Data Import cheat sheet helps with importing data from file types simi
 *R for Data Science* is a free text that provides lots of helpful explanation and examples.  The [section on data import](https://r4ds.had.co.nz/data-import.html) goes into much more detail than we were able to do in this brief module.
 
 The entire text is available [in English](https://r4ds.had.co.nz/) and [in Spanish](https://es.r4ds.hadley.nz/).
+There's also an [unofficial solutions guide](https://jrnold.github.io/r4ds-exercise-solutions/index.html) (only available in English) to allow you to check your work. 
 </div>
 <div style = "margin: 1rem; max-width: 20%; float:left;">
 ![Book Cover](media/r4ds.png)<!-- style = "max-width: 90%" -->
