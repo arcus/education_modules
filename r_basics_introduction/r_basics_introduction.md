@@ -792,7 +792,7 @@ The entire text is available [in English](https://r4ds.had.co.nz/) and [in Spani
 There's also an [unofficial solutions guide](https://jrnold.github.io/r4ds-exercise-solutions/index.html) (only available in English) to allow you to check your work.
 </div>
 <div style = "margin: 1rem; max-width: 20%; float:left;">
-![Book Cover](media/r4ds.png)<!-- style = "max-width: 90%" -->
+![""](media/r4ds.png)<!-- style = "max-width: 90%" -->
 </div>
 </div>
 
