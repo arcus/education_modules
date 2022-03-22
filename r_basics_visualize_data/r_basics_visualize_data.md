@@ -186,8 +186,7 @@ If you already completed this work for a previous module, and it's been a while 
 
 
 <div class = "warning">
-If you're pulling branches after having worked in previous modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, make copy of edited exercise files and name them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version as`my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code which will overwrite`transform_exercises.Rmd` but leave your changes in the newly named file intact.
-
+If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
 </div>
 
 ### How to Follow Along
