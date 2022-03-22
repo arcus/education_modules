@@ -257,7 +257,7 @@ All of these are good strategies!
 
 In general, review your work asking yourself "If the reader didn't have visual access, would this still communicate everything I intend it to?" It may not always be possible to make your work maximally accessible, but there's often a lot you can do to improve it.
 
-**Note**: We've discussed visual accessibility exclusively here because that is a common stumbling block for data visualizations, but access is much more than vision. For broader guidance on creating accessible content, see the [Web Content Accessibiility Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) and [The Inclusive Learning Design Handbook](https://handbook.floeproject.org/about/).
+**Note**: We've discussed visual accessibility exclusively here because that is a common stumbling block for data visualizations, but access is much more than vision. For broader guidance on creating accessible content, see the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) and [The Inclusive Learning Design Handbook](https://handbook.floeproject.org/about/).
  </div>
  ****
 
@@ -266,7 +266,7 @@ In general, review your work asking yourself "If the reader didn't have visual a
 
 If you are brand new to R or python (or want a refresher), check out [Intro to R](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md) to learn more about how to use each programming language. Before you can create visualizations of your own data, you'll need to be able to read data into R or python, and check and manipulate data frames.
 
-If you're ready for more applied examples of data visualization, check out the next modules in this series: [Data Visualization in ggplot2](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md), and [Data Visualization in seaborn](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_seaborn.md).
+For more detail on `ggplot2`, see [the `ggplot2` website](https://ggplot2.tidyverse.org/), especially the [resources for learning `ggplot2`](https://ggplot2.tidyverse.org/#learning-ggplot2). For more detail on `seaborn`, see [the `seaborn` website](https://seaborn.pydata.org/), especially the [excellent introduction to `seaborn` article](https://seaborn.pydata.org/introduction.html). 
 
 ## Feedback
 
