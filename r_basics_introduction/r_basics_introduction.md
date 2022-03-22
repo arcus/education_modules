@@ -231,7 +231,7 @@ This might work well for you if you either can't or don't want to install R and 
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
+<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
 <div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen](media/binder_loading.gif)<!--
 style = "border: 1px solid rgb(var(--color-highlight));"-->
 </div>
