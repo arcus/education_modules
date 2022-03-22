@@ -8,7 +8,7 @@ narrator: US English Male
 title: Demystifying SQL
 comment:  SQL is a relational database solution that has been around for decades.  Learn more about this technology at a high level, without having to write code.
 long_description: Do you have colleagues who use SQL or refer to "databases" or "the data warehouse" and you're not sure what it all means?  This module will give you some very high level explanations to help you understand what SQL is and some basic concepts for working with it.  There is no code or hands-on application in this module, so it's appropriate for people who have zero experience and want an overview of SQL.
-estimated_time: 45 minutes
+estimated_time: 40 minutes
 
 @learning_objectives  
 
@@ -57,7 +57,7 @@ That definition above itself introduces a new term.  So, what's a **relational d
 
 Let's start with the word "**database**".  A database is a data storage solution that stores data in objects called tables.  Tables are objects comprised of columns (sometimes called 'fields') and rows (similar to data in an Excel spreadsheet or .csv file).
 
-When we add "**relational**" as a modifier, we mean that tables within the database are **related** to one another by columns they have in common (like a customer or patient id column that appears in several different tables).  These columns in common are sometimes referred to as "join keys".
+When we add "**relational**" as a modifier, we mean that tables within the database are **related** to one another by columns they have in common (like a customer or patient id column that appears in several different tables).  
 
 Consider, for example, these three sample tables.  They are rectangular (or tabular) in shape and organize data in rows and columns.  Can you identify the column in common?  How could you figure out how many times Prairie Dawn had an encounter with `ed_ind` equal to 1?
 
@@ -93,9 +93,9 @@ Consider, for example, these three sample tables.  They are rectangular (or tabu
 | ABC123     | 491272  | 7960004   | 2022-02-01 |
 | SMLE321    | 223618    | 8000412 | 2020-08-19 |
 
-The primary benefit of the **relational database** model is the ability to use columns containing the same data ("join keys") to create complex reports combining information from multiple tables.  This enables users of the data to derive specific information from the data in highly customizable ways.
+The primary benefit of the **relational database** model is the ability to use columns containing the same data (things like patient IDs) to create complex reports combining information from multiple tables.  This enables users of the data to derive specific information from the data in highly customizable ways.
 
-Now that you have that background, you can think of **SQL** as the computer code (the "Language" in **S**tructured **Q**uery **L**anguage) that you can use to ask explicit questions (the "Query" in SQL) about the information in your Relational Database.
+Now that you have that background, you can think of SQL as the computer code (the "Language" in Structured Query Language) that you can use to ask explicit questions (the "Query" in SQL) about the information in your Relational Database.
 
 <div class = "hint">
 
@@ -138,6 +138,7 @@ Which of these correctly describe relational databases?  Choose all the correct 
 *********
 
 Relational databases are a data storage solution and they store data in tables, which are in turn organized into rows and columns.  Relational databases use SQL as a way to access data, search for data meeting particular conditions, and connect related data, using columns that tables have in common.  This allows for extracting data in very specific and customized way.
+
 ***********
 
 </div>
@@ -228,7 +229,7 @@ Many people choose write SQL keywords in all capital letters, but that's so that
 
 **Select All Columns**
 
-If you would like to return **all** of the columns from the table(s) specified in your SQL query, you can use the `*` wild card character as shown in the example below.  You'll notice that we put a line break between the asterisk and the FROM keyword.  Spaces and line breaks, or **whitespace**, doesn't really matter for SQL.  You can run your code together on a single line, or (preferably) add intendation and spaces that help human readers understand your code more easily.
+If you would like to return **all** of the columns from the table(s) specified in your SQL query, you can use the `*` wild card character as shown in the example below.  You'll notice that we put a line break between the asterisk and the `FROM` keyword.  Spaces and line breaks, or **whitespace**, doesn't really matter for SQL.  You can run your code together on a single line, or (preferably) add intendation and spaces that help human readers understand your code more easily.
 
 ```sql
 SELECT *
@@ -240,7 +241,7 @@ FROM patient;
 If you would only like to return a specific set of columns in your select statement you will need to explicitly list out each of those columns after the `SELECT` keyword, with each separate column name separated by a comma:
 
 ```sql
-SELECT last_name, first_name, date_of_birth, sex,
+SELECT last_name, first_name, date_of_birth, sex
 FROM patient;
 ```
 
@@ -281,6 +282,7 @@ Which of these correctly describe the strengths of SQL?
 *********
 
 SQL is great at working with rectangular data, data that is stored in tables with rows and columns.  Its powerful SELECT / FROM / WHERE syntax makes SQL an ideal tool for isolating just the data you care about, whether that's specifying the columns you're interested in or limiting your data to just those rows that meet certain conditions.  However, it's not great for fine-tuned statistical, linguistic, or data visualization purposes.  
+
 ***********
 
 </div>
