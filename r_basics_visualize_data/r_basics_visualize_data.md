@@ -403,7 +403,6 @@ The sample data we're going to work with in this module, the `covid_testing` dat
 ### Step 2: geom Function
 
 
-
 As a reminder, we put forth three steps in our `ggplot` template:
 
 1) Pick a **tidy data frame** (this contains the data you want to plot, organized in a tidy way) and add it to the first line, where we see `ggplot(data = )`
@@ -825,7 +824,7 @@ ggplot(data = data_frame) +                     # Required
 
 If you'd like to learn more about which graphics are most effective in specific situations, we recommend taking a look at *Fundamentals of Data Visualizations* by Claus Wilke. This is a very readable and recent primer on data visualization and figure design, and it's [available for free!](https://serialmentor.com/dataviz).  Note that this is not a book about how to code in R.  Rather, it explains visual communication of data insights in a way that will help you regardless of the language you use.
 
-### R for Data Science
+<h4>R for Data Science</h4>
 
 <div style = "align-items: center; display: flex;">
 <div style = "margin: 1rem; max-width: 60%; float:left;">
@@ -841,7 +840,7 @@ There's also an [unofficial solutions guide](https://jrnold.github.io/r4ds-exerc
 </div>
 </div>
 
-### Articles
+<h4>Articles</h4>
 
 Other potentially useful resources include articles written by the team that authored this module:
 
