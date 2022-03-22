@@ -680,6 +680,7 @@ Again, here it's important to highlight that clever, brief code that accomplishe
 * create an empty table to hold aggregated results
 * separate the rows from our raw tidy data into groups by research arm (intervention_1, intervention_2, ... , intervention_7)
 * for each group:
+
   * find the median abc\_score
   * count the number of observations that fall outside the interquartile range for xyz\_score
   * divide that count by the total number of observations for the group to find the proportion of extreme xyz scores
