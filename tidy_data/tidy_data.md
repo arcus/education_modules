@@ -170,15 +170,11 @@ Which of the following are accurate statements about tidy data?
 [[X]] "Height in meters" is an example of a variable.
 [[X]] Observations should each be in their own row
 [[?]] There are multiple correct answers!
-
-
-<div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
+************
 
 An observation is a single thing with measurable characteristics, and each observation should be in its own row.  Variables, on the other hand, are things being measured, like height, color, score, count, and so on.  Variables should each be in their own column.  Values belong in cells, the intersection of rows and columns, and each cell should have one and only one value -- no combining!
 
-</details>
-</div>
+**************
 </div>
 
 ## Sources of Messy Data
@@ -229,7 +225,7 @@ While humans can make sense of this data, remember that computers must be told i
 
 <div class = "hint">
 
-![Rubber duck.](media/rubber_duck.png)<!-- style = "max-width: 300px;" -->
+![Rubber duck.](media/rubber_duck.png)<!-- style = "max-width: 200px;" -->
 
 Thinking in computer-ese, giving very detailed instruction, is a kind of **algorithmic thinking**.  An **algorithm** is simply a well-specified process that solves a problem.  It takes practice to think like a computer instead of like a person, and one of the fun things that many programmers like to do to help this process along is called "rubber duck debugging".  This involves explaining to, yes, a rubber duck (or other friendly yet not very smart collaborator, like your cat) exactly what you're trying to do and how to get there, following detailed rules.  It may seem silly, but give it a try!
 
@@ -702,15 +698,11 @@ Which of these are accurate suggestions with regard to making data analysis more
 [[ ]] Pseudocode is a crutch that should be avoided and it results in badly written data analysis
 [[X]] Data analysis should be conducted so that both humans and computers can use the code effectively
 [[?]] There are multiple correct answers!
-
-
-<div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
+*********
 
 Data analysis should be consise.  For example, if you're doing a lot of cut-and-paste and nearly identical lines of code, it might be useful to make a function.  But that doesn't mean that it should be as short as possible.  After all, both computers **and** humans will consume the code, so writing inscrutable, genius level code that is difficult for average users to read is a bad idea.  In order to make data analysis more understandable and more tidy, habits like naming things and composing code in a consistent way can be very helpful.  Finally, pseudocode is a very useful tool that helps you understand the process that you want to carry out in small, atomic steps.
 
-</details>
-</div>
+***********
 </div>
 
 
