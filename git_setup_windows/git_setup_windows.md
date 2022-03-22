@@ -94,7 +94,7 @@ While most of of the default options will work just fine, there are 16 screens t
 | 13. Click "Next" in the lower right of the screen.| ![Choose a credential helper screen.](media/14credential.png)<!-- style = "max-width:400px;" border = 5px solid -->|
 | 14. Click "Next" in the lower right of the screen.| ![Extra options screen.](media/15extra_options.png)<!-- style = "max-width:400px;" border = 5px solid -->|
 | 15. Click "Next" in the lower right of the screen.| ![Experimental options screen.](media/16experimental_options.png)<!-- style = "max-width:400px;" border = 5px solid -->|
-| 16. Click "Finish" to complete the installation.|  ![Final screen, select "Finish" in the lower right to complete setup.](media/17finish.png)<!-- style = "max-width:400px;" border = 5px solid -->|
+| 16. Unselect "View Release Notes" and click "Finish" to complete the installation.|  ![Final screen, select "Finish" in the lower right to complete setup.](media/17finish.png)<!-- style = "max-width:400px;" border = 5px solid -->|
 
 
 ### Git Bash
@@ -168,7 +168,7 @@ Though it is beyond the scope of this lesson, you can read more about this issue
 </div>
 
 You can change the way Git recognizes and encodes line endings using the `core.autocrlf` command to `git config`.
-The following settings are recommended:
+The following setting is recommended:
 
 ```bash
 $ git config --global core.autocrlf true
@@ -186,16 +186,11 @@ If you accepted the default settings during installation, your text editor is se
 |:-------------------|:-------------------------------------------------|
 | Atom | `$ git config --global core.editor "atom --wait"`|
 | nano               | `$ git config --global core.editor "nano -w"`    |
-| BBEdit (Mac, with command line tools) | `$ git config --global core.editor "bbedit -w"`    |
-| Sublime Text (Mac) | `$ git config --global core.editor "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"` |
 | Sublime Text (Win, 32-bit install) | `$ git config --global core.editor "'c:/program files (x86)/sublime text 3/sublime_text.exe' -w"` |
 | Sublime Text (Win, 64-bit install) | `$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"` |
 | Notepad (Win)    | `$ git config --global core.editor "c:/Windows/System32/notepad.exe"`|
 | Notepad++ (Win, 32-bit install)    | `$ git config --global core.editor "'c:/program files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
 | Notepad++ (Win, 64-bit install)    | `$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`|
-| Kate (Linux)       | `$ git config --global core.editor "kate"`       |
-| Gedit (Linux)      | `$ git config --global core.editor "gedit --wait --new-window"`   |
-| Scratch (Linux)       | `$ git config --global core.editor "scratch-text-editor"`  |
 | Emacs              | `$ git config --global core.editor "emacs"`   |
 | Vim                | `$ git config --global core.editor "vim"`   |
 | VS Code                | `$ git config --global core.editor "code --wait"`   |
@@ -207,7 +202,7 @@ It is possible to reconfigure the text editor for Git whenever you want to chang
 **Exiting Vim**
 
 Note that Vim is the default editor for many programs. If you haven't used Vim before and wish to exit a session without saving your changes, press `Esc` then type `:q!` and hit `Enter` or `↵` or on Macs, `Return`.
-If you want to save your changes and quit, press `Esc` then type `:wq` and hit `Enter` or `↵` or on Macs, `Return`.
+If you want to save your changes and quit, press `Esc` then type `:wq` and hit `Enter`.
 
 This is [a common problem that has frustrated many a new Git user](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/)! You are not alone.
 </div>
