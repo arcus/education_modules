@@ -462,7 +462,7 @@ Occasionally we also have data that treat the same topic but are stored in separ
 | 9766728    | 2007-07-10 | 77 | 3 | B |
 | 6382922    | 2008-03-20 | 90 | 5 | B |
 
-## Quiz: Tidying Data
+### Quiz: Tidying Data
 
 
 Now that we've looked at several examples of messy data and ways to rearrange the data to make it tidy, let's look at a fabricated example and try to diagnose some of its problems.
