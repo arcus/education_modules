@@ -63,7 +63,7 @@ If the Git Bash application is not in your Start Menu, you will need to follow t
 
 ### Downloading Git
 
-Since Windows machines do not come with `git` pre-installed, you will need to download the latest version of [Git for Windows](https://git-scm.com/download/win).
+For machines that do not yet have Git Bash installed, you will need to start by downloading the latest version of [Git for Windows](https://git-scm.com/download/win).
 
 When you open the `.exe` file you may be asked to confirm that you want to run it. Click the `Run` button to begin the installation process.
 
@@ -101,10 +101,9 @@ While most of of the default options will work just fine, there are 16 screens t
 
 You should now be all ready to use Git on your machine. Open up Git Bash to use for the rest of this module.
 
-| Description | Screenshot |
-| -- | :--:|
-| You will interact with Git through the Git Bash application, which should now appear in your Start Menu as well as when you search for it. | ![Windows search bar containing "Git Bash".](media/git_bash_start_menu.png)<!-- style = "max-width:200px; border = 25px solid black" -->  |
-| Clicking on Git Bash will open a new Git Bash console. It is here where you will enter all commands relating to Git. This is the command line interface you should use for Git. All commands are typed following the `$` and run by pressing `Enter`. | ![A blank Git Bash window.](media/git_bash_new.png)<!-- style = "max-width:500px;"  border = 5px solid --> |
+You will interact with Git through the Git Bash application, which should now appear in your Start Menu as well as when you search for it. Clicking on Git Bash will open a new Git Bash console. It is here where you will enter all commands relating to Git. This is the command line interface you should use for Git. All commands are typed following the `$` and run by pressing `Enter`.
+
+![A blank Git Bash window.](media/git_bash_new.png)<!-- style = "max-width:500px;"  border = 5px solid --> 
 
 
 ## Global configurations
@@ -318,7 +317,7 @@ Asking a peer (in person, or via an online community of practice) is probably th
 </div>
 ***
 
-<div class = "learnmore">
+<div class = "details">
 In case you're curious, this command is an example of [how to set aliases in Git](https://www.atlassian.com/git/tutorials/git-alias), something we didn't cover in this lesson.
 
 Basically, aliases are shortcuts you can write for yourself so you don't have to type out full Git commands every time. We won't be using aliases in the lessons here, but you may like to set some up on your own computer if that sounds attractive to you!
