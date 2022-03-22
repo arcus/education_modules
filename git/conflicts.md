@@ -293,6 +293,11 @@ Clone the repository created by your instructor. Add a new file to it, and modif
 
 ### Conflicts on Non-textual files
 
+#### Code changes 
+Git is clever enough to recognize when two people have made changes to the same lines of text files. However, Git is NOT smart enough to know about changes to images or other binary files not to detect any logical errors in code. Git does not lint or check code, even if they're text files, for functionality or logical consistency. That still needs to be a manal process! 
+
+#### Images
+
 What does Git do when there is a conflict in an image or some other non-textual file that is stored in version control?
 
 Let’s try it. Suppose Dracula takes a picture of Martian surface and calls it `mars.jpg`.
@@ -455,6 +460,7 @@ order	      action . . . . . .	      command . . . . . . . . . . . . . . . . . .
 ## Wrap-Up 
 - Conflicts occur when two or more people change the same lines of the same file.
 - The version control system does not allow people to overwrite each other’s changes blindly, but highlights conflicts so that they can be resolved.
+- Git is clever enough to recognize when two people have made changes to the same lines of text files. Git is NOT smart enough to know about changes to images or other binary files not to detect any logical errors in code. 
 
 ## Additional Resources
 
