@@ -130,7 +130,7 @@ This might work well for you if you either can't or don't want to install R and 
 
 **First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
 
-  <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"></a> **← Click the "launch binder" button!**
+  <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"  alt="Launch Binder"></a> **← Click the "launch binder" button!**
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
@@ -189,7 +189,7 @@ You can use this module in a couple of different ways:
 
 ![RStudio showing the transform_exercises.Rmd file.  A text box suggests copying and pasting the first code chunk in transform_exercises.Rmd into a new R Markdown file, or adding chunks below the first chunk for experimentation.](media/rstudio_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
 
-### The `dplyr` Package
+## The `dplyr` Package
 
 <div style = "margin: 1rem; max-width: 75%; float:left;">
 `dplyr` (pronounced dee-ply-er, a play on words with "data" and "pliers") is a useful R package we'll discuss.  The various functions we'll use, like `select`, `filter`, and `mutate` are all functions that belong to the `dplyr` package.  In R, we bring in the functionality of a package by using the `library()` command.  Because `dplyr` forms part of the `tidyverse` suite of packages, we can bring in the useful functions of `dplyr` by either using the `library(dplyr)` command or the `library(tidyverse)` command.
@@ -201,21 +201,6 @@ You can use this module in a couple of different ways:
 Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`.  But if you're using the course materials in your own computer's installation of RStudio, it's possible you don't have `tidyverse` installed.  If you get a message telling you that there's no package installed with that name, issue this command: `install.packages("tidyverse")`.
 </div>
 
-
-## Subsetting Columns or Rows
-
-Often, you have a large data frame but want to create a graph or analyze data from only a small part of it. The `dplyr` package, part of the larger [tidyverse](https://www.tidyverse.org/) set of packages, works great for this purpose.
-
-Let's look at how you can subset a data frame (choose only certain columns and/or rows) by using `dplyr`.
-
-`dplyr` provides two functions for subsetting data frames: `select()` for subsetting columns, and `filter()` for subsetting rows:
-
-`select()` reshapes data so that it includes only the columns you specify. ![A grey colored data frame of five columns, with three of them selected (as indicated by a blue color), is transformed into a data frame of three selected (blue colored) columns](media/dplyr_select.png)<!--
-style = "max-width:500px;"-->
-
-`filter()` reshapes data so that it includes only the rows that meet your conditions. ![A grey colored data frame of four rows and a header row, with two rows selected (as indicated by a blue color), is transformed into a data frame of two selected (blue colored) rows, along with a header.](media/dplyr_filter.png)<!--
-style = "max-width: 600px;"
--->
 
 ### Quiz: `dplyr()`
 
@@ -240,6 +225,22 @@ The dplyr package is one of several packages that together make up the tidyverse
 </details>
 </div>
 </div>
+
+## Subsetting Columns or Rows
+
+Often, you have a large data frame but want to create a graph or analyze data from only a small part of it. The `dplyr` package, part of the larger [tidyverse](https://www.tidyverse.org/) set of packages, works great for this purpose.
+
+Let's look at how you can subset a data frame (choose only certain columns and/or rows) by using `dplyr`.
+
+`dplyr` provides two functions for subsetting data frames: `select()` for subsetting columns, and `filter()` for subsetting rows:
+
+`select()` reshapes data so that it includes only the columns you specify. ![A grey colored data frame of five columns, with three of them selected (as indicated by a blue color), is transformed into a data frame of three selected (blue colored) columns](media/dplyr_select.png)<!--
+style = "max-width:500px;"-->
+
+`filter()` reshapes data so that it includes only the rows that meet your conditions. ![A grey colored data frame of four rows and a header row, with two rows selected (as indicated by a blue color), is transformed into a data frame of two selected (blue colored) rows, along with a header.](media/dplyr_filter.png)<!--
+style = "max-width: 600px;"
+-->
+
 
 
 ### The `select()` Function
