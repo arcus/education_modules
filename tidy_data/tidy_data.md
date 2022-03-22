@@ -457,6 +457,8 @@ Occasionally we also have data that treat the same topic but are stored in separ
 
 Now that we've looked at several examples of messy data and ways to rearrange the data to make it tidy, let's look at a fabricated example and try to diagnose some of its problems.
 
+<div class = "question">
+
 Take a look at the sample table provided below.  It's similar to what you might see in a publication, and it's in a great format for humans... but it's not tidy enough to work with easily in a computational way.  This table shows the results of the "QPT" psychometric (something we made up) and shares pre- and post-treatment means and standard deviations for different kinds of research cohorts.
 
 <table border="1" cellpadding="0.5em" cellspacing="0"><tbody><tr><td style="padding: 0.5em;">
@@ -609,8 +611,6 @@ Take a look at the sample table provided below.  It's similar to what you might 
             <p>20.5</p>
             </td>
         </tr></tbody></table>
-
-<div class = "question">
 
 Which of the following are ways to make this dataset "tidy"?  Check all that apply!
 
