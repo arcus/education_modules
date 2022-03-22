@@ -678,7 +678,7 @@ This is a dense topic that we won't explain in detail here, as the best way to d
 Again, here it's important to highlight that clever, brief code that accomplishes three complex maneuvers by using a little-known command might be rewarding to discover and write, but often a headache to read and understand.  A great way to break things down into atomic text is to start off by writing "pseudocode", in which you write a series of operations that aren't in any computer code but instead in a sort of human language that is influenced by code.  Then, try running your pseudocode past your rubber duck for extra clarity!  For example:
 
 * create an empty table to hold aggregated results
-* separate the rows from our raw tidy data into groups by research arm (intervention_1, intervention_2, ... , intervention_7)
+* separate the rows from our raw tidy data into groups by research arm (intervention\_1, intervention\_2, ... , intervention\_7)
 * for each group:
 
   * find the median abc\_score
