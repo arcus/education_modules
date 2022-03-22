@@ -318,9 +318,15 @@ Asking a peer (in person, or via an online community of practice) is probably th
 ***
 
 <details>
-In case you're curious, this command is an example of [how to set aliases in Git](https://www.atlassian.com/git/tutorials/git-alias), something we didn't cover in this lesson.
+
+<summary>**Curious about that `alias` command? Click to learn more.**</summary>
+
+<div class = "learnmore">
+This command is an example of [how to set aliases in Git](https://www.atlassian.com/git/tutorials/git-alias), something we didn't cover in this lesson.
 
 Basically, aliases are shortcuts you can write for yourself so you don't have to type out full Git commands every time. We won't be using aliases in the lessons here, but you may like to set some up on your own computer if that sounds attractive to you!
+</div>
+
 </details>
 
 ## Additional Resources
