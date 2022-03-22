@@ -232,19 +232,20 @@ Correct answers include color, position on axis/dimension, shape, line type, siz
 </div>
 ****
 
-Which of the following statements is the **most** true of a typical workflow for building new data visualizations?
+For someone who has spent a lot of time getting good at `ggplot2` or `seaborn`, which of the following would likely be part of their typical workflow when building a new data visualization? Select all that apply.
 
-[( )] People new to data visualization should start by copying code from example plots, but as they get better they'll be able to write plot code themselves
-[( )] It's best to plan your plot carefully from the beginning so that you can get it right the first time and don't have to re-work it
-[(X)] You should pick a plot type that is a good fit both for the types of variables you have and what idea you want your plot to communicate
-[[?]] Hint: Although all of these answers have some element of truth to them, only one is **completely** true.
-[[?]] Hint: See [data visualization workflow](#data-visualization-workflow) for a review.
+[[X]] Spending time thinking about (and maybe drawing) the plot they want before they start coding
+[[X]] Searching for example code for similar plots online
+[[X]] Going through several different versions of their code before they get a plot that they want to keep
 ****
 <div class = "answer">
-Although the first two answers seem plausible, they don't really describe a typical workflow:
+All of these are typical for experienced programmers!
 
-- Everyone, including experts, reuses code from example plots and previous visualizations (that's why [galleries of example plots](#data-visualization-workflow) are so popular!). You shouldn't expect to be able to write `ggplot2` or `seaborn` code from a blank slate. As with so many programming skills, the main difference between a `ggplot2`/`seaborn` expert and a novice is that the expert knows exactly what to google!
-- Although planning a plot carefully before you start is a good idea and will save you time, don't expect that it will save you from having to re-work it. Creating a good visualization is almost always an iterative process --- that's one reason it's such an advantage to do your plotting in a scripted language like R or python! If you want to make a small change to a plot, you don't have to start from scratch, you can just tweak the code and re-run it.
+Sometimes it can feel discouraging when, as a beginner, you feel like everything you code takes several false starts before you make any real progress. The truth is that writing code is full of false starts, even for the most expert programmers. Everyone, including experts, reuses code from example plots and previous visualizations (that's why [galleries of example plots](#data-visualization-workflow) are so popular!). You shouldn't expect to be able to write `ggplot2` or `seaborn` code from a blank slate. As with so many programming skills, the main difference between a `ggplot2`/`seaborn` expert and a novice is that the expert knows exactly what to google!
+
+And although planning a plot carefully before you start is a good idea and will save you time, don't expect that it will save you from having to re-work it. Creating a good visualization is almost always an iterative process --- that's one reason it's such an advantage to do your plotting in a scripted language like R or python! If you want to make a small change to a plot, you don't have to start from scratch, you can just tweak the code and re-run it.
+
+If you want to see what real life data visualization coding done by a true expert looks like, check out [David Robinson's Tidy Tuesday videos](https://www.youtube.com/playlist?list=PL19ev-r1GBwkuyiwnxoHTRC8TTqP8OEi8). He livestreams himself analyzing a new dataset each week. He is an extremely experienced R user, and an expert at `ggplot2`. You'll notice that he can do a tremendous amount from memory (he's been using R every day professionally for years), but you'll also see that he makes lots of mistakes and often goes back to revise or tweak his code.
 </div>
 ****
 
