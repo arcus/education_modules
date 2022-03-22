@@ -199,7 +199,7 @@ Let's take a look at each of these problems in turn.
 * This module is intended to be code-free, making it useful for users of any programming language or none at all (this module can be useful just in terms of setting up data collection instruments well)
 * Since 2014, Hadley Wickham and others have developed new methods for data tidying
 
-So, if you choose to read along, concentrate on the principles, not the implementation details or code jargon.
+So, if you choose to [read along in the article](https://www.jstatsoft.org/article/view/v059i10), concentrate on the principles, not the implementation details or code jargon.
 
 </div>
 
@@ -226,24 +226,21 @@ Let's consider an example from section 3.1 of [Hadley's article](https://www.jst
 
 While humans can make sense of this data, remember that computers must be told in sometimes agonizing detail what to do.  If we were to ask "which is the largest group?" using the table above, we'd have to say (in code, of course) something along the lines of "look inside each row, at columns 2-7, and take the largest value of all of those cells, and then take the value of the first column of the row with that largest-valued cell, and the column header of that cell, and that's your group".
 
-<lia-keep>
 <div class = "hint">
+
 <div style = "align-items: center; display: flex;">
 <div style = "margin: 1rem; max-width: 55%; float:left; padding-right:4em;">
-</lia-keep>
 
 Thinking in computer-ese, giving very detailed instruction, is a kind of **algorithmic thinking**.  An **algorithm** is simply a well-specified process that solves a problem.  It takes practice to think like a computer instead of like a person, and one of the fun things that many programmers like to do to help this process along is called "rubber duck debugging".  This involves explaining to, yes, a rubber duck (or other friendly yet not very smart collaborator, like your cat) exactly what you're trying to do and how to get there, following detailed rules.  It may seem silly, but give it a try!
-<lia-keep>
+
 </div>
 <div style = "margin: 1rem auto; max-width: 35%; float:left;">
-</lia-keep>
 ![Rubber duck](media/rubber_duck.png)
-<figcaption style = "font-size: 0.8em;">Image courtesy Steve Webel, https://www.flickr.com/photos/webel/306290032</figcaption>
-<lia-keep>
+
+<figcaption style = "font-size: 0.8em;">Image courtesy Steve Webel, https://www.flickr.com/photos/webel/306290032 </figcaption>
 </div>
 </div>
 </div>
-</lia-keep>
 
 What would a tidy format look like?  Consider this, which is the start of a tidy table.  In the interest of space, only the first handful of rows are shown.
 
@@ -353,7 +350,7 @@ Remember that the original third rule of tidy data was replaced in later writing
 
 <h4>"Normalized" Data</h4>
 
-If you've ever worked with SQL databases, you know that in SQL, it is very common to divide data into very specific topics.  For example, demographic information about patients may be stored in a table called "demographics", while a table called "medication_order" leaves out any mention of demographic information and concerns itself solely with information about the medication order (drug id number, prescribed dose, id of provider, etc.).  Patient details like age and sex are important for prescribers.  But rather than reiterate what is already known about the patient and add it anew in the medication_order table, a patient identifier is used, which can then allow for linking across tables.
+If you've ever worked with SQL databases, you know that in SQL, it is very common to divide data into very specific topics.  For example, demographic information about patients may be stored in a table called "demographics", while a table called "medication\_order" leaves out any mention of demographic information and concerns itself solely with information about the medication order (drug id number, prescribed dose, id of provider, etc.).  Patient details like age and sex are important for prescribers.  But rather than reiterate what is already known about the patient and add it anew in the medication\_order table, a patient identifier is used, which can then allow for linking across tables.
 
 This division of data so that the minimum amount of data is reiterated in multiple places is called "normalization", and it's very useful, especially in large, complex data sets.  In these kinds of datasets (like Electronic Medical Records), it could be prohibitively costly (because of disk space and processing requirements) and error prone (because of the need to track down multiple copies for updated data) to continually add the data that exists in one table into new places.
 
@@ -668,18 +665,17 @@ In addition to data being tidy, data analysis itself has some tidy principles.  
 
 The basic tenets of "tidy" data analysis include:
 
-<h3>Data should be organized in a tidy way</h3>
+<h4>Data should be organized in a tidy way</h4>
 
 Tidy data organization includes everything we've covered so far in this module!  If your data is in a tidy format (hopefully you get to handle data collection and can make it tidy from the start), it's possible to rearrange it in almost any number of ways, including making intentionally "messy" formats for publication.  Also, it's easier to write code on tidy data, because the algorithm (process) for analyzing data will be simpler.  Of course, here we've glossed over the hard work of getting messy data that you inherited transformed and cleaned up into tidy data.  This is hard work and you'll spend lots of time doing data cleanup to transform messy data into tidy data.  But once you've done that, the analysis portion of your work is much easier.
 
-<h3>Programming code that acts on the data should be consistent, concise, with predictable inputs and outputs, and sound like human language as much as possible.</h3>
+<h4>Programming code that acts on the data should be consistent, concise, with predictable inputs and outputs, and sound like human language as much as possible.</h4>
 
 This is a dense topic that we won't explain in detail here, as the best way to demonstrate tidy code is through code examples, which we're intentionally avoiding here.  But it's helpful to point out that the shortest code isn't always the best code!  Some people like to play "code golf" - solving a problem in clever, obscure ways with as few lines of code as possible.  We urge you to consider that consise code doesn't mean "as short as possible", but rather "as long as needed to explain things well".  After all, data analysis code is intended for two audiences: the computer running the code and the people reading the code.  That's different than, say, the code that runs your operating system, which isn't designed to be read by people.  Consistency is also helpful for humans.  Naming data columns with the same case convention (such as camelCase or snake_case) is one way to be consistent and reduce the cognitive load on your reader.
 
+<h4>Each data analysis can be broken down into a series of atomic steps, such as "select this column" or "arrange the data by the values in that column". An arbitrarily complex data analysis can be broken down as a pipeline of atomic steps.</h4>
 
-<h3>Each data analysis can be broken down into a series of atomic steps, such as "select this column" or "arrange the data by the values in that column". An arbitrarily complex data analysis can be broken down as a pipeline of atomic steps.</h3>
-
-Again, here it's important to highlight that clever, brief code that accomplishes three complex maneuvers by using a little-known command might be rewarding to discover and write, but often a headache to read and understand.  A great way to break things down into atomic text is to start off by writing "pseudocode", in which you write a series of operations that aren't in any computer code but instead in a sort of human language that is influenced by code.  For example:
+Again, here it's important to highlight that clever, brief code that accomplishes three complex maneuvers by using a little-known command might be rewarding to discover and write, but often a headache to read and understand.  A great way to break things down into atomic text is to start off by writing "pseudocode", in which you write a series of operations that aren't in any computer code but instead in a sort of human language that is influenced by code.  Then, try running your pseudocode past your rubber duck for extra clarity!  For example:
 
 * create an empty table to hold aggregated results
 * separate the rows from our raw tidy data into groups by research arm (intervention_1, intervention_2, ... , intervention_7)
@@ -689,6 +685,29 @@ Again, here it's important to highlight that clever, brief code that accomplishe
   * divide that count by the total number of observations for the group to find the proportion of extreme xyz scores
   * store the group name (intervention_1, etc.), median abc_score, and proportion of extreme xyz_score as a row in our aggregated results table
 * with the new table, calculate the correlation between median abc_score and proportion of extreme_xyz score.
+
+### Quiz: Tidy Data analysis
+
+<div class = "question">
+
+Which of these are accurate suggestions with regard to making data analysis more tidy?  
+
+[[ ]] Tidy data analysis includes code that is as brief as possible in order to reduce computational processing time
+[[X]] It can be helpful to break down complex analysis into small steps in human language before starting computation
+[[X]] Naming things and writing code in a consistent way makes for tidy data analysis
+[[ ]] Pseudocode is a crutch that should be avoided and it results in badly written data analysis
+[[X]] Data analysis should be conducted so that both humans and computers can use the code effectively
+[[?]] There are multiple correct answers!
+
+
+<div class = "answer">
+<details><summary>Click to see an explanation of the answer.</summary>
+
+Data analysis should be consise.  For example, if you're doing a lot of cut-and-paste and nearly identical lines of code, it might be useful to make a function.  But that doesn't mean that it should be as short as possible.  After all, both computers **and** humans will consume the code, so writing inscrutable, genius level code that is difficult for average users to read is a bad idea.  In order to make data analysis more understandable and more tidy, habits like naming things and composing code in a consistent way can be very helpful.  Finally, pseudocode is a very useful tool that helps you understand the process that you want to carry out in small, atomic steps.
+
+</details>
+</div>
+</div>
 
 
 ## Additional Resources
