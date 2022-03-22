@@ -2,15 +2,15 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  0.0.1
+version:  1.0.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Setting Up Git on Windows
 
-comment: This module provides recommendations and examples to help new users configure git on their Windows computer for the first time.
+comment: This module provides recommendations and examples to help new users configure Git on their Windows computer for the first time.
 
-long_description: If you're ready to start using the Git version control system, this lesson will walk you through how to get set up. This lesson should be a good fit for people who already have an idea of what version control is but may not have any experience using it yet. No previous experience with Git is expected. This lesson is specific to Windows machines, If you are using Mac or Linux, please follow along with the [set-up guide for those computers]( ).
+long_description: If you're ready to start using the Git version control system, this lesson will walk you through how to get set up. This lesson should be a good fit for people who already have an idea of what version control is but may not have any experience using it yet. No previous experience with Git is expected. This lesson is specific to Windows machines, If you are using Mac or Linux, please follow along with the [set-up guide for those computers](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md).
 
 estimated_time: 25 min
 
@@ -18,7 +18,6 @@ estimated_time: 25 min
 
 After completion of this module, learners will be able to:
 
-- Download `git` onto a Windows computer
 - Configure `git` the first time it is used on a computer
 - Understand the meaning of the `--global` configuration flag
 
@@ -51,14 +50,24 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 @learning_objectives
 
 </div>
+## Lesson Preparation
 
-## Downloading Git
+<div class = "important">
+Note that this module is written specifically for people working on Windows computers. If you are using a Mac or Linux machine, you should reference [Git Setup for Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md) instead.
+</div>
+
+Search in your Start Menu for the application Git Bash. If the Git Bash application is already on your computer, you can proceed to the section on [how to use Git Bash](#git_bash).
+
+If the Git Bash application is not in your Start Menu, you will need to follow the instructions to download Git and Git Bash in the [next section](#downloading_git).
+
+
+### Downloading Git
 
 Since Windows machines do not come with `git` pre-installed, you will need to download the latest version of [Git for Windows](https://git-scm.com/download/win).
 
 When you open the `.exe` file you may be asked to confirm that you want to run it. Click the `Run` button to begin the installation process.
 
-![Security warning window. Select the "Run" button in the middle to continue](media/01run.exe.png)<!-- style = "max-width:300px;"  border = 5px solid -->
+![Security warning window. Select the "Run" button in the middle to continue.](media/01run.exe.png)<!-- style = "max-width:300px;"  border = 5px solid -->
 
 <div class = "important">
 There are several helpful settings that you can choose in the Setup phase that will be useful in the future. However it is also possible to install with default settings and update them from the command line later.
@@ -70,22 +79,22 @@ While most of of the default options will work just fine, there are 16 screens t
 
 | Instructions | Screen |
 | :---: | --- |
-| 1. Click "Next" in the lower right. | ![GNU public license screen](media/02public_license.png)<!-- style = "max-width:400px;" border = 5px solid --> |
-| 2. If you want to choose a different location for Git, you can do that on this screen. Click "Next" in the lower right. | ![Select destination location screen](media/03select_destination.png)<!-- style = "max-width:400px;"  border = 5px solid -->  |
-| 3. They should already be checked, but make sure that Windows Explorer integration and Git Bash are both checked on this screen. | ![Select components screen](media/04select_components.png)<!-- style = "max-width:400px;" border = 5px solid -->  |
-| 4. Click "Next" in the lower right. | ![Select Start Menu Folder screen](media/05select_folder.png)<!-- style = "max-width:400px;" border = 5px solid --> |
+| 1. Click "Next" in the lower right. | ![GNU public license screen.](media/02public_license.png)<!-- style = "max-width:400px;" border = 5px solid --> |
+| 2. If you want to choose a different location for Git, you can do that on this screen. Click "Next" in the lower right. | ![Select destination location screen.](media/03select_destination.png)<!-- style = "max-width:400px;"  border = 5px solid -->  |
+| 3. They should already be checked, but make sure that Windows Explorer integration and Git Bash are both checked on this screen. | ![Select components screen.](media/04select_components.png)<!-- style = "max-width:400px;" border = 5px solid -->  |
+| 4. Click "Next" in the lower right. | ![Select Start Menu Folder screen.](media/05select_folder.png)<!-- style = "max-width:400px;" border = 5px solid --> |
 | 5. If you have a favorite text editor such as Atom, go ahead and select that. You can scroll up for more options like `nano`, or select Notepad, which will feel the most familiar if you are used to word processing programs. | ![Choosing the default editor screen. The "Use Notepad as Git's default editor" option is selected from the dropdown menu.](media/06default_editor.png)<!-- style = "max-width:400px;" border = 5px solid -->|
 | 6. On this screen you want to change the default branch name to "main" to match with the conventions of GitHub. | ![Branch naming screen. The second option, "Override the default branch name for new responses" is selected and the word "main" is entered into the text box.](media/07branch_naming.png)<!-- style = "max-width:400px;" border = 5px solid -->|
-| 7. Allowing 3rd parties, such as GitHub Desktop, may be extremely useful to you in the future, so we recommend selecting this option. | ![Adjusting your PATH screen. The second option, "Git from the command line and also from 3rd-party software" is selected](media/08path.png)<!-- style = "max-width:400px;" border = 5px solid -->|
-| 8. You can click "Next" on each of the subsequent screens. | ![SSH screen](media/09ssh.png)<!-- style = "max-width:400px;" border = 5px solid -->|
-| 9. Click "Next" in the lower right of the screen.| ![HTTPS screen](media/10https.png)<!-- style = "max-width:400px;" border = 5px solid -->|
-| 10. Click "Next" in the lower right of the screen.| ![Configuring line ending conversions screen](media/11line_endings.png)<!-- style = "max-width:400px;" border = 5px solid -->|
-| 11. Click "Next" in the lower right of the screen.| ![Configuring terminal emulator screen](media/12terminal_emulator.png)<!-- style = "max-width:400px;" border = 5px solid -->|
-| 12. Click "Next" in the lower right of the screen.| ![Behavior of `git pull` screen](media/13git_pull.png)<!-- style = "max-width:400px;" border = 5px solid -->|
-| 13. Click "Next" in the lower right of the screen.| ![Choose a credential helper screen](media/14credential.png)<!-- style = "max-width:400px;" border = 5px solid -->|
-| 14. Click "Next" in the lower right of the screen.| ![Extra options screen](media/15extra_options.png)<!-- style = "max-width:400px;" border = 5px solid -->|
-| 15. Click "Next" in the lower right of the screen.| ![Experimental options screen](media/16experimental_options.png)<!-- style = "max-width:400px;" border = 5px solid -->|
-| 16. Click "Finish" to complete the installation.|  ![Final screen, select "Finish" in the lower right to complete setup](media/17finish.png)<!-- style = "max-width:400px;" border = 5px solid -->|
+| 7. Allowing 3rd parties, such as GitHub Desktop, may be extremely useful to you in the future, so we recommend selecting this option. | ![Adjusting your PATH screen. The second option, "Git from the command line and also from 3rd-party software" is selected.](media/08path.png)<!-- style = "max-width:400px;" border = 5px solid -->|
+| 8. You can click "Next" on each of the subsequent screens. | ![SSH screen.](media/09ssh.png)<!-- style = "max-width:400px;" border = 5px solid -->|
+| 9. Click "Next" in the lower right of the screen.| ![HTTPS screen.](media/10https.png)<!-- style = "max-width:400px;" border = 5px solid -->|
+| 10. Click "Next" in the lower right of the screen.| ![Configuring line ending conversions screen.](media/11line_endings.png)<!-- style = "max-width:400px;" border = 5px solid -->|
+| 11. Click "Next" in the lower right of the screen.| ![Configuring terminal emulator screen.](media/12terminal_emulator.png)<!-- style = "max-width:400px;" border = 5px solid -->|
+| 12. Click "Next" in the lower right of the screen.| ![Behavior of `git pull` screen.](media/13git_pull.png)<!-- style = "max-width:400px;" border = 5px solid -->|
+| 13. Click "Next" in the lower right of the screen.| ![Choose a credential helper screen.](media/14credential.png)<!-- style = "max-width:400px;" border = 5px solid -->|
+| 14. Click "Next" in the lower right of the screen.| ![Extra options screen.](media/15extra_options.png)<!-- style = "max-width:400px;" border = 5px solid -->|
+| 15. Click "Next" in the lower right of the screen.| ![Experimental options screen.](media/16experimental_options.png)<!-- style = "max-width:400px;" border = 5px solid -->|
+| 16. Click "Finish" to complete the installation.|  ![Final screen, select "Finish" in the lower right to complete setup.](media/17finish.png)<!-- style = "max-width:400px;" border = 5px solid -->|
 
 
 ### Git Bash
@@ -94,8 +103,8 @@ You should now be all ready to use Git on your machine. Open up Git Bash to use 
 
 | Description | Screenshot |
 | -- | :--:|
-| You will interact with Git through the Git Bash application, which should now appear in your Start Menu as well as when you search for it. | ![Windows search bar containing "Git Bash"](media/git_bash_start_menu.png)<!-- style = "max-width:200px; border = 25px solid black" -->  |
-| Clicking on Git Bash will open a new Git Bash console. It is here where you will enter all commands relating to Git. This is the command line interface you should use for Git. All commands are typed following the `$` and run by pressing `Enter`. | ![A blank Git Bash window](media/git_bash_new.png)<!-- style = "max-width:500px;"  border = 5px solid --> |
+| You will interact with Git through the Git Bash application, which should now appear in your Start Menu as well as when you search for it. | ![Windows search bar containing "Git Bash".](media/git_bash_start_menu.png)<!-- style = "max-width:200px; border = 25px solid black" -->  |
+| Clicking on Git Bash will open a new Git Bash console. It is here where you will enter all commands relating to Git. This is the command line interface you should use for Git. All commands are typed following the `$` and run by pressing `Enter`. | ![A blank Git Bash window.](media/git_bash_new.png)<!-- style = "max-width:500px;"  border = 5px solid --> |
 
 
 ## Global configurations
@@ -146,7 +155,7 @@ If you elect to use a private email address with GitHub, then use that same emai
 
 You already told Git how to handle line endings in one of those installation windows, but it never hurts to double check that your settings are correct.
 
-As with other keys, when you hit `Enter` or `↵` or on Macs, `Return` on your keyboard,
+As with other keys, when you hit `Enter` or `↵` on your keyboard,
 your computer encodes this input as a character.
 Different operating systems use different character(s) to represent the end of a line.
 (You may also hear these referred to as newlines or line breaks.)
@@ -200,7 +209,7 @@ It is possible to reconfigure the text editor for Git whenever you want to chang
 Note that Vim is the default editor for many programs. If you haven't used Vim before and wish to exit a session without saving your changes, press `Esc` then type `:q!` and hit `Enter` or `↵` or on Macs, `Return`.
 If you want to save your changes and quit, press `Esc` then type `:wq` and hit `Enter` or `↵` or on Macs, `Return`.
 
-This is [a common problem that has frustrated many a new git user](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/)! You are not alone.
+This is [a common problem that has frustrated many a new Git user](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/)! You are not alone.
 </div>
 
 ### Default branch naming
@@ -215,7 +224,7 @@ $ git config --global init.defaultBranch main
 Source file changes are associated with a "branch."
 For new learners in this lesson, it's enough to know that branches exist, and this lesson uses one branch.
 By default, Git will create a branch called `master`
-when you create a new repository with `git init` (as explained in the next Episode). This term evokes
+when you create a new repository with `git init`. This term evokes
 the racist practice of human slavery and the
 [software development community](https://github.com/github/renaming)  has moved to adopt
 more inclusive language.
@@ -223,9 +232,6 @@ more inclusive language.
 In 2020, most Git code hosting services transitioned to using `main` as the default branch. As an example, any new repository that is opened in GitHub and GitLab default
 to `main`.  However, Git has not yet made the same change.  As a result, local repositories must be manually configured have the same main branch name as most cloud services.
 
-For versions of Git prior to 2.28, the change can be made on an individual repository level.  The
-command for this is in the next episode.  Note that if this value is unset in your local Git
-configuration, the `init.defaultBranch` value defaults to `master`.
 
 ### Check your global configurations
 
@@ -256,6 +262,10 @@ To disable the proxy, use
 $ git config --global --unset http.proxy
 $ git config --global --unset https.proxy
 ```
+
+Not sure whether or not your network uses a proxy? You should be able to check for a proxy by looking at the settings in your browser. For example, [here's what the proxy settings look like for the FireFox browser](https://support.mozilla.org/en-US/kb/connection-settings-firefox). You can search online to find more examples of proxy settings in different browsers, or just open the Settings for whatever browser you're using and poke around to see if you can find proxy information.
+
+**Note**: If your network does use a proxy, or if you can't determine whether there's a proxy or not, you may need to contact your own institution's tech support team for help. In some cases, proxy settings can be complex; you may not be able to find good information relevant to your specific situation without talking to the team that manages your network.
 </div>
 
 ## Git Help and Manual
@@ -283,44 +293,45 @@ $ git help
 Without looking it up, what can you say about the following command? `git config --global alias.ci commit` Select all that apply.
 
 [[X]] It will change something in the global settings, meaning it will apply to all the projects in your user account on this computer
-[[ ]] You'll need to run this command each time you start a new git repository if you want it to take effect
+[[ ]] You'll need to run this command each time you start a new Git repository if you want it to take effect
 [[ ]] It will affect your settings on GitHub.com as well as on your local computer
 ***
 <div class = "answer">
-This command begins with `git config --global`, like most of the commands we ran during this lesson. The `--global` flag tells us this setting will be applied for all of the git projects on this user account on this computer (for a review of this topic, see [Check your global configurations](#check-your-global-configurations)).
+This command begins with `git config --global`, like most of the commands we ran during this lesson. The `--global` flag tells us this setting will be applied for all of the Git projects on this user account on this computer (for a review of this topic, see [Check your global configurations](#check-your-global-configurations)).
 
-Global configurations for git only need to be run once and then they will continue to apply until you undo them or replace them with new settings.
+Global configurations for Git only need to be run once and then they will continue to apply until you undo them or replace them with new settings.
 
-Importantly, 'global' only refers to within your account on your machine; if you use git on multiple machines, or when you use it in the cloud (for example, on GitHub.com), your global configuration settings from your personal machine won't apply.
+Importantly, 'global' only refers to within your account on your machine; if you use Git on multiple machines, or when you use it in the cloud (for example, on GitHub.com), your global configuration settings from your personal machine won't apply.
 </div>
 ***
 
 If you wanted to learn more about the command above, which of the following would be good places to start? Select all that apply.
 
-[[X]] `git config -h`
+[[ ]] `git config -h`
+[[X]] `git config --help`
 [[X]] Google it
 [[X]] Ask a friend, or post a question in an online community forum
-***
+****
 <div class = "answer">
-All of these are great ideas!
+Remember that  `-h` will pull up a list of the options for a command, while `--help` will bring up its full help documentation. In this case, knowing the list of options for `git config` won't help much since you need additional information about how the `global` option is working in this particular case, not just the fact that `global` is an option. In general, `-h` is good for when you already know pretty much what a command does but want a reminder of how to use it, whereas `--help` is better for learning about a new command.
 
-In this particular case, the help file for `git config` won't tell you what you want to know about the global settings for aliases, so that will be a dead end here. But sometimes the git help files will have exactly what you need, so it's never a bad idea to check!
+In this particular case, the help file for `git config` won't tell you what you want to know about the global settings for aliases, so `git config --help` will turn out to be a dead end. But sometimes the Git help files will have exactly what you need, so it's never a bad idea to check!
 
-Googling it is also never a bad idea. There are tons of great git resources available online, and for common problems you're likely to find a useable answer quickly. Keep in mind that there are lots of very advanced git users posting things online as well, though, and if you get unlucky you could end up with search results that are not at all user-friendly for beginners. When that happens, remind yourself that kind of gatekeeping is a failure on the part of the writer, not something wrong with you as a learner, and keep searching to find a good answer to your question somewhere else.
+Googling it is also never a bad idea. There are tons of great Git resources available online, and for common problems you're likely to find a useable answer quickly. Keep in mind that there are lots of very advanced Git users posting things online as well, though, and if you get unlucky you could end up with search results that are not at all user-friendly for beginners. When that happens, remind yourself that kind of gatekeeping is a failure on the part of the writer, not something wrong with you as a learner, and keep searching to find a good answer to your question somewhere else.
 
 Asking a peer (in person, or via an online community of practice) is probably the best strategy in a lot of situations, especially if the first two strategies don't yield useful results right away. If you feel embarrassed to ask a question, remind yourself that everyone is a beginner at some point and [asking for help is a great skill to practice](https://www.linkedin.com/pulse/20141027152039-95387062-why-you-should-never-feel-embarrassed-to-ask-questions)!
 </div>
 ***
 
 <div class = "learnmore">
-In case you're curious, this command is an example of [how to set aliases in git](https://www.atlassian.com/git/tutorials/git-alias), something we didn't cover in this lesson.
+In case you're curious, this command is an example of [how to set aliases in Git](https://www.atlassian.com/git/tutorials/git-alias), something we didn't cover in this lesson.
 
-Basically, aliases are shortcuts you can write for yourself so you don't have to type out full git commands every time. We won't be using aliases in the lessons here, but you may like to set some up on your own computer if that sounds attractive to you!
+Basically, aliases are shortcuts you can write for yourself so you don't have to type out full Git commands every time. We won't be using aliases in the lessons here, but you may like to set some up on your own computer if that sounds attractive to you!
 </div>
 
 ## Additional Resources
 
-Although the content here focuses on command line git, you may prefer to use the GitHub Desktop program instead. See the instructions posted on GitHub.com for how to [install and configure GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop).
+Although the content here focuses on command line Git, you may prefer to use the GitHub Desktop program instead. See the instructions posted on GitHub.com for how to [install and configure GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop).
 
 ## Feedback
 
