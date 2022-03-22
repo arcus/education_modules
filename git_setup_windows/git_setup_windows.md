@@ -53,7 +53,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 ## Lesson Preparation
 
 <div class = "important">
-Note that this module is written specifically for people working on Windows computers. If you are using a Mac or Linux machine, you should reference [Git Setup for Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md) instead.
+Note that this module is written specifically for people working on Windows computers. If you are using a Mac or Linux machine, you should reference [Git Setup for Mac and Linux](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md) instead.
 </div>
 
 Search in your Start Menu for the application Git Bash. If the Git Bash application is already on your computer, you can proceed to the section on [how to use Git Bash](#git-bash).
