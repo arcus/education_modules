@@ -680,11 +680,11 @@ Again, here it's important to highlight that clever, brief code that accomplishe
 * create an empty table to hold aggregated results
 * separate the rows from our raw tidy data into groups by research arm (intervention_1, intervention_2, ... , intervention_7)
 * for each group:
-  * find the median abc_score
-  * count the number of observations that fall outside the interquartile range for xyz_score
+  * find the median abc\_score
+  * count the number of observations that fall outside the interquartile range for xyz\_score
   * divide that count by the total number of observations for the group to find the proportion of extreme xyz scores
-  * store the group name (intervention_1, etc.), median abc_score, and proportion of extreme xyz_score as a row in our aggregated results table
-* with the new table, calculate the correlation between median abc_score and proportion of extreme_xyz score.
+  * store the group name (intervention_1, etc.), median abc\_score, and proportion of extreme xyz\_score as a row in our aggregated results table
+* with the new table, calculate the correlation between median abc\_score and proportion of extreme\_xyz score.
 
 ### Quiz: Tidy Data analysis
 
