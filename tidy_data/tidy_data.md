@@ -356,7 +356,7 @@ Remember that the original third rule of tidy data was replaced in later writing
 If you've ever worked with SQL databases, you know that in SQL, it is very common to divide data into very specific topics.  For example, demographic information about patients may be stored in a table called "demographics", while a table called "medication\_order" leaves out any mention of demographic information and concerns itself solely with information about the medication order (drug id number, prescribed dose, id of provider, etc.).  Patient details like age and sex are important for prescribers.  But rather than reiterate what is already known about the patient and add it anew in the medication\_order table, a patient identifier is used, which can then allow for linking across tables.
 
 This division of data so that the minimum amount of data is reiterated in multiple places is called "normalization", and it's very useful, especially in large, complex data sets.  In these kinds of datasets (like Electronic Medical Records), it could be prohibitively costly (because of disk space and processing requirements) and error prone (because of the need to track down multiple copies for updated data) to continually add the data that exists in one table into new places.
-
+| patient_id | date\_of\_birth | sex | last_name | first_name |
 <h4>A Sample demographics table</h4>
 
 <!-- data-type="none" -->
