@@ -151,10 +151,22 @@ Neither absolute nor relative file paths are "better"-- which you choose will de
 
 ### Quiz: Writing a file path
 
-What would be the relative file path pointing to the file `experiment1.csv` in a subfolder called `data` in a project folder called `study_project`, if `study project` is your current working directory? Assuming you have a Unix-like or Mac operating system.
+What would be a relative file path pointing to the file `experiment1.csv` in a subfolder called `data` in a project folder called `study_project`, if `study_project` is your current working directory?
 
 [[data/experiment1.csv]]
-[[?]] Hint: Remember that a relative file path is in relation to your working directory-- that's your reference point. And if you're confused about what file paths look like in a Unix-like operating system, take another look at the Absolute paths section.
+[[?]] Hint: Remember that a relative file path is in relation to your working directory-- that's your reference point.
+<script>
+  let input = "@input".trim();
+  /data[/\\]experiment1\.csv/i.test(input);
+</script>
+********************************
+<div class = "answer">
+Why isn't the correct answer `study_project/data/experiment1.csv`? It's because `study_project` is the working directory, and so you are already there! The file path `study_project/data/experiment1.csv` would be pointing to a **subfolder** called `study_project` with the folder `study_project`, which doesn't exist!
+
+Additionally, either `data/experiment1.csv` or `data\experiment1.csv` would be correct for this question, but which you would choose to use in your script depends on whether you are working in a Unix-like or Mac operating system (the first example) or Windows (the second example).
+</div>
+********************************
+
 
 ## Naming Best Practices and Conventions
 
