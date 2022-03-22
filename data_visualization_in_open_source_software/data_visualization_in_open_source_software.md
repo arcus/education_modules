@@ -20,7 +20,6 @@ After completion of this module, learners will be able to:
 * identify key elements in a plot that communicate information about the data
 * describe the role ggplot2 and seaborn play in the R and python programming languages, respectively
 * describe a typical data vizualization workflow
-* recognize how data structure may impact the creation of data vizualizations
 * list some best practices for creating accessible vizualizations
 
 @end
@@ -151,7 +150,7 @@ Here is a good workflow for creating a new data visualization using `ggplot2` or
 
 1. Spend time carefully thinking through the plot you want to create, as covered in [the previous section](#selecting-the-right-plot-for-your-data). For many people, this means drawing a sketch (a great excuse to keep colored pencils at your desk!). Include as many details as you can, like labels, facets, and scales.
 2. Search (online or through the help documentation) for the basic commands to make the kind of plot you're thinking of (scatterplot, line plot, box plot, etc.). If you're an experienced user, this may be a step you can do without google, at least for plots you make frequently.
-3. Using what you found in step 2, write out code to generate a basic version of your plot. Don't worry about appearance at this stage, the goal is just to get the basic structure down. You'll likely try a few different versions, tweaking the code and re-running it, before you get what you want.
+3. Using what you found in step 2, write out code to generate a basic version of your plot (note that this might also require code to transform the data before plotting, depending on your data structure). Don't worry about plot appearance at this stage, the goal is just to get the basic structure down. You'll likely try a few different versions, tweaking the code and re-running it, before you get what you want.
 4. Once you have the structure of the plot in place, turn your attention to appearance (labels, colors, themes, axes, etc.). You'll likely need to return to your search engine to get these details right.
 5. Admire your beautiful visualization! And be grateful all the work you just did is saved in your code, so it will be easy for others (including Future You) to recreate your plot and make other similar ones.
 
@@ -161,13 +160,10 @@ For both step 2 and 4 in the data visualization workflow, browsing galleries of 
 
 There are many examples of `seaborn` visualizations with code online, including the large [example gallery on the `seaborn` website](https://seaborn.pydata.org/examples/index.html). Likewise, there are lots of great [example ggpolot2 plots with code](https://www.r-graph-gallery.com/ggplot2-package.html).
 
-
-## A note about data structure
-
-In most cases, it is easier to plot with data that is in [long form](https://argoshare.is.ed.ac.uk/healthyr_book/reshaping-data-long-vs-wide-format.html), where each variable is represented in only one column. If you have repeated measures (e.g. several encounters for each patient), that means each subject may have several rows, one for each observation. This is different from how humans typically prefer to read data, so if you're used to examining your data in a speadsheet-like view, you probably don't keep it in long format --- you would need to first transform your data frame to long format (often called "pivoting") before using it in a plotting function.
-
 <div class = "warning">
 When you look for example plotting code, pay careful attention to the format of the data being used. You may need to perform some transformations on your data before you can use the example code.
+
+In most cases, it is easier to plot with data that is in [long form](https://argoshare.is.ed.ac.uk/healthyr_book/reshaping-data-long-vs-wide-format.html), where each variable is represented in only one column. If you have repeated measures (e.g. several encounters for each patient), that means each subject may have several rows, one for each observation. This is different from how humans typically prefer to read data, so if you're used to examining your data in a speadsheet-like view, you probably don't keep it in long format --- you would need to first transform your data frame to long format (often called "pivoting") before using it in a plotting function.
 </div>
 
 ## Accessible design for data visualizations
