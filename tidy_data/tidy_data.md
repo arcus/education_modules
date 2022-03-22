@@ -414,7 +414,7 @@ If we were to abide by the suggestion that each topic belongs in its own table, 
 
 This means that we only have to correct a mispelled artist name or incorrect track duration in one place, rather than multiple locations.  This is especially important in SQL databases.  Still, this is more an issue of data storage and ease of updating, rather than cleaning up data for computation.  Consider this advice completely optional!
 
-### One type in multiple tables
+### One Type in Multiple Tables
 
 Occasionally we also have data that treat the same topic but are stored in separate tables.  For example, if you're participating in a multi-site study, you may have data that is structured identically but arrive in your inbox in separate files. Logically, you could imagine "stacking" this data vertically, and perhaps adding a new column that gives the data collection site:
 
