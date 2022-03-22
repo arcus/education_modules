@@ -400,7 +400,8 @@ We won't cover "tidy" data in detail in this module.  It's sufficient at this po
 The sample data we're going to work with in this module, the `covid_testing` data, is already "tidy".  So our first step is easy: we are going to choose the `covid_testing` data frame and put that as our tidy data frame.
 
 
-### Step 2: geom function
+### Step 2: geom Function
+
 
 
 As a reminder, we put forth three steps in our `ggplot` template:
