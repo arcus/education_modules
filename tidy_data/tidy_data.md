@@ -160,8 +160,6 @@ An additional, important question that can be a source of disagreement in demogr
 ### Quiz: Three Characteristics of Tidy Data
 
 
-<div class = "question">
-
 Which of the following are accurate statements about tidy data?
 
 [[X]] An observation is a single thing with measurable characteristics (like a mouse or a city)
@@ -172,10 +170,12 @@ Which of the following are accurate statements about tidy data?
 [[?]] There are multiple correct answers!
 ************
 
+<div class = "answer">
 An observation is a single thing with measurable characteristics, and each observation should be in its own row.  Variables, on the other hand, are things being measured, like height, color, score, count, and so on.  Variables should each be in their own column.  Values belong in cells, the intersection of rows and columns, and each cell should have one and only one value -- no combining!
+</div>
 
 **************
-</div>
+
 
 ## Sources of Messy Data
 
@@ -412,7 +412,7 @@ If we were to abide by the suggestion that each topic belongs in its own table, 
 | 3 | 2000-04-15 | 2 | 70 |
 | 3 | 2000-04-22 | 3 | 68 |
 
-This means that we only have to correct a mispelled artist name or incorrect track duration in one place, rather than multiple locations.  This is especially important in SQL databases.  Still, this is more an issue of data storage and ease of updating, rather than cleaning up data for computation.  Consider this advice completely optional!
+This means that we only have to correct a misspelled artist name or incorrect track duration in one place, rather than multiple locations.  This is especially important in SQL databases.  Still, this is more an issue of data storage and ease of updating, rather than cleaning up data for computation.  Consider this advice completely optional!
 
 ### One Type in Multiple Tables
 
@@ -457,8 +457,7 @@ Occasionally we also have data that treat the same topic but are stored in separ
 
 Now that we've looked at several examples of messy data and ways to rearrange the data to make it tidy, let's look at a fabricated example and try to diagnose some of its problems.
 
-<div class = "question">
-
+<div>
 Take a look at the sample table provided below.  It's similar to what you might see in a publication, and it's in a great format for humans... but it's not tidy enough to work with easily in a computational way.  This table shows the results of the "QPT" psychometric (something we made up) and shares pre- and post-treatment means and standard deviations for different kinds of research cohorts.
 
 <table border="1" cellpadding="0.5em" cellspacing="0"><tbody><tr><td style="padding: 0.5em;">
@@ -613,6 +612,7 @@ Take a look at the sample table provided below.  It's similar to what you might 
         </tr></tbody></table>
 
 Which of the following are ways to make this dataset "tidy"?  Check all that apply!
+</div>
 
 [[X]] move "depression" status into a column instead of using it in a cell combined with other descriptors
 [[ ]] remove sex as a variable, since there's no way to detangle it from other variables
@@ -622,6 +622,7 @@ Which of the following are ways to make this dataset "tidy"?  Check all that app
 [[?]] There are multiple correct answers!
 ***************
 
+<div class = "answer">
 Depression status and timepoint should each become a column.  In fact, we suggest the following columns:
 
 * Depression +/- dx
@@ -653,10 +654,11 @@ There's no need to remove the sex variable, and the numerical values don't neces
 | neg | neg | f | 10 | pre | 110 | 13.9 |
 | neg | neg | m | 10 | post | 88 | 21.8 |
 | neg | neg | f | 10 | post | 95 | 20.6 |
+</div>
 
 **************
 
-</div>
+
 
 ## Tidy Data Analysis
 
@@ -670,7 +672,7 @@ Tidy data organization includes everything we've covered so far in this module! 
 
 <h4>Programming code that acts on the data should be consistent, concise, with predictable inputs and outputs, and sound like human language as much as possible.</h4>
 
-This is a dense topic that we won't explain in detail here, as the best way to demonstrate tidy code is through code examples, which we're intentionally avoiding here.  But it's helpful to point out that the shortest code isn't always the best code!  Some people like to play "code golf" - solving a problem in clever, obscure ways with as few lines of code as possible.  We urge you to consider that consise code doesn't mean "as short as possible", but rather "as long as needed to explain things well".  After all, data analysis code is intended for two audiences: the computer running the code and the people reading the code.  That's different than, say, the code that runs your operating system, which isn't designed to be read by people.  Consistency is also helpful for humans.  Naming data columns with the same case convention (such as camelCase or snake_case) is one way to be consistent and reduce the cognitive load on your reader.
+This is a dense topic that we won't explain in detail here, as the best way to demonstrate tidy code is through code examples, which we're intentionally avoiding here.  But it's helpful to point out that the shortest code isn't always the best code!  Some people like to play "code golf" - solving a problem in clever, obscure ways with as few lines of code as possible.  We urge you to consider that concise code doesn't mean "as short as possible", but rather "as long as needed to explain things well".  After all, data analysis code is intended for two audiences: the computer running the code and the people reading the code.  That's different than, say, the code that runs your operating system, which isn't designed to be read by people.  Consistency is also helpful for humans.  Naming data columns with the same case convention (such as camelCase or snake_case) is one way to be consistent and reduce the cognitive load on your reader.
 
 <h4>Each data analysis can be broken down into a series of atomic steps, such as "select this column" or "arrange the data by the values in that column". An arbitrarily complex data analysis can be broken down as a pipeline of atomic steps.</h4>
 
@@ -688,8 +690,6 @@ Again, here it's important to highlight that clever, brief code that accomplishe
 
 ### Quiz: Tidy Data analysis
 
-<div class = "question">
-
 Which of these are accurate suggestions with regard to making data analysis more tidy?  
 
 [[ ]] Tidy data analysis includes code that is as brief as possible in order to reduce computational processing time
@@ -700,10 +700,12 @@ Which of these are accurate suggestions with regard to making data analysis more
 [[?]] There are multiple correct answers!
 *********
 
-Data analysis should be consise.  For example, if you're doing a lot of cut-and-paste and nearly identical lines of code, it might be useful to make a function.  But that doesn't mean that it should be as short as possible.  After all, both computers **and** humans will consume the code, so writing inscrutable, genius level code that is difficult for average users to read is a bad idea.  In order to make data analysis more understandable and more tidy, habits like naming things and composing code in a consistent way can be very helpful.  Finally, pseudocode is a very useful tool that helps you understand the process that you want to carry out in small, atomic steps.
+<div class = "answer">
+Data analysis should be concise.  For example, if you're doing a lot of cut-and-paste and nearly identical lines of code, it might be useful to make a function.  But that doesn't mean that it should be as short as possible.  After all, both computers **and** humans will consume the code, so writing inscrutable, genius level code that is difficult for average users to read is a bad idea.  In order to make data analysis more understandable and more tidy, habits like naming things and composing code in a consistent way can be very helpful.  Finally, pseudocode is a very useful tool that helps you understand the process that you want to carry out in small, atomic steps.
+</div>
 
 ***********
-</div>
+
 
 
 ## Additional Resources
