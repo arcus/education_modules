@@ -210,6 +210,7 @@ Let's consider an example from section 3.1 of [Hadley's article](https://www.jst
 <div class = "hint"> Note that in the world of R users, Hadley Wickham is considered such a singularly important and yet friendly figure that he is often referred to simply as "Hadley".
 </div>
 
+<!-- data-type="none" -->
 | religion | <lia-keep><$10k</lia-keep> | <lia-keep>$10–20k</lia-keep> | <lia-keep>$20–30k</lia-keep> | <lia-keep>$30–40k</lia-keep> | <lia-keep>$40–50k</lia-keep> | <lia-keep>$50–75k</lia-keep> |
 | -------- | ----- | ------- | ------- | ------- | ------- | ------- |
 | Agnostic | 27 | 34 | 60 | 81 | 76 | 137 |
@@ -244,6 +245,7 @@ Thinking in computer-ese, giving very detailed instruction, is a kind of **algor
 
 What would a tidy format look like?  Consider this, which is the start of a tidy table.  In the interest of space, only the first handful of rows are shown.
 
+<!-- data-type="none" -->
 | religion | income | freq |
 | -------- | ------ | ---- |
 | Agnostic | <lia-keep><$10k</lia-keep> | 27 |
@@ -265,7 +267,7 @@ Again, the messy table isn't bad *per se*, but it's optimized for "looks good to
 
 In section 3.2 of his article, Hadley shows data from the World Health Organization.  In this dataset, related to tuberculosis, there's a column named, simply "column".  This is not original WHO data, but represents an interim step in transforming the original data to a more tidy form.  This interim step (called "molten" data) has made some important improvements in the data, but more work needs to be done. The column entitled "column" is hybrid: it contains sex (m or f) and age (0-14 years, 15-24 years, and so on, to 65+).  It is in a condensed form that we would judge "messy".  See a shortened version of this messy data below:
 
-
+<!-- data-type="none" -->
 | country | year | column | cases |
 | ------  | ---- | -----  | ----- |
 | AD | 2000 | m014 | 0 |
@@ -277,6 +279,7 @@ In section 3.2 of his article, Hadley shows data from the World Health Organizat
 | AE | 2000 | f014 | 3 |
 
 Again, consider the difficulty of asking the question "what's the sum of all the cases for 15-24 year olds?".  In the messy version, you'd have to start off by identifying which cases are for 15-24 year olds.  
+
 In English, you'd say something like "look for 1524 inside the value of 'column'", and then you'd have to figure out how to write that in code, using some sort of string comparison.  That's not trivial code, and it requires you to understand the pattern of a letter followed by two, three, or four numbers, and understand where one number in the range given ends and another begins.  For example, you can't just say "put a dash after the first two numbers" to indicate the range.  That would mean 014 would be read as the range 01-4.  
 
 While you as a **human** might be able to make quick work of intepreting the data, what's happening cognitively is actually rather complex and hard to translate to **computer code**.
@@ -285,7 +288,7 @@ In the "tidy" version proposed below, you can begin much more simply: "find all 
 
 Additionally, we would argue that the data below is much more "self documenting".  If you stumbled across this data with no additional information or codebook, it would be much more intuitive to have separate columns marked "sex" and "age", and you'd almost certainly interpret this data correctly.
 
-
+<!-- data-type="none" -->
 | country | year | sex | age | cases |
 | ------  | ---- | --- | --- | ----- |
 | AD | 2000 | m | 0–14 | 0 |
@@ -295,7 +298,6 @@ Additionally, we would argue that the data below is much more "self documenting"
 | AD | 2000 | m | 45–54 | 0 |
 | AD | 2000 | m | 55–64 | 0 |
 | AE | 2000 | f | 0-14 | 3 |
-
 
 
 ### Variables Stored in Both Rows and Columns
@@ -309,6 +311,7 @@ The weather data below (note that only a handful of the three dozen columns are 
 
 As you look over this table, see if you can describe the algorithm (rule-based process) by which you could ask for the maximum temperature on March 13, 2010, at the MX17004 station.  It's complicated and requires looking at column headers and multiple cells.
 
+<!-- data-type="none" -->
 | id | year | month | element | d1 | d2 | d3 | d4 | d5 | d6 | d7 | d8 |
 | -- | ---- | ----- | ------- | -- | -- | -- | -- | -- | -- | -- | -- |
 | MX17004 | 2010 | 1 | tmax | — | — | — | — | — | — | — | — |
@@ -328,7 +331,7 @@ A tidy version of this data is shown below.  Is it simpler now to ask for the ma
 Notice how the date field is united in the tidy data below, which may seem to go against some of the principles we've argued for.  Dates are so frequently used, however, that it's very easy to extract, from a given date, the year, month, day, and even the day of the week, using computational methods.  Whether to break out a date into year, month, and day depends a lot on your use case.  For example, are you planning on obtaining temperature averages across all of June, and comparing June low temperature averages across years?
 </div>
 
-
+<!-- data-type="none" -->
 | id | date | tmax | tmin |
 | -- | -- | -- | --  |
 | MX17004 | 2010-01-30 | 27.8 | 14.5 |
@@ -356,6 +359,7 @@ This division of data so that the minimum amount of data is reiterated in multip
 
 <h4>A Sample demographics table</h4>
 
+<!-- data-type="none" -->
 | patient_id | date_of_birth | sex | last_name | first_name |
 | -------    | -----------   | -   | ------    | ----- |
 | ABC123     | 1970-03-15    | M   | Bird      | Big |
@@ -364,6 +368,7 @@ This division of data so that the minimum amount of data is reiterated in multip
 
 <h4>A Sample medication_order table</h4>
 
+<!-- data-type="none" -->
 | patient_id | provider_id | med_id | order_date |
 | -------    | -----------   | --- | ------    | ----- |
 | ABC123     | 491272    | 8000412   | 2021-05-15 |  
@@ -372,7 +377,7 @@ This division of data so that the minimum amount of data is reiterated in multip
 
 That brings us to what sometimes happens when people try to squeeze too much data into a single spreadsheet or .csv file: multiple topics treated in a single table.  When this happens we often see lots of repeated data, as Hadley points out in his example taken from Billboard.  The data below represents the state of the Billboard data *after* some initial tidying has taken place, but we can see that there is rather a lot of repeating data, even once the data has been reorganized.  This isn't a completely tidy dataset:
 
-
+<!-- data-type="none" -->
 | year | artist | time | track | date | week | rank |
 | ---- | -----  | ---- | ----  | ---  | ---  | ---- |
 | 2000 | 2 Pac  | 4:22 | Baby Don't Cry | 2000-02-26 | 1 | 87 |
@@ -394,6 +399,7 @@ If we were to abide by the suggestion that each topic belongs in its own table, 
 
 <h4>Song Data</h4>
 
+<!-- data-type="none" -->
 | id | artist | track | time |
 | -- | ----- | ----- | ----- |
 | 1 | 2 Pac   | Baby Don't Cry | 4:22 |  
@@ -403,6 +409,7 @@ If we were to abide by the suggestion that each topic belongs in its own table, 
 
 <h4>Ranking Data</h4>
 
+<!-- data-type="none" -->
 | id | date | week | rank |
 | ----  | ---  | ---  | ---- |
 | 1 | 2000-02-26 | 1 | 87 |
@@ -423,6 +430,7 @@ Occasionally we also have data that treat the same topic but are stored in separ
 
 <h4>Clinic A</h4>
 
+<!-- data-type="none" -->
 | subject_id | dob | abc_score | xyz_score |
 | ---------- | --- | --------- | --------- |
 | 4123691    | 2009-08-12 | 87 | 4 |
@@ -432,6 +440,7 @@ Occasionally we also have data that treat the same topic but are stored in separ
 
 <h4>Clinic B</h4>
 
+<!-- data-type="none" -->
 | subject_id | dob | abc_score | xyz_score |
 | ---------- | --- | --------- | --------- |
 | 3396811    | 2010-12-29 | 78 | 4 |
@@ -441,6 +450,7 @@ Occasionally we also have data that treat the same topic but are stored in separ
 
 <h4>Combined Data</h4>
 
+<!-- data-type="none" -->
 | subject_id | dob | abc_score | xyz_score | collection_site |
 | ---------- | --- | --------- | --------- | -- |
 | 4123691    | 2009-08-12 | 87 | 4 | A |
@@ -453,6 +463,7 @@ Occasionally we also have data that treat the same topic but are stored in separ
 | 6382922    | 2008-03-20 | 90 | 5 | B |
 
 ## Quiz: Tidying Data
+
 
 Now that we've looked at several examples of messy data and ways to rearrange the data to make it tidy, let's look at a fabricated example and try to diagnose some of its problems.
 
@@ -621,8 +632,7 @@ Which of the following are ways to make this dataset "tidy"?  Check all that app
 [[?]] There are multiple correct answers!
 
 
-<div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
+***************
 
 Depression status and timepoint should each become a column.  In fact, we suggest the following columns:
 
@@ -636,6 +646,7 @@ Depression status and timepoint should each become a column.  In fact, we sugges
 
 There's no need to remove the sex variable, and the numerical values don't necessarily need to have the same number of significant digits to be considered "tidy".  Here's one way to make the table above into a tidy dataset ready for computational analysis:
 
+<!-- data-type="none" -->
 | Depression status | Anxiety status | Sex | Count | Timepoint | Mean QPT | SD QPT |
 | --- | --- | --- | --- | --- | --- | --- |
 | pos | pos | m | 12 | pre | 130 | 25 |
@@ -655,8 +666,8 @@ There's no need to remove the sex variable, and the numerical values don't neces
 | neg | neg | m | 10 | post | 88 | 21.8 |
 | neg | neg | f | 10 | post | 95 | 20.6 |
 
-</details>
-</div>
+**************
+
 </div>
 
 ## Tidy Data Analysis
