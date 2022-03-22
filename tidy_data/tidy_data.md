@@ -53,7 +53,7 @@ Experience working with rectangular data (data in rows and columns) will be help
 
 What do we mean by "tidy" data?
 
-To begin with, we're talking specifically about **"rectangular" data**.  Rectangular data (or **"tabular"** data, from the word "table") has rows and columns.  This is a very typical kind of data for many disciplines, but it's not the only data out there.  Here's a few examples of data that are incredibly important but are not rectangular / tabular:
+To begin with, we're talking specifically about **"rectangular" data**.  Rectangular data (or **"tabular"** data, from the word "table") has rows and columns.  This is a very typical kind of data for many disciplines, but it's not the only data out there.  Here are a few examples of data that are incredibly important but are not rectangular / tabular:
 
 * Wave form data, such as electrocardiogram data
 * Recordings of audio and/or video, such as videorecordings of babies at play
@@ -229,18 +229,12 @@ While humans can make sense of this data, remember that computers must be told i
 
 <div class = "hint">
 
-<div style = "align-items: center; display: flex;">
-<div style = "margin: 1rem; max-width: 55%; float:left; padding-right:4em;">
+![Rubber duck.](media/rubber_duck.png)<!-- style = "max-width: 300px;" -->
 
 Thinking in computer-ese, giving very detailed instruction, is a kind of **algorithmic thinking**.  An **algorithm** is simply a well-specified process that solves a problem.  It takes practice to think like a computer instead of like a person, and one of the fun things that many programmers like to do to help this process along is called "rubber duck debugging".  This involves explaining to, yes, a rubber duck (or other friendly yet not very smart collaborator, like your cat) exactly what you're trying to do and how to get there, following detailed rules.  It may seem silly, but give it a try!
 
-</div>
-<div style = "margin: 1rem auto; max-width: 35%; float:left;">
-![Rubber duck](media/rubber_duck.png)
-
 <figcaption style = "font-size: 0.8em;">Image courtesy Steve Webel, https://www.flickr.com/photos/webel/306290032 </figcaption>
-</div>
-</div>
+
 </div>
 
 What would a tidy format look like?  Consider this, which is the start of a tidy table.  In the interest of space, only the first handful of rows are shown.
@@ -348,7 +342,7 @@ Notice how the date field is united in the tidy data below, which may seem to go
 ### Multiple Types in One Table (Optional)
 
 <div class = "hint">
-Remember that the original third rule of tidy data was replaced in later writings by Hadley Wickham?  Well, briefly, it's useful to bring up the original rule.  This section may be considered a bit optional for people working with .csv documents or spreadsheets, but the topic we're going to cover is important in the world of SQL databases, so we want to explain it.  Feel free to skip if it seems unhelpful!
+Remember that the original third rule of tidy data was replaced in later writings by Hadley Wickham?  Well, briefly, it's useful to bring up the original rule.  That original third rule asserts that each observational unit (or topic) forms its own table.  This section may be considered optional for people working with .csv documents or spreadsheets, but the topic we're going to cover is important in the world of SQL databases, so we want to explain it.  Feel free to skip if it seems unhelpful!
 </div>
 
 <h4>"Normalized" Data</h4>
@@ -360,7 +354,7 @@ This division of data so that the minimum amount of data is reiterated in multip
 <h4>A Sample demographics table</h4>
 
 <!-- data-type="none" -->
-| patient_id | date_of_birth | sex | last_name | first_name |
+| patient_id | date\_of\_birth | sex | last_name | first_name |
 | -------    | -----------   | -   | ------    | ----- |
 | ABC123     | 1970-03-15    | M   | Bird      | Big |
 | TRSH789    | 1985-08-20    | M   | the Grouch | Oscar |
@@ -375,7 +369,7 @@ This division of data so that the minimum amount of data is reiterated in multip
 | ABC123     | 491272  | 7960004   | 2022-02-01 |
 | SMLE321    | 223618    | 8000412 | 2020-08-19 |
 
-That brings us to what sometimes happens when people try to squeeze too much data into a single spreadsheet or .csv file: multiple topics treated in a single table.  When this happens we often see lots of repeated data, as Hadley points out in his example taken from Billboard.  The data below represents the state of the Billboard data *after* some initial tidying has taken place, but we can see that there is rather a lot of repeating data, even once the data has been reorganized.  This isn't a completely tidy dataset:
+That brings us to what sometimes happens when people try to squeeze too much data into a single spreadsheet or .csv file: multiple topics treated in a single table.  When this happens we often see lots of repeated data, as Hadley points out in his example taken from Billboard.  The data below represents the state of the Billboard data **after** some initial tidying has taken place, but we can see that there is rather a lot of repeating data, even once the data has been reorganized.  This isn't a completely tidy dataset:
 
 <!-- data-type="none" -->
 | year | artist | time | track | date | week | rank |
@@ -630,8 +624,6 @@ Which of the following are ways to make this dataset "tidy"?  Check all that app
 [[X]] make "timepoint" into a new column, with possible values including "pre" and "post"
 [[X]] increase the rows so that there are 16 rows representing 16 distinct cohorts
 [[?]] There are multiple correct answers!
-
-
 ***************
 
 Depression status and timepoint should each become a column.  In fact, we suggest the following columns:
