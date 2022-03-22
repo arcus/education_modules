@@ -103,7 +103,7 @@ You should now be all ready to use Git on your machine. Open up Git Bash to use 
 
 You will interact with Git through the Git Bash application, which should now appear in your Start Menu as well as when you search for it. Clicking on Git Bash will open a new Git Bash console. It is here where you will enter all commands relating to Git. This is the command line interface you should use for Git. All commands are typed following the `$` and run by pressing `Enter`.
 
-![A blank Git Bash window.](media/git_bash_new.png)<!-- style = "max-width:500px;"  border = 5px solid --> 
+![A blank Git Bash window.](media/git_bash_new.png)<!-- style = "max-width:500px;"  border = 5px solid -->
 
 
 ## Global configurations
@@ -200,7 +200,7 @@ It is possible to reconfigure the text editor for Git whenever you want to chang
 <div class = "help">
 **Exiting Vim**
 
-Note that Vim is the default editor for many programs. If you haven't used Vim before and wish to exit a session without saving your changes, press `Esc` then type `:q!` and hit `Enter` or `↵` or on Macs, `Return`.
+Note that Vim is the default editor for many programs. If you haven't used Vim before and wish to exit a session without saving your changes, press `Esc` then type `:q!` and hit `Enter` or `↵`.
 If you want to save your changes and quit, press `Esc` then type `:wq` and hit `Enter`.
 
 This is [a common problem that has frustrated many a new Git user](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/)! You are not alone.
@@ -317,11 +317,11 @@ Asking a peer (in person, or via an online community of practice) is probably th
 </div>
 ***
 
-<div class = "details">
+<details>
 In case you're curious, this command is an example of [how to set aliases in Git](https://www.atlassian.com/git/tutorials/git-alias), something we didn't cover in this lesson.
 
 Basically, aliases are shortcuts you can write for yourself so you don't have to type out full Git commands every time. We won't be using aliases in the lessons here, but you may like to set some up on your own computer if that sounds attractive to you!
-</div>
+</details>
 
 ## Additional Resources
 
