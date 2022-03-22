@@ -433,7 +433,8 @@ Here are a few useful geom functions for visualizing clinical data, but there ar
 | ![unlabeled box plot](media/geom_boxplot_mini.png)<!-- style = "max-width:100px;" --> | geom_boxplot() |
 | ![unlabeled line graph](media/geom_line_mini.png)<!-- style = "max-width:100px;" --> | geom_line() |
 
-### Step 3: aesthetic mappings
+### Step 3: Aesthetic Mappings
+
 
 
 
@@ -485,7 +486,8 @@ Let's do a quick check of your understanding of aesthetic mappings.  As a remind
 
 Here are some aesthetic mappings to consider:
 
-![A handful of aesthetic options including position, shape, size, color, line width, and line type.](media/aesthetic_mappings.png)<!-- style = "max-width:700px" -->
+![6 aesthetic options: position, shape, size, color, line width, and line type.](media/aesthetic_mappings.png)<!-- style = "max-width:700px" -->
+
 
 From *Fundamentals of Data Visualization*, by Claus Wilke, licensed under CC-BY-NC-ND
 
@@ -524,7 +526,8 @@ There are actually a lot of aesthetic mapping possibilities, and they depend on 
 
 Picking the best aesthetics for your graph is as much an art as it is a science. Claus Wilke's *[Fundamentals of Data Visualization](https://serialmentor.com/dataviz)* is a great introduction to this topic.
 
-### Exercise Time!
+### Hands-On: Mapping Aesthetics
+
 
 Using your RStudio file browser (one of the tabs that usually appears in the lower right pane of RStudio), please find and open the `r_basics_visualize_data` directory, and then open `visualize_exercises.Rmd`, which will allow you to work alongside the sections of this module.
 
@@ -636,7 +639,8 @@ A geom function is a function that, given the data and aesthetic mappings, gener
 
 In the next exercise, you're going to work hands-on with geom functions.
 
-### Exercise Time!
+### Hands-On: Geom functions
+
 
 In your RStudio environment, you should already have `visualize_exercises.Rmd` open.  If not, please reopen it.  Scroll down to `### Your Turn: Geom functions`, which should be around line 90 or so.
 
@@ -686,9 +690,11 @@ Run that code, and you should see something like this!
 
 To save a plot you've created in the console, you can go to the **Plots** pane on the bottom right of the RStudio window, click "Export", and select "Save as Image".
 
-To save a plot you've created by running some code inside an R notebook, you can **right-click** the plot and select "Save image as".
+To save a plot you've created by running some code inside an R Markdown file, you can **right-click** the plot and select "Save image as".
 
-![RStudio window with the two options illustrated and labeled: Plots, Export, Save as Image, and a right click "save image as"](media/saving_images.png)<!-- style = "max-width:700px;" -->
+
+![""](media/saving_images.png)<!-- style = "max-width:700px;" -->
+
 
 
 ## More Visualization Options
@@ -707,7 +713,8 @@ ggplot(covid_testing) +
   )
 ```
 
-![Histogram that has, instead of a single bar for each bin, three -- one for invalid tests, one for negative tests, and one for positive tests.  Each is in a distinct color.](media/position_dodge.png)<!-- style = "max-width:700px;" -->
+![A histogram. Instead of a single bar for each bin, there are three: one for invalid tests, one for negative tests, and one for positive tests.  Each is in a distinct color.](media/position_dodge.png)<!-- style = "max-width:700px;" -->
+
 
 <h3>Themes</h3>
 
@@ -722,7 +729,8 @@ ggplot(covid_testing) +
   theme_light()
 ```
 
-![Histogram with three bars per bin and a light-colored background](media/theme_light.png)<!-- style = "max-width:700px;" -->
+![The same histogram as above, but now with a white background instead of a gray one.](media/theme_light.png)<!-- style = "max-width:700px;" -->
+
 
 <h3>Scales</h3>
 
@@ -745,7 +753,8 @@ ggplot(covid_testing) +
   scale_fill_manual(values = cols)
 ```
 
-![Histogram with three bars per bin and a light-colored background, but this time the colors of the three kinds of bars are different than we saw earlier.](media/color_scales.png)<!-- style = "max-width:700px;" -->
+![The same histogram as before, but with differently colored bins now.](media/color_scales.png)<!-- style = "max-width:700px;" -->
+
 
 <h3>Facets</h3>
 
@@ -823,9 +832,12 @@ If you'd like to learn more about which graphics are most effective in specific 
 *R for Data Science* is a free text that provides lots of helpful explanation and examples.  The [section on data visualization](https://r4ds.had.co.nz/data-visualisation.html) goes into much more detail than we were able to do in this brief module.  It also provides a number of exercises, if you enjoy learning by doing!
 
 The entire text is available [in English](https://r4ds.had.co.nz/) and [in Spanish](https://es.r4ds.hadley.nz/).
+
+There's also an [unofficial solutions guide](https://jrnold.github.io/r4ds-exercise-solutions/index.html) (only available in English) to allow you to check your work.
 </div>
 <div style = "margin: 1rem; max-width: 20%; float:left;">
-![Book Cover](media/r4ds.png)<!-- style = "max-width: 90%" -->
+![""](media/r4ds.png)<!-- style = "max-width: 90%" -->
+
 </div>
 </div>
 
