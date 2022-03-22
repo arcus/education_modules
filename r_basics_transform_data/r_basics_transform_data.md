@@ -202,9 +202,24 @@ Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`. 
 </div>
 
 
-### Quiz: `dplyr()`
+### Subsetting Columns or Rows
 
-Let's see what you remember about dplyr!
+Often, you have a large data frame but want to create a graph or analyze data from only a small part of it. The `dplyr` package, part of the larger [tidyverse](https://www.tidyverse.org/) set of packages, works great for this purpose.
+
+Let's look at how you can subset a data frame (choose only certain columns and/or rows) by using `dplyr`.
+
+`dplyr` provides two functions for subsetting data frames: `select()` for subsetting columns, and `filter()` for subsetting rows:
+
+`select()` reshapes data so that it includes only the columns you specify. ![A grey colored data frame of five columns, with three of them selected (as indicated by a blue color), is transformed into a data frame of three selected (blue colored) columns](media/dplyr_select.png)<!--
+style = "max-width:500px;"-->
+
+`filter()` reshapes data so that it includes only the rows that meet your conditions. ![A grey colored data frame of four rows and a header row, with two rows selected (as indicated by a blue color), is transformed into a data frame of two selected (blue colored) rows, along with a header.](media/dplyr_filter.png)<!--
+style = "max-width: 600px;"
+-->
+
+### Quiz: `dplyr()` Functions
+
+Let's see what you remember about dplyr and its functions (which we've only described briefly so far)
 
 <div class = "question">
 
@@ -226,24 +241,8 @@ The dplyr package is one of several packages that together make up the tidyverse
 </div>
 </div>
 
-## Subsetting Columns or Rows
 
-Often, you have a large data frame but want to create a graph or analyze data from only a small part of it. The `dplyr` package, part of the larger [tidyverse](https://www.tidyverse.org/) set of packages, works great for this purpose.
-
-Let's look at how you can subset a data frame (choose only certain columns and/or rows) by using `dplyr`.
-
-`dplyr` provides two functions for subsetting data frames: `select()` for subsetting columns, and `filter()` for subsetting rows:
-
-`select()` reshapes data so that it includes only the columns you specify. ![A grey colored data frame of five columns, with three of them selected (as indicated by a blue color), is transformed into a data frame of three selected (blue colored) columns](media/dplyr_select.png)<!--
-style = "max-width:500px;"-->
-
-`filter()` reshapes data so that it includes only the rows that meet your conditions. ![A grey colored data frame of four rows and a header row, with two rows selected (as indicated by a blue color), is transformed into a data frame of two selected (blue colored) rows, along with a header.](media/dplyr_filter.png)<!--
-style = "max-width: 600px;"
--->
-
-
-
-### The `select()` Function
+## The `select()` Function
 
 Let's look at `select()` first. The `select()` function extracts **columns** from a data frame, using the column **name(s)** as argument(s).
 
@@ -301,7 +300,7 @@ Answer (E) is not correct, because we know (D) is incorrect.
 </div>
 </div>
 
-### The `filter()` Function
+## The `filter()` Function
 
 One of the most important `dplyr` functions to know about is `filter()`. `filter()` extracts rows, and it does that based on **logical criteria**, or a **condition** that can be evaluated to be true (keep that row as part of our subset) or false (don't keep that row).
 
@@ -635,7 +634,7 @@ In the box below, rewrite the following statement with a pipe:
 </div>
 </div>
 
-## Create New Columns With `mutate()`
+## The `mutate()` Function
 
 `mutate()` is an extremely useful `dplyr` function, and you can use it to make new variables / columns.  That's what we'll use it for here.  You can also use `mutate()` to change existing columns (say, turn an entire column lowercase or round or scale a numeric value).  
 
