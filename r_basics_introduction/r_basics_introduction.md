@@ -529,7 +529,21 @@ You can download and **install** a package with the command `install.packages`. 
 
 <div class = "warning">
 
-On our RStudio Server, you won't need to install any packages for this course (as we have installed them for you). If you're using R on your own computer, however, **you will have to install packages**.
+On our RStudio Server, you won't need to install any packages for this course (as we have installed them for you). If you're using R on your own computer, however, **you will have to install packages**.  In the console, type `install.packages("tidyverse")` and you'll see a bunch of output (a sample of which is shown below -- don't worry if your output is a little different in terms of version or downloaded location).  Then you're ready to proceed!
+
+```r
+> install.packages("tidyverse")
+Installing package into ‘/Users/paytonk/Library/R/x86_64/4.1/library’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.1/tidyverse_1.3.1.tgz'
+Content type 'application/x-gzip' length 421072 bytes (411 KB)
+==================================================
+downloaded 411 KB
+
+
+The downloaded binary packages are in
+	/var/folders/9f/_svfj7g145711jjsr6jnpgsj5sb7dt/T//RtmppKqGtx/downloaded_packages
+  ```
 
 Make sure you **include the quotes** around tidyverse. When to use quotes is a tricky topic that we will talk about more later in this module, but for now, keep in mind that you will *always* need to put quotes around the name of a package whenever using `install.packages()`.
 
@@ -775,7 +789,7 @@ RStudio's Data Import cheat sheet helps with importing data from file types simi
 *R for Data Science* is a free text that provides lots of helpful explanation and examples.  The [section on data import](https://r4ds.had.co.nz/data-import.html) goes into much more detail than we were able to do in this brief module.
 
 The entire text is available [in English](https://r4ds.had.co.nz/) and [in Spanish](https://es.r4ds.hadley.nz/).
-There's also an [unofficial solutions guide](https://jrnold.github.io/r4ds-exercise-solutions/index.html) (only available in English) to allow you to check your work. 
+There's also an [unofficial solutions guide](https://jrnold.github.io/r4ds-exercise-solutions/index.html) (only available in English) to allow you to check your work.
 </div>
 <div style = "margin: 1rem; max-width: 20%; float:left;">
 ![Book Cover](media/r4ds.png)<!-- style = "max-width: 90%" -->
