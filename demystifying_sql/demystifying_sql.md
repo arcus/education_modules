@@ -103,7 +103,7 @@ Where did SQL come from?  SQL was created in the early 1970's by IBM as a method
 
 By 1979 Relational Software, Inc. (now Oracle Corporation) released the first commercially available implementation of SQL as a part of their Oracle V2 database application.
 
-Today SQL is the most common programing language for extracting and organizing data in relational database systems.
+Today SQL is the most common programming language for extracting and organizing data in relational database systems.
 
 </div>
 
@@ -179,7 +179,7 @@ Although all SQL implementations have a similar structure, and the same basic sy
 
 Colloquially people often refer to the different SQL dialects as different "flavors" of SQL.
 
-Some Popular "Flavors" of SQL:
+Some popular "flavors" of SQL:
 
 * [**MySQL**](https://www.mysql.com/) (open source)
 * [**SQLite**](https://www.sqlite.org) (open source)
@@ -233,7 +233,7 @@ Many people choose write SQL keywords in all capital letters, but that's so that
 
 **Select All Columns**
 
-If you would like to return **all** of the columns from the table(s) specified in your SQL query, you can use the `*` wild card character as shown in the example below.  You'll notice that we put a line break between the asterisk and the `FROM` keyword.  Spaces and line breaks, or **whitespace**, doesn't really matter for SQL.  You can run your code together on a single line, or (preferably) add intendation and spaces that help human readers understand your code more easily.
+If you would like to return **all** of the columns from the table(s) specified in your SQL query, you can use the `*` wild card character as shown in the example below.  You'll notice that we put a line break between the asterisk and the `FROM` keyword.  Spaces and line breaks, or **whitespace**, don't really matter for SQL.  You can run your code together on a single line, or (preferably) add intendation and spaces that help human readers understand your code more easily.
 
 ```sql
 SELECT *
