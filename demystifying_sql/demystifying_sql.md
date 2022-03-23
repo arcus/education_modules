@@ -122,7 +122,7 @@ What does "SQL" stand for?
 *********
 
 <div class = "answer">
-SQL, which can be pronounced "sql" or S-Q-L, stands for Structured Query Language!
+SQL, which can be pronounced "sequel" or S-Q-L, stands for Structured Query Language!
 </div>
 
 ***********
