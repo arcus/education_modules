@@ -196,7 +196,7 @@ That said, knowing the specific "flavor" of **SQL** your database uses is especi
 A SQL **query** is essentially a question or request for data, written in a specific structure.  Let's take a closer look at how to compose a SQL query!
 
 <div class = "care">
-If you feel anxious when you see code, you have a great opportunity in this module.  We're going to give some simple examples of SQL code to help build your intuition about SQL.  You **won't** have to run any code and we're only going to barely scratch the surface of SQL **syntax** (supported commands and how to write them -- the grammar and vocabular of SQL).  This will help build your intuition about what SQL is good at (picking out just the right data).
+If you feel anxious when you see code, you have a great opportunity in this module.  We're going to give some simple examples of SQL code to help build your intuition about SQL.  You **won't** have to run any code and we're only going to barely scratch the surface of SQL **syntax** (supported commands and how to write them -- the grammar and vocabulary of SQL).  This will help build your intuition about what SQL is good at (picking out just the right data).
 </div>
 
 At a high level, we generally provide three pieces of information when constructing **SQL** "**queries**":
