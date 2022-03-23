@@ -103,7 +103,7 @@ Where did SQL come from?  SQL was created in the early 1970's by IBM as a method
 
 By 1979 Relational Software, Inc. (now Oracle Corporation) released the first commercially available implementation of SQL as a part of their Oracle V2 database application.
 
-Today SQL is the most common programing language for extracting and organizing data in relational database dystems.
+Today SQL is the most common programing language for extracting and organizing data in relational database systems.
 
 </div>
 
