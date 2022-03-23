@@ -7,7 +7,7 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Learning to Learn Data Science
-comment:  Discover what about learning data science is unique from other subjects.
+comment:  Discover how learning data science is different than learning other subjects.
 long_description: The process of learning data science can be different from that of learning other subjects. This module goes over some of those differences and provides advice for navigating this potentially unfamiliar territory.
 estimated_time: 20 minutes
 
@@ -46,9 +46,9 @@ This module is appropriate for anyone who is interested in continuing to learn d
 
 </div>
 ## What's so special about data science?
-Now you might be wondering why we've even bothered to make content on how to learn data science. After all, by very virtue of you being here to learn, you clearly have a past that is paved with successful acquisition of knowledge.
+You might be wondering why we've even bothered to make content on how to learn data science. After all, by the very virtue of you being here to learn, you clearly are motivated to learn and have a history of successful acquisition of knowledge.
 
-Data science has its own quirks related to the best ways to process and learn new knowledge. This is about setting expectations and making explicit some of the "hidden" curriculum for learning a new technical topic. Depending on the other subjects you've studied and your own level of knowledge in data science, it could be that you already know everything we're about to say. Regardless, it seems important to us to be upfront about this. Perhaps another way to frame this module is "Things We Wish We Knew When We Started Learning Data Science".
+Data science has its own quirks related to the best ways to process and learn new knowledge. This module addresses setting expectations and makes explicit some of the "hidden" curriculum for learning a new technical topic. Depending on the other subjects you've studied and your own level of knowledge in data science, it could be that you already know everything we're about to say. Regardless, it seems important to us to be upfront about knowledge acquisition in data science.  Perhaps another way to frame this module is "Things We Wish We Knew When We Started Learning Data Science".
 
 It is our hope that this content will allow you to plan your approach to learning in a way that maximizes the value you get out of however much time you are able to dedicate to learning.
 
@@ -68,7 +68,7 @@ This also works in the opposite direction --  our content will often show a spec
 That being said, within the field, there can be strongly held opinions on which approach is the "best". This can also lend itself rather unfortunately to a sense of [gatekeeping](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/reproducibility/reproducibility.md#2). 
 
 For example, [Stack Overflow](https://stackoverflow.com/) (an online forum that is useful for finding answers to coding problems) is notorious for having some bordering-on-hostile answers to questions, particularly on much older questions.
-This can be discouraging to encounter -- try to shift your focus on what you can learn from their suggestion, and make the decision for yourself which approach makes the most sense for you.
+This can be discouraging to encounter.  Try to shift your focus on what you can learn from their suggestion, and make the decision for yourself which approach makes the most sense for you.
 Above all else, remember that you're no less of a programmer for approaching things in a different way.
 
 ## Asking Questions and Finding Answers
@@ -101,7 +101,7 @@ Don't worry if this sounds like a tall order right now -- this can look like a l
 Coding and data science are all about failure. In fact, it could be said that coding is just a process of failing, working really hard to figure out what's causing the error or failure, figuring it out, and then proceeding for a bit until you fail again.
 
 
-This can be a stressful realization. For many of us, failure is something to be avoided at all costs, and it's not hard to understand why when you consider our achievement-prioritizing society. Within academia specifically, due to the incentives and structures within our academic and publishing institutions, failure can weigh heavily, where a failed experiment may spell trouble for getting a grant renewal or another peer-reviewed publication. Depending on your background, failure can be especially terrifying -- if you do or have ever done any sort of clinical work, failure can often be related quite directly with some sort of harm to a patient. In those circumstances, where the fail case is so severe, it makes a lot of sense to be highly failure averse. Within this realm however, failure is embraced, or at the very least accepted as an integral part of the process.
+Recognizing the inevitability of failure can be a stressful. For many of us, failure is something to be avoided at all costs, and it's not hard to understand why when you consider our achievement-prioritizing society. Within academia specifically, due to the incentives and structures within our academic and publishing institutions, failure can weigh heavily.  A failed experiment may spell trouble for getting a grant renewal or another peer-reviewed publication. Depending on your background, failure can be especially terrifying -- if you do or have ever done any sort of clinical work, failure can often be related quite directly with some sort of harm to a patient. In those circumstances, where the consequences of failure are so severe, it makes a lot of sense to be highly failure averse. Within the realm of writing code, however, failure is **embraced**, or at the very least accepted as an integral part of the process.
 
 
 
@@ -119,7 +119,7 @@ Unfortunately because everyone has a different tolerance for ambiguity and frust
 
 However, there are a few things that can be useful to keep in mind as heuristics:
 
-- Are you at the end of your rope? If the choice is between giving up entirely and reaching out for help -- *always* reach out for help!
+- Are you at the end of your rope? If the choice is between giving up entirely and reaching out for help -- **always** reach out for help!
 - Are you out of ideas? If you've exhausted everything you can think of, and you aren't sure what else you could try -- you likely should reach out for help!
 - How much value are you getting from troubleshooting on your own? If you still haven't solved the problem, but feel as though you're learning new things along the way, it might be a good idea to keep trying. On the other hand, finding yourself getting increasingly confused is a good sign it's time to call for backup!
 - When in doubt, reach out!
