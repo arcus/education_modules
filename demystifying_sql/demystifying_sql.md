@@ -293,6 +293,19 @@ SQL is great at working with rectangular data, data that is stored in tables wit
 
 </div>
 
+## Recap
+
+In this module, you learned about the language SQL, which is an acronym for "Structured Query Language".  It's a powerful tool for requesting specific subsets of data from a relational database, and has been around since the 1970's because of its efficiency and utility.  
+
+We also introduced you to two important elements of the language:
+
+* The "select" statement, which uses `SELECT` and `FROM`
+* The "where" statement, which uses `WHERE`
+
+We also discussed what SQL doesn't provide, like robust language and statistical processing and data visualization.  SQL is a tool that ordinarily is used in concert with other tools, each one used in its area of greater strength.
+
+Finally, you learned about the structure of relational databases: data stored in tables, which are comprised of rows and columns.  Columns may contain identifers that allow data from different tables to be related to one another, and that's why the word "relational" appears.
+
 ## Additional Resources
 
 * Khan Academy's [Introduction to SQL](https://www.khanacademy.org/computing/computer-programming/sql) is high quality and easy to learn from.
