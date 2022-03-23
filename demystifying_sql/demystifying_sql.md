@@ -51,7 +51,7 @@ Experience working with rectangular data (data in rows and columns) will be help
 
 ## SQL: A Definition
 
-To put it simply, SQL (**S**tructured **Q**uery **L**anguage) is a programming language used to interact with "**Relational Databases**".  You can pronounce it as "sequel" or just say the letters S-Q-L.
+To put it simply, **SQL** (**S**tructured **Q**uery **L**anguage) is a programming language used to interact with "**Relational Databases**".  You can pronounce it as "sequel" or just say the letters S-Q-L.
 
 That definition above itself introduces a new term.  So, what's a **relational database**?
 
@@ -175,11 +175,11 @@ For all of these "downstream analytics" use cases, you will want to use an actua
 
 ### SQL Implementations
 
-Although all **SQL** implementations have a similar structure, and the same basic syntax, each different **SQL** database product often has its own minor variations in dialect.
+Although all SQL implementations have a similar structure, and the same basic syntax, each different SQL database product often has its own minor variations in dialect.
 
-Colloquially people often refer to the different **SQL** dialects as different "flavors" of **SQL**.
+Colloquially people often refer to the different SQL dialects as different "flavors" of SQL.
 
-Some Popular "Flavors" of **SQL**:
+Some Popular "Flavors" of SQL:
 
 * [**MySQL**](https://www.mysql.com/) (open source)
 * [**SQLite**](https://www.sqlite.org) (open source)
@@ -187,9 +187,9 @@ Some Popular "Flavors" of **SQL**:
 * [**Oracle**](https://www.oracle.com/database/technologies/appdev/sql.html) (proprietary)
 * [**BigQuery**](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) (proprietary)
 
-The most common difference between different **SQL** "flavors" are the availability of different functions that users can use for data manipulation, as well as the types of error messages that will be returned to the user when running code with syntax issues.
+The most common difference between different SQL "flavors" are the availability of different functions that users can use for data manipulation, as well as the types of error messages that will be returned to the user when running code with syntax issues.
 
-That said, knowing the specific "flavor" of **SQL** your database uses is especially useful when first getting started writing queries and troubleshooting errors.
+That said, knowing the specific "flavor" of SQL your database uses is especially useful when first getting started writing queries and troubleshooting errors.
 
 ## SQL Queries
 
@@ -199,13 +199,13 @@ A SQL **query** is essentially a question or request for data, written in a spec
 If you feel anxious when you see code, you have a great opportunity in this module.  We're going to give some simple examples of SQL code to help build your intuition about SQL.  You **won't** have to run any code and we're only going to barely scratch the surface of SQL **syntax** (supported commands and how to write them -- the grammar and vocabulary of SQL).  This will help build your intuition about what SQL is good at (picking out just the right data).
 </div>
 
-At a high level, we generally provide three pieces of information when constructing **SQL** "**queries**":
+At a high level, we generally provide three pieces of information when constructing SQL "**queries**":
 
  1. The name of the **table(s)** where the data is stored.
  2. The **column name(s)** you want to look at from the table(s) you specified.  Want all the columns?  You can use an asterisk!
  3. Any **filtering condition(s)** you want to apply to your data pull.  This part is optional but is often used.
 
-You put these basic pieces of information together using the syntax shown below to create a **SQL** query:
+You put these basic pieces of information together using the syntax shown below to create a SQL query:
 
 ```sql
 SELECT _2_ FROM _1_ WHERE _3_;
