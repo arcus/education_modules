@@ -183,7 +183,7 @@ It's important to note that regardless of which version of RStudio that you use,
 
 Here's what the RStudio window looks like, regardless of version.
 
-![Four panes of the RStudio application window.  In the upper left, 'Editor'.  In the lower left, 'Console'.  In the upper right, 'Environment', in the lower right, 'Files'.](media/rstudio_panes.png)<!-- style = "max-width:900px;" -->
+![""](media/rstudio_panes.png)<!-- style = "max-width:900px;" -->
 
 On the top left is the **Editor**. This is where you edit your files with code in them.
 
