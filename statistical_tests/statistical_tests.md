@@ -2,13 +2,15 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.0
+version:  1.0.1
+module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Statistical Tests in Open Source Software
 comment:  This module provides an overview of the most commonly used kinds of statistical tests and links to code for running many of them in both R and python.
 
 long_description: This module contains a curated list of links to tutorials and examples of many common statistical tests in both R and python. If you want to use R or python for data analysis but aren't sure how to write code for the statistical tests you want to run, this is a great place to start. This will be an especially valuable resource for people who have experience conducting analysis in other software (e.g. SAS, SPSS, MPlus, Matlab) and are looking to move to R and/or python. If you are new to data analysis, this module provides some structure to help you think about which statistical tests to run, and examples of code to execute them. It doesn't cover the statistical theory itself, though, so you'll need to do some additional reading before applying the code for any tests you don't already understand (there are recommended resources for learning statistical techniques at the end of the module).
+estimated_time: 20 minutes (although reading through the linked tutorials may take much longer, depending on which tests you choose to read about)
 
 @learning_objectives  
 
@@ -20,7 +22,9 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+
+script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
@@ -33,12 +37,12 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/mod
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion**: 20 minutes (although reading through the linked tutorials may take much longer, depending on which tests you choose to read about)
+**Estimated time to completion**: @estimated_time
 
 **Pre-requisites**:
 
 * Learners should already be familiar with the purpose and assumptions of any test they intend to run --- this module covers the "how" only, not the "why".
-* This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md) first and then coming back here.
+* This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md) first and then coming back here.
 
 **Learning Objectives**:  
 
@@ -166,19 +170,19 @@ There are many, many analysis situations that do not fit neatly into any of the 
 
 Note: When the outcome of your mixed effects model is not continuous, you may need a generalized linear mixed model ([R code](https://stats.idre.ucla.edu/other/mult-pkg/introduction-to-generalized-linear-mixed-models/), [python code](https://www.statsmodels.org/stable/mixed_glm.html)).
 
-## Knowledge Check
+## Quiz
 
 True or False: R and python are equally user-friendly for running most statistical tests.
 
 [( )] TRUE
 [(X)] FALSE
-***********************************************************************
+****
 <div class = "answer">
 While both R and python are excellent languages for data science, R was built specifically with statistical analysis in mind, whereas python is a general purpose programming language. That often means the code to run a test in R may be shorter and easier to read than it would be in python, and the resulting output may be more informative.
 
 That said, excellent statistical analysis tools do exist in python (see the many links in this module), and if you want additional tests or more detailed output, you can always write the code yourself.
 </div>
-***********************************************************************
+****
 
 Which of the following are key points to consider when deciding which statistical tests to run? Select all that apply.
 
@@ -187,7 +191,7 @@ Which of the following are key points to consider when deciding which statistica
 [[X]] The distribution of the residuals of your model
 [[ ]] The type of predictor variable(s) (continuous or categorical)
 [[?]] Hint: Remember to select all of the correct answers. For review, see [Thinking about statistical tests](#thinking-about-statistical-tests).
-***********************************************************************
+****
 <div class = "answer">
 The number (one or more than one) and type (continuous or categorical) of **outcome** variables will definitely influence the kind of statistical test that will be appropriate.  
 
@@ -195,7 +199,7 @@ Although there are a couple exceptions, generally the type of **predictor** vari
 
 The assumptions of the General Linear Model include the assumption of normally distributed residuals. If that assumption is violated, you may need to run a [nonparametric test](#nonparametric-tests).
 </div>
-***********************************************************************
+****
 
 **For each of the following examples, try to think through what kind of statistical test would be most appropriate and type your answer in the space provided.**
 
@@ -210,11 +214,11 @@ Dr. Rosado wants to test the relationship between patients' age and BMI. Both ar
   let input = "@input".trim();
   /.*/i.test(input);
 </script>
-***********************************************************************
+****
 <div class = "answer">
 This sounds like a case with [no clear outcome variables](#no-distinct-outcome). Dr. Rosado just wants to test the strength of the relationship between the variables. If they wanted to consider age as a predictor and BMI as an outcome, then they could run this as a [linear regression](#one-continuous-outcome).
 </div>
-***********************************************************************
+****
 
 
 Di has run an experiment where patients were randomly assigned to one or two treatment conditions or a control. Now she wants to examine how three different biomarkers (continuous variables) differ based on experimental group. What kind of test would you recommend?
@@ -224,11 +228,11 @@ Di has run an experiment where patients were randomly assigned to one or two tre
   let input = "@input".trim();
   /.*/i.test(input);
 </script>
-***********************************************************************
+****
 <div class = "answer">
 Because Di has multiple outcome variables to consider, [multivariate tests](#more-than-one-continuous-outcome) would likely be appropriate. The predictor in this case will be experimental group (treatment 1, treatment 2, or control), so a one-way MANOVA would be a reasonable choice.
 </div>
-***********************************************************************
+****
 
 Prof. Chatti was planning to run a regression model, but they're working with data that have pronounced skew and a lot of outliers. What kind of test should they consider?
 
@@ -237,17 +241,17 @@ Prof. Chatti was planning to run a regression model, but they're working with da
   let input = "@input".trim();
   /.*/i.test(input);
 </script>
-***********************************************************************
+****
 <div class = "answer">
 [Nonparametric tests](#nonparametric-tests) are probably the best choice here, since they do not rely on the assumption that the model residuals conform to any particular distribution, unlike models based on the GLM.
 </div>
-***********************************************************************
+****
 
 ## Additional Resources
 
-If you want to learn more about basics of programming in R or python, you may like our [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md) series.
+If you want to learn more about basics of programming in R or python, you may like our [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md) series.
 
-We also have material on [data visualization in R and python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization.md)
+We also have material on [data visualization in R and python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md)
 
 ### Learning statistics
 
@@ -263,7 +267,7 @@ Note that the recommendations above all focus on statistics specifically rather 
 
 ### Resources for Other Software
 
-We recommend sticking to open source software whenever possible (to read about why check out [our explanation in the Intro to R module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md#why-use-r-and-rstudio?)).
+We recommend sticking to open source software whenever possible (to read about why check out [this Nature article on the importance of open source software for science](https://www.nature.com/articles/nature10836)).
 
 That said, if you're used to working in non-open source statistical software, like SPSS or Stata, you may find it helpful to see the commands and output from those environments to compare to approaches in R and/or python. UCLA's Institute for Digital Research and Education has an excellent set of posts of [annotated output for most common statistical tests in Stata, SAS, SPSS, and Mplus](https://stats.idre.ucla.edu/other/annotatedoutput/) as well as several [data analysis examples](https://stats.idre.ucla.edu/other/dae/), which include a little more background on the techniques used.
 
