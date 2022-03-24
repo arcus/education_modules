@@ -242,7 +242,7 @@ breast_cancer_data <- read_csv("https://archive.ics.uci.edu/ml/machine-learning-
 <div class="learnmore">
 Run the above code yourself in binder (see [lesson preparation](#lesson-preparation) for links to start the binder instance) or on your own computer.
 
-In the data_visualization_ggplot2.r file, the code at the top of the file includes these library commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
+In the @r_code rmd file, the code at the top of the file includes these library commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
 </div>
 
 
