@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.0
+version:  1.2.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -200,13 +200,13 @@ At first, this seems like more work than just using a single command in another 
 To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf)
 </div>
 
-## Working through interactive coding examples
+## Working through interactive coding examples in binder
 
-Hopefully your [binder instance](#lesson-preparation) is done loading now! If not, be patient --- it can take as long as 20 or 30 minutes some times if the files haven't been used recently.
+If you chose [Option 1 in Lesson Preparation](#lesson-preparation) hopefully your binder instance is done loading now! If not, be patient --- it can take as long as 20 or 30 minutes some times if the files haven't been used recently.
 
-When it is ready, you should see the RStudio application running in your browser. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "data_viz_in_ggplot", and open the .r file in that subfolder.
+When it is ready, you should see the RStudio application running in your browser. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "@r_code", and open the .rmd file in that subfolder.
 
-All of the example code in this module is in that data_visualization_ggplot2.r file. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
+All of the example code in this module is in that "@r_code.rmd" file. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
 
 <div class = "important">
 Note that binder instances aren't stable. When you close the window or if it idles too long, it may erase all of your work. If you want to save any code or output you come up with while working in binder, you need to copy-paste the code to a new file to save it on your computer.
@@ -373,11 +373,11 @@ True or False: The only two crucial aesthetics for a ggplot2 scatterplot are x a
 
 [(X)] TRUE
 [( )] FALSE
-***********************************************************************
+****
 <div class = "answer">
 While x and y are the only two **crucial** aesthetics, you may want to include others, such as color and shape, to communicate information about additional variables in the data.
 </div>
-***********************************************************************
+****
 
 What is the geom command for a scatterplot in ggplot2?
 
@@ -386,11 +386,11 @@ What is the geom command for a scatterplot in ggplot2?
   let input = "@input".trim();
   /geom_point/.test(input);
 </script>
-***********************************************************************
+****
 <div class = "answer">
 Every ggplot2 visualization starts with the `ggplot()` command first to set which data will be used and how (i.e., the aesthetics), and then one or more "geoms" that control what type of plot will be created.
 </div>
-***********************************************************************
+****
 
 
 Which of the following can be used to manually set the color for a **numeric** variable in ggplot2?
@@ -399,11 +399,11 @@ Which of the following can be used to manually set the color for a **numeric** v
 [( )] `scale_color_manual()`
 [( )] `theme_color()`
 [( )] Any of the above
-***********************************************************************
+****
 <div class = "answer">
 `scale_color_gradient()` is for continuous variables, and `scale_color_manual()` is for categorical variables (factors).
 </div>
-***********************************************************************
+****
 
 Modify the code from the example above under [changing the background color with theme](#changing-background-color-with-theme) to apply a different theme. Add another layer to the plot with `theme(legend.position = "bottom")`. (Note: see the ggplot2 website for more on [modifying the legend for a plot](https://ggplot2.tidyverse.org/reference/guides.html).)
 
@@ -469,7 +469,7 @@ ggplot(breast_cancer_data, mapping = aes(x=Glucose)) +
 
 As with scatterplots, we can add information about an additional variable by using color. Let's add the Classification factor to our aesthetics so we can see how the distribution of glucose values differs in the two groups.
 
-<div class = "important">
+<div class = "hint">
 Tip: ggplot2 thinks about color differently for points and lines vs. filled in objects like bars. To adjust the color of the bars in a histogram, we need to use the fill aesthetic, not color.
 </div>
 
@@ -550,35 +550,35 @@ Which of the following aesthetics can be used to plot a histogram in ggplot2?
 [(X)] either x or y
 [( )] y only
 [( )] both x and y
-***********************************************************************
+****
 <div class = "answer">
 Histograms can only make use of one dimension of data (x or y, but never both) because the other dimension will always be the count of observations in each bin. If you try to provide both x and y as aesthetics, ggplot2 will give you an error.
 
 In all of our examples, we used the x aesthetic for our histograms, but it is possible to provide a y aesthetic instead. As an experiment, try generating one of the plots above, but substitute y for x and see what happens!
 </div>
-***********************************************************************
+****
 
 
 What do you use to control transparency in ggplot2?
 
 [[alpha]]
-***********************************************************************
+****
 <div class = "answer">
 Note the second plot in the [Using color to show groups](#using-color-to-show-groups), which includes an alpha adjustment.
 </div>
-***********************************************************************
+****
 
 True or False: Many common scale transformations are available in ggplot2, so you don't have to transform the data itself before plotting if you want to correct skew in your visualization.
 
 [(X)] True
 [( )] False
-***********************************************************************
+****
 <div class = "answer">
 For a review, see [transforming axes](#transforming-axes).
 
 There are a few common transformations with their own ggplot2 functions, but there are many more available, and you can even [write your own transformation to use in ggplot2](https://scales.r-lib.org/reference/trans_new.html) if you like.
 </div>
-***********************************************************************
+****
 
 ## Line Plots
 
@@ -707,11 +707,11 @@ True or False: Line plots are usually appropriate as an alternative to scatterpl
 
 [( )] TRUE
 [(X)] FALSE
-***********************************************************************
+****
 <div class = "answer">
 Line plots and scatterplots are generally used for different kinds of data, so a line plot is usually not a good alternative to a scatterplot. Line plots are used to communicate **meaningfully connected** data, most often repeated observations over time.
 </div>
-***********************************************************************
+****
 
 Modify the code from the first example, the [basic line plot](#basic-line-plot), to add a horizontal reference line at 1000 deaths. Make it a dashed line.
 
@@ -872,25 +872,25 @@ What is the geom function for creating a trend line in ggplot2?
   let input = "@input".trim();
   /geom_smooth|geom_line|geom_abline/.test(input);
 </script>
-***********************************************************************
+****
 <div class = "answer">
 This is a little bit of a trick question (sorry!) since there is no single correct answer: geom\_smooth(), geom\_line(), geom\_abline() all work to create trend lines!
 
 If you use geom\_abline or geom\_line, you need to first run the model, and then use the model results in your ggplot commands. The geom\_smooth function actually runs a model for you behind the scenes. Another difference is that geom\_smooth can print a confidence interval around your trend line, but geom\_line and geom\_abline just draw the line itself.
 </div>
-***********************************************************************
+****
 
 True or False: If you wanted to, you could use geom\_abline or geom\_line to draw a totally unrelated trend line on a scatterplot (e.g. one derived from different data).
 
 [(X)] TRUE
 [( )] FALSE
-***********************************************************************
+****
 <div class = "answer">
 True! And this is an important point, because this can happen by accident. If you run several models in your code, always double check to make sure you're referencing the correct model to get the coefficients (for geom\_abline) or fitted values (for geom\_line) when you create the trend line.
 
 One good strategy is to generate trend lines a couple different ways while you're working and check to make sure they all look the same. For example, add a trend line using geom\_smooth, and then run that model yourself and try to generate the same trend line using geom\_line or geom\_abline. That way you can confirm that you know the details of the model that geom\_smooth is using.  
 </div>
-***********************************************************************
+****
 
 Modify the code from [the first example in the geom\_smooth approach](#method-1:-geom_smooth) to change the appearance of the trend line it draws. Make it black, and make it a dashed line. (Hint: See the examples in the [line plots](#line-plots) section for a reminder of setting color and line type.)
 
