@@ -206,7 +206,7 @@ If you chose [Option 1 in Lesson Preparation](#lesson-preparation) hopefully you
 
 When it is ready, you should see the RStudio application running in your browser. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "@r_code", and open the .rmd file in that subfolder.
 
-All of the example code in this module is in that "@r_code.rmd" file. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
+All of the example code in this module is in that "@r_code .rmd" file. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
 
 <div class = "important">
 Note that binder instances aren't stable. When you close the window or if it idles too long, it may erase all of your work. If you want to save any code or output you come up with while working in binder, you need to copy-paste the code to a new file to save it on your computer.
