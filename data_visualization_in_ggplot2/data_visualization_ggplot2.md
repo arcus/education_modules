@@ -490,7 +490,7 @@ You may be noticing that the distribution for Class 1 appears to be stacked on t
 
 If we do this, we'll also need to control the transparency in the plot --- otherwise one distribution will obscure the other where they overlap. Alpha is a value between 0 (totally transparent) and 1 (totally opaque), and it defaults to 1. We'll try it at .5 here to see if that lets us see both distributions well enough.
 
-<div class = "important">
+<div class = "hint">
 Tip: When your data overlap on a plot, use alpha to make them more transparent.
 </div>
 
@@ -947,7 +947,7 @@ For an excellent quick reference, see the [ggplot2 cheatsheet](https://ggplot2.t
 
 For more detail on controlling color in ggplot2, refer to the [ggplot2 book](https://ggplot2-book.org/scale-colour.html), available for free online.
 
-To learn how to make plots in python using seaborn, see [data visualization in seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_viz_seaborn/data_visualization_in_seaborn.md).
+To learn how to make plots in python using seaborn, see [data visualization in seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md).
 
 ## Feedback
 
