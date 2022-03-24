@@ -17,16 +17,21 @@ For example, to use the training included in [data_visualization_in_ggplot2](dat
 ||||
 |--|--|--|
 |Command Line 101|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md)|[Markdown](bash_scripting_101/bash_scripting_101.md)|
-|Data Visualization in ggplot2|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md)| [Markdown](data_visualization_in_ggplot2/data_visualization_ggplot2.md)|
-|Data Visualization in Open Source Software|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization.md) | [Markdown](data_visualization_in_open_source_software/data_visualization.md) |
-|Data Visualization in Seaborn|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_seaborn.md) | [Markdown](data_visualization_in_seaborn/data_visualization_seaborn.md)|
+|Data Storage Models|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_storage_models/data_storage_models.md#1)|[Markdown](data_storage_models/data_storage_models.md)|
+|Data Visualization in ggplot2|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md#1)| [Markdown](data_visualization_in_ggplot2/data_visualization_ggplot2.md)|
+|Data Visualization in Open Source Software|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md#1)| [Markdown](data_visualization_in_open_source_software/data_visualization.md)|
+|Demystifying SQL|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md#1)|[Markdown](demystifying_sql/demystifying_sql.md)|
+|Directories and File Paths|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#1)|[Markdown](directories_and_file_paths/directories_and_file_paths.md)|
+|Introduction to Python|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md#1)|[Markdown](intro_to_python/intro_to_python.md)|
+|Intro to Version Control|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_intro/git_intro.md#1)|[Markdown](git_intro/git_intro.md)|
+|Learning to Learn|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/learning_to_learn/learning_to_learn.md#1)|[Markdown](learning_to_learn/learning_to_learn.md)|
 |R Basics: Introduction |[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md)| [Markdown](r_basics_introduction/r_basics_introduction.md)|
-|R Basics: Visualize Data|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_visualize_data/r_basics_visualize_data.md)| [Markdown](r_basics_visualize_data/r_basics_visualize_data.md)|
 |R Basics: Transform Data|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md)| [Markdown](r_basics_transform_data/r_basics_transform_data.md)|
-|Intro to Python|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md)| [Markdown](intro_to_python/intro_to_python.md)|
-|Reproducibility|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/reproducibility/reproducibility.md)| [Markdown](reproducibility/reproducibility.md)|
-|Statistical Tests|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md)| [Markdown](statistical_tests/statistical_tests.md)|
-
+|R Basics: Visualize Data|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_visualize_data/r_basics_visualize_data.md)| [Markdown](r_basics_visualize_data/r_basics_visualize_data.md)|
+|Reproducibility|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/reproducibility/reproducibility.md)| [Markdown](reproducibility/reproducibility.md)|
+|Setting Up Git|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md#1)|[Markdown](setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md)|
+|Statistical Tests|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md)|[Markdown](statistical_tests/statistical_tests.md)|
+|Tidy Data|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/tidy_data/tidy_data.md#1)|[Markdown](tidy_data/tidy_data.md)|
 
 ## For Contributors
 
