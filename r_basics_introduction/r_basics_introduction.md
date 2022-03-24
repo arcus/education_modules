@@ -183,7 +183,7 @@ It's important to note that regardless of which version of RStudio that you use,
 
 Here's what the RStudio window looks like, regardless of version.
 
-![Four panes of the RStudio application window.  In the upper left, "Editor".  In the lower left, "Console".  In the upper right, "Environment", in the lower right, "Files".](media/rstudio_panes.png)<!-- style = "max-width:900px;" -->
+![Four panes of the RStudio application window.  In the upper left, 'Editor'.  In the lower left, 'Console'.  In the upper right, 'Environment', in the lower right, 'Files'.](media/rstudio_panes.png)<!-- style = "max-width:900px;" -->
 
 On the top left is the **Editor**. This is where you edit your files with code in them.
 
@@ -239,7 +239,7 @@ style = "border: 1px solid rgb(var(--color-highlight));"-->
 </div>
 </div>
 
-**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\introduction".  That's the code for this module!
+**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_introduction".  That's the code for this module!
 
 ![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
 style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
@@ -690,7 +690,7 @@ To import data, you run the cell indicated.  Click on the image below to show a 
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/run_import_chunk.png?raw=true" height="540" width="878" alt="The file introduction_exercises.Rmd is open.  The user scrolls to line 17, which is the first line of a code chunk.  In the upper right corner of this code chunk, there is a green play button which is clicked." data-alt="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/run_import_chunk.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/run_import_chunk.png?raw=true" height="540" width="878" alt="The file introduction_exercises.Rmd is open.  The user scrolls to line 17, which is the first line of a code chunk.  In the upper right corner of this code chunk, there is a green play button which is clicked." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/run_import_chunk.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of running the chunk that imports data.</figcaption>
 </figure>
@@ -700,7 +700,7 @@ To answer the questions using the file viewer, click on the name of a data frame
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/viewer.png?raw=true" height="540" width="878" alt="The mouse moves to the Environment pane of RStudio and the named object covid_testing is clicked, and a view into that data opens in the upper left pane of RStudio." data-alt="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/viewer.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/viewer.png?raw=true" height="540" width="878" alt="The mouse moves to the Environment pane of RStudio and the named object covid_testing is clicked, and a view into that data opens in the upper left pane of RStudio." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/viewer.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of opening a viewer of a data frame.</figcaption>
 </figure>
