@@ -183,7 +183,7 @@ It's important to note that regardless of which version of RStudio that you use,
 
 Here's what the RStudio window looks like, regardless of version.
 
-![](media/rstudio_panes.png)<!-- style = "max-width:900px;" -->
+![""](media/rstudio_panes.png)<!-- style = "max-width:900px;" -->
 
 On the top left is the **Editor**. This is where you edit your files with code in them.
 
@@ -205,14 +205,16 @@ Which of the following are true?
 [[ ]] R is expensive but powerful
 [[X]] RStudio is an Integrated Development Environment or IDE
 [[?]] There are several correct answers!
+***********
 
 <div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
 
 R is a programming language that is free and open source.  It's a good idea to use RStudio, which is an editor or IDE (Integrated Development Environment) to write your R code.  You can use a "server" edition at your institution or via RStudio.cloud, or you can download RStudio to your own computer.  One kind of document you can write in RStudio is an R Markdown document, which allows you to weave together human language, written in Markdown, along with computer code.
 
-</details>
 </div>
+
+*******
+
 </div>
 
 ## Lesson Preparation: Our RStudio Environment
@@ -237,7 +239,7 @@ style = "border: 1px solid rgb(var(--color-highlight));"-->
 </div>
 </div>
 
-**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_visualize\_data".  That's the code for this module!
+**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_introduction".  That's the code for this module!
 
 ![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
 style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
@@ -252,14 +254,14 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 * Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
 * Click to select the "Open in new session" checkbox
 * Click "Create Project"
-* In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_visualize\_data".  That's the code for this module!
+* In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_introduction".  That's the code for this module!
 
 **Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
 
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/r_basics_visualize_data/r_basics_visualize_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_visualize_data/r_basics_visualize_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
 </figure>
@@ -273,7 +275,7 @@ If you already completed this work for a previous module, and it's been a while 
 ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
 
 <div class = "warning">
-If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
+If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.
 </div>
 
 ## Motivation: Reproducible Research
@@ -653,22 +655,23 @@ Which of the following statements are accurate?
 [[X]] You must load a package before using it in each new session of R
 [[X]] The `install.packages()` function requires putting the package name in quotes
 [[?]] Hint: multiple correct answers!
+*********
 
 <div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
 
 Functions can have zero, one, or many inputs.  An example of a function taking zero inputs is `getwd()`, which tells you what R considers its current "working directory".
 
 You only need to install a package using `install.packages()` **once** per computer (unless the package has a new update that you want to install).  You do, however, have to load a package using `library()` before its functions are available to you.  That means loading it each time you start a new session of R.  **When you knit a document, that counts as a separate session**, so make sure and put a `library()` in place for each package you use in your code in each R Markdown document you create.  Oh, and yep, for `install.packages()` you do indeed have to put quotes around the name of the package.
 
-</details>
-
 </div>
+
+***********
+
 </div>
 
 ### Hands-On: Import Data
 
-Please go into the "r\_basics\_visualize\_data" directory in whichever RStudio environment you're working in and open `introduction_exercises.Rmd`.  Instructions for this exercise are in the text of the R Markdown document.
+Please go into the "r\_basics\_introduction" directory in whichever RStudio environment you're working in and open `introduction_exercises.Rmd`.  Instructions for this exercise are in the text of the R Markdown document.
 
 ![""](media/introduction_exercises.png)<!-- style = "max-width:700px;" -->
 
@@ -687,7 +690,7 @@ To import data, you run the cell indicated.  Click on the image below to show a 
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/run_import_chunk.png?raw=true" height="540" width="878" alt="The file introduction_exercises.Rmd is open.  The user scrolls to line 17, which is the first line of a code chunk.  In the upper right corner of this code chunk, there is a green play button which is clicked." data-alt="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/run_import_chunk.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/run_import_chunk.png?raw=true" height="540" width="878" alt="The file introduction_exercises.Rmd is open.  The user scrolls to line 17, which is the first line of a code chunk.  In the upper right corner of this code chunk, there is a green play button which is clicked." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/run_import_chunk.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of running the chunk that imports data.</figcaption>
 </figure>
@@ -697,7 +700,7 @@ To answer the questions using the file viewer, click on the name of a data frame
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/viewer.png?raw=true" height="540" width="878" alt="The mouse moves to the Environment pane of RStudio and the named object covid_testing is clicked, and a view into that data opens in the upper left pane of RStudio." data-alt="https://github.com/arcus/education_modules/blob/r_basics_introduction/r_basics_introduction/media/viewer.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/viewer.png?raw=true" height="540" width="878" alt="The mouse moves to the Environment pane of RStudio and the named object covid_testing is clicked, and a view into that data opens in the upper left pane of RStudio." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/viewer.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of opening a viewer of a data frame.</figcaption>
 </figure>
