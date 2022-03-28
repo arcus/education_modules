@@ -2,13 +2,14 @@
 
 author:   Nicole Feldman
 email:    feldmanna@chop.edu
-version:  1.0.0
+version:  1.1.0
 language: en
 narrator: UK English Female
-title: Command Line 101
+title: Bash Scripting 101
 comment:  This course will focus on accessing a command line program and running shell scripts on your home computer, learning how to execute useful commands and recognize basic syntax, and, finally, learning how to set permissions in a way that leads to collaborating on a shared file directory with colleagues.
 
 long_description: This module is for people interested in harnessing the power of well-organized files and folders and who want to try a relatively accessible programming language.
+estimated_time: 30 minutes
 
 @learning_objectives
 
@@ -25,7 +26,7 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/sty
 script: https://kit.fontawesome.com/83b2343bd4.js
 -->
 
-# Command Line 101
+# Bash Scripting 101
 
 <div class = "overview">
 
@@ -37,7 +38,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 @long_description
 
-**Estimated time to completion:** ~30 minutes
+**Estimated time to completion:** @estimated_time
 
 **Pre-requisites**
 
@@ -71,6 +72,20 @@ There are several ways shell scripting can be useful to researchers and others w
 - Shell scripts can also call on multiple other programming languages, like R and python, to build pipelines that run across several software applications as well as enable a user to have greater facility with tools like git and docker.
 - Adoption of shell scripting also reinforces the importance of having well-structured and well-named files and file directory structures.
 
+### Quiz: Why bash?
+
+Which of the following are TRUE about bash/shell scripting? Select all that apply.
+
+[[X]] Shell scripting is a way for a user to interact with the core (or kernel) of your operating system.
+[[X]] Command line interfaces are pre-installed on most operating systems.
+[[ ]] Bash is expensive.
+[[X]] Shell scripts can work with other programming languages, such as R and Python, in pipelines.
+***
+<div class = "answer">
+Bash, or shell, scripting is a way to interface with your computer's operating system, and the necessary applications are probably already on your computer! You can also create pipelines that utilize bash and other programming languages. It's also 100% free!
+</div>
+***
+
 ## How do I get it?
 
 Everything that is necessary to run bash on your Mac or Windows machine is probably already installed; in fact, you may have done some shell without even realizing it!
@@ -92,7 +107,7 @@ Everything that is necessary to run bash on your Mac or Windows machine is proba
 - Search Bash in Cortana to launch WSL for the first time and click “Y” when asked to install Ubuntu for the first time. [Microsoft has their own internal documentation on WSL which features additional visual resources and FAQS](https://docs.microsoft.com/en-us/windows/wsl/).
 - Create a username and password when prompted and now you are ready to do some shell scripting! These user credentials have no bearing on your Windows user name and you will be automatically logged in for future sessions.
 
-### Knowledge Check 1
+### Quiz: Accessing the bash shell
 
 What is the name of the pre-installed program used to run shell scripts on a Mac?
 
@@ -100,13 +115,13 @@ What is the name of the pre-installed program used to run shell scripts on a Mac
 [( )] MSL (Mac Subsystem for Linux)
 [(X)] Terminal
 [( )] Ubuntu
-***********************************************************************
+***
 <div class = "answer">
 
 WSL is the Windows utility for running shell. Ubuntu is a well known Linux operating system that is often used as the default shell scripting environment.
 
 </div>
-***********************************************************************
+***
 
 ## Setting up a User/Home Directory
 
@@ -157,7 +172,7 @@ In our installation section, we covered how accessing CLI tools to run bash scri
 
   ![Head output of slightly less basic python script that organizes a picnic gathering menu amongst three friends.](media/head_example_small.png)
 
-### Knowledge Check 2
+### Quiz: Bash commands
 
 Select the three functions of the `cat` command?
 
@@ -165,13 +180,13 @@ Select the three functions of the `cat` command?
 [[ ]] Categorize
 [[X]] Concatenate
 [[X]] Create New Version
-***********************************************************************
+***
 <div class = "answer">
 
 The `sort` command is used to categorize files in bash.
 
 </div>
-***********************************************************************
+***
 
 ### Syntax
 
@@ -184,7 +199,7 @@ The `sort` command is used to categorize files in bash.
 - `*` character sequence wildcard. Very useful in running a command on all files with a given file extension as demonstrated in the mv example above.
 - `$` used to define a variable expression as used in the echo example above.
 
-### Knowledge Check 3
+### Quiz: Bash syntax
 
 What character passes the output of one command to the next command in a sequence?
 
@@ -192,13 +207,13 @@ What character passes the output of one command to the next command in a sequenc
 [( )] &
 [( )] +
 [( )] -
-***********************************************************************
+***
 <div class = "answer">
 
 This character is called a **pipe**, and it's name is a great way to visualize what it does: the output from the command to the left flows into the commands to the right through the pipe to create a pipeline :)
 
 </div>
-***********************************************************************
+***
 
 ## Permissions and working with other users
 
@@ -218,7 +233,7 @@ This character is called a **pipe**, and it's name is a great way to visualize w
 **Proceed with caution!** Using the `Sudo` command is decidedly not best data security practice, but might need to be invoked as you continue to learn bash, as permissioning can be quite granular and dynamic.
 </div>
 
-### Knowledge Check 4
+### Quiz: Permissions
 
 Which numerical sequence grants no restrictions on permissions and should generally be avoided?
 
@@ -227,13 +242,13 @@ Which numerical sequence grants no restrictions on permissions and should genera
 [( )] 700
 [(X)] 777
 [[?]] Hint: Check out the link to the file permissions documentation on the previous page!
-***********************************************************************
+***
 <div class = "answer">
 
 Giving all users access to manipulate files and directories in any way doesn't tend to lead to great outcomes. 755, in which the file owner can read, write, while enabling all other permissioned users to read and execute a file, is a safer and more productive option to choose.
 
 </div>
-***********************************************************************
+***
 
 ## Mounting external file shares and basic navigation
 
@@ -274,4 +289,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 - If the module difficulty was appropriate
 - If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Command+Line+101%22)!
+We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash+Scripting+101%22)!
