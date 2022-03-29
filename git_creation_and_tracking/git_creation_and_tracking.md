@@ -277,7 +277,7 @@ $ rm -rf moons/.git
 
 ## Tracking changes
 
- It might seem like *making* changes and *documenting* them are two different things, but the entire point of version control is to document every change you make.
+ It might seem like **making** changes and **documenting** them are two different things, but the entire point of version control is to document every change you make.
 
  Just like any system that can help back-up or save your work, Git will only be helpful if you use it. In this section we will first teach you
 
