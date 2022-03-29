@@ -20,6 +20,7 @@ After completion of this module, learners will be able to:
 - Add and make changes to files in the repository
 - Write short helpful descriptions, called "commit messages" to track the changes
 - Understand what `add` and `commit` do.
+- Use `.gitignore`
 
 @end
 
@@ -98,11 +99,11 @@ vlad
 $
 ```
 
-The **codeblock** above tells you that when Dracula types `logname` and presses enter, the output is 'vlad', his username. Try entering `logname` in your own console. There will be other code in front of each `$` describing who and where you are. Since the stuff before the `$` will be different for everyone, it is customary to omit it from example code. We will also omit the `$` after the output.
+The **code block** above tells you that when Dracula types `logname` and presses enter, the output is 'vlad', his username. Try entering `logname` in your own console. There will be other code in front of each `$` describing who and where you are. Since the stuff before the `$` will be different for everyone, it is customary to omit it from example code. We will also omit the `$` after the output.
 
 ### Initializing the repository
 
-First, let's create a directory in `Desktop` folder for our work and then move into that directory:
+First, let's create a directory folder for our work. Depending on how your computer is organized the `Desktop` on Mac or Linux, or in `C` Drive on Windows machines may be good locations for the new directory folder, but you can put it wherever you like. Dracula's computer has a `Desktop` where he does his work.
 
 
 ```console
@@ -151,10 +152,13 @@ including all files and sub-directories located within the project's directory.
 If we ever delete the `.git` subdirectory,
 we will lose the project's history.
 
+<div class = "learnmore">
+The `.` (pronounced "dot") refers to the directory you are currently in, while `..` ("dot dot") refers to the parent of the directory you are currently in. Every directory automatically contains both `.` and `..`.
+</div>
+
 ### Creating the `main` branch
 
-The `main` branch is likely to be the default branch depending on your settings and version
-of Git. But just to be sure, we will change the default branch to be called `main`:
+The `main` branch is likely to be the default branch depending on your settings and version of Git. But just to be sure, we will change the default branch to be called `main`:
 
 ```console
 $ git checkout -b main
@@ -177,6 +181,10 @@ nothing to commit (create/copy files and use "git add" to track)
 
 If you are using a different version of Git, the exact
 wording of the output might be slightly different.
+
+<div class ="learnmore">
+You will see that the primary branch of some projects, particularly older projects, is called `master` instead of `main`. GitHub has joined the programming community in a concerted effort to [replace programming terms associated with human slavery](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/).
+</div>
 
 
 
@@ -248,7 +256,6 @@ Not a git repository (or any of the parent directories):
 
 ### Fixing a nested `init`
 
-<div class = "help">
 What if you forgot to check `git status` and accidentally created a repository nested in another repository?
 You can fix this by removing the `.git` file from the inner repository. Take another look at Dracula's code from our last example:
 
@@ -273,6 +280,10 @@ before running:
 ```console
 $ rm -rf moons/.git
 ```
+<div class = "warning">
+The `rm` command **removes** files, and can be very useful, but the `-rf` flag is very powerful and should used with great caution. The `r` stands for "recursive" and instructs the computer to remove all contents of the file and then remove the file itself.  The `f` is for "force" and means you will not be asked if you are sure you want to delete the files.
+
+Dracula should be absolutely certain he wants to delete `moons/.git` before running this command.
 </div>
 
 ## Tracking changes
@@ -622,10 +633,15 @@ Remember a metaphor doesn't need to be perfect to be helpful. If you find or com
 
 ### Telling Git not to track some files
 
-What if we have files that we do not want Git to track for us,
-like backup files created by our editor
-or intermediate files created during data analysis?
-Let's create a few dummy files:
+What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis?
+
+<div class = "warning">
+It is likely that you will eventually share your repository publicly through [GitHub](github.com). When you do, everything that Git is tracking will become publicly visible. If there is an API key or anything that requires any level of secrecy, make sure you tell Git to ignore it as soon as you create the file.
+
+Once information is committed and made public ("pushed" to GitHub), a record of it will persist even if you remove it in a later commit.
+</div>
+
+Let's create a few dummy files to practice ignoring:
 
 ```
 $ mkdir results
@@ -650,10 +666,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Putting these files under version control would be a waste of disk space.
-What's worse,
-having them all listed could distract us from changes that actually matter,
-so let's tell Git to ignore them.
+Putting these files under version control would be a waste of disk space. What's worse, having them all listed could distract us from changes that actually matter, so let's tell Git to ignore them.
 
 We do this by creating a file in the root directory of our project called `.gitignore`. Each line in this file is a rule for a type of file Git should ignore. Use your favorite text editor to make `.gitignore` contain the two lines:
 
@@ -662,13 +675,13 @@ We do this by creating a file in the root directory of our project called `.giti
 results/
 ```
 
-These patterns tell Git to ignore any file whose name ends in `.dat`
-and everything in the `results` directory.
-(If any of these files were already being tracked,
-Git would continue to track them.)
+These patterns tell Git to ignore any file whose name ends in `.dat` and everything in the `results` directory. (If any of these files were already being tracked, Git would continue to track them.)
 
-Once we have created this file,
-the output of `git status` is much cleaner:
+<div class = "learnmore">
+There are many common file types that people frequently ask Git not to track. For example Mac users usually want Git to ignore `.DS_store` an invisible file created by opening a file in Finder. You can even start with [this collection of common configurations](https://gist.github.com/octocat/9257657) for `.gitignore`.
+</div>
+
+Once we have created the `.gitignore` file, the output of `git status` is much cleaner:
 
 ```
 $ git status
@@ -682,10 +695,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-The only thing Git notices now is the newly-created `.gitignore` file.
-You might think we wouldn't want to track it,
-but if we share the repository, everyone we're sharing with will probably want to ignore
-the same things that we are ignoring.
+The only thing Git notices now is the newly-created `.gitignore` file. You might think we wouldn't want to track it, but if we share the repository, everyone we're sharing with will probably want to ignore the same things that we are ignoring.
 Let's add and commit `.gitignore`:
 
 ```
@@ -730,9 +740,9 @@ results/
 nothing to commit, working directory clean
 ```
 
-
+<div class = "learnmore">
 For more details on how to use `.gitignore` to include or exclude particular files or folders check out Software Carpentry's [lesson on Ignoring Things](https://swcarpentry.github.io/git-novice/06-ignore/index.html).
-
+</div>
 
 
 
@@ -748,7 +758,18 @@ What does the `git commit` command do?
 <div class = "answer">
 The `git commit` command will only create a record of the files that you have *already staged.*
 
-There are options you can use to automatically stage all files. Entering `git commit -a` or `git commit --all` will automatically stage all files that Git knows about and then commit them. But it will not save any new files that Git doesn't yet know about. In our artwork metaphor, if you started a new drawing on another sheet of paper, `git commit -a` would not put the new drawing into the slot and scan it, but it would scan the current version of every drawing that had previously been scanned.
+There are options you can use to automatically stage all files. Entering `git commit -a` or `git commit --all` will automatically stage all files that Git knows about and then commit them. But it will not save any new files that Git doesn't yet know about.
+</div>
+***
+
+Why might you want to tell Git to NOT track a file? Check all that apply.
+
+[(X)] The file contains secret information like passwords or API keys.
+[(X)] The file contains intermediate data that can be recreated by running other code in your repository.
+[(X)] The file is automatically generated by your computer and not actually part of your project.
+***
+<div class = "answer">
+All of these are good reasons to include a file in `.gitignore` but especially the first reason. Keeping secret information like passwords or API keys is essential.
 </div>
 ***
 
