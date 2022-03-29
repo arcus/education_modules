@@ -68,7 +68,7 @@ If you are on a Windows machine, make sure you are in the Git Bash application. 
 
 If you are not sure if Git is configured on your computer, enter `git config --list` into your interface. The last two lines of output should show your `user.name` and `user.email`. If these are correct you are all ready to start the module!
 
-If you need to get Git configured on your computer the [Setting Up Git](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/rmh-git-setup/git_setup/setting_up_git.md#1) module will help you get set up in about 20 minutes.
+If you need to get Git configured on your computer the [Setting Up Git](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md#1) module will help you get set up in about 20 minutes if you're using a Mac or Linux machine.
 
 ## Creating a Repository
 
