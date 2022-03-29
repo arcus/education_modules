@@ -77,16 +77,16 @@ is possible to send a planetary lander to Mars.
 
 ![A collage of the project we will use as a motivating example. Figures include Dracula, a werewolf, a mummy, and several planets and moons.](media/motivatingexample.png)
 [Werewolf vs dracula](https://www.deviantart.com/b-maze/art/Werewolf-vs-Dracula-124893530)
-by [b-maze](https://www.deviantart.com/b-maze) / [Deviant Art](https://www.deviantart.com/).
+by Brian Maze.
 [Mars](https://en.wikipedia.org/wiki/File:OSIRIS_Mars_true_color.jpg) by European Space Agency /
 [CC-BY-SA 3.0 IGO](https://creativecommons.org/licenses/by/3.0/deed.en).
 [Pluto](https://commons.wikimedia.org/wiki/File:PIA19873-Pluto-NewHorizons-FlyingPastImage-20150714-transparent.png) /
 Courtesy NASA/JPL-Caltech.
 [Mummy](https://commons.wikimedia.org/wiki/File:Mummy_icon_-_Noun_Project_4070.svg)
-$\copyright$ Gilad Fried / [The Noun Project](https://thenounproject.com/) /
+$\copyright$ Gilad Fried /
 [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/deed.en).
 [Moon](https://commons.wikimedia.org/wiki/File:Lune_ico.png)
-$\copyright$ Luc Viatour / [https://lucnix.be](https://lucnix.be/) /
+$\copyright$ Luc Viatour /
 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en).
 
 In the examples, we will see code as if it is written by Vlad Dracula. If you are practicing these steps as you move through this module, your name and email address will appear instead of Dracula's.
@@ -416,7 +416,7 @@ Git will launch `nano` (or whatever other editor we configured as `core.editor`)
 so that we can write a longer message.
 
 <div class = "important">
- **Good commit messages** Commit messages start with a brief (<50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will...".
+Commit messages start with a brief (<50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will...".
 </div>
 
 If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
