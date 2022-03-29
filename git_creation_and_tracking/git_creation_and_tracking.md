@@ -281,7 +281,7 @@ $ rm -rf moons/.git
 
  Just like any system that can help back-up or save your work, Git will only be helpful if you use it. In this section we will first teach you
 
- - *how* to make a record of your changes,
+ - **how** to make a record of your changes,
 
  - *where* those records are, and
 
