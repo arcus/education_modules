@@ -283,7 +283,7 @@ $ rm -rf moons/.git
 
  - **how** to make a record of your changes,
 
- - *where* those records are, and
+ - **where** those records are, and
 
  - **when** you should be recording that you changed things.
 
