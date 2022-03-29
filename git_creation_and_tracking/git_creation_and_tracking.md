@@ -285,7 +285,7 @@ $ rm -rf moons/.git
 
  - *where* those records are, and
 
- - *when* you should be recording that you changed things.
+ - **when** you should be recording that you changed things.
 
 ### Tell Git to track a file
 Let's follow along with Dracula to add a file to the planets directory with notes about Mars.
