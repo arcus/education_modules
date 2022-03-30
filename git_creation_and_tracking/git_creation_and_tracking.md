@@ -19,8 +19,9 @@ After completion of this module, learners will be able to:
 - Create a Git repository
 - Add and make changes to files in the repository
 - Write short helpful descriptions, called "commit messages" to track the changes
-- Understand what `add` and `commit` do.
 - Use `.gitignore`
+- Understand the `add` and `commit` workflow.
+
 
 @end
 
