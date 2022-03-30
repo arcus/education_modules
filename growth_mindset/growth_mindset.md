@@ -7,8 +7,8 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Learning to Learn: Growth Mindset
-comment:  This is a short, focused description of the module.
-long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
+comment:  What is a growth mindset is and how can it help you learn?
+long_description: Learning new things can be hard work. Having an attitude that struggle and failure are not setbacks but a valuable part of the learning process can help you learn more. Yes, this sounds like a TED talk, and it is, but it is also a well studied area of metacognition. This module will introduce you to the concept of the growth mindset, present some of the research behind it, and give you some concrete steps to implement in your learning.
 
 estimated_time: This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview
 
