@@ -654,7 +654,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 In our scenario, these are files we don't want to track.  Putting these files under version control would be a waste of disk space. What's worse, having them all listed could distract us from changes that actually matter, so let's tell Git to ignore them.
 
-We do this by creating a file in the root directory of our project called `.gitignore`. Each line in this file is a rule for a type of file Git should ignore. Use your favorite text editor to make `.gitignore` contain the two lines:
+We do this by creating a file in the root directory of our project called `.gitignore`.   That dot at the beginning is intentional!  The file must be named this exactly for `.gitignore` to work properly.  Each line in this file is a rule for a type of file Git should ignore. Use your favorite text editor to make `.gitignore` contain the two lines:
 
 ```
 *.dat
