@@ -139,8 +139,6 @@ We will following this hint and changing the default name in the [next section](
 </details>
 
 <br>
-<br>
-<br>
 
 It is important to note that `git init` will create a repository that
 **includes subdirectories and their files** -- there is no need to create
