@@ -304,9 +304,7 @@ Dracula could have navigated to `~/Desktop/planets/moons` and then run `rm -rf .
 
 ## Tracking changes
 
- It might seem like **making** changes and **documenting** them are two different things, but the entire point of version control is to document every change you make.
-
- Just like any system that can help back-up or save your work, Git will only be helpful if you use it. In this section we will first teach you
+Just like any system that can help back-up or save your work, Git will be most helpful if you use it regularly as you work. In this section we will teach you
 
  - **how** to make a record of your changes,
 
