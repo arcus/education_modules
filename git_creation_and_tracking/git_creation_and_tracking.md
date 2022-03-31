@@ -69,7 +69,7 @@ If you are on computer that uses the Windows operating system, make sure you are
 ![Git Bash logo](media/git_bash.jpeg)<!-- style = "max-width:200px;" border = 5px solid -->
 </div>
 
-If you are not sure if Git is configured on your computer, enter `git config --list` into your interface. The last two lines of output should show your `user.name` and `user.email`. If these are correct you are all ready to start the module!
+If you are not sure if Git is configured on your computer, enter `git config user.name` into your command line interface and see if it returns your name. You can also check that it it has the correct email for you with `git config user.email`. If these are correct you are all ready to start the module!
 
 If you need to get Git configured on your computer the [Setting Up Git](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md#1) module will help you get set up in about 20 minutes if you're using a Mac or Linux machine.
 
@@ -137,7 +137,7 @@ that the creation of the `planets` directory and its initialization as a
 repository are completely separate processes.
 
 If we use `ls`, the **list** command, to show the directory's contents,
-it appears that nothing has changed:
+it appears to be empty:
 
 ```console
 $ ls
@@ -366,7 +366,7 @@ No commits yet
 Untracked files:
    (use "git add <file>..." to include in what will be committed)
 
-	mars.txt
+	<span style="color:red">mars.txt</span>
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
@@ -391,7 +391,7 @@ No commits yet
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
 
-	new file:   mars.txt
+	new file:   <span style="color:green">mars.txt</span>
 ```
 
 Git now knows that it's supposed to keep track of `mars.txt`,
