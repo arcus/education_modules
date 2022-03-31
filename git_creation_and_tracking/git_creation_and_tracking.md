@@ -740,7 +740,7 @@ All of these are good reasons to include a file in `.gitignore` but especially t
 There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, and that is what [many people do](https://xkcd.com/1597/). However you might remember them better if you understand what each is doing.
 
 
-So far we have encountered files that in three states:
+So far we have encountered files in three states:
 
 - **Working Directory** The working directory refers to the files you are currently working on, regardless of whether Git is tracking them. When you first create a new file, it exists solely in your working directory.
 
