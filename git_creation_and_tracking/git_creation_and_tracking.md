@@ -114,7 +114,7 @@ $ cd ~/Desktop
 $ mkdir planets
 $ cd planets
 ```
-The `cd` command means **change directory**, and `mkdir` tells the computer to **make** a **directory** with the name "planets." Once we have a `planets` directory, we use `cd` open that directory.
+The `cd` command means **change directory**.  In our first command, we're changing directory to our home directory (that's the `~`, and within that, to the directory called `Desktop`.  If you don't have this directory in your file system, you'll get an error.  That's okay -- just navigate to a different directory you'd like to work in (as long as that directory isn't within a git repository).  The `mkdir` command tells the computer to **make** a **directory** with the name "planets." Once we have a `planets` directory, we use `cd` open that directory.
 
 <div class = "help">
 Getting an error message when you type these commands? If you are using the Windows operating system, you need to switch over to Git Bash.  Windows uses a different system of commands than other computers like Linux, Unix, and Mac, and Git Bash makes it possible for you to use the commands common to the other operating systems, even though you're on Windows.
