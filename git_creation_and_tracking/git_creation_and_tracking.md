@@ -135,7 +135,9 @@ $ git init
     These instructions on how to change the name of your initial branch are part of GitHub's effort, as part of the larger programming community, to [replace programming terms associated with slavery](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/).
 
     We will following this hint and changing the default name in the [next section](#Creating-the-`main`-branch)
+
 </details>
+
 
 It is important to note that `git init` will create a repository that
 **includes subdirectories and their files** -- there is no need to create
