@@ -565,7 +565,9 @@ nothing to commit, working directory clean
 
 ### How often should you `commit`?
 
-Just like any method of backing up or saving your work, the benefits of using Git for version control are only available if you regularly use them. In our example, we have been committing every time we add or change a line in a single file. That is going to be odious overkill for most projects.
+Just like any method of backing up or saving your work, the benefits of using Git for version control are only available if you regularly use them. In our example, we have been committing every time we add or change a line in a single file. That is going to be odious overkill for most projects.  
+
+Often, when we're working in a project, we change several files in the course of a few minutes or hours of work.  For example, you might change the counts of research subjects in a couple of different places across two or three files related to a research project when you update the weekly numbers.  It's helpful to know that with git, you can change a few files in your repository, then use `git add` to include the changed files (as many as you want) you want to include in a commit, and then do a single commit which explains all of the changes as a whole.
 
 - **Commit each chunk of changes** If you add a new section to a file, or change a certain item across multiple files, it is a good practice to commit those changes with a message describing them. If a commit message like `-m "add section on atmosphere"` or `-m "reorder paragraphs on moons from smallest to largest moon"` accurately describes your changes, make sure you commit the changes so that you can find them again later!
 
