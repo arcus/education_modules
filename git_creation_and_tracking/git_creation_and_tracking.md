@@ -159,7 +159,7 @@ If we ever delete the `.git` subdirectory,
 we will lose the project's history.
 
 <div class = "learnmore">
-The `.` (pronounced "dot") refers to the directory you are currently in, while `..` ("dot dot") refers to the parent of the directory you are currently in. Every directory automatically contains both `.` and `..`.
+What are the series of dots preceding `.git`?  The `.` (pronounced "dot") refers to the directory you are currently in, while `..` ("dot dot") refers to the parent of the directory you are currently in. Every directory automatically contains both `.` and `..` as things you can use as quick shorthand if you need to use them to navigate through the file structure.  What we're seeing here, then, is really a list of three things that stay hidden unless you specify that you want to see hidden things: (1)`.`, (2) `..`, and (3) `.git`
 </div>
 
 ### Creating the `main` branch
