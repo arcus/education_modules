@@ -116,7 +116,7 @@ $ git init
 
 <details>
 
-<summary>What does this `hint` output mean?</summary>
+<summary>What does this `hint` output mean? Click to learn more!</summary>
 
 When you initialize your repository, Git will return the following output:
 
@@ -139,7 +139,8 @@ We will following this hint and changing the default name in the [next section](
 </details>
 
 <br>
-
+<br>
+<br>
 It is important to note that `git init` will create a repository that
 **includes subdirectories and their files** -- there is no need to create
 separate repositories nested within the `planets` repository, whether
