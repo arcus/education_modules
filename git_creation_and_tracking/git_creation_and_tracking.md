@@ -8,7 +8,7 @@ language: en
 narrator: UK English Female
 title: Creating your Git Repository
 comment:  Create a new Git repository and get started with version control.
-long_description: If you have Git set up on your computer and are ready to start tracking your files then this module is for you. This module will teach you how to create a Git repository, add files to it, update files in it, and keep track of those changes in a clear and organized manner.
+long_description: If you have Git set up on your computer and are ready to start tracking your files, then this module is for you. This module will teach you how to create a Git repository, add files to it, update files in it, and keep track of those changes in a clear and organized manner.
 
 @estimated_time: 1 hour
 
@@ -64,7 +64,7 @@ Before you start this module, make sure you
 Open a new command line interface on your computer. All exercises in this module will be done in this interface.
 
 <div class = "warning">
-If you are on a Windows machine, make sure you are in the Git Bash application. The Command Prompt (cmd) will not recognize the commands we are using in this module.  Git Bash is part of the [Windows install of Git](https://git-scm.com/download/win).
+If you are on computer that uses the Windows operating system, make sure you are using the Git Bash application as your command line interface. The Command Prompt (cmd) will not recognize the commands we are using in this module.  Git Bash is part of the [Windows install of Git](https://git-scm.com/download/win).
 
 ![Git Bash logo](media/git_bash.jpeg)<!-- style = "max-width:200px;" border = 5px solid -->
 </div>
@@ -117,7 +117,7 @@ $ cd planets
 The `cd` command means **change directory**, and `mkdir` tells the computer to **make** a **directory** with the name "planets." Once we have a `planets` directory, we use `cd` open that directory.
 
 <div class = "help">
-Getting an error message when you type these commands? If you are using a Windows machine, you need to switch over to Git Bash!
+Getting an error message when you type these commands? If you are using the Windows operating system, you need to switch over to Git Bash.  Windows uses a different system of commands than other computers like Linux, Unix, and Mac, and Git Bash makes it possible for you to use the commands common to the other operating systems, even though you're on Windows.
 </div>
 
 Next we tell Git to make `planets` a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository) (also called a **repo**)
@@ -130,7 +130,7 @@ $ git init
 
 
 It is important to note that `git init` will create a repository that
-includes subdirectories and their files---there is no need to create
+**includes subdirectories and their files** -- there is no need to create
 separate repositories nested within the `planets` repository, whether
 subdirectories are present from the beginning or added later. Also, note
 that the creation of the `planets` directory and its initialization as a
@@ -144,8 +144,8 @@ $ ls
 ```
 
 
-Like many commands, `ls` can be modified using **flags**, very short bits of code that change some of the options on the command. If we add the `-a` flag to `ls`, we will be asking Git to list all files.
-Now we can see that Git has created a hidden directory within `planets` called `.git`:
+Like many commands, `ls` can be modified using **flags**, very short bits of code that change some of the options on the command. If we add the `-a` flag to `ls`, we will be asking Git to list **all** files.
+Now we can see that Git has created a hidden directory within `planets` called `.git`.  It didn't show up with just plain `ls`, but it shows up now that we use the `-a` flag.  This is because of the initial dot or period in the name of `.git`.
 
 ```console
 $ ls -a
@@ -208,15 +208,15 @@ $ __________        # make the planets directory a Git repository
 [[git init]]
 ***
 <div class = "answer">
-By initializing the Git repository inside the planets directory with the `git init` command, Git will track every file inside planets.
+By initializing the Git repository inside the `planets` directory with the `git init` command, Git will track every file inside `planets`.
 </div>
 ***
 
 
 Along with tracking information about planets (the project we have already created),
 Dracula would also like to track information about moons.
-Dracula creates a `moons` project inside his `planets`
-project with the following sequence of commands:
+Consider this possible scenario: Dracula creates a `moons` project inside his `planets`
+project with the following sequence of commands.  Here we've added comments, the text following the `#`, explaining what each command does.
 
 ```console
 $ cd ~/Desktop   # return to Desktop directory
@@ -410,7 +410,7 @@ The console output will look like this, though your unique identifiers (f22b25e 
 ```
 
 When we run `git commit`,
-Git takes everything we have told it to save by using `git add`
+Git takes everything we have previously told it to save by using `git add`
 and stores a copy permanently inside the special `.git` directory.
 This permanent copy is called a **commit**
 (or **revision**) and its short identifier is `f22b25e`. Your commit may have another identifier.
@@ -424,7 +424,7 @@ so that we can write a longer message.
 <div class = "important">
 **Good commit messages**
 
-Commit messages start with a brief (less than 50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will...".
+Commit messages start with a brief (less than 50 characters) statement in the present tense about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will...".
 </div>
 
 If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
@@ -442,7 +442,7 @@ nothing to commit, working directory clean
 
 ### Keeping track of your changes
 
-Now that Git is keeping track of the file `mars.txt` we can keep a record of the changes we make to the file.
+Now that Git is keeping track of the file `mars.txt`, we can keep a record of the changes we make to the file.
 
 Each update to `mars.txt` will use that same `add` and `commit` pair of commands.
 
@@ -595,7 +595,7 @@ You must run the `git add` to tell Git to stage `myFile.txt`, then you can commi
 </div>
 ***
 
-2. With each commit, we want to leave a short, descriptive, message describing the changes we make. Which of these would be the *best* commit message?
+2. With each commit, we want to leave a short, descriptive, message describing the changes we make. Which of these would be the **best** commit message?
 
 [( )] "updates"
 [( )] "The Martian atmosphere is only 1% oxygen."
@@ -612,7 +612,7 @@ The commit message should describe what this commit does. If you want to know th
 What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis?
 
 <div class = "warning">
-It is likely that you will eventually share your repository publicly through [GitHub](github.com). When you do, everything that Git is tracking will become publicly visible. If there is an API key or anything that requires any level of secrecy, make sure you tell Git to ignore it as soon as you create the file.
+It is likely that you will eventually share your repository.  This could be sharing it privately with a team, or publicly through [GitHub](github.com). When you do, everything that Git is tracking will become visible to everyone with access to the repository.  If there is an API key, password, sensitive data, or anything that requires any level of secrecy, make sure you tell Git to ignore it as soon as you create the file.
 
 Once information is committed and made public ("pushed" to GitHub), a record of it will persist even if you remove it in a later commit.
 </div>
@@ -644,7 +644,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Putting these files under version control would be a waste of disk space. What's worse, having them all listed could distract us from changes that actually matter, so let's tell Git to ignore them.
+In our scenario, these are files we don't want to track.  Putting these files under version control would be a waste of disk space. What's worse, having them all listed could distract us from changes that actually matter, so let's tell Git to ignore them.
 
 We do this by creating a file in the root directory of our project called `.gitignore`. Each line in this file is a rule for a type of file Git should ignore. Use your favorite text editor to make `.gitignore` contain the two lines:
 
@@ -656,7 +656,7 @@ results/
 These patterns tell Git to ignore any file whose name ends in `.dat` and everything in the `results` directory. (If any of these files were already being tracked, Git would continue to track them.)
 
 <div class = "learnmore">
-There are many common file types that people frequently ask Git not to track. For example Mac users usually want Git to ignore `.DS_store` an invisible file created by opening a file in Finder. You can even start with [this collection of common configurations](https://gist.github.com/octocat/9257657) for `.gitignore`.
+There are many common file types that people frequently ask Git not to track. For example Mac users usually want Git to ignore `.DS_store`, which is an invisible file that gets created by opening a file in Finder. You can even start with [this collection of common configurations](https://gist.github.com/octocat/9257657) for `.gitignore`.
 </div>
 
 Once we have created the `.gitignore` file, the output of `git status` is much cleaner:
@@ -731,7 +731,7 @@ Why might you want to tell Git to NOT track a file? Check all that apply.
 [(X)] The file is automatically generated by your computer and not actually part of your project.
 ***
 <div class = "answer">
-All of these are good reasons to include a file in `.gitignore` but especially the first reason. Keeping secret information like passwords or API keys is essential.
+All of these are good reasons to include a file in `.gitignore`, but especially the first reason. Keeping secret information like passwords or API keys is essential.
 </div>
 ***
 
@@ -777,7 +777,7 @@ What does the `git commit` command do?
  [[X]] Creates a record of the current version of all of the staged files in the repository.
 ***
 <div class = "answer">
-The `git commit` command will only create a record of the files that you have *already staged.*
+The `git commit` command will only create a record of the files that you have **already staged.**
 
 There are options you can use to automatically stage all files. Entering `git commit -a` or `git commit --all` will automatically stage all files that Git knows about and then commit them. But it will not save any new files that Git doesn't yet know about.
 </div>
