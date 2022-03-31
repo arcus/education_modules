@@ -276,12 +276,13 @@ $ ls -a          # ensure the .git subdirectory is present indicating we have cr
 ```
 
 Dracula has created two tracking files, `planets/.git` which he should keep, and `planets/moons/.git` which should be removed.
-Dracula can do this by running `pwd` which will show the **present working directory** and getting the output:
+
+First he should navigate to the `planets directory`:
 
 ```console
-/Users/vlad/Desktop/planets
+$ cd ~/Desktop/planets
 ```
-before running:
+and then run:
 
 ```console
 $ rm -rf moons/.git
@@ -290,6 +291,10 @@ $ rm -rf moons/.git
 The `rm` command **removes** files, and can be very useful, but the `-rf` flag is very powerful and should used with great caution. The `r` stands for "recursive" and instructs the computer to remove all contents of the file and then remove the file itself.  The `f` is for "force" and means you will not be asked if you are sure you want to delete the files.
 
 Dracula should be absolutely certain he wants to delete `moons/.git` before running this command.
+</div>
+
+<div class = "options">
+Dracula could have navigated to `~/Desktop/planets/moons` and then run `rm -rf .git` which would have had exactly the same effect. However if you were to run `rm -rf .git` in the `planets` directory, you would lose the history of your project. For that reason he should use the file path `moons/.git` to be sure that only the correct file is removed.
 </div>
 
 ## Tracking changes
@@ -307,12 +312,10 @@ Dracula should be absolutely certain he wants to delete `moons/.git` before runn
 ### Tell Git to track a file
 Let's follow along with Dracula to add a file to the planets directory with notes about Mars.
 
-First let's make sure we're still in the right directory.
-You should be in the `planets` directory.
+First let's make sure we're still in the `planets` directory.
+You can check what directory you are in with `pwd` which will show your **present working directory**.
 
-```console
-$ cd ~/Desktop/planets
-```
+If your present working directory isn't `planets`, use `cd` to navigate there.
 
 Let's create a file called `mars.txt` that contains some notes
 about the Red Planet's suitability as a base.
@@ -343,7 +346,7 @@ mars.txt
 
 
 
-`mars.txt` contains a single line, which we can see by running `cat`:
+`mars.txt` contains a single line.  The `cat` command will display the contents of the file:
 
 
 ```console
@@ -351,7 +354,7 @@ $ cat mars.txt
 
 Cold and dry, but everything is my favorite color
 ```
-
+The `cat` command is short for **concatenate** and can be used to display the contents of multiple files, one after another.
 
 If we check the status of our project again,
 Git tells us that it's noticed the new file:
@@ -503,11 +506,11 @@ no changes added to commit (use "git add" and/or "git commit -a")
 The last line is the key phrase:
 "no changes added to commit".
 We have changed this file,
-but we haven't told Git we will want to save those changes
+but we haven't told Git we will want to track those changes
 (which we do with `git add`)
-nor have we saved them (which we do with `git commit`).
+nor have we recorded them (which we do with `git commit`).
 So let's do that now. It is good practice to always review
-our changes before saving them. We do this using `git diff`.
+our changes before recording them. We do this using `git diff`.
 This shows us the differences between the current state
 of the file and the most recently saved version:
 
