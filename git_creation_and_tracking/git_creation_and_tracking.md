@@ -334,6 +334,9 @@ Type the text below into the `mars.txt` file:
 Cold and dry, but everything is my favorite color
 ```
 
+<div class = "help">
+To exit the file use `control X` or `Ctrl X` (your keyboard should have either a `control` or `Ctrl` key in the lower left and possibly other locations as well). When asked if you want to save changes, enter `Y` for yes. Then the "File Name to Write" should be pre-filled with `mars.txt` so you can press `return` or `Enter`. When you are in `nano`, you can also refer to the reminders of commands at the bottom of window.
+</div>
 
 Let's first verify that the file was properly created by running the list command (`ls`):
 
@@ -369,7 +372,7 @@ No commits yet
 Untracked files:
    (use "git add <file>..." to include in what will be committed)
 
-	<span style="color:red">mars.txt</span>
+  	mars.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
@@ -394,7 +397,7 @@ No commits yet
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
 
-	new file:   <span style="color:green">mars.txt</span>
+	new file: mars.txt
 ```
 
 Git now knows that it's supposed to keep track of `mars.txt`,
