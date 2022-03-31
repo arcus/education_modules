@@ -71,7 +71,7 @@ If you are on computer that uses the Windows operating system, make sure you are
 
 If you are not sure if Git is configured on your computer, enter `git config user.name` into your command line interface and see if it returns your name. You can also check that it it has the correct email for you with `git config user.email`. If these are correct you are all ready to start the module!
 
-If you need to get Git configured on your computer the [Setting Up Git](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md#1) module will help you get set up in about 20 minutes if you're using a Mac or Linux machine.
+If you need to get Git configured on your computer there is a module to help you get set up.  Depending on what computer you are using, use the instructions for a [Mac or Linux operating system](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md#1), or a [Windows operating system](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md#1)
 
 ## Creating a Repository
 
@@ -114,24 +114,24 @@ Next we tell Git to make `planets` a [repository](https://swcarpentry.github.io/
 $ git init
 ```
 <details>
-<summary>What does this `hint` output mean?</summary>
-When you initialize your repository, Git will return the following output:
+  <summary>What does this `hint` output mean?</summary>
+  When you initialize your repository, Git will return the following output:
 
-```
-hint: Using 'master' as the name for the initial branch. This default branch name
-hint: is subject to change. To configure the initial branch name to use in all
-hint: of your new repositories, which will suppress this warning, call:
-hint:
-hint: 	git config --global init.defaultBranch <name>
-hint:
-hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-hint: 'development'. The just-created branch can be renamed via this command:
-hint:
-hint: 	git branch -m <name>
-```
-These instructions on how to change the name of your initial branch are part of GitHub's effort, as part of the larger programming community, to [replace programming terms associated with slavery](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/).
+  ```
+  hint: Using 'master' as the name for the initial branch. This default branch name
+  hint: is subject to change. To configure the initial branch name to use in all
+  hint: of your new repositories, which will suppress this warning, call:
+  hint:
+  hint: 	git config --global init.defaultBranch <name>
+  hint:
+  hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+  hint: 'development'. The just-created branch can be renamed via this command:
+  hint:
+  hint: 	git branch -m <name>
+  ```
+  These instructions on how to change the name of your initial branch are part of GitHub's effort, as part of the larger programming community, to [replace programming terms associated with slavery](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/).
 
-We will following this hint and changing the default name in the [next section](#Creating-the-`main`-branch)
+  We will following this hint and changing the default name in the [next section](#Creating-the-`main`-branch)
 </details>
 
 It is important to note that `git init` will create a repository that
@@ -338,7 +338,9 @@ Cold and dry, but everything is my favorite color
 ```
 
 <div class = "help">
-To exit the file use `control X` or `Ctrl X` (your keyboard should have either a `control` or `Ctrl` key in the lower left and possibly other locations as well). When asked if you want to save changes, enter `Y` for yes. Then the "File Name to Write" should be pre-filled with `mars.txt` so you can press `return` or `Enter`. When you are in `nano`, you can also refer to the reminders of commands at the bottom of window.
+Type `control X` or `Ctrl X` to exit `nano`. Your keyboard should have either a `control` or `Ctrl` key in the lower left and possibly other locations as well. When asked if you want to save changes, enter `Y` for yes. Then the "File Name to Write" field should be pre-filled with `mars.txt` so you can press `return` or `Enter`.
+
+When you are in `nano`, you can also refer to the reminders of commands at the bottom of window. The `^` in these commands means `control` or `Ctrl`.
 </div>
 
 Let's first verify that the file was properly created by running the list command (`ls`):
@@ -360,7 +362,7 @@ $ cat mars.txt
 
 Cold and dry, but everything is my favorite color
 ```
-The `cat` command is short for **concatenate** and can be used to display the contents of multiple files, one after another.
+The `cat` command is short for **concatenate** and can be used to display the contents of multiple files, one after another. Here we are only asking it for the contents of a single file.
 
 If we check the status of our project again,
 Git tells us that it's noticed the new file:
@@ -433,7 +435,7 @@ so that we can write a longer message.
 <div class = "important">
 **Good commit messages**
 
-Commit messages start with a brief (less than 50 characters) statement in the present tense about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will...".
+Commit messages start with a brief (less than 50 characters) statement in the present tense about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will..."
 </div>
 
 If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
@@ -578,11 +580,12 @@ Just like any method of backing up or saving your work, the benefits of using Gi
 
 Often, when we're working in a project, we change several files in the course of a few minutes or hours of work.  For example, you might change the counts of research subjects in a couple of different places across two or three files related to a research project when you update the weekly numbers.  It's helpful to know that with git, you can change a few files in your repository, then use `git add` to include the changed files (as many as you want) you want to include in a commit, and then do a single commit which explains all of the changes as a whole.
 
-- **Commit each chunk of changes** If you add a new section to a file, or change a certain item across multiple files, it is a good practice to commit those changes with a message describing them. If a commit message like `-m "add section on atmosphere"` or `-m "reorder paragraphs on moons from smallest to largest moon"` accurately describes your changes, make sure you commit the changes so that you can find them again later!
+- **Commit each chunk of changes** If you add a new section to a file, or change a certain item across multiple files, it is a good practice to commit those changes with a message describing them. If a commit message like `-m "add sections on atmosphere to planet files"` or `-m "reorder paragraphs on moons from smallest to largest moon"` accurately describes your changes, make sure you commit the changes so that you can find them again later!
 
 - **Commit before making any changes that could break your code** If your code currently works are you intend to add something new that may break it, make sure you commit so that you will be able to revert to the working version if needed.
 
 - **Commit regularly** Even if you are only making very small changes, don't forget to commit at regular intervals, like before you switch tasks or end your work day.
+
 
 ### Quiz: `add` and `commit`
 
@@ -783,9 +786,9 @@ Remember a metaphor doesn't need to be perfect to be helpful. If you find or com
 
 What does the `git commit` command do?
 
- [[ ]] Stages files so that their current version can be recorded.
- [[ ]] Creates a record of the current version of all files in the repository.
- [[X]] Creates a record of the current version of all of the staged files in the repository.
+ [( )] Stages files so that their current version can be recorded.
+ [( )] Creates a record of the current version of all files in the repository.
+ [(X)] Creates a record of the current version of all of the staged files in the repository.
 ***
 <div class = "answer">
 The `git commit` command will only create a record of the files that you have **already staged.**
