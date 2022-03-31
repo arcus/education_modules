@@ -115,8 +115,9 @@ $ git init
 ```
 
 <details>
+
     <summary>What does this `hint` output mean?</summary>
-    
+
     When you initialize your repository, Git will return the following output:
 
     ```
