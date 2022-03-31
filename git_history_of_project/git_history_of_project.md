@@ -3,13 +3,14 @@
 author:  Elizabeth Drellich
 email:    drelliche@chop.edu
 version:  1.0.0
+module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Exploring the History of your Git Repository
 comment:  This module will teach you how to look at past versions of your work on Git, compare versions, and return to former versions.
 long_description: You know that version control is important. You know how to save your work to your Git repository. Now you are ready to look at and compare different versions of your work. In this module you will you will learn how to navigate through the commits you have made to Git. You will also learn how to compare current code with past code, and, if necessary, revert to an earlier version of your work.
 
-@estimated_time: 50 minutes
+estimated_time: 50 minutes
 
 @learning_objectives  
 After completion of this module, learners will be able to:
@@ -62,7 +63,7 @@ The purpose of this module is to learn how to explore the history of a Git repos
 git clone https://www.github.com/arcus/planets
 ```
 
-This should be a very fast download. Now if you type `ls` you should see a folder titled `planets`. Navigate into the planets directory. This is the directory we will be exploring throughout the module.
+This should be a very fast download. Now if you type `ls` within the repository directory, you should see a folder titled `planets`. Navigate into the planets directory using `cd`. This is the directory we will be exploring throughout the module.
 
 <div class = "warning">
 If you are on a Windows machine, make sure you are in the Git Bash application. The Command Prompt (cmd) will not recognize the commands we are using in this module, including `ls`. 
@@ -76,10 +77,10 @@ by [b-maze](https://www.deviantart.com/b-maze) / [Deviant Art](https://www.devia
 [Pluto](https://commons.wikimedia.org/wiki/File:PIA19873-Pluto-NewHorizons-FlyingPastImage-20150714-transparent.png) /
 Courtesy NASA/JPL-Caltech.
 [Mummy](https://commons.wikimedia.org/wiki/File:Mummy_icon_-_Noun_Project_4070.svg)
-$\copyright$; Gilad Fried / [The Noun Project](https://thenounproject.com/) /
+$\copyright$ Gilad Fried / [The Noun Project](https://thenounproject.com/) /
 [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/deed.en).
 [Moon](https://commons.wikimedia.org/wiki/File:Lune_ico.png)
-$\copyright$; Luc Viatour / [https://lucnix.be](https://lucnix.be/) /
+$\copyright$ Luc Viatour / [https://lucnix.be](https://lucnix.be/) /
 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en).
 
 <div class = "options">
@@ -96,7 +97,7 @@ and explore how it was created!
 
 ## Seeing prior commits
 
-Keeping track of all versions and being able to see and compare them is the entire point of using version control on a project you are working on alone. It is also a huge part of working on a project with others, if you are collaborating in the future.
+Keeping track of all versions and being able to see and compare them is the entire point of using version control on a project you are working on alone. It is also a huge part of working on a project with others, whether you are collaborating currently or hope to share your work in the future.
 
 Each time you `commit` to Git, you are marking the current state of your project as a checkpoint that you can return to. The records of these changes are referred to as [commits](https://swcarpentry.github.io/git-novice/reference.html#commit)
 
@@ -111,7 +112,7 @@ You are going to learn about two ways to refer to past commits:
 
 ### Using HEAD
 
-The `HEAD` refers to the most recently commit to your repository. It won't include any changes that haven't been committed to the repository yet. You can see that most recent commit by entering `git show HEAD`.
+The `HEAD` almost always refers to the most recently commit to your repository on your current branch. It won't include any changes that haven't been committed to the repository yet. You can see that most recent commit by entering `git show HEAD`.
 
 ```
 $ git show HEAD
@@ -151,7 +152,7 @@ For example, to look back just one commit before the most recent checkpoint, use
 
 Using `HEAD` to refer to your commits can be great for looking at recent versions of your repository. But be careful, each time you commit to the repository, you are creating a new most-recent-version that is now the `HEAD` and every older version moves one layer down in the stack.
 
-![On the left, the stack of 3 flat white boxes are labeled `HEAD`, `HEAD~1`,  and `HEAD~2`. An arrow points to a stack on the right made of the 3 white boxes with a 4th red box now on top. This red box is labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`](media/Commit_stack_HEAD2.svg)
+![On the left, the stack of 3 flat white boxes are labeled `HEAD`, `HEAD~1`,  and `HEAD~2`. An arrow points to a stack on the right made of the 3 white boxes with a 4th red box now on top. This red box is now the one labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`, with all the white boxes having changed labels.](media/Commit_stack_HEAD2.svg)
 
 ### Using the commit number
 
@@ -184,7 +185,7 @@ Date:   Mon Mar 14 14:57:09 2022 -0400
 
 If you forget to include the `-n 3` flag and just type `git log` you can always jump to the end by pressing `q`. If you have been working on a project for a while, using the arrow keys to scroll down may take a prohibitively long time.
 
-The first thing to notice is that all of your commit messages are here. This is a good reminder to write clear and concise messages because future you may be very grateful when trying to figure out where exactly past you introduced a particular issue.
+The first thing to notice is that all of your commit messages are here. This is a good reminder to write clear and concise messages because **future** you may be very grateful when trying to figure out where exactly **past** you introduced a particular issue.
 
 The second thing to notice is the structure of each entry in the log: commit, Author, Date, message.
 When you identify which commit you want to look at, the commit number is the unique 40 digit string of letters and numbers above it after the word "commit". In Dracula's repository, the unique identifier for the commit in which he "add[ed] concerns about effects of Mars' moons on Wolfman" is `fe532b097861acb8bd3d7f221d6ee741249dc8f0`.
@@ -214,7 +215,7 @@ index df0654a..315bf3a 100644
 
 Unlike `HEAD`, the commit number doesn't change as you update your repository.
 
-![On the left is the stack of 3 boxes, each labeled with its six digit commit number. An arrow points from this stack to the stack on the right where the three white boxes have a red box on top. The red box also has a commit number, but the commit numbers on the white boxes have not changed from the picture on the left.](media/Commit_number.svg)
+![On the left is the stack of 3 boxes, each labeled with its six digit commit number. An arrow points from this stack to the stack on the right where the three white boxes have a red box on top. The red box also has a commit number.  The commit numbers on the white boxes have not changed from the picture on the left.](media/Commit_number.svg)
 
 ### Quiz: finding a commit
 
@@ -317,7 +318,7 @@ index b36abfd..93a3e13 100644
 +An ill-considered change
 ```
 
-There is a lot of information here so we will go through what each of the parts means.
+There is a lot of information here, so we will go through what each of the parts means.
 
 
 ```
@@ -357,7 +358,7 @@ But the Mummy will appreciate the lack of humidity
 
 ### Comparing particular files or commits
 
-When you enter `git diff HEAD`  your console will show you all of the differences between your current working directory and the most recent commit. But if you have made several changes in multiple files, the output may be very hard to parse. Your output will contain a `diff` section for each file that changed, and a chunk, starting with `@@` for each section of that file that changed. This could be a huge amount of output to sift through to find the changes you care about!
+When you enter `git diff HEAD`  your console will show you all of the differences between your current working directory and the the version at HEAD, which, unless you've intentionally moved it, will be the most recent commit. But if you have made several changes in multiple files, the output may be very hard to parse. Your output will contain a `diff` section for each file that changed, and a chunk, starting with `@@` for each section of that file that changed. This could be a huge amount of output to sift through to find the changes you care about!
 
 Helpfully, Git lets you ask for only the changes from a particular file. Let's add and change another file so we can see the power of this. Make sure you are in the planets directory, then enter this code to start a new file `venus.txt` with one line in it:
 
@@ -436,11 +437,11 @@ What does this output tell you? Choose all of the the statements that the output
 [[ ]] No files other than `venus.txt` have been changed since the last commit.
 ***
 <div class = "answer">
-*You already committed the comment about Venus's lack of moons.* FALSE The output is showing the difference between the most recent commit and the current working version. If you had already committed the comment about Venus's lack of moons, that line would not be marked with `+`.
+**You already committed the comment about Venus's lack of moons.**: FALSE.  The output is showing the difference between the most recent commit and the current **working** version, which has indeed changed. If you had already committed the comment about Venus's lack of moons, that line would not be marked with `+`.
 
-*The current working version of `venus.txt` has two lines.* TRUE The current working version of `venus.txt` contains all lines marked with a `+` as well as all lines that have no starting symbol.
+**The current working version of `venus.txt` has two lines.**: TRUE.  The current working version of `venus.txt` contains all lines marked with a `+` as well as all lines that have no starting symbol.
 
-*The last committed version of `venus.txt` has one line.* TRUE The last committed version contains all unmarked lines. If there were any lines marked with `-`, those would also be in the last committed version of `venus.txt`.
+**The last committed version of `venus.txt` has one line.**: TRUE. The last committed version contains all unmarked lines. If there were any lines marked with `-`, those would also be in the last committed version of `venus.txt`.
 
 *No files other than `venus.txt` have been changed since the last* FALSE Because we only asked Git to tell us about differences in the `venus.txt` file, it didn't check for differences in other files. They could have been changed and that would not be reflected in the output.
 
@@ -584,7 +585,7 @@ Luckily, she has been keeping track of her project’s versions using Git! Which
 [[?]] More than one answer can be correct.
 ***
 <div class = "answer">
-The `checkout` command restores files from the repository, overwriting the files in your working directory. Answers 2 and 4 both restore the latest version in the repository of the file `data_cruncher.py`. Answer 2 uses `HEAD` to indicate the latest, whereas answer 4 uses the unique ID of the last commit, which is what `HEAD` means.
+The `checkout` command can restore files from the repository, overwriting the files in your working directory, if used with a file name. Answers 2 and 4 both restore the latest version in the repository of the file `data_cruncher.py`. Answer 2 uses `HEAD` to indicate the latest, whereas answer 4 uses the unique ID of the last commit, which is what `HEAD` usually means.
 
 
 Answer 3 gets the version of `data_cruncher.py` from the commit before `HEAD`, which is NOT what we wanted.
@@ -601,7 +602,7 @@ This module was based on examples from [Software Carpentry](https://software-car
 
  - Lesson 5: [Exploring History](https://swcarpentry.github.io/git-novice/05-history/index.html)
 
-This module is also the fourth in a series of modules about Git created by Arcus Education and friends. We suggest continuing with the next module in the series on [working with others in Git](link/goes/here) and the entire collection is available on the [Arcus website](link/goes/here)
+This module is also the fourth in a series of modules about Git. We suggest continuing with the next module in the series on [working with others in Git](link/goes/here) and the entire collection is available on the [module catalog](link/goes/here)
 
 ## Feedback
 
