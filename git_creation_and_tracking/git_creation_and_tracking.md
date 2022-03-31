@@ -114,7 +114,7 @@ $ cd ~/Desktop
 $ mkdir planets
 $ cd planets
 ```
-The `cd` command means **change directory**, and `mkdir` tells the computer to **make** a **directory** with the name "planets." Once we have a `planets` directory, we use `cd` open that directory.
+The `cd` command means **change directory**.  In our first command, we're changing directory to our home directory (that's the `~`, and within that, to the directory called `Desktop`.  If you don't have this directory in your file system, you'll get an error.  That's okay -- just navigate to a different directory you'd like to work in (as long as that directory isn't within a git repository).  The `mkdir` command tells the computer to **make** a **directory** with the name "planets." Once we have a `planets` directory, we use `cd` open that directory.
 
 <div class = "help">
 Getting an error message when you type these commands? If you are using the Windows operating system, you need to switch over to Git Bash.  Windows uses a different system of commands than other computers like Linux, Unix, and Mac, and Git Bash makes it possible for you to use the commands common to the other operating systems, even though you're on Windows.
@@ -673,7 +673,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 In our scenario, these are files we don't want to track.  Putting these files under version control would be a waste of disk space. What's worse, having them all listed could distract us from changes that actually matter, so let's tell Git to ignore them.
 
-We do this by creating a file in the root directory of our project called `.gitignore`. Each line in this file is a rule for a type of file Git should ignore. Use your favorite text editor to make `.gitignore` contain the two lines:
+We do this by creating a file in the root directory of our project called `.gitignore`.   That dot at the beginning is intentional!  The file must be named this exactly for `.gitignore` to work properly.  Each line in this file is a rule for a type of file Git should ignore. Use your favorite text editor to make `.gitignore` contain the two lines:
 
 ```
 *.dat
