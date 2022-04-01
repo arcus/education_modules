@@ -72,7 +72,7 @@ These statements might have felt extremely true, and also comforting. It can fee
 
 All of these statements, and the attitudes attached to them, are part of a framework that psychologists call a **fixed mindset**.
 
-A fixed mindset is the belief that knowledge and skills are fixed, either due to innate talent or things that people learned earlier in their lives. This can hold you back, regardless of whether you think you are good or bad at something. Consider two people looking at a collection of complicated problems:
+A fixed mindset is the belief that knowledge and skills are fixed, either due to innate talent or things that people learned earlier in their lives. This can hold you back, regardless of whether you think you are good or bad at something. Consider two people looking at a collection of complicated problems with a fixed mindset:
 
 - "I'm already good at that type of problem, I don't want to try a harder one so I can maintain my perfect record!"
 - "I'm never going to be good at that type of problem, so working on a small piece of it is a waste of my time."
@@ -82,10 +82,20 @@ Neither of these people are going to solve the hardest problems, nor will either
 ### Growth Mindset
 
 "Everyone who knows this had to learn it at some point, so I can learn it too."
-"I have learned many new things in my life, so I can learn this new thing too."
+"I have learned many new things in my life, so I can learn this new thing as well."
 "If I practice I will get better."
-"If I fail, I will have learned something."
+"If I fail, I will learn something in the process."
 
+All of these statements, and the attitudes attached to them, are part of a framework that psychologists call a **growth mindset**.
+
+A growth mindset is the belief that "basic abilities can be developed through dedication and hard work—brains and talent are just the starting point." [^1] This can help you expand your skills regardless of whether you think you are good or bad at something. Consider two people looking at a collection of complicated problems with a growth mindset:
+
+- "I'm already good at that type of problem, so I'm going to see what I can learn from trying a different or harder type of problem."
+- "I don't know how to do that type of problem **yet** so I am going to break it into smaller chunks while I'm learning about it."
+
+Both of these people are going to come away from working on the problems with more knowledge and understanding than they started with. The first person might be able to solve a new type of problem, or identify how two types of problems differ, while the second person will be closer to solving the initial problem.
+
+[^1]: Dweck, C. (2015) Carol Dweck Revisits the 'Growth Mindset'. Education Week (https://www.edweek.org/leadership/opinion-carol-dweck-revisits-the-growth-mindset/2015/09?cmp=cpc-goog-ew-growth%20mindset&ccid=growth%20mindset&ccag=growth%20mindset&cckw=%2Bgrowth%20%2Bmindset&cccv=content%20ad&gclid=Cj0KEQiAnvfDBRCXrabLl6-6t-0BEiQAW4SRUM7nekFnoTxc675qBMSJycFgwERohguZWVmNDcSUg5gaAk3I8P8HAQ)
 
 ## Research findings
 
@@ -101,16 +111,14 @@ A lot of mindset research was done on human subjects from [W.E.I.R.D. countries]
 
 1. What is something you understand or can do well that was very difficult when you first started learning it?
 [[ ___ ]]
+***
+<div class = "answer">
+There are lots possible answers! A few possibly categories they might fall under are:
+- When you first learned to talk or communicate, you probably said a lot of nonsense for many years. But you kept trying until others understood you. Each attempt helped you be better at communicating, though you were likely very frustrated for a while.
 
-<details>
-
-<summary>**One possible answer**</summary>
-
-When you first learned to talk or communicate, you probably said a lot of nonsense for many years. But you kept trying until others understood you. Each attempt helped you be better at communicating, though you were likely very frustrated for a while.
-
-</details>
-
-2. 
+</div>
+***
+2.
 
 3.
 
