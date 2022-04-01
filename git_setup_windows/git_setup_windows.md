@@ -217,14 +217,7 @@ $ git config --global init.defaultBranch main
 
 Source file changes are associated with a "branch."
 For new learners in this lesson, it's enough to know that branches exist, and this lesson uses one branch.
-By default, Git will create a branch called `master`
-when you create a new repository with `git init`. This term evokes
-the racist practice of human slavery and the
-[software development community](https://github.com/github/renaming)  has moved to adopt
-more inclusive language.
-
-In 2020, most Git code hosting services transitioned to using `main` as the default branch. As an example, any new repository that is opened in GitHub and GitLab default
-to `main`.  However, Git has not yet made the same change.  As a result, local repositories must be manually configured have the same main branch name as most cloud services.
+The primary branch of some projects, particularly older projects, is called `master` instead of `main`. GitHub has joined the programming community in a concerted effort to [replace programming terms associated with slavery](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/).
 
 
 ### Check your global configurations
