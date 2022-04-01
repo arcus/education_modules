@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -29,7 +29,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
-# Setting Up Git
+# Setting Up Git on Mac and Linux
 
 <div class = "overview">
 
@@ -181,18 +181,7 @@ $ git config --global init.defaultBranch main
 
 Source file changes are associated with a "branch."
 For new learners in this lesson, it's enough to know that branches exist, and this lesson uses one branch.
-By default, Git will create a branch called `master`
-when you create a new repository with `git init` (as explained in the next Episode). This term evokes
-the racist practice of human slavery and the
-[software development community](https://github.com/github/renaming)  has moved to adopt
-more inclusive language.
-
-In 2020, most Git code hosting services transitioned to using `main` as the default branch. As an example, any new repository that is opened in GitHub and GitLab default
-to `main`.  However, Git has not yet made the same change.  As a result, local repositories must be manually configured have the same main branch name as most cloud services.
-
-For versions of Git prior to 2.28, the change can be made on an individual repository level.  The
-command for this is in the next episode.  Note that if this value is unset in your local Git
-configuration, the `init.defaultBranch` value defaults to `master`.
+The primary branch of some projects, particularly older projects, is called `master` instead of `main`. GitHub has joined the programming community in a concerted effort to [replace programming terms associated with slavery](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/). However Git has not yet made the same change.  As a result, local repositories must be manually configured have the same main branch name as most cloud services.
 
 ### Check your global configurations
 
