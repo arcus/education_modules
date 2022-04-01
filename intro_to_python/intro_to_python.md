@@ -132,8 +132,7 @@ Option 2: Work on Your Computer
 
 If you have [Python](https://www.python.org/) and [Jupyter](https://jupyter.org/) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. If you haven't downloaded Python or Jupyter to your computer but would like to, you'll learn how in the [Next Steps](#next-steps) section of this module. Then you can come back here when you're done and follow these steps to download the code:
 
-* Click this link to download the notebook:
-<a href="/notebooks/intro-to-python.ipynb" download>
+* <a href="/notebooks/intro-to-python.ipynb" download> Click this link to download the notebook.
 
 If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime.
 
