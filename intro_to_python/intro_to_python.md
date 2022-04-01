@@ -3,12 +3,13 @@
 author:   Meredith Lee
 email:    leemc@chop.edu
 version:  1.0.0
+module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Introduction to Python
 comment:  This module introduces the Python programming language, explores why Python is useful in research, and demonstrates how to write Python code in a Jupyter notebook (and why you might want to).
 long_description: Python is a versatile programming language that is frequently used for data analysis, machine learning, web development, and more. If are interested in learning about any of these topics and are new to programming, are joining a team where Python is used, or have just heard about Python and are looking for a general introduction to the language, this module is a good place to start. This is appropriate for someone at the beginner level.
-
+estimated_time: 1 hour
 @learning_objectives  
 
 After completion of this module, learners will be able to:
@@ -91,7 +92,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 ### Details
 
-**Estimated time to completion**: ~ 1 hr
+**Estimated time to completion**: @estimated_time
 
 **Pre-requisites**: Learners should be familiar with tabular data (data stored in a rectangular format, like an Excel spreadsheet or a comma separated file). It is helpful to have some familiarly with navigating to specific directories and running programs in the Command Line/Terminal. Learners do not need to have access to Python or Jupyter notebooks on their own computers.
 
@@ -105,11 +106,36 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 For the hands-on activity in this module, we will be using an online environment containing a Jupyter notebook. To load the environment, open the link below in a new tab:
 
-<a href = "https://mybinder.org/v2/gh/arcus/education_modules/main?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg"></a> **← Click the "launch binder" button!**
+<div class = "important">
+Please read over both options before you start performing any actions, to make sure you pick the right option for you.
+</div>
 
+Option 1: Work in the Cloud
+=======
 
-The environment takes a few minutes to load, so be patient. Read through the next couple of sections while you wait! We won't need the online environment until the ["Using a Jupyter Notebook" section](#Using-a-Jupyter-Notebook).
+This might work well for you if you either can't or don't want to install R and RStudio on your computer.  The benefit is that you don't have to install anything, but one negative is that this option requires a bit of waiting for your environment to come online.
 
+**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in a Jupyter notebook without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
+
+  <a href = "https://mybinder.org/v2/gh/arcus/education_modules/main?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg"></a> **← Click the "launch binder" button!**
+
+<div class = "hint" style = "align-items: center; display: flex;">
+
+<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
+<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen.](media/binder_loading.gif)<!--
+style = "border: 1px solid rgb(var(--color-highlight));"-->
+</div>
+</div>
+
+Option 2: Work on Your Computer
+=======
+
+If you have [Python](https://www.python.org/) and [Jupyter](https://jupyter.org/) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. If you haven't downloaded Python or Jupyter to your computer but would like to, you'll learn how in the [Next Steps](#next-steps) section of this module. Then you can come back here when you're done and follow these steps to download the code:
+
+* Click this link to download the notebook:
+<a href="/notebooks/intro-to-python.ipynb" download>
+
+If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime.
 
 ## The Python Programming Language
 
@@ -123,7 +149,7 @@ So why should you consider Python for your data analysis? There are a few reason
 
 - Because Python is quite popular and fairly mature, there are quite a lot of resources out there to help you get started learning, from free online tutorials and cheatsheets to semester-long courses and everything in between.
 
-### Knowledge Check 1
+### Quiz: Why Python?
 
 What are some reasons to consider using Python for data analysis? Select all that apply.
 
@@ -197,7 +223,7 @@ This is a hands-on activity! Feel free to pop over to that tab you opened in the
 
 <a href = "https://mybinder.org/v2/gh/arcus/education_modules/main?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg"></a> **← Click the "launch binder" button!**
 
-### Knowledge Check 2
+### Quiz: Python code
 
 Which of the following is **not** an example of Python code?
 
@@ -212,7 +238,7 @@ Python uses functions that contain instructions that tell the computer what it i
 ***********************************************************************
 
 
-### Knowledge Check 3
+### Quiz: Jupyter notebooks
 
 What are the components of a Jupyter notebook? Select all that apply.
 
@@ -242,7 +268,7 @@ Once you've downloaded Anaconda, you can open the Anaconda Navigator; when you d
 ![Anaconda Navigator interface.](media/anaconda.png?raw=true)
 </div>
 
-### Knowledge Check 4
+### Quiz: Accessing Python
 
 How can you access Python to begin practicing on your own?
 
