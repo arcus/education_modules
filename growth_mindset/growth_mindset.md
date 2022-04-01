@@ -18,7 +18,7 @@ estimated_time: This is rough guess of how long it might take a learner to work 
 After completion of this module, learners will be able to:
 
 - define "Growth Mindset"
-- identify times when having a growth mindset has helped them learn new things
+- identify times when having a growth mindset has helped them learn or do new things
 - differentiate between the popular culture idea of "Growth Mindset" and what the research shows.
 
 @end
@@ -97,30 +97,47 @@ Both of these people are going to come away from working on the problems with mo
 
 [^1]: Dweck, C. (2015) Carol Dweck Revisits the 'Growth Mindset'. Education Week (https://www.edweek.org/leadership/opinion-carol-dweck-revisits-the-growth-mindset/2015/09?cmp=cpc-goog-ew-growth%20mindset&ccid=growth%20mindset&ccag=growth%20mindset&cckw=%2Bgrowth%20%2Bmindset&cccv=content%20ad&gclid=Cj0KEQiAnvfDBRCXrabLl6-6t-0BEiQAW4SRUM7nekFnoTxc675qBMSJycFgwERohguZWVmNDcSUg5gaAk3I8P8HAQ)
 
-## Research findings
+### Mindset flexibility
+
+A mindset isn't an inherent trait, you can change your mindset whenever you want to!
+
+I have changed my own mindset about the task of writing this module several times during the course of writing it. When I decided to write this module, I thought I knew enough about the theory of mindsets to put a decent module together. Then I started to outline it and immediately thought "actually I know less than I thought and should probably have asked someone else to write it, or possibly not suggested it in the first place." I was approaching it with a fixed mindset, and not doing much more than typing section titles and immediately deleting them as not good enough.
+
+But then I reminded myself that if **I** should try applying a growth mindset the task of writing a module about growth mindset. Practically, that meant that I didn't try to outline the module before writing. Instead I typed up a lot of my disconnected thoughts, Googled a lot of the research about growth mindsets, watched some interviews with Carol Dweck, and decided to leave the title, description, and section headings of this module for last. By reminding myself that a growth mindset was something I could have, I got unstuck.
+
+I'm including this personal story as a precursor to the section on research, because it illustrates exactly what a lot of the mindset research shows. Being reminded that the growth mindset framework exists is enough to shift a person's mindset in regards to a task or challenge. And that shift in mindset has (statistically significant) impacts on achievement.
+
+## Growth Mindset Research
 
 <div class = "learnmore">
 A lot of mindset research was done on human subjects from [W.E.I.R.D. countries](https://www.science.org/content/article/western-mind-too-weird-study) (Western, Educated, Industrialized, Rich, and Democratic). The Psychology research community is starting to grapple with what conclusions gained from research on WEIRDos can be generalized to humans in general. However if you are here reading this module, I'm betting at least some of these things apply to you.
 </div>
 
-### Growth mindset Research
+### Selected Studies
 
 ### Pop culture misconceptions
 
 ## Quiz
 
-1. What is something you understand or can do well that was very difficult when you first started learning it?
+1. Describe a **Growth Mindset** in your own words.
+
+[[ ___ ___ ___ ]]
+
+2. What is something you understand or can do well that was very difficult when you first started learning it?
 [[ ___ ]]
 ***
 <div class = "answer">
-There are lots possible answers! A few possibly categories they might fall under are:
-- When you first learned to talk or communicate, you probably said a lot of nonsense for many years. But you kept trying until others understood you. Each attempt helped you be better at communicating, though you were likely very frustrated for a while.
-
+There are lots possible answers! If you are having trouble thinking of one, try think of things you do regularly that you could not have done when you were a small child. Perhaps riding a bike, driving a car, or navigating a bus system fall into this category.
 </div>
 ***
-2.
 
-3.
+3. All of the statements below could come from the popular culture understanding of growth mindset. Which ones are backed by research? Select all that apply.
+[[ ]]
+[[ ]]
+[[ ]]
+[[ ]]
+[[ ]]
+[[ ]]
 
 
 ## Additional Resources
