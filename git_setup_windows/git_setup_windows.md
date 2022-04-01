@@ -208,17 +208,16 @@ This is [a common problem that has frustrated many a new Git user](https://stack
 
 ### Default branch naming
 
+Source file changes are associated with a "branch."
+For new learners in this lesson, it's enough to know that branches exist, and this lesson uses one branch.
+The primary branch of some projects, particularly older projects, is called `master` instead of `main`. GitHub has joined the programming community in a concerted effort to [replace programming terms associated with slavery](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/). Git has not yet made the same change.  As a result, local repositories must be manually configured have the same main branch name as most cloud services.
+
 Git (2.28+) allows configuration of the name of the branch created when you initialize any new repository.  Our friend Dracula decides to use that feature to set it to `main` so
 it matches GitHub, which is the cloud service he will eventually use. If you already changed the default branch name when installing Git, you can skip this step.
 
 ```bash
 $ git config --global init.defaultBranch main
 ```
-
-Source file changes are associated with a "branch."
-For new learners in this lesson, it's enough to know that branches exist, and this lesson uses one branch.
-The primary branch of some projects, particularly older projects, is called `master` instead of `main`. GitHub has joined the programming community in a concerted effort to [replace programming terms associated with slavery](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/).
-
 
 ### Check your global configurations
 
