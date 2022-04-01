@@ -101,21 +101,27 @@ Both of these people are going to come away from working on the problems with mo
 
 A mindset isn't an inherent trait, you can change your mindset whenever you want to!
 
-I have changed my own mindset about the task of writing this module several times during the course of writing it. When I decided to write this module, I thought I knew enough about the theory of mindsets to put a decent module together. Then I started to outline it and immediately thought "actually I know less than I thought and should probably have asked someone else to write it, or possibly not suggested it in the first place." I was approaching it with a fixed mindset, and not doing much more than typing section titles and immediately deleting them as not good enough.
+I have changed my own mindset about the task of writing this module during the course of writing it. When I decided to write this module, I thought I knew enough about the theory of mindsets to put a decent module together. Then I started to outline it and immediately thought "actually I know less than I thought and should probably have asked someone else to write it, or possibly not suggested it in the first place." I was approaching it with a fixed mindset, and not doing much more than typing section titles and immediately deleting them as not good enough.
 
-But then I reminded myself that if **I** should try applying a growth mindset the task of writing a module about growth mindset. Practically, that meant that I didn't try to outline the module before writing. Instead I typed up a lot of my disconnected thoughts, Googled a lot of the research about growth mindsets, watched some interviews with Carol Dweck, and decided to leave the title, description, and section headings of this module for last. By reminding myself that a growth mindset was something I could have, I got unstuck.
+But then I reminded myself that **I** should try applying a growth mindset the task of writing a module about growth mindset. Practically, that meant that I didn't try to outline the module before writing. Instead I typed up a lot of my disconnected thoughts, most of which I knew would not appear in the final version of the module. I Googled a lot of research papers about growth mindsets because I knew that through reading them I could better understand the scientific underpinnings of mindset theory. I decided to leave the title, description, and section headings of this module for last because the goal was no longer to create a finished module, but to learn more about growth mindset research so that I would eventually have the knowledge to create such a module. By reminding myself that a growth mindset was something I could have, I got unstuck.
 
 I'm including this personal story as a precursor to the section on research, because it illustrates exactly what a lot of the mindset research shows. Being reminded that the growth mindset framework exists is enough to shift a person's mindset in regards to a task or challenge. And that shift in mindset has (statistically significant) impacts on achievement.
 
 ## Growth Mindset Research
 
+
+
+
+### Selected Studies
+
+
 <div class = "learnmore">
 A lot of mindset research was done on human subjects from [W.E.I.R.D. countries](https://www.science.org/content/article/western-mind-too-weird-study) (Western, Educated, Industrialized, Rich, and Democratic). The Psychology research community is starting to grapple with what conclusions gained from research on WEIRDos can be generalized to humans in general. However if you are here reading this module, I'm betting at least some of these things apply to you.
 </div>
 
-### Selected Studies
-
 ### Pop culture misconceptions
+
+
 
 ## Quiz
 
