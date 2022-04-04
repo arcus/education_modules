@@ -132,7 +132,17 @@ Option 2: Work on Your Computer
 
 If you have [Python](https://www.python.org/) and [Jupyter](https://jupyter.org/) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. If you haven't downloaded Python or Jupyter to your computer but would like to, you'll learn how in the [Next Steps](#next-steps) section of this module. Then you can come back here when you're done and follow these steps to download the code:
 
-* <a href="/notebooks/intro-to-python.ipynb" download> Click this link to download the notebook.
+* Go to the GitHub repository where the materials for this lesson are located: https://github.com/arcus/education_modules
+* If you are familiar with using git to **clone**, or download, a repository (or "repo", as it is sometimes called), then you can clone the entire thing. It's often useful to have a folder called "GitHub" on your computer for storing repositories that you clone.
+* If you don't want to clone the repository, you can also download just the notebook file itself:
+   * In the education_modules repository, open the `intro_to_python` folder and then the `notebooks` folder.
+   * Open the file `intro-to-python.ipynb`.
+   * In the upper right hand corner, just above the title of the notebook, you will see a button that says "Raw". Click it.
+   * Once you are looking at the raw file (which will look very different from the rendered notebook, that is normal!), right-click and then select "Save As". Save the file to your computer wherever you like. It will have a `.txt` file extension; that is okay for now.
+* Open Jupyter on your computer (either directly or using the Anaconda navigator).
+* You should see your computer's file directory system. Just as you would on your own computer, find `intro-to-python.ipynb`
+* Find the repository folder on your computer (it should be called `education_modules`). From there, find the notebook file (within the `notebooks` folder, which is itself inside the `intro_to_python` folder).
+* Open the notebook file and follow the instructions there!
 
 If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime.
 
