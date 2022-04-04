@@ -308,7 +308,7 @@ Hi Vlad! You've successfully authenticated, but GitHub does not provide shell ac
 Now that authentication is setup, we can return to the remote. This command will push the changes from our local repository to the repository on GitHub:
 
 ```console
-$ git remote add origin git@github.com:vlad/planets.git
+git push origin main
 ```
 
 Since Dracula set up a passphrase, it will prompt him for it. If you completed advanced settings for your authentication, it will not prompt for a passphrase.
@@ -331,18 +331,14 @@ To https://github.com/vlad/planets.git
 **Proxy**
   
 If the network you are connected to uses a proxy, there is a chance that your last command failed with “Could not resolve hostname” as the error message. To solve this issue, you need to tell Git about the proxy:
- 
-```console
-$ git config --global http.proxy http://user:password@proxy.url
-$ git config --global https.proxy https://user:password@proxy.url
-```
+
+`$ git config --global http.proxy http://user:password@proxy.url`
+`$ git config --global https.proxy https://user:password@proxy.url`
 
 When you connect to another network that doesn’t use a proxy, you will need to tell Git to disable the proxy using:
   
-```console
-$ git config --global --unset http.proxy
-$ git config --global --unset https.proxy
-```
+`$ git config --global --unset http.proxy`
+`$ git config --global --unset https.proxy`
 </div>
 
 <div class = 'care'>
