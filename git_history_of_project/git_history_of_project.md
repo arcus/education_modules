@@ -15,10 +15,10 @@ estimated_time: 50 minutes
 @learning_objectives  
 After completion of this module, learners will be able to:
 
-- Identify and use the HEAD of a repository.
+- Identify and use the `HEAD` of a repository.
 - Identify and use Git commit numbers.
 - Compare versions of tracked files.
-- Restore old versions of files.
+- Use `revert` to restore the previous version of a file.
 
 @end
 
@@ -66,34 +66,9 @@ git clone https://www.github.com/arcus/planets
 This should be a very fast download. Now if you type `ls` within the repository directory, you should see a folder titled `planets`. Navigate into the planets directory using `cd`. This is the directory we will be exploring throughout the module.
 
 <div class = "warning">
-If you are on a Windows machine, make sure you are in the Git Bash application. The Command Prompt (cmd) will not recognize the commands we are using in this module, including `ls`. 
+If you are on a computer running Windows, make sure you are in the Git Bash application. The Command Prompt (cmd) will not recognize the commands we are using in this module, including `ls`.
 </div>
 
-![A collage of the project we will use as a motivating example. Figures include Dracula, a werewolf, a mummy, and several planets and moons.](media/motivatingexample.png)
-[Werewolf vs dracula](https://www.deviantart.com/b-maze/art/Werewolf-vs-Dracula-124893530)
-by [b-maze](https://www.deviantart.com/b-maze) / [Deviant Art](https://www.deviantart.com/).
-[Mars](https://en.wikipedia.org/wiki/File:OSIRIS_Mars_true_color.jpg) by European Space Agency /
-[CC-BY-SA 3.0 IGO](https://creativecommons.org/licenses/by/3.0/deed.en).
-[Pluto](https://commons.wikimedia.org/wiki/File:PIA19873-Pluto-NewHorizons-FlyingPastImage-20150714-transparent.png) /
-Courtesy NASA/JPL-Caltech.
-[Mummy](https://commons.wikimedia.org/wiki/File:Mummy_icon_-_Noun_Project_4070.svg)
-$\copyright$ Gilad Fried / [The Noun Project](https://thenounproject.com/) /
-[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/deed.en).
-[Moon](https://commons.wikimedia.org/wiki/File:Lune_ico.png)
-$\copyright$ Luc Viatour / [https://lucnix.be](https://lucnix.be/) /
-[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en).
-
-<div class = "options">
-If you have a repository with at least a few commits in it, such as the one created in the previous module in this series, you can use this module as a framework for exploring that instead.
-
-Alternatively, you can clone any repository you find on [GitHub](https://github.com) using
-
-```
-git clone https://www.github.com/RepositoryOwner/RepositoryName
-```
-
-and explore how it was created!
-</div>
 
 ## Seeing prior commits
 
@@ -104,7 +79,7 @@ Each time you `commit` to Git, you are marking the current state of your project
 
 You are going to learn about two ways to refer to past commits:
 
-- Using `HEAD` to refer to the latest `commit`.
+- Using `HEAD`, which points to the last thing you were working on.
 - Using the commit number assigned to a particular `commit`.
 
 
@@ -141,7 +116,7 @@ The more you see this type of output, the more comfortable you will get with ext
 </div>
 
 <div class = "important">
-If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press `q` to skip to the end of that output.
+If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press `Q` to **quit** the output and return to your command line, a line starting with `$`.
 </div>
 
 Maybe you want to look one step further back into your work. By using `HEAD~n` you can look back n checkpoints in your repository. The `~` symbol is named "tilde" and pronounced "TIL-duh."
@@ -183,15 +158,21 @@ Date:   Mon Mar 14 14:57:09 2022 -0400
     Start notes on Mars as a base
 ```
 
-If you forget to include the `-n 3` flag and just type `git log` you can always jump to the end by pressing `q`. If you have been working on a project for a while, using the arrow keys to scroll down may take a prohibitively long time.
+If you forget to include the `-n 3` flag and just type `git log` you can always quit the log output by pressing `Q`. If you have been working on a project for a while, using the arrow keys to scroll down may take a prohibitively long time.
 
 The first thing to notice is that all of your commit messages are here. This is a good reminder to write clear and concise messages because **future** you may be very grateful when trying to figure out where exactly **past** you introduced a particular issue.
 
 The second thing to notice is the structure of each entry in the log: commit, Author, Date, message.
 When you identify which commit you want to look at, the commit number is the unique 40 digit string of letters and numbers above it after the word "commit". In Dracula's repository, the unique identifier for the commit in which he "add[ed] concerns about effects of Mars' moons on Wolfman" is `fe532b097861acb8bd3d7f221d6ee741249dc8f0`.
 
-<div class = "warning">
-If you are using the repo you created in an earlier module,  your commits might have different commit numbers than the commit numbers in the examples. Be sure to use the commit number in YOUR log.
+<div class = "learnmore">
+**What is this number?**
+
+We are used to seeing numbers in base 10, which are made up of the ten digits $$0,1,2,3,4,5,6,7,8,$$ and $$9$$. Commit numbers are in base 16, called [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal). In this number system, we use the 10 familiar digits as well as the digits $$a,b,c,d,e,$$ and $$f$$ corresponding to 10,11,12,13,14, and 15 respectively in base 10.
+
+If you are using the repo you created in an earlier module, your commits might have different commit numbers than the commit numbers in the examples.
+
+On the other hand, if you created your `planets` repository identically to Dracula, with every file containing all the same characters including spaces and line breaks, your commit numbers will match Dracula's. This is because the commit number is created by putting the entire repository through a function called a **hash**. If you and Dracula put the same thing into this function, you will get the same commit number out. Be sure to use the commit number in YOUR log if it differs from Dracula's.
 </div>
 
 Now that we have found the unique identifier of the commit we want to examine, we can use it with `git show`. Don't worry, you won't need to type all 40 digits, the first six will suffice.
@@ -603,6 +584,18 @@ This module was based on examples from [Software Carpentry](https://software-car
  - Lesson 5: [Exploring History](https://swcarpentry.github.io/git-novice/05-history/index.html)
 
 This module is also the fourth in a series of modules about Git. We suggest continuing with the next module in the series on [working with others in Git](link/goes/here) and the entire collection is available on the [module catalog](link/goes/here)
+
+<div class = "options">
+If you have a repository with at least a few commits in it, such as the one created in the previous module in this series, you can use this module as a framework for exploring the history of that project.
+
+You can also clone any repository you find on [GitHub](https://github.com) using
+
+```
+git clone https://www.github.com/RepositoryOwner/RepositoryName
+```
+
+and explore how it was created! One repository with particularly good documentation is the [LiaScript project](https://github.com/LiaScript/LiaScript).
+</div>
 
 ## Feedback
 
