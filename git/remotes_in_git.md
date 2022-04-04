@@ -330,8 +330,8 @@ To https://github.com/vlad/planets.git
   
 If the network you are connected to uses a proxy, there is a chance that your last command failed with “Could not resolve hostname” as the error message. To solve this issue, you need to tell Git about the proxy:
 
-`$ git config --global http.proxy http://user:password@proxy.url`
-`$ git config --global https.proxy https://user:password@proxy.url`
+<code>$ git config --global http.proxy http://user:password@proxy.url
+$ git config --global https.proxy https://user:password@proxy.url<code>Testing hint box</code></code>
 
 When you connect to another network that doesn’t use a proxy, you will need to tell Git to disable the proxy using:
   
@@ -350,8 +350,7 @@ $ unset SSH_ASKPASS
 
 in the terminal, before you run `git push`. Despite the name, Git uses SSH_ASKPASS for all credential entry, so you may want to unset `SSH_ASKPASS` whether you are using Git via SSH or https.
 
-You may also want to add `unset SSH_ASKPASS` at the end of your `~/.bashrc` to make Git default to using the terminal for usernames and passwords.
-  
+You may also want to add `unset SSH_ASKPASS` at the end of your `~/.bashrc` to make Git default to using the terminal for usernames and passwords. 
 </div>
 
 
@@ -363,7 +362,6 @@ Our local and remote repositories are now in this state:
 **the -u flag**
 
 You may see a -u option used with git push in some documentation. This option is synonymous with the --set-upstream-to option for the git branch command, and is used to associate the current branch with a remote branch so that the git pull command can be used without any arguments. To do this, simply use git push -u origin main once the remote has been set up.
-  
 </div>  
 
 We can pull changes from the remote repository to the local one as well:
