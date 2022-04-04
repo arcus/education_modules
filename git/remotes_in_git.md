@@ -326,7 +326,7 @@ To https://github.com/vlad/planets.git
 
 
 <div class = "help">
-  <b>Proxy</b>
+Proxy
   
 If the network you are connected to uses a proxy, there is a chance that your last command failed with “Could not resolve hostname” as the error message. To solve this issue, you need to tell Git about the proxy:
 
