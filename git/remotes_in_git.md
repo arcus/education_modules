@@ -205,7 +205,7 @@ If SSH has been set up on the computer you’re using, the public and private ke
 
 To create an SSH key pair Vlad uses this command, where the -t option specifies which type of algorithm to use and -C attaches a comment to the key (here, Vlad’s email):
 ```console 
-$ ssh-keygen -t ed25519 -C "vlad@tran.sylvan.ia"
+ssh-keygen -t ed25519 -C "vlad@tran.sylvan.ia"
 ```
 <div class = "help">
 If you are using a legacy system that doesn’t support the Ed25519 algorithm, use: `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
@@ -226,7 +226,7 @@ Enter same passphrase again:
 ```
 
 After entering the same passphrase a second time, we receive the confirmation
-```output 
+```console
 Your identification has been saved in /c/Users/Vlad Dracula/.ssh/id_ed25519
 Your public key has been saved in /c/Users/Vlad Dracula/.ssh/id_ed25519.pub
 The key fingerprint is:
