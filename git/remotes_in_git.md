@@ -168,11 +168,10 @@ What we will do now is the minimum required to set up the SSH keys and add the p
 
 <div class = "warning"> 
 Github no longer supports password authentication as of August 2021. If you do try to use HTTPS to connect to remote you will encounter the error: 
-<code>
-remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+<code>remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
 remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
-fatal: Authentication failed for 'https://github.com/pakstisj/planets.git/
-</code>
+fatal: Authentication failed for 'https://github.com/vlad/planets.git/</code>
+</div>
 
 ### SSH Setup
 
