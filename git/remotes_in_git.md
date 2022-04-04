@@ -93,9 +93,7 @@ Now that we have two repositories, we need a diagram like this:
 Note that our local repository still contains our earlier work on mars.txt, but the remote repository on GitHub appears empty as it doesn’t contain any files yet.
 </div>
 
-### Quiz 
-
-**GitHub license and README files**
+### Quiz: GitHub license and README files
 
 In this module, we learned about creating a remote repository on GitHub, but when you initialized your GitHub repo, you didn’t add a README.md or a license file. If you had, what do you think would have happened when you tried to link your local and remote repositories?
 
@@ -396,7 +394,7 @@ When we push changes, we’re interacting with a remote repository to update it 
 
 ## GitHub GUI
 
-**Uploading files directly in GitHub browser**
+**Uploading files directly in GitHub browser**\n
   
 Github also allows you to skip the command line and upload files directly to your repository without having to leave the browser. There are two options. First you can click the “Upload files” button in the toolbar at the top of the file tree. Or, you can drag and drop files from your desktop onto the file tree. You can read more about this on [this GitHub page](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
 
