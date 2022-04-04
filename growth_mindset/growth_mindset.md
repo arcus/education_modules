@@ -101,26 +101,46 @@ Both of these people are going to come away from working on the problems with mo
 
 A mindset isn't an inherent trait, you can change your mindset whenever you want to!
 
-I have changed my own mindset about the task of writing this module during the course of writing it. When I decided to write this module, I thought I knew enough about the theory of mindsets to put a decent module together. Then I started to outline it and immediately thought "actually I know less than I thought and should probably have asked someone else to write it, or possibly not suggested it in the first place." I was approaching it with a fixed mindset, and not doing much more than typing section titles and immediately deleting them as not good enough.
+I have changed my own mindset about the task of writing this module during the course of writing it. When I decided to write this module, I thought I knew enough about the theory of mindsets to put a decent module together. Then I started to outline it and immediately thought "actually I know less than I thought and should probably have asked someone else to write it, or possibly not suggested it in the first place." I was approaching it with a fixed mindset, that I either did or did not have the knowledge to write the module and if I didn't, then I shouldn't try. Practically I was not doing much more than typing section titles and immediately deleting them as not good enough.
 
 But then I reminded myself that **I** should try applying a growth mindset the task of writing a module about growth mindset. Practically, that meant that I didn't try to outline the module before writing. Instead I typed up a lot of my disconnected thoughts, most of which I knew would not appear in the final version of the module. I Googled a lot of research papers about growth mindsets because I knew that through reading them I could better understand the scientific underpinnings of mindset theory. I decided to leave the title, description, and section headings of this module for last because the goal was no longer to create a finished module, but to learn more about growth mindset research so that I would eventually have the knowledge to create such a module. By reminding myself that a growth mindset was something I could have, I got unstuck.
 
-I'm including this personal story as a precursor to the section on research, because it illustrates exactly what a lot of the mindset research shows. Being reminded that the growth mindset framework exists is enough to shift a person's mindset in regards to a task or challenge. And that shift in mindset has (statistically significant) impacts on achievement.
+I'm including this personal story as a precursor to the section on research, because it illustrates exactly what a lot of the mindset research shows: being reminded that the growth mindset framework exists is enough to shift a person's mindset in regards to a task or challenge. And that shift in mindset has measurable impacts on achievement.
 
 ## Growth Mindset Research
 
+In 2006 Carol Dweck, a [professor of psychology at Stanford University](https://profiles.stanford.edu/carol-dweck), published her book "Mindset: The New Psychology of Success." It was a bestseller and many of its ideas have permeated the wider culture.
 
-
-
-### Selected Studies
-
+It has also been tested by peer reviewed research in the fields of Psychology and Education.
 
 <div class = "learnmore">
 A lot of mindset research was done on human subjects from [W.E.I.R.D. countries](https://www.science.org/content/article/western-mind-too-weird-study) (Western, Educated, Industrialized, Rich, and Democratic). The Psychology research community is starting to grapple with what conclusions gained from research on WEIRDos can be generalized to humans in general. However if you are here reading this module, I'm betting at least some of these things apply to you.
 </div>
 
+### Selected Studies
+
+There has been a lot of activity in the research of growth mindsets and neuroplasitcity since the early 2000s. Here is a selection of what has been learned:
+
+**Having a growth mindset correlates with learning more**
+
+**Being introduced to or reminded of the idea of neuroplasticity/growth mindset helps individuals learn more in subsequent exercises**
+
+**Short introductions to the ideas of neuroplasticity/growth mindset can raise achievement in some groups in the longer term**
+
+[National experiment on effectiveness of a one hour mindset intervention](https://www.nature.com/articles/s41586-019-1466-y)
+
+**Changing people's mindset for lasting growth isn't as easy as some studies hoped**
+
+[Failure to replicate](https://www-tandfonline-com.proxy.library.upenn.edu/doi/full/10.1080/01973533.2020.1806845)
+
+
 ### Pop culture misconceptions
 
+False growth mindset
+
+Praise of effort that doesn't accomplish anything
+
+(https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means)
 
 
 ## Quiz
