@@ -442,9 +442,10 @@ so that we can write a longer message.
 **Good commit messages**
 
 Commit messages start with a brief (less than 50 characters) statement in the present tense about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will..."
-</div>
+
 
 If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
+</div>
 
 If we run `git status` now it tells us everything is up to date.
 
@@ -456,6 +457,12 @@ On branch main
 nothing to commit, working directory clean
 ```
 
+<div class= "care">
+Even, and perhaps especially, those who use Git a lot can have trouble writing good commit messages.
+
+![XKCD Cartoon, the text of which reads "As a project drags on my Git commit messages get less and less informative."  The first message shown reads "Created main loop & timing control." By the 5th message it reads "more code" followed by messages including "Here have code," "AAAAAAAAA," "my hands are typing words" and finally "haaaaaaaaands."](media/git_commit_2x.png)
+(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1296.)
+</div>
 
 ### Keeping track of your changes
 
@@ -579,6 +586,36 @@ On branch main
 
 nothing to commit, working directory clean
 ```
+### Commiting changes to multiple files
+
+Running the `git commit` command will create a record in `.git` of every file we have told Git to track using `git add`. For example Dracula might want to create files for other planets.
+
+He uses `nano` to create a file `jupiter.txt` with contents:
+
+```
+Jupiter is cheerful and full of energy
+```
+
+Then he creates a file `mercury.txt` which reads:
+
+```
+Mercury is swift and unpredictable
+```
+
+Now Dracula has two new files, and can tell Git to track both of them.
+
+```
+$ git add jupiter.txt mercury.txt
+```
+
+This tells Git to track both `jupiter.txt` and `mercury.txt`, and is the same as first adding one, and then using `git add` again to add the other. You can add as many files as you want in a single like by simply typing their names one after another, separated by a space.
+
+Now we can record them with a single commit:
+
+```
+$ git commit -m "Start files on Jupiter and Mercury."
+```
+You can use `git status` to check that both files have now been recorded!
 
 ### How often should you `commit`?
 
@@ -591,6 +628,10 @@ Often, when we're working in a project, we change several files in the course of
 - **Commit before making any changes that could break your code** If your code currently works are you intend to add something new that may break it, make sure you commit so that you will be able to revert to the working version if needed.
 
 - **Commit regularly** Even if you are only making very small changes, don't forget to commit at regular intervals, like before you switch tasks or end your work day.
+
+<div class="care">
+These are our recommendations for how often to commit, but that doesn't mean we are always good at following them. We all do the best we can, and sometimes I find myself committing every few minutes, giving each the commit message `"update file.txt"`. It's not ideal, but it gets the job done.
+</div>
 
 
 ### Quiz: `add` and `commit`
@@ -757,8 +798,11 @@ All of these are good reasons to include a file in `.gitignore`, but especially 
 ***
 
 ## Understanding the Git workflow
+![XKCD Cartoon. Person A: "This is Git. It tracks collaborative work on projects through a beautiful distributed graph theory tree model." Person B: "Cool. How do we use it?" Person A: "No idea. Just memorize these shell commands and type them to sync up. If you get errors, save your work elsewhere, delete the project, and download a fresh copy."](media/git_2x.png)
 
-There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, and that is what [many people do](https://xkcd.com/1597/). However you might remember them better if you understand what each is doing.
+(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1597.)
+
+There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, and that is what many people do. However you might remember them better if you understand what each is doing.
 
 
 So far we have encountered files in three states:
