@@ -382,6 +382,24 @@ Already up-to-date.
 
 Pulling has no effect in this case because the two repositories are already synchronized. If someone else had pushed some changes to the repository on GitHub, though, this command would download them to our local repository.
 
+### Quiz: Push vs. Commit
+
+In this module, we introduced the “git push” command. How is “git push” different from “git commit”?
+
+[[Push vs. Commit]]
+***
+<div class = "answer">
+When we push changes, we’re interacting with a remote repository to update it with the changes we’ve made locally (often this corresponds to sharing the changes we’ve made with others). Commit only updates your local repository.
+</div>
+***
+
+
+## GitHub GUI
+
+**Uploading files directly in GitHub browser**
+  
+Github also allows you to skip the command line and upload files directly to your repository without having to leave the browser. There are two options. First you can click the “Upload files” button in the toolbar at the top of the file tree. Or, you can drag and drop files from your desktop onto the file tree. You can read more about this on [this GitHub page](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
+
 ### Quiz: GitHub GUI
 
 Browse to your `planets` repository on GitHub. Under the Code tab, find and click on the text that says “XX commits” (where “XX” is some number). Hover over, and click on, the three buttons to the right of each commit. What information can you gather/explore from these buttons? How would you get that same information in the shell?
@@ -397,11 +415,6 @@ The right-most button lets you view all of the files in the repository at the ti
 </div>
 ***
 
-<div class = 'care'>
-**Uploading files directly in GitHub browser**
-  
-Github also allows you to skip the command line and upload files directly to your repository without having to leave the browser. There are two options. First you can click the “Upload files” button in the toolbar at the top of the file tree. Or, you can drag and drop files from your desktop onto the file tree. You can read more about this on [this GitHub page](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
-</div>
 
 ### Quiz: GitHub Timestamp
 
@@ -413,19 +426,6 @@ Create a remote repository on GitHub. Push the contents of your local repository
 GitHub displays timestamps in a human readable relative format (i.e. “22 hours ago” or “three weeks ago”). However, if you hover over the timestamp, you can see the exact time at which the last change to the file occurred.
 </div>
 ***
-
-### Quiz: Push vs. Commit
-
-In this module, we introduced the “git push” command. How is “git push” different from “git commit”?
-
-[[Push vs. Commit]]
-***
-<div class = "answer">
-When we push changes, we’re interacting with a remote repository to update it with the changes we’ve made locally (often this corresponds to sharing the changes we’ve made with others). Commit only updates your local repository.
-</div>
-***
-
-
 
 ## Wrap-Up 
 - A local Git repository can be connected to one or more remote repositories.
