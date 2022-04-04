@@ -230,6 +230,7 @@ The right-most button lets you view all of the files in the repository at the ti
 **Uploading files directly in GitHub browser**
   
 Github also allows you to skip the command line and upload files directly to your repository without having to leave the browser. There are two options. First you can click the “Upload files” button in the toolbar at the top of the file tree. Or, you can drag and drop files from your desktop onto the file tree. You can read more about this on [this GitHub page](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
+  
 </div>
 
 ### Quiz: GitHub Timestamp
@@ -264,11 +265,11 @@ In this module, we learned about creating a remote repository on GitHub, but whe
 <div class = "answer">
 In this case, we’d see a merge conflict due to unrelated histories. When GitHub creates a README.md file, it performs a commit in the remote repository. When you try to pull the remote repository to your local repository, Git detects that they have histories that do not share a common origin and refuses to merge.
 
-```console
+   ```console
 $ git pull origin main
 ```
-
-```output
+  
+     ```output
 warning: no common commits
 remote: Enumerating objects: 3, done.
 remote: Counting objects: 100% (3/3), done.
@@ -279,6 +280,7 @@ From https://github.com/vlad/planets
  * [new branch]      main     -> origin/main
 fatal: refusing to merge unrelated histories
 ```
+  
 </div>
 ***
 
