@@ -50,18 +50,21 @@ List any skills and knowledge needed to do this module here. When available, inc
 
 ## Lesson Preparation
 
-Open a web browser, like Chrome or Firefox 
+Open a web browser, like Chrome or Firefox and navigate to github.com.
 
 ## Create a remote repository
 
-Log in to [GitHub](github.com), then click on the icon in the top right corner to create a new repository called planets:
+We will be creating a remote version of the `planets` repository we worked with in the previous lessons. We will then connect our remote version to our local version of the `planets` repository. 
+
+Log in to [GitHub](github.com), then click on the icon in the top right corner to create a new repository:
 
 ![github-create-repo-01](./assets/media/remotes_step_01_images/github-create-repo-01.png)
 
 Name your repository “planets” and then click “Create Repository”.
 
-Note: Since this repository will be connected to a local repository, it needs to be empty. Leave “Initialize this repository with a README” unchecked, and keep “None” as options for both “Add .gitignore” and “Add a license.” See the “GitHub License and README files” exercise below for a full explanation of why the repository needs to be empty.
-
+<div class = "warning">
+Since this repository will be connected to a local repository, it needs to be empty. Leave “Initialize this repository with a README” unchecked, and keep “None” as options for both “Add .gitignore” and “Add a license.” See the “GitHub License and README files” exercise below for a full explanation of why the repository needs to be empty.
+</div>
 
 ![github-create-repo-02](./assets/media/remotes_step_01_images/github-create-repo-02.png)
 
@@ -86,7 +89,9 @@ Now that we have two repositories, we need a diagram like this:
 
 ![git-freshly-made-github-repo-05](./assets/media/remotes_step_01_images/git-freshly-made-github-repo-05.svg)
 
+<div class = "important">
 Note that our local repository still contains our earlier work on mars.txt, but the remote repository on GitHub appears empty as it doesn’t contain any files yet.
+</div>
 
 ## Connect local to remote repository
 
@@ -148,7 +153,7 @@ To https://github.com/vlad/planets.git
 
 
 <div class = 'help'>
-### Proxy
+**Proxy**
   
 If the network you are connected to uses a proxy, there is a chance that your last command failed with “Could not resolve hostname” as the error message. To solve this issue, you need to tell Git about the proxy:
  
@@ -159,11 +164,10 @@ $ git config --global https.proxy https://user:password@proxy.url
 
 When you connect to another network that doesn’t use a proxy, you will need to tell Git to disable the proxy using:
   
-    ```console
+```console
 $ git config --global --unset http.proxy
 $ git config --global --unset https.proxy
 ```
-  
 </div>
 
 <div class = 'care'>
