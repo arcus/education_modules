@@ -441,6 +441,10 @@ To learn more about SSH and its setup, refer to the Software carpentries episode
 <code>Testing hint box</code>
 </div>
 
+<div class = "options">
+<code>Testing options box</code>
+</div>
+
 
 
 ## Feedback
