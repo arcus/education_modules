@@ -439,6 +439,11 @@ GitHub displays timestamps in a human readable relative format (i.e. “22 hours
 
 To learn more about SSH and its setup, refer to the Software carpentries episode [here](https://swcarpentry.github.io/git-novice/07-github/index.html#3-ssh-background-and-setup).
 
+<div class = "hint">
+Testing hint box
+</div>
+
+
 
 ## Feedback
 
