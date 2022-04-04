@@ -204,6 +204,7 @@ If SSH has been set up on the computer you’re using, the public and private ke
 #### Create an SSH key pair 
 
 To create an SSH key pair Vlad uses this command, where the -t option specifies which type of algorithm to use and -C attaches a comment to the key (here, Vlad’s email):
+
 ```console 
 ssh-keygen -t ed25519 -C "vlad@tran.sylvan.ia"
 ```
@@ -215,17 +216,21 @@ If you are using a legacy system that doesn’t support the Ed25519 algorithm, u
 Generating public/private ed25519 key pair.
 Enter file in which to save the key (/c/Users/Vlad Dracula/.ssh/id_ed25519):
 ```
+
 We want to use the default file, so just press `Enter`.
+
 ```output 
 Created directory '/c/Users/Vlad Dracula/.ssh'.
 Enter passphrase (empty for no passphrase):
 ```
+
 Now, it is prompting Dracula for a passphrase. Since he is using his lab’s laptop that other people sometimes have access to, he wants to create a passphrase. Be sure to use something memorable or save your passphrase somewhere, as there is no “reset my password” option.
 ```output 
 Enter same passphrase again:
 ```
 
 After entering the same passphrase a second time, we receive the confirmation
+
 ```console
 Your identification has been saved in /c/Users/Vlad Dracula/.ssh/id_ed25519
 Your public key has been saved in /c/Users/Vlad Dracula/.ssh/id_ed25519.pub
@@ -244,9 +249,11 @@ The key's randomart image is:
 |oo+.             |
 +----[SHA256]-----+
 ```
+
 The “identification” is actually the private key. You should never share it. The public key is appropriately named. The “key fingerprint” is a shorter version of a public key.
 
 Now that we have generated the SSH keys, we will find the SSH files when we check.
+
 ```console 
 ls -al ~/.ssh
 ```
