@@ -139,6 +139,17 @@ If you have [Python](https://www.python.org/) and [Jupyter](https://jupyter.org/
    * Open the file `intro-to-python.ipynb`.
    * In the upper right hand corner, just above the title of the notebook, you will see a button that says "Raw". Click it.
    * Once you are looking at the raw file (which will look very different from the rendered notebook, that is normal!), right-click and then select "Save As". Save the file to your computer wherever you like. It will have a `.txt` file extension; that is okay for now.
+
+   **Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
+
+   <div style="display:none">@gifPreload</div>
+
+   <figure>
+     <img src="https://github.com/arcus/education_modules/blob/update-intro-to-python/intro_to_python/media/gh_notebook_download.png?raw=true" height="384" width="512" alt="You can download the Jupyter notebook as a raw text file from GitHub." data-alt="https://github.com/arcus/education_modules/blob/update-intro-to-python/intro_to_python/media/gh_notebook_download.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+
+   <figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
+   </figure>
+
 * Open Jupyter on your computer (either directly or using the Anaconda navigator).
 * You should see your computer's file directory system. Just as you would on your own computer, find `intro-to-python.ipynb`
 * Find the repository folder on your computer (it should be called `education_modules`). From there, find the notebook file (within the `notebooks` folder, which is itself inside the `intro_to_python` folder).
