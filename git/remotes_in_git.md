@@ -93,6 +93,35 @@ Now that we have two repositories, we need a diagram like this:
 Note that our local repository still contains our earlier work on mars.txt, but the remote repository on GitHub appears empty as it doesn’t contain any files yet.
 </div>
 
+### Quiz 
+
+**GitHub license and README files**
+
+In this module, we learned about creating a remote repository on GitHub, but when you initialized your GitHub repo, you didn’t add a README.md or a license file. If you had, what do you think would have happened when you tried to link your local and remote repositories?
+
+[[GitHub license and README files]]
+***
+<div class = "answer">
+In this case, we’d see a merge conflict due to unrelated histories. When GitHub creates a README.md file, it performs a commit in the remote repository. When you try to pull the remote repository to your local repository, Git detects that they have histories that do not share a common origin and refuses to merge.
+
+```console
+$ git pull origin main
+```
+
+```output
+warning: no common commits
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/vlad/planets
+ * branch            main     -> FETCH_HEAD
+ * [new branch]      main     -> origin/main
+fatal: refusing to merge unrelated histories
+```
+</div>
+***
+
 ## Connect local to remote repository
 
 Now we connect the two repositories. We do this by making the GitHub repository a remote for the local repository. The home page of the repository on GitHub includes the URL string we need to identify it:
@@ -255,32 +284,6 @@ When we push changes, we’re interacting with a remote repository to update it 
 ***
 
 
-### Quiz: GitHub license and README files
-
-In this module, we learned about creating a remote repository on GitHub, but when you initialized your GitHub repo, you didn’t add a README.md or a license file. If you had, what do you think would have happened when you tried to link your local and remote repositories?
-
-[[GitHub license and README files]]
-***
-<div class = "answer">
-In this case, we’d see a merge conflict due to unrelated histories. When GitHub creates a README.md file, it performs a commit in the remote repository. When you try to pull the remote repository to your local repository, Git detects that they have histories that do not share a common origin and refuses to merge.
-
-```console
-$ git pull origin main
-```
-
-```output
-warning: no common commits
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (3/3), done.
-From https://github.com/vlad/planets
- * branch            main     -> FETCH_HEAD
- * [new branch]      main     -> origin/main
-fatal: refusing to merge unrelated histories
-```
-</div>
-***
 
 ## Wrap-Up 
 - A local Git repository can be connected to one or more remote repositories.
