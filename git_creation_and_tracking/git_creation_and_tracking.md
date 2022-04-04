@@ -100,7 +100,7 @@ $ cd ~/Desktop
 $ mkdir planets
 $ cd planets
 ```
-The `cd` command means **change directory**.  In our first command, we're changing directory to our home directory (that's the `~`, and within that, to the directory called `Desktop`.  If you don't have this directory in your file system, you'll get an error.  That's okay -- just navigate to a different directory you'd like to work in (as long as that directory isn't within a git repository).  The `mkdir` command tells the computer to **make** a **directory** with the name "planets." Once we have a `planets` directory, we use `cd` open that directory.
+The `cd` command means **change directory**.  In our first command, we're changing directory to our home directory. (that's the `~`), and within that, to the directory called `Desktop`.  If you don't have this directory in your file system, you'll get an error.  That's okay -- just navigate to a different directory you'd like to work in (as long as that directory isn't within a Git repository).  The `mkdir` command tells the computer to **make** a **directory** with the name "planets." Once we have a `planets` directory, we use `cd` open that directory.
 
 <div class = "help">
 Getting an error message when you type these commands? If you are using the Windows operating system, you need to switch over to Git Bash.  Windows uses a different system of commands than other computers like Linux, Unix, and Mac, and Git Bash makes it possible for you to use the commands common to the other operating systems, even though you're on Windows.
@@ -184,7 +184,7 @@ Switched to a new branch 'main'
 ```
 
 We can check that everything is set up correctly
-by asking Git to tell us the status of our project:
+by asking Git to tell us the **status** of our project:
 
 ```console
 $ git status
@@ -257,9 +257,7 @@ Additionally, Git repositories can interfere with each other if they are "nested
 the outer repository will try to version-control
 the inner repository. Therefore, it's best to create each new Git
 repository in a separate directory. To be sure that there is no conflicting
-repository in the directory, check the output of `git status`. If it looks
-like the following, you are good to go to create a new repository as shown
-above:
+repository in the directory, check the output of `git status`. If the output tells you that you are "Not [in] a git repository" then you are clear to create a new repository:
 
 ```console
 $ git status
@@ -269,6 +267,8 @@ Not a git repository (or any of the parent directories):
 .git
 ```
  </div>
+
+If you get a different message, like the "On branch main" message we saw the first time we ran `git status` in the previous section, then you are already in a repository and should not initialize another one.
  ***
 
 ### Fixing a nested `init`
@@ -721,6 +721,7 @@ Use -f if you really want to add them.
 If we really want to override our ignore settings,
 we can use `git add -f` to force Git to add something. For example,
 `git add -f a.dat`.
+
 We can also always see the status of ignored files if we want:
 
 ```
