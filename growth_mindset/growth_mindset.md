@@ -122,8 +122,14 @@ A lot of mindset research was done on human subjects from [W.E.I.R.D. countries]
 There has been a lot of activity in the research of growth mindsets and neuroplasitcity since the early 2000s. Here is a selection of what has been learned:
 
 **Having a growth mindset correlates with learning more**
+Dweck et al.'s original studies.
 
 **Being introduced to or reminded of the idea of neuroplasticity/growth mindset helps individuals learn more in subsequent exercises**
+https://doi.org/10.1016/j.tine.2018.07.003.
+(https://www.sciencedirect.com/science/article/pii/S2211949318300024)
+
+https://www.frontiersin.org/articles/10.3389/feduc.2021.784393/full#B21
+
 
 **Short introductions to the ideas of neuroplasticity/growth mindset can raise achievement in some groups in the longer term**
 
