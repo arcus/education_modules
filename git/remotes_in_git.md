@@ -327,7 +327,7 @@ To https://github.com/vlad/planets.git
 ```
 
 
-<div class = 'help'>
+<div class = "help">
 **Proxy**
   
 If the network you are connected to uses a proxy, there is a chance that your last command failed with “Could not resolve hostname” as the error message. To solve this issue, you need to tell Git about the proxy:
@@ -341,7 +341,7 @@ When you connect to another network that doesn’t use a proxy, you will need to
 `$ git config --global --unset https.proxy`
 </div>
 
-<div class = 'care'>
+<div class = "care">
 **Password Managers**
   
 If your operating system has a password manager configured, git push will try to use it when it needs your username and password. For example, this is the default behavior for Git Bash on Windows. If you want to type your username and password at the terminal instead of using a password manager, type:
@@ -361,7 +361,7 @@ Our local and remote repositories are now in this state:
 
 ![github-repo-after-first-push_01](./assets/media/remotes_step_03_images/github-repo-after-first-push_01.svg)
 
-<div class = 'care'>
+<div class = "care">
 **the -u flag**
 
 You may see a -u option used with git push in some documentation. This option is synonymous with the --set-upstream-to option for the git branch command, and is used to associate the current branch with a remote branch so that the git pull command can be used without any arguments. To do this, simply use git push -u origin main once the remote has been set up.
