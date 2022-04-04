@@ -163,9 +163,11 @@ We'll need to set up a Secure Shell Protocol (SSH) key to work with remotes in t
 <div class = "warning">
 If you do try to use HTTPS to connect to remote you will encounter the error: 
 
-`remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+```console 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
 remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
-fatal: Authentication failed for 'https://github.com/pakstisj/planets.git/'`
+fatal: Authentication failed for 'https://github.com/pakstisj/planets.git/'
+```
 </div>
 
 ## Push local changes to a remote
