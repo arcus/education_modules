@@ -245,6 +245,7 @@ tracking files stored in the `moons` subdirectory?
 [( )] Yes, running `git init` inside the `moons` subdirectory is necessary.
 [( )] It is not necessary to run `git init` inside `moons` but it can't hurt.
 [(X)] No, `moons` was already tracked as a subdirectory of `planets` and running `git init` inside `moons` could interfere with version control.
+
 ***
 <div class = "answer">
 No. Dracula does not need to make the `moons` subdirectory a Git repository
@@ -266,9 +267,9 @@ fatal:
 Not a git repository (or any of the parent directories):
 .git
 ```
- </div>
 
 If you get a different message, like the "On branch main" message we saw the first time we ran `git status` in the previous section, then you are already in a repository and should not initialize another one.
+</div>
  ***
 
 ### Fixing a nested `init`
@@ -458,7 +459,7 @@ nothing to commit, working directory clean
 ```
 
 <div class= "care">
-Even, and perhaps especially, those who use Git a lot can have trouble writing good commit messages.
+Even, and perhaps especially, those who use Git a lot can have trouble writing good commit messages. We are all just doing our best to document our work!
 
 ![XKCD Cartoon, the text of which reads "As a project drags on my Git commit messages get less and less informative."  The first message shown reads "Created main loop & timing control." By the 5th message it reads "more code" followed by messages including "Here have code," "AAAAAAAAA," "my hands are typing words" and finally "haaaaaaaaands."](media/git_commit_2x.png)
 (Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1296.)
@@ -608,14 +609,15 @@ Now Dracula has two new files, and can tell Git to track both of them.
 $ git add jupiter.txt mercury.txt
 ```
 
-This tells Git to track both `jupiter.txt` and `mercury.txt`, and is the same as first adding one, and then using `git add` again to add the other. You can add as many files as you want in a single like by simply typing their names one after another, separated by a space.
+This tells Git to track both `jupiter.txt` and `mercury.txt`, and is the same as first adding one, and then using `git add` again to add the other. You can add as many files as you want in a single line by simply typing their names one after another, separated by a space.
 
-Now we can record them with a single commit:
+Now he can record them with a single commit:
 
 ```
 $ git commit -m "Start files on Jupiter and Mercury."
 ```
-You can use `git status` to check that both files have now been recorded!
+
+If you have been following along with Dracula, use `git status` to check that both files have now been recorded!
 
 ### How often should you `commit`?
 
@@ -630,7 +632,7 @@ Often, when we're working in a project, we change several files in the course of
 - **Commit regularly** Even if you are only making very small changes, don't forget to commit at regular intervals, like before you switch tasks or end your work day.
 
 <div class="care">
-These are our recommendations for how often to commit, but that doesn't mean we are always good at following them. We all do the best we can, and sometimes I find myself committing every few minutes, giving each the commit message `"update file.txt"`. It's not ideal, but it gets the job done.
+These are our recommendations for how often to commit, but that doesn't mean we are always good at following them. We all do the best we can, and sometimes I find myself committing every few minutes, giving each the commit message `"update file.txt"`. It's not ideal, but it gets the changes recorded even if it will be harder to see what was done later.
 </div>
 
 
