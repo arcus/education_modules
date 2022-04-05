@@ -113,15 +113,15 @@ Please read over both options before you start performing any actions, to make s
 Option 1: Work in the Cloud
 =======
 
-This might work well for you if you either can't or don't want to install R and RStudio on your computer.  The benefit is that you don't have to install anything, but one negative is that this option requires a bit of waiting for your environment to come online.
+This might work well for you if you either can't or don't want to install Python and Jupyter on your computer.  The benefit is that you don't have to install anything, but one negative is that this option requires a bit of waiting for your environment to come online.
 
-**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in a Jupyter notebook without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
+**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a couple of minutes to create, depending on how recently it was created (when it's being used more, it's quicker!).
 
   <a href = "https://mybinder.org/v2/gh/arcus/education_modules/main?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg"></a> **← Click the "launch binder" button!**
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
+<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for a few minutes.  Be patient!</div>
 <div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen.](media/binder_loading.gif)<!--
 style = "border: 1px solid rgb(var(--color-highlight));"-->
 </div>
@@ -130,32 +130,24 @@ style = "border: 1px solid rgb(var(--color-highlight));"-->
 Option 2: Work on Your Computer
 =======
 
-If you have [Python](https://www.python.org/) and [Jupyter](https://jupyter.org/) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. If you haven't downloaded Python or Jupyter to your computer but would like to, you'll learn how in the [Next Steps](#next-steps) section of this module. Then you can come back here when you're done and follow these steps to download the code:
+If you have [Python](https://www.python.org/) and [Jupyter](https://jupyter.org/) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. If you haven't downloaded Python or Jupyter to your computer but would like to, you'll learn how in the [Next Steps](#next-steps) section of this module. Then you can come back here when you're done and follow these steps to download the code (If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime):
 
-* Go to the GitHub repository where the materials for this lesson are located: https://github.com/arcus/education_modules
-* If you are familiar with using git to **clone**, or download, a repository (or "repo", as it is sometimes called), then you can clone the entire thing. It's often useful to have a folder called "GitHub" on your computer for storing repositories that you clone.
-* If you don't want to clone the repository, you can also download just the notebook file itself:
-   * In the education_modules repository, open the `intro_to_python` folder and then the `notebooks` folder.
-   * Open the file `intro-to-python.ipynb`.
-   * In the upper right hand corner, just above the title of the notebook, you will see a button that says "Raw". Click it.
-   * Once you are looking at the raw file (which will look very different from the rendered notebook, that is normal!), right-click and then select "Save As". Save the file to your computer wherever you like. It will have a `.txt` file extension; that is okay for now.
+* Go to the GitHub repository where the materials for this lesson are located: https://github.com/arcus/education_modules.
+* You can use git to **clone**, or download, a repository (or "repo", as it is sometimes called). Here are the steps to follow:
+  * It is likely that git is already installed on your computer, even if you've never used it before. Open the Terminal application (if you're using a Mac/Linux machine) or the Windows Powershell (if you're using Windows 10 or later -- here is [more information about finding the Windows Powershell](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md#5). Then run the code `git --version`. If git is installed, you should see a version number. If not, check out [these instructions for installing git on Mac or PC](https://carpentries.github.io/workshop-template/#git).
+  * You can also use GitHub Desktop, which you can use to interact with GitHub repositories. The [GitHub Desktop documentation](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) for download instructions and getting started.
+  * If you are using git in a command line interface, go to the [education_modules repository on GitHub.com](https://github.com/arcus/education_modules) and then follow [these instructions to clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository).
 
-   **Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
+  <div class = "important">
+  It's often useful to have a folder called `GitHub` on your computer for storing repositories that you clone. To navigate to a specific directory in the command line, use the `cd` command (check out the [Command Line 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md#1) for more information).
+  </div>
 
-   <div style="display:none">@gifPreload</div>
+  * If you are using GitHub desktop, follow [these instructions for cloning a repository from GitHub to GitHub Desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop).
 
-   <figure>
-     <img src="https://github.com/arcus/education_modules/blob/update-intro-to-python/intro_to_python/media/gh_notebook_download.png?raw=true" height="384" width="512" alt="You can download the Jupyter notebook as a raw text file from GitHub." data-alt="https://github.com/arcus/education_modules/blob/update-intro-to-python/intro_to_python/media/gh_notebook_download.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+<div class = "options">
+If you don't want to wait for the binder environment to load, but don't want to use git to clone the repository, you can also view the [rendered Jupyter notebook on GitHub](https://github.com/arcus/education_modules/blob/main/intro_to_python/notebooks/intro-to-python.ipynb). You will not be able to interact with the code, but if you have Jupyter installed you can copy and paste the code into code cells that you create in your own notebook.
+</div>
 
-   <figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
-   </figure>
-
-* Open Jupyter on your computer (either directly or using the Anaconda navigator).
-* You should see your computer's file directory system. Just as you would on your own computer, find `intro-to-python.ipynb`
-* Find the repository folder on your computer (it should be called `education_modules`). From there, find the notebook file (within the `notebooks` folder, which is itself inside the `intro_to_python` folder).
-* Open the notebook file and follow the instructions there!
-
-If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime.
 
 ## The Python Programming Language
 
