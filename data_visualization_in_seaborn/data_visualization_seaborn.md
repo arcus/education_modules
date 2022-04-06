@@ -39,7 +39,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This module assumes some familiarity with principles of data visualizations. If you've done some data visualization programming before, especially using seaborn or R's ggplot2, this module should be right for you. If you are brand new to both ggplot2 and seaborn, start with the overview of [data visualizations in open source software](link) first, and then come back here.
+This module assumes some familiarity with principles of data visualizations. If you've done some data visualization programming before, especially using seaborn or R's ggplot2, this module should be right for you. If you are brand new to both ggplot2 and seaborn, start with the overview of [data visualizations in open source software](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md#1) first, and then come back here.
 
 This module also assumes some basic familiarity with python, including
 
@@ -47,7 +47,7 @@ This module also assumes some basic familiarity with python, including
 * reading in data
 * manipulating data frames, including calculating new columns
 
-If you are brand new to python (or want a refresher) consider starting with [Intro to python](link) first.
+If you are brand new to python (or want a refresher) consider starting with [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md#1) first.
 
 **Learning Objectives**
 
@@ -70,7 +70,7 @@ If you have python already installed on your computer and you prefer to work thr
 
 To use the seaborn library to make visualizations, you need to import it.
 
-By convention, you import it with the shorthand `sns`. This is optional, but we do recommend you do that because when you look at seaborn code online, you'll nearly always see it with that same abbreviation; following that convention will make your code more comparable to examples you see online.
+By convention, you import it with the shorthand `sns`. This is optional, but we recommend you do that because when you look at seaborn code online, you'll nearly always see it with that same abbreviation. Following that convention will make your code more comparable to examples you see online.
 
 ```Python
 import seaborn as sns
@@ -79,7 +79,7 @@ import seaborn as sns
 ### Working through interactive coding examples
 
 
-Hopefully your [binder instance](#lesson-preparation) is done loading now! If not, be patient --- it can take as long as 20 or 30 minutes some times if the files haven't been used recently.
+Hopefully your [binder instance](#lesson-preparation) is done loading now! If not, be patient --- it can take as long as 20 or 30 minutes sometimes if the files haven't been used recently.
 
 When it is ready, you should see a jupyter notebook in your browser with the code for this module. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
 
@@ -101,9 +101,9 @@ import seaborn as sns
 ```
 
 <div class = "learnmore">
-The `pandas` module is for working with data in python. To learn more, see the [pandas guide](https://pandas.pydata.org/docs/getting_started/index.html). It is conventional to import `pandas` as `pd`.
+The [`pandas` module](https://pandas.pydata.org/docs/getting_started/index.html)) is for working with data in python. It is conventional to import `pandas` as `pd`.
 
-The `numpy` module has several useful functions for statistical calculations and other mathematical operations useful in scientific computing. To learn more, see the [numpy website](https://numpy.org/). It is conventional to import `numpy` as `np`.
+The [`numpy` module](https://numpy.org/) has several useful functions for statistical calculations and other mathematical operations useful in scientific computing. It is conventional to import `numpy` as `np`.
 
 The `seaborn` module is the plotting module that is the focus of this lesson, and it requires some pieces of `matplotlib`, since it is built as an extension to it.
 </div>
@@ -140,16 +140,16 @@ For more background on scatterplots, watch [this Kahn Academy series](https://ww
 
 The seaborn library includes a powerful function called `relplot`, short for "relationships plot" because it's designed to highlight relationships among variables in the data.
 
-If you provide `relplot` with two continuous variables, it will default to making a scatterplot. Here we'll plot age and glucose.
+If you provide `relplot` with two continuous variables, it will default to making a scatterplot. Here we'll plot age and height.
 
 ```Python
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm")
 ```
-![Basic scatterplot, with age on the x-axis and height on the y-axis. Age appears to run from approximately 5 to 80. Height increases sharply from 100-120 cm at 5 years old to an average of approximately 160 cm at about 20 years old, and then holds steady from 20 to 80 years old. There are 1011 observations plotted, with the majority of observations between 5 and roughly 50 years old. There are a few notable outliers with height values that are much lower than the rest, at roughly 60-80 cm. ](media/seaborn_scatter_1.png)
+![Basic scatterplot, with age on the x-axis and height on the y-axis. Age runs from approximately 5 to 80. Height increases sharply from 100-120 cm at 5 years old to an average of approximately 160 cm at about 20 years old, and then holds to 80 years old. There are 1011 observations plotted, with most observations between 5 and roughly 50 years old. There are three notable outliers with much lower height values than the rest, at roughly 60-80 cm. ](media/seaborn_scatter_1.png)
 
 <div class = "options">
-You can also create scatterplots with a similar function: `regplot` (short for "regression plot"). We'll take a look at `regplot` more closely in the [trend lines](#trend-lines) section.
+You can also create scatterplots with a similar function: `regplot` (short for "regression plot"), which we'll take a closer look at in the [trend lines section](#trend-lines).
 </div>
 
 ### Using color for continuous variables
@@ -166,7 +166,7 @@ Note that adding hue to the command automatically adds a legend to your plot as 
 
 ### Using color to show groups
 
-Now let's look at using color for a categorical variable. In this case, the variable is a categorical one (`is_smoker`, with options `ex_fumeur`, `fumeur`, and `non_fumeur`, referring to former smokers, current smokers, and non-smokers, respectively).
+Now let's look at using color for a categorical variable(`is_smoker`, with options `ex_fumeur`, `fumeur`, and `non_fumeur`, referring to former smokers, current smokers, and non-smokers, respectively).
 
 The values entered for `is_smoker` in the data are actually much longer than we need them to be --- they include the text of the option after the shorthand for it (e.g. former smokers are indicated by `ex_fumeur__j_ai_fum__mais_ne_fume_plus`). We don't want that additional text in the plot, so we'll recode that variable now.
 
@@ -190,7 +190,7 @@ sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker")
 ```
-![Age and height scatterplot again, but with "is smoker" represented by color, with non-smoker as blue, smoker as a muted orange, and ex-smoker as green. Most of the observations are non-smokers.](media/seaborn_scatter_3.png)
+![Age and height scatterplot again, but with "is smoker" represented by color, with non-smoker as blue, smoker as orange, and ex-smoker as green. Most of the observations are non-smokers, and smokers and ex-smokers don't start appearing until approximately age 15. There is no visually clear relationship between smoking status and height.](media/seaborn_scatter_3.png)
 
 
 <div class = "important">
@@ -210,7 +210,7 @@ sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker", style = "is_smoker")
 ```
-![Age and glucose scatterplot from the previous figure, with Classification represented using both color and shape: blue circles for Classification 1 and orange x's for Classification 2.](media/seaborn_scatter_4.png)
+![Age and height scatterplot from the previous figure, with Classification represented using both color and shape: blue circles for non-smokers, orange exes for smokers, and green squares for ex-smokers.](media/seaborn_scatter_4.png)
 
 ### Custom colors
 
@@ -220,11 +220,11 @@ Here we'll try switching from the default color palette to a version that is eas
 
 ```Python
 sns.relplot(data = covid_data,
-            x="Age", y="Glucose",
-            hue="Classification", style = "Classification",
+            x="val_age", y="val_height_cm",
+            hue="is_smoker", style = "is_smoker",
            palette = "colorblind")
 ```
-![Age and glucose scatterplot from the previous figure, with Classification represented as blue circles for Classification 1 and orange x's for Classification 2. The shades of blue and orange are slightly different from in the previous plots.](media/seaborn_scatter_5.png)
+![Age and height scatterplot from previous figure, now with slightly different shades of blue, orange, and green.](media/seaborn_scatter_5.png)
 
 Rather than changing the palette for each individual plot, you may want to change the default color palatte for all of the plots you're generating. To do that, use `set_theme` to change the default settings for seaborn plots.
 
@@ -262,7 +262,7 @@ sns.relplot(data = covid_data,
             x="Age", y="Glucose",
             hue="Classification", style = "Classification")
 ```
-![Age and glucose scatterplot from the previous figure, with a blank white background and no gridlines.](media/seaborn_scatter_6.png)
+![Age and height scatterplot from the previous figure, now with a blank white background and no gridlines.](media/seaborn_scatter_6.png)
 
 
 #### Setting plot context
@@ -275,7 +275,7 @@ sns.relplot(data = covid_data,
             x="Age", y="Glucose",
             hue="Classification", style = "Classification")
 ```
-![Age and glucose scatterplot from the previous figure, with much larger font for axis scales and labels, and larger markers for the points in the plot.](media/seaborn_scatter_7.png)
+![Age and height scatterplot from the previous figure, with much larger font for axis scales and labels, and larger markers for the points in the plot.](media/seaborn_scatter_7.png)
 
 ```Python
 # set context back to notebook (the default)
@@ -293,7 +293,7 @@ What is the command to create a scatterplot in seaborn?
 </script>
 ***
 <div class = "answer">
-By default, the `relplot` command creates a scatterplot (although it can also be used to create [line plots](#line-plots)). You can also use `regplot` to create scatterplots, as we'll see in the [trend lines](#trend-lines) section.
+By default, the `relplot` command creates a scatterplot (although it can also be used to create [line plots](#line-plots)). You can also use `regplot` to create scatterplots, as we'll see in the [trend lines section](#trend-lines).
 
 Note the `sns` before the function name. That's because we imported the seaborn library with an alias, as is conventional. See [making plots in seaborn](#making-plots-in-seaborn).
 </div>
@@ -410,9 +410,11 @@ True or False: To show multiple histograms for different subgroups on a single p
 [( )] True
 [(X)] False
 ****
+<div class = "answer">
 The `jointplot` function is for showing a bivariate plot with supplemental univariate distributions in the margins (for a review, see [adding marginal histograms to other plots](#adding-marginal-histograms-to-other-plots)).
 
 To show histograms for two or more subgroups in a single plot, use the `hue` argument to color each subgroup separately (for a review, see [using color to show groups](#using-color-to-show-groups)).
+</div>
 ****
 
 True or False: When making histograms, the default binwidth in `seaborn` is probably the best choice for most data sets.
@@ -420,14 +422,16 @@ True or False: When making histograms, the default binwidth in `seaborn` is prob
 [( )] True
 [(X)] False
 ****
+<div class = "answer">
 Not necessarily! The `seaborn` defaults are sensible, so that's often a good starting place, but it can be dangerous to accept the default bins without examining other options.  Changing the binwidth on a histogram can dramatically change the patterns highlighted in the data, so it's always a good idea to try multiple binwidths when you're making a histogram.
 
 You can read more about this issue in the [seaborn distributions tutorial](https://seaborn.pydata.org/tutorial/distributions.html#choosing-the-bin-size).
+</div>
 ****
 
 ## Line Plots
 
-Line plots are especially useful when you want to show data points that are connected in a meaningful way. The most common application is repeated measures over time (also called time series data), such as when patients are measured on a given variable (plotted on the y-axis) at several times (plotted along the x-axis), and each line would represent one patient, or a summary across a group of patients.
+Line plots are especially useful when you want to show data points that are connected in a meaningful way. The most common application is repeated measures over time (also called time series data), such as when patients are measured on a given variable (plotted on the y-axis) at several times (plotted along the x-axis). Each line would represent one patient or a summary across a group of patients.
 
 <div class = "important">
 A word of caution: You may see line plots where the data points don't actually share a meaningful theoretical connection (e.g. all being from the same patient, or the same group). Although it's not uncommon, this is generally not considered good practice and you may receive pushback from reviewers or readers.
@@ -476,7 +480,7 @@ You can add facets to a `seaborn` plot by adding an argument for either `col` (f
 sns.relplot(x="timepoint", y="signal", hue="event", style="event", col = "region", kind="line", data=fmri)
 ```
 
-![Two line plots, side by side, with timepoint on the x-axis and signal on the y-axis, and each showing two lines: a solid blue line for event = stim and a dashed yellow line for event = cue. The plot on the left says "region = parietal" at the top, and the plot on the right says "region = frontal" at the top.](media/seaborn_line_3.png)
+![Two side by side line plots with timepoint on the x-axis and signal on the y-axis. Each plot shows two lines: a solid blue line for the stim event and a dashed yellow line for the cue event. The plot on the left displays data collected from the parietal region of the brain, and the right plot is of data from the frontal region.](media/seaborn_line_3.png)
 
 <div class = "learnmore">
 For many more examples of line plots, see the [seaborn relplot tutorial section on line plots](https://seaborn.pydata.org/tutorial/relational.html#emphasizing-continuity-with-line-plots).
@@ -489,9 +493,11 @@ True or False: You can create both scatter plots and line plots with the same fu
 [(X)] TRUE
 [( )] FALSE
 ****
+<div class = "answer">
 We used just one function, `relplot`, to make both scatter plots and line plots. Under the hood, there are actually two separate functions being used --- `scatterplot()` and `lineplot()`, which are equivalent to `relplot()` with `kind = "scatter"` (the default) and `kind = "line"`, respectively --- but it's nice to be able to stick to the higher-level `relplot` function for simplicity.
 
 Because they're both called by the `relplot` function, you can use the same additional variables (e.g. `hue`, `style`, `col`) applied to either scatter or line plots, and they work in much the same way.
+</div>
 ****
 
 True or False: Line plots are appropriate in most situations in which a scatter plot would work, so you can general pick whichever one you prefer.
@@ -499,9 +505,11 @@ True or False: Line plots are appropriate in most situations in which a scatter 
 [( )] TRUE
 [(X)] FALSE
 ****
+<div class = "answer">
 There are very few situations in which a scatter plot and line plot are equally appropriate.
 
 Line plots emphasize continuity and because of that are rarely used except for with data that have some kind of time component. Scatter plots are much more flexible and can work to show the relationship between almost any two continuous variables.  
+</div>
 ****
 
 What argument do you add to include facets in a `seaborn` plot?
@@ -512,7 +520,9 @@ What argument do you add to include facets in a `seaborn` plot?
   /col|row/i.test(input);
 </script>
 ****
+<div class = "answer">
 You can add facets to a plot by including the arguments for `col`, `row`, or both.
+</div>
 ****
 
 ## Trend Lines
@@ -543,7 +553,7 @@ A couple things about this plot are not ideal:
 1. Overplotting. The density of the scatter plot makes it hard to see the trend line as it runs through the bulk of the data.
 2. The linear trend doesn't appear to be a very good description of the relationship between age and height. It systematically over-estimates height at the very young ages, then under-estimates through early adulthood and over-estimates again late in life.
 
-We can address the first issue by adjusting alpha for the scatterplot. Alpha ranges between 0 (totally transparent) and 1 (totally opaque).
+We can address the first issue by adjusting alpha for the scatterplot to make the markers more transparent. Alpha ranges between 0 (totally transparent) and 1 (totally opaque).
 
 <div class = "important">
 Tip: When your data overlap too much on a plot, use alpha to make them more transparent.
@@ -584,7 +594,7 @@ sns.lmplot(data = covid_data,
            order = 2)
 ```
 
-![The scatter plot with age on the x-axis and height on the y-axis, but now the trend line drawn is a upside-down U shape.](media/seaborn_trend_3.png)
+![The scatter plot with age on the x-axis and height on the y-axis, but now the trend line drawn is a upside-down U shape, suggesting that the general trend is for height to increase with age until it reaches some maximum, at which point height begins decreasing.](media/seaborn_trend_3.png)
 
 This appears to be a slight improvement on the linear regression model, especially at the youngest ages, but it is still systematically over-estimating height for young children and, because the quadratic trend follows a smooth arc shape, it predicts a drop in height at the older ages which is neither supported by the data nor sensible from a theoretical standpoint. A model that suggests height peaks around 40 years of age and then drops off dramatically does not make practical sense.
 
@@ -650,7 +660,7 @@ sns.lmplot(data = covid_data,
 
 ## Additional Resources
 
-The creator of `seaborn`, [Michael Waskom](https://mwaskom.github.io/) maintains an excellent website with examples, explanations, tutorials, and more: [https://seaborn.pydata.org/](https://seaborn.pydata.org/)
+The creator of `seaborn` [Michael Waskom](https://mwaskom.github.io/) maintains an [excellent website](https://seaborn.pydata.org/) with examples, explanations, tutorials, and more.
 
 There are also many questions and answers about `seaborn` available on [stackoverflow](https://stackoverflow.com/questions/tagged/seaborn/) and [discourse](https://discourse.matplotlib.org/c/3rdparty/seaborn/21), so if you run into trouble that can be a good place to look for answers.
 
