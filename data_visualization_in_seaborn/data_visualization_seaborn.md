@@ -25,7 +25,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
-# Data visualizations in seaborn
+# Data Visualization in seaborn
 
 <div class = "overview">
 
