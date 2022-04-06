@@ -389,13 +389,17 @@ Because they each start with `+`, we know neither of the last two lines of text 
 When you change
 
 Dracula originally committed the Jupiter file with the text
+
 ```
 Jupiter is cheerful and full of energy
 ```
+
 but if he goes back in and changes it to
+
 ```
 Jupiter is cheerful but quite stormy
 ```
+
 how will the `diff` display that change?
 
 Instead of noting that only the last half of the line was changed, Git records this as deleting the line in the first version, and adding the line in the second version:
