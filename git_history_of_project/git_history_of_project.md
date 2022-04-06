@@ -18,7 +18,6 @@ After completion of this module, learners will be able to:
 - Identify and use the `HEAD` of a repository.
 - Identify and use Git commit numbers.
 - Compare versions of tracked files.
-- Use `revert` to restore the previous version of a file.
 
 @end
 
@@ -45,7 +44,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 This module is for you if:
 
-* You know know how to create a Git repository and make changes using `add` and `commit` from a command line interface (CLI)
+* You know know how to create a Git repository and make changes using `add` and `commit` from a command line interface (CLI).
 * You want to learn how to explore and compare different versions of your work.
 
 
@@ -84,6 +83,7 @@ You are going to learn about two ways to refer to past commits:
 - Using `HEAD`, which points to the last thing you were working on.
 - Using the commit number assigned to a particular `commit`.
 
+These will let you navigate and explore the previous versions of repositories.
 
 ![The Commit Stack: 3 flat white boxes, stacked on top of each other. The top box is labeled "last committed version of repository", the middle box is labeled "next to last version of repository" and the bottom is labeled "previous version of repository". Three dots below the lowest box indicate that this pattern continues.](media/Commit_stack.svg)
 
@@ -171,7 +171,7 @@ Use the arrow keys to scroll down if this output is longer than the window you a
 The first thing to notice is that your commit messages are here! This is a good reminder to write clear and concise messages because **future** you may be very grateful when trying to figure out where exactly **past** you introduced a particular issue.
 
 The second thing to notice is the structure of each entry in the log: commit, Author, Date, message.
-When you identify which commit you want to look at, the commit number is the unique 40 digit string of letters and numbers above it after the word "commit". In Dracula's repository, the unique identifier for the commit in which he "add[ed] concerns about effects of Mars' moons on Wolfman" is `fe532b097861acb8bd3d7f221d6ee741249dc8f0`.
+When you identify which commit you want to look at, the commit number is the 40 digit string of letters and numbers at the top of it after the word "commit". In Dracula's repository, the identifier for the commit in which he "add[ed] concerns about effects of Mars' moons on Wolfman" is `fe532b097861acb8bd3d7f221d6ee741249dc8f0`.
 
 <div class = "learnmore">
 **What is this number?**
