@@ -189,7 +189,7 @@ On the other hand, if you created your `planets` repository identically to Dracu
 
 Now that we have found the identifier of the commit we want to examine, we can use it with `git show`. Don't worry, you won't need to type all 40 digits, the first six will suffice.
 
-```{.git}
+```
 $ git show 1e587d
 commit 1e587d25f619aa0aa10fce19b44e4e71503fa41e
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
@@ -415,6 +415,7 @@ index 3030335..09c081c 100644
 +Jupiter is cheerful but quite stormy
 ```
 
+Even if the line several sentences long and you only changed a single character, Git records that as removing the old line and adding in the new one.
 
 ### Quiz: using `diff`
 
@@ -432,7 +433,7 @@ Omitting both the commit number and `HEAD`, i.e. entering `git diff venus.txt` w
 </div>
 ***
 
-The output from your previous command is below:
+Suppose that output from your previous command is below:
 
 ```
 diff --git a/venus.txt b/venus.txt
