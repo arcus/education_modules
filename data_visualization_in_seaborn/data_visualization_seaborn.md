@@ -35,7 +35,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:**
+**Estimated time to completion:** @estimated_time
 
 **Pre-requisites**
 
