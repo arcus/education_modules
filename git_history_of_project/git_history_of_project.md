@@ -262,7 +262,7 @@ Let's add and commit this change:
 
 ```
 $ git add mars.txt
-$ git commit -m "Discuss concerns about Mars' climate for Mummy"
+$ git commit -m "Discuss pros of Martian climate for Mummy"
 ```
 
 Next let's add one more line to `mars.txt` so that it reads:
@@ -291,7 +291,7 @@ You might have noticed that `diff` was the first word after your commit message 
 ```
 $ git diff HEAD
 diff --git a/mars.txt b/mars.txt
-index b36abfd..93a3e13 100644
+index b296810..7b7a6e9 100644
 --- a/mars.txt
 +++ b/mars.txt
 @@ -1,3 +1,4 @@
@@ -310,10 +310,10 @@ diff --git a/mars.txt b/mars.txt
 1. The first line tells us that Git is producing output similar to the Unix `diff` command comparing the old and new versions of the file.
 
 ```
-index b36abfd..93a3e13 100644
+index b296810..7b7a6e9 100644
 ```
 
-2. The second line tells exactly which versions of the file Git is comparing; `b36abfd` and `93a3e13` are unique computer-generated labels for those versions.
+2. The second line tells exactly which versions of the file Git is comparing; `b296810` and `7b7a6e9` are the computer-generated labels for those versions.
 
 ```
 --- a/mars.txt
@@ -352,26 +352,27 @@ $ git add venus.txt
 
 Now `venus.txt` is being tracked by Git, but has not yet been committed to the repository. If we were to enter `git diff HEAD` now, we would see both the changes we have made to `venus.txt`, and to `mars.txt`.
 
-To look at just the changes to the file about Venus, we can enter `git diff HEAD venus.txt`:
+If you enter `git diff HEAD` now you will see two `diff` sections, one for `mars.txt` and a second for `venus.txt`. To look at just the changes to the file about Venus, we can enter `git diff HEAD venus.txt`:
 
 ```
 $ git diff HEAD venus.txt
 diff --git a/venus.txt b/venus.txt
-index e69de29..73eca03 100644
---- a/venus.txt
+new file mode 100644
+index 0000000..73eca03
+--- /dev/null
 +++ b/venus.txt
 @@ -0,0 +1 @@
 +Venus is too hot to be a suitable base
 ```
 
-Now we see only the changes to `venus.txt`.
+Now we see only the changes to `venus.txt`. The line "new file mode" and the `/dev/null` line tell us that the file `venus.txt` didn't exist in the last commit.
 
 You might also want to look at earlier changes from previous commits. By replacing `HEAD` with either `HEAD~1` or the unique six digit identifier for the previous commit, we can compare the current version in our working directory to that earlier version:
 
 ```
 $ git diff HEAD~1 mars.txt
 diff --git a/mars.txt b/mars.txt
-index 315bf3a..93a3e13 100644
+index 315bf3a..7b7a6e9 100644
 --- a/mars.txt
 +++ b/mars.txt
 @@ -1,2 +1,4 @@
@@ -382,6 +383,24 @@ index 315bf3a..93a3e13 100644
 ```
 
 Because they each start with `+`, we know neither of the last two lines of text were present in the `mars.txt` file two commits ago.
+
+### Git compares files line by line
+
+When you change
+
+Dracula originally committed the Jupiter file with the text
+```
+Jupiter is cheerful and full of energy
+```
+but if he goes back in and changes it to
+```
+Jupiter is cheerful but quite stormy
+```
+how will the `diff` display that change?
+
+Instead of noting that only the last half of the line was changed, Git records this as deleting the line in the first version, and adding the line in the second version:
+
+
 
 
 ### Quiz: using `diff`
