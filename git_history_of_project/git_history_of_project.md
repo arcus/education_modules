@@ -350,9 +350,9 @@ $ echo "Venus is too hot to be a suitable base" > venus.txt
 $ git add venus.txt
 ```
 
-Now `venus.txt` is being tracked by Git, but has not yet been committed to the repository. If we were to enter `git diff HEAD` now, we would see both the changes we have made to `venus.txt`, and to `mars.txt`.
+Now `venus.txt` is being tracked by Git, but has not yet been committed to the repository. The file `mars.txt` also has changes that have not yet been committed. If you enter `git diff HEAD` now you will see two `diff` sections, one for `mars.txt` and a second for `venus.txt`.
 
-If you enter `git diff HEAD` now you will see two `diff` sections, one for `mars.txt` and a second for `venus.txt`. To look at just the changes to the file about Venus, we can enter `git diff HEAD venus.txt`:
+To look at just the changes to the file about Venus, we can enter `git diff HEAD venus.txt`:
 
 ```
 $ git diff HEAD venus.txt
@@ -386,7 +386,7 @@ Because they each start with `+`, we know neither of the last two lines of text 
 
 ### Git compares files line by line
 
-When you change
+What happens when you change a line in your file?
 
 Dracula originally committed the Jupiter file with the text
 
@@ -424,12 +424,12 @@ After working for a while, we might not remember where our last checkpoints were
 [[git diff HEAD venus.txt]]
 ***
 <div class= "answer">
-The command `git diff HEAD venus.txt` will show you the differences between the current working version of `venus.txt` and the last committed version. If you know the 6-digit commit number of your last commit, you could also use that: `git diff c0mm1t venus.txt`.
+The command `git diff HEAD venus.txt` will show you the differences between the current working version of `venus.txt` and the last committed version. If you happen to know that the 6-digit commit number of your last commit, you could also use that. For example if the commit number was `123456`, then `git diff 123456 venus.txt` would give you the same result.
 
 
 Omitting `venus.txt` will show you ALL changes that have been made to any file in the repository since the last commit.
 
-Omitting both the commit number and `HEAD`, i.e. entering `git diff venus.txt` will give you the same output in this instance, but has a different behavior in conjunction with some commands we will learn later in this module so we don't suggest using it.
+Omitting both the commit number and `HEAD`, i.e. entering `git diff venus.txt` will give you the same output in this instance, but we don't suggest using it because there are circumstances under which it will give a different output.
 </div>
 ***
 
