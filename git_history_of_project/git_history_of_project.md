@@ -64,10 +64,14 @@ Open up your command line interface and navigate to a place where you want to pu
 git clone https://www.github.com/arcus/planets
 ```
 
-This should be a very fast download. Now if you type `ls` within the repository directory, you should see a folder titled `planets`. Navigate into the planets directory using `cd`. This is the directory we will be exploring throughout the module.
+This should be a very fast download. Now if you type `ls` within the repository directory, you should see a folder titled `planets`. Navigate into the this directory using `cd`; this is the directory we will be exploring throughout the module.
 
 <div class = "warning">
 If you are on a computer running Windows, make sure you are in the Git Bash application. The Command Prompt (cmd) will not recognize the commands we are using in this module.
+</div>
+
+<div class = "options">
+If you are starting this module after following along with all of Dracula's code in the [Creating your Git Repository](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_creation_and_tracking/git_creation_and_tracking.md#1) module, you can follow along here in your own planets directory instead of downloading Dracula's repo.
 </div>
 
 
@@ -93,9 +97,9 @@ The `HEAD` almost always refers to the most recently commit to your repository o
 
 ```
 $ git show HEAD
-commit 584977a18319f539f3f5ecde6176db2ba0081cd9 (HEAD -> main, origin/main)
+commit 024af1d5d311c5d1a737cca3fb13d1b62c2a29ed (HEAD -> main, origin/main)
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Mar 14 14:59:40 2022 -0400
+Date:   Wed Apr 6 13:17:26 2022 -0400
 
     Ignore data files and the results folder.
 
@@ -147,23 +151,23 @@ Let's see what that output looks like for Dracula:
 
 ```
 $ git log -n 3
-commit 584977a18319f539f3f5ecde6176db2ba0081cd9 (HEAD -> main, origin/main)
+commit 024af1d5d311c5d1a737cca3fb13d1b62c2a29ed (HEAD -> main, origin/main)
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Mar 14 14:59:40 2022 -0400
+Date:   Wed Apr 6 13:17:26 2022 -0400
 
-    Ignore data files and the results folder.
+    Ignore data files and the results folder
 
-commit fe532b097861acb8bd3d7f221d6ee741249dc8f0
+commit 656471fa1f38c8b0b9a6a2fafdf3ba68610e61fa
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Mar 14 14:58:17 2022 -0400
+Date:   Wed Apr 6 13:15:24 2022 -0400
+
+    Start files on Jupiter and Mercury
+
+commit 1e587d25f619aa0aa10fce19b44e4e71503fa41e
+Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Date:   Wed Apr 6 13:13:21 2022 -0400
 
     Add concerns about effects of Mars' moons on Wolfman
-
-commit c3fe500d96fa9114210320f3cac0a0d9fd58d33c
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Mar 14 14:57:09 2022 -0400
-
-    Start notes on Mars as a base
 ```
 
 Use the arrow keys to scroll down if this output is longer than the window you are working in. If that is the case, you can always quit the output by pressing `Q`. Entering `git log` without the `-n` flag will give you the list of every commit, so if a project has been in progress for a while, this can be a lot of output!
@@ -171,7 +175,7 @@ Use the arrow keys to scroll down if this output is longer than the window you a
 The first thing to notice is that your commit messages are here! This is a good reminder to write clear and concise messages because **future** you may be very grateful when trying to figure out where exactly **past** you introduced a particular issue.
 
 The second thing to notice is the structure of each entry in the log: commit, Author, Date, message.
-When you identify which commit you want to look at, the commit number is the 40 digit string of letters and numbers at the top of it after the word "commit". In Dracula's repository, the identifier for the commit in which he "add[ed] concerns about effects of Mars' moons on Wolfman" is `fe532b097861acb8bd3d7f221d6ee741249dc8f0`.
+When you identify which commit you want to look at, the commit number is the 40 digit string of letters and numbers at the top of it after the word "commit". In Dracula's repository, the identifier for the commit in which he "add[ed] concerns about effects of Mars' moons on Wolfman" is `1e587d25f619aa0aa10fce19b44e4e71503fa41e`.
 
 <div class = "learnmore">
 **What is this number?**
@@ -186,10 +190,10 @@ On the other hand, if you created your `planets` repository identically to Dracu
 Now that we have found the unique identifier of the commit we want to examine, we can use it with `git show`. Don't worry, you won't need to type all 40 digits, the first six will suffice.
 
 ```
-$ git show fe532b
-commit fe532b097861acb8bd3d7f221d6ee741249dc8f0
+$ git show 1e587d
+commit 1e587d25f619aa0aa10fce19b44e4e71503fa41e
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Mar 14 14:58:17 2022 -0400
+Date:   Wed Apr 6 13:13:21 2022 -0400
 
     Add concerns about effects of Mars' moons on Wolfman
 
@@ -212,25 +216,25 @@ The output from `git log -n 2` is:
 
 ```
 $ git log -n 2
-commit 584977a18319f539f3f5ecde6176db2ba0081cd9 (HEAD -> main, origin/main)
+commit 024af1d5d311c5d1a737cca3fb13d1b62c2a29ed (HEAD -> main, origin/main)
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Mar 14 14:59:40 2022 -0400
+Date:   Wed Apr 6 13:17:26 2022 -0400
 
-    Ignore data files and the results folder.
+    Ignore data files and the results folder
 
-commit fe532b097861acb8bd3d7f221d6ee741249dc8f0
+commit 656471fa1f38c8b0b9a6a2fafdf3ba68610e61fa
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Mon Mar 14 14:58:17 2022 -0400
+Date:   Wed Apr 6 13:15:24 2022 -0400
 
-    Add concerns about effects of Mars' moons on Wolfman
+    Start files on Jupiter and Mercury
 ```
 
 Which of the following commands would show you the *most recent* commit you made? Select all correct answers.
 
 - [[X]] `git show HEAD`
 - [[ ]] `git show HEAD~1`
-- [[X]] `git show 584977`
-- [[ ]] `git show 081cd9`
+- [[X]] `git show 024af1`
+- [[ ]] `git show 2a29ed`
 ***
 <div class ="answer">
 As long as you didn't do anything fancy to move `HEAD`, the most *recent commit* is the current `HEAD`. Its commit number is `584977`. Since both refer to the same commit, you can use either.
