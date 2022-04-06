@@ -2,14 +2,14 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.0.0
+version:  1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Introduction to Python
 comment:  This module introduces the Python programming language, explores why Python is useful in research, and demonstrates how to write Python code in a Jupyter notebook (and why you might want to).
 long_description: Python is a versatile programming language that is frequently used for data analysis, machine learning, web development, and more. If are interested in learning about any of these topics and are new to programming, are joining a team where Python is used, or have just heard about Python and are looking for a general introduction to the language, this module is a good place to start. This is appropriate for someone at the beginner level.
-estimated_time: 1 hour
+estimated_time: 1 hr
 @learning_objectives  
 
 After completion of this module, learners will be able to:
@@ -102,7 +102,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 </div>
 
-### Preparation
+## Lesson Preparation
 
 For the hands-on activity in this module, we will be using an online environment containing a Jupyter notebook. To load the environment, open the link below in a new tab:
 
@@ -117,7 +117,7 @@ This might work well for you if you either can't or don't want to install Python
 
 **First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a couple of minutes to create, depending on how recently it was created (when it's being used more, it's quicker!).
 
-  <a href = "https://mybinder.org/v2/gh/arcus/education_modules/main?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg"></a> **← Click the "launch binder" button!**
+  <a href = "https://mybinder.org/v2/gh/arcus/education_modules/main?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg alt="Launch binder.""></a> **← Click the "launch binder" button!**
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
@@ -161,7 +161,7 @@ So why should you consider Python for your data analysis? There are a few reason
 
 - Because Python is quite popular and fairly mature, there are quite a lot of resources out there to help you get started learning, from free online tutorials and cheatsheets to semester-long courses and everything in between.
 
-### Quiz: Why Python?
+### Quiz: The Python Programming Language
 
 What are some reasons to consider using Python for data analysis? Select all that apply.
 
@@ -197,7 +197,7 @@ Instead of writing instructions one at a time, for more complex tasks you might 
 
 Here is a short script written in the Spyder IDE:
 <div style = "margin: 1rem; width: 750;">
-![An example of Python code written in Spyder with the code name=input("What is your name?") and print("Welcome to Intro to Python, "+name+"!").](media/python_in_spyder.png?raw=true)
+![Python code.](media/python_in_spyder.png?raw=true)
 </div>
 
 In the above example, our script asks for input of a user's name using the `input()` function, stores that input in a variable we've called `name`, and prints out a welcome message to the screen that includes the name the user entered using the code `print("Welcome to Intro to Python, "+name+"!")`.
@@ -218,24 +218,7 @@ In this case, when you run the code we wrote before in the Spyder console, you'l
 
 When you save a Python script, you'll use the file extension .py, and so to run the script in the example above, you would navigate to the correct directory in the Terminal (the folder where you've saved your file) and type `python intro-to-python.py`. If you are in the right place, you should see the output of your code!
 
-## Jupyter Notebooks
-
-If you are interested in using Python for data analysis, you might want to write Python in a [Jupyter notebook](https://jupyter.org/) (which was previously called an IPython notebook). There are a couple of reasons why you should consider using Jupyter notebooks:
-
-- Notebooks provide the best of both worlds between interactive and scripted code: code is written in chunks that can be run individually, with any output displayed beneath the code chunk.
-
-- You can intersperse sections of text, written in Markdown language, that can provide explanations and context for your code. This is especially valuable for data analysis, similar to a scientific notebook.
-
-Interested in learning how to write Python code in a Jupyter notebook? Continue on to the next section for a hands-on activity! You won't need to download anything to your computer.
-
-
-## Using a Jupyter Notebook
-
-This is a hands-on activity! Feel free to pop over to that tab you opened in the [Preparation section](#Preparation) to get started. Need the link again? Here it is:
-
-<a href = "https://mybinder.org/v2/gh/arcus/education_modules/main?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg"></a> **← Click the "launch binder" button!**
-
-### Quiz: Python code
+### Quiz: Python Code
 
 Which of the following is **not** an example of Python code?
 
@@ -249,8 +232,25 @@ Python uses functions that contain instructions that tell the computer what it i
 </div>
 ***********************************************************************
 
+## Jupyter Notebooks
 
-### Quiz: Jupyter notebooks
+If you are interested in using Python for data analysis, you might want to write Python in a [Jupyter notebook](https://jupyter.org/) (which was previously called an IPython notebook). There are a couple of reasons why you should consider using Jupyter notebooks:
+
+- Notebooks provide the best of both worlds between interactive and scripted code: code is written in chunks that can be run individually, with any output displayed beneath the code chunk.
+
+- You can intersperse sections of text, written in Markdown language, that can provide explanations and context for your code. This is especially valuable for data analysis, similar to a scientific notebook.
+
+Interested in learning how to write Python code in a Jupyter notebook? Continue on to the next section for a hands-on activity! You won't need to download anything to your computer.
+
+
+## Using a Jupyter Notebook: Hand-On Activity
+
+This is a hands-on activity! Feel free to pop over to that tab you opened in the [Lesson Preparation section](#Lesson-Preparation) to get started. Need the link again? Here it is:
+
+<a href = "https://mybinder.org/v2/gh/arcus/education_modules/main?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
+
+
+### Quiz: Hands-On Activity
 
 What are the components of a Jupyter notebook? Select all that apply.
 
@@ -280,7 +280,7 @@ Once you've downloaded Anaconda, you can open the Anaconda Navigator; when you d
 ![Anaconda Navigator interface.](media/anaconda.png?raw=true)
 </div>
 
-### Quiz: Accessing Python
+### Quiz: Next Steps
 
 How can you access Python to begin practicing on your own?
 
@@ -297,7 +297,7 @@ You can download Python directly to your computer, use Anaconda to download Pyth
 </div>
 ***********************************************************************
 
-### Additional Resources
+## Additional Resources
 
 For a beginner-friendly walk-through of writing Python scripts, [Hello World! Your Very First Computer Program](https://youtu.be/cV-QwT4fV7M) delivered by Jeff Pennington is an excellent introduction if you've got an hour to spend.
 
