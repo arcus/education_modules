@@ -400,7 +400,16 @@ how will the `diff` display that change?
 
 Instead of noting that only the last half of the line was changed, Git records this as deleting the line in the first version, and adding the line in the second version:
 
-
+```
+$ git diff HEAD jupiter.txt
+diff --git a/jupiter.txt b/jupiter.txt
+index 3030335..09c081c 100644
+--- a/jupiter.txt
++++ b/jupiter.txt
+@@ -1 +1 @@
+-Jupiter is cheerful and full of energy
++Jupiter is cheerful but quite stormy
+```
 
 
 ### Quiz: using `diff`
