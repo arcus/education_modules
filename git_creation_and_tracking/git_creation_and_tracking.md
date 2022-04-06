@@ -631,7 +631,7 @@ Often, when we're working in a project, we change several files in the course of
 - **Commit regularly** Even if you are only making very small changes, don't forget to commit at regular intervals, like before you switch tasks or end your work day.
 
 <div class="care">
-These are our recommendations for how often to commit, but that doesn't mean we are always good at following them. We all do the best we can, and sometimes I find myself committing every few minutes, giving each the commit message `"update file.txt"`. It's not ideal, but it gets the changes recorded even if it will be harder to see what was done later.
+These are our recommendations for how often to commit, but that doesn't mean we are always good at following them. We all do the best we can, and sometimes we still end up committing every few minutes, giving each the commit message `"update file.txt"`. It's not ideal, but it gets the changes recorded even if it will be harder to see what was done later.
 </div>
 
 
