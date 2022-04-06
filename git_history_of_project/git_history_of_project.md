@@ -7,10 +7,10 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Exploring the History of your Git Repository
-comment:  This module will teach you how to look at past versions of your work on Git, compare versions, and return to former versions.
-long_description: You know that version control is important. You know how to save your work to your Git repository. Now you are ready to look at and compare different versions of your work. In this module you will you will learn how to navigate through the commits you have made to Git. You will also learn how to compare current code with past code, and, if necessary, revert to an earlier version of your work.
+comment:  This module will teach you how to look at past versions of your work on Git and compare your project with previous versions.
+long_description: You know that version control is important. You know how to save your work to your Git repository. Now you are ready to look at and compare different versions of your work. In this module you will you will learn how to navigate through the commits you have made to Git. You will also learn how to compare current code with past code.
 
-estimated_time: 50 minutes
+estimated_time: 30 minutes
 
 @learning_objectives  
 After completion of this module, learners will be able to:
@@ -57,7 +57,9 @@ This module is for you if:
 
 ## Lesson Preparation
 
-The purpose of this module is to learn how to explore the history of a Git repository that has already been created. We are going to download Dracula's repository in which he started documenting the pros and cons of moving with his friends to Mars. Open up your command line interface and type:
+The purpose of this module is to learn how to explore the history of a Git repository that has already been created. We are going to download Dracula's repository in which he started documenting the pros and cons of moving with his friends to Mars.
+
+Open up your command line interface and navigate to a place where you want to put a new repository. This might be your `Desktop` on a Mac or `C` on a computer running Windows, but it can really be anywhere on your computer you choose. Once you are in the location you want to put Dracula's repository, type:
 
 ```
 git clone https://www.github.com/arcus/planets
@@ -66,7 +68,7 @@ git clone https://www.github.com/arcus/planets
 This should be a very fast download. Now if you type `ls` within the repository directory, you should see a folder titled `planets`. Navigate into the planets directory using `cd`. This is the directory we will be exploring throughout the module.
 
 <div class = "warning">
-If you are on a computer running Windows, make sure you are in the Git Bash application. The Command Prompt (cmd) will not recognize the commands we are using in this module, including `ls`.
+If you are on a computer running Windows, make sure you are in the Git Bash application. The Command Prompt (cmd) will not recognize the commands we are using in this module.
 </div>
 
 
@@ -74,7 +76,7 @@ If you are on a computer running Windows, make sure you are in the Git Bash appl
 
 Keeping track of all versions and being able to see and compare them is the entire point of using version control on a project you are working on alone. It is also a huge part of working on a project with others, whether you are collaborating currently or hope to share your work in the future.
 
-Each time you `commit` to Git, you are marking the current state of your project as a checkpoint that you can return to. The records of these changes are referred to as [commits](https://swcarpentry.github.io/git-novice/reference.html#commit)
+Each time you `commit` to Git, you are marking the current state of your project as a checkpoint that you can return to. The records of these changes are referred to as [commits](https://swcarpentry.github.io/git-novice/reference.html#commit).
 
 
 You are going to learn about two ways to refer to past commits:
@@ -137,7 +139,7 @@ Git is a big pile of mixed metaphors, and in the case of `HEAD`, it is referenci
 
 ### Using the commit number
 
-If there is a particular commit you want to look back on and are not sure how far back it was, having to refer to it as `HEAD~n` could get extremely frustrating, especially since n will continue to change as you work more on your project and make more commits. Luckily there is another way to refer to a particular commit, using its commit number.
+If there is a particular commit you want to look back on and are not sure how far back it was, having to refer to it as `HEAD~n` could get extremely frustrating, especially since n will continue to change as you work more on your project and make more commits. Luckily there is another way to refer to a particular commit, using its **commit number**.
 
 When you enter `git commit -m "short descriptive message"` no output appears, but Git gives that commit a unique identifier, its commit number. By typing `git log` we can see ALL of the previous commits. Since that might be a lot of output to deal with, we will just ask for the last 3 commits using `git log -n 3`. The number after `-n` is how many commits you want displayed from the log.
 
@@ -164,7 +166,7 @@ Date:   Mon Mar 14 14:57:09 2022 -0400
     Start notes on Mars as a base
 ```
 
-Use the arrow keys to scroll down if this output is longer than your CLI window. If that is the case, you can always quit the log output by pressing `Q`. Entering `git log` without the `-n` flag will give you the list of every commit, so if a project has been in progress for a while, this can be a lot of output!
+Use the arrow keys to scroll down if this output is longer than the window you are working in. If that is the case, you can always quit the output by pressing `Q`. Entering `git log` without the `-n` flag will give you the list of every commit, so if a project has been in progress for a while, this can be a lot of output!
 
 The first thing to notice is that your commit messages are here! This is a good reminder to write clear and concise messages because **future** you may be very grateful when trying to figure out where exactly **past** you introduced a particular issue.
 
@@ -174,7 +176,7 @@ When you identify which commit you want to look at, the commit number is the uni
 <div class = "learnmore">
 **What is this number?**
 
-We are used to seeing numbers in base 10, which are made up of the ten digits $$0,1,2,3,4,5,6,7,8,$$ and $$9$$. Commit numbers are in base 16, called [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal). In this number system, we use the 10 familiar digits as well as the digits $$a,b,c,d,e,$$ and $$f$$ corresponding to 10,11,12,13,14, and 15 respectively in base 10.
+We are used to seeing numbers in base 10, which are made up of the ten digits $0,1,2,3,4,5,6,7,8,$ and $9$. Commit numbers are in base 16, called [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal). In this number system, we use the 10 familiar digits as well as the digits $a,b,c,d,e,$ and $f$ corresponding to 10,11,12,13,14, and 15 respectively in base 10.
 
 If you are using the repo you created in an earlier module, your commits might have different commit numbers than the commit numbers in the examples.
 
@@ -200,7 +202,7 @@ index df0654a..315bf3a 100644
 +The two moons may be a problem for Wolfman
 ```
 
-Unlike `HEAD`, the commit number doesn't change as you update your repository.
+Unlike `HEAD`, the commit number doesn't change or move as you update your repository.
 
 ![On the left is the stack of 3 boxes, each labeled with its six digit commit number. An arrow points from this stack to the stack on the right where the three white boxes have a red box on top. The red box also has a commit number.  The commit numbers on the white boxes have not changed from the picture on the left.](media/Commit_number.svg)
 
@@ -231,7 +233,7 @@ Which of the following commands would show you the *most recent* commit you made
 - [[ ]] `git show 081cd9`
 ***
 <div class ="answer">
-The *most recent* commit is the current `HEAD` and its commit number is `584977`. Since both refer to the same commit, you can use either.
+As long as you didn't do anything fancy to move `HEAD`, the most *recent commit* is the current `HEAD`. Its commit number is `584977`. Since both refer to the same commit, you can use either.
 
 The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show 081cd9` will give you an error since `081cd9` it is not the *first* six digits of a known commit number.
 </div>
@@ -314,7 +316,7 @@ index b36abfd..93a3e13 100644
 +++ b/mars.txt
 ```
 
-3. The third and fourth lines once again show the name of the file being changed and assigns a symbol to each version. Lines that are in version `a` but not version `b` will be marked with a `-` and lines that are in version `b` but not version `a` will be marked with a '+'.
+3. The third and fourth lines once again show the name of the file being changed and assigns a symbol to each version. Lines that are in version `a` but not version `b` will be marked with a `-` and lines that are in version `b` but not version `a` will be marked with a `+`.
 
 ```
 @@ -1,3 +1,4 @@
@@ -333,7 +335,7 @@ But the Mummy will appreciate the lack of humidity
 
 6. If you changed code in multiple parts of your file, you will see several of these sections, called **chunks**, showing the changes you made. Each chunk starts with a line surrounded by `@@` telling you which lines of the file come next.
 
-### Comparing particular files or commits
+### Comparing particular files and commits
 
 When you enter `git diff HEAD`  your console will show you all of the differences between your current working directory and the the version at HEAD, which, unless you've intentionally moved it, will be the most recent commit. But if you have made several changes in multiple files, the output may be very hard to parse. Your output will contain a `diff` section for each file that changed, and a chunk, starting with `@@` for each section of that file that changed. This could be a huge amount of output to sift through to find the changes you care about!
 
@@ -414,13 +416,13 @@ What does this output tell you? Choose all of the the statements that the output
 [[ ]] No files other than `venus.txt` have been changed since the last commit.
 ***
 <div class = "answer">
-**You already committed the comment about Venus's lack of moons.**: FALSE.  The output is showing the difference between the most recent commit and the current **working** version, which has indeed changed. If you had already committed the comment about Venus's lack of moons, that line would not be marked with `+`.
+**You already committed the comment about Venus's lack of moons:** FALSE.  The output is showing the difference between the most recent commit and the current **working** version, which has indeed changed. If you had already committed the comment about Venus's lack of moons, that line would not be marked with `+`.
 
-**The current working version of `venus.txt` has two lines.**: TRUE.  The current working version of `venus.txt` contains all lines marked with a `+` as well as all lines that have no starting symbol.
+**The current working version of `venus.txt` has two lines:** TRUE.  The current working version of `venus.txt` contains all lines marked with a `+` as well as all lines that have no starting symbol.
 
-**The last committed version of `venus.txt` has one line.**: TRUE. The last committed version contains all unmarked lines. If there were any lines marked with `-`, those would also be in the last committed version of `venus.txt`.
+**The last committed version of `venus.txt` has one line:** TRUE. The last committed version contains all unmarked lines. If there were any lines marked with `-`, those would also be in the last committed version of `venus.txt`.
 
-**No files other than `venus.txt` have been changed since the last** FALSE Because we only asked Git to tell us about differences in the `venus.txt` file, it didn't check for differences in other files. They could have been changed and that would not be reflected in the output.
+**No files other than `venus.txt` have been changed since the last:** FALSE Because we only asked Git to tell us about differences in the `venus.txt` file, it didn't check for differences in other files. They could have been changed and that would not be reflected in the output.
 
 You can conclude from this output that you must have committed, and then added the last line to `venus.txt`.
 </div>
@@ -438,7 +440,7 @@ This module is also the fourth in a series of modules about Git. We suggest cont
 <div class = "options">
 If you have a repository with at least a few commits in it, such as the one created in the previous module in this series, you can use this module as a framework for exploring the history of that project.
 
-You can also clone any repository you find on [GitHub](https://github.com) using
+You can also clone any public repository you find on [GitHub](https://github.com) using
 
 ```
 git clone https://www.github.com/RepositoryOwner/RepositoryName
