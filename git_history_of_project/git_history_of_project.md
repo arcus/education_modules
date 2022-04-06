@@ -27,7 +27,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
-# Exploring the History of your Git Repository
+# Exploring the History of a Git Repository
 
 
 <div class = "overview">
@@ -138,7 +138,7 @@ Using `HEAD` to refer to your commits can be great for looking at recent version
 <div class = "learnmore">
 Git is a big pile of mixed metaphors, and in the case of `HEAD`, it is referencing the idea of a [recording head](https://en.wikipedia.org/wiki/Recording_head) which writes audio or video input to a tape.
 
-`HEAD` is a "pointer," it doesn't contain any information of its own. `HEAD` points to the commit you are currently working from, and it is possible to change which commit `HEAD` is pointing to. Moving `HEAD` can be useful when you are trying to [go back to an earlier version](link/to/timetravel/module) of your work.
+`HEAD` is a "pointer," it doesn't contain any information of its own. `HEAD` points to the commit you are currently working from, and it is possible to change which commit `HEAD` is pointing to. Moving `HEAD` so that it points somewhere else can be useful when you are trying to [go back to an earlier version](link/to/timetravel/module) of your work, but is outside the scope of this module.
 </div>
 
 ### Using the commit number
@@ -187,9 +187,9 @@ If you are using the repo you created in an earlier module, your commits might h
 On the other hand, if you created your `planets` repository identically to Dracula, with every file containing all the same characters including spaces and line breaks, your commit numbers will match Dracula's. This is because the commit number is created by putting the entire repository through a function called a **hash**. If you and Dracula put the same thing into this function, you will get the same commit number out. Be sure to use the commit number in YOUR log if it differs from Dracula's.
 </div>
 
-Now that we have found the unique identifier of the commit we want to examine, we can use it with `git show`. Don't worry, you won't need to type all 40 digits, the first six will suffice.
+Now that we have found the identifier of the commit we want to examine, we can use it with `git show`. Don't worry, you won't need to type all 40 digits, the first six will suffice.
 
-```
+```{.git}
 $ git show 1e587d
 commit 1e587d25f619aa0aa10fce19b44e4e71503fa41e
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
@@ -229,7 +229,7 @@ Date:   Wed Apr 6 13:15:24 2022 -0400
     Start files on Jupiter and Mercury
 ```
 
-Which of the following commands would show you the *most recent* commit you made? Select all correct answers.
+Which of the following commands would show you the **most recent** commit you made? Select all correct answers.
 
 - [[X]] `git show HEAD`
 - [[ ]] `git show HEAD~1`
@@ -237,9 +237,9 @@ Which of the following commands would show you the *most recent* commit you made
 - [[ ]] `git show 2a29ed`
 ***
 <div class ="answer">
-As long as you didn't do anything fancy to move `HEAD`, the most *recent commit* is the current `HEAD`. Its commit number is `584977`. Since both refer to the same commit, you can use either.
+As long as you didn't do anything fancy to move `HEAD`, the **most recent** commit is the current `HEAD`. Its commit number is `584977`. Since both refer to the same commit, you can use either.
 
-The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show 081cd9` will give you an error since `081cd9` it is not the *first* six digits of a known commit number.
+The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show 081cd9` will give you an error since `081cd9` it is not the **first** six digits of a known commit number.
 </div>
 ***
 
