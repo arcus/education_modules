@@ -94,7 +94,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 **Estimated time to completion**: @estimated_time
 
-**Pre-requisites**: Learners should be familiar with tabular data (data stored in a rectangular format, like an Excel spreadsheet or a comma separated file). It is helpful to have some familiarly with navigating to specific directories and running programs in the Command Line/Terminal. Learners do not need to have access to Python or Jupyter notebooks on their own computers.
+**Pre-requisites**: Learners should be familiar with tabular data (data stored in a rectangular format, like an Excel spreadsheet or a comma separated file). It is helpful to have some familiarity with navigating to specific directories and running programs in the Command Line/Terminal. Learners do not need to have access to Python or Jupyter notebooks on their own computers.
 
 **Learning Objectives**:
 
@@ -117,7 +117,7 @@ This might work well for you if you either can't or don't want to install Python
 
 **First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a couple of minutes to create, depending on how recently it was created (when it's being used more, it's quicker!).
 
-  <a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?labpath=notebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg alt="Launch binder.""></a> **← Click the "launch binder" button!**
+<a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?urlpath=notebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/static/images/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
@@ -249,7 +249,7 @@ Interested in learning how to write Python code in a Jupyter notebook? Continue 
 
 This is a hands-on activity! Feel free to pop over to that tab you opened in the [Lesson Preparation section](#Lesson-Preparation) to get started. Need the link again? Here it is:
 
-<a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?labpath=notebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
+<a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?urlpath=notebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/static/images/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
 
 
 ### Quiz: Hands-On Activity
