@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.0.0
+version:  1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -154,10 +154,10 @@ Neither absolute nor relative file paths are "better"-- which you choose will de
 What would be a relative file path pointing to the file `experiment1.csv` in a subfolder called `data` in a project folder called `study_project`, if `study_project` is your current working directory?
 
 [[data/experiment1.csv]]
-[[?]] Hint: Remember that a relative file path is in relation to your working directory-- that's your reference point.
+[[?]] Hint: Remember that a relative file path is in relation to your working directory-- that's your reference point. And don't forget that file paths are case-sensitive!
 <script>
   let input = "@input".trim();
-  /data[/\\]experiment1\.csv/i.test(input);
+  input == "data/experiment1.csv" || input == "data\\experiment1.csv";
 </script>
 ********************************
 <div class = "answer">
