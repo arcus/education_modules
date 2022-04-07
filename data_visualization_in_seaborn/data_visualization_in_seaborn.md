@@ -556,8 +556,11 @@ You can add facets to a plot by including the arguments for `col`, `row`, or bot
 
 Trend lines look like line plots, but they are different in one key way: They show a **summary** of other data (usually a linear model), rather than plotting data directly.
 
+Trend lines are used to show the overall trend in a scatterplot. Sometimes, the scatterplot points themselves are omitted and just the trend lines are shown to keep the visualization as clean as possible, but they're still implied.
+
+
 <div class = "help">
-Note that the content in this section references statistics concepts more than the previous sections.
+Note that the content in this section references statistics concepts more than in the previous sections.
 Polynomial regression and lowess regression in particular may be new to some learners.
 
 If you're unfamiliar with the statistics referenced, you have two good options:
@@ -565,10 +568,8 @@ If you're unfamiliar with the statistics referenced, you have two good options:
 - You can gloss over the explanations and just focus on the code and the resulting data visualizations
 - You can click through to the links provided within the section and/or follow up with material referenced in the [Additional Resources](#additional-resources) section at the end to learn more
 
-Either way is fine! The best approach for you likely depends on your level of interest and how much time you have available to dig into extra content. 
+Either way is fine! The best approach for you likely depends on your level of interest and how much time you have available to dig into extra content.
 </div>
-
-Trend lines are used to show the overall trend in a scatterplot. Sometimes, the scatterplot points themselves are omitted and just the trend lines are shown to keep the visualization as clean as possible, but they're still implied.
 
 ### Linear regression trend lines
 
