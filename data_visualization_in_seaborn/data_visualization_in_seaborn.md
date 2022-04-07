@@ -43,6 +43,9 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 This module assumes some familiarity with principles of data visualizations. If you've done some data visualization programming before, especially using seaborn or R's ggplot2, this module should be right for you. If you are brand new to both ggplot2 and seaborn, start with the overview of [data visualizations in open source software](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md#1) first, and then come back here.
 
+This module assumes some familiarity with statistical concepts like distributions, outliers, and linear regression, but even if you don't understand those concepts well you should be able to learn and apply the data visualization content.
+When statistical concepts are referenced in the lesson, links to learn more are generally provided.
+
 This module also assumes some basic familiarity with python, including
 
 * installing and importing libraries
