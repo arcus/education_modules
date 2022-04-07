@@ -117,7 +117,7 @@ This might work well for you if you either can't or don't want to install Python
 
 **First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a couple of minutes to create, depending on how recently it was created (when it's being used more, it's quicker!).
 
-  <a href = "https://mybinder.org/v2/gh/arcus/education_modules/main?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg alt="Launch binder.""></a> **← Click the "launch binder" button!**
+  <a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?labpath=notebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg alt="Launch binder.""></a> **← Click the "launch binder" button!**
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
@@ -134,8 +134,11 @@ If you have [Python](https://www.python.org/) and [Jupyter](https://jupyter.org/
 
 * Go to the GitHub repository where the materials for this lesson are located: https://github.com/arcus/education_modules.
 * You can use git to **clone**, or download, a repository (or "repo", as it is sometimes called). Here are the steps to follow:
+
   * It is likely that git is already installed on your computer, even if you've never used it before. Open the Terminal application (if you're using a Mac/Linux machine) or the Windows Powershell (if you're using Windows 10 or later -- here is [more information about finding the Windows Powershell](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md#5). Then run the code `git --version`. If git is installed, you should see a version number. If not, check out [these instructions for installing git on Mac or PC](https://carpentries.github.io/workshop-template/#git).
+
   * You can also use GitHub Desktop, which you can use to interact with GitHub repositories. The [GitHub Desktop documentation](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) for download instructions and getting started.
+
   * If you are using git in a command line interface, go to the [education_modules repository on GitHub.com](https://github.com/arcus/education_modules) and then follow [these instructions to clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository).
 
   <div class = "important">
@@ -247,7 +250,7 @@ Interested in learning how to write Python code in a Jupyter notebook? Continue 
 
 This is a hands-on activity! Feel free to pop over to that tab you opened in the [Lesson Preparation section](#Lesson-Preparation) to get started. Need the link again? Here it is:
 
-<a href = "https://mybinder.org/v2/gh/arcus/education_modules/main?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
+<a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?labpath=notebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
 
 
 ### Quiz: Hands-On Activity
