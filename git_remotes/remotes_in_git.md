@@ -298,7 +298,9 @@ $ ssh -T git@github.com
 Hi Vlad! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-## Push local changes to a remote
+## Push and pull local changes to and from a remote
+
+### Push local changes to a remote
 
 Now that authentication is setup, we can return to the remote. This command will push the changes from our local repository to the repository on GitHub:
 
@@ -321,45 +323,11 @@ To https://github.com/vlad/planets.git
  * [new branch]      main -> main
 ```
 
-
-<div class = "help">
-**Proxy**
-  
-If the network you are connected to uses a proxy, there is a chance that your last command failed with “Could not resolve hostname” as the error message. To solve this issue, you need to tell Git about the proxy:
-
-`$ git config --global http.proxy http://user:password@proxy.url` <br>
-`$ git config --global https.proxy https://user:password@proxy.url<code>Testing hint box`
-<br> 
-When you connect to another network that doesn’t use a proxy, you will need to tell Git to disable the proxy using:<br>
-  
-`$ git config --global --unset http.proxy`<br>
-`$ git config --global --unset https.proxy`
-</div>
-
-<div class = "care">
-**Password Managers**
-  
-If your operating system has a password manager configured, git push will try to use it when it needs your username and password. For example, this is the default behavior for Git Bash on Windows. If you want to type your username and password at the terminal instead of using a password manager, type:
- 
-  ```console
-$ unset SSH_ASKPASS
-```
-
-in the terminal, before you run `git push`. Despite the name, Git uses SSH_ASKPASS for all credential entry, so you may want to unset `SSH_ASKPASS` whether you are using Git via SSH or https.
-
-You may also want to add `unset SSH_ASKPASS` at the end of your `~/.bashrc` to make Git default to using the terminal for usernames and passwords. 
-</div>
-
-
 Our local and remote repositories are now in this state:
 
-![github-repo-after-first-push_01](./media/remotes_step_03_images/github-repo-after-first-push_01.svg)
+![github-repo-after-first-push01](./media/remotesstep03images/github-repo-after-first-push_01.svg)
 
-<div class = "care">
-**the -u flag**
-
-You may see a -u option used with git push in some documentation. This option is synonymous with the --set-upstream-to option for the git branch command, and is used to associate the current branch with a remote branch so that the git pull command can be used without any arguments. To do this, simply use git push -u origin main once the remote has been set up.
-</div>  
+### Pull remote changes to a local
 
 We can pull changes from the remote repository to the local one as well:
 
@@ -392,7 +360,8 @@ When we push changes, we’re interacting with a remote repository to update it 
 The GitHub GUI, or Graphical User Interface, in the browser allows you to perform many tasks you are also able to do on the command line. 
 
 **Uploading files directly in GitHub browser**
-  
+<br>
+<br>  
 Github also allows you to skip the command line and upload files directly to your repository without having to leave the browser. There are two options. First you can click the “Upload files” button in the toolbar at the top of the file tree. Or, you can drag and drop files from your desktop onto the file tree. You can read more about this on [this GitHub page](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
 
 ### Quiz: GitHub GUI
@@ -434,14 +403,36 @@ GitHub displays timestamps in a human readable relative format (i.e. “22 hours
 
 To learn more about SSH and its setup, refer to the Software carpentries episode [here](https://swcarpentry.github.io/git-novice/07-github/index.html#3-ssh-background-and-setup).
 
-<div class = "hint">
-<code>Testing hint box</code>
-</div>
 
-<div class = "options">
-<code>Testing options box</code>
-</div>
+### Proxy
+  
+If the network you are connected to uses a proxy, there is a chance that your last command failed with “Could not resolve hostname” as the error message. To solve this issue, you need to tell Git about the proxy:
+``` console  
+$ git config --global http.proxy http://user:password@proxy.url
+$ git config --global https.proxy https://user:password@proxy.url<code>Testing hint box
+```
+  
+When you connect to another network that doesn’t use a proxy, you will need to tell Git to disable the proxy using:<br>
+``` console  
+$ git config --global --unset http.proxy
+$ git config --global --unset https.proxy
+```
 
+### Password Managers
+  
+If your operating system has a password manager configured, git push will try to use it when it needs your username and password. For example, this is the default behavior for Git Bash on Windows. If you want to type your username and password at the terminal instead of using a password manager, type:
+ 
+```console
+$ unset SSH_ASKPASS
+```
+
+in the terminal, before you run `git push`. Despite the name, Git uses SSH_ASKPASS for all credential entry, so you may want to unset `SSH_ASKPASS` whether you are using Git via SSH or https.
+
+You may also want to add `unset SSH_ASKPASS` at the end of your `~/.bashrc` to make Git default to using the terminal for usernames and passwords. 
+
+### The -u flag
+
+You may see a `-u` option used with git push in some documentation. This option is synonymous with the `--set-upstream-to option` for the git branch command, and is used to associate the current branch with a remote branch so that the git pull command can be used without any arguments. To do this, simply use git push `-u origin main` once the remote has been set up.
 
 
 ## Feedback
