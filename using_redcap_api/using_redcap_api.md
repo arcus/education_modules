@@ -67,7 +67,9 @@ If you already have experience with REDCap, feel free to skip watching the video
 
 ### Learn More About REDCap at your Institution
 
-Vanderbilt University provides REDCap software free of charge to institutions that join the REDCap Consortium.  It's currently in use by over 5,000 institutions and is used to host data for well over a million separate projects with millions of human users.  REDCap is offered to institutions, not to individual scientists or consumers, and participating institutions are responsible for their own REDCap software updates, training, and access for their users.  Research centers, clinics, and colleges and universities will have a dedicated server that they install REDCap on, and they'll make the REDCap website on their server available to their users (students, scientists, etc.).  Each institution does REDCap a little differently.  
+Vanderbilt University provides REDCap software free of charge to institutions that join the REDCap Consortium.  It's currently in use by over 5,000 institutions and is used to host data for well over a million separate projects with millions of human users.  REDCap is offered to institutions, not to individual scientists or consumers, and participating institutions are responsible for their own REDCap software updates, training, and access for their users.  
+
+Research centers, clinics, and colleges and universities will have a dedicated server that they install REDCap on, and they'll make the REDCap website on their server available to their users (students, scientists, etc.).  Each institution does REDCap a little differently.  
 
 If REDCap is offered by your organization (your university or workplace), questions about how to use it effectively or solve problems like the site being down should go to the people at your institution responsible for REDCap.  Sometimes, an institution will have a big staff dedicated to REDCap, people who can offer all kinds of services like helping you design instruments and manage your data with a lot of support.  Other institutions have only one administrator who keeps the REDCap site running and up to date but isn't responsible for helping users figure out how to use REDCap.  Most institutions are somewhere in the middle.
 
@@ -77,19 +79,17 @@ Not sure whether your institution has REDCap?  You may find your institution in 
 
 <div class = "important">
 
-Although these materials are intended for any researcher who finds them useful, we know the institutional affiliation of some of our users, so for your convenience we're adding some of the REDCap URLs that might be useful to you.  Want us to add your institution's REDCap link, so that this training is more useful for your peers, too?  Email us at dart@chop.edu.
+Although these materials are intended for any researcher who finds them useful, we know the institutional affiliation of some of our users, so for your convenience we're adding some of the REDCap URLs that might be useful to you.  Want us to add your institution's REDCap link, so that this training is more useful for your peers, too?  Email us at [dart@chop.edu](mailto:dart@chop.edu).
 
-Children's Hospital of Philadelphia: https://redcap.chop.edu/
-Drexel Med: https://redcap.drexelmed.edu
-Penn Medicine: https://redcap.med.upenn.edu
-Penn Nursing: https://redcap.nursing.upenn.edu
-University of Botswana: https://ehealth.ub.bw/redcap
+* Children's Hospital of Philadelphia: https://redcap.chop.edu/
+* Drexel Med: https://redcap.drexelmed.edu
+* Penn Medicine: https://redcap.med.upenn.edu
+* Penn Nursing: https://redcap.nursing.upenn.edu
+* University of Botswana: https://ehealth.ub.bw/redcap
 
 </div>
 
-## The REDCap API
-
-### What is an Application Programming Interface (API)?
+## About APIs
 
 **API** stands for **Application Programming Interface**. It's a way for people or machines to interact with software in a prescribed way.  APIs allow a user to ask for a particular resource, using various parameters to indicate what resource is being requested.  Some APIs also allow for adding resources via upload.
 
@@ -103,22 +103,23 @@ Generally, most well-crafted APIs will accept parameters that include things lik
 * Search terms, if applicable
 * Ranges (like date ranges), if applicable
 
-The API will either:
+The API will receive the request, and should do one (or possibly more) of the following:
 
-* return the desired data in the desired format to the requesting (client) program,
-* send a return code that means success (in the case, say, of adding data), or
-* provide a descriptive and helpful error message
+* Return the desired data in the desired format to the requesting (client) program,
+* Send a return code that means success (in the case, say, of adding data), or
+* Provide a descriptive and helpful error message
 
-Specific API use cases might include:
+There are many APIs, from governmental organizations like the U.S. Census Bureau, to news outlets including the New York Times, to social media platforms like Twitter, and companies like IBM Watson.  APIs are ubiquitous and you benefit from APIs all the time without realizing it. API use cases are myriad, and a few examples could include:
 
-* Getting the latest, most up-to-date data for an application that counts hospital admissions for influenza
+* Getting the latest, most up-to-date data for an dashboard that counts hospital admissions for influenza
 * Requesting, on a news site, only news stories related to public health in Ghana
 * Communicating between code, such as sending success messages from one program to another
 
-Let's use a simple example.   NCBI, the National Center for Biotechnology Information, has an API called "Entrez" that you can use for a number of purposes, including to get PubMed article IDs that meet your conditions.  They provide the following example on their website:
+Let's use a simple API example that is as easy as copying and pasting a URL.   NCBI, the National Center for Biotechnology Information, has an API called "Entrez" that you can use for a number of purposes, including to get PubMed article IDs that meet your conditions.  They provide the following example on [their website](https://www.ncbi.nlm.nih.gov/books/NBK25500/):
 
 > Example: Get the PubMed IDs (PMIDs) for articles about breast cancer published in Science in 2008
-> https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science[journal]+AND+breast+cancer+AND+2008[pdat]
+>
+> `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science[journal]+AND+breast+cancer+AND+2008[pdat]`
 
 Note that there are some terms added in the URL, parameters like `db` and `term`.  There are clearly some rules about how `term` is structured, and if we wanted to learn more about this API we could read their documentation to learn what parameters we could include in the URL (web address).
 
@@ -164,21 +165,21 @@ API stands for Application Programming Interface!
 
 Some APIs allow for anonymous use.  Others require all users to be registered and prove their identity.  Others have one level of service for anonymous users and another level for registered users.  REDCap hosts private data that can be very sensitive, so every API call to REDCap must come with proof that demonstrates that the requestor has the right to see the data they're asking for.
 
-APIs are automated, which means they won’t rely on you logging in manually, adding a user name and password interactively. API calls have to run without human intervention, which means you need to provide your R or Python script with credentials that show you are allowed see the data you’re accessing. But obviously you don’t want to put your user name and password in a script. Your user name and password might open a lot of doors at your institution, including your email, your payroll information, and your EHR access. You want to isolate **just** your access to this **particular** data, and using your all-powerful login information to access REDCap data is far too powerful.
+APIs are automated, which means they won't rely on you logging in manually, adding a user name and password interactively. API calls have to run without human intervention, which means you need to provide your R or Python script with credentials that show you are allowed see the data you're accessing. But obviously you don't want to put your user name and password in a script. Your user name and password might open a lot of doors at your institution, including your email, your payroll information, and your EHR access. You want to isolate **just** your access to this **particular** data, and using your all-powerful login information to access REDCap data is far too powerful.
 
-What if your credentials fell into the wrong hands, because they were in a script on a drive that many people have access to? This is where API keys or tokens come in. API credentials give very specific access to very specific things.  They can also be regenerated easily (like changing a lock on a door), in case you suspect they may have been lost or misused. If API credentials do fall into the wrong hands, it’s not great, but it’s much better than accidentally sharing your username and password! The access codes you need to provide might be called tokens, keys, passwords, or some other descriptor. In REDCap, the term is "token", and we'll show you in a bit how to generate a token for your data.
+What if your credentials fell into the wrong hands, because they were in a script on a drive that many people have access to? This is where API keys or tokens come in. API credentials give very specific access to very specific things.  They can also be regenerated easily (like changing a lock on a door), in case you suspect they may have been lost or misused. If API credentials do fall into the wrong hands, it's not great, but it's much better than accidentally sharing your username and password! The access codes you need to provide might be called tokens, keys, passwords, or some other descriptor. In REDCap, the term is "token", and we'll show you in a bit how to generate a token for your data.
 
 ### Advantages of the REDCap API
 
-Two important advantages to using an API are data freshness and reproducibility.
+Two important advantages to using an API are **data freshness** and **reproducibility**.
 
-Let’s say you have to run some analysis on data you’re collecting in REDCap, and you want to re-run this analysis every couple of weeks to see the latest figures. One way to do that is to manually export data from REDCap to a .csv and save it to a file that you analyze.  REDCap likes to download files with a date stamp as part of the file name, so you have to keep track of various file names and make sure you are analyzing the right data. You may, after all, end up collecting multiple .csvs, each of which has a particular version of the data in REDCap. This can easily become overwhelming and cause confusion or mistakes.
+Let's say you have to run some analysis on data you're collecting in REDCap, and you want to re-run this analysis every couple of weeks to see the latest figures. One way to do that is to manually export data from REDCap to a .csv and save it to a file that you analyze.  REDCap likes to download files with a date stamp as part of the file name, so you have to keep track of various file names and make sure you are analyzing the right data. You may, after all, end up collecting multiple .csvs, each of which has a particular version of the data in REDCap. This can easily become overwhelming and cause confusion or mistakes.
 
-What’s a better approach? Reach into the REDCap database directly each time you run your analysis script, so that you know you’re using the most up-to-date data. This is what we'll call the "data freshness" advantage.  
+What's a better approach? Reach into the REDCap database directly each time you run your analysis script, so that you know you're using the most up-to-date data. This is what we'll call the "data freshness" advantage.  
 
-Another problem with using manually downloaded files from REDCap is that this method requires unscripted, point-and-click manual work. If you were to document this carefully, you’d have to give several steps, like where to log in to REDCap, which project to use, the .csv download settings (which fields or forms to download), file naming conventions, and where to put the file. Most of us don’t go into this level of detail in our manual workflows, for good reason! It’s tiresome, and we know that sometimes things change in the look and feel of a website, so including screenshots and detailed instructions about where to look for a link or how to highlight multiple fields is a lot of work for something that might have slightly different steps next week or next month.  We'll call this the "reproducibility" motivation.
+Another problem with using manually downloaded files from REDCap is that this method requires unscripted, point-and-click manual work. If you were to document this carefully, you'd have to give several steps, like where to log in to REDCap, which project to use, the .csv download settings (which fields or forms to download), file naming conventions, and where to put the file. Most of us don't go into this level of detail in our manual workflows, for good reason! It's tiresome, and we know that sometimes things change in the look and feel of a website, so including screenshots and detailed instructions about where to look for a link or how to highlight multiple fields is a lot of work for something that might have slightly different steps next week or next month.  We'll call this the "reproducibility" motivation.
 
-A better approach is to use a script that uses an API call. First of all, it’s scripted, which means no manual steps to write up in a Word document or add to a GitHub repo or jot down on a sticky note. Also, the typical API has a standard interface that will change very little. API access may improve over time, adding new features, but it’s very infrequent that an API will radically change and remove options, rendering your script unusable. The same half-dozen lines of code you use to access your data will almost always be stable for months or years, and if you do need to change it, you’re only changing that small chunk of code, instead of a step-by-step document with words and images that describe a manual effort.
+A better approach is to use a script that uses an API call. First of all, it's scripted, which means no manual steps to write up in a Word document or add to a GitHub repo or jot down on a sticky note. Also, the typical API has a standard interface that will change very little. API access may improve over time, adding new features, but it's very infrequent that an API will radically change and remove options, rendering your script unusable. The same half-dozen lines of code you use to access your data will almost always be stable for months or years, and if you do need to change it, you're only changing that small chunk of code, instead of a step-by-step document with words and images that describe a manual effort.
 
 ### Quiz: API Advantages
 
@@ -209,7 +210,7 @@ If you have a REDCap project in mind, log in and open that project.  On the left
 
 <div class = "warning">
 
-Just because we're not going to break any of your data doesn't mean that it's okay from a regulatory perspective to use the API to download the latest data to your computer.  Think about whether the use of this data is governed by a protocol or data use agreement, and whether your computer is an approved place to do analysis of the data.  
+Just because we're not going to break any of your data doesn't mean that it's okay from a regulatory perspective to use the API to download data to your computer.  Think about whether the use of this data is governed by a protocol or data use agreement, and whether your computer is an approved place to do analysis of the data.  
 
 </div>
 
@@ -229,7 +230,7 @@ Congratulations, now you have a project that you created, which means you have U
 
 ### Enabling the API
 
-In REDCap, the project owner (or people with user rights) have to explicitly give permission to use the REDCap API to project users who need that capability. In fact, when you create a new REDCap project, REDCap does not provide you with these permissions by default, even though you’re the project owner! Take a look at your REDCap project and look on the left hand side of the screen to look at the menu of options. Chances are, you won’t see anything that says “API”. If that’s the case, don’t worry. We’re going to walk you through how to give yourself API access.
+In REDCap, the project owner (or people with user rights) have to explicitly give permission to use the REDCap API to project users who need that capability. In fact, when you create a new REDCap project, REDCap does not provide you with these permissions by default, even though you're the project owner! Take a look at your REDCap project and look on the left hand side of the screen to look at the menu of options. Chances are, you won't see anything that says "API". If that's the case, don't worry. We're going to walk you through how to give yourself API access.
 
 Open your REDCap database (one that belongs to you or in which you have the ability to change user rights). In the left side of the screen, choose "User Rights" from the list of applications.
 
@@ -239,25 +240,25 @@ The User Rights panel will open in the main part of your screen. Click on your u
 
 ![List of user rights checkboxes with API Export checked](media/api_export.png)
 
-Then click “Save Changes”.
+Then click "Save Changes".
 
-Refresh your browser (reload the page) so that your new permissions are included in what you get shown in your project. Now, on the left hand side of the project, you should see something new under “Applications” – “API” and “API Playground”.
+Refresh your browser (reload the page) so that your new permissions are included in what you get shown in your project. Now, on the left hand side of the project, you should see something new under "Applications" – "API" and "API Playground".
 
 ![List of applications which includes the "API" and "API Playground" applications](media/api_api_playground.png)
 
 ### API Token
 
-So now you have the **right** to use the API, but you can’t start using it just yet. You have to generate an API token.  Click on the “API” application in the left side menu and in the main part of your screen, click on the button to “Generate API Token.”  Depending on your institution's rules, you might automatically be granted a token immediately, or it might be generated manually by an administrator a few minutes or hours later.
+So now you have the **right** to use the API, but you can't start using it just yet. You have to generate an API token.  Click on the "API" application in the left side menu and in the main part of your screen, click on the button to "Generate API Token."  Depending on your institution's rules, you might automatically be granted a token immediately, or it might be generated manually by an administrator a few minutes or hours later.
 
 ![Text and clickable button for obtaining an API token](media/obtain_api_token.png)
 
-The API token is unique to the combination of user and project. It’s a code that allows access only to the data in a single project and only the data that the person who generated the API token is allowed to see.  If you have three different projects, your token is different for each one. Importantly, if you feel like you may have accidentally given your API token away, it’s a good idea to regenerate it, which is a single-click operation. It makes your old token invalid and creates a new token.
+The API token is unique to the combination of user and project. It's a code that allows access only to the data in a single project and only the data that the person who generated the API token is allowed to see.  If you have three different projects, your token is different for each one. Importantly, if you feel like you may have accidentally given your API token away, it's a good idea to regenerate it, which is a single-click operation. It makes your old token invalid and creates a new token.
 
-Soon, your API token will show up in that same “API” Application. It will look something like this (note, I’ve obscured my token – sharing this in a post like this one would be a terrible idea!).
+Soon, your API token will show up in that same "API" Application. It will look something like this (note, I've obscured my token – sharing this in a post like this one would be a terrible idea!).
 
 ![Text that includes an obscured API token](media/your_api_token.png)
 
-You’ll use this token when you request data in your R or Python script.
+You'll use this token when you request data in your R or Python script.
 
 ### Quiz: REDCap API Token
 
@@ -281,7 +282,7 @@ You can generate a REDCap API token once you have been given API rights.  Once y
 
 ## Hands on Practice: API Playground
 
-So, you have some data in a REDCap database, and you have an API key that gives you access to that data. How do you use this key, though? Learning how to use an API can be tricky, because it requires you to pass not only the key, but your actual request (like “give me only the field called 'species'" or “give me only the form called 'inclusion_criteria'”). Luckily, REDCap provides you an “API Playground” that gives you not only a view into what the API can do, but provides a good start to giving you the actual code. Let’s take a deeper look.
+So, you have some data in a REDCap database, and you have an API key that gives you access to that data. How do you use this key, though? Learning how to use an API can be tricky, because it requires you to pass not only the key, but your actual request (like "give me only the field called 'species'" or "give me only the form called 'inclusion_criteria'"). Luckily, REDCap provides you an "API Playground" that gives you not only a view into what the API can do, but provides a good start to giving you the actual code. Let's take a deeper look.
 
 The API Playground has several parts:
 
@@ -290,27 +291,27 @@ The API Playground has several parts:
 * Response
 * Code Examples
 
-Let’s look at how each part of the API Playground helps you learn the API.
+Let's look at how each part of the API Playground helps you learn the API.
 
 ### API Method
 
-In your REDCap project, head over to the “API Playground” – click on that phrase in the Applications pane on the left. Then, at the top of your screen, you’ll see the menu-driven selection box. The first selection you have to make is **API Method**. For now, choose “Export Records”, which will give you all your records (or your rows of data).  Make sure that the Format is "CSV" and the Type is "flat".  You don't have to change any other fields.
+In your REDCap project, head over to the "API Playground" – click on that phrase in the Applications pane on the left. Then, at the top of your screen, you'll see the menu-driven selection box. The first selection you have to make is **API Method**. For now, choose "Export Records", which will give you all your records (or your rows of data).  Make sure that the Format is "CSV" and the Type is "flat".  You don't have to change any other fields.
 
-The “Raw Request Parameters” box below your selection will change to reflect whatever you chose. Here’s an example of what you might see, if you're using the cervical cancer data.  If you're using your own dataset, things will look different.  Note that we've blurred out the API key here -- that's not something we want to share!
+The "Raw Request Parameters" box below your selection will change to reflect whatever you chose. Here's an example of what you might see, if you're using the cervical cancer data.  If you're using your own dataset, things will look different.  Note that we've blurred out the API key here -- that's not something we want to share!
 
 ![A menu-driven way to choose API method and the coded version of that selection below](media/api_method.png)
 
-This “Raw Request Parameters” gives you a quick look at the information you’re passing to REDCap, to make sure you selected what you really wanted in the menu part above.  Go on to the next page to see how to submit this API request!
+This "Raw Request Parameters" gives you a quick look at the information you're passing to REDCap, to make sure you selected what you really wanted in the menu part above.  Go on to the next page to see how to submit this API request!
 
 ### Execute Request
 
-Look further down the API Playground page, in the “Response” area, and click on the button that says “Execute Request”. You might get a “waiting” spinner, and then a box will appear below the button with the data that REDCap returned from your request.
+Look further down the API Playground page, in the "Response" area, and click on the button that says "Execute Request". You might get a "waiting" spinner, and then a box will appear below the button with the data that REDCap returned from your request.
 
-You requested your data to be in a .csv, so you should get some data that’s “comma separated” – a bunch of fields that are separated by commas, with each new line of data being separated by a line break.
+You requested your data to be in a .csv, so you should get some data that's "comma separated" – a bunch of fields that are separated by commas, with each new line of data being separated by a line break.
 
 <div class = "warning">
 
-In the “Response” box, all of this is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text and paste it into a text editor like Atom or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here’s the “before” (comma separated text in plain text) and the “after” (text saved as a .csv and then opened in Excel) of the cervical cancer data:
+In the "Response" box, all of this is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text and paste it into a text editor like Atom or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here's the "before" (comma separated text in plain text) and the "after" (text saved as a .csv and then opened in Excel) of the cervical cancer data:
 
 ![Data shown as text, separated by commas](media/execute_request.png)
 
@@ -318,16 +319,16 @@ In the “Response” box, all of this is presented in plain text, not in a tabl
 
 </div>
 
-Below that box, you’ll see an HTTP status. You want that to be 200, which means no errors occurred.
+Below that box, you'll see an HTTP status. You want that to be 200, which means no errors occurred.
 
-This is an example of “trying out” the API without having to write code. You experiment with various methods, like “Export Records”, to get data, add the appropriate criteria, such as the form(s) you want to download, and set some parameters for how you want REDCap to give you that data back (for example, in .csv format, or in .json format).
+This is an example of "trying out" the API without having to write code. You experiment with various methods, like "Export Records", to get data, add the appropriate criteria, such as the form(s) you want to download, and set some parameters for how you want REDCap to give you that data back (for example, in .csv format, or in .json format).
 
-In some API methods (like “Export Records”), you’ll have several drop down menus you can choose from, including forms and fields. You can make multiple choices by holding down control while clicking (Windows) or command while clicking (Mac).  In some cases, if you want every item listed (say, you want every form and every field), you don’t click any selection at all, and REDCap assumes you mean everything that appears in the drop-down list.
+In some API methods (like "Export Records"), you'll have several drop down menus you can choose from, including forms and fields. You can make multiple choices by holding down control while clicking (Windows) or command while clicking (Mac).  In some cases, if you want every item listed (say, you want every form and every field), you don't click any selection at all, and REDCap assumes you mean everything that appears in the drop-down list.
 
 
 ### API Playground: Code
 
-So, you’ve experimented in the API Playground and you know the kind of API call you want to make. Now, how do you automate this selection so that your R or Python code will issue exactly the same request using code?  REDCap’s API playground comes to the rescue again, with code snippets that show how to write the code to do automatically what you just did manually.
+So, you've experimented in the API Playground and you know the kind of API call you want to make. Now, how do you automate this selection so that your R or Python code will issue exactly the same request using code?  REDCap's API playground comes to the rescue again, with code snippets that show how to write the code to do automatically what you just did manually.
 
 In the tabs at the bottom of the API Playground, you'll see names of programming languages, including Python and R.  Below you can see what the Python code looks like for the API request to retrieve all records from the cervical cancer database:
 
