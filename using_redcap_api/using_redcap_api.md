@@ -224,7 +224,7 @@ If you can't or don't want to use your own existing REDCap project, you can clon
 
 An image below shows what you might see after steps 1-5, although your institution may have different colors, layouts, etc. on their page.
 
-![New project form in REDCap](media/new_project_from_xml.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![New project form in REDCap](media/new_project_from_xml.png)<!-- style = "border :1px solid rgb(var(--color-highlight)); max-width:800px;" -->
 
 6. At the bottom of the page, click "Create Project".  It may take a few minutes to digest that giant XML file!
 
@@ -252,13 +252,13 @@ Refresh your browser (reload the page) so that your new permissions are included
 
 So now you have the **right** to use the API, but you can't start using it just yet. You have to generate an API token.  Click on the "API" application in the left side menu and in the main part of your screen, click on the button to "Generate API Token."  Depending on your institution's rules, you might automatically be granted a token immediately, or it might be generated manually by an administrator a few minutes or hours later.
 
-![Text and clickable button for obtaining an API token](media/obtain_api_token.png)
+![Text and clickable button for obtaining an API token](media/obtain_api_token.png)<!-- style = "max-width:600px;" -->
 
 The API token is unique to the combination of user and project. It's a code that allows access only to the data in a single project and only the data that the person who generated the API token is allowed to see.  If you have three different projects, your token is different for each one. Importantly, if you feel like you may have accidentally given your API token away, it's a good idea to regenerate it, which is a single-click operation. It makes your old token invalid and creates a new token.
 
 Soon, your API token will show up in that same "API" Application. It will look something like this (note, I've obscured my token – sharing this in a post like this one would be a terrible idea!).
 
-![Text that includes an obscured API token](media/your_api_token.png)
+![Text that includes an obscured API token](media/your_api_token.png)<!-- style = "max-width:600px;" -->
 
 You'll use this token when you request data in your R or Python script.
 
@@ -301,7 +301,7 @@ In your REDCap project, head over to the "API Playground" – click on that phra
 
 The "Raw Request Parameters" box below your selection will change to reflect whatever you chose. Here's an example of what you might see, if you're using the cervical cancer data.  If you're using your own dataset, things will look different.  Note that we've blurred out the API key here -- that's not something we want to share!
 
-![A menu-driven way to choose API method and the coded version of that selection below](media/api_method.png)
+![A menu-driven way to choose API method and the coded version of that selection below](media/api_method.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 This "Raw Request Parameters" gives you a quick look at the information you're passing to REDCap, to make sure you selected what you really wanted in the menu part above.  Go on to the next page to see how to submit this API request!
 
@@ -313,7 +313,7 @@ You requested your data to be in a .csv, so you should get some data that's "com
 
 <div class = "warning">
 
-In the "Response" box, all of this is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text and paste it into a text editor like Atom or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here's the "before" (comma separated values in plain text) and the "after" (text saved as a .csv and then opened in Excel) of the cervical cancer data:
+In the "Response" box, data is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text and paste it into a text editor like Atom or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here's the "before" (comma separated values in plain text) and the "after" (text saved as a .csv and then opened in Excel) of the cervical cancer data:
 
 ![Data shown as text, separated by commas](media/execute_request.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
@@ -321,7 +321,7 @@ In the "Response" box, all of this is presented in plain text, not in a table, s
 
 </div>
 
-Below that box, you'll see an HTTP status. You want that to be 200, which means no errors occurred.
+Below the Response box with the comma separated values data, you'll see an HTTP status. You want that to be 200, which means no errors occurred.
 
 This is an example of trying out and learning about the API without having to write code. You can experiment with various methods and learn easily without having to go through the frustration of writing a lot of code to find out how to do things.
 
@@ -368,12 +368,6 @@ Now, your data is in a pandas data frame and you're ready to do all sorts of wor
 ## R and the REDCap API
 
 REDCap assumes you're going to use an R script and not an R Markdown document, but we advocate using R Markdown for just about everything you do in R, so we're going to teach that approach.
-
-<div class = "important">
-There are R packages that make importing REDCap data into R simpler than the code REDCap suggests.  Nevertheless, we think it's important to show you how to use the code REDCap provides, because it is reliable and reflects the current state of the REDCap API.  The R packages that streamline this effort are great, and we mention them toward the end of this module, but these packages depend on volunteers who keep them updated.  
-
-It's useful to know how to use the basic method we'll share here, even if in the future you prefer a different approach.
-</div>
 
 <div class = "important">
 There are useful R packages that make importing REDCap data into R simpler than the code REDCap suggests.  Nevertheless, we think it's important to show you how to use the code REDCap provides, because it is reliable and reflects the current state of the REDCap API.  
