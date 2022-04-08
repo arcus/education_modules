@@ -75,11 +75,11 @@ If REDCap is offered by your organization (your university or workplace), questi
 
 Not sure whether your institution has REDCap?  You may find your institution in the [list of partners](https://projectredcap.org/partners/).  For example, here are a list of partners that start with the letter "A".  Each partner then has contacts listed with their email addresses (simply click "View Collaborators"), so you can reach out and ask to get more information.
 
-![An alphabetical list of institutions with a few "A" entries shown](media/redcap_partners.png)
+![An alphabetical list of institutions with a few "A" entries shown](media/redcap_partners.png)<!-- style = "border : 1px solid rgb(var(--color-highlight)); max-width: 500px;"-->
 
 <div class = "important">
 
-Although these materials are intended for any researcher who finds them useful, we know the institutional affiliation of some of our users, so for your convenience we're adding some of the REDCap URLs that might be useful to you.  Want us to add your institution's REDCap link, so that this training is more useful for your peers, too?  Email us at [dart@chop.edu](mailto:dart@chop.edu).
+Although these materials are intended for any researcher who finds them useful, we know the institutional affiliation of some of our users, so for your convenience we're adding some of the REDCap URLs that might be useful to you.  Want us to add your institution's REDCap link, so that this training is more useful for your peers, too?  Email us at [`dart@chop.edu`](mailto:dart@chop.edu).
 
 * Children's Hospital of Philadelphia: https://redcap.chop.edu/
 * Drexel Med: https://redcap.drexelmed.edu
@@ -204,7 +204,7 @@ APIs have multiple advantages related to data freshness and reproducibility.  AP
 
 For the next part of this module, we'd like you to work with a real REDCap database that you create or in which you have User Rights (a very high level of privilege that you may not have on projects you didn't create).
 
-![List of applications which includes the "User Rights" application](media/user_rights.png)
+![List of applications which includes the "User Rights" application](media/user_rights.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 If you have a REDCap project in mind, log in and open that project.  On the left side, under "Applications", do you see "User Rights"?  If so, congratulations, you can use this project to experiment with the REDCap API.  We will only be using the API to access project data, not change or destroy it or add new data, so what we're going to describe here is safe to perform on a real dataset.
 
@@ -216,13 +216,15 @@ Just because we're not going to break any of your data doesn't mean that it's ok
 
 If you can't or don't want to use your own existing REDCap project, you can clone a sample project from us.  We've taken data from the University of California, Irvine Machine Learning Repository, specifically, their dataset on [cervical cancer risk factors](https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29), and made that data into a REDCap project.  Here are the steps to take our REDCap project and make it yours!
 
-1. Download our [REDCap xml file](media/cervical_cancer_factors.REDCap.xml), saving it to a place you'll be able to find it (like your Downloads folder)
+1. Download our [REDCap xml file](media/cervical_cancer_factors.REDCap.xml), saving it to a place you'll be able to find it (like your Downloads folder).  We suggest doing a right click on the link and choosing "Save Link As", or "Download Linked File As".
 2. Log in to your REDCap server and choose "New Project".
 3. Fill out the Project title, Project purpose, Assign project to Folder, and Project notes fields as you like.  We called our project "API Testing" but that's only a suggestion.
 4. Choose "Upload a REDCap project XML file" as the Project Creation option.  
-5. Click "Choose File", and in the file picker, navigate to where you saved our XML file. An image below shows what this might look like, although your institution may have different colors, layouts, etc. on their page.
+5. Click "Choose File", and in the file picker, navigate to where you saved our XML file.
 
-![New project form in REDCap](media/new_project_from_xml.png)
+An image below shows what you might see after steps 1-5, although your institution may have different colors, layouts, etc. on their page.
+
+![New project form in REDCap](media/new_project_from_xml.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 6. At the bottom of the page, click "Create Project".  It may take a few minutes to digest that giant XML file!
 
@@ -234,17 +236,17 @@ In REDCap, the project owner (or people with user rights) have to explicitly giv
 
 Open your REDCap database (one that belongs to you or in which you have the ability to change user rights). In the left side of the screen, choose "User Rights" from the list of applications.
 
-![List of applications which includes the "User Rights" application](media/user_rights.png)
+![List of applications which includes the "User Rights" application](media/user_rights.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 The User Rights panel will open in the main part of your screen. Click on your user id (or your role) and choose "Edit User Privileges". Give yourself API Export access, as shown in the image below.  For now, we'll leave API Import/Update turned off, so that you feel secure knowing you can't accidentally upload anything that could mess up your data.
 
-![List of user rights checkboxes with API Export checked](media/api_export.png)
+![List of user rights checkboxes with API Export checked](media/api_export.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Then click "Save Changes".
 
 Refresh your browser (reload the page) so that your new permissions are included in what you get shown in your project. Now, on the left hand side of the project, you should see something new under "Applications" – "API" and "API Playground".
 
-![List of applications which includes the "API" and "API Playground" applications](media/api_api_playground.png)
+![List of applications which includes the "API" and "API Playground" applications](media/api_api_playground.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 ### API Token
 
@@ -286,7 +288,7 @@ So, you have some data in a REDCap database, and you have an API key that gives 
 
 The API Playground has several parts:
 
-* The menu-driven selection box
+* The API Method selector menus
 * Raw Request Parameters
 * Response
 * Code Examples
@@ -295,7 +297,7 @@ Let's look at how each part of the API Playground helps you learn the API.
 
 ### API Method
 
-In your REDCap project, head over to the "API Playground" – click on that phrase in the Applications pane on the left. Then, at the top of your screen, you'll see the menu-driven selection box. The first selection you have to make is **API Method**. For now, choose "Export Records", which will give you all your records (or your rows of data).  Make sure that the Format is "CSV" and the Type is "flat".  You don't have to change any other fields.
+In your REDCap project, head over to the "API Playground" – click on that phrase in the Applications pane on the left. Then, at the top of your screen, you'll see the menu-driven selection box. The first selection you have to make is **API Method**. For now, choose "Export Records", which will give you all your records (rows of data).  Make sure that the Format is "CSV" and the Type is "flat".  You don't have to change any other fields.
 
 The "Raw Request Parameters" box below your selection will change to reflect whatever you chose. Here's an example of what you might see, if you're using the cervical cancer data.  If you're using your own dataset, things will look different.  Note that we've blurred out the API key here -- that's not something we want to share!
 
@@ -311,42 +313,42 @@ You requested your data to be in a .csv, so you should get some data that's "com
 
 <div class = "warning">
 
-In the "Response" box, all of this is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text and paste it into a text editor like Atom or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here's the "before" (comma separated text in plain text) and the "after" (text saved as a .csv and then opened in Excel) of the cervical cancer data:
+In the "Response" box, all of this is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text and paste it into a text editor like Atom or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here's the "before" (comma separated values in plain text) and the "after" (text saved as a .csv and then opened in Excel) of the cervical cancer data:
 
-![Data shown as text, separated by commas](media/execute_request.png)
+![Data shown as text, separated by commas](media/execute_request.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
-![Data shown in an Excel spreadsheet](media/excel_view.png)
+![Data shown in an Excel spreadsheet](media/excel_view.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 </div>
 
 Below that box, you'll see an HTTP status. You want that to be 200, which means no errors occurred.
 
-This is an example of "trying out" the API without having to write code. You experiment with various methods, like "Export Records", to get data, add the appropriate criteria, such as the form(s) you want to download, and set some parameters for how you want REDCap to give you that data back (for example, in .csv format, or in .json format).
+This is an example of trying out and learning about the API without having to write code. You can experiment with various methods and learn easily without having to go through the frustration of writing a lot of code to find out how to do things.
 
-In some API methods (like "Export Records"), you'll have several drop down menus you can choose from, including forms and fields. You can make multiple choices by holding down control while clicking (Windows) or command while clicking (Mac).  In some cases, if you want every item listed (say, you want every form and every field), you don't click any selection at all, and REDCap assumes you mean everything that appears in the drop-down list.
+In some API methods (like "Export Records"), you'll have a number of drop down menus you can choose from, including which "forms" and which "fields" you want to retrieve. You can make multiple choices in menus like these by holding down control while clicking (Windows) or command while clicking (Mac).  Helpfully, however, if you want **every** item listed (say, you want every form and every field), you don't click any selection at all, and REDCap assumes you mean everything that appears in the drop-down list.
 
 
 ### API Playground: Code
 
-So, you've experimented in the API Playground and you know the kind of API call you want to make. Now, how do you automate this selection so that your R or Python code will issue exactly the same request using code?  REDCap's API playground comes to the rescue again, with code snippets that show how to write the code to do automatically what you just did manually.
+So, you've experimented in the API Playground and you know the kind of API call you want to make. Now, how do you automate this selection so that your R or Python code will issue exactly the same request using code?  REDCap's API playground comes to the rescue again, with code snippets.
 
 In the tabs at the bottom of the API Playground, you'll see names of programming languages, including Python and R.  Below you can see what the Python code looks like for the API request to retrieve all records from the cervical cancer database:
 
-![](media/python_code.png)
+![](media/python_code.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 We'll show you how to use Python and R in two separate sections, so you can feel free to look at either one, or both!
 
 ## Python and the REDCap API
 
 <div class = "important">
-There are Python libraries that make importing REDCap data into Python simpler than the code REDCap suggests.  Nevertheless, we think it's important to show you how to use the code REDCap provides, because it is reliable and reflects the current state of the REDCap API.  The Python libraries that streamline this effort are great, and we mention them toward the end of this module, but these libraries depend on volunteers who keep them updated.  
+There is a useful Python library that makes importing REDCap data into Python simpler than the code REDCap suggests.  Nevertheless, we think it's important to show you how to use the code REDCap provides, because it is reliable and reflects the current state of the REDCap API.  
 
-It's useful to know how to use the basic method we'll share here, even if in the future you prefer a different approach.
+The Python library, PyCap, that streamlines this effort is great and seems very stable, and we provide a link to it toward the end of this module, but Python libraries depend on volunteers who keep them updated.  Therefore, we think it's useful to know how to use the basic method we'll share here, even if in the future you prefer a different approach.
 </div>
 
 Open a Jupyter notebook (running Python 3) and paste the code from the API Playground's "Python" tab into your first cell and run that cell.  It works!  Kind of.  Take a look below to see what the result of our API call for the records of cervical cancer data looks like.
 
-![](media/jupyter_1.png)
+![](media/jupyter_1.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 What's the only problem with this?  Well, it's not in a pandas data frame, which is what we'd prefer to work with.  We can fix that by adding a few lines of code!  Add this to a second cell, and run it.
 
@@ -359,9 +361,9 @@ df
 
 Below, this is the result when we do that for our cervical cancer data database:
 
-![](media/jupyter_2.png)
+![](media/jupyter_2.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
-Now, your data is in a pandas data frame and you're ready to do all sorts of work with that data (like cleaning question marks out of the data, getting summary statistics, finding correlations, visualizing data, and modeling data).  Importantly, you can rerun the cells in this notebook at any time to get the latest version of the data from REDCap!  
+Now, your data is in a pandas data frame and you're ready to do all sorts of work with that data (like cleaning question marks out of the data, getting summary statistics, finding correlations, visualizing data, and modeling data).  Importantly, you can re-run the cells in this notebook at any time to get the latest version of the data from REDCap!  
 
 ## R and the REDCap API
 
@@ -373,13 +375,19 @@ There are R packages that make importing REDCap data into R simpler than the cod
 It's useful to know how to use the basic method we'll share here, even if in the future you prefer a different approach.
 </div>
 
+<div class = "important">
+There are useful R packages that make importing REDCap data into R simpler than the code REDCap suggests.  Nevertheless, we think it's important to show you how to use the code REDCap provides, because it is reliable and reflects the current state of the REDCap API.  
+
+The R packages that streamline this effort (we like REDCapR and redcapAPI) are great and seem very stable, and we provide links to them toward the end of this module, but R packages depend on volunteers who keep them updated.  Therefore, we think it's useful to know how to use the basic method we'll share here, even if in the future you prefer a different approach.
+</div>
+
 First, open RStudio and create a new R Markdown (File > New File > R Markdown).  Give your R Markdown the title and author information you want, leave the default output choice (HTML), and click on "OK".
 
-![](media/new_r_markdown.png)
+![](media/new_r_markdown.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Remove all the "boilerplate" text after the setup chunk (so, delete all the lines after around line 10) and add a new empty chunk:
 
-![](media/empty_chunk.png)
+![](media/empty_chunk.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Then:
 
@@ -389,13 +397,13 @@ Then:
 
 After running that chunk, you should have some new objects in your "Environment".  Of particular interest is the object called `result`.  See below what we see when we run the chunk of code to get records from the cervical cancer database:
 
-![](media/rstudio_environment.png)
+![](media/rstudio_environment.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Click on "result" in the environment pane to open a file viewer.  
 
-![](media/rstudio_viewer.png)
+![](media/rstudio_viewer.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
-Now, your data is in a data frame and you're ready to do all sorts of work with that data (like cleaning question marks out of the data, getting summary statistics, finding correlations, visualizing data, and modeling data).  Importantly, you can rerun the chunks in this R Markdown at any time to get the latest version of the data from REDCap!  
+Now, your data is in a data frame and you're ready to do all sorts of work with that data (like cleaning question marks out of the data, getting summary statistics, finding correlations, visualizing data, and modeling data).  Importantly, you can re-run the chunks in this R Markdown at any time to get the latest version of the data from REDCap!  
 
 ## Recap
 
