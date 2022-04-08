@@ -123,7 +123,7 @@ The more you see this type of output, the more comfortable you will get with ext
 </div>
 
 <div class = "important">
-If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press `Q` to **quit** the output and return to your command line, a line starting with `$`.
+If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press `Q` or `q` to **quit** the output and return to your command prompt.
 </div>
 
 Maybe you want to look one step further back into your work. By using `HEAD~n` you can look back n checkpoints in your repository. The `~` symbol is named "tilde" and pronounced "TIL-duh."
@@ -171,7 +171,7 @@ Date:   Wed Apr 6 13:13:21 2022 -0400
     Add concerns about effects of Mars' moons on Wolfman
 ```
 
-Use the arrow keys to scroll down if this output is longer than the window you are working in. If that is the case, you can always quit the output by pressing `Q`. Entering `git log` without the `-n` flag will give you the list of every commit, so if a project has been in progress for a while, this can be a lot of output!
+Use the arrow keys to scroll down if this output is longer than the window you are working in. If that is the case, you can always quit the output by pressing `Q` or `q`. Entering `git log` without the `-n` flag will give you the list of every commit, so if a project has been in progress for a while, this can be a lot of output!
 
 The first thing to notice is that your commit messages are here! This is a good reminder to write clear and concise messages because **future** you may be very grateful when trying to figure out where exactly **past** you introduced a particular issue.
 
