@@ -122,7 +122,7 @@ The more you see this type of output, the more comfortable you will get with ext
 </div>
 
 <div class = "important">
-If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press `Q` to **quit** the output and return to your command line, a line starting with `$`.
+If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press `Q` or `q` to **quit** the output and return to your command prompt.
 </div>
 
 Maybe you want to look one step further back into your work. By using `HEAD~n` you can look back n checkpoints in your repository. The `~` symbol is named "tilde" and pronounced "TIL-duh."
