@@ -14,7 +14,7 @@ long_description: Learn how to share changes to and gather changes from remote r
 After completion of this module, learners will be able to:
 
 - Explain what remote repositories are and why they are useful 
-- Push to or pull from a remote repository
+- Push to and pull from a remote repository
 
 @end
 
