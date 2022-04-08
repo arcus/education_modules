@@ -191,6 +191,8 @@ If you have Python installed on your computer, you can use your computer's Comma
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
 
+To exit the Python interpreter, type the command `exit()` and then press the Enter key. Alternatively, you can also close the interpreter window.
+
 Using Python interactively in the terminal can be useful if you want to quickly test out short pieces of code. Most of the time, though, you'll either be creating Python scripts or using a notebook instead.
 
 ## Python Scripts
