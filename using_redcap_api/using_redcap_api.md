@@ -144,23 +144,6 @@ Try copying and pasting that URL into your browser and you'll get some text that
 Entrez, like many APIs, has a limit to what you can do anonymously.  If you try to run this a few times in a row, you'll get an error message that starts with `{"error":"API rate limit exceeded"`...
 </div>
 
-### Quiz: APIs
-
-What does "API" stand for?
-
-[[ ]] Application Private Interface
-[[ ]] Android Programming Interface
-[[X]] Application Programming Interface
-[[ ]] Application Programming Interchange
-[[ ]] Anonymous Programming Interface
-***************
-
-<div class = "answer">
-API stands for Application Programming Interface!
-</div>
-
-**************
-
 ### API Access
 
 Some APIs allow for anonymous use.  Others require all users to be registered and prove their identity.  Others have one level of service for anonymous users and another level for registered users.  REDCap hosts private data that can be very sensitive, so every API call to REDCap must come with proof that demonstrates that the requestor has the right to see the data they're asking for.
@@ -182,6 +165,23 @@ Another problem with using manually downloaded files from REDCap is that this me
 A better approach is to use a script that uses an API call. First of all, it's scripted, which means no manual steps to write up in a Word document or add to a GitHub repo or jot down on a sticky note. Also, the typical API has a standard interface that will change very little. API access may improve over time, adding new features, but it's very infrequent that an API will radically change and remove options, rendering your script unusable. The same half-dozen lines of code you use to access your data will almost always be stable for months or years, and if you do need to change it, you're only changing that small chunk of code, instead of a step-by-step document with words and images that describe a manual effort.
 
 ### Quiz: API Advantages
+
+
+What does "API" stand for?
+
+[[ ]] Application Private Interface
+[[ ]] Android Programming Interface
+[[X]] Application Programming Interface
+[[ ]] Application Programming Interchange
+[[ ]] Anonymous Programming Interface
+***************
+
+<div class = "answer">
+API stands for Application Programming Interface!
+</div>
+
+**************
+
 
 Which of the following are true statements?  Select all that apply!
 
@@ -334,7 +334,7 @@ So, you've experimented in the API Playground and you know the kind of API call 
 
 In the tabs at the bottom of the API Playground, you'll see names of programming languages, including Python and R.  Below you can see what the Python code looks like for the API request to retrieve all records from the cervical cancer database:
 
-![](media/python_code.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![Python code from the API playground](media/python_code.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 We'll show you how to use Python and R in two separate sections, so you can feel free to look at either one, or both!
 
@@ -348,7 +348,7 @@ The Python library, PyCap, that streamlines this effort is great and seems very 
 
 Open a Jupyter notebook (running Python 3) and paste the code from the API Playground's "Python" tab into your first cell and run that cell.  It works!  Kind of.  Take a look below to see what the result of our API call for the records of cervical cancer data looks like.
 
-![](media/jupyter_1.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![The same python code as before, now in a Jupyter notebook](media/jupyter_1.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 What's the only problem with this?  Well, it's not in a pandas data frame, which is what we'd prefer to work with.  We can fix that by adding a few lines of code!  Add this to a second cell, and run it.
 
@@ -361,7 +361,7 @@ df
 
 Below, this is the result when we do that for our cervical cancer data database:
 
-![](media/jupyter_2.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![The python code listed above, and the resulting data frame](media/jupyter_2.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Now, your data is in a pandas data frame and you're ready to do all sorts of work with that data (like cleaning question marks out of the data, getting summary statistics, finding correlations, visualizing data, and modeling data).  Importantly, you can re-run the cells in this notebook at any time to get the latest version of the data from REDCap!  
 
@@ -377,11 +377,11 @@ The R packages that streamline this effort (we like REDCapR and redcapAPI) are g
 
 First, open RStudio and create a new R Markdown (File > New File > R Markdown).  Give your R Markdown the title and author information you want, leave the default output choice (HTML), and click on "OK".
 
-![](media/new_r_markdown.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![The new R Markdown dialog box from RStudio](media/new_r_markdown.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Remove all the "boilerplate" text after the setup chunk (so, delete all the lines after around line 10) and add a new empty chunk:
 
-![](media/empty_chunk.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![R Markdown document with an empty chunk](media/empty_chunk.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Then:
 
@@ -391,11 +391,11 @@ Then:
 
 After running that chunk, you should have some new objects in your "Environment".  Of particular interest is the object called `result`.  See below what we see when we run the chunk of code to get records from the cervical cancer database:
 
-![](media/rstudio_environment.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![RStudio showing code on the left and environment variables including the "result" dataframe listed on the right](media/rstudio_environment.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Click on "result" in the environment pane to open a file viewer.  
 
-![](media/rstudio_viewer.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![The "result" data frame shown with its rows and columns](media/rstudio_viewer.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Now, your data is in a data frame and you're ready to do all sorts of work with that data (like cleaning question marks out of the data, getting summary statistics, finding correlations, visualizing data, and modeling data).  Importantly, you can re-run the chunks in this R Markdown at any time to get the latest version of the data from REDCap!  
 
