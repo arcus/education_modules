@@ -36,10 +36,9 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/mod
 
 **Pre-requisites**
 
-List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
 
 * A [GitHub](https://github.com/) account
-* (Preferred) Completion of git modules 1-6
+* (Preferred) Completion of [Intro to Version Control](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_intro/git_intro.md#1) and [Creating a Git Repository](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_creation_and_tracking/git_creation_and_tracking.md#1) modules
 
 **Learning Objectives**
 
