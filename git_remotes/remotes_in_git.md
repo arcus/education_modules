@@ -123,11 +123,11 @@ fatal: refusing to merge unrelated histories
 
 Now we connect the two repositories. We do this by making the GitHub repository a remote for the local repository. The home page of the repository on GitHub includes the URL string we need to identify it:
 
-![github-find-repo-string-01](./assets/media/remotes_step_02_images/github-find-repo-string-01.png)
+![github-find-repo-string-01](./media/remotes_step_02_images/github-find-repo-string-01.png)
 
 Click on the ‘SSH’ link to change the protocol from HTTPS to SSH.
 
-![github-change-repo-string-02](./assets/media/remotes_step_02_images/github-change-repo-string-02.png)
+![github-change-repo-string-02](./media/remotes_step_02_images/github-change-repo-string-02.png)
 
 Copy that URL from the browser, go into the local planets repository, and run this command:
 
@@ -353,7 +353,7 @@ You may also want to add `unset SSH_ASKPASS` at the end of your `~/.bashrc` to m
 
 Our local and remote repositories are now in this state:
 
-![github-repo-after-first-push_01](./assets/media/remotes_step_03_images/github-repo-after-first-push_01.svg)
+![github-repo-after-first-push_01](./media/remotes_step_03_images/github-repo-after-first-push_01.svg)
 
 <div class = "care">
 **the -u flag**
