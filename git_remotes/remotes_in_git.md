@@ -327,10 +327,10 @@ To https://github.com/vlad/planets.git
   
 If the network you are connected to uses a proxy, there is a chance that your last command failed with “Could not resolve hostname” as the error message. To solve this issue, you need to tell Git about the proxy:
 
-`$ git config --global http.proxy http://user:password@proxy.url <br>
-$ git config --global https.proxy https://user:password@proxy.url<code>Testing hint box`
+`$ git config --global http.proxy http://user:password@proxy.url` <br>
+`$ git config --global https.proxy https://user:password@proxy.url<code>Testing hint box`
 <br> 
-When you connect to another network that doesn’t use a proxy, you will need to tell Git to disable the proxy using:
+When you connect to another network that doesn’t use a proxy, you will need to tell Git to disable the proxy using:<br>
   
 `$ git config --global --unset http.proxy`<br>
 `$ git config --global --unset https.proxy`
