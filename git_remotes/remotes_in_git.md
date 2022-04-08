@@ -58,7 +58,7 @@ We will be creating a remote version of the `planets` repository we worked with 
 
 Log in to [GitHub](github.com), then click on the icon in the top right corner to create a new repository:
 
-![github-create-repo-01](./assets/media/remotes_step_01_images/github-create-repo-01.png)
+![github-create-repo-01](./media/remotes_step_01_images/github-create-repo-01.png)
 
 Name your repository “planets” and then click “Create Repository”.
 
@@ -66,12 +66,12 @@ Name your repository “planets” and then click “Create Repository”.
 Since this repository will be connected to a local repository, it needs to be empty. Leave “Initialize this repository with a README” unchecked, and keep “None” as options for both “Add .gitignore” and “Add a license.” See the “GitHub License and README files” exercise below for a full explanation of why the repository needs to be empty.
 </div>
 
-![github-create-repo-02](./assets/media/remotes_step_01_images/github-create-repo-02.png)
+![github-create-repo-02](./media/remotes_step_01_images/github-create-repo-02.png)
 
 
 As soon as the repository is created, GitHub displays a page with a URL and some information on how to configure your local repository:
 
-![github-create-repo-03](./assets/media/remotes_step_01_images/github-create-repo-03.png)
+![github-create-repo-03](./media/remotes_step_01_images/github-create-repo-03.png)
 
 This effectively does the following on GitHub’s servers:
 
@@ -83,11 +83,11 @@ $ git init
 
 If you remember back to the earlier episode where we added and committed our earlier work on mars.txt, we had a diagram of the local repository which looked like this:
 
-![git-staging-area-04](./assets/media/remotes_step_01_images/git-staging-area-04.svg)
+![git-staging-area-04](./media/remotes_step_01_images/git-staging-area-04.svg)
 
 Now that we have two repositories, we need a diagram like this:
 
-![git-freshly-made-github-repo-05](./assets/media/remotes_step_01_images/git-freshly-made-github-repo-05.svg)
+![git-freshly-made-github-repo-05](./media/remotes_step_01_images/git-freshly-made-github-repo-05.svg)
 
 <div class = "important">
 Note that our local repository still contains our earlier work on mars.txt, but the remote repository on GitHub appears empty as it doesn’t contain any files yet.
