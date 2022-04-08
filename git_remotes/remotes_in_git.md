@@ -300,6 +300,14 @@ Hi Vlad! You've successfully authenticated, but GitHub does not provide shell ac
 
 ## Push and pull local changes to and from a remote
 
+Pushing and pulling changes are a key part of the Git workflow. 
+
+**Pushing** local changes to a remote repository means you are making your local changes accessible to the remote branch and therefore to anyone with access to that remote repository. 
+
+**Pulling** remote changes into your local repository means you are getting any changes pushed to the remote repository and using the files in that state to perform add your own changes. 
+
+Remebering to push and pull changes is especially important when collaborating with others. Others cannot see or work with your changes if you do not push them. You may be working from an outdated version of your repository if you do not pull changes prior to starting out. Forgetting one or both of these steps may lead to conflicts in Git. 
+
 ### Push local changes to a remote
 
 Now that authentication is setup, we can return to the remote. This command will push the changes from our local repository to the repository on GitHub:
@@ -325,17 +333,17 @@ To https://github.com/vlad/planets.git
 
 Our local and remote repositories are now in this state:
 
-![github-repo-after-first-push01](./media/remotesstep03images/github-repo-after-first-push_01.svg)
+![github-repo-after-first-push01](./media/remotes_step_03_images/github-repo-after-first-push_01.svg)
 
 ### Pull remote changes to a local
 
 We can pull changes from the remote repository to the local one as well:
 
-  ```console
+```console
 $ git pull origin main
 ```
 
-  ```output
+```output
 From https://github.com/vlad/planets
  * branch            main     -> FETCH_HEAD
 Already up-to-date.
