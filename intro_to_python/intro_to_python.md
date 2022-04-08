@@ -309,7 +309,7 @@ You can even see what this module's notebook looks like in Google Colab! Once yo
    <div style="display:none">@gifPreload</div>
 
    <figure>
-     <img src="https://github.com/arcus/education_modules/update-intro-to-python/intro_to_python/media/github_repo_colab.png?raw=true" height="500" width="800" alt="Finding a GitHub repository in Google Colab" data-alt="https://github.com/arcus/education_modules/update-intro-to-python/intro_to_python/media/github_repo_colab.gif?raw=true">
+     <img src="https://github.com/arcus/education_modules/blob/update-intro-to-python/intro_to_python/media/github_repo_colab.png?raw=true" height="500" width="800" alt="Finding a GitHub repository in Google Colab" data-alt="https://github.com/arcus/education_modules/blob/update-intro-to-python/intro_to_python/media/github_repo_colab.gif?raw=true">
 
    <figcaption>Click on the image to play the demo.</figcaption>
    </figure>
