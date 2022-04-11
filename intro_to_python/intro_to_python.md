@@ -117,7 +117,7 @@ This might work well for you if you either can't or don't want to install Python
 
 **First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a couple of minutes to create, depending on how recently it was created (when it's being used more, it's quicker!).
 
-<a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?urlpath=intro_to_python%2notebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/static/images/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
+<a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/static/images/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
