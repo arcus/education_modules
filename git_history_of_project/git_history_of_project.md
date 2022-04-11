@@ -488,7 +488,7 @@ If you have a repository with at least a few commits in it, such as the one crea
 You can also clone any public repository you find on [GitHub](https://github.com) using
 
 ```
-git clone https://www.github.com/RepositoryOwner/RepositoryName
+$ git clone https://www.github.com/RepositoryOwner/RepositoryName
 ```
 
 and explore how it was created! One repository with particularly good documentation is the [LiaScript project](https://github.com/LiaScript/LiaScript).
