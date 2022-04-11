@@ -94,7 +94,10 @@ These will let you navigate and explore the previous versions of repositories.
 
 ### Using HEAD
 
-The `HEAD` almost always refers to the most recently commit to your repository on your current branch. It won't include any changes that haven't been committed to the repository yet. You can see that most recent commit by entering `git show HEAD`.
+The `HEAD` almost always refers to the most recently commit to your repository on your current **branch**. A branch is a version of the repository. Branches are usually created so that a single person can work on a particular issue in a larger project. For example a project might have branches `luisa_update_with_latest_figures` or `jameela_add_lit_review`. When the work on a branch is completed, the changes can be merged into the main branch - `main`.
+
+
+Dracula's `planets` repository only has one branch, `main`, so that is what `HEAD` refers to. It won't include any changes that haven't been committed to the repository yet. You can see that most recent commit by entering `git show HEAD`.
 
 ```
 $ git show HEAD
@@ -183,9 +186,9 @@ When you identify which commit you want to look at, the commit number is the 40 
 
 We are used to seeing numbers in base 10, which are made up of the ten digits $0,1,2,3,4,5,6,7,8,$ and $9$. Commit numbers are in base 16, called [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal). In this number system, we use the 10 familiar digits as well as the digits $a,b,c,d,e,$ and $f$ corresponding to 10,11,12,13,14, and 15 respectively in base 10.
 
-If you are using the repo you created in an earlier module, your commits might have different commit numbers than the commit numbers in the examples.
+The 40 digit commit number is created by putting the entire repository, along with some metadata, including the commit message and a timestamp, through a function called a **hash**. With $16^40$ different numbers (also called **hashes**) you can think of these number as unique!
 
-On the other hand, if you created your `planets` repository identically to Dracula, with every file containing all the same characters including spaces and line breaks, your commit numbers will match Dracula's. This is because the commit number is created by putting the entire repository through a function called a **hash**. If you and Dracula put the same thing into this function, you will get the same commit number out. Be sure to use the commit number in YOUR log if it differs from Dracula's.
+If you are using the repo you created in an earlier module, your commits might have different commit numbers than the commit numbers in the examples. Be sure to use the commit number in YOUR log if it differs from Dracula's.
 </div>
 
 Now that we have found the identifier of the commit we want to examine, we can use it with `git show`. Don't worry, you won't need to type all 40 digits, the first six will suffice.
