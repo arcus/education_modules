@@ -184,7 +184,7 @@ When you identify which commit you want to look at, the commit number is the 40 
 <div class = "learnmore">
 **What is this number?**
 
-We are used to seeing numbers in base 10, which are made up of the ten digits $0,1,2,3,4,5,6,7,8,$ and $9$. Commit numbers are in base 16, called [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal). In this number system, we use the 10 familiar digits as well as the digits $a,b,c,d,e,$ and $f$ corresponding to 10,11,12,13,14, and 15 respectively in base 10.
+We are used to seeing numbers in base 10, which are made up of ten digits. Commit numbers are in base 16, called [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal). In this number system, we use the 10 familiar digits `1,2,3,4,5,6,7,8,9` as well as the digits `a,b,c,d,e,` and `f` corresponding to 10,11,12,13,14, and 15 respectively in base 10.
 
 The 40 digit commit number is created by putting the entire repository, along with some metadata, including the commit message and a timestamp, through a function called a **hash**. With $16^40$ different numbers (also called **hashes**) you can think of these number as unique!
 
