@@ -647,7 +647,7 @@ FROM alasql.patients;
 
 <table id="dataTable2" border="1"></table><br>
 
-@AlaSQL.buildTable_patients()
+@AlaSQL.buildTable_patients("patients table ready")
 
 ### DISTINCT
 
