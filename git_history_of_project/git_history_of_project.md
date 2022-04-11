@@ -59,7 +59,7 @@ To best learn from this module make sure that you:
 
 The purpose of this module is to learn how to explore the history of a Git repository that has already been created. We are going to download Dracula's repository in which he started documenting the pros and cons of moving with his friends to Mars.
 
-Open up your command line interface and navigate to a place where you want to put a new repository. This might be your `Desktop` on a Mac or `C` on a computer running Windows, but it can really be anywhere on your computer you choose. Once you are in the location you want to put Dracula's repository, type:
+Open up your command line interface and navigate to a place where you want to put a new repository. This might be your `Desktop` but it can really be anywhere on your computer you choose. Once you are in the location you want to put Dracula's repository, type:
 
 ```
 git clone https://www.github.com/arcus/planets
