@@ -190,7 +190,7 @@ When you identify which commit you want to look at, the commit number is the 40 
 
 We are used to seeing numbers in base 10, which are made up of ten digits. Commit numbers are in base 16, called [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal). In this number system, we use the 10 familiar digits `1,2,3,4,5,6,7,8,9` as well as the digits `a,b,c,d,e,` and `f` corresponding to 10,11,12,13,14, and 15 respectively in base 10.
 
-The 40 digit commit number is created by putting the entire repository, along with some metadata, including the commit message and a timestamp, through a function called a **hash**. With $16^40$ different numbers (also called **hashes**) you can think of these number as unique!
+The 40 digit commit number is created by putting the entire repository, along with some metadata, including the commit message and a timestamp, through a function called a **hash**. With $16^{40}$ different numbers (also called **hashes**) you can think of these number as unique!
 
 If you are using the repo you created in an earlier module, your commits might have different commit numbers than the commit numbers in the examples. Be sure to use the commit number in YOUR log if it differs from Dracula's.
 </div>
