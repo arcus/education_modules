@@ -480,7 +480,7 @@ Experience working with rectangular data (data in rows and columns) is required,
 
 **SQL** (**S**tructured **Q**uery **L**anguage) is a language that for more than four decades has been used to interact with "**Relational Databases**".  You can pronounce it as "sequel" or just say the letters S-Q-L.
 
-A relational database is a data storage solution that stores data tables, which are comprised of columns (sometimes called 'fields') and rows.
+A relational database is a data storage solution that stores data tables, which are comprised of columns (also called 'fields') and rows.
 
 SQL is great at working with rectangular data, data that is stored in tables with rows and columns.  Its powerful SELECT / FROM / WHERE syntax makes SQL an ideal tool for isolating just the data you care about, whether that's specifying the columns you're interested in or limiting your data to just those rows that meet certain conditions.  However, it's not great for fine-tuned statistical, linguistic, or data visualization purposes.  SQL is therefore a tool that is often partnered with other tools like R or Python, which are better suited for work like statistical analysis.
 
@@ -510,7 +510,7 @@ In the hands-on portion of this module, we'll be using a form of SQL that actual
 
 A SQL **query** is essentially a question or request for data, written in a specific structure.  Let's take a closer look at how to compose a SQL query!
 
-At a high level, we generally provide three pieces of information when constructing SQL "**queries**":
+At a high level, we generally provide three pieces of information when constructing SQL queries:
 
  1. The name of the **table(s)** where the data is stored.
  2. The **column name(s)** you want to look at from the table(s) you specified.  Want all the columns?  You can use an asterisk!
@@ -616,8 +616,8 @@ Ready to run your first SQL query?  Hit the execute button below the SQL code to
 ```sql
 SELECT *
 FROM alasql.patients;
-```
 
+```
 @AlaSQL.eval("#dataTable1")
 
 <table id="dataTable1" border="1"></table><br>
@@ -647,7 +647,7 @@ FROM alasql.patients;
 
 <table id="dataTable2" border="1"></table><br>
 
-@AlaSQL.buildTable_patients('')
+@AlaSQL.buildTable_patients()
 
 ### DISTINCT
 
