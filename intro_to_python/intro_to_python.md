@@ -251,7 +251,7 @@ Interested in learning how to write Python code in a Jupyter notebook? Continue 
 
 This is a hands-on activity! Feel free to pop over to that tab you opened in the [Lesson Preparation section](#Lesson-Preparation) to get started. Need the link again? Here it is:
 
-<a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?urlpath=intro_to_python%2notebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/static/images/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
+<a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/static/images/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
 
 
 ### Quiz: Hands-On Activity
