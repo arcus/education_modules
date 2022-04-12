@@ -564,15 +564,15 @@ But if you don't have anyone to guide you in style, we'll do our best to instill
 
 Here are our (opinionated but not necessarily "right" style suggestions).  These might not make sense right now, but once you see them in actual queries, we think you'll understand them more intuitively.
 
-1) Put keywords in CAPITAL LETTERS so they stand out.  Examples of keywords are SELECT, LIKE, AS, WHERE, JOIN, DISTINCT, MEAN, ORDER BY, and many more.  While most code editors do a good job of color-coding these special words, you might end up seeing a SQL query in monochrome, and having keywords stand out helps you figure out where each part of your query is.  
+1) **Put keywords in CAPITAL LETTERS so they stand out.**  Examples of keywords are SELECT, LIKE, AS, WHERE, JOIN, DISTINCT, MEAN, ORDER BY, and many more.  While most code editors do a good job of color-coding these special words, you might end up seeing a SQL query in monochrome, and having keywords stand out helps you figure out where each part of your query is.  
 
-2) Put members of a list on separate lines.  This usually means the list of fields you're requesting.  Putting each item on its own line is easier on the eyes and allows for much easier cut-and-paste to rearrange things.  It also means you have space after each item of the list to add a comment if necessary.
+2) **Put members of a list on separate lines.**  This usually means the list of fields you're requesting.  Putting each item on its own line is easier on the eyes and allows for much easier cut-and-paste to rearrange things.  It also means you have space after each item of the list to add a comment if necessary.
 
-3) Use indentation to clarify the various sections of your query.  Indenting the list of columns below a SELECT statement is a way of subordinating those lines to the SELECT, subtly indicating that those lines are a continuation of the SELECT statement.  A new line that isn't indented (say, a FROM statement) shows that the SELECT part of the query is over.
+3) **Use indentation to clarify the various sections of your query.**  Indenting the list of columns below a SELECT statement is a way of subordinating those lines to the SELECT, subtly indicating that those lines are a continuation of the SELECT statement.  A new line that isn't indented (say, a FROM statement) shows that the SELECT part of the query is over.
 
-4) Use "dot notation", which we'll talk about in the next section.  Dot notation means adding more information about your data, for example, by including the table name the column comes from.  This practice will prepare you for using multiple data sources in your queries.
+4) **Use "dot notation"**, which we'll talk about in the next section.  Dot notation means adding more information about your data, for example, by including the table name the column comes from.  This practice will prepare you for using multiple data sources in your queries.
 
-5) Use a comma-first style.  This one can be a little jarring at first, but it does have real advantages, especially if you end up doing SQL for more than a few hours a week.  In a list of length n, don't put the comma *after* items 1 through n-1.  Rather, put the comma *before* items 2 through n.  
+5) **Use a comma-first style.**  This one can be a little jarring at first, but it does have real advantages, especially if you end up doing SQL for more than a few hours a week.  In a list of length n, don't put the comma *after* items 1 through n-1.  Rather, put the comma *before* items 2 through n.  
 
 <div class = 'options'>
 
@@ -596,6 +596,8 @@ A comma-first stance is not uncontroversial, and some people find this style dis
 </div>
 
 Now that we've got you thinking about style, let's move on to the substance of SQL and work with SELECT and FROM.
+
+@AlaSQL.buildTable_patients("patients table ready")
 
 ### SELECT and FROM
 
@@ -622,6 +624,7 @@ FROM alasql.patients;
 
 <table id="dataTable1" border="1"></table><br>
 
+@AlaSQL.buildTable_patients('')
 
 **Select Specific Columns**
 
@@ -646,8 +649,6 @@ FROM alasql.patients;
 @AlaSQL.eval("#dataTable2")
 
 <table id="dataTable2" border="1"></table><br>
-
-@AlaSQL.buildTable_patients("patients table ready")
 
 ### DISTINCT
 
