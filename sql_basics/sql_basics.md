@@ -597,8 +597,6 @@ A comma-first stance is not uncontroversial, and some people find this style dis
 
 Now that we've got you thinking about style, let's move on to the substance of SQL and work with SELECT and FROM.
 
-@AlaSQL.buildTable_patients("patients table ready")
-
 ### SELECT and FROM
 
 A **SELECT statement** is used to specify which columns (or fields, we use both terms interchangeably here) you would like to have returned as output from your SQL query.
@@ -624,7 +622,7 @@ FROM alasql.patients;
 
 <table id="dataTable1" border="1"></table><br>
 
-@AlaSQL.buildTable_patients('')
+@AlaSQL.buildTable_patients()
 
 **Select Specific Columns**
 
@@ -650,6 +648,8 @@ FROM alasql.patients;
 
 <table id="dataTable2" border="1"></table><br>
 
+@AlaSQL.buildTable_patients()
+
 ### DISTINCT
 
 The `DISTINCT` clause in **SQL** can be placed directly after the `SELECT` key word, and can be used to limit your result set down to only the unique row values.  
@@ -673,10 +673,10 @@ FROM alasql.patients;
 
 Here's a pro tip!  The `DISTINCT` keyword is especially useful for removing duplicates rows from the result set of your SQL queries.  If you suspect that there may be duplicate data, you can use SELECT DISTINCT to make sure you only get one copy of any identical rows of results.
 
-@AlaSQL.buildTable_patients('')
+</div>
 
+@AlaSQL.buildTable_patients()
 
-@AlaSQL.buildTable_patients('patients table queryable from this page!')
 
 ### Adding Comments
 
@@ -713,7 +713,7 @@ FROM alasql.patients;
 
 <table id="dataTable11" border="1"></table><br>
 
-@AlaSQL.buildTable_patients('')
+@AlaSQL.buildTable_patients()
 
 
 ### WHERE
@@ -753,8 +753,7 @@ WHERE
 
 <table id="dataTable5" border="1"></table><br>
 
-
-@AlaSQL.buildTable_patients('')
+@AlaSQL.buildTable_patients()
 
 ### Dealing with Null Values
 
@@ -818,7 +817,7 @@ The fact that nulls aren't included in comparisons is a very subtle distinction 
 
 </div>
 
-@AlaSQL.buildTable_allergies('')
+@AlaSQL.buildTable_allergies()
 
 ### ORDER BY Statement
 
@@ -846,7 +845,7 @@ By default, all items in the `order by` clause will be sorted in `asc` order if 
 
 </div>
 
-@AlaSQL.buildTable_patients('')
+@AlaSQL.buildTable_patients()
 
 
 ### LIMIT
@@ -860,14 +859,14 @@ The example below pulls all columns from the `patients` table, and limits the re
 ```sql
 SELECT *
 FROM alasql.patients
-LIMIT 3
+LIMIT 3;
 
 ```
 @AlaSQL.eval("#dataTable10")
 
 <table id="dataTable10" border="1"></table><br>
 
-@AlaSQL.buildTable_patients('')
+@AlaSQL.buildTable_patients()
 
 
 ### Aliasing with AS
