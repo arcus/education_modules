@@ -90,7 +90,7 @@ function addAllColumnHeaders(myList) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 try {
     var myinput=`@input`
-    myinput=myinput.replace(/;$/, ""); // remove trailing semi-colon
+    myinput=myinput.replace(/;\s*$/, ""); // remove trailing semi-colon
     var myStriptArray= myinput.split(';');
     var arrayLength = myStriptArray.length;
     console.clear();
@@ -522,7 +522,7 @@ You put these basic pieces of information together using the syntax shown below 
 SELECT _2_ FROM _1_ WHERE _3_;
 ```
 
-For example, here are some sample queries, each of which take place on just a single table.  
+For example, here are some sample queries, each of which take place on just a single table.  To be extra clear, we're ending each query with a semicolon, which tells SQL you're done with a query.  However, if you're working interactively with SQL
 
 ```sql
 SELECT price FROM products WHERE product_type = "FRUIT";
