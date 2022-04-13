@@ -41,10 +41,23 @@ attribute: [jQuery](https://jquery.com/)
            is licensed under [OpenJS Foundation](https://openjsf.org/)
 
 @AlaSQL.eval
+
+<style>
+
+.icon-compile-circle:before {
+content: "\f144";
+font-family: "Font Awesome 5 Free";
+}
+
+</style>
+
+
 <script>
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // BUILD FUNCTIONS
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 function buildHtmlTable() {
   // Builds the HTML Table out of myList, and writes output to the id attribute assigned via the "@0" argument to this marco.
   var columns = addAllColumnHeaders(myList);
@@ -314,14 +327,6 @@ try {
 </script>
 @end
 
-<style>
-
-.icon-compile-circle:before {
-content: "\f144";
-font-family: "Font Awesome 5 Free";
-}
-
-</style>
 
 -->
 
