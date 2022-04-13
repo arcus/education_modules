@@ -151,90 +151,6 @@ try {
 </script>
 @end
 
-@AlaSQL.buildTable_encounters
-<script>
-    alasql("DROP TABLE IF EXISTS encounters;");
-    alasql("create table encounters (id text,start date,stop date,patient text,organization text,provider text,encounterclass text,description text,reasondescription text);");
-    alasql("INSERT INTO encounters VALUES ('a61f97fa-70c3-4366-90e1-7c6fdcba5cbb','2002-01-24T20:46:46Z','2002-01-24T21:31:46Z','bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','24cb4eab-6166-3530-bddc-a5a8a14a4fc1','7bd4e666-a82d-3ad1-bc7c-b49eb726577b','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('469fbd8a-ec48-4da9-9165-027144ccf9a0','2014-12-04T23:28:40Z','2014-12-05T00:08:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','d692e283-0833-3201-8e55-4f868a9c0736','f4eb93d1-9187-3cfb-83a4-6d9cd77f7df6','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('022ad487-e41c-43ba-90f3-eb2d6711f4d3','1998-07-19T12:55:35Z','1998-07-19T13:38:35Z','e061409e-4b85-4ec1-b1f7-02677d51f763','465de31f-3098-365c-af70-48a071e1f5aa','0a8a9359-7b33-3256-a068-b5a7d18ebe4b','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('9607667e-4c98-4087-9c59-0fd5b6331078','1974-05-17T10:52:30Z','1974-05-17T11:07:30Z','71e13815-55fb-4734-bcac-6079160d82a0','6f122869-a856-3d65-8db9-099bf4f5bbb8','3180b739-e823-37a0-b307-52a6d67db4a5','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('d8f2b92b-5971-455f-a0b9-99da66d03899','2004-07-03T22:12:27Z','2004-07-03T22:57:27Z','ca3330c5-bbbc-47e7-addb-302f2e069986','60457c13-adb2-3415-82c5-86ab5dab5f93','47cb5349-d261-324a-9109-c888f4a0e966','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('1d475126-f3c0-41c9-a9ed-f4a0c9a955c4','1978-11-04T06:05:02Z','1978-11-04T06:51:02Z','24bca5cf-ba55-457f-8e80-49690202443c','ef6ab57c-ed94-3dbe-9861-812d515918b3','77a7881d-6dd5-32e1-9e18-521a59749572','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('32622f63-734e-4433-8628-942ce1585e6a','2018-03-20T11:48:11Z','2018-03-20T12:36:11Z','841095eb-d29f-4492-8f0e-08011321e85d','d692e283-0833-3201-8e55-4f868a9c0736','f4eb93d1-9187-3cfb-83a4-6d9cd77f7df6','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('0b7d2e65-a9df-4b74-84ed-25feffc23f62','1951-04-21T08:40:57Z','1951-04-21T08:55:57Z','ee7f6c74-a8ed-4147-b8e2-4879c8657b0f','d692e283-0833-3201-8e55-4f868a9c0736','f4eb93d1-9187-3cfb-83a4-6d9cd77f7df6','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('603a0692-9302-459a-84b4-af631dc3aee8','1971-03-07T16:13:43Z','1971-03-07T16:28:43Z','ab6a2662-f6d1-4da6-b3ce-3929d68650d7','ebc3f5c4-6700-34af-8323-85621c313726','eabb2bff-3216-34da-9f29-824dbca901c3','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('38de2a79-6bea-438e-963f-804823c1e32d','2002-05-31T06:08:11Z','2002-05-31T07:01:11Z','4440ff11-69ec-440b-a2bd-dc1c14105e8e','331f4c11-d298-308b-aaa1-d7825b29b57f','8ee28b4a-9018-3065-9f6b-0c9b69de7080','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('228c992b-3877-454c-920d-fa629bb8c5d9','1994-05-12T20:03:59Z','1994-05-12T20:47:59Z','1aa71b23-790e-4d22-92da-c689682c8993','ac8356a5-78f8-3a63-8a1e-59e832fd54e7','f6065151-bf86-330b-a526-ac86b53b440b','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('77427b07-f03b-49bc-9556-d69b4feed7ef','1950-01-07T13:40:23Z','1950-01-07T13:55:23Z','848e0227-5d5d-4bdf-8603-207cdea72e2a','5e765f2b-e908-3888-9fc7-df2cb87beb58','0359f968-d1a6-30eb-b1cc-e6cc0b4d3513','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('36279aee-15ff-48ad-a4a6-8ba334466278','2004-12-06T09:48:16Z','2004-12-06T10:36:16Z','eafd1fd3-3778-423a-ba79-4584bd310eb4','d692e283-0833-3201-8e55-4f868a9c0736','f4eb93d1-9187-3cfb-83a4-6d9cd77f7df6','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('a64c55df-b288-4f78-9996-d2ecf0b65c9d','1952-03-11T04:07:36Z','1952-03-11T04:22:36Z','0288abb6-633c-40c3-ba0c-66c7d957727e','4f3a530e-a2f7-3de0-9a09-c0a70a9ab894','3f15c687-0cfe-3bf2-9e62-34f3c85ff3cb','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('9c3c633f-c33c-426c-b771-b6117ba7d6fc','2004-04-26T14:03:38Z','2004-04-26T14:42:38Z','097079b1-ff8f-4ee0-8ce3-0ea744ecfa21','5d4b9df1-93ae-3bc9-b680-03249990e558','af01a385-31d3-3c77-8fdb-2867fe88df2f','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('7c0482a4-04fc-4cdc-9c2b-ff1f28f704db','1994-06-07T13:13:50Z','1994-06-07T13:57:50Z','78a9a8d6-b3b2-47dc-b4a0-867abec7c78f','5e765f2b-e908-3888-9fc7-df2cb87beb58','0359f968-d1a6-30eb-b1cc-e6cc0b4d3513','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','2011-10-24T09:24:08Z','2011-10-24T10:01:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','4f3a530e-a2f7-3de0-9a09-c0a70a9ab894','3f15c687-0cfe-3bf2-9e62-34f3c85ff3cb','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('5e4a49f2-47e7-4b76-9120-276a79f1766f','2009-01-22T22:23:00Z','2009-01-22T23:15:00Z','e188fafe-c1bb-45dc-9627-4ff4e4bc0ec0','465de31f-3098-365c-af70-48a071e1f5aa','0a8a9359-7b33-3256-a068-b5a7d18ebe4b','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('e75460f0-5f5c-4aa2-ab0b-200310a96c63','2003-06-13T09:58:22Z','2003-06-13T10:35:22Z','8db0d104-4c3f-40d3-bcf5-f5eb81b7308f','b0e04623-b02c-3f8b-92ea-943fc4db60da','58b66cc1-2b86-377f-ad77-ad8164388e50','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('a232db22-565f-4559-bb56-edf9021b74b2','1981-01-29T12:47:12Z','1981-01-29T13:33:12Z','df7c1d66-eac2-49bd-9d12-ee17e8758f68','fd328395-ab1d-35c6-a2d0-d05a9a79cf11','1530e81b-106c-32d5-95d5-42a710c92068','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('95099931-0042-4524-b808-dd6b6447fc0e','1978-07-20T13:40:53Z','1978-07-20T14:17:53Z','68878f91-5962-4ef2-83e7-43b8298c1708','69176529-fd1f-3b3f-abce-a0a3626769eb','c9b3c857-2e24-320c-a79a-87b8a60de63c','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('c90b2536-b388-479c-aa7e-3406fe4c2211','1963-07-23T15:56:00Z','1963-07-23T16:11:00Z','1c2aa038-9366-4c7d-9a3e-52cb753a670f','ff9863d3-3fa3-3861-900e-f00148f5d9c2','e49edc61-6ba6-324c-bef7-b65f0e10799f','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('16bc6376-a1cc-4d63-8307-c5d7479dc021','1987-11-30T13:51:47Z','1987-11-30T14:41:47Z','8d202c65-427d-4190-8c28-3aa27e1a9f4c','465de31f-3098-365c-af70-48a071e1f5aa','0a8a9359-7b33-3256-a068-b5a7d18ebe4b','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('f7ff5032-50cc-480e-90ca-848c85d6d014','1965-09-23T13:40:01Z','1965-09-23T13:55:01Z','2a6d1e58-88eb-4be0-b6b4-59a471257c2e','12c9daf5-a29c-36c9-ac55-28972463e566','aa89beb2-7bc6-35fa-83f7-4b32039e84eb','ambulatory','Encounter for problem',null);");
-    alasql("INSERT INTO encounters VALUES ('6c760807-a6b7-4af4-8d50-f32325803448','2000-01-03T07:32:25Z','2000-01-03T08:22:25Z','e6ff4bf9-09c2-4976-aa84-cca142207cf8','3d10019f-c88e-3de5-9916-6107b9c0263d','4b04cd2f-3f27-35bc-8069-f4ca6339529f','ambulatory','Encounter for problem',null);");
-    JSON.stringify(@0);
-</script>
-@end
-
-@AlaSQL.buildTable_providers
-<script>
-    alasql("DROP TABLE IF EXISTS providers;");
-    alasql("create table providers (id text,name text,gender text,speciality text,address text,city text,state text,zip text,lat real,lon real);");
-    alasql("INSERT INTO providers VALUES ('7bd4e666-a82d-3ad1-bc7c-b49eb726577b','Lonna Dietrich','F','GENERAL PRACTICE','14 PROSPECT STREET','MILFORD','MA','01757',42.158692,-71.521419);");
-    alasql("INSERT INTO providers VALUES ('f4eb93d1-9187-3cfb-83a4-6d9cd77f7df6','Vern Powlowski','M','GENERAL PRACTICE','585 LEBANON STREET','MELROSE','MA','02176',42.455723,-71.059019);");
-    alasql("INSERT INTO providers VALUES ('0a8a9359-7b33-3256-a068-b5a7d18ebe4b','Keri Schmidt','F','GENERAL PRACTICE','115 LINCOLN STREET','FRAMINGHAM','MA','01701',42.307905,-71.436196);");
-    alasql("INSERT INTO providers VALUES ('3180b739-e823-37a0-b307-52a6d67db4a5','Zana Considine','F','GENERAL PRACTICE','41 & 45 MALL ROAD','BURLINGTON','MA','01803',42.503227,-71.201713);");
-    alasql("INSERT INTO providers VALUES ('47cb5349-d261-324a-9109-c888f4a0e966','Mohammed Parisian','M','GENERAL PRACTICE','759 CHESTNUT STREET','SPRINGFIELD','MA','01199',42.115454,-72.539978);");
-    alasql("INSERT INTO providers VALUES ('77a7881d-6dd5-32e1-9e18-521a59749572','Phillip McCullough','M','GENERAL PRACTICE','88 LEWIS BAY ROAD','HYANNIS','MA','02601',41.748854,-70.740536);");
-    alasql("INSERT INTO providers VALUES ('eabb2bff-3216-34da-9f29-824dbca901c3','Oscar Mateo','M','GENERAL PRACTICE','115 WEST SILVER STREET','WESTFIELD','MA','01085',42.138838,-72.755911);");
-    alasql("INSERT INTO providers VALUES ('8ee28b4a-9018-3065-9f6b-0c9b69de7080','Malinda Cassin','F','GENERAL PRACTICE','201 HIGHLAND STREET','CLINTON','MA','01510',42.411887,-71.690005);");
-    alasql("INSERT INTO providers VALUES ('f6065151-bf86-330b-a526-ac86b53b440b','Tressa Kovacek','F','GENERAL PRACTICE','200 GROTON ROAD','AYER','MA','01432',42.562221,-71.584844);");
-    alasql("INSERT INTO providers VALUES ('0359f968-d1a6-30eb-b1cc-e6cc0b4d3513','Gaynell Streich','F','GENERAL PRACTICE','211 PARK STREET','ATTLEBORO','MA','02703',41.931653,-71.294503);");
-    alasql("INSERT INTO providers VALUES ('3f15c687-0cfe-3bf2-9e62-34f3c85ff3cb','Jesús Quiroz','M','GENERAL PRACTICE','725 NORTH STREET','PITTSFIELD','MA','01201',42.452045,-73.26054);");
-    alasql("INSERT INTO providers VALUES ('af01a385-31d3-3c77-8fdb-2867fe88df2f','Garth Wyman','M','GENERAL PRACTICE','575 BEECH STREET','HOLYOKE','MA','01040',42.211656,-72.642448);");
-    alasql("INSERT INTO providers VALUES ('58b66cc1-2b86-377f-ad77-ad8164388e50','Veda Pfeffer','F','GENERAL PRACTICE','295 VARNUM AVENUE','LOWELL','MA','01854',42.638893,-71.322107);");
-    alasql("INSERT INTO providers VALUES ('1530e81b-106c-32d5-95d5-42a710c92068','Wayne Mertz','M','GENERAL PRACTICE','271 CAREW STREET','SPRINGFIELD','MA','01104',42.115454,-72.539978);");
-    alasql("INSERT INTO providers VALUES ('c9b3c857-2e24-320c-a79a-87b8a60de63c','Suzette Monahan','F','GENERAL PRACTICE','330 MOUNT AUBURN STREET','CAMBRIDGE','MA','02138',42.375967,-71.118275);");
-    alasql("INSERT INTO providers VALUES ('e49edc61-6ba6-324c-bef7-b65f0e10799f','Carolyne Howell','F','GENERAL PRACTICE','51 BLOSSOM STREET','BOSTON','MA','02114',42.33196,-71.020173);");
-    alasql("INSERT INTO providers VALUES ('aa89beb2-7bc6-35fa-83f7-4b32039e84eb','Sanford Gottlieb','M','GENERAL PRACTICE','199 REEDSDALE ROAD','MILTON','MA','02186',42.241589,-71.082651);");
-    alasql("INSERT INTO providers VALUES ('4b04cd2f-3f27-35bc-8069-f4ca6339529f','Maile Frami','F','GENERAL PRACTICE','2014 WASHINGTON STREET','NEWTON','MA','02462',42.331876,-71.208402);");
-    JSON.stringify(@0);
-</script>
-
-@AlaSQL.buildTable_organizations
-<script>
-    alasql("DROP TABLE IF EXISTS organizations;");
-    alasql("create table organizations (id text,name text,address text,city text,state text,zip text,lat real,lon real,phone text);");
-    alasql("INSERT INTO organizations VALUES ('24cb4eab-6166-3530-bddc-a5a8a14a4fc1','MILFORD REGIONAL MEDICAL CENTER','14 PROSPECT STREET','MILFORD','MA','01757',42.158692,-71.521419,'5084731190');");
-    alasql("INSERT INTO organizations VALUES ('d692e283-0833-3201-8e55-4f868a9c0736','HALLMARK HEALTH SYSTEM','585 LEBANON STREET','MELROSE','MA','02176',42.455723,-71.059019,'7819793000');");
-    alasql("INSERT INTO organizations VALUES ('465de31f-3098-365c-af70-48a071e1f5aa','METROWEST MEDICAL CENTER','115 LINCOLN STREET','FRAMINGHAM','MA','01701',42.307905,-71.436196,'5083831000');");
-    alasql("INSERT INTO organizations VALUES ('6f122869-a856-3d65-8db9-099bf4f5bbb8','LAHEY HOSPITAL & MEDICAL CENTER  BURLINGTON','41 & 45 MALL ROAD','BURLINGTON','MA','01803',42.503227,-71.201713,'7817445100');");
-    alasql("INSERT INTO organizations VALUES ('60457c13-adb2-3415-82c5-86ab5dab5f93','BAYSTATE MEDICAL CENTER','759 CHESTNUT STREET','SPRINGFIELD','MA','01199',42.115454,-72.539978,'4137940000');");
-    alasql("INSERT INTO organizations VALUES ('ef6ab57c-ed94-3dbe-9861-812d515918b3','CAPE COD HOSPITAL','88 LEWIS BAY ROAD','HYANNIS','MA','02601',41.748854,-70.740536,'5087711800');");
-    alasql("INSERT INTO organizations VALUES ('ebc3f5c4-6700-34af-8323-85621c313726','NOBLE HOSPITAL','115 WEST SILVER STREET','WESTFIELD','MA','01085',42.138838,-72.755911,'4135682811');");
-    alasql("INSERT INTO organizations VALUES ('331f4c11-d298-308b-aaa1-d7825b29b57f','CLINTON HOSPITAL ASSOCIATION','201 HIGHLAND STREET','CLINTON','MA','01510',42.411887,-71.690005,'9783683000');");
-    alasql("INSERT INTO organizations VALUES ('ac8356a5-78f8-3a63-8a1e-59e832fd54e7','NASHOBA VALLEY MEDICAL CENTER','200 GROTON ROAD','AYER','MA','01432',42.562221,-71.584844,'9787849000');");
-    alasql("INSERT INTO organizations VALUES ('5e765f2b-e908-3888-9fc7-df2cb87beb58','STURDY MEMORIAL HOSPITAL','211 PARK STREET','ATTLEBORO','MA','02703',41.931653,-71.294503,'5082225200');");
-    alasql("INSERT INTO organizations VALUES ('4f3a530e-a2f7-3de0-9a09-c0a70a9ab894','BERKSHIRE MEDICAL CENTER INC - 1','725 NORTH STREET','PITTSFIELD','MA','01201',42.452045,-73.26054,'4134472000');");
-    alasql("INSERT INTO organizations VALUES ('5d4b9df1-93ae-3bc9-b680-03249990e558','HOLYOKE MEDICAL CENTER','575 BEECH STREET','HOLYOKE','MA','01040',42.211656,-72.642448,'4135342500');");
-    alasql("INSERT INTO organizations VALUES ('b0e04623-b02c-3f8b-92ea-943fc4db60da','LOWELL GENERAL HOSPITAL','295 VARNUM AVENUE','LOWELL','MA','01854',42.638893,-71.322107,'9789376000');");
-    alasql("INSERT INTO organizations VALUES ('fd328395-ab1d-35c6-a2d0-d05a9a79cf11','MERCY MEDICAL CTR','271 CAREW STREET','SPRINGFIELD','MA','01104',42.115454,-72.539978,'4137489000');");
-    alasql("INSERT INTO organizations VALUES ('69176529-fd1f-3b3f-abce-a0a3626769eb','MOUNT AUBURN HOSPITAL','330 MOUNT AUBURN STREET','CAMBRIDGE','MA','02138',42.375967,-71.118275,'6174923500');");
-    alasql("INSERT INTO organizations VALUES ('ff9863d3-3fa3-3861-900e-f00148f5d9c2','SHRINERS HOSPITAL FOR CHILDREN - BOSTON  THE','51 BLOSSOM STREET','BOSTON','MA','02114',42.33196,-71.020173,'6177223000');");
-    alasql("INSERT INTO organizations VALUES ('12c9daf5-a29c-36c9-ac55-28972463e566','BETH ISRAEL DEACONESS HOSPITAL-MILTON INC','199 REEDSDALE ROAD','MILTON','MA','02186',42.241589,-71.082651,'6176964600');");
-    alasql("INSERT INTO organizations VALUES ('3d10019f-c88e-3de5-9916-6107b9c0263d','NEWTON-WELLESLEY HOSPITAL','2014 WASHINGTON STREET','NEWTON','MA','02462',42.331876,-71.208402,'6172436000');");
-    JSON.stringify(@0);
-</script>
-@end
-
 @AlaSQL.buildTable_allergies
 <script>
     alasql("DROP TABLE IF EXISTS allergies;");
@@ -452,6 +368,16 @@ try {
     JSON.stringify(@0);
 </script>
 @end
+
+<style>
+
+.icon-compile-circle:before {
+content: "\f144";
+font-family: "Font Awesome 5 Free";
+}
+
+</style>
+
 -->
 
 # SQL Basics
