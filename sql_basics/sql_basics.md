@@ -314,6 +314,14 @@ try {
 </script>
 @end
 
+<style>
+
+.icon-compile-circle:before {
+content: "\f144";
+font-family: "Font Awesome 5 Free";
+}
+
+</style>
 
 -->
 
@@ -484,7 +492,7 @@ FROM alasql.patients;
 
 <table id="dataTable1" border="1"></table><br>
 
-@AlaSQL.buildTable_patients()
+@AlaSQL.buildTable_patients
 
 **Select Specific Columns**
 
@@ -510,7 +518,7 @@ FROM alasql.patients;
 
 <table id="dataTable2" border="1"></table><br>
 
-@AlaSQL.buildTable_patients()
+@AlaSQL.buildTable_patients
 
 ### DISTINCT
 
@@ -537,7 +545,7 @@ Here's a pro tip!  The `DISTINCT` keyword is especially useful for removing dupl
 
 </div>
 
-@AlaSQL.buildTable_patients()
+@AlaSQL.buildTable_patients
 
 
 ### Adding Comments
