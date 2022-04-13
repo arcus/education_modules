@@ -90,7 +90,7 @@ function addAllColumnHeaders(myList) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 try {
     var myinput=`@input`
-    myinput=myinput.replace(/;\s*$/, ""); // remove trailing semi-colon
+    myinput=myinput.replace(/;[\s\n]*$/, ""); // remove trailing semi-colon
     var myStriptArray= myinput.split(';');
     var arrayLength = myStriptArray.length;
     console.clear();
@@ -319,16 +319,6 @@ try {
 
 -->
 
-<style>
-
-.icon-compile-circle:before {
-content: "\f144";
-font-family: "Font Awesome 5 Free";
-}
-
-</style>
-
-
 # SQL Basics
 
 <div class = "overview">
@@ -491,7 +481,6 @@ Ready to run your first SQL query?  Hit the execute button below the SQL code to
 ```sql
 SELECT *
 FROM alasql.patients;
-
 ```
 @AlaSQL.eval("#dataTable1")
 
