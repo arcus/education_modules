@@ -41,17 +41,6 @@ attribute: [jQuery](https://jquery.com/)
            is licensed under [OpenJS Foundation](https://openjsf.org/)
 
 @AlaSQL.eval
-<lia-keep>
-<style>
-
-.icon-compile-circle:before {
-content: "\f144";
-font-family: "Font Awesome 5 Free";
-}
-
-</style>
-</lia-keep>
-
 <script>
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // BUILD FUNCTIONS
