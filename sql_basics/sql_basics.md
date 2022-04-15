@@ -332,7 +332,7 @@ try {
 
 **Pre-requisites**
 
-Experience working with rectangular data (data in rows and columns) is required, as is some exposure to the idea of SQL and its use of tables with rows and columns.  No experience writing SQL code is expected or required for this module.  If you would like a code-free overview to SQL we recommend our module [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md)
+Experience working with rectangular data (data in rows and columns) is required, as is some exposure to the idea of SQL and its use of tables with rows and columns.  No experience writing SQL code is expected or required for this module.  If you would like a code-free overview to SQL we recommend our module [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md).
 
 **Learning Objectives**
 
@@ -359,18 +359,20 @@ However, in our module, we won't ask you to download a heavy-duty SQL client.  R
 
 ```sql
 SELECT
-  race
-  ,ethnicity
+  birthdate
   ,sex
-  ,zip
 FROM patients
-LIMIT 10;  
+LIMIT 10;
 ```
-@AlaSQL.eval("#dataTable0")
+@AlaSQL.eval("#dataTable2a")
 
-<table id="dataTable0" border="1"></table><br>
+<table id="dataTable2a" border="1"></table><br>
+
+<div style = "display:none;">
 
 @AlaSQL.buildTable_patients
+
+</div>
 
 ### SQL Implementations
 
@@ -509,9 +511,19 @@ Ready to run your first SQL query?  Hit the execute button below the SQL code to
 SELECT *
 FROM alasql.patients;
 ```
-@AlaSQL.eval("#dataTable1")
+@AlaSQL.eval("#dataTable6a")
 
-<table id="dataTable1" border="1"></table><br>
+<table id="dataTable6a" border="1"></table><br>
+
+Now, complete the code below.  How would you get all the rows from the table `alasql.allergies`?  When you think you have it, try running the code and see if you get it right!
+
+```sql
+SELECT
+FROM  ;
+```
+@AlaSQL.eval("#dataTable6b")
+
+<table id="dataTable6b" border="1"></table><br>
 
 @AlaSQL.buildTable_patients
 
