@@ -6,8 +6,8 @@ module_template_version: 2.0.0
 language: en
 narrator: US English Male
 title: SQL Basics
-comment:  SQL is a relational database solution that has been around for decades.  Learn how to do basic SQL queries on single tables, hands on!
-long_description: Do you want to learn basic SQL either to understand concepts or prepare for access to a real database?  This module will give you hands on experience with simple queries using keywords including SELECT, WHERE, FROM, DISTINCT, and AS.  This module is appropriate for people who have little or no experience in SQL and are ready to practice with real queries.
+comment:  SQL is a relational database solution that has been around for decades.  Learn how to do basic SQL queries on single tables, by using code, hands-on.
+long_description: Do you want to learn basic SQL either to understand concepts or prepare for access to a relational database?  This module will give you hands on experience with simple queries using keywords including SELECT, WHERE, FROM, DISTINCT, and AS.  This module is appropriate for people who have little or no experience in SQL and are ready to practice with real queries.
 estimated_time: 40 minutes
 
 @learning_objectives  
@@ -16,7 +16,8 @@ After completion of this module, learners will be able to:
 
 - Use SELECT, FROM, and WHERE to do a basic query on a SQL table
 - Explain the use of DISTINCT and how it can be useful
-- Use ORDER BY to change how query results appear
+- Use AS and ORDER BY to change how query results appear
+- Explain why the LIMIT keyword can be useful
 
 
 @end
@@ -342,13 +343,34 @@ Experience working with rectangular data (data in rows and columns) is required,
 
 ## SQL: A Brief Refresher
 
-**SQL** (**S**tructured **Q**uery **L**anguage) is a language that for more than four decades has been used to interact with "**Relational Databases**".  You can pronounce it as "sequel" or just say the letters S-Q-L.
+**SQL** (**S**tructured **Q**uery **L**anguage) is a language that for more than four decades has been used to interact with **relational databases**.  You can pronounce it as "sequel" or just say the letters S-Q-L.
 
 A relational database is a data storage solution that stores data tables, which are comprised of columns (also called 'fields') and rows.
 
-SQL is great at working with rectangular data, data that is stored in tables with rows and columns.  Its powerful SELECT / FROM / WHERE syntax makes SQL an ideal tool for isolating just the data you care about, whether that's specifying the columns you're interested in or limiting your data to just those rows that meet certain conditions.  However, it's not great for fine-tuned statistical, linguistic, or data visualization purposes.  SQL is therefore a tool that is often partnered with other tools like R or Python, which are better suited for work like statistical analysis.
+SQL is great at working with rectangular data, data that is stored in tables with rows and columns / fields.  Its powerful SELECT - FROM - WHERE syntax makes SQL an ideal tool for isolating just the data you care about, whether that's specifying the columns you're interested in or limiting your data to just those rows that meet certain conditions.  However, it's not great for fine-tuned statistical, linguistic, or data visualization purposes.  SQL is therefore a tool that is often partnered with other tools like R or Python, which are better suited for work like statistical analysis.
 
 If you want to review SQL at a high level, consider our [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md) module.
+
+Most users of SQL do a lot of their work in one of many SQL **clients**.  A SQL client is a piece of software that has lots of functions, like allowing you to connect to various databases you have access to, giving you a place to type queries and submit them, and diagramming capability to help you understand the relationships in your database.  Here's a screenshot from a popular SQL client, DBeaver.  This screenshot is one they share [on their website](https://dbeaver.io/screenshots/).
+
+![Complex application screen with a long SQL query, connection information for a PostgreSQL database, and more](media/dbeaver_screenshot.png)<!-- style = "max-width: 800px; border: 1px solid rgb(var(--color-highlight));" -->
+
+However, in our module, we won't ask you to download a heavy-duty SQL client.  Rather, you'll work with code in a simple code box like this one.  Go ahead and hit the play button below the code box to run the code below.
+
+```sql
+SELECT
+  race
+  ,ethnicity
+  ,sex
+  ,zip
+FROM patients
+LIMIT 10;  
+```
+@AlaSQL.eval("#dataTable0")
+
+<table id="dataTable0" border="1"></table><br>
+
+@AlaSQL.buildTable_patients
 
 ### SQL Implementations
 
@@ -366,9 +388,9 @@ Some popular "flavors" of SQL:
 
 The most common difference between different SQL "flavors" are the availability of different functions that users can use for data manipulation, as well as the types of error messages that will be returned to the user when running code with syntax issues.
 
-That said, knowing the specific "flavor" of SQL your database uses is especially useful when first getting started writing queries and troubleshooting errors.  
+That said, knowing the specific flavor or dialect of SQL your database uses is especially useful when first getting started writing queries and troubleshooting errors.  
 
-In the hands-on portion of this module, we'll be using a form of SQL that actually runs in your web browser as you look at these pages.  This lightweight SQL engine is called "AlaSQL".  We pre-populated some tables for you to experiment with in this module.  These tables are filled with fabricated data meant to look a little like an electronic health record (EHR).
+In the hands-on portion of this module, we'll be using a form of SQL that actually runs in your web browser as you look at these pages.  This lightweight SQL engine is called "AlaSQL".  We pre-populated some tables for you to experiment with in this module.  These tables are filled with fabricated data meant to look a little like an electronic health record (EHR).  Rest assured that this data was completely invented, although it might look realistic!
 
 ## SQL Queries
 
@@ -386,8 +408,9 @@ You put these basic pieces of information together using the syntax shown below 
 SELECT _2_ FROM _1_ WHERE _3_;
 ```
 
-For example, here are some sample queries, each of which take place on just a single table.  To be extra clear, we're ending each query with a semicolon, which tells SQL you're done with a query.  However, if you're working interactively with SQL
+For example, here are some sample queries, each of which take place on just a single table.  To be extra clear, we're ending each query with a semicolon, which tells SQL you're done with a query.  If you're working interactively with SQL, one query at a time, you can sometimes get away with not ending your query with a semicolon.  Still, one of the things we're interested in doing in this module is instilling good practices from the start, so we encourage you to always end your queries with proper punctuation.
 
+<!-- data-readOnly="true" -->
 ```sql
 SELECT price FROM products WHERE product_type = "FRUIT";
 
@@ -400,18 +423,23 @@ Please note that while we write these queries all on a single line to show you a
 
 ### An Aside About Style
 
-Style is how we choose to write SQL or other languages, within the confines of syntax.  All of the following queries are valid and would work.  What distinguishes them?  Style.  
+Style is how we choose to write SQL or other languages, within the confines of syntax.  
 
+All of the following queries are valid and would work.  What distinguishes them?  Style.  
+
+<!-- data-readOnly="true" -->
 ```sql
 select price, best_by_date, sale_pct, quantity from products where product_type = "FRUIT";
 ```
 
+<!-- data-readOnly="true" -->
 ```sql
 SELECT price, best_by_date, sale_pct,
 quantity from products WHERE
 product_type = "FRUIT";
 ```
 
+<!-- data-readOnly="true" -->
 ```sql
 SELECT
   price
@@ -428,7 +456,7 @@ But if you don't have anyone to guide you in style, we'll do our best to instill
 
 Here are our (opinionated but not necessarily "right" style suggestions).  These might not make sense right now, but once you see them in actual queries, we think you'll understand them more intuitively.
 
-1) **Put keywords in CAPITAL LETTERS so they stand out.**  Examples of keywords are SELECT, LIKE, AS, WHERE, JOIN, DISTINCT, MEAN, ORDER BY, and many more.  While most code editors do a good job of color-coding these special words, you might end up seeing a SQL query in monochrome, and having keywords stand out helps you figure out where each part of your query is.  
+1) **Put keywords in CAPITAL LETTERS so they stand out.**  Examples of keywords are SELECT, LIKE, AS, WHERE, JOIN, DISTINCT, MEAN, ORDER BY, and many more.  While most code editors and SQL clients (software that lets you query a database) do a good job of color-coding these special words, you might end up seeing a SQL query in monochrome, and having keywords stand out helps you figure out where each part of your query is.  
 
 2) **Put members of a list on separate lines.**  This usually means the list of fields you're requesting.  Putting each item on its own line is easier on the eyes and allows for much easier cut-and-paste to rearrange things.  It also means you have space after each item of the list to add a comment if necessary.
 
@@ -491,9 +519,9 @@ FROM alasql.patients;
 
 If you would only like to return a specific set of columns in your select statement you will need to explicitly list out each of those columns after the select keyword, with each separate column reference separated by a comma.  Note that this time, our dot notation is in the form `table_name.column_name` for our columns, and `dataset_name.table_name` for our table.  We do this to be very explicit about which data we mean.  
 
-It may seem obvious that if we're getting data from the `patients` table, that all of our columns come, well, from `patients`... so why do we use dot notation to specify that in the list of columns?  Why say `patients.id` when `id` alone would work just as well?  
+It may seem obvious that if we're getting data from the `patients` table (after all, we have that information in the FROM statement), that all of our columns come, well, from `patients`.  Why, then, do we use dot notation to specify that in the list of columns in the SELECT statement?  Why say `patients.id` when `id` alone would work just as well?  
 
-This is an example of forming a good habit early.  You will eventually need to do queries that involve multiple tables, which may each have similar or identical column names.  In that case, you **do** have to indicate which table you're referring to, in order to disambiguate which "date" column you mean -- do you mean `date` in `encounters`, or `date` in `medication_administration`?  Rather than learn dot notation later, we want to introduce you to it now, even if it feels unnecessary.
+This is an example of forming a good habit early.  You will eventually need to do queries that involve multiple tables, which may each have identical column names.  In that case, you **do** have to indicate which table you're referring to, in order to disambiguate which `date` column you mean -- do you mean `date` in `encounters`, or `date` in `medication_administration`?  Rather than learn dot notation later, we want to introduce you to it now, even if it feels unnecessary.
 
 Go ahead and run this code by clicking the execute button.  How are your results different from the `SELECT *` query you ran previously?
 
@@ -515,7 +543,7 @@ FROM alasql.patients;
 
 ### DISTINCT
 
-The `DISTINCT` clause in **SQL** can be placed directly after the `SELECT` key word, and can be used to limit your result set down to only the unique row values.  
+The `DISTINCT` clause in **SQL** can be placed directly after the `SELECT` key word, and can be used to limit your result set to only the unique row values.  
 
 This can be especially useful when exploring a dataset for the first time and trying to become familiar with the data in each column of a given table.  For example, perhaps you want to see all the possible values for `sex` or `race` in the `patients` table, to understand a bit more about the data collection options.  If you were to use `SELECT` by itself to get just the `race` field from the `patients` table, you'd get the race of every patient, with lots of repeats.  If you used `SELECT DISTINCT` instead, you'd get a much shorter list of every possible value for `race`, each listed just once.  
 
@@ -534,7 +562,7 @@ FROM alasql.patients;
 
 <div class = "important">
 
-Here's a pro tip!  The `DISTINCT` keyword is especially useful for removing duplicates rows from the result set of your SQL queries.  If you suspect that there may be duplicate data, you can use SELECT DISTINCT to make sure you only get one copy of any identical rows of results.
+Here's a pro tip!  The `DISTINCT` keyword is especially useful for removing duplicates rows from the result set of your SQL queries.  If you suspect that there may be duplicate data, you can use `SELECT DISTINCT` to make sure you only get one copy of any identical rows of results.
 
 </div>
 
@@ -543,7 +571,7 @@ Here's a pro tip!  The `DISTINCT` keyword is especially useful for removing dupl
 
 ### Adding Comments
 
-**Comments** are essentially explanatory or helpful bits of text that you can add to your code as documentation for yourself or other reviewers of your code.  Comments don't actually affect the execution of the SQL code in any way and are simply there for humans.
+**Comments** are explanatory or helpful bits of text that you can add to your code as documentation for yourself or other reviewers of your code.  Comments don't actually affect the execution of the SQL code in any way and are simply there for humans.
 
 In **SQL** there are 2 different techniques that can be used for adding comments, **single-line** and **multi-line** comments.
 
@@ -607,8 +635,8 @@ WHERE
 	patients.state='Massachusetts'
 	AND patients.ethnicity='hispanic'
 	AND (
-		patients.birthdate<='2000-01-01'   --date strings are assumed to be yyyy-mm-dd format.
-		OR patients.birthdate>='2010-01-01'--date strings are assumed to be yyyy-mm-dd format.
+		patients.birthdate<='2000-01-01'    --date strings are assumed to be yyyy-mm-dd format.
+		OR patients.birthdate>='2010-01-01' --date strings are assumed to be yyyy-mm-dd format.
 	)
 
 ```
