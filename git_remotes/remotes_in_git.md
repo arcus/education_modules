@@ -190,7 +190,7 @@ Your output is going to look a little different depending on whether or not SSH 
 
 Dracula has not set up SSH on his computer, so his output is
 ```console 
-ls: cannot access '/c/Users/Vlad Dracula/.ssh': No such file or directory
+ls: cannot access <code>'/c/Users/Vlad Dracula/.ssh'</code>: No such file or directory
 ```
 
 If SSH has been set up on the computer you’re using, the public and private key pairs will be listed. The file names are either `id_ed25519/id_ed25519.pub` or `id_rsa/id_rsa.pub` depending on how the key pairs were set up.
