@@ -15,10 +15,11 @@ estimated_time: This is rough guess of how long it might take a learner to work 
 
 After completion of this module, learners will be able to:
 
-- identify key elements
-- create a product
-- do a task
-- articulate the rationale for something
+- Navigate the row and column structure of a `pandas` DataFrame
+- Locate data using the `.loc` method
+- Filter data using conditional statements
+- Create new DataFrames from existing DataFrames
+- Edit data in a `pandas` DataFrame.
 
 @end
 
