@@ -525,7 +525,12 @@ FROM  ;
 
 <table id="dataTable6b" border="1"></table><br>
 
+<div style = "display:none;">
+
 @AlaSQL.buildTable_patients
+@AlaSQL.buildTable_allergies
+
+</div>
 
 **Select Specific Columns**
 
@@ -551,7 +556,11 @@ FROM alasql.patients;
 
 <table id="dataTable2" border="1"></table><br>
 
+<div style = "display:none;">
+
 @AlaSQL.buildTable_patients
+
+</div>
 
 ### DISTINCT
 
@@ -578,8 +587,11 @@ Here's a pro tip!  The `DISTINCT` keyword is especially useful for removing dupl
 
 </div>
 
+<div style = "display:none;">
+
 @AlaSQL.buildTable_patients
 
+</div>
 
 ### Adding Comments
 
@@ -616,8 +628,11 @@ FROM alasql.patients;
 
 <table id="dataTable11" border="1"></table><br>
 
-@AlaSQL.buildTable_patients()
+<div style = "display:none;">
 
+@AlaSQL.buildTable_patients
+
+</div>
 
 ### WHERE
 
@@ -656,7 +671,11 @@ WHERE
 
 <table id="dataTable5" border="1"></table><br>
 
-@AlaSQL.buildTable_patients()
+<div style = "display:none;">
+
+@AlaSQL.buildTable_patients
+
+</div>
 
 ### Dealing with Null Values
 
@@ -720,7 +739,11 @@ The fact that nulls aren't included in comparisons is a very subtle distinction 
 
 </div>
 
-@AlaSQL.buildTable_allergies()
+<div style = "display:none;">
+
+@AlaSQL.buildTable_allergies
+
+</div>
 
 ### ORDER BY Statement
 
@@ -748,8 +771,11 @@ By default, all items in the `order by` clause will be sorted in `asc` order if 
 
 </div>
 
-@AlaSQL.buildTable_patients()
+<div style = "display:none;">
 
+@AlaSQL.buildTable_patients
+
+</div>
 
 ### LIMIT
 
@@ -769,7 +795,11 @@ LIMIT 3;
 
 <table id="dataTable10" border="1"></table><br>
 
-@AlaSQL.buildTable_patients()
+<div style = "display:none;">
+
+@AlaSQL.buildTable_patients
+
+</div>
 
 
 ### Aliasing with AS
@@ -798,8 +828,11 @@ FROM alasql.patients AS p
 
 <table id="dataTable12" border="1"></table><br>
 
-@AlaSQL.buildTable_patients('')
+<div style = "display:none;">
 
+@AlaSQL.buildTable_patients
+
+</div>
 
 ## Recap
 
