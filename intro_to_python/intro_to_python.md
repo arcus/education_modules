@@ -16,6 +16,7 @@ After completion of this module, learners will be able to:
 
 - Describe what Python is and why they might want to use it for research
 - Recognize Python code
+- Describe the components of a Jupyter notebook
 - Write text and simple code in a Jupyter notebook
 - Download Python to their own computers
 
@@ -246,15 +247,7 @@ If you are interested in using Python for data analysis, you might want to write
 
 Interested in learning how to write Python code in a Jupyter notebook? Continue on to the next section for a hands-on activity! You won't need to download anything to your computer.
 
-
-## Using a Jupyter Notebook: Hands-On Activity
-
-This is a hands-on activity! Feel free to pop over to that tab you opened in the [Lesson Preparation section](#Lesson-Preparation) to get started. Need the link again? Here it is:
-
-<a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/static/images/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
-
-
-### Quiz: Hands-On Activity
+### Quiz: Jupyter Notebooks
 
 What are the components of a Jupyter notebook? Select all that apply.
 
@@ -267,6 +260,46 @@ Jupyter notebooks contain code cells and text cells. The code cells are written 
 </div>
 ***********************************************************************
 
+
+## Hands-On Activity
+
+This is a hands-on activity! Feel free to pop over to that tab you opened in the [Lesson Preparation section](#Lesson-Preparation) to get started. Need the link again? Here it is:
+
+<a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/static/images/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
+
+Don't forget to come back here when you're done!
+
+### Quiz: Hands-On Activity
+
+Which of the following methods adds an element to a list in a specific position?
+
+[( )] `.extend()`
+[( )] `.pop()`
+[( )] `.append()`
+[(X)] `.insert()`
+***********************************************************************
+<div class = "answer">
+While all of the answers given are list methods, `.extend()` adds the elements of one list to the end of another list, `.append()` adds an element to the end of a list, and `.pop()` removes a element from a specific position in a list (and returns that element).
+</div>
+***********************************************************************
+
+Let's say that we have the following dictionary:
+
+```python3
+covid_testing = {"id" : 01010101,
+                 "date" : "04/11/2020"
+                 "age" : 28,
+                 "type" : "pcr"}
+```
+How would you add an entry called `result` that has the value `negative` to this dictionary?
+
+[[covid_testing["result"] = "negative"]]
+[[?]] Hint: Capitalization matters in Python, so make sure you type the key and value exactly as they appear above!
+***********************************************************************
+<div class = "answer">
+Adding a item to a dictionary is a matter of adding a key (in this case "result") and then assigning it a value (such as "negative"). The quotation marks are required because both the and value are strings.
+</div>
+***********************************************************************
 
 ## Next Steps
 
