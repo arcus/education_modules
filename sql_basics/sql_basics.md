@@ -56,8 +56,8 @@ function buildHtmlTable() {
       var cellValue = myList[i][columns[colIndex]];
       if (cellValue == null) { cellValue = ""; }
       row$.append($('<td/>').html(cellValue).css({
-      padding_left: "0.5em",
-      padding_right: "0.5em"
+      "padding_left": "1em",
+      "padding_right": "1em"
       }));
     }
     $(@0).append(row$);
