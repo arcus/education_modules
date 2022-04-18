@@ -347,6 +347,12 @@ Experience working with rectangular data (data in rows and columns) is required,
 
 A relational database is a data storage solution that stores data tables, which are comprised of columns (also called 'fields') and rows.
 
+<div class = "important">
+
+Sometimes we'll use the word "column" and sometimes we'll use the word "field".  These refer to the same thing!
+
+</div>
+
 SQL is great at working with rectangular data, data that is stored in tables with rows and columns / fields.  Its powerful SELECT - FROM - WHERE syntax makes SQL an ideal tool for isolating just the data you care about, whether that's specifying the columns you're interested in or limiting your data to just those rows that meet certain conditions.  However, it's not great for fine-tuned statistical, linguistic, or data visualization purposes.  SQL is therefore a tool that is often partnered with other tools like R or Python, which are better suited for work like statistical analysis.
 
 If you want to review SQL at a high level, consider our [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md) module.
@@ -373,6 +379,13 @@ LIMIT 10;
 @AlaSQL.buildTable_patients
 
 </div>
+
+<div class = "important">
+
+Don't worry -- the data here, although it **looks** like human subject or patient data, is completely fabricated.
+
+</div>
+
 
 ### SQL Implementations
 
@@ -451,8 +464,9 @@ SELECT
 FROM products
 WHERE product_type = "FRUIT";
 ```
+There's nothing to stop you from writing a long query on a single line -- a line that might not wrap around and instead go "off the screen", depending on how you are looking at the query.  There is no SQL-level enforcement of line breaks or indentation.  You are free to write SQL as you see fit, but we encourage you to adopt specific conventions and hold yourself to them.
 
-You may be working with a group that has an established SQL style guide, either in written form or as oral tradition.  If so, great!  Ignore what we tell you and do what they suggest.  Style is nothing more than a convention to help humans read code more easily, and it's a good idea to go along with what is already broadly understood within your team.  Everyone agreeing on conventions like when to start a new line and how and where to comment means it's easier for other people to help you with your code or for you to copy / paste from existing examples your peers share with you.
+You may be working with a group that has an established SQL style guide, either in written form or as oral tradition.  If so, great!  Ignore the style suggestions we offer and do what they suggest.  Style is nothing more than a convention to help humans read and write code more easily, and it's a good idea to go along with what is already broadly understood within your team.  Everyone agreeing on conventions like when to start a new line and how and where to comment means it's easier for other people to help you with your code or for you to copy / paste from existing examples your peers share with you.
 
 But if you don't have anyone to guide you in style, we'll do our best to instill some basic principles. It might seem silly to start talking about style now with very short queries, but we encourage you to develop good habits now.  We are going to advocate for some style conventions that not everyone will share.  As they say, there's no accounting for taste, and if you depart from our suggestions, that's fine -- but do start to develop your own standards for style, because it will help you immensely once your SQL queries get to be 5, 10, or 100 lines long and the number of queries you write increases.
 
@@ -466,7 +480,7 @@ Here are our (opinionated but not necessarily "right" style suggestions).  These
 
 4) **Use "dot notation"**, which we'll talk about in the next section.  Dot notation means adding more information about your data, for example, by including the table name the column comes from.  This practice will prepare you for using multiple data sources in your queries.
 
-5) **Use a comma-first style.**  This one can be a little jarring at first, but it does have real advantages, especially if you end up doing SQL for more than a few hours a week.  In a list of length n, don't put the comma *after* items 1 through n-1.  Rather, put the comma *before* items 2 through n.  
+5) **Use a comma-first style.**  This one can be a little jarring at first, but it does have real advantages, especially if you end up doing SQL for more than a few hours a week.  In a list of length n, don't put the comma **after** items 1 through n-1.  Rather, put the comma **before** items 2 through n.  
 
 <div class = 'options'>
 
@@ -505,7 +519,7 @@ Notice that the `FROM` line of this query is followed by 2 words separated by a 
 
 So the first word in the dot notation below is "alasql", which is the name of the **schema** or **catalog** or **dataset** that your data is stored in (terms differ according to the dialect of SQL that you're using), and the second word, "patients", is the name of the specific table you would like to reference as the base of your query.
 
-Ready to run your first SQL query?  Hit the execute button below the SQL code to run this query and you'll see the results appear!
+Ready to try this?  Hit the execute button below the SQL code to run this query and you'll see the results appear!
 
 ```sql
 SELECT *
@@ -515,7 +529,7 @@ FROM alasql.patients;
 
 <table id="dataTable6a" border="1"></table><br>
 
-Now, complete the code below.  How would you get all the rows from the table `alasql.allergies`?  When you think you have it, try running the code and see if you get it right!
+Now, complete the code below.  How would you get all the fields from the table `alasql.allergies`?  When you think you have it, try running the code and see if you get it right!
 
 ```sql
 SELECT
@@ -534,7 +548,7 @@ FROM  ;
 
 **Select Specific Columns**
 
-If you would only like to return a specific set of columns in your select statement you will need to explicitly list out each of those columns after the select keyword, with each separate column reference separated by a comma.  Note that this time, our dot notation is in the form `table_name.column_name` for our columns, and `dataset_name.table_name` for our table.  We do this to be very explicit about which data we mean.  
+If you would only like to return a specific set of columns in your select statement you will need to explicitly list out each of those columns after the `SELECT` keyword, with each separate column reference separated by a comma.  Note that this time, our dot notation is in the form `table_name.column_name` for our columns, and `dataset_name.table_name` for our table.  We do this to be very explicit about which data we mean.  
 
 It may seem obvious that if we're getting data from the `patients` table (after all, we have that information in the FROM statement), that all of our columns come, well, from `patients`.  Why, then, do we use dot notation to specify that in the list of columns in the SELECT statement?  Why say `patients.id` when `id` alone would work just as well?  
 
@@ -568,7 +582,9 @@ The `DISTINCT` clause in **SQL** can be placed directly after the `SELECT` key w
 
 This can be especially useful when exploring a dataset for the first time and trying to become familiar with the data in each column of a given table.  For example, perhaps you want to see all the possible values for `sex` or `race` in the `patients` table, to understand a bit more about the data collection options.  If you were to use `SELECT` by itself to get just the `race` field from the `patients` table, you'd get the race of every patient, with lots of repeats.  If you used `SELECT DISTINCT` instead, you'd get a much shorter list of every possible value for `race`, each listed just once.  
 
-You can also explore using SELECT DISTINCT on more than one field.  The code block below provides an example of using this syntax to invesitgate the unique combinations of values from the `sex` and `ethnicity` columns from the `patient` table.  As you can see, the `DISTINCT` clause will work on any number of columns.  Go ahead and execute this code to see the results.
+You can also explore using `SELECT DISTINCT` on more than one field.  The code block below provides an example of using this syntax to invesitgate the unique combinations of values from the `sex` and `ethnicity` columns from the `patient` table.  As you can see, the `DISTINCT` clause will work on any number of columns.  Go ahead and execute this code to see the results.  
+
+Then, if you're up for a challenge, change the code to find out what unique combinations there are of race and ethnicity!
 
 ```sql
 SELECT DISTINCT
@@ -583,7 +599,9 @@ FROM alasql.patients;
 
 <div class = "important">
 
-Here's a pro tip!  The `DISTINCT` keyword is especially useful for removing duplicates rows from the result set of your SQL queries.  If you suspect that there may be duplicate data, you can use `SELECT DISTINCT` to make sure you only get one copy of any identical rows of results.
+Here's a pro tip!  The `DISTINCT` keyword is especially useful for removing duplicates rows from the result set of your SQL queries.  If you suspect that there may be duplicate data, you can use `SELECT DISTINCT` to make sure you only get one copy of any identical rows of results.  
+
+However, if you notice an increasing reliance on `SELECT DISTINCT`, you might want to ask the deeper question of what is creating duplicate records.  This could be a symptom of a poorly written query further up in your analysis, or a problem with the underlying data.  Because `SELECT DISTINCT` requires each row of output to be compared with every other row, it is computationally expensive, and you should use it sparingly.
 
 </div>
 
@@ -701,7 +719,9 @@ Its also worth noting that null values are treated very differently from actual 
 Consider three options with regards to the `stop` column of `allergies`.  The `stop` column will meet, for each row, one of the conditions below:
 
 1) A date less than (earlier than) March 1, 2020,
+
 2) A date on or greater than (after) March 1, 2020,
+
 3) No date at all (null)
 
 It's important to realize that the code below includes **only** the first case.  Rows that meet the second condition are in direct violation of the WHERE clause and are not included.  Rows that fall into the third condition (null) cannot be evaluated with a comparison operator, and are left out as well.
