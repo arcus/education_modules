@@ -55,10 +55,10 @@ function buildHtmlTable() {
     for (var colIndex = 0 ; colIndex < columns.length ; colIndex++) {
       var cellValue = myList[i][columns[colIndex]];
       if (cellValue == null) { cellValue = ""; }
-      row$.append($('<td/>').html(cellValue)).css({
+      row$.append($('<td/>').html(cellValue).css({
       padding_left: "0.5em",
       padding_right: "0.5em"
-      });
+      }));
     }
     $(@0).append(row$);
   }
