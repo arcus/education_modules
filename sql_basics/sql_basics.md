@@ -796,16 +796,16 @@ WHERE
 
 <table id="dataTable10b" border="1"></table><br>
 
-Its also worth noting that null values are treated very differently from actual data.  Note that you cannot use operators like `=` to ask if something is null, because null values are inherently unknowable, so we can't know what a null value is equal to.  You can't do math with a null value and you can't compare to a null value.  To illustrate this point, we can look at the example code below.  
+It's also worth noting that null values are treated very differently from actual data.  Note that you cannot use operators like `=` to ask if something is null, because null values are inherently unknowable, so we can't know what a null value is equal to.  You can't do math with a null value and you can't compare to a null value.  To illustrate this point, we can look at an example below.  
 
-Consider the options with regards to the `stop` column of `allergies`.  The `stop` column will meet, for each row, one of the conditions below:
+Consider the options with regards to the `stop` column of `allergies`.  The `stop` column will meet, for each row, one of the conditions below.  Here we're using an arbitrary date to illustrate the categories.
 
 1. A date less than (earlier than) March 1, 2020,
 2. A date equal to March 1, 2020,
 3. A date greater than (after) March 1, 2020,
 4. No date at all (null)
 
-It's important to realize that the code below includes **only** the first case.  Rows that meet the second or third condition are in direct violation of the WHERE clause and are not included.  Rows that fall into the fourth condition (null) cannot be evaluated with a comparison operator, and are left out as well.
+Run the code cell below.  It's important to realize that the code below returns rows that belong to **only** the first case.  Rows that meet the second or third condition are in direct violation of the WHERE clause and are not included.  Rows that fall into the fourth condition (null) cannot be evaluated with a comparison operator, and are left out as well.
 
 ```sql
 SELECT *
@@ -818,7 +818,7 @@ WHERE
 
 <table id="dataTable10c" border="1"></table><br>
 
-Maybe you're aware that allergies with a `stop` date prior to March 1, 2020 are actually problematic and need to be checked -- these could be real allergies.  And to that group of possible allergies you want to add the cases where there is no `stop` date at all, where we can presume that the allergy wasn't ruled out.  In order to make sure that records where the `stop` date is null are also included in our output we will need to add another line to  the select statement to explicitly include them, as shown below.  
+Why is this interesting?  Because sometimes we want to return a mix of null and non-null values.  For example, maybe you're aware that allergies with a `stop` date prior to March 1, 2020 have data quality issues and need to be checked -- these could be real allergies that should not have a `stop` date.  And to that group of possible allergies you want to add the cases where there is no `stop` date at all, where we can presume that the allergy wasn't ruled out.  In order to make sure that records where the `stop` date is null are also included in our output we will need to add another line to  the select statement to explicitly include them, as shown below.  
 
 ```sql
 SELECT *
@@ -846,6 +846,7 @@ Sometimes you want to evaluate missing data patterns.  For example, maybe there'
 
 ```
 @AlaSQL.eva.("#dataTable10e")
+
 <table id="dataTable10e" border="1"></table><br>
 
 <div style = "display:none;">
@@ -857,17 +858,16 @@ Sometimes you want to evaluate missing data patterns.  For example, maybe there'
 
 Another useful piece of SQL syntax for exporing datasets is the `ORDER BY` statement, which (as its name suggests) is used to order your result set by a given set of one or more columns.
 
-When listing columns in the `ORDER BY` statment you can specify that they be sorted in either ascending (`ASC`) or descending (`DESC`) order. If you list more than one column in `ORDER BY`, items will be sorted first by the first column you provide, and then, within "ties", by the second, then third, etc., column.  For instance, the code below first sorts by `sex`, and then within each possible value of `sex` sorts by `ethnicity`.  Run it to see the results!
+When listing columns in the `ORDER BY` statment you can specify that they be sorted in either ascending (`ASC`) or descending (`DESC`) order. If you list more than one column in `ORDER BY`, items will be sorted first by the first column you provide, and then, within "ties", by the second, then third, etc., column.  For instance, the code below first sorts by `county`, and then within each possible value of `county` sorts by `ethnicity`.  Run it to see the results!
 
 ```sql
 SELECT DISTINCT
-  patients.sex
+  patients.county
   ,patients.ethnicity
 FROM alasql.patients
 ORDER BY
-  patients.sex ASC
+  patients.county ASC
   ,patients.ethnicity DESC;
-
 ```
 @AlaSQL.eval("#dataTable9")
 
@@ -875,7 +875,7 @@ ORDER BY
 
 <div class = "important">
 
-By default, all items in the `order by` clause will be sorted in `asc` order if no explicit ordering direction is provided.
+By default, all items in the `ORDER BY` clause will be sorted in `asc` order if no explicit ordering direction is provided.
 
 </div>
 
