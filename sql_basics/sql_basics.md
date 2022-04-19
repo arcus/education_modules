@@ -604,14 +604,79 @@ FROM alasql.patients;
 
 Here's a pro tip!  The `DISTINCT` keyword is especially useful for removing duplicates rows from the result set of your SQL queries.  If you suspect that there may be duplicate data, you can use `SELECT DISTINCT` to make sure you only get one copy of any identical rows of results.  
 
-However, if you notice an increasing reliance on `SELECT DISTINCT`, you might want to ask the deeper question of what is creating duplicate records.  This could be a symptom of a poorly written query further up in your analysis, or a problem with the underlying data.  Because `SELECT DISTINCT` requires each row of output to be compared with every other row, it is computationally expensive, and you should use it sparingly.
+However, if you notice an increasing reliance on `SELECT DISTINCT` to eliminate troublesome duplication, you might want to ask the deeper question of what is creating duplicate records.  This could be a symptom of a poorly written query further up in your analysis, or a problem with the underlying data.  Because `SELECT DISTINCT` requires each row of output to be compared with every other row, it is computationally expensive.  This doesn't matter much when you're looking at a field or two (like we did to see the possible combinations of sex and ethnicity), but can cause slowness when you are using `SELECT DISTINCT` across many fields (like a `SELECT DISTINCT *` query).
 
 </div>
 
 <div style = "display:none;">
-
 @AlaSQL.buildTable_patients
+</div>
 
+### Quiz: SELECT, FROM, DISTINCT
+
+Which of the following is **not** true about DISTINCT?  Select all that apply!
+
+[[ ]] `DISTINCT` returns rows that are unique, with no duplicated rows in the result set
+[[ ]] `DISTINCT` is a handy tool for seeing what possible values, or value combinations, exist in various columns (or sets of columns)
+[[X]] `DISTINCT` is computationally inexpensive and doesn't use much in the way of resources
+[[X]] `DISTINCT` immediately follows FROM in a query
+[[ ]] `DISTINCT` immediately follows SELECT in a query
+***************
+
+<div class = "answer">
+`DISTINCT` is a powerful tool that allows you to retrieve a unique set of rows with no duplication.  This is great for eliminating duplicated data or finding out what the possible values for a single column are (or the possible combinations of values across two or more columns). The `DISTINCT` keyword appears directly after the `SELECT` keyword in a query.  It's useful, but it can also be computationally expensive, so if you end up using DISTINCT across many columns of data in order to eliminate duplicate rows, consider doing a bit of investigation about why there's so much duplication! </div>
+
+**************
+
+In the code block below, write a query that will return the unique combinations of `county` and `state` from the `patients` table.  Then we'll ask you a question about your findings!
+
+```sql
+
+```
+@AlaSQL.eval("#dataTable0a")
+<table id="dataTable0a" border="1"></table><br>
+
+How many rows do you have in your results?  Type the number with no spaces or extra characters.
+
+[[8]]
+***************
+
+<div class = "answer">
+You should have 8 rows displayed!  If you don't, we'll share the query we used in the explanation of the next question.
+</div>
+
+**************
+
+Which of the following statements are true about your data?  Select all that apply!
+
+[[X]] There are no patients with a `state` value of Pennsylvania
+[[X]] There are no patients from Hampshire county
+[[ ]] There are four counties represented from Massachusetts
+[[ ]] Bristol County appears twice, once for Massachusetts and once for New Jersey
+[[ ]] Connecticut appears with four counties
+***************
+
+<div class = "answer">
+Wondering how we got these answers?
+
+Run the following query:
+
+```sql
+SELECT DISTINCT
+	county
+	,state
+FROM alasql.patients;
+```
+@AlaSQL.eval("#dataTable0b")
+<table id="dataTable0b" border="1"></table><br>
+
+
+</div>
+
+**************
+
+<div style = "display:none;">
+@AlaSQL.buildTable_patients
 </div>
 
 ### Adding Comments
@@ -645,9 +710,9 @@ FROM alasql.patients;
     Aren't Comments Great!
 */
 ```
-@AlaSQL.eval("#dataTable11")
+@AlaSQL.eval("#dataTable8a")
 
-<table id="dataTable11" border="1"></table><br>
+<table id="dataTable8a" border="1"></table><br>
 
 <div style = "display:none;">
 
@@ -668,9 +733,9 @@ WHERE
 	patients.state='Massachusetts';
 
 ```
-@AlaSQL.eval("#dataTable4")
+@AlaSQL.eval("#dataTable9a")
 
-<table id="dataTable4" border="1"></table><br>
+<table id="dataTable9a" border="1"></table><br>
 
 Although the above example lists only one constraint for the dataset, the WHERE clause can contain any number of filtering arguments needed.
 
@@ -688,14 +753,26 @@ WHERE
 	)
 
 ```
-@AlaSQL.eval("#dataTable5")
+@AlaSQL.eval("#dataTable9b")
 
-<table id="dataTable5" border="1"></table><br>
+<table id="dataTable9b" border="1"></table><br>
+
+Ready to try your luck at a complex WHERE statement?
+
+Get every field from `patients` for all male patients who were born on or after January 1, 2001.  Not sure about the field name that holds sex, or whether male is coded "Male", "male", "M", or some other way?  Look at the results of other queries to get this information!
+
+```sql
+SELECT
+FROM
+WHERE
+
+```
+@AlaSQL.eval("#dataTable9c")
+
+<table id="dataTable9c" border="1"></table><br>
 
 <div style = "display:none;">
-
 @AlaSQL.buildTable_patients
-
 </div>
 
 ### Dealing with Null Values
@@ -704,7 +781,9 @@ Like many programing languages, **SQL** deals with "blank" values in a very spec
 
 **SQL** uses the concept of **null** to represent "blank" row values.
 
-If you ever find yourself in a situation where you need to filter on null values you can use the `IS NULL` or `IS NOT NULL` operators as shown below.  Here, we're asking to see rows from the `allergies` table where the `stop` value (the date at which the presumed allergy was considered no longer applicable, resolved, a mistake, or not an allergy) isn't missing.  In other words, the allergy has a date at which it was ruled to not exist.
+If you ever find yourself in a situation where you need to filter on null values you can use the `IS NULL` or `IS NOT NULL` operators as shown below.
+
+Here, we're asking to see rows from the `allergies` table where the `stop` value (the date at which the presumed allergy was considered no longer applicable, resolved, a mistake, or not an allergy) isn't missing.  In other words, the allergy has a date at which it was ruled to not exist.
 
 ```sql
 SELECT *
@@ -713,21 +792,20 @@ WHERE
     allergies.stop IS NOT NULL; -- there is some value here, it's not empty
 
 ```
-@AlaSQL.eval("#dataTable6")
+@AlaSQL.eval("#dataTable10b")
 
-<table id="dataTable6" border="1"></table><br>
+<table id="dataTable10b" border="1"></table><br>
 
 Its also worth noting that null values are treated very differently from actual data.  Note that you cannot use operators like `=` to ask if something is null, because null values are inherently unknowable, so we can't know what a null value is equal to.  You can't do math with a null value and you can't compare to a null value.  To illustrate this point, we can look at the example code below.  
 
-Consider three options with regards to the `stop` column of `allergies`.  The `stop` column will meet, for each row, one of the conditions below:
+Consider the options with regards to the `stop` column of `allergies`.  The `stop` column will meet, for each row, one of the conditions below:
 
-1) A date less than (earlier than) March 1, 2020,
+1. A date less than (earlier than) March 1, 2020,
+2. A date equal to March 1, 2020,
+3. A date greater than (after) March 1, 2020,
+4. No date at all (null)
 
-2) A date on or greater than (after) March 1, 2020,
-
-3) No date at all (null)
-
-It's important to realize that the code below includes **only** the first case.  Rows that meet the second condition are in direct violation of the WHERE clause and are not included.  Rows that fall into the third condition (null) cannot be evaluated with a comparison operator, and are left out as well.
+It's important to realize that the code below includes **only** the first case.  Rows that meet the second or third condition are in direct violation of the WHERE clause and are not included.  Rows that fall into the fourth condition (null) cannot be evaluated with a comparison operator, and are left out as well.
 
 ```sql
 SELECT *
@@ -736,11 +814,11 @@ WHERE
     allergies.stop < '2020-03-01'
 
 ```
-@AlaSQL.eval("#dataTable7")
+@AlaSQL.eval("#dataTable10c")
 
-<table id="dataTable7" border="1"></table><br>
+<table id="dataTable10c" border="1"></table><br>
 
-In order to make sure that records where the `stop` date is null are also included in our output we will need to add another line to the select statement to explicitly include them, as shown below:
+Maybe you're aware that allergies with a `stop` date prior to March 1, 2020 are actually problematic and need to be checked -- these could be real allergies.  And to that group of possible allergies you want to add the cases where there is no `stop` date at all, where we can presume that the allergy wasn't ruled out.  In order to make sure that records where the `stop` date is null are also included in our output we will need to add another line to  the select statement to explicitly include them, as shown below.  
 
 ```sql
 SELECT *
@@ -752,9 +830,9 @@ WHERE
     )
 
 ```
-@AlaSQL.eval("#dataTable8")
+@AlaSQL.eval("#dataTable10d")
 
-<table id="dataTable8" border="1"></table><br>
+<table id="dataTable10d" border="1"></table><br>
 
 <div class = "warning">
 
@@ -762,10 +840,17 @@ The fact that nulls aren't included in comparisons is a very subtle distinction 
 
 </div>
 
+Sometimes you want to evaluate missing data patterns.  For example, maybe there's a discernible pattern in patients who are missing sex or race data.  Write a query that will give you all the fields for rows in `patients` where either the sex or race data is missing.
+
+```sql
+
+```
+@AlaSQL.eva.("#dataTable10e")
+<table id="dataTable10e" border="1"></table><br>
+
 <div style = "display:none;">
-
 @AlaSQL.buildTable_allergies
-
+@AlaSQL.buildTable_patients
 </div>
 
 ### ORDER BY Statement
@@ -827,11 +912,11 @@ LIMIT 3;
 
 ### Aliasing with AS
 
-In SQL, it is possible to assigne a custom name (usually a kind of shortened name) to a table or column in your query using a technique called **Aliasing**.
+In SQL, it is possible to assign a custom name (usually a kind of shortened name) to a table or column in your query using a technique called **aliasing**.
 
 * Aliasing **tables** can be helpful for long or complex queries involving multiple tables because it allows you to avoid typing out the full name of a table each time you refer to it.  For example, in a long query involving the `patients` table, the `encounters` table, and the `diagnosis` table, you might prefer to use the shorthand terms `pt`, `enc`, and `dx` or even `p`, `e`, and `d`.
 
-* Aliasing **columns** can be helpful to by assigning clearer, more comprehensible, names for a given column than the name that might be assigned to it in the database.  For example, the you might want to see the results from the `stop` column in the `allergies` table returned to you not as `stop`, but rather as `ruled_out_date`.
+* Aliasing **columns** can be helpful to by assigning clearer, more comprehensible names for a given column than the name that might be assigned to it in the database.  For example, the you might want to see the results from the `stop` column in the `allergies` table returned to you not as `stop`, but rather as `ruled_out_date`.
 
 Aliases are assigned by placing the `AS` key word directly after the item (table/column) you would like to alias, followed by the name you would like to assign as its **alias**.
 
@@ -844,17 +929,31 @@ SELECT
   ,p.race
   ,p.ethnicity
   ,p.state AS state_name
-FROM alasql.patients AS p
+FROM alasql.patients AS p;
 
 ```
-@AlaSQL.eval("#dataTable12")
+@AlaSQL.eval("#dataTable13a")
 
-<table id="dataTable12" border="1"></table><br>
+<table id="dataTable13a" border="1"></table><br>
+
+In the SQL code block below, try writing a query that accomplishes the following.  Because there are several constraints, try starting with a simple query (something like a `SELECT * ...`) and gradually changing it so that you knock out one bullet point at a time.
+
+* Retrieves the patient identifier, sex, ethnicity, state, and zip
+* Aliases the `patients` table as `pt`
+* Aliases the `sex` field as `sex_assigned_at_birth`
+* Aliases `zip` as `postal_code`
+* Orders the result by zip
+
+```sql
+
+
+```
+@AlaSQL.eval("#dataTable13a")
+
+<table id="dataTable13a" border="1"></table><br>
 
 <div style = "display:none;">
-
 @AlaSQL.buildTable_patients
-
 </div>
 
 ## Recap
