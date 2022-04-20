@@ -126,32 +126,32 @@ try {
 @AlaSQL.buildTable_patients
 <script>
     alasql("DROP TABLE IF EXISTS patients;");
-    alasql("create table patients (id text,birthdate date,deathdate date,ssn text,drivers text,passport text,prefix text,first text,last text,suffix text,maiden text,marital text,race text,ethnicity text,sex text,birthplace text,address text,city text,state text,county text,zip integer,lat real,lon real);");
-    alasql("INSERT INTO patients VALUES ('bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','2000-11-21',null,'999-87-8860','S99917788',null,'Ms.','Cecila','Feil',null,null,null,'white','nonhispanic','F','Nahant  Massachusetts  US','873 Mueller Arcade Unit 96','Ashland','Massachusetts','Middlesex County',null,42.2138985577807,-71.503695110333);");
-    alasql("INSERT INTO patients VALUES ('e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','2013-07-02',null,'999-82-6451',null,null,null,'Lorrie','Leannon',null,null,null,'white','nonhispanic','F','Winthrop  Massachusetts  US','813 Casper Street','Peabody','Massachusetts','Essex County',1940,42.4951616189433,-71.0071749067398);");
-    alasql("INSERT INTO patients VALUES ('e061409e-4b85-4ec1-b1f7-02677d51f763','1997-09-11',null,'999-32-2366','S99995098','X50396137X','Ms.','Tabetha','OHara',null,null,null,'white','nonhispanic','F','Auburn  Massachusetts  US','1080 Sawayn Gateway Suite 9','Framingham','Massachusetts','Middlesex County',1701,42.3224819015944,-71.4003256055831);");
-    alasql("INSERT INTO patients VALUES ('71e13815-55fb-4734-bcac-6079160d82a0','1973-06-02',null,'999-94-8759','S99996780','X23275205X','Mrs.','Laticia','Flatley',null,'Rempel203','M','white','nonhispanic','F','Boston  Massachusetts  US','469 Gerhold Bay Unit 34','Waltham','Massachusetts','Middlesex County',2451,42.4312144913848,-71.2680783842969);");
-    alasql("INSERT INTO patients VALUES ('ca3330c5-bbbc-47e7-addb-302f2e069986','2003-06-23',null,'999-44-5854','S99912993',null,null,'Golden','Pollich',null,null,null,'white','nonhispanic','F','Carlisle  Massachusetts  US','792 OKon Byway','Springfield','Massachusetts','Hampden County',1105,42.0930726815877,-72.5803988374441);");
-    alasql("INSERT INTO patients VALUES ('24bca5cf-ba55-457f-8e80-49690202443c','1977-06-28',null,'999-31-8026','S99975475','X46617643X','Mr.','Lionel','Fadel',null,null,'M','white','nonhispanic','M','Dighton  Massachusetts  US','1015 Parisian Divide Unit 26','Fairhaven','Massachusetts','Bristol County',null,41.6529893063487,-70.8948756027136);");
-    alasql("INSERT INTO patients VALUES ('841095eb-d29f-4492-8f0e-08011321e85d','2017-04-08',null,'999-81-1909',null,null,null,'Carlton','Leffler',null,null,null,'asian','nonhispanic','M','Ipswich  Massachusetts  US','344 Feest Camp Suite 73','Wakefield','Massachusetts','Middlesex County',1880,42.4780284069299,-71.0892699664186);");
-    alasql("INSERT INTO patients VALUES ('ee7f6c74-a8ed-4147-b8e2-4879c8657b0f','1950-04-11',null,'999-24-8407','S99984370','X70737069X','Mr.','Kelvin','Powlowski',null,null,'M','white','nonhispanic','M','Fall River  Massachusetts  US','623 Runolfsson Annex Suite 88','Revere','Massachusetts','Suffolk County',2151,42.4674386785624,-71.0070987954362);");
-    alasql("INSERT INTO patients VALUES ('ab6a2662-f6d1-4da6-b3ce-3929d68650d7','1971-01-16',null,'999-76-3317','S99978505','X28929072X','Mrs.','Miesha','Wyman',null,'Jacobs452','M','white','nonhispanic','F','Harvard  Massachusetts  US','850 Thiel Road Unit 0','Westfield','Massachusetts','Hampden County',1086,42.0904434489837,-72.7927566478986);");
-    alasql("INSERT INTO patients VALUES ('4440ff11-69ec-440b-a2bd-dc1c14105e8e','2001-11-20',null,'999-68-1710','S99968894',null,'Ms.','Ona','Dooley',null,null,null,'white','hispanic','F','Athol  Massachusetts  US','1048 Weimann Throughway','Northborough','Massachusetts','Worcester County',null,42.3661545339449,-71.6515505734496);");
-    alasql("INSERT INTO patients VALUES ('1aa71b23-790e-4d22-92da-c689682c8993','1993-05-03',null,'999-84-7590','S99922416','X45217366X','Ms.','Jeannie','VonRueden',null,null,null,'white','nonhispanic','F','Ashburnham  Massachusetts  US','711 Williamson Dale','Ayer','Massachusetts','Middlesex County',null,42.5198988512541,-71.6009012317879);");
-    alasql("INSERT INTO patients VALUES ('848e0227-5d5d-4bdf-8603-207cdea72e2a','1949-03-27',null,'999-87-5716','S99971093','X51980015X','Mrs.','Alda','Kris',null,'Satterfield305','M','white','nonhispanic','F','Mansfield  Massachusetts  US','1090 Wiegand Union','Attleboro','Massachusetts','Bristol County',null,41.9326094578451,-71.3272454816091);");
-    alasql("INSERT INTO patients VALUES ('eafd1fd3-3778-423a-ba79-4584bd310eb4','2003-07-05',null,'999-39-2345','S99942603',null,null,'Buford','Lynch',null,null,null,'white','nonhispanic','M','Walpole  Massachusetts  US','332 Witting Mission','Malden','Massachusetts','Middlesex County',null,42.4569197038897,-71.0641138577902);");
-    alasql("INSERT INTO patients VALUES ('0288abb6-633c-40c3-ba0c-66c7d957727e','1950-11-28',null,'999-18-7195','S99953954','X15598453X','Mrs.','Keva','Shanahan',null,'Reichel38','M','white','nonhispanic','F','Winchendon  Massachusetts  US','169 Witting Orchard Unit 98','Williamstown','Massachusetts','Berkshire County',null,42.7353013466036,-73.1923384461437);");
-    alasql("INSERT INTO patients VALUES ('097079b1-ff8f-4ee0-8ce3-0ea744ecfa21','2003-06-18',null,'999-43-8940','S99945945',null,null,'Maribeth','DAmore',null,null,null,'white','hispanic','F','Fall River  Massachusetts  US','238 Mills Hollow','Holyoke','Massachusetts','Hampden County',1040,42.1738356843755,-72.6457553208547);");
-    alasql("INSERT INTO patients VALUES ('78a9a8d6-b3b2-47dc-b4a0-867abec7c78f','1993-05-01',null,'999-75-7372','S99974220','X59022582X','Mr.','James','Wyman',null,null,null,'white','nonhispanic','M','Stoughton  Massachusetts  US','702 Stoltenberg Course Apt 16','Attleboro','Massachusetts','Bristol County',2703,41.9406317547512,-71.311136544988);");
-    alasql("INSERT INTO patients VALUES ('c05478a7-a4df-4fd3-8d68-60b9452d4781','2010-10-14',null,'999-96-3194',null,null,null,'Brandon','Hagenes',null,null,null,'white','nonhispanic','M','Natick  Massachusetts  US','519 Thiel Annex Apt 55','Pittsfield','Massachusetts','Berkshire County',null,42.4079671056193,-73.3177862656724);");
-    alasql("INSERT INTO patients VALUES ('e188fafe-c1bb-45dc-9627-4ff4e4bc0ec0','2008-07-16',null,'999-93-5743',null,null,null,'Frances','Schumm',null,null,null,'white','nonhispanic','M','Chelsea  Massachusetts  US','826 Hammes Mission Apt 1','Natick','Massachusetts','Middlesex County',null,42.2584672080661,-71.3444415391516);");
-    alasql("INSERT INTO patients VALUES ('8db0d104-4c3f-40d3-bcf5-f5eb81b7308f','2002-03-02',null,'999-93-1045','S99931036',null,'Ms.','Essie','Kutch',null,null,null,'white','nonhispanic','F','Cambridge  Massachusetts  US','219 Gorczany Gateway Unit 71','Chelmsford','Massachusetts','Middlesex County',null,42.5642627698721,-71.3448142130082);");
-    alasql("INSERT INTO patients VALUES ('df7c1d66-eac2-49bd-9d12-ee17e8758f68','1979-11-19',null,'999-19-4886','S99963281','X82905419X','Mrs.','Iraida','Oberbrunner',null,'Sporer811','M','white','nonhispanic','F','Hanson  Massachusetts  US','903 Spencer Gate Suite 97','Springfield','Massachusetts','Hampden County',null,42.018977154431,-72.5783835627201);");
-    alasql("INSERT INTO patients VALUES ('68878f91-5962-4ef2-83e7-43b8298c1708','1977-11-07',null,'999-40-6743','S99988503','X59484000X','Mr.','Ali','Maggio',null,null,'S','asian','nonhispanic','M','Taunton  Massachusetts  US','448 Rath Glen','Boston','Massachusetts','Suffolk County',2118,42.3425177110989,-71.1548454376564);");
-    alasql("INSERT INTO patients VALUES ('1c2aa038-9366-4c7d-9a3e-52cb753a670f','1962-09-13',null,'999-19-8817','S99966954','X83180931X','Mr.','Homero','Carrillo',null,null,'M','white','hispanic','M','Gaudalajara  Jalisco  MX','627 Weissnat Fork','Boston','Massachusetts','Suffolk County',2128,42.3109346386431,-71.0700902117231);");
-    alasql("INSERT INTO patients VALUES ('8d202c65-427d-4190-8c28-3aa27e1a9f4c','1986-10-24',null,'999-82-4546','S99932840','X66208297X','Mrs.','Mariam','Bogisich',null,'Hermann103','M','white','nonhispanic','F','Milton  Massachusetts  US','1032 McClure Extension Unit 88','Framingham','Massachusetts','Middlesex County',1701,42.3029088307893,-71.4025310847364);");
-    alasql("INSERT INTO patients VALUES ('2a6d1e58-88eb-4be0-b6b4-59a471257c2e','1964-10-10',null,'999-22-8704','S99976805','X66668021X','Ms.','Nikia','Herzog',null,null,'S','white','nonhispanic','F','Wareham  Massachusetts  US','679 Robel Junction Apt 36','Quincy','Massachusetts','Norfolk County',2169,42.2640821758816,-71.0518467413496);");
-    alasql("INSERT INTO patients VALUES ('e6ff4bf9-09c2-4976-aa84-cca142207cf8','1998-12-23',null,'999-91-5603','S99952608','X23816401X','Ms.','Corie','Howe',null,null,null,'white','nonhispanic','F','West Boylston  Massachusetts  US','580 Hickle Dam','Brookline','Massachusetts','Norfolk County',2215,42.3312937592791,-71.1672225619312);");
+    alasql("create table patients (id text,birthdate date,deathdate date,ssn text,drivers text,passport text,prefix text,first text,last text,suffix text,maiden text,marital text,race text,ethnicity text,sex text,birthplace text,address text,city text,state text,county text,zip text,lat real,lon real, expenses real, coverage real);");
+    alasql("INSERT INTO patients VALUES ('e974e5c3-9b22-41f2-b3a3-c12848f29a73', '1922-02-14', '2016-04-17', '999-40-9174', 'S99950579', 'X27596354X', 'Mrs.', 'Ramona980', 'Alcaraz418', null, 'V√°zquez552', 'M', 'asian', 'hispanic', 'F', 'Port-au-Prince  Haiti  HT', '932 Hoppe Camp Unit 1', 'Cambridge', 'Massachusetts', 'Middlesex County', '02140', '42.32956821377', '-71.0655750714097', '1399151.49', '28678.46');");
+    alasql("INSERT INTO patients VALUES ('8d236c5c-485e-4030-b3e8-20e580afbb0a', '2010-03-11', null, '999-37-4171', null, null, null, 'Donn979', 'Casper496', null, null, null, 'asian', 'nonhispanic', 'M', 'Westford  Massachusetts  US', '330 Hermiston Trafficway', 'Westborough', 'Massachusetts', 'Worcester County', null, '42.3146913804637', '-71.6092388699133', '232331.46', '2698.17');");
+    alasql("INSERT INTO patients VALUES ('fcc61454-1b07-4e49-a25b-29e5064e0063', '1966-07-06', null, '999-87-1534', 'S99948423', 'X7514421X', 'Mr.', 'Patrick786', 'Farrell962', null, null, 'M', 'asian', 'nonhispanic', 'M', 'Hanoi  H√† ƒê√¥ng  VN', '341 Homenick Trailer Suite 77', 'Marlborough', 'Massachusetts', 'Middlesex County', '01752', '42.3590769360988', '-71.5160843735423', '1392358.66', '5569.53');");
+    alasql("INSERT INTO patients VALUES ('4a50c62e-24ba-459b-993c-0959691cf96d', '1947-07-12', '1989-11-25', '999-13-8181', 'S99993186', 'X9890795X', 'Mrs.', 'Kristeen693', 'Cole117', null, 'Konopelski743', 'M', 'asian', 'nonhispanic', 'F', 'Hong Kong  Hong Kong Special Administrative Region  CN', '1070 Bartoletti Neck', 'Peabody', 'Massachusetts', 'Essex County', null, '42.4942259149787', '-71.0785466574374', '848337.83', '5741.8');");
+    alasql("INSERT INTO patients VALUES ('7f9a57e5-cfc5-4970-b19f-1a7b6ce22882', '1971-09-11', null, '999-59-9011', 'S99961342', 'X35775930X', 'Mrs.', 'Emilie407', 'Bednar518', null, 'Keeling57', 'M', 'asian', 'nonhispanic', 'F', 'Hanoi  H√† ƒê√¥ng  VN', '846 Marvin Approach Unit 12', 'Lowell', 'Massachusetts', 'Middlesex County', '01854', '42.6747573365128', '-71.2862778307696', '1148999.04', '5613.64');");
+    alasql("INSERT INTO patients VALUES ('b1d50391-79c5-403c-919f-3ded66c9d77a', '1959-09-01', null, '999-96-8597', 'S99987915', 'X27141234X', 'Mrs.', 'Gertie348', 'Runolfsson901', null, 'Nolan344', 'M', 'black', 'hispanic', 'F', 'Westborough  Massachusetts  US', '361 Haag Boulevard Unit 0', 'Springfield', 'Massachusetts', 'Hampden County', null, '42.134943625397', '-72.601106133145', '1308480.38', '13897.55');");
+    alasql("INSERT INTO patients VALUES ('e175908a-09db-4730-a311-4e57ba73438b', '2009-05-07', null, '999-19-6600', null, null, null, 'Eveline832', 'Wintheiser220', null, null, null, 'black', 'hispanic', 'F', 'Sandwich  Massachusetts  US', '895 MacGyver Skyway', 'Chicopee', 'Massachusetts', 'Hampden County', '01020', '42.1834548010167', '-72.5016471115102', '26070.08', '645.8');");
+    alasql("INSERT INTO patients VALUES ('50ee80ee-bce0-4794-87f6-d0fb74a88f8a', '1997-10-15', null, '999-42-6450', 'S99964529', 'X81391446X', 'Mr.', 'Esteban536', 'Sierra982', null, null, null, 'black', 'nonhispanic', 'M', 'Carolina  Puerto Rico  PR', '677 Hoppe Rapid', 'Boston', 'Massachusetts', 'Suffolk County', '02134', '42.3620775494977', '-71.0746898287342', '519266.17', '3938');");
+    alasql("INSERT INTO patients VALUES ('5b891358-1bb3-4bbf-b8a6-a73fbe58efe7', '1962-12-21', null, '999-58-8644', 'S99992512', 'X35458892X', 'Ms.', 'Rene434', 'Schinner682', null, null, 'S', 'black', 'nonhispanic', 'F', 'Lowell  Massachusetts  US', '604 Sipes Divide Unit 0', 'Boston', 'Massachusetts', 'Suffolk County', '02136', '42.2380394989987', '-71.1400184488966', '1116196.22', '3667.92');");
+    alasql("INSERT INTO patients VALUES ('d286528e-a39a-4c04-8545-5e648f781052', '1974-04-25', null, '999-72-6418', 'S99924001', 'X17879337X', 'Mrs.', 'Scottie437', 'Koss676', null, 'Witting912', 'M', 'black', 'nonhispanic', 'F', 'Worcester  Massachusetts  US', '474 Hettinger Arcade', 'Hamilton', 'Massachusetts', 'Essex County', null, '42.605565952088', '-70.8917039273168', '890218.58', '7506.68');");
+    alasql("INSERT INTO patients VALUES ('344de08b-bae0-4d79-b89e-a2b6204e1a21', '1941-02-14', '1958-01-03', '999-43-4878', 'S99994390', null, null, 'Sibyl335', 'Zulauf375', null, null, null, 'black', 'nonhispanic', 'F', 'Southbridge  Massachusetts  US', '449 Shields Extension Unit 55', 'Hanover', 'Massachusetts', 'Plymouth County', null, '42.0829961514318', '-70.8269756491514', '449896.36', '1854');");
+    alasql("INSERT INTO patients VALUES ('2abf5d21-8d0f-4263-b720-81d9d25f7a70', '1991-06-20', null, '999-49-8301', 'S99922026', 'X65406262X', 'Mr.', 'Abram53', 'Schinner682', null, null, 'M', 'black', 'nonhispanic', 'M', 'Franklin  Massachusetts  US', '1071 Bahringer Park', 'Mansfield', 'Massachusetts', 'Bristol County', null, '42.0170083027574', '-71.2201039521409', '667979.05', '3695.48');");
+    alasql("INSERT INTO patients VALUES ('6e20fc08-a75d-43db-b642-4f15064aeb0d', '2016-11-21', null, '999-91-7902', null, null, null, 'Cathie710', 'Beatty507', null, null, null, 'black', 'nonhispanic', 'F', 'Marblehead  Massachusetts  US', '227 Rippin Vista', 'Walpole', 'Massachusetts', 'Norfolk County', '02081', '42.1276179917707', '-71.2445777349412', '94888.09', '1549.92');");
+    alasql("INSERT INTO patients VALUES ('ed6fb8d6-c14d-4e34-a029-2dab33855ddd', '1973-06-10', null, '999-41-4345', 'S99931849', 'X85490024X', 'Mrs.', 'Sara501', 'Arreola736', null, 'Medina536', 'M', 'native', 'hispanic', 'F', 'Caguas  Puerto Rico  PR', '313 Gulgowski Plaza Unit 81', 'Peabody', 'Massachusetts', 'Essex County', null, '42.5629355117525', '-71.017704116768', '155686.2', '20059.08');");
+    alasql("INSERT INTO patients VALUES ('ca24f616-30cc-4351-aca9-1b49297de076', '1942-05-23', '2001-02-10', '999-61-4406', 'S99934749', 'X55713048X', 'Mr.', 'Filiberto722', 'Adams676', null, null, 'M', 'native', 'nonhispanic', 'M', 'Boston  Massachusetts  US', '673 Pagac Esplanade Apt 20', 'Chatham', 'Massachusetts', 'Barnstable County', '02633', '41.6887565172739', '-69.9407634414895', '198943.29', '51847.26');");
+    alasql("INSERT INTO patients VALUES ('cafc2141-2307-4f62-abd1-2d6e5486d7a5', '1942-05-23', '2011-12-14', '999-68-4539', 'S99979088', 'X14233432X', 'Mr.', 'Alonso270', 'Gerhold939', null, null, 'M', 'native', 'nonhispanic', 'M', 'West Springfield  Massachusetts  US', '260 Effertz Hollow', 'Chatham', 'Massachusetts', 'Barnstable County', '02633', '41.6313534346182', '-70.0176252634712', '236803.89', '34294.4');");
+    alasql("INSERT INTO patients VALUES ('88ea8573-863c-47e3-b144-b810c63156a0', '1962-10-25', null, '999-64-2812', 'S99970548', 'X27386052X', 'Mrs.', 'Mayte822', 'Candelaria844', null, 'Hernandes724', 'M', 'other', 'hispanic', 'F', 'Santo Domingo  National District  DO', '222 Weimann Parade Apt 21', 'Billerica', 'Massachusetts', 'Middlesex County', null, '42.5605178544939', '-71.2305090816335', '1198802.9', '49212.96');");
+    alasql("INSERT INTO patients VALUES ('0982ef39-7ff9-4c24-8239-e9fc0667e8ca', '1998-12-14', null, '999-87-3074', 'S99917986', 'X72211827X', 'Ms.', 'Stasia733', 'Kirlin939', null, null, null, 'other', 'nonhispanic', 'F', 'Lynn  Massachusetts  US', '958 Robel Run Unit 83', 'Carver', 'Massachusetts', 'Plymouth County', null, '41.9005925642133', '-70.7320231895707', '37492.08', '444.96');");
+    alasql("INSERT INTO patients VALUES ('29fc389e-f454-4907-8fa5-987f312cc32a', '1982-03-07', null, '999-59-4905', 'S99924114', 'X76526910X', 'Mr.', 'Eusebio566', 'Cremin516', null, null, 'M', 'white', 'hispanic', 'M', 'Woburn  Massachusetts  US', '915 Legros Neck Apt 5', 'Lynn', 'Massachusetts', 'Essex County', '01905', '42.4827539638704', '-70.8578543300735', '791005.88', '4364.56');");
+    alasql("INSERT INTO patients VALUES ('99b1c709-00fc-4be2-97ba-a6222e567305', '1992-10-05', null, '999-72-9974', 'S99975875', 'X37620710X', 'Mr.', 'Forrest301', 'Jacobs452', null, null, 'M', 'white', 'hispanic', 'M', 'Wrentham  Massachusetts  US', '722 Ullrich Promenade', 'Everett', 'Massachusetts', 'Middlesex County', '02148', '42.4779060051335', '-71.0204050464474', '733205.81', '2664.8');");
+    alasql("INSERT INTO patients VALUES ('ab88386a-1c0d-4d1c-89fc-b38f631b3edc', '1990-01-25', null, '999-85-3833', 'S99935526', 'X74358200X', 'Mrs.', 'Oda116', 'Willms744', null, 'Dietrich576', 'M', 'white', 'nonhispanic', 'F', 'Acushnet  Massachusetts  US', '158 Rempel Drive', 'Wareham', 'Massachusetts', 'Plymouth County', null, '41.7864240325723', '-70.7434572830845', '753274.93', '4847.99');");
+    alasql("INSERT INTO patients VALUES ('03963166-b49f-4440-a80d-30abb90b4a78', '1979-08-19', null, '999-53-2391', 'S99976779', 'X57420256X', 'Mr.', 'Jacob959', 'Daniel959', null, null, 'M', 'white', 'nonhispanic', 'M', 'Danvers  Massachusetts  US', '699 Ankunding Run Apt 36', 'Norwood', 'Massachusetts', 'Norfolk County', '02062', '42.1716590630744', '-71.2263318929621', '125695.89', '4242.12');");
+    alasql("INSERT INTO patients VALUES ('dcda9f18-59eb-402e-985b-f13c15c2131c', '2012-12-19', null, '999-10-6031', null, null, null, 'Colby655', 'Gleichner915', null, null, null, 'white', 'nonhispanic', 'M', 'Peabody  Massachusetts  US', '408 Dicki Corner Unit 82', 'Everett', 'Massachusetts', 'Middlesex County', '02148', '42.4043223426552', '-71.0735281194192', '197008.18', '2066.56');");
+    alasql("INSERT INTO patients VALUES ('1474f954-3781-4de1-9d5d-27a2b8688419', '1994-02-25', null, '999-61-4523', 'S99953247', 'X66416063X', 'Ms.', 'Tamisha203', 'Considine820', null, null, null, 'white', 'nonhispanic', 'F', 'Worcester  Massachusetts  US', '589 McLaughlin Route Apt 69', 'Wareham', 'Massachusetts', 'Plymouth County', null, '41.7607992858186', '-70.7511725489897', '84681.47', '9639.33');");
+    alasql("INSERT INTO patients VALUES ('55506d51-2c6a-4608-aae3-7cb2f111c926', '1941-06-14', null, '999-49-7097', 'S99984057', 'X2961509X', 'Ms.', 'Rosalind66', 'Torp761', null, null, 'S', 'white', 'nonhispanic', 'F', 'Ludlow  Massachusetts  US', '1000 Runolfsdottir Extension', 'Lowell', 'Massachusetts', 'Middlesex County', '01851', '42.6514751630267', '-71.318674676214', '1716727.06', '7784.36');");
 </script>
 @end
 
@@ -385,7 +385,7 @@ LIMIT 10;
 
 <div class = "important">
 
-Don't worry -- the data here, although it **looks** like human subject or patient data, is completely fabricated.
+Don't worry -- the data here, although it **looks** like human subject or patient data, is completely fabricated.  We used sample data from the open source project [Synthea](https://synthetichealth.github.io/synthea).
 
 </div>
 
@@ -854,6 +854,104 @@ Sometimes you want to evaluate missing data patterns.  For example, maybe there'
 @AlaSQL.buildTable_patients
 </div>
 
+### Quiz: Comments, WHERE, Null Values
+
+What has to change to make this code work?  Select all that apply.  You will be able to check your own work!
+
+```sql
+SELECT
+FROM alasql.patients
+WHERE
+  race = NULL OR
+  sex = NULL.
+```
+@AlaSQL.eval("#dataTable0d")
+
+<table id="dataTable0d" border="1"></table><br>
+
+[[X]] ` = NULL ` should be changed to ` IS NULL `
+[[ ]] `OR` should be in lowercase
+[[X]] A column selection should be made after the `SELECT` keyword
+[[X]] The period at the end of the query should be replaced with a semicolon
+[[ ]] The two conditions in the `WHERE` clause should be enclosed by parentheses
+***************
+
+<div class = "answer">
+First things first, what are you `SELECT`ing?  Also, you do need to replace the ` = NULL` to ` IS NULL `, and end the query with a semicolon, not a period.
+
+`OR` isn't case sensitive, but we suggest leaving it in CAPITAL letters so it stands out as a keyword.  And since there's no nesting and no mixing of `AND` and `OR`, parentheses around the `WHERE` clauses is totally optional.  You only really **have** to add parentheses when you're mixing operations (just as in math, to make sure things get added before they're multiplied).
+
+</div>
+
+What has to change to make this code work?  Select all that apply.  You will be able to check your own work!
+
+```sql
+SELECT *             # we want all the fields/columns
+FROM alasql.patients # note that this uses dot notation
+WITH
+  sex = M;
+```
+@AlaSQL.eval("#dataTable0d")
+
+<table id="dataTable0d" border="1"></table><br>
+
+
+[[ ]] ` = NULL ` should be changed to ` IS NULL `
+[[ ]] `OR` should be in lowercase
+[[X]] A column selection should be made after the `SELECT` keyword
+[[ ]] The period at the end of the query should be replaced with a semicolon
+[[X]] The two conditions in the `WHERE` clause should be enclosed by parentheses
+***************
+
+<div class = "answer">
+First things first, what are you `SELECT`ing?  Also, you do need to replace the ` = NULL` to ` IS NULL `, and end the query with a semicolon, not a period.
+
+`OR` isn't case sensitive, but we suggest leaving it in CAPITAL letters so it stands out as a keyword.  And since there's no nesting and no mixing of `AND` and `OR`, parentheses around the `WHERE` clauses is totally optional.  You only really **have** to add parentheses when you're mixing operations (just as in math, to make sure things get added before they're multiplied).
+
+</div>
+
+How many rows do you have in your results?  Type the number with no spaces or extra characters.
+
+[[8]]
+***************
+
+<div class = "answer">
+You should have 8 rows displayed!  If you don't, we'll share the query we used in the explanation of the next question.
+</div>
+
+**************
+
+Which of the following statements are true about your data?  Select all that apply!
+
+[[X]] There are no patients with a `state` value of Pennsylvania
+[[X]] There are no patients from Hampshire county
+[[ ]] There are four counties represented from Massachusetts
+[[ ]] Bristol County appears twice, once for Massachusetts and once for New Jersey
+[[ ]] Connecticut appears with four counties
+***************
+
+<div class = "answer">
+Wondering how we got these answers?
+
+Run the following query:
+
+```sql
+SELECT DISTINCT
+	county
+	,state
+FROM alasql.patients;
+```
+@AlaSQL.eval("#dataTable0b")
+<table id="dataTable0b" border="1"></table><br>
+
+
+</div>
+
+**************
+
+
+
+
 ### ORDER BY Statement
 
 Another useful piece of SQL syntax for exporing datasets is the `ORDER BY` statement, which (as its name suggests) is used to order your result set by a given set of one or more columns.
@@ -955,6 +1053,10 @@ In the SQL code block below, try writing a query that accomplishes the following
 <div style = "display:none;">
 @AlaSQL.buildTable_patients
 </div>
+
+### Quiz: ORDER BY, LIMIT, AS
+
+
 
 ## Recap
 
