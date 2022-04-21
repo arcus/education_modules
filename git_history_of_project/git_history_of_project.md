@@ -146,7 +146,7 @@ Using `HEAD` to refer to your commits can be great for looking at recent version
 <div class = "learnmore">
 Git is a big pile of mixed metaphors, and in the case of `HEAD`, it is referencing the idea of a [recording head](https://en.wikipedia.org/wiki/Recording_head) which writes audio or video input to a tape.
 
-`HEAD` is a "pointer," it doesn't contain any information of its own. `HEAD` points to the commit you are currently working from, and it is possible to change which commit `HEAD` is pointing to. Moving `HEAD` so that it points somewhere else can be useful when you are trying to [go back to an earlier version](link/to/timetravel/module) of your work, but is outside the scope of this module.
+`HEAD` is a "pointer," it doesn't contain any information of its own. `HEAD` points to the commit you are currently working from, and it is possible to change which commit `HEAD` is pointing to. Moving `HEAD` so that it points somewhere else can be useful when you are trying to go back to an earlier version of your work, but is outside the scope of this module.
 </div>
 
 ### Using the commit number
@@ -479,8 +479,6 @@ You can conclude from this output that you must have committed, and then added t
 This module was based on examples from [Software Carpentry](https://software-carpentry.org)'s [lessons on using Git](https://swcarpentry.github.io/git-novice/). The story of Dracula and Wolfman's planned trip to Mars is borrowed from them, and more examples are available in the original lesson:
 
  - Lesson 5: [Exploring History](https://swcarpentry.github.io/git-novice/05-history/index.html)
-
-This module is also the fourth in a series of modules about Git. We suggest continuing with the next module in the series on [working with others in Git](link/goes/here).
 
 <div class = "options">
 If you have a repository with at least a few commits in it, such as the one created in the previous module in this series, you can use this module as a framework for exploring the history of that project.
