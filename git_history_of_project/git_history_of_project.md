@@ -94,7 +94,7 @@ You are going to learn about two ways to refer to past commits:
 
 These will let you navigate and explore the previous versions of repositories.
 
-![The Commit Stack: 3 flat white boxes, stacked on top of each other. The top box is labeled "last committed version of repository", the middle box is labeled "next to last version of repository" and the bottom is labeled "previous version of repository". Three dots below the lowest box indicate that this pattern continues.](media/Commit_stack.svg)
+![The Commit Stack: 3 flat white boxes, stacked on top of each other. The top box is labeled "last committed version of repository", the middle box is labeled "next to last version of repository" and the bottom is labeled "previous version of repository". Three dots below the lowest box indicate that this pattern continues.](media/commit_stack.svg)
 
 ### Using HEAD
 
@@ -137,11 +137,11 @@ Maybe you want to look one step further back into your work. By using `HEAD~n` y
 
 For example, to look back just one commit before `HEAD`, use `git show HEAD~1`. If instead you wanted to look back three checkpoints (two commits before `HEAD`) you would enter `git show HEAD~2`.
 
-![The stack of 3 white flat boxes. Now the top box is labeled `HEAD`, the middle box `HEAD~1` and the bottom `HEAD~2`](media/Commit_stack_HEAD.svg)
+![The stack of 3 white flat boxes. Now the top box is labeled `HEAD`, the middle box `HEAD~1` and the bottom `HEAD~2`](media/commit_stack_head.svg)
 
 Using `HEAD` to refer to your commits can be great for looking at recent versions of your repository. But be careful, each time you commit to the repository, you are creating a new most-recent-version that is now the `HEAD` and every older version moves one layer down in the stack.
 
-![On the left, the stack of 3 flat white boxes are labeled `HEAD`, `HEAD~1`,  and `HEAD~2`. An arrow points to a stack on the right made of the 3 white boxes with a 4th red box now on top. This red box is now the one labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`, with all the white boxes having changed labels.](media/Commit_stack_HEAD2.svg)
+![On the left, the stack of 3 flat white boxes are labeled `HEAD`, `HEAD~1`,  and `HEAD~2`. An arrow points to a stack on the right made of the 3 white boxes with a 4th red box now on top. This red box is now the one labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`, with all the white boxes having changed labels.](media/commit_stack_head2.svg)
 
 <div class = "learnmore">
 Git is a big pile of mixed metaphors, and in the case of `HEAD`, it is referencing the idea of a [recording head](https://en.wikipedia.org/wiki/Recording_head) which writes audio or video input to a tape.
@@ -216,7 +216,7 @@ index df0654a..315bf3a 100644
 
 Unlike `HEAD`, the commit number doesn't change or move as you update your repository.
 
-![On the left is the stack of 3 boxes, each labeled with its six digit commit number. An arrow points from this stack to the stack on the right where the three white boxes have a red box on top. The red box also has a commit number.  The commit numbers on the white boxes have not changed from the picture on the left.](media/Commit_number.svg)
+![On the left is the stack of 3 boxes, each labeled with its six digit commit number. An arrow points from this stack to the stack on the right where the three white boxes have a red box on top. The red box also has a commit number.  The commit numbers on the white boxes have not changed from the picture on the left.](media/commit_number.svg)
 
 ### Quiz: finding a commit
 
