@@ -845,7 +845,7 @@ Sometimes you want to evaluate missing data patterns.  For example, maybe there'
 ```sql
 
 ```
-@AlaSQL.eval.("#dataTable11d")
+@AlaSQL.eval("#dataTable11b")
 
 <table id="dataTable11d" border="1"></table><br>
 
