@@ -813,8 +813,7 @@ Run the code cell below.  It's important to realize that the code below returns 
 SELECT *
 FROM alasql.allergies
 WHERE
-    allergies.stop < '2020-03-01'
-
+    allergies.stop < '2020-03-01';
 ```
 @AlaSQL.eval("#dataTable11b")
 
@@ -846,7 +845,7 @@ Sometimes you want to evaluate missing data patterns.  For example, maybe there'
 ```sql
 
 ```
-@AlaSQL.eva.("#dataTable11d")
+@AlaSQL.eval.("#dataTable11d")
 
 <table id="dataTable11d" border="1"></table><br>
 
