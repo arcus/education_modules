@@ -567,11 +567,10 @@ SELECT
   ,patients.ethnicity
   ,patients.state
 FROM alasql.patients;
-
 ```
-@AlaSQL.eval("#dataTable2")
+@AlaSQL.eval("#dataTable6c")
 
-<table id="dataTable2" border="1"></table><br>
+<table id="dataTable6c" border="1"></table><br>
 
 <div style = "display:none;">
 
@@ -594,11 +593,10 @@ SELECT DISTINCT
   patients.sex
   ,patients.ethnicity
 FROM alasql.patients;
-
 ```
-@AlaSQL.eval("#dataTable3")
+@AlaSQL.eval("#dataTable7a")
 
-<table id="dataTable3" border="1"></table><br>
+<table id="dataTable7a" border="1"></table><br>
 
 <div class = "important">
 
@@ -633,16 +631,16 @@ In the code block below, write a query that will return the unique combinations 
 ```sql
 
 ```
-@AlaSQL.eval("#dataTable0a")
-<table id="dataTable0a" border="1"></table><br>
+@AlaSQL.eval("#dataTable8a")
+<table id="dataTable8a" border="1"></table><br>
 
 How many rows do you have in your results?  Type the number with no spaces or extra characters.
 
-[[8]]
+[[9]]
 ***************
 
 <div class = "answer">
-You should have 8 rows displayed!  If you don't, we'll share the query we used in the explanation of the next question.
+You should have 9 rows displayed!  If you don't, we'll share the query we used in the explanation of the next question.
 </div>
 
 **************
@@ -667,8 +665,8 @@ SELECT DISTINCT
 	,state
 FROM alasql.patients;
 ```
-@AlaSQL.eval("#dataTable0b")
-<table id="dataTable0b" border="1"></table><br>
+@AlaSQL.eval("#dataTable8b")
+<table id="dataTable8b" border="1"></table><br>
 
 
 </div>
@@ -710,9 +708,9 @@ FROM alasql.patients;
     Aren't Comments Great!
 */
 ```
-@AlaSQL.eval("#dataTable8a")
+@AlaSQL.eval("#dataTable9a")
 
-<table id="dataTable8a" border="1"></table><br>
+<table id="dataTable9a" border="1"></table><br>
 
 <div style = "display:none;">
 
@@ -724,18 +722,17 @@ FROM alasql.patients;
 
 The **WHERE clause**, using the `WHERE` keyword, is the section of your query used to specify any "filtering logic" that should be applied to your query before returning any output.  It's optional but very useful.
 
-The below example uses `WHERE` to filter output on only the records for a specific state.
+The below example uses `WHERE` to filter output on only the records for a specific county.
 
 ```sql
 SELECT *
 FROM alasql.patients
 WHERE
-	patients.state='Massachusetts';
-
+	patients.county = "Suffolk County";
 ```
-@AlaSQL.eval("#dataTable9a")
+@AlaSQL.eval("#dataTable10a")
 
-<table id="dataTable9a" border="1"></table><br>
+<table id="dataTable10a" border="1"></table><br>
 
 Although the above example lists only one constraint for the dataset, the WHERE clause can contain any number of filtering arguments needed.
 
@@ -745,17 +742,23 @@ Check out the code block below for an example of a where clause that includes mu
 SELECT *
 FROM alasql.patients
 WHERE
-	patients.state='Massachusetts'
-	AND patients.ethnicity='hispanic'
-	AND (
-		patients.birthdate<='2000-01-01'    --date strings are assumed to be yyyy-mm-dd format.
-		OR patients.birthdate>='2010-01-01' --date strings are assumed to be yyyy-mm-dd format.
+	(
+		patients.county = "Suffolk County"
+		OR patients.county = "Barnstable County"
 	)
-
+	AND
+	(
+	  patients.ethnicity = "hispanic"
+	  OR patients.race != "white"
+	);
 ```
-@AlaSQL.eval("#dataTable9b")
+@AlaSQL.eval("#dataTable10b")
 
-<table id="dataTable9b" border="1"></table><br>
+<table id="dataTable10b" border="1"></table><br>
+
+<div class ="warning">
+When you mix `AND` and `OR`, you have to be careful.  It's easy to make a logical order-of-operations mistake.  That's why it's crucial to include parentheses to show the scope of your `AND` and `OR` logical operators.  To see this in action, remove the second set of parentheses, around the `race` and `ethnicity` comparisons, and re-run the query.  What happens?  Why?  
+</div>
 
 Ready to try your luck at a complex WHERE statement?
 
@@ -767,9 +770,9 @@ FROM
 WHERE
 
 ```
-@AlaSQL.eval("#dataTable9c")
+@AlaSQL.eval("#dataTable10c")
 
-<table id="dataTable9c" border="1"></table><br>
+<table id="dataTable10c" border="1"></table><br>
 
 <div style = "display:none;">
 @AlaSQL.buildTable_patients
@@ -790,11 +793,10 @@ SELECT *
 FROM alasql.allergies
 WHERE
     allergies.stop IS NOT NULL; -- there is some value here, it's not empty
-
 ```
-@AlaSQL.eval("#dataTable10b")
+@AlaSQL.eval("#dataTable11a")
 
-<table id="dataTable10b" border="1"></table><br>
+<table id="dataTable11a" border="1"></table><br>
 
 It's also worth noting that null values are treated very differently from actual data.  Note that you cannot use operators like `=` to ask if something is null, because null values are inherently unknowable, so we can't know what a null value is equal to.  You can't do math with a null value and you can't compare to a null value.  To illustrate this point, we can look at an example below.  
 
@@ -814,9 +816,9 @@ WHERE
     allergies.stop < '2020-03-01'
 
 ```
-@AlaSQL.eval("#dataTable10c")
+@AlaSQL.eval("#dataTable11b")
 
-<table id="dataTable10c" border="1"></table><br>
+<table id="dataTable11b" border="1"></table><br>
 
 Why is this interesting?  Because sometimes we want to return a mix of null and non-null values.  For example, maybe you're aware that allergies with a `stop` date prior to March 1, 2020 have data quality issues and need to be checked -- these could be real allergies that should not have a `stop` date.  And to that group of possible allergies you want to add the cases where there is no `stop` date at all, where we can presume that the allergy wasn't ruled out.  In order to make sure that records where the `stop` date is null are also included in our output we will need to add another line to  the select statement to explicitly include them, as shown below.  
 
@@ -827,12 +829,11 @@ WHERE
     (
         allergies.stop < '2020-03-01'
         OR allergies.stop IS NULL
-    )
-
+    );
 ```
-@AlaSQL.eval("#dataTable10d")
+@AlaSQL.eval("#dataTable11c")
 
-<table id="dataTable10d" border="1"></table><br>
+<table id="dataTable11c" border="1"></table><br>
 
 <div class = "warning">
 
@@ -840,14 +841,14 @@ The fact that nulls aren't included in comparisons is a very subtle distinction 
 
 </div>
 
-Sometimes you want to evaluate missing data patterns.  For example, maybe there's a discernible pattern in patients who are missing sex or race data.  Write a query that will give you all the fields for rows in `patients` where either the sex or race data is missing.
+Sometimes you want to evaluate missing data patterns.  For example, maybe there's a discernible pattern in patients who are missing sex or race data.  Write a query that will give you all the fields for rows in `patients` where either the sex or race data is missing.   (Hint: there might not be any rows that have missing data in those two fields).
 
 ```sql
 
 ```
-@AlaSQL.eva.("#dataTable10e")
+@AlaSQL.eva.("#dataTable11d")
 
-<table id="dataTable10e" border="1"></table><br>
+<table id="dataTable11d" border="1"></table><br>
 
 <div style = "display:none;">
 @AlaSQL.buildTable_allergies
@@ -891,65 +892,26 @@ FROM alasql.patients # note that this uses dot notation
 WITH
   sex = M;
 ```
-@AlaSQL.eval("#dataTable0d")
+@AlaSQL.eval("#dataTable12a")
 
-<table id="dataTable0d" border="1"></table><br>
+<table id="dataTable12a" border="1"></table><br>
 
 
-[[ ]] ` = NULL ` should be changed to ` IS NULL `
-[[ ]] `OR` should be in lowercase
-[[X]] A column selection should be made after the `SELECT` keyword
-[[ ]] The period at the end of the query should be replaced with a semicolon
-[[X]] The two conditions in the `WHERE` clause should be enclosed by parentheses
+[[ ]] `alasql.patients` should be changed to just `patients`
+[[ ]] The semicolon should be omitted
+[[X]] The `M` in the last line should have quotes around it
+[[X]] The has marks (`#`) on the first two lines should be replaced with `--`
+[[X]] `WITH` should be replaced by `where`
 ***************
 
 <div class = "answer">
-First things first, what are you `SELECT`ing?  Also, you do need to replace the ` = NULL` to ` IS NULL `, and end the query with a semicolon, not a period.
+While you **could** omit `alasql`, it certainly isn't hurting things, and it's often useful to add the additional context that dot notation provides.  Similarly, while in this module page, you can get away without typing a semicolon, that doesn't mean it's a good idea.  Here's what needs to change to make this code run:
 
-`OR` isn't case sensitive, but we suggest leaving it in CAPITAL letters so it stands out as a keyword.  And since there's no nesting and no mixing of `AND` and `OR`, parentheses around the `WHERE` clauses is totally optional.  You only really **have** to add parentheses when you're mixing operations (just as in math, to make sure things get added before they're multiplied).
-
-</div>
-
-How many rows do you have in your results?  Type the number with no spaces or extra characters.
-
-[[8]]
-***************
-
-<div class = "answer">
-You should have 8 rows displayed!  If you don't, we'll share the query we used in the explanation of the next question.
-</div>
-
-**************
-
-Which of the following statements are true about your data?  Select all that apply!
-
-[[X]] There are no patients with a `state` value of Pennsylvania
-[[X]] There are no patients from Hampshire county
-[[ ]] There are four counties represented from Massachusetts
-[[ ]] Bristol County appears twice, once for Massachusetts and once for New Jersey
-[[ ]] Connecticut appears with four counties
-***************
-
-<div class = "answer">
-Wondering how we got these answers?
-
-Run the following query:
-
-```sql
-SELECT DISTINCT
-	county
-	,state
-FROM alasql.patients;
-```
-@AlaSQL.eval("#dataTable0b")
-<table id="dataTable0b" border="1"></table><br>
-
+* Comments need to be corrected -- the right way to do end-of-line comments like this is using a double dash (`--`), not a hash mark.
+* `WITH` should be replaced by `WHERE`.  
+* When you compare something to a string, you need to put that string in quotes.  So try `"M"` instead of `M`.
 
 </div>
-
-**************
-
-
 
 
 ### ORDER BY Statement
@@ -967,9 +929,14 @@ ORDER BY
   patients.county ASC
   ,patients.ethnicity DESC;
 ```
-@AlaSQL.eval("#dataTable9")
+@AlaSQL.eval("#dataTable13a")
 
-<table id="dataTable9" border="1"></table><br>
+<table id="dataTable13a" border="1"></table><br>
+
+Some things to think about:
+
+* What does the query above help you understand about your patient population?
+* How could you switch the sorting so that all the counties with a Latino / Hispanic patient population were at the top, followed by all the counties without a Latino / Hispanic patient population?  Try it!
 
 <div class = "important">
 
@@ -995,11 +962,10 @@ The example below pulls all columns from the `patients` table, and limits the re
 SELECT *
 FROM alasql.patients
 LIMIT 3;
-
 ```
-@AlaSQL.eval("#dataTable10")
+@AlaSQL.eval("#dataTable14a")
 
-<table id="dataTable10" border="1"></table><br>
+<table id="dataTable14a" border="1"></table><br>
 
 <div style = "display:none;">
 
@@ -1028,11 +994,10 @@ SELECT
   ,p.ethnicity
   ,p.state AS state_name
 FROM alasql.patients AS p;
-
 ```
-@AlaSQL.eval("#dataTable13a")
+@AlaSQL.eval("#dataTable15a")
 
-<table id="dataTable13a" border="1"></table><br>
+<table id="dataTable15a" border="1"></table><br>
 
 In the SQL code block below, try writing a query that accomplishes the following.  Because there are several constraints, try starting with a simple query (something like a `SELECT * ...`) and gradually changing it so that you knock out one bullet point at a time.
 
@@ -1046,9 +1011,9 @@ In the SQL code block below, try writing a query that accomplishes the following
 
 
 ```
-@AlaSQL.eval("#dataTable13a")
+@AlaSQL.eval("#dataTable15b")
 
-<table id="dataTable13a" border="1"></table><br>
+<table id="dataTable15b" border="1"></table><br>
 
 <div style = "display:none;">
 @AlaSQL.buildTable_patients
@@ -1056,35 +1021,69 @@ In the SQL code block below, try writing a query that accomplishes the following
 
 ### Quiz: ORDER BY, LIMIT, AS
 
+What does `ORDER BY` accomplish?
 
+[[ ]] `ORDER BY` changes the order of columns, so you can rearrange columns to be more helpful to your use case
+[[X]] `ORDER BY` changes the order of rows, putting them in order according to the value in one or more columns
+***************
+
+<div class = "answer">
+If you want to change the order of columns, the best thing to do is change the order you type things in after `SELECT`.  That's not the job of `ORDER BY`!  No, what `ORDER BY` does is permit you to organize your **rows**.  You can put rows in order according to one or more column values.
+</div>
+
+**************
+
+Which of the following are true about the `AS` keyword?
+
+[[X]] `AS` indicates an alias -- a temporary command to "please call this by a different name".
+[[X]] `AS` can be useful for making queries easier to type
+[[X]] `AS` can be helpful for giving columns more accurate names
+***************
+
+<div class = "answer">
+All of these are true!  Aliasing uses the `AS` keyword.  You can alias table names, which often means less typing (for instance, you could use `pt` instead of `patient`) in long queries.  Aliasing column names can be helpful when you're making the alias something more understandable than the column name in the table.
+</div>
+
+**************
+
+What does `LIMIT` accomplish?
+
+
+[[ ]] `LIMIT` controls the maximum number of rows output.  You will not get more rows than what your `LIMIT` value is.  
+[[ ]] `LIMIT` puts a limit on number of identical rows that can be output as the result of a query.
+***************
+
+<div class = "answer">
+`LIMIT` controls the maximum number of rows output.  You will not get more rows than what your `LIMIT` value is.  Of course, if the total number of rows a query outputs is **less** than `LIMIT`, you'll get that value.  `LIMIT` doesn't have anything to do with ensuring that rows are unique, so it won't do anything about identical rows.  You need to think about `DISTINCT` for that use case!
+</div>
+
+**************
 
 ## Recap
 
 In this module, you learned about the language SQL, which is an acronym for "Structured Query Language".  It's a powerful tool for requesting specific subsets of data from a relational database, and has been around since the 1970's because of its efficiency and utility.  
 
-We also introduced you to two important elements of the language:
+We also introduced you to important functions, in terms of **keywords**.  You got a chance to read about and practice these keywords:
 
-* The "select" statement, which uses `SELECT` and `FROM`
-* The "where" statement, which uses `WHERE`
+* `SELECT`
+* `FROM`
+* `DISTINCT`
+* `WHERE`
+* `IS NULL`
+* `IS NOT NULL`
+* `ORDER BY`
+* `LIMIT`
+* `AS`
 
-We also discussed what SQL doesn't provide, like robust language and statistical processing and data visualization.  SQL is a tool that ordinarily is used in concert with other tools, each one used in its area of greater strength.
+We also learned about comparison operators, comments, and style -- how to write code in a specific way that promotes reusability and readability.
 
-Finally, you learned about the structure of relational databases: data stored in tables, which are comprised of rows and columns.  Columns may contain identifers that allow data from different tables to be related to one another, and that's why the word "relational" appears.
+You also got to practice hands on, which probably meant you got to see some error messages, too, which is helpful experience.
 
 ## Additional Resources
 
 * Khan Academy's [Introduction to SQL](https://www.khanacademy.org/computing/computer-programming/sql) is high quality and easy to learn from.
 
-* [What is SQL?](https://education.arcus.chop.edu/sql-intro/) is a brief introduction to SQL similar to the material in this module.
-
-* If you are interested in the history of technology, [Early History of SQL](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6359709) is a comprehensive look into how SQL has evolved.  It's very jargon-dense!
-
-
-
-> **Additional Reading**:
->
-> To read more about the basic types of "Operators" avaiable for use in a **SQL** query, click [here](https://www.tutorialspoint.com/sql/sql-operators.htm) for some helpful documentation from **tutorialspoint.com**.
-
+* To read more about the basic types of **operators** available for use in a SQL query, check out [tutorialspoint.com](https://www.tutorialspoint.com/sql/sql-operators.htm) for some helpful documentation.
 
 
 ## Feedback
