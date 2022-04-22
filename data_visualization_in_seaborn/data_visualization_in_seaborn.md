@@ -41,8 +41,6 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This module assumes some familiarity with principles of data visualizations. If you've done some data visualization programming before, especially using seaborn or R's ggplot2, this module should be right for you. If you are brand new to both ggplot2 and seaborn, start with the overview of [data visualizations in open source software](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md#1) first, and then come back here.
-
 This module assumes some familiarity with statistical concepts like distributions, outliers, and linear regression, but even if you don't understand those concepts well you should be able to learn and apply the data visualization content.
 When statistical concepts are referenced in the lesson, links to learn more are generally provided.
 
@@ -86,7 +84,7 @@ import seaborn as sns
 
 Hopefully your [binder instance](#lesson-preparation) is done loading now! If not, be patient --- it can take as long as 20 or 30 minutes sometimes if the files haven't been used recently.
 
-When it is ready, you should see a jupyter notebook in your browser with the code for this module. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
+When it is ready, you should see a Jupyter notebook in your browser with the code for this module. While you read through this module, **we recommend you keep the binder instance open alongside this module**, so you can go back and forth to try running the code for yourself. Even better, try changing the code and see what happens.
 
 <div class = "important">
 Note that binder instances aren't stable. When you close the window or if it idles too long, it may erase all of your work. If you want to save any code or output you come up with while working in binder, you need to copy-paste the code to a new file to save it on your computer.
@@ -95,7 +93,7 @@ Note that binder instances aren't stable. When you close the window or if it idl
 
 ### The data
 
-First, we need to load the modules we'll be using:
+First, we need to load the python modules we'll be using:
 
 ```python
 import pandas as pd
@@ -498,6 +496,7 @@ sns.relplot(x="timepoint", y="signal", hue="event", style="event", kind="line", 
 ### Using facets to compare plots
 
 If you want to make more than one version of a similar plot, consider using facets.
+Facets let you split one complicated plot into a number of comparable mini plots, usually by separating the data out by levels of a categorical variable.
 
 In the current example, let's say we wanted to create two versions of the signal line plots for the two types of events: one showing the response in the parietal region, and one showing the response in the frontal region.
 
@@ -666,6 +665,8 @@ If you want a high level of flexibility in your trend line, you can achieve that
 
 <div class = "learnmore">
 For a deeper understanding of what is meant by parametric vs. non-parametric models, see section 2.1.2 of the book [Statistical Learning](https://hastie.su.domains/ISLR2/ISLRv2_website.pdf).
+
+For a good conceptual explanation of lowess curves in particular, see the [StatsQuest video "Lowess and Loess, Clearly Explained"](https://www.youtube.com/watch?v=Vf7oJ6z2LCc).
 </div>
 
 ```python
@@ -737,7 +738,7 @@ There are also many questions and answers about `seaborn` available on [stackove
 
 You may find the [pandas cheatsheet (pdf)](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) helpful.
 
-To learn how to make plots in R using ggplot2, see [data visualization in ggplot2](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md).
+To learn how to make plots in R using ggplot2, see [data visualization in ggplot2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md).
 
 For resources about statistics in general, rather than data visualization specifically, see the [Additional Resources section of the module on statistical tests](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md#learning-statistics).
 
