@@ -95,7 +95,7 @@ function addAllColumnHeaders(myList) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 try {
     var myinput=`@input`
-    myinput=myinput.replace(/;\s*$/, ""); // remove trailing semi-colon
+    myinput=myinput.replace(/;/, ""); // remove all semi-colon
     var myStriptArray= myinput.split(';');
     var arrayLength = myStriptArray.length;
     console.clear();
