@@ -1049,7 +1049,7 @@ All of these are true!  Aliasing uses the `AS` keyword.  You can alias table nam
 What does `LIMIT` accomplish?
 
 
-[[ ]] `LIMIT` controls the maximum number of rows output.  You will not get more rows than what your `LIMIT` value is.  
+[[X]] `LIMIT` controls the maximum number of rows output.  You will not get more rows than what your `LIMIT` value is.  
 [[ ]] `LIMIT` puts a limit on number of identical rows that can be output as the result of a query.
 ***************
 
