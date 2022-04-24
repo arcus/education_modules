@@ -242,7 +242,13 @@ The User Rights panel will open in the main part of your screen. Click on your u
 
 ![List of user rights checkboxes with API Export checked](media/api_export.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
-Then click "Save Changes".
+The next step depends on your version of REDCap.  Do you see a box labeled "Privileges for Viewing and Exporting Data"?  If you do, give yourself some Data Export Rights.  We recommend "Full Data Set", but you can choose a less privileged level of access if you're working with identified data and want to be extra careful.  Note that our sample project on cervican cancer risk factors is already deidentified.
+
+This is what we're talking about:
+
+![Privileges for Viewing and Exporting Data options](media/privileges.png)
+
+Once you're all done giving yourself API export rights and (if applicable) data export rights, click "Save Changes".
 
 Refresh your browser (reload the page) so that your new permissions are included in what you get shown in your project. Now, on the left hand side of the project, you should see something new under "Applications" – "API" and "API Playground".
 
@@ -297,7 +303,18 @@ Let's look at how each part of the API Playground helps you learn the API.
 
 ### API Method
 
-In your REDCap project, head over to the "API Playground" – click on that phrase in the Applications pane on the left. Then, at the top of your screen, you'll see the menu-driven selection box. The first selection you have to make is **API Method**. For now, choose "Export Records", which will give you all your records (rows of data).  Make sure that the Format is "CSV" and the Type is "flat".  You don't have to change any other fields.
+In your REDCap project, head over to the "API Playground" – click on that phrase in the Applications pane on the left. Then, at the top of your screen, you'll see the menu-driven selection box. The first selection you have to make is **API Method**.
+
+For now, choose "Export Records" as the API method.  This will allow you to download records (rows of data).  Make sure that:
+
+* The "Format" (second option down) is "CSV" and
+* The Type is "flat" (third option down).
+
+You don't have to change any other fields.  Leaving everything else alone means you'll download all the records (rows) and all of the forms / instruments with all of their fields (columns) into a single .csv file.
+
+<div class = "warning">
+Be careful not to choose `.json` as the format -- `.csv`, or **comma separated values**, is the file format you want to download!
+</div>
 
 The "Raw Request Parameters" box below your selection will change to reflect whatever you chose. Here's an example of what you might see, if you're using the cervical cancer data.  If you're using your own dataset, things will look different.  Note that we've blurred out the API key here -- that's not something we want to share!
 
@@ -325,8 +342,11 @@ Below the Response box with the comma separated values data, you'll see an HTTP 
 
 This is an example of trying out and learning about the API without having to write code. You can experiment with various methods and learn easily without having to go through the frustration of writing a lot of code to find out how to do things.
 
-In some API methods (like "Export Records"), you'll have a number of drop down menus you can choose from, including which "forms" and which "fields" you want to retrieve. You can make multiple choices in menus like these by holding down control while clicking (Windows) or command while clicking (Mac).  Helpfully, however, if you want **every** item listed (say, you want every form and every field), you don't click any selection at all, and REDCap assumes you mean everything that appears in the drop-down list.
+In some API methods (like "Export Records"), you'll have a number of drop down menus you can choose from to tailor your request, including which "forms" and which "fields" you want to retrieve. You can make multiple choices in menus like these by holding down control while clicking (Windows) or command while clicking (Mac).  Helpfully, however, if you want **every** item listed (say, you want every form and every field), you don't click any selection at all, and REDCap assumes you mean everything that appears in the drop-down list.
 
+<div class = "important">
+Do take a look and make sure your "Response" box contains comma separated values and shows a good return code (200).  If not, something has gone wrong -- either you don't have the correct rights, which means you need to take another look at your rights in the User Rights section of REDCap, or you've issued an API call that is incorrect in some way (for instance, maybe you requested a .json format instead of .csv).
+</div>
 
 ### API Playground: Code
 
