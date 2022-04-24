@@ -263,7 +263,7 @@ Once you're all done giving yourself API export rights and (if applicable) data 
 
 Refresh your browser (reload the page) so that your new permissions are included in what you get shown in your project. Now, on the left hand side of the project, you should see something new under "Applications" – "API" and "API Playground".
 
-![List of applications which includes the "API" and "API Playground" applications](media/api_api_playground.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![List of applications which includes the "API" and "API Playground" applications.](media/api_api_playground.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 ### API Token
 
@@ -275,7 +275,7 @@ The API token is unique to the combination of user and project. It's a code that
 
 Soon, your API token will show up in that same "API" Application. It will look something like this (note, I've obscured my token – sharing this in a post like this one would be a terrible idea!).
 
-![Text that includes an obscured API token](media/your_api_token.png)<!-- style = "max-width:600px;" -->
+![Text that includes an obscured API token.](media/your_api_token.png)<!-- style = "max-width:600px;" -->
 
 You'll use this token when you request data in your R or Python script.
 
@@ -329,7 +329,7 @@ Be careful not to choose `.json` as the format -- `.csv`, or **comma separated v
 
 The "Raw Request Parameters" box below your selection will change to reflect whatever you chose. Here's an example of what you might see, if you're using the cervical cancer data.  If you're using your own dataset, things will look different.  Note that we've blurred out the API key here -- that's not something we want to share!
 
-![A menu-driven way to choose API method and the coded version of that selection below](media/api_method.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![A menu-driven way to choose API method and the coded version of that selection below.](media/api_method.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 This "Raw Request Parameters" gives you a quick look at the information you're passing to REDCap, to make sure you selected what you really wanted in the menu part above.  Go on to the next page to see how to submit this API request!
 
@@ -341,11 +341,11 @@ You requested your data to be in a .csv, so you should get some data that's "com
 
 <div class = "warning">
 
-In the "Response" box, data is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text and paste it into a text editor like Atom or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here's the "before" (comma separated values in plain text) and the "after" (text saved as a .csv and then opened in Excel) of the cervical cancer data:
+In the "Response" box, data is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text by clicking on the contents of the box and then using your browser's "Select All" function, followed by "Copy." Then paste it into a text editor like Atom or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here's the "before" (comma separated values in plain text) and the "after" (text saved as a .csv and then opened in Excel) of the cervical cancer data:
 
 ![Data shown as text, separated by commas.](media/execute_request.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
-![Data shown in an Excel spreadsheet](media/excel_view.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![Data shown in an Excel spreadsheet.](media/excel_view.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 </div>
 
@@ -422,7 +422,7 @@ Then:
 
 After running that chunk, you should have some new objects in your "Environment."  Of particular interest is the object called `result`.  See below what we see when we run the chunk of code to get records from the cervical cancer database:
 
-![RStudio showing code on the left and environment variables including the "result" dataframe listed on the right](media/rstudio_environment.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![RStudio showing code on the left and environment variables including the "result" dataframe listed on the right.](media/rstudio_environment.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Click on "result" in the environment pane to open a file viewer.  
 
