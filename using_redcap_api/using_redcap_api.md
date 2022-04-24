@@ -152,7 +152,11 @@ Some APIs allow for anonymous use.  Others require all users to be registered an
 
 **Automation**
 
+**Automation**
+
 APIs are automated, which means they won't rely on you logging in manually, adding a user name and password interactively. API calls have to run without human intervention, which means you need to provide your R or Python script with credentials that show you are allowed see the data you're accessing. But obviously you don't want to put your user name and password in a script. Your user name and password might open a lot of doors at your institution, including your email, your payroll information, and your EHR access. You want to isolate **just** your access to this **particular** data, and using your all-powerful login information to access REDCap data is far too powerful.
+
+**Security**
 
 What if your credentials fell into the wrong hands, because they were in a script on a drive that many people have access to? This is where API keys or tokens come in. API credentials give very specific access to very specific things.  They can also be regenerated easily (like changing a lock on a door), in case you suspect they may have been lost or misused. If API credentials do fall into the wrong hands, it's not great, but it's much better than accidentally sharing your username and password! The access codes you need to provide might be called tokens, keys, passwords, or some other descriptor. In REDCap, the term is "token", and we'll show you in a bit how to generate a token for your data.
 
@@ -233,21 +237,21 @@ An image below shows what you might see after steps 1-5, although your instituti
 
 ![New project form in REDCap.](media/new_project_from_xml.png)<!-- style = "border :1px solid rgb(var(--color-highlight)); max-width:800px;" -->
 
-6. At the bottom of the page, click "Create Project".  It may take a few minutes to digest that giant XML file!
+6. At the bottom of the page, click "Create Project."  It may take a few minutes to digest that giant XML file!
 
 Congratulations, now you have a project that you created, which means you have User Rights capabilities.  That will come in handy in our next step!
 
 ### Enabling the API
 
-In REDCap, the project owner (or people with user rights) have to explicitly give permission to use the REDCap API to project users who need that capability. In fact, when you create a new REDCap project, REDCap does not provide you with these permissions by default, even though you're the project owner! Take a look at your REDCap project and look on the left hand side of the screen to look at the menu of options. Chances are, you won't see anything that says "API". If that's the case, don't worry. We're going to walk you through how to give yourself API access.
+In REDCap, the project owner (or people with user rights) have to explicitly give permission to use the REDCap API to project users who need that capability. In fact, when you create a new REDCap project, REDCap does not provide you with these permissions by default, even though you're the project owner! Take a look at your REDCap project and look on the left hand side of the screen to look at the menu of options. Chances are, you won't see anything that says "API." If that's the case, don't worry. We're going to walk you through how to give yourself API access.
 
 Open your REDCap database (one that belongs to you or in which you have the ability to change user rights). In the left side of the screen, choose "User Rights" from the list of applications.
 
 ![List of applications which includes the "User Rights" application](media/user_rights.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
-The User Rights panel will open in the main part of your screen. Click on your user id (or your role) and choose "Edit User Privileges". Give yourself API Export access, as shown in the image below.  For now, we'll leave API Import/Update turned off, so that you feel secure knowing you can't accidentally upload anything that could mess up your data.
+The User Rights panel will open in the main part of your screen. Click on your user id (or your role) and choose "Edit User Privileges." Give yourself API Export access, as shown in the image below.  For now, we'll leave API Import/Update turned off, so that you feel secure knowing you can't accidentally upload anything that could mess up your data.
 
-![List of user rights checkboxes with API Export checked](media/api_export.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![List of user rights checkboxes with API Export checked.](media/api_export.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 The next step depends on your version of REDCap.  Do you see a box labeled "Privileges for Viewing and Exporting Data"?  If you do, give yourself some Data Export Rights.  We recommend "Full Data Set", but you can choose a less privileged level of access if you're working with identified data and want to be extra careful.  Note that our sample project on cervican cancer risk factors is already deidentified.
 
@@ -265,7 +269,7 @@ Refresh your browser (reload the page) so that your new permissions are included
 
 So now you have the **right** to use the API, but you can't start using it just yet. You have to generate an API token.  Click on the "API" application in the left side menu and in the main part of your screen, click on the button to "Generate API Token."  Depending on your institution's rules, you might automatically be granted a token immediately, or it might be generated manually by an administrator a few minutes or hours later.
 
-![Text and clickable button for obtaining an API token](media/obtain_api_token.png)<!-- style = "max-width:600px;" -->
+![Text and clickable button for obtaining an API token.](media/obtain_api_token.png)<!-- style = "max-width:600px;" -->
 
 The API token is unique to the combination of user and project. It's a code that allows access only to the data in a single project and only the data that the person who generated the API token is allowed to see.  If you have three different projects, your token is different for each one. Importantly, if you feel like you may have accidentally given your API token away, it's a good idea to regenerate it, which is a single-click operation. It makes your old token invalid and creates a new token.
 
@@ -289,7 +293,7 @@ Which of the following is true of a REDCap API Token?  Select all that apply!
 ***************
 
 <div class = "answer">
-You can generate a REDCap API token once you have been given API rights.  Once you have API rights, your token isn't automatically generated, but it's an easy single click to get your token when you're ready.  Your token is unique both to you and to the project -- it's a unique key that will only work for you, and only work for the project it was generated for.  The REDCap API token doesn't change daily, but you can change it if you feel like it may have been accidentally shared to another person.
+You can generate a REDCap API token once you have been given API rights.  Once you have API rights, your token isn't automatically generated, but it's an easy single click to get your token when you're ready.  Your token is unique both to you and to the project -- it's a unique key that is only meant for you, and only for the project it was generated for.  That said, anyone who has that key can access the data, so you should not share it with anyone. The REDCap API token doesn't change daily, but you can change it if you feel like it may have been accidentally shared to another person.
 
 </div>
 
@@ -331,7 +335,7 @@ This "Raw Request Parameters" gives you a quick look at the information you're p
 
 ### Execute Request
 
-Look further down the API Playground page, in the "Response" area, and click on the button that says "Execute Request". You might get a "waiting" spinner, and then a box will appear below the button with the data that REDCap returned from your request.
+Look further down the API Playground page, in the "Response" area, and click on the button that says "Execute Request." You might get a "waiting" spinner, and then a box will appear below the button with the data that REDCap returned from your request.
 
 You requested your data to be in a .csv, so you should get some data that's "comma separated" – a bunch of fields that are separated by commas, with each new line of data being separated by a line break.
 
@@ -339,7 +343,7 @@ You requested your data to be in a .csv, so you should get some data that's "com
 
 In the "Response" box, data is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text and paste it into a text editor like Atom or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here's the "before" (comma separated values in plain text) and the "after" (text saved as a .csv and then opened in Excel) of the cervical cancer data:
 
-![Data shown as text, separated by commas](media/execute_request.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![Data shown as text, separated by commas.](media/execute_request.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 ![Data shown in an Excel spreadsheet](media/excel_view.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
@@ -361,7 +365,7 @@ So, you've experimented in the API Playground and you know the kind of API call 
 
 In the tabs at the bottom of the API Playground, you'll see names of programming languages, including Python and R.  Below you can see what the Python code looks like for the API request to retrieve all records from the cervical cancer database:
 
-![Python code from the API playground](media/python_code.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![Python code from the API playground.](media/python_code.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 We'll show you how to use Python and R in two separate sections, so you can feel free to look at either one, or both!
 
@@ -375,7 +379,7 @@ The Python library, PyCap, that streamlines this effort is great and seems very 
 
 Open a Jupyter notebook (running Python 3) and paste the code from the API Playground's "Python" tab into your first cell and run that cell.  It works!  Kind of.  Take a look below to see what the result of our API call for the records of cervical cancer data looks like.
 
-![The same python code as before, now in a Jupyter notebook](media/jupyter_1.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![The same python code as before, now in a Jupyter notebook.](media/jupyter_1.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 What's the only problem with this?  Well, it's not in a pandas data frame, which is what we'd prefer to work with.  We can fix that by adding a few lines of code!  Add this to a second cell, and run it.
 
