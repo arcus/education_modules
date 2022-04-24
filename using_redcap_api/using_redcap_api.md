@@ -383,7 +383,7 @@ df
 
 Below, this is the result when we do that for our cervical cancer data database:
 
-![The python code listed above, and the resulting data frame](media/jupyter_2.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![The python code listed above, and the resulting data frame.](media/jupyter_2.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Now, your data is in a pandas data frame and you're ready to do all sorts of work with that data (like cleaning question marks out of the data, getting summary statistics, finding correlations, visualizing data, and modeling data).  Importantly, you can re-run the cells in this notebook at any time to get the latest version of the data from REDCap!  
 
@@ -397,13 +397,13 @@ There are useful R packages that make importing REDCap data into R simpler than 
 The R packages that streamline this effort (we like REDCapR and redcapAPI) are great and seem very stable, and we provide links to them toward the end of this module, but R packages depend on volunteers who keep them updated.  Therefore, we think it's useful to know how to use the basic method we'll share here, even if in the future you prefer a different approach.
 </div>
 
-First, open RStudio and create a new R Markdown (File > New File > R Markdown).  Give your R Markdown the title and author information you want, leave the default output choice (HTML), and click on "OK".
+First, open RStudio and create a new R Markdown (File > New File > R Markdown).  Give your R Markdown the title and author information you want, leave the default output choice (HTML), and click on "OK."
 
-![The new R Markdown dialog box from RStudio](media/new_r_markdown.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![The new R Markdown dialog box from RStudio.](media/new_r_markdown.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Remove all the "boilerplate" text after the setup chunk (so, delete all the lines after around line 10) and add a new empty chunk:
 
-![R Markdown document with an empty chunk](media/empty_chunk.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![R Markdown document with an empty chunk.](media/empty_chunk.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Then:
 
@@ -411,13 +411,13 @@ Then:
 * Remove the first line (the one that starts `#!/usr/bin`).
 * Run that chunk!
 
-After running that chunk, you should have some new objects in your "Environment".  Of particular interest is the object called `result`.  See below what we see when we run the chunk of code to get records from the cervical cancer database:
+After running that chunk, you should have some new objects in your "Environment."  Of particular interest is the object called `result`.  See below what we see when we run the chunk of code to get records from the cervical cancer database:
 
 ![RStudio showing code on the left and environment variables including the "result" dataframe listed on the right](media/rstudio_environment.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Click on "result" in the environment pane to open a file viewer.  
 
-![The "result" data frame shown with its rows and columns](media/rstudio_viewer.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![The "result" data frame shown with its rows and columns.](media/rstudio_viewer.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Now, your data is in a data frame and you're ready to do all sorts of work with that data (like cleaning question marks out of the data, getting summary statistics, finding correlations, visualizing data, and modeling data).  Importantly, you can re-run the chunks in this R Markdown at any time to get the latest version of the data from REDCap!  
 
