@@ -249,11 +249,11 @@ The User Rights panel will open in the main part of your screen. Click on your u
 
 ![List of user rights checkboxes with API Export checked.](media/api_export.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
-The next step depends on your version of REDCap.  Do you see a box labeled "Privileges for Viewing and Exporting Data"?  If you do, give yourself some Data Export Rights.  We recommend "Full Data Set", but you can choose a less privileged level of access if you're working with identified data and want to be extra careful.  Note that our sample project on cervican cancer risk factors is already deidentified.
+**The next step depends on your version of REDCap.**  Do you see a box on the right side of your User Rights panel labeled "Privileges for Viewing and Exporting Data"?  If you do, give yourself some Data Export Rights.  We recommend "Full Data Set", but you can choose a less privileged level of access if you're working with identified data and want to be extra careful.  Note that our sample project on cervical cancer risk factors is already deidentified.
 
 This is what we're talking about:
 
-![Privileges for Viewing and Exporting Data options](media/privileges.png)
+![Privileges for Viewing and Exporting Data options](media/privileges.png)<!-- style = "border :1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
 
 Once you're all done giving yourself API export rights and (if applicable) data export rights, click "Save Changes".
 
