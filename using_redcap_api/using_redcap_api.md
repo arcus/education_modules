@@ -73,7 +73,7 @@ Research centers, clinics, and colleges and universities will have a dedicated s
 
 If REDCap is offered by your organization (your university or workplace), questions about how to use it effectively or solve problems like the site being down should go to the people at your institution responsible for REDCap.  Sometimes, an institution will have a big staff dedicated to REDCap, people who can offer all kinds of services like helping you design instruments and manage your data with a lot of support.  Other institutions have only one administrator who keeps the REDCap site running and up to date but isn't responsible for helping users figure out how to use REDCap.  Most institutions are somewhere in the middle.
 
-Not sure whether your institution has REDCap?  You may find your institution in the [list of partners](https://projectredcap.org/partners/).  For example, here are a list of partners that start with the letter "A."  Each partner then has contacts listed with their email addresses (simply click "View Collaborators"), so you can reach out and ask to get more information.
+Not sure whether your institution has REDCap?  You may find your institution in the [list of partners](https://projectredcap.org/partners/).  For example, here are a list of partners that start with the letter "A," plus a couple of oddball entries at the top of the alphabetical list.  Each partner then has contacts listed with their email addresses (simply click "View Collaborators"), so you can reach out and ask to get more information.
 
 ![An alphabetical list of institutions with a few "A" entries shown.](media/redcap_partners.png)<!-- style = "border : 1px solid rgb(var(--color-highlight)); max-width: 500px;"-->
 
@@ -164,7 +164,7 @@ Two important advantages to using an API are **data freshness** and **reproducib
 
 Let's say you have to run some analysis on data you're collecting in REDCap, and you want to re-run this analysis every couple of weeks to see the latest figures. One way to do that is to manually export data from REDCap to a .csv and save it to a file that you analyze.  REDCap likes to download files with a date stamp as part of the file name, so you have to keep track of various file names and make sure you are analyzing the right data. You may, after all, end up collecting multiple .csvs, each of which has a particular version of the data in REDCap. This can easily become overwhelming and cause confusion or mistakes.
 
-What's a better approach? Reach into the REDCap database directly each time you run your analysis script, so that you know you're using the most up-to-date data. 
+What's a better approach? Reach into the REDCap database directly each time you run your analysis script, so that you know you're using the most up-to-date data.
 
 **Reproducibility**
 
@@ -425,14 +425,6 @@ Click on "result" in the environment pane to open a file viewer.
 ![The "result" data frame shown with its rows and columns.](media/rstudio_viewer.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 Now, your data is in a data frame and you're ready to do all sorts of work with that data (like cleaning question marks out of the data, getting summary statistics, finding correlations, visualizing data, and modeling data).  Importantly, you can re-run the chunks in this R Markdown at any time to get the latest version of the data from REDCap!  
-
-## Recap
-
-In this module, you learned that APIs, or Application Programming Interfaces, are helpful to researchers because they improve data freshness and reproducibility.
-
-You also learned how to enable API use and generate an API token in REDCap, and how to use the API Playground to rehearse your API requests.
-
-Finally, you learned how to use the API Playground to get Python or R code that helps you import data into an R or Python analysis.
 
 ## Additional Resources
 
