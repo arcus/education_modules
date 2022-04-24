@@ -315,7 +315,7 @@ In your REDCap project, head over to the "API Playground" – click on that phra
 For now, choose "Export Records" as the API method.  This will allow you to download records (rows of data).  Make sure that:
 
 * The "Format" (second option down) is "CSV" and
-* The Type is "flat" (third option down).
+* The "Type" (third option down) is "flat".
 
 You don't have to change any other fields.  Leaving everything else alone means you'll download all the records (rows) and all of the forms / instruments with all of their fields (columns) into a single .csv file.
 
