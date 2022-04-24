@@ -156,6 +156,8 @@ Some APIs allow for anonymous use.  Others require all users to be registered an
 
 **Automation**
 
+**Automation**
+
 APIs are automated, which means they won't rely on you logging in manually, adding a user name and password interactively. API calls have to run without human intervention, which means you need to provide your R or Python script with credentials that show you are allowed see the data you're accessing. But obviously you don't want to put your user name and password in a script. Your user name and password might open a lot of doors at your institution, including your email, your payroll information, and your EHR access. You want to isolate **just** your access to this **particular** data, and using your all-powerful login information to access REDCap data is far too powerful.
 
 **Security**
@@ -166,6 +168,7 @@ What if your credentials fell into the wrong hands, because they were in a scrip
 
 Two important advantages to using an API are **data freshness** and **reproducibility**.
 
+**Data Freshness**
 **Data Freshness**
 **Data Freshness**
 Let's say you have to run some analysis on data you're collecting in REDCap, and you want to re-run this analysis every couple of weeks to see the latest figures. One way to do that is to manually export data from REDCap to a .csv and save it to a file that you analyze.  REDCap likes to download files with a date stamp as part of the file name, so you have to keep track of various file names and make sure you are analyzing the right data. You may, after all, end up collecting multiple .csvs, each of which has a particular version of the data in REDCap. This can easily become overwhelming and cause confusion or mistakes.
