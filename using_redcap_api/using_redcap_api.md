@@ -150,6 +150,8 @@ Some APIs allow for anonymous use.  Others require all users to be registered an
 
 **Automation**
 
+**Automation**
+
 APIs are automated, which means they won't rely on you logging in manually, adding a user name and password interactively. API calls have to run without human intervention, which means you need to provide your R or Python script with credentials that show you are allowed see the data you're accessing. But obviously you don't want to put your user name and password in a script. Your user name and password might open a lot of doors at your institution, including your email, your payroll information, and your EHR access. You want to isolate **just** your access to this **particular** data, and using your all-powerful login information to access REDCap data is far too powerful.
 
 What if your credentials fell into the wrong hands, because they were in a script on a drive that many people have access to? This is where API keys or tokens come in. API credentials give very specific access to very specific things.  They can also be regenerated easily (like changing a lock on a door), in case you suspect they may have been lost or misused. If API credentials do fall into the wrong hands, it's not great, but it's much better than accidentally sharing your username and password! The access codes you need to provide might be called tokens, keys, passwords, or some other descriptor. In REDCap, the term is "token", and we'll show you in a bit how to generate a token for your data.
@@ -158,11 +160,14 @@ What if your credentials fell into the wrong hands, because they were in a scrip
 
 Two important advantages to using an API are **data freshness** and **reproducibility**.
 
+**Data Freshness**
 Let's say you have to run some analysis on data you're collecting in REDCap, and you want to re-run this analysis every couple of weeks to see the latest figures. One way to do that is to manually export data from REDCap to a .csv and save it to a file that you analyze.  REDCap likes to download files with a date stamp as part of the file name, so you have to keep track of various file names and make sure you are analyzing the right data. You may, after all, end up collecting multiple .csvs, each of which has a particular version of the data in REDCap. This can easily become overwhelming and cause confusion or mistakes.
 
-What's a better approach? Reach into the REDCap database directly each time you run your analysis script, so that you know you're using the most up-to-date data. This is what we'll call the "data freshness" advantage.  
+What's a better approach? Reach into the REDCap database directly each time you run your analysis script, so that you know you're using the most up-to-date data. 
 
-Another problem with using manually downloaded files from REDCap is that this method requires unscripted, point-and-click manual work. If you were to document this carefully, you'd have to give several steps, like where to log in to REDCap, which project to use, the .csv download settings (which fields or forms to download), file naming conventions, and where to put the file. Most of us don't go into this level of detail in our manual workflows, for good reason! It's tiresome, and we know that sometimes things change in the look and feel of a website, so including screenshots and detailed instructions about where to look for a link or how to highlight multiple fields is a lot of work for something that might have slightly different steps next week or next month.  We'll call this the "reproducibility" motivation.
+**Reproducibility**
+
+Another problem with using manually downloaded files from REDCap is that this method requires unscripted, point-and-click manual work. If you were to document this carefully, you'd have to give several steps, like where to log in to REDCap, which project to use, the .csv download settings (which fields or forms to download), file naming conventions, and where to put the file. Most of us don't go into this level of detail in our manual workflows, for good reason! It's tiresome, and we know that sometimes things change in the look and feel of a website, so including screenshots and detailed instructions about where to look for a link or how to highlight multiple fields is a lot of work for something that might have slightly different steps next week or next month.
 
 A better approach is to use a script that uses an API call. First of all, it's scripted, which means no manual steps to write up in a Word document or add to a GitHub repo or jot down on a sticky note. Also, the typical API has a standard interface that will change very little. API access may improve over time, adding new features, but it's very infrequent that an API will radically change and remove options, rendering your script unusable. The same half-dozen lines of code you use to access your data will almost always be stable for months or years, and if you do need to change it, you're only changing that small chunk of code, instead of a step-by-step document with words and images that describe a manual effort.
 
@@ -206,9 +211,9 @@ APIs have multiple advantages related to data freshness and reproducibility.  AP
 
 For the next part of this module, we'd like you to work with a real REDCap database that you create or in which you have User Rights (a very high level of privilege that you may not have on projects you didn't create).
 
-![List of applications which includes the "User Rights" application](media/user_rights.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![List of applications which includes the "User Rights" application.](media/user_rights.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
-If you have a REDCap project in mind, log in and open that project.  On the left side, under "Applications", do you see "User Rights"?  If so, congratulations, you can use this project to experiment with the REDCap API.  We will only be using the API to access project data, not change or destroy it or add new data, so what we're going to describe here is safe to perform on a real dataset.
+If you have a REDCap project in mind, log in and open that project.  On the left side, under "Applications," do you see "User Rights"?  If so, congratulations, you can use this project to experiment with the REDCap API.  We will only be using the API to access project data, not change or destroy it or add new data, so what we're going to describe here is safe to perform on a real dataset.
 
 <div class = "warning">
 
@@ -218,15 +223,15 @@ Just because we're not going to break any of your data doesn't mean that it's ok
 
 If you can't or don't want to use your own existing REDCap project, you can clone a sample project from us.  We've taken data from the University of California, Irvine Machine Learning Repository, specifically, their dataset on [cervical cancer risk factors](https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29), and made that data into a REDCap project.  Here are the steps to take our REDCap project and make it yours!
 
-1. Download our [REDCap xml file](media/cervical_cancer_factors.REDCap.xml), saving it to a place you'll be able to find it (like your Downloads folder).  We suggest doing a right click on the link and choosing "Save Link As", or "Download Linked File As".
-2. Log in to your REDCap server and choose "New Project".
+1. Download our [REDCap xml file](media/cervical_cancer_factors.REDCap.xml), saving it to a place you'll be able to find it (like your Downloads folder).  We suggest doing a right click on the link and choosing "Save Link As," or "Download Linked File As."
+2. Log in to your REDCap server and choose "New Project."
 3. Fill out the Project title, Project purpose, Assign project to Folder, and Project notes fields as you like.  We called our project "API Testing" but that's only a suggestion.
 4. Choose "Upload a REDCap project XML file" as the Project Creation option.  
-5. Click "Choose File", and in the file picker, navigate to where you saved our XML file.
+5. Click "Choose File," and in the file picker, navigate to where you saved our XML file.
 
 An image below shows what you might see after steps 1-5, although your institution may have different colors, layouts, etc. on their page.
 
-![New project form in REDCap](media/new_project_from_xml.png)<!-- style = "border :1px solid rgb(var(--color-highlight)); max-width:800px;" -->
+![New project form in REDCap.](media/new_project_from_xml.png)<!-- style = "border :1px solid rgb(var(--color-highlight)); max-width:800px;" -->
 
 6. At the bottom of the page, click "Create Project".  It may take a few minutes to digest that giant XML file!
 
