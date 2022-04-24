@@ -154,16 +154,19 @@ Some APIs allow for anonymous use.  Others require all users to be registered an
 
 **Automation**
 
+**Automation**
+
 APIs are automated, which means they won't rely on you logging in manually, adding a user name and password interactively. API calls have to run without human intervention, which means you need to provide your R or Python script with credentials that show you are allowed see the data you're accessing. But obviously you don't want to put your user name and password in a script. Your user name and password might open a lot of doors at your institution, including your email, your payroll information, and your EHR access. You want to isolate **just** your access to this **particular** data, and using your all-powerful login information to access REDCap data is far too powerful.
 
 **Security**
 
-What if your credentials fell into the wrong hands, because they were in a script on a drive that many people have access to? This is where API keys or tokens come in. API credentials give very specific access to very specific things.  They can also be regenerated easily (like changing a lock on a door), in case you suspect they may have been lost or misused. If API credentials do fall into the wrong hands, it's not great, but it's much better than accidentally sharing your username and password! The access codes you need to provide might be called tokens, keys, passwords, or some other descriptor. In REDCap, the term is "token", and we'll show you in a bit how to generate a token for your data.
+What if your credentials fell into the wrong hands, because they were in a script on a drive that many people have access to? This is where API keys or tokens come in. API credentials give very specific access to very specific things.  They can also be regenerated easily (like changing a lock on a door), in case you suspect they may have been lost or misused. If API credentials do fall into the wrong hands, it's not great, but it's much better than accidentally sharing your username and password! The access codes you need to provide might be called tokens, keys, passwords, or some other descriptor. In REDCap, the term is "token," and we'll show you in a bit how to generate a token for your data.
 
 ### Advantages of the REDCap API
 
 Two important advantages to using an API are **data freshness** and **reproducibility**.
 
+**Data Freshness**
 **Data Freshness**
 Let's say you have to run some analysis on data you're collecting in REDCap, and you want to re-run this analysis every couple of weeks to see the latest figures. One way to do that is to manually export data from REDCap to a .csv and save it to a file that you analyze.  REDCap likes to download files with a date stamp as part of the file name, so you have to keep track of various file names and make sure you are analyzing the right data. You may, after all, end up collecting multiple .csvs, each of which has a particular version of the data in REDCap. This can easily become overwhelming and cause confusion or mistakes.
 
@@ -247,7 +250,7 @@ In REDCap, the project owner (or people with user rights) have to explicitly giv
 
 Open your REDCap database (one that belongs to you or in which you have the ability to change user rights). In the left side of the screen, choose "User Rights" from the list of applications.
 
-![List of applications which includes the "User Rights" application](media/user_rights.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
+![List of applications which includes the "User Rights" application.](media/user_rights.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 The User Rights panel will open in the main part of your screen. Click on your user id (or your role) and choose "Edit User Privileges." Give yourself API Export access, as shown in the image below.  For now, we'll leave API Import/Update turned off, so that you feel secure knowing you can't accidentally upload anything that could mess up your data.
 
@@ -261,7 +264,7 @@ This is what we're talking about:
 
 Once you're all done giving yourself API export rights and (if applicable) data export rights, click "Save Changes".
 
-Refresh your browser (reload the page) so that your new permissions are included in what you get shown in your project. Now, on the left hand side of the project, you should see something new under "Applications" – "API" and "API Playground".
+Refresh your browser (reload the page) so that your new permissions are included in what you get shown in your project. Now, on the left hand side of the project, you should see something new under "Applications" – "API" and "API Playground."
 
 ![List of applications which includes the "API" and "API Playground" applications.](media/api_api_playground.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
