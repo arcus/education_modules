@@ -70,9 +70,9 @@ If relevant, you can include recommendations for somewhere else to start if the 
 Which of the following would be examples of machine learning? Select all that apply.
 
 [[X]] Using ultrasound images, automatically flag potentially high-risk patient files for closer inspection by a clinician
-[[ ]] Estimate the difference 
+[[ ]] Estimate the difference
 [[X]] Based on a large sample of electronic health records, build a model to give the probability that a given patient will be readmitted within a week of hospital discharge
-[[ ]] 
+[[ ]]
 ****
 <div class = "answer">
 </div>
@@ -93,7 +93,7 @@ Which of the following would be examples of machine learning? Select all that ap
 
 ## Big data does not mean good data: Bias and inequality
 
-Although there are unfortunately many examples of explicit bias in data intentionally used to maintain inequalities (e.g. [the Home Owners Loan Corporation assessments during the New Deal era](https://dsl.richmond.edu/panorama/redlining/#loc=4/41.212/-109.995&text=intro)), 
+Although there are unfortunately many examples of explicit bias in data intentionally used to maintain inequalities (e.g. [the Home Owners Loan Corporation assessments during the New Deal era](https://dsl.richmond.edu/panorama/redlining/#loc=4/41.212/-109.995&text=intro)),
 
 [racial disparities in the distribution of COVID-19 reflief funding](https://www.statnews.com/2020/08/07/racial-bias-in-government-covid19-hospital-aid-formula/)
 
@@ -103,6 +103,8 @@ To learn more about one particularly salient example of this problem, read ["Dis
 > The U.S. health care system uses commercial algorithms to guide health decisions. Obermeyer et al. find evidence of racial bias in one widely used algorithm, such that Black patients assigned the same level of risk by the algorithm are sicker than White patients (see the Perspective by Benjamin). The authors estimated that this racial bias reduces the number of Black patients identified for extra care by more than half.
 
 </div>
+
+[Weapons of Math Destruction](https://www.youtube.com/watch?v=gdCJYsKlX_Y)
 
 ### Quiz: Bias and inequality
 
@@ -115,7 +117,23 @@ True or False: Big data sets are generally higher quality than smaller data sets
 </div>
 ****
 
+## Sources
 
+R4DS https://r4ds.had.co.nz/
+
+Text analysis
+- Supervised Machine Learning for Text Analysis in R https://smltar.com/
+- Text Mining with R: https://www.tidytextmining.com/
+
+Applied Predictive Modeling https://vuquangnguyen2016.files.wordpress.com/2018/03/applied-predictive-modeling-max-kuhn-kjell-johnson_1518.pdf
+
+Feature Engineering and Selection: A Practical Approach for Predictive Models http://www.feat.engineering/
+
+Tidy Modeling with R https://www.tmwr.org/
+
+Introduction to Applied Machine Learning (online course) https://dionysus.psych.wisc.edu/iaml/
+
+https://www.deeplearning.ai/ Several world-class courses on machine learning topics ranging from intro to very advanced, all free.
 
 ## Including highlight boxes
 
