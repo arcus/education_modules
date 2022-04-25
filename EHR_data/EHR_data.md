@@ -17,6 +17,7 @@ After completion of this module, learners will be able to:
 
 - describe data structures typical of EHR data, especially a 'normalized' database
 - list three common sources of quality problems in EHR data
+- explain the difference between structured and unstructured data as it applies to EHR
 - identify statistical methods that are especially effective in analyzing EHR data
 
 @end
@@ -65,6 +66,30 @@ There are several advantages to EHR research over other data sources:
 - large, representative sample
 - potential for detailed longitudinal analyses
 - potential for multi-site studies, replications, and generalizations
+
+
+## Sources
+
+https://www.med.upenn.edu/ehr-stats/assets/user-content/documents/COC_EHR_Traveling_Course.pdf
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3555312/
+
+https://pubmed.ncbi.nlm.nih.gov/23300414/
+
+https://pubmed.ncbi.nlm.nih.gov/27668265/
+
+https://pubmed.ncbi.nlm.nih.gov/28865143/
+
+missing outcome data: https://pubmed.ncbi.nlm.nih.gov/30873729/
+
+https://pubmed.ncbi.nlm.nih.gov/27852603/
+
+https://pubmed.ncbi.nlm.nih.gov/29135770/
+
+https://pubmed.ncbi.nlm.nih.gov/25062868/
+
+need pennkey:
+https://www.nature.com/articles/nrg3208
 
 
 ## Additional Resources
