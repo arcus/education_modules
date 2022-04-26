@@ -20,7 +20,7 @@ After completion of this module, learners will be able to:
 
 @source_attribution
 
-This "Good Enough Git" module is derived from the "Version Control with Git" lesson, Copyright (c) ![Software Carpentry]( http://software-carpentry.org/), in accordance with its ![Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/)."Good Enough Git" is licensed itself under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> by The Children's Hospital of Philadelphia Arcus Team. 
+This "Good Enough Git" module is derived from the "Version Control with Git" lesson, Copyright (c) <a href="http://software-carpentry.org/">Software Carpentry</a>, in accordance with its <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a>. "Good Enough Git" is licensed itself under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> by The Children's Hospital of Philadelphia Arcus Team. 
 
 @end
 
