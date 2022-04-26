@@ -18,6 +18,12 @@ After completion of this module, learners will be able to:
 
 @end
 
+@source_attribution
+
+This "Good Enough Git" module is derived from the "Version Control with Git" lesson, Copyright (c) [Software Carpentry]( http://software-carpentry.org/), in accordance with its [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/)."Good Enough Git" is licensed itself under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) by The Children's Hospital of Philadelphia Arcus Team. 
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
 
 -->
@@ -43,6 +49,11 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/mod
 **Learning Objectives**
 
 @learning_objectives
+  
+  
+**Source Attribution**
+
+@source_attribution 
 
 
 </div>
@@ -442,6 +453,9 @@ You may also want to add `unset SSH_ASKPASS` at the end of your `~/.bashrc` to m
 
 You may see a `-u` option used with git push in some documentation. This option is synonymous with the `--set-upstream-to option` for the git branch command, and is used to associate the current branch with a remote branch so that the git pull command can be used without any arguments. To do this, simply use git push `-u origin main` once the remote has been set up.
 
+## Attribution
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Good Enough Git</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">The Children's Hospital of Philadelphia Arcus Team</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 ## Feedback
 
