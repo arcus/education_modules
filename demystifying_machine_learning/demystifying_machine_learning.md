@@ -93,7 +93,10 @@ Which of the following would be examples of machine learning? Select all that ap
 
 ## Big data does not mean good data: Bias and inequality
 
-Although there are unfortunately many examples of explicit bias in data intentionally used to maintain inequalities (e.g. [the Home Owners Loan Corporation assessments during the New Deal era](https://dsl.richmond.edu/panorama/redlining/#loc=4/41.212/-109.995&text=intro)),
+Although there are unfortunately many examples of explicit bias in data intentionally used to maintain inequalities (e.g. [the Home Owners Loan Corporation assessments during the New Deal era](https://dsl.richmond.edu/panorama/redlining/#loc=4/41.212/-109.995&text=intro)), there are also many cases where biased algorithms are actually well-intentioned attempts to solve difficult problems.
+Machine learning models have been used to try to bring efficiency and fairness to a range of tricky societal problems including [](), [how to effectively deploy police](), and [assist judges in predicting recidivism](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing).
+In each case, the people designing and using the models (presumably) did not intend biased results, but
+Why does this happen?
 
 [racial disparities in the distribution of COVID-19 reflief funding](https://www.statnews.com/2020/08/07/racial-bias-in-government-covid19-hospital-aid-formula/)
 
@@ -104,7 +107,7 @@ To learn more about one particularly salient example of this problem, read ["Dis
 
 </div>
 
-[Weapons of Math Destruction](https://www.youtube.com/watch?v=gdCJYsKlX_Y)
+Cathy O'Neil's best selling book [Weapons of Math Destruction](https://www.penguinrandomhouse.com/books/241363/weapons-of-math-destruction-by-cathy-oneil/9780553418835/) or her [TED Talk, "The era of blind faith in big data must end"](https://www.ted.com/talks/cathy_o_neil_the_era_of_blind_faith_in_big_data_must_end).
 
 ### Quiz: Bias and inequality
 
