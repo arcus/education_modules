@@ -39,6 +39,9 @@ To see what it looks like rendered via LiaScript, [click here](https://liascript
 <div class = "overview">
 
 ## Overview
+
+??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
+
 @comment
 
 **Is this module right for me?** @long_description
