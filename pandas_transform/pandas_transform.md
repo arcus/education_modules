@@ -80,6 +80,8 @@ You don't have to do anything except come back here once the link opens in a new
 
 ## The `pandas` Package
 
+??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
+
 When and why would `pandas` and programming in python be preferable to doing similar things in `R`?
 
 What is this `import`, `as pd` and `import numpy as np`?
