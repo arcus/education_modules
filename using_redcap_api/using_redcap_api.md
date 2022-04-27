@@ -213,7 +213,7 @@ For the next part of this module, we'd like you to work with a real REDCap datab
 
 ![List of applications which includes the "User Rights" application.](media/user_rights.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
-If you have a REDCap project in mind, log in and open that project.  On the left side, under "Applications," do you see "User Rights"?  If so, congratulations, you can use this project to experiment with the REDCap API.  We will only be using the API to access project data, not change or destroy it or add new data, so what we're going to describe here is safe to perform on a real dataset.
+If you have a REDCap project in mind, log in and open that project.  On the left side, under **Applications,** do you see **User Rights**?  If so, congratulations, you can use this project to experiment with the REDCap API.  We will only be using the API to access project data, not change or destroy it or add new data, so what we're going to describe here is safe to perform on a real dataset.
 
 <div class = "warning">
 
@@ -223,17 +223,17 @@ Just because we're not going to break any of your data doesn't mean that it's ok
 
 If you can't or don't want to use your own existing REDCap project, you can clone a sample project from us.  We've taken data from the University of California, Irvine Machine Learning Repository, specifically, their dataset on [cervical cancer risk factors](https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29), and made that data into a REDCap project.  Here are the steps to take our REDCap project and make it yours!
 
-1. Download our [REDCap xml file](media/cervical_cancer_factors.REDCap.xml), saving it to a place you'll be able to find it (like your Downloads folder).  We suggest doing a right click on the link and choosing "Save Link As," or "Download Linked File As."
-2. Log in to your REDCap server and choose "New Project."
+1. Download our [REDCap xml file](media/cervical_cancer_factors.REDCap.xml), saving it to a place you'll be able to find it (like your Downloads folder).  We suggest doing a right click on the link and choosing **Save Link As,** or **Download Linked File As.**
+2. Log in to your REDCap server and choose **New Project.**
 3. Fill out the Project title, Project purpose, Assign project to Folder, and Project notes fields as you like.  We called our project "API Testing" but that's only a suggestion.
-4. Choose "Upload a REDCap project XML file" as the Project Creation option.  
-5. Click "Choose File," and in the file picker, navigate to where you saved our XML file.
+4. Choose **Upload a REDCap project XML file** as the Project Creation option.  
+5. Click **Choose File,** and in the file picker, navigate to where you saved our XML file.
 
 An image below shows what you might see after steps 1-5, although your institution may have different colors, layouts, etc. on their page.
 
 ![New project form in REDCap.](media/new_project_from_xml.png)<!-- style = "border :1px solid rgb(var(--color-highlight)); max-width:800px;" -->
 
-6. At the bottom of the page, click "Create Project."  It may take a few minutes to digest that giant XML file!
+6. At the bottom of the page, click **Create Project.**  It may take a few minutes to digest that giant XML file!
 
 Congratulations, now you have a project that you created, which means you have User Rights capabilities.  That will come in handy in our next step!
 
@@ -241,35 +241,35 @@ Congratulations, now you have a project that you created, which means you have U
 
 In REDCap, the project owner (or people with user rights) have to explicitly give permission to use the REDCap API to project users who need that capability. In fact, when you create a new REDCap project, REDCap does not provide you with these permissions by default, even though you're the project owner! Take a look at your REDCap project and look on the left hand side of the screen to look at the menu of options. Chances are, you won't see anything that says "API." If that's the case, don't worry. We're going to walk you through how to give yourself API access.
 
-Open your REDCap database (one that belongs to you or in which you have the ability to change user rights). In the left side of the screen, choose "User Rights" from the list of applications.
+Open your REDCap database (one that belongs to you or in which you have the ability to change user rights). In the left side of the screen, choose **User Rights** from the list of applications.
 
 ![List of applications which includes the "User Rights" application.](media/user_rights.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
-The User Rights panel will open in the main part of your screen. Click on your user id (or your role) and choose "Edit User Privileges." Give yourself API Export access, as shown in the image below.  For now, we'll leave API Import/Update turned off, so that you feel secure knowing you can't accidentally upload anything that could mess up your data.
+The User Rights panel will open in the main part of your screen. Click on your user id (or your role) and choose **Edit User Privileges.** Give yourself API Export access, as shown in the image below.  For now, we'll leave API Import/Update turned off, so that you feel secure knowing you can't accidentally upload anything that could mess up your data.
 
 ![List of user rights checkboxes with API Export checked.](media/api_export.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
-**The next step depends on your version of REDCap.**  Do you see a box on the right side of your User Rights panel labeled "Privileges for Viewing and Exporting Data"?  If you do, give yourself some Data Export Rights.  We recommend "Full Data Set", but you can choose a less privileged level of access if you're working with identified data and want to be extra careful.  Note that our sample project on cervical cancer risk factors is already deidentified.
+**The next step depends on your version of REDCap.**  Do you see a box on the right side of your User Rights panel labeled **Privileges for Viewing and Exporting Data**?  If you do, give yourself some Data Export Rights.  We recommend **Full Data Set**, but you can choose a less privileged level of access if you're working with identified data and want to be extra careful.  Note that our sample project on cervical cancer risk factors is already deidentified.
 
 This is what we're talking about:
 
 ![Privileges for Viewing and Exporting Data options](media/privileges.png)<!-- style = "border :1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
 
-Once you're all done giving yourself API export rights and (if applicable) data export rights, click "Save Changes".
+Once you're all done giving yourself API export rights and (if applicable) data export rights, click **Save Changes**.
 
-Refresh your browser (reload the page) so that your new permissions are included in what you get shown in your project. Now, on the left hand side of the project, you should see something new under "Applications" – "API" and "API Playground."
+Refresh your browser (reload the page) so that your new permissions are included in what you get shown in your project. Now, on the left hand side of the project, you should see something new under Applications – **API** and **API Playground.**
 
 ![List of applications which includes the "API" and "API Playground" applications.](media/api_api_playground.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 ### API Token
 
-So now you have the **right** to use the API, but you can't start using it just yet. You have to generate an API token.  Click on the "API" application in the left side menu and in the main part of your screen, click on the button to "Generate API Token."  Depending on your institution's rules, you might automatically be granted a token immediately, or it might be generated manually by an administrator a few minutes or hours later.
+So now you have the **right** to use the API, but you can't start using it just yet. You have to generate an API token.  Click on the **API** application in the left side menu and in the main part of your screen, click on the button to **Generate API Token.**  Depending on your institution's rules, you might automatically be granted a token immediately, or it might be generated manually by an administrator a few minutes or hours later.
 
 ![Text and clickable button for obtaining an API token.](media/obtain_api_token.png)<!-- style = "max-width:600px;" -->
 
 The API token is unique to the combination of user and project. It's a code that allows access only to the data in a single project and only the data that the person who generated the API token is allowed to see.  If you have three different projects, your token is different for each one. Importantly, if you feel like you may have accidentally given your API token away, it's a good idea to regenerate it, which is a single-click operation. It makes your old token invalid and creates a new token.
 
-Soon, your API token will show up in that same "API" Application. It will look something like this (note, I've obscured my token – sharing this in a post like this one would be a terrible idea!).
+Soon, your API token will show up in that same API Application. It will look something like this (note, I've obscured my token – sharing this in a post like this one would be a terrible idea!).
 
 ![Text that includes an obscured API token.](media/your_api_token.png)<!-- style = "max-width:600px;" -->
 
@@ -297,7 +297,7 @@ You can generate a REDCap API token once you have been given API rights.  Once y
 
 ## Hands on Practice: API Playground
 
-So, you have some data in a REDCap database, and you have an API key that gives you access to that data. How do you use this key, though? Learning how to use an API can be tricky, because it requires you to pass not only the key, but your actual request (like "give me only the field called 'species'" or "give me only the form called 'inclusion_criteria'"). Luckily, REDCap provides you an "API Playground" that gives you not only a view into what the API can do, but provides a good start to giving you the actual code. Let's take a deeper look.
+So, you have some data in a REDCap database, and you have an API key that gives you access to that data. How do you use this key, though? Learning how to use an API can be tricky, because it requires you to pass not only the key, but your actual request like "give me only the field called `species`" or "give me only the form called `inclusion_criteria`." Luckily, REDCap provides you an **API Playground** that gives you not only a view into what the API can do, but provides a good start to giving you the actual code. Let's take a deeper look.
 
 The API Playground has several parts:
 
@@ -310,12 +310,12 @@ Let's look at how each part of the API Playground helps you learn the API.
 
 ### API Method
 
-In your REDCap project, head over to the "API Playground" – click on that phrase in the Applications pane on the left. Then, at the top of your screen, you'll see the menu-driven selection box. The first selection you have to make is **API Method**.
+In your REDCap project, head over to the **API Playground** – click on that phrase in the Applications pane on the left. Then, at the top of your screen, you'll see the menu-driven selection box. The first selection you have to make is **API Method**.
 
-For now, choose "Export Records" as the API method.  This will allow you to download records (rows of data).  Make sure that:
+For now, choose **Export Records** as the API method.  This will allow you to download records (rows of data).  Make sure that:
 
 * The "Format" (second option down) is "CSV" and
-* The "Type" (third option down) is "flat".
+* The "Type" (third option down) is "flat."
 
 You don't have to change any other fields.  Leaving everything else alone means you'll download all the records (rows) and all of the forms / instruments with all of their fields (columns) into a single .csv file.
 
@@ -323,21 +323,21 @@ You don't have to change any other fields.  Leaving everything else alone means 
 Be careful not to choose `.json` as the format -- `.csv`, or **comma separated values**, is the file format you want to download!
 </div>
 
-The "Raw Request Parameters" box below your selection will change to reflect whatever you chose. Here's an example of what you might see, if you're using the cervical cancer data.  If you're using your own dataset, things will look different.  Note that we've blurred out the API key here -- that's not something we want to share!
+The **Raw Request Parameters** box below your selection will change to reflect whatever you chose. Here's an example of what you might see, if you're using the cervical cancer data.  If you're using your own dataset, things will look different.  Note that we've blurred out the API key here -- that's not something we want to share!
 
 ![A menu-driven way to choose API method and the coded version of that selection below.](media/api_method.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
-This "Raw Request Parameters" gives you a quick look at the information you're passing to REDCap, to make sure you selected what you really wanted in the menu part above.  Go on to the next page to see how to submit this API request!
+This **Raw Request Parameters** gives you a quick look at the information you're passing to REDCap, to make sure you selected what you really wanted in the menu part above.  Go on to the next page to see how to submit this API request!
 
 ### Execute Request
 
-Look further down the API Playground page, in the "Response" area, and click on the button that says "Execute Request." You might get a "waiting" spinner, and then a box will appear below the button with the data that REDCap returned from your request.
+Look further down the API Playground page, in the **Response** area, and click on the button that says **Execute Request.** You might get a "waiting" spinner, and then a box will appear below the button with the data that REDCap returned from your request.
 
 You requested your data to be in a .csv, so you should get some data that's "comma separated" – a bunch of fields that are separated by commas, with each new line of data being separated by a line break.
 
 <div class = "warning">
 
-In the "Response" box, data is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text by clicking on the contents of the box and then using your browser's "Select All" function, followed by "Copy." Then paste it into a text editor like Atom or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here's the "before" (comma separated values in plain text) and the "after" (text saved as a .csv and then opened in Excel) of the cervical cancer data:
+In the **Response** box, data is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text by clicking on the contents of the box and then using your browser's "Select All" function, followed by "Copy." Then paste it into a text editor like Atom or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here's the cervical cancer data before, as comma separated values in plain text, and after, as text saved as a .csv and opened in Excel:
 
 ![Data shown as text, separated by commas.](media/execute_request.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
@@ -349,10 +349,10 @@ Below the Response box with the comma separated values data, you'll see an HTTP 
 
 This is an example of trying out and learning about the API without having to write code. You can experiment with various methods and learn easily without having to go through the frustration of writing a lot of code to find out how to do things.
 
-In some API methods (like "Export Records"), you'll have a number of drop down menus you can choose from to tailor your request, including which "forms" and which "fields" you want to retrieve. You can make multiple choices in menus like these by holding down control while clicking (Windows) or command while clicking (Mac).  Helpfully, however, if you want **every** item listed (say, you want every form and every field), you don't click any selection at all, and REDCap assumes you mean everything that appears in the drop-down list.
+In some API methods, like **Export Records**, you'll have a number of drop down menus you can choose from to tailor your request, including which "forms" and which "fields" you want to retrieve. You can make multiple choices in menus like these by holding down control while clicking (Windows) or command while clicking (Mac).  Helpfully, however, if you want **every** item listed (say, you want every form and every field), you don't click any selection at all, and REDCap assumes you mean everything that appears in the drop-down list.
 
 <div class = "important">
-Do take a look and make sure your "Response" box contains comma separated values and shows a good return code (200).  If not, something has gone wrong -- either you don't have the correct rights, which means you need to take another look at your rights in the User Rights section of REDCap, or you've issued an API call that is incorrect in some way (for instance, maybe you requested a .json format instead of .csv).
+Do take a look and make sure your Response box contains comma separated values and shows a good return code (200).  If not, something has gone wrong -- either you don't have the correct rights, which means you need to take another look at your rights in the User Rights section of REDCap, or you've issued an API call that is incorrect in some way (for instance, maybe you requested a .json format instead of .csv).
 </div>
 
 ### API Playground: Code
@@ -402,7 +402,7 @@ There are useful R packages that make importing REDCap data into R simpler than 
 The R packages that streamline this effort (we like REDCapR and redcapAPI) are great and seem very stable, and we provide links to them toward the end of this module, but R packages depend on volunteers who keep them updated.  Therefore, we think it's useful to know how to use the basic method we'll share here, even if in the future you prefer a different approach.
 </div>
 
-First, open RStudio and create a new R Markdown (File > New File > R Markdown).  Give your R Markdown the title and author information you want, leave the default output choice (HTML), and click on "OK."
+First, open RStudio and create a new R Markdown (File > New File > R Markdown).  Give your R Markdown the title and author information you want, leave the default output choice (HTML), and click on **OK.**
 
 ![The new R Markdown dialog box from RStudio.](media/new_r_markdown.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
@@ -416,7 +416,7 @@ Then:
 * Remove the first line (the one that starts `#!/usr/bin`).
 * Run that chunk!
 
-After running that chunk, you should have some new objects in your "Environment."  Of particular interest is the object called `result`.  See below what we see when we run the chunk of code to get records from the cervical cancer database:
+After running that chunk, you should have some new objects in your **Environment.**  Of particular interest is the object called `result`.  See below what we see when we run the chunk of code to get records from the cervical cancer database:
 
 ![RStudio showing code on the left and environment variables including the "result" dataframe listed on the right.](media/rstudio_environment.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
