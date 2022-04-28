@@ -27,9 +27,9 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/sty
 
 script: https://kit.fontawesome.com/83b2343bd4.js
 
-script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
-<lia-keep>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
 <script>
 // Make *any* div with class 'compute' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.compute',
@@ -37,29 +37,50 @@ sagecell.makeSagecell({inputLocation: 'div.compute',
 // Make *any* div with class 'compute' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.python',
                        evalButtonText: 'Run python',
-                       languages: ["python"]});
+                       languages: ["python"],
+                       autoeval: FALSE});
 sagecell.makeSagecell({inputLocation: 'div.Rcell',
                       evalButtonText: 'Run R',
                       languages: ["r"]});
 </script>
-</lia-keep>
+
 -->
 
 # Transforming Data in Python using Pandas
 
 ## Embedded Code Testing:
-Jupyterlite lab environment:
-??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
+<lia-keep>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      width: 250px; height: 40px;
+      text-align: center;
+    }
+  </style>
 
-Jupyterlite classic notebook:
-to do
+  <table style="margin: 1em">
+    <tr>
+      <th>**Header 1**</th>
+      <th>**Header 2**</th>
+    </tr>
+    <tr>
+      <td>Cell 1</td>
+      <td rowspan="2">Cell 2</td>
+    </tr>
+    <tr>
+      <td>Cell 3</td>
+    </tr>
+  </table>
+</lia-keep>
 
 Python cell:
-<div class="python">
-<script type="text/x-sage">
-range(4)
-</script>
-</div>
+<lia-keep>
+  <div class="python">
+  <script type="text/x-sage">
+  1+2
+  </script>
+  </div>
+</lia-keep>
 
 <div class="python">
 <script type="text/x-sage">
@@ -76,6 +97,12 @@ R cell:
 1+1
 </script>
 </div>
+
+Jupyterlite lab environment:
+??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
+
+Jupyterlite classic notebook:
+to do
 
 ## Overview
 
