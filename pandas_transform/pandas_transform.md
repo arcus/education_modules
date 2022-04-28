@@ -29,19 +29,20 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
+<lia-keep>
 <script>
 // Make *any* div with class 'compute' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.compute',
                        evalButtonText: 'Evaluate'});
 // Make *any* div with class 'compute' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.python',
-                       evalButtonText: 'Run python'
+                       evalButtonText: 'Run python',
                        languages: ["python"]});
 sagecell.makeSagecell({inputLocation: 'div.Rcell',
-                      evalButtonText: 'Run R'
+                      evalButtonText: 'Run R',
                       languages: ["r"]});
 </script>
-
+</lia-keep>
 -->
 
 # Transforming Data in Python using Pandas
@@ -54,11 +55,21 @@ Jupyterlite classic notebook:
 to do
 
 Python cell:
-<lia-keep>
-<div class="python"><script type="text/x-sage">
-1+1
-</script></div>
-</lia-keep>
+<div class="python">
+<script type="text/x-sage">
+range(4)
+</script>
+</div>
+
+<div class="python">
+<script type="text/x-sage">
+import pandas as pd
+d = {'col1': [1, 2], 'col2': [3, 4]};
+df = pd.DataFrame(data=d);
+df
+</script>
+</div>
+
 
 R cell:
 <div class="Rcell"><script type="text/x-sage">
