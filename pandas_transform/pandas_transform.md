@@ -27,16 +27,42 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/sty
 
 script: https://kit.fontawesome.com/83b2343bd4.js
 
+script: https://sagecell.sagemath.org/static/embedded_sagecell.js
+
+<script>
+// Make *any* div with class 'compute' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.compute',
+                       evalButtonText: 'Evaluate'});
+// Make *any* div with class 'compute' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python',
+                       evalButtonText: 'Run python'
+                       languages: ["python"]});
+sagecell.makeSagecell({inputLocation: 'div.Rcell',
+                      evalButtonText: 'Run R'
+                      languages: ["r"]});
+</script>
+
 -->
 
 # Transforming Data in Python using Pandas
 
-(Note that the title is the only level-1 header in the document)
+## Embedded Code Testing:
+Jupyterlite lab environment:
+??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
 
-To see how to use this template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6).
-To see what it looks like rendered via LiaScript, [click here](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6#1) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
+Jupyterlite classic notebook:
+to do
 
-<div class = "overview">
+Python cell:
+<div class="python"><script type="text/x-sage">
+1+1
+</script></div>
+
+R cell:
+<div class="Rcell"><script type="text/x-sage">
+1+1
+</script>
+</div>
 
 ## Overview
 
