@@ -54,9 +54,11 @@ Jupyterlite classic notebook:
 to do
 
 Python cell:
+<lia-keep>
 <div class="python"><script type="text/x-sage">
 1+1
 </script></div>
+</lia-keep>
 
 R cell:
 <div class="Rcell"><script type="text/x-sage">
