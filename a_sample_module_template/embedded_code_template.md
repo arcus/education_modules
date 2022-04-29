@@ -27,7 +27,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
 @sage
-<script>
+<script input="hidden">
 // Make *any* div with class 'compute' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.compute',
                        evalButtonText: 'Evaluate'});
