@@ -74,7 +74,10 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 
 </div>
 
-## Python cell
+## Embedding sagemath cells
+
+
+### Python cells
 
 You can include a regular python cell that will evaluate for you. One twitchy thing about sagemathcells is that they won't return output unless you specifically ask them to print.
 
@@ -117,7 +120,7 @@ print(a.transpose())
 </div>
 
 
-## R cell
+### R cells
 @sage
 
 Similarly you can include R code in a cell with the class `"r_cell"`:
@@ -167,12 +170,17 @@ print(paste(num,"is not a prime number"))
 </lia-keep>
 </div>
 
-## Jupyterlite lab environment
-??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
+### Define your own sagemath cells type
 
 
-## Jupyterlite classic notebook
+## Embedding Jupyterlite
+
+
+### Jupyterlite classic notebook
 ??[notebook](https://arcus.github.io/jupyterlite/retro/notebooks/?path=p5.ipynb)
+
+### Jupyterlite lab environment
+??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
 
 ## Feedback
 
