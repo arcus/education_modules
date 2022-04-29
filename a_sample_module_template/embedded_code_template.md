@@ -6,7 +6,7 @@ version:  0.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
-title: Embedded code
+title: Embedding code into Liascript
 comment:  This is a place to figure out how to embed code into a Liascript module.
 long_description: Do you want to include python code in your module?
 
@@ -35,28 +35,33 @@ sagecell.makeSagecell({inputLocation: 'div.compute',
 sagecell.makeSagecell({inputLocation: 'div.python',
                        evalButtonText: 'Run python',
                        languages: ["python"],
+                       hide: ['fullScreen', 'permalink'],
                        });
 // Make *any* div with class 'python_run' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.python_run',
                       evalButtonText: 'Run python',
                       languages: ["python"],
+                      hide: ['fullScreen', 'permalink'],
                       autoeval: 'true'
                       });
 // Make *any* div with class 'r' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.r',
                       evalButtonText: 'Run R',
-                      languages: ["r"]});
+                      languages: ["r"],
+                      hide: ['fullScreen', 'permalink'],
+                      });
 // Make *any* div with class 'r_run' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.r_run',
                       evalButtonText: 'Run R',
                       languages: ["r"],
+                      hide: ['fullScreen', 'permalink'],
                       autoeval: 'true'
                       });
 </script>
 @end
 
 -->
-# Embedded Code Testing
+# Embedding Code into Liascript
 <div class = "overview">
 
 ## Overview
@@ -76,6 +81,7 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 
 ## Embedding sagemath cells
 
+One cool spin-off of the [SageMath Project](https://www.sagemath.org) is the [SageMathCell](https://sagecell.sagemath.org) which allows you to run a single cell, not just in Sage, but in a number of languages including both python and R.
 
 ### Python cells
 
