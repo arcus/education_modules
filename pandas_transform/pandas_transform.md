@@ -49,38 +49,14 @@ sagecell.makeSagecell({inputLocation: 'div.Rcell',
 # Transforming Data in Python using Pandas
 
 ## Embedded Code Testing:
-<lia-keep>
-  <style>
-    table, th, td {
-      border: 1px solid black;
-      width: 250px; height: 40px;
-      text-align: center;
-    }
-  </style>
-
-  <table style="margin: 1em">
-    <tr>
-      <th>**Header 1**</th>
-      <th>**Header 2**</th>
-    </tr>
-    <tr>
-      <td>Cell 1</td>
-      <td rowspan="2">Cell 2</td>
-    </tr>
-    <tr>
-      <td>Cell 3</td>
-    </tr>
-  </table>
-</lia-keep>
 
 Python cell:
-<lia-keep>
-  <div class="python">
-  <script type="text/x-sage">
-  1+2
-  </script>
-  </div>
-</lia-keep>
+<div class="python">
+<script>
+1+2
+</script>
+</div>
+
 
 <div class="python">
 <script type="text/x-sage">
@@ -102,8 +78,7 @@ Jupyterlite lab environment:
 ??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
 
 Jupyterlite classic notebook:
-to do
-
+??[notebook](https://arcus.github.io/jupyterlite/retro/notebooks/?path=p5.ipynb)
 ## Overview
 
 ??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
