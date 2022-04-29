@@ -24,6 +24,7 @@ After completion of this module, learners will be able to:
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
+
 script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
 @sage
@@ -83,16 +84,81 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 
 One cool spin-off of the [SageMath Project](https://www.sagemath.org) is the [SageMathCell](https://sagecell.sagemath.org) which allows you to run a single cell, not just in Sage, but in a number of languages including both python and R.
 
+Full documentation is available on the [sagecell GitHub](https://github.com/sagemath/sagecell).
+
+### Basic setup
+
+In order to run cells in Liascript, we need to have a script in the header to call out and run our code on the sagecell server.
+
+```
+script: https://sagecell.sagemath.org/static/embedded_sagecell.js
+```
+
+If we later decided that we need our own server, there are instructions on how to do that on [GitHub](https://github.com/sagemath/sagecell) but that would certainly need to go through some significant security vetting. For the moment, SageMathCell is certainly adequate for our needs.
+
+In addition, we need to call a script defining the type of cell we want on every page that will have a cell. To make this easier, here are 4 types of cells ready to go. We will see examples of all 4 on the next few pages, and show you how to make your own environments.
+
+By including `@sage` on any page you want to have a cell on, all of these environments will be available on that page.
+
+```
+@sage
+<script input="hidden">
+// Make *any* div with class 'python' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python',
+                       evalButtonText: 'Run python',
+                       languages: ["python"],
+                       hide: ['fullScreen', 'permalink'],
+                       });
+// Make *any* div with class 'python_run' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_run',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'true'
+                      });
+// Make *any* div with class 'r' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.r',
+                      evalButtonText: 'Run R',
+                      languages: ["r"],
+                      hide: ['fullScreen', 'permalink'],
+                      });
+// Make *any* div with class 'r_run' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.r_run',
+                      evalButtonText: 'Run R',
+                      languages: ["r"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'true'
+                      });
+</script>
+@end
+```
+
 ### Python cells
 
-You can include a regular python cell that will evaluate for you. One twitchy thing about sagemathcells is that they won't return output unless you specifically ask them to print.
+The `"python"` class will now give you a cell that runs python, and can be evaluated by clicking a button. The individual cell must be set up like this:
+
+```
+<div class="python">
+<lia-keep>
+<script type="text/x-sage">
+
+Your python code goes here.
+
+</script>
+</lia-keep>
+</div>
+```
+
+The `lia-keep` tag makes sure that the innermost script is read correctly, as text that will be the cell's input. The order of `div`, `lia-keep`, then `script` matters and the code will do weird things if `lia-keep` is inside the script of outside of the `div`.
+
+Let's see a first example:
 
 @sage
 <div class="python">
 <lia-keep>
 <script type="text/x-sage">
 
-1+2  # this line will not return output
+1+2  # this line will compute but not return output
 
 print(3+4) #but this line will return output
 
@@ -100,7 +166,10 @@ print(3+4) #but this line will return output
 </lia-keep>
 </div>
 
-The next cell imports `pandas` and then creates a dataframe. If we make the last line `df` instead of `print(df)` it might not give us output even though a Jupyter notebook cell or using python in the command line would give output.
+<div class = "warning">
+One twitchy thing about sagemathcells is that they won't return output unless you specifically ask them to print. The next cell imports `pandas` and then creates a dataframe. If we make the last line `df` instead of `print(df)` it might not give us output even though a Jupyter notebook cell or using python in the command line would give output.
+</div>
+
 
 <div class="python">
 <lia-keep>
@@ -113,7 +182,7 @@ print(df)
 </lia-keep>
 </div>
 
-You can also have a cell run automatically. This cell can still be edited and re-run by the user, but it will load with both the input and the output.
+You can also have a python cell run automatically using the class `"python_run"`. This cell can still be edited and re-run by the user, but it will load with both the input and the output.
 
 <div class="python_run">
 <lia-keep>
