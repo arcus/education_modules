@@ -42,13 +42,13 @@ sagecell.makeSagecell({inputLocation: 'div.python_run',
                       languages: ["python"],
                       autoeval: 'true'
                       });
-// Make *any* div with class 'r_cell' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.r_cell',
+// Make *any* div with class 'r' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.r',
                       evalButtonText: 'Run R',
                       languages: ["r"]});
 // Make *any* div with class 'r_run' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.r_run',
-                      evalButtonText: 'Run python',
+                      evalButtonText: 'Run R',
                       languages: ["r"],
                       autoeval: 'true'
                       });
@@ -123,9 +123,9 @@ print(a.transpose())
 ### R cells
 @sage
 
-Similarly you can include R code in a cell with the class `"r_cell"`:
+Similarly you can include R code in a cell with the class `"r"`:
 
-<div class="r_cell">
+<div class="r">
 <lia-keep>
 <script type="text/x-sage">
 # R Program to find the multiplicationtable (from 1 to 10)
