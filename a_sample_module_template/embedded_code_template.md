@@ -36,6 +36,12 @@ sagecell.makeSagecell({inputLocation: 'div.python',
                        evalButtonText: 'Run python',
                        languages: ["python"],
                        });
+// Make *any* div with class 'python_run' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_run',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      autoeval: 'true'
+                      });
 sagecell.makeSagecell({inputLocation: 'div.Rcell',
                       evalButtonText: 'Run R',
                       languages: ["r"]});
@@ -62,18 +68,23 @@ sagecell.makeSagecell({inputLocation: 'div.Rcell',
 </div>
 
 ## Python cell
+
+You can include a regular python cell that will evaluate for you. One twitchy thing about sagemathcells is that they won't return output unless you specifically ask them to print.
+
 @sage
 <div class="python">
 <lia-keep>
 <script type="text/x-sage">
 
-print(1+2)
+1+2  # this line will not return output
+
+print(3+4) #but this line will return output
 
 </script>
 </lia-keep>
 </div>
 
-And here is some text describing that the next cell tries to import `pandas` and doesn't seem able to?
+The next cell imports `pandas` and then creates a dataframe. If we make the last line `df` instead of `print(df)` it might not give us output even though a Jupyter notebook cell or using python in the command line would give output.
 
 <div class="python">
 <lia-keep>
@@ -82,6 +93,18 @@ import pandas as pd
 d = {'col1': [1, 2], 'col2': [3, 4]};
 df = pd.DataFrame(data=d);
 print(df)
+</script>
+</lia-keep>
+</div>
+
+You can also have a cell run automatically. This cell can still be edited and re-run by the user, but it will load with both the input and the output.
+
+<div class="python_run">
+<lia-keep>
+<script type="text/x-sage">
+import numpy as np
+a = np.arange(15).reshape(3, 5)
+print(a.transpose())
 </script>
 </lia-keep>
 </div>
