@@ -88,7 +88,7 @@ Full documentation is available on the [sagecell GitHub](https://github.com/sage
 
 ### Basic setup
 
-In order to run cells in Liascript, we need to have a script in the header to call out and run our code on the sagecell server.
+In order to run cells in Liascript, we need to have a script in the header yaml to call out and run our code on the sagecell server.
 
 ```
 script: https://sagecell.sagemath.org/static/embedded_sagecell.js
@@ -96,7 +96,7 @@ script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
 If we later decided that we need our own server, there are instructions on how to do that on [GitHub](https://github.com/sagemath/sagecell) but that would certainly need to go through some significant security vetting. For the moment, SageMathCell is certainly adequate for our needs.
 
-In addition, we need to call a script defining the type of cell we want on every page that will have a cell. To make this easier, here are 4 types of cells ready to go. We will see examples of all 4 on the next few pages, and show you how to make your own environments.
+In addition, we need to call a script defining the type of cells we want. To make this easier, here are 4 types of cells ready to go. We will see examples of all 4 on the next few pages, and show you how to make your own environments.
 
 By including `@sage` on any page you want to have a cell on, all of these environments will be available on that page.
 
@@ -247,14 +247,28 @@ print(paste(num,"is not a prime number"))
 
 ### Define your own sagemath cells type
 
+We have defined 4 types of cells so far in the yaml. That doesn't mean those are the only 4 types of cells that you can embed. Check out the documentation on [customizing sagemath cells](https://github.com/sagemath/sagecell/blob/master/doc/embedding.rst) to learn how to link cells, pre-load cells with code, use other open source languages.
 
 ## Embedding Jupyterlite
 
+We can also use Jupyterlite to embed full notebooks, or even full Jupyter labs directly into a page.
 
+Right now we are hosting a [Jupyterlite webpage](https://arcus.github.io/jupyterlite/) using GitHub pages. Notebooks you want to be available there need to be added to the [arcus/jupyterlite](https://github.com/arcus/jupyterlite) repository.
 ### Jupyterlite classic notebook
+You can embed a single notebook using the retro version of notebooks. Go to **Help -> Launch Jupyter Classic Notebook** to launch a version in which each notebook has it's own url.
+
+Then you can embed the url for your notebook directly in an iFrame using
+
+```
+??[notebook name](https://arcus.github.io/jupyterlite/retro/notebooks/?path=YourNotebookHere.ipynb)
+```
+
 ??[notebook](https://arcus.github.io/jupyterlite/retro/notebooks/?path=p5.ipynb)
 
 ### Jupyterlite lab environment
+
+If you want to have users explore a bigger project, you can also embed the entire Jupyter lab into the browser. This is clunky since your users will then have to navigate the file directory themselves.
+
 ??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
 
 ## Feedback
