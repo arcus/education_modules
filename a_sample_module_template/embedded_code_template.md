@@ -42,9 +42,16 @@ sagecell.makeSagecell({inputLocation: 'div.python_run',
                       languages: ["python"],
                       autoeval: 'true'
                       });
-sagecell.makeSagecell({inputLocation: 'div.Rcell',
+// Make *any* div with class 'r_cell' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.r_cell',
                       evalButtonText: 'Run R',
                       languages: ["r"]});
+// Make *any* div with class 'r_run' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.r_run',
+                      evalButtonText: 'Run python',
+                      languages: ["r"],
+                      autoeval: 'true'
+                      });
 </script>
 @end
 
@@ -112,7 +119,10 @@ print(a.transpose())
 
 ## R cell
 @sage
-<div class="Rcell">
+
+Similarly you can include R code in a cell with the class `"r_cell"`:
+
+<div class="r_cell">
 <lia-keep>
 <script type="text/x-sage">
 # R Program to find the multiplicationtable (from 1 to 10)
@@ -121,6 +131,37 @@ num = 7
 # use for loop to iterate 10 times
 for(i in 1:10) {
 print(paste(num,'x', i, '=', num*i))
+}
+</script>
+</lia-keep>
+</div>
+
+And if you want something to run automatically in R, the class `"r_run"` is currently set up to do that.
+
+<div class="r_run">
+<lia-keep>
+<script type="text/x-sage">
+# Program to check if the input number is prime or not
+# take input from the user
+for(num in 1:20){
+flag = 0
+# prime numbers are greater than 1
+if(num > 1) {
+# check for factors
+flag = 1
+for(i in 2:20) {
+if ((num %% i) == 0) {
+flag = 0
+break
+}
+}
+}
+if(num == 2)    flag = 1
+if(flag == 1) {
+print(paste(num,"is a prime number"))
+} else {
+print(paste(num,"is not a prime number"))
+}
 }
 </script>
 </lia-keep>
