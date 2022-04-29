@@ -72,6 +72,19 @@ There are several ways shell scripting can be useful to researchers and others w
 - Shell scripts can also call on multiple other programming languages, like R and python, to build pipelines that run across several software applications as well as enable a user to have greater facility with tools like git and docker.
 - Adoption of shell scripting also reinforces the importance of having well-structured and well-named files and file directory structures.
 
+### Quiz: Why bash?
+
+Which of the following are TRUE about bash/shell scripting? Select all that apply.
+
+[[X]] Shell scripting is a way for a user to interact with the core (or kernel) of your operating system.
+[[X]] Command line interfaces are pre-installed on most operating systems.
+[[ ]] Bash is expensive.
+[[X]] Shell scripts can work with other programming languages, such as R and Python, in pipelines.
+***
+<div class = "answer">
+Bash, or shell, scripting is a way to interface with your computer's operating system, and the necessary applications are probably already on your computer! You can also create pipelines that utilize bash and other programming languages. It's also 100% free!
+</div>
+***
 
 ## How do I get it?
 
