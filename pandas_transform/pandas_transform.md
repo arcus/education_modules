@@ -26,10 +26,9 @@ After completion of this module, learners will be able to:
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
+script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
-
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
-
+@sage
 <script>
 // Make *any* div with class 'compute' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.compute',
@@ -37,22 +36,23 @@ sagecell.makeSagecell({inputLocation: 'div.compute',
 // Make *any* div with class 'compute' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.python',
                        evalButtonText: 'Run python',
-                       languages: ["python"],
-                       autoeval: FALSE});
+                       languages: ["python"]});
 sagecell.makeSagecell({inputLocation: 'div.Rcell',
                       evalButtonText: 'Run R',
                       languages: ["r"]});
 </script>
+@end
 
 -->
 
 # Transforming Data in Python using Pandas
 
 ## Embedded Code Testing:
+@sage
 
 Python cell:
 <div class="python">
-<script>
+<script type="text/x-sage">
 1+2
 </script>
 </div>
