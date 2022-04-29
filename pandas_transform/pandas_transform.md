@@ -38,7 +38,8 @@ sagecell.makeSagecell({inputLocation: 'div.compute',
 sagecell.makeSagecell({inputLocation: 'div.python',
                        evalButtonText: 'Run python',
                        languages: ["python"],
-                       autoeval: FALSE});
+                       autoeval: FALSE,
+                       editor: 'codemirror'});
 sagecell.makeSagecell({inputLocation: 'div.Rcell',
                       evalButtonText: 'Run R',
                       languages: ["r"]});
