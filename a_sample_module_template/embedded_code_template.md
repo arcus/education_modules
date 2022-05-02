@@ -235,6 +235,10 @@ print(np.rint(np.dot(B,C)))
 </lia-keep>
 </div>
 
+<div class = "warning">
+These linked cells won't communicate from one page to the next, but you can have what you want in the kernel load in a linked cell at the start of each page.
+</div>
+
 ### R cells
 @sage
 
