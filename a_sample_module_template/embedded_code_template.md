@@ -45,6 +45,14 @@ sagecell.makeSagecell({inputLocation: 'div.python_run',
                       hide: ['fullScreen', 'permalink'],
                       autoeval: 'true'
                       });
+// Make *any* div with class 'python_link' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_link',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'false',
+                      linked: 'true'
+                      });
 // Make *any* div with class 'r' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.r',
                       evalButtonText: 'Run R',
@@ -115,6 +123,14 @@ sagecell.makeSagecell({inputLocation: 'div.python_run',
                       languages: ["python"],
                       hide: ['fullScreen', 'permalink'],
                       autoeval: 'true'
+                      });
+// Make *any* div with class 'python_link' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_link',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'false',
+                      linked: 'true'
                       });
 // Make *any* div with class 'r' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.r',
@@ -194,6 +210,30 @@ print(a.transpose())
 </lia-keep>
 </div>
 
+Even fancier, you can link cells using the class `'python_link'`, so that what is run in one cell impacts other cells run afterwards.
+
+<div class="python_link">
+<lia-keep>
+<script type="text/x-sage">
+import numpy as np
+B = np.arange(16).reshape(4, 4) +  np.identity((4))
+print(B.transpose())
+</script>
+</lia-keep>
+</div>
+
+In the cell above we imported `numpy` and defined a numpy array. Since the next cell is linked, if you run it after, it will use the same kernel as the cell above it.
+
+<div class="python_link">
+<lia-keep>
+<script type="text/x-sage">
+C = np.linalg.inv(B)
+print("B * C =")
+print(B,"*",C,"=")
+print(np.rint(np.dot(B,C)))
+</script>
+</lia-keep>
+</div>
 
 ### R cells
 @sage
