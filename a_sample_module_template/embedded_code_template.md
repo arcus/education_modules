@@ -50,15 +50,24 @@ sagecell.makeSagecell({inputLocation: 'div.python_link',
                       autoeval: 'false',
                       linked: 'true'
                       });
+// Make *any* div with class 'python_data_init' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_data_init',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'true',
+                      linked: 'true',
+                      linkKey: "data"
+                      });       
 // Make *any* div with class 'python_data' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.python_data',
                       evalButtonText: 'Run python',
                       languages: ["python"],
                       hide: ['fullScreen', 'permalink'],
-                      autoeval: 'true',
-                      linked: 'false',
-                      code: "import pandas as pd"
-                      });                      
+                      autoeval: 'false',
+                      linked: 'true',
+                      linkKey: "data"
+                      });                
 
 // Make *any* div with class 'r' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.r',
@@ -298,23 +307,33 @@ print(paste(num,"is not a prime number"))
 
 ### Loading data into a sagemathcell
 
+If your data is stored as a file in the GitHub repository, you can ask the sagecell to download it directly from GitHub. The `python_data_init` class will run automatically when the page loads.
 @sage
 
-<div class="python_data">
+<div class="python_data_init">
 <lia-keep>
 <script type="text/x-sage">
 
-my_list
+import pandas as pd
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+
+print(covid_testing.head())
 
 </script>
 </lia-keep>
 </div>
 
-You can't store anything on the server, but you can ask the cell to download data on the fly. There is a way to do this, possibly two.
+If you use a linked cell to import the data, it will hang around for subsequent cells on the same page. You will have to reload everything for the next page, but this also helps keep tasks/topics organized. The `python_data` class is linked to `python_data_init` but will won't run until the user clicks a button.
 
-1. Method 1: store the data on a public website and have the sage cell load it.
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 
-2. Method 2?: store the data in a script and load it when the page loads.
+print(covid_testing.loc[4,:])
+
+</script>
+</lia-keep>
+</div>
 
 ### Define your own sagemath cells type
 
