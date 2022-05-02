@@ -6,8 +6,8 @@ module_template_version: 2.0.0
 language: en
 narrator: US English Male
 title: SQL Basics
-comment:  SQL is a relational database solution that has been around for decades.  Learn how to do basic SQL queries on single tables, by using code, hands-on.
-long_description: Do you want to learn basic SQL either to understand concepts or prepare for access to a relational database?  This module will give you hands on experience with simple queries using keywords including SELECT, WHERE, FROM, DISTINCT, and AS.  This module is appropriate for people who have little or no experience in SQL and are ready to practice with real queries.
+comment:  Structured Query Language, or SQL, is a relational database solution that has been around for decades.  Learn how to do basic SQL queries on single tables, by using code, hands-on.
+long_description: Do you want to learn basic Structured Query Language (SQL) either to understand concepts or prepare for access to a relational database?  This module will give you hands on experience with simple queries using keywords including SELECT, WHERE, FROM, DISTINCT, and AS.  We'll also briefly cover working with empty (NULL) values using IS NULL and IS NOT NULL.  This module is appropriate for people who have little or no experience in SQL and are ready to practice with real queries.
 estimated_time: 40 minutes
 
 @learning_objectives  
@@ -15,6 +15,7 @@ estimated_time: 40 minutes
 After completion of this module, learners will be able to:
 
 - Use SELECT, FROM, and WHERE to do a basic query on a SQL table
+- Use IS NULL and IS NOT NULL operators to work with empty values
 - Explain the use of DISTINCT and how it can be useful
 - Use AS and ORDER BY to change how query results appear
 - Explain why the LIMIT keyword can be useful
@@ -979,7 +980,7 @@ In SQL, it is possible to assign a custom name (usually a kind of shortened name
 
 * Aliasing **tables** can be helpful for long or complex queries involving multiple tables because it allows you to avoid typing out the full name of a table each time you refer to it.  For example, in a long query involving the `patients` table, the `encounters` table, and the `diagnosis` table, you might prefer to use the shorthand terms `pt`, `enc`, and `dx` or even `p`, `e`, and `d`.
 
-* Aliasing **columns** can be helpful to by assigning clearer, more comprehensible names for a given column than the name that might be assigned to it in the database.  For example, the you might want to see the results from the `stop` column in the `allergies` table returned to you not as `stop`, but rather as `ruled_out_date`.
+* Aliasing **columns** can be helpful as well by assigning clearer, more comprehensible names for a given column than the name that might be assigned to it in the database.  For example, you might want to see the results from the `stop` column in the `allergies` table returned to you not as `stop`, but rather as `ruled_out_date`.
 
 Aliases are assigned by placing the `AS` key word directly after the item (table/column) you would like to alias, followed by the name you would like to assign as its **alias**.
 
