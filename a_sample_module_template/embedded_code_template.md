@@ -29,9 +29,6 @@ script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
 @sage
 <script input="hidden">
-// Make *any* div with class 'compute' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.compute',
-                       evalButtonText: 'Evaluate'});
 // Make *any* div with class 'python' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.python',
                        evalButtonText: 'Run python',
@@ -53,6 +50,16 @@ sagecell.makeSagecell({inputLocation: 'div.python_link',
                       autoeval: 'false',
                       linked: 'true'
                       });
+// Make *any* div with class 'python_data' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_data',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'true',
+                      linked: 'false',
+                      code: "import pandas as pd"
+                      });                      
+
 // Make *any* div with class 'r' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.r',
                       evalButtonText: 'Run R',
@@ -288,6 +295,26 @@ print(paste(num,"is not a prime number"))
 </script>
 </lia-keep>
 </div>
+
+### Loading data into a sagemathcell
+
+@sage
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+
+my_list
+
+</script>
+</lia-keep>
+</div>
+
+You can't store anything on the server, but you can ask the cell to download data on the fly. There is a way to do this, possibly two.
+
+1. Method 1: store the data on a public website and have the sage cell load it.
+
+2. Method 2?: store the data in a script and load it when the page loads.
 
 ### Define your own sagemath cells type
 
