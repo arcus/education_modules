@@ -54,7 +54,8 @@ sagecell.makeSagecell({inputLocation: 'div.python_link',
 sagecell.makeSagecell({inputLocation: 'div.python_data_init',
                       evalButtonText: 'Run python',
                       languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
+                      editor: 'codemirror-readonly',
+                      hide: ['fullScreen', 'permalink','output','evalButton'],
                       autoeval: 'true',
                       linked: 'true',
                       linkKey: "data"
@@ -307,7 +308,7 @@ print(paste(num,"is not a prime number"))
 
 ### Loading data into a sagemathcell
 
-If your data is stored as a file in the GitHub repository, you can ask the sagecell to download it directly from GitHub. The `python_data_init` class will run automatically when the page loads.
+If your data is stored as a file in the GitHub repository, you can ask the sagecell to download it directly from GitHub. The `python_data_init` class will run automatically when the page loads. The assumption is that this is not code that you want the user to be able to change, so they can't. This is the set-up, with no output whatsoever.
 @sage
 
 <div class="python_data_init">
@@ -317,20 +318,47 @@ If your data is stored as a file in the GitHub repository, you can ask the sagec
 import pandas as pd
 covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
 
-print(covid_testing.head())
-
 </script>
 </lia-keep>
 </div>
 
 If you use a linked cell to import the data, it will hang around for subsequent cells on the same page. You will have to reload everything for the next page, but this also helps keep tasks/topics organized. The `python_data` class is linked to `python_data_init` but will won't run until the user clicks a button.
 
+**Click the "Run python" button** to see that the data did in fact load:
+
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
+print(covid_testing.loc[[0,1,2,3,4],["first_name","last_name"]])
+</script>
+</lia-keep>
+</div>
 
+All of the `python_data` cells are linked to the first cell, and completely editable by the user.
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 print(covid_testing.loc[4,:])
+</script>
+</lia-keep>
+</div>
 
+The cells are also linked to each other, but the user has to run them in order there are dependencies between them. These next two cells must be run in the order they are presented, or the latter on will not know what `day` means!
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+day = covid_testing.loc[4,"pan_day"]
+print(day)
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+print(day >= 5)
 </script>
 </lia-keep>
 </div>
