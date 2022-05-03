@@ -26,23 +26,53 @@ After completion of this module, learners will be able to:
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
+
 script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
 @sage
-<script>
-// Make *any* div with class 'compute' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.compute',
-                       evalButtonText: 'Evaluate'});
-// Make *any* div with class 'compute' a Sage cell
+<script input="hidden">
+// Make *any* div with class 'python' a Sage cell
 sagecell.makeSagecell({inputLocation: 'div.python',
                        evalButtonText: 'Run python',
-                       languages: ["python"]});
-sagecell.makeSagecell({inputLocation: 'div.Rcell',
-                      evalButtonText: 'Run R',
-                      languages: ["r"]});
+                       languages: ["python"],
+                       hide: ['fullScreen', 'permalink'],
+                       });
+// Make *any* div with class 'python_run' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_run',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'true'
+                      });
+// Make *any* div with class 'python_link' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_link',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'false',
+                      linked: 'true'
+                      });
+// Make *any* div with class 'python_data_init' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_data_init',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      editor: 'codemirror-readonly',
+                      hide: ['fullScreen', 'permalink','output','evalButton'],
+                      autoeval: 'true',
+                      linked: 'true',
+                      linkKey: "data"
+                      });       
+// Make *any* div with class 'python_data' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_data',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'false',
+                      linked: 'true',
+                      linkKey: "data"
+                      });                
 </script>
 @end
-
 -->
 
 # Transforming Data in Python using Pandas
@@ -52,27 +82,25 @@ sagecell.makeSagecell({inputLocation: 'div.Rcell',
 
 Python cell:
 <div class="python">
+<lia-keep>
 <script type="text/x-sage">
 1+2
 </script>
+</lia-keep>
 </div>
 
 
 <div class="python">
+<lia-keep>
 <script type="text/x-sage">
 import pandas as pd
 d = {'col1': [1, 2], 'col2': [3, 4]};
 df = pd.DataFrame(data=d);
-df
+print(df)
 </script>
+</lia-keep>
 </div>
 
-
-R cell:
-<div class="Rcell"><script type="text/x-sage">
-1+1
-</script>
-</div>
 
 Jupyterlite lab environment:
 ??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
@@ -80,8 +108,6 @@ Jupyterlite lab environment:
 Jupyterlite classic notebook:
 ??[notebook](https://arcus.github.io/jupyterlite/retro/notebooks/?path=p5.ipynb)
 ## Overview
-
-??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
 
 @comment
 
@@ -91,11 +117,11 @@ Jupyterlite classic notebook:
 
 **Pre-requisites**
 
-List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
+Before starting this module it is useful for you to have:
 
-* one skill we have [another module for, linked here](https://education.arcus.chop.edu)
-* some familiarity with [a topic](https://education.arcus.chop.edu)
-* understanding of [one thing](https://education.arcus.chop.edu) and [another](https://education.arcus.chop.edu)
+* some familiarity with [tabular data](tabular/data/module)
+* an introductory level exposure to coding in [python](intro/to/python/module)
+
 
 If relevant, you can include recommendations for somewhere else to start if the learner doesn't have these prereqs. For example: If you are brand new to R or python (or want a refresher) consider starting with [Intro to R](link) or [Intro to python](link) first and then coming back here.
 
@@ -109,19 +135,19 @@ For help articulating learning objectives, see [this guide to learning objective
 
 ## Lesson Preparation
 
-If your module includes code learners may want to run, then give links to a pangeo binder here so they can start it up now. Also provide a link to the raw code so learners can download the code itself and run it on their own machines or copy it into a cloud server.
+If you want to do all of the exercises in your browser window, there is no preparation required for this lesson. Your code will run, but will not be saved.
 
-This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in R and python. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection. If you have R and/or python already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.r" download>download the code for this module to run offline</a>.
+If you would prefer to save your work, particularly the hands on exercises, you have a few options:
 
-If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity. We recommend using right-click to open it in a new tab or window, and then returning here to continue learning while the environment finishes loading. Here is the link:
+1. If you have python on your computer, you can download he notebook and run it yourself.
 
-[![Link to start Binder environment](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/main?urlpath=rstudio) **Click the "launch binder" button!**
+2. Make and account somewhere?
 
-You don't have to do anything except come back here once the link opens in a new tab or window.
+
 
 ## The `pandas` Package
 
-??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
+The `pandas` [package](https://pandas.pydata.org/) lets you store, examine, and manipulate tabular data using python.
 
 When and why would `pandas` and programming in python be preferable to doing similar things in `R`?
 
