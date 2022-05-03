@@ -249,13 +249,7 @@ Did you get an error when you tried to print out a column? Make sure you run the
 ### Quiz: `pandas` package
 
 @sage
-
-Your friend's code isn't running, which is extremely frustrating because they copy and pasted it from the previous page of this module. Can you add a line to make it run correctly?
-
-[[?]] Hint: What does the error message say is wrong?
-[[?]] Hint: What do we need to include at the top in order to make `pandas` commands available to us?
-
-<div class="python_run">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
@@ -264,13 +258,31 @@ print(df)
 </script>
 </lia-keep>
 </div>
+<br>
+Your friend's code (above) isn't running, which is extremely frustrating because they copied and pasted it from the previous page of this module. What line must they add to make it work?
 
+[[import pandas as pd]]
+[[?]] Hint: Run the code. What does the error message say is wrong?
+[[?]] Hint: What do we need to include at the top in order to make `pandas` commands available to us?
+***
 <div class = "answer">
 `NameError: name 'pd' is not defined` is a helpful error message because it tells you exactly what you friend forgot: they never defined `pd`!
 
 When you add the line `import pandas as pd` to their code, it runs as it did before.
+
+<div class="python_run">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
+df = pd.DataFrame(data=d);
+print(df)
+</script>
+</lia-keep>
 </div>
 
+</div>
+***
 
 ## Exploring Data with `pandas`
 
@@ -282,13 +294,79 @@ The tiny DataFrame we saw in the last section was exceptional in several ways. W
 
 * Real data is often missing entries.
 
-### Importing data
+### Loading data
+@sage
+<div class="python_data_init">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+</script>
+</lia-keep>
+</div>
 
+The `pandas` package can read most tabular data files and convert them into DataFrames. As long as your data is in place that the program can locate, either on your computer if you are running code on your computer, or in the cloud, all `pandas` needs to know is what type of file it is reading, and where to find that file.
 
+For this modules we will be looking at some fake Covid-19 testing data. This data is saved as a csv file and is hosted on [GitHub](https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv).
+
+The `read_csv` function from the `pandas` library takes the location of the file as its argument. The path to the file, in this case a url, must be in quotes. Let's create a new DataFrame called `covid_testing` that will contain all of our fake Covid-19 testing data.
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+</script>
+</lia-keep>
+</div>
+
+That code didn't have any output because we didn't ask it to print anything, but it did create the `covid_testing` DataFrame. We can take a look at with `print(covid_testing)`:
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+print(covid_testing)
+</script>
+</lia-keep>
+</div>
+
+Good thing it doesn't print all 15524 rows! Unless you specify a different subset, you will see the first five rows and the last five rows of a DataFrame. If, like this one, it has more than 10 rows, the hidden rows will be indicated by ellipses.
+
+<div class = "important">
+**Loading your own data**
+
+To create a DataFrame of your data, make sure you use the right command for your file type, and make sure the location of the file is in quotes.
+| File type | Read command |
+| - | - |
+| .csv | pd.read_csv('location')|
+| .xlsx | pd.read_excel('location')|
+|.ods | pd.read_excel('location')|
+| .json| pd.read_json('location')|
+| .html| pd.read_html('location')|
+| .sql | pd.read_sql('location')|
+
+</div>
 
 ### Filtering rows and columns
+@sage
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+</script>
+</lia-keep>
+</div>
+
 
 ### Missing entries
+@sage
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+</script>
+</lia-keep>
+</div>
 
 ### Quiz: Exploring datasets
 
