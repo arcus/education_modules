@@ -111,6 +111,10 @@ One cool spin-off of the [SageMath Project](https://www.sagemath.org) is the [Sa
 
 Full documentation is available on the [sagecell GitHub](https://github.com/sagemath/sagecell).
 
+<div class= "important">
+The sagemath cell is licensed under [GPLv2+](https://www.gnu.org/licenses/gpl-3.0.html) since there are some packages included in it with that license. For full details see the [licensing statement](https://github.com/sagemath/sagecell/blob/master/LICENSE.txt).
+</div>
+
 ### Basic setup
 
 In order to run cells in Liascript, we need to have a script in the header yaml to call out and run our code on the sagecell server.
@@ -125,46 +129,6 @@ In addition, we need to call a script defining the type of cells we want. To mak
 
 By including `@sage` on any page you want to have a cell on, all of these environments will be available on that page.
 
-```
-@sage
-<script input="hidden">
-// Make *any* div with class 'python' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python',
-                       evalButtonText: 'Run python',
-                       languages: ["python"],
-                       hide: ['fullScreen', 'permalink'],
-                       });
-// Make *any* div with class 'python_run' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_run',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'true'
-                      });
-// Make *any* div with class 'python_link' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_link',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'false',
-                      linked: 'true'
-                      });
-// Make *any* div with class 'r' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.r',
-                      evalButtonText: 'Run R',
-                      languages: ["r"],
-                      hide: ['fullScreen', 'permalink'],
-                      });
-// Make *any* div with class 'r_run' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.r_run',
-                      evalButtonText: 'Run R',
-                      languages: ["r"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'true'
-                      });
-</script>
-@end
-```
 
 ### Python cells
 
