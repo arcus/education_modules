@@ -7,7 +7,7 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Module Title
-comment:  This is a short, focused description of the module.
+comment:  This is an introduction to tabular data in python using `pandas` DataFrames.
 long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
 estimated_time: 1 hour
 
@@ -15,11 +15,10 @@ estimated_time: 1 hour
 
 After completion of this module, learners will be able to:
 
-- Navigate the row and column structure of a `pandas` DataFrame
-- Locate data using the `.loc` method
-- Filter data using conditional statements
-- Create new DataFrames from existing DataFrames
-- Edit data in a `pandas` DataFrame.
+- Import `pandas` and use functions from the `pandas` package.
+- Load data into a `pandas` DataFrame.
+- Explore the contents of a DataFrame, including missing data.
+- Create new columns in an existing DataFrame.
 
 @end
 
@@ -338,7 +337,7 @@ To create a DataFrame of your data, make sure you use the right command for your
 | - | - |
 | .csv | pd.read_csv('location')|
 | .xlsx | pd.read_excel('location')|
-|.ods | pd.read_excel('location')|
+| .ods | pd.read_excel('location')|
 | .json| pd.read_json('location')|
 | .html| pd.read_html('location')|
 | .sql | pd.read_sql('location')|
@@ -370,16 +369,28 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 
 ### Quiz: Exploring datasets
 
+Import another file from somewhere else.
 
-## Creating new columns
+Filter by missing entries question.
+
+## Editing a DataFrame
+
+
+### Adding new columns
+
+### Editing existing columns
 
 ### Logical and mathematical functions in Python
+maybe?
+
+### Quiz: Editing datasets
+
+Here is some code, multiple choice what did it filter by?
 
 ## Hands-On Activity
+Do I really have time for this in an hour? I suspect no....
 
 ## Additional Resources
-
-The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
 
 The creators of the pandas package have [great tutorials](https://pandas.pydata.org/docs/getting_started/index.html) with very thorough examples.
 
@@ -397,4 +408,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Transform+Data+with+Pandas%22)!
+We gather this information in order to iteratively improve our work. Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Transform+Data+with+Pandas%22)!
