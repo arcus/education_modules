@@ -125,7 +125,7 @@ script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
 If we later decided that we need our own server, there are instructions on how to do that on [GitHub](https://github.com/sagemath/sagecell) but that would certainly need to go through some significant security vetting. For the moment, SageMathCell is certainly adequate for our needs.
 
-In addition, we need to call a script defining the type of cells we want. To make this easier, here are the types of cells ready to go. We will see examples of all of them on the next few pages, and show you how to make your own environments.
+In addition, we need to call a script defining the type of cells we want. To make this easier, several types of cells are ready to go. We will see examples of all of them on the next few pages, and show you how to make your own environments.
 
 By including `@sage` on any page you want to have a cell on, all of these environments will be available on that page.
 
@@ -308,7 +308,7 @@ print(covid_testing.loc[4,:])
 </lia-keep>
 </div>
 
-The cells are also linked to each other, but the user has to run them in order there are dependencies between them. These next two cells must be run in the order they are presented, or the latter on will not know what `day` means!
+The cells are also linked to each other, but the user has to run them in order if there are dependencies between them. These next two cells must be run in the order they are presented, or the latter on will not know what `day` means!
 
 <div class="python_data">
 <lia-keep>
@@ -336,6 +336,11 @@ We have defined a few types of cells so far in the yaml. That doesn't mean those
 We can also use Jupyterlite to embed full notebooks, or even full Jupyter labs directly into a page.
 
 Right now we are hosting a [Jupyterlite webpage](https://arcus.github.io/jupyterlite/) using GitHub pages. Notebooks you want to be available there need to be added to the [arcus/jupyterlite](https://github.com/arcus/jupyterlite) repository.
+
+<div class = "warning">
+For the moment, the embedded Jupyterlite webpage does not load in Chrome. We are working with the developers of Liascript to fix this.
+</div>
+
 ### Jupyterlite classic notebook
 You can embed a single notebook using the retro version of notebooks. Go to **Help -> Launch Jupyter Classic Notebook** to launch a version in which each notebook has it's own url.
 
