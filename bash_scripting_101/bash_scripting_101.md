@@ -3,11 +3,11 @@
 author:   Nicole Feldman
 email:    feldmanna@chop.edu
 version:  1.1.0
+module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Bash Scripting 101
 comment:  This course will focus on accessing a command line program and running shell scripts on your home computer, learning how to execute useful commands and recognize basic syntax, and, finally, learning how to set permissions in a way that leads to collaborating on a shared file directory with colleagues.
-
 long_description: This module is for people interested in harnessing the power of well-organized files and folders and who want to try a relatively accessible programming language.
 estimated_time: 30 minutes
 
