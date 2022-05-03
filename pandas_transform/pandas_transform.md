@@ -9,7 +9,7 @@ narrator: UK English Female
 title: Module Title
 comment:  This is a short, focused description of the module.
 long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
-estimated_time: This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview
+estimated_time: 1 hour
 
 @learning_objectives  
 
@@ -107,6 +107,8 @@ Jupyterlite lab environment:
 
 Jupyterlite classic notebook:
 ??[notebook](https://arcus.github.io/jupyterlite/retro/notebooks/?path=p5.ipynb)
+
+<div class = "overview">
 ## Overview
 
 @comment
@@ -117,57 +119,185 @@ Jupyterlite classic notebook:
 
 **Pre-requisites**
 
-Before starting this module it is useful for you to have:
+Before starting this module it is useful for you to:
 
-* some familiarity with [tabular data](tabular/data/module)
-* an introductory level exposure to coding in [python](intro/to/python/module)
-
-
-If relevant, you can include recommendations for somewhere else to start if the learner doesn't have these prereqs. For example: If you are brand new to R or python (or want a refresher) consider starting with [Intro to R](link) or [Intro to python](link) first and then coming back here.
+* have some familiarity with [tabular data](tabular/data/module)
+* have an introductory level exposure to coding in [python](intro/to/python/module)
+* know how to run a [Jupyter notebook](link/here?).
 
 **Learning Objectives**
 
 @learning_objectives
 
-For help articulating learning objectives, see [this guide to learning objectives, including lots of example verbs](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/).
-
 </div>
 
 ## Lesson Preparation
+@sage
 
-If you want to do all of the exercises in your browser window, there is no preparation required for this lesson. Your code will run, but will not be saved.
+You will be doing two types of hands-on coding as you work your way through this module. You do not need any particular preparation for the first way, interactive python cells. For the second way, Jupyter notebooks, you can choose to work in your browser where you will not be able to save your work, or in a few other ways where you will.
 
-If you would prefer to save your work, particularly the hands on exercises, you have a few options:
+**Interactive python cells**
+
+The first will be in cells powered by [SageMathCell](https://sagecell.sagemath.org/). For the most part, these will appear with some code already in them, and you can run that code by clicking the **Run python** button. You can also edit the code in these cells and run your own code.
+
+Give it a try:
+<div class="python">
+<lia-keep>
+<script type="text/x-sage">
+print(1+2)
+</script>
+</lia-keep>
+</div>
+
+<div class = "important">
+These cells will compute everything you ask them to, but will only output what you explicitly request using the `print()` command. Try
+</div>
+
+**Jupyter notebooks**
+
+The longer hands-on exercises in this module are in a Jupyter notebook. The notebook is embedded into the module and you are welcome to do the exercises there. However this will not save your work if you want to come back and see what you did in a few days. If you want that ability, you have two options:
 
 1. If you have python on your computer, you can download he notebook and run it yourself.
 
-2. Make and account somewhere?
+2. Make and account somewhere to run it in the cloud?
 
 
 
 ## The `pandas` Package
 
-The `pandas` [package](https://pandas.pydata.org/) lets you store, examine, and manipulate tabular data using python.
+The `pandas` [package](https://pandas.pydata.org/) lets you store, examine, and manipulate tabular data using python. Since many machine learning tools use python, it can be particularly useful to process tabular data in that same environment.
 
-When and why would `pandas` and programming in python be preferable to doing similar things in `R`?
+<div class = "learnmore">
+Most people associate "pandas" with the large mammals [Ailuropoda melanoleuca](https://en.wikipedia.org/wiki/Giant_panda). The `pandas` package is actually a shortening of "panel data."
+</div>
 
-What is this `import`, `as pd` and `import numpy as np`?
+### Importing `pandas`
 
-## `DataFrame`s
+**`import pandas`**
 
-Tabular data! Tidy tabular data! Use `.head()` to see it!
+Because `pandas` isn't part of python, in order to use its tools you will need to **import** the pandas package at the beginning of each session you intend to use it.
 
-Always indexed by `[row,column]`
+The code `import pandas` tells python that you want all of the commands and tools that `pandas` has to be available to you. For example `read_csv` is a  function in `pandas` and regular python will not recognize it! You will have to tell python that a command you are using is a `pandas` command by entering `pandas.read_csv`.
 
-## Filter specific rows and columns
+**`as pd`**
 
-Identify an entry with `loc` and `iloc`
+To make it easier to type out these commands, you can give the `pandas` package a different name when you import it using `as new_name`. While you could in theory pick any name you want, the standard abbreviation is `pd`.
+
+@sage
+<div class="python_link">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+</script>
+</lia-keep>
+</div>
+
+If you click the **Run python** button, the `pandas` package will be imported. There isn't any output from this line of code, but we will be able to see on future pages that is is giving us access to all of the `pandas` tools.
+
+This code, without a "Run python" button, will be at the top of each page in this module. We will run it automatically when you open each page. If you want to run this code on your own computer, make sure to include the line `import pandas as pd` as the first line.
+
+### DataFrames and Series
+@sage
+
+The `pandas` package lets you handle two types of data structures that python alone can't: **DataFrames** and **Series**. Before we can start exploring them, let's make sure we have `pandas` imported. You don't have to click anything, this code ran automatically when you opened this page:
+
+<div class="python_data_init">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+</script>
+</lia-keep>
+</div>
+
+
+**DataFrames**
+
+**DataFrame** is the name `pandas` gives to its primary data structure. You can think of a DataFrame like a spreadsheet: it has rows and columns, and you can look up the data in it by referencing those rows and columns.
+
+Let's take a look at a basic DataFrame. This one is being built from scratch, but we aren't going to spend any time learning how to do that in this module because you will usually be using `pandas` to analyze data that you import from somewhere else.
+
+**Run this code** to print out the DataFrame `df`.
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
+df = pd.DataFrame(data=d);
+print(df)
+</script>
+</lia-keep>
+</div>
+
+**Series**
+
+You might have noticed that in the above example, everything in the first column was an integer, everything in the second column had a decimal point, and the third column consisted of words. Each column in a DataFrame is called a **series**. A series is a one-dimensional array in which all of the data has the same **type**.
+
+**Run this code** to print out `col1` from the DataFrame `df`.
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+print(df['col1'])
+</script>
+</lia-keep>
+</div>
+
+Did you notice the `Name` and `dtype` at the bottom? Those tell you the name of the series and its data type. Try changing `col1` to `col2` or `col3` to see what type of data those series contain.
+
+<div class = "help">
+Did you get an error when you tried to print out a column? Make sure you run the cell above to define `df` before you try to reference it!
+</div>
+
+### Quiz: `pandas` package
+
+@sage
+
+Your friend's code isn't running, which is extremely frustrating because they copy and pasted it from the previous page of this module. Can you add a line to make it run correctly?
+
+[[?]] Hint: What does the error message say is wrong?
+[[?]] Hint: What do we need to include at the top in order to make `pandas` commands available to us?
+
+<div class="python_run">
+<lia-keep>
+<script type="text/x-sage">
+d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
+df = pd.DataFrame(data=d);
+print(df)
+</script>
+</lia-keep>
+</div>
+
+<div class = "answer">
+`NameError: name 'pd' is not defined` is a helpful error message because it tells you exactly what you friend forgot: they never defined `pd`!
+
+When you add the line `import pandas as pd` to their code, it runs as it did before.
+</div>
+
+
+## Exploring Data with `pandas`
+
+The tiny DataFrame we saw in the last section was exceptional in several ways. With real data you are likely to have some challenges that just can't be replicated with something that small:
+
+* Real data will almost always be too big to type into a DataFrame.
+
+* Real data frequently has too many rows and columns to look at the whole dataset at once.
+
+* Real data is often missing entries.
+
+### Importing data
+
+
+
+### Filtering rows and columns
+
+### Missing entries
+
+### Quiz: Exploring datasets
+
 
 ## Creating new columns
 
 ### Logical and mathematical functions in Python
 
-## Chaining Methods
+## Hands-On Activity
 
 ## Additional Resources
 
