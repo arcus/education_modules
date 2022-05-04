@@ -17,8 +17,9 @@ After completion of this module, learners will be able to:
 
 - Import `pandas` and use functions from the `pandas` package.
 - Load data into a `pandas` DataFrame.
-- Explore the contents of a DataFrame, including missing data.
-- Create new columns in an existing DataFrame.
+- Use the `.loc` method to explore the contents of a DataFrame
+- Filter a DataFrame using conditional statements.
+- Transform data in a DataFrame.
 
 @end
 
@@ -254,7 +255,7 @@ print(df)
 </div>
 ***
 
-## Exploring Data with `pandas`
+## Tabular Data in `pandas` DataFrames
 
 The tiny DataFrame we saw in the last section was exceptional in several ways. With real data you are likely to have some challenges that just can't be replicated with something that small:
 
@@ -345,7 +346,7 @@ The methods `.columns` and `.index` will show you all of the column and row name
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-covid_testing.columns
+print(covid_testing.columns)
 </script>
 </lia-keep>
 </div>
@@ -420,7 +421,47 @@ covid_testing.loc[[2,3,4],:]
 </div>
 <br>
 
-### Conditional statements
+### Quiz: DataFrames
+
+@sage
+
+1. Complete the following code by replacing the two `__?__`s with your own code to find out the first and last name of the patient in row 11942.
+
+<div class="python">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+covid_testing = pd.__?__('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+
+print(covid_testing.__?__[11942, ["first_name","last_name"]])
+</script>
+</lia-keep>
+</div>
+<br>
+
+Enter their name below to check your answer:
+[[grazdan greyjoy]]
+***
+<div class = "answer">
+
+On line 2, the command `read_csv` will convert the csv file's data into a DataFrame.
+
+On line 4, the `.loc` method will request the data from row 11942 and columns `"first_name"` and `"last_name"`.
+
+<div class="python_run">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+
+print(covid_testing.loc[11942, ["first_name","last_name"]])
+</script>
+</lia-keep>
+</div>
+</div>
+***
+
+## Conditional statements
 
 @sage
 
@@ -442,6 +483,38 @@ If, for example, we only want to look at instances where the covid test came bac
 <lia-keep>
 <script type="text/x-sage">
 print(covid_testing.loc[:,"result"] == "positive")
+</script>
+</lia-keep>
+</div>
+<br>
+
+In the example above we used the double equals sign `==` to check whether two objects were the same. This is different from the single equals sign we use at the top of the page to define `covid_testing`.
+
+<div class = "important">
+A double equals sign `==` tests for equality, while a single equals sign `=` is for assigning values.
+
+- `a = 7` sets 7 as the value of `a`. It is a declarative statement that from now on `a` is equal to 7. No output will be shown, but from now on if you enter `a`, the output will be `7`.
+- `b == 8` is a checking for equality. It is a question "is `b` equal to 8?" You will get an answer back, either `True` or `False`.
+</div>
+
+In addition to using `==` to check if two values are the same, we can use other relational conditions to compare values in a DataFrame.
+
+| symbol | meaning |
+| :---: | --- |
+| `<` | is less than|
+| `<=` | is less than or equal to |
+| `>` | is greater than|
+| `>=` | is greater than or equal to|
+
+### Filtering by a condition
+
+@sage
+
+<div class="python_data_init">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
 </script>
 </lia-keep>
 </div>
@@ -476,23 +549,7 @@ The method `.copy()` at the very end of line one creates a new DataFrame separat
 - `new_name = dataframe.loc[rows,columns]` does not create a new DataFrame. Instead every time you type `new_name` after this, it will understand that you mean `dataframe.loc[rows,columns]`.
 </div>
 
-In the example above we used the double equals sign `==` to check that the things to the left and the right were the same. This is different from the single equals sign we used at the beginning of this notebook to define `covid_testing`.
 
-<div class = "important">
-A double equals sign `==` tests for equality, while a single equals sign `=` is for assigning values.
-
-- `a = 7` sets 7 as the value of `a`. It is a declarative statement that from now on `a` is equal to 7. No output will be shown, but from now on if you enter `a`, the output will be `7`.
-- `b == 8` is a checking for equality. It is a question "is `b` equal to 8?" You will get an answer back, either `True` or `False`.
-</div>
-
-In addition to using `==` to check if two values are the same, we can use other relational conditions to compare values in a DataFrame.
-
-| symbol | meaning |
-| :---: | --- |
-| `<` | is less than|
-| `<=` | is less than or equal to |
-| `>` | is greater than|
-| `>=` | is greater than or equal to|
 
 ### Combining conditions
 @sage
@@ -516,6 +573,8 @@ print(adult_positive.loc[:,["first_name","last_name", "age"]])
 </lia-keep>
 </div>
 <br>
+
+There are some strategies to keep your code from becoming an unreadable tangle of conditional statements.
 
 **Use parentheses**
 
@@ -613,56 +672,107 @@ print(known_payor_tests.loc[:, ["first_name", "last_name"]])
 </div>
 <br>
 
-### Quiz: Exploring datasets
+### Quiz: Conditional statements
 
 @sage
-
-1. Complete the following code by replacing the two `__?__`s with your own code to find out the first and last name of the patient in row 11942.
-
-<div class="python">
+<div class="python_data_init">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
-covid_testing = pd.__?__('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
-
-print(covid_testing.__?__[11942, ["first_name","last_name"]])
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
 </script>
 </lia-keep>
 </div>
 <br>
 
-Enter their name below to check your answer:
-[[grazdan greyjoy]]
+You come across the following code in which three conditions are defined but not given descriptive names:
+
+<div class="python_data_init">
+<lia-keep>
+<script type="text/x-sage">
+
+condition_1 = covid_testing.loc[:,"first_name"].isna()
+
+condition_2 = covid_testing.loc[:,"last_name"].isna()
+
+condition_3 = covid_testing.loc[:,"age"]<=18
+
+my_condition = (condition_1 | condition_2) & condition_3
+</script>
+</lia-keep>
+</div>
+<br>
+
+What does `my_condition` test for?
+
+[( )] Patients under the age of 18 who are missing data in both the `first_name` and `last_name` columns.
+[( )] Patients under the age of 18 who are missing data in either the `first_name` or `last_name` columns.
+[( )] Patients ages 18 or younger who are missing data in both the `first_name` and `last_name` columns.
+[(X)] Patients ages 18 or younger who are missing data in either the `first_name` or `last_name` columns.
 ***
 <div class = "answer">
+* `condition_1` will be TRUE if the patient is missing data in the `first_name` column.
 
-On line 2, the command `read_csv` will convert the csv file's data into a DataFrame.
+* `condition_2` will be TRUE if the patient is missing data in the `last_name` column.
 
-On line 4, the `.loc` method will request the data from row 11942 and columns `"first_name"` and `"last_name"`.
+* `condition_1 | condition_2` will be TRUE if the patient is missing data in the `first_name` column, the `last_name` column, or in both columns.
 
-<div class="python_run">
+* `condition_3` will be TRUE if the patient is age 18 or less.
+
+THEREFORE:
+
+* `my_condition` will be TRUE when **both** `condition_1 | condition_2` and `condition_3` are TRUE, when **at least one** of the columns `first_name` and `last_name` are blank, and the patient age is 18 or less.
+
+</div>
+***
+
+## Editing a DataFrame
+
+Sometimes the data in a DataFrame isn't in the best form for us to use. Maybe it is a string that is too long or unclear, or maybe the units aren't the unit we will ultimately want to use to analyze the data.
+
+There are two things we can do to make our data more useful.
+
+1. Add a new column with data based on existing columns.
+
+2. Edit the data in an existing column to improve its usefulness.
+
+<div class ="warning">
+Reproducibility must always been a priority when doing research, so whenever you are making changes to data, you must ensure that you keep a clear record of the calculations you did and even more importantly that you don't change the original copy of your data.
+
+**Recording calculations**
+
+Python, and particularly Jupyter notebooks, in which you can write linked cells of code, are a great way to preserve and annotate every step of your data manipulation.
+
+**Preserving orignal data**
+
+If you imported data from another source using `.read_csv()` or another such method, the original file still exists untouched! The best practice is to store your original data in a file that your code reads but does not change.
+
+If your original data is not already in a separate file you can use `.to_csv(data.csv)` to create a new file containing your DataFrame as a csv file. You can also create files in [many other formats](https://pandas.pydata.org/docs/reference/io.html).
+</div>
+
+### Adding new columns
+
+@sage
+<div class="python_data_init">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
 covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
-
-print(covid_testing.loc[11942, ["first_name","last_name"]])
 </script>
 </lia-keep>
 </div>
-</div>
-***
 
-2. Question about
-
-
-## Editing a DataFrame
-
-
-### Adding new columns
 
 ### Editing existing columns
-
+@sage
+<div class="python_data_init">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+</script>
+</lia-keep>
+</div>
 
 
 ### Quiz: Editing datasets
