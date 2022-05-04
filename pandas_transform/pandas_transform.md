@@ -75,7 +75,7 @@ sagecell.makeSagecell({inputLocation: 'div.python_data',
 @end
 -->
 
-# Transforming Data in Python using Pandas
+# Using `pandas` for Tabular Data in python
 
 <div class = "overview">
 ## Overview
@@ -111,7 +111,7 @@ The first will be in cells powered by [SageMathCell](https://sagecell.sagemath.o
 
 
 **Give it a try:**
-<div class="python">
+<div class="python_link">
 <lia-keep>
 <script type="text/x-sage">
 m = 3
@@ -119,6 +119,21 @@ print(m+2)
 </script>
 </lia-keep>
 </div>
+
+The cells in this module are linked, meaning if you run code in two cells on the same page, the second cell will remember anything you defined in the first.
+
+<div class="python_link">
+<lia-keep>
+<script type="text/x-sage">
+n = m**3 + m  # a double asterisk indicates 3 is the exponent of m
+print(n)
+</script>
+</lia-keep>
+</div>
+
+You can change anything you want in either cell. Once you run that code using the **Run python** button, both cells will remember it.
+
+Code will not persist from one page to the next, and you can always refresh the page to return the code (and the stored memory of the cell) to its initial state.
 
 <div class = "important">
 These cells will compute everything you ask them to, but will only output what you explicitly request using the `print()` command.
@@ -726,7 +741,7 @@ THEREFORE:
 </div>
 ***
 
-## Editing a DataFrame
+## Transforming data in a DataFrame
 
 Sometimes the data in a DataFrame isn't in the best form for us to use. Maybe it is a string that is too long or unclear, or maybe the units aren't the unit we will ultimately want to use to analyze the data.
 
