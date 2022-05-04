@@ -76,37 +76,6 @@ sagecell.makeSagecell({inputLocation: 'div.python_data',
 
 # Transforming Data in Python using Pandas
 
-## Embedded Code Testing:
-@sage
-
-Python cell:
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-1+2
-</script>
-</lia-keep>
-</div>
-
-
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-d = {'col1': [1, 2], 'col2': [3, 4]};
-df = pd.DataFrame(data=d);
-print(df)
-</script>
-</lia-keep>
-</div>
-
-
-Jupyterlite lab environment:
-??[notebook](https://arcus.github.io/jupyterlite/lab/index.html)
-
-Jupyterlite classic notebook:
-??[notebook](https://arcus.github.io/jupyterlite/retro/notebooks/?path=p5.ipynb)
-
 <div class = "overview">
 ## Overview
 
@@ -139,17 +108,19 @@ You will be doing two types of hands-on coding as you work your way through this
 
 The first will be in cells powered by [SageMathCell](https://sagecell.sagemath.org/). For the most part, these will appear with some code already in them, and you can run that code by clicking the **Run python** button. You can also edit the code in these cells and run your own code.
 
-Give it a try:
+
+**Give it a try:**
 <div class="python">
 <lia-keep>
 <script type="text/x-sage">
-print(1+2)
+m = 3
+print(m+2)
 </script>
 </lia-keep>
 </div>
 
 <div class = "important">
-These cells will compute everything you ask them to, but will only output what you explicitly request using the `print()` command. Try
+These cells will compute everything you ask them to, but will only output what you explicitly request using the `print()` command.
 </div>
 
 **Jupyter notebooks**
@@ -338,8 +309,8 @@ print(covid_testing.head())
 </script>
 </lia-keep>
 </div>
+<br>
 
-<div class = "important">
 **Loading your own data**
 
 To create a DataFrame of your data, make sure you use the right command for your file type, and make sure the location of the file is in quotes.
@@ -352,7 +323,7 @@ To create a DataFrame of your data, make sure you use the right command for your
 | .html| pd.read_html('location')|
 | .sql | pd.read_sql('location')|
 
-</div>
+
 
 ### Column names and row indices
 @sage
@@ -382,7 +353,9 @@ covid_testing.columns
 The column names were imported with the `.csv` file. If you imported tabular data that didn't have column headers, the column names will be numeric, the way the row indices are in our `covid_testing` DataFrame. They let us refer to individual rows and columns.
 
 ### Locating data with `.loc`
+
 @sage
+
 <div class="python_data_init">
 <lia-keep>
 <script type="text/x-sage">
@@ -392,6 +365,7 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 </lia-keep>
 </div>
 <br>
+
 The `.loc` method lets you select a subset of your DataFrame to display.
 
 **Selecting a single entry**
@@ -446,15 +420,208 @@ covid_testing.loc[[2,3,4],:]
 </div>
 <br>
 
+### Conditional statements
+
+@sage
+
+<div class="python_data_init">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+</script>
+</lia-keep>
+</div>
+<br>
+
+Let's say we only care about the positive Covid tests. We could make a new DataFrame consisting only of those tests that came back positive using a **conditional** argument. A condition is a statement that evaluates to either `True` or `False`.
+
+If, for example, we only want to look at instances where the covid test came back positive, we need to use the condition `covid_testing.loc[:,"result"] == "positive"`. This statement checks every row in the `covid_testing` and will be `True` for a given row if the entry in column `result` is equal to the string `positive` and `False` otherwise.
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+print(covid_testing.loc[:,"result"] == "positive")
+</script>
+</lia-keep>
+</div>
+<br>
+
+When we used a column name or list of names as our argument in the row spot of the `.loc` method, we got back all rows in that list. When we put a condition in the row spot, it will return all rows for which that condition is `True`.
+
+If this this is a subset of the data that you are likely to want to use again, it is a good practice to create a new DataFrame consisting only of the rows and columns that you want.
+
+**Create a new DataFrame** titled `positive_tests`. How many rows have positive test results?
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+positive_tests = covid_testing.loc[covid_testing.loc[:,"result"] == "positive",:].copy()
+print(positive_tests)
+</script>
+</lia-keep>
+</div>
+<br>
+
+That is a whole lot of output when we see every column! You can ask to see fewer columns, try replacing `print(positive_tests)` with  `print(positive_tests.loc[:,["first_name","last_name"]])` and see if that output is easier to understand.
+
+
+<div class = "important">
+**`.copy()`**
+
+The method `.copy()` at the very end of line one creates a new DataFrame separate from the original. Omitting the `.copy()` method won't change the output in the next code block, but can have consequences if you later want to make changes to your DataFrame.
+
+- `new_name = dataframe.loc[rows,columns].copy()` creates a new DataFrame called `new_name` that you can make changes to without impacting the original `dataframe` and vice versa.
+
+- `new_name = dataframe.loc[rows,columns]` does not create a new DataFrame. Instead every time you type `new_name` after this, it will understand that you mean `dataframe.loc[rows,columns]`.
+</div>
+
+In the example above we used the double equals sign `==` to check that the things to the left and the right were the same. This is different from the single equals sign we used at the beginning of this notebook to define `covid_testing`.
+
+<div class = "important">
+A double equals sign `==` tests for equality, while a single equals sign `=` is for assigning values.
+
+- `a = 7` sets 7 as the value of `a`. It is a declarative statement that from now on `a` is equal to 7. No output will be shown, but from now on if you enter `a`, the output will be `7`.
+- `b == 8` is a checking for equality. It is a question "is `b` equal to 8?" You will get an answer back, either `True` or `False`.
+</div>
+
+In addition to using `==` to check if two values are the same, we can use other relational conditions to compare values in a DataFrame.
+
+| symbol | meaning |
+| :---: | --- |
+| `<` | is less than|
+| `<=` | is less than or equal to |
+| `>` | is greater than|
+| `>=` | is greater than or equal to|
+
+### Combining conditions
+@sage
+<div class="python_data_init">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+</script>
+</lia-keep>
+</div>
+
+We can also combine conditions using `&` for **and**, and the vertical "pipe" `|` **or**. The `|` can be found above the forward slash \ on your keyboard. The code below shows us only the rows for patients age 18 or older who tested positive.
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+adult_positive = covid_testing.loc[(covid_testing.loc[:,"result"] == "positive") & (covid_testing.loc[:,"age"] >= 18), :]
+print(adult_positive.loc[:,["first_name","last_name", "age"]])
+</script>
+</lia-keep>
+</div>
+<br>
+
+**Use parentheses**
+
+When combining conditions, you should use parentheses around each condition. This isn't just for the benefit of humans reading your code. If you are combining three or more conditions, the placement of parentheses can change the meaning of a condition.
+
+The condition:
+`((positive test) & (older than 10)) | (younger than 5)`
+is true for all results where a patient was older than 10 and tested positive, as well as all children under five, whether or not they tested positive. By moving the parentheses we can change the condition to test for patients older than 10 or younger than 5, but only return those with positive test results.
+
+**Name your conditions**
+
+When working with more complicated conditions it is extremely helpful to define your condition by giving it a name, and then refer to that name, rather than the chain of conditions, inside the `.loc` method. By carefully naming the compound condition, you can also make your code more human-readable. Take a moment to see what this code below is doing:
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+is_positive_infant = (covid_testing.loc[:,"age"]<1) & (covid_testing.loc[:,"result"] == "positive")
+
+infant_positive = covid_testing.loc[is_positive_infant,:].copy()
+print(infant_positive.loc[:,["first_name","last_name","age"]])
+</script>
+</lia-keep>
+</div>
+<br>
+
+### Missing Data
+@sage
+<div class="python_data_init">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+</script>
+</lia-keep>
+</div>
+
+So far we have been treating the `covid_testing` DataFrame as if it has a value in every row of every column, but like most real data sets, there is some missing data!
+
+Wherever the original csv file didn't have an entry, you will see `NaN` or `nan`, meaning "Not a Number." For which columns is the patient in row 2 missing data?
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+print(covid_testing.loc[2, :])
+</script>
+</lia-keep>
+</div>
+<br>
+
+`NaN`s are special in a couple of ways.
+
+1. They are not strings, you can't type them in directly when setting the value of a cell.
+2. Two `NaN`s are **not equal** to each other.
+
+For example we know that patient 2 has no data, i.e. `NaN` in both the column `payor_group` and the column `patient_class`. The double equals sign `==` will tell us if those two entries are the same:
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+are_NaNs_equal = ( covid_testing.loc[2,"payor_group"] == covid_testing.loc[2, "patient_class"] )
+
+print(are_NaNs_equal)
+</script>
+</lia-keep>
+</div>
+<br>
+
+Notice that the above cell uses both of the techniques we learned for combining conditions: there are parentheses surrounding the condition `a == b` and the condition has a short, readable name.
+
+Since using `==` to check if a cell is empty won't work, we have the methods `.isna()` and `.isnull()`. These do exactly the same thing: they return `True` if the cell is empty, and `False` if the cell contains information. You can run these methods on a DataFrame or a series (a column of a DataFrame) but not on a single cell:
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+print(covid_testing.loc[:,"payor_group"].isna())
+</script>
+</lia-keep>
+</div>
+<br>
+
+The opposite of `.isna()` is the method `.notna()`.
+
+For example you might want to create a new DataFrame of only patients whose `payor_group` is known:
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+known_payor = covid_testing.loc[:,"payor_group"].notna()
+
+known_payor_tests = covid_testing.loc[known_payor, :].copy()
+
+print(known_payor_tests.loc[:, ["first_name", "last_name"]])
+</script>
+</lia-keep>
+</div>
+<br>
 
 ### Quiz: Exploring datasets
 
 @sage
 
-Complete the following code by replacing the two `__?__`s with your own code to find out the first and last name of the patient in row 11942.
+1. Complete the following code by replacing the two `__?__`s with your own code to find out the first and last name of the patient in row 11942.
 
 <div class="python">
 <lia-keep>
+<script type="text/x-sage">
 import pandas as pd
 covid_testing = pd.__?__('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
 
@@ -466,7 +633,6 @@ print(covid_testing.__?__[11942, ["first_name","last_name"]])
 
 Enter their name below to check your answer:
 [[grazdan greyjoy]]
-
 ***
 <div class = "answer">
 
@@ -476,6 +642,7 @@ On line 4, the `.loc` method will request the data from row 11942 and columns `"
 
 <div class="python_run">
 <lia-keep>
+<script type="text/x-sage">
 import pandas as pd
 covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
 
@@ -486,6 +653,9 @@ print(covid_testing.loc[11942, ["first_name","last_name"]])
 </div>
 ***
 
+2. Question about
+
+
 ## Editing a DataFrame
 
 
@@ -493,19 +663,7 @@ print(covid_testing.loc[11942, ["first_name","last_name"]])
 
 ### Editing existing columns
 
-### Logical and mathematical functions in Python
-maybe?
 
-### Missing Data
-@sage
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
-</script>
-</lia-keep>
-</div>
 
 ### Quiz: Editing datasets
 
