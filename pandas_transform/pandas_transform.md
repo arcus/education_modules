@@ -329,6 +329,16 @@ print(covid_testing)
 
 Good thing it doesn't print all 15524 rows! Unless you specify a different subset, you will see the first five rows and the last five rows of a DataFrame. If, like this one, it has more than 10 rows, the hidden rows will be indicated by ellipses.
 
+You can also ask for the first or last 5 rows of data using the methods `.head()` and `.tail()`. Try putting a number in the parentheses to get different numbers of rows.
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+print(covid_testing.head())
+</script>
+</lia-keep>
+</div>
+
 <div class = "important">
 **Loading your own data**
 
@@ -344,9 +354,11 @@ To create a DataFrame of your data, make sure you use the right command for your
 
 </div>
 
-### Filtering rows and columns
+### Column names and row indices
 @sage
-<div class="python_data">
+From now on we will add the definition of our DataFrame `covid_testing` to the set-up of each page. There is nothing for you to click here, this code ran automatically when you loaded the page:
+
+<div class="python_data_init">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -355,10 +367,23 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 </lia-keep>
 </div>
 
+When a DataFrame is displayed it has a row of column names along the top, and a column of indices along the left side. In some environments, like Jupyter notebooks, these names and indices may be bolded.
 
-### Missing entries
-@sage
+The methods `.columns` and `.index` will show you all of the column and row names, respectively. **Give it a try:**
+
 <div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+covid_testing.columns
+</script>
+</lia-keep>
+</div>
+
+The column names were imported with the `.csv` file. If you imported tabular data that didn't have column headers, the column names will be numeric, the way the row indices are in our `covid_testing` DataFrame. They let us refer to individual rows and columns.
+
+### Locating data with `.loc`
+@sage
+<div class="python_data_init">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -366,12 +391,100 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 </script>
 </lia-keep>
 </div>
+<br>
+The `.loc` method lets you select a subset of your DataFrame to display.
+
+**Selecting a single entry**
+
+The grammar of the `.loc` method is `dataframe.loc[row(s), column(s)]`. To see the age of the of the very first person to be tested, i.e. extract the data from row `0` (python starts counting with 0) and column `"age"` enter `covid_testing.loc[0,"age"]`.
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+covid_testing.loc[0,"age"]
+</script>
+</lia-keep>
+</div>
+
+You need the `"` surrounding `age` because that column header is a string. No quotes are needed around the row index `0` because it is recognized as a known value.
+
+**Selecting multiple rows or columns**
+
+If you want to see the ages of the first 3 patients tested, change the `0` to the list `[0,1,2]`. This indicates that you want to see the data in rows indexed 0,1, and 2. Similarly you can change the single column to be a list of columns.
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+covid_testing.loc[[0,1,2],[ "age", "gender"]]
+</script>
+</lia-keep>
+</div>
+
+**Viewing full rows and columns**
+
+If you want to show all of the data in a row or column, instead of a list you can use a colon `:` to indicate that you want to include everything.
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+covid_testing.loc[:,["mrn","first_name","last_name"]]
+</script>
+</lia-keep>
+</div>
+<br>
+
+A colon before the comma will show you all rows of the columns you selected and a colon after the comma will return all columns of the given rows.
+
+**Your turn:** What do you think will happen if you put colons both before and after the comma? Change the code below to check if you were correct.
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+covid_testing.loc[[2,3,4],:]
+</script>
+</lia-keep>
+</div>
+<br>
+
 
 ### Quiz: Exploring datasets
 
-Import another file from somewhere else.
+@sage
 
-Filter by missing entries question.
+Complete the following code by replacing the two `__?__`s with your own code to find out the first and last name of the patient in row 11942.
+
+<div class="python">
+<lia-keep>
+import pandas as pd
+covid_testing = pd.__?__('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+
+print(covid_testing.__?__[11942, ["first_name","last_name"]])
+</script>
+</lia-keep>
+</div>
+<br>
+
+Enter their name below to check your answer:
+[[grazdan greyjoy]]
+
+***
+<div class = "answer">
+
+On line 2, the command `read_csv` will convert the csv file's data into a DataFrame.
+
+On line 4, the `.loc` method will request the data from row 11942 and columns `"first_name"` and `"last_name"`.
+
+<div class="python_run">
+<lia-keep>
+import pandas as pd
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+
+print(covid_testing.loc[11942, ["first_name","last_name"]])
+</script>
+</lia-keep>
+</div>
+</div>
+***
 
 ## Editing a DataFrame
 
@@ -382,6 +495,17 @@ Filter by missing entries question.
 
 ### Logical and mathematical functions in Python
 maybe?
+
+### Missing Data
+@sage
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+</script>
+</lia-keep>
+</div>
 
 ### Quiz: Editing datasets
 
