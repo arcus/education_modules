@@ -326,7 +326,7 @@ You can download Python directly to your computer, use Anaconda to download Pyth
 
 While Python does contain a lot of basic functions "out of the box", if you plan on using it for more complex tasks you'll need more functions and methods. For that, you'll need modules, packages, and libraries.
 
-* A **module** is a Python script that contains a number of related **functions** (defined pieces of code that perform a specific task, which can then be called whenever you want to do that task). You can even [write your own Python modules](https://www.w3schools.com/python/python_modules.asp)!
+* A **module** is a Python script that contains a number of related **functions** (defined pieces of code that perform a specific task, which can then be called whenever you want to do that task) and **variables**, which you can think of as containers for storing values (and which you can call just like functions to access their values). You can even [write your own Python modules](https://www.w3schools.com/python/python_modules.asp)!
 * A **package** is a group of related modules. You can import the entire package, or if you only need one module, you can just import that module. One package that is frequently used in scientific computing is called **numpy** ([you can read more about numpy here](https://numpy.org/)).
 * A **library** is often used as a generic term for a collection of related code (and is therefore sometimes used interchangeably with "module" and "package"), but is frequently used to refer to a collection that contains both modules and packages. [**matplotlib**](https://matplotlib.org/) is a popular data visualization library.
 
@@ -352,6 +352,10 @@ Then let's say we want to find the square root of 42. If we try to run the code 
 
 `math.sqrt(42)`
 
+If you want to use a variable from a module rather than a function, the syntax is similar, but you don't need the parentheses at the end. For example, the `math` module also contains several mathematical constants as variables; interestingly, one of these "constants" is infinity, which is stored in the variable `inf`. To access `inf` from the `math` module, we would run this code:
+
+`math.inf`
+
 <div class = "important">
 For many modules, packages, and libraries, it is often the convention that they are given an **alias**, or a shorter handle used to refer to them later in your script or notebook, using the `as` keyword (for example, `numpy` is customarily given the alias `np`, so the import statement would be `import numpy as np`). Then, if we wanted to use the `numpy` function `linspace()`(which generates evenly spaced numbers over a specified interval, see the [`linspace` documentation](https://numpy.org/doc/stable/reference/generated/numpy.linspace.html) if you're interested in learning more), you would use the code `np.linspace(start, stop)` (with start and stop indicting the interval).
 </div>
@@ -365,7 +369,7 @@ Sometimes, you might only want to import part of a library instead of the whole 
 Both of these methods do essentially the same thing (and note that we've also used the alias `plt` for `pyplot`). The first option is more readable (that is, it's a little clearer what the code is doing), while the second option is a little faster to type out. In either case, you **don't** need to type out `matplotlib.plt()`; if you want to use `pyplot` going forward, you would only need to type `plt`. This is nice, because `pyplot` is actually a module in the `matplotlib` package, and so to use, for example, the `plot()` function from `pyplot`, now we only need to write the code `plt.plot()`.
 
 <div class = "help">
-If you're thoroughly confused now by libraries, packages, and modules, that's understandable! It take some time to sort it out. Just remember that functions and variables can be grouped together into modules, which can themselves be grouped into packages and libraries. And when in doubt, Google can help! Just search for "Python import" and the module/packages that you want to use.
+If you're thoroughly confused now by libraries, packages, and modules, that's understandable! It can take some time to sort it all out. Just remember that functions and variables can be grouped together into modules, which can themselves be grouped into packages and libraries. And when in doubt, Google can help! Just search for "Python import" and the module/packages that you want to use.
 </div>
 
 
@@ -385,14 +389,24 @@ In this case, because the `choice()` function is part of the `random` module in 
 </div>
 ***
 
+
+For one of her calculations, Fatima needs the variable `pi`, and she needs this constant with more precision than the common 3.14 approximation. Luckily, Python's `math` module has this constant available in the `pi`constant. If Fatima has imported the `math` module with the code `import math`, how would she access the constant `pi`?
+
+[[math.pi]]
+***
+<div class = "answer">
+Because Fatima imported the `math` module, but not the `pi` constant explicitly, to access the constant she'll need to refer to it as part of the `math` module. If instead she had imported just the `pi` constant with the code `from math import pi`, then she could just use `pi` to access the constant.
+</div>
+***
+
+
 ## Hands-On Exercises
 
-This is a hands-on activity! Feel free to pop over to that tab you opened in the [Lesson Preparation section](#Lesson-Preparation) to get started. Need the link again? Here it is:
+This is a hands-on activity to get you used to looking at and using a Jupyter notebook. Feel free to pop over to that tab you opened in the [Lesson Preparation section](#Lesson-Preparation) to get started. Need the link again? Here it is:
 
 <a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/static/images/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
 
 Don't forget to come back here when you're done!
-
 
 
 ## Additional Resources
