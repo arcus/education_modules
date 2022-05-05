@@ -67,6 +67,61 @@ There are several advantages to EHR research over other data sources:
 - potential for detailed longitudinal analyses
 - potential for multi-site studies, replications, and generalizations
 
+## Data structures
+
+https://education.arcus.chop.edu/getting-to-one-row/
+
+A practical example of how combining data from multiple tables can be complicated
+https://education.arcus.chop.edu/cartesian-results/
+
+## Data quality
+
+## Text data
+
+One common data type in EHR is text data, such as clinical notes.
+
+When considering text data, there is an important distinction between **structured** and **unstructured** text:
+Structured text data is restricted or validated in some way, such as selecting an option from a dropdown, whereas unstructured text data is filled in freely.
+
+## Quiz: Text data
+
+<div>
+Consider the following three versions of a question on a hypothetical patient survey:
+
+> 1. Please select your gender:
+>
+>  [[male|female|non-binary|prefer not to say]]
+>
+> 2. Please indicate your gender (select all that apply):
+>
+> [[male]] male
+> [[female]] female
+> [[nonbinary]] non-binary
+> [[prefer not to say]] prefer not to say
+
+> 3. Please write in your gender:
+>
+> [[___]]
+
+Which of those questions would result in **unstructured** text data?
+</div>
+
+[( )] Only question 1
+[( )] Only question 2
+[(X)] Only question 3
+[( )] Either question 2 or 3 could result in unstructured data, depending on how the patient responds
+
+True or False: If we added another option to question 1 above that said "Other (please specify)" and triggered a small text box for the respondent to fill in if it was selected, all of the data for that question would then be considered unstructured.
+
+[( )] True
+[(X)] False
+
+True or False: Techniques for the analysis of structured and unstructured text data are similar.
+
+[( )] True
+[(X)] False
+
+## Statistical considerations
 
 ## Sources
 
