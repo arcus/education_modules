@@ -436,6 +436,10 @@ covid_testing.loc[[2,3,4],:]
 </div>
 <br>
 
+<div class = "options">
+If you look at other people's code, you may see columns refered to with `data_frame["column_name"]` instead of `data_frame.loc[:,"column_name"]`. While this will frequently give the same output, i.e. show you the entire column, it can [raise errors if you use it to try to update data](https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html). For that reason we are focusing on the `.loc` method.
+</div>
+
 ### Quiz: DataFrames
 
 @sage
@@ -765,7 +769,7 @@ If you imported data from another source using `.read_csv()` or another such met
 If your original data is not already in a separate file you can use `.to_csv(data.csv)` to create a new file containing your DataFrame as a csv file. You can also create files in [many other formats](https://pandas.pydata.org/docs/reference/io.html).
 </div>
 
-### Adding new columns
+### Create new columns
 
 @sage
 <div class="python_data_init">
@@ -776,9 +780,50 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 </script>
 </lia-keep>
 </div>
+<br>
+
+In `pandas` you can create a new column by calling your new column with the `.loc[:,"new_column"]` method and using a single equals sign `=` to define its contents.
+
+The next bit of code creates a new column named `new_column` in the DataFrame `covid_testing` in which every entry is the number 1:
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+covid_testing.loc[:,"new_column"] = 1
+print(covid_testing.loc[:,"new_column"])
+</script>
+</lia-keep>
+</div>
+<br>
+
+Your new column can also depend on data in columns that already exist. Remember that each column, or series, needs to be called using the format `dataframe.loc[:,"column_name"]`.
+
+For example maybe you need to have patient ages recorded in months instead of years:
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+covid_testing.loc[:,"age_months"] = covid_testing.loc[:,"age"]*12
+print(covid_testing.loc[:,["age","age_months"]])
+</script>
+</lia-keep>
+</div>
+<br>
+
+Or maybe you want a new column that displays the full name of each patient, rather than separate columns for first and last names.
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+covid_testing.loc[:,"full_name"] = covid_testing.loc[:,"first_name"]+" " +covid_testing.loc[:,"last_name"]
+print(covid_testing.loc[:,"full_name"])
+</script>
+</lia-keep>
+</div>
 
 
-### Editing existing columns
+
+### Edit existing columns
 @sage
 <div class="python_data_init">
 <lia-keep>
@@ -789,10 +834,77 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 </lia-keep>
 </div>
 
+You can make changes to existing entries using the same method and simply using the key that already exists for that column.
 
-### Quiz: Editing datasets
+What if you wanted to reformat the gender column to use `M` and `F` instead of spelling out male and female?
 
-Here is some code, multiple choice what did it filter by?
+One way to approach this is to define a condition testing each row for whether the entry in the `gender` column is `male`. Then we can use that condition to change the entry to `M` if the condition is met.
+
+<div class="python_data_init">
+<lia-keep>
+<script type="text/x-sage">
+is_male = covid_testing.loc[:, "gender"] == "male"
+
+covid_testing.loc[is_male, "gender"] = "M"
+
+</script>
+</lia-keep>
+</div>
+<br>
+
+You can also use the `.replace` method to change entries in a column. The grammar required can be a bit tricky, but it is worth learning to use this powerful tool.
+
+* The `.replace()` method takes two arguments: the entry you want to find, and what you want to replace it with.
+
+* Before the `.` goes the DataFrame, or part of the DataFrame on which you want to find and replace the entry.
+
+  * `dataframe.replace("a","b")` will search all columns of `dataframe` for `a` and replace them with `b`.
+
+  * `dataframe.loc[:,"column_1"]` will only replace `a` with `b` in the column labeled `column_1`. If another column contains the entry `a` that will remain unchanged.
+
+* The `.replace()` method doesn't change the DataFrame, only the way it is shown to you that one time. In order to change the data in the DataFrame you need to use `=` to set the DataFrame equal to the version with the replacements.
+
+  * If you `print(dataframe.replace("a","b"))` you will see that `a` has been replaced by `b`. However if you then `print(dataframe)` the `a` entries will still be there.
+
+  * To change `a` to `b` in your DataFrame, redefine it: `dataframe = dataframe.replace("a","b")`. Now if you `print(dataframe)`, you will see all `a`s have been replaced by `b`.
+
+Let's take a look a using this method to change the gender `female` to `F`:
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+covid_testing.loc[:, "gender"] = covid_testing.loc[:, "gender"].replace("female","F")
+
+print(covid_testing.loc[:,["first_name", "last_name", "gender"]])
+
+</script>
+</lia-keep>
+</div>
+<br>
+
+The `.replace` method lets you replace multiple kinds of entries simultaneously. The same way we could enter lists into `.loc`, `.replace` can also accept two lists.
+
+If we want to replace `positive` and `negative` with `1` and `0` respectively, we can ask for the list `["positive", "negative"]` to be replaced with the list `[1,0]`:
+
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+covid_testing = covid_testing.replace(["positive","negative"],[1,0])
+
+print(covid_testing.loc[:,["first_name", "last_name", "result"]])
+
+</script>
+</lia-keep>
+</div>
+
+<div class= "warning">
+The order and length of these lists matter! Each element in the first list will be replaced by the element in the **same position** in the second list.
+</div>
+
+### Quiz: Transforming DataFrames
+
+Here is some code, multiple choice what did it do?
 
 ## Hands-On Activity
 Do I really have time for this in an hour? I suspect no....
