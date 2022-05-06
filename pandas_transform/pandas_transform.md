@@ -139,7 +139,7 @@ Code will not persist from one page to the next, and you can always refresh the 
 These cells will compute everything you ask them to, but will only output what you explicitly request using the `print()` command.
 </div>
 
-**Jupyter notebooks**
+**Jupyter notebooks** This section depends on what makes sense for the [Hands on activity](#hands-on-activity)
 
 The longer hands-on exercises in this module are in a Jupyter notebook. The notebook is embedded into the module and you are welcome to do the exercises there. However this will not save your work if you want to come back and see what you did in a few days. If you want that ability, you have two options:
 
@@ -228,9 +228,6 @@ print(df['col1'])
 
 Did you notice the `Name` and `dtype` at the bottom? Those tell you the name of the series and its data type. Try changing `col1` to `col2` or `col3` to see what type of data those series contain.
 
-<div class = "help">
-Did you get an error when you tried to print out a column? Make sure you run the cell above to define `df` before you try to reference it!
-</div>
 
 ### Quiz: `pandas` package
 
@@ -254,7 +251,7 @@ Your friend's code (above) isn't running, which is extremely frustrating because
 <div class = "answer">
 `NameError: name 'pd' is not defined` is a helpful error message because it tells you exactly what you friend forgot: they never defined `pd`!
 
-When you add the line `import pandas as pd` to their code, it runs as it did before.
+When you add the line `import pandas as pd` to the top of their code, it runs as it did before.
 
 <div class="python_run">
 <lia-keep>
@@ -314,9 +311,9 @@ print(covid_testing)
 </lia-keep>
 </div>
 
-Good thing it doesn't print all 15524 rows! Unless you specify a different subset, you will see the first five rows and the last five rows of a DataFrame. If, like this one, it has more than 10 rows, the hidden rows will be indicated by ellipses.
+Unless you have an extremely wide browser window, the output above is broken into as many columns as it can fit at a time. Some interfaces will output the DataFrame and let you scroll right to see more columns, but this interface just prints as many columns as it can fit and then starts again with the next columns. Good thing it didnt't print all 15524 rows!
 
-You can also ask for the first or last 5 rows of data using the methods `.head()` and `.tail()`. Try putting a number in the parentheses to get different numbers of rows.
+When you print a DataFrame or Series you will see the first five rows and the last five rows of a DataFrame. If, like this one, it has more than 10 rows, the hidden rows will be indicated by ellipses. You can also ask for the first or last 5 rows of data using the methods `.head()` and `.tail()`. Try putting a number in the parentheses to get different numbers of rows.
 
 <div class="python_data">
 <lia-keep>
@@ -366,7 +363,7 @@ print(covid_testing.columns)
 </lia-keep>
 </div>
 
-The column names were imported with the `.csv` file. If you imported tabular data that didn't have column headers, the column names will be numeric, the way the row indices are in our `covid_testing` DataFrame. They let us refer to individual rows and columns.
+The column names were imported with the `.csv` file. Since the original file didn't have labels for the rows, `pandas` automatically labeled them numerically 0 through 15523. If you imported tabular data that didn't have column headers, the column names would be numeric, the way the row indices are in our `covid_testing` DataFrame.
 
 ### Locating data with `.loc`
 
@@ -391,7 +388,7 @@ The grammar of the `.loc` method is `dataframe.loc[row(s), column(s)]`. To see t
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-covid_testing.loc[0,"age"]
+print(covid_testing.loc[0,"age"])
 </script>
 </lia-keep>
 </div>
@@ -405,7 +402,7 @@ If you want to see the ages of the first 3 patients tested, change the `0` to th
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-covid_testing.loc[[0,1,2],[ "age", "gender"]]
+print(covid_testing.loc[[0,1,2],[ "age", "gender"]])
 </script>
 </lia-keep>
 </div>
@@ -417,7 +414,7 @@ If you want to show all of the data in a row or column, instead of a list you ca
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-covid_testing.loc[:,["mrn","first_name","last_name"]]
+print(covid_testing.loc[:,["mrn","first_name","last_name"]])
 </script>
 </lia-keep>
 </div>
@@ -430,7 +427,7 @@ A colon before the comma will show you all rows of the columns you selected and 
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-covid_testing.loc[[2,3,4],:]
+print(covid_testing.loc[[2,3,4],:])
 </script>
 </lia-keep>
 </div>
@@ -459,7 +456,12 @@ print(covid_testing.__?__[11942, ["first_name","last_name"]])
 <br>
 
 Enter their name below to check your answer:
+
 [[grazdan greyjoy]]
+<script>
+  let input = "@input".trim().toLowerCase();
+  input == "grazdan greyjoy";
+</script>
 ***
 <div class = "answer">
 
@@ -467,16 +469,14 @@ On line 2, the command `read_csv` will convert the csv file's data into a DataFr
 
 On line 4, the `.loc` method will request the data from row 11942 and columns `"first_name"` and `"last_name"`.
 
-<div class="python_run">
-<lia-keep>
-<script type="text/x-sage">
+The completed code should look like this:
+
+```
 import pandas as pd
 covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
 
 print(covid_testing.loc[11942, ["first_name","last_name"]])
-</script>
-</lia-keep>
-</div>
+```
 </div>
 ***
 
@@ -539,7 +539,7 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 </div>
 <br>
 
-When we used a column name or list of names as our argument in the row spot of the `.loc` method, we got back all rows in that list. When we put a condition in the row spot, it will return all rows for which that condition is `True`.
+When we used a column name or list of names as our argument in the row spot of the `.loc` method, we got back all rows in that list. When we put a condition  like `covid_testing.loc[:,"result"] == "positive"` in the row spot, it will return all rows for which that condition is `True`.
 
 If this this is a subset of the data that you are likely to want to use again, it is a good practice to create a new DataFrame consisting only of the rows and columns that you want.
 
@@ -555,7 +555,7 @@ print(positive_tests)
 </div>
 <br>
 
-That is a whole lot of output when we see every column! You can ask to see fewer columns, try replacing `print(positive_tests)` with  `print(positive_tests.loc[:,["first_name","last_name"]])` and see if that output is easier to understand.
+That is a whole lot of output when we see every column! You can ask to see fewer columns so that the output doesn't need to wrap. Try replacing `print(positive_tests)` with  `print(positive_tests.loc[:,["first_name","last_name"]])` and see if that output is easier to understand.
 
 
 <div class = "important">
@@ -593,15 +593,7 @@ print(adult_positive.loc[:,["first_name","last_name", "age"]])
 </div>
 <br>
 
-There are some strategies to keep your code from becoming an unreadable tangle of conditional statements.
-
-**Use parentheses**
-
-When combining conditions, you should use parentheses around each condition. This isn't just for the benefit of humans reading your code. If you are combining three or more conditions, the placement of parentheses can change the meaning of a condition.
-
-The condition:
-`((positive test) & (older than 10)) | (younger than 5)`
-is true for all results where a patient was older than 10 and tested positive, as well as all children under five, whether or not they tested positive. By moving the parentheses we can change the condition to test for patients older than 10 or younger than 5, but only return those with positive test results.
+Our code is starting to look quite messy. Giving each condition a name is a good way to keep your code from becoming an unreadable tangle of conditional statements.
 
 **Name your conditions**
 
@@ -619,6 +611,15 @@ print(infant_positive.loc[:,["first_name","last_name","age"]])
 </div>
 <br>
 
+**Use parentheses**
+
+When combining conditions, you should use parentheses around each condition. This isn't just for the benefit of humans reading your code. If you are combining three or more conditions, the placement of parentheses can change the meaning of a condition.
+
+The condition:
+`((positive_test) & (older_than_10)) | (younger_than_5)`
+is true for all results where a patient was older than 10 and tested positive, as well as all children under five, whether or not they tested positive. By moving the parentheses we can change the condition to test for patients older than 10 or younger than 5, but only return those with positive test results.
+
+
 ### Missing Data
 @sage
 <div class="python_data_init">
@@ -630,7 +631,7 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 </lia-keep>
 </div>
 
-So far we have been treating the `covid_testing` DataFrame as if it has a value in every row of every column, but like most real data sets, there is some missing data!
+So far we have been treating the `covid_testing` DataFrame as if it has a value in every row of every column, but like most real data sets, some data is missing!
 
 Wherever the original csv file didn't have an entry, you will see `NaN` or `nan`, meaning "Not a Number." For which columns is the patient in row 2 missing data?
 
@@ -653,7 +654,7 @@ For example we know that patient 2 has no data, i.e. `NaN` in both the column `p
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-are_NaNs_equal = ( covid_testing.loc[2,"payor_group"] == covid_testing.loc[2, "patient_class"] )
+are_NaNs_equal = (covid_testing.loc[2,"payor_group"] == covid_testing.loc[2, "patient_class"])
 
 print(are_NaNs_equal)
 </script>
@@ -704,7 +705,7 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 </div>
 <br>
 
-You come across the following code in which three conditions are defined but not given descriptive names:
+You come across the following code in which several conditions are defined but not given descriptive names:
 
 <div class="python_data_init">
 <lia-keep>
@@ -722,7 +723,16 @@ my_condition = (condition_1 | condition_2) & condition_3
 </div>
 <br>
 
-What does `my_condition` test for?
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+
+</script>
+</lia-keep>
+</div>
+<br>
+
+What does `my_condition` test for? You can use the interactive cell above to test the conditions however you want.
 
 [( )] Patients under the age of 18 who are missing data in both the `first_name` and `last_name` columns.
 [( )] Patients under the age of 18 who are missing data in either the `first_name` or `last_name` columns.
@@ -816,7 +826,7 @@ Or maybe you want a new column that displays the full name of each patient, rath
 <lia-keep>
 <script type="text/x-sage">
 covid_testing.loc[:,"full_name"] = covid_testing.loc[:,"first_name"]+" " +covid_testing.loc[:,"last_name"]
-print(covid_testing.loc[:,"full_name"])
+print(covid_testing.loc[:,["first_name", "last_name", "full_name"]])
 </script>
 </lia-keep>
 </div>
@@ -838,6 +848,8 @@ You can make changes to existing entries using the same method and simply using 
 
 What if you wanted to reformat the gender column to use `M` and `F` instead of spelling out male and female?
 
+**Using `=` to assign values**
+
 One way to approach this is to define a condition testing each row for whether the entry in the `gender` column is `male`. Then we can use that condition to change the entry to `M` if the condition is met.
 
 <div class="python_data_init">
@@ -852,23 +864,11 @@ covid_testing.loc[is_male, "gender"] = "M"
 </div>
 <br>
 
+**Using `.replace`**
+
 You can also use the `.replace` method to change entries in a column. The grammar required can be a bit tricky, but it is worth learning to use this powerful tool.
 
-* The `.replace()` method takes two arguments: the entry you want to find, and what you want to replace it with.
-
-* Before the `.` goes the DataFrame, or part of the DataFrame on which you want to find and replace the entry.
-
-  * `dataframe.replace("a","b")` will search all columns of `dataframe` for `a` and replace them with `b`.
-
-  * `dataframe.loc[:,"column_1"]` will only replace `a` with `b` in the column labeled `column_1`. If another column contains the entry `a` that will remain unchanged.
-
-* The `.replace()` method doesn't change the DataFrame, only the way it is shown to you that one time. In order to change the data in the DataFrame you need to use `=` to set the DataFrame equal to the version with the replacements.
-
-  * If you `print(dataframe.replace("a","b"))` you will see that `a` has been replaced by `b`. However if you then `print(dataframe)` the `a` entries will still be there.
-
-  * To change `a` to `b` in your DataFrame, redefine it: `dataframe = dataframe.replace("a","b")`. Now if you `print(dataframe)`, you will see all `a`s have been replaced by `b`.
-
-Let's take a look a using this method to change the gender `female` to `F`:
+Let's take a look a using this method to change the gender `female` to `F`. After the code block we will go through what each part of the code is doing.
 
 <div class="python_data">
 <lia-keep>
@@ -881,6 +881,22 @@ print(covid_testing.loc[:,["first_name", "last_name", "gender"]])
 </lia-keep>
 </div>
 <br>
+
+* The `.replace()` method takes two arguments: the entry you want to find, and what you want to replace it with.
+
+* Before  `.replace()` goes the DataFrame, or part of the DataFrame on which you want to find and replace the entry.
+
+  * `dataframe.replace("a","b")` will search all columns of `dataframe` for `a` and replace them with `b`.
+
+  * `dataframe.loc[:,"column_1"]` will only replace `a` with `b` in the column labeled `column_1`. If another column contains the entry `a` that will remain unchanged.
+
+* The `.replace()` method doesn't change the DataFrame, only the way it is shown to you that one time. In order to change the data in the DataFrame you need to use `=` to set the DataFrame equal to the version with the replacements.
+
+  * If you `print(dataframe.replace("a","b"))` you will see that `a` has been replaced by `b`. However if you then `print(dataframe)` the `a` entries will still be there.
+
+  * To change `a` to `b` in your DataFrame, redefine it: `dataframe = dataframe.replace("a","b")`. Now if you `print(dataframe)`, you will see all `a`s have been replaced by `b`.
+
+**Simultaneous replacement**
 
 The `.replace` method lets you replace multiple kinds of entries simultaneously. The same way we could enter lists into `.loc`, `.replace` can also accept two lists.
 
@@ -904,10 +920,54 @@ The order and length of these lists matter! Each element in the first list will 
 
 ### Quiz: Transforming DataFrames
 
-Here is some code, multiple choice what did it do?
+@sage
+<div class="python_data_init">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+</script>
+</lia-keep>
+</div>
+
+You can change the all of the entries in a column to uppercase using the method `.str.upper()`. The code below **prints** the `last_name` column  of `covid_testing`  in uppercase:
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+print(covid_testing.loc[:, "last_name"].str.upper())
+</script>
+</lia-keep>
+</div>
+<br>
+
+How would you **change** the the `last_name` column of `covid_testing` to be uppercase?
+
+[( )] `covid_testing.loc[:, "last_name"].str.upper()`
+[( )] `covid_testing.loc[:, "last_name"] == covid_testing.loc[:, "last_name"].str.upper()`
+[(X)] `covid_testing.loc[:, "last_name"] = covid_testing.loc[:, "last_name"].str.upper()`
+***
+<div class = "answer">
+- `covid_testing.loc[:, "last_name"].str.upper()` This command will change the way the `last_name` column is **displayed**, but will not make any changes to the DataFrame itself.
+
+- `covid_testing.loc[:, "last_name"] == covid_testing.loc[:, "last_name"].str.upper()` The double equals `==` mean that this is a **condition** testing whether or not the entry int the `last_name` column is already uppercase.
+
+- `covid_testing.loc[:, "last_name"] = covid_testing.loc[:, "last_name"].str.upper()` The single equals `=` **assigns** the entry in the `last_name` column to the uppercase version.
+</div>
+***
+
+<div class = "learnmore">
+
+The method `.str.lower()` will make every entry in a column lower case. There are several [other ways to manipulate the presentation of text](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.lower.html) in a pandas series.
+
+</div>
 
 ## Hands-On Activity
 Do I really have time for this in an hour? I suspect no....
+
+Question for QA-ers: Would it make sense to have option exercises here? a Jupyter notebook (embedded and with a link to download it).
+
+I could also add these to Additional resources instead with a "hey, you actually have to practice this stuff! try it out here!" message.
 
 ## Additional Resources
 
