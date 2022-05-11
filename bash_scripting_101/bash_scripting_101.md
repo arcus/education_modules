@@ -132,47 +132,50 @@ WSL is the Windows utility for running shell. Ubuntu is a well known Linux opera
 </div>
 ***
 
-## Setting up a User/Home Directory
 
-- As you get comfortable in bash, it is important to create a default home directory in an easily accessible place.
-- It is recommended that you use the native user directory in the home directory on your computer. Your user directory contains a folder named “bin” which is the root directory of any unix like operating system.
-- Bin is short for “binary” and is where you can store any configuration or executable files for programs you run on the CLI. This will be a good place to store bash scripts (.sh files) once you have become comfortable executing commands and learning syntax.
-
-![Accessing the user/home directory on a Mac.](media/user_directory.png)
-
-## Useful Commands and Syntax
+## Bash Commands to get you started
 
 In our installation section, we covered how accessing CLI tools to run bash scripts is quite uncomplicated on either operating system. Similarly, bash commands and syntax are approachable and integrate well to allow for a gradual increasing in the complexity of utilities run.
 
-### Commands
+### Navigation Commands
 
-- `Ls`: list directory contents
-- `Mkdir`: create a new directory at the folder level
-- `Cd`: change directory
-- `Echo`: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
+- `pwd`:
+- `ls`: list directory contents
+- `cd`: change directory
+  - `cd folder_name`
+  - `cd ~`
+  - `cd ~/path/to/folder`
+  - `cd ..`
+  - `cd .`
 
-  ![Echo variable example demonstrating how to print and set the price of a pint.](media/echo_example_large.png)
+### Creating and placing files and folders
 
-- `Touch`: creates a new file
+- `mkdir`: create a new directory at the folder level
 
+- `touch`: creates a new file
   - `touch file 1` will create a single new file
   - `touch file 1 file 2 file 3` will create multiple uniquely named files at once
 
-- `Grep`: powerful search function to locate a string or pattern within a file or in a directory. Grep stands for global regular expression print.
+- `mv`: move or rename a directory and allows for batch processing
+  `mv *.txt folder` will move all files with a .txt file extension into a folder for example.
+
+### Searching and examining files
+
+- `echo`: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
+
+  ![Echo variable example demonstrating how to print and set the price of a pint.](media/echo_example_large.png)
+
+- `grep`: powerful search function to locate a string or pattern within a file or in a directory. Grep stands for global regular expression print.
 
   - `grep 'panda' file 1 file 2 file 3` will search for the word "panda" in the three files we just created.
 
-- `Man`: reveals function of a given command
-
-  ![Grep man command output with the full definition and some options displayed.](media/grep_output_large.png)
-
-- `Mv`: move or rename a directory and allows for batch processing
-  `mv *.txt folder` will move all files with a .txt file extension into a folder for example.
-- `Less`: view contents of a file without opening a separate editor
+- `less`: view contents of a file without opening a separate editor
 
   ![Less of basic python script that says hello and prompts a dialogue for an individual's name and age.](media/less_sample_small.png)
 
-- `Cat`: very powerful three-part function that allows a reader to view, combine (concatenate), or create a new version of a file
+### `cat` can create, edit, and display files
+
+- `cat`: very powerful three-part function that allows a reader to view, combine (concatenate), or create a new version of a file
 
   - `cat file 1 file 2` will display the contents of both files on separate lines.
   - `cat > file 4` will create a new file named file 4
@@ -180,6 +183,12 @@ In our installation section, we covered how accessing CLI tools to run bash scri
   - `cat file 2` will now confirm if the content in file 1 was successfully appended to the end of file 2.
 
   ![Head output of slightly less basic python script that organizes a picnic gathering menu amongst three friends.](media/head_example_small.png)
+
+### The bash manual
+
+  - `man`: reveals function of a given command
+
+    ![Grep man command output with the full definition and some options displayed.](media/grep_output_large.png)
 
 ### Quiz: Bash commands
 
@@ -197,16 +206,27 @@ The `sort` command is used to categorize files in bash.
 </div>
 ***
 
-### Syntax
+## Bash syntax
 
-- `>` takes the output of the command you executed in the terminal and places it in a new file
-- `|` takes the output of one command and passes it to the next command in the sequence. Allows for integrating of commands
 - `~` shortcut for your home directory
 - `.` shortcut for your current directory
 - `..` shortcut for your previous directory
   The above three shortcuts are highly useful for executing scripts in the proper location once you are collaborating in an active project with multiple files and folders.
-- `*` character sequence wildcard. Very useful in running a command on all files with a given file extension as demonstrated in the mv example above.
+
+
+### Writing output to a file with `>`
+- `>` takes the output of the command you executed in the terminal and places it in a new file
+
+### Linking commands with `|`
+
+- `|` takes the output of one command and passes it to the next command in the sequence. Allows for integrating of commands
+
+### Defining variables with `$`
 - `$` used to define a variable expression as used in the echo example above.
+
+### Character sequence wildcard `*`
+
+- `*` character sequence wildcard. Very useful in running a command on all files with a given file extension as demonstrated in the mv example above.
 
 ### Quiz: Bash syntax
 
@@ -223,6 +243,15 @@ This character is called a **pipe**, and it's name is a great way to visualize w
 
 </div>
 ***
+
+## Setting up a User/Home Directory
+
+- As you get comfortable in bash, it is important to create a default home directory in an easily accessible place.
+- It is recommended that you use the native user directory in the home directory on your computer. Your user directory contains a folder named “bin” which is the root directory of any unix like operating system.
+- Bin is short for “binary” and is where you can store any configuration or executable files for programs you run on the CLI. This will be a good place to store bash scripts (.sh files) once you have become comfortable executing commands and learning syntax.
+
+![Accessing the user/home directory on a Mac.](media/user_directory.png)
+
 
 ## Permissions and working with other users
 
