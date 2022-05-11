@@ -272,21 +272,16 @@ Giving all users access to manipulate files and directories in any way doesn't t
 
 ## Feedback
 
-_5 minute survey_
+In the beginning, we stated some goals.
 
-At the beginning of this module we described the following goals:
+**Learning Objectives:**
 
-**Learning Objectives**: After completion of this module, learners will be able to:
-
-- Describe what bash scripting is and why they might want to learn it for data management and research
-- Recognize bash scripting commands and syntax
-- Know how to access the command line and execute bash scripting commands in the linux shell environment
-- Know how to modify permissions on shared files and directories in bash
+@learning_objectives
 
 We ask you to fill out a brief (5 minutes or less) survey to let us know:
 
-- If we achieved the learning objectives
-- If the module difficulty was appropriate
-- If we gave you the experience you expected
+* If we achieved the learning objectives
+* If the module difficulty was appropriate
+* If we gave you the experience you expected
 
 We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash+Scripting+101%22)!
