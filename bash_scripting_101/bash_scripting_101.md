@@ -50,6 +50,35 @@ Learners should be familiar with locating files and folders stored in a director
 
 </div>
 
+
+## Lesson Preparation
+
+You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer. Please follow the instructions appropriate for the computer you are using.
+
+### Mac Computers
+
+![How to locate the terminal in Spotlight on a Mac.](media/terminal_in_mac.png)
+
+On a Mac computer, bash is the default login shell in the **Terminal** command line program.
+
+1. Type "terminal" in your Mac spotlight search to pull up this program.
+
+2. The terminal may take a few seconds to start, once it is open you should see a blinking cursor where you can type.
+
+<div class = "learnmore">
+It should be noted that Macs with the Catalina Operating System or later are running zsh instead of bash. That said, zsh is [functionally a later and greater version of bash with some key differences noted](https://medium.com/@harrison.miller13_28580/bash-vs-z-shell-a-tale-of-two-command-line-shells-c65bb66e4658).
+</div>
+
+### Windows Computers
+
+![Confirm these Windows settings to enable shell scripting capabilities.](media/on_windows.png)
+
+- On a Windows machine, the WSL (Windows Subsystem for Linux) has Ubuntu, which is just a widely used flavor of Bash, installed as its default shell scripting environment. This is automatically installed on any Windows computer running Windows 10 or later.
+- To confirm this feature is enabled, check to see if developer mode is enabled in settings and WSL is turned on in Features.
+- Search Bash in Cortana to launch WSL for the first time and click “Y” when asked to install Ubuntu for the first time. [Microsoft has their own internal documentation on WSL which features additional visual resources and FAQS](https://docs.microsoft.com/en-us/windows/wsl/).
+- Create a username and password when prompted and now you are ready to do some shell scripting! These user credentials have no bearing on your Windows user name and you will be automatically logged in for future sessions.
+
+
 ## The bash shell
 
 Your computer has an **O**perating **S**ystem (OS), most commonly either Windows, Mac, or Linux. The core for the OS itself is called the kernel; it's the heart of how everything works in your computer, but you can't actually interface with it directly as a user. Programs that are designed to work with your OS can communicate with the kernel (Word, RStudio, Chrome, etc.), but if you want to do something outside of one of those programs you can't connect to the kernel directly yourself. That's where a shell comes in.
@@ -95,58 +124,27 @@ Bash, or shell, scripting is a way to interface with your computer's operating s
 </div>
 ***
 
-## How do I get it?
-
-Everything that is necessary to run bash on your Mac or Windows machine is probably already installed; in fact, you may have done some shell without even realizing it!
-
-### Mac Installation
-
-![How to locate the terminal in Spotlight on a Mac.](media/terminal_in_mac.png)
-
-- On a Mac machine, bash is the default login shell in the Terminal command line program.
-- Type "terminal" in your Mac spotlight search to pull up this program for the first time (though it might already launch in the dock on your machine).
-- It should be noted that Macs with the Catalina Operating System or later are running zsh instead of bash. That said, zsh is [functionally a later and greater version of bash with some key differences noted](https://medium.com/@harrison.miller13_28580/bash-vs-z-shell-a-tale-of-two-command-line-shells-c65bb66e4658).
-
-### Windows Installation
-
-![Confirm these Windows settings to enable shell scripting capabilities.](media/on_windows.png)
-
-- On a Windows machine, the WSL (Windows Subsystem for Linux) has Ubuntu, which is just a widely used flavor of Bash, installed as its default shell scripting environment. This is automatically installed on any Windows computer running Windows 10 or later.
-- To confirm this feature is enabled, check to see if developer mode is enabled in settings and WSL is turned on in Features.
-- Search Bash in Cortana to launch WSL for the first time and click “Y” when asked to install Ubuntu for the first time. [Microsoft has their own internal documentation on WSL which features additional visual resources and FAQS](https://docs.microsoft.com/en-us/windows/wsl/).
-- Create a username and password when prompted and now you are ready to do some shell scripting! These user credentials have no bearing on your Windows user name and you will be automatically logged in for future sessions.
-
-### Quiz: Accessing the bash shell
-
-What is the name of the pre-installed program used to run shell scripts on a Mac?
-
-[( )] Together
-[( )] MSL (Mac Subsystem for Linux)
-[(X)] Terminal
-[( )] Ubuntu
-***
-<div class = "answer">
-
-WSL is the Windows utility for running shell. Ubuntu is a well known Linux operating system that is often used as the default shell scripting environment.
-
-</div>
-***
 
 
 ## Bash Commands to get you started
 
-In our installation section, we covered how accessing CLI tools to run bash scripts is quite uncomplicated on either operating system. Similarly, bash commands and syntax are approachable and integrate well to allow for a gradual increasing in the complexity of utilities run.
+If you are new to bash scripting, it can take some adjustment to navigate by typing text. Once you get the hang of a few basic commands, this can be an easier way to deal with files and folders than dropdown menus and dragging icons from place to place.
 
 ### Navigation Commands
+
 
 - `pwd`:
 - `ls`: list directory contents
 - `cd`: change directory
-  - `cd folder_name`
-  - `cd ~`
-  - `cd ~/path/to/folder`
-  - `cd ..`
-  - `cd .`
+    - `cd folder_name`
+
+    - `cd ~`
+
+    - `cd ~/path/to/folder`
+
+    - `cd ..`
+
+    - `cd .`
 
 ### Creating and placing files and folders
 
