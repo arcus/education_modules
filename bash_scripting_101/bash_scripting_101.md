@@ -8,7 +8,7 @@ language: en
 narrator: UK English Female
 title: Bash Scripting 101
 comment:  This course will focus on accessing a command line program and running shell scripts on your home computer, learning how to execute useful commands and recognize basic syntax, and, finally, learning how to set permissions in a way that leads to collaborating on a shared file directory with colleagues.
-long_description: This module is for people interested in harnessing the power of well-organized files and folders and who want to try a relatively accessible programming language.
+long_description: This course is designed to be both an introduction to bash for those who are total newbies as well as refresher for those some with experience running code.
 estimated_time: 30 minutes
 
 @learning_objectives
@@ -42,7 +42,9 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-Learners should be familiar with locating files and folders stored in a directory system. Familiarity with using a command line interface to execute code is recommended but not required. This course is designed to be equally useful for those with experience running code as well as for those who are total newbies.
+Learners should be familiar with locating files and folders stored in a directory system.
+
+
 
 **Learning Objectives**
 
@@ -126,38 +128,111 @@ Bash, or shell, scripting is a way to interface with your computer's operating s
 
 
 
-## Bash Commands to get you started
+## Bash Commands
 
-If you are new to bash scripting, it can take some adjustment to navigate by typing text. Once you get the hang of a few basic commands, this can be an easier way to deal with files and folders than dropdown menus and dragging icons from place to place.
+If you are new to bash scripting, it can take some adjustment to navigate by typing text. Once you get the hang of a few basic commands, this can be an easier way to deal with files and folders than dropdown menus and dragging icons from place to place. Even the language we use is a little different. In bash scripting you will hear folders refered to as **directories**.
+
+To enter a command into the shell, type it in where the blinking cursor appears and press `Enter` or `return` on your keyboard.
 
 ### Navigation Commands
 
+Just like when you navigate any file system, it is important to know where you are, see what files and folders are in that location, and move to other locations.
 
-- `pwd`:
-- `ls`: list directory contents
-- `cd`: change directory
-    - `cd folder_name`
+**Where am I?**
 
-    - `cd ~`
+The command `pwd`, which stands for **p**resent **w**orking **d**irectory, will return the path through your directory system to your current location.
 
-    - `cd ~/path/to/folder`
+**What is here?**
 
-    - `cd ..`
+The bash shell doesn't show the icons of the files and directories in your present working directory. Instead you will need to ask for a list of the directory's contents with the command `ls`.
 
-    - `cd .`
+**How do I move around?**
 
-### Creating and placing files and folders
+The command `cd` lets you **c**hange **d**irectory. Unlike the previous two commands, `cd` requires you to provide additional information: the directory you want to move to. You can move to a location relative to your current location, or you can move anywhere directly if you know the path to get there.
 
-- `mkdir`: create a new directory at the folder level
+- Move to a directory relative to your present working directory:
 
-- `touch`: creates a new file
-  - `touch file 1` will create a single new file
-  - `touch file 1 file 2 file 3` will create multiple uniquely named files at once
+  * If the directory `directory_name` is in your present working directory (i.e. it is one of the listed items when you enter `ls`) you can navigate into it with the command `cd directory_name`
 
-- `mv`: move or rename a directory and allows for batch processing
-  `mv *.txt folder` will move all files with a .txt file extension into a folder for example.
+  * To move to the parent directory of your current location, use `cd ..`
 
-### Searching and examining files
+- Move to a directory using its file path:
+
+  * To return to your home directory use `cd ~`
+
+  * If you know how to get to the directory you want from your home directory, you can go directly there with `cd ~/path/to/directory`
+
+
+**Give it a try!** Use these commands to explore the directories on your computer. Try navigating around some files and folders that you are already familiar with to get comfortable with how they look through the bash shell.
+
+### Creating and moving files
+
+You can also create new directories and files. So that we don't change any of your pre-existing files, we will practice this in a new directory that you can play around with or delete later.
+
+Make sure you are in your home directory with `pwd`. If not, `cd ~` will get you there.
+
+**Making a new directory**
+
+The command `mkdir` will create a new directory in your current location. Let's make a new directory called `learning_bash`:
+
+```
+mkdir learning_bash
+```
+
+You will now see `learning_bash` when you ask for the list of files and directories with `ls`, and can use `cd` to navigate into it.
+
+**Creating a new file**
+
+The command `touch` creates a new file. You need to give your file a name.
+
+From your `learning_bash` directory create a new file called `my_file`:
+
+```
+cd ~/learning_bash
+touch my_file
+```
+
+You can also create multiple files at a time by listing their unique names one after another:
+
+```
+cd ~/learning_bash
+touch file_1 file_2 file_3
+```
+
+Now if you use `ls` to see the contents of `learning_bash`, you should see four files: `file_1`, `file_2`, `file_3`, and `my_file`.
+
+Since these are files and not directories, we can't use `cd` to open them, and we didn't put anything into these files yet anyway. We will learn how to interact with their contents in the next section.
+
+**Moving files**
+
+Inside of `learning_bash`, create a new directory called `numbered_files`:
+
+```
+cd ~/learning_bash
+mkdir numbered_files
+```
+
+The `mv` command will move files from their current location to a new location. This command needs to know **what** you want to move and **where** you want to move it to.
+
+To move `file_1` to `numbered_files` run the command:
+
+```
+mv file_1 numbered_files
+```
+
+Now you can use `cd` and `ls` to see that `file_1` is now in `numbered_files`.
+
+You can also move multiple files at a time by entering them one after another, as long as the directory you want them to end up in is at the end.
+
+```
+mv file_2 file_3 numbered_files
+```
+
+<div class = "warning">
+You might have noticed that none of the file or directory names we used had spaces in them. Bash scripting gets quite a bit more complicated when you have spaces in names, so it is considered best practice to avoid them.
+</div>
+
+### Searching and viewing files
 
 - `echo`: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
 
