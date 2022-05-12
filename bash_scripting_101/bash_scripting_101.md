@@ -128,7 +128,7 @@ Bash, or shell, scripting is a way to interface with your computer's operating s
 
 
 
-## Bash Commands
+## Navigating in bash
 
 If you are new to bash scripting, it can take some adjustment to navigate by typing text. Once you get the hang of a few basic commands, this can be an easier way to deal with files and folders than dropdown menus and dragging icons from place to place. Even the language we use is a little different. In bash scripting you will hear folders refered to as **directories**.
 
@@ -232,21 +232,34 @@ mv file_2 file_3 numbered_files
 You might have noticed that none of the file or directory names we used had spaces in them. Bash scripting gets quite a bit more complicated when you have spaces in names, so it is considered best practice to avoid them.
 </div>
 
-### Searching and viewing files
+### Quiz: Navigation
 
-- `echo`: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
+## Editing Files
 
-  ![Echo variable example demonstrating how to print and set the price of a pint.](media/echo_example_large.png)
+The bash shell can see and move files of all types, but it is most useful for interacting directly with plain text files.
 
-- `grep`: powerful search function to locate a string or pattern within a file or in a directory. Grep stands for global regular expression print.
+A [**plain text**](https://en.wikipedia.org/wiki/Plain_text) file is a file that contains only text characters like the ones you can type directly using your keyboard. For example the words "plain text" at the beginning of this paragraph, which are both bolded and hyperlinked, are not being presented to you as plain text. However they are recorded as plain text in the Markdown (`.md`) file this lesson is written in. If you open the Markdown file, you will see only characters that can be typed by a keyboard:
 
-  - `grep 'panda' file 1 file 2 file 3` will search for the word "panda" in the three files we just created.
+```
+[**plain text**](https://en.wikipedia.org/wiki/Plain_text)
+```
 
-- `less`: view contents of a file without opening a separate editor
+If you have been using a particular program to write and edit your files like Word, RStudio, or Jupyter notebook, you will need to continue to use that program to edit those files. If you expect your project to grow substantially in size or number of files, having as much of your work as possible in plain text files may make scaling up easier.
 
-  ![Less of basic python script that says hello and prompts a dialogue for an individual's name and age.](media/less_sample_small.png)
+Some common types of plain text files you might have seen before are:
 
-### `cat` can create, edit, and display files
+| file ending | description |
+|:---:| :---|
+| `.txt` | text file |
+| `.csv` | comma separated values |
+| `.md` | markdown file |
+| `.html` | html file |
+
+<div class = "learnmore">
+The file endings like `.txt`, `.csv`, or `.doc` (Word), `.xslx` (Excel) are the part of the file name that lets your computer know what type of program to use to open it. The ending doesn't actually impact the contents of the file, which is why we were able to create files like `my_file` in the previous section with no file ending at all.
+</div>
+
+### Writing to a file
 
 - `cat`: very powerful three-part function that allows a reader to view, combine (concatenate), or create a new version of a file
 
@@ -257,7 +270,43 @@ You might have noticed that none of the file or directory names we used had spac
 
   ![Head output of slightly less basic python script that organizes a picnic gathering menu amongst three friends.](media/head_example_small.png)
 
-### The bash manual
+
+### Viewing the contents of a file
+
+
+- `less`: view contents of a file without opening a separate editor
+
+  ![Less of basic python script that says hello and prompts a dialogue for an individual's name and age.](media/less_sample_small.png)
+
+### File editors
+
+atom, nano, long list from git modules
+
+### Quiz: Editing files
+
+
+## Searching files
+
+### `grep`
+
+`grep`: powerful search function to locate a string or pattern within a file or in a directory. Grep stands for global regular expression print.
+
+`grep 'panda' file 1 file 2 file 3` will search for the word "panda" in the three files we just created.
+
+### Character sequence wildcard `*`
+
+`*` character sequence wildcard. Very useful in running a command on all files with a given file extension as demonstrated in the mv example above.
+
+### Quiz: Searching files
+
+
+
+
+### `cat` can create, edit, and display files
+
+
+
+## The bash manual
 
   - `man`: reveals function of a given command
 
@@ -286,7 +335,11 @@ The `sort` command is used to categorize files in bash.
 - `..` shortcut for your previous directory
   The above three shortcuts are highly useful for executing scripts in the proper location once you are collaborating in an active project with multiple files and folders.
 
+  - `echo`: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
 
+    ![Echo variable example demonstrating how to print and set the price of a pint.](media/echo_example_large.png)
+
+    
 ### Writing output to a file with `>`
 - `>` takes the output of the command you executed in the terminal and places it in a new file
 
@@ -297,9 +350,7 @@ The `sort` command is used to categorize files in bash.
 ### Defining variables with `$`
 - `$` used to define a variable expression as used in the echo example above.
 
-### Character sequence wildcard `*`
 
-- `*` character sequence wildcard. Very useful in running a command on all files with a given file extension as demonstrated in the mv example above.
 
 ### Quiz: Bash syntax
 
