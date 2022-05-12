@@ -9,7 +9,7 @@ narrator: UK English Female
 title: Introduction to Python
 comment:  This module introduces the Python programming language, explores why Python is useful in research, and describes how to download Python and Jupyter.
 long_description: Python is a versatile programming language that is frequently used for data analysis, machine learning, web development, and more. If you are interested in learning about any of these topics and are new to programming, are joining a team where Python is used, or have just heard about Python and are looking for a general introduction to the language, this module is a good place to start. This is appropriate for someone at the beginner level.
-estimated_time: 1 hr
+estimated_time: 20m
 @learning_objectives  
 
 After completion of this module, learners will be able to:
