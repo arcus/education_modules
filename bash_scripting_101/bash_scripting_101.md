@@ -1,7 +1,7 @@
 <!--
 
-author:   Nicole Feldman
-email:    feldmanna@chop.edu
+author:   Nicole Feldman and Elizabeth Drellich
+email:    feldmanna@chop.edu drelliche@chop.edu
 version:  1.1.0
 module_template_version: 2.0.0
 language: en
@@ -158,18 +158,81 @@ The command `cd` lets you **c**hange **d**irectory. Unlike the previous two comm
 
   * To move to the parent directory of your current location, use `cd ..`
 
+  * Use slashes `/` to link directions. For example `cd ../..` up to the the parent directory of your parent directory.
+
+  * It is possible to move up and then back down in your file hierarchy. For example `cd ../other_directory` would move you to the `other_directory` that shares the same parent directory as your current location.
+
 - Move to a directory using its file path:
 
   * To return to your home directory use `cd ~`
 
-  * If you know how to get to the directory you want from your home directory, you can go directly there with `cd ~/path/to/directory`
+  * If you know how to get to the directory you want from your home directory, you can go directly there with `cd ~/fixed/path/to/directory`
 
 
 **Give it a try!** Use these commands to explore the directories on your computer. Try navigating around some files and folders that you are already familiar with to get comfortable with how they look through the bash shell.
 
+
+### Quiz: Navigation
+
+Your project is located in the directory `project` which has fixed path `~/project` and contains directories `notes` and `data`. You run `pwd` and see that you are in `project/notes/1_jan_2022/`. How would you navigate to the `data` directory?
+
+[[cd ../../data]]
+<script>
+  input == "cd ../../data" || input == "cd ~/project/data";
+</script>
+***
+<div class = "answer">
+The `cd` function changes what directory you are in. There are a couple of ways to move to the `data` directory:
+
+- The fixed path to the `data` directory is `~/project/data`, so `cd ~/project/data` will get you there.
+
+- Relative to your current location, you can go up one level with `..` to the `notes` directory, then up another level with `..` to `project`. Once in the `project` directory you can move down a level into `data`.
+
+    * You can do this in three steps: `cd ..` followed by `cd ..` again and lastly `cd data`
+
+  * You can link the three steps together with `cd ../../data`
+</div>
+***
+
+## Editing Files
+
+The bash shell can see and move files of all types, but it is most useful for interacting directly with plain text files.
+
+A [**plain text**](https://en.wikipedia.org/wiki/Plain_text) file is a file that contains only text characters like the ones you can type directly using your keyboard. For example the words "plain text" at the beginning of this paragraph, which are both bolded and hyperlinked, are not being presented to you as plain text. You might have run into problems with files that aren't in plain text if, for example, you ever opened a file in a new program and lost some of the formatting like particular fonts in Word or conditional highlighting in Excel.
+
+<div class = "learnmore">
+Even though the words "plain text" in the previous paragraph have some non-text attributes, the are all recorded as plain text in the Markdown (`.md`) file of this lesson. If you open the [Markdown file](link/to/git/of/this/file), you will see only characters that can be typed by a keyboard:
+
+```
+[**plain text**](https://en.wikipedia.org/wiki/Plain_text)
+```
+</div>
+
+If you have been using a particular program to write and edit your files like Word, RStudio, or Jupyter notebook, you will need to continue to use that program to edit those files. If you expect your project to grow substantially in size or number of files, having as much of your work as possible in plain text files may make scaling up easier.
+
+Some common types of plain text files you might have seen before are:
+
+| file ending | description |
+|:---:| :---|
+| `.txt` | text file |
+| `.csv` | comma separated values |
+| `.md` | markdown file |
+| `.html` | html file |
+
+<div class = "learnmore">
+The file endings like `.txt`, `.csv`, or `.doc` (Word), `.xslx` (Excel) are the part of the file name that lets your computer know what type of program to use to open it. The ending doesn't actually impact the contents of the file, which is why we were able to create files like `my_file` in the previous section with no file ending at all.
+</div>
+
+
 ### Creating and moving files
 
-You can also create new directories and files. So that we don't change any of your pre-existing files, we will practice this in a new directory that you can play around with or delete later.
+
+<div class = "important">
+You will get the most out of this section if you follow along in your own command line interface, running the commands as you learn them.
+
+So that we don't change any of your pre-existing files, we will practice this in a new directory that you can play around with or delete later.
+</div>
+
 
 Make sure you are in your home directory with `pwd`. If not, `cd ~` will get you there.
 
@@ -206,36 +269,83 @@ Now if you use `ls` to see the contents of `learning_bash`, you should see four 
 
 Since these are files and not directories, we can't use `cd` to open them, and we didn't put anything into these files yet anyway. We will learn how to interact with their contents in the next section.
 
-**Moving files**
-
-Inside of `learning_bash`, create a new directory called `numbered_files`:
-
-```
-cd ~/learning_bash
-mkdir numbered_files
-```
-
-The `mv` command will move files from their current location to a new location. This command needs to know **what** you want to move and **where** you want to move it to.
-
-To move `file_1` to `numbered_files` run the command:
-
-```
-mv file_1 numbered_files
-```
-
-Now you can use `cd` and `ls` to see that `file_1` is now in `numbered_files`.
-
-You can also move multiple files at a time by entering them one after another, as long as the directory you want them to end up in is at the end.
-
-```
-mv file_2 file_3 numbered_files
-```
 
 <div class = "warning">
 You might have noticed that none of the file or directory names we used had spaces in them. Bash scripting gets quite a bit more complicated when you have spaces in names, so it is considered best practice to avoid them.
 </div>
 
-### Quiz: Navigation
+### Writing to a file directly
+
+We have created 4 files, but so far all of them are empty. The most direct way to write text to a file is to use the `echo` and `>>` commands.
+
+**`echo`**
+
+The bash command `echo` returns any text that follows it. Give it a try in your command line interface!
+
+**`>>`**
+
+The bash command `>>` is used to write the output of a command to the end of a file. For example the following code will create a file called `my_sentences` and write the text `This is a sentence.` in that file.
+
+```
+echo "This is a sentence." >> my_sentences
+```
+
+If you then want to add an additional line to `my_sentences` you can use the same method.
+
+```
+echo "This is another sentence." >> my_sentences
+```
+
+Now the file `my_sentences` has two lines:
+
+```
+This is a sentence.
+This is another sentence.
+```
+
+<div class = "warning">
+Make sure you use the two arrows in `>>`. Using only a single arrow will also write text to your file, but instead of appending it to the end of the file, it will replace the entire contents of the file with that new text.
+</div>
+
+Next, we will see learn how to look at the contents of our file to ensure that it really does contain what we think it should.
+
+### Viewing the contents of a file
+
+The easiest way to see the contents of a file is the `cat` function. If you run `cat` followed by a file name, the command line interface will print out the contents of that file line by line.
+
+Give it a try:
+
+```
+cat my_sentences
+```
+
+<div class = "learnmore">
+The command `cat` is very powerful three-part function that allows a reader to view, combine, or create a new version of a file. In fact `cat` is a shortening of the word "con**cat**enate."
+</div>
+
+
+### File editors
+
+The commands `echo` and `cat` are extremely useful if you are automatically writing files by running code, but they aren't particularly easy to use if you are creating large files with lots of text that you are going to want to edit.
+
+Luckily there are lots and lots of programs that edit text files. Some of these may already be on your computer as part of the bash shell, while others you will have to download.
+
+The switch from a **word processor** program that lets you format text to a **text editor** that only deals in plain text might initially feel unsettling, but it is well worth never having to worry about losing parts of your work when something gets opened in the wrong program!
+
+| Editor             | Notes                            |
+|:-------------------|:-------------------------------------------------|
+| Atom | Download at ___ |
+| nano               | Already accessible in your Bash Shell   |
+| BBEdit (Mac, with command line tools) |  |
+| Sublime Text (Mac) | |
+| Kate (Linux)       |     |
+| Gedit (Linux)      |  |
+| Scratch (Linux)       |  |
+| Emacs              |   |
+| Vim                | Already accessible in your Bash Shell   |
+| VS Code                |  |
+
+### Quiz: Editing files
 
 You want to make a new folder inside `learning_bash` called `data` and put two files in it, `data_1` and `data_2`.
 
@@ -261,69 +371,40 @@ The command `touch data` will create a file named `data`, not a directory that c
 </div>
 ***
 
+## Moving files around
 
-## Editing Files
+Just because you created a file in one location, doesn't mean it has to stay there forever.
 
-The bash shell can see and move files of all types, but it is most useful for interacting directly with plain text files.
+### Moving files
 
-A [**plain text**](https://en.wikipedia.org/wiki/Plain_text) file is a file that contains only text characters like the ones you can type directly using your keyboard. For example the words "plain text" at the beginning of this paragraph, which are both bolded and hyperlinked, are not being presented to you as plain text. However they are recorded as plain text in the Markdown (`.md`) file this lesson is written in. If you open the Markdown file, you will see only characters that can be typed by a keyboard:
+Inside of `learning_bash`, create a new directory called `numbered_files`:
 
 ```
-[**plain text**](https://en.wikipedia.org/wiki/Plain_text)
+cd ~/learning_bash
+mkdir numbered_files
 ```
 
-If you have been using a particular program to write and edit your files like Word, RStudio, or Jupyter notebook, you will need to continue to use that program to edit those files. If you expect your project to grow substantially in size or number of files, having as much of your work as possible in plain text files may make scaling up easier.
+The `mv` command will move files from their current location to a new location. This command needs to know **what** you want to move and **where** you want to move it to.
 
-Some common types of plain text files you might have seen before are:
+To move `file_1` to `numbered_files` run the command:
 
-| file ending | description |
-|:---:| :---|
-| `.txt` | text file |
-| `.csv` | comma separated values |
-| `.md` | markdown file |
-| `.html` | html file |
+```
+mv file_1 numbered_files
+```
 
-<div class = "learnmore">
-The file endings like `.txt`, `.csv`, or `.doc` (Word), `.xslx` (Excel) are the part of the file name that lets your computer know what type of program to use to open it. The ending doesn't actually impact the contents of the file, which is why we were able to create files like `my_file` in the previous section with no file ending at all.
-</div>
+Now you can use `cd` and `ls` to see that `file_1` is now in `numbered_files`.
 
-### Writing to a file
+You can also move multiple files at a time by entering them one after another, as long as the directory you want them to end up in is at the end.
 
-- `cat`: very powerful three-part function that allows a reader to view, combine (concatenate), or create a new version of a file
+```
+mv file_2 file_3 numbered_files
+```
 
-  - `cat file 1 file 2` will display the contents of both files on separate lines.
-  - `cat > file 4` will create a new file named file 4
-  - `cat file 1 >> file 2` will append the contents of file 1 at the end of file 2.
-  - `cat file 2` will now confirm if the content in file 1 was successfully appended to the end of file 2.
+### Renaming Files
 
+### Copying Files
 
-### Viewing the contents of a file
-
-- `less`: view contents of a file without opening a separate editor
-
-  ![Less of basic python script that says hello and prompts a dialogue for an individual's name and age.](media/less_sample_small.png)
-
-### File editors
-
-atom, nano, long list from git modules
-
-### Quiz: Editing files
-
-
-## Searching files
-
-### `grep`
-
-`grep`: powerful search function to locate a string or pattern within a file or in a directory. Grep stands for global regular expression print.
-
-`grep 'panda' file 1 file 2 file 3` will search for the word "panda" in the three files we just created.
-
-### Character sequence wildcard `*`
-
-`*` character sequence wildcard. Very useful in running a command on all files with a given file extension as demonstrated in the mv example above.
-
-### Quiz: Searching files
-
+### Quiz: moving files
 
 
 ## Additional Resources
