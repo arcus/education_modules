@@ -18,7 +18,6 @@ After completion of this module, learners will be able to:
 - Identify several ways to write Python code
 - Understand the purpose and utility of a Jupyter notebook
 - Download Python to their own computers
-- Install and import packages
 
 @end
 
@@ -101,54 +100,6 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 @learning_objectives
 
-</div>
-
-## Lesson Preparation
-
-For the hands-on activity in this module, we will be using an online environment containing a Jupyter notebook. To load the environment, open the link below in a new tab:
-
-<div class = "important">
-Please read over both options before you start performing any actions, to make sure you pick the right option for you.
-</div>
-
-Option 1: Work in the Cloud
-=======
-
-This might work well for you if you either can't or don't want to install Python and Jupyter on your computer, or are not familiar with working with directories or Github. The benefit is that you don't have to install anything, but one negative is that this option requires a bit of waiting for your environment to come online.
-
-**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a couple of minutes to create, depending on how recently it was created (when it's being used more, it's quicker!).
-
-<a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/static/images/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
-
-<div class = "hint" style = "align-items: center; display: flex;">
-
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for a few minutes.  Be patient!</div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen.](media/binder_loading.gif)<!--
-style = "border: 1px solid rgb(var(--color-highlight));"-->
-</div>
-</div>
-
-Option 2: Work on Your Computer
-=======
-
-If you have [Python](https://www.python.org/) and [Jupyter](https://jupyter.org/) installed already on your local computer, and have some familiarity working with file directories or Github, you might be interested in simply downloading our sample code to your computer. If you haven't downloaded Python or Jupyter to your computer but would like to, you'll learn how in the [Next Steps](#next-steps) section of this module. Then you can come back here when you're done and follow these steps to download the code (If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime):
-
-* Go to the [GitHub repository](https://github.com/arcus/education_modules) where the materials for this lesson are located.
-* You can use Git to **clone**, or download, a repository (or "repo", as it is sometimes called). Here are the steps to follow:
-
-  * It is likely that Git is already installed on your computer, even if you've never used it before. Open the Terminal application (if you're using a Mac/Linux machine) or the Windows Powershell (if you're using Windows 10 or later -- here is [more information about finding the Windows Powershell](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md#5). Then run the code `git --version`. If Git is installed, you should see a version number. If not, check out [these instructions for installing git on Mac or PC](https://carpentries.github.io/workshop-template/#git).
-
-  * You can also use GitHub Desktop, which you can use to interact with GitHub repositories. The [GitHub Desktop documentation](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) for download instructions and getting started.
-  * If you are using Git in a command line interface, go to the [education_modules repository on GitHub.com](https://github.com/arcus/education_modules) and then follow [these instructions to clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository).
-
-  <div class = "important">
-  It's often useful to have a folder called `GitHub` on your computer for storing repositories that you clone. To navigate to a specific directory in the command line, use the `cd` command (check out the [Command Line 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md#1) for more information).
-  </div>
-
-  * If you are using GitHub desktop, follow [these instructions for cloning a repository from GitHub to GitHub Desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop).
-
-<div class = "options">
-If you don't want to wait for the binder environment to load, but don't want to use git to clone the repository, you can also view the [rendered Jupyter notebook on GitHub](https://github.com/arcus/education_modules/blob/main/intro_to_python/notebooks/intro-to-python.ipynb). You will not be able to interact with the code, but if you have Jupyter installed you can copy and paste the code into code cells that you create in your own notebook.
 </div>
 
 
@@ -322,96 +273,7 @@ You can download Python directly to your computer, use Anaconda to download Pyth
 </div>
 ***
 
-## Modules, Packages, and Libraries
-
-While Python does contain a lot of basic functions "out of the box", if you plan on using it for more complex tasks you'll need more functions and methods. For that, you'll need modules, packages, and libraries.
-
-* A **module** is a Python script that contains a number of related **functions** (defined pieces of code that perform a specific task, which can then be called whenever you want to do that task) and **variables**, which you can think of as containers for storing values (and which you can call just like functions to access their values). You can even [write your own Python modules](https://www.w3schools.com/python/python_modules.asp)!
-* A **package** is a group of related modules. You can import the entire package, or if you only need one module, you can just import that module. One package that is frequently used in scientific computing is called **numpy** ([you can read more about numpy here](https://numpy.org/)).
-* A **library** is often used as a generic term for a collection of related code (and is therefore sometimes used interchangeably with "module" and "package"), but is frequently used to refer to a collection that contains both modules and packages. [**matplotlib**](https://matplotlib.org/) is a popular data visualization library.
-
-### Installation
-
-In almost every Python script or notebook that you write, you will probably need to import at least one module, package, or library (and usually it will be more than one). Most of the time, these will need to be installed before they can be imported. There are a couple of ways that you can install modules, packages, and libraries, but the syntax is the same for all three.
-
-* One method of installation with Python is using [`pip`](https://pypi.org/project/pip/) to install packages from the [Python Package Index, or PyPI](https://pypi.org/). Most of the packages you'll want to use can be found there! To install packages (or libraries) with `pip`, run `pip install package-name`  in the command line (you would replace `package-name` with the actual name of the package you want to install). So if I wanted to install the [PyTorch](https://pytorch.org/) package, a popular package for machine learning, I would open my command line interface and run `pip install pytorch`.
-
-* If you run Python using the Anaconda distribution, many data science-related packages will come pre-installed, but for ones that don't, you can use the command `conda install package-name`. Not everything is available as a conda package, but it's worth checking if you use Anaconda.
-
-While you can often use either `pip` or `conda` when installing packages, they aren't exactly the same thing-- but they're close enough for our purposes at the moment. [You can read more about `pip` and `conda` here](https://www.anaconda.com/blog/understanding-conda-and-pip) if you're curious. When in doubt, you can always Google "python install package-name" and you should get all of the information you need.
-
-### Import
-
-While you only need to install a module, package, or library one time, you will need to **import** them any time we need to use them in a script or a notebook. This uses the `import` keyword, and you will need to include the import statement at some point before you use a package or library (or any of the individual modules contained within it) for the first time. It's generally considered good practice to import all of the packages and libraries that you want to use in your script or notebook at the very beginning of the document, for organizational purposes. For example, if we wanted to use the `matplotlib` data visualization package in a script or notebook, we would need to run the code `import matplotlib` at some point before using it. Then, if you use a function that is contained within that package or module, you use the syntax `package_name.function_name`.
-
-Let's look at an example. One useful module is `math` which, as its name suggests, contains many useful mathematical functions, including one that returns the square root of a number passed to it, `sqrt()`. To use the `math` module, first we need to import it:
-
-`import math`
-
-Then let's say we want to find the square root of 42. If we try to run the code `sqrt(42)`, we'll get an error (`NameError: name 'sqrt' is not defined`). We have to explicitly tell Python to look in `math` to find the `sqrt()` function. So instead, we run this code:
-
-`math.sqrt(42)`
-
-If you want to use a variable from a module rather than a function, the syntax is similar, but you don't need the parentheses at the end. For example, the `math` module also contains several mathematical constants as variables; interestingly, one of these "constants" is infinity, which is stored in the variable `inf`. To access `inf` from the `math` module, we would run this code:
-
-`math.inf`
-
-<div class = "important">
-For many modules, packages, and libraries, it is often the convention that they are given an **alias**, or a shorter handle used to refer to them later in your script or notebook, using the `as` keyword (for example, `numpy` is customarily given the alias `np`, so the import statement would be `import numpy as np`). Then, if we wanted to use the `numpy` function `linspace()`(which generates evenly spaced numbers over a specified interval, see the [`linspace` documentation](https://numpy.org/doc/stable/reference/generated/numpy.linspace.html) if you're interested in learning more), you would use the code `np.linspace(start, stop)` (with start and stop indicting the interval).
-</div>
-
-Sometimes, you might only want to import part of a library instead of the whole thing, especially if it is very large and you will only need a small part. There are a couple of ways to do this; we'll use `matplotlib` and one of its modules `pyplot` as an example:
-
-1. `from matplotlib import pyplot as plt`
-
-2. `import pyplot.matplotlib as plt`
-
-Both of these methods do essentially the same thing (and note that we've also used the alias `plt` for `pyplot`). The first option is more readable (that is, it's a little clearer what the code is doing), while the second option is a little faster to type out. In either case, you **don't** need to type out `matplotlib.plt()`; if you want to use `pyplot` going forward, you would only need to type `plt`. This is nice, because `pyplot` is actually a module in the `matplotlib` package, and so to use, for example, the `plot()` function from `pyplot`, now we only need to write the code `plt.plot()`.
-
-<div class = "help">
-If you're thoroughly confused now by libraries, packages, and modules, that's understandable! It can take some time to sort it all out. Just remember that functions and variables can be grouped together into modules, which can themselves be grouped into packages and libraries. And when in doubt, Google can help! Just search for "Python import" and the module/packages that you want to use.
-</div>
-
-
-### Quiz: Modules, packages, and libraries
-
-Fatima wants to use Python to select a random of number from a given collection of numbers. She knows that `numpy` has a module called `random` for working with random numbers, which in turn has a function called `choice()` that chooses a selection of random numbers based on a sample that you give it.
-
-Which of the following import statements would allow Fatima to use the `choice()` function described above? Select all that apply.
-
-[[X]] `import numpy as np`
-[[X]] `from numpy import random`
-[[ ]] `import choice`
-[[ ]] `from random import choice`
-***
-<div class = "answer">
-In this case, because the `choice()` function is part of the `random` module in the `numpy` library, Fatima can either import the whole `numpy` package (a good option if she wants to use several modules in `numpy`) or just import the `random` module. She won't be able to import `choice()` or `random` without pointing Python to the library where it exists.
-</div>
-***
-
-
-For one of her calculations, Fatima needs the variable `pi`, and she needs this constant with more precision than the common 3.14 approximation. Luckily, Python's `math` module has this constant available in the `pi`constant. If Fatima has imported the `math` module with the code `import math`, how would she access the constant `pi`?
-
-[[math.pi]]
-***
-<div class = "answer">
-Because Fatima imported the `math` module, but not the `pi` constant explicitly, to access the constant she'll need to refer to it as part of the `math` module. If instead she had imported just the `pi` constant with the code `from math import pi`, then she could just use `pi` to access the constant.
-</div>
-***
-
-
-## Hands-On Exercises
-
-This is a hands-on activity to get you used to looking at and using a Jupyter notebook. Feel free to pop over to that tab you opened in the [Lesson Preparation section](#Lesson-Preparation) to get started. Need the link again? Here it is:
-
-<a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/static/images/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
-
-Don't forget to come back here when you're done!
-
-
 ## Additional Resources
-
-* For a beginner-friendly walk-through of writing Python scripts, [Hello World! Your Very First Computer Program](https://youtu.be/cV-QwT4fV7M) delivered by Jeff Pennington is an excellent introduction if you've got an hour to spend.
 
 * [python.org](https://www.python.org/) is a great resource for documentation, FAQ's, and tutorials for beginners, as well as information about what is happening in the wider Python community. Check it out and explore!
 
