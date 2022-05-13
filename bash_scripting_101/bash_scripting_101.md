@@ -20,7 +20,6 @@ After completion of this module, learners will be able to:
 - Describe what bash scripting is and why they might want to learn it for data management and research
 - Navigate their file system using the bash shell
 - View and edit the contents of a file from the bash shell
-- Search for character strings in files
 @end
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
@@ -75,12 +74,34 @@ It should be noted that Macs with the Catalina Operating System or later are run
 
 ### Windows Computers
 
+<div class = "warning">
+There are two sets of instructions for Windows users, one for users who have administrative access to their computers, and one that will work for most users who don't. That said, your organization may have stricter controls on what a non-admin user can download.
+
+**If the instructions for non-admin users do not work for you, you may have to talk to your organization's IT support about getting access.**
+</div>
+
+**Windows users with admin access**
+
+
+1. On a Windows machine, the WSL (Windows Subsystem for Linux) has Ubuntu, which is just a widely used flavor of Bash, installed as its default shell scripting environment. This is automatically installed on any Windows computer running Windows 10 or later.
+
+2. To confirm this feature is enabled, check to see if developer mode is enabled in settings and WSL is turned on in Features. **If you are unable to turn on the developer mode, you may not have admin permissions. Follow the instructions for downloading Git Bash below.**
+
+
 ![Confirm these Windows settings to enable shell scripting capabilities.](media/on_windows.png)
 
-- On a Windows machine, the WSL (Windows Subsystem for Linux) has Ubuntu, which is just a widely used flavor of Bash, installed as its default shell scripting environment. This is automatically installed on any Windows computer running Windows 10 or later.
-- To confirm this feature is enabled, check to see if developer mode is enabled in settings and WSL is turned on in Features.
-- Search Bash in Cortana to launch WSL for the first time and click “Y” when asked to install Ubuntu for the first time. [Microsoft has their own internal documentation on WSL which features additional visual resources and FAQS](https://docs.microsoft.com/en-us/windows/wsl/).
-- Create a username and password when prompted and now you are ready to do some shell scripting! These user credentials have no bearing on your Windows user name and you will be automatically logged in for future sessions.
+3. Search "Bash" in Cortana to launch WSL for the first time and click “Y” when asked to install Ubuntu for the first time. [Microsoft has their own internal documentation on WSL which features additional visual resources and FAQS](https://docs.microsoft.com/en-us/windows/wsl/).
+
+4. Create a username and password when prompted and now you are ready to do some shell scripting! These user credentials have no bearing on your Windows user name and you will be automatically logged in for future sessions.
+
+**Windows users with or without admin access**
+
+You will need to download and use the **Git Bash**, a bash shell that is downloaded when you set up **Git** on your computer.
+
+Git is a powerful version control system for organizing your work and you will likely want to use at some point in the (near) future if you don't use it already. For that reason, we recommend that you follow these instructions for [setting up Git on your Windows computer](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md#Lesson-Preparation).
+You do not need to configure Git at the this time, so following the instructions in the Lesson Preparation section will suffice. The installation process may take about 10 to 15 minutes.
+
+Once you have Git Bash installed, you are ready to get started learning how to use the bash shell!
 
 
 ## The bash shell
@@ -178,6 +199,7 @@ Your project is located in the directory `project` which has fixed path `~/proje
 
 [[cd ../../data]]
 <script>
+let input = "@input".trim();
   input == "cd ../../data" || input == "cd ~/project/data";
 </script>
 ***
@@ -224,7 +246,7 @@ The file endings like `.txt`, `.csv`, or `.doc` (Word), `.xslx` (Excel) are the 
 </div>
 
 
-### Creating and moving files
+### Creating files
 
 
 <div class = "important">
@@ -303,6 +325,8 @@ This is a sentence.
 This is another sentence.
 ```
 
+**Give it a try!** Add some text to the files you already created!
+
 <div class = "warning">
 Make sure you use the two arrows in `>>`. Using only a single arrow will also write text to your file, but instead of appending it to the end of the file, it will replace the entire contents of the file with that new text.
 </div>
@@ -324,7 +348,7 @@ The command `cat` is very powerful three-part function that allows a reader to v
 </div>
 
 
-### File editors
+### Text editors
 
 The commands `echo` and `cat` are extremely useful if you are automatically writing files by running code, but they aren't particularly easy to use if you are creating large files with lots of text that you are going to want to edit.
 
@@ -332,22 +356,38 @@ Luckily there are lots and lots of programs that edit text files. Some of these 
 
 The switch from a **word processor** program that lets you format text to a **text editor** that only deals in plain text might initially feel unsettling, but it is well worth never having to worry about losing parts of your work when something gets opened in the wrong program!
 
-| Editor             | Notes                            |
-|:-------------------|:-------------------------------------------------|
-| Atom | Download at ___ |
-| nano               | Already accessible in your Bash Shell   |
-| BBEdit (Mac, with command line tools) |  |
-| Sublime Text (Mac) | |
-| Kate (Linux)       |     |
-| Gedit (Linux)      |  |
-| Scratch (Linux)       |  |
-| Emacs              |   |
-| Vim                | Already accessible in your Bash Shell   |
-| VS Code                |  |
+There are some text editors already installed in your bash shell, like nano. These are useful because they don't require new downloads, but can have a steep learning curve since you need to learn new commands to open, save, and quit in those programs.
+
+Other, more user-friendly, text editors exist and can be downloaded. [Atom](https://atom.io/) is a particularly good free text editor that includes helpful tools like color coding text.
+
+
+**`nano`**
+
+The `nano` text editor is already in Bash Shell. You can type `nano` to start a new file, or `nano file_name` to open a file that already exists. You will need to use keyboard commands to save, or WriteOut, and exit the program, but they are all helpfully listed at the bottom of your window when you are in nano.
+
+For example to exit nano, the `^X` reminder at the bottom means that you should hold down the `control` button at the same time as the key `X`. You will then be helpfully asked if you want to "Save modified buffer," or in other words, save your changes. Type `Y` and you will be asked for the "File name to write." If you are working in a new file, give it a name here! Otherwise you can press `enter`/`return` to accept the name the file already had.  
+
+
+**Atom**
+
+Atom is a free text editor that you can download from [https://atom.io/](https://atom.io/). Once you open the Atom program, you will see "File" and "Edit" menus like you might expect from a word processing program. You can open files, save them, as well as create new folders and files from Atom's "File" menu.
+
+
+**Vim**
+
+Vim may be the default editor in your shell, but that doesn't mean it is the best one. It is notoriously un-friendly to new users so we don't recommend it as your first (or second) choice of text editor.
+
+<div class = "help">
+
+**Stuck in Vim?**
+
+The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. That is why we don't recommend it as a text editor. If you accidentally find yourself stuck in it, hit the `Esc` key, followed by `:`+`Q`+`!` (colon, lower-case 'q', exclamation mark), then hitting Return to return to the shell.
+</div>
+
 
 ### Quiz: Editing files
 
-You want to make a new folder inside `learning_bash` called `data` and put two files in it, `data_1` and `data_2`.
+1. You want to make a new folder inside `learning_bash` called `data` and put two files in it, `data_1` and `data_2`.
 
 ```
 cd ~/learning_bash
@@ -357,17 +397,36 @@ touch data_1 data_2
 ```
 What code should go in lines A and B?
 
-[[ ]] Line A should be `touch data`
-[[ ]] Line B should be `touch data`
-[[X]] Line A should be `mkdir data`
-[[ ]] Line B should be `mkdir data`
-[[ ]] Line A should be `cd data`
-[[X]] Line B should be `cd data`
+Line A should be:
+
+[[ `touch data`| (`mkdir data`) | `cd data` ]]
+
+Line B should be:
+
+[[ `touch data`| `mkdir data` | (`cd data`) ]]
 ***
 <div class = "answer">
 You must first make the directory `data` and then move into that directory with `cd data`.
 
 The command `touch data` will create a file named `data`, not a directory that can contain files.
+</div>
+***
+
+
+2. Now that you have created the files `data_1` you want to put some content into it. How would you make the file `data_1` contain the text `sample 1: 45`?
+
+[[echo "sample 1: 45" >> data_1]]
+<script>
+let input = "@input".trim();
+  input == "echo \"sample 1: 45\" >> data_1" || input == "echo sample 1: 45 >> data_1" || input == "echo \"sample 1: 45\" > data_1" || input == "echo sample 1: 45 > data_1";
+</script>
+***
+<div class = "answer">
+The command `echo "sample 1: 45" >> data_1` will add `sample 1: 45` as a new line at the end of the current contents of the file `data_1`.
+
+Since there wasn't anything in `data_1` to begin with, you will get the same outcome if you use a single `>` to replace the entire file with `sample 1: 45`.
+
+The quotes around the text can also be safely omitted in this case, but that isn't a good habit to get into since you may need them later as you progress in your bash scripting.
 </div>
 ***
 
@@ -410,11 +469,9 @@ mv file_2 file_3 numbered_files
 ## Additional Resources
 
 - [Brief Illustration of the Difference between Shell and Kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/)
-- [Exhaustive Wiki of Linux Filesystem Hierarchy](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/index.html)
+
 - [Reinforce Your New Knowledge through this Learning the Shell Page](https://linuxcommand.org/lc3_learning_the_shell.php)
-- [Unix Command Line I Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/3/)
-- [Unix Command Line II Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/2/)
-- [Intermediate Bash Scripting Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/1/)
+
 
 ## Feedback
 
