@@ -2,12 +2,16 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.0
+version:  1.2.0
+module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Data Visualization in ggplot2
 comment:  This module includes code and explanations for several popular data visualizations, using R's ggplot2 package. It also includes examples of how to modify ggplot2 plots to customize them for different uses (e.g. adhering to journal requirements for visualizations).
 long_description: You can use the ggplot2 library in R to make many different kinds of data visualizations (also called plots, or charts), including scatterplots, histograms, line plots, and trend lines. This module provides an example of each of these kinds of plots, including R code to make them using the ggplot2 library. It may be hard to follow if you are brand new to R, but it is appropriate for beginners with at least a small amount of R experience.
+estimated_time: 60 min
+
+r_code: data\_visualization\_in\_ggplot2
 
 @learning_objectives  
 
@@ -18,8 +22,59 @@ After completion of this module, learners will be able to:
 
 @end
 
-link: https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
+@gifPreload
+<script>
+(function($) {
 
+  // Get the .gif images from the "data-alt".
+	var getGif = function() {
+		var gif = [];
+		$('img').each(function() {
+			var data = $(this).data('alt');
+			gif.push(data);
+		});
+		return gif;
+	}
+
+	var gif = getGif();
+
+	// Preload all the gif images.
+	var image = [];
+
+	$.each(gif, function(index) {
+		image[index]     = new Image();
+		image[index].src = gif[index];
+	});
+
+	// Change the image to .gif when clicked and vice versa.
+	$('figure').on('click', function() {
+
+		var $this   = $(this),
+				$index  = $this.index(),
+
+				$img    = $this.children('img'),
+				$imgSrc = $img.attr('src'),
+				$imgAlt = $img.attr('data-alt'),
+				$imgExt = $imgAlt.split('.');
+
+		if($imgExt[1] === 'gif') {
+			$img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
+		} else {
+			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
+		}
+
+		// Add play class to help with the styling.
+		$this.toggleClass('play');
+
+	});
+
+})(jQuery);
+</script>
+@end
+
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+script: https://kit.fontawesome.com/83b2343bd4.js
+script: https://code.jquery.com/jquery-3.6.0.slim.min.js
 -->
 # Data Visualization in ggplot2
 
@@ -29,7 +84,7 @@ link: https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modu
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** 1 hr
+**Estimated time to completion:** @estimated_time
 
 **Pre-requisites**
 
@@ -42,7 +97,7 @@ This module also assumes some basic familiarity with R, including
 * manipulating data frames, including [calculating new columns](https://r4ds.had.co.nz/transform.html#add-new-variables-with-mutate), and [pivoting from wide format to long](https://r4ds.had.co.nz/tidy-data.html#longer)
 * some [statistical tests](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md), especially linear regression
 
-If you are brand new to R (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_r_rstudio/intro_to_r_rstudio.md) first.
+If you are brand new to R (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) first.
 
 **Learning Objectives**
 
@@ -50,23 +105,76 @@ If you are brand new to R (or want a refresher) consider starting with [Intro to
 
 </div>
 
-
 ## Lesson Preparation
 
-This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in R. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection. If you have R already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.r" download>download the code for this module to run offline</a>.
+Please do this step now, because we're going to ask you to follow along throughout and try out code as you go.  
 
-If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity now. Use right-click to open it in a new tab or window, and you can simply return here to continue learning while the environment finishes loading. Here is the link:
+<div class = "important">
+Please read over both options before you start performing any actions, to make sure you pick the right option for you.
+</div>
 
-[![Open Binder environment.](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/roseh-data-viz-module?urlpath=rstudio) **Click the "launch binder" button!**
+<h3>Option 1: Work in the Cloud</h3>
 
-You don't have to do anything except come back here after opening the link opens in a new tab or window.
+This might work well for you if you either can't or don't want to install R and RStudio on your computer.  The benefit is that you don't have to install anything, but one negative is that this option requires a bit of waiting for your environment to come online.
+
+**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
+
+  <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"></a> **← Click the "launch binder" button!**
+
+<div class = "hint" style = "align-items: center; display: flex;">
+
+<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
+<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen.](media/binder_loading.gif)<!--
+style = "border: 1px solid rgb(var(--color-highlight));"-->
+</div>
+</div>
+
+**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "@r_code".  That's the code for this module!
+
+![RStudio as shown in the cloud platform Binder.](media/binder_rstudio.png)<!--
+style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
+
+<h3>Option 2: Work on Your Computer</h3>
+
+If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
+
+* In RStudio, open a new project (File, New Project)
+* Select Version Control, then Git
+* Drop this link into the "Repository URL": https://github.com/arcus/education_r_environment
+* Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
+* Click to select the "Open in new session" checkbox
+* Click "Create Project"
+* In the file area to the lower right, you'll see, among multiple choices, the folder called "@r_code".  That's the code for this module!
+
+**Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
+
+<div style="display:none">@gifPreload</div>
+
+<figure>
+  <img src="https://github.com/arcus/education_modules/blob/main/data_visualization_in_ggplot2/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/main/data_visualization_in_ggplot2/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+
+<figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
+</figure>
+
+If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime:
+
+* Open your project.
+* In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
+
+![Git button menu with choices to pull and push branches.](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->  
+![Tools menu with choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
+
+<div class = "warning">
+If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_example` exercise files, you might want to save your version of `example_exercises.Rmd` to `my_example_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `example_exercises.Rmd` while holding on to your changes in the new file.
+</div>
+
 
 ## Making plots in ggplot2
 
 This module is a practical, hands-on guide to making data visualizations in R's ggplot2. Snippets of code are included throughout the text here, but you are strongly encouraged to try running the code yourself instead of just reading it. Better yet, try to modify the code for each of the example plots to use with your own data!
 
-<div class = "warning">
-If you are using the [pangeo binder instance we prepared](#lesson-preparation), then all of the R packages you need will already be installed and you're all set.
+<div class = "important">
+If you are using the [binder instance we prepared](#lesson-preparation), then all of the R packages you need will already be installed and you're all set.
 
 If you are using R on your own machine, though, then you may need to run the following code in R before continuing with the code examples here:
 
@@ -92,13 +200,13 @@ At first, this seems like more work than just using a single command in another 
 To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf)
 </div>
 
-## Working through interactive coding examples
+## Working through interactive coding examples in binder
 
-Hopefully your [binder instance](#lesson-preparation) is done loading now! If not, be patient --- it can take as long as 20 or 30 minutes some times if the files haven't been used recently.
+If you chose [Option 1 in Lesson Preparation](#lesson-preparation) hopefully your binder instance is done loading now! If not, be patient --- it can take as long as 20 or 30 minutes some times if the files haven't been used recently.
 
-When it is ready, you should see the RStudio application running in your browser. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "data_viz_in_ggplot", and open the .r file in that subfolder.
+When it is ready, you should see the RStudio application running in your browser. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "@r_code", and open the .rmd file in that subfolder.
 
-All of the example code in this module is in that data_visualization_ggplot2.r file. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
+All of the example code in this module is in that "@r_code .rmd" file. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
 
 <div class = "important">
 Note that binder instances aren't stable. When you close the window or if it idles too long, it may erase all of your work. If you want to save any code or output you come up with while working in binder, you need to copy-paste the code to a new file to save it on your computer.
@@ -134,7 +242,7 @@ breast_cancer_data <- read_csv("https://archive.ics.uci.edu/ml/machine-learning-
 <div class="learnmore">
 Run the above code yourself in binder (see [lesson preparation](#lesson-preparation) for links to start the binder instance) or on your own computer.
 
-In the data_visualization_ggplot2.r file, the code at the top of the file includes these library commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
+In the @r_code rmd file, the code at the top of the file includes these library commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
 </div>
 
 
@@ -265,11 +373,11 @@ True or False: The only two crucial aesthetics for a ggplot2 scatterplot are x a
 
 [(X)] TRUE
 [( )] FALSE
-***********************************************************************
+****
 <div class = "answer">
 While x and y are the only two **crucial** aesthetics, you may want to include others, such as color and shape, to communicate information about additional variables in the data.
 </div>
-***********************************************************************
+****
 
 What is the geom command for a scatterplot in ggplot2?
 
@@ -278,11 +386,11 @@ What is the geom command for a scatterplot in ggplot2?
   let input = "@input".trim();
   /geom_point/.test(input);
 </script>
-***********************************************************************
+****
 <div class = "answer">
 Every ggplot2 visualization starts with the `ggplot()` command first to set which data will be used and how (i.e., the aesthetics), and then one or more "geoms" that control what type of plot will be created.
 </div>
-***********************************************************************
+****
 
 
 Which of the following can be used to manually set the color for a **numeric** variable in ggplot2?
@@ -291,11 +399,11 @@ Which of the following can be used to manually set the color for a **numeric** v
 [( )] `scale_color_manual()`
 [( )] `theme_color()`
 [( )] Any of the above
-***********************************************************************
+****
 <div class = "answer">
 `scale_color_gradient()` is for continuous variables, and `scale_color_manual()` is for categorical variables (factors).
 </div>
-***********************************************************************
+****
 
 Modify the code from the example above under [changing the background color with theme](#changing-background-color-with-theme) to apply a different theme. Add another layer to the plot with `theme(legend.position = "bottom")`. (Note: see the ggplot2 website for more on [modifying the legend for a plot](https://ggplot2.tidyverse.org/reference/guides.html).)
 
@@ -361,7 +469,7 @@ ggplot(breast_cancer_data, mapping = aes(x=Glucose)) +
 
 As with scatterplots, we can add information about an additional variable by using color. Let's add the Classification factor to our aesthetics so we can see how the distribution of glucose values differs in the two groups.
 
-<div class = "important">
+<div class = "hint">
 Tip: ggplot2 thinks about color differently for points and lines vs. filled in objects like bars. To adjust the color of the bars in a histogram, we need to use the fill aesthetic, not color.
 </div>
 
@@ -382,7 +490,7 @@ You may be noticing that the distribution for Class 1 appears to be stacked on t
 
 If we do this, we'll also need to control the transparency in the plot --- otherwise one distribution will obscure the other where they overlap. Alpha is a value between 0 (totally transparent) and 1 (totally opaque), and it defaults to 1. We'll try it at .5 here to see if that lets us see both distributions well enough.
 
-<div class = "important">
+<div class = "hint">
 Tip: When your data overlap on a plot, use alpha to make them more transparent.
 </div>
 
@@ -442,35 +550,35 @@ Which of the following aesthetics can be used to plot a histogram in ggplot2?
 [(X)] either x or y
 [( )] y only
 [( )] both x and y
-***********************************************************************
+****
 <div class = "answer">
 Histograms can only make use of one dimension of data (x or y, but never both) because the other dimension will always be the count of observations in each bin. If you try to provide both x and y as aesthetics, ggplot2 will give you an error.
 
 In all of our examples, we used the x aesthetic for our histograms, but it is possible to provide a y aesthetic instead. As an experiment, try generating one of the plots above, but substitute y for x and see what happens!
 </div>
-***********************************************************************
+****
 
 
 What do you use to control transparency in ggplot2?
 
 [[alpha]]
-***********************************************************************
+****
 <div class = "answer">
 Note the second plot in the [Using color to show groups](#using-color-to-show-groups), which includes an alpha adjustment.
 </div>
-***********************************************************************
+****
 
 True or False: Many common scale transformations are available in ggplot2, so you don't have to transform the data itself before plotting if you want to correct skew in your visualization.
 
 [(X)] True
 [( )] False
-***********************************************************************
+****
 <div class = "answer">
 For a review, see [transforming axes](#transforming-axes).
 
 There are a few common transformations with their own ggplot2 functions, but there are many more available, and you can even [write your own transformation to use in ggplot2](https://scales.r-lib.org/reference/trans_new.html) if you like.
 </div>
-***********************************************************************
+****
 
 ## Line Plots
 
@@ -599,11 +707,11 @@ True or False: Line plots are usually appropriate as an alternative to scatterpl
 
 [( )] TRUE
 [(X)] FALSE
-***********************************************************************
+****
 <div class = "answer">
 Line plots and scatterplots are generally used for different kinds of data, so a line plot is usually not a good alternative to a scatterplot. Line plots are used to communicate **meaningfully connected** data, most often repeated observations over time.
 </div>
-***********************************************************************
+****
 
 Modify the code from the first example, the [basic line plot](#basic-line-plot), to add a horizontal reference line at 1000 deaths. Make it a dashed line.
 
@@ -764,25 +872,25 @@ What is the geom function for creating a trend line in ggplot2?
   let input = "@input".trim();
   /geom_smooth|geom_line|geom_abline/.test(input);
 </script>
-***********************************************************************
+****
 <div class = "answer">
 This is a little bit of a trick question (sorry!) since there is no single correct answer: geom\_smooth(), geom\_line(), geom\_abline() all work to create trend lines!
 
 If you use geom\_abline or geom\_line, you need to first run the model, and then use the model results in your ggplot commands. The geom\_smooth function actually runs a model for you behind the scenes. Another difference is that geom\_smooth can print a confidence interval around your trend line, but geom\_line and geom\_abline just draw the line itself.
 </div>
-***********************************************************************
+****
 
 True or False: If you wanted to, you could use geom\_abline or geom\_line to draw a totally unrelated trend line on a scatterplot (e.g. one derived from different data).
 
 [(X)] TRUE
 [( )] FALSE
-***********************************************************************
+****
 <div class = "answer">
 True! And this is an important point, because this can happen by accident. If you run several models in your code, always double check to make sure you're referencing the correct model to get the coefficients (for geom\_abline) or fitted values (for geom\_line) when you create the trend line.
 
 One good strategy is to generate trend lines a couple different ways while you're working and check to make sure they all look the same. For example, add a trend line using geom\_smooth, and then run that model yourself and try to generate the same trend line using geom\_line or geom\_abline. That way you can confirm that you know the details of the model that geom\_smooth is using.  
 </div>
-***********************************************************************
+****
 
 Modify the code from [the first example in the geom\_smooth approach](#method-1:-geom_smooth) to change the appearance of the trend line it draws. Make it black, and make it a dashed line. (Hint: See the examples in the [line plots](#line-plots) section for a reminder of setting color and line type.)
 
@@ -839,7 +947,7 @@ For an excellent quick reference, see the [ggplot2 cheatsheet](https://ggplot2.t
 
 For more detail on controlling color in ggplot2, refer to the [ggplot2 book](https://ggplot2-book.org/scale-colour.html), available for free online.
 
-To learn how to make plots in python using seaborn, see [data visualization in seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_viz_seaborn/data_visualization_in_seaborn.md).
+To learn how to make plots in python using seaborn, see [data visualization in seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md).
 
 ## Feedback
 

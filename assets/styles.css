@@ -123,3 +123,9 @@ h2, h3, h4 {
   > li:before {
     content: "\25CF";
 }
+
+
+.icon-compile-circle:before {
+content: "\f144";
+font-family: "Font Awesome 5 Free";
+}
