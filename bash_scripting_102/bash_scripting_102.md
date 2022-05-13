@@ -187,69 +187,13 @@ This character is called a **pipe**, and it's name is a great way to visualize w
 </div>
 ***
 
-## Setting up a User/Home Directory
-
-- As you get comfortable in bash, it is important to create a default home directory in an easily accessible place.
-- It is recommended that you use the native user directory in the home directory on your computer. Your user directory contains a folder named “bin” which is the root directory of any unix like operating system.
-- Bin is short for “binary” and is where you can store any configuration or executable files for programs you run on the CLI. This will be a good place to store bash scripts (.sh files) once you have become comfortable executing commands and learning syntax.
-
-![Accessing the user/home directory on a Mac.](media/user_directory.png)
-
-
-## Permissions and working with other users
-
-- `Chmod` or change mode is used to set the permissions on a file or directory.
-- The three basic permissions are:
-
-  - **read** - access the contents of a file
-  - **write** - modify the contents of a file or directory
-  - **execute** - run a bash script on a file or directory.
-
-- [Consult this documentation and table for guidance on how to apply useful file and directory level permissions](https://linuxcommand.org/lc3_lts0090.php)
-- `Chown`: change file ownership
-- `Chgrp`: change group ownership
-- `Sudo` - assume super user privileges on an as-needed basis.
-
-<div class = "warning">
-**Proceed with caution!** Using the `Sudo` command is decidedly not best data security practice, but might need to be invoked as you continue to learn bash, as permissioning can be quite granular and dynamic.
-</div>
-
-### Quiz: Permissions
-
-Which numerical sequence grants no restrictions on permissions and should generally be avoided?
-
-[( )] 755
-[( )] 666
-[( )] 700
-[(X)] 777
-[[?]] Hint: Check out the link to the file permissions documentation on the previous page!
-***
-<div class = "answer">
-
-Giving all users access to manipulate files and directories in any way doesn't tend to lead to great outcomes. 755, in which the file owner can read, write, while enabling all other permissioned users to read and execute a file, is a safer and more productive option to choose.
-
-</div>
-***
-
-## Mounting external file shares and basic navigation
-
-- When you mount something you are placing access to a file directory system within your root file system structure, giving yourself a fixed location by which to access files. This is not unlike the C: or D: drives visible in Windows or the Mac HD icon on a Mac.
-- `cd/mnt/file_path` opens up access to this external directory within the shell scripting window. As long as permissions have been appropriately granted, you can now collaborate with colleagues in the mounted file directory.
-
-## Glossary
-
-- Binary or Executable File: A file that causes a computer to follow a series of tasks represented in encoded instructions. It should be noted that .bin is the preferred Mac extension and .exe is the preferred Windows extension.
-- Unix: Widely used class of computer operating systems which support multitasking and multiusers.
-- Linux: Open source operating system modeled on Unix. Bash is the most common shell for Linux.
 
 ## Additional Resources
 
-- [Brief Illustration of the Difference between Shell and Kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/)
+
 - [Exhaustive Wiki of Linux Filesystem Hierarchy](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/index.html)
-- [Reinforce Your New Knowledge through this Learing the Shell Page](https://linuxcommand.org/lc3_learning_the_shell.php)
-- [Unix Command Line I Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/3/)
-- [Unix Command Line II Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/2/)
-- [Intermediate Bash Scripting Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/1/)
+- [Reinforce Your New Knowledge through this Learning the Shell Page](https://linuxcommand.org/lc3_learning_the_shell.php)
+
 
 ## Feedback
 
