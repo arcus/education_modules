@@ -2,7 +2,7 @@
 
 author:   Rose Franzen
 email:    franzenr@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -175,8 +175,6 @@ In terms of deciding when to seek out assistance to help you figure something ou
 [[?]] Hint: use all lower case letters and no punctuation. If you're still stuck, see the last point in [Balancing Problem Solving and Asking for Help](#Balancing-Problem-Solving-and-Asking-for-Help)
 
 ## Additional Resources
-
- The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
 
 Check out this wonderful (and entertaining) [cartoon guide to bioinformatics](https://www.nature.com/articles/d41586-021-01485-y) by a biologist who later learned to code
 
