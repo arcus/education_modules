@@ -430,41 +430,6 @@ The quotes around the text can also be safely omitted in this case, but that isn
 </div>
 ***
 
-## Moving files around
-
-Just because you created a file in one location, doesn't mean it has to stay there forever.
-
-### Moving files
-
-Inside of `learning_bash`, create a new directory called `numbered_files`:
-
-```
-cd ~/learning_bash
-mkdir numbered_files
-```
-
-The `mv` command will move files from their current location to a new location. This command needs to know **what** you want to move and **where** you want to move it to.
-
-To move `file_1` to `numbered_files` run the command:
-
-```
-mv file_1 numbered_files
-```
-
-Now you can use `cd` and `ls` to see that `file_1` is now in `numbered_files`.
-
-You can also move multiple files at a time by entering them one after another, as long as the directory you want them to end up in is at the end.
-
-```
-mv file_2 file_3 numbered_files
-```
-
-### Renaming Files
-
-### Copying Files
-
-### Quiz: moving files
-
 
 ## Additional Resources
 
