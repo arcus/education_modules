@@ -11,7 +11,7 @@ comment:  This course will focus on accessing a command line program and running
 
 long_description: This course is designed to be both an introduction to bash for those who are total newbies as well as refresher for those some with experience running code who want a more solid command of the basics.
 
-estimated_time: 30 minutes
+estimated_time: 40 minutes
 
 @learning_objectives
 
