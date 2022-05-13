@@ -8,7 +8,7 @@ language: en
 narrator: UK English Female
 title:  Bash: Searching and Organizing Files
 comment:  This module will teach you how to use the bash shell to search and organize your files.
-long_description: This module is for people who have a little bit of experience with bash scripting and want to learn to use it's power to organize their file and folders.
+long_description: This module is for people who have a bit of experience with bash scripting and want to learn to use it's power to organize their file and folders.
 estimated_time: 30 minutes
 
 @learning_objectives
@@ -56,6 +56,15 @@ Learners should be familiar with using a bash shell to navigate a directory syst
 ## Lesson Preparation
 
 You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer. Please follow the instructions appropriate for the computer you are using.
+
+Open a bash shell. If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash 101](link/here) module.
+
+
+We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
+
+**Create a mini repo with a bunch of files in it and nested folder system?**
+
+You can download this from GitHub or if you have Git installed on your computer, run `git clone` in your command line interface.
 
 
 ## Searching files
