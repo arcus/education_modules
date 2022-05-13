@@ -455,6 +455,14 @@ The quotes around the text can also be safely omitted in this case, but that isn
 
 - [Reinforce Your New Knowledge through this Learning the Shell Page](https://linuxcommand.org/lc3_learning_the_shell.php)
 
+### The bash manual
+
+The bash manual is available to you whenever you are in a bash shell.  Entering `man command_name` reveals the documentation for the function `command_name`.  This can be useful if you think a command might be useful and want to learn more about it, or have forgotten how to use a command or what its options are.
+
+For example if you wanted to know more about the command `grep` you could type `man grep`. The output contains a description. The first sentence of the description tells us what `grep` does, it "searches any given input files, selecting lines that match
+     one or more patterns."
+
+![Grep man command output with the full definition and some options displayed.](media/grep_output_large.png)
 
 ## Feedback
 
