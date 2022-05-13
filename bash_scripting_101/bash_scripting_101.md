@@ -58,6 +58,8 @@ Learners should be familiar with locating files and folders stored in a director
 
 You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer. Please follow the instructions appropriate for the computer you are using.
 
+While it is true that the bash shell is a powerful tool that can be used to make major changes on a computer, we won't be learning how to do any of that in this lesson. This is a zero risk exploration to get you comfortable with using the bash shell.
+
 ### Mac Computers
 
 ![How to locate the terminal in Spotlight on a Mac.](media/terminal_in_mac.png)
@@ -73,6 +75,10 @@ It should be noted that Macs with the Catalina Operating System or later are run
 </div>
 
 ### Windows Computers
+
+Check in your start menu if you have either **WLS** (the Windows Subsystem for Linux) or **Git Bash** already installed on your computer. If you have either one of those programs and can open a command line interface using it, you are all ready to get started!
+
+If you do not have either of those programs available, please follow the instructions below. **Do not use the PowerShell** program for this lesson, it utilizes a different scripting language.
 
 <div class = "warning">
 There are two sets of instructions for Windows users, one for users who have administrative access to their computers, and one that will work for most users who don't. That said, your organization may have stricter controls on what a non-admin user can download.
@@ -191,6 +197,18 @@ The command `cd` lets you **c**hange **d**irectory. Unlike the previous two comm
 
 
 **Give it a try!** Use these commands to explore the directories on your computer. Try navigating around some files and folders that you are already familiar with to get comfortable with how they look through the bash shell.
+
+### Tab completion
+
+If it seems like there is an awful lot to make sure you are typing correctly  into your bash shell, you are right. Luckily you don't have to type everything out fully because you can use the `tab` key on your computer.
+
+Once you start typing the first few letters of a directory, press `tab`. The shell will automatically fill in as much as it can of what you are typing. For example if I have only two directories in my current location, named `my_directory` and `shared_directory`, I don't need to type out the full name of the directory I want to `cd` into. In fact since they start with different letters, `cd m` followed by the `tab` instead of the `enter` or `return` key will automatically be completed to the only possibility, `cd my_directory`.
+
+If there were another directory that started with the same few letters, the shell will guess as far as it can. For example if there were also a folder `my_random_files`, typing `cd m` followed by `tab` would prompt the shell to complete as much as it can: `cd my_` and then you could keep typing either an `r` or `d` followed by another `tab` to complete the line of code.
+
+<div class = "important">
+Tab completion is useful not just for navigating your file system, but for all sorts of commands in bash scripting. By minimizing the amount you have to type it can make your work both easier and more accurate. You should always be sure to double check that the `tab` completed the line to what you wanted it to be.
+</div>
 
 
 ### Quiz: Navigation
