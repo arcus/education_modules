@@ -75,19 +75,91 @@ Download the [`learning_bash` directory](https://github.com/arcus/learning_bash)
 
 ## Searching files
 
-### `find`
+Before we start searching for specific things in this directory, let's navigate into it and explore a little bit of what it contains.
 
-The `find` command lets you search file names.
+```
+cd ~/learning_bash-main
+ls
+```
+These commands will give you a list of (almost) everything in the folder.
 
-### `grep`
+A few things we can see from this list of files:
 
-`grep`: powerful search function to locate a string or pattern within a file or in a directory. Grep stands for global regular expression print.
+1. The files and folders are listed alphabetically.
+2. There are `.txt`, `.dat` and `.csv` files.
+3. The `.csv` file is named `Animals.csv` and each of the other files has the name of an animal.
+
+It is also a good idea to take a look at what each type of file contains. We would expect `Animals.csv` to be some sort of tabular data with rows and columns. You can use `cat` to display the file and confirm this.
+
+If we take a look at the contents of a `.txt` file, we see a few words in Latin.
+
+```
+cat dog.txt
+Canis lupus familiaris
+```
+
+It looks like the `.txt` files contain the scientific names of the animals! Try looking at a few more to confirm this.
+
+We could individually look at the contents of each file, but that is a lot of work even with this small folder. Next we are going to learn how to search these files and folders.
+
+<div class ="learnmore">
+Files that start with a `.` (period) are hidden when you enter `ls`. These are usually operational files that help navigate the file system or keep track of metadata. To see all of these files, enter `ls -a`. The `-a` flag tells bash to show you all files and folders.
+
+Since you just downloaded this folder from `GitHub`, you should see `.git` which keeps track of changes to this public directory.
+</div>
+
+### Search folder and file names with `find`
+
+The `find` command lets you search file and folder names. Since we just looked at `dog.txt`, we could search for it using `find dog.txt`. The output for this is just the file name  `dog.txt`. That isn't very helpful by itself, but with the `*` symbol we can make it extremely powerful.
+
+<div class = "important">
+**Character sequence wildcard `*`**
+
+The asterisk `*` is a character sequence wildcard. It allows you to search for strings of characters when you might know only a portion of the string.
+
+Every character sequence matches `*`, even the empty character sequence:
+
+- `anim*` matches `anim`, `animal`, `animal.csv` `anim_132`
+
+The location of the `*` matters:
+
+- `animal*` matches `animals` but not `_animal`
+
+- `*bear` matches `polar_bear` but not `polar_bear.txt`
+
+You can use more than one `*` at a time:
+
+- `*bear*` matches `polar_bear.txt` and `grizzly_bear.dat`
+
+
+
+
+</div>
+
+Some things that the `*` let us do are:
+
+1. Search for all files of a certain type: `find *.dat` will return a list of files with the extension `.dat`.
+
+2. Search for all files and folders that start with a certain sequence of characters: `find blue*` will return all six files that start with the four characters `blue` as well as the folder that starts with `blue`.
+
+3. Search for all file names containing a particular sequence: `find *_*` will return all of the files and folders that contain an underscore `_` anywhere in their names. In this folder, the files with underscores correspond to the animals whose common names are more than one word long.
+
+
+The `find` function will return a list of **all** in your current directory that match the criteria you have asked for. **Give it a try!**
+
+### Search file contents with `grep`
+
+Now that we can search file names, we also want to be able to search file contents.
+
+The command `grep` (rhymes with "step") is a search function to locate a string or pattern within a file or in a directory.
+
+<div class = "learnmore">
+Grep stands for **g**lobal **r**egular **e**xpression **p**rint.
+</div>
 
 `grep 'panda' file 1 file 2 file 3` will search for the word "panda" in the three files we just created.
 
-### Character sequence wildcard `*`
 
-`*` character sequence wildcard. Very useful in running a command on all files with a given file extension as demonstrated in the mv example above.
 
 ### Quiz: Searching files
 
