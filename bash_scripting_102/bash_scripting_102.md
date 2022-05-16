@@ -238,7 +238,15 @@ The `grep` function searches the contents of the files, in this case all of the 
 
 ## Organizing files
 
-Just because you created a file in one location, doesn't mean it has to stay there forever.
+While it would be great if all of your files came into being in the location you will want them in forever and with the naming conventions you want to keep forever, that simply isn't it works. Even if you put every file you create in the correct location and give it a perfectly formatted name, you will at some point have to interact with files that someone else created.
+
+Just because a file is in one location, doesn't mean it has to stay there forever, nor does it's name need to be permanent. In this section we will learn and practice moving files around, copying files, and renaming files.
+
+<div class = "important">
+Since **we will be making changes** to your files in this section, please use the `learning_bash` directory for practice.  
+
+If you have not yet downloaded it, please follow the instructions on the [Lesson Preparation](#Lesson-Preparation) page.
+</div>
 
 ### Moving files
 
@@ -280,73 +288,6 @@ mv file_2 file_3 numbered_files
   - `cat file 2` will now confirm if the content in file 1 was successfully appended to the end of file 2.
 
   ![Head output of slightly less basic python script that organizes a picnic gathering menu amongst three friends.](media/head_example_small.png)
-
-
-### Viewing the contents of a file
-
-
-- `less`: view contents of a file without opening a separate editor
-
-  ![Less of basic python script that says hello and prompts a dialogue for an individual's name and age.](media/less_sample_small.png)
-
-
-
-
-### Quiz: Bash commands
-
-Select the three functions of the `cat` command?
-
-[[X]] View
-[[ ]] Categorize
-[[X]] Concatenate
-[[X]] Create New Version
-***
-<div class = "answer">
-
-The `sort` command is used to categorize files in bash.
-
-</div>
-***
-
-## Bash syntax
-
-- `~` shortcut for your home directory
-- `.` shortcut for your current directory
-- `..` shortcut for your previous directory
-  The above three shortcuts are highly useful for executing scripts in the proper location once you are collaborating in an active project with multiple files and folders.
-
-  - `echo`: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
-
-    ![Echo variable example demonstrating how to print and set the price of a pint.](media/echo_example_large.png)
-
-
-### Writing output to a file with `>`
-- `>` takes the output of the command you executed in the terminal and places it in a new file
-
-### Linking commands with `|`
-
-- `|` takes the output of one command and passes it to the next command in the sequence. Allows for integrating of commands
-
-### Defining variables with `$`
-- `$` used to define a variable expression as used in the echo example above.
-
-
-
-### Quiz: Bash syntax
-
-What character passes the output of one command to the next command in a sequence?
-
-[(X)] \|
-[( )] &
-[( )] +
-[( )] -
-***
-<div class = "answer">
-
-This character is called a **pipe**, and it's name is a great way to visualize what it does: the output from the command to the left flows into the commands to the right through the pipe to create a pipeline :)
-
-</div>
-***
 
 
 ## Additional Resources
