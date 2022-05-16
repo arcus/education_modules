@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -695,7 +695,7 @@ Which of these are accurate suggestions with regard to making data analysis more
 [[ ]] Tidy data analysis includes code that is as brief as possible in order to reduce computational processing time
 [[X]] It can be helpful to break down complex analysis into small steps in human language before starting computation
 [[X]] Naming things and writing code in a consistent way makes for tidy data analysis
-[[ ]] Pseudocode is a crutch that should be avoided and it results in badly written data analysis
+[[ ]] Pseudocode should be avoided, as it results in badly written data analysis
 [[X]] Data analysis should be conducted so that both humans and computers can use the code effectively
 [[?]] There are multiple correct answers!
 *********
