@@ -250,44 +250,40 @@ If you have not yet downloaded it, please follow the instructions on the [Lesson
 
 ### Moving files
 
-Inside of `learning_bash`, create a new directory called `numbered_files`:
-
-```
-cd ~/learning_bash
-mkdir numbered_files
-```
+Inside of `learning_bash-main`, there is a directory called `blue_animals` which currently only contains one of the many blue animals, the blue morpho butterfly.
 
 The `mv` command will move files from their current location to a new location. This command needs to know **what** you want to move and **where** you want to move it to.
 
-To move `file_1` to `numbered_files` run the command:
+To move `blue_jay.txt` to `blue_animals` run the command:
 
 ```
-mv file_1 numbered_files
+mv blue_jay.txt blue_animals
 ```
 
-Now you can use `cd` and `ls` to see that `file_1` is now in `numbered_files`.
+Now you can use `cd` and `ls` to see that `blue_jay.txt` is now in `blue_animals`.
 
+Notice that we used the **relative** locations of `blue_animals` and the macaw file. We could also have used their global location. Let's see how we would use the **global** location of the `blue_morpho` file to move it:
+
+```
+mv ~/learning_bash-main/blue_morpho.txt ~/learning_bash-main
+```
+
+<div class = "warning">
+If you did not place `learning_bash-main` in your home folder, you will need to use the file path to it instead of `~`.
+</>
 You can also move multiple files at a time by entering them one after another, as long as the directory you want them to end up in is at the end.
 
 ```
-mv file_2 file_3 numbered_files
+mv blue_and_yellow_macaw.txt blue_animals
 ```
+
+An even
 
 ### Renaming Files
 
 ### Copying Files
 
 ### Quiz: Organizing Files
-
-
-- `cat`: very powerful three-part function that allows a reader to view, combine (concatenate), or create a new version of a file
-
-  - `cat file 1 file 2` will display the contents of both files on separate lines.
-  - `cat > file 4` will create a new file named file 4
-  - `cat file 1 >> file 2` will append the contents of file 1 at the end of file 2.
-  - `cat file 2` will now confirm if the content in file 1 was successfully appended to the end of file 2.
-
-  ![Head output of slightly less basic python script that organizes a picnic gathering menu amongst three friends.](media/head_example_small.png)
 
 
 ## Additional Resources
