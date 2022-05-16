@@ -85,9 +85,9 @@ These commands will give you a list of (almost) everything in the folder.
 
 A few things we can see from this list of files:
 
-1. The files and folders are listed alphabetically.
+1. There is a `README.md` file.
 2. There are `.txt`, `.dat` and `.csv` files.
-3. The `.csv` file is named `Animals.csv` and each of the other files has the name of an animal.
+3. The `.csv` file is named `Animals.csv` and each of the `.txt` and `.dat` files has the name of an animal.
 
 It is also a good idea to take a look at what each type of file contains. We would expect `Animals.csv` to be some sort of tabular data with rows and columns. You can use `cat` to display the file and confirm this.
 
@@ -100,7 +100,20 @@ Canis lupus familiaris
 
 It looks like the `.txt` files contain the scientific names of the animals! Try looking at a few more to confirm this.
 
-We could individually look at the contents of each file, but that is a lot of work even with this small folder. Next we are going to learn how to search these files and folders.
+What is in the `.dat` files?
+
+```
+cat blue_whale.dat
+Length: 29.9 m
+Weight: 190000 kg
+```
+
+It looks like these might have some length and weight data in them.
+
+We could continue to individually look at the contents of each file, but that is a lot of work even with this small folder. Next we are going to learn how to search these files and folders.
+
+
+
 
 <div class ="learnmore">
 Files that start with a `.` (period) are hidden when you enter `ls`. These are usually operational files that help navigate the file system or keep track of metadata. To see all of these files, enter `ls -a`. The `-a` flag tells bash to show you all files and folders.
@@ -136,34 +149,91 @@ You can use more than one `*` at a time:
 
 </div>
 
-Some things that the `*` let us do are:
+The `find` function will return a list of **all** files and folders in your current directory that match the criteria you have asked for. **Give it a try!** Follow along with these three examples:
 
 1. Search for all files of a certain type: `find *.dat` will return a list of files with the extension `.dat`.
 
-2. Search for all files and folders that start with a certain sequence of characters: `find blue*` will return all six files that start with the four characters `blue` as well as the folder that starts with `blue`.
+2. Search for all files and folders that start with a certain sequence of characters: `find blue*` will return all six files that start with the four characters `blue` as well as the folder that starts with `blue` and the file `blue_morpho` inside that folder.
 
 3. Search for all file names containing a particular sequence: `find *_*` will return all of the files and folders that contain an underscore `_` anywhere in their names. In this folder, the files with underscores correspond to the animals whose common names are more than one word long.
 
 
-The `find` function will return a list of **all** in your current directory that match the criteria you have asked for. **Give it a try!**
+
 
 ### Search file contents with `grep`
 
 Now that we can search file names, we also want to be able to search file contents.
 
-The command `grep` (rhymes with "step") is a search function to locate a string or pattern within a file or in a directory.
+The command `grep` (rhymes with "step") is a search function to locate a string or pattern within a file or in a directory. The `grep` command requires two arguments, first you need to tell it what string or pattern to look for in quotes, and second you have to tell it where to search.
+
+For example if you wanted to search for `bear` in `Animals.csv` you can run the following command:
+
+```
+grep 'bear' Animals.csv
+```
+This will print out each line of `Animals.csv` that contains the string `bear`:
+
+```
+brown bear,mammal
+grizzly bear,mammal
+panda bear,mammal
+polar bear,mammal
+```
+
+You could also search several files at a time by listing their file names one after another.
+
+```
+grep 'Ursus' brown_bear.txt grizzly_bear.txt panda_bear.txt
+```
+
+This will return the files containing `Ursus` as well as each of the lines containing the word.
+
+```
+brown_bear.txt:Ursus arctos
+grizzly_bear.txt:Ursus arctos horribilis
+```
+
+We can make `grep` more powerful by combining it with the `*` we used before. You might have noticed that we didn't search `polar_bear.txt` for the word `Ursus`. It would be a lot easier to just search all of the files that contain `bear` for the word `Ursus`. We can do that!
+
+```
+grep 'Ursus' *bear*
+```
+This output will include the files we saw before as well as the previously missing `polar_bear` file.
+
+```
+brown_bear.txt:Ursus arctos
+grizzly_bear.txt:Ursus arctos horribilis
+polar_bear.txt:Ursus maritimus
+```
+
+<div class = "learnmore">
+There are a lot of other ways to modify your search pattern... more in additional resources.
+</div>
 
 <div class = "learnmore">
 Grep stands for **g**lobal **r**egular **e**xpression **p**rint.
 </div>
 
-`grep 'panda' file 1 file 2 file 3` will search for the word "panda" in the three files we just created.
-
-
 
 ### Quiz: Searching files
+1. What command will return all of the files with a `.dat` ending?
+
+[[find *.dat]]
+***
+<div class = "answer">
+The `find` function searches the names of all folders and files in the current directory. The asterisk in `*.dat` matches any string, so all files with the `.dat` ending will be returned by this command.
+</div>
+***
 
 
+2. What you command will return all files with a `.dat` ending that contain the word `Weight`
+
+[[grep 'Weight' *.dat]]
+***
+<div class = "answer">
+The `grep` function searches the contents of the files, in this case all of the files that end in `.dat` for the pattern `Weight`.
+</div>
+***
 
 
 ## Organizing files
