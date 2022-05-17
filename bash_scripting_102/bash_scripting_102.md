@@ -71,14 +71,14 @@ Download the [`learning_bash` directory](https://github.com/arcus/learning_bash)
 1. Click on the green **Code** button.
 2. Select **Download ZIP**
 3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`.
-4. Place this new folder `learning_bash-main` somewhere you can easily find it. In the examples we will assume that `learning_bash-main` is in the home directory, but you are welcome to leave it in your Downloads folder or move it somewhere else that is convenient for you to navigate to in your command line interface.
+4. Place this new folder `learning_bash-main` somewhere you can easily find it. In the examples we will assume that `learning_bash-main` is in the Downloads directory, but you are welcome to move it somewhere else that is convenient for you to navigate to in your command line interface.
 
 ## Searching files
 
 Before we start searching for specific things in this directory, let's navigate into it and explore a little bit of what it contains.
 
 ```
-cd ~/learning_bash-main
+cd ~/Downloads/learning_bash-main
 ls
 ```
 These commands will give you a list of (almost) everything in the folder.
@@ -210,10 +210,6 @@ polar_bear.txt:Ursus maritimus
 There are a lot of other ways to modify your search pattern... more in additional resources.
 </div>
 
-<div class = "learnmore">
-Grep stands for **g**lobal **r**egular **e**xpression **p**rint.
-</div>
-
 
 ### Quiz: Searching files
 1. What command will return all of the files with a `.dat` ending?
@@ -243,7 +239,7 @@ While it would be great if all of your files came into being in the location you
 Just because a file is in one location, doesn't mean it has to stay there forever, nor does it's name need to be permanent. In this section we will learn and practice moving files around, copying files, and renaming files.
 
 <div class = "important">
-Since **we will be making changes** to your files in this section, please use the `learning_bash` directory for practice.  
+Since **we will be making changes** to your files in this section, please use the `learning_bash-main` directory for practice.  
 
 If you have not yet downloaded it, please follow the instructions on the [Lesson Preparation](#Lesson-Preparation) page.
 </div>
@@ -262,26 +258,52 @@ mv blue_jay.txt blue_animals
 
 Now you can use `cd` and `ls` to see that `blue_jay.txt` is now in `blue_animals`.
 
-Notice that we used the **relative** locations of `blue_animals` and the macaw file. We could also have used their global location. Let's see how we would use the **global** location of the `blue_morpho` file to move it:
+Notice that we used the **relative** locations of `blue_animals` and the macaw file. We could also have used their global location. Let's see how we would use **global** locations to move the `blue_morpho.txt` file, currently in `blue_animals`, to the same location as the other animals.
 
 ```
-mv ~/learning_bash-main/blue_morpho.txt ~/learning_bash-main
+mv ~/Downloads/learning_bash-main/blue_animals/blue_morpho.txt ~/Downloads/learning_bash-main
 ```
 
 <div class = "warning">
-If you did not place `learning_bash-main` in your home folder, you will need to use the file path to it instead of `~`.
-</>
+If you moved `learning_bash-main` out of your Downloads folder, you will need to use the file path to it instead of `~/Downloads`.
+</div>
+
 You can also move multiple files at a time by entering them one after another, as long as the directory you want them to end up in is at the end.
 
 ```
-mv blue_and_yellow_macaw.txt blue_animals
+mv blue_and_yellow_macaw.txt blue_morpho.txt blue_animals
 ```
 
-An even
+<div class = "help">
+Did you get a message informing you that "No such file or directory" exists? Make sure you are in the right directory with `cd ~/Downloads/learning_bash-main`.
+</div>
+
+We can also use the `*` to move all files and folders matching a certain pattern to a new location. Let's make a new folder containing all files pertaining to blue whales:
+
+```
+mkdir blue_whale_folder
+mv blue_whale.* blue_whale_folder
+```
+This will move both `blue_whale.txt` and `blue_whale.dat` into the folder `blue_whale_folder`.
+
+Similarly we could move all of the files and folders that start with the word blue into `blue_animals`.
+
+```
+mv blue* blue_animals
+```
+You will get an output warning you that one of the things you asked for cannot be done:
+
+```
+mv: rename blue_animals to blue_animals/blue_animals: Invalid argument
+```
+
+**This is okay!** In fact it is bash being smart enough to know that you can't move a directory to become a sub-directory of itself! Use `cd` and `ls` to check that all of the other files and folders that started with the characters `blue` are now in the `blue_animals` directory.
 
 ### Renaming Files
 
+
 ### Copying Files
+
 
 ### Quiz: Organizing Files
 
