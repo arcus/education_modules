@@ -174,7 +174,7 @@ grep 'bear' Animals.csv
 This will print out each line of `Animals.csv` that contains the string `bear`:
 
 ```
-brown bear,mammal
+black bear,mammal
 grizzly bear,mammal
 panda bear,mammal
 polar bear,mammal
@@ -183,13 +183,13 @@ polar bear,mammal
 You could also search several files at a time by listing their file names one after another.
 
 ```
-grep 'Ursus' brown_bear.txt grizzly_bear.txt panda_bear.txt
+grep 'Ursus' black_bear.txt grizzly_bear.txt panda_bear.txt
 ```
 
 This will return the files containing `Ursus` as well as each of the lines containing the word.
 
 ```
-brown_bear.txt:Ursus arctos
+black_bear.txt:Ursus americanus
 grizzly_bear.txt:Ursus arctos horribilis
 ```
 
@@ -201,7 +201,7 @@ grep 'Ursus' *bear*
 This output will include the files we saw before as well as the previously missing `polar_bear` file.
 
 ```
-brown_bear.txt:Ursus arctos
+black_bear.txt:Ursus americanus
 grizzly_bear.txt:Ursus arctos horribilis
 polar_bear.txt:Ursus maritimus
 ```
@@ -315,13 +315,16 @@ You can also use the global location names for your files or folders. In the exa
 ```
 mv ~/Downloads/learning_bash-main/koala.txt ~/Downloads/learning_bash-main/koala_bear.txt
 ```
-The benefit to using the global names is that you can run commands with global names from anywhere, you don't have to be in the folder containing the files. The downside is that you have to make sure you type a much longer name correctly.
+The benefit to using the global names is that you can run commands with global names from anywhere, you don't have to be in the folder containing the files. The downside is that you have to make sure to type a much longer name correctly.
 
 </div>
 
 ### Copy files with `cp`
 
+The copy function `cp` has the same requirements as the `mv` function: **which file** you want to copy, and **where** you want the copy to go.
+
 ### Copy folders with `cp -r`
+
 
 ### Quiz: Organizing files
 
