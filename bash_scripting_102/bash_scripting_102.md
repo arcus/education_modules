@@ -18,7 +18,8 @@ After completion of this module, learners will be able to:
 - Search existing files for particular character strings.
 - Search folders for files with certain titles.
 - Move files to new locations in a directory system.
-- Rename files.
+- Copy files and directories.
+- Delete files and directories.
 @end
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
@@ -402,11 +403,58 @@ The command `cp -r coyote.txt canines` will **also** create a copy of `coyote.tx
 </div>
 ***
 
+## Deleting files
+
+If you are done with a file and sure you won't need it ever again, it might make sense to delete it.
+
+The command `rm` **remove**s and files listed after it from your computer. Maybe you don't actually want two different names for the same species of bear and want to delete the `brown_bear.txt` file we made earlier:
+
+```
+rm brown_bear.txt
+```
+
+<div class = "warning">
+Removing files from your command line interface with the `rm` command **removes** them from your computer. It does not move them to your "Trash" folder.
+
+Be completely sure that you want to remove a file before using the `rm` command.
+</div>
+
+If you are sure you want to delete a directory, the recursive flag `-r` will recursively delete a folder and all of its contents, and the contents of any subfolders, and on an on until everything is gone.
+
+Maybe you no longer want a `red_animals` folder since all of its contents are available elsewhere:
+
+```
+rm -r red_animals
+```
+
+### Quiz: Deleting files
+
+Which statements about the remove command `rm` are true?
+
+[[ ]] The command `rm` moves files to your "Trash" folder.
+[[X]] To remove a folder and all of its contents you need to use `rm -r`.
+[[X]] Sometimes you need to remove files in order to keep your projects organized.
+[[ ]] If you accidentally remove a file you wanted to keep, it is easy to recover it.
+***
+<div class = "answer">
+**The command `rm` moves files to your "Trash" folder.** FALSE: the command `rm` removes files from your computer without first moving them to you trash folder.
+
+**To remove a folder and all of its contents you need to use `rm -r`.** TRUE: you need to use the `-r` flag in order to recursively remove all subfolders.
+
+**Sometimes you need to remove files in order to keep your projects organized.** TRUE: there are many projects that need to regularly delete intermediary files, especially when analyzing large datasets.
+
+**If you accidentally remove a file you wanted to keep, it is easy to recover it.** FALSE: recovering a file you have removed with `rm` might be possible if you are using a version control system like Git, but if not, removed files are gone forever.
+</div>
+***
+
+
 ## Additional Resources
 
+You can always use the manual command `man` to read the documentation of any command. Give it a try with `man cp`!
 
-- [Exhaustive Wiki of Linux Filesystem Hierarchy](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/index.html)
-- [Reinforce Your New Knowledge through this Learning the Shell Page](https://linuxcommand.org/lc3_learning_the_shell.php)
+Reading the manual isn't always the easiest was to get more comfortable with a programming language, so here are some other resources:
+
+
 
 
 ## Feedback
