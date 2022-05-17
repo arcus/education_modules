@@ -121,7 +121,7 @@ Files that start with a `.` (period) are hidden when you enter `ls`. These are u
 Since you just downloaded this folder from `GitHub`, you should see `.git` which keeps track of changes to this public directory.
 </div>
 
-### Search folder and file names with `find`
+### Search names with `find`
 
 The `find` command lets you search file and folder names. Since we just looked at `dog.txt`, we could search for it using `find dog.txt`. The output for this is just the file name  `dog.txt`. That isn't very helpful by itself, but with the `*` symbol we can make it extremely powerful.
 
@@ -160,9 +160,9 @@ The `find` function will return a list of **all** files and folders in your curr
 
 
 
-### Search file contents with `grep`
+### Search contents with `grep`
 
-Now that we can search file names, we also want to be able to search file contents.
+Now that we can search file and folder names, we also want to be able to search file contents.
 
 The command `grep` (rhymes with "step") is a search function to locate a string or pattern within a file or in a directory. The `grep` command requires two arguments, first you need to tell it what string or pattern to look for in quotes, and second you have to tell it where to search.
 
@@ -244,7 +244,7 @@ Since **we will be making changes** to your files in this section, please use th
 If you have not yet downloaded it, please follow the instructions on the [Lesson Preparation](#Lesson-Preparation) page.
 </div>
 
-### Moving files
+### Move files with `mv`
 
 Inside of `learning_bash-main`, there is a directory called `blue_animals` which currently only contains one of the many blue animals, the blue morpho butterfly.
 
@@ -299,13 +299,17 @@ mv: rename blue_animals to blue_animals/blue_animals: Invalid argument
 
 **This is okay!** In fact it is bash being smart enough to know that you can't move a directory to become a sub-directory of itself! Use `cd` and `ls` to check that all of the other files and folders that started with the characters `blue` are now in the `blue_animals` directory.
 
-### Renaming Files
+### Rename files with `mv`
+
+While there is a specific function for renaming files and folders, the easiest way to rename a file is to again use the `mv` function.
 
 
-### Copying Files
 
 
-### Quiz: Organizing Files
+### Copying files
+
+
+### Quiz: Organizing files
 
 
 ## Additional Resources
