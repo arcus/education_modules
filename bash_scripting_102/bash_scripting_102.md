@@ -321,13 +321,86 @@ The benefit to using the global names is that you can run commands with global n
 
 ### Copy files with `cp`
 
-The copy function `cp` has the same requirements as the `mv` function: **which file** you want to copy, and **where** you want the copy to go.
+The copy function `cp` has the same requirements as the `mv` function: **which file** you want to copy, and **where** you want the copy to go. For example maybe we want to make a new folder called `true_bears` for bears in the genus Ursus, and put copies of those files into the folder while keeping the originals.
+
+```
+mkdir true_bears
+cp black_bear.txt true_bears
+```
+
+There are now two files with the name `black_bear.txt` but because they are in different places, that is okay. The original `black_bear.txt` is unchanged, and the copy is `true_bears/black_bear.txt`.
+
+You can also use `cp` to make a copy of a file with a new name. Brown bear is another name for a grizzly bear.
+
+```
+cp grizzly_bear.txt brown_bear.txt
+```
+
+Now there are two files with the same contents but different names.
+
+You can also use the asterisk `*` to speed copy all files with certain patterns in their names.
+
+```
+mkdir red_animals
+cp red* red_animals
+```
+
+You get a message that bash isn't copying the folder `red_animals` to itself, but with a different message than when we weren't able to move `blue_animals` into itself with `mv`. This is because we need to do something special to use `cp` on a directory.
 
 ### Copy folders with `cp -r`
 
+In order to copy a directory using `cp` you need to include the flag `-r` which stands for "recursive." This tells bash to make a copy not just of the directory, but of all of its sub-directories, and all of their sub-directories, and so on.
+
+Let's make a new directory for all of the animals with colors in their names.
+
+```
+mkdir color_name_animals
+```
+
+If we want to copy the entire directory of `blue_animals` into this new folder, we need to use the `-r` flag:
+
+```
+cp -r blue_animals color_name_animals
+```
+
+<div class = "important">
+Moving a directory with `mv` will move all of its contents to the new location.
+
+Copying a directory with `cp` requires the `-r` flag in order to copy all of its contents.
+</div>
 
 ### Quiz: Organizing files
 
+1. You create a new folder titled `canines` in `learning_bash-main`. What command would you use to move the files `dog.txt` and `wolf.txt` into the `canines` folder? Use the relative locations of the files and folders.
+
+[[mv dog.txt wolf.txt canines]]
+<script>
+  let input = "@input";
+  input == "mv dog.txt wolf.txt canines" || input == "cmv wolf.txt dog.txt canines";
+</script>
+***
+<div class = "answer">
+The command `mv dog.txt wolf.txt canines` will move both files into the `canines` folder. The order of `dog.txt` and `wolf.txt` doesn't matter, but `mv` must be first and `canines`, the target folder, must be last.
+</div>
+***
+
+2. Which of these commands would you use to put a copy of the file `coyote.txt` into the `canines` folder?
+
+[[ ]] `mv coyote.txt canines`
+[[X]] `cp coyote.txt canines`
+[[ ]] `mv -r coyote.txt canines`
+[[ ]] `cp -r coyote.txt canines`
+***
+<div class = "answer">
+The command `mv coyote.txt canines` will move the entire file into the `canines` folder.
+
+The command `cp coyote.txt canines` will create a copy of `coyote.txt` in the folder `canines`.
+
+The command `mv -r coyote.txt canines` will raise an error since `-r` is not one of the options of the command `mv`.
+
+The command `cp -r coyote.txt canines` will **also** create a copy of `coyote.txt` in the folder `canines`. However the flag `-r` is not necessary here because `coyote.txt` is a file and not a directory.
+</div>
+***
 
 ## Additional Resources
 
