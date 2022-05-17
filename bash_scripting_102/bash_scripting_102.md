@@ -303,11 +303,25 @@ mv: rename blue_animals to blue_animals/blue_animals: Invalid argument
 
 While there is a specific function for renaming files and folders, the easiest way to rename a file is to again use the `mv` function.
 
+Maybe we want to rename `koala.txt` to be `koala_bear.txt`. The `mv` function lets us do this by simply moving the file currently named `koala.txt` to a new file in the same location called `koala_bear.txt`:
 
+```
+mv koala.txt koala_bear.txt
+```
 
+<div class = "options">
+You can also use the global location names for your files or folders. In the example above we could have gotten the same result with
 
-### Copying files
+```
+mv ~/Downloads/learning_bash-main/koala.txt ~/Downloads/learning_bash-main/koala_bear.txt
+```
+The benefit to using the global names is that you can run commands with global names from anywhere, you don't have to be in the folder containing the files. The downside is that you have to make sure you type a much longer name correctly.
 
+</div>
+
+### Copy files with `cp`
+
+### Copy folders with `cp -r`
 
 ### Quiz: Organizing files
 
