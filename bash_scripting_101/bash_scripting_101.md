@@ -6,7 +6,7 @@ version:  1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
-title: Bash Scripting 101
+title: Bash 101
 comment:  This course will focus on accessing a command line program and running shell scripts on your home computer and learning how to navigate your file system as well as editing and searching files.
 
 long_description: This course is designed to be both an introduction to bash for those who are total newbies as well as refresher for those some with experience running code who want a more solid command of the basics.
@@ -27,7 +27,7 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/sty
 script: https://kit.fontawesome.com/83b2343bd4.js
 -->
 
-# Bash Scripting 101
+# Bash 101
 
 <div class = "overview">
 
