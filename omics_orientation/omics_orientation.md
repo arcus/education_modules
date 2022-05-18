@@ -115,6 +115,11 @@ As all of these biology domains that we have talked about so far are interconnec
 
 ## Additional Resources
 
+The website [genome.gov](genome.gov) has a variety of educational resources and infographics for reading more about various omics topics:
+
+* The [About Genomics](https://www.genome.gov/about-genomics) has overviews on genomes, genomics, and even a useful glossery of genomics-related terms.
+
+* They also have [a brief overview of transcriptomics](https://www.genome.gov/about-genomics/fact-sheets/Transcriptome-Fact-Sheet)
 
 
 ## References
