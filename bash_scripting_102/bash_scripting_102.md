@@ -226,6 +226,10 @@ The `find` function searches the names of all folders and files in the current d
 2. What you command will return all files with a `.dat` ending that contain the word `Weight`
 
 [[grep 'Weight' *.dat]]
+<script>
+  let input = "@input";
+  input == "grep \'Weight\' *.dat" || input == "grep \"Weight\" *.dat";
+</script>
 ***
 <div class = "answer">
 The `grep` function searches the contents of the files, in this case all of the files that end in `.dat` for the pattern `Weight`.
@@ -377,7 +381,7 @@ Copying a directory with `cp` requires the `-r` flag in order to copy all of its
 [[mv dog.txt wolf.txt canines]]
 <script>
   let input = "@input";
-  input == "mv dog.txt wolf.txt canines" || input == "cmv wolf.txt dog.txt canines";
+  input == "mv dog.txt wolf.txt canines" || input == "mv wolf.txt dog.txt canines";
 </script>
 ***
 <div class = "answer">
@@ -429,7 +433,7 @@ rm -r red_animals
 
 ### Quiz: Deleting files
 
-Which statements about the remove command `rm` are true?
+Which statements about the remove command `rm` are **TRUE**?
 
 [[ ]] The command `rm` moves files to your "Trash" folder.
 [[X]] To remove a folder and all of its contents you need to use `rm -r`.
@@ -474,4 +478,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash+Scripting+101%22)!
+We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash+Searching+and+Organizing+Files%22)!
