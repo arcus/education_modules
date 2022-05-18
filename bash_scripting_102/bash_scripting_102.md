@@ -235,7 +235,7 @@ The `grep` function searches the contents of the files, in this case all of the 
 
 ## Organizing files
 
-While it would be great if all of your files came into being in the location you will want them in forever and with the naming conventions you want to keep forever, that simply isn't it works. Even if you put every file you create in the correct location and give it a perfectly formatted name, you will at some point have to interact with files that someone else created.
+While it would be great if all of your files came into being in the location you will want them in forever and with the naming conventions you want to keep forever, that simply isn't the way it works. Even if you put every file you create in the correct location and give it a perfectly formatted name, you will at some point have to interact with files that someone else created.
 
 Just because a file is in one location, doesn't mean it has to stay there forever, nor does it's name need to be permanent. In this section we will learn and practice moving files around, copying files, and renaming files.
 
@@ -259,7 +259,7 @@ mv blue_jay.txt blue_animals
 
 Now you can use `cd` and `ls` to see that `blue_jay.txt` is now in `blue_animals`.
 
-Notice that we used the **relative** locations of `blue_animals` and the macaw file. We could also have used their global location. Let's see how we would use **global** locations to move the `blue_morpho.txt` file, currently in `blue_animals`, to the same location as the other animals.
+Notice that we used the **relative** locations of `blue_animals` and the `blue_jay.txt` file. We could also have used their global location. Let's see how we would use **global** locations to move the `blue_morpho.txt` file, currently in `blue_animals`, to the same location as the other animals.
 
 ```
 mv ~/Downloads/learning_bash-main/blue_animals/blue_morpho.txt ~/Downloads/learning_bash-main
@@ -407,7 +407,7 @@ The command `cp -r coyote.txt canines` will **also** create a copy of `coyote.tx
 
 If you are done with a file and sure you won't need it ever again, it might make sense to delete it.
 
-The command `rm` **remove**s and files listed after it from your computer. Maybe you don't actually want two different names for the same species of bear and want to delete the `brown_bear.txt` file we made earlier:
+The command `rm` **remove**s files listed after it from your computer. Maybe you don't actually want two different names for the same species of bear and want to delete the `brown_bear.txt` file we made earlier:
 
 ```
 rm brown_bear.txt
@@ -452,7 +452,7 @@ Which statements about the remove command `rm` are true?
 
 You can always use the manual command `man` to read the documentation of any command. Give it a try with `man cp`!
 
-Reading the manual isn't always the easiest was to get more comfortable with a programming language, so here are some other resources:
+Reading the manual isn't always the easiest way to get more comfortable with a programming language, so here are some other resources:
 
 - The Earth Lab at University of Colorado, Boulder has a nice [bash tutorial](https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/bash/bash-commands-to-manage-directories-files/) that can supplement and reenforce the learning you have done here.
 
