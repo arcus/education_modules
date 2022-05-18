@@ -208,7 +208,7 @@ polar_bear.txt:Ursus maritimus
 ```
 
 <div class = "learnmore">
-There are a lot of other ways to modify your search pattern... more in additional resources.
+The [origin of "grep"](https://en.wikipedia.org/wiki/Grep) is that it is **g**lobally searching for a **r**egular **e**xpression and **p**rinting the matching lines. In the text editor `ed` that was part part of the original Unix operating system from 1969, you could do these action with the command `g/re/p` and the name has stuck.
 </div>
 
 
