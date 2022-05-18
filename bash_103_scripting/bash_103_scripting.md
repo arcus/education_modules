@@ -58,57 +58,6 @@ Learners should be familiar with using a bash shell to navigate a directory syst
 You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer. Please follow the instructions appropriate for the computer you are using.
 
 
-## Searching files
-
-### `grep`
-
-`grep`: powerful search function to locate a string or pattern within a file or in a directory. Grep stands for global regular expression print.
-
-`grep 'panda' file 1 file 2 file 3` will search for the word "panda" in the three files we just created.
-
-### Character sequence wildcard `*`
-
-`*` character sequence wildcard. Very useful in running a command on all files with a given file extension as demonstrated in the mv example above.
-
-### Quiz: Searching files
-
-
-
-
-## Organizing files
-
-Just because you created a file in one location, doesn't mean it has to stay there forever.
-
-### Moving files
-
-Inside of `learning_bash`, create a new directory called `numbered_files`:
-
-```
-cd ~/learning_bash
-mkdir numbered_files
-```
-
-The `mv` command will move files from their current location to a new location. This command needs to know **what** you want to move and **where** you want to move it to.
-
-To move `file_1` to `numbered_files` run the command:
-
-```
-mv file_1 numbered_files
-```
-
-Now you can use `cd` and `ls` to see that `file_1` is now in `numbered_files`.
-
-You can also move multiple files at a time by entering them one after another, as long as the directory you want them to end up in is at the end.
-
-```
-mv file_2 file_3 numbered_files
-```
-
-### Renaming Files
-
-### Copying Files
-
-### Quiz: Organizing Files
 
 
 - `cat`: very powerful three-part function that allows a reader to view, combine (concatenate), or create a new version of a file
