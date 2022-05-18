@@ -454,6 +454,9 @@ You can always use the manual command `man` to read the documentation of any com
 
 Reading the manual isn't always the easiest was to get more comfortable with a programming language, so here are some other resources:
 
+- The Earth Lab at University of Colorado, Boulder has a nice [bash tutorial](https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/bash/bash-commands-to-manage-directories-files/) that can supplement and reenforce the learning you have done here.
+
+- MDN Web Docs, a project that documents a number of Web platform technologies has [a detailed crash course in bash](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line).
 
 
 
