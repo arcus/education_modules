@@ -320,6 +320,8 @@ You can also use the global location names for your files or folders. In the exa
 ```
 mv ~/Downloads/learning_bash-main/koala.txt ~/Downloads/learning_bash-main/koala_bear.txt
 ```
+Tip: You can scroll sideways to see all of the text in the code block!
+
 The benefit to using the global names is that you can run commands with global names from anywhere, you don't have to be in the folder containing the files. The downside is that you have to make sure to type a much longer name correctly.
 
 </div>
