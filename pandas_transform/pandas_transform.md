@@ -6,7 +6,7 @@ version:  0.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
-title: Module Title
+title: Using `pandas` for Tabular Data in python
 comment:  This is an introduction to tabular data in python using `pandas` DataFrames.
 long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
 estimated_time: 1 hour
@@ -159,13 +159,13 @@ Most people associate "pandas" with the large mammals [Ailuropoda melanoleuca](h
 
 ### Importing `pandas`
 
-**`import pandas`**
+**The pandas package**
 
 Because `pandas` isn't part of python, in order to use its tools you will need to **import** the pandas package at the beginning of each session you intend to use it.
 
 The code `import pandas` tells python that you want all of the commands and tools that `pandas` has to be available to you. For example `read_csv` is a  function in `pandas` and regular python will not recognize it! You will have to tell python that a command you are using is a `pandas` command by entering `pandas.read_csv`.
 
-**`as pd`**
+Rename `pandas` as `pd` by convention
 
 To make it easier to type out these commands, you can give the `pandas` package a different name when you import it using `as new_name`. While you could in theory pick any name you want, the standard abbreviation is `pd`.
 
@@ -287,9 +287,9 @@ import pandas as pd
 </lia-keep>
 </div>
 
-The `pandas` package can read most tabular data files and convert them into DataFrames. As long as your data is in place that the program can locate, either on your computer if you are running code on your computer, or in the cloud, all `pandas` needs to know is what type of file it is reading, and where to find that file.
+The `pandas` package can read most tabular data files and convert them into DataFrames. As long as your data is in a place that the program can locate (either on your computer if you are running code on your computer, or in the cloud) all `pandas` needs to know is what type of file it is reading, and where to find that file.
 
-For this modules we will be looking at some fake Covid-19 testing data. This data is saved as a csv file and is hosted on [GitHub](https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv).
+For this module we will be looking at some fake Covid-19 testing data. This data is saved as a [csv file hosted on GitHub](https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv).
 
 The `read_csv` function from the `pandas` library takes the location of the file as its argument. The path to the file, in this case a url, must be in quotes. Let's create a new DataFrame called `covid_testing` that will contain all of our fake Covid-19 testing data.
 
@@ -311,7 +311,7 @@ print(covid_testing)
 </lia-keep>
 </div>
 
-Unless you have an extremely wide browser window, the output above is broken into as many columns as it can fit at a time. Some interfaces will output the DataFrame and let you scroll right to see more columns, but this interface just prints as many columns as it can fit and then starts again with the next columns. Good thing it didnt't print all 15524 rows!
+Unless you have an extremely wide browser window, the output above is broken into as many columns as it can fit at a time. Some interfaces will output the DataFrame and let you scroll right to see more columns, but this interface just prints as many columns as it can fit and then starts again with the next columns. Good thing it didn't print all 15524 rows!
 
 When you print a DataFrame or Series you will see the first five rows and the last five rows of a DataFrame. If, like this one, it has more than 10 rows, the hidden rows will be indicated by ellipses. You can also ask for the first or last 5 rows of data using the methods `.head()` and `.tail()`. Try putting a number in the parentheses to get different numbers of rows.
 
@@ -476,6 +476,7 @@ import pandas as pd
 covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
 
 print(covid_testing.loc[11942, ["first_name","last_name"]])
+
 ```
 </div>
 ***
