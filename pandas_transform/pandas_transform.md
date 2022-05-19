@@ -8,7 +8,7 @@ language: en
 narrator: UK English Female
 title: Using `pandas` for Tabular Data in python
 comment:  This is an introduction to tabular data in python using `pandas` DataFrames.
-long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
+long_description: This module is for learners who have some familiarity with python, and want to learn how the `pandas` package can handle large tabular data sets. No previous experience with `pandas` is required, and only an introductory level understanding of python is assumed.
 estimated_time: 1 hour
 
 @learning_objectives  
@@ -92,7 +92,6 @@ Before starting this module it is useful for you to:
 
 * have some familiarity with [tabular data](tabular/data/module)
 * have an introductory level exposure to coding in [python](intro/to/python/module)
-* know how to run a [Jupyter notebook](link/here?).
 
 **Learning Objectives**
 
@@ -139,15 +138,6 @@ Code will not persist from one page to the next, and you can always refresh the 
 These cells will compute everything you ask them to, but will only output what you explicitly request using the `print()` command.
 </div>
 
-**Jupyter notebooks** This section depends on what makes sense for the [Hands on activity](#hands-on-activity)
-
-The longer hands-on exercises in this module are in a Jupyter notebook. The notebook is embedded into the module and you are welcome to do the exercises there. However this will not save your work if you want to come back and see what you did in a few days. If you want that ability, you have two options:
-
-1. If you have python on your computer, you can download he notebook and run it yourself.
-
-2. Make and account somewhere to run it in the cloud?
-
-
 
 ## The `pandas` Package
 
@@ -165,7 +155,7 @@ Because `pandas` isn't part of python, in order to use its tools you will need t
 
 The code `import pandas` tells python that you want all of the commands and tools that `pandas` has to be available to you. For example `read_csv` is a  function in `pandas` and regular python will not recognize it! You will have to tell python that a command you are using is a `pandas` command by entering `pandas.read_csv`.
 
-Rename `pandas` as `pd` by convention
+**Rename `pandas` to `pd`**
 
 To make it easier to type out these commands, you can give the `pandas` package a different name when you import it using `as new_name`. While you could in theory pick any name you want, the standard abbreviation is `pd`.
 
@@ -277,6 +267,12 @@ The tiny DataFrame we saw in the last section was exceptional in several ways. W
 
 * Real data is often missing entries.
 
+<div class = "important">
+For this module we will be looking at some fake Covid-19 testing data. Although this data is designed to mimic realistic data with plausible patterns and values, **there is no Protected Health Information in this data**. If you are a fan of the fictional series "Game of Thones," however, you might recognize some familiar characters.
+
+This data is saved as a [csv file hosted on GitHub](https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv).
+</div>
+
 ### Loading data
 @sage
 <div class="python_data_init">
@@ -289,7 +285,7 @@ import pandas as pd
 
 The `pandas` package can read most tabular data files and convert them into DataFrames. As long as your data is in a place that the program can locate (either on your computer if you are running code on your computer, or in the cloud) all `pandas` needs to know is what type of file it is reading, and where to find that file.
 
-For this module we will be looking at some fake Covid-19 testing data. This data is saved as a [csv file hosted on GitHub](https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv).
+The fake Covid-19 testing data we will use for the rest of this lesson is saved as a [csv file hosted on GitHub](https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv).
 
 The `read_csv` function from the `pandas` library takes the location of the file as its argument. The path to the file, in this case a url, must be in quotes. Let's create a new DataFrame called `covid_testing` that will contain all of our fake Covid-19 testing data.
 
@@ -364,6 +360,20 @@ print(covid_testing.columns)
 </div>
 
 The column names were imported with the `.csv` file. Since the original file didn't have labels for the rows, `pandas` automatically labeled them numerically 0 through 15523. If you imported tabular data that didn't have column headers, the column names would be numeric, the way the row indices are in our `covid_testing` DataFrame.
+
+<div class = "help">
+**What does that RangeIndex mean?**
+
+The `covid_testing.index` is `RangeIndex(start=0, stop=15524, step=1)`, but on the previous page we saw that the last row of this DataFrame is labeled 15523. Why is that?
+
+Python ranges can be confusing even for people who use them all the time. Some things to keep in mind are:
+
+- Python starts counting at 0.
+- Python ranges include their lower bounds.
+- Python ranges **do not include their upper bounds**.
+
+For example `range(0,4)` contains 4 elements. Those elements are 0,1,2, and 3.
+</div>
 
 ### Locating data with `.loc`
 
@@ -963,16 +973,10 @@ The method `.str.lower()` will make every entry in a column lower case. There ar
 
 </div>
 
-## Hands-On Activity
-Do I really have time for this in an hour? I suspect no....
-
-Question for QA-ers: Would it make sense to have option exercises here? a Jupyter notebook (embedded and with a link to download it).
-
-I could also add these to Additional resources instead with a "hey, you actually have to practice this stuff! try it out here!" message.
-
 ## Additional Resources
 
 The creators of the pandas package have [great tutorials](https://pandas.pydata.org/docs/getting_started/index.html) with very thorough examples.
+
 
 ## Feedback
 
