@@ -6,19 +6,17 @@ version:  1.0.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
-title:  Bash: Searching and Organizing Files
-comment:  This module will teach you how to use the bash shell to search and organize your files.
-long_description: This module is for people who have a little bit of experience with bash scripting and want to learn to use it's power to organize their file and folders.
+title:  Bash: Scripting Basics
+comment:  This module will teach you how to create and use simple bash scripts so to make repetitive tasks as simple as possible. If you have some experience with bash and want to learn how to save and reuse bash processes, this lesson is for you.
 estimated_time: 30 minutes
 
 @learning_objectives
 
 After completion of this module, learners will be able to:
 
-- Search existing files for particular character strings.
-- Search folders for files with certain titles.
-- Move files to new locations in a directory system.
-- Rename files.
+- Identify the structure of a bash script
+- Call bash scripts
+- Write simple bash scripts
 @end
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
@@ -26,7 +24,7 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/sty
 script: https://kit.fontawesome.com/83b2343bd4.js
 -->
 
-# Bash: Searching and Organizing Files
+# Bash: Scripting Basics
 
 <div class = "overview">
 
@@ -57,6 +55,41 @@ Learners should be familiar with using a bash shell to navigate a directory syst
 
 You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer. Please follow the instructions appropriate for the computer you are using.
 
+
+
+## What is a script?
+
+why are the so freakin cool?
+
+### Structure
+
+Title, shebang start line, end in `.sh`
+
+### Location
+
+`/bin` folder?
+
+### Quiz: Scripts
+
+
+## Calling a script
+downloadable examples?
+### Basic examples
+
+### Scripts that take arguments
+
+### Interactive scripts
+
+
+### Quiz: Calling scripts
+
+
+## Writing a script
+
+### Basic commands
+### Bash syntax
+
+### Quiz: Writing scripts
 
 
 
@@ -214,4 +247,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash+Scripting+101%22)!
+We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash+Scripting+Basic%22)!
