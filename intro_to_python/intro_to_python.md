@@ -177,7 +177,8 @@ The Spyder IDE has a console where you can see the output of your script without
 
 In this case, when you run the code we wrote before in the Spyder console, you'll be asked for an input value (I've supplied the name "Pythonista"). If you hit "Enter", the output of the second line of code will appear: `Welcome to Intro to Python, Pythonista!`.
 
-When you save a Python script, you'll use the file extension .py, and so to run the script in the example above, you would navigate to the correct directory in the Terminal (the folder where you've saved your file) and type `python intro-to-python.py`. If you are in the right place, you should see the output of your code!
+Python scripts are saved with the file extension `.py`.  
+To run the script in the example above using the Terminal, you would use Terminal to navigate to the correct directory(the folder where you've saved your file) and type `python intro-to-python.py`. If you are in the right place, you should see the output of your code!
 
 ### Quiz: Where to write Python code
 
