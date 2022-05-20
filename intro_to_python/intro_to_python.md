@@ -215,7 +215,7 @@ Jupyter notebooks contain code cells and text cells. The code cells are written 
 </div>
 ***
 
-## Accessing Python on Your Computer
+## Accessing Python
 
 Are you interested in learning more about Python, or even starting to work with it? Here are some tips for what you might want to do next!
 
