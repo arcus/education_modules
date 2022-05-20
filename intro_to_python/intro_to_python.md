@@ -131,7 +131,12 @@ While Python is human-readable and free, it is not point-and-click software, and
 
 ## Python Code
 
-Python can be written in several ways. You can write Python code interactively using your computer's Terminal program or Command Line, you can write scripts that include Python code, or you can create Python notebooks using [Jupyter](https://jupyter.org/) or online using [Google Colaboratory](https://colab.research.google.com/?utm_source=scs-index) (or "Colab" for short). In most cases, you'll need to start with downloading Python to your computer (the exception will be if you are using cloud-based solutions like Google Colab); which option you choose will come down to personal preference and your specific goals.
+Python can be written in several ways: 
+- You can write Python code interactively using your computer's Terminal program or Command Line
+- You can write scripts that include Python code 
+- You can create Python notebooks using [Jupyter](https://jupyter.org/) or online using [Google Colaboratory](https://colab.research.google.com/?utm_source=scs-index) (or "Colab" for short). 
+
+In most cases, you'll need to start with downloading Python to your computer (the exception will be if you are using cloud-based solutions like Google Colab); which option you choose will come down to personal preference and your specific goals.
 
 If you have Python installed on your computer, you can use your computer's Command Line or Terminal program to write Python code interactively using a Python **interpreter** by typing `python3`:
 
