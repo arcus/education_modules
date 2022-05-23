@@ -53,13 +53,18 @@ Learners should be familiar with using a bash shell to navigate a directory syst
 
 ## Lesson Preparation
 
-You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer. Please follow the instructions appropriate for the computer you are using.
+You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer.
 
 
 
 ## What is a script?
 
-why are the so freakin cool?
+A **script** is a small program that you can run on your computer.
+
+A **bash script** is a small program that automates bash commands and lets you run the same sequence of commands as many times as you want. It might be as simple as a program that takes a file you have downloaded and 
+
+
+You might have heard the terms "script" and "bash scripting" and "shell script" used interchangeably. This is probably because the bash language is most powerful when you use it to write short scripts that do exactly what you want.
 
 ### Structure
 
