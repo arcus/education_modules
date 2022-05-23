@@ -17,7 +17,7 @@ After completion of this module, learners will be able to:
 - Describe what Python is and why they might want to use it for research
 - Identify several ways to write Python code
 - Understand the purpose and utility of a Jupyter notebook
-- Download Python to their own computers
+- Download Python and Jupyter, and access a Python notebook in Google Colab
 
 @end
 
@@ -131,10 +131,10 @@ While Python is human-readable and free, it is not point-and-click software, and
 
 ## Python Code
 
-Python can be written in several ways: 
+Python can be written in several ways:
 - You can write Python code interactively using your computer's Terminal program or Command Line
-- You can write scripts that include Python code 
-- You can create Python notebooks using [Jupyter](https://jupyter.org/) or online using [Google Colaboratory](https://colab.research.google.com/?utm_source=scs-index) (or "Colab" for short). 
+- You can write scripts that include Python code
+- You can create Python notebooks using [Jupyter](https://jupyter.org/) or online using [Google Colaboratory](https://colab.research.google.com/?utm_source=scs-index) (or "Colab" for short).
 
 In most cases, you'll need to start with downloading Python to your computer (the exception will be if you are using cloud-based solutions like Google Colab); which option you choose will come down to personal preference and your specific goals.
 
@@ -143,22 +143,30 @@ If you have Python installed on your computer, you can use your computer's Comma
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_interactive.png?raw=true" height="500" width="800" alt="An example of Python code in the Terminal with the code 7 + 8, print('Hello World!'), and list(range(0,10))." data-alt="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_interactive.gif?raw=true">
+  <img src="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_interactive.png?raw=true" height="500" width="800" alt="An example of Python code in the Terminal with the following code: 7 + 8, after which the number 15 is displayed as output;  print('Hello World!'), which gives the output 'Hello World!'; and list(range(0,10)), which gives the output [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" data-alt="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_interactive.gif?raw=true">
 
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
 
-To exit the Python interpreter, type the command `exit()` and then press the Enter key. Alternatively, you can also close the interpreter window.
+To exit the Python interpreter, type the command `exit()` and then press the Enter key. Alternatively, you can simply close the interpreter window.
 
-Using Python interactively in the terminal can be useful if you want to quickly test out short pieces of code. Most of the time, though, you'll either be creating Python scripts or using a notebook instead.
+Using Python interactively in the terminal can be useful if you want to quickly test out short pieces of code. However, there are a couple of reasons why it's not useful to code interactively in the interpreter for longer or more complex code:
+
+* If you want to re-run a line of code, because you want to change the parameters or accidentally included a typo, you'll need to re-type the code again with your edits. There are some shortcuts you can use to scroll through previous lines of code in the Terminal/Command Line (the up arrow on your keyboard will usually do it) but it can still be time-consuming if the code your working with is longer than a line or two.
+
+* The code you write in the interpreter will disappear once you exit.
+
+Because of these reasons, you'll usually either be creating Python scripts or using a notebook instead.
 
 ## Python Scripts
 
-Instead of writing instructions one at a time, for more complex tasks you might want to write a Python **script**, a series of instructions that you can write out ahead of time and then run in order with one command. Scripts are often written using special text editors that are designed for writing code (such as Atom or Sublime) or full-featured integrated development environments, or IDEs for short (IDEs, such as PyCharm or Spyder, have more debugging and automation capabilities than text editors).
+For more complex tasks, it often makes sense to write a python **script** instead of writing instructions one at a time. Scripts allow you to write out a series of instructions ahead of time and then run in order with one command.
+
+Scripts are often written using special text editors that are designed for writing code (such as Atom or Sublime) or full-featured integrated development environments (IDEs) such as [PyCharm](https://www.jetbrains.com/pycharm/) or [Spyder](https://www.spyder-ide.org/), which have more debugging and automation capabilities than text editors.
 
 Here is a short script written in the Spyder IDE:
 <div style = "margin: 1rem; width: 750;">
-![Python code.](media/python_in_spyder.png?raw=true)
+![Simple Python code demonstrating the visual features of the Spyder IDE.](media/python_in_spyder.png?raw=true)
 </div>
 
 In the above example, our script asks for input of a user's name using the `input()` function, stores that input in a variable we've called `name`, and prints out a welcome message to the screen that includes the name the user entered using the code `print("Welcome to Intro to Python, "+name+"!")`.
@@ -170,7 +178,7 @@ The Spyder IDE has a console where you can see the output of your script without
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_spyder_console.png?raw=true" height="500" width="800" alt="Running a Python script in Spyder, showing a user typing 'Pythonista' in response to the prompt and showing the output 'Welcome to Intro to Python, Pythonista!'" data-alt="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_spyder_console.gif?raw=true">
+  <img src="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_spyder_console.png?raw=true" height="500" width="800" alt="Running the Python script discussed above in Spyder, showing a user typing 'Pythonista' in response to the prompt and showing the output 'Welcome to Intro to Python, Pythonista!'" data-alt="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_spyder_console.gif?raw=true">
 
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
@@ -196,11 +204,11 @@ While it is technically possible to write Python scripts in a Google document, a
 
 ## Jupyter Notebooks
 
-If you are interested in using Python for data analysis, you might want to write Python in a [Jupyter notebook](https://jupyter.org/) (which was previously called an IPython notebook). There are a couple of reasons why you should consider using Jupyter notebooks:
+If you are interested in using Python for data analysis, you might want to write Python in a [Jupyter notebook](https://jupyter.org/) (which was previously called an IPython notebook; this is where its file extension `.ipynb` comes from). There are a couple of reasons to consider using Jupyter notebooks:
 
-- Notebooks provide the best of both worlds between interactive and scripted code: code is written in chunks that can be run individually, with any output displayed beneath the code chunk.
+* Notebooks provide the best of both worlds between interactive and scripted code: code is written in chunks that can be run individually, with any output displayed beneath the code chunk.
 
-- You can intersperse sections of text, written in Markdown language, that can provide explanations and context for your code. This is especially valuable for data analysis, similar to a scientific notebook.
+* You can intersperse sections of text, written in Markdown language, that can provide explanations and context for your code. This is similar to a scientific notebook, and is especially valuable for data analysis.
 
 
 ### Quiz: Jupyter Notebooks
@@ -212,13 +220,13 @@ What are the components of a Jupyter notebook? Select all that apply.
 [[ ]] A console where you can write lines of code interactively
 ***
 <div class = "answer">
-Jupyter notebooks contain code cells and text cells. The code cells are written in Python and can contain as much or as little code as you want; the output of the code can be displayed directly beneath the code cell and the code can be edited and re-run at any time. The text cells are written in Markdown language and can provide more context and reasoning than can easily be done using comments. Additionally, using Markdown allows you to add useful formatting to your text. Jupyter notebooks do not have console, but since you can run each code cell independently, you don't really need one!
+Jupyter notebooks contain code cells and text cells. The code cells are written in Python and can contain as much or as little code as you want; the output of the code can be displayed directly beneath the code cell and the code can be edited and re-run at any time. The text cells are written in Markdown language and can provide more context and reasoning than can easily be done using comments. Additionally, using Markdown allows you to add useful formatting to your text. Jupyter notebooks do not have a console, but since you can run each code cell independently, you don't really need one!
 </div>
 ***
 
 ## Accessing Python
 
-Are you interested in learning more about Python, or even starting to work with it? Here are some tips for what you might want to do next!
+There are two primary ways to use Python: on your own computer, or in the cloud! Here are instructions for a way to get set up no matter which one you prefer.
 
 Installing Python On Your Own Computer
 =======
@@ -227,9 +235,9 @@ Your computer most likely will **not** have Python already installed. To check, 
 
 * You can [install Python using Anaconda](https://www.anaconda.com/products/individual) (recommended), a toolkit that gives you not only Python itself but also many other data science tools to help with coding, analysis, and visualization. The individual version of Anaconda is also free to download!
 
-  Once you've downloaded Anaconda, you can open the Anaconda Navigator; when you do, you'll see the the window below. Now you have access to lots of tools for working with Python!
+  Once you've downloaded Anaconda, you can open the Anaconda Navigator. When you do, you'll see the the window below. Now you have access to lots of tools for working with Python!
   <div style = "margin: 1rem; width: 750;">
-  ![Anaconda Navigator interface.](media/anaconda.png?raw=true)
+  ![Anaconda Navigator interface showing the base apps: Datalore, IBM Watson Studio Cloud, JupyterLab, Jupyter Notebook, Qt Console, Spyder, VS Code, Glueviz, Orange 3, PyCharm Professional, & RStudio.](media/anaconda.png?raw=true)
   </div>
 
 * You can also download [just the latest version of Python directly at python.org](https://www.python.org/downloads/). If you also want Jupyter or any IDEs, you will need to download those separately as well. [You can install Jupyter here](https://jupyter.org/install) and [here is a list of IDEs where you can write Python code](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments).
@@ -241,23 +249,23 @@ Your computer most likely will **not** have Python already installed. To check, 
 Using Python in the Cloud
 =======
 
-If you don't want to download Python and would instead prefer to continue practicing in the cloud, [Google Colaboratory](https://colab.research.google.com/), or Google Colab, provides an online Jupyter notebook environment that is completely free (though you do need a Google account). The introduction is actually written as a Colab notebook itself, so you can jump right in practicing. While it won't look exactly like the Jupyter notebook we used for this module, it will be a very similar experience, with a mix of code cells and text cells written in Markdown.
+If you prefer to continue practicing in the cloud instead of downloading Python, [Google Colaboratory](https://colab.research.google.com/), or Google Colab, provides an online Jupyter notebook environment that is completely free (though you do need a Google account). The introduction is actually written as a Colab notebook itself, so you can jump right in practicing. While it won't look exactly like the Jupyter notebook we used for this module, it will be a very similar experience, with a mix of code cells and text cells written in Markdown.
 
 You can even see what this module's notebook looks like in Google Colab! Once you've worked through the introduction above:
 
 1. Click "File" in the upper left-hand corner and then "Open notebook" in the drop-down menu:
 
-   ![Opening a notebook in Google Colab](media/google_colab_open_nb.png)
+   ![To open a notebook in Google Colab, click the File drop down menu in the top left, and select the second option: Open notebook](media/google_colab_open_nb.png)
 
  2. In the window that appears, one of the options at the top is **GitHub**. Click that, and you'll see where you can type in a GitHub URL.
  3. In that space, copy and paste the repository where these modules live: [https://github.com/arcus/education_modules](https://github.com/arcus/education_modules).
- 4. Click the magnifying glass to the far right. You should see a list of the Python notebooks in that repository.
+ 4. Click the magnifying glass to the far right to search. You should see a list of the Python notebooks in that repository.
  5. When you find the one you want, the button on the far right (an upward-slanting arrow in a box) will open the notebook file as a Colab notebook in another tab.
 
    <div style="display:none">@gifPreload</div>
 
    <figure>
-     <img src="https://github.com/arcus/education_modules/blob/update-intro-to-python/intro_to_python/media/github_repo_colab.png?raw=true" height="500" width="800" alt="Finding a GitHub repository in Google Colab" data-alt="https://github.com/arcus/education_modules/blob/update-intro-to-python/intro_to_python/media/github_repo_colab.gif?raw=true">
+     <img src="https://github.com/arcus/education_modules/blob/update-intro-to-python/intro_to_python/media/github_repo_colab.png?raw=true" height="500" width="800" alt="Finding a GitHub repository in Google Colab following the above instructions." data-alt="https://github.com/arcus/education_modules/blob/update-intro-to-python/intro_to_python/media/github_repo_colab.gif?raw=true">
 
    <figcaption>Click on the image to play the demo.</figcaption>
    </figure>
