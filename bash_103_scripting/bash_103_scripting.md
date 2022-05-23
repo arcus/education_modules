@@ -73,8 +73,6 @@ Setting up a User/Home Directory
 - It is recommended that you use the native user directory in the home directory on your computer. Your user directory contains a folder named “bin” which is the root directory of any unix like operating system.
 - Bin is short for “binary” and is where you can store any configuration or executable files for programs you run on the CLI. This will be a good place to store bash scripts (.sh files) once you have become comfortable executing commands and learning syntax.
 
-![Accessing the user/home directory on a Mac.](media/user_directory.png)
-
 
 `/bin` folder?
 
