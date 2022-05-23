@@ -57,29 +57,29 @@ You will get the most out of this lesson if you follow along with the examples a
 
 
 
+
+
 ## What is a script?
 
 A **script** is a small program that you can run on your computer.
 
-A **bash script** is a small program that automates bash commands and lets you run the same sequence of commands as many times as you want. It might be as simple as a program that takes a file you have downloaded and 
+A **bash script** is a small program that automates bash commands and lets you run the same sequence of commands as many times as you want. It might be as simple as a program that takes a file you have downloaded and standardizes the file name, or as complicated as creating new files based on information stored in several other files in other locations or doing complex tasks based on a user's typed responses to questions.
+
+You might have heard the terms "script" and "bash scripting" and "shell script" used interchangeably. This is probably because the bash language is most powerful when you use it to write short scripts that do exactly what you want. Once you get the hang of writing scripts, you can automate almost any work that you expect to need to use multiple times!
+
+### Recognizing a script
+
+You don't have to be able to write a script in order to use one, but you do need to know how to recognize one.
+
+The conventional file ending for a script is `.sh`. Usually a script will be informatively named, for example `fibonacci.sh` might be a script that computes the numbers in the Fibonacci sequence. Even though scripts don't have to use the file ending `.sh`, this is the most common way to name them so that you and your collaborators can locate all of the scripts quickly and easily (i.e. `find *.sh`).
+
+ and Title, shebang start line, end in `.sh`
+
+<div class = "warning">
+Using a script written by a trusted colleague can help you streamline your work without replicating their effort! But downloading a script off of the internet isn't a good idea unless you can look at the code and verify that it does what you think it should, and nothing else.
+</div>
 
 
-You might have heard the terms "script" and "bash scripting" and "shell script" used interchangeably. This is probably because the bash language is most powerful when you use it to write short scripts that do exactly what you want.
-
-### Structure
-
-Title, shebang start line, end in `.sh`
-
-### Location
-
-Setting up a User/Home Directory
-
-- As you get comfortable in bash, it is important to create a default home directory in an easily accessible place.
-- It is recommended that you use the native user directory in the home directory on your computer. Your user directory contains a folder named “bin” which is the root directory of any unix like operating system.
-- Bin is short for “binary” and is where you can store any configuration or executable files for programs you run on the CLI. This will be a good place to store bash scripts (.sh files) once you have become comfortable executing commands and learning syntax.
-
-
-`/bin` folder?
 
 ### Quiz: Scripts
 
@@ -97,6 +97,17 @@ downloadable examples?
 
 
 ## Writing a script
+
+### Location
+
+Setting up a User/Home Directory
+
+- As you get comfortable in bash, it is important to create a default home directory in an easily accessible place.
+- It is recommended that you use the native user directory in the home directory on your computer. Your user directory contains a folder named “bin” which is the root directory of any unix like operating system.
+- Bin is short for “binary” and is where you can store any configuration or executable files for programs you run on the CLI. This will be a good place to store bash scripts (.sh files) once you have become comfortable executing commands and learning syntax.
+
+
+`/bin` folder?
 
 ### Basic commands
 ### Bash syntax
