@@ -41,7 +41,8 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This lesson assumes a working understanding of the bash shell. If you aren’t familiar with the bash shell, please review our [Command Line 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md) and/or the [Shell Genomics lesson by Data Carpentry](http://www.datacarpentry.org/shell-genomics/) before starting this lesson.
+This lesson assumes a working understanding of the bash shell.
+If you aren’t familiar with the bash shell, please review our [Command Line 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md) and/or the [Shell Genomics lesson by Data Carpentry](http://www.datacarpentry.org/shell-genomics/) before starting this lesson.
 
 This lesson also assumes some familiarity with biological concepts, including the structure of DNA, nucleotide abbreviations, and the concept of genomic variation within a population.
 
@@ -51,17 +52,19 @@ This lesson also assumes some familiarity with biological concepts, including th
 
 </div>
 
-## Lesson Preparation
+## Getting started with genomics
 
-If your module includes code learners may want to run, then give links to a pangeo binder here so they can start it up now. Also provide a link to the raw code so learners can download the code itself and run it on their own machines or copy it into a cloud server.
+Analysis of genomic sequencing data is different from many other kinds of analysis in several important ways:
 
-This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in R and python. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection. If you have R and/or python already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.r" download>download the code for this module to run offline</a>.
+- the data files are often so large that normal computing tools won't work to analyze them
+- there are special issues of data quality to consider that are specific to sequencing data
+- because of the unique challenges of genomics data, a number of specialized tools have been developed for each stage of the workflow, many of which have to be accessed via the command line
 
-If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity. We recommend using right-click to open it in a new tab or window, and then returning here to continue learning while the environment finishes loading. Here is the link:
+This module focuses specifically on how to set yourself up for genomics analysis; we won't actually start the analysis process here (there are related modules on that).
 
-[![Link to start Binder environment](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/main?urlpath=rstudio) **Click the "launch binder" button!**
 
-You don't have to do anything except come back here once the link opens in a new tab or window.
+As you progress through the material in this and related lessons, keep in mind that, even if you aren’t going to be doing this exact same workflow in your research, you will be learning some very important lessons about using command-line bioinformatic tools.
+What you learn here will enable you to use a variety of bioinformatic tools with confidence and greatly enhance your research efficiency and productivity.
 
 ## Using the command line
 
@@ -71,12 +74,9 @@ A lot of genomics analysis is done using command-line tools for three reasons:
 2) you will often need more compute power than is available on your personal computer, and connecting to and interacting with remote computers requires a command-line interface, and
 3) you will often need to customize your analyses, and command-line tools often enable more customization than the corresponding GUI tools (if in fact a GUI tool even exists).
 
-In a previous lesson, you learned how to use the bash shell to interact with your computer through a command line interface.
-In this lesson, you will be applying this new knowledge to carry out a common genomics workflow - identifying variants among sequencing samples taken from multiple individuals within a population.
+Before starting this lesson, you should have tried using the bash shell to interact with your computer through a command line interface.
+Now you will be applying this knowledge to carry out a common genomics workflow - identifying variants among sequencing samples taken from multiple individuals within a population.
 We will be starting with a set of sequenced reads (.fastq files), performing some quality control steps, aligning those reads to a reference genome, and ending by identifying and visualizing variations among these samples.
-
-As you progress through this lesson, keep in mind that, even if you aren’t going to be doing this same workflow in your research, you will be learning some very important lessons about using command-line bioinformatic tools.
-What you learn here will enable you to use a variety of bioinformatic tools with confidence and greatly enhance your research efficiency and productivity.
 
 ## The data
 
