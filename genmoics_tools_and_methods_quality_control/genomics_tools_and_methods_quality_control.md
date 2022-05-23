@@ -40,31 +40,26 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This lesson assumes a working understanding of the bash shell. If you haven’t already completed the Shell Genomics lesson, and aren’t familiar with the bash shell, please review those materials before starting this lesson.
+This lesson assumes a working understanding of the bash shell.
+If you aren’t familiar with the bash shell, please review our [Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md) module and/or the [Shell Genomics lesson by Data Carpentry](http://www.datacarpentry.org/shell-genomics/) before starting this lesson.
 
 This lesson also assumes some familiarity with biological concepts, including the structure of DNA, nucleotide abbreviations, and the concept of genomic variation within a population.
-
-This lesson uses data hosted on an Amazon Machine Instance (AMI). Workshop participants will be given information on how to log-in to the AMI during the workshop. Learners using these materials for self-directed study will need to set up their own AMI. Information on setting up an AMI and accessing the required data is provided on the Genomics Workshop setup page.
 
 **Learning Objectives**
 
 @learning_objectives
 
-For help articulating learning objectives, see [this guide to learning objectives, including lots of example verbs](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/).
-
 </div>
 
 ## Lesson Preparation
 
-If your module includes code learners may want to run, then give links to a pangeo binder here so they can start it up now. Also provide a link to the raw code so learners can download the code itself and run it on their own machines or copy it into a cloud server.
+This lesson uses data hosted on an Amazon Machine Instance (AMI).
+In order to run the code examples here, you will need to set up their own AMI.
+For step-by-step instructions, see the section on [setting up your computing environment in AWS](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/genomics-tools-and-methods-1/genomics_tools_and_methods/genomics_tools_and_methods.md#setting-up-your-computing-environment-in-aws) from the Genomics Tools and Methods: Introduction module.
 
-This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in R and python. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection. If you have R and/or python already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.r" download>download the code for this module to run offline</a>.
-
-If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity. We recommend using right-click to open it in a new tab or window, and then returning here to continue learning while the environment finishes loading. Here is the link:
-
-[![Link to start Binder environment](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/main?urlpath=rstudio) **Click the "launch binder" button!**
-
-You don't have to do anything except come back here once the link opens in a new tab or window.
+<div class = "important">
+**Note:** If you made an AWS account and set up the AMI instance for a previous genomics module, you won't need to set it up again. 
+</div>
 
 ## Bioinformatics workflows
 
