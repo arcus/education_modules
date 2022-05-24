@@ -65,15 +65,14 @@ We want to be able to search, move, and rename files during this module, but don
 
 **Download the files.**
 
-Download the [`learning_bash` directory](https://github.com/arcus/learning_bash) from GitHub. Once you go to the link:
+We will be using a directory called `learning-bash` that is publicly available on GitHub. If you have already downloaded this directory for use in another bash module, you do not need to download a fresh copy.
+
+Navigate in your browser to the [`learning_bash` directory](https://github.com/arcus/learning_bash) on GitHub. Once you follow the link:
 
 1. Click on the green **Code** button.
 2. Select **Download ZIP**
 3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`.
 4. Place this new folder `learning_bash-main` somewhere you can easily find it. In the examples we will assume that `learning_bash-main` is in the Downloads directory, but you are welcome to move it somewhere else that is convenient for you to navigate to in your command line interface.
-
-
-
 
 ## What is a script?
 
