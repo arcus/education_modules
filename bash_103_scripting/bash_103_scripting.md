@@ -107,9 +107,9 @@ Whether or not a script has the traditional `.sh` ending to its file name, you s
 The two symbol sequence `#!` is called a [**shebang**](https://en.wikipedia.org/wiki/Shebang_(Unix) and without it your computer wouldn't know that it is expected to run what follows as code.
 
 <div class = "learnmore">
-The symbol [`#` has many names](https://en.wikipedia.org/wiki/Number_sign#). You might be most familiar with it as a "hashtag," "number sign," or the "pound sign." In the context of coding it is usually called either a "hash" or, borrowing from musical notation, a "sharp."
+The symbol `#` has [many names](https://en.wikipedia.org/wiki/Number_sign#). You might be most familiar with it as a "hashtag," "number sign," or the "pound sign." In the context of coding it is usually called either a "hash" or, borrowing from musical notation, a "sharp."
 
-In the context of coding, the symbol [`!`] is called a "bang." The word shebang is a shortening of either ha**sh**-bang or **sh**arp-bang.
+In the context of coding, the symbol `!` is called a "bang." The word shebang is a shortening of either ha**sh**-bang or **sh**arp-bang.
 </div>
 
 
@@ -125,13 +125,13 @@ Which of the following statements about scripts are TRUE?
 ***
 <div class = "answer">
 
-**A script isn't very useful because you could just as easily run code by typing it in line by line.**
+**A script isn't very useful because you could just as easily run code by typing it in line by line.** FALSE: You can speed up the process a lot, and avoid typos, but using a script to automate procedures you want to do multiple times!
 
-**The standard file ending for a script file is `.sh`.**
+**The standard file ending for a script file is `.sh`.** TRUE: Although the file ending doesn't impact what the script does, ending the file name with `.sh` is standard practice.
 
-**Every bash command is a script.**
+**Every bash command is a script.** FALSE: Even though bash is a "scripting language," the word "script" refers to a small program, not an individual bash command.
 
-**If you are going to want to do a particular sequence of commands many times, a script can help you by automating that sequence.**
+**If you are going to want to do a particular sequence of commands many times, a script can help you by automating that sequence.** TRUE
 </div>
 ***
 
