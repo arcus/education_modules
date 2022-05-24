@@ -8,16 +8,17 @@ language: en
 narrator: UK English Female
 title: Omics Orientation
 comment: This module provides a brief introduction to omics and its associated fields.
-long_description: Omics is a wide-reaching field, with many different subfields. This module aims to disambiguate several omics-related topics and discuss some of the most popular omics research fields.
-estimated_time: 20m
+long_description: Omics is a wide-reaching field, with many different subfields. This module aims to disambiguate several omics-related terms and topics, discuss some of the most popular omics research fields, and examine the challenges of and caveats for omics research.
+estimated_time: 15m
 
 @learning_objectives
 
 After completion of this module, learners will be able to:
 
 - Define what omics is and explain why a researcher might choose an omics approach
+- Identify several popular omics domains
 - Describe some challenges and caveats of omics research
-- Describe several popular omics domains
+
 
 @end
 
@@ -52,7 +53,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 ## What is "Omics"?
 
 <div class = "learnmore">
-Much of the content of this module, particularly regarding omics domains, was derived from an article by Hasin *et al.* published in the journal *Genome Biology*. The citation is below and the article is open source if you are interesting in reading more about this topic.
+Much of the content of this module, particularly the definitions of specific omics domains, was derived from an article by Hasin *et al.* published in the journal *Genome Biology*. The citation is below and the article is open source if you are interesting in reading more about this topic.
 
 <div style = "margin-left: 40px; text-indent: -40px; font-size:0.8em;">
 
@@ -66,7 +67,7 @@ Hasin, Y., Seldin, M. & Lusis, A. Multi-omics approaches to disease. Genome Biol
 
 ### Why study omics?
 
-While studying single molecules or genetic loci is certainly valuable, biological processes and diseases are generally complicated and are rarely explained by variation in just one component of a system. Some diseases and disorders are polygenic (or are due at least in part to contributions from multiple genes), and many are believed to result from changes in gene regulation rather than changes in the genes themselves. Furthermore, these variations contribute to individual phenotypes in various ways; genetic background and environment play their own roles! In short, there are a lot of moving parts, and studying omics can give researchers a "global" view of biology, which can help explain such things as why some variants cause disease in some individuals and not others, or how the components of a biological system work together to form a whole.
+While studying single molecules or genetic loci is often valuable, biological processes and diseases are generally complicated and are rarely explained by variation in just one component of a system. For example, some genetic diseases and disorders are polygenic (due at least in part to contributions from multiple genes), and many are believed to result from changes in gene regulation rather than changes in the genes themselves. Furthermore, these variations contribute to individual phenotypes in various ways; genetic background and environment play their own roles! In short, there are a lot of moving parts, and studying omics can give researchers a "global" view of biology. This can help explain such things as why some variants cause disease in some individuals and not others, or how the components of a biological system work together to form a whole.
 
 ### Quiz: What is omics?
 
@@ -80,35 +81,13 @@ While there is often value in simplifying the study of biological phenomena to o
 </div>
 ***
 
-## Caveats and Challenges
-
-While omics approaches can be powerful, this doesn't mean that an omics approach is always the "best", nor that omics studies are guaranteed to provide every answer to every question! There are several caveats to be aware of when planning an omics study, or reading about one:
-
-* Heterogeneity of populations: According to Hasin et al., "[i]nsights gained from omics approaches are mostly comparative" (2017), meaning that omics studies involve comparing groups to each other (such as "disease vs. healthy" or "treatment vs control", for example). Heterogeneity in any of these populations makes it difficult to distinguish important differences, or "signal", from unrelated variation, also called "noise." Because of the amount of data being analyzed in omics studies, this problem can be amplified compared to traditional approaches.
-
-* Confounding variables: Omics allows researchers to ask complex questions with many variables, but that doesn't mean studies can include every possible variable. Variables that researchers don't know about or don't measure can still be contributing to the effect in question. Any conclusions drawn from the results of an omics study (or any scientific study) should account for this possibility.
-
-* Reproducibility: Due to the amount and complexity of the data in omics studies, the analysis process can require many steps, and there will be differences in workflows between studies. This means that results sometimes can't be reproduced from one study to another.
-
-### Quiz: Caveats and Challenges
-
-True or False: A well-designed omics study will allow a researcher to pinpoint the cause of a specific disease in an individual.
-
-[( )] TRUE
-[(X)] FALSE
-***
-<div class = "answer">
-While a well-designed omics study might offer some insight into factors that could contribute to the disease in question (which in turn could reveal promising treatment targets or more information about disease prognosis), study populations are simply too heterogeneous and there are too many possible variables for a study to lead to a definite conclusion about a specific individual. 
-</div>
-***
-
 ## Omics topics
 
 There are many "omics" topics that correspond to various biological domains. The following sections will discuss some of the most popular topics: genomics, transcriptomics, and metabolomics.
 
 ### Genomics
 
-As the name suggests, genomics is the study of **genomes**. A genome is the complete genetic information of an organism, and so the study of genomics is generally focused on identifying and studying the effects of genetic variants. In medicine, this can lead to a better understanding of variation in response to pharmacological agents or disease prognoses. One type of genomics study that is commonly conducted is a **genome-wide association study** (GWAS) which, according to the National Human Genome Research Institute, is "a research approach used to identify genomic variants that are statistically associated with a risk for a disease or a particular trait" (https://www.genome.gov/genetics-glossary/Genome-Wide-Association-Studies#:~:text=A%20genome%2Dwide%20association%20study,disease%20or%20a%20particular%20trait). In these studies, "thousands of individuals are genotyped for more than a million genetic markers, and statistically significant differences in minor allele frequencies between cases and controls are considered evidence of association" (Hasin et al., 2017).
+As the name suggests, genomics is the study of **genomes**. A genome is the complete genetic information of an organism, and so the study of genomics is generally focused on identifying and studying the effects of variants within this genetic information. In medicine, this can lead to a better understanding of variation in response to pharmacological agents or disease prognoses. A commonly conducted type of genomics study is called a **genome-wide association study** (GWAS) which, according to the National Human Genome Research Institute, is "a research approach used to identify genomic variants that are statistically associated with a risk for a disease or a particular trait" (https://www.genome.gov/genetics-glossary/Genome-Wide-Association-Studies#:~:text=A%20genome%2Dwide%20association%20study,disease%20or%20a%20particular%20trait). In these studies, "thousands of individuals are genotyped for more than a million genetic markers, and statistically significant differences in minor allele frequencies between cases and controls are considered evidence of association" (Hasin et al., 2017).
 
 Genomics vs. genetics
 =====
@@ -122,21 +101,30 @@ Bioinformatics is another word that is often used interchangeably with genomics,
 
 ### Transciptomics
 
-An organism's **transcriptome** is the RNA that is transcribed from the DNA, and **transcriptomics** is the qualitative (what transcripts are present) and quantitative (how much of each transcript is present) study of these RNA transcripts. While some RNA transcripts are the template to be translated into proteins, it is becoming increasingly recognized that many RNA transcripts have important biological roles beyond encoding proteins! And while every cell in an organism has the same genome, the transcritome will vary from cell to cell populations and can change in response to changes in the environment, such as disease or treatment. The primary technologies for studying transcriptomics are **microarray**, in which RNA fragments of known sequences are bound to a surface (or "chip") and the amount of each fragment is quantified, and **RNA-Seq**, in which RNA sequences (which can be known or unknown) are analyzed qualitatively and quantitatively using **next-generation sequencing** (in which millions of sequences can be run at one time).
+An organism's **transcriptome** is all of the RNA that is transcribed from that organism's DNA, and **transcriptomics** is the qualitative (which transcripts are present) and quantitative (how much of each transcript is present) study of these RNA transcripts. While some RNA transcripts are templates to be translated into proteins, it is becoming increasingly recognized that many RNA molecules have important biological roles beyond encoding proteins! And while every cell in an organism has the same genome, the transcriptome will vary from between cell populations and can change in response to changes in the environment, such as disease or treatment. The primary technologies for studying transcriptomics are **microarray**, in which RNA fragments of known sequences are bound to a surface (or "chip") and the amount of each fragment is quantified, and **RNA-Seq**, in which RNA sequences (which can be known or unknown) are analyzed qualitatively and quantitatively using **next-generation sequencing** (in which millions of sequences can be run at one time).
 
 ### Proteomics
 
-Proteomics is the study of a cell's or organism's set of proteins. This involves not only quantifying how much of each protein is present, but also how they interact with each other and other molecules as well as how they are modified (a protein's function and regulation can often be affected by post-translation modifications). Like a cell's transcriptome, the **proteome** of a cell (or organism) is constantly changing in response to changing conditions. The most common high-throughput method of studying the proteome is **mass spectrometry** (often called mass spec), in which proteins or protein fragments are **ionized** (or charged) and then separated based on their mass-to-charge ratio. For more information about protein mass spectrometry, check out [this beginner's guide to protein mass spec](https://portlandpress.com/biochemist/article/42/5/64/226371/A-beginner-s-guide-to-mass-spectrometry-based).
+Proteomics is the study of a cell or organism's complete set of proteins. This involves quantifying how much of each protein is present, how they interact with each other and other molecules, and how the proteins are modified (a protein's function and regulation can often be affected by post-translation modifications). Like a cell's transcriptome, the **proteome** of a cell (or organism) is constantly shifting in response to changing conditions. The most common high-throughput method of studying the proteome is **mass spectrometry** (often called mass spec), in which proteins or protein fragments are **ionized** (or charged) and then separated based on their mass-to-charge ratio. For more information about protein mass spectrometry, check out [this beginner's guide to protein mass spec](https://portlandpress.com/biochemist/article/42/5/64/226371/A-beginner-s-guide-to-mass-spectrometry-based).
 
 ### Other topics
 
-A few other omics topics that you may come across include
+A few other omics topics that you may encounter include:
 
 * Epigenomics: The study of a cell or organism's **epigenome**, or the specific set of proteins and other molecules that bind to and regulate DNA.
 
 * Metabolomics: The study of the set of small molecules in a cell known as **metabolites** that result from cellular metabolism.
 
 * Microbiomics: The study of a system's microorganisms, such as those that live in the human digestive system.
+
+
+### Multi-omics
+
+In "Multi-omics approaches to disease", Hasin et al. write:
+
+>Each type of omics data, on its own, typically provides a list of differences associated with the disease. These data can be useful both as markers of the disease process and to give insight as to which biological pathways or processes are different between the disease and control groups.
+
+All of these biology domains that we have talked about so far are interconnected, and so it is perhaps not very surprising that there are circumstances in which it makes sense to take a **multi-omic** approach for a particular study. Biological processes are complex and can rarely be explained by just one set of molecules. Perhaps a disease-associated genomic variant might be due to contributions of differential regulation (the realm of transcriptomics) and/or changes in protein expression (which might be elucidated by proteomic analysis). A study into a specific disease might wish to examine all of the various biological processes that are altered, from cellular metabolism to gene expression. There are a variety of ways in which multiple omics domains might contribute to a more thorough understanding of biological processes!
 
 ### Quiz: Omics topics
 
@@ -152,13 +140,28 @@ Transcriptomics is the study of the RNA transcripts in a system, which is consid
 </div>
 ***
 
-## Multi-omics
+## Caveats and Challenges
 
-In "Multi-omics approaches to disease", Hasin et al. write:
+While omics approaches can be powerful, this doesn't mean that an omics approach is always the "best", nor that omics studies are guaranteed to provide every answer to every question! There are several caveats to be aware of when planning or reading about an omics study:
 
->Each type of omics data, on its own, typically provides a list of differences associated with the disease. These data can be useful both as markers of the disease process and to give insight as to which biological pathways or processes are different between the disease and control groups.
+* Heterogeneity of populations: According to Hasin et al., "[i]nsights gained from omics approaches are mostly comparative" (2017), meaning that omics studies involve comparing groups to each other (such as "disease vs. healthy" or "treatment vs control", for example). Inherent heterogeneity in any of these populations makes it difficult to distinguish important differences, or "signal", from unrelated variation, also called "noise." Because of the amount of data being analyzed in omics studies, this problem can be amplified compared to traditional approaches.
 
-All of these biology domains that we have talked about so far are interconnected, and so it is perhaps not very surprising that there are circumstances in which it makes sense to take a **multi-omic** approach for a particular study. Biological processes are complex and can rarely be explained by just one set of molecules. Perhaps a disease-associated genomic variant might be due to contributions of differential regulation (the realm of transcriptomics) and/or changes in protein expression (which might be elucidated by proteomic analysis). A study into a specific disease might wish to catalog all of the various biological processes that are altered, from cellular metabolism to gene expression. There are a variety of ways in which multiple omics domains might contribute to a more thorough understanding of biological processes!
+* Confounding variables: Omics allows researchers to ask complex questions with many variables, but that doesn't mean studies can include every possible variable. Variables that researchers don't know about or don't measure can still be contributing to the effect in question. Any conclusions drawn from the results of an omics study (or any scientific study) should account for this possibility.
+
+* Reproducibility: Due to the amount and complexity of the data in omics studies, the analysis process can require many steps, and there will be differences in workflows between studies. This means that results sometimes can't be reproduced from one study to another.
+
+### Quiz: Caveats and Challenges
+
+True or False: A well-designed omics study will allow a researcher to pinpoint the cause of a specific disease in an individual.
+
+[( )] TRUE
+[(X)] FALSE
+***
+<div class = "answer">
+While a well-designed omics study might offer some insight into factors that could contribute to the disease in question (which in turn could reveal promising treatment targets or more information about disease prognosis), study populations are simply too heterogeneous and there are too many possible variables for a study to lead to a definite conclusion about a specific individual.
+</div>
+***
+
 
 ## Additional Resources
 
