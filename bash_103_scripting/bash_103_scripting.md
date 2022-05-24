@@ -53,8 +53,24 @@ Learners should be familiar with using a bash shell to navigate a directory syst
 
 ## Lesson Preparation
 
-You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer.
+You will get the most out of this lesson if you follow along with the examples and try out the commands.
 
+**Open a bash shell.**
+
+If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash 101](link/here) module.
+
+<div class = "important">
+We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
+</div>
+
+**Download the files.**
+
+Download the [`learning_bash` directory](https://github.com/arcus/learning_bash) from GitHub. Once you go to the link:
+
+1. Click on the green **Code** button.
+2. Select **Download ZIP**
+3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`.
+4. Place this new folder `learning_bash-main` somewhere you can easily find it. In the examples we will assume that `learning_bash-main` is in the Downloads directory, but you are welcome to move it somewhere else that is convenient for you to navigate to in your command line interface.
 
 
 
@@ -67,25 +83,66 @@ A **bash script** is a small program that automates bash commands and lets you r
 
 You might have heard the terms "script" and "bash scripting" and "shell script" used interchangeably. This is probably because the bash language is most powerful when you use it to write short scripts that do exactly what you want. Once you get the hang of writing scripts, you can automate almost any work that you expect to need to use multiple times!
 
-### Recognizing a script
+<div class = "learnmore">
+A **scripting language** is a type of programming language that, like bash or python, does not need to be compiled in order for your code to run.
+</div>
+
+
+### Recognizing a bash script
 
 You don't have to be able to write a script in order to use one, but you do need to know how to recognize one.
 
+**File name**
+
 The conventional file ending for a script is `.sh`. Usually a script will be informatively named, for example `fibonacci.sh` might be a script that computes the numbers in the Fibonacci sequence. Even though scripts don't have to use the file ending `.sh`, this is the most common way to name them so that you and your collaborators can locate all of the scripts quickly and easily (i.e. `find *.sh`).
 
- and Title, shebang start line, end in `.sh`
+**First line**
+
+Whether or not a script has the traditional `.sh` ending to its file name, you should be able to tell if a file is a script by looking at the first line of the file. The first line of a script tells your computer that it should run the rest of the file as code, and specifies what language the script in. Later in this lesson we will be working with scripts with the first line:
+
+```
+#! /usr/bin/bash
+```
+
+The two symbol sequence `#!` is called a [**shebang**](https://en.wikipedia.org/wiki/Shebang_(Unix) and without it your computer wouldn't know that it is expected to run what follows as code.
+
+<div class = "learnmore">
+The symbol [`#` has many names](https://en.wikipedia.org/wiki/Number_sign#). You might be most familiar with it as a "hashtag," "number sign," or the "pound sign." In the context of coding it is usually called either a "hash" or, borrowing from musical notation, a "sharp."
+
+In the context of coding, the symbol [`!`] is called a "bang." The word shebang is a shortening of either ha**sh**-bang or **sh**arp-bang.
+</div>
+
+
+### Quiz: Scripts
+
+Which of the following statements about scripts are TRUE?
+
+
+[[ ]] A script isn't very useful because you could just as easily run code by typing it in line by line.
+[[X]] The standard file ending for a script file is `.sh`.
+[[ ]] Every bash command is a script.
+[[X]] If you are going to want to do a particular sequence of commands many times, a script can help you by automating that sequence.
+***
+<div class = "answer">
+
+**A script isn't very useful because you could just as easily run code by typing it in line by line.**
+
+**The standard file ending for a script file is `.sh`.**
+
+**Every bash command is a script.**
+
+**If you are going to want to do a particular sequence of commands many times, a script can help you by automating that sequence.**
+</div>
+***
+
+## Calling a script
+
+downloadable examples?
 
 <div class = "warning">
 Using a script written by a trusted colleague can help you streamline your work without replicating their effort! But downloading a script off of the internet isn't a good idea unless you can look at the code and verify that it does what you think it should, and nothing else.
 </div>
 
-
-
-### Quiz: Scripts
-
-
-## Calling a script
-downloadable examples?
 ### Basic examples
 
 ### Scripts that take arguments
