@@ -70,12 +70,13 @@ What you learn here will enable you to use a variety of bioinformatic tools with
 
 A lot of genomics analysis is done using command-line tools for three reasons:
 
-1) you will often be working with a large number of files, and working through the command-line rather than through a graphical user interface (GUI) allows you to automate repetitive tasks,
-2) you will often need more compute power than is available on your personal computer, and connecting to and interacting with remote computers requires a command-line interface, and
-3) you will often need to customize your analyses, and command-line tools often enable more customization than the corresponding GUI tools (if in fact a GUI tool even exists).
+1. you will often be working with a large number of files, and working through the command-line rather than through a graphical user interface (GUI) allows you to **automate** repetitive tasks
+2. you will often need more compute power than is available on your personal computer, and connecting to and interacting with **remote** computers requires a command-line interface
+3. you will often need to **customize** your analyses, and command-line tools often enable more customization than the corresponding GUI tools (if in fact a GUI tool even exists)
 
 Before starting this lesson, you should have tried using the bash shell to interact with your computer through a command line interface.
 Now you will be applying this knowledge to carry out a common genomics workflow - identifying variants among sequencing samples taken from multiple individuals within a population.
+
 We will be starting with a set of sequenced reads (.fastq files), performing some quality control steps, aligning those reads to a reference genome, and ending by identifying and visualizing variations among these samples.
 
 ## The data
@@ -212,6 +213,11 @@ You can change your location in the upper right corner of the main AWS menu bar.
 4. For 'Choose an Instance Type' select **t2.medium**; then click 'Review and Launch'  
 
 <img src="media/logging-onto-cloud_3.png" width="500" alt="Screenshot of AMI launch wizard showing choosing t2.medium image type.">  
+
+<div class = "important">
+Unfortunately, the t2.micro, which is covered on AWS's free tier, is not powerful enough for this analysis.
+You'll need to select t2.medium.
+</div>
 
 5. Click on "6. Configure Security Group" in the top navigation menu. If this is your first time working with this AMI on your AWS account, choose "create a new security group". Name your security group something descriptive (for example "DC-genomics-AMI") and enter a description into the description box (for example "to use with DC genomics AMI").
 
