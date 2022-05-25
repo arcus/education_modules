@@ -74,7 +74,7 @@ Navigate in your browser to the [`learning_bash` directory](https://github.com/a
 3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`.
 4. Place this new folder `learning_bash-main` somewhere you can easily find it. In the examples we will assume that `learning_bash-main` is in the Downloads directory, but you are welcome to move it somewhere else that is convenient for you to navigate to in your command line interface.
 
-## Input and Output
+## Inputs and Outputs
 
 The purpose of any command is to take some input and do something with it. The input might a file, a folder, or something you typed in. In the case of `ls` and `pwd` the input is your location in your file system.
 
@@ -101,6 +101,9 @@ In your command line interface, use `cd` to navigate to the directory `learning_
 
 ### Writing output to a file
 
+The commands we just saw give us information and insight through their outputs, but that output isn't actually preserved anywhere. If we want to see it again, or use it for something later without re-running the command, we need to save that output in a file. This process is called "writing output to a file" or "redirecting output to a file" because instead of the output being shown to us in the command line interface, it is instead going to be written and saved to the file we name.
+
+The "greater than" symbol
 Create a new file `>`
 
 Append to an existing file `>>`
@@ -117,26 +120,6 @@ With smaller files, the benefits of using pipes over making intermediate files a
 ### Using the pipe `|`
 
 ### Quiz: linking with `|`
-
-
-
-### Basic commands
-### Bash syntax
-
-
-  - `echo`: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
-
-
-#### Writing output to a file with `>`
-- `>` takes the output of the command you executed in the terminal and places it in a new file
-
-#### Linking commands with `|`
-
-- `|` takes the output of one command and passes it to the next command in the sequence. Allows for integrating of commands
-
-#### Defining variables with `$`
-- `$` used to define a variable expression as used in the echo example above.
-
 
 
 ## Additional Resources
