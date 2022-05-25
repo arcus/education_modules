@@ -6,10 +6,10 @@ version:  1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
-title: Bash 101
-comment:  This course will focus on accessing a command line program and running shell scripts on your home computer and learning how to navigate your file system as well as editing and searching files.
+title: Bash / Command Line 101
+comment:  This course will focus on accessing a command line program (or CLI, "command line interface") and running shell scripts on your home computer and learning how to navigate your file system as well as editing and searching files.
 
-long_description: This course is designed to be both an introduction to bash for those who are total newbies as well as refresher for those some with experience running code who want a more solid command of the basics.
+long_description: This course is designed to be both an introduction to bash / command line for those who are total newbies as well as refresher for those some with experience running code who want a more solid command of the basics.
 
 estimated_time: 40 minutes
 
@@ -27,7 +27,7 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/sty
 script: https://kit.fontawesome.com/83b2343bd4.js
 -->
 
-# Bash 101
+# Bash / Command Line 101
 
 <div class = "overview">
 
@@ -43,7 +43,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-Learners should be familiar with locating files and folders stored in a directory system.
+Learners should be familiar with locating files and folders stored in a directory system.  Our [Directories and File Paths](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#1) module can provide some help with gaining these skills.
 
 
 
@@ -58,15 +58,15 @@ Learners should be familiar with locating files and folders stored in a director
 
 You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer. Please follow the instructions appropriate for the computer you are using.
 
-While it is true that the bash shell is a powerful tool that can be used to make major changes on a computer, we won't be learning how to do any of that in this lesson. This is a zero risk exploration to get you comfortable with using the bash shell.
+While it is true that the bash shell is a powerful tool that can be used to make major changes on a computer, we won't be learning how to do any major changes in this lesson. Rather, this module provides a zero risk exploration to get you comfortable with using the bash shell.
 
 ### Mac Computers
 
 ![How to locate the terminal in Spotlight on a Mac.](media/terminal_in_mac.png)
 
-On a Mac computer, bash is the default login shell in the **Terminal** command line program.
+On a Mac computer, bash has been the default login shell in the **Terminal** command line program.
 
-1. Type "terminal" in your Mac spotlight search to pull up this program.
+1. Type "terminal" in your Mac Spotlight search (open via the Spotlight item in the menu bar or by pressing Command-spacebar) to pull up this program.
 
 2. The terminal may take a few seconds to start, once it is open you should see a blinking cursor where you can type.
 
@@ -131,13 +131,13 @@ A lot of organizational tasks that you might do with "point and click" programs,
 
 ### Why would I use it?
 
-If you have ever spent time painstakingly renaming files to prepare them for processing one at a time, then you know how difficult that task can be using point and click methods. Bash scripting can can make this kind of task easier, faster, and more accurate.
+If you have ever spent time painstakingly changing files to prepare them for processing one at a time (say, renaming files, or removing identifying information in the first few lines of each file, or replacing curly quotes with straight quotes via search and replace across many files), then you know how difficult it can be to manipulate multiple files using point and click methods. Bash scripting can can make this kind of task easier, faster, and more accurate.
 
 Shell scripting can be useful to researchers and others working with data:
 
-- Commands run on one’s local machine or on a training data set can be scaled up to working with large volumes of data in a **h**igh **p**erformance **c**omputing (hpc) or cloud hosted environment.
+- Commands run on one's local machine or on a training data set can be scaled up to working with large volumes of data in a **h**igh **p**erformance **c**omputing (HPC) or cloud hosted environment.
 
-- Shell scripts can call on multiple other programming languages, like R and python, to build pipelines that run across several software applications as well as enable a user to have greater facility with tools like Git and docker.
+- Shell scripts can call on multiple other programming languages, like R and Python, to build pipelines (multi-step processes) that use several software applications.  Shell scripts can also allow a user to work with tools like Git and Docker.
 
 - Adoption of shell scripting also reinforces the importance of having well-structured and well-named files and file directory structures.
 
@@ -165,7 +165,7 @@ To enter a command into the shell, type it in where the blinking cursor appears 
 
 ### Navigation Commands
 
-Just like when you navigate any file system, it is important to know where you are, see what files and folders are in that location, and move to other locations.
+Just like when you navigate any file system, it is important to know where you are, see what files and folders are in that location, and know how move to other locations.
 
 **Where am I?**
 
@@ -179,30 +179,30 @@ The bash shell doesn't show the icons of the files and directories in your prese
 
 The command `cd` lets you **c**hange **d**irectory. Unlike the previous two commands, `cd` requires you to provide additional information: the directory you want to move to. You can move to a location relative to your current location, or you can move anywhere directly if you know the path to get there.
 
-- Move to a directory relative to your present working directory:
+- Navigate to a directory relative to your present working directory:
 
   * If the directory `directory_name` is in your present working directory (i.e. it is one of the listed items when you enter `ls`) you can navigate into it with the command `cd directory_name`
 
-  * To move to the parent directory of your current location, use `cd ..`
+  * To navigate to the parent directory of your current location, use `cd ..`
 
-  * Use slashes `/` to link directions. For example `cd ../..` up to the the parent directory of your parent directory.
+  * Use slashes `/` to link more than one navigation. For example `cd ../..` will navigate you up to the the parent directory (`..`) of your parent directory (`..`).
 
   * It is possible to move up and then back down in your file hierarchy. For example `cd ../other_directory` would move you to the `other_directory` that shares the same parent directory as your current location.
 
-- Move to a directory using its file path:
+- Navigate to a directory using its file path:
 
   * To return to your home directory use `cd ~`
 
   * If you know how to get to the directory you want from your home directory, you can go directly there with `cd ~/fixed/path/to/directory`
 
 
-**Give it a try!** Use these commands to explore the directories on your computer. Try navigating around some files and folders that you are already familiar with to get comfortable with how they look through the bash shell.
+**Give it a try!** Use `cd`, `ls`, and `pwd` to explore the directories on your computer. Try navigating around some files and folders that you are already familiar with to get comfortable with how they look through the bash shell.
 
 ### Tab completion
 
-If it seems like there is an awful lot to make sure you are typing correctly  into your bash shell, you are right. Luckily you don't have to type everything out fully because you can use the `tab` key on your computer.
+If it seems like there is an awful lot to make sure you are typing correctly into your bash shell, you are right. Luckily you don't have to type everything out fully because you can use the `tab` key on your computer.
 
-Once you start typing the first few letters of a directory, press `tab`. The shell will automatically fill in as much as it can of what you are typing. For example if I have only two directories in my current location, named `my_directory` and `shared_directory`, I don't need to type out the full name of the directory I want to `cd` into. In fact since they start with different letters, `cd m` followed by the `tab` instead of the `enter` or `return` key will automatically be completed to the only possibility, `cd my_directory`.
+Once you start typing the first few letters of a directory, press `tab`. The shell will automatically fill in as much as it can of what you are typing in a process known as **tab completion**. For example, if you have only two directories in your current location, named `my_directory` and `shared_directory`, you don't need to type out the full name of the directory you want to `cd` into. In fact, since they start with different letters, `cd m` followed by the `tab` instead of the `enter` or `return` key will automatically be completed to the only possibility, `cd my_directory`.
 
 If there were another directory that started with the same few letters, the shell will guess as far as it can. For example if there were also a folder `my_random_files`, typing `cd m` followed by `tab` would prompt the shell to complete as much as it can: `cd my_` and then you could keep typing either an `r` or `d` followed by another `tab` to complete the line of code.
 
@@ -260,7 +260,7 @@ Some common types of plain text files you might have seen before are:
 | `.html` | html file |
 
 <div class = "learnmore">
-The file endings like `.txt`, `.csv`, or `.doc` (Word), `.xslx` (Excel) are the part of the file name that lets your computer know what type of program to use to open it. The ending doesn't actually impact the contents of the file, which is why we were able to create files like `my_file` in the previous section with no file ending at all.
+The file endings (or **extensions**) like `.txt`, `.csv`, or `.doc` (Word), `.xslx` (Excel) are the part of the file name that lets your computer know what type of program to use to open it. The ending doesn't actually impact the contents of the file, which is why we were able to create files like `my_file` in the previous section with no file ending at all.
 </div>
 
 
@@ -346,7 +346,7 @@ This is another sentence.
 **Give it a try!** Add some text to the files you already created!
 
 <div class = "warning">
-Make sure you use the two arrows in `>>`. Using only a single arrow will also write text to your file, but instead of appending it to the end of the file, it will replace the entire contents of the file with that new text.
+Make sure you use the two greater than signs (here, we'll call them "arrows") in `>>`. Using only a single arrow will also write text to your file, but instead of appending it to the end of the file, it will replace the entire contents of the file with that new text.
 </div>
 
 Next, we will see learn how to look at the contents of our file to ensure that it really does contain what we think it should.
