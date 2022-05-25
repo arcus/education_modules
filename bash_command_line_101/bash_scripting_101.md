@@ -479,6 +479,8 @@ The quotes around the text can also be safely omitted in this case, but that isn
 
 - [Reinforce Your New Knowledge through this Learning the Shell Page](https://linuxcommand.org/lc3_learning_the_shell.php)
 
+- Software Carpentries offers an open source course [introducing new users to the Unix Shell](https://swcarpentry.github.io/shell-novice/)
+
 ### The bash manual
 
 The bash manual is available to you whenever you are in a bash shell.  Entering `man command_name` reveals the documentation (`man` is short for "manual") for the function `command_name`.  This can be useful if you think a command might be useful and want to learn more about it, or have forgotten how to use a command or what its options are.
