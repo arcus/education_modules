@@ -71,7 +71,7 @@ While studying single molecules or genetic loci is often valuable, biological pr
 
 ### Quiz: What is omics?
 
-True or False: Omics gives you a narrow, simplified view of biological systems.
+True or False: Omics focuses on a narrow, simplified view of biological systems.
 
 [( )] TRUE
 [(X)] FALSE
@@ -87,7 +87,7 @@ There are many "omics" topics that correspond to various biological domains. The
 
 ### Genomics
 
-As the name suggests, genomics is the study of **genomes**. A genome is the complete genetic information of an organism, and so the study of genomics is generally focused on identifying and studying the effects of variants within this genetic information. In medicine, this can lead to a better understanding of variation in response to pharmacological agents or disease prognoses. A commonly conducted type of genomics study is called a **genome-wide association study** (GWAS) which, according to the National Human Genome Research Institute, is "a research approach used to identify genomic variants that are statistically associated with a risk for a disease or a particular trait" (https://www.genome.gov/genetics-glossary/Genome-Wide-Association-Studies#:~:text=A%20genome%2Dwide%20association%20study,disease%20or%20a%20particular%20trait). In these studies, "thousands of individuals are genotyped for more than a million genetic markers, and statistically significant differences in minor allele frequencies between cases and controls are considered evidence of association" (Hasin et al., 2017).
+As the name suggests, genomics is the study of **genomes**. A genome is the complete genetic information of an organism, and so the study of genomics is generally focused on identifying and studying the effects of variants within this genetic information. In medicine, this can lead to a better understanding of variation in response to pharmacological agents or disease prognoses. A commonly conducted type of genomics study is called a **genome-wide association study** (GWAS) which, [according to the National Human Genome Research Institute](https://www.genome.gov/genetics-glossary/Genome-Wide-Association-Studies#:~:text=A%20genome%2Dwide%20association%20study,disease%20or%20a%20particular%20trait), is "a research approach used to identify genomic variants that are statistically associated with a risk for a disease or a particular trait."  In these studies, "thousands of individuals are genotyped for more than a million genetic markers, and statistically significant differences in minor allele frequencies between cases and controls are considered evidence of association" (Hasin et al., 2017).
 
 Genomics vs. genetics
 =====
@@ -97,25 +97,27 @@ Though they are often mixed up or used interchangeably, genomics and genetics ar
 What about bioinformatics? Is that the same thing?
 =====
 
-Bioinformatics is another word that is often used interchangeably with genomics, but they are also not the same thing! Bioinformatics specifically refers to "using computer technology to collect, store, analyze and disseminate biological data and information, such as DNA and amino acid sequences or annotations about those sequences" (https://www.genome.gov/genetics-glossary/Bioinformatics). Bioinformatics makes the study of genomics and other omics disciplines possible.
+Bioinformatics is another word that is often used interchangeably with genomics, but they are also not the same thing! The National Human Genome Research Institute [defines](https://www.genome.gov/genetics-glossary/Bioinformatics) Bioinformatics as "using computer technology to collect, store, analyze and disseminate biological data and information, such as DNA and amino acid sequences or annotations about those sequences."  Bioinformatics makes the study of genomics and other omics disciplines possible.
 
 ### Transciptomics
 
-An organism's **transcriptome** is all of the RNA that is transcribed from that organism's DNA, and **transcriptomics** is the qualitative (which transcripts are present) and quantitative (how much of each transcript is present) study of these RNA transcripts. While some RNA transcripts are templates to be translated into proteins, it is becoming increasingly recognized that many RNA molecules have important biological roles beyond encoding proteins! And while every cell in an organism has the same genome, the transcriptome will vary from between cell populations and can change in response to changes in the environment, such as disease or treatment. The primary technologies for studying transcriptomics are **microarray**, in which RNA fragments of known sequences are bound to a surface (or "chip") and the amount of each fragment is quantified, and **RNA-Seq**, in which RNA sequences (which can be known or unknown) are analyzed qualitatively and quantitatively using **next-generation sequencing** (in which millions of sequences can be run at one time).
+An organism's **transcriptome** is all of the RNA that is transcribed from that organism's DNA, and **transcriptomics** is the qualitative (which transcripts are present) and quantitative (how much of each transcript is present) study of these RNA transcripts. While some RNA transcripts are templates to be translated into proteins, it is becoming increasingly recognized that many RNA molecules have important biological roles beyond encoding proteins! And while every cell in an organism has the same genome, the transcriptome will vary between cell populations and can change in response to changes in the environment, such as disease or treatment. The primary technologies for studying transcriptomics are **microarray**, in which RNA fragments of known sequences are bound to a surface (or "chip") and the amount of each fragment is quantified, and **RNA-Seq**, in which RNA sequences (which can be known or unknown) are analyzed qualitatively and quantitatively using **next-generation sequencing** (in which millions of sequences can be run at one time).
 
 ### Proteomics
 
-Proteomics is the study of a cell or organism's complete set of proteins. This involves quantifying how much of each protein is present, how they interact with each other and other molecules, and how the proteins are modified (a protein's function and regulation can often be affected by post-translation modifications). Like a cell's transcriptome, the **proteome** of a cell (or organism) is constantly shifting in response to changing conditions. The most common high-throughput method of studying the proteome is **mass spectrometry** (often called mass spec), in which proteins or protein fragments are **ionized** (or charged) and then separated based on their mass-to-charge ratio. For more information about protein mass spectrometry, check out [this beginner's guide to protein mass spec](https://portlandpress.com/biochemist/article/42/5/64/226371/A-beginner-s-guide-to-mass-spectrometry-based).
+Proteomics is the study of a cell or organism's complete set of proteins. This involves quantifying how much of each protein is present, how they interact with each other and other molecules, and how the proteins are modified (a protein's function and regulation can often be affected by post-translation modifications). Like a cell's transcriptome, the **proteome** of a cell (or organism) is constantly shifting in response to changing conditions. 
+
+The most common high-throughput method of studying the proteome is **mass spectrometry** (often called mass spec), in which proteins or protein fragments are **ionized** (or charged) and then separated based on their mass-to-charge ratio. For more information about protein mass spectrometry, check out [this beginner's guide to protein mass spec](https://portlandpress.com/biochemist/article/42/5/64/226371/A-beginner-s-guide-to-mass-spectrometry-based).
 
 ### Other topics
 
 A few other omics topics that you may encounter include:
 
-* Epigenomics: The study of a cell or organism's **epigenome**, or the specific set of proteins and other molecules that bind to and regulate DNA.
+* **Epigenomics:** The study of a cell or organism's **epigenome**, or the specific set of proteins and other molecules that bind to and regulate DNA.
 
-* Metabolomics: The study of the set of small molecules in a cell known as **metabolites** that result from cellular metabolism.
+* **Metabolomics:** The study of the set of small molecules in a cell known as **metabolites** that result from cellular metabolism.
 
-* Microbiomics: The study of a system's microorganisms, such as those that live in the human digestive system.
+* **Microbiomics:** The study of a system's microorganisms, such as those that live in the human digestive system.
 
 
 ### Multi-omics
@@ -144,11 +146,11 @@ Transcriptomics is the study of the RNA transcripts in a system, which is consid
 
 While omics approaches can be powerful, this doesn't mean that an omics approach is always the "best", nor that omics studies are guaranteed to provide every answer to every question! There are several caveats to be aware of when planning or reading about an omics study:
 
-* Heterogeneity of populations: According to Hasin et al., "[i]nsights gained from omics approaches are mostly comparative" (2017), meaning that omics studies involve comparing groups to each other (such as "disease vs. healthy" or "treatment vs control", for example). Inherent heterogeneity in any of these populations makes it difficult to distinguish important differences, or "signal", from unrelated variation, also called "noise." Because of the amount of data being analyzed in omics studies, this problem can be amplified compared to traditional approaches.
+* **Heterogeneity of populations:** According to Hasin et al., "[i]nsights gained from omics approaches are mostly comparative" (2017), meaning that omics studies involve comparing groups to each other (such as "disease vs. healthy" or "treatment vs control", for example). Inherent heterogeneity in any of these populations makes it difficult to distinguish important differences, or "signal", from unrelated variation, also called "noise." Because of the amount of data being analyzed in omics studies, this problem can be amplified compared to traditional approaches.
 
-* Confounding variables: Omics allows researchers to ask complex questions with many variables, but that doesn't mean studies can include every possible variable. Variables that researchers don't know about or don't measure can still be contributing to the effect in question. Any conclusions drawn from the results of an omics study (or any scientific study) should account for this possibility.
+* **Confounding variables:** Omics allows researchers to ask complex questions with many variables, but that doesn't mean studies can include every possible variable. Variables that researchers don't know about or don't measure can still be contributing to the effect in question. Any conclusions drawn from the results of an omics study (or any scientific study) should account for this possibility.
 
-* Reproducibility: Due to the amount and complexity of the data in omics studies, the analysis process can require many steps, and there will be differences in workflows between studies. This means that results sometimes can't be reproduced from one study to another.
+* **Reproducibility:** Due to the amount and complexity of the data in omics studies, the analysis process can require many steps, and there will be differences in workflows between studies. This means that results sometimes can't be reproduced from one study to another.
 
 ### Quiz: Caveats and Challenges
 
@@ -165,7 +167,7 @@ While a well-designed omics study might offer some insight into factors that cou
 
 ## Additional Resources
 
-The website [genome.gov](genome.gov) has a variety of educational resources and infographics for reading more about various omics topics:
+The website [genome.gov](https://www.genome.gov) has a variety of educational resources and infographics for reading more about various omics topics:
 
 * The [About Genomics](https://www.genome.gov/about-genomics) has overviews on genomes, genomics, and even a useful glossery of genomics-related terms.
 
