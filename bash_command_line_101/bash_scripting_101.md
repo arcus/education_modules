@@ -89,7 +89,7 @@ There are two sets of instructions for Windows users, one for users who have adm
 **Windows users with admin access**
 
 
-1. On a Windows machine, the WSL (Windows Subsystem for Linux) has Ubuntu, which is just a widely used flavor of Bash, installed as its default shell scripting environment. This is automatically installed on any Windows computer running Windows 10 or later.
+1. On a Windows machine, the WSL (Windows Subsystem for Linux) has Bash installed as its default shell scripting environment. This is automatically installed on any Windows computer running Windows 10 or later.
 
 2. To confirm this feature is enabled, check to see if developer mode is enabled in settings and WSL is turned on in Features. **If you are unable to turn on the developer mode, you may not have admin permissions. Follow the instructions for downloading Git Bash below.**
 
@@ -112,22 +112,18 @@ Once you have Git Bash installed, you are ready to get started learning how to u
 
 ## The bash shell
 
-Your computer has an **O**perating **S**ystem (OS), most commonly either Windows, Mac, or Linux. The core for the OS itself is called the kernel; it's the heart of how everything works in your computer, but you can't actually interface with it directly as a user. Programs that are designed to work with your OS can communicate with the kernel (Word, RStudio, Chrome, etc.), but if you want to do something outside of one of those programs you can't connect to the kernel directly yourself. That's where a shell comes in.
+Your computer has an **Operating System** (OS), most commonly either Windows, Mac, or Linux. The core for the OS itself is called the **kernel**; it's the heart of how everything works in your computer, but you can't actually interface with it directly as a user. Programs that are designed to work with your OS can communicate with the kernel (Word, RStudio, Chrome, etc.), but if you want to do something outside of one of those programs you can't connect to the kernel directly yourself. That's where a shell comes in.
 
-The shell is like a layer outside the kernel that you as a user can communicate with. You can type commands in the shell, and it will execute them for you in the kernel. Back when computers were newer and there were few ready programs available, the shell was the primary way to get stuff done on a computer.
+The **shell** is like a layer outside the kernel that you as a user can communicate with. You can type commands in the shell, and it will execute them for you in the kernel. Back when computers were newer and there were few ready programs available, the shell was the primary way to get stuff done on a computer.
 
 <div class = "learnmore">
 To learn more, check out this post for [an excellent breakdown of the difference between the shell and the kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/).
 </div>
-![Home directory of the shell in the default homebrew theme.](media/shell_home.png)
 
-### What is it?
+A **Command Line Interface** or **CLI** allows a user to pass a series of text (commands) to a program in order to execute code. Common command line interfaces include Terminal (Mac), WSL (Windows), and Git Bash (Windows). You opened one of these in the [lesson preparation](#lesson-preparation) for this module.
 
-A **C**ommand **L**ine **I**nterface or CLI allows a user to pass a series of text (commands) to a program in order to execute code. The execution of shell commands is known as shell scripting.
+**Bash** (or **unix shell**) is the free command line language we will be learning in this lesson. The phrase "Bash scripting" refers to executing Bash commands in a command line interface. "Shell scripting" similarly refers to running code in a shell.
 
-**Bash** (or **unix shell**) is a free command line language.  
-
-A lot of organizational tasks that you might do with "point and click" programs, like opening files and folders, editing or moving their contents, renaming files and folders, can be done in a bash shell. If you computer uses a Linux operating system, the bash shell may be the default way to do these things, but even if you are using a different operating system like iOS (Mac) or Windows, it can be very useful to use bash scripting.
 
 ### Why would I use it?
 
@@ -141,7 +137,7 @@ Shell scripting can be useful to researchers and others working with data:
 
 - Adoption of shell scripting also reinforces the importance of having well-structured and well-named files and file directory structures.
 
-### Quiz: Why bash?
+### Quiz: Why Bash?
 
 Which of the following are TRUE about bash/shell scripting? Select all that apply.
 
@@ -157,11 +153,13 @@ Bash, or shell, scripting is a way to interface with your computer's operating s
 
 
 
-## Navigating in bash
+## Navigating in Bash
 
-If you are new to bash scripting, it can take some adjustment to navigate by typing text. Once you get the hang of a few basic commands, this can be an easier way to deal with files and folders than dropdown menus and dragging icons from place to place. Even the language we use is a little different. In bash scripting you will hear folders refered to as **directories**.
+If you are new to bash scripting, it can take some adjustment to navigate by typing text. Once you get the hang of a few basic commands, this can be an easier way to deal with files and folders than dropdown menus and dragging icons from place to place. Even the language we use is a little different. In bash scripting you will hear folders referred to as **directories**.
 
 To enter a command into the shell, type it in where the blinking cursor appears and press `Enter` or `return` on your keyboard.
+
+![Home directory of the shell in the default homebrew theme.](media/shell_home.png)
 
 ### Navigation Commands
 
@@ -171,13 +169,31 @@ Just like when you navigate any file system, it is important to know where you a
 
 The command `pwd`, which stands for **p**resent **w**orking **d**irectory, will return the path through your directory system to your current location.
 
+```
+(base) C02GM4SBQ05N:~ drelliche$ pwd
+/Users/drelliche
+```
 **What is here?**
 
 The bash shell doesn't show the icons of the files and directories in your present working directory. Instead you will need to ask for a list of the directory's contents with the command `ls`.
 
-**How do I move around?**
+```
+(base) C02GM4SBQ05N:~ drelliche$ ls
+Applications
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+OneDrive - Children's Hospital of Philadelphia
+Pictures
+Public
+```
 
-The command `cd` lets you **c**hange **d**irectory. Unlike the previous two commands, `cd` requires you to provide additional information: the directory you want to move to. You can move to a location relative to your current location, or you can move anywhere directly if you know the path to get there.
+**How do I navigate around?**
+
+The command `cd` lets you **c**hange **d**irectory. Unlike the previous two commands, `cd` requires you to provide additional information: the directory you want to navigate to. You can move to a location relative to your current location, or you can move anywhere directly if you know the path to get there.
 
 - Navigate to a directory relative to your present working directory:
 
@@ -248,7 +264,15 @@ Even though the words "plain text" in the previous paragraph have some non-text 
 ```
 </div>
 
-If you have been using a particular program to write and edit your files like Word, RStudio, or Jupyter notebook, you will need to continue to use that program to edit those files. If you expect your project to grow substantially in size or number of files, having as much of your work as possible in plain text files may make scaling up easier.
+If you have been using a particular program to write and edit your files like Word, RStudio, or Jupyter notebook, you will likely want to continue to use that program to edit those files. You won't be able to easily see or change non-text attributes from your command line, and might even see some weird symbols representing unreadable characters. This is especially true if you try to view image files as plain text. Here are a few lines from a `.jpg` as viewed from a command line interface:
+
+```
+?b4ب???????"??ӠiS????#?d?<??Q?#?V?{%<??
+?TS?]^???j\???D?n???٘???8#????
+族?7??G?\???n????B?~?M1#?!????????)??U?*?%*?TUM4??e@??
+```
+
+If you expect your project to grow substantially in size or number of files, having as much of your work as possible in plain text files may make scaling up easier.
 
 Some common types of plain text files you might have seen before are:
 
@@ -260,7 +284,7 @@ Some common types of plain text files you might have seen before are:
 | `.html` | html file |
 
 <div class = "learnmore">
-The file endings (or **extensions**) like `.txt`, `.csv`, or `.doc` (Word), `.xslx` (Excel) are the part of the file name that lets your computer know what type of program to use to open it. The ending doesn't actually impact the contents of the file, which is why we were able to create files like `my_file` in the previous section with no file ending at all.
+The file endings (or **extensions**) like `.txt`, `.csv`, or `.doc` (Word), `.xslx` (Excel) are the part of the file name that lets your computer know what type of program to use to open it. The ending doesn't actually impact the contents of the file, which is why we will be able to create files like `my_file` in the next section with no file ending at all.
 </div>
 
 
