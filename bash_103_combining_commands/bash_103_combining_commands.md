@@ -8,7 +8,7 @@ language: en
 narrator: UK English Female
 title:  Bash: Combining Commands
 comment:  This module will teach you how to combine two or more commands in bash to create more complicated pipelines.
-long_description: This module is for learners who can use some basic bash commands and want to learn to how to combine multiple commands to make full use of the power of the bash language.
+long_description: This module is for learners who can use some basic bash commands and want to learn to how to use the output of one command as the input for another command.
 estimated_time: 30 minutes
 
 @learning_objectives
@@ -16,7 +16,7 @@ estimated_time: 30 minutes
 After completion of this module, learners will be able to:
 
 - Write the output of a command to a file using `>` and `>>`
-- Chain commands using the pipe `|`
+- Chain commands directly using the pipe `|`
 @end
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
@@ -40,7 +40,8 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-Learners should be familiar with using a bash shell and a few basic commands. This module will assume that learners have encountered bash the commands `find` and `grep`.
+Learners should be familiar with using a bash shell and [navigating a file system from the command line](link/to/bash101).
+This module will assume that learners have encountered bash the commands [`find` and `grep`](link/to/search/and/organize/module).
 
 
 **Learning Objectives**
@@ -73,32 +74,57 @@ Navigate in your browser to the [`learning_bash` directory](https://github.com/a
 3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`.
 4. Place this new folder `learning_bash-main` somewhere you can easily find it. In the examples we will assume that `learning_bash-main` is in the Downloads directory, but you are welcome to move it somewhere else that is convenient for you to navigate to in your command line interface.
 
-## Writing output to a file
+## Input and Output
 
-### Overwriting a file
+The purpose of any command is to take some input and do something with it. The input might a file, a folder, or something you typed in. In the case of `ls` and `pwd` the input is your location in your file system.
 
-### Appending output to the end of a file
+Some commands also return output based on the input. For example `grep` returns a list of lines that contain a given regular expression, but doesn't make any changes to any files.
 
-### Quiz: writing output to files
+As your bash scripting progresses, you may find or create commands that simultaneously change files and return and output, but the commands we will see in this lesson return output without modifying their input.
+
+### Examples
+
+In your command line interface, use `cd` to navigate to the directory `learning_bash-main` that you downloaded in the [lesson preparation](#lesson-preparation) section. Since the commands we are learning in this section don't make any changes to your files, definitely try them out on some of your own files too!
+
+**Word count**
+`wc`
+
+**First and last lines of a file**
+`head`
+`tail`
+
+**Sorting**
+`sort`
+
+**Unique occurrences**
+`uniq`
+
+### Writing output to a file
+
+Create a new file `>`
+
+Append to an existing file `>>`
+
+### Quiz: inputs and outputs
+
 
 ## Linking commands
+
+We could link commands by writing the output of one command to a file, and then running another command on that file. However if we don't actually need that intermediate file it is possible to speed up the process by passing the output of one command directly to another using a "pipe."
+
+With smaller files, the benefits of using pipes over making intermediate files are mostly from having fewer commands to type and run. But if you start working with really large datasets, maybe you are working in an "omics" field like genomics or metabolomics, creating and saving intermediate files, as well as writing and reading them, can use significant time and energy.  
 
 ### Using the pipe `|`
 
 ### Quiz: linking with `|`
 
 
+
 ### Basic commands
 ### Bash syntax
 
-- `~` shortcut for your home directory
-- `.` shortcut for your current directory
-- `..` shortcut for your previous directory
-  The above three shortcuts are highly useful for executing scripts in the proper location once you are collaborating in an active project with multiple files and folders.
 
   - `echo`: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
-
-    ![Echo variable example demonstrating how to print and set the price of a pint.](media/echo_example_large.png)
 
 
 #### Writing output to a file with `>`
