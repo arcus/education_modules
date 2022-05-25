@@ -92,7 +92,7 @@ When statistical concepts are referenced in the lesson, links to learn more are 
 
 This module also assumes some basic familiarity with python, including
 
-* installing and importing libraries
+* installing and importing python modules
 * reading in data
 * manipulating data frames, including calculating new columns
 
@@ -105,15 +105,10 @@ If you are brand new to python (or want a refresher) consider starting with [Int
 </div>
 
 ## Lesson Preparation
-
-You will be doing two types of hands-on coding as you work your way through this module.
-You do not need any particular preparation for the first way, interactive python cells.
-For the second way, Jupyter notebooks, you can choose to work in your browser where you will not be able to save your work, or in a few other ways where you will.
-
-### Interactive python cells
 @sage
 
-The first will be in cells powered by [SageMathCell](https://sagecell.sagemath.org/).
+You will have opportunities for hands-on coding as you work your way through this module using interactive python cells.
+The interactive python cells are powered by [SageMathCell](https://sagecell.sagemath.org/).
 For the most part, these will appear with some code already in them, and you can run that code by clicking the **Run python** button.
 You can also edit the code in these cells and run your own code.
 
@@ -147,19 +142,6 @@ Code will not persist from one page to the next, and you can always refresh the 
 These cells will compute everything you ask them to, but will only output what you explicitly request using the `print()` command.
 </div>
 
-### Jupyter notebook
-
-For the hands-on activity at the end of this module, we will be using an online environment containing a Jupyter notebook. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection.
-
-Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity. We recommend using right-click to open it in a new tab or window, and then returning here to continue learning while the environment finishes loading. Here is the link:
-
-<a href = "https://mybinder.org/v2/gh/arcus/education_modules/data_viz_seaborn?labpath=data_visualization_in_seaborn%2Fnotebooks%2Fdata_visualization_in_seaborn.ipynb" target = "_blank"> <img src = "https://mybinder.org/badge_logo.svg"></a> **← Click the "launch binder" button!**
-
-If you have python already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/notebooks/data_visualization_in_seaborn.ipynb" download>download the code for this module to run offline</a>.
-
-<div class = "important">
-Note that binder instances aren't stable. When you close the window or if it idles too long, it may erase all of your work. If you want to save any code or output you come up with while working in binder, you need to copy-paste the code to a new file to save it on your computer.
-</div>
 
 ### Importing seaborn
 
