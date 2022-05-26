@@ -58,7 +58,6 @@ sagecell.makeSagecell({inputLocation: 'div.python_data_init1',
                       editor: 'codemirror-readonly',
                       hide: ['fullScreen', 'permalink','output','evalButton'],
                       autoeval: 'true',
-                      linked: 'true',
                       linkKey: "data1"
                       });       
 // Make *any* div with class 'python_data1' a Sage cell
@@ -67,7 +66,6 @@ sagecell.makeSagecell({inputLocation: 'div.python_data1',
                       languages: ["python"],
                       hide: ['fullScreen', 'permalink'],
                       autoeval: 'false',
-                      linked: 'true',
                       linkKey: "data1"
                       });
 // Make *any* div with class 'python_data_init2' a Sage cell
@@ -77,7 +75,6 @@ sagecell.makeSagecell({inputLocation: 'div.python_data_init2',
                       editor: 'codemirror-readonly',
                       hide: ['fullScreen', 'permalink','output','evalButton'],
                       autoeval: 'true',
-                      linked: 'true',
                       linkKey: "data2"
                       });       
 // Make *any* div with class 'python_data2' a Sage cell
@@ -86,7 +83,6 @@ sagecell.makeSagecell({inputLocation: 'div.python_data2',
                       languages: ["python"],
                       hide: ['fullScreen', 'permalink'],
                       autoeval: 'false',
-                      linked: 'true',
                       linkKey: "data2"
                       });
 // Make *any* div with class 'python_data_init3' a Sage cell
@@ -96,7 +92,6 @@ sagecell.makeSagecell({inputLocation: 'div.python_data_init3',
                       editor: 'codemirror-readonly',
                       hide: ['fullScreen', 'permalink','output','evalButton'],
                       autoeval: 'true',
-                      linked: 'true',
                       linkKey: "data3"
                       });       
 // Make *any* div with class 'python_data3' a Sage cell
@@ -105,7 +100,6 @@ sagecell.makeSagecell({inputLocation: 'div.python_data3',
                       languages: ["python"],
                       hide: ['fullScreen', 'permalink'],
                       autoeval: 'false',
-                      linked: 'true',
                       linkKey: "data3"
                       });                                      
 </script>
