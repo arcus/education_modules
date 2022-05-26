@@ -190,21 +190,9 @@ Why would you ever want data in long format?  Your eyes have to do a lot of work
 
 In fact, you may also hear long data called "molten" data, and hear phrases like "melting" the data.  When something is molten or melted, it's easier to then "pour" that data into a new shape (you might hear "cast" or "mold" to describe this process).  It's easier to melt something down to reshape it, rather than take a shape you don't want, cut off bits and reattach them in the new shape.
 
-## Reshaping into a Tidy Format
+Additionally, if you have lots of missing data (as in our example, in which only two of the subjects have completed both sample collections), storing data in a long format that eliminates missing data can be more efficient.
 
-A data set is tidy, [according to Hadley Wickham and Garrett Grolemund](https://r4ds.had.co.nz/tidy-data.html#tidy-data-1), if:
-
-* Each variable is in its own column
-* Each observation is in its own row, and
-* Each value is in its own cell
-
-If you want to understand more about tidy data, we encourage you to try our brief [Tidy Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/tidy_data/tidy_data.md#1) module.
-
-"Tidy" data is wide, but not all wide data is tidy! For example, we'd argue that the wide biosample data isn't particularly tidy.
-
-For example, we're repeating columns (`collection_date_1`, `collection_date_2`, etc.) in a way that makes it tricky to do things like count the number of blood draws or do a time-series graph on number of samples taken per day.  We're also treating the "observation" for each row as a subject, but really, a unique observation is a single biosample collection.  Our data is split into two column sets, and we'd like to tidy it.  
-
-We'll work with this dataset in R, to give you the practice you need!
+We'll work with long and wide data in R, so please use the next page to open the RStudio environment that's best for you.
 
 ## Lesson Preparation: Our RStudio Environment
 
@@ -267,6 +255,202 @@ If you already completed this work for a previous module, and it's been a while 
 If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.
 </div>
 
+
+## Pivots in `tidyr`
+
+### `pivot_longer`
+
+The `tidyr` package, a subset of the `tidyverse` suite of packages, includes two reshaping functions we'll use in this module.  We'll start with `pivot_longer`.  This function is used to reshape wide data, with multiple variable columns, into long data, with key-value pairs in a pair of columns that hold the variable name (or key) and the variable value.
+
+Visually, `pivot_longer` aims to transform a data frame that looks like this:
+
+| name | age | fave_dinosaur | fave_movie |
+| ---- | --- | ------------- | ---------- |
+| Ayana | 8 | stegosaurus | Encanto |
+
+To a data frame that looks like this:
+
+| name | key | value |
+| ---- | --- | ----- |
+| Ayana | age | 8 |
+| Ayana | fave_dinosaur | stegosaurus |
+| Ayana | fave_movie | Encanto |
+
+All of the column names, except for "name", are converted to keys, and the value in the cells are converted to values.
+
+Note that instead of "key" and "value" as the column headers, you could have other names that make more sense to you or your data users:
+
+| name | variable_name | value |
+| ---- | --- | ----- |
+| Ayana | age | 8 |
+| Ayana | fave_dinosaur | stegosaurus |
+| Ayana | fave_movie | Encanto |
+
+Sometimes you might have additional columns that help specify an observation (such as year).  Maybe we poll students about their preferences yearly and have wide data that looks like this:
+
+
+| name | year | age | fave_dinosaur | fave_movie |
+| ---- | --- | --- | ------------- | ---------- |
+| Ayana | 2021 | 7 | stegosaurus | Coco |
+| Ayana | 2022 | 8 | stegosaurus | Encanto |
+
+Because the first two columns together indicate a single observation, we could pivot that data longer to look like this:
+
+| name | year | variable_name | value |
+| ---- | --- | ----- | --- |
+| Ayana | 2021 | age | 7 |
+| Ayana | 2021 | fave_dinosaur | stegosaurus |
+| Ayana | 2021 | fave_movie | Coco |
+| Ayana | 2022 | age | 8 |
+| Ayana | 2022 | fave_dinosaur | stegosaurus |
+| Ayana | 2022 | fave_movie | Encanto |
+
+### `pivot_wider`
+
+Similarly, `pivot_wider` is a `tidyr` function.  It does the inverse of `pivot_longer` -- it takes a long data format and transforms it so that the column with variable names is transformed to become a set of columns and the column with values is transformed into cells placed in the correct intersection of row and column.  
+
+Visually, `pivot_wider` transforms a data frame that looks like this:
+
+| sensor_id | name | value |
+| ---- | --- | --- |
+| 0001 | PM2.5 | 10 |
+| 0001 | PM10 | 25 |
+| 0001 | O3 | 0.0 |
+| 0001 | NO2 | 67 |
+
+into something like this:
+
+| sensor_id | PM2.5 | PM10 | O3 | NO2 |
+| ---- | --- | --- | --- | --- |
+| 0001 | 10 | 25 | 0.0 | 67 |
+
+Sometimes, you'll have more than just one column that uniquely identifies the observation.  So your long data might look something like this:
+
+| sensor_id | date | name | value |
+| ---- | --- | --- | --- |
+| 0001 | 2022-01-01 | PM2.5 | 10 |
+| 0001 | 2022-01-01 | PM10 | 25 |
+| 0001 | 2022-01-01 | O3 | 0.0 |
+| 0001 | 2022-01-01 | NO2 | 67 |
+| 0001 | 2022-01-05 | PM2.5 | 17 |
+| 0001 | 2022-01-05 | PM10 | 35 |
+| 0001 | 2022-01-05 | O3 | 0.1 |
+| 0001 | 2022-01-05 | NO2 | 45 |
+
+which can be pivoted into a wide data that looks like this:
+
+| sensor_id | date | PM2.5 | PM10 | O3 | NO2 |
+| ---- | --- | --- | --- | --- | --- |
+| 0001 | 2022-01-01 | 10 | 25 | 0.0 | 67 |
+| 0001 | 2022-01-05 | 17 | 35 | 0.1 | 45 |
+
+## Using `pivot_longer`
+
+`pivot_longer` has several required arguments or parameters (information we have to pass to it for it to work), as well as several optional arguments.  Let's take a look at the help file for `pivot_longer` to learn more.
+
+In the Console of your RStudio, you'll first type `library(tidyverse)`, so that `tidyr` and other important packages load.  Once that happens, then type `?pivot_longer`.  You should get a long and possibly difficult to understand help file opening in the Files / Plots / Packages / Help / Viewer pane (usually the lower right corner of the screen).
+
+Help files can be hard to understand, so let's walk through this help text.  It begins with a **Description** that briefly describes the aim of the function, without much detail.  This section is mostly useful to make sure you aren't confusing similarly-named functions.  Does this function do what you want it to do?  In our case, yes, it does. Then we can take on the much denser **Usage** section.  The usage section begins by writing out the function call with all of its arguments:
+
+```
+pivot_longer(
+  data,
+  cols,
+  names_to = "name",
+  names_prefix = NULL,
+  names_sep = NULL,
+  names_pattern = NULL,
+  names_ptypes = list(),
+  names_transform = list(),
+  names_repair = "check_unique",
+  values_to = "value",
+  values_drop_na = FALSE,
+  values_ptypes = list(),
+  values_transform = list(),
+  ...
+)
+```
+
+There are a few things worth noticing in the text above.  First, there are only two arguments that aren't followed by an equals sign and **default value**.  These arguments are `data` and `cols`.  Since they don't have an equals sign followed by a default value, you **must** supply these two values at a minimum, for `pivot_longer` to work.  
+
+The other arguments have a default value, and are therefore optional (if you agree with the default value, you can just leave them out).  If you omit, say, `names_to`, it's not a big deal, because the function has a default value already set for `names_to`: "name".  
+
+So, what do we put in as our `data`, and what do we add for `cols`?  Look a bit further down in the help file under the **Arguments** section and you'll see that `data` refers to the data frame you want to reshape (pivot), and `cols` refers to the columns you want to pivot.
+
+When it comes to choosing columns, you generally want to pivot all the columns of your data frame except for the ones that uniquely identify an observation (a group, a patient, a vital signs reading, an environmental sensor reading at a particular moment, a town).  Sometimes that's just one column, as we'll see in our first example.  Other times, you might need two or more columns to uniquely identify an observation (like patient MRN and encounter ID to uniquely identify a patient encounter).
+
+This might all seem very theoretical and hard to understand.  That's why normally we like to scroll down in the help file all the way to the bottom, where there are some examples.  Let's start with a simple case.  This is the example given in the help file:
+
+```
+# Simplest case where column names are character data
+relig_income
+relig_income %>%
+  pivot_longer(!religion, names_to = "income", values_to = "count")
+```
+
+Let's try that in R!  In your R environment, open the file `reshape_data.Rmd` from within the `r\_reshape\_wide\_long` folder.
+
+Please read over the first 70 lines of code and execute that code in the R Markdown document.  This is what you'll be doing:
+
+* Looking at some Pew religion survey data in wide format
+* Making a first long format of that data
+* Looking at your resulting long data
+* Re-creating the long format by making it a little better, with better column names
+* Looking at the final long data
+
+## Using `pivot_wider`
+
+Just as in our `pivot_longer` work, let's start by looking at the help file for `pivot_wider`, using `?pivot_wider` in the Console.
+
+This command has only one required field, as shown in the **Usage** section:
+
+```
+pivot_wider(
+  data,
+  id_cols = NULL,
+  names_from = name,
+  names_prefix = "",
+  names_sep = "_",
+  names_glue = NULL,
+  names_sort = FALSE,
+  names_repair = "check_unique",
+  values_from = value,
+  values_fill = NULL,
+  values_fn = NULL,
+  ...
+)
+```
+
+That means that the only required argument we know we have to add is `data`.  We may also need to add other arguments, depending on our situation.  Pivot wider will take whatever is in the column with the name provided in the "names_from" argument (default is "name") and make that column's contents into new column headers.  It will take whatever is in the column with the name provided in the `values_from` argument (default is "value") and put those into cells in the appropriate row and column.
+
+Please read over lines 71-140 and run the code in that section.  This is what you'll be doing:
+
+* Pivoting the religion data back from long data to wide data
+* Troubleshooting what went wrong with that pivot
+* Pivoting the religion data back from long data to a different wide data arrangement
+* Pivoting a dataset (fish encounters) that was originally in long format to a wide format
+
+
+## Reshaping into a Tidy Format
+
+First, a reminder about tidy data!
+
+A data set is tidy, [according to Hadley Wickham and Garrett Grolemund](https://r4ds.had.co.nz/tidy-data.html#tidy-data-1), if:
+
+* Each variable is in its own column
+* Each observation is in its own row, and
+* Each value is in its own cell
+
+If you want to understand more about tidy data, we encourage you to try our brief [Tidy Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/tidy_data/tidy_data.md#1) module.
+
+"Tidy" data is wide, but not all wide data is tidy! For example, we'd argue that the wide biosample data we first showed you isn't particularly tidy.
+
+For example, we're repeating columns (`collection_date_1`, `collection_date_2`, etc.) in a way that makes it tricky to do things like count the number of blood draws or do a time-series graph on number of samples taken per day.  We're also treating the "observation" for each row as a subject, but really, a unique observation is a single biosample collection.  Our data is split into two column sets, and we'd like to tidy it.  
+
+We'll work with this dataset in R, to give you the practice you need!
+
+
+##
 
 ## Feedback
 
