@@ -144,6 +144,7 @@ These cells will compute everything you ask them to, but will only output what y
 
 
 ### Importing seaborn
+@sage
 
 To use the seaborn library to make visualizations, you need to import it.
 
@@ -151,7 +152,7 @@ By convention, you import it with the shorthand `sns`.
 This is optional, but we recommend you do that because when you look at seaborn code online, you'll nearly always see it with that same abbreviation.
 Following that convention will make your code more comparable to examples you see online.
 
-<div class="python_link">
+<div class="python_data_init">
 <lia-keep>
 <script type="text/x-sage">
 import seaborn as sns
