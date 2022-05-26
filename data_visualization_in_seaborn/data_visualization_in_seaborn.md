@@ -466,13 +466,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 </script>
 </lia-keep>
@@ -522,13 +516,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -604,13 +592,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -647,13 +629,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -719,13 +695,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -789,13 +759,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -893,13 +857,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 fmri = sns.load_dataset("fmri")
-</script>
-</lia-keep>
-</div>
-
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -937,13 +894,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 fmri = sns.load_dataset("fmri")
-</script>
-</lia-keep>
-</div>
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -979,13 +930,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 fmri = sns.load_dataset("fmri")
-</script>
-</lia-keep>
-</div>
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -1088,13 +1033,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -1144,13 +1083,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -1223,13 +1156,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-s</script>
-</lia-keep>
-</div>
-
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+s
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -1278,13 +1205,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -1332,13 +1253,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
