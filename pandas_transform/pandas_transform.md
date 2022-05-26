@@ -2,13 +2,13 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  0.0.1
+version:  1.0.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
-title: Using `pandas` for Tabular Data in python
-comment:  This is an introduction to tabular data in python using `pandas` DataFrames.
-long_description: This module is for learners who have some familiarity with python, and want to learn how the `pandas` package can handle large tabular data sets. No previous experience with `pandas` is required, and only an introductory level understanding of python is assumed.
+title: Transform Data with pandas
+comment:  This is an introduction to transforming data using a Python library named pandas.
+long_description: This module is for learners who have some familiarity with Python, and want to learn how the pandas library can handle large tabular data sets. No previous experience with pandas is required, and only an introductory level understanding of Python is assumed.
 estimated_time: 1 hour
 
 @learning_objectives  
@@ -75,7 +75,7 @@ sagecell.makeSagecell({inputLocation: 'div.python_data',
 @end
 -->
 
-# Using `pandas` for Tabular Data in python
+# Transform Data with pandas
 
 <div class = "overview">
 ## Overview
@@ -90,8 +90,9 @@ sagecell.makeSagecell({inputLocation: 'div.python_data',
 
 Before starting this module it is useful for you to:
 
-* have some familiarity with [tabular data](tabular/data/module)
-* have an introductory level exposure to coding in [python](intro/to/python/module)
+* have some familiarity with tabular data: data stored in an array of rows and columns.
+
+* have an introductory level exposure to coding in [Python](intro/to/python/module)
 
 **Learning Objectives**
 
@@ -265,7 +266,7 @@ The tiny DataFrame we saw in the last section was exceptional in several ways. W
 * Real data is often missing entries.
 
 <div class = "important">
-For this module we will be looking at some fake Covid-19 testing data. Although this data is designed to mimic realistic data with plausible patterns and values, **there is no Protected Health Information in this data**. If you are a fan of the fictional series "Game of Thones," however, you might recognize some familiar characters.
+For this module we will be looking at some fake Covid-19 testing data. Although this data is designed to mimic realistic data with plausible patterns and values, **there is no Protected Health Information in this data**. If you are a fan of the fictional series "Game of Thrones," however, you might recognize some familiar characters.
 
 This data is saved as a [csv file hosted on GitHub](https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv).
 </div>
@@ -778,7 +779,7 @@ Reproducibility must always been a priority when doing research, so whenever you
 
 **Recording calculations**
 
-Python, and particularly Jupyter notebooks, in which you can write linked cells of code, are a great way to preserve and annotate every step of your data manipulation.
+There are many environments from which you can save Python code. One of the most user-friendly platforms is [Jupyter notebooks](https://jupyter.org/). These notebooks let you write linked cells of code as well as cells of non-code text, so they are a great way to preserve and annotate every step of your data manipulation.
 
 **Preserving orignal data**
 
@@ -860,7 +861,7 @@ What if you wanted to reformat the gender column to use `M` and `F` instead of s
 
 One way to approach this is to define a condition testing each row for whether the entry in the `gender` column is `male`. Then we can use that condition to change the entry to `M` if the condition is met.
 
-<div class="python_data_init">
+<div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
 is_male = covid_testing.loc[:, "gender"] == "male"
@@ -989,4 +990,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work. Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Transform+Data+with+Pandas%22)!
+We gather this information in order to iteratively improve our work. Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Transform+Data+with+pandas%22)!
