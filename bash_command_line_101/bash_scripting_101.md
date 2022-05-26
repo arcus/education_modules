@@ -457,16 +457,15 @@ The command `touch data` will create a file named `data`, not a directory that c
 
 2. Now that you have created the files `data_1` you want to put some content into it. How would you make the file `data_1` contain the text `sample 1: 45`?
 
-[[echo "sample 1: 45" >> data_1]]
-<script>
-let input = "@input".trim();
-  input == "echo \"sample 1: 45\" >> data_1" || input == "echo sample 1: 45 >> data_1" || input == "echo \"sample 1: 45\" > data_1" || input == "echo sample 1: 45 > data_1";
-</script>
+[(X)] `echo "sample 1: 45" >> data_1`
+[( )] `echo data_1 >> "sample 1: 45"`
+[( )] `>> "sample 1: 45" echo data_1`
+[( )] `>> data_1 echo "sample 1: 45"`
 ***
 <div class = "answer">
 The command `echo "sample 1: 45" >> data_1` will add `sample 1: 45` as a new line at the end of the current contents of the file `data_1`.
 
-Since there wasn't anything in `data_1` to begin with, you will get the same outcome if you use a single `>` to replace the entire file with `sample 1: 45`.
+Since there wasn't anything in `data_1` to begin with, you will get the same outcome if you use a single arrow `>` to replace the entire file with `sample 1: 45`.
 
 The quotes around the text can also be safely omitted in this case, but that isn't a good habit to get into since you may need them later as you progress in your bash scripting.
 </div>
