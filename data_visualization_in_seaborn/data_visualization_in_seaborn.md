@@ -466,6 +466,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 </script>
 </lia-keep>
@@ -515,6 +522,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -590,6 +604,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -626,6 +647,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -691,6 +719,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -717,7 +752,7 @@ plt.show()
 
 </details>
 
-You may be noticing that the distribution of non-smokers, which makes up the majority of the data, appears to be covering the other smaller groups. By default, seaborn plots each group as if they were each their own histogram, making each slightly translucent so you can see where distributions overlap. The height of each colored bar shows the count for that bin within that group.
+You may be noticing that the distribution of non-smokers, which makes up the majority of the data, appears to be covering the other smaller groups. By default, `seaborn` plots each group as if they were each their own histogram, making each slightly translucent so you can see where distributions overlap. The height of each colored bar shows the count for that bin within that group.
 
 That's often the most useful way to plot multiple histograms, but in this case, it makes it hard to see the smoker and ex-smoker distributions clearly because they are completely covered by the non-smoker distribution.
 
@@ -754,6 +789,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -851,6 +893,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 fmri = sns.load_dataset("fmri")
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -888,6 +937,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 fmri = sns.load_dataset("fmri")
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -923,6 +979,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 fmri = sns.load_dataset("fmri")
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -1025,6 +1088,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -1074,6 +1144,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -1146,6 +1223,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+s</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -1194,6 +1278,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -1232,6 +1323,27 @@ There are several more options for kinds of trend lines to draw in `seaborn`, in
 </div>
 
 ### Quiz: Trend Lines
+@sage
+<div class="python_data_init">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+</script>
+</lia-keep>
+</div>
+
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+sns.set_theme(palette="colorblind")
+sns.set_style("white")
+</script>
+</lia-keep>
+</div>
 
 What function can you use to draw a scatterplot with trend line?
 
@@ -1248,13 +1360,24 @@ Either `regplot` or `lmplot` can be used to draw scatterplots with trend lines.
 
 <div class = "important">
 For the following two questions, you'll be asked to modify code from the lesson.
-As you work on the code, test it out by editing the .ipynb file so you can see what your code does.
+As you work on the code, test it out by editing the interactive code block so you can see what your code does.
 
 Note that your solution may not look exactly like the solution code provided --- if your code works and it generates a plot that meets your needs, then it's perfect!
 </div>
 
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+sns.lmplot(data = covid_data,
+            x="val_age", y="val_height_cm",
+           scatter_kws={"alpha": .1},
+           lowess=True)
+plt.show()
+</script>
+</lia-keep>
+</div>
 
-Modify the code from the final example, the [lowess curve trend line](#lowess-curve-trend-lines), to separate out respondents by smoking status (`is_smoker`) with a separate facet for each.
+Modify the code from the final example, the [lowess curve trend line](#lowess-curve-trend-lines) (copied above), to separate out respondents by smoking status (`is_smoker`) with a separate facet for each.
 
 ```python  -Solution
 sns.lmplot(data = covid_data,
@@ -1267,7 +1390,19 @@ sns.lmplot(data = covid_data,
 # If you used col, try switching to row now to see how the plot changes!
 ```
 
-Modify the code from the final example, the [lowess curve trend line](#lowess-curve-trend-lines), to get separate trend lines for each smoking status (`is_smoker`), but all shown together on single plot. (Hint: Use color to distinguish the groups.)
+<div class="python_data">
+<lia-keep>
+<script type="text/x-sage">
+sns.lmplot(data = covid_data,
+            x="val_age", y="val_height_cm",
+           scatter_kws={"alpha": .1},
+           lowess=True)
+plt.show()
+</script>
+</lia-keep>
+</div>
+
+Modify the above code again. This time change it to get separate trend lines for each smoking status (`is_smoker`), but all shown together on single plot. (Hint: Use color to distinguish the groups.)
 
 ```python  -Solution
 sns.lmplot(data = covid_data,
