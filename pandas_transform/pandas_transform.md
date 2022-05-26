@@ -102,11 +102,8 @@ Before starting this module it is useful for you to:
 ## Lesson Preparation
 @sage
 
-You will be doing two types of hands-on coding as you work your way through this module. You do not need any particular preparation for the first way, interactive python cells. For the second way, Jupyter notebooks, you can choose to work in your browser where you will not be able to save your work, or in a few other ways where you will.
-
-**Interactive python cells**
-
-The first will be in cells powered by [SageMathCell](https://sagecell.sagemath.org/). For the most part, these will appear with some code already in them, and you can run that code by clicking the **Run python** button. You can also edit the code in these cells and run your own code.
+You will have opportunities for hands-on coding as you work your way through this module using interactive python cells.
+The interactive python cells are powered by [SageMathCell](https://sagecell.sagemath.org/). For the most part, these will appear with some code already in them, and you can run that code by clicking the **Run python** button. You can also edit the code in these cells and run your own code.
 
 
 **Give it a try:**
@@ -552,7 +549,7 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 
 When we used a column name or list of names as our argument in the row spot of the `.loc` method, we got back all rows in that list. When we put a condition  like `covid_testing.loc[:,"result"] == "positive"` in the row spot, it will return all rows for which that condition is `True`.
 
-If this this is a subset of the data that you are likely to want to use again, it is a good practice to create a new DataFrame consisting only of the rows and columns that you want.
+If this is a subset of the data that you are likely to want to use again, it is a good practice to create a new DataFrame consisting only of the rows and columns that you want.
 
 **Create a new DataFrame** titled `positive_tests`. How many rows have positive test results?
 
@@ -836,7 +833,7 @@ Or maybe you want a new column that displays the full name of each patient, rath
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-covid_testing.loc[:,"full_name"] = covid_testing.loc[:,"first_name"]+" " +covid_testing.loc[:,"last_name"]
+covid_testing.loc[:,"full_name"] = covid_testing.loc[:,"first_name"]+" "+covid_testing.loc[:,"last_name"]
 print(covid_testing.loc[:,["first_name", "last_name", "full_name"]])
 </script>
 </lia-keep>
@@ -899,7 +896,7 @@ print(covid_testing.loc[:,["first_name", "last_name", "gender"]])
 
   * `dataframe.replace("a","b")` will search all columns of `dataframe` for `a` and replace them with `b`.
 
-  * `dataframe.loc[:,"column_1"]` will only replace `a` with `b` in the column labeled `column_1`. If another column contains the entry `a` that will remain unchanged.
+  * `dataframe.loc[:,"column_1"].replace("a","b")` will only replace `a` with `b` in the column labeled `column_1`. If another column contains the entry `a` that will remain unchanged.
 
 * The `.replace()` method doesn't change the DataFrame, only the way it is shown to you that one time. In order to change the data in the DataFrame you need to use `=` to set the DataFrame equal to the version with the replacements.
 
@@ -975,7 +972,7 @@ The method `.str.lower()` will make every entry in a column lower case. There ar
 
 ## Additional Resources
 
-The creators of the pandas package have [great tutorials](https://pandas.pydata.org/docs/getting_started/index.html) with very thorough examples.
+The creators of the pandas package have [great tutorials](https://pandas.pydata.org/docs/getting_started/index.html#tutorials) with very thorough examples.
 
 
 ## Feedback
