@@ -147,24 +147,35 @@ These cells will compute everything you ask them to, but will only output what y
 
 To use the seaborn library to make visualizations, you need to import it.
 
-By convention, you import it with the shorthand `sns`. This is optional, but we recommend you do that because when you look at seaborn code online, you'll nearly always see it with that same abbreviation. Following that convention will make your code more comparable to examples you see online.
+By convention, you import it with the shorthand `sns`.
+This is optional, but we recommend you do that because when you look at seaborn code online, you'll nearly always see it with that same abbreviation.
+Following that convention will make your code more comparable to examples you see online.
 
-```Python
+<div class="python_link">
+<lia-keep>
+<script type="text/x-sage">
 import seaborn as sns
-```
+</script>
+</lia-keep>
+</div>
 
 
 ### The data
+@sage
 
 First, we need to load the python modules we'll be using:
 
-```python
+<div class="python_data_init">
+<lia-keep>
+<script type="text/x-sage">
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+</script>
+</lia-keep>
+</div>
 
-```
 
 <div class = "learnmore">
 The [`pandas` module](https://pandas.pydata.org/docs/getting_started/index.html)) is for working with data in python. It is conventional to import `pandas` as `pd`.
@@ -176,10 +187,13 @@ The `seaborn` module is the plotting module that is the focus of this lesson, an
 
 And then read in the data set:
 
-```python
+<div class="python_data_init">
+<lia-keep>
+<script type="text/x-sage">
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
-```
+</script>
+</lia-keep>
+</div>
 
 These data are from a COVID-19 serological survey conducted in Yaounde, Cameroon (Nwosu, K., Fokam, J., Wanda, F. et al., 2021[^1](Kene David Nwosu, Joseph Fokam, Franck Wanda, Lucien Mama, Erol Orel, Nicolas Ray, Jeanine Meke, Armel Tassegning, Desire Takou, Eric Mimbe, Beat Stoll, Josselin Guillebert, Eric Comte, Olivia Keiser, & Laura Ciaffi. 2021). kendavidn/yaounde\_serocovpop\_shared: Initial release (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.5218965)). The authors have made all of the code and data publicly available under a [creative commons 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode) to facilitate re-use.
 
@@ -188,13 +202,9 @@ These data are from a COVID-19 serological survey conducted in Yaounde, Cameroon
 To learn more about the study, see the [zenodo page for this dataset](https://zenodo.org/record/5218965#.YeBq2RPMITW). You can read the published article online: [SARS-CoV-2 antibody seroprevalence and associated risk factors in an urban district in Cameroon](https://www.nature.com/articles/s41467-021-25946-0).
 </div>
 
-Run the above code yourself in binder (see [lesson preparation](#lesson-preparation) for links to start the binder instance) or on your own computer.
-
-In the data\_visualization\_in\_seaborn.ipynb file, the code in the **Setup** section includes these import commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
-
 <div class="important">
 The code from this section, without a "Run python" button, will be at the top of each page with code in this module.
-We will run it automatically when you open each page.
+It will run automatically when you open each page.
 If you want to run this code on your own computer, make sure to include the code to import the necessary modules and read in the data as the first lines.
 </div>
 
