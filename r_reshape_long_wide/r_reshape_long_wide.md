@@ -445,12 +445,95 @@ If you want to understand more about tidy data, we encourage you to try our brie
 
 "Tidy" data is wide, but not all wide data is tidy! For example, we'd argue that the wide biosample data we first showed you isn't particularly tidy.
 
-For example, we're repeating columns (`collection_date_1`, `collection_date_2`, etc.) in a way that makes it tricky to do things like count the number of blood draws or do a time-series graph on number of samples taken per day.  We're also treating the "observation" for each row as a subject, but really, a unique observation is a single biosample collection.  Our data is split into two column sets, and we'd like to tidy it.  
+For example, we're repeating columns (`collection_date_1`, `collection_date_2`, etc.) in a way that makes it tricky to do things like count the number of blood draws or do a time-series graph on number of samples taken per day.  We're also treating the "observation" for each row as a subject, but really, a unique observation is a single biosample collection.  Our data is split into two column sets, and we'd like to tidy it.  As a reminder, this is the data we're starting with:
 
-We'll work with this dataset in R, to give you the practice you need!
+subject_id | biosample_id_1 | collection_date_1 | collection_time_1 | sample_type_1 | collection_method_1 | collected_by_id_1 | sample_size_1 | biosample_id_2 | collection_date_2 | collection_time_2 | sample_type_2 | collection_method_2 | collected_by_id_2 | sample_size_2
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+876123 | 3380629109 | 2019-05-14 | 9:15 | blood | venipuncture | 4511 | 10 ml | 3380629887 | 2019-05-14 | 18:34 | blood | venipuncture | 4511 | 10 ml
+612351 | 3531370968 | 2019-06-04 |  | blood | venipuncture | 7124 | 10 ml | 4182110569 | 2020-02-14 | 13:55 | blood | venipuncture | 3201 | 10 ml
+716978 | 3860881351 | 2019-10-20 | 10:45 | saliva | swab | 4511 | 4 g |  |  |  |  |  |  |
+321900 | 4190070221 | 2020-02-25 |  | saliva | swab | 7124 | NA |  |  |  |  |  |  |
+342855 | 4348365204 | 2020-06-19 | 15:20 | blood | venipuncture | NA | 10 ml |  |  |  |  |  |  |
+901284 | 4377143652 | 2020-08-10 |  | blood | venipuncture | 3201 | 10 ml |  |  |  |  |  |  |
 
 
-##
+We'll work with this dataset in R, to give you the practice you need!  But first, think about what a "tidy" version of this data might look like.  Sketch it out on a piece of paper!  What columns would you have?  Would you change the order of column names?  How many rows do you think you would have?
+
+It might be tempting to start reshaping by cutting off some columns from the right and pasting them at the bottom of the data frame -- using some complex rules about renaming things and how to stack the data.  But we are going to first transform this wide-but-not-tidy data to long format, then take that long data and pour it into our desired shape.  Remember -- usually you transform wide data to long not because that's the final form you want, but because it's a very versatile format you can convert to many useful shapes.
+
+Go on to the next page for more instructions!
+
+## Working With Our Biosample Data
+
+### Preliminary work
+
+The data we're working with is tricky -- we have column names that are suffixed with `_1` and `_2`, and we have a column name, `subject_id`, that doesn't have a suffix.  In a way, we kind of have two data frames stuck together, side by side.  The values of all the `_1` belong to one event and the values of all the `_2` belong to another event.  And `subject_id` applies to both groups!  
+
+So one thing we'll need to do is separate the `_1` and `_2` events into two data frames, at least temporarily, and then use that data to turn wide data into long.
+
+In order to turn wide data into long, which is our ultimate goal, we need to think about the long data columns we'll end up with.  We'll have:
+
+* one or more columns that uniquely identify an observation,
+* a single column that holds variable names, and
+* a single column that holds values.
+
+Let's start by thinking about what constitutes a unique observation.  
+
+* Does a `subject_id` alone constitute a unique observation?  No, because two subjects have more than one biosample collection.  
+* What about the `subject_id` along with date?  Again, no, because we have one subject with two biosample collections on the same day.
+* `subject_id`, date, and time?  That would work... but we now have three columns required to make a unique observation.  Is there a better way?
+* What about the `biosample_id`?  Yes, that would work.  Each sample (blood or saliva) has its own `biosample_id` and those ids don't repeat.
+
+OK, so we'd like our  "one or more columns that uniquely identify and observation" to be the `biosample_id`.  One problem is that we have two sets of these -- one with the suffix `_1` and one with the suffix `_2`.  We'll have to do some clean up, and we can do that when we cut our data frame down the middle.
+
+All of the other columns headers (the cleaned up version, without suffixes) will be the contents of our column that holds variable names, and the data within cells will be placed in the column that holds values.
+
+The final data will therefore look something like this (just a few rows shown):
+
+| biosample_id | key |	value |
+| --------- | --- | --- |
+| 3380629109 | subject_id | 876123 |
+| 3380629109 | collection_date | 2019-05-14 |
+| 3380629109 | collection_time | 09:15:00 |
+| 3380629109 | sample_type | blood |
+| 3380629109 | collection_method | venipuncture |
+| 3380629109 | collected_by_id | 4511 |
+
+Without having written any code, we've gotten an idea of what we want to accomplish:
+
+* split the data frame into two events
+* get rid of suffixes in column names
+* pivot all the column data except for `biosample_id` into a long format
+
+Let's jump into R and get started.  In `reshape_data.Rmd` in your RStudio environment, start by loading this data and taking a look at it (look at and run the code in lines 150-165).
+
+### Dealing With Suffixes
+
+All done bringing in the data and looking at it?  Great!  Time to move along to data reshaping.
+
+Our first challenge is to get all the `_1` variables, along with `subject_id` into one object, and all the `_2` variables, along with `subject_id`, into another.  We can do this using `dplyr`.
+
+Read and execute the code in lines 170-225 to create `biosample_first` and `biosample_second`, which will capture the two sets of data neatly (and even add an additional field giving the 1 or 2 sequence number, in case that ends up being important).  
+
+We'll use some commands that you already know, like `select`, as well as some that you might not be as familiar with, like `rename_with`.  Now that you've gotten some experience using help files, try using the `?` functionality and trying out `?rename_with` (or other function names) in the Console.
+
+### Pivoting Wide to Long
+
+Do you now have two objects, called `biosample_first` and `biosample_second`?  Great!
+
+At this point, you might be thinking, "Hey!  If we just stack `biosample_first` and `biosample_second`, we'll be done, and have some tidy data!".  You're not wrong, and you might be tempted to do just that and not bother with transforming wide data to long data.  Just remember that once you get data into a long format, it's very versatile, and it's worth the effort to put your data into a long format first.
+
+Go to lines 230 - 265 and read through the explanations and run the code in this section of the file.
+
+By the end of this section, you should have a `biosample_data_long` object that has our data in long format.
+
+### Pivoting Long to Wide
+
+By now, you should have long data that's ready to be pivoted to wide -- but this time, it will be wide data that's tidy, a vast improvement over the data we began with.
+
+Go to lines 270 - 290 to see what we mean!
+
+In the end, we have tidy data that meets our needs and will make computation simpler.
 
 ## Feedback
 
