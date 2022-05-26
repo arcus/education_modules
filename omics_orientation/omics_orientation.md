@@ -50,7 +50,9 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 </div>
 
 
-## What is "Omics"?
+## What is Omics?
+
+"**Omics**" (pronounced OH-micks) is a suffix added to a large number of biological disciplines which denotes a "comprehensive, or global, assessment of a set of molecules" (Hasin et al., 2017) related to that domain.  Genomics is possibly the most well-known member of this family of disciplines, but is certainly not the only one! Omics has become something of a buzzword in recent years with the improvement of high-throughput technologies and increased ability to analyze large amounts of data.
 
 <div class = "learnmore">
 Much of the content of this module, particularly the definitions of specific omics domains, was derived from an article by Hasin *et al.* published in the journal *Genome Biology*. The citation is below and the article is open source if you are interesting in reading more about this topic.
@@ -62,8 +64,6 @@ Hasin, Y., Seldin, M. & Lusis, A. Multi-omics approaches to disease. Genome Biol
 </div>
 
 </div>
-
-**Omics** is a suffix added to a large number of biological disciplines which denotes a "comprehensive, or global, assessment of a set of molecules" (Hasin et al., 2017) related to that domain.  Genomics is possibly the most well-known member of this family of disciplines, but is certainly not the only one! Omics has become something of a buzzword in recent years with the improvement of high-throughput technologies and increased ability to analyze large amounts of data.
 
 ### Why study omics?
 
@@ -83,7 +83,7 @@ While there is often value in simplifying the study of biological phenomena to o
 
 ## Omics topics
 
-There are many "omics" topics that correspond to various biological domains. The following sections will discuss some of the most popular topics: genomics, transcriptomics, and metabolomics.
+There are many "omics" topics that correspond to various biological domains. The following sections will discuss some of the most popular topics: genomics, transcriptomics, and proteomics.
 
 ### Genomics
 
@@ -101,11 +101,13 @@ Bioinformatics is another word that is often used interchangeably with genomics,
 
 ### Transciptomics
 
-An organism's **transcriptome** is all of the RNA that is transcribed from that organism's DNA, and **transcriptomics** is the qualitative (which transcripts are present) and quantitative (how much of each transcript is present) study of these RNA transcripts. While some RNA transcripts are templates to be translated into proteins, it is becoming increasingly recognized that many RNA molecules have important biological roles beyond encoding proteins! And while every cell in an organism has the same genome, the transcriptome will vary between cell populations and can change in response to changes in the environment, such as disease or treatment. The primary technologies for studying transcriptomics are **microarray**, in which RNA fragments of known sequences are bound to a surface (or "chip") and the amount of each fragment is quantified, and **RNA-Seq**, in which RNA sequences (which can be known or unknown) are analyzed qualitatively and quantitatively using **next-generation sequencing** (in which millions of sequences can be run at one time).
+An organism's **transcriptome** is all of the RNA that is transcribed from that organism's DNA, and **transcriptomics** is the qualitative (which transcripts are present) and quantitative (how much of each transcript is present) study of these RNA transcripts. While some RNA transcripts are templates to be translated into proteins, it is becoming increasingly recognized that many RNA molecules have important biological roles beyond encoding proteins, including gene regulation and translation.
+
+While every cell in an organism has the same genome, the transcriptome will vary between cell populations and can change in response to changes in the environment, such as disease or treatment. The primary technologies for studying transcriptomics are **microarray**, in which RNA fragments of known sequences are bound to a surface (or "chip") and the amount of each fragment is quantified, and **RNA-Seq**, in which RNA sequences (which can be known or unknown) are analyzed qualitatively and quantitatively using **next-generation sequencing** (in which millions of sequences can be run at one time).
 
 ### Proteomics
 
-Proteomics is the study of a cell or organism's complete set of proteins. This involves quantifying how much of each protein is present, how they interact with each other and other molecules, and how the proteins are modified (a protein's function and regulation can often be affected by post-translation modifications). Like a cell's transcriptome, the **proteome** of a cell (or organism) is constantly shifting in response to changing conditions. 
+Proteomics is the study of a cell or organism's complete set of proteins. This involves quantifying how much of each protein is present, how they interact with each other and other molecules, and how the proteins are modified (a protein's function and regulation can often be affected by post-translation modifications). Like a cell's transcriptome, the **proteome** of a cell (or organism) is constantly shifting in response to changing conditions.
 
 The most common high-throughput method of studying the proteome is **mass spectrometry** (often called mass spec), in which proteins or protein fragments are **ionized** (or charged) and then separated based on their mass-to-charge ratio. For more information about protein mass spectrometry, check out [this beginner's guide to protein mass spec](https://portlandpress.com/biochemist/article/42/5/64/226371/A-beginner-s-guide-to-mass-spectrometry-based).
 
@@ -144,11 +146,11 @@ Transcriptomics is the study of the RNA transcripts in a system, which is consid
 
 ## Caveats and Challenges
 
-While omics approaches can be powerful, this doesn't mean that an omics approach is always the "best", nor that omics studies are guaranteed to provide every answer to every question! There are several caveats to be aware of when planning or reading about an omics study:
+While omics approaches can be powerful, this doesn't mean that an omics approach is always the "best", nor that omics studies are guaranteed to provide every answer to every question! While omics studies can leverage large data sets to find patterns and correlations, they can't provide much insight about individuals, nor do they offer 100% certainty about any results or conclusions. There are several caveats to be aware of when planning or reading about an omics study:
 
 * **Heterogeneity of populations:** According to Hasin et al., "[i]nsights gained from omics approaches are mostly comparative" (2017), meaning that omics studies involve comparing groups to each other (such as "disease vs. healthy" or "treatment vs control", for example). Inherent heterogeneity in any of these populations makes it difficult to distinguish important differences, or "signal", from unrelated variation, also called "noise." Because of the amount of data being analyzed in omics studies, this problem can be amplified compared to traditional approaches.
 
-* **Confounding variables:** Omics allows researchers to ask complex questions with many variables, but that doesn't mean studies can include every possible variable. Variables that researchers don't know about or don't measure can still be contributing to the effect in question. Any conclusions drawn from the results of an omics study (or any scientific study) should account for this possibility.
+* **Confounding variables:** Omics allows researchers to ask complex questions with many variables, but that doesn't mean studies can include every possible variable. Variables that researchers don't know about or don't measure can still be contributing to the effect being studied. Any conclusions drawn from the results of an omics study (or any scientific study) should account for this possibility.
 
 * **Reproducibility:** Due to the amount and complexity of the data in omics studies, the analysis process can require many steps, and there will be differences in workflows between studies. This means that results sometimes can't be reproduced from one study to another.
 
