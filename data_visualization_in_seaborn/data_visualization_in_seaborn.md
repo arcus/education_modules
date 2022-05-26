@@ -1384,9 +1384,9 @@ sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            scatter_kws={"alpha": .1},
            lowess=True,
-           col = 'is_smoker')
+           col = "is_smoker")
 
-# Note that row = 'is_smoker' would also work.
+# Note that row = "is_smoker" would also work.
 # If you used col, try switching to row now to see how the plot changes!
 ```
 
@@ -1409,7 +1409,7 @@ sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            scatter_kws={"alpha": .1},
            lowess=True,
-           hue = 'is_smoker')
+           hue = "is_smoker")
 
 # We're using hue again to control color, as we did for scatterplots and again for line plots.           
 ```
