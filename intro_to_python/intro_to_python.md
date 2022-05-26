@@ -8,7 +8,7 @@ language: en
 narrator: UK English Female
 title: Introduction to Python
 comment:  This module introduces the Python programming language, explores why Python is useful in research, and describes how to download Python and Jupyter.
-long_description: Python is a versatile programming language that is frequently used for data analysis, machine learning, web development, and more. If you are interested in learning about any of these topics and are new to programming, are joining a team where Python is used, or have just heard about Python and are looking for a general introduction to the language, this module is a good place to start. This is appropriate for someone at the beginner level.
+long_description: Python is a versatile programming language that is frequently used for data analysis, machine learning, web development, and more. If you are interested in using Python (or even just trying it out), and are looking for how to get set up, this module is a good place to start. This is appropriate for someone at the beginner level, including those with no prior knowledge of or experience with Python.
 estimated_time: 20m
 @learning_objectives  
 
@@ -136,14 +136,14 @@ Python can be written in several ways:
 - You can write scripts that include Python code
 - You can create Python notebooks using [Jupyter](https://jupyter.org/) or online using [Google Colaboratory](https://colab.research.google.com/?utm_source=scs-index) (or "Colab" for short).
 
-In most cases, you'll need to start with downloading Python to your computer (the exception will be if you are using cloud-based solutions like Google Colab); which option you choose will come down to personal preference and your specific goals.
+In most cases, you'll need to start with downloading Python to your computer (the exception is when using cloud-based solutions like Google Colab); which option you choose will come down to personal preference and your specific goals.
 
 If you have Python installed on your computer, you can use your computer's Command Line or Terminal program to write Python code interactively using a Python **interpreter** by typing `python3`:
 
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_interactive.png?raw=true" height="500" width="800" alt="An example of Python code in the Terminal with the following code: 7 + 8, after which the number 15 is displayed as output;  print('Hello World!'), which gives the output 'Hello World!'; and list(range(0,10)), which gives the output [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" data-alt="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_interactive.gif?raw=true">
+  <img src="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_interactive.png?raw=true" height="500" width="800" alt="An example of Python code in the Terminal with the following code: 7 + 8, followed by an output of 15;  print('Hello World!'), which gives the output 'Hello World!'; and list(range(0,10)), which prints all integers from 0 to 9" data-alt="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_interactive.gif?raw=true">
 
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
@@ -162,7 +162,7 @@ Because of these reasons, you'll usually either be creating Python scripts or us
 
 For more complex tasks, it often makes sense to write a python **script** instead of writing instructions one at a time. Scripts allow you to write out a series of instructions ahead of time and then run in order with one command.
 
-Scripts are often written using special text editors that are designed for writing code (such as Atom or Sublime) or full-featured integrated development environments (IDEs) such as [PyCharm](https://www.jetbrains.com/pycharm/) or [Spyder](https://www.spyder-ide.org/), which have more debugging and automation capabilities than text editors.
+Scripts are often written using special text editors that are designed for writing code (such as [Atom](https://atom.io) or [Sublime](https://sublimetext.com)) or full-featured integrated development environments (IDEs) such as [PyCharm](https://www.jetbrains.com/pycharm/) or [Spyder](https://www.spyder-ide.org/), which have more debugging and automation capabilities than text editors.
 
 Here is a short script written in the Spyder IDE:
 <div style = "margin: 1rem; width: 750;">
