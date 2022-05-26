@@ -163,7 +163,7 @@ import seaborn as sns
 ### The data
 @sage
 
-First, we need to load the python modules we'll be using:
+First, we need to load the python modules we'll be using (this block of code will run automatically):
 
 <div class="python_data_init">
 <lia-keep>
@@ -187,10 +187,11 @@ The `seaborn` module is the plotting module that is the focus of this lesson, an
 
 And then read in the data set:
 
-<div class="python_data_init">
+<div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+print(covid_data.shape) # gives the number of rows and columns
 </script>
 </lia-keep>
 </div>
@@ -199,13 +200,13 @@ These data are from a COVID-19 serological survey conducted in Yaounde, Cameroon
 
 
 <div class="learnmore">
-To learn more about the study, see the [zenodo page for this dataset](https://zenodo.org/record/5218965#.YeBq2RPMITW). You can read the published article online: [SARS-CoV-2 antibody seroprevalence and associated risk factors in an urban district in Cameroon](https://www.nature.com/articles/s41467-021-25946-0).
+To learn more about the study, see the [zenodo page for this dataset](https://zenodo.org/record/5218965#.YeBq2RPMITW). You can also read the published article online: [SARS-CoV-2 antibody seroprevalence and associated risk factors in an urban district in Cameroon](https://www.nature.com/articles/s41467-021-25946-0).
 </div>
 
 <div class="important">
 The code from this section, without a "Run python" button, will be at the top of each page with code in this module.
 It will run automatically when you open each page.
-If you want to run this code on your own computer, make sure to include the code to import the necessary modules and read in the data as the first lines.
+If you want to practice this code on your own computer, make sure to include the code to import the necessary modules and read in the data as the first lines.
 </div>
 
 ## Scatterplots
