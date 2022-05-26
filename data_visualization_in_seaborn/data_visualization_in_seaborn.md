@@ -51,25 +51,63 @@ sagecell.makeSagecell({inputLocation: 'div.python_link',
                       autoeval: 'false',
                       linked: 'true'
                       });
-// Make *any* div with class 'python_data_init' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_data_init',
+// Make *any* div with class 'python_data_init1' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_data_init1',
                       evalButtonText: 'Run python',
                       languages: ["python"],
                       editor: 'codemirror-readonly',
                       hide: ['fullScreen', 'permalink','output','evalButton'],
                       autoeval: 'true',
                       linked: 'true',
-                      linkKey: "data"
+                      linkKey: "data1"
                       });       
-// Make *any* div with class 'python_data' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_data',
+// Make *any* div with class 'python_data1' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_data1',
                       evalButtonText: 'Run python',
                       languages: ["python"],
                       hide: ['fullScreen', 'permalink'],
                       autoeval: 'false',
                       linked: 'true',
-                      linkKey: "data"
-                      });                
+                      linkKey: "data1"
+                      });
+// Make *any* div with class 'python_data_init2' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_data_init2',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      editor: 'codemirror-readonly',
+                      hide: ['fullScreen', 'permalink','output','evalButton'],
+                      autoeval: 'true',
+                      linked: 'true',
+                      linkKey: "data2"
+                      });       
+// Make *any* div with class 'python_data2' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_data2',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'false',
+                      linked: 'true',
+                      linkKey: "data2"
+                      });
+// Make *any* div with class 'python_data_init3' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_data_init3',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      editor: 'codemirror-readonly',
+                      hide: ['fullScreen', 'permalink','output','evalButton'],
+                      autoeval: 'true',
+                      linked: 'true',
+                      linkKey: "data3"
+                      });       
+// Make *any* div with class 'python_data3' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_data3',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'false',
+                      linked: 'true',
+                      linkKey: "data3"
+                      });                                      
 </script>
 @end
 -->
@@ -152,7 +190,7 @@ By convention, you import it with the shorthand `sns`.
 This is optional, but we recommend you do that because when you look at seaborn code online, you'll nearly always see it with that same abbreviation.
 Following that convention will make your code more comparable to examples you see online.
 
-<div class="python_data_init">
+<div class="python_data_init1">
 <lia-keep>
 <script type="text/x-sage">
 import seaborn as sns
@@ -166,7 +204,7 @@ import seaborn as sns
 
 First, we need to load the python modules we'll be using (this block of code will run automatically):
 
-<div class="python_data_init">
+<div class="python_data_init1">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -188,7 +226,7 @@ The `seaborn` module is the plotting module that is the focus of this lesson, an
 
 And then read in the data set:
 
-<div class="python_data">
+<div class="python_data1">
 <lia-keep>
 <script type="text/x-sage">
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
@@ -220,7 +258,7 @@ For more background on scatterplots, watch [this Kahn Academy series](https://ww
 ### Basic scatterplot
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init1">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -236,7 +274,7 @@ The seaborn library includes a powerful function called `relplot`, short for "re
 
 If you provide `relplot` with two continuous variables, it will default to making a scatterplot. Here we'll plot age and height.
 
-<div class="python_data">
+<div class="python_data1">
 <lia-keep>
 <script type="text/x-sage">
 sns.relplot(data = covid_data,
@@ -260,7 +298,7 @@ You can also create scatterplots with a similar function: `regplot` (short for "
 ### Using color for continuous variables
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init1">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -274,7 +312,7 @@ covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_se
 
 Let's try adding information about a third variable, weight, by using color.
 
-<div class="python_data">
+<div class="python_data1">
 <lia-keep>
 <script type="text/x-sage">
 sns.relplot(data = covid_data,
@@ -297,7 +335,7 @@ Note that adding hue to the command automatically adds a legend to your plot as 
 ### Using color to show groups
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init1">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -313,7 +351,7 @@ Now let's look at using color for a categorical variable (`is_smoker`, with opti
 
 The values entered for `is_smoker` in the data are actually much longer than we need them to be --- they include the text of the option after the shorthand for it (e.g. former smokers are indicated by `ex_fumeur__j_ai_fum__mais_ne_fume_plus`). We don't want that additional text in the plot, so we'll recode that variable now.
 
-<div class="python_data">
+<div class="python_data1">
 <lia-keep>
 <script type="text/x-sage">
 # recode is_smoker to make the variable labels shorter
@@ -333,7 +371,7 @@ For a refresher, see this tutorial on [recoding variables in a pandas dataframe]
 
 Then we can update our scatterplot to use `is_smoker` for color.
 
-<div class="python_data">
+<div class="python_data1">
 <lia-keep>
 <script type="text/x-sage">
 sns.relplot(data = covid_data,
@@ -358,7 +396,7 @@ Tip: It's generally much easier to make any necessary changes to the dataframe, 
 ### Distinguish groups more clearly with color and shape
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init1">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -376,7 +414,7 @@ We'll improve this plot by using shape (controlled by the `style` argument) and 
 Tip: Don't use color alone to convey important information in your plots because if your end users are unable to distinguish the colors, the plot loses its value. Instead, double-up color information with another element, such as marker shape, to make the different groups easier to distinguish.
 </div>
 
-<div class="python_data">
+<div class="python_data1">
 <lia-keep>
 <script type="text/x-sage">
 sns.relplot(data = covid_data,
@@ -397,7 +435,7 @@ plt.show()
 ### Custom colors
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init1">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -413,7 +451,7 @@ The seaborn library includes many color palettes to choose from, or you can spec
 
 Here we'll try switching from the default color palette to a version that is easier to distinguish for people with some types of colorblindness (although remember that even when using a palette that is supposedly colorblind friendly, you should still avoid using color on its own to display important information).
 
-<div class="python_data">
+<div class="python_data1">
 <lia-keep>
 <script type="text/x-sage">
 sns.relplot(data = covid_data,
@@ -458,7 +496,7 @@ We'll show a quick example of changing style and context here, but there are man
 #### Setting plot style
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init2">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -466,7 +504,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
 sns.set_theme(palette="colorblind")
 </script>
 </lia-keep>
@@ -474,7 +511,7 @@ sns.set_theme(palette="colorblind")
 
 There are 5 preset seaborn themes: darkgrid, whitegrid, dark, white, and ticks.
 
-<div class="python_data">
+<div class="python_data2">
 <lia-keep>
 <script type="text/x-sage">
 sns.set_style("white")
@@ -508,7 +545,7 @@ It's unfortunate that the same word gets used for both, but you can still tell t
 #### Setting plot context
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init3">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -516,7 +553,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -525,7 +561,7 @@ sns.set_style("white")
 
 There are 4 different contexts available: notebook (default), paper, talk, and poster.
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.set_context("poster")
@@ -584,7 +620,7 @@ We'll continue using the same data we explored to make scatterplots.
 ### Basic histogram
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init3">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -592,7 +628,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -601,7 +636,7 @@ sns.set_style("white")
 
 Because histograms show just one variable, the only aesthetic they require is x. The y-axis of the plot will just show the counts of observations in each bin on the x-axis. (Note that it is possible to provide `sns.displot` with y instead of x, in which case it will generate a sideways histogram.)
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.displot(covid_data, x="val_age")
@@ -621,7 +656,7 @@ plt.show()
 ### Change the number of bins
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init3">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -629,7 +664,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -638,7 +672,7 @@ sns.set_style("white")
 
 The appearance of a histogram can change a lot depending on the number of bins you use along the x-axis. It's a good idea to try a few different sets of bins to see what works well for communicating this distribution.
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.displot(covid_data, x="val_age", binwidth=1)
@@ -655,7 +689,7 @@ plt.show()
 </details>
 
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.displot(covid_data, x="val_age", binwidth=10)
@@ -687,7 +721,7 @@ The best binwidth to choose depends on what you want your histogram to convey.
 ### Using color to show groups
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init3">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -695,7 +729,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -706,7 +739,7 @@ As with scatterplots, we can add information about an additional variable by usi
 
 Note that seaborn is continuing to use the color palette we set when we were making scatterplots (see [custom colors](#custom-colors)). If you want to change the color palette, you can do so at any time.
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.displot(covid_data, x="val_age", hue="is_smoker")
@@ -728,7 +761,7 @@ That's often the most useful way to plot multiple histograms, but in this case, 
 
 You can control how `seaborn` plots the distributions with the `multiple` argument. To show stacked groups instead, use `multiple = "stack"`. This will put the three distributions one on top of the other, so the height of all three colors together in each bin corresponds to the total count across groups; the silhouette of this histogram will be identical to the original histogram without coloring by group.
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.displot(covid_data, x="val_age", hue="is_smoker", multiple="stack")
@@ -751,7 +784,7 @@ You can also use this same `displot` function to create [density plots](https://
 ### Adding marginal histograms to other plots
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init3">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -759,7 +792,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
 </script>
@@ -768,7 +800,7 @@ sns.set_style("white")
 
 Sometimes you may wish to show a distribution as context for another plot, such as a scatterplot. You can add marginal histograms to a bivariate plot with the `jointplot` function.
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.jointplot(data=covid_data, x="val_age", y="val_height_cm")
@@ -849,7 +881,7 @@ We'll modify the code that runs automatically at the top of each page to load th
 ### Basic line plot
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init3">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -863,7 +895,7 @@ sns.set_style("white")
 </lia-keep>
 </div>
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.relplot(x="timepoint", y="signal", kind="line", data=fmri)
@@ -886,7 +918,7 @@ In this case, we have several different subjects, and from each we have readings
 ### Using color and line type to show groups
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init3">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -903,7 +935,7 @@ sns.set_style("white")
 
 If you want to show multiple lines on a single plot, you can achieve that by adding arguments for `hue` (controls color) and `style` (controls line type, like solid or dashed), as we did for scatterplots and histograms.
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.relplot(x="timepoint", y="signal", hue="event", style="event", kind="line", data=fmri)
@@ -922,7 +954,7 @@ plt.show()
 ### Using facets to compare plots
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init3">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -944,7 +976,7 @@ In the current example, let's say we wanted to create two versions of the signal
 
 You can add facets to a `seaborn` plot by adding an argument for either `col` (for columns) or `row` (for rows) --- or both, if you want to show several different facets.
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.relplot(x="timepoint", y="signal", hue="event", style="event", col = "region", kind="line", data=fmri)
@@ -1025,7 +1057,7 @@ Either way is fine! The best approach for you likely depends on your level of in
 ### Linear regression trend lines
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init3">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -1048,7 +1080,7 @@ There are two very similar functions available for drawing trend lines: `regplot
 For more background on `regplot` vs. `lmplot`, see [the seaborn regression tutorial](https://seaborn.pydata.org/tutorial/regression.html#controlling-the-size-and-shape-of-the-plot).
 </div>
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.lmplot(data = covid_data,
@@ -1075,7 +1107,7 @@ We can address the first issue by adjusting alpha for the scatterplot to make th
 ### Using alpha to fix overplotting
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init3">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -1093,7 +1125,7 @@ sns.set_style("white")
 One reasonable guess for how to adjust `alpha` in our plot would be to add an `alpha` argument to the command, as we did previously for `hue` and `style`.
 For example, you might try to set alpha to .1 by doing something like this:
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 # this won't work
@@ -1125,7 +1157,7 @@ There is a much steeper learning curve for `matplotlib` compared to `seaborn`, h
 
 In this case, we can add an argument `scatter_kws` that passes additional "keyword arguments" to the `matplotlib` function drawing the scatterplot via a [python dictionary](https://www.w3schools.com/python/python_dictionaries.asp). There are [many possible keyword arguments](https://matplotlib.org/3.5.1/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D) you can use, but we'll just set `alpha` here.
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.lmplot(data = covid_data,
@@ -1148,7 +1180,7 @@ This solves the overplotting issue, but we still have the problem of the linear 
 ### Polynomial regression trend lines
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init3">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -1167,7 +1199,7 @@ One way to add more flexibility to a linear trend line is by adding [polynomial 
 
 We'll try adding a quadratic term here, to see if it looks like a second order polynomial linear regression is a better description of the data.
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.lmplot(data = covid_data,
@@ -1197,7 +1229,7 @@ In general, polynomial models are a good choice when the polynomial relationship
 ### Lowess curve trend lines
 @sage
 
-<div class="python_data_init">
+<div class="python_data_init3">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -1220,7 +1252,7 @@ For a deeper understanding of what is meant by parametric vs. non-parametric mod
 For a good conceptual explanation of lowess curves in particular, see the [StatsQuest video "Lowess and Loess, Clearly Explained"](https://www.youtube.com/watch?v=Vf7oJ6z2LCc).
 </div>
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.lmplot(data = covid_data,
@@ -1245,7 +1277,7 @@ There are several more options for kinds of trend lines to draw in `seaborn`, in
 
 ### Quiz: Trend Lines
 @sage
-<div class="python_data_init">
+<div class="python_data_init3">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -1280,7 +1312,7 @@ As you work on the code, test it out by editing the interactive code block so yo
 Note that your solution may not look exactly like the solution code provided --- if your code works and it generates a plot that meets your needs, then it's perfect!
 </div>
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.lmplot(data = covid_data,
@@ -1305,7 +1337,7 @@ sns.lmplot(data = covid_data,
 # If you used col, try switching to row now to see how the plot changes!
 ```
 
-<div class="python_data">
+<div class="python_data3">
 <lia-keep>
 <script type="text/x-sage">
 sns.lmplot(data = covid_data,
