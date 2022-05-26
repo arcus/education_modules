@@ -42,72 +42,7 @@ sagecell.makeSagecell({inputLocation: 'div.python_run',
                       languages: ["python"],
                       hide: ['fullScreen', 'permalink'],
                       autoeval: 'true'
-                      });
-// Make *any* div with class 'python_link' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_link',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'false',
-                      linked: 'true'
-                      });
-// Make *any* div with class 'python_data_init1' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_data_init1',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      editor: 'codemirror-readonly',
-                      hide: ['fullScreen', 'permalink','output','evalButton'],
-                      autoeval: 'true',
-                      linked: 'false',
-                      linkKey: "data1"
-                      });       
-// Make *any* div with class 'python_data1' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_data1',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'false',
-                      linked: 'false',
-                      linkKey: "data1"
-                      });
-// Make *any* div with class 'python_data_init2' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_data_init2',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      editor: 'codemirror-readonly',
-                      hide: ['fullScreen', 'permalink','output','evalButton'],
-                      autoeval: 'true',
-                      linked: 'false',
-                      linkKey: "data2"
-                      });       
-// Make *any* div with class 'python_data2' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_data2',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'false',
-                      linked: 'false',
-                      linkKey: "data2"
-                      });
-// Make *any* div with class 'python_data_init3' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_data_init3',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      editor: 'codemirror-readonly',
-                      hide: ['fullScreen', 'permalink','output','evalButton'],
-                      autoeval: 'true',
-                      linked: 'false',
-                      linkKey: "data3"
-                      });       
-// Make *any* div with class 'python_data3' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_data3',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'false',
-                      linked: 'false',
-                      linkKey: "data3"
-                      });                                      
+                      });                                    
 </script>
 @end
 -->
@@ -152,7 +87,7 @@ You can also edit the code in these cells and run your own code.
 
 
 **Give it a try:**
-<div class="python_link">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 m = 3
@@ -161,20 +96,11 @@ print(m+2)
 </lia-keep>
 </div>
 
-The cells in this module are linked, meaning if you run code in two cells on the same page, the second cell will remember anything you defined in the first.
 
-<div class="python_link">
-<lia-keep>
-<script type="text/x-sage">
-n = m**3 + m  # a double asterisk indicates 3 is the exponent of m
-print(n)
-</script>
-</lia-keep>
-</div>
+You can change anything you want in the cell.
+You can always refresh the page to return the code (and the stored memory of the cell) to its initial state.
 
-You can change anything you want in either cell. Once you run that code using the **Run python** button, both cells will remember it.
-
-Code will not persist from one page to the next, and you can always refresh the page to return the code (and the stored memory of the cell) to its initial state.
+Code will not persist from one cell to the next, so we'll end up repeating a lot of commands from one cell to the next.
 
 <div class = "important">
 These cells will compute everything you ask them to, but will only output what you explicitly request using the `print()` command.
@@ -190,7 +116,7 @@ By convention, you import it with the shorthand `sns`.
 This is optional, but we recommend you do that because when you look at seaborn code online, you'll nearly always see it with that same abbreviation.
 Following that convention will make your code more comparable to examples you see online.
 
-<div class="python_data_init1">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import seaborn as sns
@@ -202,9 +128,9 @@ import seaborn as sns
 ### The data
 @sage
 
-First, we need to load the python modules we'll be using (this block of code will run automatically):
+First, we need to load the python modules we'll be using:
 
-<div class="python_data_init1">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -224,11 +150,16 @@ The [`numpy` module](https://numpy.org/) has several useful functions for statis
 The `seaborn` module is the plotting module that is the focus of this lesson, and it requires some pieces of `matplotlib`, since it is built as an extension to it.
 </div>
 
-And then read in the data set:
+And then read in the data set (note that we have to repeat our commands to load the libraries here, since this is a new cell):
 
-<div class="python_data1">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
 print(covid_data.shape) # gives the number of rows and columns
 </script>
@@ -243,9 +174,9 @@ To learn more about the study, see the [zenodo page for this dataset](https://ze
 </div>
 
 <div class="important">
-The code from this section, without a "Run python" button, will be at the top of each page with code in this module.
-It will run automatically when you open each page.
-If you want to practice this code on your own computer, make sure to include the code to import the necessary modules and read in the data as the first lines.
+The code from this section will be at the top of each code block in this module.
+
+If you want to practice this code on your own computer, make sure to include the code to import the necessary modules and read in the data as the first lines, but you'll only have to do it once at the top of your script, not before each new command.
 </div>
 
 ## Scatterplots
@@ -258,7 +189,11 @@ For more background on scatterplots, watch [this Kahn Academy series](https://ww
 ### Basic scatterplot
 @sage
 
-<div class="python_data_init1">
+The seaborn library includes a powerful function called `relplot`, short for "relationships plot" because it's designed to highlight relationships among variables in the data.
+
+If you provide `relplot` with two continuous variables, it will default to making a scatterplot. Here we'll plot age and height.
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -266,17 +201,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
 
-The seaborn library includes a powerful function called `relplot`, short for "relationships plot" because it's designed to highlight relationships among variables in the data.
-
-If you provide `relplot` with two continuous variables, it will default to making a scatterplot. Here we'll plot age and height.
-
-<div class="python_data1">
-<lia-keep>
-<script type="text/x-sage">
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm")
 plt.show()
@@ -298,7 +223,9 @@ You can also create scatterplots with a similar function: `regplot` (short for "
 ### Using color for continuous variables
 @sage
 
-<div class="python_data_init1">
+Let's try adding information about a third variable, weight, by using color.
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -306,15 +233,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
 
-Let's try adding information about a third variable, weight, by using color.
-
-<div class="python_data1">
-<lia-keep>
-<script type="text/x-sage">
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm", hue="val_weight_kg")
 plt.show()
@@ -335,7 +254,11 @@ Note that adding hue to the command automatically adds a legend to your plot as 
 ### Using color to show groups
 @sage
 
-<div class="python_data_init1">
+Now let's look at using color for a categorical variable (`is_smoker`, with options `ex_fumeur`, `fumeur`, and `non_fumeur`, referring to former smokers, current smokers, and non-smokers, respectively).
+
+The values entered for `is_smoker` in the data are actually much longer than we need them to be --- they include the text of the option after the shorthand for it (e.g. former smokers are indicated by `ex_fumeur__j_ai_fum__mais_ne_fume_plus`). We don't want that additional text in the plot, so we'll recode that variable now.
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -343,23 +266,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
 
-Now let's look at using color for a categorical variable (`is_smoker`, with options `ex_fumeur`, `fumeur`, and `non_fumeur`, referring to former smokers, current smokers, and non-smokers, respectively).
-
-The values entered for `is_smoker` in the data are actually much longer than we need them to be --- they include the text of the option after the shorthand for it (e.g. former smokers are indicated by `ex_fumeur__j_ai_fum__mais_ne_fume_plus`). We don't want that additional text in the plot, so we'll recode that variable now.
-
-<div class="python_data1">
-<lia-keep>
-<script type="text/x-sage">
 # recode is_smoker to make the variable labels shorter
 orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
 new_codes = ["ex-smoker", "smoker", "non-smoker"]
 
 covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-
 </script>
 </lia-keep>
 </div>
@@ -371,9 +283,19 @@ For a refresher, see this tutorial on [recoding variables in a pandas dataframe]
 
 Then we can update our scatterplot to use `is_smoker` for color.
 
-<div class="python_data1">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker")
@@ -396,7 +318,13 @@ Tip: It's generally much easier to make any necessary changes to the dataframe, 
 ### Distinguish groups more clearly with color and shape
 @sage
 
-<div class="python_data_init1">
+We'll improve this plot by using shape (controlled by the `style` argument) and color (controlled by `hue`) together to mark the smoking status groups.
+
+<div class = "important">
+Tip: Don't use color alone to convey important information in your plots because if your end users are unable to distinguish the colors, the plot loses its value. Instead, double-up color information with another element, such as marker shape, to make the different groups easier to distinguish.
+</div>
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -404,19 +332,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
 
-We'll improve this plot by using shape (controlled by the `style` argument) and color (controlled by `hue`) together to mark the smoking status groups.
-
-<div class = "important">
-Tip: Don't use color alone to convey important information in your plots because if your end users are unable to distinguish the colors, the plot loses its value. Instead, double-up color information with another element, such as marker shape, to make the different groups easier to distinguish.
-</div>
-
-<div class="python_data1">
-<lia-keep>
-<script type="text/x-sage">
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker", style = "is_smoker")
@@ -435,7 +355,11 @@ plt.show()
 ### Custom colors
 @sage
 
-<div class="python_data_init1">
+The seaborn library includes many color palettes to choose from, or you can specify colors manually.
+
+Here we'll try switching from the default color palette to a version that is easier to distinguish for people with some types of colorblindness (although remember that even when using a palette that is supposedly colorblind friendly, you should still avoid using color on its own to display important information).
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -443,17 +367,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-</script>
-</lia-keep>
-</div>
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
 
-The seaborn library includes many color palettes to choose from, or you can specify colors manually.
-
-Here we'll try switching from the default color palette to a version that is easier to distinguish for people with some types of colorblindness (although remember that even when using a palette that is supposedly colorblind friendly, you should still avoid using color on its own to display important information).
-
-<div class="python_data1">
-<lia-keep>
-<script type="text/x-sage">
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker", style = "is_smoker",
@@ -496,7 +414,9 @@ We'll show a quick example of changing style and context here, but there are man
 #### Setting plot style
 @sage
 
-<div class="python_data_init2">
+There are 5 preset seaborn themes: darkgrid, whitegrid, dark, white, and ticks.
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -504,16 +424,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette
 sns.set_theme(palette="colorblind")
-</script>
-</lia-keep>
-</div>
 
-There are 5 preset seaborn themes: darkgrid, whitegrid, dark, white, and ticks.
-
-<div class="python_data2">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_style("white")
 
 sns.relplot(data = covid_data,
@@ -545,7 +462,9 @@ It's unfortunate that the same word gets used for both, but you can still tell t
 #### Setting plot context
 @sage
 
-<div class="python_data_init3">
+There are 4 different contexts available: notebook (default), paper, talk, and poster.
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -553,17 +472,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette
 sns.set_theme(palette="colorblind")
+# style
 sns.set_style("white")
-</script>
-</lia-keep>
-</div>
 
-There are 4 different contexts available: notebook (default), paper, talk, and poster.
-
-<div class="python_data3">
-<lia-keep>
-<script type="text/x-sage">
 sns.set_context("poster")
 
 sns.relplot(data = covid_data,
@@ -586,7 +503,7 @@ To set the context back to `notebook` (the default), use `sns.set_context("noteb
 
 ### Quiz: Scatterplots
 
-What is the command to create a scatterplot in seaborn?
+What is the command to create a scatterplot in `seaborn`?
 
 [[sns.relplot()]]
 <script>
@@ -620,7 +537,9 @@ We'll continue using the same data we explored to make scatterplots.
 ### Basic histogram
 @sage
 
-<div class="python_data_init3">
+Because histograms show just one variable, the only aesthetic they require is x. The y-axis of the plot will just show the counts of observations in each bin on the x-axis. (Note that it is possible to provide `sns.displot` with y instead of x, in which case it will generate a sideways histogram.)
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -628,17 +547,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette and style
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
-</script>
-</lia-keep>
-</div>
 
-Because histograms show just one variable, the only aesthetic they require is x. The y-axis of the plot will just show the counts of observations in each bin on the x-axis. (Note that it is possible to provide `sns.displot` with y instead of x, in which case it will generate a sideways histogram.)
-
-<div class="python_data3">
-<lia-keep>
-<script type="text/x-sage">
 sns.displot(covid_data, x="val_age")
 plt.show()
 </script>
@@ -656,7 +572,9 @@ plt.show()
 ### Change the number of bins
 @sage
 
-<div class="python_data_init3">
+The appearance of a histogram can change a lot depending on the number of bins you use along the x-axis. It's a good idea to try a few different sets of bins to see what works well for communicating this distribution.
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -664,17 +582,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette and style
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
-</script>
-</lia-keep>
-</div>
 
-The appearance of a histogram can change a lot depending on the number of bins you use along the x-axis. It's a good idea to try a few different sets of bins to see what works well for communicating this distribution.
-
-<div class="python_data3">
-<lia-keep>
-<script type="text/x-sage">
 sns.displot(covid_data, x="val_age", binwidth=1)
 plt.show()
 </script>
@@ -689,9 +604,22 @@ plt.show()
 </details>
 
 
-<div class="python_data3">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette and style
+sns.set_theme(palette="colorblind")
+sns.set_style("white")
+
 sns.displot(covid_data, x="val_age", binwidth=10)
 plt.show()
 </script>
@@ -721,7 +649,11 @@ The best binwidth to choose depends on what you want your histogram to convey.
 ### Using color to show groups
 @sage
 
-<div class="python_data_init3">
+As with scatterplots, we can add information about an additional variable by using color. Let's put in the variable `is_smoker` for hue so we can see how the distribution of ages differs by smoking status.
+
+Note that seaborn is continuing to use the color palette we set when we were making scatterplots (see [custom colors](#custom-colors)). If you want to change the color palette, you can do so at any time.
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -729,19 +661,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette and style
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
-</script>
-</lia-keep>
-</div>
 
-As with scatterplots, we can add information about an additional variable by using color. Let's put in the variable `is_smoker` for hue so we can see how the distribution of ages differs by smoking status.
-
-Note that seaborn is continuing to use the color palette we set when we were making scatterplots (see [custom colors](#custom-colors)). If you want to change the color palette, you can do so at any time.
-
-<div class="python_data3">
-<lia-keep>
-<script type="text/x-sage">
 sns.displot(covid_data, x="val_age", hue="is_smoker")
 plt.show()
 </script>
@@ -761,9 +688,22 @@ That's often the most useful way to plot multiple histograms, but in this case, 
 
 You can control how `seaborn` plots the distributions with the `multiple` argument. To show stacked groups instead, use `multiple = "stack"`. This will put the three distributions one on top of the other, so the height of all three colors together in each bin corresponds to the total count across groups; the silhouette of this histogram will be identical to the original histogram without coloring by group.
 
-<div class="python_data3">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette and style
+sns.set_theme(palette="colorblind")
+sns.set_style("white")
+
 sns.displot(covid_data, x="val_age", hue="is_smoker", multiple="stack")
 plt.show()
 </script>
@@ -784,7 +724,9 @@ You can also use this same `displot` function to create [density plots](https://
 ### Adding marginal histograms to other plots
 @sage
 
-<div class="python_data_init3">
+Sometimes you may wish to show a distribution as context for another plot, such as a scatterplot. You can add marginal histograms to a bivariate plot with the `jointplot` function.
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -792,17 +734,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette and style
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
-</script>
-</lia-keep>
-</div>
 
-Sometimes you may wish to show a distribution as context for another plot, such as a scatterplot. You can add marginal histograms to a bivariate plot with the `jointplot` function.
-
-<div class="python_data3">
-<lia-keep>
-<script type="text/x-sage">
 sns.jointplot(data=covid_data, x="val_age", y="val_height_cm")
 plt.show()
 </script>
@@ -881,7 +820,7 @@ We'll modify the code that runs automatically at the top of each page to load th
 ### Basic line plot
 @sage
 
-<div class="python_data_init3">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -891,13 +830,7 @@ import seaborn as sns
 fmri = sns.load_dataset("fmri")
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
-</script>
-</lia-keep>
-</div>
 
-<div class="python_data3">
-<lia-keep>
-<script type="text/x-sage">
 sns.relplot(x="timepoint", y="signal", kind="line", data=fmri)
 plt.show()
 </script>
@@ -918,7 +851,9 @@ In this case, we have several different subjects, and from each we have readings
 ### Using color and line type to show groups
 @sage
 
-<div class="python_data_init3">
+If you want to show multiple lines on a single plot, you can achieve that by adding arguments for `hue` (controls color) and `style` (controls line type, like solid or dashed), as we did for scatterplots and histograms.
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -926,18 +861,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 fmri = sns.load_dataset("fmri")
-
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
-</script>
-</lia-keep>
-</div>
 
-If you want to show multiple lines on a single plot, you can achieve that by adding arguments for `hue` (controls color) and `style` (controls line type, like solid or dashed), as we did for scatterplots and histograms.
-
-<div class="python_data3">
-<lia-keep>
-<script type="text/x-sage">
 sns.relplot(x="timepoint", y="signal", hue="event", style="event", kind="line", data=fmri)
 plt.show()
 </script>
@@ -954,21 +880,6 @@ plt.show()
 ### Using facets to compare plots
 @sage
 
-<div class="python_data_init3">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-fmri = sns.load_dataset("fmri")
-
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-</script>
-</lia-keep>
-</div>
-
 If you want to make more than one version of a similar plot, consider using facets.
 Facets let you split one complicated plot into a number of comparable mini plots, usually by separating the data out by levels of a categorical variable.
 
@@ -976,9 +887,17 @@ In the current example, let's say we wanted to create two versions of the signal
 
 You can add facets to a `seaborn` plot by adding an argument for either `col` (for columns) or `row` (for rows) --- or both, if you want to show several different facets.
 
-<div class="python_data3">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+fmri = sns.load_dataset("fmri")
+sns.set_theme(palette="colorblind")
+sns.set_style("white")
+
 sns.relplot(x="timepoint", y="signal", hue="event", style="event", col = "region", kind="line", data=fmri)
 plt.show()
 </script>
@@ -1057,21 +976,6 @@ Either way is fine! The best approach for you likely depends on your level of in
 ### Linear regression trend lines
 @sage
 
-<div class="python_data_init3">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-</script>
-</lia-keep>
-</div>
-
 Because trend lines are such a useful visual summary, `seaborn` provides several options to add trend lines to your plots quickly and easily.
 
 <div class = "options">
@@ -1080,9 +984,22 @@ There are two very similar functions available for drawing trend lines: `regplot
 For more background on `regplot` vs. `lmplot`, see [the seaborn regression tutorial](https://seaborn.pydata.org/tutorial/regression.html#controlling-the-size-and-shape-of-the-plot).
 </div>
 
-<div class="python_data3">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette and style
+sns.set_theme(palette="colorblind")
+sns.set_style("white")
+
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm")
 plt.show()
@@ -1107,7 +1024,10 @@ We can address the first issue by adjusting alpha for the scatterplot to make th
 ### Using alpha to fix overplotting
 @sage
 
-<div class="python_data_init3">
+One reasonable guess for how to adjust `alpha` in our plot would be to add an `alpha` argument to the command, as we did previously for `hue` and `style`.
+For example, you might try to set alpha to .1 by doing something like this:
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -1115,19 +1035,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette and style
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
-</script>
-</lia-keep>
-</div>
 
-One reasonable guess for how to adjust `alpha` in our plot would be to add an `alpha` argument to the command, as we did previously for `hue` and `style`.
-For example, you might try to set alpha to .1 by doing something like this:
-
-<div class="python_data3">
-<lia-keep>
-<script type="text/x-sage">
 # this won't work
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
@@ -1157,9 +1072,22 @@ There is a much steeper learning curve for `matplotlib` compared to `seaborn`, h
 
 In this case, we can add an argument `scatter_kws` that passes additional "keyword arguments" to the `matplotlib` function drawing the scatterplot via a [python dictionary](https://www.w3schools.com/python/python_dictionaries.asp). There are [many possible keyword arguments](https://matplotlib.org/3.5.1/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D) you can use, but we'll just set `alpha` here.
 
-<div class="python_data3">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette and style
+sns.set_theme(palette="colorblind")
+sns.set_style("white")
+
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            scatter_kws={"alpha": .1})
@@ -1180,7 +1108,11 @@ This solves the overplotting issue, but we still have the problem of the linear 
 ### Polynomial regression trend lines
 @sage
 
-<div class="python_data_init3">
+One way to add more flexibility to a linear trend line is by adding [polynomial terms](https://www.theanalysisfactor.com/regression-modelshow-do-you-know-you-need-a-polynomial/) to the model. A second order polynomial model includes linear and quadratic terms, a third order polynomial model includes linear, quadratic, and cubic terms, and so on.
+
+We'll try adding a quadratic term here, to see if it looks like a second order polynomial linear regression is a better description of the data.
+
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
@@ -1188,20 +1120,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-s
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette and style
 sns.set_theme(palette="colorblind")
 sns.set_style("white")
-</script>
-</lia-keep>
-</div>
 
-One way to add more flexibility to a linear trend line is by adding [polynomial terms](https://www.theanalysisfactor.com/regression-modelshow-do-you-know-you-need-a-polynomial/) to the model. A second order polynomial model includes linear and quadratic terms, a third order polynomial model includes linear, quadratic, and cubic terms, and so on.
-
-We'll try adding a quadratic term here, to see if it looks like a second order polynomial linear regression is a better description of the data.
-
-<div class="python_data3">
-<lia-keep>
-<script type="text/x-sage">
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            scatter_kws={"alpha": .1},
@@ -1229,21 +1155,6 @@ In general, polynomial models are a good choice when the polynomial relationship
 ### Lowess curve trend lines
 @sage
 
-<div class="python_data_init3">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-</script>
-</lia-keep>
-</div>
-
 If you want a high level of flexibility in your trend line, you can achieve that with much less complexity by switching to a non-parametric approach like [local regression](https://en.wikipedia.org/wiki/Local_regression), one example of which is lowess ("locally weighted scatterplot smoothing") curves.
 
 <div class = "learnmore">
@@ -1252,9 +1163,22 @@ For a deeper understanding of what is meant by parametric vs. non-parametric mod
 For a good conceptual explanation of lowess curves in particular, see the [StatsQuest video "Lowess and Loess, Clearly Explained"](https://www.youtube.com/watch?v=Vf7oJ6z2LCc).
 </div>
 
-<div class="python_data3">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette and style
+sns.set_theme(palette="colorblind")
+sns.set_style("white")
+
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            scatter_kws={"alpha": .1},
@@ -1277,20 +1201,6 @@ There are several more options for kinds of trend lines to draw in `seaborn`, in
 
 ### Quiz: Trend Lines
 @sage
-<div class="python_data_init3">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-</script>
-</lia-keep>
-</div>
 
 What function can you use to draw a scatterplot with trend line?
 
@@ -1312,9 +1222,22 @@ As you work on the code, test it out by editing the interactive code block so yo
 Note that your solution may not look exactly like the solution code provided --- if your code works and it generates a plot that meets your needs, then it's perfect!
 </div>
 
-<div class="python_data3">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette and style
+sns.set_theme(palette="colorblind")
+sns.set_style("white")
+
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            scatter_kws={"alpha": .1},
@@ -1337,9 +1260,22 @@ sns.lmplot(data = covid_data,
 # If you used col, try switching to row now to see how the plot changes!
 ```
 
-<div class="python_data3">
+<div class="python">
 <lia-keep>
 <script type="text/x-sage">
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+# recode is_smoker to make the variable labels shorter
+orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
+new_codes = ["ex-smoker", "smoker", "non-smoker"]
+covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+# color palette and style
+sns.set_theme(palette="colorblind")
+sns.set_style("white")
+
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            scatter_kws={"alpha": .1},
