@@ -443,8 +443,6 @@ Please read over the first 70 lines of code and execute that code in the R Markd
 * Re-creating the long format by making it a little better, with better column names
 * Looking at the final long data
 
-![Code from `reshape_data_exercises.Rmd`](media/line_1.png) <!-- style = "max-height: 200px;" -->
-
 <div class = "important">
 Please open your RStudio environment now and go through the first 70 lines of code of `reshape_data_exercises.Rmd`.  We're using that code to help instruct you, too -- it's not just an example, it has some useful information you don't want to miss!  There's also a solutions file at `reshape_data_solutions.Rmd` if you get stuck.
 </div>
@@ -480,8 +478,6 @@ Please read over lines 75-140 and run the code in that section.  This is what yo
 * Troubleshooting what went wrong with that pivot and correcting it
 * Pivoting the religion data back from long data to a different wide data arrangement
 * Pivoting a dataset (fish encounters) that was originally in long format to a wide format
-
-![Code from `reshape_data_exercises.Rmd`](media/line_75.png) <!-- style = "max-height: 200px;" -->
 
 <div class = "important">
 Please open your RStudio environment now and go through lines 75-140 of `reshape_data_exercises.Rmd`.  We're using that code to help instruct you, too -- it's not just an example, it has some useful information you don't want to miss!  There's also a solutions file at `reshape_data_solutions.Rmd` if you get stuck.
@@ -564,8 +560,6 @@ Without having written any code, we've gotten an idea of what we want to accompl
 
 Let's jump into R and get started.  In `reshape_data_exercises.Rmd` in your RStudio environment, start by loading this data and taking a look at it (look at and run the code in lines 150-165).
 
-![Code from `reshape_data_exercises.Rmd`](media/line_150.png) <!-- style = "max-height: 200px;" -->
-
 <div class = "important">
 You know what to do!  Check out lines 150-165 of `reshape_data_exercises.Rmd`.
 </div>
@@ -578,8 +572,6 @@ All done bringing in the data and looking at it?  Great!  Time to move along to 
 Our first challenge is to get all the `_1` variables, along with `subject_id` into one object, and all the `_2` variables, along with `subject_id`, into another.  We can do this using `dplyr`.
 
 Read and execute the code in lines 170-225 to create `biosample_first` and `biosample_second`, which will capture the two sets of data neatly (and even add an additional field giving the 1 or 2 sequence number, in case that ends up being important).  
-
-![Code from `reshape_data_exercises.Rmd`](media/line_170.png) <!-- style = "max-height: 200px;" -->
 
 We'll use some commands that you already know, like `select`, as well as some that you might not be as familiar with, like `rename_with`.  Now that you've gotten some experience using help files, try using the `?` functionality and trying out `?rename_with` (or other function names) in the Console.
 
@@ -594,8 +586,6 @@ Do you now have two objects, called `biosample_first` and `biosample_second`?  G
 At this point, you might be thinking, "Hey!  If we just stack `biosample_first` and `biosample_second`, we'll be done, and have some tidy data!".  You're not wrong, and you might be tempted to do just that and not bother with transforming wide data to long data.  Just remember that once you get data into a long format, it's very versatile, and it's worth the effort to put your data into a long format first.
 
 Go to lines 230 - 265 and read through the explanations and run the code in this section of the file.
-
-![Code from `reshape_data_exercises.Rmd`](media/line_230.png) <!-- style = "max-height: 200px;" -->
 
 By the end of this section, you should have a `biosample_data_long` object that has our data in long format.
 
@@ -615,8 +605,6 @@ Ideally, what we'd like to eventually see is a tidy dataset that looks more like
 | 3380629109 | 876123	| 2019-05-14 | 09:15 | blood	 | venipuncture	| 4511 |	10 ml | 1 |
 
 Go to lines 270 - 290 to see what we mean!
-
-![Code from `reshape_data_exercises.Rmd`](media/line_270.png) <!-- style = "max-height: 200px;" -->
 
 In the end, we have tidy data that meets our needs and will make computation simpler.
 
