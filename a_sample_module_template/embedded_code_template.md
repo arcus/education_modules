@@ -86,6 +86,33 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 </script>
 @end
 
+@sage1
+<script input="hidden">
+// Make *any* div with class 'python_link1' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_link1',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'false',
+                      linked: 'true',
+                      linkKey: 'link1'
+                      });
+</script>
+@end
+
+@sage2
+<script input="hidden">
+// Make *any* div with class 'python_link1' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.python_link2',
+                      evalButtonText: 'Run python',
+                      languages: ["python"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'false',
+                      linked: 'true',
+                      linkKey: 'link2'
+                      });
+</script>
+@end
 -->
 # Embedding Code into Liascript
 <div class = "overview">
@@ -104,7 +131,30 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 @learning_objectives
 
 </div>
+## Testing linking
 
+### cells of type 1
+@sage1
+<div class="python_link1">
+<lia-keep>
+<script type="text/x-sage">
+print(df)
+</script>
+</lia-keep>
+</div>
+
+### cells of type 2
+@sage2
+<div class="python_link2">
+<lia-keep>
+<script type="text/x-sage">
+import pandas as pd
+d = {'col1': [1, 2], 'col2': [3, 4]};
+df = pd.DataFrame(data=d);
+print(df)
+</script>
+</lia-keep>
+</div>
 ## Embedding sagemath cells
 
 One cool spin-off of the [SageMath Project](https://www.sagemath.org) is the [SageMathCell](https://sagecell.sagemath.org) which allows you to run a single cell, not just in Sage, but in a number of languages including both python and R.
