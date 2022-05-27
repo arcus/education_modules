@@ -426,7 +426,7 @@ So, what do we put in as our `data`, and what do we add for `cols`?  Look a bit 
 
 When it comes to choosing columns, you generally want to pivot all the columns of your data frame except for the ones that uniquely identify an observation (a group, a patient, a vital signs reading, an environmental sensor reading at a particular moment, a town).  Sometimes that's just one column, as we'll see in our first example.  Other times, you might need two or more columns to uniquely identify an observation (like patient MRN and encounter ID to uniquely identify a patient encounter).
 
-This might all seem very theoretical and hard to understand.  That's why normally we like to scroll down in the help file all the way to the bottom, where there are some examples.  Let's start with a simple case.  This is the example given in the help file:
+This might all seem very theoretical and hard to understand.  That's why normally we like to scroll down in the help file all the way to the bottom, where there are some examples.  Let's start with a simple case.  This is the example given in the help file, which uses one of the sample datasets that comes along with the `tidyr` package.
 
 ```
 # Simplest case where column names are character data
