@@ -647,6 +647,10 @@ Go to lines 270 - 290 to see what we mean!
 
 In the end, we have tidy data that meets our needs and will make computation simpler.
 
+## Additional Resources
+
+As usual, one of the best resources for pivoting can be found in [R for Data Science](https://r4ds.had.co.nz/tidy-data.html#pivoting).  There are also helpful and illustrative exercises to help you gain fluency!
+
 ## Feedback
 
 In the beginning, we stated some goals.
