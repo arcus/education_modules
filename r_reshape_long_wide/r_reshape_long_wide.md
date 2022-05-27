@@ -122,7 +122,7 @@ subject_id | biosample_id_1 | collection_date_1 | collection_time_1 | sample_typ
 
 Compare that with long data, which might seem less familiar.  Long data has one or more columns that uniquely identify an observation, then just one column that discloses the name of a measured variable, and one column that gives the value of that variable.
 
-The long data below, which focuses on the `biosample_id` (which is unique for each biosample) instead of the `subject_id`, has the same information as the wide data above.  However, the data is organized in a format that features **keys** (variable names) and **values** appearing in **key-value pairs**.  You'll also notice that we've changed the variable names to remove the `_1` and `_2` suffixes used to indicate a first or second collection and instead added a "sequence" variable to state that information.
+The long data below, which focuses on the `biosample_id` (which is unique for each biosample) instead of the `subject_id`, has the same information as the wide data above.  However, the data is organized in a format that features **keys** (or **names**) and **values** appearing in **key-value pairs**.  You'll also notice that we've changed the variable names to remove the `_1` and `_2` suffixes used to indicate a first or second collection and instead added a "sequence" variable to state that information.
 
 | biosample_id | key |	value |
 | --------- | --- | --- |
@@ -190,9 +190,35 @@ Why would you ever want data in long format?  Your eyes have to do a lot of work
 
 In fact, you may also hear long data called "molten" data, and hear phrases like "melting" the data.  When something is molten or melted, it's easier to then "pour" that data into a new shape (you might hear "cast" or "mold" to describe this process).  It's easier to melt something down to reshape it, rather than take a shape you don't want, cut off bits and reattach them in the new shape.
 
-Additionally, if you have lots of missing data (as in our example, in which only two of the subjects have completed both sample collections), storing data in a long format that eliminates missing data can be more efficient.
+Additionally, if you have lots of missing data (as in our example, in which only two of the subjects have completed both sample collections), storing data in a long format that eliminates missing data might be more efficient (it all depends on the number of missing values).
 
 We'll work with long and wide data in R, so please use the next page to open the RStudio environment that's best for you.
+
+## Quiz: Wide vs Long Data
+
+<div class = "question">
+
+Which of the following is true?
+
+[[ ]] It's usually easier to reshape wide data into other wide formats than it is to reshape long data into wide data.
+[[X]] Long data stores data in key-value pairs
+[[ ]] Long data is more familiar and what tends to appear in journal articles
+[[X ]] Wide data has multiple columns for variables
+[[?]] There are several correct answers!
+***********
+
+<div class = "answer">
+
+It's actually easier to reshape long data into wide data than it is to convert one kind of wide data to a different wide data shape.  This is why it's so useful to know how to turn wide data into long data!
+
+Long data formats include data stored in key-value pairs, while wide data has multiple columns (1, 2, 100) for data.  The wide data format is what most people are used to seeing in journal articles, in .csvs, and in spreadsheets.
+
+</div>
+
+*******
+
+</div>
+
 
 ## Lesson Preparation: Our RStudio Environment
 
@@ -260,7 +286,7 @@ If you're pulling branches after having worked in other R modules, you might hav
 
 ### `pivot_longer`
 
-The `tidyr` package, a subset of the `tidyverse` suite of packages, includes two reshaping functions we'll use in this module.  We'll start with `pivot_longer`.  This function is used to reshape wide data, with multiple variable columns, into long data, with key-value pairs in a pair of columns that hold the variable name (or key) and the variable value.
+The `tidyr` package, a subset of the `tidyverse` suite of packages, includes two reshaping functions we'll use in this module.  We'll start with `pivot_longer`.  This function is used to reshape wide data, with multiple variable columns, into long data, with key-value pairs in a pair of columns that hold the variable name (or key) and the variable value.  Besides this pair of columns, there is a set of one or more leading columns that are used to uniquely identify an observation (for example, a sensor id, MRN, order number, or combination of name and date).
 
 Visually, `pivot_longer` aims to transform a data frame that looks like this:
 
@@ -276,7 +302,7 @@ To a data frame that looks like this:
 | Ayana | fave_dinosaur | stegosaurus |
 | Ayana | fave_movie | Encanto |
 
-All of the column names, except for "name", are converted to keys, and the value in the cells are converted to values.
+All of the column names, except for "name" (in this case), are converted to keys, and the value in the cells are converted to values.
 
 Note that instead of "key" and "value" as the column headers, you could have other names that make more sense to you or your data users:
 
@@ -288,13 +314,12 @@ Note that instead of "key" and "value" as the column headers, you could have oth
 
 Sometimes you might have additional columns that help specify an observation (such as year).  Maybe we poll students about their preferences yearly and have wide data that looks like this:
 
-
 | name | year | age | fave_dinosaur | fave_movie |
 | ---- | --- | --- | ------------- | ---------- |
 | Ayana | 2021 | 7 | stegosaurus | Coco |
 | Ayana | 2022 | 8 | stegosaurus | Encanto |
 
-Because the first two columns together indicate a single observation, we could pivot that data longer to look like this:
+Because the first two columns together indicate a single observation, we could pivot that data longer to look like this, keeping `name` and `year` and pivoting the rest of the variables.
 
 | name | year | variable_name | value |
 | ---- | --- | ----- | --- |
@@ -350,7 +375,7 @@ which can be pivoted into a wide data that looks like this:
 
 In the Console of your RStudio, you'll first type `library(tidyverse)`, so that `tidyr` and other important packages load.  Once that happens, then type `?pivot_longer`.  You should get a long and possibly difficult to understand help file opening in the Files / Plots / Packages / Help / Viewer pane (usually the lower right corner of the screen).
 
-Help files can be hard to understand, so let's walk through this help text.  It begins with a **Description** that briefly describes the aim of the function, without much detail.  This section is mostly useful to make sure you aren't confusing similarly-named functions.  Does this function do what you want it to do?  In our case, yes, it does. Then we can take on the much denser **Usage** section.  The usage section begins by writing out the function call with all of its arguments:
+Help files can be hard to understand, so let's walk through this help text.  It begins with a **Description** that briefly describes the aim of the function, without much detail.  This section is mostly useful to make sure you aren't confusing similarly-named functions.  Does this function do what you want it to do?  In our case, yes, it does. Then we can take on the much denser **Usage** section.  The usage section includes the function call with all of its arguments:
 
 ```
 pivot_longer(
@@ -373,7 +398,8 @@ pivot_longer(
 
 There are a few things worth noticing in the text above.  First, there are only two arguments that aren't followed by an equals sign and **default value**.  These arguments are `data` and `cols`.  Since they don't have an equals sign followed by a default value, you **must** supply these two values at a minimum, for `pivot_longer` to work.  
 
-The other arguments have a default value, and are therefore optional (if you agree with the default value, you can just leave them out).  If you omit, say, `names_to`, it's not a big deal, because the function has a default value already set for `names_to`: "name".  
+The other arguments have a default value, and are therefore optional (if you agree with the default value, you can just leave them out).  If you omit, say, `names_to`, it's not a big deal, because the function has a default value already set for `names_to`: "name".  If you don't have an opinion about whether empty values should be dropped, then the default value of
+`values_drop_na` will be used: `FALSE`, don't drop empty (NA) values.  But if you want to change these (or any other) optional arguments, you can.
 
 So, what do we put in as our `data`, and what do we add for `cols`?  Look a bit further down in the help file under the **Arguments** section and you'll see that `data` refers to the data frame you want to reshape (pivot), and `cols` refers to the columns you want to pivot.
 
@@ -425,11 +451,74 @@ That means that the only required argument we know we have to add is `data`.  We
 
 Please read over lines 71-140 and run the code in that section.  This is what you'll be doing:
 
-* Pivoting the religion data back from long data to wide data
-* Troubleshooting what went wrong with that pivot
+* Attempting to pivot the religion data back from long data to wide data
+* Troubleshooting what went wrong with that pivot and correcting it
 * Pivoting the religion data back from long data to a different wide data arrangement
 * Pivoting a dataset (fish encounters) that was originally in long format to a wide format
 
+## Quiz: `pivot_longer` and `pivot_wider`
+
+<div class = "question">
+
+What do you need to know in order to use `pivot_longer` to turn wide data into long data?
+
+[[X]] The name of the wide data frame
+[[ ]] The dimensions (number of rows and columns) of the wide data frame
+[[X]] Which variables of the wide data frame are needed to uniquely identify an observation
+[[ ]] Which variables of the data frame have missing values
+[[X]] Which variables of the wide data frame you'd like to pivot
+[[?]] There are several correct answers!
+***********
+
+<div class = "answer">
+
+`pivot_longer` requires you to pass two arguments: the data frame you want to reshape, and the columns to be pivoted into key-value pairs.  This means that you need to know the name of the data frame as well as which columns you'll leave alone (because they are needed to uniquely identify an observation) and which columns you'll pivot.  You do not need to know the dimensions of the wide data frame, nor do you need to have insight into missing values.
+
+</div>
+
+*******
+
+</div>
+
+
+
+<div class = "question">
+
+What are some potential snags in using `pivot_longer` and `pivot_wider`?
+
+[[ ]] Trying to do `pivot_wider` when the key-value pairs are different data types can cause an error
+[[X]] Trying to do `pivot_longer` on columns of different data types can cause an error
+[[X]] The names of the name and value columns of a long data frame might not be the default "name" and "value"
+[[ ]] Missing values in either a wide or long data frame can cause an error
+[[ ]] It is difficult to use `pivot_longer` on a data frame with more than one column that shouldn't be pivoted
+[[?]] There are several correct answers!
+***********
+
+<div class = "answer">
+
+A long data frame with a set of columns that provide key-value pairs will not have different key-value data types.  This is because in R, each column in a data frame must have a single, uniform data type.  So it's not true that trying to do `pivot_wider` when the key-value pairs are different data types can cause an error.  That's sort of a trick question!  But it is true that various columns in a wide data frame can have different data types, and uniting their values in a single column by using `pivot_longer` can cause an error.  We ran into that in the hands-on work in the last section.  
+
+We also had column naming errors in the last section, too.  You don't have to name the key-value pair of columns "name" and "value".  You could name them "key" and "value" or "variable" and "contents" or any pair of valid column names.  That means that you have to remember to pass those names to `pivot_wider` if you want to change the shape from longer to wider.  
+
+Missing values aren't a problem for pivoting.  Also, although we haven't seen this, it's easy to pivot "all columns except for three" or "just these five columns and not the rest".  For example, you could do something like:
+
+```
+data_frame %>%
+  pivot_longer(!c(pat_id, enc_id, enc_date))  # please don't pivot these three
+```
+
+or
+
+```
+data_frame %>%
+  pivot_longer(c(pref_name, gender, dx_code, dx_name, unit))  # pivot these five
+```
+
+</div>
+
+*******
+
+</div>
 
 ## Reshaping into a Tidy Format
 
@@ -461,13 +550,13 @@ We'll work with this dataset in R, to give you the practice you need!  But first
 
 It might be tempting to start reshaping by cutting off some columns from the right and pasting them at the bottom of the data frame -- using some complex rules about renaming things and how to stack the data.  But we are going to first transform this wide-but-not-tidy data to long format, then take that long data and pour it into our desired shape.  Remember -- usually you transform wide data to long not because that's the final form you want, but because it's a very versatile format you can convert to many useful shapes.
 
-Go on to the next page for more instructions!
+Go on to the next page for more instructions.
 
 ## Working With Our Biosample Data
 
 ### Preliminary work
 
-The data we're working with is tricky -- we have column names that are suffixed with `_1` and `_2`, and we have a column name, `subject_id`, that doesn't have a suffix.  In a way, we kind of have two data frames stuck together, side by side.  The values of all the `_1` belong to one event and the values of all the `_2` belong to another event.  And `subject_id` applies to both groups!  
+The data we're working with is tricky -- we have column names that are suffixed with `_1` and `_2`, and we have a column name, `subject_id`, that doesn't have a suffix.  In a way, we have two data frames stuck together, side by side.  The values of all the `_1` belong to one event and the values of all the `_2` belong to another event, separated in time.  And `subject_id` applies to both groups!  
 
 So one thing we'll need to do is separate the `_1` and `_2` events into two data frames, at least temporarily, and then use that data to turn wide data into long.
 
@@ -550,5 +639,3 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If we gave you the experience you expected
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Basics+Introduction%22)!
-
-Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data workshop materials](https://skadauke.github.io/intro-to-r-for-clinicians-chop/).  We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.
