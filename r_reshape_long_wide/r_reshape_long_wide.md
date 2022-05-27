@@ -109,7 +109,7 @@ Two rectangular data shapes are the "long" and "wide" formats.
 
 We'll start with wide data, which may be more familiar to you.  Wide data stores variables in columns, with (ideally) each variable assigned its own column.  Consider, for example, some fabricated biosample data.  In this study, research subjects have come in for one or two biosample data collections.  Either blood or saliva was taken.  This is the way data might be stored in REDCap, for example, if you use events with suffixes to indicate which event.
 
-subject_id | biosample_id_1 | collection_date_1 | collection_time_1 | sample_type_1 | collection_method_1 | collected_by_id_1 | sample_size_1 | biosample_id_2 | collection_date_2 | collection_time_2 | sample_type_2 | collection_method_2 | collected_by_id_2 | sample_size_2
+subject_id | biosample\_id\_1 | collection\_date\_1 | collection\_time\_1 | sample\_type\_1 | collection\_method\_1 | collected\_by\_id\_1 | sample\_size\_1 | biosample\_id\_2 | collection\_date\_2 | collection\_time\_2 | sample\_type\_2 | collection\_method\_2 | collected\_by\_id\_2 | sample\_size\_2
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 876123 | 3380629109 | 2019-05-14 | 9:15 | blood | venipuncture | 4511 | 10 ml | 3380629887 | 2019-05-14 | 18:34 | blood | venipuncture | 4511 | 10 ml
 612351 | 3531370968 | 2019-06-04 |  | blood | venipuncture | 7124 | 10 ml | 4182110569 | 2020-02-14 | 13:55 | blood | venipuncture | 3201 | 10 ml
@@ -290,7 +290,7 @@ The `tidyr` package, a subset of the `tidyverse` suite of packages, includes two
 
 Visually, `pivot_longer` aims to transform a data frame that looks like this:
 
-| name | age | fave_dinosaur | fave_movie |
+| name | age | fave\_dinosaur | fave\_movie |
 | ---- | --- | ------------- | ---------- |
 | Ayana | 8 | stegosaurus | Encanto |
 
@@ -299,8 +299,8 @@ To a data frame that looks like this:
 | name | key | value |
 | ---- | --- | ----- |
 | Ayana | age | 8 |
-| Ayana | fave_dinosaur | stegosaurus |
-| Ayana | fave_movie | Encanto |
+| Ayana | fave\_dinosaur | stegosaurus |
+| Ayana | fave\_movie | Encanto |
 
 All of the column names, except for "name" (in this case), are converted to keys, and the value in the cells are converted to values.
 
@@ -309,12 +309,12 @@ Note that instead of "key" and "value" as the column headers, you could have oth
 | name | variable_name | value |
 | ---- | --- | ----- |
 | Ayana | age | 8 |
-| Ayana | fave_dinosaur | stegosaurus |
-| Ayana | fave_movie | Encanto |
+| Ayana | fave\_dinosaur | stegosaurus |
+| Ayana | fave\_movie | Encanto |
 
 Sometimes you might have additional columns that help specify an observation (such as year).  Maybe we poll students about their preferences yearly and have wide data that looks like this:
 
-| name | year | age | fave_dinosaur | fave_movie |
+| name | year | age | fave\_dinosaur | fave\_movie |
 | ---- | --- | --- | ------------- | ---------- |
 | Ayana | 2021 | 7 | stegosaurus | Coco |
 | Ayana | 2022 | 8 | stegosaurus | Encanto |
@@ -324,11 +324,11 @@ Because the first two columns together indicate a single observation, we could p
 | name | year | variable_name | value |
 | ---- | --- | ----- | --- |
 | Ayana | 2021 | age | 7 |
-| Ayana | 2021 | fave_dinosaur | stegosaurus |
-| Ayana | 2021 | fave_movie | Coco |
+| Ayana | 2021 | fave\_dinosaur | stegosaurus |
+| Ayana | 2021 | fave\_movie | Coco |
 | Ayana | 2022 | age | 8 |
-| Ayana | 2022 | fave_dinosaur | stegosaurus |
-| Ayana | 2022 | fave_movie | Encanto |
+| Ayana | 2022 | fave\_dinosaur | stegosaurus |
+| Ayana | 2022 | fave\_movie | Encanto |
 
 ### `pivot_wider`
 
@@ -534,9 +534,9 @@ If you want to understand more about tidy data, we encourage you to try our brie
 
 "Tidy" data is wide, but not all wide data is tidy! For example, we'd argue that the wide biosample data we first showed you isn't particularly tidy.
 
-For example, we're repeating columns (`collection_date_1`, `collection_date_2`, etc.) in a way that makes it tricky to do things like count the number of blood draws or do a time-series graph on number of samples taken per day.  We're also treating the "observation" for each row as a subject, but really, a unique observation is a single biosample collection.  Our data is split into two column sets, and we'd like to tidy it.  As a reminder, this is the data we're starting with:
+For example, we're repeating columns (`collection\_date\_1`, `collection\_date\_2`, etc.) in a way that makes it tricky to do things like count the number of blood draws or do a time-series graph on number of samples taken per day.  We're also treating the "observation" for each row as a subject, but really, a unique observation is a single biosample collection.  Our data is split into two column sets, and we'd like to tidy it.  As a reminder, this is the data we're starting with:
 
-subject_id | biosample_id_1 | collection_date_1 | collection_time_1 | sample_type_1 | collection_method_1 | collected_by_id_1 | sample_size_1 | biosample_id_2 | collection_date_2 | collection_time_2 | sample_type_2 | collection_method_2 | collected_by_id_2 | sample_size_2
+subject_id | biosample\_id\_1 | collection\_date\_1 | collection\_time\_1 | sample\_type\_1 | collection\_method\_1 | collected\_by\_id\_1 | sample\_size\_1 | biosample\_id\_2 | collection\_date\_2 | collection\_time\_2 | sample\_type\_2 | collection\_method\_2 | collected\_by\_id\_2 | sample\_size\_2
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 876123 | 3380629109 | 2019-05-14 | 9:15 | blood | venipuncture | 4511 | 10 ml | 3380629887 | 2019-05-14 | 18:34 | blood | venipuncture | 4511 | 10 ml
 612351 | 3531370968 | 2019-06-04 |  | blood | venipuncture | 7124 | 10 ml | 4182110569 | 2020-02-14 | 13:55 | blood | venipuncture | 3201 | 10 ml
