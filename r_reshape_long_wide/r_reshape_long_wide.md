@@ -89,7 +89,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This module assumes familiarity with R basics, including ingesting .csv data and using dplyr tools to do basic transformation including choosing only certain columns or rows of a data frame.  If you need to learn these basics, we suggest our [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) module and our [R Basics: Transform Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md) module
+This module assumes familiarity with R basics, including ingesting .csv data and using dplyr tools to do basic transformation including choosing only certain columns or rows of a data frame.  If you need to learn these basics, we suggest our [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) module and our [R Basics: Transform Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md) module.
 
 **Learning Objectives**
 
@@ -204,7 +204,6 @@ We'll work with long and wide data in R, so please advance to the next page, a b
 
 ## Quiz: Wide vs Long Data
 
-<div class = "question">
 
 Which of the following is true?
 
@@ -225,7 +224,6 @@ Long data formats include data stored in key-value pairs, while wide data has mu
 
 *******
 
-</div>
 
 
 ## Lesson Preparation: Our RStudio Environment
@@ -245,14 +243,14 @@ This might work well for you if you either can't or don't want to install R and 
 <div class = "hint" style = "align-items: center; display: flex;">
 
 <div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen](media/binder_loading.gif)<!--
+<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen.](media/binder_loading.gif)<!--
 style = "border: 1px solid rgb(var(--color-highlight));"-->
 </div>
 </div>
 
 **Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_reshape\_long\_wide".  That's the code for this module!
 
-![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
+![RStudio as shown in the cloud platform Binder.](media/binder_rstudio.png)<!--
 style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
 
 <h3>Option 2: Work on Your Computer</h3>
@@ -282,8 +280,8 @@ If you already completed this work for a previous module, and it's been a while 
 * Open your project.
 * In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
 
-![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->  
-![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
+![Git button menu with choices to pull and push branches.](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->  
+![Tools menu with choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
 
 <div class = "warning">
 If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.
@@ -487,7 +485,6 @@ Please read over lines 75-140 and run the code in that section.  This is what yo
 
 <div class = "important">
 Please open your RStudio environment now and go through lines 75-140 of `reshape_data_exercises.Rmd`.  We're using that code to help instruct you, too -- it's not just an example, it has some useful information you don't want to miss!  There's also a solutions file at `reshape_data_solutions.Rmd` if you get stuck.
-</div>
 
 ## Reshaping into a Tidy Format
 
@@ -544,7 +541,7 @@ Let's start by thinking about what constitutes a unique observation.
 * `subject_id`, date, and time?  That would work... but we now have three columns required to make a unique observation.  Is there a better way?
 * What about the `biosample_id`?  Yes, that would work.  Each sample (blood or saliva) has its own `biosample_id` and those ids don't repeat.
 
-OK, so we'd like our  "one or more columns that uniquely identify and observation" to be the `biosample_id`.  One problem is that we have two sets of these -- one with the suffix `_1` and one with the suffix `_2`.  We'll have to do some clean up, and we can do that when we cut our data frame down the middle.
+OK, so we'd like our  "one or more columns that uniquely identify an observation" to be the `biosample_id`.  One problem is that we have two sets of these -- one with the suffix `_1` and one with the suffix `_2`.  We'll have to do some clean up, and we can do that when we cut our data frame down the middle.
 
 All of the other columns headers (the cleaned up version, without suffixes) will be the contents of our column that holds variable names, and the data within cells will be placed in the column that holds values.
 
