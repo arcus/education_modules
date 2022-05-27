@@ -477,70 +477,6 @@ Please read over lines 71-140 and run the code in that section.  This is what yo
 * Pivoting the religion data back from long data to a different wide data arrangement
 * Pivoting a dataset (fish encounters) that was originally in long format to a wide format
 
-## Quiz: `pivot_longer` and `pivot_wider`
-
-<div class = "question">
-
-What do you need to know in order to use `pivot_longer` to turn wide data into long data?
-
-[[X]] The name of the wide data frame
-[[ ]] The dimensions (number of rows and columns) of the wide data frame
-[[X]] Which variables of the wide data frame are needed to uniquely identify an observation
-[[ ]] Which variables of the data frame have missing values
-[[X]] Which variables of the wide data frame you'd like to pivot
-[[?]] There are several correct answers!
-***********
-
-<div class = "answer">
-
-`pivot_longer` requires you to pass two arguments: the data frame you want to reshape, and the columns to be pivoted into key-value pairs.  This means that you need to know the name of the data frame as well as which columns you'll leave alone (because they are needed to uniquely identify an observation) and which columns you'll pivot.  You do not need to know the dimensions of the wide data frame, nor do you need to have insight into missing values.
-
-</div>
-
-*******
-
-</div>
-
-
-
-<div class = "question">
-
-What are some potential snags in using `pivot_longer` and `pivot_wider`?
-
-[[ ]] Trying to do `pivot_wider` when the key-value pairs are different data types can cause an error
-[[X]] Trying to do `pivot_longer` on columns of different data types can cause an error
-[[X]] The names of the name and value columns of a long data frame might not be the default "name" and "value"
-[[ ]] Missing values in either a wide or long data frame can cause an error
-[[ ]] It is difficult to use `pivot_longer` on a data frame with more than one column that shouldn't be pivoted
-[[?]] There are several correct answers!
-***********
-
-<div class = "answer">
-
-A long data frame with a set of columns that provide key-value pairs will not have different key-value data types.  This is because in R, each column in a data frame must have a single, uniform data type.  So it's not true that trying to do `pivot_wider` when the key-value pairs are different data types can cause an error.  That's sort of a trick question!  But it is true that various columns in a wide data frame can have different data types, and uniting their values in a single column by using `pivot_longer` can cause an error.  We ran into that in the hands-on work in the last section.  
-
-We also had column naming errors in the last section, too.  You don't have to name the key-value pair of columns "name" and "value".  You could name them "key" and "value" or "variable" and "contents" or any pair of valid column names.  That means that you have to remember to pass those names to `pivot_wider` if you want to change the shape from longer to wider.  
-
-Missing values aren't a problem for pivoting.  Also, although we haven't seen this, it's easy to pivot "all columns except for three" or "just these five columns and not the rest".  For example, you could do something like:
-
-```
-data_frame %>%
-  pivot_longer(!c(pat_id, enc_id, enc_date))  # please don't pivot these three
-```
-
-or
-
-```
-data_frame %>%
-  pivot_longer(c(pref_name, gender, dx_code, dx_name, unit))  # pivot these five
-```
-
-</div>
-
-*******
-
-</div>
-
 ## Reshaping into a Tidy Format
 
 First, a reminder about tidy data!
@@ -646,6 +582,70 @@ By now, you should have long data that's ready to be pivoted to wide -- but this
 Go to lines 270 - 290 to see what we mean!
 
 In the end, we have tidy data that meets our needs and will make computation simpler.
+
+## Quiz: `pivot_longer` and `pivot_wider`
+
+<div class = "question">
+
+What do you need to know in order to use `pivot_longer` to turn wide data into long data?
+
+[[X]] The name of the wide data frame
+[[ ]] The dimensions (number of rows and columns) of the wide data frame
+[[X]] Which variables of the wide data frame are needed to uniquely identify an observation
+[[ ]] Which variables of the data frame have missing values
+[[X]] Which variables of the wide data frame you'd like to pivot
+[[?]] There are several correct answers!
+***********
+
+<div class = "answer">
+
+`pivot_longer` requires you to pass two arguments: the data frame you want to reshape, and the columns to be pivoted into key-value pairs.  This means that you need to know the name of the data frame as well as which columns you'll leave alone (because they are needed to uniquely identify an observation) and which columns you'll pivot.  You do not need to know the dimensions of the wide data frame, nor do you need to have insight into missing values.
+
+</div>
+
+*******
+
+</div>
+
+
+
+<div class = "question">
+
+What are some potential snags in using `pivot_longer` and `pivot_wider`?
+
+[[ ]] Trying to do `pivot_wider` when the key-value pairs are different data types can cause an error
+[[X]] Trying to do `pivot_longer` on columns of different data types can cause an error
+[[X]] The names of the name and value columns of a long data frame might not be the default "name" and "value"
+[[ ]] Missing values in either a wide or long data frame can cause an error
+[[ ]] It is difficult to use `pivot_longer` on a data frame with more than one column that shouldn't be pivoted
+[[?]] There are several correct answers!
+***********
+
+<div class = "answer">
+
+A long data frame with a set of columns that provide key-value pairs will not have different key-value data types.  This is because in R, each column in a data frame must have a single, uniform data type.  So it's not true that trying to do `pivot_wider` when the key-value pairs are different data types can cause an error.  That's sort of a trick question!  But it is true that various columns in a wide data frame can have different data types, and uniting their values in a single column by using `pivot_longer` can cause an error.  We ran into that in the hands-on work in the last section.  
+
+We also had column naming errors in the last section, too.  You don't have to name the key-value pair of columns "name" and "value".  You could name them "key" and "value" or "variable" and "contents" or any pair of valid column names.  That means that you have to remember to pass those names to `pivot_wider` if you want to change the shape from longer to wider.  
+
+Missing values aren't a problem for pivoting.  Also, although we haven't seen this, it's easy to pivot "all columns except for three" or "just these five columns and not the rest".  For example, you could do something like:
+
+```
+data_frame %>%
+  pivot_longer(!c(pat_id, enc_id, enc_date))  # please don't pivot these three
+```
+
+or
+
+```
+data_frame %>%
+  pivot_longer(c(pref_name, gender, dx_code, dx_name, unit))  # pivot these five
+```
+
+</div>
+
+*******
+
+</div>
 
 ## Additional Resources
 
