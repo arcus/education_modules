@@ -25,7 +25,44 @@ After completion of this module, learners will be able to:
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
+script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
+@sage
+<script input="hidden">
+// Make *any* div with class 'r' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.r',
+                      evalButtonText: 'Run R',
+                      languages: ["r"],
+                      hide: ['fullScreen', 'permalink'],
+                      });
+// Make *any* div with class 'r_run' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.r_run',
+                      evalButtonText: 'Run R',
+                      languages: ["r"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'true'
+                      });
+// Make *any* div with class 'r_data_init' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.r_data_init',
+                      evalButtonText: 'Run R',
+                      languages: ["r"],
+                      editor: 'codemirror-readonly',
+                      hide: ['fullScreen', 'permalink','output','evalButton'],
+                      autoeval: 'true',
+                      linked: 'true',
+                      linkKey: "data"
+                      });       
+// Make *any* div with class 'r_data' a Sage cell
+sagecell.makeSagecell({inputLocation: 'div.r_data',
+                      evalButtonText: 'Run R',
+                      languages: ["r"],
+                      hide: ['fullScreen', 'permalink'],
+                      autoeval: 'false',
+                      linked: 'true',
+                      linkKey: "data"
+                      });
+</script>
+@end
 -->
 
 # @title
@@ -58,8 +95,43 @@ For help articulating learning objectives, see [this guide to learning objective
 </div>
 
 ## The data
+@sage
+
+And then read in the data set (note that we have to repeat our commands to load the libraries here, since this is a new cell):
+
+<div class="r">
+<lia-keep>
+<script type="text/x-sage">
+install.packages("readr")
+library(readr)
+
+covid_data <- read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+summary(covid_data)
+</script>
+</lia-keep>
+</div>
+
+These data are from a COVID-19 serological survey conducted in Yaounde, Cameroon (Nwosu, K., Fokam, J., Wanda, F. et al., 2021[^1](Kene David Nwosu, Joseph Fokam, Franck Wanda, Lucien Mama, Erol Orel, Nicolas Ray, Jeanine Meke, Armel Tassegning, Desire Takou, Eric Mimbe, Beat Stoll, Josselin Guillebert, Eric Comte, Olivia Keiser, & Laura Ciaffi. 2021. kendavidn/yaounde\_serocovpop\_shared: Initial release v1.0.0. Zenodo. https://doi.org/10.5281/zenodo.5218965)). The authors have made all of the code and data publicly available under a [creative commons 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode) to facilitate re-use.
+
+
+<div class="learnmore">
+To learn more about the study, see the [zenodo page for this dataset](https://zenodo.org/record/5218965#.YeBq2RPMITW). You can also read the published article online: [SARS-CoV-2 antibody seroprevalence and associated risk factors in an urban district in Cameroon](https://www.nature.com/articles/s41467-021-25946-0).
+</div>
+
+<div class="important">
+The code from this section will be at the top of each code block in this module.
+
+If you want to practice this code on your own computer, make sure to include the code to import the necessary modules and read in the data as the first lines, but you'll only have to do it once at the top of your script, not before each new command.
+</div>
 
 ## What does "missing" look like in R?
+
+
+<div class = "learnmore">
+Technically, there are actually four different kinds of `NA`, one for each of the different data types in R. To learn more, read about [missing values in the free online book R for Data Science](https://r4ds.had.co.nz/vectors.html?q=missing#missing-values-4)
+
+For most practical purposes, you don't need to know anything about these different kinds of `NA`, though; they all just mean "missing", and you can usually use `NA` to refer to all of them.
+</div>
 
 ## How to check for missing values
 
