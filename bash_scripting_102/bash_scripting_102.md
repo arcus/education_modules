@@ -59,7 +59,7 @@ Learners should be familiar with using a bash shell to navigate a directory syst
 You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer. Please follow the instructions appropriate for the computer you are using.
 
 **Open a bash shell.**
-If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash 101](link/here) module.
+If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
 <div class = "important">
 We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
@@ -459,6 +459,8 @@ Which statements about the remove command `rm` are **TRUE**?
 You can always use the manual command `man` to read the documentation of any command. Give it a try with `man cp`!
 
 Reading the manual isn't always the easiest way to get more comfortable with a programming language, so here are some other resources:
+
+- Software Carpentries makes all the materials from their [Unix Shell lessons](https://swcarpentry.github.io/shell-novice/) available.
 
 - The Earth Lab at University of Colorado, Boulder has a nice [bash tutorial](https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/bash/bash-commands-to-manage-directories-files/) that can supplement and reenforce the learning you have done here.
 
