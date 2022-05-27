@@ -2,11 +2,11 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  0.0.1
+version:  1.0.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
-title: Module Title
+title: Python Basics: Writing Python Code
 comment: Learn the foundations of writing Python code.
 long_description: Before using Python for data analysis, there are some basics to learn that will set the foundation for more advanced Python coding. This module will teach you about functions and methods, how to define and use variables, how to create and edit lists and dictionaries, and how use loops and conditional statements to perform tasks with these basic data structures.
 estimated_time: 1 hour
@@ -257,7 +257,7 @@ If, for example, you typed `dogs` without defining it as a variable, you would g
 
 ### Quiz: Variables
 
-True or False: Once you assign a value to a variable, you can never change that value.
+True or False: Once you assign a value to a variable, you can never change the value of that variable.
 
 [( )] True
 [(X)] False
@@ -457,7 +457,7 @@ print(candy_day1)
 Did you notice the explanatory text in the above code cell that started with a pound sign? The pound sign ( # ) in a code cell indicates the start of a **comment**. Comments aren't recognized as code and won't be run. Each line of a comment must be marked with a new pound sign. Comments are an excellent way to add brief explanations and clarifications about your code.
 </div>
 
-This example loops through the list of numbers, adds 5 to each number one at a time, and adds the sum to a new list using the append() method for lists. Finally, we printed the new list to our screen. This kind of loop is sometimes called a for loop; there is another kind of loop called a while loop, which is often used when we don't know the number of times we'll have to iterate through a block of code before we start (check out this page for more information about while loops).
+This example loops through the list of numbers, adds 5 to each number one at a time, and adds the sum to a new list using the append() method for lists. Finally, we printed the new list to our screen. This kind of loop is sometimes called a **for loop**; there is another kind of loop called a **while loop**, which is often used when we don't know the number of times we'll have to iterate through a block of code before we start (check out this page for more information about while loops).
 
 
 ### Indentation
@@ -918,4 +918,3 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Module+Template%22)!
 
-Remember to change the redcap link so that the module name is correct for this module!
