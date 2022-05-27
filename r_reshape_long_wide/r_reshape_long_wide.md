@@ -109,14 +109,15 @@ Two rectangular data shapes are the "long" and "wide" formats.
 
 We'll start with wide data, which may be more familiar to you.  Wide data stores variables in columns, with (ideally) each variable assigned its own column.  Consider, for example, some fabricated biosample data.  In this study, research subjects have come in for one or two biosample data collections.  Either blood or saliva was taken.  This is the way data might be stored in REDCap, for example, if you use events with suffixes to indicate which event.
 
-subject_id | biosample\_id\_1 | collection\_date\_1 | collection\_time\_1 | sample\_type\_1 | collection\_method\_1 | collected\_by\_id\_1 | sample\_size\_1 | biosample\_id\_2 | collection\_date\_2 | collection\_time\_2 | sample\_type\_2 | collection\_method\_2 | collected\_by\_id\_2 | sample\_size\_2
---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-876123 | 3380629109 | 2019-05-14 | 9:15 | blood | venipuncture | 4511 | 10 ml | 3380629887 | 2019-05-14 | 18:34 | blood | venipuncture | 4511 | 10 ml
-612351 | 3531370968 | 2019-06-04 |  | blood | venipuncture | 7124 | 10 ml | 4182110569 | 2020-02-14 | 13:55 | blood | venipuncture | 3201 | 10 ml
-716978 | 3860881351 | 2019-10-20 | 10:45 | saliva | swab | 4511 | 4 g |  |  |  |  |  |  |
-321900 | 4190070221 | 2020-02-25 |  | saliva | swab | 7124 | NA |  |  |  |  |  |  |
+<!-- data-type="none" -->
+| subject_id | biosample\_id\_1 | collection\_date\_1 | collection\_time\_1 | sample\_type\_1 | collection\_method\_1 | collected\_by\_id\_1 | sample\_size\_1 | biosample\_id\_2 | collection\_date\_2 | collection\_time\_2 | sample\_type\_2 | collection\_method\_2 | collected\_by\_id\_2 | sample\_size\_2 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 876123 | 3380629109 | 2019-05-14 | 9:15 | blood | venipuncture | 4511 | 10 ml | 3380629887 | 2019-05-14 | 18:34 | blood | venipuncture | 4511 | 10 ml
+| 612351 | 3531370968 | 2019-06-04 |  | blood | venipuncture | 7124 | 10 ml | 4182110569 | 2020-02-14 | 13:55 | blood | venipuncture | 3201 | 10 ml
+| 716978 | 3860881351 | 2019-10-20 | 10:45 | saliva | swab | 4511 | 4 g |  |  |  |  |  |  |
+| 321900 | 4190070221 | 2020-02-25 |  | saliva | swab | 7124 | NA |  |  |  |  |  |  |
 342855 | 4348365204 | 2020-06-19 | 15:20 | blood | venipuncture | NA | 10 ml |  |  |  |  |  |  |
-901284 | 4377143652 | 2020-08-10 |  | blood | venipuncture | 3201 | 10 ml |  |  |  |  |  |  |
+| 901284 | 4377143652 | 2020-08-10 |  | blood | venipuncture | 3201 | 10 ml |  |  |  |  |  |  |
 
 ### Long Data
 
@@ -124,6 +125,7 @@ Compare that with long data, which might seem less familiar.  Long data has one 
 
 The long data below, which focuses on the `biosample_id` (which is unique for each biosample) instead of the `subject_id`, has the same information as the wide data above.  However, the data is organized in a format that features **keys** (or **names**) and **values** appearing in **key-value pairs**.  You'll also notice that we've changed the variable names to remove the `_1` and `_2` suffixes used to indicate a first or second collection and instead added a "sequence" variable to state that information.
 
+<!-- data-type="none" -->
 | biosample_id | key |	value |
 | --------- | --- | --- |
 | 3380629109 | subject_id | 876123 |
@@ -131,14 +133,14 @@ The long data below, which focuses on the `biosample_id` (which is unique for ea
 | 3380629109 | collection_time | 09:15:00 |
 | 3380629109 | sample_type | blood |
 | 3380629109 | collection_method | venipuncture |
-| 3380629109 | collected_by_id | 4511 |
+| 3380629109 | collected\_by\_id | 4511 |
 | 3380629109 | sample_size | 10 ml |
 | 3380629109 | sequence | 1 |
 | 3531370968 | subject_id | 612351 |
 | 3531370968 | collection_date | 2019-06-04 |
 | 3531370968 | sample_type | blood |
 | 3531370968 | collection_method | venipuncture |
-| 3531370968 | collected_by_id | 7124 |
+| 3531370968 | collected\_by\_id | 7124 |
 | 3531370968 | sample_size | 10 ml |
 | 3531370968 | sequence | 1 |
 | 3860881351 | subject_id | 716978 |
@@ -146,14 +148,14 @@ The long data below, which focuses on the `biosample_id` (which is unique for ea
 | 3860881351 | collection_time | 10:45:00 |
 | 3860881351 | sample_type | saliva |
 | 3860881351 | collection_method | swab |
-| 3860881351 | collected_by_id | 4511 |
+| 3860881351 | collected\_by\_id | 4511 |
 | 3860881351 | sample_size | 4 g |
 | 3860881351 | sequence | 1 |
 | 4190070221 | subject_id | 612351 |
 | 4190070221 | collection_date | 2020-02-25 |
 | 4190070221 | sample_type | saliva |
 | 4190070221 | collection_method | swab |
-| 4190070221 | collected_by_id | 7124 |
+| 4190070221 | collected\_by\_id | 7124 |
 | 4190070221 | sequence | 1 |
 | 4348365204 | subject_id | 342855 |
 | 4348365204 | collection_date | 2020-06-19 |
@@ -166,7 +168,7 @@ The long data below, which focuses on the `biosample_id` (which is unique for ea
 | 4377143652 | collection_date | 2020-08-10 |
 | 4377143652 | sample_type | blood |
 | 4377143652 | collection_method | venipuncture |
-| 4377143652 | collected_by_id | 3201 |
+| 4377143652 | collected\_by\_id | 3201 |
 | 4377143652 | sample_size | 10 ml |
 | 4377143652 | sequence | 1 |
 | 3380629887 | subject_id | 876123 |
@@ -174,7 +176,7 @@ The long data below, which focuses on the `biosample_id` (which is unique for ea
 | 3380629887 | collection_time | 18:34 |
 | 3380629887 | sample_type | blood |
 | 3380629887 | collection_method | venipuncture |
-| 3380629887 | collected_by_id | 4511 |
+| 3380629887 | collected\_by\_id | 4511 |
 | 3380629887 | sample_size | 10 ml |
 | 3380629887 | sequence | 2 |
 | 4182110569 | subject_id | 612351 |
@@ -182,7 +184,7 @@ The long data below, which focuses on the `biosample_id` (which is unique for ea
 | 4182110569 | collection_time | 13:55 |
 | 4182110569 | sample_type | blood |
 | 4182110569 | collection_method | venipuncture |
-| 4182110569 | collected_by_id | 3201 |
+| 4182110569 | collected\_by\_id | 3201 |
 | 4182110569 | sample_size | 10 ml |
 | 4182110569 | sequence | 2 |
 
@@ -203,7 +205,7 @@ Which of the following is true?
 [[ ]] It's usually easier to reshape wide data into other wide formats than it is to reshape long data into wide data.
 [[X]] Long data stores data in key-value pairs
 [[ ]] Long data is more familiar and what tends to appear in journal articles
-[[X ]] Wide data has multiple columns for variables
+[[X]] Wide data has multiple columns for variables
 [[?]] There are several correct answers!
 ***********
 
@@ -284,18 +286,20 @@ If you're pulling branches after having worked in other R modules, you might hav
 
 ## Pivots in `tidyr`
 
-### `pivot_longer`
+<h3> `pivot_longer` </h3>
 
 The `tidyr` package, a subset of the `tidyverse` suite of packages, includes two reshaping functions we'll use in this module.  We'll start with `pivot_longer`.  This function is used to reshape wide data, with multiple variable columns, into long data, with key-value pairs in a pair of columns that hold the variable name (or key) and the variable value.  Besides this pair of columns, there is a set of one or more leading columns that are used to uniquely identify an observation (for example, a sensor id, MRN, order number, or combination of name and date).
 
 Visually, `pivot_longer` aims to transform a data frame that looks like this:
 
+<!-- data-type="none" -->
 | name | age | fave\_dinosaur | fave\_movie |
 | ---- | --- | ------------- | ---------- |
 | Ayana | 8 | stegosaurus | Encanto |
 
 To a data frame that looks like this:
 
+<!-- data-type="none" -->
 | name | key | value |
 | ---- | --- | ----- |
 | Ayana | age | 8 |
@@ -306,6 +310,7 @@ All of the column names, except for "name" (in this case), are converted to keys
 
 Note that instead of "key" and "value" as the column headers, you could have other names that make more sense to you or your data users:
 
+<!-- data-type="none" -->
 | name | variable_name | value |
 | ---- | --- | ----- |
 | Ayana | age | 8 |
@@ -314,6 +319,7 @@ Note that instead of "key" and "value" as the column headers, you could have oth
 
 Sometimes you might have additional columns that help specify an observation (such as year).  Maybe we poll students about their preferences yearly and have wide data that looks like this:
 
+<!-- data-type="none" -->
 | name | year | age | fave\_dinosaur | fave\_movie |
 | ---- | --- | --- | ------------- | ---------- |
 | Ayana | 2021 | 7 | stegosaurus | Coco |
@@ -321,6 +327,7 @@ Sometimes you might have additional columns that help specify an observation (su
 
 Because the first two columns together indicate a single observation, we could pivot that data longer to look like this, keeping `name` and `year` and pivoting the rest of the variables.
 
+<!-- data-type="none" -->
 | name | year | variable_name | value |
 | ---- | --- | ----- | --- |
 | Ayana | 2021 | age | 7 |
@@ -330,12 +337,13 @@ Because the first two columns together indicate a single observation, we could p
 | Ayana | 2022 | fave\_dinosaur | stegosaurus |
 | Ayana | 2022 | fave\_movie | Encanto |
 
-### `pivot_wider`
+<h3> `pivot_wider` </h3>
 
 Similarly, `pivot_wider` is a `tidyr` function.  It does the inverse of `pivot_longer` -- it takes a long data format and transforms it so that the column with variable names is transformed to become a set of columns and the column with values is transformed into cells placed in the correct intersection of row and column.  
 
 Visually, `pivot_wider` transforms a data frame that looks like this:
 
+<!-- data-type="none" -->
 | sensor_id | name | value |
 | ---- | --- | --- |
 | 0001 | PM2.5 | 10 |
@@ -345,12 +353,14 @@ Visually, `pivot_wider` transforms a data frame that looks like this:
 
 into something like this:
 
+<!-- data-type="none" -->
 | sensor_id | PM2.5 | PM10 | O3 | NO2 |
 | ---- | --- | --- | --- | --- |
 | 0001 | 10 | 25 | 0.0 | 67 |
 
 Sometimes, you'll have more than just one column that uniquely identifies the observation.  So your long data might look something like this:
 
+<!-- data-type="none" -->
 | sensor_id | date | name | value |
 | ---- | --- | --- | --- |
 | 0001 | 2022-01-01 | PM2.5 | 10 |
@@ -364,6 +374,7 @@ Sometimes, you'll have more than just one column that uniquely identifies the ob
 
 which can be pivoted into a wide data that looks like this:
 
+<!-- data-type="none" -->
 | sensor_id | date | PM2.5 | PM10 | O3 | NO2 |
 | ---- | --- | --- | --- | --- | --- |
 | 0001 | 2022-01-01 | 10 | 25 | 0.0 | 67 |
@@ -586,7 +597,7 @@ The final data will therefore look something like this (just a few rows shown):
 | 3380629109 | collection_time | 09:15:00 |
 | 3380629109 | sample_type | blood |
 | 3380629109 | collection_method | venipuncture |
-| 3380629109 | collected_by_id | 4511 |
+| 3380629109 | collected\_by\_id | 4511 |
 
 Without having written any code, we've gotten an idea of what we want to accomplish:
 
