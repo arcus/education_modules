@@ -445,6 +445,12 @@ Please read over the first 70 lines of code and execute that code in the R Markd
 * Re-creating the long format by making it a little better, with better column names
 * Looking at the final long data
 
+![Code from `reshape_data_exercises.Rmd`](media/line_1.png) <!-- style = "max-height: 200px;" -->
+
+<div class = "important">
+Please open your RStudio environment now and go through the first 70 lines of code of `reshape_data_exercises.Rmd`.  We're using that code to help instruct you, too -- it's not just an example, it has some useful information you don't want to miss!  There's also a solutions file at `reshape_data_solutions.Rmd` if you get stuck.
+</div>
+
 ## Using `pivot_wider`
 
 Just as in our `pivot_longer` work, let's start by looking at the help file for `pivot_wider`, using `?pivot_wider` in the Console.
@@ -470,12 +476,18 @@ pivot_wider(
 
 That means that the only required argument we know we have to add is `data`.  We may also need to add other arguments, depending on our situation.  Pivot wider will take whatever is in the column with the name provided in the `names_from` argument (default is "name") and make that column's contents into new column headers.  It will take whatever is in the column with the name provided in the `values_from` argument (default is "value") and put those into cells in the appropriate row and column.
 
-Please read over lines 71-140 and run the code in that section.  This is what you'll be doing:
+Please read over lines 75-140 and run the code in that section.  This is what you'll be doing:
 
 * Attempting to pivot the religion data back from long data to wide data
 * Troubleshooting what went wrong with that pivot and correcting it
 * Pivoting the religion data back from long data to a different wide data arrangement
 * Pivoting a dataset (fish encounters) that was originally in long format to a wide format
+
+![Code from `reshape_data_exercises.Rmd`](media/line_75.png) <!-- style = "max-height: 200px;" -->
+
+<div class = "important">
+Please open your RStudio environment now and go through lines 75-140 of `reshape_data_exercises.Rmd`.  We're using that code to help instruct you, too -- it's not just an example, it has some useful information you don't want to miss!  There's also a solutions file at `reshape_data_solutions.Rmd` if you get stuck.
+</div>
 
 ## Reshaping into a Tidy Format
 
@@ -555,6 +567,13 @@ Without having written any code, we've gotten an idea of what we want to accompl
 
 Let's jump into R and get started.  In `reshape_data_exercises.Rmd` in your RStudio environment, start by loading this data and taking a look at it (look at and run the code in lines 150-165).
 
+![Code from `reshape_data_exercises.Rmd`](media/line_150.png) <!-- style = "max-height: 200px;" -->
+
+<div class = "important">
+You know what to do!  Check out lines 150-165 of `reshape_data_exercises.Rmd`.
+</div>
+
+
 ### Dealing With Suffixes
 
 All done bringing in the data and looking at it?  Great!  Time to move along to data reshaping.
@@ -563,7 +582,13 @@ Our first challenge is to get all the `_1` variables, along with `subject_id` in
 
 Read and execute the code in lines 170-225 to create `biosample_first` and `biosample_second`, which will capture the two sets of data neatly (and even add an additional field giving the 1 or 2 sequence number, in case that ends up being important).  
 
+![Code from `reshape_data_exercises.Rmd`](media/line_170.png) <!-- style = "max-height: 200px;" -->
+
 We'll use some commands that you already know, like `select`, as well as some that you might not be as familiar with, like `rename_with`.  Now that you've gotten some experience using help files, try using the `?` functionality and trying out `?rename_with` (or other function names) in the Console.
+
+<div class = "important">
+Please work through lines 170-225 of `reshape_data_exercises.Rmd`.  Don't forget that there's also a solutions file, should you get stuck: `reshape_data_solutions.Rmd`.
+</div>
 
 ### Pivoting Wide to Long
 
@@ -573,15 +598,34 @@ At this point, you might be thinking, "Hey!  If we just stack `biosample_first` 
 
 Go to lines 230 - 265 and read through the explanations and run the code in this section of the file.
 
+![Code from `reshape_data_exercises.Rmd`](media/line_230.png) <!-- style = "max-height: 200px;" -->
+
 By the end of this section, you should have a `biosample_data_long` object that has our data in long format.
+
+<div class = "important">
+Almost there!  Go through lines 230-265 of `reshape_data_exercises.Rmd`.  
+</div>
 
 ### Pivoting Long to Wide
 
 By now, you should have long data that's ready to be pivoted to wide -- but this time, it will be wide data that's tidy, a vast improvement over the data we began with.
 
+Ideally, what we'd like to eventually see is a tidy dataset that looks more like this:
+
+<!-- data-type="none" -->
+| biosample_id | subject_id | collection_date | collection_time | sample_type | collection_method | collected_by_id |  sample_size | sequence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 3380629109 | 876123	| 2019-05-14 | 09:15 | blood	 | venipuncture	| 4511 |	10 ml | 1 |
+
 Go to lines 270 - 290 to see what we mean!
 
+![Code from `reshape_data_exercises.Rmd`](media/line_270.png) <!-- style = "max-height: 200px;" -->
+
 In the end, we have tidy data that meets our needs and will make computation simpler.
+
+<div class = "important">
+This is the home stretch!  Work through lines 270 until the end of `reshape_data_exercises.Rmd`.  Don't forget that there's also a solutions file, should you get stuck: `reshape_data_solutions.Rmd`.
+</div>
 
 ## Quiz: `pivot_longer` and `pivot_wider`
 
