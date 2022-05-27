@@ -109,7 +109,7 @@ Two rectangular data shapes are the "long" and "wide" formats.
 
 We'll start with wide data, which may be more familiar to you.  Wide data stores variables in columns, with (ideally) each variable assigned its own column.  Consider, for example, some fabricated biosample data.  In this study, research subjects have come in for one or two biosample data collections.  Either blood or saliva was taken.  This is the way data might be stored in REDCap, for example, if you use events with suffixes to indicate which event.
 
-<div style="font-size:80%">
+<div style="font-size:70%">
 
 <!-- data-type="none" -->
 | subject_id | biosample\_id\_1 | collection\_date\_1 | collection\_time\_1 | sample\_type\_1 | collection\_method\_1 | collected\_by\_id\_1 | sample\_size\_1 | biosample\_id\_2 | collection\_date\_2 | collection\_time\_2 | sample\_type\_2 | collection\_method\_2 | collected\_by\_id\_2 | sample\_size\_2 |
@@ -127,7 +127,9 @@ We'll start with wide data, which may be more familiar to you.  Wide data stores
 
 Compare that with long data, which might seem less familiar.  Long data has one or more columns that uniquely identify an observation, then just one column that discloses the name of a measured variable, and one column that gives the value of that variable.
 
-The long data below, which focuses on the `biosample_id` (which is unique for each biosample) instead of the `subject_id`, has the same information as the wide data above.  However, the data is organized in a format that features **keys** (or **names**) and **values** appearing in **key-value pairs**.  You'll also notice that we've changed the variable names to remove the `_1` and `_2` suffixes used to indicate a first or second collection and instead added a "sequence" variable to state that information.
+The long data below, which focuses on the `biosample_id` (which is unique for each biosample) instead of the `subject_id`, has the same information as the wide data shown previously.  However, the data is organized in a format that features **keys** (or **names**) and **values** appearing in **key-value pairs**.  You'll also notice that we've changed the variable names to remove the `_1` and `_2` suffixes used to indicate a first or second collection and instead added a "sequence" variable to state that information.
+
+It's important that you understand that both of these datasets give the same information.  Flip back and forth as needed between the wide and long data versions until you are convinced that these are distinct shapes that tell the same data story.
 
 <!-- data-type="none" -->
 | biosample_id | key |	value |
@@ -290,7 +292,11 @@ If you're pulling branches after having worked in other R modules, you might hav
 
 ## Pivots in `tidyr`
 
-<h3> `pivot_longer` </h3>
+The `tidyr` package, a subset of the `tidyverse` suite of packages, includes two reshaping functions we'll use in this module.  We'll cover the use of `pivot_longer`, which reshapes (or "pivots") wide data to be in a long format, while `pivot_wider` reshapes long data to be in a wide format.
+
+For now, we'll start by building your instincts about long and wide data by showing what the pivot functions do visually.  Then in subsequent sections, we'll look into the help pages that are included with R functions.  If you've ever been intimidated by help text, we hope that walking through a couple of examples will be useful.  As a reminder, in RStudio, the lower right corner of your RStudio window (unless you've rearranged things) holds a multi-purpose pane that includes a Help tab.
+
+### `pivot_longer`
 
 The `tidyr` package, a subset of the `tidyverse` suite of packages, includes two reshaping functions we'll use in this module.  We'll start with `pivot_longer`.  This function is used to reshape wide data, with multiple variable columns, into long data, with key-value pairs in a pair of columns that hold the variable name (or key) and the variable value.  Besides this pair of columns, there is a set of one or more leading columns that are used to uniquely identify an observation (for example, a sensor id, MRN, order number, or combination of name and date).
 
@@ -341,7 +347,7 @@ Because the first two columns together indicate a single observation, we could p
 | Ayana | 2022 | fave\_dinosaur | stegosaurus |
 | Ayana | 2022 | fave\_movie | Encanto |
 
-<h3> `pivot_wider` </h3>
+### `pivot_wider`
 
 Similarly, `pivot_wider` is a `tidyr` function.  It does the inverse of `pivot_longer` -- it takes a long data format and transforms it so that the column with variable names is transformed to become a set of columns and the column with values is transformed into cells placed in the correct intersection of row and column.  
 
@@ -551,6 +557,8 @@ If you want to understand more about tidy data, we encourage you to try our brie
 
 For example, we're repeating columns (`collection_date_1`, `collection_date_2`, etc.) in a way that makes it tricky to do things like count the number of blood draws or do a time-series graph on number of samples taken per day.  We're also treating the "observation" for each row as a subject, but really, a unique observation is a single biosample collection.  Our data is split into two column sets, and we'd like to tidy it.  As a reminder, this is the data we're starting with:
 
+<div style="font-size:70%">
+
 <!-- data-type="none" -->
 | subject_id | biosample\_id\_1 | collection\_date\_1 | collection\_time\_1 | sample\_type\_1 | collection\_method\_1 | collected\_by\_id\_1 | sample\_size\_1 | biosample\_id\_2 | collection\_date\_2 | collection\_time\_2 | sample\_type\_2 | collection\_method\_2 | collected\_by\_id\_2 | sample\_size\_2 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -561,6 +569,7 @@ For example, we're repeating columns (`collection_date_1`, `collection_date_2`, 
 | 342855 | 4348365204 | 2020-06-19 | 15:20 | blood | venipuncture | NA | 10 ml |  |  |  |  |  |  | |
 | 901284 | 4377143652 | 2020-08-10 |  | blood | venipuncture | 3201 | 10 ml |  |  |  |  |  |  | |
 
+</div>
 
 We'll work with this dataset in R, to give you the practice you need!  But first, think about what a "tidy" version of this data might look like.  Sketch it out on a piece of paper!  What columns would you have?  Would you change the order of column names?  How many rows do you think you would have?
 
@@ -568,9 +577,7 @@ It might be tempting to start reshaping by cutting off some columns from the rig
 
 Go on to the next page for more instructions.
 
-## Working With Our Biosample Data
-
-<h3> Preliminary work </h3>
+### Preliminary work
 
 The data we're working with is tricky -- we have column names that are suffixed with `_1` and `_2`, and we have a column name, `subject_id`, that doesn't have a suffix.  In a way, we have two data frames stuck together, side by side.  The values of all the `_1` belong to one event and the values of all the `_2` belong to another event, separated in time.  And `subject_id` applies to both groups!  
 
