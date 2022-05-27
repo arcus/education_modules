@@ -1,7 +1,7 @@
 <!--
 
-author:   Nicole Feldman and Elizabeth Drellich
-email:    feldmanna@chop.edu and drelliche@chop.edu
+author:   Elizabeth Drellich and Nicole Feldman
+email:    drelliche@chop.edu and feldmanna@chop.edu
 version:  1.0.0
 module_template_version: 2.0.0
 language: en
@@ -40,9 +40,11 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-Learners should be familiar with using a bash shell and [navigating a file system from the command line](link/to/bash101).
-This module will assume that learners have encountered bash the commands [`find` and `grep`](link/to/search/and/organize/module).
+Learners should be familiar with using a bash shell and [navigating a file system from the command line](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md).
 
+Learners should also know how to view the contents of a file using `cat`.
+
+The only other commands that will be assumed are the navigation commands `cd`, `ls`, and `pwd`.
 
 **Learning Objectives**
 
@@ -57,7 +59,7 @@ You will get the most out of this lesson if you follow along with the examples a
 
 **Open a bash shell.**
 
-If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash 101](link/here) module.
+If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
 <div class = "important">
 We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
@@ -87,6 +89,7 @@ As your bash scripting progresses, you may find or create commands that simultan
 In your command line interface, use `cd` to navigate to the directory `learning_bash-main` that you downloaded in the [lesson preparation](#lesson-preparation) section. Since the commands we are learning in this section don't make any changes to your files, definitely try them out on some of your own files too!
 
 **Word count**
+
 `wc`
 
 **First and last lines of a file**
@@ -103,10 +106,31 @@ In your command line interface, use `cd` to navigate to the directory `learning_
 
 The commands we just saw give us information and insight through their outputs, but that output isn't actually preserved anywhere. If we want to see it again, or use it for something later without re-running the command, we need to save that output in a file. This process is called "writing output to a file" or "redirecting output to a file" because instead of the output being shown to us in the command line interface, it is instead going to be written and saved to the file we name.
 
-The "greater than" symbol
-Create a new file `>`
+The "greater than" symbol, also known as an arrow or more specifically "right arrow" lets us redirect output. On a standard American qwerty keyboard, the `>` is located on the same key as the period `.`
 
-Append to an existing file `>>`
+Try running the following code:
+
+```
+wc Animals.csv > animals.txt
+```
+
+You won't see any output because it was redirected to the newly created file `animals.txt`. Use `cat` or another program to check that the file `animals.txt` contains the text:
+
+```
+      19      35     341 Animals.csv
+```
+
+A single arrow will replace anything that was already in the file with the new content. If we don't want to replace the content in `animals.txt` we can append (add new lines after the existing lines) to the end of the file using double arrows `>>`:
+
+```
+sort Animals.csv >> animals.txt
+```
+
+Again there is no output shown because it was redirected into the file `animals.txt`. Check that `animals.txt` now contains the word count at the top, followed by a sorted copy of the data from `Animals.csv`.
+
+<div class = "learnmore">
+In the bash language, the right arrow redirects output, and the left arrow (or "less than" sign) redirects input.
+</div>
 
 ### Quiz: inputs and outputs
 
@@ -120,7 +144,6 @@ With smaller files, the benefits of using pipes over making intermediate files a
 ### Using the pipe `|`
 
 ### Quiz: linking with `|`
-
 
 ## Additional Resources
 
