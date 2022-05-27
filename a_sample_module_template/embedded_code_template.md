@@ -138,7 +138,18 @@ sagecell.makeSagecell({inputLocation: 'div.python_link2',
 <div class="python_link1">
 <lia-keep>
 <script type="text/x-sage">
-print(df)
+print(STR)
+</script>
+</lia-keep>
+</div>
+
+### more cells of type 1
+@sage1
+<div class="python_link1">
+<lia-keep>
+<script type="text/x-sage">
+STR = "link type 1"
+print(STR)
 </script>
 </lia-keep>
 </div>
@@ -148,10 +159,17 @@ print(df)
 <div class="python_link2">
 <lia-keep>
 <script type="text/x-sage">
-import pandas as pd
-d = {'col1': [1, 2], 'col2': [3, 4]};
-df = pd.DataFrame(data=d);
-print(df)
+STR = "type 2"
+print(STR)
+</script>
+</lia-keep>
+</div>
+
+### cells of type 2
+@sage2
+<div class="python_link2">
+<lia-keep>
+print(STR)
 </script>
 </lia-keep>
 </div>
