@@ -212,7 +212,7 @@ print(x)
 
 ## Variables
 
-Rather than passing a value (like a string or a number) directly to a function, we can also assign values to variables and pass those to functions. **Variables** are ways to store values and objects for use later.
+Rather than passing a value (like a string or a number) directly to a function, we can also **assign** values to variables and pass those to functions. **Variables** are ways to store values and objects for use later.
 
 @sage
 <div class="python">
@@ -285,9 +285,9 @@ print(produce)
 
 There are a few important characteristics of lists:
 
-* Lists can have duplicate values.
+* Lists can have duplicate values. An example might be the list `[3, 1, 4, 1, 5, 9]`, where the number 1 appears twice.
 
-* List items don't all have to be of the same type (you can have a mix of strings and numbers, for example, or even a list of lists).
+* List items don't all have to be of the same type (you can have a mix of strings and numbers, for example, or even a list of lists). `[3.14, "pi", False, ["number", "string", "boolean"]]` is an example of a list that contains a float, a string, a boolean value, and a list as its elements.
 
 * Lists are **ordered**: List items remain in the position that they are entered into the list, and you can access any item by its position, or **index**.
 
@@ -900,7 +900,11 @@ print(letter_grades_dict)
 
 ## Additional Resources
 
-The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
+* There are many helpful resources on [python.org](https://www.python.org/), including a [Beginner's Guide](https://wiki.python.org/moin/BeginnersGuide) and FAQs (https://docs.python.org/3/faq/).
+
+* [W3 Schools has bite-sized explanations and examples](https://www.w3schools.com/python/) if you want more clarity on how anything works.
+
+* Jupyter notebooks are a great option for doing data analysis with Python-- [check out this Jupyter notebook demo](https://jupyter.org/try-jupyter/lab/) to see how they work.
 
 ## Feedback
 
@@ -916,5 +920,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Module+Template%22)!
-
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Python+Basics+:+Writing+Python+Code%22)!
