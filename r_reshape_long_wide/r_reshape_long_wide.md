@@ -112,12 +112,12 @@ We'll start with wide data, which may be more familiar to you.  Wide data stores
 <!-- data-type="none" -->
 | subject_id | biosample\_id\_1 | collection\_date\_1 | collection\_time\_1 | sample\_type\_1 | collection\_method\_1 | collected\_by\_id\_1 | sample\_size\_1 | biosample\_id\_2 | collection\_date\_2 | collection\_time\_2 | sample\_type\_2 | collection\_method\_2 | collected\_by\_id\_2 | sample\_size\_2 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 876123 | 3380629109 | 2019-05-14 | 9:15 | blood | venipuncture | 4511 | 10 ml | 3380629887 | 2019-05-14 | 18:34 | blood | venipuncture | 4511 | 10 ml
-| 612351 | 3531370968 | 2019-06-04 |  | blood | venipuncture | 7124 | 10 ml | 4182110569 | 2020-02-14 | 13:55 | blood | venipuncture | 3201 | 10 ml
-| 716978 | 3860881351 | 2019-10-20 | 10:45 | saliva | swab | 4511 | 4 g |  |  |  |  |  |  |
-| 321900 | 4190070221 | 2020-02-25 |  | saliva | swab | 7124 | NA |  |  |  |  |  |  |
-342855 | 4348365204 | 2020-06-19 | 15:20 | blood | venipuncture | NA | 10 ml |  |  |  |  |  |  |
-| 901284 | 4377143652 | 2020-08-10 |  | blood | venipuncture | 3201 | 10 ml |  |  |  |  |  |  |
+| 876123 | 3380629109 | 2019-05-14 | 9:15 | blood | venipuncture | 4511 | 10 ml | 3380629887 | 2019-05-14 | 18:34 | blood | venipuncture | 4511 | 10 ml |
+| 612351 | 3531370968 | 2019-06-04 |  | blood | venipuncture | 7124 | 10 ml | 4182110569 | 2020-02-14 | 13:55 | blood | venipuncture | 3201 | 10 ml |
+| 716978 | 3860881351 | 2019-10-20 | 10:45 | saliva | swab | 4511 | 4 g |  |  |  |  |  |  | |
+| 321900 | 4190070221 | 2020-02-25 |  | saliva | swab | 7124 | NA |  |  |  |  |  |  | |
+342855 | 4348365204 | 2020-06-19 | 15:20 | blood | venipuncture | NA | 10 ml |  |  |  |  |  |  | |
+| 901284 | 4377143652 | 2020-08-10 |  | blood | venipuncture | 3201 | 10 ml |  |  |  |  |  |  | |
 
 ### Long Data
 
@@ -425,7 +425,7 @@ relig_income %>%
   pivot_longer(!religion, names_to = "income", values_to = "count")
 ```
 
-Let's try that in R!  In your R environment, open the file `reshape_data.Rmd` from within the `r\_reshape\_wide\_long` folder.
+Let's try that in R!  In your R environment, open the file `reshape_data_exercises.Rmd` from within the `r\_reshape\_wide\_long` folder.
 
 Please read over the first 70 lines of code and execute that code in the R Markdown document.  This is what you'll be doing:
 
@@ -605,7 +605,7 @@ Without having written any code, we've gotten an idea of what we want to accompl
 * get rid of suffixes in column names
 * pivot all the column data except for `biosample_id` into a long format
 
-Let's jump into R and get started.  In `reshape_data.Rmd` in your RStudio environment, start by loading this data and taking a look at it (look at and run the code in lines 150-165).
+Let's jump into R and get started.  In `reshape_data_exercises.Rmd` in your RStudio environment, start by loading this data and taking a look at it (look at and run the code in lines 150-165).
 
 ### Dealing With Suffixes
 
