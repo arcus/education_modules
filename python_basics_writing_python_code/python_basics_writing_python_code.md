@@ -7,8 +7,8 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Module Title
-comment: Learn the basics of writing Python code.
-long_description: Before using Python for data analysis, there are some basics to learn that will set the foundation for more advanced Python coding. This module will teach you how to define and use variables, how to create and edit lists and dictionaries, and how use loops and conditional statements to perform tasks with these basic data structures.
+comment: Learn the foundations of writing Python code.
+long_description: Before using Python for data analysis, there are some basics to learn that will set the foundation for more advanced Python coding. This module will teach you about functions and methods, how to define and use variables, how to create and edit lists and dictionaries, and how use loops and conditional statements to perform tasks with these basic data structures.
 estimated_time: 1 hour
 
 @learning_objectives
@@ -113,11 +113,16 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 
 ## Introduction to Python code
 
-Python is a flexible, multi-purpose programming language that has applications in web development, software engineering, and data analysis. Part of its power comes from the fact that it is **human-readable**, with a relatively simple syntax compared to many other programming languages. However, just like any language, there are some grammar rules to learn in order to use Python. In this module, we'll go through a few of the basics of Python that will build a foundation for your learning and practice.
+Python is a flexible, multi-purpose programming language that has applications in web development, software engineering, and data analysis. Part of its power and much of its popularity comes from the fact that it is **human-readable**, with a relatively simple syntax compared to many other programming languages. However, just like any language, there are some grammar rules to learn in order to use Python. In this module, we'll go through a few of the basics of Python that will build a foundation for your learning and practice.
 
 ### Functions and methods: Getting stuff done
 
-In Python, there are two basic ways of taking something (such as text, a number, or even a collection of numbers or pieces of text) and performing some action on it: functions and methods. **Functions** take the syntax `function(arguments)`-- the name of the function, and then whatever you want to perform that function on (called **arguments**) in parentheses. A simple (but very useful) example of this is the `print()` function.
+In Python, there are two basic ways of taking something (such as text, a number, or a sequence) and performing some action on it: functions and methods.
+
+Functions
+======
+
+**Functions** take the syntax `function(arguments)`: the name of the function, and then whatever you want to perform that function on (called **arguments**) in parentheses. A simple (but very useful) example of this is the `print()` function.
 
 @sage
 <div class="python">
@@ -132,10 +137,13 @@ print("Hello World!")
 The `print()` function takes an argument (in this case the phrase "Hello World!") and displays it as output.
 
 <div class = "important">
-Tip: Some functions can be called on their own without any arguments, though this isn't common. The documentation for the function will tell you which, if any, arguments are required for a function. To call a function without any arguments, just leave the parentheses empty.
+Tip: Some functions can be called on their own without any arguments, though this isn't common. The documentation for the function will tell you which, if any, arguments are required for that function. To call a function without any arguments, just leave the parentheses empty.
 </div>
 
-There are many [built-in function in Python](https://docs.python.org/3/library/functions.html), which means to perform many tasks, you only need to call the function without downloading anything other than Python itself. A couple of examples are `abs()`, which takes a number as its argument and returns the absolute value of that number, and `len()`, which returns the length of its argument (which can be a word, a phrase, a sequence, or a collection of items)
+There are many [built-in functions in Python](https://docs.python.org/3/library/functions.html), which means to perform many tasks, you only need to call the function without downloading anything other than Python itself. A couple of examples are `abs()`, which takes a number as its argument and returns the absolute value of that number and `len()`, which returns the length of its argument (which can be a word, a phrase, a sequence, or a collection of items)
+
+Methods
+======
 
 **Methods** in Python are very similar to functions, but are not precisely the same. The exact differences are not important to us right now, except that the syntax is a little different. Methods cannot be called by themselves; they are always called on an object, with the syntax `object.method()`.
 
@@ -152,13 +160,13 @@ print("Hello World!".lower())
 </lia-keep>
 </div>
 
-As you might have suspected, the `.lower()` method made all of the letters of the phrase "Hello World!" lowercase. The `.lower()` method is a **string method**, or a method that must be called on a string, of which "Hello World!" is an example. There is also a string method called `.upper()`, can you guess what it does? The Python documentation has [more information about string methods](https://docs.python.org/2.5/lib/string-methods.html).
+As you might have suspected, the `.lower()` method made all of the letters of the phrase "Hello World!" lowercase. The `.lower()` method is a **string method**, or a method that must be called on a string, of which "Hello World!" is an example. (There is also a string method called `.upper()`, can you guess what it does?) The Python documentation has [more information about string methods](https://docs.python.org/2.5/lib/string-methods.html).
 
 Let's talk more about strings and other data types next.
 
 ### Data Types
 
-Strings are an example of a **data type** in Python; other data types include integers, floats (or decimal numbers), lists, and boolean (like True or False), but there are many more. Knowing what data type you're working with is important, because certain functions and methods will only work on certain data types, or will behave differently depending on the data type. The built-in function `type()` will return as output the data type of its argument.
+Strings are an example of a **data type** in Python. Knowing what data type you're working with is important, because certain functions and methods will only work on certain data types, or will behave differently depending on the data type. The built-in function `type()` will return as output the data type of its argument.
 
 @sage
 <div class="python">
@@ -171,7 +179,7 @@ print(type("Hello World!"))
 </lia-keep>
 </div>
 
-When we pass the phrase "Hello World!" to the `type()` function, we get the output `<class 'str'>`, "str" being short for "string". A **string** is a sequence of characters; you tell Python that a sequence is a string by surrounding it in quotation marks. You can use either single or double quotes, but it's a good idea to be consistent. Strings are a specific data type in Python; other data types include integers, floats (or decimal numbers), lists, and boolean (like True or False, which may look like strings but are a special data type and don't require quotation marks), but there are many more. Try editing the code above, replacing "Hello World" with different inputs (for example "Hi", 9.8, 10, or False) and run the cell again to see how the output changes.
+When we pass the phrase "Hello World!" to the `type()` function, we get the output `<class 'str'>`, "str" being short for "string". A **string** is a sequence of characters; you tell Python that a sequence is a string by surrounding it in quotation marks. You can use either single or double quotes, but it's a good idea to be consistent. Strings are a specific data type in Python; other data types include integers, floats (or decimal numbers), lists, and boolean (like True or False, which may look like strings but are a special data type and don't require quotation marks), but there are many more. Try editing the code cell above, replacing "Hello World" with different inputs (for example "Hi", 9.8, 10, or False) and run the cell again to see how the output changes.
 
 <div class = "important">
 Notice that in the above example, we have passed the `type("Hello World!")` function call as an argument to `print()`. Nesting functions like this is common (you can do the same with methods), but there is another option we'll discuss in the next section-- using variables!
@@ -179,7 +187,7 @@ Notice that in the above example, we have passed the `type("Hello World!")` func
 
 ### Quiz: Functions and methods
 
-Which of the following are valid Python code? Select all that apply. Use the code cell below to check your knowledge by replacing the `x` argument in the `print()` function with code you're curious about.
+Which of the following are valid examples of Python code? Select all that apply. Use the code cell below to check your knowledge by replacing the `x` argument in the `print()` function with code you're curious about.
 
 [[X]] `len("Python is awesome!")`
 [[X]] `"python".upper()`
@@ -239,6 +247,14 @@ print(all_pets)
 
 In the above example, we have defined variables to contain the number of dogs and the number of cats, and then used these variables in a calculation to get the total number of pets, which is itself assigned to a variable. The `all_pets` variable can then be used repeatedly later (maybe we want to calculate costs associated with feeding and housing all of these pets, for example, or how many collars we'll need). Now, if the number of dogs or cats changes, we can just change the value in the variable statement and re-run our code!
 
+<div class = "important">
+While strings in Python need to be in quotation marks, variable names do not. The reason that strings require quotation marks is so that Python knows that they aren't variables! Numbers and boolean values like `True` and `False` do not need quotation marks either, but you also cannot use numbers or boolean values by themselves as variable names (a mix of letters and number is okay).
+
+If, for example, you typed `dogs` without defining it as a variable, you would get an error message that looks like this: `NameError: name 'dogs' is not defined`. Variables are defined (or declared) when you assign a value to them.  
+
+</div>
+
+
 ### Quiz: Variables
 
 True or False: Once you assign a value to a variable, you can never change that value.
@@ -247,13 +263,13 @@ True or False: Once you assign a value to a variable, you can never change that 
 [(X)] False
 ***
 <div class = "answer">
-Changing the value of a variable is as simple as editing the value in the assignment statement and re-running the code, or you can write a new assignment statement assigning the new value to the variable.
+Changing the value of a variable is as simple as editing the value in the assignment statement and re-running the code; alternatively, you can write a new assignment statement assigning the updated value to the variable.
 </div>
 ***
 
 ## Lists
 
-**Lists** in Python are objects that contain multiple items. They are surrounded by square brackets [ ] and the items in the list are separated by commas:
+**Lists** in Python are objects that contain a collection of multiple items. They are surrounded by square brackets [ ] and the items in the list are separated by commas:
 
 @sage
 <div class="python_link">
@@ -267,25 +283,36 @@ print(produce)
 </lia-keep>
 </div>
 
+There are a few important characteristics of lists:
 
-Notice that the strings that we put into our list, like "tomato" or "squash", are in quotation marks, while the name of our list (`produce`) is not. In Python, variable names don't need quotation marks, but strings that aren't variables do, so that Python knows that they aren't variables. If, for example, you typed `squash` without defining it as a variable, you would get an error message that looks like this: `NameError: name 'squash' is not defined`. Variables are defined (or declared) when you assign a value to them.
+* Lists can have duplicate values.
 
-There can be duplicate values in Python lists, and the items don't all have to be of the same type (you can have a mix of strings and numbers, for example, or even a list of lists). Lists are also changeable; you can add, remove, and edit items in a list. There are a few ways to do this:
+* List items don't all have to be of the same type (you can have a mix of strings and numbers, for example, or even a list of lists).
 
-* `.pop()` removes a specific element by index. The index is the element's position in the list, and in Python, indices start at 0. So the first element is at index 0, the second is at 1, and so on (this is not necessarily the case in other programming languages).
+* Lists are **ordered**: List items remain in the position that they are entered into the list, and you can access any item by its position, or **index**.
 
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
+  <div class = "important">
+  An **index** in Python refers to a value's position in a sequence. The sequence can be a collection object like a list or even a string (which you can think of as a sequence of characters). The important thing to remember is that in Python, **indices start at 0**. This means that the index of the first item in a sequence is `0`! This is not always the case in other programming languages.
 
-    print(produce.pop(0))
+  To access an item by its index, you use **subsetting notation**, `sequence[index]`. To get the first letter of the string "Hello", for example, you would use the code `"Hello"[0]`.
+  </div>
 
-    </script>
-    </lia-keep>
-    </div>
+* Lists are **changeable**; you can add, remove, and edit items in a list. There are a few ways to do this:
 
-* `.remove()` removes a specific element by value.
+    * `.pop()` removes a specific element by **index**).
+
+     @sage
+     <div class="python_link">
+     <lia-keep>
+     <script type="text/x-sage">
+
+     print(produce.pop(0))
+
+     </script>
+     </lia-keep>
+     </div>
+
+   * `.remove()` removes a specific element by **value**.
 
     @sage
     <div class="python_link">
@@ -299,7 +326,7 @@ print(produce)
     </lia-keep>
     </div>
 
-* `del` deletes objects, and can be used as another way to remove elements of a list by index. The syntax will be a little different, because it is a keyword, not a list method. It is useful because it allows you to delete list elements in a slice.
+  * `del` deletes objects, and can be used as another way to remove elements of a list by index. The syntax will be a little different, because it is a keyword, not a list method. It is useful because it allows you to delete list elements in a slice. Slicing uses subsetting notation. the first index listed is **inclusive**, or included in the slice; this is followed by a colon; the second index listed is **exclusive**, or excluded from the slice; finally, these numbers are surrounded by square brackets.
 
     @sage
     <div class="python_link">
@@ -313,7 +340,7 @@ print(produce)
     </lia-keep>
     </div>
 
-* `.clear()` removes everything from the list.
+  * `.clear()` removes everything from the list.
 
     @sage
     <div class="python_link">
@@ -327,7 +354,7 @@ print(produce)
     </lia-keep>
     </div>
 
-* `.append()` adds an element to the end of a list.
+  * `.append()` adds an element to the end of a list.
 
     @sage
     <div class="python_link">
@@ -341,7 +368,7 @@ print(produce)
     </lia-keep>
     </div>
 
-* `.insert()` adds an element to a specific position.
+  * `.insert()` adds an element to a specific position.
 
     @sage
     <div class="python_link">
@@ -355,7 +382,7 @@ print(produce)
     </lia-keep>
     </div>
 
-* `.extend()` adds another list to your list (or another iterable object, but don't worry about that for now).
+  * `.extend()` adds another list to your list (or another iterable object, but don't worry about that for now).
 
     @sage
     <div class="python_link">
@@ -378,31 +405,31 @@ The code cells above are linked, meaning that all of the cells "remember" the co
 
 ### Quiz: Lists
 
-While of the following is FALSE about lists? Select all that apply.
+1. While of the following is FALSE about lists? Select all that apply.
 
-[( )] Lists are changeable; items can be added, removed, or replaced after the list is created.
-[( )] Lists can be assigned to variables.
-[( )] Lists can contain a mix of data types.
-[(X)] Lists are unordered; you cannot access an item in the list by its position.
-***
-<div class = "answer">
-Lists are chanageable, can be stored in varibles for later use, can contain a mix of data types, and they are **ordered**, meaning that items remain in the position that they were put into the list, and you can access or edit list items by value **or** position (also called the **index**).
-</div>
-***
+    [( )] Lists are changeable; items can be added, removed, or replaced after the list is created.
+    [( )] Lists can be assigned to variables.
+    [( )] Lists can contain a mix of data types.
+    [(X)] Lists are unordered; you cannot access an item in the list by its position.
+    ***
+    <div class = "answer">
+    Lists are chanageable, can be stored in varibles for later use, can contain a mix of data types, and they are **ordered**, meaning that items remain in the position that they were put into the list, and you can access or edit list items by value **or** position (also called the **index**).
+    </div>
+    ***
 
-Given the following list of numbers, what is the **index** of the number **15**?
+2. Given the following list of numbers, what is the **index** of the number **15**?
 
-[2, 14, 9, 101, 15, 37]
+    `[2, 14, 9, 101, 15, 37]`
 
-[( )] 5
-[(X)] 4
-[( )] 15
-[( )] 6
-***
-<div class = "answer">
-Indexing in Python begins with **0**, not 1, and so the index of 15, which is the fifth item in the list, is **4**.  
-</div>
-***
+    [( )] 5
+    [(X)] 4
+    [( )] 15
+    [( )] 6
+    ***
+    <div class = "answer">
+    Indexing in Python begins with **0**, not 1, and so the index of 15, which is the fifth item in the list, is **4**.  
+    </div>
+    ***
 
 ## Loops
 
@@ -489,7 +516,7 @@ print(list(range(1, 20)))
 
 Notice that the last number listed is 19, not 20. Just like in subsetting, the first number passed to `range()` is **inclusive**, and the second is **exclusive**. And don't forget that the first position is index 0!
 
-**Your Turn**: Before running the code cell below, try to predict what number will be returned. Got a number in mind? Run the code and see if your hypothesis is correct! (**Hint**: the bracket notation below (`[ ]`) allows Python to access an element in a collection object, like a list; you saw it before when subsetting).
+**Your Turn**: Before running the code cell below, try to predict what number will be returned. Got a number in mind? Run the code and see if your hypothesis is correct! (**Hint**: the bracket notation below (`[ ]`) allows Python to access an element in a collection object, like a list; you saw it before when indexing and subsetting).
 
 @sage
 <div class="python">
@@ -535,7 +562,7 @@ Sometimes when you're working with Python, you might want your code to do differ
 
 Conditional statements often make use of **comparison operators**. Comparison operators compare values and return a `True` or `False`, depending on the outcome of the comparison. Some important comparison operators include:
 
-* `==`: In Python, this is used to test **equality** (be sure not to use  the singal equals sign `=`, which is used for assignment values to variables). So `9 == 18` asks the questions "is 9 equal to 18?", which would evalulate to `False`.
+* `==`: In Python, this is used to test **equality** (be sure not to use  the single equals sign `=`, which is used for assigning values to variables). So `9 == 18` asks the questions "is 9 equal to 18?", which would evalulate to `False`.
 
 * `!=`: not equal to.
 
@@ -621,22 +648,22 @@ Because the conditional statements are run in order, and in the code above the f
 
 Python becomes very powerful when you start combining conditionals and loops.
 
-Remember when we looped through a list of pieces of candy that some students started with and calculated the number they would have if we gave each student 5 more pieces? Let's suppose that the next day instead of giving all of the students in the class more candy, only the students who have fewer than 10 pieces of candy get another piece. We can still calculate how many pieces of candy each student has now (even though we're making the very unlikely assumption that none of the students have eaten any of their candy from before!).
+Remember when we looped through a list of pieces of candy that some children started with and calculated the number they would have if we gave each child 5 more pieces? Let's suppose that the next day instead of giving all of the children more candy, only the children who have fewer than 10 pieces of candy get another piece. We can still calculate how many pieces of candy each child has now (even though we're making the very unlikely assumption that none of the children have eaten any of their candy from before!).
 
 @sage
 <div class="python">
 <lia-keep>
 <script type="text/x-sage">
 
-candy_day1 = [8, 15, 16, 11, 12]
-candy_day2 = []
-for i in candy_day1:
+candy1 = [8, 15, 16, 11, 12]
+candy2 = []
+for i in candy1:
     if i < 10: #tests to see if each student has fewer than 10 pieces of candy
         j = i + 1
     else:
         j = i
-    candy_day2.append(j)
-print(candy_day2)
+    candy2.append(j)
+print(candy2)
 
 </script>
 </lia-keep>
@@ -653,22 +680,22 @@ The following quiz questions are about the following code:
 <lia-keep>
 <script type="text/x-sage">
 
-candy_day1 = [8, 15, 16, 11, 12]
-candy_day2 = []
-for i in candy_day1:
+candy1 = [8, 15, 16, 11, 12]
+candy2 = []
+for i in candy1:
     if i < 10: #tests to see if each student has fewer than 10 pieces of candy
         j = i + 2
     #Missing code here
     else:
         j = i
-    candy_day2.append(j)
-print(candy_day2)
+    candy2.append(j)
+print(candy2)
 
 </script>
 </lia-keep>
 </div>
 
-1. If we wanted to add another conditional statement at line 6 of the code cell above that would give 1 piece of candy to student who start with between 10 to 15 pieces (inclusive), what keyword would we use to start that line?
+1. If we wanted to add another conditional statement at line 6 of the code cell above that would give 1 piece of candy to children who start with between 10 to 15 pieces (inclusive), what keyword would we use to start that line?
 
     [( )] `for`
     [( )] `if`
@@ -681,7 +708,7 @@ print(candy_day2)
     ***
 
 
-2. How could you write the comparison at line 6 so that each student gets the correct number of pieces of candy? Select all that apply.
+2. How could you write the comparison at line 6 so that each child gets the correct number of pieces of candy? Select all that apply.
 
     [[X]] `10 <= i <= 15`
     [[ ]] `10 < i < 15`
@@ -697,7 +724,7 @@ print(candy_day2)
 
 Another kind of collection object in Python is a **dictionary**. Dictionaries are similar to lists in some ways, in that they are ordered (in recent versions of Python; in older versions, dictionaries are unordered) and changeable. However, there are some important distinctions:
 
-* Dictionaries are collections of key-value pairs. For example if you had a dictionary of demographic information for an individual, the **keys** might be the type of information stored (address, telephone number, etc.) and the **values** would be the actual values of those data (123 Puppydog Lane, 987-654-3210).
+* Dictionaries are collections of **key-value pairs**. For example if you had a dictionary of demographic information for an individual, the **keys** might be the type of information stored (address, telephone number, etc.) and the **values** would be the actual values of those data (123 Puppydog Lane, 987-654-3210).
 
 * They do not allow duplicate key-value pairs.
 
@@ -719,7 +746,7 @@ print(contact_info)
 </lia-keep>
 </div>
 
-Like lists, dictionaries have some useful methods you can use to access or alter its data:
+Like lists, dictionaries have some useful methods you can use to access or alter their data:
 
 * `.keys()` returns a list of the dictionary's keys.
 
@@ -747,7 +774,7 @@ Like lists, dictionaries have some useful methods you can use to access or alter
     </lia-keep>
     </div>
 
-* `.items()` returns a list of the dictionary's key-value pairs as tuples (this may seem not very useful at first glance, but since different collection objects have different properties, there could be circumstances in which it is more useful to have the data in a different kind of object).
+* `.items()` returns a list of the dictionary's key-value pairs as tuples (an object that holds multiple values, similar to a list, except that they are unchangeable). This may seem not very useful at first glance, but since different collection objects have different properties, there could be circumstances in which it is more useful to have the data in a different kind of object.
 
     @sage
     <div class="python_link">
@@ -802,7 +829,7 @@ True or False: Duplicate key-value pairs are allowed in dictionaries.
 [(X)] False
 ***
 <div class = "answer">
-While **values** can be repeated in a dictionary, each **key** must be unique. However, you can have multiple values for a key by putting those values in a list. 
+While **values** can be repeated in a dictionary, each **key** must be unique. However, you can have multiple values for a key by putting those values in a list.
 </div>
 ***
 
