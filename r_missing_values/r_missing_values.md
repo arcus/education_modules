@@ -25,44 +25,7 @@ After completion of this module, learners will be able to:
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
-script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
-@sage
-<script input="hidden">
-// Make *any* div with class 'r' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.r',
-                      evalButtonText: 'Run R',
-                      languages: ["r"],
-                      hide: ['fullScreen', 'permalink'],
-                      });
-// Make *any* div with class 'r_run' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.r_run',
-                      evalButtonText: 'Run R',
-                      languages: ["r"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'true'
-                      });
-// Make *any* div with class 'r_data_init' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.r_data_init',
-                      evalButtonText: 'Run R',
-                      languages: ["r"],
-                      editor: 'codemirror-readonly',
-                      hide: ['fullScreen', 'permalink','output','evalButton'],
-                      autoeval: 'true',
-                      linked: 'true',
-                      linkKey: "data"
-                      });       
-// Make *any* div with class 'r_data' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.r_data',
-                      evalButtonText: 'Run R',
-                      languages: ["r"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'false',
-                      linked: 'true',
-                      linkKey: "data"
-                      });
-</script>
-@end
 -->
 
 # @title
