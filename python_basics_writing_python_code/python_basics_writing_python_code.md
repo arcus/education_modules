@@ -15,7 +15,8 @@ estimated_time: 1 hour
 
 After completion of this module, learners will be able to:
 
-- Assign values and objects to variables
+- Identify and use functions and methods
+- Assign values to variables
 - Create and edit lists
 - Iterate through lists using loops
 - Utilize conditional statements
@@ -110,54 +111,6 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 
 </div>
 
-## Lesson Preparation
-
-For the hands-on activity in this module, we will be using an online environment containing a Jupyter notebook. To load the environment, open the link below in a new tab:
-
-<div class = "important">
-Please read over both options before you start performing any actions, to make sure you pick the right option for you.
-</div>
-
-Option 1: Work in the Cloud
-=======
-
-This might work well for you if you either can't or don't want to install Python and Jupyter on your computer, or are not familiar with working with directories or Github. The benefit is that you don't have to install anything, but one negative is that this option requires a bit of waiting for your environment to come online.
-
-**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a couple of minutes to create, depending on how recently it was created (when it's being used more, it's quicker!).
-
-<a href = "https://mybinder.org/v2/gh/arcus/education_modules/update-intro-to-python?labpath=intro_to_python%2Fnotebooks%2Fintro-to-python.ipynb" target = "_blank"> <img src = "https://mybinder.org/static/images/badge_logo.svg" alt="Launch binder."></a> **← Click the "launch binder" button!**
-
-<div class = "hint" style = "align-items: center; display: flex;">
-
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for a few minutes.  Be patient!</div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen.](media/binder_loading.gif)<!--
-style = "border: 1px solid rgb(var(--color-highlight));"-->
-</div>
-</div>
-
-Option 2: Work on Your Computer
-=======
-
-If you have [Python](https://www.python.org/) and [Jupyter](https://jupyter.org/) installed already on your local computer, and have some familiarity working with file directories or Github, you might be interested in simply downloading our sample code to your computer. If you haven't downloaded Python or Jupyter to your computer but would like to, you'll learn how in the [Next Steps](#next-steps) section of this module. Then you can come back here when you're done and follow these steps to download the code (If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime):
-
-* Go to the [GitHub repository](https://github.com/arcus/education_modules) where the materials for this lesson are located.
-* You can use Git to **clone**, or download, a repository (or "repo", as it is sometimes called). Here are the steps to follow:
-
-  * It is likely that Git is already installed on your computer, even if you've never used it before. Open the Terminal application (if you're using a Mac/Linux machine) or the Windows Powershell (if you're using Windows 10 or later -- here is [more information about finding the Windows Powershell](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md#5). Then run the code `git --version`. If Git is installed, you should see a version number. If not, check out [these instructions for installing git on Mac or PC](https://carpentries.github.io/workshop-template/#git).
-
-  * You can also use GitHub Desktop, which you can use to interact with GitHub repositories. The [GitHub Desktop documentation](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) for download instructions and getting started.
-  * If you are using Git in a command line interface, go to the [education_modules repository on GitHub.com](https://github.com/arcus/education_modules) and then follow [these instructions to clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository).
-
-  <div class = "important">
-  It's often useful to have a folder called `GitHub` on your computer for storing repositories that you clone. To navigate to a specific directory in the command line, use the `cd` command (check out the [Command Line 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md#1) for more information).
-  </div>
-
-  * If you are using GitHub desktop, follow [these instructions for cloning a repository from GitHub to GitHub Desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop).
-
-<div class = "options">
-If you don't want to wait for the binder environment to load, but don't want to use git to clone the repository, you can also view the [rendered Jupyter notebook on GitHub](https://github.com/arcus/education_modules/blob/main/intro_to_python/notebooks/intro-to-python.ipynb). You will not be able to interact with the code, but if you have Jupyter installed you can copy and paste the code into code cells that you create in your own notebook.
-</div>
-
 ## Introduction to Python code
 
 Python is a flexible, multi-purpose programming language that has applications in web development, software engineering, and data analysis. Part of its power comes from the fact that it is **human-readable**, with a relatively simple syntax compared to many other programming languages. However, just like any language, there are some grammar rules to learn in order to use Python. In this module, we'll go through a few of the basics of Python that will build a foundation for your learning and practice.
@@ -182,6 +135,8 @@ The `print()` function takes an argument (in this case the phrase "Hello World!"
 Tip: Some functions can be called on their own without any arguments, though this isn't common. The documentation for the function will tell you which, if any, arguments are required for a function. To call a function without any arguments, just leave the parentheses empty.
 </div>
 
+There are many [built-in function in Python](https://docs.python.org/3/library/functions.html), which means to perform many tasks, you only need to call the function without downloading anything other than Python itself. A couple of examples are `abs()`, which takes a number as its argument and returns the absolute value of that number, and `len()`, which returns the length of its argument (which can be a word, a phrase, a sequence, or a collection of items)
+
 **Methods** in Python are very similar to functions, but are not precisely the same. The exact differences are not important to us right now, except that the syntax is a little different. Methods cannot be called by themselves; they are always called on an object, with the syntax `object.method()`.
 
 Let's look at an example:
@@ -197,7 +152,9 @@ print("Hello World!".lower())
 </lia-keep>
 </div>
 
-As you might have suspected, the `.lower()` method made all of the letters of the phrase "Hello World!" lowercase. The `.lower()` method is a **string method**, or a method that must be called on a string, of which "Hello World!" is an example. Let's talk more about strings and other data types next.
+As you might have suspected, the `.lower()` method made all of the letters of the phrase "Hello World!" lowercase. The `.lower()` method is a **string method**, or a method that must be called on a string, of which "Hello World!" is an example. There is also a string method called `.upper()`, can you guess what it does? The Python documentation has [more information about string methods](https://docs.python.org/2.5/lib/string-methods.html).
+
+Let's talk more about strings and other data types next.
 
 ### Data Types
 
@@ -214,10 +171,35 @@ print(type("Hello World!"))
 </lia-keep>
 </div>
 
-When we pass the phrase "Hello World!" to the `type()` function, we get the output `<class 'str'>`, "str" being short for "string". A **string** is a sequence of characters; you tell Python that a sequence is a string by surrounding it in quotation marks. You can use either single or double quotes, but it's a good idea to be consistent. Strings are a specific data type in Python; other data types include integers, floats (or decimal numbers), lists, and boolean (like True or False), but there are many more. Try editing the code above, replacing "Hello World" with different inputs (for example "Hi", 9.8, 10, or False) and run the cell again to see how the output changes.
+When we pass the phrase "Hello World!" to the `type()` function, we get the output `<class 'str'>`, "str" being short for "string". A **string** is a sequence of characters; you tell Python that a sequence is a string by surrounding it in quotation marks. You can use either single or double quotes, but it's a good idea to be consistent. Strings are a specific data type in Python; other data types include integers, floats (or decimal numbers), lists, and boolean (like True or False, which may look like strings but are a special data type and don't require quotation marks), but there are many more. Try editing the code above, replacing "Hello World" with different inputs (for example "Hi", 9.8, 10, or False) and run the cell again to see how the output changes.
 
 <div class = "important">
 Notice that in the above example, we have passed the `type("Hello World!")` function call as an argument to `print()`. Nesting functions like this is common (you can do the same with methods), but there is another option we'll discuss in the next section-- using variables!
+</div>
+
+### Quiz: Functions and methods
+
+Which of the following are valid Python code? Select all that apply. Use the code cell below to check your knowledge by replacing the `x` argument in the `print()` function with code you're curious about.
+
+[[X]] `len("Python is awesome!")`
+[[X]] `"python".upper()`
+[[X]] `type("4.3")`
+[[X]] `type(True)`
+***
+<div class = "answer">
+These are all examples of valid Python code! `print(type(4))` returns the type of the argument `4` (which is `int`, short for integer) and prints that output to the screen. `"python.upper()"` makes the string "python" all uppercase. `type("4.3")` might be a little tricky, since 4.3 is a decimal number (or **float**) but it's in quotation marks-- but those quotation marks just mean that, in this case, "4.3" is a string! `type(True)` might also be tricky, since at first it looks like a string that doesn't have the required quotation marks. However, `True` and `False` are special in Python, and have the type `boolean`.  
+</div>
+***
+
+@sage
+<div class="python">
+<lia-keep>
+<script type="text/x-sage">
+
+print(x)
+
+</script>
+</lia-keep>
 </div>
 
 ## Variables
@@ -259,6 +241,16 @@ In the above example, we have defined variables to contain the number of dogs an
 
 ### Quiz: Variables
 
+True or False: Once you assign a value to a variable, you can never change that value.
+
+[( )] True
+[(X)] False
+***
+<div class = "answer">
+Changing the value of a variable is as simple as editing the value in the assignment statement and re-running the code, or you can write a new assignment statement assigning the new value to the variable.
+</div>
+***
+
 ## Lists
 
 **Lists** in Python are objects that contain multiple items. They are surrounded by square brackets [ ] and the items in the list are separated by commas:
@@ -278,9 +270,9 @@ print(produce)
 
 Notice that the strings that we put into our list, like "tomato" or "squash", are in quotation marks, while the name of our list (`produce`) is not. In Python, variable names don't need quotation marks, but strings that aren't variables do, so that Python knows that they aren't variables. If, for example, you typed `squash` without defining it as a variable, you would get an error message that looks like this: `NameError: name 'squash' is not defined`. Variables are defined (or declared) when you assign a value to them.
 
-There can be duplicate values in Python lists, and lists are changeable; you can add, remove, and edit items in a list. There are a few ways to do this, depending on exactly what you're trying to do:
+There can be duplicate values in Python lists, and the items don't all have to be of the same type (you can have a mix of strings and numbers, for example, or even a list of lists). Lists are also changeable; you can add, remove, and edit items in a list. There are a few ways to do this:
 
-* .pop( ) removes a specific element by index. The index is the element's position in the list, and in Python, indices start at 0. So the first element is at index 0, the second is at 1, and so on (this is not necessarily the case in other programming languages).
+* `.pop()` removes a specific element by index. The index is the element's position in the list, and in Python, indices start at 0. So the first element is at index 0, the second is at 1, and so on (this is not necessarily the case in other programming languages).
 
     @sage
     <div class="python_link">
@@ -293,7 +285,7 @@ There can be duplicate values in Python lists, and lists are changeable; you can
     </lia-keep>
     </div>
 
-* .remove( ) removes a specific element by value.
+* `.remove()` removes a specific element by value.
 
     @sage
     <div class="python_link">
@@ -307,7 +299,7 @@ print(produce)
     </lia-keep>
     </div>
 
-* del deletes objects, and can be used as another way to remove elements of a list by index. The syntax will be a little different, because it is a keyword, not a list method. It is useful because it allows you to delete list elements in a slice.
+* `del` deletes objects, and can be used as another way to remove elements of a list by index. The syntax will be a little different, because it is a keyword, not a list method. It is useful because it allows you to delete list elements in a slice.
 
     @sage
     <div class="python_link">
@@ -321,7 +313,7 @@ print(produce)
     </lia-keep>
     </div>
 
-* .clear( ) removes everything from the list.
+* `.clear()` removes everything from the list.
 
     @sage
     <div class="python_link">
@@ -335,7 +327,7 @@ print(produce)
     </lia-keep>
     </div>
 
-* .append( ) adds an element to the end of a list.
+* `.append()` adds an element to the end of a list.
 
     @sage
     <div class="python_link">
@@ -349,7 +341,7 @@ print(produce)
     </lia-keep>
     </div>
 
-* .insert( ) adds an element to a specific position.
+* `.insert()` adds an element to a specific position.
 
     @sage
     <div class="python_link">
@@ -363,7 +355,7 @@ print(produce)
     </lia-keep>
     </div>
 
-* .extend( ) adds another list to your list (or another iterable object, but don't worry about that for now).
+* `.extend()` adds another list to your list (or another iterable object, but don't worry about that for now).
 
     @sage
     <div class="python_link">
@@ -381,8 +373,36 @@ print(produce)
 You'll notice that with each step, our list `produce` has been permanently changed-- in order to "start over" with the original list, we simply need to re-run the first code chunk.
 
 <div class = "warning">
-The code chunks above are linked, meaning that all of the chunks "remember" what the code that has been run previously (as they would be in a [notebook](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/update-intro-to-python/intro_to_python/intro_to_python.md#8)) and so if you run them out of order, you can get unexpected results or even errors! If things aren't working like they should, re-run the first code chunk on this page, or refresh the whole page.
+The code cells above are linked, meaning that all of the cells "remember" the code that has been run previously (as they would be in a [notebook](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/update-intro-to-python/intro_to_python/intro_to_python.md#8)). Because of this, if you run them out of order, you can get unexpected results or even errors! If things aren't working like they should, re-run the first code cell on the page or hit your refresh button.
 </div>
+
+### Quiz: Lists
+
+While of the following is FALSE about lists? Select all that apply.
+
+[( )] Lists are changeable; items can be added, removed, or replaced after the list is created.
+[( )] Lists can be assigned to variables.
+[( )] Lists can contain a mix of data types.
+[(X)] Lists are unordered; you cannot access an item in the list by its position.
+***
+<div class = "answer">
+Lists are chanageable, can be stored in varibles for later use, can contain a mix of data types, and they are **ordered**, meaning that items remain in the position that they were put into the list, and you can access or edit list items by value **or** position (also called the **index**).
+</div>
+***
+
+Given the following list of numbers, what is the **index** of the number **15**?
+
+[2, 14, 9, 101, 15, 37]
+
+[( )] 5
+[(X)] 4
+[( )] 15
+[( )] 6
+***
+<div class = "answer">
+Indexing in Python begins with **0**, not 1, and so the index of 15, which is the fifth item in the list, is **4**.  
+</div>
+***
 
 ## Loops
 
@@ -485,9 +505,49 @@ print(list(range(1, 20))[7])
 
 ### Quiz: Loops
 
+
+@sage
+<div class="python">
+<lia-keep>
+<script type="text/x-sage">
+
+for i in range(0, 6):
+  j = i*i
+</script>
+</lia-keep>
+</div>
+
+The loop in the code cell above is missing a `print()` statement to show us the output. How would you include a `print()` statement such that all of the squares of `i` in `range(0,6)` are displayed? Feel free to edit the code cell above and experiment to find the answer.
+
+[( )] `print(i)`, indented so that it **inside** the loop
+[(X)] `print(j)`, indented so that it **inside** the loop
+[( )] `print(i)` with no indentation, so that it is **outside** of the loop
+[( )] `print(j)` with no indentation, so that it is **outside** of the loop
+***
+<div class = "answer">
+According to our code, we know that `j` is the square of `i`, so that's the number we need to print. If we put the `print()` statment **outside** of the loop, we only see the last number, 25, because that is the value that `j` had once the loop was completed. If we place the `print()` statement **inside** the loop, each value of `j` is printed before the next interation of the loop. Therefore, the second option is correct.
+</div>
+***
+
 ## Conditional statements: If-else
 
-Sometimes when you're working with Python, you might want your code to do different things in different circumstances. You handle this with an `if else`, or **conditional**, statement. Let's look at a simple example:
+Sometimes when you're working with Python, you might want your code to do different things in different circumstances. You handle this with an `if else`, or **conditional**, statement.
+
+Conditional statements often make use of **comparison operators**. Comparison operators compare values and return a `True` or `False`, depending on the outcome of the comparison. Some important comparison operators include:
+
+* `==`: In Python, this is used to test **equality** (be sure not to use  the singal equals sign `=`, which is used for assignment values to variables). So `9 == 18` asks the questions "is 9 equal to 18?", which would evalulate to `False`.
+
+* `!=`: not equal to.
+
+* `<`: less than.
+
+* `>`: greater than.
+
+* `<=`: less than or equal to.
+
+* `>=`: greater than or equal to.
+
+Let's look at a simple example of some code that ultilizes conditionals.
 
 @sage
 <div class="python">
@@ -504,7 +564,7 @@ else:
 </lia-keep>
 </div>
 
-**Your Turn**: Try changing `name` in the code cell above to a number and see what happens! What happens if you remove the quotation marks?
+**Your Turn**: Try changing the value assigned to `name` from "Pythonista" to a number, and see what happens! What happens if you remove the quotation marks?
 
 Multiple conditions
 ======
@@ -561,7 +621,7 @@ Because the conditional statements are run in order, and in the code above the f
 
 Python becomes very powerful when you start combining conditionals and loops.
 
-Remember when we looped through a list of pieces of candy that some students started with and calculated the number they would have if we gave each student 5 more pieces? Let's suppose that the next day instead of giving all of the students in the class more candy, only the students who have fewer than 10 pieces of candy already get another piece. We can still calculate how many pieces of candy each student has now (even though we're making the very unlikely assumption that none of the students have eaten any of their candy from before!).
+Remember when we looped through a list of pieces of candy that some students started with and calculated the number they would have if we gave each student 5 more pieces? Let's suppose that the next day instead of giving all of the students in the class more candy, only the students who have fewer than 10 pieces of candy get another piece. We can still calculate how many pieces of candy each student has now (even though we're making the very unlikely assumption that none of the students have eaten any of their candy from before!).
 
 @sage
 <div class="python">
@@ -571,7 +631,7 @@ Remember when we looped through a list of pieces of candy that some students sta
 candy_day1 = [8, 15, 16, 11, 12]
 candy_day2 = []
 for i in candy_day1:
-    if i < 10: #tests to see if each student has less than 10 pieces of candy
+    if i < 10: #tests to see if each student has fewer than 10 pieces of candy
         j = i + 1
     else:
         j = i
@@ -585,6 +645,53 @@ print(candy_day2)
 In the case above, we've used an if-else statement within our `for` loop! These loops can actually get quite complex for some tasks, but breaking down the loop and testing out the various pieces is often a good strategy.
 
 ### Quiz: Conditional statements
+
+The following quiz questions are about the following code:
+
+@sage
+<div class="python">
+<lia-keep>
+<script type="text/x-sage">
+
+candy_day1 = [8, 15, 16, 11, 12]
+candy_day2 = []
+for i in candy_day1:
+    if i < 10: #tests to see if each student has fewer than 10 pieces of candy
+        j = i + 2
+    #Missing code here
+    else:
+        j = i
+    candy_day2.append(j)
+print(candy_day2)
+
+</script>
+</lia-keep>
+</div>
+
+1. If we wanted to add another conditional statement at line 6 of the code cell above that would give 1 piece of candy to student who start with between 10 to 15 pieces (inclusive), what keyword would we use to start that line?
+
+    [( )] `for`
+    [( )] `if`
+    [(X)] `elif`
+    [( )] `else`
+    ***
+    <div class = "answer">
+    Because we're checking for multiple conditions, we use the `elif` keyword. We use `if` for the first condition that we are testing; `else` is used at the end to catch anything that hasn't been explictly handled by our preceding conditions. And we know that `for` is the keyword to begin a loop!
+    </div>
+    ***
+
+
+2. How could you write the comparison at line 6 so that each student gets the correct number of pieces of candy? Select all that apply.
+
+    [[X]] `10 <= i <= 15`
+    [[ ]] `10 < i < 15`
+    [[ ]] `i >= 10`
+    [[X]] `10 <= i < 16`
+    ***
+    <div class = "answer">
+    Because we want to give an additional piece of candy to any student who started with between 10 and 15 pieces, we want to test if `i` is greater than or equal to 10, but less than or equal to 15 (which could also be expressed as less than 16, since we're working with integers). So the first and last choices are correct.
+    </div>
+    ***
 
 ## Dictionaries
 
@@ -685,7 +792,19 @@ print(contact_info)
     </lia-keep>
     </div>
 
+  You can also use the same syntax with an exisitng key to assign a new value (note that the new value will **replace** the previous value).
+
 ### Quiz: Dictionaries
+
+True or False: Duplicate key-value pairs are allowed in dictionaries.
+
+[( )] True
+[(X)] False
+***
+<div class = "answer">
+While **values** can be repeated in a dictionary, each **key** must be unique. However, you can have multiple values for a key by putting those values in a list. 
+</div>
+***
 
 ## It's Your Turn!
 
@@ -708,6 +827,8 @@ Your friend also sends you the class's final grades, along with the student iden
 st1: 88, st2: 78, st3: 34, st4: 97, st5: 64, st6: 89, st7: 56, st8: 83, st9: 92
 
 Using a for loop and if-else statements, can you write some code that returns a dictionary with the student identifiers as the keys and the letter grades that the students should be assigned as the values? If you get stumped, look at the next page for one possible approach.
+
+**Hint:** To loop through the items (the keys and values) of a dictionary that we'll call `my_dict`, you can use the code `for k,v in my_dict.items()`.
 
 If you do glance at the answer, note that your code might look a little different; as long as you get the output you're looking for, that's okay!
 
