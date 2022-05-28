@@ -7,18 +7,19 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Missing Values in R
-comment:  A practical demonstration of how missing values show up in R and how to deal with them. Note that this module does **not** cover statistical approaches for handling missing data like imputation, but instead focuses on the code you need to work with and replace missing values in R.
-long_description: Beginning introduction of how missing data is handled in R, what is NA, how to work with missing data values (in a very basic sense), typical default behavior, etc. For example, `remove_na()`, `replace_na()`, `fill()`, are missing values causing your error?, `na.rm=TRUE/FALSE`, other similar v concrete applicable stuff. Not covered: Imputation, assessing the impact of missing data on your analyses (in terms of validity, stats, etc), considering possible relatedness of missing data, etc.
+comment:  A practical demonstration of how missing values show up in R and how to deal with them. Note that this module does **not** cover statistical approaches for handling missing data, but instead focuses on the code you need to find, work with, and assign missing values in R.
+long_description: This is a beginners guide to handling missing values in R. It covers what `NA` values are and how to check for them, how to mark values as missing, how to work around missing values in your analysis, and how to filter your data to remove missingness. This module is appropriate for learners who feel comfortable with R basics and are ready to get into the realities of data analysis, like dealing with missing values.
+
 estimated_time: 45 min
 
 @learning_objectives  
 
 After completion of this module, learners will be able to:
 
-- identify key elements
-- create a product
-- do a task
-- articulate the rationale for something
+- check the number and location of missing values in a dataframe
+- mark values as missing
+- use common arguments like `na.rm` and `na.action` to control how functions handle missingness
+- remove cases with missing values from a dataframe
 
 @end
 
@@ -211,7 +212,7 @@ If you'd like to learn more, check out this [blog post explaining the difference
 If you're just beginning in R, though, you can safely ignore `NULL` for now.
 </div>
 
-## How to check for missing values
+### How to check for missing values
 
 One way to see missing data in R is to take a look at the full dataset, either by printing it in the console or using `View()` to see it opened like a spreadsheet (to see examples of how to use `View()`, see this [tutorial on RStudio's data viewer](https://support.rstudio.com/hc/en-us/articles/205175388-Using-the-Data-Viewer-in-the-RStudio-IDE)).
 Then you can just scan visually for `NA` cells, as in the example table in the previous section.
@@ -232,7 +233,7 @@ Now **return to your RStudio instance** to work through practical examples on ho
 In your R environment, open the file `missing_values_exercises.Rmd` from within the `r_missing_values` folder.
 You'll start at the top of the file and work until you see the message to return to the module on line 96.
 
-### Quiz: Checking for missing values
+### Quiz: Missing values
 
 True or False: The only way to check for missing values in R is by using the `summary()` function.
 
