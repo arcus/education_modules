@@ -406,13 +406,14 @@ When you do a comparison with a literal character string, such as "stark", that 
 
 </div>
 
-<div class = "question">
+
 Which of these would successfully filter the `covid_testing` data frame to only tests with positive results?
 
 [( )] A: `filter(covid_testing, result == positive)`
 [( )] B: `filter(covid_testing, result = "positive")`
 [(X)] C: `filter(covid_testing, result == "positive")`
 [( )] D: `filter(covid_testing, positive == "result")`
+******
 
 <div class = "answer">
 
@@ -425,7 +426,8 @@ C is correct.  It includes `filter()`, has the name of a data frame as the first
 D is not correct because it flips the positions of the comparison; the column name goes to the left and the comparator on the right.
 
 </div>
-</div>
+
+******
 
 ### Filtering a Complex Condition
 
