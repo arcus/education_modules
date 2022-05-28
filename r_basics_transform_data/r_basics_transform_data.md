@@ -682,10 +682,9 @@ mutate(covid_testing,
 
 ### Quiz: `mutate()`
 
-Which of the following can you accomplish with `mutate()`?
-
 <div class = "question">
-Which of the following are true statements about "dplyr"?  Check all that apply!
+
+Which of the following can you accomplish with `mutate()`?
 
 [[X]] create a new column that uses existing data to calculate the new column's value
 [[X]] create a new column that is uniform (has the same value for each row)
@@ -771,7 +770,7 @@ If you already completed this work for a previous module, and it's been a while 
 
 Within the `r_basics_transform_data` folder, please open `transform_exercises.Rmd` to work through the exercises.  You'll see something like the below.
 
-![RStudio window showing transform_exercises.Rmd](media/r_transform_exercise.png)<!-- style = "max-width: 800px; border: 1px solid rgb(var(--color-highlight))" -->
+![RStudio window showing `transform_exercises.Rmd`](media/r_transform_exercise.png)<!-- style = "max-width: 800px; border: 1px solid rgb(var(--color-highlight))" -->
 
 To work in this file:
 
