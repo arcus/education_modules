@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -233,11 +233,9 @@ Which of the following are true statements about "dplyr"?  Check all that apply!
 [[?]] There are multiple correct answers!
 
 <div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
 
 The dplyr package is one of several packages that together make up the tidyverse suite of packages, not the other way around. Additionally, dplyr is intended to help with data reshaping -- for example, removing unneeded rows from a data frame, selecting some columns and not others, or creating a new column for a data frame.  It's not a package related to data privacy.  Finally, while dplyr does include the `select()` function, it's not true that `select()` works on both rows and columns.
 
-</details>
 </div>
 </div>
 
@@ -285,7 +283,6 @@ Which of the following will select the `first_name` column from the `covid_testi
 [( )] E: Both B and D
 
 <div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
 
 Answer (A) isn't correct, because the first argument that appears inside `select` represents the data frame, and `first_name` is not the name of a data frame.  Also, we notice that instead of an assignment arrow, we see an equals sign.  This isn't wrong *per se*, but it isn't advised.
 
@@ -296,7 +293,7 @@ Answer (C) is not correct, because it does not create a new object, but instead 
 Answer (D) is a bit of a trick.  It's incorrect because in R, capitalization matters.  It's a "case sensitive" language, and there is no column named "First_Name" with capital letters!
 
 Answer (E) is not correct, because we know (D) is incorrect.
-</details>
+
 </div>
 </div>
 
@@ -389,7 +386,6 @@ In the box below, write a `filter()` statement that returns a data frame contain
 [[?]] Hint: We include a space after any comma and on either side of the comparison operator `!=`.  We also aren't assigning the results of this `filter` to a new object.
 
 <div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
 
 `filter(covid_testing, last_name != "stark")` is correct:
 
@@ -398,7 +394,7 @@ In the box below, write a `filter()` statement that returns a data frame contain
 * after the comma, there is a logical condition that can be evaluated to be either true or false.
 * within the logical condition, we check whether it's true that the last_name value is not equal to the exact string "stark".
 
-</details>
+
 </div>
 </div>
 
@@ -420,7 +416,6 @@ Which of these would successfully filter the `covid_testing` data frame to only 
 [( )] D: `filter(covid_testing, positive == "result")`
 
 <div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
 
 A is not correct because "positive" is a character string that must appear in quotes (it's not a number or a logical value such as TRUE or FALSE).
 
@@ -430,8 +425,6 @@ C is correct.  It includes `filter()`, has the name of a data frame as the first
 
 D is not correct because it flips the positions of the comparison; the column name goes to the left and the comparator on the right.
 
-
-</details>
 </div>
 </div>
 
@@ -622,7 +615,6 @@ In the box below, rewrite the following statement with a pipe:
 [[?]] Hint: We include a space after any comma and on either side of the pipe `%>%`.  We also aren't assigning the results of this `select` to a new object.
 
 <div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
 
 `mydata %>% select(first_name, last_name)` is correct because:
 
@@ -630,7 +622,6 @@ In the box below, rewrite the following statement with a pipe:
 * To the left of the pipe, there is the name of a data frame, in this case `mydata`.
 * To the right of the pipe, there is a `select()` function that includes additional arguments giving the names of the columns we want to keep.
 
-</details>
 </div>
 </div>
 
@@ -694,11 +685,9 @@ Which of the following can you accomplish with `mutate()`?
 [[?]] There are multiple correct answers!
 
 <div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
 
 `mutate()` works well as a method for altering existing columns (for instance, changing the case of a string field to all lower case or all upper case, or rounding numbers).  It's also useful for creating new columns.  You can use existing columns to create a new column, based on some calculation (say, if you want to add two columns to create the new column) or entirely new data (such as adding a new column, "hospital_name" that says "city general" for every row).
 
-</details>
 </div>
 </div>
 
