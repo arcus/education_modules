@@ -219,9 +219,7 @@ style = "max-width: 600px;"
 
 ### Quiz: `dplyr()` Functions
 
-Let's see what you remember about dplyr and its functions (which we've only described briefly so far)
-
-<div class = "question">
+Let's see what you remember about dplyr and its functions (which we've only described briefly so far).
 
 Which of the following are true statements about "dplyr"?  Check all that apply!
 
@@ -231,14 +229,15 @@ Which of the following are true statements about "dplyr"?  Check all that apply!
 [[X]] dplyr provides a number of functions good for getting precise subsets of data from a data frame
 [[ ]] dplyr includes the function `select()`, which can be used to subset both rows or columns
 [[?]] There are multiple correct answers!
+*********
 
 <div class = "answer">
 
 The dplyr package is one of several packages that together make up the tidyverse suite of packages, not the other way around. Additionally, dplyr is intended to help with data reshaping -- for example, removing unneeded rows from a data frame, selecting some columns and not others, or creating a new column for a data frame.  It's not a package related to data privacy.  Finally, while dplyr does include the `select()` function, it's not true that `select()` works on both rows and columns.
 
 </div>
-</div>
 
+********
 
 ## The `select()` Function
 
@@ -272,15 +271,14 @@ If you write the `select` statement like this it will simply print out the resul
 
 ### Quiz: `select()`
 
-<div class = "question">
 Which of the following will select the `first_name` column from the `covid_testing` data frame and capture the result in a data frame named `newdata`?
-
 
 [( )] A: `newdata = select(first_name, covid_testing)`
 [(X)] B: `newdata <- select(covid_testing, first_name)`
 [( )] C: `select(newdata, covid_testing, first_name)`
 [( )] D: `newdata <- select(covid_testing, First_Name)`
 [( )] E: Both B and D
+********
 
 <div class = "answer">
 
@@ -295,7 +293,8 @@ Answer (D) is a bit of a trick.  It's incorrect because in R, capitalization mat
 Answer (E) is not correct, because we know (D) is incorrect.
 
 </div>
-</div>
+
+********
 
 ## The `filter()` Function
 
@@ -379,11 +378,11 @@ Use `!=` if you want to select rows in which a value is **not** equal to another
 
 ### Quiz: `filter()`
 
-<div class = "question">
 In the box below, write a `filter()` statement that returns a data frame containing only the rows from `covid_testing` in which the `last_name column` is NOT equal to "stark". Don't capture the returned data frame to assign it to an object.
 
 [[filter(covid_testing, last_name != "stark")]]
 [[?]] Hint: We include a space after any comma and on either side of the comparison operator `!=`.  We also aren't assigning the results of this `filter` to a new object.
+********
 
 <div class = "answer">
 
@@ -394,9 +393,9 @@ In the box below, write a `filter()` statement that returns a data frame contain
 * after the comma, there is a logical condition that can be evaluated to be either true or false.
 * within the logical condition, we check whether it's true that the last_name value is not equal to the exact string "stark".
 
+</div>
 
-</div>
-</div>
+********
 
 <div class = "warning">
 When you do a comparison with a literal character string, such as "stark", that string needs to go inside quotes. A character string is anything that's not a number or a logical value such as TRUE and FALSE.  Quotes can be tricky in R, and practice makes perfect.
@@ -606,13 +605,13 @@ This approach to coding is powerful because it makes it much easier for someone 
 
 ### Quiz: `%>%`
 
-<div class = "question">
 In the box below, rewrite the following statement with a pipe:
 
 `select(mydata, first_name, last_name)`
 
 [[mydata %>% select(first_name, last_name)]]
 [[?]] Hint: We include a space after any comma and on either side of the pipe `%>%`.  We also aren't assigning the results of this `select` to a new object.
+********
 
 <div class = "answer">
 
@@ -623,7 +622,8 @@ In the box below, rewrite the following statement with a pipe:
 * To the right of the pipe, there is a `select()` function that includes additional arguments giving the names of the columns we want to keep.
 
 </div>
-</div>
+
+********
 
 ## The `mutate()` Function
 
@@ -673,8 +673,6 @@ mutate(covid_testing,
 
 ### Quiz: `mutate()`
 
-<div class = "question">
-
 Which of the following can you accomplish with `mutate()`?
 
 [[X]] create a new column that uses existing data to calculate the new column's value
@@ -683,13 +681,16 @@ Which of the following can you accomplish with `mutate()`?
 [[X]] change an existing column from a decimal value to an integer value
 [[ ]] transpose a data frame, so that rows become columns and columns become rows
 [[?]] There are multiple correct answers!
+********
 
 <div class = "answer">
 
 `mutate()` works well as a method for altering existing columns (for instance, changing the case of a string field to all lower case or all upper case, or rounding numbers).  It's also useful for creating new columns.  You can use existing columns to create a new column, based on some calculation (say, if you want to add two columns to create the new column) or entirely new data (such as adding a new column, "hospital_name" that says "city general" for every row).
 
 </div>
-</div>
+
+********
+
 
 
 ## Exercises
