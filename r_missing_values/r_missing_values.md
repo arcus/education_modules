@@ -8,7 +8,7 @@ language: en
 narrator: UK English Female
 title: Missing Values in R
 comment:  A practical demonstration of how missing values show up in R and how to deal with them. Note that this module does **not** cover statistical approaches for handling missing data, but instead focuses on the code you need to find, work with, and assign missing values in R.
-long_description: This is a beginners guide to handling missing values in R. It covers what `NA` values are and how to check for them, how to mark values as missing, how to work around missing values in your analysis, and how to filter your data to remove missingness. This module is appropriate for learners who feel comfortable with R basics and are ready to get into the realities of data analysis, like dealing with missing values.
+long_description: This is a beginner's guide to handling missing values in R. It covers what `NA` values are and how to check for them, how to mark values as missing, how to work around missing values in your analysis, and how to filter your data to remove missingness. This module is appropriate for learners who feel comfortable with R basics and are ready to get into the realities of data analysis, like dealing with missing values.
 
 estimated_time: 45 min
 
@@ -80,7 +80,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
-# @title
+Missing Values in R
 
 <div class = "overview">
 
@@ -185,7 +185,7 @@ Different statistical software mark missing values in different ways.
 In R, missing values are marked with `NA`, which is short for "Not Available".
 
 <div class = "learnmore">
-Technically, there are actually four different kinds of `NA`, one for each of the different data types in R. To learn more, read about [missing values in the free online book R for Data Science](https://r4ds.had.co.nz/vectors.html?q=missing#missing-values-4)
+Technically, there are actually four different kinds of `NA`, one for each of the different data types in R. To learn more, read about [missing values in the free online book R for Data Science](https://r4ds.had.co.nz/vectors.html?q=missing#missing-values-4).
 
 For most practical purposes, you don't need to know anything about these different kinds of `NA`, though; they all just mean "missing", and you can usually use `NA` to refer to all of them.
 </div>
@@ -287,8 +287,14 @@ mutate(df, rating = if_else(rating == -99, NA, rating))
 
 Let's break that down.
 
-We're using a `mutate` command to change the variable, and we're setting it to be conditional by using `if_else`.
-The `if_else` command begins with a conditional test, in this case `if_else(rating == -99, NA, rating)`, and for each value in `rating`, it will run the test and return either `TRUE` or `FALSE`.
+We're using a `mutate` command to change ("mutate") a variable (a column of data), and we're setting what the new value of this column should be by using a special conditional function, the `if_else` function.
+The `if_else` command is what's called a ternary operator, and it has three parts:
+
+ * a conditional test
+ * a value to use if the test returns `TRUE`
+ * a value to use if the test returns `FALSE`.
+ 
+ Our `if_else` statement begins with a conditional test, in this case `if_else(rating == -99, NA, rating)`, and for each value in `rating`, it will run the test and return either `TRUE` or `FALSE`.
 If it returns `TRUE`, then it assigns the next argument, in this case `NA`, which will mark that value missing.
 If it returns `FALSE`, then it assigns the last argument, in this case `rating`, which will leave the value untouched.
 So for any `rating` values that equal -99, we're asking it to replace them with `NA`, otherwise leave them as they were.
