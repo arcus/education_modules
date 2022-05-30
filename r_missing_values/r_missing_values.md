@@ -282,31 +282,31 @@ Either way, you don't want to treat those -99 scores as actual responses to the 
 Here's some code to assign the -99 values in our pretend dataset to missing:
 
 ```r
-mutate(df, rating = if_else(rating == -99, NA, rating))
+mutate(df, rating = ifelse(rating == -99, NA, rating))
 ```
 
 Let's break that down.
 
-We're using a `mutate` command to change ("mutate") a variable (a column of data), and we're setting what the new value of this column should be by using a special conditional function, the `if_else` function.
-The `if_else` command is what's called a ternary operator, and it has three parts:
+We're using a `mutate` command to change ("mutate") a variable (a column of data), and we're setting what the new value of this column should be by using a special conditional function, the `ifelse` function.
+The `ifelse` command is what's called a ternary operator, and it has three parts:
 
  * a conditional test
  * a value to use if the test returns `TRUE`
  * a value to use if the test returns `FALSE`.
- 
- Our `if_else` statement begins with a conditional test, in this case `if_else(rating == -99, NA, rating)`, and for each value in `rating`, it will run the test and return either `TRUE` or `FALSE`.
+
+ Our `ifelse` statement begins with a conditional test, in this case `ifelse(rating == -99, NA, rating)`, and for each value in `rating`, it will run the test and return either `TRUE` or `FALSE`.
 If it returns `TRUE`, then it assigns the next argument, in this case `NA`, which will mark that value missing.
 If it returns `FALSE`, then it assigns the last argument, in this case `rating`, which will leave the value untouched.
 So for any `rating` values that equal -99, we're asking it to replace them with `NA`, otherwise leave them as they were.
 
 <div class="learnmore">
-For more on `mutate` and `if_else`, see the [R Basics: Data Transformation sections on `mutate`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#the-mutate%28%29-function) and [logical operators](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#logical-operators), and the [`if_else` help documentation](https://dplyr.tidyverse.org/reference/if_else.html).
+For more on `mutate` and `ifelse`, see the [R Basics: Data Transformation sections on `mutate`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#the-mutate%28%29-function) and [logical operators](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#logical-operators), and the [`ifelse` section in the free online book Advanced R](https://adv-r.hadley.nz/control-flow.html#vectorised-if).
 </div>
 
 We could make this command more general by replacing all values that fall outside of the 1-5 scale with `NA`:
 
 ```r
-mutate(df, rating = if_else(rating < 1 | rating > 5, NA, rating))
+mutate(df, rating = ifelse(rating < 1 | rating > 5, NA, rating))
 ```
 
 Here we're using [the "or" operator](https://www.statmethods.net/management/operators.html) `|` to combine two tests together.
