@@ -671,8 +671,6 @@ FROM alasql.patients;
 
 <table id="dataTable7c" border="1"></table><br>
 
-</div>
-
 Which of these years are represented in your query results?
 
 [[ ]] 1970
@@ -1078,7 +1076,7 @@ What are the sex, race, and age group of the patient with id 03963166-b49f-4440-
 [[ ]] F, white, boomer
 ***************
 
-<div class = "answer">
+<div class = "answer", style = "width: 100%;">
 This is the query we used to get the answer:
 
 ```sql
