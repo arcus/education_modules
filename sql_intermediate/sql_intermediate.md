@@ -15,7 +15,7 @@ estimated_time: 1 hour
 After completion of this module, learners will be able to:
 
 * Create new data classifications using `CASE` statements
-* Find text matching given patterns using `LIKE` and `REGEXP_LIKE` statements
+* Find text that matches a given pattern using `LIKE` and `REGEXP_LIKE` statements
 * Use `GROUP BY` and `HAVING` statements along with aggregate functions to understand group characteristics
 * Use `WITH` to create sub queries
 
@@ -386,7 +386,7 @@ alasql("INSERT INTO patients VALUES ('fcc61454-1b07-4e49-a25b-29e5064e0063', '19
 
 **Pre-requisites**
 
-Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this module.  If you would like a code-free overview to SQL we recommend our module [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md).  If you need to develop basic SQL fluency we recommend our module [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md)
+Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this module.  If you would like a code-free overview to SQL we recommend our module [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md).  If you need to develop basic SQL fluency we recommend our module [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md).
 
 **Learning Objectives**
 
@@ -436,7 +436,7 @@ LIMIT 10;
 
 <div class = "important">
 
-Don't worry -- the data here, although it **looks** like human subject or patient data, is completely fabricated.  We used sample data from the open source project [Synthea](https://synthetichealth.github.io/synthea).
+Don't worry -- the data here, although it **looks** like human subject or patient data, is completely fabricated.  We used sample data from the open source project [Synthea](https://synthetichealth.github.io/synthea).  There are other clues that this data isn't real: for example, names include a numerical suffix, and SSN values are clearly fake.
 
 </div>
 
@@ -455,9 +455,9 @@ Whether you adopt our preferred style or not, it's a good idea to have some sort
 5) **Use a comma-first style.**  This one can be a little jarring at first, but it does have real advantages, especially if you end up doing SQL for more than a few hours a week.  In a list of length n, don't put the comma **after** items 1 through n-1.  Rather, put the comma **before** items 2 through n.  
 
 
-### CASE Statement
+## CASE Statement
 
-The `CASE` statement is used to produce conditional row-level output based on columns/rows provided as input.  It's like an "if" statement in other languages, but with multiple possibilities, or "cases", that are considered.  A `CASE` statement will have several lines (possibly many lines), but for any row of data, SQL will give only one value back per `CASE` statement.
+The `CASE` statement is used to produce conditional row-level output based on columns/rows provided as input.  It's like an "if" statement in other languages, but with multiple possibilities, or "cases", that are considered.  A `CASE` statement will have several lines (possibly many lines), but for any row of data, SQL will give only **one** value back per `CASE` statement.
 
 Often when working with data, you will come across the need to define your own "custom categories/groupings" given some raw row data as input (for example, "normal" versus "borderline" vs "abnormal" hematocrit levels). This is where the `CASE` statement can come in handy!
 
@@ -481,13 +481,13 @@ However, you can list as many occurrences of the `WHEN` / `THEN` component as yo
 
 <div class = "important">
 
-When multiple `WHEN` / `THEN` components are listed, SQL will walk through each of them in the order they are listed and will return output for the first `WHEN` condition to be evaluated as TRUE.  This is very important to remember, because sometimes multiple conditions might be true, if you don't write them carefully, but only **one** result will be returned.
+When multiple `WHEN` / `THEN` components are listed, SQL will walk through each of them in the order they are listed and will return output for the first `WHEN` condition to be evaluated as TRUE.  This is very important to remember, because sometimes multiple conditions might be true, if you don't write them carefully, but only **one** result will be returned -- the one corresponding to the first matching condition.
 
 </div>
 
 Finally, if no `ELSE` clause is explicitly specified SQL imposes a condition of `ELSE NULL` by default.  We strongly encourage you to always include an `ELSE` clause even if you like the default value of `ELSE NULL`, to make your code more explicit.
 
-The example below looks at "Peanut IgE Ab in Serum" Observations (i.e. Labs) and uses a `CASE` statement to create a column called `interpretation`, which categorizes (or you might hear "bins", "lumps", or "buckets") the results of the **observations.observation_value** field for each record into one of five distinct categories, or, if none of the criteria is met, makes the value of `interpretation` NULL.
+The example below looks at "Peanut IgE Ab in Serum" observations (i.e. labs) and uses a `CASE` statement to create a column called `interpretation`, which categorizes (or you might hear "bins", "lumps", or "buckets") the results of the `observations.observation_value` field for each record into one of five distinct categories, or, if none of the criteria is met, makes the value of `interpretation` NULL.
 
 ```sql
 SELECT
@@ -514,9 +514,9 @@ WHERE
 
 </div>
 
-### LIKE Operator
+## LIKE Operator
 
-The `LIKE` operator can be used to filter on row values that contain a specific "pattern of text" in a column of interest (also known as "text/pattern matching").
+The `LIKE` operator can be used to filter on row values that contain a simple pattern of text in a column of interest (this action is known as "text/pattern matching").
 
 For the purpose of "pattern matching", the `LIKE` operator is able to utilize the 2 distinct **wildcard characters** listed below:
 
@@ -541,7 +541,7 @@ WHERE
 
 <div style = "display:none;">
 
-@AlaSQL.buildTable_observations
+@AlaSQL.buildTable_allergies
 
 </div>
 
@@ -549,13 +549,13 @@ WHERE
 
 The `LIKE` operator (like many other things in **SQL**) is **case sensitive**!  This means an upper and lower case version of the same letter will be treated differently (i.e. `a` is not the same as `A`).
 
-For this reason we recommend that you always use either the `LOWER()` or `UPPER()` functions, as shown above, when dealing with text/string based data in your sql queries.  This forces strings to be either all lower case or all upper case, so that you can make comparisons knowing that the text in question is all in that case.
+For this reason we recommend that you always use either the `LOWER()` or `UPPER()` functions, as we did above, when dealing with text/string based data in your SQL queries.  This forces strings to be either all lower case or all upper case, so that you can make comparisons knowing that the text in question is all in that case.
 
 </div>
 
-#### Regular Expression Functions
+#### REGEXP_LIKE and Regular Expressions
 
-**Regular expression functions** are a class of function that utilize [regular expressions](https://en.wikipedia.org/wiki/Regular_expression), including [metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended), to perform some kind of pattern matching on text data.  A regular expression (or "regex", which could sound like *reh-gecks* or *reh-jecks*) is a coded description of a pattern, such as the pattern for a phone number in the United States.  You might describe what an American phone number looks like written out by saying, "maybe a '+1', then optionally a space or some other separator like a dash or period or open parenthesis, then three digits, another optional space or separator (but this time it could be a closed parenthesis, not an open one), three more digits, another optional space or separator, and then the last four digits".  In a regular expression, we could write that like this:
+**Regular expression functions** are a class of function that utilize [regular expressions](https://en.wikipedia.org/wiki/Regular_expression), including [metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended), to perform some kind of pattern matching on text data.  A regular expression (or "regex", which could sound like *reh-gecks* or *reh-jecks*) is a coded description of a pattern, such as the pattern for a phone number in the United States.  You might describe what an American phone number looks like written out by saying, "maybe a '+1' for the country code, then optionally a space or some other separator like a dash or period or open parenthesis, then three digits for the area code, another optional space or separator (but this time it could be a closed parenthesis, not an open one), three more digits, another optional space or separator, and then the last four digits".  In a regular expression, we could write that like this:
 
 ```
 (?:\+1)?[\s\(\-\.]?\d{3}[\s\)\-\.]?\d{3}[\s\-\.]?\d{4}
@@ -565,7 +565,7 @@ It looks intimidating, but learning regex can be a powerful way to find text nee
 
 Regex can be thought of as a supercharged version of the the `LIKE` operator's "wildcard" characters.
 
-The most common set of **Regular Expression "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)"** are listed below:
+The most common set of regular expression metacharacters are listed below:
 
 |Metacharacter|Description|
 |:---|:---|
@@ -575,7 +575,7 @@ The most common set of **Regular Expression "[Metacharacters](https://en.wikiped
 |*|Matches 0 or more occurrences of the preceding character.|
 |\||This character (known as the "choice operator") can be used to delimit multiple match patterns, and will provide a match on either the expression before or the expression after it is listed in your search string.|
 
-To experiment with regular expressions and learn more about them, we recommend using a regular expression tester or checker online, like [regular expressions 101](https://regex101.com).  A website like that will give you a lot of instant feedback and practice to help you understand regex.
+To experiment with regular expressions and learn more about them, we recommend using a regular expression tester or checker online, like [regular expressions 101](https://regex101.com).   A website like that will give you a lot of instant feedback and practice to help you understand regex.
 
 In the SQL `REGEXP_LIKE()` function, you have to give two arguments or parameters.  The first argument is the string SQL should look at (normally, a SQL column), and the second argument is the pattern it should look for, to see if there's a match (this is what's written in regex code). The example below uses the `REGEXP_LIKE()` function to filter on records where the `allergies.description` field contains either the string "nu" or "fi".  
 
@@ -635,7 +635,7 @@ How many patients are in the third phase of surveys?
 [[ ]] 3
 ***************
 
-<div class = "answer">
+<div class = "answer" style = "width: 100%">
 This is the query we used to get the answer:
 
 ```sql
@@ -659,19 +659,12 @@ FROM alasql.patients;
 
 *********
 
-You'd like to research patients born in the 1970s (so any year starting 197_ would work).  Use a `LIKE` statement to find the patient set you care about:
+You'd like to research patients born in the 1970s (so any year starting 197_ would work).  Use a `LIKE` statement to enrich the query below and find the patient set you care about:
 
 ```sql
 SELECT
-  patients.first
-  ,patients.last
-  ,patients.county
-  ,CASE
-    WHEN patients.county = "Plymouth County" THEN "Phase 1"
-    WHEN patients.county = "Essex County" THEN "Phase 2"
-    WHEN patients.county = "Barnstable County" THEN "Phase 3"
-    ELSE NULL
-  END AS phase
+  patients.id
+  ,patients.birthdate
 FROM alasql.patients;
 ```
 @AlaSQL.eval("#dataTable7c")
@@ -690,7 +683,7 @@ Which of these years are represented in your query results?
 [[ ]] 1975
 ***************
 
-<div class = "answer">
+<div class = "answer" style = "width: 100%">
 This is the query we used to get the answer:
 
 ```
@@ -733,7 +726,7 @@ Which of the following is an address that appears in the output of your query?  
 [[ ]] 82 Marriott Way Room 1153
 ***************
 
-<div class = "answer">
+<div class = "answer" style = "width: 100%">
 This is the query we used to get the answer:
 
 ```
@@ -762,7 +755,7 @@ WHERE REGEXP_LIKE(LOWER(patients.address), "[a-z\s]+\d+");
 
 **Aggregate functions** can be used to get a single value related the values for multiple rows of data in some meaningful way.  This aggregation could be a numerical statistic, like the sum or standard deviation of a number of rows, or it could pull out a special value, like the minimum or maximum value (this works as well for strings, in which case it would be the first or last value in alphabetical order). There are many other possibilities as well, like giving a count of rows or pulling a value at random from the rows.
 
-See the table below for a list of the most commonly used aggregate functions**:
+See the table below for a list of the most commonly used aggregate functions:
 
 |Function|Description|
 |:---|:---|
@@ -776,7 +769,7 @@ See the table below for a list of the most commonly used aggregate functions**:
 If you just want to count how many rows there are, use `COUNT(*)`.  You can use a specific column, instead, if you wish, like `COUNT(birthdate)`, but if you do that, a missing birthdate will mean the count is lower than the number of rows.
 </div>
 
-The below table utilizes each of these aggregate functions** to analyze the last name (`last`) column from the `patient` table:
+The below table utilizes each of these aggregate functions to analyze the last name (`last`) column from the `patient` table:
 
 ```sql
 SELECT
@@ -797,13 +790,13 @@ FROM alasql.patients
 
 Aggregation by itself is somewhat limited, so we often use aggregation in partnership with `GROUP BY`, which we'll look at next.
 
-### GROUP BY Statement
+### GROUP BY Clause
 
 Often, you are interested in statistics by group, such as the average BMI for men and for women, or the standard deviation of reading test scores in teens with ADHD, depression, neither condition, or both conditions.
 
-The `GROUP BY` statement is used to group column results into only the unique/distinct values among them, and is used in combination with aggregate functions to generate summary statistics about the larger dataset that was "grouped" (i.e. "collapsed") by the `GROUP BY` statement.
+The `GROUP BY` clause is used to group column results into only the unique/distinct values among them, and is used in combination with aggregate functions to generate summary statistics about the larger dataset that was "grouped" (i.e. "collapsed") by `GROUP BY`.
 
-The code block below shows an example of using the `GROUP BY` statement to summarize some simple information from the **patient** table.
+The code block below shows an example of using the `GROUP BY` clause to summarize some simple information from the `patients` table.
 
 
 ```sql
@@ -828,6 +821,7 @@ GROUP BY
 
 `GROUP BY` aggregations like the one above can be confusing and frustrating for new SQL users, because you have to remember that an aggregation returns **one and only one** value for the entire group of rows.  This means you **cannot** ask for something in your `SELECT` clause that could give more than one value for the  group.  You can include aggregate functions (they by definition give you one and only one value for the group) and you can include what you grouped by (because each member of the group is guaranteed to have the same value), but you can't add anything else.  For example, we couldn't add, say, `race` in the `SELECT` statement above, because each group (the group `sex` = 'F' and the group `sex` = 'M') could potentially have more than one value for `race`.
 
+
 ```sql
 SELECT
     patients.sex
@@ -850,11 +844,11 @@ While AlaSQL gives up and just gives you empty data for `race` in the example ab
 
 ### HAVING Clause
 
-The `HAVING` clause can be used to filter your result set on the value of an aggregate function.  It works similar to a `WHERE` clause, but the two are not interchangable.  This is another common error people who are new to SQL often encounter.
+The `HAVING` clause can be used to filter your result set on the value of an aggregate function.  It works similarly to a `WHERE` clause, but the two are not interchangable.  This is another common error people who are new to SQL often encounter -- mixing up `WHERE` and `HAVING`.
 
 In terms of placement in your query, the `HAVING` clause can be placed directly after your `GROUP BY` statement, and before your `ORDER BY` statement (if applicable).
 
-The example below summarizes patients by grouping them by `race` and giving the earliest and latest birthdate per group.  Then it uses the `HAVING` clause to only return the race groups with more than 5 members, and then returns a results sorted in order by `earliest_birthdate`).
+The example below summarizes patients by grouping them by `race` and giving the earliest and latest birthdate per group.  Then it uses the `HAVING` clause to only return the race groups with more than 5 members, and then returns a results sorted in order by `earliest_birthdate`.
 
 Try commenting out (use `--` at the start of the line) the `ORDER BY` clause to see what changes in the results.  Then do the same for the `HAVING` clause.
 
@@ -878,6 +872,8 @@ ORDER BY earliest_birthdate;
 
 @AlaSQL.buildTable_patients
 
+</div>
+
 <div class = "warning">
 
 SQL can be a bit tricky, because even though you've added an alias to `COUNT(*)` (you're calling it `pat_count` in the query above), that alias isn't available to SQL at the time it's parsing the `HAVING` clause.  To see what we mean, try replacing the `HAVING` clause above with `HAVING pat_count >= 5`.  
@@ -888,7 +884,7 @@ But `ORDER BY` is the last thing done by SQL, after it has already applied alias
 
  The `HAVING` clause is also a great tool to use for determining which columns in your tables are potential **primary keys**. Primary keys are columns that have a unique value for each row of data, with no repeating values.
 
-Consider the query below, that checks to see if there are any repeated patient ids:
+Try running the query below, which checks to see if there are any repeated patient ids:
 
 ```sql
 SELECT
@@ -897,7 +893,7 @@ SELECT
 FROM alasql.patients
 GROUP BY
     patients.id
-HAVING COUNT(*) >= 1;
+HAVING COUNT(*) > 1;
 ```
 @AlaSQL.eval("#dataTable10b")
 
@@ -907,16 +903,17 @@ HAVING COUNT(*) >= 1;
 
 In this quiz, we're going to challenge you to create a query from scratch using aggregate functions, and then quiz you about the results of that query.
 
-Please create a query below that queries `alasql.patients` and gives the patient population of each city (`patients.city`) which has more than one patient living there.  Give the results in an alphabetized list, like this:
+Please create a query below that queries `alasql.patients` and gives the patient population of each city (`patients.city`) which has more than one patient living there.  Give the results in an alphabetized list.  Your results should start like the table below:
 
+<!-- data-type="none" -->
 | city | patient_population |
 | ---- | ---- |
 | Boston | 2 |
 | ...    | ... |
 
+
 ```sql
-
-
+-- Enter your query here!
 ```
 @AlaSQL.eval("#dataTable11a")
 
@@ -936,7 +933,7 @@ What's the third row of results?
 [[ ]] Maryknoll, with a `patient_population` of 4
 ***************
 
-<div class = "answer">
+<div class = "answer" style = "width: 100%;">
 This is the query we used to get the answer:
 
 ```sql
@@ -961,7 +958,7 @@ ORDER BY city
 
 A **sub query** (or subquery or sub-query) is essentially a nested SQL query that is referenced inside of a larger SQL query.
 
-Sub queries can appear in the `FROM` section of your `SELECT` statement like a regular table and are enclosed by parentheses, followed by an alias name that you would like to use to reference it later on in your query.  
+Sub queries can appear in the `FROM` section of your `SELECT` statement where you'd ordinarily give a table name.  The sub query is enclosed by parentheses, followed by an alias name that you would like to use to reference it later on in your query.  
 
 Let's say we wanted to consider a subset of patients, Latina women (in this dataset, "hispanic" `ethnicity` and "F" `sex`) and wanted to get their ids and race and classify their `birth_status` as either born in Massachusetts, not born in Massachusetts, or with a birth place that was not listed (based on the contents of the `birthplace` field).  Instead of tackling all this at once, we could use a subquery to make the tasks a bit more separate and easy to understand.
 
@@ -986,7 +983,7 @@ Then we could use that as a sub query, and do our `birthplace` query just on tha
 
 ```sql
 SELECT
-  latina_pop.id
+  latina_pop.id  -- referencing the name we will give to the sub query
   ,latina_pop.race
   ,CASE
      WHEN LOWER(latina_pop.birthplace) LIKE '%massachusetts%' THEN 'Born in MA'
@@ -998,7 +995,7 @@ FROM
 FROM alasql.patients
 WHERE
   sex = 'F' AND
-  ethnicity = 'hispanic') AS latina_pop
+  ethnicity = 'hispanic') AS latina_pop -- note that we've named this!
 ```
 @AlaSQL.eval("#dataTable12b")
 
@@ -1041,7 +1038,7 @@ FROM latina_pop
 
 This approach, using `WITH` to move the sub query to before the main query, is often used to increase code readability, but can also be used to increase query performance in certain situations.
 
-## Quiz: Sub Queries
+### Quiz: Sub Queries
 
 There are three problems with the SQL code below.  Correct all three and run the code successfully and you should be able to answer the quiz question.
 
@@ -1071,11 +1068,13 @@ FROM generation
 
 @AlaSQL.buildTable_patients
 
+</div>
+
 What are the sex, race, and age group of the patient with id 03963166-b49f-4440-a80d-30abb90b4a78?
 
 [[ ]] F, black, millenial
 [[ ]] M, other, other
-[[ ]] M, white, other
+[[X]] M, white, other
 [[ ]] F, white, boomer
 ***************
 
@@ -1133,4 +1132,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22SQL+Basics%22)!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22SQL+Intermediate%22)!
