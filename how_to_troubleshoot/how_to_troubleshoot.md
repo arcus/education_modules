@@ -54,9 +54,9 @@ This module assumes that learners have started using technical methods such as w
 Some technical types (including the author of this module) are also fans of *The Hitchhiker's Guide to the Galaxy*, so we begin with a quote from that illustrious text.
 
 > Ford handed the book to Arthur.
-"What is it?" asked Arthur.
-"The Hitchhiker's Guide to the Galaxy. It's a sort of electronic book. It tells you everything you need to know about anything. That's its job."
-Arthur turned it over nervously in his hands. "I like the cover," he said. "Don't Panic. It's the first helpful or intelligible thing anybody's said to me all day."
+>"What is it?" asked Arthur.
+>"The Hitchhiker's Guide to the Galaxy. It's a sort of electronic book. It tells you everything you need to know about anything. That's its job."
+>Arthur turned it over nervously in his hands. "I like the cover," he said. "Don't Panic. It's the first helpful or intelligible thing anybody's said to me all day."
 
 While not even the entirety of the Internet can promise to tell you **everything** you need to know about technology, we do believe that the slogan "Don't Panic" is a useful one.  Technology can be baffling, inconsistent, and frustrating, and lead its users to experience rage or fear or feel incompetent.  If you feel this way, you're not alone, and there are practical steps to troubleshooting we'll share with you in this module to help you feel more empowered.  Try not to panic!
 
@@ -71,7 +71,7 @@ Consider the way you would describe a car problem to a professional.  You'd incl
 * Whether the problem is made better or worse by weather or driving conditions
 * When the problem started and if anything noteworthy happened at that time (like an oil change or a flooded street)
 
-If you're a clinician, you probably have guided patients into more detailed descriptions of abdominal pain, asking questions like:
+If you're a clinician, you may have guided patients into more detailed descriptions of abdominal pain, asking questions like:
 
 * Is it made better, worse, or no change when you eat?  When you lie down?
 * Is the pain dull, sharp, constant, throbbing, severe, mild?
@@ -79,12 +79,12 @@ If you're a clinician, you probably have guided patients into more detailed desc
 * When did you notice it begin?  How long has it been going on?
 * Is it accompanied by tenderness? Rash? Vomiting? Change in bowel habits?
 
-In both of these examples, we're offering ways to help describe a problem more thoroughly, and we're going to ask you to do the same when you describe a computing problem.  A good place to start is by documenting (say, by jotting information down in a draft email) details like:
+In both of these examples, we're offering ways to help describe a problem more thoroughly, and we're going to ask you to do the same when you describe a computing problem.  A good place to start is by documenting (yes, do actually type it out) details like:
 
 * What did you try to do?  
-* Can you copy and paste what you actually typed?
+* What code did you use?
 * What did you think / hope would happen?  
-* Do you have an example of when it did work the way you expected?
+* Do you have an example of when it **did** work the way you expected?
 * What happened instead?
 * Were there any error messages?  What do they say?  
 * What did you try already to fix the problem?  
@@ -106,11 +106,12 @@ Option 2:  "I'm so frustrated.  I have been trying to load a .csv from my local 
 Once you've described the problem, even if just to yourself, try explaining it to... a rubber duck!  Yes, you read that correctly.  "Rubber duck debugging" is an old trick used by software developers, and while the traditional object used for this exercise is a rubber duck, you can also use your newborn, a pet, or a sock puppet.  
 
 ![Rubber duck.](media/rubber_duck.png)<!-- style = "max-width: 400px;" -->
+
 <figcaption style = "font-size: 0.8em;">Image courtesy Steve Webel, https://www.flickr.com/photos/webel/306290032 </figcaption>
 
 The idea is that by describing your problem carefully and kindly to someone you care about but who doesn't know much about coding, you'll unwittingly stumble upon the answer.  We've also experienced this when we've asked a supervisor to "please come look at this code".  As soon as we start explaining the problem, the answer becomes clear (and sometimes, maddeningly, the problem simply disappears, presumably due to boss promximity).
 
-Remember that your rubber duck (or sock puppet, etc.) isn't the expert you are, so you'll have to gently explain **why** you want to do certain things and how various procedures work.  With luck, this cognitive trick of getting back to basics will be enough to help you realize what made things go wrong.  If not, you can consider additional techniques, like searching for clues online and asking others for help.
+Remember that your rubber duck (or sock puppet, etc.) isn't the expert you are, so you'll have to gently explain **why** you want to do certain things and how various procedures work.  With luck, this cognitive trick of getting back to basics will be enough to help you realize what made things go wrong.  If not, you can consider additional techniques, like searching for clues online and asking others for help.  Plus, you've described your problem simply, which will help other people understand what you're trying to do and what's going wrong.
 
 ## Searching for Clues Online
 
@@ -138,7 +139,7 @@ Luckily, learning to ask the right question using trial and error is a skill you
 
 <h3>A Silly (but True) Example </h3>
 
-The author of this module did grad school for the first time in Spain, and had been in Spain for around a year when they went looking for a thing they needed in order to prepare a meal.  They didn't know the name of the thing and at the time, it was really hard to explain what the thing was to friends and roommates.  But then they remembered that it was often used for shredding carrots for salads.  Since the word "shred" wasn't part of their Spanish vocabulary, they did the best they could and asked, "¿como se llama el enemigo de zanahorias?" and used pantomime and sound effects to mimic using a grater to shred carrots finely.  "What do you call the enemy of carrots?"  It was a silly way to describe the use of a grater, but it was effective, and memorable!  (By the way, "grater" in Spanish is "rallador".)
+The author of this module did grad school for the first time in Spain, and had been in Spain for around a year when they went looking for a tool necessary to prepare that evening's meal.  They didn't know the name of the thing and at the time, it was really hard to explain what the thing was to friends and roommates.  But then they remembered that it was often used for shredding carrots for salads.  Since the word "shred" wasn't part of their Spanish vocabulary, they did the best they could and asked, "¿cómo se llama el enemigo de zanahorias?" and used pantomime and sound effects to mimic using a grater to shred carrots finely.  "What do you call the enemy of carrots?"  It was a silly way to describe the use of a grater, but it was effective, and memorable!  (By the way, "grater" in Spanish is "rallador".)
 
 Does this  feel familiar to you?  Maybe you don't even know what a concept is called or how to ask for information, and feel silly or inarticulate when you can only describe it in some simple terms you know.  This is very typical in learning new technology schills. Does one "github" a file?  Or "git" a file?  Is "markdown" a thing, or an action?  Is it right to say "I will markdown this file."?  Or "I will make a markdown."?  You may know a few words but aren't yet sure how they interact with each other.  The nice thing is that modern search engines (we'll use Google for our examples, but other search engines are similar) are very good at helping you use the few words you know to provide you with more precise terms.  As an example, you could even try "Googling" phrases like "I need to make tiny carrot pieces" or "what thing is sharp and has holes and you can cut carrots with it".  Surprisingly enough, you'll find great suggestions in "Related searches".  By scanning the first page of search results, you can hone your vocabulary and learn, in context, what a "grater" is.
 
@@ -160,25 +161,26 @@ Learning what sources are trustworthy and useful takes time and experience, and 
 * Likes / dislikes on blog posts or videos
 * Whether a snippet shared on the page of search results seems well written
 * If the URL or text seems like an aggregator or keyword miner (https://best-handbags-and-python-queries-and-airfare.biz)
-* If it seems that the website will try to sell you something?
+* If it seems that the website will try to sell you something
 * The date / recency of the result
 * Result ranking (how high up on the page of search results it appears)
-* Similarity to my problem
+* Similarity to your problem
+
+While online privacy is a thorny issue, searching for answers online is one place where **cookies** and  other personalization (such as being logged in with a Google identity) can be very helpful.  Once you've run a few searches, your web search tool of choice (unless you choose strict privacy controls) will realize that you're more interested in "Python" the language than "Python", part of the name of a comedy troupe or "Python", a type of constrictor.
 
 One common place that many people find extremely useful for solving technical problems is a website called [Stack Overflow](https://stackoverflow.com/). Stack Overflow is a crowdsourced Q&A site, where you can either browse questions and answers that others have posted, or create an account and start contributing.
 
 We'll talk about how to contribute good questions to Stack Overflow later in this module, but for now let's consider the anatomy of a Stack Overflow question.  Below, we've searched for the phrase "ggplot black and white", because we need to create a black and white data visualization and we like using the `ggplot2` package in R.
 
-![Search results within Stack Overflow for "ggplot black and white".](media/stack_overflow)
+![Search results within Stack Overflow for "ggplot black and white".](media/stack_overflow.png)
 
 When sourcing an answer from Stack Overflow, look for:
+
 * Votes (people with accounts can "upvote" a useful question and "downvote" a low quality question)
 * A title and snippet that seem to describe a problem similar to your own
 * A recent date (unless this is a "classic" / basic question)
 * At least one "answer", particularly if there's a check mark, indicating that the person who originated the question selected the answer that worked for them
 * Tags (which appear below the snippet, in our case including "r", "ggplot2", "colors", and "graphics") that might prove useful
-
-While online privacy is a thorny issue, searching for answers online is one place where **cookies** and  other personalization (such as being logged in with a Google identity) can be very helpful.  Once you've run a few searches, your web search tool of choice (unless you choose strict privacy controls) will realize that you're more interested in "Python" the language than "Python", part of the name of a comedy troupe or "Python", a type of constrictor.
 
 
 ## Crowdsourcing: Asking for Help
@@ -210,7 +212,6 @@ Then, try breaking the code down into more atomic elements -- this has the added
 Then you might want to state your desired outcome:
 
 > I'd like to separate the `name` column into two, like this:
-
 > | first | last|
 > | --- | --- |
 > | John | Doe |
@@ -221,7 +222,7 @@ You'll also want to include important details like what language you're working 
 
 To go back to our car analogy, would you rather help a friend figure out what's wrong with their car if they said "OK, let it get warm for about five minutes, then put it in reverse and you'll hear it squeal" or "Well, I think I have seen this on long trips, so maybe drive it for an hour or two, and then try a few things like parallel parking or backing into a garage and I think you might hear the sound"?
 
-This means that you might have to do a significant amount of work to figure out how exactly to reproduce the problem, but that effort is incredibly useful -- to you, and to your online helpers.
+Creating a minimal reproducible example means that you might have to do a significant amount of work to figure out how exactly to reproduce the problem, but that effort is incredibly useful -- to you, and to your online helpers.
 
 Stack Overflow itself offers a great post called [How to create a Minimal, Reproducible Example](https://stackoverflow.com/help/minimal-reproducible-example) and we strongly urge you to read this post before asking your first question.  If you're not sure how in your circumstance to create such an example, say so!  You might, for example, post using text like this:
 
