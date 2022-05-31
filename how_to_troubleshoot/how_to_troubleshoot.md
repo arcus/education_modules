@@ -57,7 +57,7 @@ Some technical types (including the author of this module) are also fans of *The
 
 While not even the entirety of the Internet can promise to tell you **everything** you need to know about technology, we do believe that the slogan "Don't Panic" is a useful one.  Technology can be baffling, inconsistent, and frustrating, and lead its users to experience rage or fear or feel incompetent.  If you feel this way, you're not alone, and there are practical steps to troubleshooting we'll share with you in this module to help you feel more empowered.  Try not to panic!
 
-The "steps" we're describing in this module don't necessarily take place in the order we describe -- often there's a flow from one method to another and back again as you get closer and closer to understanding, describing, and solving any problems you encounter in tech.  And you may have tips and ideas we haven't mentioned here, too.  Please share those with us at [dart@chop.edu](mailto:dart@chop.edu)!
+The "steps" we're describing in this module don't necessarily take place in the order we describe -- often there's a flow from one method to another and back again as you get closer and closer to understanding, describing, and solving any problems you encounter in tech.  And you may have tips and ideas we haven't mentioned here, too.  Please share those with us at <dart@chop.edu>.
 
 ### Describing the Problem
 
@@ -104,9 +104,9 @@ Once you've described the problem, even if just to yourself, try explaining it t
 
 ![Rubber duck.](media/rubber_duck.png)<!-- style = "max-width: 400px;" -->
 
-<figcaption style = "font-size: 0.8em;">Image courtesy Steve Webel, https://www.flickr.com/photos/webel/306290032 </figcaption>
+<figcaption style = "font-size: 0.8em; margin-bottom:1rem;">Image courtesy Steve Webel, https://www.flickr.com/photos/webel/306290032 </figcaption>
 
-The idea is that by describing your problem carefully and kindly to someone you care about but who doesn't know much about coding, you'll unwittingly stumble upon the answer.  We've also experienced this when we've asked a supervisor to "please come look at this code".  As soon as we start explaining the problem, the answer becomes clear (and sometimes, maddeningly, the problem simply disappears, presumably due to boss promximity).
+The idea is that by describing your problem carefully and kindly to something or someone you care about but who doesn't know much about coding, you'll unwittingly stumble upon the answer.  We've also experienced this when we've asked a supervisor to "please come look at this code".  As soon as we start explaining the problem, the answer becomes clear (and sometimes, maddeningly, the problem simply disappears, presumably due to boss promximity).
 
 Remember that your rubber duck (or sock puppet, etc.) isn't the expert you are, so you'll have to gently explain **why** you want to do certain things and how various procedures work.  With luck, this cognitive trick of getting back to basics will be enough to help you realize what made things go wrong.  If not, you can consider additional techniques, like searching for clues online and asking others for help.  Plus, you've described your problem simply, which will help other people understand what you're trying to do and what's going wrong.
 
@@ -130,7 +130,7 @@ Let's start with the right question!
 
 There's a delightful [Twitter thread](https://twitter.com/xkcd/status/1333529967079120896) about asking the wrong question by the inimitable Randall Munroe, of [xkcd](https://xkcd.com) fame, of which we'll share just one small screenshot:
 
-![Learning new things from Google: a search box with the text "what year did tom hanks land on the moon" is followed by a suggested answer of "1970".](media/tom_hanks.png)
+![Learning new things from Google: a search box with the text "what year did tom hanks land on the moon" is followed by a suggested answer of "1970".](media/tom_hanks.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px" -->
 
 Luckily, learning to ask the right question using trial and error is a skill you can learn.  
 
@@ -167,9 +167,10 @@ While online privacy is a thorny issue, searching for answers online is one plac
 
 One common place that many people find extremely useful for solving technical problems is a website called [Stack Overflow](https://stackoverflow.com/). Stack Overflow is a crowdsourced Q&A site, where you can either browse questions and answers that others have posted, or create an account and start contributing.
 
-We'll talk about how to contribute good questions to Stack Overflow later in this module, but for now let's consider the anatomy of a Stack Overflow question.  Below, we've searched for the phrase "ggplot black and white", because we need to create a black and white data visualization and we like using the `ggplot2` package in R.
+We'll talk about how to contribute good questions to Stack Overflow later in this module, but for now let's consider the anatomy of a Stack Overflow question.  Below, we've searched for the phrase "ggplot black and white", because we need to create a black and white data visualization and we like using the `ggplot2` package in R.  You'll notice that in the list of search results, each one has a descriptive title and a short snippet.  To the left of each search item, there's a bit of information about votes, answers, and views.
 
-![Search results within Stack Overflow for "ggplot black and white".](media/stack_overflow.png)
+
+![Search results within Stack Overflow for "ggplot black and white".](media/stack_overflow.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))"-->
 
 When sourcing an answer from Stack Overflow, look for:
 
@@ -206,16 +207,18 @@ You can start by creating separate data that shares relevant details with your s
 
 Then, try breaking the code down into more atomic elements -- this has the added benefit of often increasing your understanding of how different pieces of code work together. Does the first bite sized chunk you run produce the error?  No, not yet?  OK, well, run the next small chunk of code. Figure out which step of the code is causing the problem, and what the data looks like just before you do that step.   
 
-<blockquote class = "lia-quote">
-
 Then you might want to state your desired outcome:
 
-> I'd like to separate the `name` column into two, like this:
-> | first | last|
-> | --- | --- |
-> | John | Doe |
-> | Giovanni  | Ferraro |
-> | María | López-Ayllón |
+<blockquote class = "lia-quote">
+
+I'd like to separate the `name` column into two, like this:
+
+| first | last|
+
+| --- | --- |
+| John | Doe |
+| Giovanni  | Ferraro |
+| María | López-Ayllón |
 
 </blockquote>
 
