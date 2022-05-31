@@ -78,7 +78,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 @end
 -->
 
-# Introduction to Python
+# Demystifying Python
 
 <div class = "overview">
 
@@ -94,7 +94,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 **Estimated time to completion**: @estimated_time
 
-**Pre-requisites**: Learners should be familiar with tabular data (data stored in a rectangular format, like an Excel spreadsheet or a comma separated file). It is helpful to have some familiarity with navigating to specific directories and running programs in the Command Line/Terminal. Learners do not need to have access to Python or Jupyter notebooks on their own computers.
+**Pre-requisites**: Learners should be familiar with tabular data (data stored in a rectangular format, like an Excel spreadsheet or a comma separated file). It is helpful to have some familiarity with [navigating to specific directories](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) and running programs in the Command Line/Terminal. Learners do not need to have access to Python or Jupyter notebooks on their own computers.
 
 **Learning Objectives**:
 
@@ -132,9 +132,10 @@ While Python is human-readable and free, it is not point-and-click software, and
 ## Python Code
 
 Python can be written in several ways:
-- You can write Python code interactively using your computer's Terminal program or Command Line
-- You can write scripts that include Python code
-- You can create Python notebooks using [Jupyter](https://jupyter.org/) or online using [Google Colaboratory](https://colab.research.google.com/?utm_source=scs-index) (or "Colab" for short).
+
+* You can write Python code interactively using your computer's Terminal program or Command Line (if you're not sure where that is or how to use it, the [Bash/Command Line 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) will help you get started).
+* You can write scripts that include Python code.
+* You can create Python notebooks using [Jupyter](https://jupyter.org/) or online using [Google Colaboratory](https://colab.research.google.com/?utm_source=scs-index) (or "Colab" for short).
 
 In most cases, you'll need to start with downloading Python to your computer (the exception is when using cloud-based solutions like Google Colab); which option you choose will come down to personal preference and your specific goals.
 
@@ -152,7 +153,7 @@ To exit the Python interpreter, type the command `exit()` and then press the Ent
 
 Using Python interactively in the terminal can be useful if you want to quickly test out short pieces of code. However, there are a couple of reasons why it's not useful to code interactively in the interpreter for longer or more complex code:
 
-* If you want to re-run a line of code, because you want to change the parameters or accidentally included a typo, you'll need to re-type the code again with your edits. There are some shortcuts you can use to scroll through previous lines of code in the Terminal/Command Line (the up arrow on your keyboard will usually do it) but it can still be time-consuming if the code your working with is longer than a line or two.
+* If you want to re-run a line of code, because you want to change the parameters or accidentally included a typo, you'll need to re-type the code again with your edits. There are some shortcuts you can use to scroll through previous lines of code in the Terminal/Command Line (the up arrow on your keyboard will usually do it) but it can still be time-consuming if the code is longer than a line or two.
 
 * The code you write in the interpreter will disappear once you exit.
 
@@ -171,7 +172,7 @@ Here is a short script written in the Spyder IDE:
 
 In the above example, our script asks for input of a user's name using the `input()` function, stores that input in a variable we've called `name`, and prints out a welcome message to the screen that includes the name the user entered using the code `print("Welcome to Intro to Python, "+name+"!")`.
 
-In the script above you can also see lines of text marked with a pound sign `#` at the beginning. The pound sign marks a **comment**, which is anything you write in a script that you don't want to run as code. Comments are a good way to briefly describe or explain aspects of your script, and can also be used to "hide" lines of code as you experiment (an alternative to deleting code that you may want to add back later).
+In the script above you can also see lines of text marked with a pound sign/hash mark `#` at the beginning. The pound sign/hash mark indicates the start of a **comment**, which is anything you write in a script that you don't want to run as code. Comments are a good way to briefly describe or explain aspects of your script, and can also be used to "hide" lines of code as you experiment (an alternative to deleting code that you may want to add back later).
 
 The Spyder IDE has a console where you can see the output of your script without having to run it in the Command Prompt/Terminal. As you can see in the screenshot below, all we had to do was create the file one time and then run that file instead of typing in the code interactively. This can save you time and effort if you have a task you know you'll want to perform repeatedly. In the Spyder IDE there is a "run" button (a green arrow in menu at the top) but you could also run the same file in your Terminal/Command Line by typing the command `python` followed by the file name of your Python script.
 
@@ -307,4 +308,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Intro+to+Python%22)!
+We gather this information in order to iteratively improve our work.  Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Demystifying+Python%22)!
