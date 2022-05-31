@@ -53,10 +53,7 @@ This module assumes that learners have started using technical methods such as w
 
 Some technical types (including the author of this module) are also fans of *The Hitchhiker's Guide to the Galaxy*, so we begin with a quote from that illustrious text.
 
-> Ford handed the book to Arthur.
-> "What is it?" asked Arthur.
-> "The Hitchhiker's Guide to the Galaxy. It's a sort of electronic book. It tells you everything you need to know about anything. That's its job."
-> Arthur turned it over nervously in his hands. "I like the cover," he said. "Don't Panic. It's the first helpful or intelligible thing anybody's said to me all day."
+> Ford handed the book to Arthur.<br/><br/> "What is it?" asked Arthur. <br/><br/> "The Hitchhiker's Guide to the Galaxy. It's a sort of electronic book. It tells you everything you need to know about anything. That's its job." <br/><br/>Arthur turned it over nervously in his hands. "I like the cover," he said. "Don't Panic. It's the first helpful or intelligible thing anybody's said to me all day."
 
 While not even the entirety of the Internet can promise to tell you **everything** you need to know about technology, we do believe that the slogan "Don't Panic" is a useful one.  Technology can be baffling, inconsistent, and frustrating, and lead its users to experience rage or fear or feel incompetent.  If you feel this way, you're not alone, and there are practical steps to troubleshooting we'll share with you in this module to help you feel more empowered.  Try not to panic!
 
@@ -209,6 +206,8 @@ You can start by creating separate data that shares relevant details with your s
 
 Then, try breaking the code down into more atomic elements -- this has the added benefit of often increasing your understanding of how different pieces of code work together. Does the first bite sized chunk you run produce the error?  No, not yet?  OK, well, run the next small chunk of code. Figure out which step of the code is causing the problem, and what the data looks like just before you do that step.   
 
+<blockquote class = "lia-quote">
+
 Then you might want to state your desired outcome:
 
 > I'd like to separate the `name` column into two, like this:
@@ -217,6 +216,8 @@ Then you might want to state your desired outcome:
 > | John | Doe |
 > | Giovanni  | Ferraro |
 > | María | López-Ayllón |
+
+</blockquote>
 
 You'll also want to include important details like what language you're working in, what you've already tried and why it wasn't good enough, and if there are any constraints that are important to mention.  It's important that you share an example that's succinct, clear, will demonstrate the problem, and doesn't require a lot of work to recreate.  
 
