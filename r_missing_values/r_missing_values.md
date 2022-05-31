@@ -294,7 +294,9 @@ The `ifelse` command is what's called a ternary operator, and it has three parts
  * a value to use if the test returns `TRUE`
  * a value to use if the test returns `FALSE`.
 
- Our `ifelse` statement begins with a conditional test, in this case `ifelse(rating == -99, NA, rating)`, and for each value in `rating`, it will run the test and return either `TRUE` or `FALSE`.
+ Our `ifelse` statement begins with a conditional test, in this case `rating == -99`.
+ Remember that the double equals sign is a comparison --- it's **asking** whether `rating` is equal to -99, while a single equals sign is a "setter", and it will try to **make** `rating` equal to -99.  
+ For each value in `rating`, it will run the test and return either `TRUE` or `FALSE`.
 If it returns `TRUE`, then it assigns the next argument, in this case `NA`, which will mark that value missing.
 If it returns `FALSE`, then it assigns the last argument, in this case `rating`, which will leave the value untouched.
 So for any `rating` values that equal -99, we're asking it to replace them with `NA`, otherwise leave them as they were.
@@ -312,6 +314,13 @@ mutate(df, rating = ifelse(rating < 1 | rating > 5, NA, rating))
 Here we're using [the "or" operator](https://www.statmethods.net/management/operators.html) `|` to combine two tests together.
 So this checks whether each `rating` value is less than 1 or greater than 5, and if so changes it to `NA`.
 Otherwise it leaves it as it was.
+
+<div class="options">
+There is another function, `case_when` from the `dplyr` package, that is similar to `ifelse` but can also handle more complex recoding situations.
+For a situation like the one when have here, with a single logical test, `ifelse` works fine.
+But if you find yourself needing multiple `ifelse` statements to recode a column, then `case_when` may be a better choice.
+To learn more, see the [`case_when` help documentation](https://dplyr.tidyverse.org/reference/case_when.html).
+</div>
 
 Now **return to your RStudio instance** to work through some practical examples of assigning values to missing in R.
 You'll start at line 99 and work until you see the message to return to the module on line 130.
