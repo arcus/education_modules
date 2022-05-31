@@ -187,7 +187,7 @@ Notice that in the above example, we have passed the `type("Hello World!")` func
 
 ### Quiz: Functions and methods
 
-Which of the following are valid examples of Python code? Select all that apply. Use the code cell below to check your knowledge by replacing the `x` argument in the `print()` function with code you're curious about.
+Which of the following are valid examples of Python code? Select all that apply.
 
 [[X]] `len("Python is awesome!")`
 [[X]] `"python".upper()`
@@ -198,6 +198,8 @@ Which of the following are valid examples of Python code? Select all that apply.
 These are all examples of valid Python code! `print(type(4))` returns the type of the argument `4` (which is `int`, short for integer) and prints that output to the screen. `"python.upper()"` makes the string "python" all uppercase. `type("4.3")` might be a little tricky, since 4.3 is a decimal number (or **float**) but it's in quotation marks-- but those quotation marks just mean that, in this case, "4.3" is a string! `type(True)` might also be tricky, since at first it looks like a string that doesn't have the required quotation marks. However, `True` and `False` are special in Python, and have the type `boolean`.  
 </div>
 ***
+
+**Hint:** If you get stuck, try replacing the `x` argument in the `print()` function below with the code examples above. Running code you're unsure about and seeing what output you get can be a useful troubleshooting tool!
 
 @sage
 <div class="python">
@@ -584,7 +586,7 @@ Let's look at a simple example of some code that ultilizes conditionals.
 <script type="text/x-sage">
 
 name = "Pythonista"
-if type(name) == str: # We're testing here to see if the value of name is a string. 
+if type(name) == str: # We're testing here to see if the value of name is a string.
                                     # This will either evaluate to True or False.
     print("Welcome, "+ name+"!")
 else:
@@ -805,7 +807,23 @@ print(contact_info)
     </div>
 
     <div class="warning">
-    Note that this change is permanent! If you want to keep the original dictionary as-is, you should make a copy of the dictionary (using the `.copy()` method and assigning the copy to a new variable), and then using `.pop()` on the copy. In this example though, all you need to do to restore the dictionary to its original form is re-run the first code cell or refresh the page.
+    Note that this change is permanent! If you want to keep the original dictionary as-is, you should make a copy of the dictionary (using the `.copy()` method and assigning the copy to a new variable), and then using `.pop()` on the copy:
+
+    @sage
+    <div class="python_link">
+    <lia-keep>
+    <script type="text/x-sage">
+
+    contact_info_copy = contact_info.copy()
+contact_info_copy.pop("telephone")
+print(contact_info)
+print(contact_info_copy)
+
+    </script>
+    </lia-keep>
+    </div>
+
+    In this example though, all you need to do to restore the dictionary to its original form is re-run the first code cell or refresh the page.
     </div>
 
 * There isn't a method to add items to a dictionary, but it can be done! You can give the dictionary a new key and assign a value to it (notice that we're using bracket notation again). This is another example of a permanent change to our dictionary.
@@ -836,9 +854,11 @@ While **values** can be repeated in a dictionary, each **key** must be unique. H
 </div>
 ***
 
-## It's Your Turn!
+## Challenge Problem
 
-Ready to practice what you've learned?
+<div class = "important">
+Below is an example of a problem that can be solved using many of the things presented in this module. The next few pages will show you how to work through one possible solution, but feel free to give it a try on your own first!
+</div>
 
 A teacher friend of yours can never remember what the grade ranges are for letter grades. They have requested that you write some code that will take a list of final grades and return the letter grades corresponding to the score. After doing some research, you know that:
 
@@ -856,11 +876,11 @@ Your friend also sends you the class's final grades, along with the student iden
 
 st1: 88, st2: 78, st3: 34, st4: 97, st5: 64, st6: 89, st7: 56, st8: 83, st9: 92
 
-Using a for loop and if-else statements, can you write some code that returns a dictionary with the student identifiers as the keys and the letter grades that the students should be assigned as the values? If you get stumped, look at the next page for one possible approach.
+Using a `for` loop and `if-else` statements, can you write some code that returns a dictionary with the student identifiers as the keys and the letter grades that the students should be assigned as the values?
 
 **Hint:** To loop through the items (the keys and values) of a dictionary that we'll call `my_dict`, you can use the code `for k,v in my_dict.items()`.
 
-If you do glance at the answer, note that your code might look a little different; as long as you get the output you're looking for, that's okay!
+If you do come up with a solution before looking at the answer, note that your code might look a little different; as long as you get the output you're looking for, that's okay!
 
 @sage
 <div class="python">
@@ -874,7 +894,73 @@ If you do glance at the answer, note that your code might look a little differen
 </lia-keep>
 </div>
 
-### Possible solution
+### Possible solution: Part 1
+
+Since we were given the student identifiers and each student's grades, the first thing we could do is build a dictionary, using the identifiers as the keys and the scores as the values.
+
+We also know that we want our output to be a dictionary with the student identifiers as the keys and the **letter grades** as the values, so let's initialize an empty dictionary that we can add to later.
+
+@sage
+<div class="python">
+<lia-keep>
+<script type="text/x-sage">
+
+final_scores_dict = {"st1": 88, "st2": 78, "st3": 34, "st4": 97, "st5": 64,"st6": 89, "st7": 56, "st8": 83, "st9": 92}
+letter_grades_dict = {}
+
+</script>
+</lia-keep>
+</div>
+
+### Possible solution: Part 2
+
+Next, since we need to look at each student's grade and assign a letter grade based on that, we need to loop through the items in `final_scores_dict`. We can use a `for` loop for this. To make sure we are looping through the dictionary correctly, we can add a `print()` statement at the end that will display each item in turn (we can remove this line of code later, once we don't need it anymore).
+
+@sage
+<div class="python">
+<lia-keep>
+<script type="text/x-sage">
+
+final_scores_dict = {"st1": 88, "st2": 78, "st3": 34, "st4": 97, "st5": 64,"st6": 89, "st7": 56, "st8": 83, "st9": 92}
+letter_grades_dict = {}
+for k,v in final_scores_dict.items():
+  print(k,v)
+
+</script>
+</lia-keep>
+</div>
+
+### Possible solution: Part 3
+
+Now we need to use conditional statements to assign the correct letter grade to each student based on their final score. Here, we'll want to use the ranges presented in the problem and several `if-else` statements to look at each score and assign the letter that corresponds to it. We can add another `print()` statement at the end that will display the letter grades as they're assigned, to make sure our `if-else` statements are working like we think they are.
+
+@sage
+<div class="python">
+<lia-keep>
+<script type="text/x-sage">
+
+final_scores_dict = {"st1": 88, "st2": 78, "st3": 34, "st4": 97, "st5": 64,"st6": 89, "st7": 56, "st8": 83, "st9": 92}
+letter_grades_dict = {}
+for k,v in final_scores_dict.items():
+    if v >= 90:
+        grade = "A"
+    elif 89 >= v >= 80:
+        grade = "B"
+    elif 79 >= v >= 70:
+        grade = "C"
+    elif 69 >= v >= 60:
+        grade = "D"
+    else:
+        grade = "F"
+    print(grade)
+
+</script>
+</lia-keep>
+</div>
+
+### Possible solution: Final
+
+Finally, we need to build a dictionary where the keys are the student identifiers and the values are the newly-assigned letter grades. Since we've looped through the items in `final_scores_dict`, we can use the keys from `final_scores_dict` as the keys in our new `letter_grades_dict`, and then assign the letter grade for that student to that key as we loop through. The last thing is then to display our dictionary using one last `print()` statement. Note that we've moved it **outside** the loop now, so that it only prints once it's completely built and not every time we add a new key-value pair.
 
 @sage
 <div class="python">
@@ -899,6 +985,12 @@ print(letter_grades_dict)
 
 </script>
 </lia-keep>
+</div>
+
+Congratulations! You can now send the letter grades off to your teacher friend. 
+
+<div class = "care">
+If this process seemed intimidating, that's understandable! Learning to code takes time, and there will be moments where things don't work. Things will come easier as you practice! And don't feel like failure if you have to Google how to do certain things over and over-- lots of people who write code for a living do the same thing!
 </div>
 
 ## Additional Resources
