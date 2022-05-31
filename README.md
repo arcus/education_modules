@@ -12,7 +12,7 @@ The training materials here are built in [markdown](https://www.markdownguide.or
 
 For example, to use the training included in [data_visualization_in_ggplot2](data_visualization_in_ggplot2/data_visualization_ggplot2.md), navigate to https://liascript.github.io add the url for the "raw" version of [data_visualization_in_ggplot2](data_visualization_in_ggplot2/data_visualization_ggplot2.md), which is https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md.  Together, that gives you this combined url: https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md
 
-This project is grateful for the generosity of Liascript's creator, André Dietrich, for sharing his work (and advice!) freely.
+This project is grateful for the generosity of Liascript's creators and sustainers, André Dietrich and Sebastian Zug, for sharing their work (and advice!) freely.
 
 ## Remixing Our Materials
 
