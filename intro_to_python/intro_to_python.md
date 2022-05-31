@@ -2,11 +2,11 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  2.0.0
+version:  1.0.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
-title: Introduction to Python
+title: Demystifying Python
 comment:  This module introduces the Python programming language, explores why Python is useful in research, and describes how to download Python and Jupyter.
 long_description: Python is a versatile programming language that is frequently used for data analysis, machine learning, web development, and more. If you are interested in using Python (or even just trying it out), and are looking for how to get set up, this module is a good place to start. This is appropriate for someone at the beginner level, including those with no prior knowledge of or experience with Python.
 estimated_time: 20m
@@ -144,7 +144,7 @@ If you have Python installed on your computer, you can use your computer's Comma
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_interactive.png?raw=true" height="500" width="800" alt="An example of Python code in the Terminal with the following code: 7 + 8, followed by an output of 15;  print('Hello World!'), which gives the output 'Hello World!'; and list(range(0,10)), which prints all integers from 0 to 9" data-alt="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_interactive.gif?raw=true">
+  <img src="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_interactive.png?raw=true" height="500" width="800" alt="An example of Python code in the Terminal with the following code: 7 + 8, followed by an output of 15;  print('Hello World!'), which gives the output 'Hello World!'; and list(range(0,10)), which prints all integers from 0 to 9" data-alt="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_interactive.gif?raw=true">
 
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
@@ -172,14 +172,14 @@ Here is a short script written in the Spyder IDE:
 
 In the above example, our script asks for input of a user's name using the `input()` function, stores that input in a variable we've called `name`, and prints out a welcome message to the screen that includes the name the user entered using the code `print("Welcome to Intro to Python, "+name+"!")`.
 
-In the script above you can also see lines of text marked with a pound sign/hash mark `#` at the beginning. The pound sign/hash mark indicates the start of a **comment**, which is anything you write in a script that you don't want to run as code. Comments are a good way to briefly describe or explain aspects of your script, and can also be used to "hide" lines of code as you experiment (an alternative to deleting code that you may want to add back later).
+In the script above you can also see lines of text marked with a pound sign/hash mark `#` at the beginning. This symbol indicates the start of a **comment**, which is anything you write in a script that you don't want to run as code. Comments are a good way to briefly describe or explain aspects of your script, and can also be used to "hide" lines of code as you experiment (an alternative to deleting code that you may want to add back later).
 
 The Spyder IDE has a console where you can see the output of your script without having to run it in the Command Prompt/Terminal. As you can see in the screenshot below, all we had to do was create the file one time and then run that file instead of typing in the code interactively. This can save you time and effort if you have a task you know you'll want to perform repeatedly. In the Spyder IDE there is a "run" button (a green arrow in menu at the top) but you could also run the same file in your Terminal/Command Line by typing the command `python` followed by the file name of your Python script.
 
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_spyder_console.png?raw=true" height="500" width="800" alt="Running the Python script discussed above in Spyder, showing a user typing 'Pythonista' in response to the prompt and showing the output 'Welcome to Intro to Python, Pythonista!'" data-alt="https://github.com/arcus/education_modules/blob/main/intro_to_python/media/python_spyder_console.gif?raw=true">
+  <img src="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_spyder_console.png?raw=true" height="500" width="800" alt="Running the Python script discussed above in Spyder, showing a user typing 'Pythonista' in response to the prompt and showing the output 'Welcome to Intro to Python, Pythonista!'" data-alt="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_spyder_console.gif?raw=true">
 
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
@@ -266,7 +266,7 @@ You can even see what this module's notebook looks like in Google Colab! Once yo
    <div style="display:none">@gifPreload</div>
 
    <figure>
-     <img src="https://github.com/arcus/education_modules/blob/update-intro-to-python/intro_to_python/media/github_repo_colab.png?raw=true" height="500" width="800" alt="Finding a GitHub repository in Google Colab following the above instructions." data-alt="https://github.com/arcus/education_modules/blob/update-intro-to-python/intro_to_python/media/github_repo_colab.gif?raw=true">
+     <img src="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/github_repo_colab.png?raw=true" height="500" width="800" alt="Finding a GitHub repository in Google Colab following the above instructions." data-alt="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/github_repo_colab.gif?raw=true">
 
    <figcaption>Click on the image to play the demo.</figcaption>
    </figure>
