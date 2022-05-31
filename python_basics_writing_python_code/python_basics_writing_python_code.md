@@ -113,7 +113,7 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 
 ## Introduction to Python code
 
-Python is a flexible, multi-purpose programming language that has applications in web development, software engineering, and data analysis. Part of its power and much of its popularity comes from the fact that it is **human-readable**, with a relatively simple syntax compared to many other programming languages. However, just like any language, there are some grammar rules to learn in order to use Python. In this module, we'll go through a few of the basics of Python that will build a foundation for your learning and practice.
+Python is a flexible, multi-purpose programming language that has applications in web development, software engineering, and data analysis. Part of its power and much of its popularity comes from the fact that it is **human-readable**, with a relatively simple syntax compared to many other programming languages. However, just like any language, there are some grammar rules (**syntax**) to learn in order to use Python. In this module, we'll go through a few of the basics of Python that will build a foundation for your learning and practice.
 
 ### Functions and methods: Getting stuff done
 
@@ -147,7 +147,7 @@ Methods
 
 **Methods** in Python are very similar to functions, but are not precisely the same. The exact differences are not important to us right now, except that the syntax is a little different. Methods cannot be called by themselves; they are always called on an object, with the syntax `object.method()`.
 
-Let's look at an example:
+Let's look at an example and try applying the `lower()` method:
 
 @sage
 <div class="python">
@@ -248,7 +248,9 @@ print(all_pets)
 In the above example, we have defined variables to contain the number of dogs and the number of cats, and then used these variables in a calculation to get the total number of pets, which is itself assigned to a variable. The `all_pets` variable can then be used repeatedly later (maybe we want to calculate costs associated with feeding and housing all of these pets, for example, or how many collars we'll need). Now, if the number of dogs or cats changes, we can just change the value in the variable statement and re-run our code!
 
 <div class = "important">
-While strings in Python need to be in quotation marks, variable names do not. The reason that strings require quotation marks is so that Python knows that they aren't variables! Numbers and boolean values like `True` and `False` do not need quotation marks either, but you also cannot use numbers or boolean values by themselves as variable names (a mix of letters and number is okay).
+While strings in Python need to be in quotation marks, variable names do not. The reason that strings require quotation marks is so that Python knows that when you type "abc", you mean the **literal characters** "abc", and not some variable with the **name** `abc`.  
+
+Numbers and boolean values like `True` and `False` do not need quotation marks either, but you also cannot use numbers or boolean values by themselves as variable names (but naming a variable using a mix of letters and number is okay).
 
 If, for example, you typed `dogs` without defining it as a variable, you would get an error message that looks like this: `NameError: name 'dogs' is not defined`. Variables are defined (or declared) when you assign a value to them.  
 
@@ -326,7 +328,7 @@ print(produce)
     </lia-keep>
     </div>
 
-  * `del` deletes objects, and can be used as another way to remove elements of a list by index. The syntax will be a little different, because it is a keyword, not a list method. It is useful because it allows you to delete list elements in a slice. Slicing uses subsetting notation. the first index listed is **inclusive**, or included in the slice; this is followed by a colon; the second index listed is **exclusive**, or excluded from the slice; finally, these numbers are surrounded by square brackets.
+  * `del` deletes objects, and can be used as another way to remove elements of a list by index. The syntax will be a little different, because it is a keyword, not a list method. It is useful because it allows you to delete list elements in a **slice**. Slicing uses subsetting notation to indicate where the slice begins and ends. The first index listed is **inclusive**, or included in the slice; this is followed by a colon; the second index listed is **exclusive**, or excluded from the slice; finally, these numbers are surrounded by square brackets.
 
     @sage
     <div class="python_link">
@@ -454,10 +456,10 @@ print(candy_day1)
 </div>
 
 <div class = "important">
-Did you notice the explanatory text in the above code cell that started with a pound sign? The pound sign ( # ) in a code cell indicates the start of a **comment**. Comments aren't recognized as code and won't be run. Each line of a comment must be marked with a new pound sign. Comments are an excellent way to add brief explanations and clarifications about your code.
+Did you notice the explanatory text in the above code cell that started with a pound sign (or hash mark)? The pound sign / hash mark ( # ) in a code cell indicates the start of a **comment**. Comments aren't recognized as code and won't be run. Each line of a comment must be marked with a new pound sign. Comments are an excellent way to add brief explanations and clarifications about your code.
 </div>
 
-This example loops through the list of numbers, adds 5 to each number one at a time, and adds the sum to a new list using the append() method for lists. Finally, we printed the new list to our screen. This kind of loop is sometimes called a **for loop**; there is another kind of loop called a **while loop**, which is often used when we don't know the number of times we'll have to iterate through a block of code before we start (check out this page for more information about while loops).
+This example loops through the list of numbers, adds 5 to each number one at a time, and adds the sum to a new list using the `append()` method for lists. Finally, we printed the new list to our screen. This kind of loop is sometimes called a **for loop**; there is another kind of loop called a **while loop**, which is often used when we don't know the number of times we'll have to iterate through a block of code before we start (check out this page for more information about while loops).
 
 
 ### Indentation
@@ -582,7 +584,8 @@ Let's look at a simple example of some code that ultilizes conditionals.
 <script type="text/x-sage">
 
 name = "Pythonista"
-if type(name) == str: #We're testing here to see if the value of name is a string. This will either evaluate to True or False.
+if type(name) == str: # We're testing here to see if the value of name is a string. 
+                                    # This will either evaluate to True or False.
     print("Welcome, "+ name+"!")
 else:
     print("Please enter a name.")
@@ -819,7 +822,7 @@ print(contact_info)
     </lia-keep>
     </div>
 
-  You can also use the same syntax with an exisitng key to assign a new value (note that the new value will **replace** the previous value).
+  You can also use the same syntax with an existing key to assign a new value (note that the new value will **replace** the previous value).
 
 ### Quiz: Dictionaries
 
@@ -900,11 +903,11 @@ print(letter_grades_dict)
 
 ## Additional Resources
 
-* There are many helpful resources on [python.org](https://www.python.org/), including a [Beginner's Guide](https://wiki.python.org/moin/BeginnersGuide) and FAQs (https://docs.python.org/3/faq/).
+* There are many helpful resources on [python.org](https://www.python.org/), including a [Beginner's Guide](https://wiki.python.org/moin/BeginnersGuide) and [FAQs](https://docs.python.org/3/faq/).
 
 * [W3 Schools has bite-sized explanations and examples](https://www.w3schools.com/python/) if you want more clarity on how anything works.
 
-* Jupyter notebooks are a great option for doing data analysis with Python-- [check out this Jupyter notebook demo](https://jupyter.org/try-jupyter/lab/) to see how they work.
+* Jupyter notebooks are a great option for doing data analysis with Python-- [check out this Jupyter notebook demo](https://jupyter.org/try-jupyter/lab/), then open "notebooks" and look at "Intro.ipynb" to see how they work.
 
 ## Feedback
 
