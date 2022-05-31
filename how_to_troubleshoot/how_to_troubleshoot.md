@@ -57,7 +57,12 @@ Some technical types (including the author of this module) are also fans of *The
 
 While not even the entirety of the Internet can promise to tell you **everything** you need to know about technology, we do believe that the slogan "Don't Panic" is a useful one.  Technology can be baffling, inconsistent, and frustrating, and lead its users to experience rage or fear or feel incompetent.  If you feel this way, you're not alone, and there are practical steps to troubleshooting we'll share with you in this module to help you feel more empowered.  Try not to panic!
 
-The "steps" we're describing in this module don't necessarily take place in the order we describe -- often there's a flow from one method to another and back again as you get closer and closer to understanding, describing, and solving any problems you encounter in tech.  And you may have tips and ideas we haven't mentioned here, too.
+The "steps" we're describing in this module don't necessarily take place in the order we describe -- often there's a flow from one method to another and back again as you get closer and closer to understanding, describing, and solving any problems you encounter in tech.  And you may have tips and ideas we haven't mentioned here, too.  Read on for more tips to help you move from panic to action!
+
+<div class = "important">
+One thing that tends to intimidate people is the dreaded **error message**.  Error messages can seem cryptic, but we encourage you to read them aloud if possible.  Reading aloud makes it less likely that you'll skim over important, useful, and recognizably helpful information.  Yes, you can certainly search for error message text in your favorite web browser, but you might surprise yourself with your debugging prowess if you slow down and read your error messages aloud.  Also, walking away from your computer and getting a snack is a completely acceptable problem-solving tactic.
+</div>
+
 
 ### Describing the Problem
 
