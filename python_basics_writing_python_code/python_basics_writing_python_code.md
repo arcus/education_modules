@@ -857,10 +857,10 @@ While **values** can be repeated in a dictionary, each **key** must be unique. H
 ## Challenge Problem
 
 <div class = "important">
-Below is an example of a problem that can be solved using many of the things presented in this module. The next few pages will show you how to work through one possible solution, but feel free to give it a try on your own first!
+Below is an example of a problem that can be solved using many of the concepts presented in this module. The next few pages will show you how to work through one possible solution, but feel free to give it a try on your own first!
 </div>
 
-A teacher friend of yours can never remember what the grade ranges are for letter grades. They have requested that you write some code that will take a list of final grades and return the letter grades corresponding to the score. After doing some research, you know that:
+A teacher friend of yours can never remember what the grade ranges are for letter grades. They have requested that you write some code that will take their students' final scores and return the letter grades corresponding to those scores. After doing some research, you know that:
 
 90-100 = "A"
 
@@ -876,7 +876,7 @@ Your friend also sends you the class's final grades, along with the student iden
 
 st1: 88, st2: 78, st3: 34, st4: 97, st5: 64, st6: 89, st7: 56, st8: 83, st9: 92
 
-Using a `for` loop and `if-else` statements, can you write some code that returns a dictionary with the student identifiers as the keys and the letter grades that the students should be assigned as the values?
+Using a `for` loop and `if-else` statements, can you write some code that returns a dictionary with the student identifiers as the keys and the letter grades that the students should be awarded as the values?
 
 **Hint:** To loop through the items (the keys and values) of a dictionary that we'll call `my_dict`, you can use the code `for k,v in my_dict.items()`.
 
@@ -898,7 +898,7 @@ If you do come up with a solution before looking at the answer, note that your c
 
 Since we were given the student identifiers and each student's grades, the first thing we could do is build a dictionary, using the identifiers as the keys and the scores as the values.
 
-We also know that we want our output to be a dictionary with the student identifiers as the keys and the **letter grades** as the values, so let's initialize an empty dictionary that we can add to later.
+We also know that we want our output to be a dictionary with the student identifiers as the keys and the **letter grades** as the values, so let's initialize an empty dictionary that we can add to later (the code below shouldn't have any output).
 
 @sage
 <div class="python">
@@ -914,7 +914,7 @@ letter_grades_dict = {}
 
 ### Possible solution: Part 2
 
-Next, since we need to look at each student's grade and assign a letter grade based on that, we need to loop through the items in `final_scores_dict`. We can use a `for` loop for this. To make sure we are looping through the dictionary correctly, we can add a `print()` statement at the end that will display each item in turn (we can remove this line of code later, once we don't need it anymore).
+Next, since we need to look at each student's final score and assign a letter grade based on it, we'll want to loop through the items in `final_scores_dict`. We can use a `for` loop for this. To make sure we are looping through the dictionary correctly, we can add a `print()` statement at the end that will display each item in turn (we can remove this line of code later, once we don't need it anymore).
 
 @sage
 <div class="python">
@@ -987,7 +987,7 @@ print(letter_grades_dict)
 </lia-keep>
 </div>
 
-Congratulations! You can now send the letter grades off to your teacher friend. 
+Congratulations! You can now send the letter grades off to your teacher friend.
 
 <div class = "care">
 If this process seemed intimidating, that's understandable! Learning to code takes time, and there will be moments where things don't work. Things will come easier as you practice! And don't feel like failure if you have to Google how to do certain things over and over-- lots of people who write code for a living do the same thing!
@@ -997,7 +997,7 @@ If this process seemed intimidating, that's understandable! Learning to code tak
 
 * There are many helpful resources on [python.org](https://www.python.org/), including a [Beginner's Guide](https://wiki.python.org/moin/BeginnersGuide) and [FAQs](https://docs.python.org/3/faq/).
 
-* [W3 Schools has bite-sized explanations and examples](https://www.w3schools.com/python/) if you want more clarity on how anything works.
+* [W3 Schools has bite-sized explanations and examples of writing code in Python](https://www.w3schools.com/python/) if you want more clarity on how anything works.
 
 * Jupyter notebooks are a great option for doing data analysis with Python-- [check out this Jupyter notebook demo](https://jupyter.org/try-jupyter/lab/), then open "notebooks" and look at "Intro.ipynb" to see how they work.
 
