@@ -805,7 +805,7 @@ print(contact_info)
     </div>
 
     <div class="warning">
-    Note that this change is permanent! If you want to keep the original dictionary as-is, you should make a copy of the dictionary by assigning it to a new variable, and then using `.pop()` on the copy. In this example though, all you need to do to restore the dictionary to its original form is re-run the first code cell or refresh the page.
+    Note that this change is permanent! If you want to keep the original dictionary as-is, you should make a copy of the dictionary (using the `.copy()` method and assigning the copy to a new variable), and then using `.pop()` on the copy. In this example though, all you need to do to restore the dictionary to its original form is re-run the first code cell or refresh the page.
     </div>
 
 * There isn't a method to add items to a dictionary, but it can be done! You can give the dictionary a new key and assign a value to it (notice that we're using bracket notation again). This is another example of a permanent change to our dictionary.
