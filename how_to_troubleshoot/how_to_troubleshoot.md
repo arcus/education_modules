@@ -54,9 +54,9 @@ This module assumes that learners have started using technical methods such as w
 Some technical types (including the author of this module) are also fans of *The Hitchhiker's Guide to the Galaxy*, so we begin with a quote from that illustrious text.
 
 > Ford handed the book to Arthur.
->"What is it?" asked Arthur.
->"The Hitchhiker's Guide to the Galaxy. It's a sort of electronic book. It tells you everything you need to know about anything. That's its job."
->Arthur turned it over nervously in his hands. "I like the cover," he said. "Don't Panic. It's the first helpful or intelligible thing anybody's said to me all day."
+> "What is it?" asked Arthur.
+> "The Hitchhiker's Guide to the Galaxy. It's a sort of electronic book. It tells you everything you need to know about anything. That's its job."
+> Arthur turned it over nervously in his hands. "I like the cover," he said. "Don't Panic. It's the first helpful or intelligible thing anybody's said to me all day."
 
 While not even the entirety of the Internet can promise to tell you **everything** you need to know about technology, we do believe that the slogan "Don't Panic" is a useful one.  Technology can be baffling, inconsistent, and frustrating, and lead its users to experience rage or fear or feel incompetent.  If you feel this way, you're not alone, and there are practical steps to troubleshooting we'll share with you in this module to help you feel more empowered.  Try not to panic!
 
