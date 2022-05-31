@@ -57,7 +57,7 @@ Some technical types (including the author of this module) are also fans of *The
 
 While not even the entirety of the Internet can promise to tell you **everything** you need to know about technology, we do believe that the slogan "Don't Panic" is a useful one.  Technology can be baffling, inconsistent, and frustrating, and lead its users to experience rage or fear or feel incompetent.  If you feel this way, you're not alone, and there are practical steps to troubleshooting we'll share with you in this module to help you feel more empowered.  Try not to panic!
 
-The "steps" we're describing in this module don't necessarily take place in the order we describe -- often there's a flow from one method to another and back again as you get closer and closer to understanding, describing, and solving any problems you encounter in tech.  And you may have tips and ideas we haven't mentioned here, too.  Please share those with us at <dart@chop.edu>.
+The "steps" we're describing in this module don't necessarily take place in the order we describe -- often there's a flow from one method to another and back again as you get closer and closer to understanding, describing, and solving any problems you encounter in tech.  And you may have tips and ideas we haven't mentioned here, too.
 
 ### Describing the Problem
 
@@ -170,7 +170,7 @@ One common place that many people find extremely useful for solving technical pr
 We'll talk about how to contribute good questions to Stack Overflow later in this module, but for now let's consider the anatomy of a Stack Overflow question.  Below, we've searched for the phrase "ggplot black and white", because we need to create a black and white data visualization and we like using the `ggplot2` package in R.  You'll notice that in the list of search results, each one has a descriptive title and a short snippet.  To the left of each search item, there's a bit of information about votes, answers, and views.
 
 
-![Search results within Stack Overflow for "ggplot black and white".](media/stack_overflow.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))"-->
+![Search results within Stack Overflow for "ggplot black and white".](media/stack_overflow.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));"-->
 
 When sourcing an answer from Stack Overflow, look for:
 
@@ -214,7 +214,6 @@ Then you might want to state your desired outcome:
 I'd like to separate the `name` column into two, like this:
 
 | first | last|
-
 | --- | --- |
 | John | Doe |
 | Giovanni  | Ferraro |
