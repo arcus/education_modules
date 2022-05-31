@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.0.0
+version:  1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -54,7 +54,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 If you've ever saved a file on your computer, you probably have some familiarity with how files and folders work. Maybe you save a file to your Desktop, or in your Documents folder, or perhaps you made a special folder to hold all of your files relating to a specific project. In some ways, it works very similarly to a physical filing system; related files go in labeled folders, which are stored in a known location (a file cabinet in a file room somewhere).
 
-On your computer, you can have a mix of files and folders. This is a hierarchical filing system, where each folder can have both subfolders and files within it, and the subfolders can have more subfolders and files; if you map it out, it looks like a tree.
+On your computer, you can have a mix of files and folders. This is a hierarchical filing system, where each folder can have both subfolders and files within it, and the subfolders can have more subfolders and files; if you map it out, it looks like a tree. A folder on your computer is also often called a **directory**.
 
 <div style = "margin: 1rem; width: 750;">
 ![Diagram of a hierarchical file structure, with a mix of files and folders within folders.](media/files_and_folders.png?raw=true)
@@ -154,10 +154,10 @@ Neither absolute nor relative file paths are "better"-- which you choose will de
 What would be a relative file path pointing to the file `experiment1.csv` in a subfolder called `data` in a project folder called `study_project`, if `study_project` is your current working directory?
 
 [[data/experiment1.csv]]
-[[?]] Hint: Remember that a relative file path is in relation to your working directory-- that's your reference point.
+[[?]] Hint: Remember that a relative file path is in relation to your working directory-- that's your reference point. And don't forget that file paths are case-sensitive!
 <script>
   let input = "@input".trim();
-  /data[/\\]experiment1\.csv/i.test(input);
+  input == "data/experiment1.csv" || input == "data\\experiment1.csv";
 </script>
 ********************************
 <div class = "answer">
