@@ -93,7 +93,7 @@ Before starting this module it is useful for you to:
 
 * have some familiarity with tabular data: data stored in an array of rows and columns.
 
-* have an introductory level exposure to coding in [Python](intro/to/python/module)
+* have an introductory level exposure to coding in [Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md)
 
 **Learning Objectives**
 
