@@ -139,6 +139,11 @@ These cells will compute everything you ask them to, but will only output what y
 Many cells in this lesson will initially have the `print()` line commented out with a `#`. To print the output, delete the `#` and run the cell.
 </div>
 
+<div class = "warning">
+**Navigating with arrow keys**
+
+You can navigate the pages of this course using left and right arrow keys. This means that you **cannot** use left and right arrow keys to navigate **within** a code cell.
+</div>
 
 ## The `pandas` Package
 
