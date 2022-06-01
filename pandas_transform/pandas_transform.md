@@ -135,6 +135,8 @@ Code will not persist from one page to the next, and you can always refresh the 
 
 <div class = "important">
 These cells will compute everything you ask them to, but will only output what you explicitly request using the `print()` command.
+
+Many cells in this lesson will initially have the `print()` line commented out with a `#`. To print the output, delete the `#` and run the cell.
 </div>
 
 
@@ -191,13 +193,14 @@ import pandas as pd
 
 Let's take a look at a basic DataFrame. This one is being built from scratch, but we aren't going to spend any time learning how to do that in this module because you will usually be using `pandas` to analyze data that you import from somewhere else.
 
-**Run this code** to print out the DataFrame `df`.
+**Run this code** to print out the DataFrame `df`. Don't forget to remove the `#` in the last line!
+
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
 d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
 df = pd.DataFrame(data=d);
-print(df)
+#print(df)
 </script>
 </lia-keep>
 </div>
@@ -207,10 +210,11 @@ print(df)
 You might have noticed that in the above example, everything in the first column was an integer, everything in the second column had a decimal point, and the third column consisted of words. Each column in a DataFrame is called a **series**. A series is a one-dimensional array in which all of the data has the same **type**.
 
 **Run this code** to print out `col1` from the DataFrame `df`.
+
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-print(df['col1'])
+#print(df['col1'])
 </script>
 </lia-keep>
 </div>
@@ -242,16 +246,12 @@ Your friend's code (above) isn't running, which is extremely frustrating because
 
 When you add the line `import pandas as pd` to the top of their code, it runs as it did before.
 
-<div class="python_run">
-<lia-keep>
-<script type="text/x-sage">
+```
 import pandas as pd
 d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
 df = pd.DataFrame(data=d);
 print(df)
-</script>
-</lia-keep>
-</div>
+```
 
 </div>
 ***
@@ -301,7 +301,7 @@ That code didn't have any output because we didn't ask it to print anything, but
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-print(covid_testing)
+#print(covid_testing)
 </script>
 </lia-keep>
 </div>
@@ -313,7 +313,7 @@ When you print a DataFrame or Series you will see the first five rows and the la
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-print(covid_testing.head())
+#print(covid_testing.head())
 </script>
 </lia-keep>
 </div>
@@ -353,7 +353,7 @@ The methods `.columns` and `.index` will show you all of the column and row name
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-print(covid_testing.columns)
+#print(covid_testing.columns)
 </script>
 </lia-keep>
 </div>
@@ -397,7 +397,7 @@ The grammar of the `.loc` method is `dataframe.loc[row(s), column(s)]`. To see t
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-print(covid_testing.loc[0,"age"])
+#print(covid_testing.loc[0,"age"])
 </script>
 </lia-keep>
 </div>
@@ -411,7 +411,7 @@ If you want to see the ages of the first 3 patients tested, change the `0` to th
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-print(covid_testing.loc[[0,1,2],[ "age", "gender"]])
+#print(covid_testing.loc[[0,1,2],[ "age", "gender"]])
 </script>
 </lia-keep>
 </div>
@@ -423,7 +423,7 @@ If you want to show all of the data in a row or column, instead of a list you ca
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-print(covid_testing.loc[:,["mrn","first_name","last_name"]])
+#print(covid_testing.loc[:,["mrn","first_name","last_name"]])
 </script>
 </lia-keep>
 </div>
@@ -436,7 +436,7 @@ A colon before the comma will show you all rows of the columns you selected and 
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-print(covid_testing.loc[[2,3,4],:])
+#print(covid_testing.loc[[2,3,4],:])
 </script>
 </lia-keep>
 </div>
@@ -511,7 +511,7 @@ If, for example, we only want to look at instances where the covid test came bac
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-print(covid_testing.loc[:,"result"] == "positive")
+#print(covid_testing.loc[:,"result"] == "positive")
 </script>
 </lia-keep>
 </div>
@@ -559,7 +559,7 @@ If this is a subset of the data that you are likely to want to use again, it is 
 <lia-keep>
 <script type="text/x-sage">
 positive_tests = covid_testing.loc[covid_testing.loc[:,"result"] == "positive",:].copy()
-print(positive_tests)
+#print(positive_tests)
 </script>
 </lia-keep>
 </div>
@@ -597,7 +597,7 @@ We can also combine conditions using `&` for **and**, and the vertical "pipe" `|
 <lia-keep>
 <script type="text/x-sage">
 adult_positive = covid_testing.loc[(covid_testing.loc[:,"result"] == "positive") & (covid_testing.loc[:,"age"] >= 18), :]
-print(adult_positive.loc[:,["first_name","last_name", "age"]])
+#print(adult_positive.loc[:,["first_name","last_name", "age"]])
 </script>
 </lia-keep>
 </div>
@@ -615,7 +615,7 @@ When working with more complicated conditions it is extremely helpful to define 
 is_positive_infant = (covid_testing.loc[:,"age"]<1) & (covid_testing.loc[:,"result"] == "positive")
 
 infant_positive = covid_testing.loc[is_positive_infant,:].copy()
-print(infant_positive.loc[:,["first_name","last_name","age"]])
+#print(infant_positive.loc[:,["first_name","last_name","age"]])
 </script>
 </lia-keep>
 </div>
@@ -648,7 +648,7 @@ Wherever the original csv file didn't have an entry, you will see `NaN` or `nan`
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-print(covid_testing.loc[2, :])
+#print(covid_testing.loc[2, :])
 </script>
 </lia-keep>
 </div>
@@ -666,7 +666,7 @@ For example we know that patient 2 has no data, i.e. `NaN` in both the column `p
 <script type="text/x-sage">
 are_NaNs_equal = (covid_testing.loc[2,"payor_group"] == covid_testing.loc[2, "patient_class"])
 
-print(are_NaNs_equal)
+#print(are_NaNs_equal)
 </script>
 </lia-keep>
 </div>
@@ -679,7 +679,7 @@ Since using `==` to check if a cell is empty won't work, we have the methods `.i
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-print(covid_testing.loc[:,"payor_group"].isna())
+#print(covid_testing.loc[:,"payor_group"].isna())
 </script>
 </lia-keep>
 </div>
@@ -696,7 +696,7 @@ known_payor = covid_testing.loc[:,"payor_group"].notna()
 
 known_payor_tests = covid_testing.loc[known_payor, :].copy()
 
-print(known_payor_tests.loc[:, ["first_name", "last_name"]])
+#print(known_payor_tests.loc[:, ["first_name", "last_name"]])
 </script>
 </lia-keep>
 </div>
@@ -810,7 +810,7 @@ The next bit of code creates a new column named `new_column` in the DataFrame `c
 <lia-keep>
 <script type="text/x-sage">
 covid_testing.loc[:,"new_column"] = 1
-print(covid_testing.loc[:,"new_column"])
+#print(covid_testing.loc[:,"new_column"])
 </script>
 </lia-keep>
 </div>
@@ -824,7 +824,7 @@ For example maybe you need to have patient ages recorded in months instead of ye
 <lia-keep>
 <script type="text/x-sage">
 covid_testing.loc[:,"age_months"] = covid_testing.loc[:,"age"]*12
-print(covid_testing.loc[:,["age","age_months"]])
+#print(covid_testing.loc[:,["age","age_months"]])
 </script>
 </lia-keep>
 </div>
@@ -836,7 +836,7 @@ Or maybe you want a new column that displays the full name of each patient, rath
 <lia-keep>
 <script type="text/x-sage">
 covid_testing.loc[:,"full_name"] = covid_testing.loc[:,"first_name"]+" "+covid_testing.loc[:,"last_name"]
-print(covid_testing.loc[:,["first_name", "last_name", "full_name"]])
+#print(covid_testing.loc[:,["first_name", "last_name", "full_name"]])
 </script>
 </lia-keep>
 </div>
@@ -885,7 +885,7 @@ Let's take a look a using this method to change the gender `female` to `F`. Afte
 <script type="text/x-sage">
 covid_testing.loc[:, "gender"] = covid_testing.loc[:, "gender"].replace("female","F")
 
-print(covid_testing.loc[:,["first_name", "last_name", "gender"]])
+#print(covid_testing.loc[:,["first_name", "last_name", "gender"]])
 
 </script>
 </lia-keep>
@@ -918,7 +918,7 @@ If we want to replace `positive` and `negative` with `1` and `0` respectively, w
 <script type="text/x-sage">
 covid_testing = covid_testing.replace(["positive","negative"],[1,0])
 
-print(covid_testing.loc[:,["first_name", "last_name", "result"]])
+#print(covid_testing.loc[:,["first_name", "last_name", "result"]])
 
 </script>
 </lia-keep>
@@ -945,7 +945,7 @@ You can change the all of the entries in a column to uppercase using the method 
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-print(covid_testing.loc[:, "last_name"].str.upper())
+#print(covid_testing.loc[:, "last_name"].str.upper())
 </script>
 </lia-keep>
 </div>
