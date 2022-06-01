@@ -108,7 +108,35 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 
 @learning_objectives
 
+</div>
 
+## Lesson Preparation
+@sage
+
+You will have opportunities for hands-on coding as you work your way through this module using interactive python cells.
+The interactive python cells are powered by [SageMathCell](https://sagecell.sagemath.org/). For the most part, these will appear with some code already in them, and you can run that code by clicking the **Run python** button. You can also edit the code in these cells and run your own code.
+
+
+**Give it a try:**
+<div class="python">
+<lia-keep>
+<script type="text/x-sage">
+print(7+2)
+</script>
+</lia-keep>
+</div>
+
+Code will not persist from one page to the next, and you can always refresh the page to return the code (and the stored memory of the cell) to its initial state.
+
+<div class = "important">
+These cells will compute everything you ask them to, but will only display what you explicitly request using the `print()` command.
+
+</div>
+
+<div class = "warning">
+**Navigating with arrow keys**
+
+You can navigate the pages of this course using left and right arrow keys. This means that you **cannot** use left and right arrow keys to navigate **within** a code cell.
 </div>
 
 ## Introduction to Python code
