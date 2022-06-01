@@ -274,7 +274,7 @@ The tiny DataFrame we saw in the last section was exceptional in several ways. W
 <div class = "important">
 For this module we will be looking at some fake Covid-19 testing data. Although this data is designed to mimic realistic data with plausible patterns and values, **there is no Protected Health Information in this data**. If you are a fan of the fictional series "Game of Thrones," however, you might recognize some familiar characters.
 
-This data is saved as a [csv file hosted on GitHub](https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv).
+This data is saved as a [csv file hosted on GitHub](https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv).
 </div>
 
 ### Loading data
@@ -289,14 +289,14 @@ import pandas as pd
 
 The `pandas` package can read most tabular data files and convert them into DataFrames. As long as your data is in a place that the program can locate (either on your computer if you are running code on your computer, or in the cloud) all `pandas` needs to know is what type of file it is reading, and where to find that file.
 
-The fake Covid-19 testing data we will use for the rest of this lesson is saved as a [csv file hosted on GitHub](https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv).
+The fake Covid-19 testing data we will use for the rest of this lesson is saved as a [csv file hosted on GitHub](https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv).
 
 The `read_csv` function from the `pandas` library takes the location of the file as its argument. The path to the file, in this case a url, must be in quotes. Let's create a new DataFrame called `covid_testing` that will contain all of our fake Covid-19 testing data.
 
 <div class="python_data">
 <lia-keep>
 <script type="text/x-sage">
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 </script>
 </lia-keep>
 </div>
@@ -346,7 +346,7 @@ From now on we will add the definition of our DataFrame `covid_testing` to the s
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 </script>
 </lia-keep>
 </div>
@@ -387,7 +387,7 @@ For example `range(0,4)` contains 4 elements. Those elements are 0,1,2, and 3.
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 </script>
 </lia-keep>
 </div>
@@ -461,7 +461,7 @@ If you look at other people's code, you may see columns refered to with `data_fr
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
-covid_testing = pd.__?__('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+covid_testing = pd.__?__('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 
 print(covid_testing.__?__[11942, ["first_name","last_name"]])
 </script>
@@ -487,7 +487,7 @@ The completed code should look like this:
 
 ```
 import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 
 print(covid_testing.loc[11942, ["first_name","last_name"]])
 
@@ -503,7 +503,7 @@ print(covid_testing.loc[11942, ["first_name","last_name"]])
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 </script>
 </lia-keep>
 </div>
@@ -548,7 +548,7 @@ In addition to using `==` to check if two values are the same, we can use other 
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 </script>
 </lia-keep>
 </div>
@@ -591,7 +591,7 @@ The method `.copy()` at the very end of line one creates a new DataFrame separat
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 </script>
 </lia-keep>
 </div>
@@ -641,7 +641,7 @@ is true for all results where a patient was older than 10 and tested positive, a
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 </script>
 </lia-keep>
 </div>
@@ -714,7 +714,7 @@ known_payor_tests = covid_testing.loc[known_payor, :].copy()
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 </script>
 </lia-keep>
 </div>
@@ -801,7 +801,7 @@ If your original data is not already in a separate file you can use `.to_csv(dat
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 </script>
 </lia-keep>
 </div>
@@ -854,7 +854,7 @@ covid_testing.loc[:,"full_name"] = covid_testing.loc[:,"first_name"]+" "+covid_t
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 </script>
 </lia-keep>
 </div>
@@ -940,7 +940,7 @@ The order and length of these lists matter! Each element in the first list will 
 <lia-keep>
 <script type="text/x-sage">
 import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 </script>
 </lia-keep>
 </div>
