@@ -21,7 +21,8 @@ After completion of this module, learners will be able to:
 @end
 
 @version_history
-1.0.1: revision to correct image links referring to wrong branch
+1.0.1: revision to correct image links referring to wrong branch + small changes to environment setup language to be exactly mirrored across all 3 R basics modules.
+
 @end
 
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
@@ -133,19 +134,16 @@ Please read over both options before you start performing any actions, to make s
 
 <h3>Option 1: Work in the Cloud</h3>
 
-This might work well for you if you don't want to, or can't, install R and RStudio on your computer.  The benefit is that you don't have to install anything, but one negative is that this option requires a bit of waiting for your environment to come online.
+This might work well for you if you either can't or don't want to install R and RStudio on your computer.  The benefit is that you don't have to install anything, but one negative is that this option requires a bit of waiting for your environment to come online.
 
 **First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
 
-<a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank">
+<a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"  alt="Launch Binder"></a> **← Click the "launch binder" button!**
 
-![Launch Binder](media/badge_logo.svg)**← Click to launch binder**
-
-</a>
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for several minutes.  Be patient!</div>
+<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
 <div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen](media/binder_loading.gif)<!--
 style = "border: 1px solid rgb(var(--color-highlight));"-->
 </div>

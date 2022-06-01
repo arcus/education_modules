@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -21,6 +21,12 @@ After completion of this module, learners will be able to:
 
 
 @end
+
+@version_history
+1.0.1: small changes to environment setup alt text to be exactly mirrored across all 3 R basics modules.
+
+@end
+
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 @gifPreload
@@ -241,7 +247,7 @@ style = "border: 1px solid rgb(var(--color-highlight));"-->
 
 **Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_introduction".  That's the code for this module!
 
-![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
+![RStudio as shown in the cloud platform Binder. The left side of the screen displays the "Console" tab. On the right there is a split between an "upper" and "lower" section. The upper section is the "Environment", which is empty. The lower section, "files", shows one file (environment.yml) and three folders (r_basics_introduction, r_basics_transform_data, r_basics_visualize_data)](media/binder_rstudio.png)<!--
 style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
 
 <h3>Option 2: Work on Your Computer</h3>
@@ -271,8 +277,9 @@ If you already completed this work for a previous module, and it's been a while 
 * Open your project.
 * In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
 
-![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->  
-![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
+![Version control button in RStudio menu at top of window drops down with choices to pull and push branches.](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->  
+
+![Tools tab in the highest level menu bar drops down with with a Version Control option. Under version control, there are choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
 
 <div class = "warning">
 If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.

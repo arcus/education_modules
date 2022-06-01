@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.2
+version:  1.0.3
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -23,7 +23,7 @@ After completion of this module, learners will be able to:
 
 @version_history
 1.0.2: revision to correct image links referring to wrong branch
-
+1.0.3: revamping environment setup section to mirror exactly other R basics modules, including only presenting the content once. Changed the hands-on section to follow appropriate structure. Also replaced hex art alt text with blank tags based on best practices for decorative images.
 @end
 
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
@@ -120,13 +120,11 @@ This is what that data looks like:
 ![The `covid_testing` data frame in the RStudio data viewer.  The first 13 rows of over fifteen thousand rows are shown.  The first eight columns are shown.  The columns are: `mrn`, `first_name`, `last_name`, `gender`, `pan_day`, `test_id`, `clinic_name`, and `result`.](media/covid_testing_df.png)<!--
 style = "max-width:800px;"-->
 
-You will be asked to do some code-based exercises at the **end** of this module, but you may find it useful to use the sample code and data throughout the module.
-
 On the next page, you'll learn how to get access to the sample code.  
 
 ### Lesson Preparation: Our RStudio Environment
 
-You can do this step now, if you like to follow along throughout and try out code as you go.  Or, we'll present this step again at the end, when we give you some concrete tasks to perform.  It's totally up to you!  
+Please do this step now, because we're going to ask you to follow along throughout and try out code as you go.
 
 Please read over both options before you start performing any actions, to make sure you pick the right option for you.
 
@@ -148,7 +146,7 @@ style = "border: 1px solid rgb(var(--color-highlight));"-->
 
 **Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
 
-![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
+![RStudio as shown in the cloud platform Binder. The left side of the screen displays the "Console" tab. On the right there is a split between an "upper" and "lower" section. The upper section is the "Environment", which is empty. The lower section, "files", shows one file (environment.yml) and three folders (r_basics_introduction, r_basics_transform_data, r_basics_visualize_data)](media/binder_rstudio.png)<!--
 style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
 
 
@@ -179,8 +177,8 @@ If you already completed this work for a previous module, and it's been a while 
 * Open your project.
 * In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
 
-![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->  
-![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
+![Version control button in RStudio menu at top of window drops down with choices to pull and push branches.](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->  
+![Tools tab in the highest level menu bar drops down with with a Version Control option. Under version control, there are choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
 
 <div class = "warning">
 If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_visualize_data` exercise files, you might want to save your version of `visualize_exercies.Rmd` to `my_visualize_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `visualize_exercises.Rmd` while holding on to your changes in the new file.
@@ -201,7 +199,7 @@ You can use this module in a couple of different ways:
 `dplyr` (pronounced dee-ply-er, a play on words with "data" and "pliers") is a useful R package we'll discuss.  The various functions we'll use, like `select`, `filter`, and `mutate` are all functions that belong to the `dplyr` package.  In R, we bring in the functionality of a package by using the `library()` command.  Because `dplyr` forms part of the `tidyverse` suite of packages, we can bring in the useful functions of `dplyr` by either using the `library(dplyr)` command or the `library(tidyverse)` command.
 </div>
 <div style = "margin: 1rem auto; max-width: 20%; float:left;">
-![`dplyr` logo: three sets of futuristic, colorful pliers that appear to be moving upward and to the right.  The word "dplyr" appears in the upper left of the logo, which is in the shape of a hexagon.](media/dplyr_logo.png)</div>
+![""](media/dplyr_logo.png)</div>
 
 <div class = "warning">
 Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`.  But if you're using the course materials in your own computer's installation of RStudio, it's possible you don't have `tidyverse` installed.  If you get a message telling you that there's no package installed with that name, issue this command: `install.packages("tidyverse")`.
@@ -699,72 +697,7 @@ Which of the following can you accomplish with `mutate()`?
 
 ********
 
-
-
-## Exercises
-
-<h3>A Setup Reminder</h3>
-
-If you're already set up in RStudio with the materials for this course (we had some instructions early on), you can skip this page and go ahead to the next!
-
-If you haven't yet started to work in the files for this module, please read over both options below before choosing one to continue with.
-
-<h3>Option 1: Work in the Cloud</h3>
-
-This might work well for you if you don't want to, or can't, install R and RStudio on your computer.  The benefit is that you don't have to install anything, but one negative is that this option requires a bit of waiting for your environment to come online.
-
-**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
-
-<a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank">
-
-![Launch Binder](media/badge_logo.svg)**← Click to launch binder**
-
-</a>
-
-<div class = "hint" style = "align-items: center; display: flex;">
-
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen](media/binder_loading.gif)<!--
-style = "border: 1px solid rgb(var(--color-highlight));"-->
-</div>
-</div>
-
-**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
-
-![RStudio as shown in the cloud platform Binder](media/binder_rstudio.png)<!--
-style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
-
-
-<h3>Option 2: Work on Your Computer</h3>
-
-If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
-
-* In RStudio, open a new project (File, New Project)
-* Select Version Control, then Git
-* Drop this link into the "Repository URL": https://github.com/arcus/education_r_environment
-* Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
-* Click to select the "Open in new session" checkbox
-* Click "Create Project"
-* In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_transform\_data".  That's the code for this module!
-
-**Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
-
-<div style="display:none">@gifPreload</div>
-
-<figure>
-  <img src="https://github.com/arcus/education_modules/blob/main/r_basics_transform_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_transform_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
-
-<figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
-</figure>
-
-If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime:
-
-* Open your project.
-* In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
-
-![Git button menu with choices to pull and push branches](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->  ![Tools menu with choices to pull and push branches](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight))" -->
-
-### Work On Data Transformation
+## Hands-On
 
 Within the `r_basics_transform_data` folder, please open `transform_exercises.Rmd` to work through the exercises.  You'll see something like the below.
 
@@ -782,7 +715,7 @@ When you've done the best you can on your own, go to the next page, where we'll 
 Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`.  But if you're using the course materials in your own computer's installation of RStudio, it's possible you don't have `tidyverse` installed.  If you get a message telling you that there's no package installed with that name, issue this command: `install.packages("tidyverse")`.
 </div>
 
-### Solutions for Data Transformation
+### Solutions
 
 You can find the solution file in the "r\_basics\_transform\_data" directory.  Simply open `transform_solutions.Rmd` in that folder to see the answers.  
 
@@ -875,7 +808,7 @@ Beyond dplyr, there are a number of other [`tidyverse`](https://www.tidyverse.or
 * `purrr` offers advanced functionality to automate complex data transformations
 * `dbplyr` allows you to interact with a table inside a database as if it were a data frame
 
-![A set of five hexagonal logos: one each for tidyr (futuristic brooms fly up and to the right), lubridate (a calendar and clock), stringr (a violin), purrr (a hand-drawn sketch of a cat), and dbplyr (futuristic channellock pliers flying up and to the right)](media/tidyverse_logos.png)<!-- style = "max-width:600px;" -->  
+![""](media/tidyverse_logos.png)<!-- style = "max-width:600px;" -->  
 
 ## Feedback
 
