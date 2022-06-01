@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.1
+version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -20,6 +20,12 @@ After completion of this module, learners will be able to:
 - Use the "pipe" syntax to link a series of transformations in a "pipeline" that performs desired changes to a data frame
 
 @end
+
+@version_history
+1.0.2: revision to correct image links referring to wrong branch
+
+@end
+
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 @gifPreload
@@ -163,7 +169,7 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/education_modules/blob/main/r_basics_transform_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_transform_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
 </figure>
@@ -746,7 +752,7 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_transform_data/r_basics_transform_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/education_modules/blob/main/r_basics_transform_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_transform_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
 </figure>
