@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
+version:  1.0.1
 language: en
 module_template_version: 2.0.0
 narrator: US English Female
@@ -19,6 +19,11 @@ After completion of this module, learners will be able to:
 - Map columns of data to visual elements like color or position
 
 @end
+
+@version_history
+1.0.1: revision to correct image links referring to wrong branch
+@end
+
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 @gifPreload
@@ -170,7 +175,7 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_modules/blob/r_basics_visualize_data/r_basics_visualize_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/r_basics_visualize_data/r_basics_visualize_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/education_modules/blob/main/r_basics_visualize_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/main/r_basics_visualize_data/r_basics_visualize_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
 </figure>
@@ -873,4 +878,3 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Basics+Visualize+Data%22)!
 
 Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data workshop materials](https://skadauke.github.io/intro-to-r-for-clinicians-chop/).  We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.
-
