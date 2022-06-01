@@ -14,7 +14,7 @@ estimated_time: 30 minutes
 
 After completion of this module, learners will be able to:
 
-- Learn to describe technical problems more effectively
+- Describe technical problems more effectively
 - Explain why a "reproducible example" is critical to asking for help
 - Find potentially helpful answers in Stack Overflow
 
@@ -40,7 +40,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This module assumes that learners have started using technical methods such as writing code.  However, this module is useful for learners at any stage of adoption of reproducible methods in research such as scripting and version control.
+This module assumes that learners have started using technical methods such as writing code.  However, this module is useful for learners at any stage of their technical journey, and is not specific to any particular methods or programming languages. 
 
 **Learning Objectives**
 
@@ -57,10 +57,10 @@ Some technical types (including the author of this module) are also fans of *The
 
 While not even the entirety of the Internet can promise to tell you **everything** you need to know about technology, we do believe that the slogan "Don't Panic" is a useful one.  Technology can be baffling, inconsistent, and frustrating, and lead its users to experience rage or fear or feel incompetent.  If you feel this way, you're not alone, and there are practical steps to troubleshooting we'll share with you in this module to help you feel more empowered.  Try not to panic!
 
-The "steps" we're describing in this module don't necessarily take place in the order we describe -- often there's a flow from one method to another and back again as you get closer and closer to understanding, describing, and solving any problems you encounter in tech.  And you may have tips and ideas we haven't mentioned here, too.  Read on for more tips to help you move from panic to action!
+The "steps" we're describing in this module don't necessarily take place in the order we describe -- often there's a flow from one method to another and back again as you get closer and closer to understanding, describing, and solving your problem.  This module also is not exhaustive -- you may have tips, ideas, and methods we don't describe here. Everyone's debugging process looks a little bit different, and that's perfectly okay! 
 
 <div class = "important">
-One thing that tends to intimidate people is the dreaded **error message**.  Error messages can seem cryptic, but we encourage you to read them aloud if possible.  Reading aloud makes it less likely that you'll skim over important, useful, and recognizably helpful information.  Yes, you can certainly search for error message text in your favorite web browser, but you might surprise yourself with your debugging prowess if you slow down and read your error messages aloud.  Also, walking away from your computer and getting a snack is a completely acceptable problem-solving tactic.
+One thing that tends to intimidate people is the dreaded **error message**.  Error messages can seem cryptic, but we encourage you to read them aloud if possible.  Reading aloud makes it less likely that you'll skim over important, useful, and recognizably helpful information.  Yes, you can certainly search for error message text in your favorite web browser, but you might surprise yourself with your debugging prowess if you slow down and read your error messages aloud.  At the very least, reading it out loud might help you identify _which parts of the error code_ to search, as the messages can contain some generic text mixed with elements that are very specific to your code or data.
 </div>
 
 
@@ -81,7 +81,7 @@ If you're a clinician, you may have guided patients into more detailed descripti
 * When did you notice it begin?  How long has it been going on?
 * Is it accompanied by tenderness? Rash? Vomiting? Change in bowel habits?
 
-In both of these examples, we're offering ways to help describe a problem more thoroughly, and we're going to ask you to do the same when you describe a computing problem.  A good place to start is by documenting (yes, do actually type it out) details like:
+In both of these examples, describing a problem more thoroughly is the key to narrowing down the possible source of the issue. The same idea holds true when encountering a technical snag. When something isn't working as expected, a good place to start is by documenting (yes, do actually type it out) details like:
 
 * What did you try to do?  
 * What code did you use?
@@ -95,9 +95,9 @@ When you're in a hurry, in a panic, or annoyed (at yourself, at your computer, o
 
 <div class = "important">
 
-Which of these problem descriptions would you rather tackle?  Remember that no one can read your mind and that taking a breath and giving a few details will help you **and** the people willing to lend you a hand.
+Which of these problem descriptions would you rather tackle?  
 
-Option 1:  "This program is garbage, I've spent an hour trying to import data and it just doesn't work."
+Option 1:  "I'm so frustrated. No matter what I try to import my data, I can't get it to work! I just keep getting error messages. "
 
 Option 2:  "I'm so frustrated.  I have been trying to load a .csv from my local drive using the `read_csv` function, which I've read is the best way to import .csv data, but I keep getting the error `Error in read_csv("intervention_case_control.csv") : could not find function "read_csv"`.  I know the file is there, and I'm 99% sure it's not a file path issue."
 
@@ -107,27 +107,21 @@ Option 2:  "I'm so frustrated.  I have been trying to load a .csv from my local 
 
 Once you've described the problem, even if just to yourself, try explaining it to... a rubber duck!  Yes, you read that correctly.  "Rubber duck debugging" is an old trick used by software developers, and while the traditional object used for this exercise is a rubber duck, you can also use your newborn, a pet, or a sock puppet.  
 
-![Rubber duck.](media/rubber_duck.png)<!-- style = "max-width: 400px;" -->
+![""](media/rubber_duck.png)<!-- style = "max-width: 400px;" -->
 
 <figcaption style = "font-size: 0.8em; margin-bottom:1rem;">Image courtesy Steve Webel, https://www.flickr.com/photos/webel/306290032 </figcaption>
 
-The idea is that by describing your problem carefully and kindly to something or someone you care about but who doesn't know much about coding, you'll unwittingly stumble upon the answer.  We've also experienced this when we've asked a supervisor to "please come look at this code".  As soon as we start explaining the problem, the answer becomes clear (and sometimes, maddeningly, the problem simply disappears, presumably due to boss promximity).
+The idea is that by describing your problem carefully to something or someone who doesn't know much about coding, you'll unwittingly stumble upon the answer.  We've also experienced this when we've asked a supervisor to "please come look at this code".  As soon as we start explaining the problem, the answer becomes clear (or sometimes, inexplicably, the problem simply disappears, presumably due to the magical qualities of boss proximity, but that's beyond the scope of this module).
 
-Remember that your rubber duck (or sock puppet, etc.) isn't the expert you are, so you'll have to gently explain **why** you want to do certain things and how various procedures work.  With luck, this cognitive trick of getting back to basics will be enough to help you realize what made things go wrong.  If not, you can consider additional techniques, like searching for clues online and asking others for help.  Plus, you've described your problem simply, which will help other people understand what you're trying to do and what's going wrong.
+Remember that your rubber duck (or sock puppet, etc.) isn't the expert you are, so you'll have to explain **why** you want to do certain things and how various procedures work.  With luck, this cognitive trick of getting back to basics and fully mapping out the logic of each step will be enough to help you realize what made things go wrong.  If not, you can consider additional techniques, like searching for clues online and asking others for help.  Plus, you've described your problem simply, which will help other people understand what you're trying to do and what's going wrong.
 
 ## Searching for Clues Online
 
-One thing you might not realize if you're new to coding or version control or other technical fields is that even experts who write software all day often use the Internet for help.  In fact, much of what distinguishes experts from novices is knowing how to search for answers more effectively.  Experts know tech lingo enough to use search terms like "R ternary operator" or "git squash and merge or rebase", and they know which websites and even which authors are trustworthy.  If you feel as though searching for help is a sign of weakness or inability, we invite you to ask your friendly local neighborhood web developer or data scientist or genomics researcher how well they could do their jobs without a search engine.  Our guess is that they'll explain that while experience has given them a lot of best practices and instincts that make life easier, many of the small implementation details simply aren't something worth memorizing when Google or Bing can handle that instead.
+One thing you might not realize if you're new to coding or version control or other technical fields is that even experts who write software all day often use the Internet for help. Sometimes, people find this surprising! In fact, depending upon your field it may well be that reaching for a search engine to answer a "simple" question would be considered bad form. If you feel as though searching for help is a sign of weakness or inability, we invite you to ask your friendly local neighborhood web developer or data scientist or genomics researcher how well they could do their jobs without a search engine.  Our guess is that they'll explain that while experience has given them a lot of best practices and instincts that make life easier, many of the small implementation details simply aren't something worth memorizing when Google or Bing can handle that instead.
 
-Depending on your field, this may be surprising to you.  It may well be that in your field, reaching for a search engine to answer a simple question would be considered bad form.  But we want you to keep in mind that learning programming (and other technical skills) has some basic principles:
+In fact, much of what distinguishes experts from novices is knowing how to search for answers more effectively.  Experts know tech lingo enough to use search terms like "R ternary operator" or "git squash and merge or rebase", and they know which websites and even which authors are trustworthy.  
 
-* Learning in tech requires repetition
-* Only active, constructive learning sticks, long term
-* Failure is the most useful technique in technical education
 
-That's right!  Failure is incredibly useful, and you can use failure as leverage as you learn to search more effectively to find answers to your tech problems (or even just search to figure out what your problem is called).
-
-When you need to find solutions online, you have two main goals.  The first is asking the **right question**.  The other is using the **right source**.  
 
 ### The Right Question
 
@@ -143,7 +137,7 @@ Luckily, learning to ask the right question using trial and error is a skill you
 
 The author of this module did grad school for the first time in Spain, and had been in Spain for around a year when they went looking for a tool necessary to prepare that evening's meal.  They didn't know the name of the thing and at the time, it was really hard to explain what the thing was to friends and roommates.  But then they remembered that it was often used for shredding carrots for salads.  Since the word "shred" wasn't part of their Spanish vocabulary, they did the best they could and asked, "¿cómo se llama el enemigo de zanahorias?" and used pantomime and sound effects to mimic using a grater to shred carrots finely.  "What do you call the enemy of carrots?"  It was a silly way to describe the use of a grater, but it was effective, and memorable!  (By the way, "grater" in Spanish is "rallador".)
 
-Does this  feel familiar to you?  Maybe you don't even know what a concept is called or how to ask for information, and feel silly or inarticulate when you can only describe it in some simple terms you know.  This is very typical in learning new technology schills. Does one "github" a file?  Or "git" a file?  Is "markdown" a thing, or an action?  Is it right to say "I will markdown this file."?  Or "I will make a markdown."?  You may know a few words but aren't yet sure how they interact with each other.  The nice thing is that modern search engines (we'll use Google for our examples, but other search engines are similar) are very good at helping you use the few words you know to provide you with more precise terms.  As an example, you could even try "Googling" phrases like "I need to make tiny carrot pieces" or "what thing is sharp and has holes and you can cut carrots with it".  Surprisingly enough, you'll find great suggestions in "Related searches".  By scanning the first page of search results, you can hone your vocabulary and learn, in context, what a "grater" is.
+Does this feel familiar? This feeling of awkward inarticulacy can be very typical in learning new technology skills. Does one "github" a file?  Or "git" a file?  Is "markdown" a thing, or an action?  Is it right to say "I will markdown this file."?  Or "I will make a markdown."?  Even once you have a few of the most common words figured out, you might not be sure how they interact with each other. The nice thing is that modern search engines (we'll use Google for our examples, but other search engines are similar) are very good at helping you use the few words you know to provide you with more precise terms.  For example, Googling phrases like "I need to make tiny carrot pieces" or "what thing is sharp and has holes and you can cut carrots with it" can provide surprisingly great suggestions in "Related searches".  By scanning the first page of search results, you can hone your vocabulary and learn, in context, what a "grater" is.
 
 The next time you are trying to solve a coding problem, try using your first two or three searches **just to hone and refine your question and your vocabulary**.  Don't be tempted to click on the first link that might be an answer, but instead, use the titles of the search results, the "Related searches" that are suggested, and other context clues to get a more precise handle on what your use case is called.
 
@@ -153,7 +147,7 @@ For example, let's say you are new to using SQL and you have to get data out of 
 
 Go ahead and search on those phrases or your own problem description.  
 
-Before too long, you should have figured out that there's a special work for that kind of work in SQL, and that word is "join".  That means that your next search question might be "how to join in SQL".  By tapping into novel jargon, your results will be much more useful and precise.  Sometimes we might do two or three or even more searches just to hone our language and make sure that we'll be getting high quality results... and not ask a question like "What year did Tom Hanks land on the moon".
+Before too long, you should have figured out that the special word for that kind of work in SQL is "join".  That means that your next search question might be "how to join in SQL".  By tapping into novel jargon, your results will be much more useful and precise... which hopefully helps us not ask a question like "What year did Tom Hanks land on the moon".
 
 ### The Right Source
 
@@ -175,7 +169,7 @@ One common place that many people find extremely useful for solving technical pr
 We'll talk about how to contribute good questions to Stack Overflow later in this module, but for now let's consider the anatomy of a Stack Overflow question.  Below, we've searched for the phrase "ggplot black and white", because we need to create a black and white data visualization and we like using the `ggplot2` package in R.  You'll notice that in the list of search results, each one has a descriptive title and a short snippet.  To the left of each search item, there's a bit of information about votes, answers, and views.
 
 
-![Search results within Stack Overflow for "ggplot black and white".](media/stack_overflow.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));"-->
+![The search provides hundreds of results. On the right of the screen the default sort by option is "Relevance". Next to that is newest, and then a dropdown for additional options labelled "More".](media/stack_overflow.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));"-->
 
 When sourcing an answer from Stack Overflow, look for:
 
@@ -198,7 +192,7 @@ If you decide to create a Stack Overflow (or other similar site) account and sta
 
 ### Making a Minimal Reproducible Example
 
-A **(minimal) reproducible example** (not everyone includes the word "minimal" and some abbreviate it to **reprex**) is a way for another person to re-create the problem you're experiencing in just a few lines they can run on their own computer.  Usually, your data or computing details are something you want to keep secret -- you just want answers about how to do one specific thing to your data.  If you're doing data analysis, you might have hundreds of rows, dozens of columns, and get an error halfway through an eighty-line script.  So, how can you create a reproducible example?
+A **(minimal) reproducible example** (not everyone includes the word "minimal" and some abbreviate it to **reprex** (pronounced ree-precks)) is a way for another person to re-create the problem you're experiencing in just a few lines they can run on their own computer.  Usually, your data or computing details are something you want to keep secret -- you just want answers about how to do one specific thing to your data.  If you're doing data analysis, you might have hundreds of rows, dozens of columns, and get an error halfway through an eighty-line script.  So, how can you create a reproducible example?
 
 You can start by creating separate data that shares relevant details with your situation.  For example, if you're trying to separate first names and last names by using the space between them, you might want to create a sample data frame or table with three rows and just one column, writing the R, Python, or SQL code needed to create a simple data structure like this:
 
@@ -230,7 +224,7 @@ You'll also want to include important details like what language you're working 
 
 To go back to our car analogy, would you rather help a friend figure out what's wrong with their car if they said "OK, let it get warm for about five minutes, then put it in reverse and you'll hear it squeal" or "Well, I think I have seen this on long trips, so maybe drive it for an hour or two, and then try a few things like parallel parking or backing into a garage and I think you might hear the sound"?
 
-Creating a minimal reproducible example means that you might have to do a significant amount of work to figure out how exactly to reproduce the problem, but that effort is incredibly useful -- to you, and to your online helpers.
+Creating a minimal reproducible example means that you might have to do a significant amount of work to figure out how exactly to reproduce the problem, but that effort is incredibly useful -- to you, and to your online helpers. In fact, the process of creating a reprex may end up leading you to your own solution, all without ever getting to the stage of posting it. And if it doesn't (because that won't always happen) you're perfectly set up to get help from others! 
 
 Stack Overflow itself offers a great post called [How to create a Minimal, Reproducible Example](https://stackoverflow.com/help/minimal-reproducible-example) and we strongly urge you to read this post before asking your first question.  If you're not sure how in your circumstance to create such an example, say so!  You might, for example, post using text like this:
 
