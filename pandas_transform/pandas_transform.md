@@ -57,8 +57,8 @@ sagecell.makeSagecell({inputLocation: 'div.python_data_init',
                       evalButtonText: 'Run python',
                       languages: ["python"],
                       editor: 'codemirror-readonly',
-                      hide: ['fullScreen', 'permalink','output','evalButton'],
-                      autoeval: 'true',
+                      hide: ['fullScreen', 'permalink','output',],
+                      autoeval: 'false',
                       linked: 'true',
                       linkKey: "data"
                       });       
@@ -73,6 +73,7 @@ sagecell.makeSagecell({inputLocation: 'div.python_data',
                       });                
 </script>
 @end
+persistent: true
 -->
 
 # Transform Data with pandas
