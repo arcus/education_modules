@@ -57,8 +57,8 @@ sagecell.makeSagecell({inputLocation: 'div.python_data_init',
                       evalButtonText: 'Run python',
                       languages: ["python"],
                       editor: 'codemirror-readonly',
-                      hide: ['fullScreen', 'permalink','output',],
-                      autoeval: 'false',
+                      hide: ['fullScreen', 'permalink','output','evalButton'],
+                      autoeval: 'true',
                       linked: 'true',
                       linkKey: "data"
                       });       
