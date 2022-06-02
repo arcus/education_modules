@@ -174,7 +174,7 @@ There are lots of options for the `sort` command. All of the options are visible
 
 As soon as we sort a file, we run into the question of what to do if two lines are identical. The `uniq` command will output the lines of the file in order, but if a line is identical to the line above it, it will be printed only once.
 
-We will use this command more in combination with some other commands, but in a file like `Animals.csv` where every line is different, running `uniq Animals.csv` isn't particularly interesting. 
+We will use this command more in combination with some other commands, but in a file like `Animals.csv` where every line is different, running `uniq Animals.csv` isn't particularly interesting.
 
 ### Writing output to a file
 
@@ -208,6 +208,32 @@ In the bash language, the right arrow redirects output, and the left arrow (or "
 
 ### Quiz: inputs and outputs
 
+Suppose you have acquired a new file with the uninformative name `newfile.txt`. You look at its contents and see that `cat newfile.txt` returns
+
+```
+Callinectes sapidus
+
+blue crab,crustacean
+
+Source: https://www.fisheries.noaa.gov/species/blue-crab
+
+The blue crab is a highly sought-after shellfish. Blue crabs live up and down the Atlantic Coast and in the Gulf of Mexico and are caught by both commercial and recreational fishermen. Its scientific name—Callinectes sapidus—translated from Latin means 'beautiful savory swimmer.'
+
+Blue crabs are the most valuable fishery in the Chesapeake Bay. They are also major predators of benthic communities and are prey for many other fish species. Blue crabs are so treasured in the region that the blue crab is the Maryland state crustacean.
+
+Length: 9 in
+Weight: .33 lbs
+```
+
+You want to convert information in this file into a similar format to your other animal files, while avoiding typing the information in by hand.
+
+1. What command would you type to create a new file `blue_crab.txt` that contains only the first line of this file?
+
+[[head -1 newfile.txt > blue_crab.txt]]
+
+2. What command would you type to create a new file `blue_crab.dat` that contains only the last two lines of this file?
+
+[[tail -2 newfile.txt > blue_crab.dat]]
 
 ## Linking commands
 
@@ -218,6 +244,30 @@ With smaller files, the benefits of using pipes over making intermediate files a
 ### Using the pipe `|`
 
 ### Quiz: linking with `|`
+
+Let's return to the uninformatively named `newfile.txt`:
+
+```
+Callinectes sapidus
+
+blue crab,crustacean
+
+Source: https://www.fisheries.noaa.gov/species/blue-crab
+
+The blue crab is a highly sought-after shellfish. Blue crabs live up and down the Atlantic Coast and in the Gulf of Mexico and are caught by both commercial and recreational fishermen. Its scientific name—Callinectes sapidus—translated from Latin means 'beautiful savory swimmer.'
+
+Blue crabs are the most valuable fishery in the Chesapeake Bay. They are also major predators of benthic communities and are prey for many other fish species. Blue crabs are so treasured in the region that the blue crab is the Maryland state crustacean.
+
+Length: 9 in
+Weight: .33 lbs
+```
+
+What command would append the 3rd line, which reads `blue crab,crustacean` to the file `Animals.csv`?
+
+[(X)] `head -3 newfile.txt | tail -1 >> Animals.csv`
+[( )] `head -3 newfile.txt | tail -1 > Animals.csv`
+[( )] `tail -1 newfile.txt | head -3 >> Animals.csv`
+[( )] `tail -1 newfile.txt | head -3 > Animals.csv`
 
 ## Additional Resources
 
