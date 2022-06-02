@@ -88,19 +88,93 @@ As your bash scripting progresses, you may find or create commands that simultan
 
 In your command line interface, use `cd` to navigate to the directory `learning_bash-main` that you downloaded in the [lesson preparation](#lesson-preparation) section. Since the commands we are learning in this section don't make any changes to your files, definitely try them out on some of your own files too!
 
-**Word count**
+#### Word count
 
-`wc`
+The word count command `wc` takes a file (or files) as input and returns some basic metadata:
 
-**First and last lines of a file**
-`head`
-`tail`
+```
+wc Animals.csv
+      19      35     341 Animals.csv
+```
 
-**Sorting**
-`sort`
+The output counts the number of lines (19), the number of words (35), and the number of bytes (341) in the file, followed by the file's name.
+
+Some common options are to ask for only some of this metadata using flags:
+
+- `wc -l` returns the number of lines followed by the file's name.
+- `wc -w` returns the number of words followed by the file's name.
+- `wc -c` returns the number of bytes followed by the file's name.
+
+
+<div class = "learnmore">
+The `wc` command distinguishes words as strings of characters on the same line separated by at least one space, so it counts `wolf,mammal` as a single word and `blue and yellow macaw,bird` as four words.
+</div>  
+
+You can also pass multiple files to the `wc` command. It will print out the word count for each, and then helpfully total each column for you at the bottom:
+
+```
+wc wolf.txt dog.txt
+      1       2      12 wolf.txt
+      1       3      23 dog.txt
+      2       5      35 total
+```
+#### First and last lines
+
+You might also want to look at the contents of a file. The `cat` command lets you see the entire file, but sometimes only the first few lines are important for your purposes. Maybe your file contains a long article, but the first few lines are the title, author, and date it was published. You may want that information without having to print out the entire article the way that `cat` would.
+
+The command `head` outputs the first 10 lines of a file. You can ask for the first `n` lines by using the flag `-n`:
+
+```
+head -3 Animals.csv
+blue and yellow macaw,bird
+blue jay,bird
+blue whale,mammal
+```
+
+The `head` command is particularly useful when you know a certain type of information is at the beginning of your file.
+
+The `tail` command is similarly used to output the last lines of a file:
+
+```
+tail -4 Animals.csv
+red panda,mammal
+tiger,mammal
+wolf,mammal
+blue morpho,insect
+```
+
+The `tail` command is particularly useful when you know a certain type of information is at the end of your file, perhaps because you appended it to the end of the file.
+
+#### Sorting
+
+Sorting the contents of a file can be extremely useful. The file `Animals.csv` has animals listed alphabetically, but the blue morpho butterfly was added to the list later and and therefore out of alphabetical order.
+
+The `sort` command outputs the lines of a file in alphabetical order, the same order that the `ls` command uses to output file names.
+
+**Give it a try** in your command line interface:
+
+```
+sort Animals.csv
+```
+
+You can change how the lines are ordered using flags. The `-r` flag reverses the order. Try it out:
+
+```
+sort -r Animals.csv
+```
+<div class ="learnmore">
+There are lots of options for the `sort` command. All of the options are visible in the manual which you can see by typing `man sort`. In addition to reversing the order with `-r`, a few particularly useful ones include:
+
+- `sort -n` which sorts by numerical value
+- `sort -b` which ignores leading blanks
+- `sort -f` which treats upper and lower case characters as the same while sorting.
+</div>
 
 **Unique occurrences**
-`uniq`
+
+As soon as we sort a file, we run into the question of what to do if two lines are identical. The `uniq` command will output the lines of the file in order, but if a line is identical to the line above it, it will be printed only once.
+
+We will use this command more in combination with some other commands, but in a file like `Animals.csv` where every line is different, running `uniq Animals.csv` isn't particularly interesting. 
 
 ### Writing output to a file
 
