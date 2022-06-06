@@ -230,18 +230,144 @@ You want to convert information in this file into a similar format to your other
 1. What command would you type to create a new file `blue_crab.txt` that contains only the first line of this file?
 
 [[head -1 newfile.txt > blue_crab.txt]]
+<script>
+  let input = "@input".trim().toLowerCase();
+  input == "head -1 newfile.txt > blue_crab.txt" || input == "head -1 newfile.txt >> blue_crab.txt";
+</script>
+***
+<div class = "answer">
+The output of `head -1 newfile.txt` is the first line of `newfile.txt`. Since no file named  `blue_crab.txt` previously existed, overwriting (`>`) and appending (`>>`) that output have the same result.
+</div>
+***
 
 2. What command would you type to create a new file `blue_crab.dat` that contains only the last two lines of this file?
 
 [[tail -2 newfile.txt > blue_crab.dat]]
-
+<script>
+  let input = "@input".trim().toLowerCase();
+  input == "tail -2 newfile.txt > blue_crab.dat" || input == "tail -2 newfile.txt >> blue_crab.dat";
+</script>
+***
+<div class = "answer">
+The output of `tail -2 newfile.txt` is the last two lines of `newfile.txt`. Since no file named  `blue_crab.dat` previously existed, overwriting (`>`) and appending (`>>`) that output have the same result.
+</div>
+***
 ## Linking commands
 
 We could link commands by writing the output of one command to a file, and then running another command on that file. However if we don't actually need that intermediate file it is possible to speed up the process by passing the output of one command directly to another using a "pipe."
 
+The vertical line `|` is called a **pipe**. On American qwerty keyboards symbol `|` is located on the same key as the backslash ` \ ` and can be typed by using the `shift` key with ` \ `.
+
+<div class = "help">
+The pipe symbol is located in different places on different keyboards. If you have trouble finding it, try an internet search for "pipe symbol" along with the country or language of your keyboard.
+</div>
+
 With smaller files, the benefits of using pipes over making intermediate files are mostly from having fewer commands to type and run. But if you start working with really large datasets, maybe you are working in an "omics" field like genomics or metabolomics, creating and saving intermediate files, as well as writing and reading them, can use significant time and energy.  
 
 ### Using the pipe `|`
+
+The pipe symbol `|` is like the arrow symbols `>` and `>>` in that it redirects the output of the command that precedes it. Instead of writing that output to a file, the pipe turns that output into input for the command that follows.
+
+In the previous section we learned how to sort the lines in the file `Animals.csv`. But maybe we only care about the last 3 animals listed alphabetically. With a pipe we can first `sort` and then immediately look at the `tail`. Give it a try:
+
+```
+sort Animals.csv | tail -3
+```
+
+You get the last three animals of the alphabetically sorted list: red panda, tiger, and wolf.
+
+What do you think will happen if you switch the order of `sort` and `tail`? Try it out:
+
+```
+tail -3 Animals.csv | sort
+```
+Now the blue morpho butterfly is first, instead of the red panda because the last three lines of `Animals.csv` were tiger, wolf, and blue morpho.
+
+<div class = "important">
+Something helpful about standard input and standard output here? but not too confusing?
+</div>
+
+### Combining `|` and `>`
+
+You can also pipe commands and then write the final output to a file. For example we could create a new file with just the last three alphabetical animals from `Animals.csv`.
+
+```
+sort Animals.csv | tail -3 > last.txt
+```
+
+This command doesn't give any output, but take a look at the contents of your new file `last.txt` and confirm that it contains what you expected.
+
+The double arrow `>>` which concatenates or appends output to a file can also be combined with pipes. Try this line:
+
+```
+tail -3 Animals.csv | sort >> last.txt
+```
+
+Now the file `last.txt` should contain six lines:
+
+```
+red panda,mammal
+tiger,mammal
+wolf,mammal
+blue morpho,insect
+tiger,mammal
+wolf,mammal
+```
+
+### `uniq` revisited
+
+Now that the file `last.txt` has some repeated lines in it, we can get useful information out of the command `uniq`. This command outputs the lines of a file, but only those lines that are distinct from the line directly above.
+
+```
+uniq last.txt
+```
+
+Since all lines in `last.txt` are different from the line immediately preceding them, this isn't particularly useful. However when combined with the `sort` function, we can eliminate repeated lines:
+
+```
+sort last.txt | uniq
+```
+
+Now there are no repeated lines! They are also in alphabetical order since we first sorted alphabetically.
+
+If we want to know how many copies of each line were in the original file, the option `-c` for "count" will output the lines with each preceded by the number of occurrences:
+
+```
+sort last.txt | uniq -c
+```
+### Chaining multiple pipes
+
+Piping the output of one command into another is extremely powerful, and chaining multiple pipes to get a **pipeline** only increases the number of things you can do with pipes!
+
+Maybe you want to know how many unique animals are in the file `last.txt`. We saw on the last page how to output the list of unique lines using `sort` followed by `uniq`. If we want to know how many (unique) lines there are, we can use the word count function `wc` with the option `-l` for number of lines:
+
+```
+sort last.txt | uniq | wc -l
+```
+
+This gives us the single numeric output `4`; there are 4 lines corresponding to the 4 unique animals listed in `last.txt`.
+
+What if we want to know which animal has the shortest scientific name? This also becomes a three step process:
+
+1. Count the characters in each `.txt` file with `wc -m *.txt`. For further explanation of how `*.txt` calls all of the `.txt.` files, see the [lesson on searching and organizing files](link to bash 102).
+2. Sort the output by number with `sort -n`.
+3. Output the first line with `head -1`.
+
+Putting these steps together:
+
+```
+wc -m *.txt | sort -n | head -1
+      10 indian_cobra.txt
+```
+The Indian cobra, scientific name _Naja naja_ has the shortest character count of any of the animals listed here.
+
+<div class = "learnmore">
+**Why is the character count for `Naja naja` 10?**
+
+The character count includes each of the 8 letters, as well as the single blank space and the "newline" character that indicates the end of the line.
+</div>
+
+You can chain as many commands as you want into a pipeline, including search commands like `grep` and `find` that we haven't talked about in this lesson.
 
 ### Quiz: linking with `|`
 
@@ -271,9 +397,6 @@ What command would append the 3rd line, which reads `blue crab,crustacean` to th
 
 ## Additional Resources
 
-- [Brief Illustration of the Difference between Shell and Kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/)
-- [Exhaustive Wiki of Linux Filesystem Hierarchy](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/index.html)
-- [Reinforce Your New Knowledge through this Learing the Shell Page](https://linuxcommand.org/lc3_learning_the_shell.php)
 - [Unix Command Line I Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/3/)
 - [Unix Command Line II Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/2/)
 - [Intermediate Bash Scripting Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/1/)
