@@ -7,8 +7,8 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title:  Bash: Combining Commands
-comment:  This module will teach you how to combine two or more commands in bash to create more complicated pipelines.
-long_description: This module is for learners who can use some basic bash commands and want to learn to how to use the output of one command as the input for another command.
+comment:  This module will teach you how to combine two or more commands in bash to create more complicated pipelines in Bash.
+long_description: This module is for learners who can use some basic Bash commands and want to learn to how to use the output of one command as the input for another command.
 estimated_time: 30 minutes
 
 @learning_objectives
@@ -40,11 +40,9 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-Learners should be familiar with using a bash shell and [navigating a file system from the command line](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md).
+Learners should be familiar with using a bash shell and [navigating a file system from the command line and look at the contents of a file](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md).
 
-Learners should also know how to view the contents of a file using `cat`.
-
-The only other commands that will be assumed are the navigation commands `cd`, `ls`, and `pwd`.
+The only commands that will be assumed are the navigation commands `cd`, `ls`, and `pwd` and `cat`, all of which are explained in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
 **Learning Objectives**
 
@@ -57,7 +55,7 @@ The only other commands that will be assumed are the navigation commands `cd`, `
 
 You will get the most out of this lesson if you follow along with the examples and try out the commands.
 
-**Open a bash shell.**
+**Open a Bash shell.**
 
 If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
@@ -297,7 +295,7 @@ sort Animals.csv | tail -3 > last.txt
 
 This command doesn't give any output, but take a look at the contents of your new file `last.txt` and confirm that it contains what you expected.
 
-The double arrow `>>` which concatenates or appends output to a file can also be combined with pipes. Try this line:
+The double arrow `>>` which appends output to a file can also be combined with pipes. Try this line:
 
 ```
 tail -3 Animals.csv | sort >> last.txt
@@ -349,7 +347,7 @@ This gives us the single numeric output `4`; there are 4 lines corresponding to 
 
 What if we want to know which animal has the shortest scientific name? This also becomes a three step process:
 
-1. Count the characters in each `.txt` file with `wc -m *.txt`. For further explanation of how `*.txt` calls all of the `.txt.` files, see the [lesson on searching and organizing files](link to bash 102).
+1. Count the characters in each `.txt` file with `wc -m *.txt`. For further explanation of how `*.txt` calls all of the `.txt.` files, see the [lesson on searching and organizing files](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_102/bash_command_line_102.md).
 2. Sort the output by number with `sort -n`.
 3. Output the first line with `head -1`.
 
@@ -394,9 +392,28 @@ What command would append the 3rd line, which reads `blue crab,crustacean` to th
 [( )] `head -3 newfile.txt | tail -1 > Animals.csv`
 [( )] `tail -1 newfile.txt | head -3 >> Animals.csv`
 [( )] `tail -1 newfile.txt | head -3 > Animals.csv`
+***
+<div class = "answer">
+The first three lines are returned by `head -3 newfile.txt`:
+```
+Callinectes sapidus
+
+blue crab,crustacean
+```
+and the last line of that text is returned by `tail -1`:
+```
+blue crab,crustacean
+```
+
+Since we don't want to overwrite the text already in `Animals.csv` we have to use the double arrow `>>` to append that line to the end of the file.
+</div>
+***
 
 ## Additional Resources
 
+The [Software Carpentries](https://software-carpentry.org) has a series of lessons on the [Unix Shell](https://swcarpentry.github.io/shell-novice/).
+
+These webinars, recorded by Jacob Levernier are a great walk through the command line.
 - [Unix Command Line I Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/3/)
 - [Unix Command Line II Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/2/)
 - [Intermediate Bash Scripting Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/1/)
@@ -415,4 +432,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash+Scripting+Basic%22)!
+We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash+Combining+Commands%22)!
