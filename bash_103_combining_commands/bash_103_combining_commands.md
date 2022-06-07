@@ -60,7 +60,7 @@ You will get the most out of this lesson if you follow along with the examples a
 If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
 <div class = "important">
-We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
+We will be manipulating, writing, and overwriting files in this lesson, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
 </div>
 
 **Download the files.**
@@ -102,10 +102,17 @@ Some common options are to ask for only some of this metadata using flags:
 - `wc -l` returns the number of lines followed by the file's name.
 - `wc -w` returns the number of words followed by the file's name.
 - `wc -c` returns the number of bytes followed by the file's name.
+- `wc -m` returns the number of characters followed by the file's name.
 
 
 <div class = "learnmore">
+**Words**
+
 The `wc` command distinguishes words as strings of characters on the same line separated by at least one space, so it counts `wolf,mammal` as a single word and `blue and yellow macaw,bird` as four words.
+
+**Bytes and characters**
+
+For all of the files in this lesson, the number of bytes is the same as the number of characters. However when a file contains more than simple plain text, the number of bytes and number of characters can differ by quite a bit!
 </div>  
 
 You can also pass multiple files to the `wc` command. It will print out the word count for each, and then helpfully total each column for you at the bottom:
@@ -201,7 +208,7 @@ sort Animals.csv >> animals.txt
 Again there is no output shown because it was redirected into the file `animals.txt`. Check that `animals.txt` now contains the word count at the top, followed by a sorted copy of the data from `Animals.csv`.
 
 <div class = "learnmore">
-In the bash language, the right arrow redirects output, and the left arrow (or "less than" sign) redirects input.
+In the Bash language, right arrows redirect output, and left arrows (or "less than" sign) redirect input.
 </div>
 
 ### Quiz: inputs and outputs
