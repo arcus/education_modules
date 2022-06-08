@@ -160,11 +160,49 @@ If you already completed this work for a previous module, and it's been a while 
 If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.
 </div>
 
-## Why different data types?
+## Common data types in R
 
-Computers are very good at what they do, but humans are much smarter about most things.
+R has several basic data types, and several more that are for special situations.
+The most commonly used basic data types in R are:
 
-## Vectors and data types
+- character
+- numeric
+- integer
+- logical
+
+Of these, the first two (character data and numeric data) are used most in dataframes. The most useful extra data types for researchers are:
+
+- factors
+- dates and datetimes
+
+We'll explore each of these data types in more detail in the sections that follow.
+But first, we'll go over some general information about how data types work in R and why you need to pay attention to them.
+
+<div class = "help">
+**Confusing terminology:**
+
+As you learn more about R, you'll see references to "types", "classes", and "modes", all of which seem very similar.
+There are some real (but subtle) [differences between them](https://stats.stackexchange.com/questions/3212/mode-class-and-type-of-r-objects), but for the most part those differences exist for historical reasons only --- from a practical standpoint, type, class, and mode all work pretty similarly.
+
+To help cut through the confusion, we'll stick to recommending functions that work well for all three, rather than functions that are designed to work with only one.
+In general, most high-level functions (e.g. any statistical or plotting functions) don't require you to distinguish between type, class, and mode.
+</div>
+
+### Why different data types?
+
+Computers are very good at what they do, but humans are still much smarter about many things.
+
+One thing people are very good at but computers struggle with is quickly and accurately classifying information by type ---
+for example, a person can browse through a column of data with entries like "Elif", "Clara", and "Kansia" and know those are words (more specifically, probably names), whereas a column with entries like "1.2", "0.45", and "3.1" is numbers.
+And being able to distinguish those different kinds of columns means if you ask a human to summarize those data, they might do something like take the average of number column, but they wouldn't try to get the average of a list of words.
+Computers, on the other hand, are very likely to make exactly that kind of mistake.
+
+To help computers process data effectively, dataframes in R include **metadata** that tell R what type of information is stored in each column.
+That makes it possible for R to avoid silly mistakes like trying to get the average of a list of words, but it also means we can have useful defaults like [automatically dummy-coding any categorical variables you enter as predictors in a linear model](link), and providing helpful error messages when you try to use a variable of one type in a function that requires a different data type.
+
+When you're working with data in R, you'll want to check your dataframes to make sure R is thinking about the variables they way you intend it to.  
+
+### Vectors and data types
 
 A vector is a sequence of R objects, for example, each of the entries in a list, or each of the observations in a column of data.
 An atomic vector (usually shortened to just "vector") is a sequence of objects that are all the same type.
@@ -175,8 +213,21 @@ Technically, "vector" is a general term in R that includes both atomic vectors a
 In practice, when most people talk about vectors in R, they mean atomic vectors only, and they will specify lists if they want to talk about lists instead.
 </div>
 
-The function `c()` (short for "combine") in R is used to create a new atomic vector.
-R will guess the correct data type for the vector based on what you enter.
+Vectors are the main workhorse of most R analyses, including anything with dataframes --- each of the columns in a dataframe is an atomic vector.
+That means that a single column in an R dataframe must have just one data type.
+If you try to put elements of different types into the same column, you'll either get an error or R will [coerce](https://www.oreilly.com/library/view/r-in-a/9781449358204/ch05s08.html) it all into the same data type. 
+
+The function `c()` (short for "combine") in R is used to create an atomic vector.
+R will try to guess the correct data type for the vector based on what you enter.
+Although it usually does a good job, it can get hung up on some common issues.
+
+Try to guess what data type each of the following vectors will be:
+
+```r
+v1 <- c(2, 4, 3, "2kg")
+v2 <- c("June 10, 2020", "July 1, 2020", "March 13, 2020")
+v3 <- c("treatment", "control", "control", "treatment")
+```
 
 ## Data types in R
 
