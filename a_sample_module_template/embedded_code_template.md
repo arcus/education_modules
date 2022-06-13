@@ -86,33 +86,17 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 </script>
 @end
 
-@sage1
-<script input="hidden">
-// Make *any* div with class 'python_link1' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_link1',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'false',
-                      linked: 'true',
-                      linkKey: 'link1'
-                      });
+
+@SAGE.cell
+<lia-keep>
+<div class="@0">
+<script type="text/x-sage">
+@1
 </script>
+</div>
+</lia-keep>
 @end
 
-@sage2
-<script input="hidden">
-// Make *any* div with class 'python_link1' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_link2',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'false',
-                      linked: 'true',
-                      linkKey: 'link2'
-                      });
-</script>
-@end
 -->
 # Embedding Code into Liascript
 <div class = "overview">
@@ -131,48 +115,7 @@ sagecell.makeSagecell({inputLocation: 'div.python_link2',
 @learning_objectives
 
 </div>
-## Testing linking
 
-### cells of type 1
-@sage1
-<div class="python_link1">
-<lia-keep>
-<script type="text/x-sage">
-print(STR)
-</script>
-</lia-keep>
-</div>
-
-### more cells of type 1
-@sage1
-<div class="python_link1">
-<lia-keep>
-<script type="text/x-sage">
-STR = "link type 1"
-print(STR)
-</script>
-</lia-keep>
-</div>
-
-### cells of type 2
-@sage2
-<div class="python_link2">
-<lia-keep>
-<script type="text/x-sage">
-STR = "type 2"
-print(STR)
-</script>
-</lia-keep>
-</div>
-
-### cells of type 2
-@sage2
-<div class="python_link2">
-<lia-keep>
-print(STR)
-</script>
-</lia-keep>
-</div>
 ## Embedding sagemath cells
 
 One cool spin-off of the [SageMath Project](https://www.sagemath.org) is the [SageMathCell](https://sagecell.sagemath.org) which allows you to run a single cell, not just in Sage, but in a number of languages including both python and R.
@@ -200,89 +143,65 @@ By including `@sage` on any page you want to have a cell on, all of these enviro
 
 ### Python cells
 
-The `"python"` class will now give you a cell that runs python, and can be evaluated by clicking a button. The individual cell must be set up like this:
+The `python` class will now give you a cell that runs python, and can be evaluated by clicking a button. The individual cell must be set up like this:
 
-```
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
+````
+``` python @SAGE.cell(python)
 
 Your python code goes here.
 
-</script>
-</lia-keep>
-</div>
 ```
+````
 
-The `lia-keep` tag makes sure that the innermost script is read correctly, as text that will be the cell's input. The order of `div`, `lia-keep`, then `script` matters and the code will do weird things if `lia-keep` is inside the script of outside of the `div`.
+Under the hood the `@SAGE.cell` script is creating the sage cell and of the particular type, in this case `python`.
 
 Let's see a first example:
-
 @sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
+
+``` python @SAGE.cell(python)
 
 1+2  # this line will compute but not return output
 
 print(3+4) #but this line will return output
 
-</script>
-</lia-keep>
-</div>
+```
 
 <div class = "warning">
-One twitchy thing about sagemathcells is that they won't return output unless you specifically ask them to print. The next cell imports `pandas` and then creates a dataframe. If we make the last line `df` instead of `print(df)` it might not give us output even though a Jupyter notebook cell or using python in the command line would give output.
+One twitchy thing about SageMathCells is that they won't return output unless you specifically ask them to print. The next cell imports `pandas` and then creates a Data Frame. If we make the last line `df` instead of `print(df)` it might not give us output even though a Jupyter notebook cell or using python in the command line would give output.
 </div>
 
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
+``` python @SAGE.cell(python)
 import pandas as pd
 d = {'col1': [1, 2], 'col2': [3, 4]};
 df = pd.DataFrame(data=d);
 print(df)
-</script>
-</lia-keep>
-</div>
+```
 
-You can also have a python cell run automatically using the class `"python_run"`. This cell can still be edited and re-run by the user, but it will load with both the input and the output.
+You can also have a python cell run automatically using the class `python_run`. This cell can still be edited and re-run by the user, but it will load with both the input and the output.
 
-<div class="python_run">
-<lia-keep>
-<script type="text/x-sage">
+``` python @SAGE.cell(python_run)
 import numpy as np
 a = np.arange(15).reshape(3, 5)
 print(a.transpose())
-</script>
-</lia-keep>
-</div>
+```
 
-Even fancier, you can link cells using the class `'python_link'`, so that what is run in one cell impacts other cells run afterwards.
+Even fancier, you can link cells using the class `python_link`, so that what is run in one cell impacts other cells run afterwards.
 
-<div class="python_link">
-<lia-keep>
-<script type="text/x-sage">
+``` python @SAGE.cell(python_link)
 import numpy as np
 B = np.arange(16).reshape(4, 4) +  np.identity((4))
 print(B.transpose())
-</script>
-</lia-keep>
-</div>
+```
 
 In the cell above we imported `numpy` and defined a numpy array. Since the next cell is linked, if you run it after, it will use the same kernel as the cell above it.
 
-<div class="python_link">
-<lia-keep>
-<script type="text/x-sage">
+``` python @SAGE.cell(python_link)
 C = np.linalg.inv(B)
 print("B * C =")
 print(B,"*",C,"=")
 print(np.rint(np.dot(B,C)))
-</script>
-</lia-keep>
-</div>
+```
 
 <div class = "warning">
 These linked cells won't communicate from one page to the next, but you can have what you want in the kernel load in a linked cell at the start of each page.
@@ -291,11 +210,9 @@ These linked cells won't communicate from one page to the next, but you can have
 ### R cells
 @sage
 
-Similarly you can include R code in a cell with the class `"r"`:
+Similarly you can include R code in a cell with the class `r`:
 
-<div class="r">
-<lia-keep>
-<script type="text/x-sage">
+``` r @SAGE.cell(r)
 # R Program to find the multiplicationtable (from 1 to 10)
 # take input from the user
 num = 7
@@ -303,15 +220,11 @@ num = 7
 for(i in 1:10) {
 print(paste(num,'x', i, '=', num*i))
 }
-</script>
-</lia-keep>
-</div>
+```
 
-And if you want something to run automatically in R, the class `"r_run"` is currently set up to do that.
+And if you want something to run automatically in R, the class `r_run` is currently set up to do that.
 
-<div class="r_run">
-<lia-keep>
-<script type="text/x-sage">
+``` r @SAGE.cell(r_run)
 # Program to check if the input number is prime or not
 # take input from the user
 for(num in 1:20){
@@ -320,7 +233,7 @@ flag = 0
 if(num > 1) {
 # check for factors
 flag = 1
-for(i in 2:20) {
+for(i in 2:(num-1)) {
 if ((num %% i) == 0) {
 flag = 0
 break
@@ -334,66 +247,44 @@ print(paste(num,"is a prime number"))
 print(paste(num,"is not a prime number"))
 }
 }
-</script>
-</lia-keep>
-</div>
+```
 
 ### Loading data into a sagemathcell
 
 If your data is stored as a file in the GitHub repository, you can ask the sagecell to download it directly from GitHub. The `python_data_init` class will run automatically when the page loads. The assumption is that this is not code that you want the user to be able to change, so they can't. This is the set-up, with no output whatsoever.
 @sage
 
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
+``` python @SAGE.cell(python_data_init)
 
 import pandas as pd
 covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/embedded_code/a_sample_module_template/covid_testing.csv')
 
-</script>
-</lia-keep>
-</div>
+```
 
 If you use a linked cell to import the data, it will hang around for subsequent cells on the same page. You will have to reload everything for the next page, but this also helps keep tasks/topics organized. The `python_data` class is linked to `python_data_init` but will won't run until the user clicks a button.
 
 **Click the "Run python" button** to see that the data did in fact load:
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+``` python @SAGE.cell(python_data)
 print(covid_testing.loc[[0,1,2,3,4],["first_name","last_name"]])
-</script>
-</lia-keep>
-</div>
+```
 
 All of the `python_data` cells are linked to the first cell, and completely editable by the user.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+``` python @SAGE.cell(python_data)
 print(covid_testing.loc[4,:])
-</script>
-</lia-keep>
-</div>
+```
 
-The cells are also linked to each other, but the user has to run them in order if there are dependencies between them. These next two cells must be run in the order they are presented, or the latter on will not know what `day` means!
+The cells are also linked to each other and to the `python_data_init` cell which ran automatically. Because they are linked to a cell that ran automatically, all of them ran as soon as you loaded the page. Try running the second of these cells **before** the first to confirm that the object `day` is already defined:
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+``` python @SAGE.cell(python_data)
 day = covid_testing.loc[4,"pan_day"]
 print(day)
-</script>
-</lia-keep>
-</div>
+```
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+``` python @SAGE.cell(python_data)
 print(day >= 5)
-</script>
-</lia-keep>
-</div>
+```
 
 ### Define your own sagemath cells type
 
