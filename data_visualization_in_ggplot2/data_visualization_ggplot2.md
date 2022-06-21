@@ -222,9 +222,7 @@ First, we need to load the libraries we'll be using:
 
 ```r
 # the libraries we'll be using
-library(readr)
-library(dplyr)
-library(ggplot2)
+library(tidyverse)
 
 ```
 
