@@ -214,22 +214,41 @@ In practice, when most people talk about vectors in R, they mean atomic vectors 
 </div>
 
 Vectors are the main workhorse of most R analyses, including anything with dataframes --- each of the columns in a dataframe is an atomic vector.
-That means that a single column in an R dataframe must have just one data type.
-If you try to put elements of different types into the same column, you'll either get an error or R will [coerce](https://www.oreilly.com/library/view/r-in-a/9781449358204/ch05s08.html) it all into the same data type. 
+That means that **a single column in an R dataframe must have just one data type**.
+If you try to put elements of different types into the same column, you'll either get an error or R will [coerce](https://www.oreilly.com/library/view/r-in-a/9781449358204/ch05s08.html) it all into the same data type.
 
 The function `c()` (short for "combine") in R is used to create an atomic vector.
 R will try to guess the correct data type for the vector based on what you enter.
-Although it usually does a good job, it can get hung up on some common issues.
+A similar guessing process happens with most functions that read in new dataframes --- they guess column by column to determine the datatypes for each vector in the dataframe.
+Although R usually does a good job, it can get hung up on some common issues:
 
-Try to guess what data type each of the following vectors will be:
+- For a vector to be numeric, it must be **only** numbers, with no other content (including units, etc.)
+- By default, R sticks to its basic data types first, which means most vectors will be classified as either character or numeric. To get special data types like datetimes or factors, you either need to apply them manually (we'll work on that in the next section) or you need to use a function that is designed to guess more than just basic data types.
 
-```r
-v1 <- c(2, 4, 3, "2kg")
-v2 <- c("June 10, 2020", "July 1, 2020", "March 13, 2020")
-v3 <- c("treatment", "control", "control", "treatment")
-```
+## Quiz: Common data types
 
-## Data types in R
+For each of the example vectors below, guess what data type it will be:
+
+- [[character] [numeric] [neither, or both]]
+- [    [X]          [ ]           [ ]     ]  `c(2, 4, 3, "2kg")`
+- [    [ ]          [X]           [ ]     ]  `c(2.01, 0, 1/5, -3)`
+- [    [X]          [ ]           [ ]     ]  `c("June 10, 2020", "July 1, 2020")`
+- [    [X]          [ ]           [ ]     ]  `c("$10", "$12.50", "$9.25")`
+****
+<div class="answer">
+In order for a vector to be numeric, it must have only numbers (even characters that just indicate units, like "$" or "kg" will prevent a vector from being numeric because they are not numbers).
+Numbers can be whole or decimal, positive or negative, and they can even be represented as a fraction, but they have to be numbers.
+The only numeric vector above is `c(2.01, 0, 1/5, -3)` because it's the only one with exclusively numbers.
+
+Note that no vector will contain both character and numeric elements --- vectors have to only have one type of data in them, so if you attempt to include both character and numeric elements (e.g. `c(2, 4, 3, "2kg")`), R will coerce the whole vector to character.
+
+You may have thought that `c("June 10, 2020", "July 1, 2020")` would be of type "date" or "datetime" instead of character --- a very good guess!
+But R uses its basic data types first, and only applies extra data types like factor and datetimes when specifically asked to do so.
+We'll examine how to convert a vector from one type to another in the next section.
+</div>
+****
+
+## Working with data types in R
 
 ### Numeric
 
@@ -281,6 +300,11 @@ Now let's look at the same dataframe, but this time with `private_ins` stored as
 
 R also supports a data type called "complex" which is for [numbers with a real and imaginary component](https://en.wikipedia.org/wiki/Complex_number).
 If you don't work with imaginary numbers (as is the case for nearly all researchers), feel free to ignore this data type completely.
+
+## Data types and troubleshooting
+
+Problems with data types are at the root of many errors in R.
+
 
 ## Including highlight boxes
 
