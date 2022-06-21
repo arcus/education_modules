@@ -221,7 +221,6 @@ Scatterplots show the relationship between two continuous variables, one on the 
 First, we need to load the libraries we'll be using:
 
 ```r
-# the libraries we'll be using
 library(tidyverse)
 
 ```
