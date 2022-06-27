@@ -74,7 +74,7 @@ In the following sections, you will find tables of links to example code for a r
 
 Whenever possible, we've linked to tutorials that include explanation of what the code does line by line and at least some background on the rationale for the statistical test in question. There are many cases where full tutorials are not yet available, though, in which case bare example code may be all there is.
 
-Even when a rich tutorial is available, the information linked here will generally **not** be enough for you to effectively use a statistical technique you're not already familiar with. Before applying a test you don't fully understand, seek out advice from someone experienced in the technique you want to use. We also have [recommendations for further statistical education](#additional-resources) at the end of this module.
+Even when a rich tutorial is available, the information linked here will generally **not** be enough for you to effectively use a statistical technique you're not already familiar with. Before applying a test you don't fully understand, seek out advice from someone experienced in the technique you want to use. We also have [recommendations for further statistical education](#learning-statistics) at the end of this module.
 
 <div class="warning">
 **Important:**
