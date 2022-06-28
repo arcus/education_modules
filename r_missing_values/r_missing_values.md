@@ -337,13 +337,15 @@ When might it be a good idea to mark values as missing? Select all that apply.
 [[X]] Values that are logically impossible
 [[X]] Values that you know are meant to mark missing or invalid responses
 ****
-<div class="answer">
+<div class = "answer">
+
 These are all perfectly reasonable situations in which to mark values as missing.
 
 Note, however that you should be cautious when excluding observations in general.
 Dropping outliers can become problematic when you might be excluding valid data (i.e. not typos or impossible values).
 This is an especially important problem when you decide whether or not to drop outliers after checking the results of your analysis both ways, because that can lead to unintentional bias in your results.
 To learn more, read [The Extent and Consequences of P-Hacking in Science](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002106).
+
 </div>
 ****
 

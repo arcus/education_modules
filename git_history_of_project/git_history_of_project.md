@@ -245,9 +245,11 @@ Which of the following commands would show you the **most recent** commit you ma
 - [[ ]] `git show 2a29ed`
 ***
 <div class ="answer">
+
 As long as you didn't do anything fancy to move `HEAD`, the **most recent** commit is the current `HEAD`. Its commit number is `584977`. Since both refer to the same commit, you can use either.
 
 The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show 081cd9` will give you an error since `081cd9` it is not the **first** six digits of a known commit number.
+
 </div>
 ***
 
@@ -432,12 +434,14 @@ After working for a while, we might not remember where our last checkpoints were
 [[git diff HEAD venus.txt]]
 ***
 <div class= "answer">
+
 The command `git diff HEAD venus.txt` will show you the differences between the current working version of `venus.txt` and the last committed version. If you happen to know that the 6-digit commit number of your last commit, you could also use that. For example if the commit number was `123456`, then `git diff 123456 venus.txt` would give you the same result.
 
 
 Omitting `venus.txt` will show you ALL changes that have been made to any file in the repository since the last commit.
 
 Omitting both the commit number and `HEAD`, i.e. entering `git diff venus.txt` will give you the same output in this instance, but we don't suggest using it because there are circumstances under which it will give a different output.
+
 </div>
 ***
 

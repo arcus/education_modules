@@ -891,6 +891,8 @@ First things first, what are you `SELECT`ing?  Also, you do need to replace the 
 
 </div>
 
+***************
+
 What has to change to make this code work?  Select all that apply.  You will be able to check your own work!
 
 ```sql
@@ -907,7 +909,7 @@ WITH
 [[ ]] `alasql.patients` should be changed to just `patients`
 [[ ]] The semicolon should be omitted
 [[X]] The `M` in the last line should have quotes around it
-[[X]] The has marks (`#`) on the first two lines should be replaced with `--`
+[[X]] The hash marks (`#`) on the first two lines should be replaced with `--`
 [[X]] `WITH` should be replaced by `where`
 ***************
 
@@ -921,6 +923,7 @@ While you **could** omit `alasql`, it certainly isn't hurting things, and it's o
 
 </div>
 
+***************
 
 ### ORDER BY Statement
 
