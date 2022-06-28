@@ -656,8 +656,10 @@ These are our recommendations for how often to commit, but that doesn't mean we 
 [( )] First run c, then b
 [( )] First run c, then d
 ***
-<div class = 'answer'>
+<div class = "answer">
+
 You must run the `git add` to tell Git to stage `myFile.txt`, then you can commit the changes and leave your short, descriptive message. We will discuss how to think of these steps in the [Git workflow section](#understanding-the-git-workflow).
+
 </div>
 ***
 
