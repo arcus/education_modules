@@ -185,9 +185,15 @@ The Spyder IDE has a console where you can see the output of your script without
 </div>
 
 <figure>
+
   <img src="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_spyder_console.png?raw=true" height="500" width="800" alt="Running the Python script discussed above in Spyder, showing a user typing 'Pythonista' in response to the prompt and showing the output 'Welcome to Intro to Python, Pythonista!'" data-alt="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_spyder_console.gif?raw=true">
 
-<figcaption>Click on the image to play the demo.</figcaption>
+<figcaption>
+
+Click on the image to play the demo.
+
+</figcaption>
+
 </figure>
 
 In this case, when you run the code we wrote before in the Spyder console, you'll be asked for an input value (I've supplied the name "Pythonista"). If you hit "Enter", the output of the second line of code will appear: `Welcome to Intro to Python, Pythonista!`.
