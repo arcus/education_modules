@@ -463,7 +463,7 @@ The code cells above are linked, meaning that all of the cells "remember" the co
     <div class = "answer">
 
     Indexing in Python begins with **0**, not 1, and so the index of 15, which is the fifth item in the list, is **4**.
-      
+
     </div>
     ***
 
