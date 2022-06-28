@@ -178,7 +178,11 @@ In the script above you can also see lines of text marked with a pound sign/hash
 
 The Spyder IDE has a console where you can see the output of your script without having to run it in the Command Prompt/Terminal. As you can see in the screenshot below, all we had to do was create the file one time and then run that file instead of typing in the code interactively. This can save you time and effort if you have a task you know you'll want to perform repeatedly. In the Spyder IDE there is a "run" button (a green arrow in menu at the top) but you could also run the same file in your Terminal/Command Line by typing the command `python` followed by the file name of your Python script.
 
-<div style="display:none">@gifPreload</div>
+<div style="display:none">
+
+@gifPreload
+
+</div>
 
 <figure>
   <img src="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_spyder_console.png?raw=true" height="500" width="800" alt="Running the Python script discussed above in Spyder, showing a user typing 'Pythonista' in response to the prompt and showing the output 'Welcome to Intro to Python, Pythonista!'" data-alt="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_spyder_console.gif?raw=true">
