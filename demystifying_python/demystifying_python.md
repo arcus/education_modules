@@ -29,6 +29,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 @gifPreload
 <script>
+
 (function($) {
 
   // Get the .gif images from the "data-alt".
@@ -74,6 +75,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 	});
 
 })(jQuery);
+
 </script>
 @end
 -->
