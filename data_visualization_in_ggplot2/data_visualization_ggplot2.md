@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.2.0
+version:  1.2.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -375,7 +375,9 @@ True or False: The only two crucial aesthetics for a ggplot2 scatterplot are x a
 [( )] FALSE
 ****
 <div class = "answer">
+
 While x and y are the only two **crucial** aesthetics, you may want to include others, such as color and shape, to communicate information about additional variables in the data.
+
 </div>
 ****
 
@@ -388,7 +390,9 @@ What is the geom command for a scatterplot in ggplot2?
 </script>
 ****
 <div class = "answer">
+
 Every ggplot2 visualization starts with the `ggplot()` command first to set which data will be used and how (i.e., the aesthetics), and then one or more "geoms" that control what type of plot will be created.
+
 </div>
 ****
 
@@ -401,7 +405,9 @@ Which of the following can be used to manually set the color for a **numeric** v
 [( )] Any of the above
 ****
 <div class = "answer">
+
 `scale_color_gradient()` is for continuous variables, and `scale_color_manual()` is for categorical variables (factors).
+
 </div>
 ****
 
@@ -552,9 +558,11 @@ Which of the following aesthetics can be used to plot a histogram in ggplot2?
 [( )] both x and y
 ****
 <div class = "answer">
+
 Histograms can only make use of one dimension of data (x or y, but never both) because the other dimension will always be the count of observations in each bin. If you try to provide both x and y as aesthetics, ggplot2 will give you an error.
 
 In all of our examples, we used the x aesthetic for our histograms, but it is possible to provide a y aesthetic instead. As an experiment, try generating one of the plots above, but substitute y for x and see what happens!
+
 </div>
 ****
 
@@ -564,7 +572,9 @@ What do you use to control transparency in ggplot2?
 [[alpha]]
 ****
 <div class = "answer">
+
 Note the second plot in the [Using color to show groups](#using-color-to-show-groups), which includes an alpha adjustment.
+
 </div>
 ****
 
@@ -574,9 +584,11 @@ True or False: Many common scale transformations are available in ggplot2, so yo
 [( )] False
 ****
 <div class = "answer">
+
 For a review, see [transforming axes](#transforming-axes).
 
 There are a few common transformations with their own ggplot2 functions, but there are many more available, and you can even [write your own transformation to use in ggplot2](https://scales.r-lib.org/reference/trans_new.html) if you like.
+
 </div>
 ****
 
@@ -709,7 +721,9 @@ True or False: Line plots are usually appropriate as an alternative to scatterpl
 [(X)] FALSE
 ****
 <div class = "answer">
+
 Line plots and scatterplots are generally used for different kinds of data, so a line plot is usually not a good alternative to a scatterplot. Line plots are used to communicate **meaningfully connected** data, most often repeated observations over time.
+
 </div>
 ****
 
@@ -874,9 +888,11 @@ What is the geom function for creating a trend line in ggplot2?
 </script>
 ****
 <div class = "answer">
+
 This is a little bit of a trick question (sorry!) since there is no single correct answer: geom\_smooth(), geom\_line(), geom\_abline() all work to create trend lines!
 
 If you use geom\_abline or geom\_line, you need to first run the model, and then use the model results in your ggplot commands. The geom\_smooth function actually runs a model for you behind the scenes. Another difference is that geom\_smooth can print a confidence interval around your trend line, but geom\_line and geom\_abline just draw the line itself.
+
 </div>
 ****
 
@@ -886,9 +902,11 @@ True or False: If you wanted to, you could use geom\_abline or geom\_line to dra
 [( )] FALSE
 ****
 <div class = "answer">
+
 True! And this is an important point, because this can happen by accident. If you run several models in your code, always double check to make sure you're referencing the correct model to get the coefficients (for geom\_abline) or fitted values (for geom\_line) when you create the trend line.
 
 One good strategy is to generate trend lines a couple different ways while you're working and check to make sure they all look the same. For example, add a trend line using geom\_smooth, and then run that model yourself and try to generate the same trend line using geom\_line or geom\_abline. That way you can confirm that you know the details of the model that geom\_smooth is using.  
+
 </div>
 ****
 

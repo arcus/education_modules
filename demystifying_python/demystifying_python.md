@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -125,7 +125,9 @@ What are some reasons to consider using Python for data analysis? Select all tha
 [[X]] The Python community has lots of resources to help you get started.
 ***
 <div class = "answer">
+
 While Python is human-readable and free, it is not point-and-click software, and it can take some time and effort to learn how to write Python code. Don't worry, there are lots of resources out there to help you learn!
+
 </div>
 ***
 
@@ -199,7 +201,9 @@ Which of the following is **not** a recommended way to write Python code?
 [( )] online in a notebook.
 ***
 <div class = "answer">
+
 While it is technically possible to write Python scripts in a Google document, a word processor like Microsoft Word, or a text editor not designed to write code, it is generally not recommended and will make your life harder. There are a variety of text editors that are specifically designed for writing scripts. They generally support multiple languages and have special features that help you write code, such as syntax highlighting, smart code completion, and collaboration tools. Which features you have access to depends on on which editor you choose ([Atom](https://atom.io/) and [Visual Studio Code](https://code.visualstudio.com/) are two free options).
+
 </div>
 ***
 
@@ -221,7 +225,9 @@ What are the components of a Jupyter notebook? Select all that apply.
 [[ ]] A console where you can write lines of code interactively
 ***
 <div class = "answer">
+
 Jupyter notebooks contain code cells and text cells. The code cells are written in Python and can contain as much or as little code as you want; the output of the code can be displayed directly beneath the code cell and the code can be edited and re-run at any time. The text cells are written in Markdown language and can provide more context and reasoning than can easily be done using comments. Additionally, using Markdown allows you to add useful formatting to your text. Jupyter notebooks do not have a console, but since you can run each code cell independently, you don't really need one!
+
 </div>
 ***
 

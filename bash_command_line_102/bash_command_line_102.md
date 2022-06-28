@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -218,7 +218,9 @@ The [origin of "grep"](https://en.wikipedia.org/wiki/Grep) is that it is **g**lo
 [[find *.dat]]
 ***
 <div class = "answer">
+
 The `find` function searches the names of all folders and files in the current directory. The asterisk in `*.dat` matches any string, so all files with the `.dat` ending will be returned by this command.
+
 </div>
 ***
 
@@ -232,7 +234,9 @@ The `find` function searches the names of all folders and files in the current d
 </script>
 ***
 <div class = "answer">
+
 The `grep` function searches the contents of the files, in this case all of the files that end in `.dat` for the pattern `Weight`.
+
 </div>
 ***
 
@@ -387,7 +391,9 @@ Copying a directory with `cp` requires the `-r` flag in order to copy all of its
 </script>
 ***
 <div class = "answer">
+
 The command `mv dog.txt wolf.txt canines` will move both files into the `canines` folder. The order of `dog.txt` and `wolf.txt` doesn't matter, but `mv` must be first and `canines`, the target folder, must be last.
+
 </div>
 ***
 
@@ -399,6 +405,7 @@ The command `mv dog.txt wolf.txt canines` will move both files into the `canines
 [[ ]] `cp -r coyote.txt canines`
 ***
 <div class = "answer">
+
 The command `mv coyote.txt canines` will move the entire file into the `canines` folder.
 
 The command `cp coyote.txt canines` will create a copy of `coyote.txt` in the folder `canines`.
@@ -406,6 +413,7 @@ The command `cp coyote.txt canines` will create a copy of `coyote.txt` in the fo
 The command `mv -r coyote.txt canines` will raise an error since `-r` is not one of the options of the command `mv`.
 
 The command `cp -r coyote.txt canines` will **also** create a copy of `coyote.txt` in the folder `canines`. However the flag `-r` is not necessary here because `coyote.txt` is a file and not a directory.
+
 </div>
 ***
 
@@ -443,6 +451,7 @@ Which statements about the remove command `rm` are **TRUE**?
 [[ ]] If you accidentally remove a file you wanted to keep, it is easy to recover it.
 ***
 <div class = "answer">
+
 **The command `rm` moves files to your "Trash" folder.** FALSE: the command `rm` removes files from your computer without first moving them to you trash folder.
 
 **To remove a folder and all of its contents you need to use `rm -r`.** TRUE: you need to use the `-r` flag in order to recursively remove all subfolders.
@@ -450,6 +459,7 @@ Which statements about the remove command `rm` are **TRUE**?
 **Sometimes you need to remove files in order to keep your projects organized.** TRUE: there are many projects that need to regularly delete intermediary files, especially when analyzing large datasets.
 
 **If you accidentally remove a file you wanted to keep, it is easy to recover it.** FALSE: recovering a file you have removed with `rm` might be possible if you are using a version control system like Git, but if not, removed files are gone forever.
+
 </div>
 ***
 

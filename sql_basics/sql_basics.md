@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho
 email:    camachop@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: US English Male
@@ -623,7 +623,10 @@ Which of the following is **not** true about DISTINCT?  Select all that apply!
 ***************
 
 <div class = "answer">
-`DISTINCT` is a powerful tool that allows you to retrieve a unique set of rows with no duplication.  This is great for eliminating duplicated data or finding out what the possible values for a single column are (or the possible combinations of values across two or more columns). The `DISTINCT` keyword appears directly after the `SELECT` keyword in a query.  It's useful, but it can also be computationally expensive, so if you end up using DISTINCT across many columns of data in order to eliminate duplicate rows, consider doing a bit of investigation about why there's so much duplication! </div>
+
+`DISTINCT` is a powerful tool that allows you to retrieve a unique set of rows with no duplication.  This is great for eliminating duplicated data or finding out what the possible values for a single column are (or the possible combinations of values across two or more columns). The `DISTINCT` keyword appears directly after the `SELECT` keyword in a query.  It's useful, but it can also be computationally expensive, so if you end up using DISTINCT across many columns of data in order to eliminate duplicate rows, consider doing a bit of investigation about why there's so much duplication!
+
+</div>
 
 **************
 
@@ -641,7 +644,9 @@ How many rows do you have in your results?  Type the number with no spaces or ex
 ***************
 
 <div class = "answer">
+
 You should have 9 rows displayed!  If you don't, we'll share the query we used in the explanation of the next question.
+
 </div>
 
 **************
@@ -656,6 +661,7 @@ Which of the following statements are true about your data?  Select all that app
 ***************
 
 <div class = "answer">
+
 Wondering how we got these answers?
 
 Run the following query:
@@ -878,6 +884,7 @@ WHERE
 ***************
 
 <div class = "answer">
+
 First things first, what are you `SELECT`ing?  Also, you do need to replace the ` = NULL` to ` IS NULL `, and end the query with a semicolon, not a period.
 
 `OR` isn't case sensitive, but we suggest leaving it in CAPITAL letters so it stands out as a keyword.  And since there's no nesting and no mixing of `AND` and `OR`, parentheses around the `WHERE` clauses is totally optional.  You only really **have** to add parentheses when you're mixing operations (just as in math, to make sure things get added before they're multiplied).
@@ -905,6 +912,7 @@ WITH
 ***************
 
 <div class = "answer">
+
 While you **could** omit `alasql`, it certainly isn't hurting things, and it's often useful to add the additional context that dot notation provides.  Similarly, while in this module page, you can get away without typing a semicolon, that doesn't mean it's a good idea.  Here's what needs to change to make this code run:
 
 * Comments need to be corrected -- the right way to do end-of-line comments like this is using a double dash (`--`), not a hash mark.
@@ -1028,7 +1036,9 @@ What does `ORDER BY` accomplish?
 ***************
 
 <div class = "answer">
+
 If you want to change the order of columns, the best thing to do is change the order you type things in after `SELECT`.  That's not the job of `ORDER BY`!  No, what `ORDER BY` does is permit you to organize your **rows**.  You can put rows in order according to one or more column values.
+
 </div>
 
 **************
@@ -1041,7 +1051,9 @@ Which of the following are true about the `AS` keyword?
 ***************
 
 <div class = "answer">
+
 All of these are true!  Aliasing uses the `AS` keyword.  You can alias table names, which often means less typing (for instance, you could use `pt` instead of `patient`) in long queries.  Aliasing column names can be helpful when you're making the alias something more understandable than the column name in the table.
+
 </div>
 
 **************
@@ -1054,7 +1066,9 @@ What does `LIMIT` accomplish?
 ***************
 
 <div class = "answer">
+
 `LIMIT` controls the maximum number of rows output.  You will not get more rows than what your `LIMIT` value is.  Of course, if the total number of rows a query outputs is **less** than `LIMIT`, you'll get that value.  `LIMIT` doesn't have anything to do with ensuring that rows are unique, so it won't do anything about identical rows.  You need to think about `DISTINCT` for that use case!
+
 </div>
 
 **************

@@ -2,7 +2,7 @@
 
 author:  Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -461,6 +461,7 @@ What does this output tell you? Choose all of the the statements that the output
 [[ ]] No files other than `venus.txt` have been changed since the last commit.
 ***
 <div class = "answer">
+
 **You already committed the comment about Venus's lack of moons:** FALSE.  The output is showing the difference between the most recent commit and the current **working** version, which has indeed changed. If you had already committed the comment about Venus's lack of moons, that line would not be marked with `+`.
 
 **The current working version of `venus.txt` has two lines:** TRUE.  The current working version of `venus.txt` contains all lines marked with a `+` as well as all lines that have no starting symbol.
@@ -470,6 +471,7 @@ What does this output tell you? Choose all of the the statements that the output
 **No files other than `venus.txt` have been changed since the last:** FALSE Because we only asked Git to tell us about differences in the `venus.txt` file, it didn't check for differences in other files. They could have been changed and that would not be reflected in the output.
 
 You can conclude from this output that you must have committed, and then added the last line to `venus.txt`.
+
 </div>
 ***
 
