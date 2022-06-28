@@ -445,7 +445,9 @@ The code cells above are linked, meaning that all of the cells "remember" the co
     [(X)] Lists are unordered; you cannot access an item in the list by its position.
     ***
     <div class = "answer">
+
     Lists are chanageable, can be stored in varibles for later use, can contain a mix of data types, and they are **ordered**, meaning that items remain in the position that they were put into the list, and you can access or edit list items by value **or** position (also called the **index**).
+
     </div>
     ***
 
@@ -459,7 +461,9 @@ The code cells above are linked, meaning that all of the cells "remember" the co
     [( )] 6
     ***
     <div class = "answer">
-    Indexing in Python begins with **0**, not 1, and so the index of 15, which is the fifth item in the list, is **4**.  
+
+    Indexing in Python begins with **0**, not 1, and so the index of 15, which is the fifth item in the list, is **4**.
+      
     </div>
     ***
 
