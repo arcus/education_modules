@@ -183,12 +183,52 @@ for swivel_chair in *.dat; do echo $swivel_chair; done
 ```
 The first one doesn't give any context for what the variable `$z` represents, and the second will be extra confusing to you and anyone else who wants to know what your code does later!
 
-### Looping more complicated commands
+### More complicated loops
 
-Any command can be repeated using a for loop. Here are a few examples that combine commands with pipes and redirect outputs. We won't go too deep into how these compound commands are created but if you want to learn more about anything you see in this section, check  out the [module on combining commands in Bash]().
+Any command or sequence of commands can be repeated using a for loop.
 
+Maybe you to see all of the data files and all of their contents, and also want that information displayed with an empty line between each animal's data:
+
+```
+for file in *.dat
+do
+  echo $file
+  cat $file
+  echo
+done
+```
+
+Maybe you want to create a new file called `my_data` that contains all of that output you just printed. The best way to do that is to redirect each line of output to be appended to `my_data`:
+
+```
+for file in *.dat
+do
+  echo $file >> my_data
+  cat $file >> my_data
+  echo >> my_data
+done
+```
+
+There isn't any output because you redirected it all, so use `cat my_data` to check that it worked!
+
+You can also create loops that redirect some output but while also showing you output. This can be a way to check that your code is working if you have a loop that takes a long time to run.
+
+```
+for file in *.txt
+do
+  echo $file >> my_animals
+  cat $file >> my_animals
+  echo >> my_animals
+  echo $file was processed
+done
+```
+
+This runs very quickly, but you can see that you got the output that each file was processed, and check that it appeared as you wanted in `my_animals`.
 
 ### Nesting Loops
+
+You can even put a loop inside of another loop! This is called **nesting** and nested loops can allow you to iterate over two (or more!) collections of objects.
+
 
 
 ### Quiz: Loops
