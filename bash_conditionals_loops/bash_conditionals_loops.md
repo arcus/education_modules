@@ -100,7 +100,7 @@ There are two kinds of loops: "for loops" and "while loops." In this lesson we w
 
 </div>
 
-### Structure of for loops
+### Structure of For Loops
 
 **For loops** are a type of coding structure that exist across many programming languages. Once you understand how for loops work in theory, you can look up the specifics of running one in any language.
 
@@ -130,7 +130,7 @@ The code blocks above are written in **pseudocode**. Pseudocode is a description
 
 ### Bash grammar of for loops
 
-In Bash a the structure "for A in B do C" is coded:
+In Bash the structure "for A in B do C" is coded:
 
 ```
 for A in B
@@ -166,9 +166,13 @@ done
 
 The collection `*.dat` is a list all of the files in the directory that end with the `.dat` file extension. We could have listed them using `ls *.dat` but that wouldn't have allowed us to add the extra text "is a data file" to each line.
 
+<div class = "important">
+
 **`file` versus `$file`**
 
 In the first line `for file in *.dat` we are telling Bash that the variable "file" will refer to the elements in the list `*.dat`. However when we want to actually use the variable, we need to start with the dollar sign `$` to tell Bash that it should treat `$file` as a variable and not as the string of characters. To see the importance of the `$` when calling the variable, try omitting it  from the third line. What do you think the output will be?
+
+</div>
 
 **Variable names**
 
@@ -229,13 +233,60 @@ This runs very quickly, but you can see that you got the output that each file w
 
 You can even put a loop inside of another loop! This is called **nesting** and nested loops can allow you to iterate over two (or more!) collections of objects.
 
+Perhaps you want to make some empty files for giant squid, elephant, and albatross. You just want each of these animals to have an empty `.txt` file and and empty `.dat` file. A nested loop can be a good way to do this:
 
+```
+for animal in giant_squid elephant albatross
+do
+  for filetype in .txt .dat
+  do
+    touch $animal$filetype
+    echo $animal$filetype has been created
+  done
+done
+```
+
+Now use `ls` to check the files in your directory. You should have just created six new files!
+
+<div class = "warning">
+
+Make sure when you are nesting loops that you give your variables different names!
+
+</div>
 
 ### Quiz: Loops
 
 ## Conditional Statements
 
-Why do you want to check if/then?
+Loops are great for doing the same thing over and over again, but what if you only want to run the command sometimes? Maybe you want to record the filename in a list, but only if the file is non-empty.
+
+This is where conditional statements come in! A conditional evaluates if a statement is true, and if it is true, executes a command. The most basic conditional statements take the form "if/then."
+
+"If the file is empty, delete the file."
+
+Using a conditional clause like this can automate the process so that the computer checks whether the file is true rather than you having to do it!
+
+### Bash Statements
+
+A statement (or mathematical statement) is something that can be evaluated as either true or false. Here are some examples:
+
+- 5 = 7
+- 100 is greater than 50
+- The string "blue" appears in this file's name
+- This file is empty
+- The contents of these two files are identical
+
+The first statement is false, the second one is true, and the last three can be determined to be true or false as soon as "this file" or "these two files" are identified.
+
+Opinions, questions, and instructions are among the many things that we can say that do not fall into the category of mathematical statements.
+
+In Bash, statements are written surrounded by square brackets: `[ statement here ]`
+
+As you use them more, you will learn more and more ways to combine and mix mathematical statements to make new ones. To get us started, here are some useful Bash statements:
+
+|Code| Meaning|
+|:-:| :-:|
+|fdsaf|fdsa|
 
 ### if
 If D is true, then E.
@@ -246,14 +297,7 @@ If D is true, then E, elif F then G
 ### else
 If D is true, then E, elif F then G, else H
 
-### Examples
-
 ### Quiz: Conditional Statements
-
-## Combining Loops and Conditional Statements
-for A in B do if D then E else H.
-
-### Quiz
 
 
 ## Additional Resources
