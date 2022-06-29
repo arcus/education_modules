@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  0.0.1
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -80,7 +80,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
-Missing Values in R
+# Missing Values in R
 
 <div class = "overview">
 
@@ -241,10 +241,12 @@ True or False: The only way to check for missing values in R is by using the `su
 [(X)] False
 ****
 <div class = "answer">
+
 Although it's the only function we demonstrated in depth, there are lots and lots of options other than `summary()` for exploring missing values in your data!
 
 For some alternate options, check out the tutorials listed in the [Additional Resources](#additional-resources) section at the end.
 Play around with different methods and find something that works well for you and the kinds of data you work with most.
+
 </div>
 ****
 
@@ -255,6 +257,7 @@ Why might you need to know which variables in your data have missing values? Sel
 [[X]] Depending on how much data is missing and the pattern of missingness, you might need to apply statistical corrections to be able to run your planned analyses
 ****
 <div class = "answer">
+
 All of these are important reasons to check for missing values in your data.
 
 In many cases, you know beforehand whether there should be any missing values on particular variables in your data.
@@ -266,6 +269,7 @@ For example, if you collect 100 samples, but 20 of them are missing at least som
 
 If you have substantial missingness (a good rule of thumb is 5% or more of your data are missing), then you may need special statistical techniques to be able to analyze the data without introducing bias.
 Such techniques are outside the scope of this module, but there are lots of excellent papers and tutorials available with instructions.  
+
 </div>
 ****
 
@@ -333,13 +337,15 @@ When might it be a good idea to mark values as missing? Select all that apply.
 [[X]] Values that are logically impossible
 [[X]] Values that you know are meant to mark missing or invalid responses
 ****
-<div class="answer">
+<div class = "answer">
+
 These are all perfectly reasonable situations in which to mark values as missing.
 
 Note, however that you should be cautious when excluding observations in general.
 Dropping outliers can become problematic when you might be excluding valid data (i.e. not typos or impossible values).
 This is an especially important problem when you decide whether or not to drop outliers after checking the results of your analysis both ways, because that can lead to unintentional bias in your results.
 To learn more, read [The Extent and Consequences of P-Hacking in Science](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002106).
+
 </div>
 ****
 
@@ -376,7 +382,9 @@ True or False: The output from R functions usually tells you how missing data we
 [(X)] False
 ****
 <div class = "answer">
+
 Although some functions, like `geom_point`, provide a warning when dropping missing values, many functions in R do not. We saw an example of this with the `prcomp` function.
+
 </div>
 ****
 
@@ -386,8 +394,10 @@ If you want R to skip over missing values and give you the results based only on
 [( )] `na.rm = FALSE`
 ****
 <div class = "answer">
+
 For functions that have an `na.rm` argument, like `mean()` does, setting `na.rm = TRUE` will give you the result ignoring missing values.
 The default setting for most of these functions is `na.rm = FALSE`, which will return `NA` as the result whenever there are missing values present.
+
 </div>
 ****
 
@@ -400,6 +410,7 @@ Which of the following are typical options for the argument `na.action`? Select 
 [[ ]] `na.skip`
 ****
 <div class = "answer">
+
 Typical options for `na.action` are `na.omit`, `na.exclude`, and `na.fail`.
 The first two drop any observations with missing values for the variables in the analysis (listwise deletion), and `na.fail` stops the analysis and gives you an error message if it encounters any missing values.
 
@@ -410,6 +421,7 @@ In general, you'll get the same results either way, but `na.exclude` will preser
 `na.skip` and `na.pairwise` are not typical options for `na.action`.
 To skip missing values, use `na.omit` or `na.exclude`.
 For special functions that have extra options for pairwise complete observations (like `cor`), it's an entirely separate argument (the `use` argument for `cor`), not part of `na.action`.  
+
 </div>
 ****
 
@@ -444,7 +456,9 @@ input == "na.omit()" || input == "na.omit"
 </script>
 ****
 <div class = "answer">
+
 It is also possible to drop cases with missing values by using `filter()` or other similar options, but `na.omit()` is the simplest.
+
 </div>
 ****
 
@@ -454,8 +468,10 @@ True or False: The function from the previous answer also works to just drop cas
 [(X)] False
 ****
 <div class = "answer">
+
 `na.omit()` is just for removing cases where there's missingness on any variable.
 If you want to target just one or more specific variables and remove cases with missing values on those variables, you need to use something like `filter` instead.
+
 </div>
 ****
 

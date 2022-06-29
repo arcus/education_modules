@@ -2,8 +2,8 @@
 
 author:   Your Name
 email:    email@chop.edu
-version:  0.0.1
-module_template_version: 2.0.0
+version:  0.0.2
+module_template_version: 2.0.1
 language: en
 narrator: UK English Female
 title: Module Title
@@ -204,11 +204,13 @@ Short answer/text response. Note that, without any additional script, to get it 
 [[?]] Hint: The answer is "right answer"
 ***
 <div class = "answer">
+
 This is extra text that will show up after the learner clicks to have the correct answer revealed. It can be as long as you like, and allows any markdown formatting (you can embed pictures or videos, links, etc.).
 
 Use `<div class = "answer">` to mark these sections with special styling, so that they're visually distinct from the rest of the quiz. The style for `"answer"` is defined in the css file.
 
 For this context to show up automatically when the learner answers the question correctly or clicks to have the right answer revealed, it needs to be surrounded by `***` (at least three, but you can use more if you want a more visually distinct horizontal marker in your md file).
+
 </div>
 ***
 
@@ -221,7 +223,9 @@ We can allow some flexibility in what we accept as correct answers for text by a
 </script>
 ***
 <div class = "answer">
+
 For this question, either "right answer" or "correct answer" (not case sensitive) counts as correct.
+
 </div>
 ***
 
@@ -235,11 +239,13 @@ This question accepts any of several items from a list of possible correct answe
 </script>
 ***
 <div class = "answer">
+
 With flexible answers like this, it's definitely a good idea to include a follow-up to help the learner put their answer in context.
 
 For example, if the question was "Name one or more colors" with acceptable answers including red, orange, yellow, green, blue, and purple, and they wrote "red, green, and the center of a black hole" that would be marked as correct because it contains at least one string from the acceptable list. Similarly, "hammered metal" would be marked as correct because it contains the string "red" ([you can prevent this if you want](https://www.w3schools.com/jsref/jsref_regexp_begin.asp)). On the other hand "teal, scarlet, indigo" would be marked wrong.
 
 Reiterate what the correct answer or answers should be, and try to anticipate likely wrong answers so you can explain why they're not correct.
+
 </div>
 ***
 

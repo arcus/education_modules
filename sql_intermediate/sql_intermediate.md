@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho
 email:    camachop@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: US English Male
@@ -636,6 +636,7 @@ How many patients are in the third phase of surveys?
 ***************
 
 <div class = "answer" style = "width: 100%">
+
 This is the query we used to get the answer:
 
 ```sql
@@ -682,6 +683,7 @@ Which of these years are represented in your query results?
 ***************
 
 <div class = "answer" style = "width: 100%">
+
 This is the query we used to get the answer:
 
 ```
@@ -725,6 +727,7 @@ Which of the following is an address that appears in the output of your query?  
 ***************
 
 <div class = "answer" style = "width: 100%">
+
 This is the query we used to get the answer:
 
 ```
@@ -932,6 +935,7 @@ What's the third row of results?
 ***************
 
 <div class = "answer" style = "width: 100%;">
+
 This is the query we used to get the answer:
 
 ```sql
@@ -1076,7 +1080,8 @@ What are the sex, race, and age group of the patient with id 03963166-b49f-4440-
 [[ ]] F, white, boomer
 ***************
 
-<div class = "answer", style = "width: 100%;">
+<div class = "answer" style = "width: 100%;">
+
 This is the query we used to get the answer:
 
 ```sql

@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -512,9 +512,11 @@ What is the command to create a scatterplot in `seaborn`?
 </script>
 ***
 <div class = "answer">
+
 By default, the `sns.relplot` command creates a scatterplot (although it can also be used to create [line plots](#line-plots)). You can also use `sns.regplot` to create scatterplots, as we'll see in the [trend lines section](#trend-lines).
 
 Note the `sns` before the function name. That's because we imported the seaborn library with an alias, as is conventional. See [making plots in seaborn](#making-plots-in-seaborn).
+
 </div>
 ***
 
@@ -524,7 +526,9 @@ True or False: The only two crucial arguments to supply (in addition to providin
 [( )] FALSE
 ***
 <div class = "answer">
+
 While x and y are the only two **crucial** arguments for you to supply the plotting function, you may want to include others, such as hue and style, to communicate information about additional variables in the data.
+
 </div>
 ***
 
@@ -771,9 +775,11 @@ Which of the following aesthetics can be used to plot a histogram using `displot
 [( )] both x and y
 ****
 <div class = "answer">
+
 Histograms can only make use of one dimension of data (x or y, but never both) because the other dimension will always be the count of observations in each bin. If you try to provide variables for both x and y, `seaborn` will plot a [bivariate distribution heatmap](https://seaborn.pydata.org/tutorial/distributions.html#visualizing-bivariate-distributions) instead of a histogram.
 
 In all of our examples, we used the x argument for our histograms, but it is possible to provide y instead. As an experiment, try generating one of the plots above, but substitute y for x and see what happens!
+
 </div>
 ****
 
@@ -783,9 +789,11 @@ True or False: To show multiple histograms for different subgroups on a single p
 [(X)] False
 ****
 <div class = "answer">
+
 The `jointplot` function is for showing a bivariate plot with supplemental univariate distributions in the margins (for a review, see [adding marginal histograms to other plots](#adding-marginal-histograms-to-other-plots)).
 
 To show histograms for two or more subgroups in a single plot, use the `hue` argument to color each subgroup separately (for a review, see [using color to show groups](#using-color-to-show-groups)).
+
 </div>
 ****
 
@@ -795,9 +803,11 @@ True or False: When making histograms, you should stick with the default binwidt
 [(X)] False
 ****
 <div class = "answer">
+
 Not necessarily! The `seaborn` defaults are sensible, so that's often a good starting place, but it can be dangerous to accept the default bins without examining other options.  Changing the binwidth on a histogram can dramatically change the patterns highlighted in the data, so it's always a good idea to try multiple binwidths when you're making a histogram.
 
 You can read more about this issue in the [seaborn distributions tutorial](https://seaborn.pydata.org/tutorial/distributions.html#choosing-the-bin-size).
+
 </div>
 ****
 
@@ -923,9 +933,11 @@ True or False: You can create both scatterplots and line plots with the same fun
 [( )] FALSE
 ****
 <div class = "answer">
+
 We used just one function, `relplot`, to make both scatterplots and line plots. Under the hood, there are actually two separate functions being used --- `scatterplot()` and `lineplot()`, which are equivalent to `relplot()` with `kind = "scatter"` (the default) and `kind = "line"`, respectively --- but it's nice to be able to stick to the higher-level `relplot` function for simplicity.
 
 Because they're both called by the `relplot` function, you can use the same additional variables (e.g. `hue`, `style`, `col`) applied to either scatter or line plots, and they work in much the same way.
+
 </div>
 ****
 
@@ -935,9 +947,11 @@ True or False: Line plots are appropriate in most situations in which a scatterp
 [(X)] FALSE
 ****
 <div class = "answer">
+
 There are very few situations in which a scatterplot and line plot are equally appropriate.
 
 Line plots emphasize continuity and because of that are rarely used except for with data that have some kind of time component. Scatterplots are much more flexible and can work to show the relationship between almost any two continuous variables.  
+
 </div>
 ****
 
@@ -950,7 +964,9 @@ What argument do you add to include facets in a `seaborn` plot?
 </script>
 ****
 <div class = "answer">
+
 You can add facets to a plot by including the arguments for `col`, `row`, or both.
+
 </div>
 ****
 
@@ -1211,7 +1227,9 @@ What function can you use to draw a scatterplot with trend line?
 </script>
 ****
 <div class = "answer">
+
 Either `regplot` or `lmplot` can be used to draw scatterplots with trend lines.
+
 </div>
 ****
 

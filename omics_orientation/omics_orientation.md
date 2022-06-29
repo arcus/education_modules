@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -77,7 +77,9 @@ True or False: Omics focuses on a narrow, simplified view of biological systems.
 [(X)] FALSE
 ***
 <div class = "answer">
+
 While there is often value in simplifying the study of biological phenomena to one or a few specific targets, omics fields don't take this approach; rather, omics fields leverage the power of big data to try to capture the complexity of biological systems and processes.  
+
 </div>
 ***
 
@@ -140,7 +142,9 @@ Which of the following omics topics involves studying gene expression by quantif
 [( )] Metabolomics
 ***
 <div class = "answer">
+
 Transcriptomics is the study of the RNA transcripts in a system, which is considered one measure of gene expression under certain conditions. Genomics is the study of the genome, which is DNA; proteomics deals with proteins, and metabolomics studies the small molecules resulting from cell metabolism.
+
 </div>
 ***
 
@@ -162,7 +166,9 @@ True or False: A well-designed omics study will allow a researcher to pinpoint t
 [(X)] FALSE
 ***
 <div class = "answer">
+
 While a well-designed omics study might offer some insight into factors that could contribute to the disease in question (which in turn could reveal promising treatment targets or more information about disease prognosis), study populations are simply too heterogeneous and there are too many possible variables for a study to lead to a definite conclusion about a specific individual.
+
 </div>
 ***
 

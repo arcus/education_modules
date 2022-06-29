@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -247,6 +247,7 @@ Your friend's code (above) isn't running, which is extremely frustrating because
 [[?]] Hint: What do we need to include at the top in order to make `pandas` commands available to us?
 ***
 <div class = "answer">
+
 `NameError: name 'pd' is not defined` is a helpful error message because it tells you exactly what you friend forgot: they never defined `pd`!
 
 When you add the line `import pandas as pd` to the top of their code, it runs as it did before.
@@ -492,6 +493,7 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 print(covid_testing.loc[11942, ["first_name","last_name"]])
 
 ```
+
 </div>
 ***
 
@@ -755,6 +757,7 @@ What does `my_condition` test for? You can use the interactive cell above to tes
 [(X)] Patients ages 18 or younger who are missing data in either the `first_name` or `last_name` columns.
 ***
 <div class = "answer">
+
 * `condition_1` will be TRUE if the patient is missing data in the `first_name` column.
 
 * `condition_2` will be TRUE if the patient is missing data in the `last_name` column.
@@ -963,11 +966,13 @@ How would you **change** the the `last_name` column of `covid_testing` to be upp
 [(X)] `covid_testing.loc[:, "last_name"] = covid_testing.loc[:, "last_name"].str.upper()`
 ***
 <div class = "answer">
+
 - `covid_testing.loc[:, "last_name"].str.upper()` This command will change the way the `last_name` column is **displayed**, but will not make any changes to the DataFrame itself.
 
 - `covid_testing.loc[:, "last_name"] == covid_testing.loc[:, "last_name"].str.upper()` The double equals `==` mean that this is a **condition** testing whether or not the entry int the `last_name` column is already uppercase.
 
 - `covid_testing.loc[:, "last_name"] = covid_testing.loc[:, "last_name"].str.upper()` The single equals `=` **assigns** the entry in the `last_name` column to the uppercase version.
+
 </div>
 ***
 

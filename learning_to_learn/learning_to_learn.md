@@ -2,7 +2,7 @@
 
 author:   Rose Franzen
 email:    franzenr@chop.edu
-version:  1.0.1
+version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -165,6 +165,7 @@ True or False: If you hope to change your current data analytics pipeline, it's 
 <div class = "answer">
 
 This is true! Instead of letting perfect be the enemy of good, taking small steps to change your process is not only going to make the task much more manageable, it will also allow you to engage in the crucial practice needed to further hone your skills.
+
 </div>
 ***
 
