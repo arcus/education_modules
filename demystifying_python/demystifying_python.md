@@ -152,9 +152,15 @@ If you have Python installed on your computer, you can use your computer's Comma
 </div>
 
 <figure>
+
   <img src="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_interactive.png?raw=true" height="500" width="800" alt="An example of Python code in the Terminal with the following code: 7 + 8, followed by an output of 15;  print('Hello World!'), which gives the output 'Hello World!'; and list(range(0,10)), which prints all integers from 0 to 9" data-alt="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_interactive.gif?raw=true">
 
-<figcaption>Click on the image to play the demo.</figcaption>
+<figcaption>
+
+Click on the image to play the demo.
+
+</figcaption>
+
 </figure>
 
 To exit the Python interpreter, type the command `exit()` and then press the Enter key. Alternatively, you can simply close the interpreter window.
@@ -292,9 +298,15 @@ You can even see what this module's notebook looks like in Google Colab! Once yo
    </div>
 
    <figure>
+
      <img src="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/github_repo_colab.png?raw=true" height="500" width="800" alt="Finding a GitHub repository in Google Colab following the above instructions." data-alt="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/github_repo_colab.gif?raw=true">
 
-   <figcaption>Click on the image to play the demo.</figcaption>
+   <figcaption>
+
+   Click on the image to play the demo.
+
+   </figcaption>
+   
    </figure>
 
 ### Quiz: Accessing Python on Your Computer
