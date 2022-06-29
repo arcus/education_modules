@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -223,7 +223,9 @@ Which of the following are valid examples of Python code? Select all that apply.
 [[X]] `type(True)`
 ***
 <div class = "answer">
+
 These are all examples of valid Python code! `print(type(4))` returns the type of the argument `4` (which is `int`, short for integer) and prints that output to the screen. `"python.upper()"` makes the string "python" all uppercase. `type("4.3")` might be a little tricky, since 4.3 is a decimal number (or **float**) but it's in quotation marks-- but those quotation marks just mean that, in this case, "4.3" is a string! `type(True)` might also be tricky, since at first it looks like a string that doesn't have the required quotation marks. However, `True` and `False` are special in Python, and have the type `boolean`.  
+
 </div>
 ***
 
@@ -295,7 +297,9 @@ True or False: Once you assign a value to a variable, you can never change the v
 [(X)] False
 ***
 <div class = "answer">
+
 Changing the value of a variable is as simple as editing the value in the assignment statement and re-running the code; alternatively, you can write a new assignment statement assigning the updated value to the variable.
+
 </div>
 ***
 
@@ -445,7 +449,9 @@ The code cells above are linked, meaning that all of the cells "remember" the co
     [(X)] Lists are unordered; you cannot access an item in the list by its position.
     ***
     <div class = "answer">
+
     Lists are chanageable, can be stored in varibles for later use, can contain a mix of data types, and they are **ordered**, meaning that items remain in the position that they were put into the list, and you can access or edit list items by value **or** position (also called the **index**).
+
     </div>
     ***
 
@@ -459,7 +465,9 @@ The code cells above are linked, meaning that all of the cells "remember" the co
     [( )] 6
     ***
     <div class = "answer">
+
     Indexing in Python begins with **0**, not 1, and so the index of 15, which is the fifth item in the list, is **4**.  
+
     </div>
     ***
 
@@ -584,7 +592,9 @@ The loop in the code cell above is missing a `print()` statement to show us the 
 [( )] `print(j)` with no indentation, so that it is **outside** of the loop
 ***
 <div class = "answer">
+
 According to our code, we know that `j` is the square of `i`, so that's the number we need to print. If we put the `print()` statment **outside** of the loop, we only see the last number, 25, because that is the value that `j` had once the loop was completed. If we place the `print()` statement **inside** the loop, each value of `j` is printed before the next interation of the loop. Therefore, the second option is correct.
+
 </div>
 ***
 
@@ -736,7 +746,9 @@ print(candy2)
     [( )] `else`
     ***
     <div class = "answer">
+
     Because we're checking for multiple conditions, we use the `elif` keyword. We use `if` for the first condition that we are testing; `else` is used at the end to catch anything that hasn't been explictly handled by our preceding conditions. And we know that `for` is the keyword to begin a loop!
+
     </div>
     ***
 
@@ -749,7 +761,9 @@ print(candy2)
     [[X]] `10 <= i < 16`
     ***
     <div class = "answer">
+
     Because we want to give an additional piece of candy to any student who started with between 10 and 15 pieces, we want to test if `i` is greater than or equal to 10, but less than or equal to 15 (which could also be expressed as less than 16, since we're working with integers). So the first and last choices are correct.
+
     </div>
     ***
 
@@ -878,7 +892,9 @@ True or False: Duplicate key-value pairs are allowed in dictionaries.
 [(X)] False
 ***
 <div class = "answer">
+
 While **values** can be repeated in a dictionary, each **key** must be unique. However, you can have multiple values for a key by putting those values in a list.
+
 </div>
 ***
 

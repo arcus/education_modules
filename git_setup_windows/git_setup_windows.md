@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  1.0.1
+version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -284,11 +284,13 @@ Without looking it up, what can you say about the following command? `git config
 [[ ]] It will affect your settings on GitHub.com as well as on your local computer
 ***
 <div class = "answer">
+
 This command begins with `git config --global`, like most of the commands we ran during this lesson. The `--global` flag tells us this setting will be applied for all of the Git projects on this user account on this computer (for a review of this topic, see [Check your global configurations](#check-your-global-configurations)).
 
 Global configurations for Git only need to be run once and then they will continue to apply until you undo them or replace them with new settings.
 
 Importantly, 'global' only refers to within your account on your machine; if you use Git on multiple machines, or when you use it in the cloud (for example, on GitHub.com), your global configuration settings from your personal machine won't apply.
+
 </div>
 ***
 
@@ -300,6 +302,7 @@ If you wanted to learn more about the command above, which of the following woul
 [[X]] Ask a friend, or post a question in an online community forum
 ****
 <div class = "answer">
+
 Remember that  `-h` will pull up a list of the options for a command, while `--help` will bring up its full help documentation. In this case, knowing the list of options for `git config` won't help much since you need additional information about how the `global` option is working in this particular case, not just the fact that `global` is an option. In general, `-h` is good for when you already know pretty much what a command does but want a reminder of how to use it, whereas `--help` is better for learning about a new command.
 
 In this particular case, the help file for `git config` won't tell you what you want to know about the global settings for aliases, so `git config --help` will turn out to be a dead end. But sometimes the Git help files will have exactly what you need, so it's never a bad idea to check!
@@ -307,6 +310,7 @@ In this particular case, the help file for `git config` won't tell you what you 
 Googling it is also never a bad idea. There are tons of great Git resources available online, and for common problems you're likely to find a useable answer quickly. Keep in mind that there are lots of very advanced Git users posting things online as well, though, and if you get unlucky you could end up with search results that are not at all user-friendly for beginners. When that happens, remind yourself that kind of gatekeeping is a failure on the part of the writer, not something wrong with you as a learner, and keep searching to find a good answer to your question somewhere else.
 
 Asking a peer (in person, or via an online community of practice) is probably the best strategy in a lot of situations, especially if the first two strategies don't yield useful results right away. If you feel embarrassed to ask a question, remind yourself that everyone is a beginner at some point and [asking for help is a great skill to practice](https://www.linkedin.com/pulse/20141027152039-95387062-why-you-should-never-feel-embarrassed-to-ask-questions)!
+
 </div>
 ***
 

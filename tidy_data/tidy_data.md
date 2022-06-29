@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.1
+version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -171,7 +171,9 @@ Which of the following are accurate statements about tidy data?
 ************
 
 <div class = "answer">
+
 An observation is a single thing with measurable characteristics, and each observation should be in its own row.  Variables, on the other hand, are things being measured, like height, color, score, count, and so on.  Variables should each be in their own column.  Values belong in cells, the intersection of rows and columns, and each cell should have one and only one value -- no combining!
+
 </div>
 
 **************
@@ -623,6 +625,7 @@ Which of the following are ways to make this dataset "tidy"?  Check all that app
 ***************
 
 <div class = "answer">
+
 Depression status and timepoint should each become a column.  In fact, we suggest the following columns:
 
 * Depression +/- dx
@@ -654,6 +657,7 @@ There's no need to remove the sex variable, and the numerical values don't neces
 | neg | neg | f | 10 | pre | 110 | 13.9 |
 | neg | neg | m | 10 | post | 88 | 21.8 |
 | neg | neg | f | 10 | post | 95 | 20.6 |
+
 </div>
 
 **************
@@ -701,7 +705,9 @@ Which of these are accurate suggestions with regard to making data analysis more
 *********
 
 <div class = "answer">
+
 Data analysis should be concise.  For example, if you're doing a lot of cut-and-paste and nearly identical lines of code, it might be useful to make a function.  But that doesn't mean that it should be as short as possible.  After all, both computers **and** humans will consume the code, so writing inscrutable, genius level code that is difficult for average users to read is a bad idea.  In order to make data analysis more understandable and more tidy, habits like naming things and composing code in a consistent way can be very helpful.  Finally, pseudocode is a very useful tool that helps you understand the process that you want to carry out in small, atomic steps.
+
 </div>
 
 ***********

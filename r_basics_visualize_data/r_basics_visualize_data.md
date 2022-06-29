@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.1
+version:  1.0.2
 language: en
 module_template_version: 2.0.0
 narrator: US English Female
@@ -224,19 +224,17 @@ Here's another example of that kind of plot:
 
 ![A normally distributed or bell-shaped curve.  The x axis ranges from -3 to 3 while the y axis goes from 0 to 200](media/small_histogram.png)<!-- style = "max-width:800px;"-->
 
-<div class = "question">
 In the box below, write what you think the name of this is (all lowercase, please).
 
 [[histogram]]
 [[?]] Hint: this word ends in "gram"
-
+***
 <div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
 
 "histogram" is the right answer!  A histogram plots the frequency of something in terms of some other thing (for instance, a time value like days).  In our next section, we're going to build a histogram.
-</details>
+
 </div>
-</div>
+***
 
 ### Building Your First Histogram
 
@@ -493,7 +491,6 @@ Here are some aesthetic mappings to consider:
 
 From *Fundamentals of Data Visualization*, by Claus Wilke, licensed under CC-BY-NC-ND
 
-<div class = "question">
 Which of the following elements of a graph could reasonably form part of an aesthetic mapping? Check all that apply!
 
 [[ ]] The size of font used in the title of a plot
@@ -506,9 +503,8 @@ Which of the following elements of a graph could reasonably form part of an aest
 [[X]] The color of paired bars in a bar chart
 [[X]] The line style (solid, dotted) in a line graph
 [[?]] There are multiple correct answers!
-
+***
 <div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
 
 Elements that don't get their value from data don't form part of an aesthetic **mapping**.  For example, the size of the font I want for the title of a plot is based on what looks good, what is readable, and what my publisher asks for.  I can set that without looking at any of the actual data.  The same thing is true of the location of a caption.  I might left-justify it, or center it, or put it above or below the graph, but that's an aesthetic choice that doesn't have any relationship (or mapping) to the data I want to display.
 
@@ -520,9 +516,8 @@ Out of the list above, these are the visual elements that could be reasonably ma
 * The color of paired bars in a bar chart (perhaps we have the number of male and female patients being tested each week, and use different colors to indicate the sex in a paired bar chart)
 * The line style (solid, dotted) in a line graph (we could have actual number of tests administered in a solid line and a machine learning prediction of number of tests in a dotted line)
 
-</details>
 </div>
-</div>
+***
 
 There are actually a lot of aesthetic mapping possibilities, and they depend on the kind of plot you're making. For example, for a line graph you can define line width and line type, and for scatter plots you can define the shape of the dots.
 

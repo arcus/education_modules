@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -198,9 +198,11 @@ Which of the following statements best describes the `seaborn` and `ggplot2` lib
 [( )] They come standard in base python or R, respectively, so you don't have to install them before use
 ****
 <div class = "answer">
+
 Both `seaborn` and `ggplot2` are powerful libraries designed for use in data science. Because they offer so much flexibility, they can be difficult to learn initially, but if you'll be producing data visualizations for use in publications and presentations you'll be glad you put in the time to learn to use them.
 
 Neither `ggplot2` nor `seaborn` are included when you install R or python, so you'll need to install them before the first time you use them. You should also periodically check for updates and install the newest versions of these and other packages you rely on.
+
 </div>
 ****
 
@@ -210,7 +212,9 @@ True or False: It's generally NOT necessary to reformat data before plotting.
 [(X)] FALSE
 ****
 <div class = "answer">
+
 Although some data reformatting can be completed as part of the plotting code, in many cases it will be necessary (or at least a lot easier!) to do any data manipulation before plotting.
+
 </div>
 ****
 
@@ -224,7 +228,9 @@ List as many plot elements as you can that can be used as tools to communicate d
 </script>
 ****
 <div class = "answer">
+
 Correct answers include color, position on axis/dimension, shape, line type, size, and facet. If you got at least a couple items from the above list, give yourself a pat on the back!
+
 </div>
 ****
 
@@ -235,6 +241,7 @@ For someone who has spent a lot of time getting good at `ggplot2` or `seaborn`, 
 [[X]] Going through several different versions of their code before they get a plot that they want to keep
 ****
 <div class = "answer">
+
 All of these are typical for experienced programmers!
 
 Sometimes it can feel discouraging when, as a beginner, you feel like everything you code takes several false starts before you make any real progress. The truth is that writing code is full of false starts, even for the most expert programmers. Everyone, including experts, reuses code from example plots and previous visualizations (that's why [galleries of example plots](#data-visualization-workflow) are so popular!). You shouldn't expect to be able to write `ggplot2` or `seaborn` code from a blank slate. As with so many programming skills, the main difference between a `ggplot2`/`seaborn` expert and a novice is that the expert knows exactly what to google!
@@ -242,6 +249,7 @@ Sometimes it can feel discouraging when, as a beginner, you feel like everything
 And although planning a plot carefully before you start is a good idea and will save you time, don't expect that it will save you from having to re-work it. Creating a good visualization is almost always an iterative process --- that's one reason it's such an advantage to do your plotting in a scripted language like R or python! If you want to make a small change to a plot, you don't have to start from scratch, you can just tweak the code and re-run it.
 
 If you want to see what real life data visualization coding done by a true expert looks like, check out [David Robinson's Tidy Tuesday videos](https://www.youtube.com/playlist?list=PL19ev-r1GBwkuyiwnxoHTRC8TTqP8OEi8). He livestreams himself analyzing a new dataset each week. He is an extremely experienced R user, and an expert at `ggplot2`. You'll notice that he can do a tremendous amount from memory (he's been using R every day professionally for years), but you'll also see that he makes lots of mistakes and often goes back to revise or tweak his code.
+
 </div>
 ****
 
@@ -253,11 +261,13 @@ Which of the following are good strategies to extend the accessibility of your d
  [[X]] Present the information from the plot in alternate forms (a data table in an appendix, narrative description in the text, etc.)
  ****
 <div class = "answer">
+
 All of these are good strategies!
 
 In general, review your work asking yourself "If the reader didn't have visual access, would this still communicate everything I intend it to?" It may not always be possible to make your work maximally accessible, but there's often a lot you can do to improve it.
 
 **Note**: We've discussed visual accessibility exclusively here because that is a common stumbling block for data visualizations, but access is much more than vision. For broader guidance on creating accessible content, see the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) and [The Inclusive Learning Design Handbook](https://handbook.floeproject.org/about/).
+
  </div>
  ****
 
