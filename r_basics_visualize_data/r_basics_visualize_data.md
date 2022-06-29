@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.2
+version:  1.0.3
 language: en
 module_template_version: 2.0.0
 narrator: US English Female

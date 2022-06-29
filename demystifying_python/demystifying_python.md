@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.0.1
+version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -306,7 +306,7 @@ You can even see what this module's notebook looks like in Google Colab! Once yo
    Click on the image to play the demo.
 
    </figcaption>
-   
+
    </figure>
 
 ### Quiz: Accessing Python on Your Computer
