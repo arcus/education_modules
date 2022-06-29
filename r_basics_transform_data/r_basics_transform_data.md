@@ -164,12 +164,22 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 
 **Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
 
-<div style="display:none">@gifPreload</div>
+<div style="display:none">
+
+@gifPreload
+
+</div>
 
 <figure>
+
   <img src="https://github.com/arcus/education_modules/blob/main/r_basics_transform_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_transform_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
-<figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
+<figcaption style = "font-size: 1em;">
+
+Click on the image to play the demo of the above steps!
+
+</figcaption>
+
 </figure>
 
 If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime:
