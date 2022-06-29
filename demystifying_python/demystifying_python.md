@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.0.1
+version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -29,6 +29,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 @gifPreload
 <script>
+
 (function($) {
 
   // Get the .gif images from the "data-alt".
@@ -74,6 +75,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 	});
 
 })(jQuery);
+
 </script>
 @end
 -->
@@ -143,12 +145,22 @@ In most cases, you'll need to start with downloading Python to your computer (th
 
 If you have Python installed on your computer, you can use your computer's Command Line or Terminal program to write Python code interactively using a Python **interpreter** by typing `python3`:
 
-<div style="display:none">@gifPreload</div>
+<div style="display:none">
+
+@gifPreload
+
+</div>
 
 <figure>
+
   <img src="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_interactive.png?raw=true" height="500" width="800" alt="An example of Python code in the Terminal with the following code: 7 + 8, followed by an output of 15;  print('Hello World!'), which gives the output 'Hello World!'; and list(range(0,10)), which prints all integers from 0 to 9" data-alt="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_interactive.gif?raw=true">
 
-<figcaption>Click on the image to play the demo.</figcaption>
+<figcaption>
+
+Click on the image to play the demo.
+
+</figcaption>
+
 </figure>
 
 To exit the Python interpreter, type the command `exit()` and then press the Enter key. Alternatively, you can simply close the interpreter window.
@@ -178,12 +190,22 @@ In the script above you can also see lines of text marked with a pound sign/hash
 
 The Spyder IDE has a console where you can see the output of your script without having to run it in the Command Prompt/Terminal. As you can see in the screenshot below, all we had to do was create the file one time and then run that file instead of typing in the code interactively. This can save you time and effort if you have a task you know you'll want to perform repeatedly. In the Spyder IDE there is a "run" button (a green arrow in menu at the top) but you could also run the same file in your Terminal/Command Line by typing the command `python` followed by the file name of your Python script.
 
-<div style="display:none">@gifPreload</div>
+<div style="display:none">
+
+@gifPreload
+
+</div>
 
 <figure>
+
   <img src="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_spyder_console.png?raw=true" height="500" width="800" alt="Running the Python script discussed above in Spyder, showing a user typing 'Pythonista' in response to the prompt and showing the output 'Welcome to Intro to Python, Pythonista!'" data-alt="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_spyder_console.gif?raw=true">
 
-<figcaption>Click on the image to play the demo.</figcaption>
+<figcaption>
+
+Click on the image to play the demo.
+
+</figcaption>
+
 </figure>
 
 In this case, when you run the code we wrote before in the Spyder console, you'll be asked for an input value (I've supplied the name "Pythonista"). If you hit "Enter", the output of the second line of code will appear: `Welcome to Intro to Python, Pythonista!`.
@@ -269,12 +291,22 @@ You can even see what this module's notebook looks like in Google Colab! Once yo
  4. Click the magnifying glass to the far right to search. You should see a list of the Python notebooks in that repository.
  5. When you find the one you want, the button on the far right (an upward-slanting arrow in a box) will open the notebook file as a Colab notebook in another tab.
 
-   <div style="display:none">@gifPreload</div>
+   <div style="display:none">
+
+   @gifPreload
+
+   </div>
 
    <figure>
+
      <img src="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/github_repo_colab.png?raw=true" height="500" width="800" alt="Finding a GitHub repository in Google Colab following the above instructions." data-alt="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/github_repo_colab.gif?raw=true">
 
-   <figcaption>Click on the image to play the demo.</figcaption>
+   <figcaption>
+
+   Click on the image to play the demo.
+
+   </figcaption>
+
    </figure>
 
 ### Quiz: Accessing Python on Your Computer
