@@ -145,7 +145,11 @@ In most cases, you'll need to start with downloading Python to your computer (th
 
 If you have Python installed on your computer, you can use your computer's Command Line or Terminal program to write Python code interactively using a Python **interpreter** by typing `python3`:
 
-<div style="display:none">@gifPreload</div>
+<div style="display:none">
+
+@gifPreload
+
+</div>
 
 <figure>
   <img src="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_interactive.png?raw=true" height="500" width="800" alt="An example of Python code in the Terminal with the following code: 7 + 8, followed by an output of 15;  print('Hello World!'), which gives the output 'Hello World!'; and list(range(0,10)), which prints all integers from 0 to 9" data-alt="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/python_interactive.gif?raw=true">
@@ -281,7 +285,11 @@ You can even see what this module's notebook looks like in Google Colab! Once yo
  4. Click the magnifying glass to the far right to search. You should see a list of the Python notebooks in that repository.
  5. When you find the one you want, the button on the far right (an upward-slanting arrow in a box) will open the notebook file as a Colab notebook in another tab.
 
-   <div style="display:none">@gifPreload</div>
+   <div style="display:none">
+
+   @gifPreload
+
+   </div>
 
    <figure>
      <img src="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/github_repo_colab.png?raw=true" height="500" width="800" alt="Finding a GitHub repository in Google Colab following the above instructions." data-alt="https://github.com/arcus/education_modules/blob/main/demystifying_python/media/github_repo_colab.gif?raw=true">
