@@ -282,12 +282,38 @@ Opinions, questions, and instructions are among the many things that we can say 
 
 In Bash, statements are written surrounded by square brackets: `[ statement here ]`
 
-As you use them more, you will learn more and more ways to combine and mix mathematical statements to make new ones. To get us started, here are some useful Bash statements:
+To get us started, here are some useful Bash statements:
 
 |Code| Meaning|
-|:-:| :-:|
-|fdsaf|fdsa|
+|:-:| :-|
+| `[-e FILE]` | FILE exists |
+| `[-s FILE]` | FILE exists and is non-empty|
+|`[STRING1 = STRING2]` | STRING1 is equal (identical) to STRING2 |
+|`[INTEGER1 -eq INTEGER2]` | INTEGER1 is equal (numerically) to INTEGER2|
+|`[INTEGER1 -gt INTEGER2]` | INTEGER1 is greater than  INTEGER2|
+|`[INTEGER1 -lt INTEGER2]` | INTEGER1 is less than INTEGER2|
 
+
+<div class = "learnmore">
+
+Under the hood, these statements are using Bash's `test` utility. You can see all of the possible ways to use `test` by running the command `man test` to see it's documentation.
+
+</div>
+
+As you use them more, you will learn more and more ways to combine and mix mathematical statements to make new ones. The basic ways to combine expressions are:
+
+|Code| Meaning|
+|:-:| :-|
+| `[EXPRESSION1] && [EXPRESSION2]` | Both EXPRESSION1 and EXPRESSION2 are true |
+| `[EXPRESSION1] || [EXPRESSION2]` | One or both are true |
+
+<div class = "help">
+
+Don't worry about trying to memorize these statements. Even people who are writing this kind of code daily regularly have to look up these statements.
+
+It is more important to know what types of commands are possible so that you can envision what you want your code to do. You can always type something like "Bash file is empty statement" into a search engine to quickly find what you need.
+
+</div>
 ### if
 If D is true, then E.
 
