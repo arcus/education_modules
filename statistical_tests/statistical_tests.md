@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.2
+version:  1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -74,7 +74,14 @@ In the following sections, you will find tables of links to example code for a r
 
 Whenever possible, we've linked to tutorials that include explanation of what the code does line by line and at least some background on the rationale for the statistical test in question. There are many cases where full tutorials are not yet available, though, in which case bare example code may be all there is.
 
-Even when a rich tutorial is available, the information linked here will generally **not** be enough for you to effectively use a statistical technique you're not already familiar with. Before applying a test you don't fully understand, seek out advice from someone experienced in the technique you want to use. We also have [recommendations for further statistical education](#additional-resources) at the end of this module.
+Even when a rich tutorial is available, the information linked here will generally **not** be enough for you to effectively use a statistical technique you're not already familiar with. Before applying a test you don't fully understand, seek out advice from someone experienced in the technique you want to use. We also have [recommendations for further statistical education](#learning-statistics) at the end of this module.
+
+<div class="warning">
+**Important:**
+This module provides links to code for running statistical tests, but it doesn't explain the statistical theory or assumptions behind the tests themselves (and neither do the linked tutorials and code examples, in many cases).
+
+You'll need to do some additional reading before applying the code for any tests you don't already understand (there are [recommended resources for learning statistical techniques](#additional-resources) at the end of the module).
+</div>
 
 ### No Distinct Outcome
 
@@ -182,6 +189,20 @@ True or False: R and python are equally user-friendly for running most statistic
 While both R and python are excellent languages for data science, R was built specifically with statistical analysis in mind, whereas python is a general purpose programming language. That often means the code to run a test in R may be shorter and easier to read than it would be in python, and the resulting output may be more informative.
 
 That said, excellent statistical analysis tools do exist in python (see the many links in this module), and if you want additional tests or more detailed output, you can always write the code yourself.
+
+</div>
+****
+
+True or False: The best way to find out if a new statistical test is appropriate for your data is to try to run it --- if you get no errors or warnings, then you can assume it's an appropriate test for your data and research question.
+
+[( )] TRUE
+[(X)] FALSE
+****
+<div class = "answer">
+
+For many programming tasks, if your code runs without errors then you can consider it a success --- that is **not** the case with statistical programming. Any statistical software, including both R and python, will allow you to run tests that actually make no sense at all for your data or research question.
+
+It is important that you understand the statistical theory and assumptions underlying a test before you try to apply it to your data. That usually means seeking out guidance (a consultation with a colleague, reading a stats textbook, taking a course, etc.) that goes beyond what you'll find in example code or accompanying documentation. Many statistical techniques --- even very common ones like correlations or t-tests --- take a fair amount of study to be able to understand, so make sure to allow yourself time for additional learning if you're thinking of applying a test that's new to you.
 
 </div>
 ****
