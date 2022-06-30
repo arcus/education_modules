@@ -199,9 +199,11 @@ True or False: The best way to find out if a new statistical test is appropriate
 [(X)] FALSE
 ****
 <div class = "answer">
+
 For many programming tasks, if your code runs without errors then you can consider it a success --- that is **not** the case with statistical programming. Any statistical software, including both R and python, will allow you to run tests that actually make no sense at all for your data or research question.
 
 It is important that you understand the statistical theory and assumptions underlying a test before you try to apply it to your data. That usually means seeking out guidance (a consultation with a colleague, reading a stats textbook, taking a course, etc.) that goes beyond what you'll find in example code or accompanying documentation. Many statistical techniques --- even very common ones like correlations or t-tests --- take a fair amount of study to be able to understand, so make sure to allow yourself time for additional learning if you're thinking of applying a test that's new to you.
+
 </div>
 ****
 
