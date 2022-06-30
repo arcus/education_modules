@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.2.0
+version:  1.2.1
 language: en
 narrator: US English Female
 comment:  This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **data reuse**, and how technical approaches can help make these goals more attainable.
@@ -129,19 +129,17 @@ As learners, we ask that you build your core competencies and non-technical skil
 * Recalling your own ability to master difficult material.  The fact that something feels staggeringly difficult today doesn't mean it will always be so challenging.
 
 
-<div class = "question">
 True or False: If you're a driven, intelligent researcher, you're unlikely to experience failure as you learn skills like writing code.
 
 [( )] TRUE
 [(X)] FALSE
-
+***
 <div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
 
 FALSE!  Failure is something that people who work a lot with technology have to become comfortable with.  You can even think of the process of writing code as failing a lot until you get things right, then moving on to failing on the next project.  Error codes, mistakes, and confusion with new methods can be frustrating, especially if you have a lot of confidence and competence in your current way of working.  It's easier said than done, but you might find it helpful to recall that failure is a critically important tool in science, even if it's a tool we don't love to talk about.
-</details>
+
 </div>
-</div>
+***
 
 ## Concepts
 
@@ -194,7 +192,7 @@ Think about it: when have you been frustrated by a process or study that had poo
 
 </div>
 
-<div class = "question">
+
 Who benefits from reproducible research practices?  Choose all that apply.
 
 [[X]] The original authors of novel research
@@ -203,9 +201,8 @@ Who benefits from reproducible research practices?  Choose all that apply.
 [[X]] Taxpayers
 [[X]] Authors of meta-analyses
 [[?]] There are multiple correct answers!
-
+***
 <div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
 
 All of these groups benefit!  
 
@@ -218,9 +215,9 @@ Journal editors and peer reviewers benefit when submitters use reproducible meth
 Taxpayers benefit when government funded research has the greatest generalizability and highest quality.  Reproducible methods allow a single funded study to have a ripple effect that will continue to influence scientific knowledge well into the future.
 
 Authors of meta-analyses benefit from reproducible practices like data and script sharing, because it allows them to check the findings asserted within a manuscript, compare its findings to those of other manuscripts, and discover differences between analyses that may point to the best methods to use in the practice of science in a given area.
-</details>
+
 </div>
-</div>
+***
 
 ### Generalizability
 
@@ -303,7 +300,6 @@ Here we aim to provide a broad overview of how some tools and practices (scripts
 
 Areas we won't cover here, but are critical to the consistent production of reproducible science, include researcher bias, research incentivization, publication bias, research culture, mentorship, and more.  While we assert that proper use of technology is a **necessary** part of reproducible science, technology alone is not **sufficient**.
 
-<div class = "question">
 
 In the "Data Management and Sharing Snafu" on the previous page, we hear some common researcher errors that are hard to prevent with technology, such as a tendency to gloss over questions with a bit of arrogance: "Everything you need to know is in the article...".  However, technology would have helped solve some of the problems that Dr. Judy Benign had to deal with.  Which of these problems are examples of the kinds of problems that may have a potential technological fix?
 
@@ -313,9 +309,8 @@ In the "Data Management and Sharing Snafu" on the previous page, we hear some co
 [[X]] Software becoming unavailable
 [[ ]] Mentors relying on postdocs to do most of the work
 [[?]] Hint: We consider three of these to be problems with potential technological fixes!
-
+***
 <div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
 
 While technology alone can't motivate researchers to change some behavior, like being skeptical about data sharing in general or turfing much of the hard work of analysis to junior researchers, technology can help save us from ourselves in other ways.
 
@@ -324,9 +319,9 @@ For example, it's understandable that short variable names may be hard to connec
 Researchers are busy, lab churn is a fact of life, and staff like research assistants and postdocs can move on in the middle of a project.  That's why consistently applying **data management** best practices such as shared drives, version controlled repositories, or automated backup can be helpful in preventing misplaced files.  
 
 The careful listing of **dependencies** like software can help quantify the risk of data becoming unusable, and data management practices can include saving plain text versions of encoded data, so that if a proprietary data format is no longer easily usable, a version of the data exists that can still have some utility.
-</details>
+
 </div>
-</div>
+***
 
 ### Scripts
 

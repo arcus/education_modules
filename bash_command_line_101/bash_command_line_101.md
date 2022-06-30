@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version:  1.1.0
+version:  1.1.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -147,7 +147,9 @@ Which of the following are TRUE about bash/shell scripting? Select all that appl
 [[X]] Shell scripts can work with other programming languages, such as R and Python, in pipelines.
 ***
 <div class = "answer">
+
 Bash, or shell, scripting is a way to interface with your computer's operating system, and the necessary applications are probably already on your computer! You can also create pipelines that utilize bash and other programming languages. It's also 100% free!
+
 </div>
 ***
 
@@ -238,6 +240,7 @@ let input = "@input".trim();
 </script>
 ***
 <div class = "answer">
+
 The `cd` function changes what directory you are in. There are a couple of ways to move to the `data` directory:
 
 - The fixed path to the `data` directory is `~/project/data`, so `cd ~/project/data` will get you there.
@@ -247,6 +250,7 @@ The `cd` function changes what directory you are in. There are a couple of ways 
     * You can do this in three steps: `cd ..` followed by `cd ..` again and lastly `cd data`
 
   * You can link the three steps together with `cd ../../data`
+
 </div>
 ***
 
@@ -448,9 +452,11 @@ Line B should be:
 [[ `touch data`| `mkdir data` | (`cd data`) ]]
 ***
 <div class = "answer">
+
 You must first make the directory `data` and then move into that directory with `cd data`.
 
 The command `touch data` will create a file named `data`, not a directory that can contain files.
+
 </div>
 ***
 
@@ -463,11 +469,13 @@ The command `touch data` will create a file named `data`, not a directory that c
 [( )] `>> data_1 echo "sample 1: 45"`
 ***
 <div class = "answer">
+
 The command `echo "sample 1: 45" >> data_1` will add `sample 1: 45` as a new line at the end of the current contents of the file `data_1`.
 
 Since there wasn't anything in `data_1` to begin with, you will get the same outcome if you use a single arrow `>` to replace the entire file with `sample 1: 45`.
 
 The quotes around the text can also be safely omitted in this case, but that isn't a good habit to get into since you may need them later as you progress in your bash scripting.
+
 </div>
 ***
 

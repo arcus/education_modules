@@ -2,7 +2,7 @@
 
 author:  Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -245,9 +245,11 @@ Which of the following commands would show you the **most recent** commit you ma
 - [[ ]] `git show 2a29ed`
 ***
 <div class ="answer">
+
 As long as you didn't do anything fancy to move `HEAD`, the **most recent** commit is the current `HEAD`. Its commit number is `584977`. Since both refer to the same commit, you can use either.
 
 The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show 081cd9` will give you an error since `081cd9` it is not the **first** six digits of a known commit number.
+
 </div>
 ***
 
@@ -432,12 +434,14 @@ After working for a while, we might not remember where our last checkpoints were
 [[git diff HEAD venus.txt]]
 ***
 <div class= "answer">
+
 The command `git diff HEAD venus.txt` will show you the differences between the current working version of `venus.txt` and the last committed version. If you happen to know that the 6-digit commit number of your last commit, you could also use that. For example if the commit number was `123456`, then `git diff 123456 venus.txt` would give you the same result.
 
 
 Omitting `venus.txt` will show you ALL changes that have been made to any file in the repository since the last commit.
 
 Omitting both the commit number and `HEAD`, i.e. entering `git diff venus.txt` will give you the same output in this instance, but we don't suggest using it because there are circumstances under which it will give a different output.
+
 </div>
 ***
 
@@ -461,6 +465,7 @@ What does this output tell you? Choose all of the the statements that the output
 [[ ]] No files other than `venus.txt` have been changed since the last commit.
 ***
 <div class = "answer">
+
 **You already committed the comment about Venus's lack of moons:** FALSE.  The output is showing the difference between the most recent commit and the current **working** version, which has indeed changed. If you had already committed the comment about Venus's lack of moons, that line would not be marked with `+`.
 
 **The current working version of `venus.txt` has two lines:** TRUE.  The current working version of `venus.txt` contains all lines marked with a `+` as well as all lines that have no starting symbol.
@@ -470,6 +475,7 @@ What does this output tell you? Choose all of the the statements that the output
 **No files other than `venus.txt` have been changed since the last:** FALSE Because we only asked Git to tell us about differences in the `venus.txt` file, it didn't check for differences in other files. They could have been changed and that would not be reflected in the output.
 
 You can conclude from this output that you must have committed, and then added the last line to `venus.txt`.
+
 </div>
 ***
 

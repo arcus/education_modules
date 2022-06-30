@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.1.0
+version:  1.1.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -97,7 +97,9 @@ Which of the following is a synonym for "directory"?
 [( )] File
 ********************************
 <div class = "answer">
+
 Directories are often called folders, because the file system on your computer is similar to a physical filing systems, where files are contained in folders. A drive is a physical device where information is stored, and a volume is where the user interacts with the stored information (this is where the directory system is located).
+
 </div>
 ********************************
 
@@ -145,7 +147,9 @@ What is the difference between an absolute file path and a relative file path? S
 [[X]] Absolute file paths contain all of the information about the location of the file, while relative file paths are relative to the current location, or working directory.
 ********************************
 <div class = "answer">
+
 Neither absolute nor relative file paths are "better"-- which you choose will depend on how you will be using or sharing your script. With an absolute path, all of the information to find your file **on your own computer** will be included in the file path. With a relative path, the file path will be in relation to a reference point. Often, relative file paths are used in scripts that will be shared or run on multiple computers.
+
 </div>
 ********************************
 
@@ -161,9 +165,11 @@ What would be a relative file path pointing to the file `experiment1.csv` in a s
 </script>
 ********************************
 <div class = "answer">
+
 Why isn't the correct answer `study_project/data/experiment1.csv`? It's because `study_project` is the working directory, and so you are already there! The file path `study_project/data/experiment1.csv` would be pointing to a **subfolder** called `study_project` with the folder `study_project`, which doesn't exist!
 
 Additionally, either `data/experiment1.csv` or `data\experiment1.csv` would be correct for this question, but which you would choose to use in your script depends on whether you are working in a Unix-like or Mac operating system (the first example) or Windows (the second example).
+
 </div>
 ********************************
 
@@ -208,9 +214,11 @@ Mica has written an R script to extract from a patient cohort some data about al
 [[X]] The file name contains a date that is ambiguous (doesn't use the ISO 8601 standard).
 ********************************
 <div class = "answer">
+
 There are a few things that make Mica's file name unideal! Spaces in file names are not always supported or are painful to deal with in some software. Special characters (in this case "!" and "/") are not allowed in most operating systems. Even though Mica included a date in their file name, generally a good idea, we can't be sure if the format was MM/DD/YYYY or DD/MM/YYYY because they didn't use the ISO 8601 standard, which is always YYYYMMDD. Additionally, `my awesome R script 03/04/21!.R` doesn't tell us anything about what the script actually does! While that might be fine in the short term, in the long term it will likely lead to some confusion. However, there isn't a rule that you can't include "R" in the name of an R script, though with the `.R` file extension, it's not necessary.
 
 Can you think of a few alternative names for the file above that would be more descriptive and follow the best practices we listed previously?
+
 </div>
 ********************************
 

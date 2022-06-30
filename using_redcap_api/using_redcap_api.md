@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -184,7 +184,9 @@ What does "API" stand for?
 ***************
 
 <div class = "answer">
+
 API stands for Application Programming Interface!
+
 </div>
 
 **************
@@ -201,6 +203,7 @@ Which of the following are true statements?  Select all that apply!
 ***************
 
 <div class = "answer">
+
 APIs have multiple advantages related to data freshness and reproducibility.  API usage can reduce the amount of point-and-click analysis step and allow you to import data directly into your analysis script. This can make your research more easily reproducible.  APIs are generally quite stable, changing infrequently, and are great for getting the freshest data (instead of relying on a stale .csv).
 
 </div>
@@ -289,6 +292,7 @@ Which of the following is true of a REDCap API Token?  Select all that apply!
 ***************
 
 <div class = "answer">
+
 You can generate a REDCap API token once you have been given API rights.  Once you have API rights, your token isn't automatically generated, but it's an easy single click to get your token when you're ready.  Your token is unique both to you and to the project -- it's a unique key that is only meant for you, and only for the project it was generated for.  That said, anyone who has that key can access the data, so you should not share it with anyone. The REDCap API token doesn't change daily, but you can change it if you feel like it may have been accidentally shared to another person.
 
 </div>

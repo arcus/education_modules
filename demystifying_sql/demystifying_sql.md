@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho
 email:    camachop@chop.edu
-version:  1.0.0
+version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: US English Male
@@ -122,7 +122,9 @@ What does "SQL" stand for?
 *********
 
 <div class = "answer">
+
 SQL, which can be pronounced "sequel" or S-Q-L, stands for Structured Query Language!
+
 </div>
 
 ***********
@@ -140,7 +142,9 @@ Which of these correctly describe relational databases?  Choose all the correct 
 *********
 
 <div class = "answer">
+
 Relational databases are a data storage solution and they store data in tables, which are in turn organized into rows and columns.  Relational databases use SQL as a way to access data, search for data meeting particular conditions, and connect related data, using columns that tables have in common.  This allows for extracting data in very specific and customized way.
+
 </div>
 
 ***********
@@ -286,7 +290,9 @@ Which of these correctly describe the strengths of SQL?
 *********
 
 <div class = "answer">
+
 SQL is great at working with rectangular data, data that is stored in tables with rows and columns.  Its powerful SELECT / FROM / WHERE syntax makes SQL an ideal tool for isolating just the data you care about, whether that's specifying the columns you're interested in or limiting your data to just those rows that meet certain conditions.  However, it's not great for fine-tuned statistical, linguistic, or data visualization purposes.  
+
 </div>
 
 ***********

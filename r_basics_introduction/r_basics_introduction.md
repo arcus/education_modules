@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.1
+version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -264,12 +264,22 @@ If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.co
 
 **Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
 
-<div style="display:none">@gifPreload</div>
+<div style="display:none">
+
+@gifPreload
+
+</div>
 
 <figure>
+
   <img src="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
-<figcaption style = "font-size: 1em;">Click on the image to play the demo of the above steps!</figcaption>
+<figcaption style = "font-size: 1em;">
+
+Click on the image to play the demo of the above steps!
+
+</figcaption>
+
 </figure>
 
 If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime:
@@ -694,22 +704,42 @@ You can open the `introduction_solutions.Rmd` file to see the answers.
 
 To import data, you run the cell indicated.  Click on the image below to show a short clip of what this looks like.
 
-<div style="display:none">@gifPreload</div>
+<div style="display:none">
+
+@gifPreload
+
+</div>
 
 <figure>
+
   <img src="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/run_import_chunk.png?raw=true" height="540" width="878" alt="The file introduction_exercises.Rmd is open.  The user scrolls to line 17, which is the first line of a code chunk.  In the upper right corner of this code chunk, there is a green play button which is clicked." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/run_import_chunk.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
-<figcaption style = "font-size: 1em;">Click on the image to play the demo of running the chunk that imports data.</figcaption>
+<figcaption style = "font-size: 1em;">
+
+Click on the image to play the demo of running the chunk that imports data.
+
+</figcaption>
+
 </figure>
 
 To answer the questions using the file viewer, click on the name of a data frame (like `covid_testing`) to open a view into the data in a new tab.  Click on the image below to show a short clip of what this looks like.
 
-<div style="display:none">@gifPreload</div>
+<div style="display:none">
+
+@gifPreload
+
+</div>
 
 <figure>
+
   <img src="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/viewer.png?raw=true" height="540" width="878" alt="The mouse moves to the Environment pane of RStudio and the named object covid_testing is clicked, and a view into that data opens in the upper left pane of RStudio." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/viewer.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
-<figcaption style = "font-size: 1em;">Click on the image to play the demo of opening a viewer of a data frame.</figcaption>
+<figcaption style = "font-size: 1em;">
+
+Click on the image to play the demo of opening a viewer of a data frame.
+
+</figcaption>
+
 </figure>
 
 Here are the answers to the questions posed in `introduction_exercises.Rmd`:

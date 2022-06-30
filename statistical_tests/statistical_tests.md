@@ -185,9 +185,11 @@ True or False: R and python are equally user-friendly for running most statistic
 [(X)] FALSE
 ****
 <div class = "answer">
+
 While both R and python are excellent languages for data science, R was built specifically with statistical analysis in mind, whereas python is a general purpose programming language. That often means the code to run a test in R may be shorter and easier to read than it would be in python, and the resulting output may be more informative.
 
 That said, excellent statistical analysis tools do exist in python (see the many links in this module), and if you want additional tests or more detailed output, you can always write the code yourself.
+
 </div>
 ****
 
@@ -212,11 +214,13 @@ Which of the following are key points to consider when deciding which statistica
 [[?]] Hint: Remember to select all of the correct answers. For review, see [Thinking about statistical tests](#thinking-about-statistical-tests).
 ****
 <div class = "answer">
+
 The number (one or more than one) and type (continuous or categorical) of **outcome** variables will definitely influence the kind of statistical test that will be appropriate.  
 
 Although there are a couple exceptions, generally the type of **predictor** variables (continuous or categorical) will not impact which test you choose; most tests work the same whether you use continuous predictors, categorical predictors, or a combination of both (although note that depending on how you run your models, categorical predictors may need to be [dummy coded](https://en.wikiversity.org/wiki/Dummy_variable_(statistics)).
 
 The assumptions of the General Linear Model include the assumption of normally distributed residuals. If that assumption is violated, you may need to run a [nonparametric test](#nonparametric-tests).
+
 </div>
 ****
 
@@ -235,7 +239,9 @@ Dr. Rosado wants to test the relationship between patients' age and BMI. Both ar
 </script>
 ****
 <div class = "answer">
+
 This sounds like a case with [no clear outcome variables](#no-distinct-outcome). Dr. Rosado just wants to test the strength of the relationship between the variables. If they wanted to consider age as a predictor and BMI as an outcome, then they could run this as a [linear regression](#one-continuous-outcome).
+
 </div>
 ****
 
@@ -249,7 +255,9 @@ Di has run an experiment where patients were randomly assigned to one or two tre
 </script>
 ****
 <div class = "answer">
+
 Because Di has multiple outcome variables to consider, [multivariate tests](#more-than-one-continuous-outcome) would likely be appropriate. The predictor in this case will be experimental group (treatment 1, treatment 2, or control), so a one-way MANOVA would be a reasonable choice.
+
 </div>
 ****
 
@@ -262,7 +270,9 @@ Prof. Chatti was planning to run a regression model, but they're working with da
 </script>
 ****
 <div class = "answer">
+
 [Nonparametric tests](#nonparametric-tests) are probably the best choice here, since they do not rely on the assumption that the model residuals conform to any particular distribution, unlike models based on the GLM.
+
 </div>
 ****
 
