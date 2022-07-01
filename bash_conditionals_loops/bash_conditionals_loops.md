@@ -352,9 +352,9 @@ The statement `[ $a -lt $b ]` tests whether the variable `$a` is less than the v
 
 <div class = "important">
 
-**Variables in Bash**
+**Assigning Variables in Bash**
 
-Variables in Bash are assigned using the equals symbol `=` with **no spaces** around it. When you want to refer to a variable that you defined, use the dollar symbol `$` followed by the variable name, again with no spaces separating them.
+Variables in Bash are assigned values using the equals symbol `=` with **no spaces** around it. When you want to refer to a variable later, use the dollar symbol `$` followed by the variable name, again with no spaces separating them.
 
 </div>
 
