@@ -17,8 +17,7 @@ After completion of this module, learners will be able to:
 - Understand how a "for loop" works
 - Write simple "for loop"s in Bash  
 - Understand how an "if/then" statement works
-- Write "if/then" statements
-- Combine loops and conditional statements to create powerful code.
+- Recognize and reuse "if/then" statements in Bash
 
 @end
 
@@ -262,11 +261,19 @@ Loops are great for doing the same thing over and over again, but what if you on
 
 This is where conditional statements come in! A conditional evaluates if a statement is true, and if it is true, executes a command. The most basic conditional statements take the form "if/then."
 
-"If the file is empty, delete the file."
+"**If** the file is empty, **then** delete the file."
 
 Using a conditional clause like this can automate the process so that the computer checks whether the file is true rather than you having to do it!
 
-### Bash Statements
+That said, the Bash language does not make it easy to write conditional statements. Over the next few pages you will learn
+
+* how conditionals work in general (not specific to the Bash language)
+* how to recognize conditionals in Bash
+* how to make small changes to existing code.
+
+If you find that you need to use conditionals a lot in Bash, you will probably settle on a favorite cheat sheet, of which there are many. (links here and in additional resources)
+
+### Statements
 
 A statement (or mathematical statement) is something that can be evaluated as either true or false. Here are some examples:
 
@@ -280,18 +287,117 @@ The first statement is false, the second one is true, and the last three can be 
 
 Opinions, questions, and instructions are among the many things that we can say that do not fall into the category of mathematical statements.
 
+
+### If / Then Structure
+
+The basic structure of an if / then statement in Bash is:
+
+```
+if STATEMENT
+then RUN THIS COMMAND
+fi
+```
+The three lines together make up the conditional statement.
+
+* `if` tells the computer to check whether the statement following it is true or false
+* `then` tells the computer what to do if the statement is true
+* `fi` tells the computer that the conditional statement is completed.
+
+Let's see a working example:
+
+```
+if [ 5 -eq 05 ]
+then echo "integer equality"
+fi
+```
+
+<div class = "important">
+
+In Bash, statements are surrounded by square brackets with a space after the opening `[` and before the closing `]`. A Bash statement looks like this:
+
+`[ statement here ]`
+
+</div>
+The statement `[ 5 -eq 05 ]` is checking if the numbers `5` and `05` are equal to each other. The command `echo "integer equality"` only runs if the numbers are equal. If you change the `05` to `04`, this code will not return any output.
+
+**`else`**
+
+You can also give instructions for what to do if the statement evaluates as false by adding a line starting with `else` after your `then` statement:
+
+```
+if [ 5 -eq 05 ]
+then echo "integer equality"
+else echo "these numbers are not equal"
+fi
+```
+
+Running this code exactly as is will give you the same output you got before. But now if you change the `5` or `05` so that the integers are not equal, you will get a message telling you that!
+
+**`elif`**
+
+The command `elif` is a shortening of the words "else if". This allows you to tell the computer to check another statement if the first statement is false. The `elif` line is followed by its own instance of `then` with instructions for what to do if that statement is true:
+
+```
+a=5
+b=6
+if [ $a -eq $b ]
+then echo "integer equality"
+elif [ $a -lt $b ]
+then echo "$a is smaller than $b"
+else echo "$a is greater than $b"
+fi
+```
+
+The statement `[ $a -lt $b ]` tests whether the variable `$a` is less than the variable `$b`. Similarly, `[ $a -gt $b ]` tests whether `$a` is greather than `$b`.
+
+<div class = "important">
+
+**Variables in Bash**
+
+Variables in Bash are assigned using the equals symbol `=` with **no spaces** around it. When you want to refer to a variable that you defined, use the dollar symbol `$` followed by the variable name, again with no spaces separating them.
+
+</div>
+
+You can have as many `elif` and `then` pairs as you want, but as soon as one is statement is true, the code will do that action and not continue to check the remaining statements. Try to think about what this code will output, then run it and check if you were right:
+
+```
+c=100
+if [ $c -lt 10 ]
+then echo "$c is a single digit number"
+elif [ $c -gt 99 ]
+then echo "$c is a big number"
+elif [ $c -eq 100 ]
+then echo "$c is one hundred"
+fi
+```
+
+
+### Bash examples
+
+
+
+<div class = "help">
+
+**Bash is not designed for humans**
+
+Don't worry about trying to memorize these statements. Even people who are writing this kind of code daily regularly have to look up these statements.
+
+It is more important to know what types of commands are possible so that you can envision what you want your code to do. You can always return to this page or type something like "Bash file is empty statement" into a search engine to quickly find what you need.
+
+</div>
+
 In Bash, statements are written surrounded by square brackets: `[ statement here ]`
 
 To get us started, here are some useful Bash statements:
 
 |Code| Meaning|
 |:-:| :-|
-| `[-e FILE]` | FILE exists |
-| `[-s FILE]` | FILE exists and is non-empty|
-|`[STRING1 = STRING2]` | STRING1 is equal (identical) to STRING2 |
-|`[INTEGER1 -eq INTEGER2]` | INTEGER1 is equal (numerically) to INTEGER2|
-|`[INTEGER1 -gt INTEGER2]` | INTEGER1 is greater than  INTEGER2|
-|`[INTEGER1 -lt INTEGER2]` | INTEGER1 is less than INTEGER2|
+| `[ -e FILE ]` | FILE exists |
+| `[ -s FILE ]` | FILE exists and is non-empty|
+|`[ STRING1 = STRING2 ]` | STRING1 is equal (identical) to STRING2 |
+|`[ INTEGER1 -eq INTEGER2 ]` | INTEGER1 is equal (numerically) to INTEGER2|
+|`[ INTEGER1 -gt INTEGER2 ]` | INTEGER1 is greater than  INTEGER2|
+|`[ INTEGER1 -lt INTEGER2 ]` | INTEGER1 is less than INTEGER2|
 
 
 <div class = "learnmore">
@@ -306,22 +412,6 @@ As you use them more, you will learn more and more ways to combine and mix mathe
 |:-:| :-|
 | `[EXPRESSION1] && [EXPRESSION2]` | Both EXPRESSION1 and EXPRESSION2 are true |
 | `[EXPRESSION1] || [EXPRESSION2]` | One or both are true |
-
-<div class = "help">
-
-Don't worry about trying to memorize these statements. Even people who are writing this kind of code daily regularly have to look up these statements.
-
-It is more important to know what types of commands are possible so that you can envision what you want your code to do. You can always type something like "Bash file is empty statement" into a search engine to quickly find what you need.
-
-</div>
-### if
-If D is true, then E.
-
-### elif
-If D is true, then E, elif F then G
-
-### else
-If D is true, then E, elif F then G, else H
 
 ### Quiz: Conditional Statements
 
