@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  0.0.1
+version:  1.0.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -10,6 +10,7 @@ title: Bash: Conditionals and Loops
 comment:  This module teaches you how to iterate through "for" loops and write conditional statements in Bash.
 long_description: This lesson teaches the basics of loops (for all x, do y) and conditional statements (if x is true, do y) in Bash. Since the grammar of Bash can be non-intuitive this module is appropriate both for learners who have experience with conditionals and loops in other languages, as well as learners who are learning about these kinds of commands for the first time.
 
+estimated_time: 1 hour
 @learning_objectives  
 
 After completion of this module, learners will be able to:
@@ -427,7 +428,7 @@ fi
 ```
 
 
-### Bash examples
+### Bash Examples
 
 On this page we will go through a few examples of conditional statements. In each case the conditional statement will go **inside** a for loop. This is a common way to use the power of conditional statements. After all, writing several lines of code would be overkill to check something only one time!
 
@@ -503,9 +504,9 @@ Look closely at the output you got. There are few things you might not have noti
 
 * When a file contains the string `Ursus`, the line containing that string is printed out! This is how the `grep` function works, it prints out the lines it finds that contain the given string. If you wanted to avoid printing those lines out, use the flag `-q` after `grep` to "quiet" that output.
 
-* Even though the "real bears" have "bear" in their file name, the don't show up in `fake_bears`. This is because once the first `if` statement came back as true, nothing else was checked by the computer.
+* Even though the "real bears" have "bear" in their file name, they don't show up in `fake_bears`. This is because once the first `if` statement came back as true, nothing else was checked by the computer.
 
-### Reference table of Bash statements
+### Reference Table of Bash Statements
 
 A lot of the statements we have used in this module use Bash's `test` utility. You can see all of the possible ways to use `test` by running the command `man test` to see it's documentation. Here are a few useful statements you can try out:
 
@@ -543,14 +544,46 @@ It is more important to know what types of commands are possible so that you can
 
 ### Quiz: Conditional Statements
 
+Without running this code, predict what it will do:
+
+```
+for number in 1 2 3 4 5 6 7
+do
+  if [ $number -gt 4 ]
+    then echo $number is bigger than four
+  elif [ $number -eq 2 ]
+    then echo $number is two
+  elif [ $number -eq 6 ]
+    then echo $number is six
+  elif [ $number -lt 5 ]
+    then echo $number is smaller than five
+  fi
+done
+```
+
+Select all true statements about the output of the above code:
+
+[[X]] The first line will be `1 is smaller than five`
+[[ ]] The second line will be `2 is smaller than five`
+[[X]] The third line will be `3 is smaller than five`
+[[X]] The fourth line will be `4 is smaller than 5`
+[[X]] The fifth line will be `5 is bigger than 4`
+[[ ]] The sixth line will be `6 is six`
+[[X]] The seventh line will be `7 is bigger than 4`
+***
+<div class = "answer">
+
+When the code gets to `2`, it sees the test `[ $number -eq 2 ]` and stops there because it is true. The code never gets to checking whether 2 is less than 5.
+
+When the code gets to `6`, it first sees the test ` [ $number -gt 4 ]`. Since that is true, it never checks whether 6 is equal to 6.
+
+</div>
+***
+
 
 ## Additional Resources
 
-
-
-https://swcarpentry.github.io/shell-novice/
-
-https://swcarpentry.github.io/shell-novice/05-loop/index.html
+Software Carpentry has a series of lessons on the [Unix Shell](https://swcarpentry.github.io/shell-novice/), including one specifically on [loops](https://swcarpentry.github.io/shell-novice/05-loop/index.html).
 
 
 ## Feedback
