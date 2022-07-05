@@ -122,7 +122,9 @@ for each number in the collection B, print the square of that number
 This will have the same result as
 
 ```
-print the square of 2, then print the square of 3, then print the square of 4
+print the square of 2
+print the square of 3
+print the square of 4
 ```
 
 The code blocks above are written in **pseudocode**. Pseudocode is a description of code that shows humans its structure but isn't actually written in any programming language.
@@ -287,6 +289,15 @@ The first statement is false, the second one is true, and the last three can be 
 
 Opinions, questions, and instructions are among the many things that we can say that do not fall into the category of mathematical statements.
 
+<div class = "warning">
+
+**True / False in Bash**
+
+Bash is an older language and can be used to on all sorts of computers with different operating systems to interface with file and directories. This versatility means that Bash shows up in a lot of places. Unfortunately that does not mean that Bash is easy to understand. In fact the opposite is true.
+
+One of Bash's worst properties is that, unlike most programming languages which think of "true" statements as `1` and "false" statements as `0`, in Bash a "true" statement is assigned the numerical value `0` (except when evaluating mathematical expressions inside of double parentheses).
+
+</div>
 
 ### If / Then Structure
 
@@ -313,11 +324,16 @@ fi
 
 <div class = "important">
 
-In Bash, statements are surrounded by square brackets with a space after the opening `[` and before the closing `]`. A Bash statement looks like this:
+**Bash's `test` utility**
+
+A Bash test statement looks like this:
 
 `[ statement here ]`
 
+Notice that the statement is surrounded by square brackets with a space after the opening `[` and before the closing `]`
+
 </div>
+
 The statement `[ 5 -eq 05 ]` is checking if the numbers `5` and `05` are equal to each other. The command `echo "integer equality"` only runs if the numbers are equal. If you change the `05` to `04`, this code will not return any output.
 
 **`else`**
@@ -348,7 +364,7 @@ else echo "$a is greater than $b"
 fi
 ```
 
-The statement `[ $a -lt $b ]` tests whether the variable `$a` is less than the variable `$b`. Similarly, `[ $a -gt $b ]` tests whether `$a` is greather than `$b`.
+The statement `[ $a -lt $b ]` tests whether the variable `$a` is less than the variable `$b`. Similarly, `[ $a -gt $b ]` tests whether `$a` is greater than `$b`.
 
 <div class = "important">
 
@@ -358,7 +374,7 @@ Variables in Bash are assigned values using the equals symbol `=` with **no spac
 
 </div>
 
-You can have as many `elif` and `then` pairs as you want, but as soon as one is statement is true, the code will do that action and not continue to check the remaining statements. Try to think about what this code will output, then run it and check if you were right:
+You can have as many `elif` and `then` pairs as you want, but as soon as one is statement is true, the code will do that action stop. It will not continue to check the remaining statements. Try to think about what this code will output, then run it and check if you were right:
 
 ```
 c=100
@@ -374,21 +390,85 @@ fi
 
 ### Bash examples
 
+On this page we will go through a few examples of conditional statements. In each case the conditional statement will go **inside** a for loop. This is a common way to use the power of conditional statements. After all, writing several lines of code would be overkill to check something only one time!
 
+Each of these examples is based on the directory `learning_bash-main` that you downloaded in the [lesson preparation](#lesson-preparation) section. For each example:
 
-<div class = "help">
+1. Read the code and see if you can guess what it does. Hint: the bold title should give you a clue!
+2. Run the code in your command line interface. Can you tell if your guess was correct?
+3. Read the step by step description of what the code does. Are there parts that weren't clear from running it?
 
-**Bash is not designed for humans**
+**Checking if files are empty**
 
-Don't worry about trying to memorize these statements. Even people who are writing this kind of code daily regularly have to look up these statements.
+The test statement `[ -s FILE ]` is true if `FILE` exists is non-empty and false if `FILE` doesn't exist or exists but is empty.
 
-It is more important to know what types of commands are possible so that you can envision what you want your code to do. You can always return to this page or type something like "Bash file is empty statement" into a search engine to quickly find what you need.
+```
+for file in *.txt
+do
+   if [ -s $file ]
+    then echo $file has text
+   else echo $file is empty
+        echo $file is empty >> empty_files
+   fi
+done
+```
+The outermost portion of this code instructs the computer to look at every file in your current directory that has a `.txt` file extension.
+
+For each `.txt` file, it checks whether the file contains any contents. If the file has contents, Bash prints out the line `file.txt has text`. If the file is empty, Bash adds the line `file.txt is empty` to the file `empty_files`. Note that if you run this command multiple times, you will get add lines to `empty_files` each time!
+
+Also take a look at lines 5 and 6: both run whenever the statement `[ -s $file ]` is false. You can have as much code in that command as you want!
+
+**Checking if filenames contain given string**
+
+The test statement `[ STRING1 = STRING2 ]` is true if the two strings are the same, and false if they differ at all. For example `[ 5 = 05 ]` is false because the string `5` and the string `05` are not the same string of characters.
+
+```
+for file in *.txt
+do
+  if [[ "$file" = *bear* ]]
+    then echo $file might be a bear!
+  else echo $file is not a bear at all
+  fi
+done
+```
+
+This loop also looks at every `.txt` file in the current directory, but the `if` statement is doing a few new things. You might have figured out from running the code that `[[ "$file" == *bear* ]]` is checking whether the file's **name** contains the string `bear`, possibly with other characters before or after. The double equals sign `==` is the test function for whether or not two strings are equal. But what are the double brackets doing?
+
+Double brackets are an extension of single square brackets, with more powerful tools, like the pattern matching we are doing in this example with the character wildcard `*`. Since they extend the uses of single brackets, sometimes double and single brackets do the same thing, and sometimes using one type or the other is required. There are strongly held opinions on [which is better](https://stackoverflow.com/questions/669452/are-double-square-brackets-preferable-over-single-square-brackets-in-b) when you have a choice, but day-to-day your best course of action is to copy bracket style when you look up how to code a particular action.
+
+**Checking if files contain a given string**
+
+<div class = "important">
+
+**True and False for other statements**
+
+Bash can also think of all sorts of other commands as statements. In general a command will evaluate as true if it has output, and false if it doesn't.  For example `grep Ursus some_bear.txt` will be true if the file `some_bear.txt` contains the string `Ursus` and false if the file does not contain that string.
 
 </div>
 
-In Bash, statements are written surrounded by square brackets: `[ statement here ]`
+```
+for file in *.txt
+do
+  if grep Ursus $file
+    then echo $file is a real bear >> real_bears
+  elif [[ "$file" = *"bear"* ]]
+    then echo $file is a fake bear >> fake_bears
+  else echo $file is not a bear at all
+  fi
+done
 
-To get us started, here are some useful Bash statements:
+```
+This loop again goes through all of the `.txt` files, but this time it creates the files `real_bears` which contains the filenames of files containing "real" bears from the genus Ursus, and `fake_bears` containing those animals with "bear" in their common name but which are not in the bear genus Ursus.
+
+Look closely at the output you got. There are few things you might not have noticed at first glance:
+
+* When a file contains the string `Ursus`, the line containing that string is printed out! This is how the `grep` function works, it prints out the lines it finds that contain the given string. If you wanted to avoid printing those lines out, use the flag `-q` after `grep` to "quiet" that output.
+
+* Even though the "real bears" have "bear" in their file name, the don't show up in `fake_bears`. This is because once the first `if` statement came back as true, nothing else was checked by the computer.
+
+### Reference table of Bash statements
+
+A lot of the statements we have used in this module use Bash's `test` utility. You can see all of the possible ways to use `test` by running the command `man test` to see it's documentation. Here are a few useful statements you can try out:
 
 |Code| Meaning|
 |:-:| :-|
@@ -399,26 +479,35 @@ To get us started, here are some useful Bash statements:
 |`[ INTEGER1 -gt INTEGER2 ]` | INTEGER1 is greater than  INTEGER2|
 |`[ INTEGER1 -lt INTEGER2 ]` | INTEGER1 is less than INTEGER2|
 
-
 <div class = "learnmore">
 
-Under the hood, these statements are using Bash's `test` utility. You can see all of the possible ways to use `test` by running the command `man test` to see it's documentation.
-
-</div>
-
-As you use them more, you will learn more and more ways to combine and mix mathematical statements to make new ones. The basic ways to combine expressions are:
+As you use them more, you will learn more and more ways to combine and mix mathematical statements to make new ones. An exclamation point `!` lets you negate a statement, and the double brackets we saw in the second example allow us to combine expressions with **and** and **or** statements.
 
 |Code| Meaning|
 |:-:| :-|
-| `[EXPRESSION1] && [EXPRESSION2]` | Both EXPRESSION1 and EXPRESSION2 are true |
-| `[EXPRESSION1] || [EXPRESSION2]` | One or both are true |
+| `! EXPRESSION` | EXPRESSION is false |
+| `[[ EXPRESSION1 && EXPRESSION2 ]]` | Both EXPRESSION1 and EXPRESSION2 are true |
+| `[[ EXPRESSION1 || EXPRESSION2 ]]` | One or both are true |
+
+
+</div>
+
+<div class = "help">
+
+**Look up instead of memorizing**
+
+Don't worry about trying to memorize these statements. Even people who are writing this kind of code daily regularly have to look up these statements.
+
+It is more important to know what types of commands are possible so that you can envision what you want your code to do. You can always return to this page or type something like "Bash file is empty statement" into a search engine to quickly find what you need.
+
+</div>
 
 ### Quiz: Conditional Statements
 
 
 ## Additional Resources
 
-The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
+
 
 https://swcarpentry.github.io/shell-novice/
 
