@@ -15,7 +15,7 @@ long_description: This lesson teaches the basics of loops (for all x, do y) and 
 After completion of this module, learners will be able to:
 
 - Understand how a "for loop" works
-- Write simple "for loop"s in Bash  
+- Write a "for loop" in Bash  
 - Understand how an "if/then" statement works
 - Recognize and reuse "if/then" statements in Bash
 
@@ -40,15 +40,13 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
+Only basic exposure to Bash is expected. The following is a list of actions and commands that will be used without explanation in this module. Each includes a link to help you brush up on the commands or learn them for the first time.
 
-* navigate within CLI
-* read and write files: `echo` `>>` `>`
-* one skill we have [another module for, linked here](https://education.arcus.chop.edu)
-* some familiarity with [a topic](https://education.arcus.chop.edu)
-* understanding of [one thing](https://education.arcus.chop.edu) and [another](https://education.arcus.chop.edu)
+* [Navigating](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) a filesystem from a command line interface
+* Reading the contents of files with [`cat`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#15)
+* Writing text to files with [`echo` and `>>`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#14)
+* Matching character strings with the [character wildcard `*`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_102/bash_command_line_102.md#4)
 
-If relevant, you can include recommendations for somewhere else to start if the learner doesn't have these prereqs. For example: If you are brand new to R or python (or want a refresher) consider starting with [Intro to R](link) or [Intro to python](link) first and then coming back here.
 
 **Learning Objectives**
 
@@ -188,7 +186,7 @@ for swivel_chair in *.dat; do echo $swivel_chair; done
 ```
 The first one doesn't give any context for what the variable `$z` represents, and the second will be extra confusing to you and anyone else who wants to know what your code does later!
 
-### More complicated loops
+### More Complicated For Loops
 
 Any command or sequence of commands can be repeated using a for loop.
 
@@ -230,7 +228,7 @@ done
 
 This runs very quickly, but you can see that you got the output that each file was processed, and check that it appeared as you wanted in `my_animals`.
 
-### Nesting Loops
+### Nesting For Loops
 
 You can even put a loop inside of another loop! This is called **nesting** and nested loops can allow you to iterate over two (or more!) collections of objects.
 
@@ -255,8 +253,49 @@ Make sure when you are nesting loops that you give your variables different name
 
 </div>
 
-### Quiz: Loops
+### Quiz: For Loops
 
+Which of the following are true statements about for loops? There are multiple true statements.
+
+[[X]] For loops are a useful concept in many programming languages, not just Bash.
+[[X]] For loops let you execute the same command for each item in a list or collection.
+[[X]] For loops can contain other for loops.
+[[X]] For loops can run multiple commands on each item in a collection.
+***
+<div class = "answer">
+
+For loops are powerful tools in many programming languages because they let you execute a command, or series of commands, over and over again. Those commands can even be other for loops!
+
+</div>
+***
+
+In a previous example you created files including `giant_squid.txt`, `elephant.txt`, and `albatross.txt`. If you now want to make each of these files contain their name, what should go in the three blanks in this code?
+
+```
+___1___ giant_squid elephant albatross
+___2___
+  echo $animal >> $animal.txt
+___3___
+```
+
+[( )]  `for animal` ; `do` ; `done`
+[( )]  `for animal`  ; `done` ; `do`
+[(X)]  `for animal in`  ; `do` ; `done`
+[( )]  `for animal in`  ; `done` ; `do`
+***
+<div class = "answer">
+
+The word `in` after defining the variable is important, and the command `do` comes before `done`. The correct code is:
+```
+for animal in giant_squid elephant albatross
+do
+  echo $animal >> $animal.txt
+done
+```
+
+
+</div>
+***
 ## Conditional Statements
 
 Loops are great for doing the same thing over and over again, but what if you only want to run the command sometimes? Maybe you want to record the filename in a list, but only if the file is non-empty.
@@ -414,7 +453,7 @@ done
 ```
 The outermost portion of this code instructs the computer to look at every file in your current directory that has a `.txt` file extension.
 
-For each `.txt` file, it checks whether the file contains any contents. If the file has contents, Bash prints out the line `file.txt has text`. If the file is empty, Bash adds the line `file.txt is empty` to the file `empty_files`. Note that if you run this command multiple times, you will get add lines to `empty_files` each time!
+For each `.txt` file, it checks whether the file contains any contents. If the file has contents, Bash prints out the line `file.txt has text`. If the file is empty, Bash adds the line `file.txt is empty` to the file `empty_files`. Note that if you run this command multiple times, you will add lines to `empty_files` each time!
 
 Also take a look at lines 5 and 6: both run whenever the statement `[ -s $file ]` is false. You can have as much code in that command as you want!
 
@@ -528,6 +567,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Module+Template%22)!
-
-Remember to change the redcap link so that the module name is correct for this module!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash+Loops+and+Conditional+Statements%22)!
