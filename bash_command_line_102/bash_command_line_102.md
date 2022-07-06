@@ -97,7 +97,7 @@ This will open a command line interface at the correct location. Once there, you
 
 Before we start searching for specific things in this directory, let's navigate into it and explore a little bit of what it contains.
 
-If your file ended up in the `Downloads` folder, you could type:
+If your file ended up in the `Downloads` folder, you would type:
 
 ```
 cd ~/Downloads/learning_bash-main
@@ -106,11 +106,11 @@ ls
 
 <div class = "warning">
 
-Make sure to use the file path to `learning_bash-main` that you found for your own computer. It may be far more complicated than this example. You can also follow the instructions on the previous page to open your command line interface where you want to end up, without having to use the `cd` command.
+Make sure to use the file path to `learning_bash-main` that you found for your own computer. It may be far more complicated than this example. You can also follow the instructions on the previous page to open your command line interface where you want to end up, without having to use the `cd` command to get there.
 
 </div>
 
-The `ls` command will give you a list of (almost) everything in the folder.
+If the `ls` command shows you a single directory also titled `learning_bash-main` instead of a list of files, then `cd` into that directory and type `ls` again. This will give you a list of (almost) everything in the folder.
 
 A few things we can see from this list of files:
 
