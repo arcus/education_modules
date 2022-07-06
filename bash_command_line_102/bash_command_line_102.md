@@ -70,19 +70,47 @@ We want to be able to search, move, and rename files during this module, but don
 Download the [`learning_bash` directory](https://github.com/arcus/learning_bash) from GitHub. Once you go to the link:
 
 1. Click on the green **Code** button.
-2. Select **Download ZIP**
-3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`.
-4. Place this new folder `learning_bash-main` somewhere you can easily find it. In the examples we will assume that `learning_bash-main` is in the Downloads directory, but you are welcome to move it somewhere else that is convenient for you to navigate to in your command line interface.
 
+2. Select **Download ZIP**
+
+3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`. Depending on your computer's operating system, you may be able to un-zip the folder by double clicking on it, or may need to right click on it a select "Extract All." This may create an identically named folder inside `learning_bash-main` that contains all of the individual files.
+
+4. Find out the file path (location on your computer) of the new folder `learning_bash-main` and navigate there in your command line interface.
+
+
+<div class = "help">
+
+**Where is my folder?**
+
+Depending on several factors, including your computer's operating system, your level of administrative privileges, and whether you share it with other users, it may be harder or easier to find where `learning_bash-main` ended up from the command line. Luckily you can open the folder directly by right clicking on on the folder you want to open and selecting the appropriate option:
+
+| Command Line Interface | Right-click menu option |
+| :- | :- |
+| Terminal (Mac or Linux) | New Terminal at Folder |
+| Git Bash (Windows) | Git Bash Here |
+| WLS (Windows Linux Subsystem) | Open Linux shell here |
+
+This will open a command line interface at the correct location. Once there, you can use the command `pwd` to see the path to your present working directory.
+
+</div>
 ## Searching files
 
 Before we start searching for specific things in this directory, let's navigate into it and explore a little bit of what it contains.
+
+If your file ended up in the `Downloads` folder, you could type:
 
 ```
 cd ~/Downloads/learning_bash-main
 ls
 ```
-These commands will give you a list of (almost) everything in the folder.
+
+<div class = "warning">
+
+Make sure to use the file path to `learning_bash-main` that you found for your own computer. It may be far more complicated than this example. You can also follow the instructions on the previous page to open your command line interface where you want to end up, without having to use the `cd` command.
+
+</div>
+
+The `ls` command will give you a list of (almost) everything in the folder.
 
 A few things we can see from this list of files:
 
