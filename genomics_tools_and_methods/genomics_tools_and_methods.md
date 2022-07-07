@@ -366,6 +366,8 @@ in addition to trying AWS, you can reach out to support staff in information sys
 
 The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
 
+[Computational Genomics with R](http://compgenomr.github.io/book/) NOTE: CC-SA4.0
+
 ## Feedback
 
 In the beginning, we stated some goals.
