@@ -42,7 +42,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 **Pre-requisites**:
 
 * Learners should already be familiar with the purpose and assumptions of any test they intend to run --- this module covers the "how" only, not the "why".
-* This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md) first and then coming back here.
+* This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md) first and then coming back here.
 
 **Learning Objectives**:  
 
@@ -280,7 +280,7 @@ Prof. Chatti was planning to run a regression model, but they're working with da
 
 ## Additional Resources
 
-If you want to learn more about basics of programming in R or python, you may like our [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md) series.
+If you want to learn more about basics of programming in R or python, you may like our [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md) series.
 
 We also have material on [data visualization in R and python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md)
 

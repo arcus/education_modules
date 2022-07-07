@@ -102,7 +102,7 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 
 **Estimated time to completion:** @estimated_time
 
-**Pre-requisites:** Learners should be familiar with [Python as a programming language](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/update-intro-to-python/intro_to_python/intro_to_python.md#1), but need not have any experience with actually writing Python code.
+**Pre-requisites:** Learners should be familiar with [Python as a programming language](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md), but need not have any experience with actually writing Python code.
 
 **Learning Objectives**:
 
@@ -436,7 +436,7 @@ print(produce)
 You'll notice that with each step, our list `produce` has been permanently changed-- in order to "start over" with the original list, we simply need to re-run the first code chunk.
 
 <div class = "warning">
-The code cells above are linked, meaning that all of the cells "remember" the code that has been run previously (as they would be in a [notebook](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/update-intro-to-python/intro_to_python/intro_to_python.md#8)). Because of this, if you run them out of order, you can get unexpected results or even errors! If things aren't working like they should, re-run the first code cell on the page or hit your refresh button.
+The code cells above are linked, meaning that all of the cells "remember" the code that has been run previously (as they would be in a [notebook](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md#jupyter-notebooks)). Because of this, if you run them out of order, you can get unexpected results or even errors! If things aren't working like they should, re-run the first code cell on the page or hit your refresh button.
 </div>
 
 ### Quiz: Lists
