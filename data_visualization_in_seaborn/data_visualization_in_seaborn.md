@@ -69,7 +69,7 @@ This module also assumes some basic familiarity with python, including
 * reading in data
 * manipulating data frames, including calculating new columns
 
-If you are brand new to python (or want a refresher) consider starting with [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_python/intro_to_python.md#1) first.
+If you are brand new to python (or want a refresher) consider starting with [Demystifying Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md) first.
 
 **Learning Objectives**
 
