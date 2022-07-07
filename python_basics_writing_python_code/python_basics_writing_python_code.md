@@ -102,7 +102,7 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 
 **Estimated time to completion:** @estimated_time
 
-**Pre-requisites:** Learners should be familiar with [Python as a programming language](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/update-intro-to-python/intro_to_python/intro_to_python.md#1), but need not have any experience with actually writing Python code.
+**Pre-requisites:** Learners should be familiar with [Python as a programming language](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md), but need not have any experience with actually writing Python code.
 
 **Learning Objectives**:
 
