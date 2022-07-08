@@ -163,7 +163,11 @@ Navigating the Finder application to locate a file or directory might make it cl
 Finder will show the path to your file or folder on the bottom of the window, as long as that function is turned on.
 ![A Finder window with the file path displayed across the bottom.](media/mac_finder.png) <!-- style = "max-width:600px;" -->
 
-To turn on this feature, go to the **View** menu and select **Show Path Bar**. In the example above, the foler `learning_bash-main` is in `Downloads` which is in `drelliche` which in turn is in `Users` which is on the hard drive `Macintosh HD`.
+In the example above, the folder `learning_bash-main` is in `Downloads` which is in `drelliche` which in turn is in `Users` which is on the hard drive `Macintosh HD`.
+
+To turn on this feature, go to the **View** menu which is at the top left of your screen when a Finder window is selected, and select **Show Path Bar**.
+
+![The View menu with Show Path Bar selected.](media/show_path_bar.png)
 
 **Copy File Path from Path Bar**
 
