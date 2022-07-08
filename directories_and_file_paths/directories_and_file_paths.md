@@ -180,6 +180,8 @@ To turn on this feature, go to the **View** menu which is at the top left of you
 
 Once you have the Path Bar displayed, you can copy the directory or file's path by right clicking on its name in the path bar and selecting **Copy "file_name" as Pathname** and then pasting that pathname wherever you want.
 
+![Copy filename as Pathname.](media/Copy_Pathname.png)
+
 Using this method on the screen shown above, the file path is
 `/Users/drelliche/Downloads/learning_bash-main`.
 
