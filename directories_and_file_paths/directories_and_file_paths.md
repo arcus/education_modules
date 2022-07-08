@@ -144,14 +144,14 @@ One of the properties of the file is its location. The screenshot below shows th
 
 This is unlikely to be your default, but if you are going to want to find the file path of many files and directories, it can be useful to have the file path displayed at the top of the File Explorer window:
 
-![A File Explorer window with the file path displayed across the top.](media/title_path.png)
+![A File Explorer window with the file path displayed across the top.](media/title_path_1.png)
 
 It will take a few clicks to turn this on, but might ultimately save you a lot of time.
 
 1. Go to the **View** menu next to File, Home, and Share at the top of the screen.
 2. Select **Options** which will open the "Folder Options" screen.
 
-![The View menu and Options button.](media/title_path1.png)
+![The View menu and Options button.](media/title_path_2.png)
 
 
 3. Go to the **View** tab of the Folder Options screen, shown below.
