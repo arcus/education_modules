@@ -175,6 +175,19 @@ There are some basic best practice guidelines you can use to make your visualiza
 - Avoid using color as the sole indicator for important information. Instead, double color up with a second indicator like shape or line type.
 - Keep visualizations clean and simple, avoiding unnecessary visual clutter. In other words, keep the [data-to-ink ratio](https://infovis-wiki.net/wiki/Data-Ink_Ratio) high.
 
+<div class="learnmore">
+
+**What about colorblind-friendly palettes?**
+
+There are several excellent color palettes available that are designed to be more visually distinct for people with various types of colorblindness.
+One popular example is the [viridis](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html#the-color-scales) palette.
+(For a fascinating look into the development process behind colorblind-friendly palettes like viridis, check out the [presentation where the developers introduce that scale and discuss the theory behind it](https://www.youtube.com/watch?v=xAoljeRJ3lU).)
+
+One important thing to keep in mind, though, is that there are many different varieties of colorblindness, so a palette that works for one person with colorblindness may not work for another --- and no palette will work for people without visual access at all.
+So colorblind-friendly palettes are a good idea, but don't stop there.
+
+</div>
+
 Even those precautions won't help you reach people with severely limited or nonexistent visual access, though.
 
 In general, a [good principle for inclusive design](https://idrc.ocadu.ca/about/philosophy/) is providing **options** for your users so they can select for themselves the best way for them to interact with your content. Thinking about data visualizations, relevant additional options for accessing the information in your visualization may include the following:
