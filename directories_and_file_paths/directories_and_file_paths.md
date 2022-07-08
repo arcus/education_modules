@@ -150,6 +150,10 @@ It will take a few clicks to turn this on, but might ultimately save you a lot o
 
 1. Go to the **View** menu next to File, Home, and Share at the top of the screen.
 2. Select **Options** which will open the "Folder Options" screen.
+
+![The View menu and Options button.](media/title_path1.png)
+
+
 3. Go to the **View** tab of the Folder Options screen, shown below.
 4. Check the box next to **Display the full path in the title bar** under Advanced Settings.
 5. Click **Apply to All Folders** under Folder Views.
