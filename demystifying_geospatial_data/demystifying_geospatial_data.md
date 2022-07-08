@@ -49,24 +49,46 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 ## What is Geospatial Data?
 
-Maps and More!
-Sometimes maps are helpful: https://www.sciencedirect.com/science/article/pii/S1876285922001814?via%3Dihub
-Not all geospatial research results in maps: https://link.springer.com/content/pdf/10.1007/s11524-022-00633-7.pdf
+If you have ever look at a map, followed GPS directions, or even just used a cell phone to check the time, you have used geospatial data.
 
-## Classic example: John Snow and the Cholera Outbreak
+**Geospatial Data** is any data that includes information about the location of an object or event on the Earth. We think of these locations as being on the Earth's surface, but they might actually be a bit above the surface (weather, airplane flight paths) or below (oil or gas deposits).    
+
+Most useful geospatial data includes locations in addition to other information.
+
+Many of our interactions with geospatial data are in the form of maps. Maps can be visually striking ways to present a lot of geospatial data.
+
+
+### Classic example: John Snow and the Cholera Outbreak
 
 https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/
 
-## Uses
-Connections of all sort of not otherwise clear groupings (social determinants of health)
-Effective interventions (i.e. put a clinic here)
-Impactful communication, to both scientists and other interested people (general public/politicians/policy makers)
+### More than Maps
 
-## Issues
+Sometimes maps are helpful: https://www.sciencedirect.com/science/article/pii/S1876285922001814?via%3Dihub
+Not all geospatial research results in maps: https://link.springer.com/content/pdf/10.1007/s11524-022-00633-7.pdf
+
+## The power of geospatial data
+
+### Connections
+of all sort of not otherwise clear groupings (including social determinants of health)
+
+### Effective interventions
+(i.e. put a clinic here)
+
+### Impactful communication
+to both scientists and other interested people (general public/politicians/policy makers)
+
+## Issues impacting geospatial data
 Quality of data is greatly improved: hand drawn maps and surveying technology is now GPS, still not perfect
-Volume of data: so freaking much all the time every day (think weather data)
-Privacy: your cell phone is tracking you! Responsible use: jittering? By region? Can location data be anonymized?
 
+### Volume of data
+so freaking much all the time every day (think weather data)
+
+### Privacy
+your cell phone is tracking you! Responsible use: jittering? By region? Can location data be anonymized?
+
+### Expense
+some things are free, but for really powerful stuff, you need to pay a lot of money.
 
 ## Additional Resources
 
