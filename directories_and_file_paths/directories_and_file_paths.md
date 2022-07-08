@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.1.1
+version:  1.2.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -125,6 +125,66 @@ While relative file paths require a frame of reference to start looking for a fi
 An example of an absolute file path to our file `age_data.csv` might look something like this:
 
 `/Users/username/Documents/data/age_data.csv` (Unix-like, including Mac operating systems) or `C:\Users\username\Documents\data\age_data.csv`  (Windows)
+
+#### Finding Absolute paths (Windows)
+
+The Windows operating system makes it fairly easy to find a file in the File Explorer, but doesn't necessarily make it easy to know where on your computer that file actually lives. If you can find a file or folder's icon, here are two ways to figure out its file path.
+
+**Viewing the Properties of a File or Directory**
+
+Right click on the file or directory and select "Properties" from the menu.
+
+![Right click menu.](media/right_click_properties.png)<!-- style = "max-width:300px;" -->
+
+One of the properties of the file is its location. The screenshot below shows the properties of a folder called `learning_bash-main` which is located at  `C:\Users\drelliche\Downloads`.
+
+![The properties of a file, including its type and location.](media/find_location_in_properties.png)<!-- style = "max-width:400px;" -->
+
+**Display the full path name in the title bar**
+
+This is unlikely to be your default, but if you are going to want to find the file path of many files and directories, it can be useful to have the file path displayed at the top of the File Explorer window:
+
+![A File Explorer window with the file path displayed across the top.](media/title_path_1.png)
+
+It will take a few clicks to turn this on, but might ultimately save you a lot of time.
+
+1. Go to the **View** menu next to File, Home, and Share at the top of the screen.
+2. Select **Options** which will open the "Folder Options" screen.
+
+![The View menu and Options button.](media/title_path_2.png)
+
+
+3. Go to the **View** tab of the Folder Options screen, shown below.
+4. Check the box next to **Display the full path in the title bar** under Advanced Settings.
+5. Click **Apply to All Folders** under Folder Views.
+6. Click **Apply** in the lower right corner.
+
+![The Folder Options screen open to the View tab.](media/display_full_path.png)
+
+#### Finding Absolute paths (Mac)
+
+Navigating the Finder application to locate a file or directory might make it clear where on your computer the file lives, but if you located it using "Search" it's exactly location might not be obvious at all. Here are two ways to identify the file path of a file you have located in the Finder.
+
+**Show Path Bar**
+
+Finder will show the path to your file or folder on the bottom of the window, as long as that function is turned on.
+
+![A Finder window with the file path displayed across the bottom.](media/mac_finder.png)<!-- style = "max-width:600px;" -->
+
+In the example above, the folder `learning_bash-main` is in `Downloads` which is in `drelliche` which in turn is in `Users` which is on the hard drive `Macintosh HD`.
+
+To turn on this feature, go to the **View** menu which is at the top left of your screen when a Finder window is selected, and select **Show Path Bar**.
+
+![The View menu with Show Path Bar selected.](media/show_path_bar.png)
+
+**Copy File Path from Path Bar**
+
+Once you have the Path Bar displayed, you can copy the directory or file's path by right clicking on its name in the path bar and selecting **Copy "file_name" as Pathname** and then pasting that pathname wherever you want.
+
+![Copy filename as Pathname.](media/Copy_Pathname.png)
+
+Using this method on the screen shown above, the file path is
+`/Users/drelliche/Downloads/learning_bash-main`.
 
 ### So which kind file path should I use?
 
