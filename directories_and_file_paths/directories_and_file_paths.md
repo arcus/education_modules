@@ -132,10 +132,13 @@ The Windows operating system makes it fairly easy to find a file in the File Exp
 
 **Viewing the Properties of a File or Directory**
 
-Right click on the file or directory and select "Properties" from the menu. One of the properties of the file is its location. The screenshot below shows the properties of a folder called `learning_bash-main` which is located at  `C:\Users\drelliche\Downloads`.
+Right click on the file or directory and select "Properties" from the menu.
 
+![Right click menu.](media/right_click_properties.png)<!-- style = "max-width:300px;" -->
 
-![Right click menu.](media/right_click_properties.png)<!-- style = "max-width:400px;" -->    ![The properties of a file, including its type and location.](media/find_location_in_properties.png)<!-- style = "max-width:400px;" -->
+One of the properties of the file is its location. The screenshot below shows the properties of a folder called `learning_bash-main` which is located at  `C:\Users\drelliche\Downloads`.
+
+![The properties of a file, including its type and location.](media/find_location_in_properties.png)<!-- style = "max-width:400px;" -->
 
 **Display the full path name in the title bar**
 
