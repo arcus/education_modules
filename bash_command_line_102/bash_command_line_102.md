@@ -225,7 +225,7 @@ The `find` function searches the names of all folders and files in the current d
 ***
 
 
-2. What you command will return all files with a `.dat` ending that contain the word `Weight`?
+2. What command will return all files with a `.dat` ending that contain the word `Weight`?
 
 [[grep 'Weight' *.dat]]
 <script>
