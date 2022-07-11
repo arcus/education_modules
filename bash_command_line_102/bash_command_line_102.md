@@ -106,7 +106,9 @@ ls
 
 <div class = "warning">
 
-Make sure to use the file path to `learning_bash-main` that you found for your own computer. It may be far more complicated than this example. You can also follow the instructions on the previous page to open your command line interface where you want to end up, without having to use the `cd` command to get there.
+Make sure to use the file path to `learning_bash-main` that you found for your own computer. If your computer uses Windows OS, make sure you replace the forward slashes ` \ ` in the path with back slashes `/`.
+
+You can also follow the instructions on the previous page to open your command line interface where you want to end up, without having to use the `cd` command to get there.
 
 </div>
 
