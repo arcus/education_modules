@@ -75,14 +75,14 @@ Download the [`learning_bash` directory](https://github.com/arcus/learning_bash)
 
 3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`. Depending on your computer's operating system, you may be able to un-zip the folder by double clicking on it, or may need to right click on it a select "Extract All." This may create an identically named folder inside `learning_bash-main` that contains all of the individual files.
 
-4. Find out the file path (location on your computer) of the new folder `learning_bash-main` and navigate there in your command line interface.
+4. [Find out the file path](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#6) (location on your computer) of the new folder `learning_bash-main` and navigate there in your command line interface.
 
 
 <div class = "help">
 
 **Where is my folder?**
 
-Depending on several factors, including your computer's operating system, your level of administrative privileges, and whether you share it with other users, it may be harder or easier to find where `learning_bash-main` ended up from the command line. Luckily you can open the folder directly by right clicking on on the folder you want to open and selecting the appropriate option:
+If you can see the icon for your `learning_bash-main` folder (maybe in a downloads screen) you can open your command line interface directly into the folder by right clicking on the folder and selecting the appropriate option:
 
 | Command Line Interface | Right-click menu option |
 | :- | :- |
@@ -97,10 +97,10 @@ This will open a command line interface at the correct location. Once there, you
 
 Before we start searching for specific things in this directory, let's navigate into it and explore a little bit of what it contains.
 
-If your file ended up in the `Downloads` folder, you would type:
+Make sure to replace `~/your/file/path/here/` with the path to `learning_bash-main` on your own computer that you identified on the previous page.
 
 ```
-cd ~/Downloads/learning_bash-main
+cd ~/your/file/path/here/learning_bash-main
 ls
 ```
 
@@ -297,12 +297,14 @@ Now you can use `cd` and `ls` to see that `blue_jay.txt` is now in `blue_animals
 
 Notice that we used the **relative** locations of `blue_animals` and the `blue_jay.txt` file. We could also have used their global location. Let's see how we would use **global** locations to move the `blue_morpho.txt` file, currently in `blue_animals`, to the same location as the other animals.
 
+Tip: You can scroll sideways to see all of the text in the code block:
+
 ```
-mv ~/Downloads/learning_bash-main/blue_animals/blue_morpho.txt ~/Downloads/learning_bash-main
+mv ~/your/file/path/here/learning_bash-main/blue_animals/blue_morpho.txt ~/your/file/path/here/learning_bash-main
 ```
 
 <div class = "warning">
-If you moved `learning_bash-main` out of your Downloads folder, you will need to use the file path to it instead of `~/Downloads`.
+Make sure to replace `~/your/file/path/here/` with the path to `learning_bash-main` on your own computer.
 </div>
 
 You can also move multiple files at a time by entering them one after another, as long as the directory you want them to end up in is at the end.
@@ -312,7 +314,7 @@ mv blue_and_yellow_macaw.txt blue_morpho.txt blue_animals
 ```
 
 <div class = "help">
-Did you get a message informing you that "No such file or directory" exists? Make sure you are in the right directory with `cd ~/Downloads/learning_bash-main`.
+Did you get a message informing you that "No such file or directory" exists? Make sure you are in the right directory with `cd ~/your/file/path/here/learning_bash-main`.
 </div>
 
 We can also use the `*` to move all files and folders matching a certain pattern to a new location. Let's make a new folder containing all files pertaining to blue whales:
@@ -350,9 +352,8 @@ mv koala.txt koala_bear.txt
 You can also use the global location names for your files or folders. In the example above we could have gotten the same result with
 
 ```
-mv ~/Downloads/learning_bash-main/koala.txt ~/Downloads/learning_bash-main/koala_bear.txt
+mv ~/your/file/path/here/learning_bash-main/koala.txt ~/your/file/path/here/learning_bash-main/koala_bear.txt
 ```
-Tip: You can scroll sideways to see all of the text in the code block!
 
 The benefit to using the global names is that you can run commands with global names from anywhere, you don't have to be in the folder containing the files. The downside is that you have to make sure to type a much longer name correctly.
 
