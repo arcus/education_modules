@@ -225,11 +225,11 @@ The `find` function searches the names of all folders and files in the current d
 ***
 
 
-2. What you command will return all files with a `.dat` ending that contain the word `Weight`
+2. What you command will return all files with a `.dat` ending that contain the word `Weight`?
 
 [[grep 'Weight' *.dat]]
 <script>
-  let input = "@input";
+  let input = "@input".trim().replace(/\s+/g, ' ');
   input == "grep \'Weight\' *.dat" || input == "grep \"Weight\" *.dat";
 </script>
 ***
@@ -386,7 +386,7 @@ Copying a directory with `cp` requires the `-r` flag in order to copy all of its
 
 [[mv dog.txt wolf.txt canines]]
 <script>
-  let input = "@input";
+  let input = "@input".trim().replace(/\s+/g, ' ');
   input == "mv dog.txt wolf.txt canines" || input == "mv wolf.txt dog.txt canines";
 </script>
 ***
