@@ -1,0 +1,205 @@
+<!--
+
+author:   Rose Hartman
+email:    hartmanr1@chop.edu
+version:  0.0.1
+module_template_version: 2.0.1
+language: en
+narrator: UK English Female
+title: Introduction to Power Analysis
+comment:  This is a short, focused description of the module.
+long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
+estimated_time: This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview
+
+@learning_objectives  
+
+After completion of this module, learners will be able to:
+
+- identify when power analyses are and are not appropriate
+- explain the relationship between sample size, effect size, and statistical power
+- describe the three main kinds of power analyses and what each is for
+
+@end
+
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+
+script: https://kit.fontawesome.com/83b2343bd4.js
+
+-->
+
+# Introduction to Power Analysis
+
+<div class = "overview">
+
+## Overview
+@comment
+
+**Is this module right for me?** @long_description
+
+**Estimated time to completion:** @estimated_time
+
+**Pre-requisites**
+
+None.
+
+**Learning Objectives**
+
+@learning_objectives
+
+</div>
+
+
+## What is a power analysis?
+
+## Why would you run a power analysis?
+
+## Sample size, effect size, and power
+
+### What is effect size?
+
+Effect size is how dramatic the effect you're testing is.
+It can be measured in many different ways, depending on your research question.
+If you're interested in whether two continuous variables are related to each other, then your effect size would be measured as a [correlation](link).
+If you're interested in whether two populations differ from each other on some measured variable, then your effect size would be measured as the difference between the sample means divided by their standard deviation (this statistic is called [Cohen's d](link)).
+
+In other words, the effect size captures whether you're testing something very dramatic (a big effect size), quite subtle (a small effect size), or something in between.
+What actual values typically count as "big" vs. "small" effects vary by discipline.  
+
+One important characteristic of measures of effect size is that they **do not depend on the size of your sample**.
+This is in contrast to something like a *p* value --- *p* can also sort of give you a sense of how dramatic your effect is (a very small *p* value results from a bigger effect than a larger *p* value does at the same sample size), but crucially *p* is also directly related to sample size, so *p* can't be considered a pure measure of effect size.
+
+For example, let's say you measure the strength of the relationship between two variables X and Y with a sample of 50 observations, and you calculate a correlation of *r* = .319, *p* = .024.
+If you ran a replication study measuring exactly the same relationship but collected ten times the number of samples (N=500).
+What would you expect to happen?
+
+- [(pdru)] *p* value goes down, *r* goes up
+- [(pdrs)] *p* value goes down, *r* stays roughly the same
+- [(psrs)] *p* value and *r* both stay roughly the same
+- [(psru)] *p* value stays roughly the same, *r* goes up
+<script output="prediction">''@input'</script>
+
+<script style="width: 100%">
+try {
+  let pred = JSON.parse('@input(`prediction`)')
+
+  if(pred[2] == 1) {
+    send.liascript(`Yep!`
+    )
+  } else if(pred[0] == 1 || pred[1] == 1 || pred[3] == 1) {
+    send.liascript(`Nope!`
+      )
+  } else send.clear()
+  } catch(e) { }
+</script>
+{"pdrs": 0, "pdru": 0, "psrs": 1, "psru": 0}
+
+
+**What do you want to learn today?**
+
+- [ ] Biology
+- [ ] Chemistry
+<script output="tasks">"@input"</script>
+
+<script style="width: 100%">
+try {
+  let task = JSON.parse("@input(`tasks`)")
+
+  if(task[0]) {
+    send.liascript(`## Biology
+
+Hey, great, you want to learn something about Biology.
+
+* resource 1
+* resource 2
+
+The input from the tasks above was: \`[${task}]\``
+    )
+  } else send.clear()
+} catch(e) { }
+</script>
+
+Here is a table of some common statistical tests and the typical corresponding measures of effect size for each:
+
+
+### Quiz: Sample size, effect size, and power
+
+Which of the following are examples of measures of effect size? Select all that apply.
+
+[[X]] correlation (*r*)
+[[ ]] *p*-values
+[[X]] Cohen's *d*
+[[ ]] regression coefficients
+[[ ]] *F*-statistics
+
+## Three different kinds of power analysis
+
+###
+
+
+
+## Including highlight boxes
+
+Include special notes with different formatting. The style "important" is for important points and key ideas. For example:
+
+<div class = "important">
+Tip: It's generally much easier to make any necessary changes to the dataframe, such as mutating variables, before sending it to the plotting command.
+</div>
+
+The style "care" is for content related to compassion, self-care, and motivation. For example:
+
+<div class = "care">
+This is a topic with a tremendous amount of jargon, which can make resources you may find online hard to understand for folks new to the field. When that happens it's easy to feel like there's something wrong with you if you don't get it, but that's not the case! Those kinds of gatekeeping explanations are a failure on the part of the writer, not the learner.
+</div>
+
+
+The style "help" is for educational first aid --- "help I'm lost!" suggestions. For example:
+
+<div class = "help">
+Feeling overwhelmed? It takes a long time to learn git, so don't be disheartened if it doesn't click initially. Just focus on stage, commit, and push. Ignore the rest for now, until you've had a chance to practice just the stage-commit-push process several times.
+</div>
+
+The style "warning" alerts users to potential pitfalls. For example:
+
+<div class = "warning">
+A common mistake when using `filter` is to write = when you mean ==. Remember that = is for argument assignment, and == is for testing equality in conditions. If you get them mixed up, your code won't run!
+</div>
+
+The style "learnmore" alerts users resources for further learning, especially links to a more in-depth discussion of an issue that might be touched on only briefly in the module.
+
+<div class = "learnmore">
+To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf)
+</div>
+
+The style "options" is for an aside to let learners know there's another possible approach. For example:
+
+<div class = "options">
+You could also skip setting up an OSF account completely and just use github to publish and share your research products, but many people prefer to have OSF links available.
+</div>
+or
+<div class = "options">
+To do this in R instead of python, see this other module.
+</div>
+There's an additional style of highlight, "answer", that is used in [quizzes](#quiz).
+
+
+## Additional Resources
+
+The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
+
+## Feedback
+
+In the beginning, we stated some goals.
+
+**Learning Objectives:**
+
+@learning_objectives
+
+We ask you to fill out a brief (5 minutes or less) survey to let us know:
+
+* If we achieved the learning objectives
+* If the module difficulty was appropriate
+* If we gave you the experience you expected
+
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Introduction+to+Power+Analysis%22)!
+
+Remember to change the redcap link so that the module name is correct for this module!
