@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
-version:  1.0.2
+version:  1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -299,7 +299,7 @@ Now you can use `cd` and `ls` to see that `blue_jay.txt` is now in `blue_animals
 
 Notice that we used the **relative** locations of `blue_animals` and the `blue_jay.txt` file. We could also have used their global location. Let's see how we would use **global** locations to move the `blue_morpho.txt` file, currently in `blue_animals`, to the same location as the other animals.
 
-Tip: You can scroll sideways to see all of the text in the code block:
+**Tip: You can scroll sideways to see all of the text in the code block:**
 
 ```
 mv ~/your/file/path/here/learning_bash-main/blue_animals/blue_morpho.txt ~/your/file/path/here/learning_bash-main
