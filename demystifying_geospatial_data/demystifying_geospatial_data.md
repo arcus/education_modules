@@ -151,7 +151,7 @@ An internal review board, funding agency, or local law may lay out how you are r
 
 ### Expense
 
-While there are a number of open source tools to process and analyze geospatial data, like `ggmaps` in R or `geopandas` in Python, the most powerful tools for geospatial data are proprietary Geographical Information Systems (GIS).
+While there are a number of open source tools to process and analyze geospatial data, like `ggmap` in R or `geopandas` in Python, the most powerful tools for geospatial data are proprietary Geographical Information Systems (GIS).
 
 If your research leads you to need more complex geographical information like elevation gradients or travel routes, you may eventually want to learn more about some of the paid platforms.
 
