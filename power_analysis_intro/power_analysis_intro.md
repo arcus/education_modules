@@ -66,57 +66,68 @@ In other words, the effect size captures whether you're testing something very d
 What actual values typically count as "big" vs. "small" effects vary by discipline.  
 
 One important characteristic of measures of effect size is that they **do not depend on the size of your sample**.
-This is in contrast to something like a *p* value --- *p* can also sort of give you a sense of how dramatic your effect is (a very small *p* value results from a bigger effect than a larger *p* value does at the same sample size), but crucially *p* is also directly related to sample size, so *p* can't be considered a pure measure of effect size.
+This is in contrast to something like a $p$ value --- $p$ can also sort of give you a sense of how dramatic your effect is (a very small $p$ value results from a bigger effect than a larger $p$ value does at the same sample size), but crucially $p$ is also directly related to sample size, so $p$ can't be considered a pure measure of effect size.
 
-For example, let's say you measure the strength of the relationship between two variables X and Y with a sample of 50 observations, and you calculate a correlation of *r* = .319, *p* = .024.
-If you ran a replication study measuring exactly the same relationship but collected ten times the number of samples (N=500).
-What would you expect to happen?
+For example, let's say you measure the strength of the relationship between two variables X and Y with a sample of 50 observations, and you calculate a correlation of $r = .319$, $p = .024$.
+If you ran a replication study measuring exactly the same relationship but collected ten times the number of samples (N=500),
+what would you expect to happen to your estimates?
+**Take a guess:**
 
-- [(pdru)] *p* value goes down, *r* goes up
-- [(pdrs)] *p* value goes down, *r* stays roughly the same
-- [(psrs)] *p* value and *r* both stay roughly the same
-- [(psru)] *p* value stays roughly the same, *r* goes up
-<script output="prediction">''@input'</script>
+- [( )] $p$ value goes down, $r$ goes up
+- [(X)] $p$ value goes down, $r$ stays roughly the same
+- [( )] $p$ value and $r$ both stay roughly the same
+- [( )] $p$ value stays roughly the same, $r$ goes up
+<script output="prediction:p_vs_r">
+// Correct answer is 1 (second option)
 
-<script style="width: 100%">
-try {
-  let pred = JSON.parse('@input(`prediction`)')
-
-  if(pred[2] == 1) {
-    send.liascript(`Yep!`
-    )
-  } else if(pred[0] == 1 || pred[1] == 1 || pred[3] == 1) {
-    send.liascript(`Nope!`
-      )
-  } else send.clear()
-  } catch(e) { }
+  if ("@input" == 1) {
+    true
+  } else {
+    "@input"
+  }
 </script>
-{"pdrs": 0, "pdru": 0, "psrs": 1, "psru": 0}
 
-
-**What do you want to learn today?**
-
-- [ ] Biology
-- [ ] Chemistry
-<script output="tasks">"@input"</script>
-
-<script style="width: 100%">
+<script style="display: block">
 try {
-  let task = JSON.parse("@input(`tasks`)")
+  if (@input(`prediction:p_vs_r`) == 0 || @input(`prediction:p_vs_r`) == 3) {
+    // Explain why r shouldn't change.
 
-  if(task[0]) {
-    send.liascript(`## Biology
-
-Hey, great, you want to learn something about Biology.
-
-* resource 1
-* resource 2
-
-The input from the tasks above was: \`[${task}]\``
-    )
-  } else send.clear()
+    send.liascript(`Remember, we're testing the exact same question ("What is the relationship between X and Y?"), just with a larger sample.
+      Correlation is an estimate of the strength and direction of a relationship in the population, regardless of the size of a given sample.
+  `)
+  } else ""
 } catch(e) { }
+
 </script>
+
+<script style="display: block">
+
+if (@input(`prediction:p_vs_r`) == 2 || @input(`prediction:p_vs_r`) == 3) {
+
+  // Explain why p should decrease
+
+  send.liascript(`Unlike measures of effect size, $p$ values are sensitive to how big your sample is.
+    That's because even though the underlying effect isn't changing, the precision with which you're estimating it improves as you increase your sample size.
+    In other words, you'll get less random variation sample to sample if you're taking big samples than you would with small samples.
+    That makes your estimate of the $p$ value smaller as sample size gets bigger.
+
+    For a good video on the intuition behind $p$ values:
+    !?[Estimating p values from a simulation.](https://www.khanacademy.org/math/ap-statistics/xfb5d8e68:inference-categorical-proportions/idea-significance-tests/v/estimating-p-value-from-simulation)
+`)
+} else ""
+</script>
+
+<script style="display: block">
+
+if (@input(`prediction:p_vs_r`) != -1) {
+  // After any section is made (right or wrong), show explanation:
+
+  send.liascript(`The value of $r$ will probably change a bit because of random error, but we wouldn't expect it to systematically go up (or down) just because we have a larger sample.
+
+  The $p$ value, on the other hand, will almost certainly go down.`)
+} else ""
+</script>
+
 
 Here is a table of some common statistical tests and the typical corresponding measures of effect size for each:
 
@@ -125,15 +136,15 @@ Here is a table of some common statistical tests and the typical corresponding m
 
 Which of the following are examples of measures of effect size? Select all that apply.
 
-[[X]] correlation (*r*)
-[[ ]] *p*-values
+[[X]] correlation ($r$)
+[[ ]] $p$-values
 [[X]] Cohen's *d*
 [[ ]] regression coefficients
 [[ ]] *F*-statistics
 
 ## Three different kinds of power analysis
 
-###
+### one
 
 
 
@@ -181,7 +192,6 @@ To do this in R instead of python, see this other module.
 </div>
 There's an additional style of highlight, "answer", that is used in [quizzes](#quiz).
 
-
 ## Additional Resources
 
 The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
@@ -201,5 +211,3 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If we gave you the experience you expected
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Introduction+to+Power+Analysis%22)!
-
-Remember to change the redcap link so that the module name is correct for this module!
