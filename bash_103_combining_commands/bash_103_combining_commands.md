@@ -53,26 +53,46 @@ The only commands that will be assumed are the navigation commands `cd`, `ls`, a
 
 ## Lesson Preparation
 
-You will get the most out of this lesson if you follow along with the examples and try out the commands.
 
-**Open a Bash shell.**
+You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer. Please follow the instructions appropriate for the computer you are using.
 
+**Open a bash shell.**
 If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
 <div class = "important">
-We will be manipulating, writing, and overwriting files in this lesson, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
+We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
+</div>
+
+<div class = "warning">
+
+Please download a fresh copy of these files. If you have downloaded them for a previous module, you have likely moved and changed some of them while working through that module and the examples in this module assume that no changes have already been made to the directory.
+
 </div>
 
 **Download the files.**
 
-We will be using a directory called `learning-bash` that is publicly available on GitHub. If you have already downloaded this directory for use in another bash module, you do not need to download a fresh copy.
-
-Navigate in your browser to the [`learning_bash` directory](https://github.com/arcus/learning_bash) on GitHub. Once you follow the link:
+Download the [`learning_bash` directory](https://github.com/arcus/learning_bash) from GitHub. Once you go to the link:
 
 1. Click on the green **Code** button.
 2. Select **Download ZIP**
-3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`.
-4. Place this new folder `learning_bash-main` somewhere you can easily find it. In the examples we will assume that `learning_bash-main` is in the Downloads directory, but you are welcome to move it somewhere else that is convenient for you to navigate to in your command line interface.
+3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`. Depending on your computer's operating system, you may be able to un-zip the folder by double clicking on it, or may need to right click on it a select "Extract All." This may create an identically named folder inside `learning_bash-main` that contains all of the individual files.
+4. [Find out the file path](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#6) (location on your computer) of the new folder `learning_bash-main` and navigate there in your command line interface.
+
+ <div class = "help">
+
+ **Where is my folder?**
+
+ If you can see the icon for your `learning_bash-main` folder (maybe in a downloads screen) you can open your command line interface directly into the folder by right clicking on the folder and selecting the appropriate option:
+
+ | Command Line Interface | Right-click menu option |
+ | :- | :- |
+ | Terminal (Mac or Linux) | New Terminal at Folder |
+ | Git Bash (Windows) | Git Bash Here |
+ | WLS (Windows Linux Subsystem) | Open Linux shell here |
+
+ This will open a command line interface at the correct location. Once there, you can use the command `pwd` to see the path to your present working directory.
+
+ </div>
 
 ## Inputs and Outputs
 
