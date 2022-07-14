@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
-version:  1.0.1
+version:  1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -70,19 +70,49 @@ We want to be able to search, move, and rename files during this module, but don
 Download the [`learning_bash` directory](https://github.com/arcus/learning_bash) from GitHub. Once you go to the link:
 
 1. Click on the green **Code** button.
-2. Select **Download ZIP**
-3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`.
-4. Place this new folder `learning_bash-main` somewhere you can easily find it. In the examples we will assume that `learning_bash-main` is in the Downloads directory, but you are welcome to move it somewhere else that is convenient for you to navigate to in your command line interface.
 
+2. Select **Download ZIP**
+
+3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`. Depending on your computer's operating system, you may be able to un-zip the folder by double clicking on it, or may need to right click on it a select "Extract All." This may create an identically named folder inside `learning_bash-main` that contains all of the individual files.
+
+4. [Find out the file path](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#6) (location on your computer) of the new folder `learning_bash-main` and navigate there in your command line interface.
+
+
+<div class = "help">
+
+**Where is my folder?**
+
+If you can see the icon for your `learning_bash-main` folder (maybe in a downloads screen) you can open your command line interface directly into the folder by right clicking on the folder and selecting the appropriate option:
+
+| Command Line Interface | Right-click menu option |
+| :- | :- |
+| Terminal (Mac or Linux) | New Terminal at Folder |
+| Git Bash (Windows) | Git Bash Here |
+| WLS (Windows Linux Subsystem) | Open Linux shell here |
+
+This will open a command line interface at the correct location. Once there, you can use the command `pwd` to see the path to your present working directory.
+
+</div>
 ## Searching files
 
 Before we start searching for specific things in this directory, let's navigate into it and explore a little bit of what it contains.
 
+Make sure to replace `~/your/file/path/here/` with the path to `learning_bash-main` on your own computer that you identified on the previous page.
+
 ```
-cd ~/Downloads/learning_bash-main
+cd ~/your/file/path/here/learning_bash-main
 ls
 ```
-These commands will give you a list of (almost) everything in the folder.
+
+<div class = "warning">
+
+Make sure to use the file path to `learning_bash-main` that you found for your own computer. If your computer uses Windows OS, make sure you replace the forward slashes ` \ ` in the path with back slashes `/`.
+
+You can also follow the instructions on the previous page to open your command line interface where you want to end up, without having to use the `cd` command to get there.
+
+</div>
+
+If the `ls` command shows you a single directory also titled `learning_bash-main` instead of a list of files, then `cd` into that directory and type `ls` again. This will give you a list of (almost) everything in the folder.
 
 A few things we can see from this list of files:
 
@@ -269,12 +299,14 @@ Now you can use `cd` and `ls` to see that `blue_jay.txt` is now in `blue_animals
 
 Notice that we used the **relative** locations of `blue_animals` and the `blue_jay.txt` file. We could also have used their global location. Let's see how we would use **global** locations to move the `blue_morpho.txt` file, currently in `blue_animals`, to the same location as the other animals.
 
+**Tip: You can scroll sideways to see all of the text in the code block:**
+
 ```
-mv ~/Downloads/learning_bash-main/blue_animals/blue_morpho.txt ~/Downloads/learning_bash-main
+mv ~/your/file/path/here/learning_bash-main/blue_animals/blue_morpho.txt ~/your/file/path/here/learning_bash-main
 ```
 
 <div class = "warning">
-If you moved `learning_bash-main` out of your Downloads folder, you will need to use the file path to it instead of `~/Downloads`.
+Make sure to replace `~/your/file/path/here/` with the path to `learning_bash-main` on your own computer.
 </div>
 
 You can also move multiple files at a time by entering them one after another, as long as the directory you want them to end up in is at the end.
@@ -284,7 +316,7 @@ mv blue_and_yellow_macaw.txt blue_morpho.txt blue_animals
 ```
 
 <div class = "help">
-Did you get a message informing you that "No such file or directory" exists? Make sure you are in the right directory with `cd ~/Downloads/learning_bash-main`.
+Did you get a message informing you that "No such file or directory" exists? Make sure you are in the right directory with `cd ~/your/file/path/here/learning_bash-main`.
 </div>
 
 We can also use the `*` to move all files and folders matching a certain pattern to a new location. Let's make a new folder containing all files pertaining to blue whales:
@@ -322,9 +354,8 @@ mv koala.txt koala_bear.txt
 You can also use the global location names for your files or folders. In the example above we could have gotten the same result with
 
 ```
-mv ~/Downloads/learning_bash-main/koala.txt ~/Downloads/learning_bash-main/koala_bear.txt
+mv ~/your/file/path/here/learning_bash-main/koala.txt ~/your/file/path/here/learning_bash-main/koala_bear.txt
 ```
-Tip: You can scroll sideways to see all of the text in the code block!
 
 The benefit to using the global names is that you can run commands with global names from anywhere, you don't have to be in the folder containing the files. The downside is that you have to make sure to type a much longer name correctly.
 
