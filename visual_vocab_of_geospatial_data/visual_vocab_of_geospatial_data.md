@@ -15,7 +15,7 @@ estimated_time: ?? minutes
 
 After completion of this module, learners will be able to:
 
-- specify mapping conventions
+- discuss benefits and pitfalls of using maps to present data
 - describe types of geospatial data
 - identify common types of maps
 
@@ -52,26 +52,54 @@ None
 
 Pros of maps:
 
-don't need a lot of specialized knowledge to understand them
-meanings persist throughout time, check out these really old maps!
-some conventions: land/water is a convention worth keeping, north = up maybe less so
+- don't need a lot of specialized knowledge to understand them
+- meanings persist throughout time, check out these really old maps!
+- some conventions: land/water is a convention worth keeping, north = up maybe less so
 
 Issues to consider:
 
-maps can distort information just as much as any other way of presenting data. Because they are so striking, perhaps even more so!
-remember, visual means very accessible for SOME, but not universally accessible. If your ONLY way of communicating the information is with a map, it will be less accessible to completely inaccessible to those with different vision.  
+- maps can distort information just as much as any other way of presenting data. Because they are so striking, perhaps even more so!
+- remember, visual means very accessible for SOME, but not universally accessible. If your ONLY way of communicating the information is with a map, it will be less accessible or completely inaccessible to those with different vision capabilities. Even those who have no trouble seeing your map, may not be visual learners, so rely exclusively on maps to your own peril.
+- A map is a representation of reality, but it is not reality. [Failures of GPS navigation systems](https://www.salon.com/2014/02/19/9_of_the_most_epic_gps_failures_partner/) can make the difference particularly clear, but there are many subtler ways in which maps are good, but imperfect representations.
 
-## What makes up a map?
+Maps are inherently political:
 
-points, lines, and polygons, multipolygons. (state of delaware has a circular bump how is that pologon-ized?)
+- the idea of claiming land by mapping it (still in effect via oceanography and ocean floor mapping to claim continental shelf/deep see drilling rights: The United Nations Convention on the Law of the Sea (UNCLOS))
+- in public health, maps can have huge consequences for who has political power or receives services or benefits.
+- From the name of a neighborhood to regions actually suffering from war... making, or even sharing a map can be a political statement... be warned? (Hans island Canada/Denmark seems like a safe example and recently resolved...)
 
-## Ways maps can present data
+## How does geospatial data become a map?
 
-choropleth (and variantions)
-dot distribution
-graduated symbol
-heat Maps
-cartogram (kind of a weird one...)
+Interpreting the geospatial data presented by a map is one thing, but if you want to make a map, you need to know how geospatial data becomes a map!
+
+Now that you have decided that the pros of making maps outweigh the cons, what actually goes into making a map?
+
+Geospatial data might be the location of an individual object, be it a building, a city, a person, etc. (0 dimensional). It might be a line or path, tracing out the route of a road, river, or isobar (all the points where the air pressure is a specific value) (1 dimensional). It might be a region, like a country, park, or body of water (2 dimensional). In different contexts the same physical object might be described using different types of data. While a city might be a 2D region of a local map, it might only appear as a point in national or global data. Similarly a river might be a line dividing two regions of land on either side, or it could be a region of its own. Which format you use will depend on your needs. Knowing what you will use the data for will help you determine which types of location data you want to acquire.
+
+### Points
+
+### Lines
+
+### Polygons
+
+
+## Ways to present data with maps
+
+Every map involves choices to emphasize some data and omit other data. The type of data you want to display can help you choose what type of map to make. In this section we will learn about some of the most common types of maps.
+
+### Choropleths
+(and variations)
+
+### Dot distribution
+
+### Graduated symbol maps
+(https://gisgeography.com/dot-distribution-graduated-symbols-proportional-symbol-maps/#:~:text=Graduated%20symbol%20maps%20and%20proportional%20symbol%20maps%20scale%20the%20size,instead%20of%20scaling%20them%20larger.)
+
+### Proportional symbol maps
+### Heat maps
+
+### Cartograms
+(kind of a weird one...)
 
 ## Quiz
 
