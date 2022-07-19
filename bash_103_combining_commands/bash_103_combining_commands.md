@@ -115,7 +115,7 @@ wc Animals.csv
       20      36     355 Animals.csv
 ```
 
-The output counts the number of lines (19), the number of words (35), and the number of bytes (341) in the file, followed by the file's name.
+The output counts the number of lines (20), the number of words (36), and the number of bytes (355) in the file, followed by the file's name.
 
 Some common options are to ask for only some of this metadata using flags:
 
