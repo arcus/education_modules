@@ -78,21 +78,21 @@ Download the [`learning_bash` directory](https://github.com/arcus/learning_bash)
 3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`. Depending on your computer's operating system, you may be able to un-zip the folder by double clicking on it, or may need to right click on it a select "Extract All." This may create an identically named folder inside `learning_bash-main` that contains all of the individual files.
 4. [Find out the file path](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#6) (location on your computer) of the new folder `learning_bash-main` and navigate there in your command line interface.
 
- <div class = "help">
+<div class = "help">
 
- **Where is my folder?**
+**Where is my folder?**
 
- If you can see the icon for your `learning_bash-main` folder (maybe in a downloads screen) you can open your command line interface directly into the folder by right clicking on the folder and selecting the appropriate option:
+If you can see the icon for your `learning_bash-main` folder (maybe in a downloads screen) you can open your command line interface directly into the folder by right clicking on the folder and selecting the appropriate option:
 
- | Command Line Interface | Right-click menu option |
- | :- | :- |
- | Terminal (Mac or Linux) | New Terminal at Folder |
- | Git Bash (Windows) | Git Bash Here |
- | WLS (Windows Linux Subsystem) | Open Linux shell here |
+| Command Line Interface | Right-click menu option |
+| :- | :- |
+| Terminal (Mac or Linux) | New Terminal at Folder |
+| Git Bash (Windows) | Git Bash Here |
+| WLS (Windows Linux Subsystem) | Open Linux shell here |
 
- This will open a command line interface at the correct location. Once there, you can use the command `pwd` to see the path to your present working directory.
+This will open a command line interface at the correct location. Once there, you can use the command `pwd` to see the path to your present working directory.
 
- </div>
+</div>
 
 ## Inputs and Outputs
 
@@ -112,7 +112,7 @@ The word count command `wc` takes a file (or files) as input and returns some ba
 
 ```
 wc Animals.csv
-      19      35     341 Animals.csv
+      20      36     355 Animals.csv
 ```
 
 The output counts the number of lines (19), the number of words (35), and the number of bytes (341) in the file, followed by the file's name.
@@ -151,6 +151,11 @@ The command `head` outputs the first 10 lines of a file. You can ask for the fir
 
 ```
 head -3 Animals.csv
+```
+
+You should see these first three lines of `Animals.csv`:
+
+```
 blue and yellow macaw,bird
 blue jay,bird
 blue whale,mammal
@@ -162,10 +167,15 @@ The `tail` command is similarly used to output the last lines of a file:
 
 ```
 tail -4 Animals.csv
-red panda,mammal
+```
+
+You should see these last four lines of `Animals.csv`:
+
+```
 tiger,mammal
 wolf,mammal
 blue morpho,insect
+koala,mammal
 ```
 
 The `tail` command is particularly useful when you know a certain type of information is at the end of your file, perhaps because you appended it to the end of the file.
@@ -188,11 +198,13 @@ You can change how the lines are ordered using flags. The `-r` flag reverses the
 sort -r Animals.csv
 ```
 <div class ="learnmore">
+
 There are lots of options for the `sort` command. All of the options are visible in the manual which you can see by typing `man sort`. In addition to reversing the order with `-r`, a few particularly useful ones include:
 
 - `sort -n` which sorts by numerical value
 - `sort -b` which ignores leading blanks
 - `sort -f` which treats upper and lower case characters as the same while sorting.
+
 </div>
 
 **Unique occurrences**
@@ -216,7 +228,7 @@ wc Animals.csv > animals.txt
 You won't see any output because it was redirected to the newly created file `animals.txt`. Use `cat` or another program to check that the file `animals.txt` contains the text:
 
 ```
-      19      35     341 Animals.csv
+      20      36     355 Animals.csv
 ```
 
 A single arrow will replace anything that was already in the file with the new content. If we don't want to replace the content in `animals.txt` we can append (add new lines after the existing lines) to the end of the file using double arrows `>>`:
@@ -228,7 +240,9 @@ sort Animals.csv >> animals.txt
 Again there is no output shown because it was redirected into the file `animals.txt`. Check that `animals.txt` now contains the word count at the top, followed by a sorted copy of the data from `Animals.csv`.
 
 <div class = "learnmore">
-In the Bash language, right arrows redirect output, and left arrows (or "less than" sign) redirect input.
+
+In the Bash language, right arrows `>` redirect output, and left arrows `<` redirect input. You are unlikely to need to redirect input since most of the time just entering the input you want, like `Animals.csv`, is sufficient. However if you end up writing more complicated pipelines in the future it may be useful to [learn more about redirecting input](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
+
 </div>
 
 ### Quiz: inputs and outputs
@@ -261,9 +275,12 @@ You want to convert information in this file into a similar format to your other
 </script>
 ***
 <div class = "answer">
+
 The output of `head -1 newfile.txt` is the first line of `newfile.txt`. Since no file named  `blue_crab.txt` previously existed, overwriting (`>`) and appending (`>>`) that output have the same result.
+
 </div>
 ***
+
 
 2. What command would you type to create a new file `blue_crab.dat` that contains only the last two lines of this file?
 
@@ -274,9 +291,12 @@ The output of `head -1 newfile.txt` is the first line of `newfile.txt`. Since no
 </script>
 ***
 <div class = "answer">
+
 The output of `tail -2 newfile.txt` is the last two lines of `newfile.txt`. Since no file named  `blue_crab.dat` previously existed, overwriting (`>`) and appending (`>>`) that output have the same result.
+
 </div>
 ***
+
 ## Linking commands
 
 We could link commands by writing the output of one command to a file, and then running another command on that file. However if we don't actually need that intermediate file it is possible to speed up the process by passing the output of one command directly to another using a "pipe."
@@ -307,10 +327,6 @@ What do you think will happen if you switch the order of `sort` and `tail`? Try 
 tail -3 Animals.csv | sort
 ```
 Now the blue morpho butterfly is first, instead of the red panda because the last three lines of `Animals.csv` were tiger, wolf, and blue morpho.
-
-<div class = "important">
-Something helpful about standard input and standard output here? but not too confusing?
-</div>
 
 ### Combining `|` and `>`
 
@@ -387,9 +403,11 @@ wc -m *.txt | sort -n | head -1
 The Indian cobra, scientific name _Naja naja_ has the shortest character count of any of the animals listed here.
 
 <div class = "learnmore">
+
 **Why is the character count for `Naja naja` 10?**
 
 The character count includes each of the 8 letters, as well as the single blank space and the "newline" character that indicates the end of the line.
+
 </div>
 
 You can chain as many commands as you want into a pipeline, including search commands like `grep` and `find` that we haven't talked about in this lesson.
@@ -421,18 +439,23 @@ What command would append the 3rd line, which reads `blue crab,crustacean` to th
 [( )] `tail -1 newfile.txt | head -3 > Animals.csv`
 ***
 <div class = "answer">
+
 The first three lines are returned by `head -3 newfile.txt`:
+
 ```
 Callinectes sapidus
 
 blue crab,crustacean
 ```
+
 and the last line of that text is returned by `tail -1`:
+
 ```
 blue crab,crustacean
 ```
 
 Since we don't want to overwrite the text already in `Animals.csv` we have to use the double arrow `>>` to append that line to the end of the file.
+
 </div>
 ***
 
