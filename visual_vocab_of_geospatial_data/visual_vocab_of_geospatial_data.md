@@ -8,14 +8,13 @@ language: en
 narrator: UK English Female
 title: Maps: the Visual Vocabulary of Geospatial Data
 comment:  This is a general overview of how geospatial data can be presented visually using maps.
-long_description: Although maps can be extremely effective ways to receive information with limited specialized knowledge, creating them requires some specialized vocabulary. This modules if for learners who want to move beyond reading maps and are considering making their own maps.
+long_description: Although maps can be extremely effective ways to receive information with only limited prerequisite specialized knowledge, creating them requires some specialized vocabulary. This modules is for learners who want to move beyond reading maps and are considering making their own maps.
 estimated_time: ?? minutes
 
 @learning_objectives  
 
 After completion of this module, learners will be able to:
 
-- discuss benefits and pitfalls of using maps to present data
 - describe types of geospatial data
 - identify common types of maps
 
@@ -54,7 +53,7 @@ Pros of maps:
 
 - don't need a lot of specialized knowledge to understand them
 - meanings persist throughout time, check out these really old maps!
-- some conventions: land/water is a convention worth keeping, north = up maybe less so
+- some conventions: land/water is a convention worth keeping, north = up maybe less so, although depending on context can really confuse people
 
 Issues to consider:
 
@@ -72,15 +71,47 @@ Maps are inherently political:
 
 Interpreting the geospatial data presented by a map is one thing, but if you want to make a map, you need to know how geospatial data becomes a map!
 
-Now that you have decided that the pros of making maps outweigh the cons, what actually goes into making a map?
+The following map shows the city of Philadelphia, along with a few specific attributes:
+- outdoor public pools that opened in Summer 2021 (pictured as blue dots)
+- two train lines, the Broad Street Line (in orange) and the Market Frankfort Line (in dark blue) are also pictured
+- zip codes divide the city into regions
 
-Geospatial data might be the location of an individual object, be it a building, a city, a person, etc. (0 dimensional). It might be a line or path, tracing out the route of a road, river, or isobar (all the points where the air pressure is a specific value) (1 dimensional). It might be a region, like a country, park, or body of water (2 dimensional). In different contexts the same physical object might be described using different types of data. While a city might be a 2D region of a local map, it might only appear as a point in national or global data. Similarly a river might be a line dividing two regions of land on either side, or it could be a region of its own. Which format you use will depend on your needs. Knowing what you will use the data for will help you determine which types of location data you want to acquire.
+![Map of Philadelphia](media/Philly_map.png)
+
+How did the data about pools, trains, and zip codes become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
+- Points
+- Lines
+- Polygons
+- Multipolygons.
+
+We will investigate each of theses type of spatial data a little more closely.
 
 ### Points
 
+Geospatial data might be the location of an individual object, be it a building, a city, a person, etc. (0 dimensional).
+
+**Latitude and Longitude**
+
+single points, you can still see a lot with only points, assuming you have a lot of points. Could be very accurate (where is this car?) or sort of vague and politically determined (each city has an official lat/long located somewhere within the city limits?)
+
 ### Lines
 
+It might be a line or path, tracing out the route of a road, river, or isobar (all the points where the air pressure is a specific value) (1 dimensional).
+Data on lines is stored as an ordered sequence of points. The "line" consists of straight line segments from one point to the next to the next.
+
 ### Polygons
+
+It might be a region, like a country, park, or body of water (2 dimensional).
+
+In different contexts the same physical object might be described using different types of data. While a city might be a 2D region of a local map, it might only appear as a point in national or global data. Similarly a river might be a line dividing two regions of land on either side, or it could be a region of its own. Which format you use will depend on your needs. Knowing what you will use the data for will help you determine which types of location data you want to acquire.
+
+### Multipolygons
+
+Regions that are "simply connected," which is a mathematics term for having exactly one obvious interior and one obvious exterior can be represented by polygons. But what about regions like Hawaii (a collection of several islands) or South Africa (which has two holes punched out of it where the country of Lesotho is located)?
+
+These more complicated regions are described by **mulitpolygons**. A multipolygon is a collection of polygons.
+
+Examples: code and image of Hawaii
 
 
 ## Ways to present data with maps
