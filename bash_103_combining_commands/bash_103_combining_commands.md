@@ -127,13 +127,14 @@ Some common options are to ask for only some of this metadata using flags:
 
 <div class = "learnmore">
 
-**Words**
+**Words**   
 
 The `wc` command distinguishes words as strings of characters on the same line separated by at least one space, so it counts `wolf,mammal` as a single word and `blue and yellow macaw,bird` as four words.
 
-**Bytes and characters**
+**Bytes and characters**   
 
 For all of the files in this lesson, the number of bytes is the same as the number of characters. However when a file contains more than simple plain text, the number of bytes and number of characters can differ by quite a bit!
+
 </div>  
 
 You can also pass multiple files to the `wc` command. It will print out the word count for each, and then helpfully total each column for you at the bottom:
