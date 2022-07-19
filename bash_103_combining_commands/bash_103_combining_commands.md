@@ -126,6 +126,7 @@ Some common options are to ask for only some of this metadata using flags:
 
 
 <div class = "learnmore">
+
 **Words**
 
 The `wc` command distinguishes words as strings of characters on the same line separated by at least one space, so it counts `wolf,mammal` as a single word and `blue and yellow macaw,bird` as four words.
@@ -351,7 +352,7 @@ red panda,mammal
 tiger,mammal
 wolf,mammal
 blue morpho,insect
-tiger,mammal
+koala,mammal
 wolf,mammal
 ```
 
@@ -376,6 +377,7 @@ If we want to know how many copies of each line were in the original file, the o
 ```
 sort last.txt | uniq -c
 ```
+
 ### Chaining multiple pipes
 
 Piping the output of one command into another is extremely powerful, and chaining multiple pipes to get a **pipeline** only increases the number of things you can do with pipes!
