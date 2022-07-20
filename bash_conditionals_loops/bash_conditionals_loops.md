@@ -126,7 +126,7 @@ There are two kinds of loops: "for loops" and "while loops." In this lesson we w
 **For A in B do C**
 ===================
 
-A for loop needs some command (C) that it is repeating over and over again. This command can be as simple or as complicated as you need it to be.
+A **for loop** needs some command (C) that it is repeating over and over again. This command can be as simple or as complicated as you need it to be.
 
 A for loop also needs some collection (B) to "iterate over" or "iterate through." This is the collection of objects for which the command (C) will be repeated. In our examples we will use lists, but there are several "iterable" data types. An object is iterable if there is a way to list out the individual elements of it.
 
