@@ -63,7 +63,9 @@ You will get the most out of this lesson if you follow along with the examples a
 If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
 <div class = "important">
+
 We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
+
 </div>
 
 <div class = "warning">
@@ -81,30 +83,32 @@ Download the [`learning_bash` directory](https://github.com/arcus/learning_bash)
 3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`. Depending on your computer's operating system, you may be able to un-zip the folder by double clicking on it, or may need to right click on it a select "Extract All." This may create an identically named folder inside `learning_bash-main` that contains all of the individual files.
 4. [Find out the file path](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#6) (location on your computer) of the new folder `learning_bash-main` and navigate there in your command line interface.
 
- <div class = "help">
+<div class = "help">
 
- **Where is my folder?**
+**Where is my folder?**
 
- If you can see the icon for your `learning_bash-main` folder (maybe in a downloads screen) you can open your command line interface directly into the folder by right clicking on the folder and selecting the appropriate option:
+If you can see the icon for your `learning_bash-main` folder (maybe in a downloads screen) you can open your command line interface directly into the folder by right clicking on the folder and selecting the appropriate option:
 
- | Command Line Interface | Right-click menu option |
- | :- | :- |
- | Terminal (Mac or Linux) | New Terminal at Folder |
- | Git Bash (Windows) | Git Bash Here |
- | WLS (Windows Linux Subsystem) | Open Linux shell here |
+| Command Line Interface | Right-click menu option |
+| :- | :- |
+| Terminal (Mac or Linux) | New Terminal at Folder |
+| Git Bash (Windows) | Git Bash Here |
+| WLS (Windows Linux Subsystem) | Open Linux shell here |
 
- This will open a command line interface at the correct location. Once there, you can use the command `pwd` to see the path to your present working directory.
+This will open a command line interface at the correct location. Once there, you can use the command `pwd` to see the path to your present working directory.
 
- </div>
+</div>
 
 
 ## Loops
 
 **Iteration**
+===================
 
-To **iterate** an action or command is to run it again and again. A common situation in which you might use iteration is if you have lots of files to which you want to add an appropriate file extension. You could iterate this action by hand, individually adding the extension to each file name, but that would likely be quite time-consuming and frustrating.
+To **iterate** an action or command is to run it again and again. A common situation in which you might use iteration is if you have lots of files to which you want to add an appropriate file extension. You could iterate this action by hand, individually adding the extension to each file name, but that would likely be quite time-consuming and frustrating. Instead you can automate the process of iterating using a loop!
 
 **Loops**
+===================
 
 A **loop** is a bit of code that allows you to run the same command again and again. The loop gives instructions for how many times to run your code, and if it requires input, what that input should be.  With loops, you get to write your command once and then tell it to run as many times as you want!
 
@@ -120,6 +124,7 @@ There are two kinds of loops: "for loops" and "while loops." In this lesson we w
 **For loops** are a type of coding structure that exist across many programming languages. Once you understand how for loops work in theory, you can look up the specifics of running one in any language.
 
 **For A in B do C**
+===================
 
 A for loop needs some command (C) that it is repeating over and over again. This command can be as simple or as complicated as you need it to be.
 
@@ -128,22 +133,27 @@ A for loop also needs some collection (B) to "iterate over" or "iterate through.
 For loops also need a way to identify elements in the collection B. This variable is how the command C will refer to the particular element it is acting on.
 
 **General example**
+===================
 
 Suppose B is the collection of numbers 2,3,4. If we want the square of each of those numbers we could write a for loop that says
 
 ```
-for each number in the collection B, print the square of that number
+For each number in the collection B, print the square of that number
 ```
 
 This will have the same result as
 
 ```
-print the square of 2
-print the square of 3
-print the square of 4
+Print the square of 2
+Print the square of 3
+Print the square of 4
 ```
 
-The code blocks above are written in **pseudocode**. Pseudocode is a description of code that shows humans its structure but isn't actually written in any programming language.
+<div class = "important">
+
+The code blocks above are written in **pseudocode**. Pseudocode is a description of code that shows humans its structure but isn't actually written in any programming language. Writing out what you want a program to do in pseudocode can be useful for [explaining, planning, and even debugging](https://towardsdatascience.com/pseudocode-101-an-introduction-to-writing-good-pseudocode-1331cb855be7) code!
+
+</div>
 
 ### Bash grammar of for loops
 
@@ -192,6 +202,7 @@ In the first line `for file in *.dat` we are telling Bash that the variable "fil
 </div>
 
 **Variable names**
+===================
 
 You can name your variable anything you want as long as there are no spaces in the name, but the best practice is to name it something informative that helps you understand what your code is doing. For example both of  these have the same output as the code block above:
 
@@ -304,6 +315,7 @@ ___3___
 <div class = "answer">
 
 The word `in` after defining the variable is important, and the command `do` comes before `done`. The correct code is:
+
 ```
 for animal in giant_squid elephant albatross
 do
@@ -311,16 +323,18 @@ do
 done
 ```
 
-
 </div>
 ***
+
 ## Conditional Statements
 
 Loops are great for doing the same thing over and over again, but what if you only want to run the command sometimes? Maybe you want to record the filename in a list, but only if the file is non-empty.
 
 This is where **conditional statements** come in! A **conditional** evaluates if a statement is true or false, and if it is true, executes a command. The most basic conditional statements take the form "if/then."
 
-"**If** the file is empty, **then** delete the file."
+```
+If the file is empty, then delete the file.
+```
 
 Using a conditional clause like this can automate the process so that the computer checks whether the file is true rather than you having to do it!
 
@@ -330,7 +344,11 @@ That said, the Bash language does not make it easy to write conditional statemen
 * how to recognize conditionals in Bash
 * how to make small changes to existing code.
 
-If you find that you need to use conditionals a lot in Bash, you will probably settle on a favorite cheat sheet, of which there are many. (links here and in additional resources)
+<div class = "important">
+
+If you find that you need to use conditionals a lot in Bash, you will probably settle on a favorite cheat sheet, of which there are many, including [these](https://github.com/RehanSaeed/Bash-Cheat-Sheet#conditional-statements) [two](https://devhints.io/bash#conditionals).
+
+</div>
 
 ### Statements
 
@@ -350,9 +368,11 @@ Opinions, questions, and instructions are among the many things that we can say 
 
 **True / False in Bash**
 
-Bash is an older language and can be used on all sorts of computers with different operating systems to interface with file and directories. This versatility means that Bash shows up in a lot of places. Unfortunately that does not mean that Bash is easy to understand. In fact the opposite is true.
+Bash is an older language and can be used on all sorts of computers with different operating systems to interface with file and directories. This versatility means that Bash shows up in a lot of places. Unfortunately that does not mean that Bash is easy to understand. In fact the opposite can be true.
 
-One of Bash's worst properties is that, unlike most programming languages which think of "true" statements as `1` and "false" statements as `0`, in Bash a "true" statement is assigned the numerical value `0` (except when evaluating mathematical expressions inside of double parentheses).
+Unlike most programming languages which think of "true" statements as `1` and "false" statements as `0`, in Bash a "true" statement is assigned the numerical value `0` (except when evaluating mathematical expressions inside of double parentheses).
+
+There are [good reasons](https://stackoverflow.com/questions/2933843/why-0-is-true-but-false-is-1-in-the-shell) for Bash to work this way, but it is an example of how Bash can still be challenging for people with other programming experience, so keep this weirdness in mind when switching between Bash and other languages.
 
 </div>
 
@@ -391,7 +411,7 @@ Notice that the statement is surrounded by square brackets with a space after th
 
 </div>
 
-The statement `[ 5 -eq 05 ]` is checking if the numbers `5` and `05` are equal to each other. The command `echo "integer equality"` only runs if the numbers are equal. If you change the `05` to `04`, this code will not return any output.
+The statement `[ 5 -eq 05 ]` is checking if the numbers `5` and `05` are equal to each other. This numerical equality is different from `=` which we will see later and is for comparing strings. The command `echo "integer equality"` only runs if the numbers are equal. If you change the `05` to `04`, this code will not return any output.
 
 **`else`**
 
@@ -456,6 +476,7 @@ Each of these examples is based on the directory `learning_bash-main` that you d
 3. Read the step by step description of what the code does. Are there parts that weren't clear from running it?
 
 **Checking if files are empty**
+===================
 
 The test statement `[ -s FILE ]` is true if `FILE` exists is non-empty and false if `FILE` doesn't exist or exists but is empty.
 
@@ -476,6 +497,7 @@ For each `.txt` file, it checks whether the file contains any contents. If the f
 Also take a look at lines 5 and 6: both run whenever the statement `[ -s $file ]` is false. You can have as much code in that command as you want!
 
 **Checking if filenames contain given string**
+===================
 
 The test statement `[ STRING1 = STRING2 ]` is true if the two strings are the same, and false if they differ at all. For example `[ 5 = 05 ]` is false because the string `5` and the string `05` are not the same string of characters.
 
@@ -494,6 +516,7 @@ This loop also looks at every `.txt` file in the current directory, but the `if`
 Double brackets are an extension of single square brackets, with more powerful tools, like the pattern matching we are doing in this example with the character wildcard `*`. Since they extend the uses of single brackets, sometimes double and single brackets do the same thing, and sometimes using one type or the other is required. There are strongly held opinions on [which is better](https://stackoverflow.com/questions/669452/are-double-square-brackets-preferable-over-single-square-brackets-in-b) when you have a choice, but day-to-day your best course of action is to copy bracket style when you look up how to code a particular action.
 
 **Checking if files contain a given string**
+===================
 
 <div class = "important">
 
@@ -599,6 +622,15 @@ When the code gets to `6`, it first sees the test ` [ $number -gt 4 ]`. Since th
 
 
 ## Additional Resources
+
+Two of our favorite Bash cheat sheets were linked on the [Condition Statements](#conditional-statements) page, but they are good references for a wide variety of things you might want to use Bash for:
+
+- https://github.com/RehanSaeed/Bash-Cheat-Sheet
+- https://devhints.io/bash
+
+For a purely theoretical explanation of how loops work, [this short video](https://www.youtube.com/watch?v=wxds6MAtUQ0) explains the theory in under 2 minutes.
+
+You can also use flow charts to visualize both [loops](https://www.zenflowchart.com/blog/for-loop-flowchart) and [conditionals](https://www.zenflowchart.com/guides/if-else-flowchart).
 
 Software Carpentry has a series of lessons on the [Unix Shell](https://swcarpentry.github.io/shell-novice/), including one specifically on [loops](https://swcarpentry.github.io/shell-novice/05-loop/index.html).
 
