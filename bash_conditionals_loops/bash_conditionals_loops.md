@@ -3,7 +3,7 @@
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
 version:  1.0.0
-module_template_version: 2.0.0
+module_template_version: 2.0.1
 language: en
 narrator: UK English Female
 title: Bash: Conditionals and Loops
@@ -100,9 +100,9 @@ Download the [`learning_bash` directory](https://github.com/arcus/learning_bash)
 
 ## Loops
 
-**Iterating**
+**Iteration**
 
-To **iterate** an action or command is the run it again and again. A common thing you might want to iterate if you have lots of files could be adding an appropriate file extension to the file name. You could iterate this action by hand, individually adding the extension to each file name, but that could be quite time-consuming and frustrating.
+To **iterate** an action or command is to run it again and again. A common situation in which you might use iteration is if you have lots of files to which you want to add an appropriate file extension. You could iterate this action by hand, individually adding the extension to each file name, but that would likely be quite time-consuming and frustrating.
 
 **Loops**
 
@@ -121,11 +121,11 @@ There are two kinds of loops: "for loops" and "while loops." In this lesson we w
 
 **For A in B do C**
 
-A for loop needs some command (C) that it is looping, or doing over and over again. This command can be as simple or as complicated as you need it to be.
+A for loop needs some command (C) that it is repeating over and over again. This command can be as simple or as complicated as you need it to be.
 
 A for loop also needs some collection (B) to "iterate over" or "iterate through." This is the collection of objects for which the command (C) will be repeated. In our examples we will use lists, but there are several "iterable" data types. An object is iterable if there is a way to list out the individual elements of it.
 
-For loops also need a way to refer elements in the collection B. This variable is how the command C will refer to the particular element it is acting on.
+For loops also need a way to identify elements in the collection B. This variable is how the command C will refer to the particular element it is acting on.
 
 **General example**
 
@@ -318,7 +318,7 @@ done
 
 Loops are great for doing the same thing over and over again, but what if you only want to run the command sometimes? Maybe you want to record the filename in a list, but only if the file is non-empty.
 
-This is where conditional statements come in! A conditional evaluates if a statement is true, and if it is true, executes a command. The most basic conditional statements take the form "if/then."
+This is where **conditional statements** come in! A **conditional** evaluates if a statement is true or false, and if it is true, executes a command. The most basic conditional statements take the form "if/then."
 
 "**If** the file is empty, **then** delete the file."
 
@@ -350,7 +350,7 @@ Opinions, questions, and instructions are among the many things that we can say 
 
 **True / False in Bash**
 
-Bash is an older language and can be used to on all sorts of computers with different operating systems to interface with file and directories. This versatility means that Bash shows up in a lot of places. Unfortunately that does not mean that Bash is easy to understand. In fact the opposite is true.
+Bash is an older language and can be used on all sorts of computers with different operating systems to interface with file and directories. This versatility means that Bash shows up in a lot of places. Unfortunately that does not mean that Bash is easy to understand. In fact the opposite is true.
 
 One of Bash's worst properties is that, unlike most programming languages which think of "true" statements as `1` and "false" statements as `0`, in Bash a "true" statement is assigned the numerical value `0` (except when evaluating mathematical expressions inside of double parentheses).
 
@@ -431,7 +431,7 @@ Variables in Bash are assigned values using the equals symbol `=` with **no spac
 
 </div>
 
-You can have as many `elif` and `then` pairs as you want, but as soon as one is statement is true, the code will do that action stop. It will not continue to check the remaining statements. Try to think about what this code will output, then run it and check if you were right:
+You can have as many `elif` and `then` pairs as you want, but as soon as one is statement is true, the code will do that action **and then stop**. It will not continue to check the remaining statements! Try to think about what this code will output, then run it and check if you were right:
 
 ```
 c=100
