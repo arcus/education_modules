@@ -55,6 +55,10 @@ None.
 
 ## Sample size, effect size, and power
 
+### What is sample size?
+
+
+
 ### What is effect size?
 
 Effect size is how dramatic the effect you're testing is.
@@ -66,7 +70,9 @@ In other words, the effect size captures whether you're testing something very d
 What actual values typically count as "big" vs. "small" effects vary by discipline.  
 
 One important characteristic of measures of effect size is that they **do not depend on the size of your sample**.
-This is in contrast to something like a $p$ value --- $p$ can also sort of give you a sense of how dramatic your effect is (a very small $p$ value results from a bigger effect than a larger $p$ value does at the same sample size), but crucially $p$ is also directly related to sample size, so $p$ can't be considered a pure measure of effect size.
+This is in contrast to something like a $p$ value --- $p$ can also (sort of) give you a sense of how dramatic your effect is.
+A smaller $p$ value results from a bigger effect than a larger $p$ value does at the same sample size.
+But, crucially, that "at the same sample size" is important; $p$ values are related to sample size, so $p$ can't be considered a pure measure of effect size.
 
 For example, let's say you measure the strength of the relationship between two variables X and Y with a sample of 50 observations, and you calculate a correlation of $r = .319$, $p = .024$.
 If you ran a replication study measuring exactly the same relationship but collected ten times the number of samples (N=500),
@@ -88,15 +94,15 @@ what would you expect to happen to your estimates?
 </script>
 
 <script style="display: block">
-try {
-  if (@input(`prediction:p_vs_r`) == 0 || @input(`prediction:p_vs_r`) == 3) {
+
+if (@input(`prediction:p_vs_r`) == 0 || @input(`prediction:p_vs_r`) == 3) {
+
     // Explain why r shouldn't change.
 
     send.liascript(`Remember, we're testing the exact same question ("What is the relationship between X and Y?"), just with a larger sample.
-      Correlation is an estimate of the strength and direction of a relationship in the population, regardless of the size of a given sample.
+      Correlation is an estimate of the strength and direction of a relationship in the population, regardless of the size of a given sample. We wouldn't expect the correlation to change (beyond some random variation) as a result of collecting a larger sample.
   `)
-  } else ""
-} catch(e) { }
+} else ""
 
 </script>
 
@@ -115,22 +121,57 @@ if (@input(`prediction:p_vs_r`) == 2 || @input(`prediction:p_vs_r`) == 3) {
     !?[Estimating p values from a simulation.](https://www.khanacademy.org/math/ap-statistics/xfb5d8e68:inference-categorical-proportions/idea-significance-tests/v/estimating-p-value-from-simulation)
 `)
 } else ""
+
 </script>
 
 <script style="display: block">
 
 if (@input(`prediction:p_vs_r`) != -1) {
+
   // After any section is made (right or wrong), show explanation:
 
   send.liascript(`The value of $r$ will probably change a bit because of random error, but we wouldn't expect it to systematically go up (or down) just because we have a larger sample.
 
   The $p$ value, on the other hand, will almost certainly go down.`)
 } else ""
+
 </script>
 
 
+#### Examples of effect size measures
+
 Here is a table of some common statistical tests and the typical corresponding measures of effect size for each:
 
+### What is power?
+
+Within the null hypothesis significance testing (NHST) framework, there are theoretically four possibilities for any given test:
+You can reject the null hypothesis (get a significant result) correctly or incorrectly, and you can also retain the null hypothesis (get a non-significant result) correctly or incorrectly.
+
+Power is the probability of rejecting the null hypothesis when the null hypothesis is indeed wrong ---
+in other words, power is the probability of correctly identifying a real effect.
+
+<div class="learnmore">
+
+If you've taken some statistics classes before, this may be reminding you of the concepts of Type 1 and Type 2 errors.
+Indeed, power is closely related to Type 2 errors especially!
+Although it's not necessary to understand this level of detail in order to do a power analysis, some learners may find the extra background helpful.
+
+If you're interested in watching a good explanation of the idea of power, and how it relates to Type 1 and Type 2 errors, check out this video by KhanAcademy (if not, feel free to skip!):
+
+!?[](https://youtu.be/6_Cuz0QqRWc)
+
+</div>
+
+#### High power is good!
+
+If you're going to the trouble to collect data and analyze it in order to test a hypothesis, you want to feel like there's a decent chance that your results will come out significant if your idea is solid (i.e. you want the probability of correctly rejecting the null --- power --- to be high).
+
+It may help to think about it from the other side:
+If someone told you that even if you're correct that the null hypothesis is untrue there's still only a 20% chance of you rejecting it with your statistical test, that would be very discouraging.
+You'd be facing a situation where whether the null is true or false, the most likely outcome is that you'll get non-significant results either way.
+That's a low-power design.
+
+One potential reason to conduct a power analysis is to check that you're not setting yourself up for that kind of disappointment, i.e. to check that your experiment has high enough power to make it worth your time.  
 
 ### Quiz: Sample size, effect size, and power
 
@@ -141,6 +182,17 @@ Which of the following are examples of measures of effect size? Select all that 
 [[X]] Cohen's *d*
 [[ ]] regression coefficients
 [[ ]] *F*-statistics
+[[ ]] 95% confidence intervals
+****
+<div class="answer">
+
+Measures of effect size must be independent of sample size --- that is, they can't change just because of an increase or decrease in N.
+Regression coefficients, $F$-statistics, 95% confidence intervals, and $p$-values are all sensitive to sample size.
+
+For a review, see the list of [some common measures of effect size](#examples-of-effect-size-measures).
+
+</div>
+****
 
 ## Three different kinds of power analysis
 
@@ -194,7 +246,11 @@ There's an additional style of highlight, "answer", that is used in [quizzes](#q
 
 ## Additional Resources
 
-The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
+Power, and especially the prevalence of under-powered studies, is an important part of the conversation on questionable research practices (QRPs) like p-hacking.
+Here are a few resources that draw the connection between power and general issues of quality in the scientific literature:
+
+- [Blog post on what range of p-values you might expect at different power levels](https://sometimesimwrong.typepad.com/wrong/2015/06/why-p-048-should-be-rare-and-why-this-feels-counterintuitive.html)
+- [The flawed logic of chasing large effects with small samples](https://thehardestscience.com/2013/09/09/the-flawed-logic-of-chasing-large-effects-with-small-samples/)
 
 ## Feedback
 
