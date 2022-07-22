@@ -88,9 +88,22 @@ We will investigate each of theses type of spatial data a little more closely.
 
 ### Points
 
-Geospatial data might be the location of an individual object, be it a building, a city, a person, etc. (0 dimensional).
+Before we can talk about locations all over the earth, we have to establish the locations of a few very special points. The first two are the North Pole and the South Pole. If you imagine a line going straight through the planet connecting the two poles, this is the axis around which the Earth rotates creating night and day.
+
+The **equator** is the circle around the surface of the earth that is exactly half way between the north and south poles. Any celestial body, like a planet or a star, that spins on an axis has two poles and an equator. Imagine a flat surface containing the equator and dividing the planet into a northern hemisphere and southern hemisphere. That flat surface is called the **equatorial plane**.
+
+A **meridian** is a straight line on the surface of the earth connecting the poles. The third point we need is the location of the [Greenwich Observatory](https://www.rmg.co.uk/royal-observatory) in London, England. The meridian running through the observatory is called the **Prime Meridian**. Unlike the poles, which are fixed points determined by the astronomical fact that the earth is spinning on an axis, the location of the Prime Meridian was a human decision made for [historical](https://greenwichmeantime.com/articles/history/navy/) rather than geographical reasons.
+
+Now that we have established the poles and the prime meridian, we can use those to to create a coordinate system that will specify and point on earth!
 
 **Latitude and Longitude**
+==========================
+
+**Latitude** is a measure of how far north or south a location is from the equator. Given a point on the surface of the earth, imagine a straight line to the center of the earth. The angle that line makes with the equatorial plane, measured in degrees, is the point's latitude. 
+
+IMAGE HERE?
+
+Together, latitude and longitude form a (spherical) coordinate system that can specify any point on the planet.
 
 single points, you can still see a lot with only points, assuming you have a lot of points. Could be very accurate (where is this car?) or sort of vague and politically determined (each city has an official lat/long located somewhere within the city limits?)
 
