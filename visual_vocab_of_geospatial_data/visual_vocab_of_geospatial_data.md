@@ -99,10 +99,11 @@ Now that we have established the poles and the prime meridian, we can use those 
 **Latitude and Longitude**
 ==========================
 
-**Latitude** is a measure of how far north or south a location is from the equator. Given a point on the surface of the earth, imagine a straight line to the center of the earth. The angle that line makes with the equatorial plane, measured in degrees, is the point's latitude. 
+**Latitude** is a measure of how far north or south a location is from the equator. Given a point on the surface of the earth, imagine a straight line to the center of the earth. The angle that line makes with the equatorial plane, measured in degrees, is the point's latitude. north + south -, with example
 
 IMAGE HERE?
 
+**Longitude** is similarly an angular measurement, but rather than measuring relative to the equatorial plane, it measures relative to the prime meridian,
 Together, latitude and longitude form a (spherical) coordinate system that can specify any point on the planet.
 
 single points, you can still see a lot with only points, assuming you have a lot of points. Could be very accurate (where is this car?) or sort of vague and politically determined (each city has an official lat/long located somewhere within the city limits?)
