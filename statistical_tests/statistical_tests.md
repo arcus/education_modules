@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.0
+version:  1.2.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -279,6 +279,8 @@ Prof. Chatti was planning to run a regression model, but they're working with da
 ****
 
 ## Additional Resources
+
+For another excellent resource on the same topic, see [Choosing a Statistical Test, from the Biostatistics Handbook](http://www.biostathandbook.com/testchoice.html).
 
 If you want to learn more about basics of programming in R or python, you may like our [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md) series.
 
