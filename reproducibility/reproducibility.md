@@ -3,6 +3,7 @@ author:   Joy Payton
 email:    paytonk@chop.edu
 title: Reproducibility, Generalizability, and Reuse: How Technology Can Help
 version:  1.2.1
+module_template_version: 0.0.0
 language: en
 narrator: US English Female
 comment:  This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **reuse of data**, and how technical approaches can help make these goals more attainable.
