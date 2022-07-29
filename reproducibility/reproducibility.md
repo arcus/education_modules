@@ -1,10 +1,11 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
+title: Reproducibility, Generalizability, and Reuse: How Technology Can Help
 version:  1.2.1
 language: en
 narrator: US English Female
-comment:  This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **data reuse**, and how technical approaches can help make these goals more attainable.
+comment:  This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **reuse of data**, and how technical approaches can help make these goals more attainable.
 long_description: **If you currently conduct research or expect to in the future**, the concepts we talk about here are important to grasp.  This material will help you understand much of the current literature and debate around how research should be conducted, and will provide you with a starting point for understanding why some practices (like writing code, even for researchers who have never programmed a computer) are gaining traction in the research field.  **If research doesn't form part of your future plans, but you want to *use* research** (for example, as a clinician or public health official), this material will help you form criteria for what research to consider the most rigorous and useful and help you understand why science can seem to vacillate or be self-contradictory.
 
 @learning_objectives  
