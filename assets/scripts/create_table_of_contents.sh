@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # This script should be run from the main education_modules directory
+# With the command:
+# bash assets/scripts/create_table_of_contents.sh
 # It will create a .md file called table_of_contents.md
 # It will also create a .csv called table_of_contents.csv
 
@@ -61,12 +63,12 @@ echo $csvHEADINGS > table_of_contents.csv
 
 for FOLDER in *
 do
-  if [[ -s $FOLDER/$FOLDER.md && "$FOLDER" != "a_sample_module_template" ]]       ## Only do this for folders that have a course .md file inside an identically named folder in education_modules
+  if [[ -s $FOLDER/$FOLDER.md && "$FOLDER" != "a_sample_module_template" ]]       ## Only do this for folders that have a real module inside them.
     then
       ROW=''
       for COL in $csvCOLUMNS
         do
-          ROW+=" `grep -m 1 $COL: $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]' | tr ',' ' '` ,"  # Pull the YAML entry but remove excess white space at the front, as well as any unprintable characters
+          ROW+=" `grep -m 1 $COL: $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]' | tr ',' ' '` ,"  # Pull the YAML entry but remove excess white space at the front, as well as any unprintable characters or commas
         done
       echo $ROW >> table_of_contents.csv
   fi
