@@ -1,5 +1,4 @@
 title , author , email , estimated_time , version , module_template_version , language , narrator ,
-Module Title , Your Name , email@chop.edu , This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview , 0.0.2 , 2.0.1 , en , UK English Female ,
 Bash: Combining Commands , Elizabeth Drellich and Nicole Feldman , drelliche@chop.edu and feldmanna@chop.edu , 30 minutes , 1.0.0 , 2.0.1 , en , UK English Female ,
 Bash / Command Line 101 , Nicole Feldman and Elizabeth Drellich , feldmanna@chop.edu and drelliche@chop.edu , 40 minutes , 1.1.1 , 2.0.0 , en , UK English Female ,
 Bash: Searching and Organizing Files , Nicole Feldman and Elizabeth Drellich , feldmanna@chop.edu and drelliche@chop.edu , 30 minutes , 1.1.0 , 2.0.0 , en , UK English Female ,

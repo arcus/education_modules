@@ -61,7 +61,7 @@ echo $csvHEADINGS > table_of_contents.csv
 
 for FOLDER in *
 do
-  if [[ -s $FOLDER/$FOLDER.md ]]      ## Only do this for folders that have a course .md file inside an identically named folder in education_modules
+  if [[ -s $FOLDER/$FOLDER.md && "$FOLDER" != "a_sample_module_template" ]]       ## Only do this for folders that have a course .md file inside an identically named folder in education_modules
     then
       ROW=''
       for COL in $csvCOLUMNS
