@@ -8,11 +8,11 @@ COLUMNS="title author email version comment estimated_time"
 # Create a .md file with the column headings specified above
 
 HEADINGS='| Link to Training Course | Markdown |'
-BREAK='| : | : |'
+BREAK='| -- | -- |'
 for COL in $COLUMNS
 do
   HEADINGS+=" $COL |"
-  BREAK+=" : |"
+  BREAK+=" -- |"
 done
 
 echo $HEADINGS > table_of_contents.md
