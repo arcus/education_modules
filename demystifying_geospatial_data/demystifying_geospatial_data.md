@@ -52,10 +52,14 @@ If you have ever look at a map, followed GPS directions, or even just used a cel
 
 **Geospatial Data** is any data that includes information about the location of an object or event on the Earth. We think of these locations as being on the Earth's surface, but they might actually be a bit above the surface, like weather or airplane flight paths, or below, like oil deposits.
 
+We use [**latitutde**](https://en.wikipedia.org/wiki/Latitude) and [**longitude**](https://en.wikipedia.org/wiki/Longitude) to describe locations on Earth. If you have any data that includes latitude and longitude, you have geospatial data!
+
+While geospatial data could be a specific **point**, give by a single set of latitude/longitude coordinates, it could also be a **line segment** connecting two locations, a series of line segments connecting a sequence of points, or a **polygon**, which is a region enclosed by points connected with line segments. These are the kinds of geospatial data that maps do a particularly good job of presenting.
+
 More than Maps
 -------------------
 
-While maps can be an extremely effective way to display geospatial data, not all geospatial is easily represented by maps, nor are maps the most effective way to study some questions.
+While maps can be an extremely effective way to display geospatial data, not all geospatial discovery is easily represented by maps, nor are maps the most effective way to study some questions.
 
 For example, a [study by the CHOP Policy Lab](https://link.springer.com/content/pdf/10.1007/s11524-022-00633-7.pdf) used geospatial data both about patient addresses and the locations of trees and other vegetation throughout the city of Philadelphia to study whether living near green spaces impacts the number of exacerbated asthma attacks experienced by children.
 
@@ -92,13 +96,18 @@ Geographic Connections
 
 Because geospatial data asks the **where**, using it can help answer all sorts of questions that could otherwise not even be asked. Geospatial data lets you make all sorts of connections that might not otherwise be visible.
 
-**Social determinants of health**
+Geospatitial data can also be used to intuit or extrapolate information that might not otherwise be available. A research subject or patient cannot possibly be expected to share every aspect of their lived experience with an interviewer, but looking at a person's neighborhood, place of work, or school can provide a lot of information about their environmental exposures without asking intrusive questions. Are they in an area with high rates of violence or low access to fresh produce? Are they close to a park with lots of shade and a playground? Do the have to cross a busy highway on their way to school? The answers to these questions may be crucial to understanding an individual or group's social determinants of health.
+
+Social Determinants of Health
+----------------------------
 
 According to the [World Health Organization](https://www.who.int/health-topics/social-determinants-of-health#tab=tab_1):
 
 > The social determinants of health (SDH) are the non-medical factors that influence health outcomes. They are the conditions in which people are born, grow, work, live, and age, and the wider set of forces and systems shaping the conditions of daily life. These forces and systems include economic policies and systems, development agendas, social norms, social policies and political systems.
 
 Many social determinants of health are connected to a person's geographic location. During the 1854 London cholera outbreak, which water pump someone relied on ended up being the key determinant of whether they were exposed to the deadly bacteria.
+
+Much modern research focuses on similar social determinants of health. How does living near a power plant impact long term health? What about living near green spaces with lots of trees? Or living downstream from intensive agriculture operations?
 
 Effective Interventions
 -----------------------
@@ -115,7 +124,7 @@ While not all geospatial data is amenable to being portrayed with maps, maps can
 Identifying a problem, and even finding an effective solution to it, isn't enough. Researchers need to be able to communicate their findings and recommendations to those who can do something about it. Your audience might be the general public, or politicians and policy makers responsible for making changes.
 
 
-## Issues Impacting Geospatial Data
+## Issues Using Geospatial Data
 
 Now that you are convinced of the value of using geospatial data, it's important that we alert you to some issues you may come across.
 
