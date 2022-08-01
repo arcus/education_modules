@@ -52,6 +52,15 @@ If you have ever look at a map, followed GPS directions, or even just used a cel
 
 **Geospatial Data** is any data that includes information about the location of an object or event on the Earth. We think of these locations as being on the Earth's surface, but they might actually be a bit above the surface, like weather or airplane flight paths, or below, like oil deposits.
 
+More than Maps
+-------------------
+
+While maps can be an extremely effective way to display geospatial data, not all geospatial is easily represented by maps, nor are maps the most effective way to study some questions.
+
+For example, a [study by the CHOP Policy Lab](https://link.springer.com/content/pdf/10.1007/s11524-022-00633-7.pdf) used geospatial data both about patient addresses and the locations of trees and other vegetation throughout the city of Philadelphia to study whether living near green spaces impacts the number of exacerbated asthma attacks experienced by children.
+
+While this study relies heavily on geospatial data, including "satellite imaging and high resolution groundcover data," it doesn't produce any maps. Instead, the researchers process the location information they have about both patient addresses and the geographic location of greenery to find relationships between living near vegetation and exacerbated asthma.
+
 
 ### Classic Example: London's 1854 Cholera Outbreak
 
@@ -74,19 +83,12 @@ He also created a second map, which added a dotted line showing which addresses 
 ![](media/snow_map_2.jpeg "John Snow's map with a dotted line marking which locations are closer to the infected water pump than any other pump. On the Mode of Communication of Cholera by John Snow, updatded 1855. Public domain, avaialable through [ESRI](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/).")
 
 
-### More than Maps
-
-While maps can be an extremely effective way to display geospatial data, not all geospatial is easily represented by maps, nor are maps the most effective way to study some questions.
-
-For example, a [study by the CHOP Policy Lab](https://link.springer.com/content/pdf/10.1007/s11524-022-00633-7.pdf) used geospatial data both about patient addresses and the locations of trees and other vegetation throughout the city of Philadelphia to study whether living near green spaces impacts the number of exacerbated asthma attacks experienced by children.
-
-While this study relies heavily on geospatial data, including "satellite imaging and high resolution groundcover data," it doesn't produce any maps. Instead, the researchers process the location information they have about both patient addresses and the geographic location of greenery to find relationships between living near vegetation and exacerbated asthma.
-
 ## The Power of Geospatial Data
 
 All data has the capacity to illuminate, communicate, and effect change. Geospatial data is particularly useful for certain types of population analyses, as all of us are impacted by our environments.
 
-### Geographic Connections
+Geographic Connections
+----------------------
 
 Because geospatial data asks the **where**, using it can help answer all sorts of questions that could otherwise not even be asked. Geospatial data lets you make all sorts of connections that might not otherwise be visible.
 
@@ -98,13 +100,15 @@ According to the [World Health Organization](https://www.who.int/health-topics/s
 
 Many social determinants of health are connected to a person's geographic location. During the 1854 London cholera outbreak, which water pump someone relied on ended up being the key determinant of whether they were exposed to the deadly bacteria.
 
-### Effective Interventions
+Effective Interventions
+-----------------------
 
 If researchers can determine where a phenomenon is occurring, it can help them come up with more effective interventions for improving health outcomes. For example the study of how green spaces impact exacerbated asthma attacks doesn't just use geospatial data as an input, it also could produce output like "plant more trees in these neighborhoods."
 
 Even if doctors had known in 1854 that cholera was waterborne, without the geospatial analysis they wouldn't have been able to recommend turning off just the one affected pump. This targeted intervention was only possible because they were able to determine which pump was infected, and far more effective than if they had turned off all of the pumps in the neighborhood, making people walk much farther to obtain water.
 
-### Impactful Communication
+Impactful Communication
+-----------------------
 
 While not all geospatial data is amenable to being portrayed with maps, maps can be visually striking ways to present and communicate lot of geospatial data.
 
@@ -115,9 +119,15 @@ Identifying a problem, and even finding an effective solution to it, isn't enoug
 
 Now that you are convinced of the value of using geospatial data, it's important that we alert you to some issues you may come across.
 
+Data Quality
+--------------
+
 Data quality is one concern you should consider.  Two hundred years ago, maps were drawn by hand and even the most accurate surveyor using the most accurate tools could not match the accuracy of modern Global Positioning Systems (GPS).
 
 While GPS has greatly improved the quality of geospatial data, it is still not perfect and can have the same sorts of missing and nonsensical fields as any data set. For example, Philadelphia records of police stops, available via [OpenDataPhilly](https://www.opendataphilly.org/dataset/vehicle-pedestrian-investigations), record some small portion of stops as occurring in Cape Canaveral, Florida, approximately a thousand miles away.
+
+Data Quantity
+-------------
 
 The quantity of data and how to determine which geographic data you need is another important consideration. The abundance of geospatial data created by modern systems also creates new problems. While it might seem like more data is always better, even the most high powered computer can only handle so much data at a time.
 
@@ -125,6 +135,12 @@ A single weather forecast, for example, incorporates a huge amount of real-time 
 
 Of course there is far more location data than that collected by satellites.  Environmental sensors, sales records, bus routes, census data, school district boundaries and many more sources provide rich location data that might be useful to you!
 
+Expensive Analyses
+------------------
+
+While there are a number of open source tools to process and analyze geospatial data, like `ggmap` in R or `geopandas` in Python, the most powerful tools for geospatial data are proprietary Geographical Information Systems (GIS).
+
+If your research leads you to need more complex geographical information like elevation gradients or travel routes, you may eventually want to learn more about some of the paid platforms.
 
 ### Privacy
 
@@ -150,11 +166,7 @@ An internal review board, funding agency, or local law may lay out how you are r
 
 </div>
 
-### Expense
 
-While there are a number of open source tools to process and analyze geospatial data, like `ggmap` in R or `geopandas` in Python, the most powerful tools for geospatial data are proprietary Geographical Information Systems (GIS).
-
-If your research leads you to need more complex geographical information like elevation gradients or travel routes, you may eventually want to learn more about some of the paid platforms.
 
 ## Quiz
 
