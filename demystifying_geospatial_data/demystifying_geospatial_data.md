@@ -53,7 +53,7 @@ If you have ever look at a map, followed GPS directions, or even just used a cel
 **Geospatial Data** is any data that includes information about the location of an object or event on the Earth. We think of these locations as being on the Earth's surface, but they might actually be a bit above the surface, like weather or airplane flight paths, or below, like oil deposits.
 
 
-### Classic example: London's 1854 Cholera Outbreak
+### Classic Example: London's 1854 Cholera Outbreak
 
 In the mid 1800s, the modern idea of germ theory was still in its nascent stages, one of several competing ideas about how diseases spread. Learning how diseases spread, cholera in particular, was of great concern because cholera was traveling along global trade routes to become a pandemic.
 
@@ -82,41 +82,42 @@ For example, a [study by the CHOP Policy Lab](https://link.springer.com/content/
 
 While this study relies heavily on geospatial data, including "satellite imaging and high resolution groundcover data," it doesn't produce any maps. Instead, the researchers process the location information they have about both patient addresses and the geographic location of greenery to find relationships between living near vegetation and exacerbated asthma.
 
-## The power of geospatial data
+## The Power of Geospatial Data
 
 All data has the capacity to illuminate, communicate, and effect change. Geospatial data is particularly useful for certain types of population analyses, as all of us are impacted by our environments.
 
-### Geographic connections
+### Geographic Connections
 
 Because geospatial data asks the **where**, using it can help answer all sorts of questions that could otherwise not even be asked. Geospatial data lets you make all sorts of connections that might not otherwise be visible.
 
 **Social determinants of health**
 
 According to the [World Health Organization](https://www.who.int/health-topics/social-determinants-of-health#tab=tab_1):
+
 > The social determinants of health (SDH) are the non-medical factors that influence health outcomes. They are the conditions in which people are born, grow, work, live, and age, and the wider set of forces and systems shaping the conditions of daily life. These forces and systems include economic policies and systems, development agendas, social norms, social policies and political systems.
 
 Many social determinants of health are connected to a person's geographic location. During the 1854 London cholera outbreak, which water pump someone relied on ended up being the key determinant of whether they were exposed to the deadly bacteria.
 
-### Effective interventions
+### Effective Interventions
 
 If researchers can determine where a phenomenon is occurring, it can help them come up with more effective interventions for improving health outcomes. For example the study of how green spaces impact exacerbated asthma attacks doesn't just use geospatial data as an input, it also could produce output like "plant more trees in these neighborhoods."
 
 Even if doctors had known in 1854 that cholera was waterborne, without the geospatial analysis they wouldn't have been able to recommend turning off just the one affected pump. This targeted intervention was only possible because they were able to determine which pump was infected, and far more effective than if they had turned off all of the pumps in the neighborhood, making people walk much farther to obtain water.
 
-### Impactful communication
+### Impactful Communication
 
 While not all geospatial data is amenable to being portrayed with maps, maps can be visually striking ways to present and communicate lot of geospatial data.
 
 Identifying a problem, and even finding an effective solution to it, isn't enough. Researchers need to be able to communicate their findings and recommendations to those who can do something about it. Your audience might be the general public, or politicians and policy makers responsible for making changes.
 
 
-## Issues impacting geospatial data
+## Issues Impacting Geospatial Data
 
 Now that you are convinced of the value of using geospatial data, it's important that we alert you to some issues you may come across.
 
 Data quality is one concern you should consider.  Two hundred years ago, maps were drawn by hand and even the most accurate surveyor using the most accurate tools could not match the accuracy of modern Global Positioning Systems (GPS).
 
-While GPS has greatly improved the quality of geospatial data, it is still not perfect and can have the same sorts of missing and nonsensical fields as any data set. For example, [Philadelphia records of police stops](github_link) record some small portion of stops as occurring in Cape Canaveral, Florida, approximately a thousand miles away.
+While GPS has greatly improved the quality of geospatial data, it is still not perfect and can have the same sorts of missing and nonsensical fields as any data set. For example, Philadelphia records of police stops, available via [OpenDataPhilly](https://www.opendataphilly.org/dataset/vehicle-pedestrian-investigations), record some small portion of stops as occurring in Cape Canaveral, Florida, approximately a thousand miles away.
 
 The quantity of data and how to determine which geographic data you need is another important consideration. The abundance of geospatial data created by modern systems also creates new problems. While it might seem like more data is always better, even the most high powered computer can only handle so much data at a time.
 
