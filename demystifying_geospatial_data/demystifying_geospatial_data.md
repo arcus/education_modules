@@ -61,7 +61,7 @@ Ultimately it was determined that cholera is an infection caused by a water-born
 
 In 1854, the city of London experienced an outbreak of cholera, with a particularly high number of cases among people who lived in near Broad Street in the Soho district. London kept good records of deaths so doctors, including one named John Snow, were able to put all of the cholera deaths on to a neighborhood map, shown below:
 
-![Doctor John Snow's map of the 1854 cholera outbreak.](media/Snowmap1.png)
+![](media/snow_map_1.png "Doctor John Snow's map of the 1854 cholera outbreak. Public domain, avalable from [wikimedia](https://commons.wikimedia.org/wiki/File:Snow-cholera-map-1.jpg).")
 
 This map marks each cholera death as a dark bar at the deceased's address. If an address has multiple deaths from cholera, the bars stack to form a version of a bar graph.
 
@@ -71,7 +71,7 @@ In reality, while he did identify the water pump as a possible source of the out
 
 He also created a second map, which added a dotted line showing which addresses were closer to that water pump than any other pump. This map shows that almost all of the cholera deaths were of people who not just lived near that pump, but likely used that pump to get their water.
 
-![John Snow's map with a dotted line marking which locations are closer to the infected water pump than any other pump](media/Snowmap2.jpeg)
+![](media/snow_map_2.jpeg "John Snow's map with a dotted line marking which locations are closer to the infected water pump than any other pump. On the Mode of Communication of Cholera by John Snow, updatded 1855. Public domain, avaialable through [ESRI](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/).")
 
 
 ### More than Maps
