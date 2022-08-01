@@ -6,7 +6,7 @@ version:  1.0.0
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
-title: Module Title
+title: Demystifying Geospatial Data
 comment:  This module is a brief introduction to geospatial (location) data.
 long_description: This module will survey some of the benefits of using geospatial data for research purposes. No previous exposure to geospatial data is expected. If you have any interest in maps or are wondering if using geospatial data might be helpful for your work, this lesson is designed to help you decide whether learning more about geospatial techniques is right for you and your project.
 estimated_time:  20 minutes
@@ -17,7 +17,7 @@ After completion of this module, learners will be able to:
 
 - Identify geospatial data
 - Describe some of the benefits of using geospatial data
-- Recognize some of the issues you may encounter when using geospatial data
+- Recognize some of the issues learners may encounter when using geospatial data
 
 @end
 
@@ -38,7 +38,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Estimated time to completion:** @estimated_time
 
-**Pre-requisites**: none
+**Pre-requisites**: No prior knowledge or experience of geospatial data is required.
 
 **Learning Objectives**
 
@@ -84,7 +84,7 @@ While this study relies heavily on geospatial data, including "satellite imaging
 
 ## The power of geospatial data
 
-All data has the capacity to illuminate, communicate, and effect change. Geospatial data is particularly useful for certain types of population analyses as all of us are impacted by our environments.
+All data has the capacity to illuminate, communicate, and effect change. Geospatial data is particularly useful for certain types of population analyses, as all of us are impacted by our environments.
 
 ### Geographic connections
 
@@ -101,7 +101,7 @@ Many social determinants of health are connected to a person's geographic locati
 
 If researchers can determine where a phenomenon is occurring, it can help them come up with more effective interventions for improving health outcomes. For example the study of how green spaces impact exacerbated asthma attacks doesn't just use geospatial data as an input, it also could produce output like "plant more trees in these neighborhoods."
 
-Even if doctors had known in 1854 that cholera was water born, without the geospatial analysis they wouldn't have been able to recommend turning off just the one affected pump. This targeted intervention was only possible because they were able to determine which pump was infected, and far more effective than if they had turned off all of the pumps in the neighborhood, making people walk much farther to obtain water.
+Even if doctors had known in 1854 that cholera was waterborne, without the geospatial analysis they wouldn't have been able to recommend turning off just the one affected pump. This targeted intervention was only possible because they were able to determine which pump was infected, and far more effective than if they had turned off all of the pumps in the neighborhood, making people walk much farther to obtain water.
 
 ### Impactful communication
 
@@ -112,17 +112,17 @@ Identifying a problem, and even finding an effective solution to it, isn't enoug
 
 ## Issues impacting geospatial data
 
-Now that you are convinced of the value of using geospatial data, we must unfortunately warn you of some of the issues you may come across.
+Now that you are convinced of the value of using geospatial data, it's important that we alert you to some issues you may come across.
 
-Two hundred years ago, maps were drawn by hand and even the most accurate surveyor using the most accurate tools could not match the accuracy of modern Global Positioning Systems (GPS).
+Data quality is one concern you should consider.  Two hundred years ago, maps were drawn by hand and even the most accurate surveyor using the most accurate tools could not match the accuracy of modern Global Positioning Systems (GPS).
 
 While GPS has greatly improved the quality of geospatial data, it is still not perfect and can have the same sorts of missing and nonsensical fields as any data set. For example, [Philadelphia records of police stops](github_link) record some small portion of stops as occurring in Cape Canaveral, Florida, approximately a thousand miles away.
 
-The abundance of geospatial data created by modern systems also creates new problems. While it might seem like more data is always better, even the most high powered computer can only handle so much data at a time.
+The quantity of data and how to determine which geographic data you need is another important consideration. The abundance of geospatial data created by modern systems also creates new problems. While it might seem like more data is always better, even the most high powered computer can only handle so much data at a time.
 
 A single weather forecast, for example, incorporates a huge amount of real-time geospatial data, most of it recorded by satellites in low orbit around the Earth.
 
-Of course there is far more location data than that collected by satellites.
+Of course there is far more location data than that collected by satellites.  Environmental sensors, sales records, bus routes, census data, school district boundaries and many more sources provide rich location data that might be useful to you!
 
 
 ### Privacy
@@ -145,7 +145,7 @@ While the **Participant Address** locations might appear at first glance to give
 
 <div class = "warning">
 
-An internal review board, funding agency, or local law may lay out how you are required to anonymize and protect location data in your research. Be sure to follow all required steps to protect personal data when conduction research with geospatial data!
+An internal review board, funding agency, or local law may lay out how you are required to anonymize and protect location data in your research. Be sure to follow all required steps to protect personal data when conducting research with geospatial data!
 
 </div>
 
@@ -165,14 +165,14 @@ Which of these types of information are considered geospatial data? Select all t
 ***
 <div class ="answer">
 
-Location information doesn't have to be as precise as an address to be useful, knowing what neighborhood study participants live in is definitely geospatial data. The location of public amenities like swimming pools is also geospatial data.
+Location information doesn't have to be as precise as an address to be useful; knowing what neighborhood study participants live in is definitely geospatial data. The location of public amenities like swimming pools is also geospatial data.
 
 While you might link ages of study participants to the locations in which they were evaluated, the ages themselves are not inherently geospatial.
 
 </div>
 ***
 
-Which of these are potential benefits of incorporating geospatial data into your research? Select all that apply.
+Which of these are potential benefits of incorporating geospatial data into public health research? Select all that apply.
 
 [[X]] Geospatial data can help illuminate social determinants of health.
 [[ ]] All of the best and most powerful tools for studying geospatial data are free and open source.
@@ -190,7 +190,7 @@ While some free open source tools for studying geospatial data exist, the most p
 Which of these potential issues should you be aware of when considering using geospatial data in your research? Select all that apply.
 
 [[ ]] Geospatial data is sparse and generally unavailable.
-[[X]] The privacy of study participants addresses and other location data must be carefully protected.
+[[X]] The privacy of study participants' addresses and other location data must be carefully protected.
 [[ ]] Politicians, policy makers, and the public generally have a harder time understanding results of research that relies on geospatial data.
 ***
 <div class = "answer">
