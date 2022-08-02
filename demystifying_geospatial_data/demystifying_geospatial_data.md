@@ -9,7 +9,7 @@ narrator: UK English Female
 title: Demystifying Geospatial Data
 comment:  This module is a brief introduction to geospatial (location) data.
 long_description: This module will survey some of the benefits of using geospatial data for research purposes. No previous exposure to geospatial data is expected. If you have any interest in maps or are wondering if using geospatial data might be helpful for your work, this lesson is designed to help you decide whether learning more about geospatial techniques is right for you and your project.
-estimated_time:  20 minutes
+estimated_time:  15 minutes
 
 @learning_objectives  
 
@@ -54,23 +54,23 @@ If you have ever look at a map, followed GPS directions, or even just used a cel
 
 We use [**latitutde**](https://en.wikipedia.org/wiki/Latitude) and [**longitude**](https://en.wikipedia.org/wiki/Longitude) to describe locations on Earth. If you have any data that includes latitude and longitude, you have geospatial data!
 
-While geospatial data could be a specific **point**, give by a single set of latitude/longitude coordinates, it could also be a **line segment** connecting two locations, a series of line segments connecting a sequence of points, or a **polygon**, which is a region enclosed by points connected with line segments. These are the kinds of geospatial data that maps do a particularly good job of presenting.
+While geospatial data could be a specific **point**, give by a single set of latitude/longitude coordinates, it could also be a **line segment** connecting two locations, a series of line segments connecting a sequence of points, or a **polygon**, which is a region enclosed by points connected with line segments. These are the kinds of geospatial data that you will need to draw a map.
 
 More than Maps
 -------------------
 
-While maps can be an extremely effective way to display geospatial data, not all geospatial discovery is easily represented by maps, nor are maps the most effective way to study some questions.
+While maps can be an extremely effective way to display geospatial data, not all geospatial discovery is easily represented by maps, nor are maps the most effective way to study some geospatial questions.
 
 For example, a [study by the CHOP Policy Lab](https://link.springer.com/content/pdf/10.1007/s11524-022-00633-7.pdf) used geospatial data both about patient addresses and the locations of trees and other vegetation throughout the city of Philadelphia to study whether living near green spaces impacts the number of exacerbated asthma attacks experienced by children.
 
-While this study relies heavily on geospatial data, including "satellite imaging and high resolution groundcover data," it doesn't produce any maps. Instead, the researchers process the location information they have about both patient addresses and the geographic location of greenery to find relationships between living near vegetation and exacerbated asthma.
+While this study relies heavily on geospatial data, including "satellite imaging and high resolution ground cover data," it doesn't produce any maps. Instead, the researchers process the location information they have about both patient addresses and the geographic location of greenery to find relationships between living near vegetation and exacerbated asthma.
 
 
 ### Classic Example: London's 1854 Cholera Outbreak
 
 In the mid 1800s, the modern idea of germ theory was still in its nascent stages, one of several competing ideas about how diseases spread. Learning how diseases spread, cholera in particular, was of great concern because cholera was traveling along global trade routes to become a pandemic.
 
-Ultimately it was determined that cholera is an infection caused by a water-born bacteria, [Vibrio cholerae](https://www.who.int/news-room/fact-sheets/detail/cholera). How did scientists figure out that cholera was spread by water? Using geospatial data!
+Ultimately it was determined that cholera is an infection caused by a waterborne bacteria, [Vibrio cholerae](https://www.who.int/news-room/fact-sheets/detail/cholera). How did scientists figure out that cholera was spread by water? Using geospatial data!
 
 In 1854, the city of London experienced an outbreak of cholera, with a particularly high number of cases among people who lived in near Broad Street in the Soho district. London kept good records of deaths so doctors, including one named John Snow, were able to put all of the cholera deaths on to a neighborhood map, shown below:
 
@@ -89,25 +89,22 @@ He also created a second map, which added a dotted line showing which addresses 
 
 ## The Power of Geospatial Data
 
-All data has the capacity to illuminate, communicate, and effect change. Geospatial data is particularly useful for certain types of population analyses, as all of us are impacted by our environments.
+All data has the capacity to illuminate, communicate, and effect change. Geospatial data is particularly useful for certain types of population analyses, as all of us are impacted by our environments. Because geospatial data asks **where**, using it can help answer all sorts of questions that could otherwise not even be asked.
 
-Geographic Connections
-----------------------
-
-Because geospatial data asks the **where**, using it can help answer all sorts of questions that could otherwise not even be asked. Geospatial data lets you make all sorts of connections that might not otherwise be visible.
-
-Geospatitial data can also be used to intuit or extrapolate information that might not otherwise be available. A research subject or patient cannot possibly be expected to share every aspect of their lived experience with an interviewer, but looking at a person's neighborhood, place of work, or school can provide a lot of information about their environmental exposures without asking intrusive questions. Are they in an area with high rates of violence or low access to fresh produce? Are they close to a park with lots of shade and a playground? Do the have to cross a busy highway on their way to school? The answers to these questions may be crucial to understanding an individual or group's social determinants of health.
+Geospatial data lets you make all sorts of connections that might not otherwise be visible. If many people in one location are having similar health outcomes, then it is worth investigating whether that health outcome is connected to something in that environment. In this way geospatial data about individuals can provide important insights about a location. The information can also flow in the other direction. Researchers can use geospatial data to intuit or extrapolate information about individuals that might not otherwise be available.
 
 Social Determinants of Health
 ----------------------------
+
+A research subject or patient cannot possibly be expected to share every aspect of their lived experience with an interviewer, but looking at a person's neighborhood, place of work, or school can provide a lot of information about their environmental exposures without asking intrusive questions. Are they in an area with high rates of violence or low access to fresh produce? Are they close to a park with lots of shade and a playground? Do the have to cross a busy highway on their way to school? The answers to these questions may be crucial to understanding an individual or group's social determinants of health.
+
 
 According to the [World Health Organization](https://www.who.int/health-topics/social-determinants-of-health#tab=tab_1):
 
 > The social determinants of health (SDH) are the non-medical factors that influence health outcomes. They are the conditions in which people are born, grow, work, live, and age, and the wider set of forces and systems shaping the conditions of daily life. These forces and systems include economic policies and systems, development agendas, social norms, social policies and political systems.
 
-Many social determinants of health are connected to a person's geographic location. During the 1854 London cholera outbreak, which water pump someone relied on ended up being the key determinant of whether they were exposed to the deadly bacteria.
 
-Much modern research focuses on similar social determinants of health. How does living near a power plant impact long term health? What about living near green spaces with lots of trees? Or living downstream from intensive agriculture operations? Figuring out where phenomena are occurring can be an important first step in making changes that greatly improve public health!
+Much modern research focuses on similar social determinants of health. Whether researchers are using aggregated data to learn more about an individual's circumstances, or individuals' location data to learn more about a place, figuring out **where** phenomena are occurring can be an important first step in making changes that greatly improve public health!
 
 Effective Interventions
 -----------------------
@@ -119,9 +116,9 @@ Even if doctors had known in 1854 that cholera was waterborne, without the geosp
 Impactful Communication
 -----------------------
 
-While not all geospatial data is amenable to being portrayed with maps, maps can be visually striking ways to present and communicate lot of geospatial data.
-
 Identifying a problem, and even finding an effective solution to it, isn't enough. Researchers need to be able to communicate their findings and recommendations to those who can do something about it. Your audience might be the general public, or politicians and policy makers responsible for making changes.
+
+While not all geospatial data is amenable to being portrayed with maps, maps can be visually striking ways to present and communicate lot of geospatial data to people with a wide range of backgrounds.
 
 
 ## Issues to Consider when Using Geospatial Data
@@ -131,18 +128,18 @@ Now that you are convinced of the value of using geospatial data, it's important
 Data Quality
 --------------
 
-Data quality is one concern you should consider.  Two hundred years ago, maps were drawn by hand and even the most accurate surveyor using the most accurate tools could not match the accuracy of modern Global Positioning Systems (GPS).
+Two hundred years ago, maps were drawn by hand and even the most accurate surveyor using the most accurate tools could not match the accuracy of modern Global Positioning Systems (GPS).
 
 While GPS has greatly improved the quality of geospatial data, it is still not perfect and can have the same sorts of missing and nonsensical fields as any data set. For example, Philadelphia records of police stops, available via [OpenDataPhilly](https://www.opendataphilly.org/dataset/vehicle-pedestrian-investigations), record some small portion of stops as occurring in Cape Canaveral, Florida, approximately a thousand miles away, which is clearly not accurate.
+
+Treat location data as you would any other raw data: with a questioning attitude and the expectation that some data cleaning will be required.
 
 Data Quantity
 -------------
 
-The quantity of data and how to determine which geographic data you need is another important consideration. The abundance of geospatial data created by modern systems also creates new problems. While it might seem like more data is always better, even the most high powered computer can only handle so much data at a time.
+The abundance of geospatial data created by modern systems also creates new problems. While it might seem like more data is always better, even the most high powered computer can only handle so much data at a time. A single weather forecast, for example, incorporates a huge amount of real-time geospatial data, most of it recorded by satellites in low orbit around the Earth.
 
-A single weather forecast, for example, incorporates a huge amount of real-time geospatial data, most of it recorded by satellites in low orbit around the Earth.
-
-Of course there is far more location data than that collected by satellites.  Environmental sensors, sales records, bus routes, census data, school district boundaries and many more sources provide rich location data that might be useful to you!
+Of course there is far more location data than that collected by satellites.  Environmental sensors, sales records, bus routes, census data, school district boundaries and many more sources provide rich location data that might be useful to you. You may need to consider how much computational power you have at your disposal when deciding which sources of geospatial data are most appropriate for your research.
 
 Expensive Analyses
 ------------------
@@ -153,9 +150,14 @@ If your research leads you to need more complex geographical information like el
 
 ### Privacy
 
-As with all data, privacy and ownership of people's geospatial data is an important consideration. You might be personally aware of how much location data your devices, like your cell phone, are recording.
+As with all data, privacy and ownership of people's geospatial data is an important consideration.
 
 The maps of cholera deaths from 1854 might not contain the names of the individuals who died, but they do contain enough information to reconstruct a pretty good picture of which individuals are represented simply by looking at who lives, or lived at each address. As a researcher using geospatial data, you have additional responsibility to keep data private.
+
+Depending on where and how you obtain your geospatial data, it might have precise locations or it may have already been processed in order to protect privacy. For example if you are working with 2020 US Census Data, the data you are looking at has been processed using a method called [differential privacy](https://www.census.gov/programs-surveys/decennial-census/decade/2020/planning-management/process/disclosure-avoidance.html). That might mean that you need to aggregate data in order to get accurate results.
+
+Even if you have approval to **use** fully identified location data in your analyses, you need to make sure that the data you ultimately **publish** does not violate the privacy of any research subjects.
+
 
 Aggregation
 -----------
@@ -170,6 +172,7 @@ Jittering
 ----------
 
 Another method to preserve privacy is called **jittering**. Jittering means adding a small amount of random noise to the real location data so that the jittered data are close to, but not exactly in, their true locations. With this method you can publish maps and data that look like they disclose individual addresses, but don't actually show where individuals truly live.
+
 
 <div class = "warning">
 
@@ -226,7 +229,9 @@ Geospatial data is very rich and while not all of it is publicly available, ther
 
 ## Additional Resources
 
-The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
+If you need more convincing of how important thinking geospatially can be, here are a few [videos](https://thepossibilityofwhere.economist.com/) produced by the GIS company ESRI illustrating importance of geospatial analyses in a variety of fields including healthcare.
+
+Another summary of uses of geospatial data appeared as [an article](https://trajectorymagazine.com/past-present-future-geospatial-data-use/) in Trajectory Magazine, a publication of the United States Geospatial Intelligence Foundation (USGIF).
 
 ## Feedback
 
