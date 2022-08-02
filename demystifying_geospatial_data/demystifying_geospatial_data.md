@@ -74,7 +74,7 @@ Ultimately it was determined that cholera is an infection caused by a water-born
 
 In 1854, the city of London experienced an outbreak of cholera, with a particularly high number of cases among people who lived in near Broad Street in the Soho district. London kept good records of deaths so doctors, including one named John Snow, were able to put all of the cholera deaths on to a neighborhood map, shown below:
 
-![](media/snow_map_1.png "Doctor John Snow's map of the 1854 cholera outbreak. Public domain, avalable from [wikimedia](https://commons.wikimedia.org/wiki/File:Snow-cholera-map-1.jpg).")
+![Map of part of London which includes the Soho district, with black bars at some addresses.](media/snow_map_1.png "Doctor John Snow's map of the 1854 cholera outbreak. Public domain, available from [wikimedia](https://commons.wikimedia.org/wiki/File:Snow-cholera-map-1.jpg).")
 
 This map marks each cholera death as a dark bar at the deceased's address. If an address has multiple deaths from cholera, the bars stack to form a version of a bar graph.
 
@@ -84,7 +84,7 @@ In reality, while he did identify the water pump as a possible source of the out
 
 He also created a second map, which added a dotted line showing which addresses were closer to that water pump than any other pump. This map shows that almost all of the cholera deaths were of people who not just lived near that pump, but likely used that pump to get their water.
 
-![](media/snow_map_2.jpeg "John Snow's map with a dotted line marking which locations are closer to the infected water pump than any other pump. On the Mode of Communication of Cholera by John Snow, updatded 1855. Public domain, avaialable through [ESRI](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/).")
+![Enlarged map of the Soho district with a dotted curve enclosing most, but not all, of the black bars.](media/snow_map_2.jpeg "John Snow's updated map with a dotted line marking which locations are closer to the infected water pump than any other pump. On the Mode of Communication of Cholera by John Snow, 1855. Public domain, available through [ESRI](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/).")
 
 
 ## The Power of Geospatial Data
@@ -107,7 +107,7 @@ According to the [World Health Organization](https://www.who.int/health-topics/s
 
 Many social determinants of health are connected to a person's geographic location. During the 1854 London cholera outbreak, which water pump someone relied on ended up being the key determinant of whether they were exposed to the deadly bacteria.
 
-Much modern research focuses on similar social determinants of health. How does living near a power plant impact long term health? What about living near green spaces with lots of trees? Or living downstream from intensive agriculture operations?
+Much modern research focuses on similar social determinants of health. How does living near a power plant impact long term health? What about living near green spaces with lots of trees? Or living downstream from intensive agriculture operations? Figuring out where phenomena are occurring can be an important first step in making changes that greatly improve public health!
 
 Effective Interventions
 -----------------------
@@ -124,7 +124,7 @@ While not all geospatial data is amenable to being portrayed with maps, maps can
 Identifying a problem, and even finding an effective solution to it, isn't enough. Researchers need to be able to communicate their findings and recommendations to those who can do something about it. Your audience might be the general public, or politicians and policy makers responsible for making changes.
 
 
-## Issues Using Geospatial Data
+## Issues to Consider when Using Geospatial Data
 
 Now that you are convinced of the value of using geospatial data, it's important that we alert you to some issues you may come across.
 
@@ -133,7 +133,7 @@ Data Quality
 
 Data quality is one concern you should consider.  Two hundred years ago, maps were drawn by hand and even the most accurate surveyor using the most accurate tools could not match the accuracy of modern Global Positioning Systems (GPS).
 
-While GPS has greatly improved the quality of geospatial data, it is still not perfect and can have the same sorts of missing and nonsensical fields as any data set. For example, Philadelphia records of police stops, available via [OpenDataPhilly](https://www.opendataphilly.org/dataset/vehicle-pedestrian-investigations), record some small portion of stops as occurring in Cape Canaveral, Florida, approximately a thousand miles away.
+While GPS has greatly improved the quality of geospatial data, it is still not perfect and can have the same sorts of missing and nonsensical fields as any data set. For example, Philadelphia records of police stops, available via [OpenDataPhilly](https://www.opendataphilly.org/dataset/vehicle-pedestrian-investigations), record some small portion of stops as occurring in Cape Canaveral, Florida, approximately a thousand miles away, which is clearly not accurate.
 
 Data Quantity
 -------------
@@ -155,19 +155,21 @@ If your research leads you to need more complex geographical information like el
 
 As with all data, privacy and ownership of people's geospatial data is an important consideration. You might be personally aware of how much location data your devices, like your cell phone, are recording.
 
-**Patient and participant privacy**
-
 The maps of cholera deaths from 1854 might not contain the names of the individuals who died, but they do contain enough information to reconstruct a pretty good picture of which individuals are represented simply by looking at who lives, or lived at each address. As a researcher using geospatial data, you have additional responsibility to keep data private.
+
+Aggregation
+-----------
 
 One way to do that is to only publishing location data in aggregate. For example you might take patient addresses and only record which postal code or other larger geographic region they are in.
 
+This can help protect the data of individuals, but there is a tension between the accuracy of your results and the privacy of your location data. Grouping locations into buckets that are too small may result in buckets with very few data points, potentially negating any efforts to protect privacy. On the other hand creating larger buckets may obscure important results.
+
+John Snow's research may have come to similar conclusions if he had grouped deaths by city block instead of by address, but that would not have done very much to protect the identities of the cholera victims. Alternatively he could have very effectively protected their privacy by grouping the data into collections of 10 or 20 blocks, but that might not have allowed him to accurately identify the water pump as the source of infection.
+
+Jittering
+----------
+
 Another method to preserve privacy is called **jittering**. Jittering means adding a small amount of random noise to the real location data so that the jittered data are close to, but not exactly in, their true locations. With this method you can publish maps and data that look like they disclose individual addresses, but don't actually show where individuals truly live.
-
-Here is a map from a [CHOP Policy Lab article](https://www.sciencedirect.com/science/article/pii/S1876285922001814?via%3Dihub) on how neighborhood social context might increase or decrease the stress levels of mothers of young children.
-
-![Map of Philadelphia color coded by the rate of violent crime. Addresses of study participant are marked on the map with yellow dots.](media/phillystressmap.jpg)
-
-While the **Participant Address** locations might appear at first glance to give away exactly where each participant lives, the image caption is reassuring: "Participant locations were randomly jittered and enlarged to ensure confidentiality."
 
 <div class = "warning">
 
