@@ -371,7 +371,7 @@ We can also manually control the color for a continuous variable, such as BMI. T
 # manually adjust color for a continuous variable
 ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = BMI)) +
   geom_point() +
-  scale_color_gradient(low = "lightgrey", high ="darkred") +
+  scale_color_continuous(low = "lightgrey", high ="darkred") +
   theme_bw()
 ```
 
@@ -409,14 +409,14 @@ Every ggplot2 visualization starts with the `ggplot()` command first to set whic
 
 Which of the following can be used to manually set the color for a **numeric** variable in ggplot2?
 
-[(X)] `scale_color_gradient()`
+[(X)] `scale_color_continuous()`
 [( )] `scale_color_manual()`
 [( )] `theme_color()`
 [( )] Any of the above
 ****
 <div class = "answer">
 
-`scale_color_gradient()` is for continuous variables, and `scale_color_manual()` is for categorical variables (factors).
+`scale_color_continuous()` is for continuous variables, and `scale_color_manual()` is for categorical variables (factors).
 
 </div>
 ****
