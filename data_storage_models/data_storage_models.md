@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman
 email:    feldmanna@chop.edu
-version:  1.0.0
+version:  1.1.0
 language: en
 narrator: UK English Female
 title: Types of Data Storage Solutions
