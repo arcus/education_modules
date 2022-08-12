@@ -184,7 +184,7 @@ For all its computational advantages, on premises network storage has significan
 
 ### Quiz: Cloud Storage
 
-True or False: Cost of storage in the cloud is inversely related to how instantly it can be accessed
+True or False: Cost of storage in the cloud is inversely related to how quickly it can be accessed
 
 [( )] TRUE
 [(X)] FALSE
