@@ -74,21 +74,6 @@ None, this module is intended for all end users regardless of their technical sk
 - Moreover, a desktop, like your physical desk, can quickly become cluttered and hard to navigate and should never be where the bulk of your work is saved.
 - **Documents** folder storage is another default option on your personal computer that provides better security, organizing potential and backup than your desktop. This is a good storage choice for frequently updated and accessed smaller files that are critical to business operations and for which you are the sole contributor.
 
-### Quiz: Storage on your Computer
-
-What is true of desktop storage?
-
-[( )] Requires physical space to maintain and host servers
-[( )] Requires in house IT staff or vendor support to maintain the technical infrastructure
-[(X)] Once you have made the resource investment, making changes is quite easy
-[( )] Files can be only accessed over the network or through a VPN client
-***
-<div class = "answer">
-
-For all its computational advantages, on premises network storage has significant up front costs and you are generally trapped into a pretty rigid setup once you have made the selection.
-
-</div>
-****
 
 ### Removable Media
 
@@ -143,20 +128,25 @@ Both optical discs and USB flash drives require playback media and can suffer ir
 - However, it is not just a mere flip of the switch to provide these resources, and it is a huge investment of time and upfront costs to get this kind of infrastructure in place.
 - If your organization is partnering with an external vendor, you might also be locked into their allotted technological constraints as well as be subject to time and cost intensive things like hardware, software, and licensing updates.
 
-### Quiz: On Premises Network
+### Quiz: Local vs. On Premises Network Storage
 
-What is not true of on premises network storage?
+Which of the following is true of local storage (on your computer) vs. on premises network storage?
 
-[( )] Requires physical space to maintain and host servers
-[( )] Requires in house IT staff or vendor support to maintain the technical infrastructure
-[(X)] Once you have made the resource investment, making changes is quite easy
-[( )] Files can be only accessed over the network or through a VPN client
+- [(Local) (Network)]
+- [ [ ]      [X] ] Requires substantial physical space to maintain and host servers
+- [ [ ]      [X] ] Requires in house IT staff or vendor support to maintain the technical infrastructure
+- [ [X]      [ ] ] Once you have made the resource investment, making changes is quite easy
+- [ [ ]      [X] ] Files can be only accessed over the network or through a VPN client
+-
+
 ***
+
 <div class = "answer">
 
 For all its computational advantages, on premises network storage has significant up front costs and you are generally trapped into a pretty rigid setup once you have made the selection.
 
 </div>
+
 ****
 
 ## Cloud Storage
@@ -184,7 +174,7 @@ For all its computational advantages, on premises network storage has significan
 
 ### Quiz: Cloud Storage
 
-True or False: Cost of storage in the cloud is inversely related to how quickly it can be accessed
+True or False: Cost of storage in the cloud is inversely related to how quickly data can be accessed.
 
 [( )] TRUE
 [(X)] FALSE
