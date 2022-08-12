@@ -189,7 +189,7 @@ If you are using the [binder instance we prepared](#lesson-preparation), then al
 If you are using R on your own machine, though, then you may need to run the following code in R before continuing with the code examples here:
 
 ```r
-install.packages("ggplot2", "readr", "dplyr")
+install.packages(c("ggplot2", "readr", "dplyr"))
 
 ```
 </div>
