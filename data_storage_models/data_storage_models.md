@@ -137,8 +137,6 @@ Which of the following is true of local storage (on your computer) vs. on premis
 - [ [ ]      [X] ] Requires in house IT staff or vendor support to maintain the technical infrastructure
 - [ [X]      [ ] ] Once you have made the resource investment, making changes is quite easy
 - [ [ ]      [X] ] Files can be only accessed over the network or through a VPN client
--
-
 ***
 
 <div class = "answer">
