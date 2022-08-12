@@ -174,14 +174,14 @@ For all its computational advantages, on premises network storage has significan
 
 ### Quiz: Cloud Storage
 
-True or False: Cost of storage in the cloud is inversely related to how quickly data can be accessed.
+True or False: Cost of storage in the cloud is directly related to how quickly data can be accessed.
 
-[( )] TRUE
-[(X)] FALSE
+[(X)] TRUE
+[( )] FALSE
 ***
 <div class = "answer">
 
-The most economical storage in the cloud is coldline or archival tier storage. This option can offer up to a several day retrieval time.
+The cheapest storage in the cloud is coldline or archival tier storage. This option can offer up to a several day retrieval time.
 
 </div>
 ****
