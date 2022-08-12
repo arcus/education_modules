@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.1
+version:  1.1.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -88,10 +88,17 @@ Before we dive into how plotting works in practice, though, we'll explore some p
 
 There are many options available for creating data visualizations in R and python. For this module, we'll focus on just one plotting library in each: `ggplot2` in R, and `seaborn` in python.
 
+<div class="important">
+
+Note: This module provides an overview of the tools only, to orient learners to the options available.
+Practical exercises and example code for `ggplot2` and `seaborn` are provided in subsequent modules (see [Additional Resources](#additional-resources)).
+
+</div>
+
 ### `ggplot2` in R
 
 R comes with plenty of plotting functions ready to go in base R (the set of functions you can use without needing to install any additional packages), and for quick-and-dirty visualizations, that is usually the fastest option.
-The [popular library `ggplot2`](https://ggplot2.tidyverse.org/) provides much more flexibility and control over your visualizations, however, and if you're creating visualizations to share (e.g. in a manuscript or presentation), you'll probably find you need to switch to `ggplot2` at some point anyway to get more control over the appearance of your visualizations.
+However, the [popular library `ggplot2`](https://ggplot2.tidyverse.org/) provides much more flexibility and control over your visualizations, and if you're creating visualizations to share (e.g. in a manuscript or presentation), you'll probably find you need to switch to `ggplot2` at some point anyway to get more control over the appearance of your visualizations.
 
 To get started with `ggplot2` in R on your own machine, you'll need to install it, and then load the library in R:
 
@@ -174,6 +181,19 @@ There are some basic best practice guidelines you can use to make your visualiza
 
 - Avoid using color as the sole indicator for important information. Instead, double color up with a second indicator like shape or line type.
 - Keep visualizations clean and simple, avoiding unnecessary visual clutter. In other words, keep the [data-to-ink ratio](https://infovis-wiki.net/wiki/Data-Ink_Ratio) high.
+
+<div class="learnmore">
+
+**What about colorblind-friendly palettes?**
+
+There are several excellent color palettes available that are designed to be more visually distinct for people with various types of colorblindness.
+One popular example is the [viridis](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html#the-color-scales) palette.
+(For a fascinating look into the development process behind colorblind-friendly palettes like viridis, check out the [presentation where the developers introduce that scale and discuss the theory behind it](https://www.youtube.com/watch?v=xAoljeRJ3lU).)
+
+One important thing to keep in mind, though, is that there are many different varieties of colorblindness, so a palette that works for one person with colorblindness may not work for another --- and no palette will work for people without visual access at all.
+So colorblind-friendly palettes are a good idea, but don't stop there.
+
+</div>
 
 Even those precautions won't help you reach people with severely limited or nonexistent visual access, though.
 
@@ -276,7 +296,11 @@ In general, review your work asking yourself "If the reader didn't have visual a
 
 If you are brand new to R or python (or want a refresher), check out [Intro to R](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md) to learn more about how to use each programming language. Before you can create visualizations of your own data, you'll need to be able to read data into R or python, and check and manipulate data frames.
 
-For more detail on `ggplot2`, see [the `ggplot2` website](https://ggplot2.tidyverse.org/), especially the [resources for learning `ggplot2`](https://ggplot2.tidyverse.org/#learning-ggplot2). For more detail on `seaborn`, see [the `seaborn` website](https://seaborn.pydata.org/), especially the [excellent introduction to `seaborn` article](https://seaborn.pydata.org/introduction.html).
+For more detail on `ggplot2`, see [Data Visualization in ggplot2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md).
+Another valuable resource is [the `ggplot2` website](https://ggplot2.tidyverse.org/), especially the [resources for learning `ggplot2`](https://ggplot2.tidyverse.org/#learning-ggplot2).
+
+For more detail on `seaborn`, see [Data Visualization in seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md).
+Also check out [the `seaborn` website](https://seaborn.pydata.org/), especially the [excellent introduction to `seaborn` article](https://seaborn.pydata.org/introduction.html).
 
 ## Feedback
 
