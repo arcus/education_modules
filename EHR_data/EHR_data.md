@@ -76,6 +76,25 @@ https://education.arcus.chop.edu/cartesian-results/
 
 ## Data quality
 
+One source of bias in EHR is **informative presence bias** --- the fact that there are systematic differences in the health information recorded as a result of the reason for the appointment.
+Data collected at routine, scheduled appointments ("non-informative" visits) will be systematically different in a number of ways from data collected at appointments that occur in response to a health problem ("informative" visits).
+This is compounded by the fact that the amount and type of appointments available in a patient's EHR will depend in part on their overall health.
+Sicker patients are more likely to have more information recorded in their EHR than healthier patients.
+
+The severity of informative presence bias will be different for different variables, depending on how stable each variable is over time.
+For example, something like height (which is relatively stable over time) won't show much bias based on whether it's measured at a routine checkup versus when a patient seeks care because of health problems.
+Something like temperature would be much more variable, though, and may be highly biased based on the type of appointment ---
+people who seek care because they're feeling unwell may have higher temperatures on average than people receiving routine care at a checkup.
+
+These systematic differences in measurements depending on the nature of the appointment can have far-reaching and sometimes subtle effects on the results of any analysis of EHR, especially longitudinal analyses where some patients may have more measurements recorded than others based on their overall health.
+One way to protect against this type of bias in your analyses is to check the degree of informative presence bias in your variables of interest by checking how much measurements differ when recorded at routine versus patient-initiated appointments.
+
+<div class="learnmore">
+
+Learn more about informative presence bias in electronic health records, including how to measure and correct for it, by reading [this recent article](https://academic.oup.com/jamia/article/29/7/1191/6570639).
+
+</div>
+
 ## Text data
 
 One common data type in EHR is text data, such as clinical notes.
@@ -125,7 +144,9 @@ True or False: Techniques for the analysis of structured and unstructured text d
 
 ## Sources
 
-https://www.med.upenn.edu/ehr-stats/assets/user-content/documents/COC_EHR_Traveling_Course.pdf
+key resource: https://www.med.upenn.edu/ehr-stats/assets/user-content/documents/COC_EHR_Traveling_Course.pdf
+
+(worth contacting as a potential collaborator/contributor? https://www.dbei.med.upenn.edu/bio/rebecca-hubbard-phd)
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3555312/
 
@@ -146,6 +167,7 @@ https://pubmed.ncbi.nlm.nih.gov/25062868/
 need pennkey:
 https://www.nature.com/articles/nrg3208
 
+Recent example using ML and EHR, from DBHi: https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000073
 
 ## Additional Resources
 
