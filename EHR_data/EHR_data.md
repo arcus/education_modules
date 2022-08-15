@@ -76,7 +76,7 @@ https://education.arcus.chop.edu/cartesian-results/
 
 ## Data quality
 
-One source of bias in EHR is **informative presence bias** --- the fact that there are systematic differences in the health information recorded as a result of the reason for the appointment.
+One source of bias in EHR is **informative presence bias** (also called "informed presence bias") --- the fact that there are systematic differences in the health information recorded as a result of the reason for the appointment.
 Data collected at routine, scheduled appointments ("non-informative" visits) will be systematically different in a number of ways from data collected at appointments that occur in response to a health problem ("informative" visits).
 This is compounded by the fact that the amount and type of appointments available in a patient's EHR will depend in part on their overall health.
 Sicker patients are more likely to have more information recorded in their EHR than healthier patients.
@@ -94,6 +94,10 @@ One way to protect against this type of bias in your analyses is to check the de
 Learn more about informative presence bias in electronic health records, including how to measure and correct for it, by reading [this recent article](https://academic.oup.com/jamia/article/29/7/1191/6570639).
 
 </div>
+
+Note that some times you will see the recommendation to enter a patient's total number of visits as a proxy for their overall health in an attempt to correct for informative presence bias.
+This may be effective in some situations, but there are a number of serious drawbacks to that approach as well.
+See discussion of this technique [in this article](https://pubmed.ncbi.nlm.nih.gov/27852603/), as well as in the article linked in the box above. 
 
 ## Text data
 
