@@ -51,7 +51,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 Before you start this module, make sure you
 
 * Know how to access a command line interface (CLI) on your computer.
-* Have Git configured on your computer. If Git is not yet configured, see the module on setting up Git on a [Mac, Linux](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md), or [Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md) machine.
+* Have Git configured on your computer. If Git is not yet configured, see the module on setting up Git on a [Mac, Linux](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md), or [Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md) machine.
 * Can edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file), one of many text editors that you can access directly from the command line interface (CLI).
 
 **Learning Objectives**
@@ -71,7 +71,7 @@ If you are on computer that uses the Windows operating system, make sure you are
 
 If you are not sure if Git is configured on your computer, enter `git config user.name` into your command line interface and see if it returns your name. You can also check that it it has the correct email for you with `git config user.email`. If these are correct you are all ready to start the module!
 
-If you need to get Git configured on your computer there is a module to help you get set up.  Depending on what computer you are using, use the instructions for a [Mac or Linux operating system](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md#1), or a [Windows operating system](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md#1)
+If you need to get Git configured on your computer there is a module to help you get set up.  Depending on what computer you are using, use the instructions for a [Mac or Linux operating system](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md#1), or a [Windows operating system](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md#1)
 
 ## Creating a Repository
 
