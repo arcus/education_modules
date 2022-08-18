@@ -14,3 +14,4 @@ If you do use these materials, we would love to hear from you!  Please [let us k
 # Second section
 
 * Info here
+* More info here
