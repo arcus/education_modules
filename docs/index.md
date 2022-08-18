@@ -1,37 +1,12 @@
-## Welcome to GitHub Pages
+## Remixing Our Materials
 
-You can use the [editor on GitHub](https://github.com/arcus/education_modules/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+This work is [licensed](LICENSE) with Creative Commons Attribution-ShareAlike 4.0.  There is also a helpful [summary](https://creativecommons.org/licenses/by-sa/4.0/) of the full [license](LICENSE) that describes what we permit in brief terms.  You are free to share and adapt these materials as long as you give appropriate credit and apply the same license to your version of these materials.  Some uses we foresee include:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+* [Forking](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository and changing some elements to be more contextualized to your audience (such as translating materials or changing sample data), and sharing the remixed contents with your audience
+* [Forking](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository and adding or removing courses that best meet the needs of your audience
+* Sharing links to this repository or its contents with communities of learners
+* Suggesting changes to our materials (especially where doing so would improve generalizability and accessibility) by [adding an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue#creating-an-issue-from-a-repository) or [creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) with proposed changes
+* Creating free community learning events like user groups or hackathons that use these materials
+* Using our published guidelines and methods for curriculum creation, with attribution, in your own projects
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/arcus/education_modules/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+If you do use these materials, we would love to hear from you!  Please [let us know about your experience](mailto:dart@chop.edu) so we can continue to improve.
