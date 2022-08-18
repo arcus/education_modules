@@ -10,3 +10,7 @@ This work is [licensed](LICENSE) with Creative Commons Attribution-ShareAlike 4.
 * Using our published guidelines and methods for curriculum creation, with attribution, in your own projects
 
 If you do use these materials, we would love to hear from you!  Please [let us know about your experience](mailto:dart@chop.edu) so we can continue to improve.
+
+# Second section
+
+* Info here
