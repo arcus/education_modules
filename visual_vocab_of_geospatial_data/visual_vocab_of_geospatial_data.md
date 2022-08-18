@@ -72,17 +72,21 @@ Maps are inherently political:
 Interpreting the geospatial data presented by a map is one thing, but if you want to make a map, you need to know how geospatial data becomes a map!
 
 The following map shows the city of Philadelphia, along with a few specific attributes:
-- outdoor public pools that opened in Summer 2021 (pictured as blue dots)
-- two train lines, the Broad Street Line (in orange) and the Market Frankfort Line (in dark blue) are also pictured
-- zip codes divide the city into regions
+- zip codes divide the city into regions,
+- two train lines, the Broad Street Line (in orange) and the Market Frankfort Line (in dark blue) are also pictured,
+- train stations along those two train lines are shown as black dots.
+
 
 ![Map of Philadelphia](media/Philly_map.png)
 
-How did the data about pools, trains, and zip codes become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
+The data for this map comes from [SEPTA](https://septaopendata-septa.opendata.arcgis.com/search?tags=Highspeed) and [OpenDataPhilly](https://www.opendataphilly.org/dataset/zip-codes).
+
+How did the data about stations, train lines, and zip codes become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
 - Points
-- Lines
-- Polygons
-- Multipolygons.
+- Lines (and Mulitlines)
+- Polygons (and Multipolygons)
+
+
 
 We will investigate each of theses type of spatial data a little more closely.
 
