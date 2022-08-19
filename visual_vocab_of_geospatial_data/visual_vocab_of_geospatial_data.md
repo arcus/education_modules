@@ -124,7 +124,7 @@ The data for this map comes from [SEPTA](https://septaopendata-septa.opendata.ar
 
 How did the data about stations, train lines, and zip codes become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
 
-- Points
+- Points (and Multipoints)
 - Lines (and Mulitlines)
 - Polygons (and Multipolygons)
 
