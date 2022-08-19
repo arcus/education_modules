@@ -67,32 +67,9 @@ Maps are inherently political:
 - in public health, maps can have huge consequences for who has political power or receives services or benefits.
 - From the name of a neighborhood to regions actually suffering from war... making, or even sharing a map can be a political statement... be warned? (Hans island Canada/Denmark seems like a safe example and recently resolved...)
 
-## How does geospatial data become a map?
-
-Interpreting the geospatial data presented by a map is one thing, but if you want to make a map, you need to know how geospatial data becomes a map!
-
-The following map shows the city of Philadelphia, along with a few specific attributes:
-
-- zip codes divide the city into regions,
-- two train lines, the Broad Street Line (in orange) and the Market Frankfort Line (in dark blue) are also pictured,
-- train stations along those two train lines are shown as black and white dots.
 
 
-![Map of Philadelphia highspeed train lines.](media/Philadelphia_highspeed_trains.jpg)
-
-The data for this map comes from [SEPTA](https://septaopendata-septa.opendata.arcgis.com/search?tags=Highspeed) and [OpenDataPhilly](https://www.opendataphilly.org/dataset/zip-codes).
-
-How did the data about stations, train lines, and zip codes become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
-
-- Points
-- Lines (and Mulitlines)
-- Polygons (and Multipolygons)
-
-
-
-We will investigate each of theses type of spatial data a little more closely.
-
-### Points
+## Locations on Earth
 
 Before we can talk about locations all over the earth, we have to establish the locations of a few very special points. The first two are the **North Pole** and the **South Pole**. If you imagine a line going straight through the planet connecting the two poles, this is the axis around which the Earth rotates creating night and day.
 
@@ -130,7 +107,32 @@ While most of your geospatial data will likely use decimal degrees (DD), like th
 It is important to remember that this coordinate system is measuring angles, not distance. The points (0N,90E) and (0N, 90W) are directly across the planet from each other, as a far away as two points can get (over 20,000 km). However (89N, 90E) and (89N, 90W) are both in the arctic circle, less than 240 km away from each other.
 
 </div>
+## How does geospatial data become a map?
 
+Interpreting the geospatial data presented by a map is one thing, but if you want to make a map, you need to know how geospatial data becomes a map!
+
+The following map shows the city of Philadelphia, along with a few specific attributes:
+
+- zip codes divide the city into regions,
+- two train lines, the Broad Street Line (in orange) and the Market Frankfort Line (in dark blue) are also pictured,
+- train stations along those two train lines are shown as black and white dots.
+
+
+![Map of Philadelphia highspeed train lines.](media/Philadelphia_highspeed_trains.jpg)
+
+The data for this map comes from [SEPTA](https://septaopendata-septa.opendata.arcgis.com/search?tags=Highspeed) and [OpenDataPhilly](https://www.opendataphilly.org/dataset/zip-codes).
+
+How did the data about stations, train lines, and zip codes become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
+
+- Points
+- Lines (and Mulitlines)
+- Polygons (and Multipolygons)
+
+
+
+We will investigate each of theses type of spatial data a little more closely.
+
+### Points
 
 ### Lines
 
@@ -144,9 +146,9 @@ It might be a region, like a country, park, or body of water (2 dimensional).
 
 In different contexts the same physical object might be described using different types of data. While a city might be a 2D region of a local map, it might only appear as a point in national or global data. Similarly a river might be a line dividing two regions of land on either side, or it could be a region of its own. Which format you use will depend on your needs. Knowing what you will use the data for will help you determine which types of location data you want to acquire.
 
-### Multipolygons
+### Multiple
 
-Regions that are "simply connected," which is a mathematics term for having exactly one obvious interior and one obvious exterior can be represented by polygons. But what about regions like Hawaii (a collection of several islands) or South Africa (which has two holes punched out of it where the country of Lesotho is located)?
+Regions that are "simply connected," which is a mathematics term for having exactly one obvious interior and one obvious exterior can be represented by polygons. But what about regions like Hawaii (a collection of several islands) or South Africa (which has a hole punched out of it where the country of Lesotho is located)?
 
 These more complicated regions are described by **mulitpolygons**. A multipolygon is a collection of polygons.
 
