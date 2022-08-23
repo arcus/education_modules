@@ -6,17 +6,19 @@ version:  0.0.1
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
-title: Maps: the Visual Vocabulary of Geospatial Data
-comment:  This is a general overview of how geospatial data can be presented visually using maps.
-long_description: Although maps can be extremely effective ways to receive information with only limited prerequisite specialized knowledge, creating them requires some specialized vocabulary. This modules is for learners who want to move beyond reading maps and are considering making their own maps.
+title: The Elements of a Map
+comment:  This is a general overview of ways that geospatial data can be communicated visually using maps.
+long_description: Raw geospatial data can be particularly tricky for humans to read. However the shapes, colors, sizes, symbols, and language that make up a good map can effectively communicate a variety of detailed data even to readers looking at the map with only minimum specialized background knowledge. This module will demystify how raw data becomes a map and explain common components of maps. It is appropriate for anyone considering making maps from geospatial data.
 estimated_time: ?? minutes
 
 @learning_objectives  
 
 After completion of this module, learners will be able to:
 
-- describe types of geospatial data
-- identify common types of maps
+- understand the latitude and longitude coordinate system
+- understand how raw geospatial data becomes points, lines, and polygons on a map
+- recognize the elements of maps
+- name types of maps that focus on particular elements.
 
 @end
 
@@ -26,7 +28,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
-# Maps: the Visual Vocabulary of Geospatial Data
+# The Elements of a Map
 
 <div class = "overview">
 
@@ -107,6 +109,10 @@ While most of your geospatial data will likely use decimal degrees (DD), like th
 It is important to remember that this coordinate system is measuring angles, not distance. The points (0N,90E) and (0N, 90W) are directly across the planet from each other, as a far away as two points can get (over 20,000 km). However (89N, 90E) and (89N, 90W) are both in the arctic circle, less than 240 km away from each other.
 
 </div>
+
+### Quiz: Latitude and Longitude
+
+
 ## How does geospatial data become a map?
 
 Interpreting the geospatial data presented by a map is one thing, but if you want to make a map, you need to know how geospatial data becomes a map!
@@ -146,7 +152,7 @@ It might be a region, like a country, park, or body of water (2 dimensional).
 
 In different contexts the same physical object might be described using different types of data. While a city might be a 2D region of a local map, it might only appear as a point in national or global data. Similarly a river might be a line dividing two regions of land on either side, or it could be a region of its own. Which format you use will depend on your needs. Knowing what you will use the data for will help you determine which types of location data you want to acquire.
 
-### Multiple
+### Multi-
 
 Regions that are "simply connected," which is a mathematics term for having exactly one obvious interior and one obvious exterior can be represented by polygons. But what about regions like Hawaii (a collection of several islands) or South Africa (which has a hole punched out of it where the country of Lesotho is located)?
 
@@ -154,29 +160,37 @@ These more complicated regions are described by **mulitpolygons**. A multipolygo
 
 Examples: code and image of Hawaii
 
+### Quiz: Shapes
 
+## Communicate more than location
 
-## Ways to present data with maps
-
-Every map involves choices to emphasize some data and omit other data. The type of data you want to display can help you choose what type of map to make. In this section we will learn about some of the most common types of maps.
-
-### Choropleths
-(and variations)
-
-### Dot distribution
+Dot distribution
+-----------------
 
 single points, you can still see a lot with only points, assuming you have a lot of points. Could be very accurate (where is this car?) or sort of vague and politically determined (each city has an official lat/long located somewhere within the city limits?)
 
-### Graduated symbol maps
+### Colors
+
+#### Choropleths
+(and variations)
+#### Heat maps
+
+### Sizes
+#### Graduated symbol maps
 (https://gisgeography.com/dot-distribution-graduated-symbols-proportional-symbol-maps/#:~:text=Graduated%20symbol%20maps%20and%20proportional%20symbol%20maps%20scale%20the%20size,instead%20of%20scaling%20them%20larger.)
+#### Proportional symbol maps
 
-### Proportional symbol maps
-### Heat maps
 
-### Cartograms
+#### Cartograms
 (kind of a weird one...)
 
-## Quiz
+### Language
+
+Words
+numbers
+Legends and keys
+
+### Quiz
 
 
 
