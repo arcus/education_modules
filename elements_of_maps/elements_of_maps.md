@@ -48,29 +48,6 @@ None
 
 </div>
 
-
-## The power of maps
-
-Pros of maps:
-
-- don't need a lot of specialized knowledge to understand them
-- meanings persist throughout time, check out these really old maps!
-- some conventions: land/water is a convention worth keeping, north = up maybe less so, although depending on context can really confuse people
-
-Issues to consider:
-
-- maps can distort information just as much as any other way of presenting data. Because they are so striking, perhaps even more so!
-- remember, visual means very accessible for SOME, but not universally accessible. If your ONLY way of communicating the information is with a map, it will be less accessible or completely inaccessible to those with different vision capabilities. Even those who have no trouble seeing your map, may not be visual learners, so rely exclusively on maps to your own peril.
-- A map is a representation of reality, but it is not reality. [Failures of GPS navigation systems](https://www.salon.com/2014/02/19/9_of_the_most_epic_gps_failures_partner/) can make the difference particularly clear, but there are many subtler ways in which maps are good, but imperfect representations.
-
-Maps are inherently political:
-
-- the idea of claiming land by mapping it (still in effect via oceanography and ocean floor mapping to claim continental shelf/deep see drilling rights: The United Nations Convention on the Law of the Sea (UNCLOS))
-- in public health, maps can have huge consequences for who has political power or receives services or benefits.
-- From the name of a neighborhood to regions actually suffering from war... making, or even sharing a map can be a political statement... be warned? (Hans island Canada/Denmark seems like a safe example and recently resolved...)
-
-
-
 ## Locations on Earth
 
 Before we can talk about locations all over the earth, we have to establish the locations of a few very special points. The first two are the **North Pole** and the **South Pole**. If you imagine a line going straight through the planet connecting the two poles, this is the axis around which the Earth rotates creating night and day.
@@ -86,11 +63,11 @@ Now that we have established the poles, the equator, and the prime meridian, we 
 
 **Latitude** is a measure of how far north or south a location is from the equator. Given a point on the surface of the earth, imagine a straight line to the center of the earth. The angle that line makes with the equatorial plane, measured in degrees (denoted $ {}^\circ $), is the point's latitude. Since that angle could be either above or below the equatorial plane, we have to specify which angle we are talking about. The horizontal line on the picture below corresponding to 30 degrees north, or +30$ {}^\circ $, goes through the United States, while the line representing 30 degrees south, or -30$ {}^\circ $, runs through Chile and Argentina.
 
-![Earth with the poles, the equator, and latitude measurements.](media/latitude.png)
+![Earth with the poles, the equator, and latitudes marked at 30 degree increments ranging from -90 at the South Pole to 90 at the North Pole.](media/latitude.png)
 
 **Longitude** is similarly an angular measurement, but rather than measuring relative to the equatorial plane, it measures relative to the prime meridian. Positive angles correspond to locations to the east of the prime meridian, while negative angles refer to points west of it. The meridian on the exact opposite side of the world from the prime meridian is, by convention, +180$ {}^\circ $ or 180$ {}^\circ $ East, even though it could just as accurately be described as -180$ {}^\circ $ or 180$ {}^\circ $ West.
 
-![Earth with the prime meridian and longitude measurements.](media/longitude.png)
+![Earth with the prime meridian and longitude lines at 30 degree increments ranging from -150 to 180. Not shown is -180 degrees longitude which is the same as  180 degrees.](media/longitude.png)
 
 Together, latitude and longitude form a (spherical) coordinate system that can specify any point on the planet, with high precision.
 
@@ -110,10 +87,8 @@ It is important to remember that this coordinate system is measuring angles, not
 
 </div>
 
-### Quiz: Latitude and Longitude
 
-
-## How does geospatial data become a map?
+## Shapes
 
 Interpreting the geospatial data presented by a map is one thing, but if you want to make a map, you need to know how geospatial data becomes a map!
 
@@ -126,43 +101,49 @@ The following map shows the city of Philadelphia, along with a few specific attr
 
 ![Map of Philadelphia highspeed train lines.](media/Philadelphia_highspeed_trains.jpg)
 
-The data for this map comes from [SEPTA](https://septaopendata-septa.opendata.arcgis.com/search?tags=Highspeed) and [OpenDataPhilly](https://www.opendataphilly.org/dataset/zip-codes).
 
-How did the data about stations, train lines, and zip codes become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
+How did the data about stations, train lines (from [SEPTA](https://septaopendata-septa.opendata.arcgis.com/search?tags=Highspeed)), and zip codes (from [OpenDataPhilly](https://www.opendataphilly.org/dataset/zip-codes)) become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
 
 - Points (and Multipoints)
 - Lines (and Mulitlines)
 - Polygons (and Multipolygons)
 
+Points
+------
+
+A point is a single location given by its latitude and longitude coordinates. On the map above, individual train stations are represented as points. A point has no length or width and therefore no area.
+
+What objects are represented as points can depend on both the source of the geospatial data and the purpose of a particular map. For example if you are studying the health and safety of the city's unhoused population, representing a station that has multiple entrances as a single point could be insufficient. Alternatively if you are looking at national or global populations, the entire city of Philadelphia might be represented as a single point.
+
+Lines
+------
+
+A line is an ordered sequence of points and all of the line segments connecting adjacent points. On the map above, the Market-Frankford and Broad Street train routes are represented as lines (actually multilines, but we will address that shortly). A line has legnth, but no width.
+
+Much like with points, which objects are represented as points can depend on both the available data and the goal of your research. A road might be represented as a line when you are studying how children commute to school on a bus and are interested in the distance they travel. A similar study looking at children crossing large streets on the way to school might need additional information on how wide each street is. In that case, it could be helpful to represent streets not as lines but as polygons.
+
+Polygons
+-------
+
+A polygon is a region encircled by a line that starts and ends at the same point. Each of the grey regions in the map above, representing zip codes, is a polygon. While the boundaries of these regions look curved, they are in fact made up of hundreds of straight line segments. A polygon has an inside and an outside. Its boundary is a line and it is possible to calculate the area of the polygon.
+
+In theory, and with enough location data, you could represent every feature as a polygon. However this is extremely computationally intensive and might add a lot of work (for both the computer and the person operating it) without much added benefit. Even if the footprint of each train station were available for the map above, using those polygons would not improve the quality of this map since they would be too small to be visible.
+
+Multipoints, Multilines, and Multipolygons
+----------
+
+Geospatial data doesn't always cleanly fit into a single point, line, or polygon. The orange Broad Street Line on the map above actually has a small loop at its northern end, and a "spur" just north of where it meets the Market-Frankford Line. These attributes can't be stored as a single ordered sequence of line segments, so they appear in the data files as multilines.
+
+A **multiline** is a collection of two or more lines that make up a single geographic feature. Many rivers are multilines to account for tributaries flowing into the main river. Similar to multilines are multipolygons. A **multipolygon** is a collection of two or more polygons that form a single geographic region. The US state of Michigan is usually represented as a multipolygon since it is separated into two parts by the great lakes and no single line could enclose both parts.
+
+![The state of Michigan consists of the Upper Peninsula and the Lower Peninsula.]()
+
+A **multipoint** is a collection of two or more points. Multipoints can be an extremely helpful data structure for some of the more complicated geographic analyses. For example if you want to know how far an address is from a subway station, you could create a multipoint of all of the stations and find the distance from that multipoint to the address. Without the multipoint, you would need to find the distance from the address to each of the stations and then find the minimum distance.
 
 
-We will investigate each of theses type of spatial data a little more closely.
+## Beyond Shapes
 
-### Points
-
-### Lines
-
-
-It might be a line or path, tracing out the route of a road, river, or isobar (all the points where the air pressure is a specific value) (1 dimensional).
-Data on lines is stored as an ordered sequence of points. The "line" consists of straight line segments from one point to the next to the next.
-
-### Polygons
-
-It might be a region, like a country, park, or body of water (2 dimensional).
-
-In different contexts the same physical object might be described using different types of data. While a city might be a 2D region of a local map, it might only appear as a point in national or global data. Similarly a river might be a line dividing two regions of land on either side, or it could be a region of its own. Which format you use will depend on your needs. Knowing what you will use the data for will help you determine which types of location data you want to acquire.
-
-### Multi-
-
-Regions that are "simply connected," which is a mathematics term for having exactly one obvious interior and one obvious exterior can be represented by polygons. But what about regions like Hawaii (a collection of several islands) or South Africa (which has a hole punched out of it where the country of Lesotho is located)?
-
-These more complicated regions are described by **mulitpolygons**. A multipolygon is a collection of polygons.
-
-Examples: code and image of Hawaii
-
-### Quiz: Shapes
-
-## Communicate more than location
+A map that only shows points, lines, and polygons is unlikely to be detailed enough to incorporate
 
 Dot distribution
 -----------------
@@ -171,17 +152,24 @@ single points, you can still see a lot with only points, assuming you have a lot
 
 ### Colors
 
-#### Choropleths
+Choropleths
+-----------
 (and variations)
-#### Heat maps
+
+Heat maps
+---------
+
 
 ### Sizes
-#### Graduated symbol maps
+Graduated symbol maps
+--------------
 (https://gisgeography.com/dot-distribution-graduated-symbols-proportional-symbol-maps/#:~:text=Graduated%20symbol%20maps%20and%20proportional%20symbol%20maps%20scale%20the%20size,instead%20of%20scaling%20them%20larger.)
-#### Proportional symbol maps
 
+Proportional symbol maps
+--------------
 
-#### Cartograms
+Cartograms
+------------
 (kind of a weird one...)
 
 ### Language
@@ -190,7 +178,33 @@ Words
 numbers
 Legends and keys
 
-### Quiz
+## Types of Maps
+We have seen several types of maps in this module. We list them all here for easy reference.
+
+Dot Distribution
+Choropleth
+Heat Map
+Graduated Symbol Map
+Proportional Symbol Map
+Cartogram
+
+## Quiz
+
+Which of the following statements are TRUE?
+
+[[X]] Every location on Earth can be described using latitude and longitude.
+[[ ]] The location of equator was an arbitrary decision made by historical map makers.
+[[X]] Locations north of the equator are represented by positive latitudes and locations south of the equator are represented by negative latitudes.
+[[ ]] Locations east of the prime meridian are represented by positive longitudes and locations west of the prime meridian are represented by negative longitudes.
+***
+
+<div class = "answer">
+
+Every location on Earth can be described using latitude and longitude. Positive latitudes are north of the equator and positive longitudes are east of the prime meridian while negative latitudes and longitudes are to the south and west, respectively. While the location of the prime meridian was chosen for historical reasons, the location of the equator is fixed by the planet's rotation.
+
+</div>
+***
+
 
 
 
