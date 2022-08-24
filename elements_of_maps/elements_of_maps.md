@@ -143,20 +143,46 @@ A **multipoint** is a collection of two or more points. Multipoints can be an ex
 
 ## Beyond Shapes
 
-A map that only shows points, lines, and polygons is unlikely to be detailed enough to incorporate
+Now that you know what goes into the outlines of a map, you likely want to use a map to display your data. You probably want your map to convey more information. Perhaps you have data on the locations of car accidents, or household income by neighborhood, or maybe you have addresses of households in which children have childhood asthma. You will need to use other elements to communicate the data you care about.
 
-Dot distribution
+
+
+Dot Distribution Map
 -----------------
 
-single points, you can still see a lot with only points, assuming you have a lot of points. Could be very accurate (where is this car?) or sort of vague and politically determined (each city has an official lat/long located somewhere within the city limits?)
 
 ### Colors
 
-Choropleths
+
+<div class = "warning">
+
+Not everyone can distinguish colors. While colors can be a powerful tool, if colors are the only way your are distinguishing features on your map, those differences will be invisible to some of your audience.
+
+</div>
+
+While color isn't universally accessible, it is still an important way tool for distinguish features from each other on a map.
+
+Hue
+------
+
+When choosing what color a certain feature should be, it is important to consider the larger context of the map. Our map of Philadelphia made the two train lines orange and blue, which are the colors used on both the signs and the train cars on those lines. While our map could have used other colors, that might have been visually confusing for people familiar with these trains.  
+
+A more universal example is the convention that bodies of water are colored blue. Unless you have a good reason to use other colors, stick to this convention to avoid confusing your audience.
+
+
+Intensity
+---------
+
+You can convey a lot of information with a single color by varying its intensity. A map showing ocean depth might be a deeper, darker blue where the water is deep, and a lighter shade where the water is shallow.
+
+Using color intensity rather than changing hues to show differences can make a map more accessible to some readers.
+
+
+Choropleth Maps
 -----------
 (and variations)
 
-Heat maps
+Heat Maps
 ---------
 
 
