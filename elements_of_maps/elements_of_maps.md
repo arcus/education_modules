@@ -247,7 +247,25 @@ Every location on Earth can be described using latitude and longitude. Positive 
 ***
 
 
+Which types of geometry might be appropriate to represent a hospital? Select all possibilities.
 
+[[X]] Point
+[[X]] Multipoint
+[[ ]] Line
+[[ ]] Multiline
+[[X]] Polygon
+[[X]] Multipolygon
+***
+<div class = "answer">
+
+The type of geometry depends on both the structure of the hospital, and the reason you are interested in it.
+
+If you care about where the hospital is located in a city or country, a point might be an appropriate geometry. If the hospital has multiple locations, a multipoint could capture all of those locations.
+
+If you are studying how the hospital building interacts with the surrounding neighborhood, it may be better to use a polygon representation of the footprint of the hospital. If the hospital has several buildings, a mulitpolygon geometry can include all of the buildings.
+
+</div>
+***
 
 ## Additional Resources
 
