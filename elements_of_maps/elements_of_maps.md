@@ -100,13 +100,7 @@ The following map shows the city of Philadelphia, along with a few specific attr
 
 ![Map of Philadelphia highspeed train lines.](media/Philadelphia_highspeed_trains.jpg)
 
-<div class = "important">
 
-Raw location data is stored as a set of points. This data is called the **geometry**.
-
-In a tidy, tabular data array, you will have a column for the object name (i.e. "Broad Street Line"), a column for the geometry of that object.
-
-</div>
 
 
 How did the data about stations, train lines (from [SEPTA](https://septaopendata-septa.opendata.arcgis.com/search?tags=Highspeed)), and zip codes (from [OpenDataPhilly](https://www.opendataphilly.org/dataset/zip-codes)) become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
@@ -115,19 +109,31 @@ How did the data about stations, train lines (from [SEPTA](https://septaopendata
 - Lines (and Mulitlines)
 - Polygons (and Multipolygons)
 
+<div class = "important">
+
+Raw location data is stored as a set of points. This set of points is called a **geometry**.
+
+In a tidy, tabular data array, you will have a column for the object name and a column for the geometry of that object. The names and geometries of the stations used for the map above are shown below:
+
+![Location data for train stations.](media/station_data.png)
+
+</div>
+
 Points
 ------
 
-A point is a single location given by its latitude and longitude coordinates. On the map above, individual train stations are represented as points. The southernmost (bottom) station on the Broad Street Line has geometry `POINT (-75.17394 39.90543)`. A point has no length or width and therefore no area.
+A point is a single location given by its latitude and longitude coordinates. On the map above, individual train stations are represented as points. The southernmost (bottom) station on the Broad Street Line, the NRG station has geometry `POINT (-75.17394 39.90543)`. A point has no length or width and therefore no area.
 
 What objects are represented as points can depend on both the source of the geospatial data and the purpose of a particular map. For example if you are studying the health and safety of the city's unhoused population, representing a station that has multiple entrances as a single point could be insufficient. Alternatively if you are looking at national or global populations, the entire city of Philadelphia might be represented as a single point.
 
 Lines
 ------
 
-A line is an ordered sequence of points and all of the line segments connecting adjacent points. On the map above, the Market-Frankford and Broad Street train routes are represented as lines (actually multilines, but we will address that shortly). A line has legnth, but no width.
+A line is an ordered sequence of points and all of the line segments connecting adjacent points. On the map above, the Market-Frankford and Broad Street train routes are represented as lines (actually multilines, which we will address that shortly). A line has legnth, but no width.
 
-Much like with points, which objects are represented as points can depend on both the available data and the goal of your research. A road might be represented as a line when you are studying how children commute to school on a bus and are interested in the distance they travel. A similar study looking at children crossing large streets on the way to school might need additional information on how wide each street is. In that case, it could be helpful to represent streets not as lines but as polygons.
+Since lines are made up of straight line segments, twists and turns a line require a lot of small line segments to accurately represent their geometry. While the Broad Street Line might look straight enough on the map, it is comprised of over 200 line segments!
+
+Much like with points, which objects are represented as lines can depend on both the available data and the goal of your research. A road might be represented as a line when you are studying how children commute to school on a bus and are interested in the distance they travel. A similar study looking at children crossing large streets on the way to school might need additional information on how wide each street is. In that case, it could be helpful to represent streets not as lines but as polygons.
 
 Polygons
 -------
@@ -141,9 +147,11 @@ Multipoints, Multilines, and Multipolygons
 
 Geospatial data doesn't always cleanly fit into a single point, line, or polygon. The orange Broad Street Line on the map above actually has a small loop at its northern end, and a "spur" just north of where it meets the Market-Frankford Line. These attributes can't be stored as a single ordered sequence of line segments, so they appear in the data files as multilines.
 
-A **multiline** is a collection of two or more lines that make up a single geographic feature. Many rivers are multilines to account for tributaries flowing into the main river. Similar to multilines are multipolygons. A **multipolygon** is a collection of two or more polygons that form a single geographic region. The US state of Michigan is usually represented as a multipolygon since it is separated into two parts by the great lakes and no single line could enclose both parts.
+![Broad Street Line](media/broad_street_line.jpg)
 
-![The state of Michigan consists of the Upper Peninsula and the Lower Peninsula.]()
+A **multiline** is a collection of two or more lines that make up a single geographic feature. Many rivers are multilines to account for tributaries flowing into the main river.
+
+Similar to multilines are multipolygons. A **multipolygon** is a collection of two or more polygons that form a single geographic region. The US state of Michigan is usually represented as a multipolygon since it is separated into two parts by the Great Lakes and no single line could enclose both parts.
 
 A **multipoint** is a collection of two or more points. Multipoints can be an extremely helpful data structure for some of the more complicated geographic analyses. For example if you want to know how far an address is from a subway station, you could create a multipoint of all of the stations and find the distance from that multipoint to the address. Without the multipoint, you would need to find the distance from the address to each of the stations and then find the minimum distance.
 
