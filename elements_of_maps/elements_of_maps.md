@@ -16,7 +16,6 @@ estimated_time: ?? minutes
 After completion of this module, learners will be able to:
 
 - understand the latitude and longitude coordinate system
-- understand how raw geospatial data becomes points, lines, and polygons on a map
 - recognize the elements of maps
 - name types of maps that focus on particular elements.
 
@@ -90,7 +89,7 @@ It is important to remember that this coordinate system is measuring angles, not
 
 ## Shapes
 
-Interpreting the geospatial data presented by a map is one thing, but if you want to make a map, you need to know how geospatial data becomes a map!
+Interpreting the geospatial data presented by a map is one thing, but if you want to make a map, you need to know how geospatial data becomes a map.
 
 The following map shows the city of Philadelphia, along with a few specific attributes:
 
@@ -100,6 +99,14 @@ The following map shows the city of Philadelphia, along with a few specific attr
 
 
 ![Map of Philadelphia highspeed train lines.](media/Philadelphia_highspeed_trains.jpg)
+
+<div class = "important">
+
+Raw location data is stored as a set of points. This data is called the **geometry**.
+
+In a tidy, tabular data array, you will have a column for the object name (i.e. "Broad Street Line"), a column for the geometry of that object.
+
+</div>
 
 
 How did the data about stations, train lines (from [SEPTA](https://septaopendata-septa.opendata.arcgis.com/search?tags=Highspeed)), and zip codes (from [OpenDataPhilly](https://www.opendataphilly.org/dataset/zip-codes)) become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
@@ -111,7 +118,7 @@ How did the data about stations, train lines (from [SEPTA](https://septaopendata
 Points
 ------
 
-A point is a single location given by its latitude and longitude coordinates. On the map above, individual train stations are represented as points. A point has no length or width and therefore no area.
+A point is a single location given by its latitude and longitude coordinates. On the map above, individual train stations are represented as points. The southernmost (bottom) station on the Broad Street Line has geometry `POINT (-75.17394 39.90543)`. A point has no length or width and therefore no area.
 
 What objects are represented as points can depend on both the source of the geospatial data and the purpose of a particular map. For example if you are studying the health and safety of the city's unhoused population, representing a station that has multiple entrances as a single point could be insufficient. Alternatively if you are looking at national or global populations, the entire city of Philadelphia might be represented as a single point.
 
@@ -216,7 +223,7 @@ Cartogram
 
 ## Quiz
 
-Which of the following statements are TRUE?
+Which of the following statements about latitude and longitude are TRUE?
 
 [[X]] Every location on Earth can be described using latitude and longitude.
 [[ ]] The location of equator was an arbitrary decision made by historical map makers.
@@ -252,6 +259,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Module+Template%22)!
-
-Remember to change the redcap link so that the module name is correct for this module!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Elements+of+Maps%22)!
