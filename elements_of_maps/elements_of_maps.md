@@ -9,7 +9,7 @@ narrator: UK English Female
 title: The Elements of a Map
 comment:  This is a general overview of ways that geospatial data can be communicated visually using maps.
 long_description: Raw geospatial data can be particularly tricky for humans to read. However the shapes, colors, sizes, symbols, and language that make up a good map can effectively communicate a variety of detailed data even to readers looking at the map with only minimum specialized background knowledge. This module will demystify how raw data becomes a map and explain common components of maps. It is appropriate for anyone considering making maps from geospatial data.
-estimated_time: ?? minutes
+estimated_time: 45 minutes
 
 @learning_objectives  
 
@@ -89,6 +89,12 @@ It is important to remember that this coordinate system is measuring angles, not
 
 ## Shapes
 
+<div class = "warning">
+
+Although a map can be an extremely effective way of sharing your data, be aware that as a visual medium, maps will be inaccessible to members of your audience who are visually impaired. While we are focusing on the visual aspects in this module, it is important to provide text summaries of your findings as well.
+
+</div>
+
 Interpreting the geospatial data presented by a map is one thing, but if you want to make a map, you need to know how geospatial data becomes a map.
 
 The following map shows the city of Philadelphia, along with a few specific attributes:
@@ -115,7 +121,7 @@ Raw location data is stored as a set of points. This set of points is called a *
 
 In a tidy, tabular data array, you will have a column for the object name and a column for the geometry of that object. The names and geometries of the stations used for the map above are shown below:
 
-![Location data for train stations.](media/station_data.png)
+![Location data for train stations.](media/station_data.png)<!-- style = "max-width:400px;" border = 5px solid -->
 
 </div>
 
@@ -156,14 +162,17 @@ Similar to multilines are multipolygons. A **multipolygon** is a collection of t
 A **multipoint** is a collection of two or more points. Multipoints can be an extremely helpful data structure for some of the more complicated geographic analyses. For example if you want to know how far an address is from a subway station, you could create a multipoint of all of the stations and find the distance from that multipoint to the address. Without the multipoint, you would need to find the distance from the address to each of the stations and then find the minimum distance.
 
 
-## Beyond Shapes
+## Displaying Data
 
-Now that you know what goes into the outlines of a map, you likely want to use a map to display your data. You probably want your map to convey more information. Perhaps you have data on the locations of car accidents, or household income by neighborhood, or maybe you have addresses of households in which children have childhood asthma. You will need to use other elements to communicate the data you care about.
+Now that you know what goes into the outlines of a map, you likely want to use a map to display your data. Perhaps you have data on the locations of car accidents, or household income by neighborhood, or maybe you have addresses of households in which children have childhood asthma. You will need to use other elements to communicate the data you care about.
 
-
+Before we look at other ways to communicate data, let's take a look at what we can see with just shapes:
 
 Dot Distribution Map
 -----------------
+A dot distribution map lets you display the location of many individual, related events. Using data from [OpenDataPhilly](https://www.opendataphilly.org/dataset/vehicular-crash-data) we can plot every reported vehicular crash from 2019:
+
+![Philadelphia is outlined in grey and covered in blue dots. The dots are most concentrated along large roadways and trace out partial street map of the city.](media/2019_crashes.jpg)
 
 
 ### Colors
