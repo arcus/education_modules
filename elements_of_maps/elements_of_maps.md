@@ -179,6 +179,8 @@ A dot distribution map lets you display the location of many individual, related
 
 ![Philadelphia is outlined in grey and covered in tiny blue dots. The dots are most concentrated along large roadways and trace out partial street map of the city.](media/2019_crashes.jpg)
 
+In this section we will discuss other elements of maps, and learn about types of maps that use these elements to display data.
+
 
 ### Colors
 
@@ -206,13 +208,25 @@ You can convey a lot of information with a single color by varying its intensity
 
 Using color intensity rather than changing hues to show differences can make a map more accessible to some readers.
 
+Two types of maps that rely primarily on color for displaying data are heat maps and choropleth maps.
+
+Heat Maps
+---------
+
+A heat map is a useful way to show how points cluster together. This heat map uses the same Philadelphia vehicle [crash data](https://www.opendataphilly.org/dataset/vehicular-crash-data) from 2019 from before:
+
+![Zip code boundaries of Philadelphia are outlined in black and bright colors, ranging from red to blue, blur into each other across the map. Small red regions appear in the center, upper right, and lower left of the city, with several orange and yellow regions scattered throughout. In between, the color fades to greens and blues, with the edge of the map surrounded by light blue.](media/2019_crashes_heat_map.png)
+
+
+Instead of showing each individual crash, this map assigns colors based on how many of the crash locations are within a fixed distance. The brighter red you see on the map, the more crashes were close to that point. Green and blue colors are near to fewer crashes.
+
+This map can show us interesting information, and also mislead if it isn't in the proper context. We are only looking at crashes inside the city, so this heat map may lead to the mistaken assumption that there are fewer crashes just outside the city limits because the edges of the city are lighter colors. On the other hand, the redder region in the lower left of the map is where several highways converge near the Philadelphia airport, so that concentration of crashes is likely a real observation.
 
 Choropleth Maps
 -----------
 (and variations)
 
-Heat Maps
----------
+
 
 
 ### Sizes
