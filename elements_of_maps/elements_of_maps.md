@@ -121,7 +121,7 @@ Raw location data is stored as a set of points. This set of points is called a *
 
 In a tidy, tabular data array, you will have a column for the object name and a column for the geometry of that object. The names and geometries of the stations used for the map above are shown below:
 
-![Location data for train stations.](media/station_data.png)<!-- style = "max-width:400px;" border = 5px solid -->
+![Tabular location data for train stations. The first column contains station names and the second column, titled geometry, contains each station's location as a point with longitude and latitude coordinates.](media/station_data.png)<!-- style = "max-width:400px;" border = 5px solid -->
 
 </div>
 
@@ -161,6 +161,11 @@ Similar to multilines are multipolygons. A **multipolygon** is a collection of t
 
 A **multipoint** is a collection of two or more points. Multipoints can be an extremely helpful data structure for some of the more complicated geographic analyses. For example if you want to know how far an address is from a subway station, you could create a multipoint of all of the stations and find the distance from that multipoint to the address. Without the multipoint, you would need to find the distance from the address to each of the stations and then find the minimum distance.
 
+<div class = "learnmore">
+
+Software programs sometimes use different names for some shapes. For example QGIS calls a line containing more than two points a [polyline](https://docs.qgis.org/3.22/en/docs/gentle_gis_introduction/vector_data.html#polyline-features-in-detail).
+
+</div>
 
 ## Displaying Data
 
