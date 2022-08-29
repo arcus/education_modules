@@ -208,7 +208,9 @@ You can convey a lot of information with a single color by varying its intensity
 
 Using color intensity rather than changing hues to show differences can make a map more accessible to some readers.
 
-Two types of maps that rely primarily on color for displaying data are heat maps and choropleth maps.
+---
+
+**Two types of maps that rely primarily on color for displaying data are heat maps and choropleth maps.**
 
 Heat Maps
 ---------
@@ -220,14 +222,11 @@ A heat map is a useful way to show how points cluster together. This heat map us
 
 Instead of showing each individual crash, this map assigns colors based on how many of the crash locations are within a fixed distance. The brighter red you see on the map, the more crashes were close to that point. Green and blue colors are near to fewer crashes.
 
-This map can show us interesting information, and also mislead if it isn't in the proper context. We are only looking at crashes inside the city, so this heat map may lead to the mistaken assumption that there are fewer crashes near the edge of the city because even though based on the data from within the city those areas are lighter colors. On the other hand, the redder region in the lower left of the map is where several highways converge near the Philadelphia airport, so that concentration of crashes is likely a real observation.
+This map can show us interesting information, and also mislead if it isn't in the proper context. We are only looking at crashes inside the city, so this heat map may lead to the mistaken assumption that there are fewer crashes near the edge of the city because even though based on the data from within the city those areas are lighter colors. On the other hand, the redder region in the lower left of the map is where several highways converge near the Philadelphia airport, so that concentration of crashes might be a real observation.
 
 Choropleth Maps
 -----------
 A choropleth map (pronounced "koro-pleth") colors map regions based on data. These maps may be familiar as they are frequently used by news organizations to display both political news, like election results, and public health news, like rates of Covid-19.
-
-
-
 
 
 
