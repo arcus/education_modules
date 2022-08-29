@@ -224,7 +224,7 @@ Which of the following are valid examples of Python code? Select all that apply.
 ***
 <div class = "answer">
 
-These are all examples of valid Python code! `print(type(4))` returns the type of the argument `4` (which is `int`, short for integer) and prints that output to the screen. `"python.upper()"` makes the string "python" all uppercase. `type("4.3")` might be a little tricky, since 4.3 is a decimal number (or **float**) but it's in quotation marks-- but those quotation marks just mean that, in this case, "4.3" is a string! `type(True)` might also be tricky, since at first it looks like a string that doesn't have the required quotation marks. However, `True` and `False` are special in Python, and have the type `boolean`.  
+These are all examples of valid Python code! `len("Python is awesome!")` returns the length of the argument `"Python is awesome!"` (which is 18-- spaces and punctuation count!) and prints that output to the screen. `"python.upper()"` makes the string "python" all uppercase. `type("4.3")` might be a little tricky, since 4.3 is a decimal number (or **float**), but it's also in quotation marks, which means that "4.3" is a string in this case! `type(True)` might also be tricky, since at first it looks like a string that doesn't have the required quotation marks. However, `True` and `False` are special in Python, and have the type `boolean`.  
 
 </div>
 ***
@@ -497,7 +497,7 @@ print(candy_day1)
 Did you notice the explanatory text in the above code cell that started with a pound sign (or hash mark)? The pound sign / hash mark ( # ) in a code cell indicates the start of a **comment**. Comments aren't recognized as code and won't be run. Each line of a comment must be marked with a new pound sign. Comments are an excellent way to add brief explanations and clarifications about your code.
 </div>
 
-This example loops through the list of numbers, adds 5 to each number one at a time, and adds the sum to a new list using the `append()` method for lists. Finally, we printed the new list to our screen. This kind of loop is sometimes called a **for loop**; there is another kind of loop called a **while loop**, which is often used when we don't know the number of times we'll have to iterate through a block of code before we start (check out this page for more information about while loops).
+This example loops through the list of numbers, adds 5 to each number one at a time, and adds the sum to a new list using the `append()` method for lists. Finally, we printed the new list to our screen. This kind of loop is sometimes called a **for loop**; there is another kind of loop called a **while loop**, which is often used when we don't know the number of times we'll have to iterate through a block of code before we start ([check out this page for more information about while loops](https://www.geeksforgeeks.org/python-while-loop/)).
 
 
 ### Indentation
@@ -652,7 +652,7 @@ if num < 10:
 elif 10 < num < 100:
     print("This number is more than 10 but less than 100")
 elif num >= 100:
-    print("This number is more than 100")
+    print("This number is equal to or more than 100")
 else:
     print("This number equals 10")
 
@@ -676,6 +676,8 @@ if num < 100:
     print("This number is less than 100")
 elif num < 10:
     print("This number is less than 10")
+elif num >= 100:
+    print("This number is greater than or equal to 100.")
 else:
     print("This number equals 10")
 
