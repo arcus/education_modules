@@ -215,16 +215,18 @@ Heat Maps
 
 A heat map is a useful way to show how points cluster together. This heat map uses the same Philadelphia vehicle [crash data](https://www.opendataphilly.org/dataset/vehicular-crash-data) from 2019 from before:
 
-![Zip code boundaries of Philadelphia are outlined in black and bright colors, ranging from red to blue, blur into each other across the map. Small red regions appear in the center, upper right, and lower left of the city, with several orange and yellow regions scattered throughout. In between, the color fades to greens and blues, with the edge of the map surrounded by light blue.](media/2019_crashes_heat_map.png)
+![Zip code boundaries of Philadelphia are outlined in black and bright colors, ranging from red to blue, blur into each other across the map. A large red region appears in the center, as do smaller reddish-orange regions in the upper right, and lower left of the city, with several orange and yellow regions scattered throughout. In between, the color fades to greens and blues, with the edge of the map surrounded by light blue.](media/2019_crashes_heat_map.png)
 
 
 Instead of showing each individual crash, this map assigns colors based on how many of the crash locations are within a fixed distance. The brighter red you see on the map, the more crashes were close to that point. Green and blue colors are near to fewer crashes.
 
-This map can show us interesting information, and also mislead if it isn't in the proper context. We are only looking at crashes inside the city, so this heat map may lead to the mistaken assumption that there are fewer crashes just outside the city limits because the edges of the city are lighter colors. On the other hand, the redder region in the lower left of the map is where several highways converge near the Philadelphia airport, so that concentration of crashes is likely a real observation.
+This map can show us interesting information, and also mislead if it isn't in the proper context. We are only looking at crashes inside the city, so this heat map may lead to the mistaken assumption that there are fewer crashes near the edge of the city because even though based on the data from within the city those areas are lighter colors. On the other hand, the redder region in the lower left of the map is where several highways converge near the Philadelphia airport, so that concentration of crashes is likely a real observation.
 
 Choropleth Maps
 -----------
-(and variations)
+A choropleth map (pronounced "koro-pleth") colors map regions based on data. These maps may be familiar as they are frequently used by news organizations to display both political news, like election results, and public health news, like rates of Covid-19.
+
+
 
 
 
@@ -247,12 +249,20 @@ Words
 numbers
 Legends and keys
 
-## Types of Maps
-We have seen several types of maps in this module. We list them all here for easy reference.
+### Reference tables
+
+This page is meant to summarize the vocabulary and concepts of this section.
+
+Elements of Maps
+--------------
+
+
+Types of Maps
+--------------
 
 Dot Distribution
-Choropleth
 Heat Map
+Choropleth
 Graduated Symbol Map
 Proportional Symbol Map
 Cartogram
