@@ -234,10 +234,12 @@ The map below colors each zip code in Philadelphia by how many times police stop
 
 The number of pedestrian stops in each zip code range from only three stops in 19109, which is a single square block near City Hall comprised mainly of office buildings, to 1371 stops in zip code 19134.
 
+The colors in this map are points along a gradient, but a choropleth map could also designate certain colors for particular ranges of data. A common technique is to divide the regions into quartiles and then use four shades to color the quartiles from lowest to highest value.
+
 ### Sizes
 Graduated symbol maps
 --------------
-(https://gisgeography.com/dot-distribution-graduated-symbols-proportional-symbol-maps/#:~:text=Graduated%20symbol%20maps%20and%20proportional%20symbol%20maps%20scale%20the%20size,instead%20of%20scaling%20them%20larger.)
+
 
 Proportional symbol maps
 --------------
@@ -318,7 +320,11 @@ If you are studying how the hospital building interacts with the surrounding nei
 
 ## Additional Resources
 
-The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
+(https://gisgeography.com/dot-distribution-graduated-symbols-proportional-symbol-maps/#:~:text=Graduated%20symbol%20maps%20and%20proportional%20symbol%20maps%20scale%20the%20size,instead%20of%20scaling%20them%20larger.)
+
+QGIS intro to geospatial data
+
+
 
 ## Feedback
 
