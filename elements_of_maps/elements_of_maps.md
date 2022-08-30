@@ -187,7 +187,7 @@ In this section we will discuss other elements of maps, and learn about types of
 
 <div class = "warning">
 
-Not everyone can distinguish colors. While colors can be a powerful tool, if colors are the only way your are distinguishing features on your map, those differences will be invisible to some of your audience.
+Not everyone can distinguish colors. While colors can be a powerful tool, if colors are the only way your are distinguishing features on your map, those features will be invisible to some of your audience.
 
 </div>
 
@@ -217,7 +217,7 @@ Heat Maps
 
 A heat map is a useful way to show how points cluster together. This heat map uses the same Philadelphia vehicle [crash data](https://www.opendataphilly.org/dataset/vehicular-crash-data) from 2019 from before:
 
-![Zip code boundaries of Philadelphia are outlined in black and bright colors, ranging from red to blue, blur into each other across the map. A large red region appears in the center, as do smaller reddish-orange regions in the upper right, and lower left of the city, with several orange and yellow regions scattered throughout. In between, the color fades to greens and blues, with the edge of the map surrounded by light blue.](media/2019_crashes_heat_map.png)
+![Zip code boundaries of Philadelphia are outlined in black and bright colors, ranging from red to blue, blur into each other across the map. A large red region appears in the center, as do smaller reddish-orange regions in the upper right, and lower left of the city, with several orange and yellow regions scattered throughout. In between, the color fades to greens and blues, with the edge of the map surrounded by light blue.](media/2019_crashes_heat_map.png)<!-- style = "max-width:400px;" border = 5px solid -->
 
 
 Instead of showing each individual crash, this map assigns colors based on how many of the crash locations are within a fixed distance. The brighter red you see on the map, the more crashes were close to that point. Green and blue colors are near to fewer crashes.
@@ -228,7 +228,11 @@ Choropleth Maps
 -----------
 A choropleth map (pronounced "koro-pleth") colors map regions based on data. These maps may be familiar as they are frequently used by news organizations to display both political news, like election results, and public health news, like rates of Covid-19.
 
+The map below colors each zip code in Philadelphia by how many times police stopped pedestrians within that area in 2021. The darkest red regions are where the most stops occurred, while the lighter regions had fewer stops.
 
+![2021 Pedestrian Stops by Zip Code. Each zip code region of Philadelphia is colored a shade of red, ranging from a very light peach color (most regions) to intense dark reds (only a few regions). The legend indicates that the darkest colors indicate values of more than 1200 while the lightest colors indicate values less than 200. ](media/2021_pedestrian_stops.jpg)
+
+The number of pedestrian stops in each zip code range from only three stops in 19109, which is a single square block near City Hall comprised mainly of office buildings, to 1371 stops in zip code 19134.
 
 ### Sizes
 Graduated symbol maps
@@ -255,16 +259,24 @@ This page is meant to summarize the vocabulary and concepts of this section.
 Elements of Maps
 --------------
 
+| Shapes       | Colors                           | Sizes                    | Language    |
+|:--|:--|:--|:--|
+| Points   |  Hue (water is blue)          | Thick / thin lines   |  Scales  |
+| Lines    |  Intensity (e.g. water depth) | Large / small points |   Numbers |
+| Polygons |                                  |  Solid / broken lines |  Words   |
+
 
 Types of Maps
 --------------
 
-Dot Distribution
-Heat Map
-Choropleth
-Graduated Symbol Map
-Proportional Symbol Map
-Cartogram
+| Type | Example |
+|:--:|:--:|
+| Dot Distribution | ![](media/2019_crashes.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
+| Heat Map | ![](media/2019_crashes_heat_map.png)<!-- style = "max-width:200px;" border = 5px solid -->|
+| Choropleth | ![](media/2021_pedestrian_stops.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
+| Graduated Symbol Map | |
+| Proportional Symbol Map | |
+| Cartogram | |
 
 ## Quiz
 
@@ -272,8 +284,8 @@ Which of the following statements about latitude and longitude are TRUE?
 
 [[X]] Every location on Earth can be described using latitude and longitude.
 [[ ]] The location of equator was an arbitrary decision made by historical map makers.
-[[X]] Locations north of the equator are represented by positive latitudes and locations south of the equator are represented by negative latitudes.
 [[ ]] Locations east of the prime meridian are represented by positive longitudes and locations west of the prime meridian are represented by negative longitudes.
+[[X]] Locations north of the equator are represented by positive latitudes and locations south of the equator are represented by negative latitudes.
 ***
 
 <div class = "answer">
