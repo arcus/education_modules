@@ -273,7 +273,7 @@ The sizes of the regions on a map are usually determined by the geometry we look
 
 But while polygons stay the same size, a lot can be conveyed by modifying the size of points and lines. A road map might us a very thick line for a highway, a medium thickness line for a paved road that is not a highway, and a thin line for dirt roads. Similarly the size of the text describing locations might vary from large text for large cities to very small text for small towns.
 
-
+While polygons stay the same size and lines can really only vary in thickness, points have a lot of flexibility in their size. By changing the size of a point's marker, a map can convey a substantial amount of non-geographic data without compromising its locational accuracy.
 
 ---
 
@@ -281,10 +281,18 @@ Let's revisit the data on pedestrian stops made by law enforcement in the city o
 
 Proportional symbol map
 --------------
+In a proportional symbol map, the size of each symbol is proportional to the data for that location.
+
+In the map below, each zip code has a single point in it, but the points range in size from very small dots to circles that almost fill their geographic region. The bigger the point, the more pedestrian stops that zip code had in 2021.
+
 ![](media/2021_pedestrian_stops_proportional_symbol.jpg)
 
 Graduated symbol map
 --------------
+A graduated symbol map is similar, but there are only a few different sizes of dots. In this case there are ? sizes, each corresponding to a different range of numbers.
+
+Take a look at the two southernmost zip codes at the bottom of the map. In this graduated symbol map, they are marked by dots of the same tiny size. In the proportional symbol map you can see that though both are small dots, the one on the right is far smaller than the one on the left.
+
 ![](media/2021_pedestrian_stops_graduated_symbol.jpg)
 
 
@@ -372,6 +380,8 @@ If you are studying how the hospital building interacts with the surrounding nei
 
 </div>
 ***
+
+
 
 ## Additional Resources
 
