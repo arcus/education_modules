@@ -87,7 +87,7 @@ It is important to remember that this coordinate system is measuring angles, not
 </div>
 
 
-## Shapes
+## Creating a Map
 
 <div class = "warning">
 
@@ -107,7 +107,7 @@ The following map shows the city of Philadelphia, along with a few specific attr
 ![Map of Philadelphia highspeed train lines.](media/Philadelphia_highspeed_trains.jpg)
 
 
-
+### Shapes
 
 How did the data about stations, train lines (from [SEPTA](https://septaopendata-septa.opendata.arcgis.com/search?tags=Highspeed)), and zip codes (from [OpenDataPhilly](https://www.opendataphilly.org/dataset/zip-codes)) become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
 
@@ -135,7 +135,7 @@ What objects are represented as points can depend on both the source of the geos
 Lines
 ------
 
-A line is an ordered sequence of points and all of the line segments connecting adjacent points. On the map above, the Market-Frankford and Broad Street train routes are represented as lines (actually multilines, which we will address that shortly). A line has legnth, but no width.
+A line is an ordered sequence of points and all of the line segments connecting adjacent points. On the map above, the Market-Frankford and Broad Street train routes are represented as lines (actually multilines, which we will address that shortly). A line has length, but no width.
 
 Since lines are made up of straight line segments, twists and turns a line require a lot of small line segments to accurately represent their geometry. While the Broad Street Line might look straight enough on the map, it is comprised of over 200 line segments!
 
@@ -166,6 +166,37 @@ A **multipoint** is a collection of two or more points. Multipoints can be an ex
 Software programs sometimes use different names for some shapes. For example QGIS calls a line containing more than two points a [polyline](https://docs.qgis.org/3.22/en/docs/gentle_gis_introduction/vector_data.html#polyline-features-in-detail).
 
 </div>
+
+### Language
+
+While some geographic features are well understood enough to be recognizable from shapes alone, maps usually need some words in order to be understandable. Few shapes are globally familiar and even in settings where you might expect most of your audience to be comfortable with the outlines of your map, labeling can greatly increase a map's legibility.
+
+Words
+-------
+It is a good practice to give every map a descriptive title, but the title doesn't need to be the only language on a map.
+
+Many maps label individual features with their names. A world map might include ocean names, country names, and more. The map of Philadelphia trains that we saw before is more informative if we label the two train lines:
+
+![The Broad Street and Market-Frankford Lines are labeled on this map of Philadelphia highspeed train lines.](media/Philadelphia_highspeed_trains_labeled.jpg)
+
+Numbers
+-------
+
+Numbers show the scale of a map. The map above has numbers on the side and bottom corresponding the the latitude and longitude respectively.
+
+Other common uses of numbers of maps include measurement scales like "1cm = 10km" and elevation or depth markers. Sometimes the label of a particular region is itself a number, like on a map of Philadelphia zip codes.
+
+<div class = "warning">
+
+![Philadelphia is partitioned into regions and each region is labeled by its 5 digit zip code. Many of the labels overlap each other and are illegible.](media/zip_codes.jpg)
+
+Too much language on a map can be just as confusing as too little!
+
+</div>
+
+Legends and Keys
+------------
+A **legend** or **key** is a way to associate language with colors, sizes, or symbols without crowding too much language onto the visual.
 
 ## Displaying Data
 
@@ -237,26 +268,51 @@ The number of pedestrian stops in each zip code range from only three stops in 1
 The colors in this map are points along a gradient, but a choropleth map could also designate certain colors for particular ranges of data. A common technique is to divide the regions into quartiles and then use four shades to color the quartiles from lowest to highest value.
 
 ### Sizes
-Graduated symbol maps
+
+The sizes of the regions on a map are usually determined by the geometry we looked at in the [Shapes](#shapes) section. While you might zoom into or out of a particular region, the sizes of those regions don't communicate non-geographic data.
+
+But while polygons stay the same size, a lot can be conveyed by modifying the size of points and lines. A road map might us a very thick line for a highway, a medium thickness line for a paved road that is not a highway, and a thin line for dirt roads. Similarly the size of the text describing locations might vary from large text for large cities to very small text for small towns.
+
+
+
+---
+
+Let's revisit the data on pedestrian stops made by law enforcement in the city of Philadelphia in 2021 using two types of maps that rely primarily on size for displaying data.
+
+Proportional symbol map
 --------------
+![](media/2021_pedestrian_stops_proportional_symbol.jpg)
 
-
-Proportional symbol maps
+Graduated symbol map
 --------------
+![](media/2021_pedestrian_stops_graduated_symbol.jpg)
 
-Cartograms
-------------
-(kind of a weird one...)
 
-### Language
+<div class = "important">
 
-Words
-numbers
-Legends and keys
+The difference between proportional and graduated symbol maps may look small, but touches on a a bigger question of what type of data you are working with. A proportional symbol map is more appropriate when you have **continuous data**, while a graduated symbol map is better at presenting **discrete data** in which each data point falls into one only a few bins.
 
-### Reference tables
+This distinction between continuous and discrete data also shows up in the color choices of the choropleth maps we saw earlier.
 
-This page is meant to summarize the vocabulary and concepts of this section.
+</div>
+
+<div class = "learnmore">
+
+Another way to display data using sizes is with a [**cartogram**](https://en.wikipedia.org/wiki/Cartogram). A cartogram scales and distorts regions so that the size of the region reflects the data.
+
+</div>
+
+### More
+
+Symbols
+-------
+
+
+Combining Types of Maps
+--------------------
+
+
+## Reference
 
 Elements of Maps
 --------------
@@ -276,9 +332,8 @@ Types of Maps
 | Dot Distribution | ![](media/2019_crashes.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
 | Heat Map | ![](media/2019_crashes_heat_map.png)<!-- style = "max-width:200px;" border = 5px solid -->|
 | Choropleth | ![](media/2021_pedestrian_stops.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
-| Graduated Symbol Map | |
-| Proportional Symbol Map | |
-| Cartogram | |
+| Graduated Symbol Map | ![](media/2021_pedestrian_stops_graduated_symbol.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
+| Proportional Symbol Map | ![](media/2021_pedestrian_stops_proportional_symbol.jpg)<!-- style = "max-width:200px;" border = 5px solid -->  |
 
 ## Quiz
 
