@@ -57,8 +57,10 @@ A **meridian** is a straight line on the surface of the earth connecting the pol
 
 Now that we have established the poles, the equator, and the prime meridian, we can use those to to create a coordinate system that will specify and point on earth!
 
-**Latitude and Longitude**
-==========================
+![](media/Latitude_and_Longitude_of_the_Earth.svg)<!-- style = "max-width:800px;" border = 5px solid --> 
+
+### Latitude and Longitude
+
 
 **Latitude** is a measure of how far north or south a location is from the equator. Given a point on the surface of the earth, imagine a straight line to the center of the earth. The angle that line makes with the equatorial plane, measured in degrees (denoted $ {}^\circ $), is the point's latitude. Since that angle could be either above or below the equatorial plane, we have to specify which angle we are talking about. The horizontal line on the picture below corresponding to 30 degrees north, or +30$ {}^\circ $, goes through the United States, while the line representing 30 degrees south, or -30$ {}^\circ $, runs through Chile and Argentina.
 
@@ -67,6 +69,8 @@ Now that we have established the poles, the equator, and the prime meridian, we 
 **Longitude** is similarly an angular measurement, but rather than measuring relative to the equatorial plane, it measures relative to the prime meridian. Positive angles correspond to locations to the east of the prime meridian, while negative angles refer to points west of it. The meridian on the exact opposite side of the world from the prime meridian is, by convention, +180$ {}^\circ $ or 180$ {}^\circ $ East, even though it could just as accurately be described as -180$ {}^\circ $ or 180$ {}^\circ $ West.
 
 ![Earth with the prime meridian and longitude lines at 30 degree increments ranging from -150 to 180. Not shown is -180 degrees longitude which is the same as  180 degrees.](media/longitude.png)
+
+### Coordinate Systems
 
 Together, latitude and longitude form a (spherical) coordinate system that can specify any point on the planet, with high precision.
 
@@ -77,6 +81,9 @@ The Roberts Center for Pediatric Research at the Children's Hospital of Philadel
 The location data produced today by satellites has no problem with long decimal numbers, but the first accurate measurements of longitude depended on the ability to accurately measure time.
 
 While most of your geospatial data will likely use decimal degrees (DD), like the location for the Roberts Center above did, there is another way to specify smaller angles, using [degrees, minutes, and seconds (DMS)](https://gisgeography.com/decimal-degrees-dd-minutes-seconds-dms/). If you find yourself working with nautical data you may have to get comfortable with DMS measurements, but since most biomedical data deals with locations on land, we will leave this as a topic for you to explore further if interested.
+
+**_include a table of conversions?_**
+
 
 </div>
 
