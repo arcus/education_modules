@@ -652,7 +652,7 @@ if num < 10:
 elif 10 < num < 100:
     print("This number is more than 10 but less than 100")
 elif num >= 100:
-    print("This number is equal to or more than 100")
+    print("This number is greater than or equal to 100")
 else:
     print("This number equals 10")
 
