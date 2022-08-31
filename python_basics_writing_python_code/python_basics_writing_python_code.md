@@ -224,7 +224,7 @@ Which of the following are valid examples of Python code? Select all that apply.
 ***
 <div class = "answer">
 
-These are all examples of valid Python code! `len("Python is awesome!")` returns the length of the argument `"Python is awesome!"` (which is 18-- spaces and punctuation count!) and prints that output to the screen. `"python.upper()"` makes the string "python" all uppercase. `type("4.3")` might be a little tricky, since 4.3 is a decimal number (or **float**), but it's also in quotation marks, which means that "4.3" is a string in this case! `type(True)` might also be tricky, since at first it looks like a string that doesn't have the required quotation marks. However, `True` and `False` are special in Python, and have the type `boolean`.  
+These are all examples of valid Python code! `len("Python is awesome!")` returns the length of the argument `"Python is awesome!"` (which is 18-- spaces and punctuation count!) and prints that output to the screen. `"python".upper()` makes the string "python" all uppercase. `type("4.3")` might be a little tricky, since 4.3 is a decimal number (or **float**), but it's also in quotation marks, which means that "4.3" is a string in this case! `type(True)` might also be tricky, since at first it looks like a string that doesn't have the required quotation marks. However, `True` and `False` are special in Python, and have the type `boolean`.  
 
 </div>
 ***
