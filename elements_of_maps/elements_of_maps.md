@@ -57,7 +57,7 @@ A **meridian** is a straight line on the surface of the earth connecting the pol
 
 Now that we have established the poles, the equator, and the prime meridian, we can use those to to create a coordinate system that will specify and point on earth!
 
-![](media/Latitude_and_Longitude_of_the_Earth.svg)<!-- style = "max-width:800px;" border = 5px solid --> 
+![](media/poles_meridian_equator.svg)<!-- style = "max-width:800px;" border = 5px solid -->
 
 ### Latitude and Longitude
 
