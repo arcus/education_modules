@@ -57,7 +57,7 @@ A **meridian** is a straight line on the surface of the earth connecting the pol
 
 Now that we have established the poles, the equator, and the prime meridian, we can use those to to create a coordinate system that will specify and point on earth!
 
-![](media/poles_meridian_equator.svg)<!-- style = "max-width:800px;" border = 5px solid -->
+![On the left an image of Earth is shown from the side with the North Pole labeled at the top, the South Pole labeled at the bottom, and the equator represented as a dashed horizontal line around the middle. On the right Earth is shown from above so that the North Pole is visible. The prime meridian is represented by a dashed vertical line starting at the North Pole and continuing down through the United Kingdom, the western Mediterranean Sea, and West Africa.](media/poles_meridian_equator.svg)<!-- style = "max-width:800px;" border = 5px solid -->
 
 ### Latitude and Longitude
 
@@ -70,9 +70,22 @@ Now that we have established the poles, the equator, and the prime meridian, we 
 
 ![Earth with the prime meridian and longitude lines at 30 degree increments ranging from -150 to 180. Not shown is -180 degrees longitude which is the same as  180 degrees.](media/longitude.png)
 
+<div class = "important">
+
+It is common to associate the East/West axis of longitude with the the variable "x" and the North/South axis of latitude with the variable "y." Because of this it is common to see this information written as longitude first, followed by latitude.
+
+</div>
+
+<div class = "warning">
+
+It is important to remember that this latitude and longitude are measuring angles, not distance. The point 90E 0 N (in the Indian Ocean part way between Sri Lanka and Indonesia) and 90W 0 N (near the Galapagos Islands off the west coast of South America) are directly across the planet from each other, as a far away as two points can get (over 20,000 km). However 90E 89N and 90W 89N are both in the Arctic Circle, less than 240 km away from each other.
+
+</div>
+
+
 ### Coordinate Systems
 
-Together, latitude and longitude form a (spherical) coordinate system that can specify any point on the planet, with high precision.
+Together, latitude and longitude form a (spherical) coordinate system that can specify any point on the planet, with high precision. To get that precision, degrees need to be divided into smaller units of measurement.
 
 The Roberts Center for Pediatric Research at the Children's Hospital of Philadelphia, for example, is located at 39.94583795815241, -75.18659130245932. These numbers actually have far more significant digits than are appropriate, and correspond to a particular spot in the building's lobby.
 
@@ -87,11 +100,7 @@ While most of your geospatial data will likely use decimal degrees (DD), like th
 
 </div>
 
-<div class = "warning">
 
-It is important to remember that this coordinate system is measuring angles, not distance. The points (0N,90E) and (0N, 90W) are directly across the planet from each other, as a far away as two points can get (over 20,000 km). However (89N, 90E) and (89N, 90W) are both in the arctic circle, less than 240 km away from each other.
-
-</div>
 
 
 ## Creating a Map
