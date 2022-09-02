@@ -2,7 +2,7 @@
 
 Welcome to our page!
 
-## [Information for Learners](learners.md) 
+## [Information for Learners](learners)
 
 
 
