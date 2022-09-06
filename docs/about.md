@@ -1,5 +1,7 @@
 ---
 title: About DART
+layout: default
+permalink: /about/
 ---
 
 # All about the DART Program
