@@ -10,3 +10,5 @@ header_pages:
   - educators.md
   - about.md
 header_page_refs: ['Home','For Learners', 'For Educators', 'About']
+plugins:
+- jekyll-sitemap
