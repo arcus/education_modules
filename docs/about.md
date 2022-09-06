@@ -1,7 +1,6 @@
 ---
 title: About DART
 layout: default
-permalink: /education_modules/about/
 ---
 
 # All about the DART Program

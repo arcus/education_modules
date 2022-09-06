@@ -1,7 +1,6 @@
 ---
 title: DART: For Educators
 layout: default
-permalink: /education_modules/educators/
 ---
 
 # DART: Information for Educators

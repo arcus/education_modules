@@ -1,7 +1,6 @@
 ---
 title: DART: For Learners
 layout: default
-permalink: /education_modules/learners/
 ---
 
 # DART: Information for Learners

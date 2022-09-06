@@ -1,7 +1,6 @@
 ---
 title: DART Program
 layout: default
-permalink: /education_modules/
 ---
 
 
