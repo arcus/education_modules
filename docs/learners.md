@@ -1,5 +1,7 @@
 ---
 title: DART: For Learners
+layout: default
+permalink: /learners
 ---
 
 # DART: Information for Learners
