@@ -19,7 +19,7 @@ Support for this effort includes NIH funding via an R25 grant mechanism.
 
 The founding contributors to this project are members of the [Arcus](https://arcus.chop.edu) team at [Children's Hospital of Philadelphia](https://www.chop.edu).
 
-If you are interested in contributing to this project, visit the project's [GitHub repository](https://github.com/arcus/education_modules) for more information.
+We invite and encourage you to help in any way you feel you can, from letting us know about typos and bugs to [writing entire new modules](https://github.com/arcus/education_modules/blob/main/how_to.md). If you are interested in contributing to this project, visit the project's [GitHub repository](https://github.com/arcus/education_modules) for more information.
 
 ## Thanks
 
