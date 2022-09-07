@@ -2,6 +2,8 @@
 title: Educational Modules
 ---
 
+The following list of courses is in alphabetical order:
+
 | Link to Training Course | Markdown | Title | Author | email | version | Comment | Estimated Time |
 | -- | -- | -- | -- | -- | -- | -- | -- |
 | [Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_103_combining_commands/bash_103_combining_commands.md) | [Markdown File](https://github.com/arcus/education_modules/blob/main/bash_103_combining_commands/bash_103_combining_commands.md) | Bash: Combining Commands | Elizabeth Drellich and Nicole Feldman | drelliche@chop.edu and feldmanna@chop.edu | 1.0.0 | This module will teach you how to combine two or more commands in bash to create more complicated pipelines in Bash. | 30 minutes |
