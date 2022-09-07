@@ -15,6 +15,12 @@ These materials have been created for the purpose of sharing them widely with th
 
 Support for this effort includes NIH funding via an R25 grant mechanism.
 
+## Contributors
+
+The founding contributors to this project are members of the [Arcus](https://arcus.chop.edu) team at Children's Hospital of Philadelphia.
+
+If you are interested in contributing to this project, visit the project's GitHub repository for more information.
+
 ## Thanks
 
 This project is grateful for the generosity of [Liascript](https://github.com/LiaScript)'s creators and sustainers, André Dietrich and Sebastian Zug, for sharing their work (and advice!) freely.
