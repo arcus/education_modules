@@ -5,7 +5,7 @@ layout: default
 
 # All about the DART Program
 
-## Goal
+## Goals
 
 This repository holds publicly available instructional modules aimed at teaching data science and related skills to researchers, as part of an NIH emphasis on improving research reproducibility, transparency, and rigor.
 
@@ -17,9 +17,9 @@ Support for this effort includes NIH funding via an R25 grant mechanism.
 
 ## Contributors
 
-The founding contributors to this project are members of the [Arcus](https://arcus.chop.edu) team at Children's Hospital of Philadelphia.
+The founding contributors to this project are members of the [Arcus](https://arcus.chop.edu) team at [Children's Hospital of Philadelphia](https://www.chop.edu).
 
-If you are interested in contributing to this project, visit the project's GitHub repository for more information.
+If you are interested in contributing to this project, visit the project's [GitHub repository](https://github.com/arcus/education_modules) for more information.
 
 ## Thanks
 
