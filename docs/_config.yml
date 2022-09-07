@@ -4,3 +4,4 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 title: DART
 description: Data and Analytics for Researchers Training Program
+show_downloads: false
