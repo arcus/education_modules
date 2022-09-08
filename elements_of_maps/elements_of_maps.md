@@ -70,38 +70,38 @@ Now that we have established the poles, the equator, and the prime meridian, we 
 
 ![Earth with the prime meridian and longitude lines at 30 degree increments ranging from -150 to 180. Not shown is -180 degrees longitude which is the same as  180 degrees.](media/longitude.png)
 
-<div class = "important">
-
-It is common to associate the East/West axis of longitude with the the variable "x" and the North/South axis of latitude with the variable "y." Because of this it is common to see this information written as longitude first, followed by latitude.
-
-</div>
-
-<div class = "warning">
-
-It is important to remember that this latitude and longitude are measuring angles, not distance. The point 90E 0 N (in the Indian Ocean part way between Sri Lanka and Indonesia) and 90W 0 N (near the Galapagos Islands off the west coast of South America) are directly across the planet from each other, as a far away as two points can get (over 20,000 km). However 90E 89N and 90W 89N are both in the Arctic Circle, less than 240 km away from each other.
-
-</div>
-
-
 ### Coordinate Systems
 
 Together, latitude and longitude form a (spherical) coordinate system that can specify any point on the planet, with high precision. To get that precision, degrees need to be divided into smaller units of measurement.
 
-The Roberts Center for Pediatric Research at the Children's Hospital of Philadelphia, for example, is located at 39.94583795815241, -75.18659130245932. These numbers actually have far more significant digits than are appropriate, and correspond to a particular spot in the building's lobby.
+Decimal Degrees (DD) vs. Degrees, Minutes, and Seconds (DMS)
+---
 
-<div class = "learnmore">
+The location data produced today by satellites has no problem with long decimal numbers, but the first accurate measurements of longitude depended on the ability to accurately measure time. In the system of [degrees, minutes, and seconds (DMS)](https://gisgeography.com/decimal-degrees-dd-minutes-seconds-dms/) each angle of one degree is divided into 60 equal parts called "minutes" (denoted `'`) and each minute is further divided into 60 equal parts called "seconds" (denoted `"`).
 
-The location data produced today by satellites has no problem with long decimal numbers, but the first accurate measurements of longitude depended on the ability to accurately measure time.
+Here is a table of a few locations with their coordinates given as both decimal degrees and degrees, minutes, seconds.
 
-While most of your geospatial data will likely use decimal degrees (DD), like the location for the Roberts Center above did, there is another way to specify smaller angles, using [degrees, minutes, and seconds (DMS)](https://gisgeography.com/decimal-degrees-dd-minutes-seconds-dms/). If you find yourself working with nautical data you may have to get comfortable with DMS measurements, but since most biomedical data deals with locations on land, we will leave this as a topic for you to explore further if interested.
+| City | Lat, Long (DD) | Lat, Long (DMS) |
+| -- | -- | -- |
+| Philadelphia, USA | 39.952583, -75.165222 | 39° 57' 9.2988'' N, 75° 9' 54.7992'' W |
+| Gabororne, Botswana | -24.653257, 25.906792 | 24° 39' 11.7252'' S, 25° 54' 24.4512'' E |
+| Manila, Philippines | 14.556586, 121.023415| 14° 33' 23.7096'' N, 120° 59' 3.1992'' E|
+|Buenos Aires, Argentina | -34.603722, -58.381592 | 34° 36' 13.3992'' S, 58° 22' 53.7312'' W|
 
-**_include a table of conversions?_**
 
+<div class = "important">
+
+It is common to associate the East/West axis of longitude with the the variable "x" and the North/South axis of latitude with the variable "y." Because of this it is common to see location data stored as longitude first, followed by latitude.
 
 </div>
 
 
+Accuracy and Relative Scale
+---
 
+The Roberts Center for Pediatric Research at the Children's Hospital of Philadelphia, for example, is, [according to Google Maps](https://www.google.com/maps/place/CHOP+Roberts+Center+for+Pediatric+Research/@39.9458205,-75.18878,17z/data=!3m1!4b1!4m5!3m4!1s0x89c6c643a1cf897f:0x6f378f102e502212!8m2!3d39.9458205!4d-75.1865913) located at 39.94583795815241, -75.18659130245932. (You can right-click on the location icon to copy the latitude and longitude.) These numbers actually have far more significant digits than are appropriate, and correspond to a particular point in the building's lobby.
+
+While 14 significant digits is clearly overkill, the number of digits needed to be accurate within a certain distance depends on where on the planet your location is. This is because latitude and longitude are measuring angles, not distance. The point 90E 0 N (in the Indian Ocean part way between Sri Lanka and Indonesia) and 90W 0N (near the Galapagos Islands off the west coast of South America) are directly across the planet from each other, as a far away as two points can get (over 20,000 km). However 90E 89N and 90W 89N are both in the Arctic Circle, less than 240 km away from each other.
 
 ## Creating a Map
 
@@ -139,12 +139,14 @@ In a tidy, tabular data array, you will have a column for the object name and a 
 
 ![Tabular location data for train stations. The first column contains station names and the second column, titled geometry, contains each station's location as a point with longitude and latitude coordinates.](media/station_data.png)<!-- style = "max-width:400px;" border = 5px solid -->
 
+Note that the `geometry` column stores locations as longitude, followed by latitude.
+
 </div>
 
 Points
 ------
 
-A point is a single location given by its latitude and longitude coordinates. On the map above, individual train stations are represented as points. The southernmost (bottom) station on the Broad Street Line, the NRG station has geometry `POINT (-75.17394 39.90543)`. A point has no length or width and therefore no area.
+A point is a single location given by its longitude and latitude coordinates. On the map above, individual train stations are represented as points. The southernmost (bottom) station on the Broad Street Line, the NRG station has geometry `POINT (-75.17394 39.90543)`. A point has no length or width and therefore no area.
 
 What objects are represented as points can depend on both the source of the geospatial data and the purpose of a particular map. For example if you are studying the health and safety of the city's unhoused population, representing a station that has multiple entrances as a single point could be insufficient. Alternatively if you are looking at national or global populations, the entire city of Philadelphia might be represented as a single point.
 
