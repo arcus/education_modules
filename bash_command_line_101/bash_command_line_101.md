@@ -3,11 +3,11 @@
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
 version:  1.1.1
-module_template_version: 2.0.0
+module_template_version: 2.0.1
 language: en
 narrator: UK English Female
 title: Bash / Command Line 101
-comment:  This course will focus on accessing a command line program (or CLI, "command line interface") and running shell scripts on your home computer and learning how to navigate your file system as well as editing and searching files.
+comment:  This course teaches learners to navigate their computer, as well as view and edit files, from the command line using Bash.
 
 long_description: This course is designed to be both an introduction to bash / command line for those who are total newbies as well as refresher for those some with experience running code who want a more solid command of the basics.
 
