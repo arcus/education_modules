@@ -380,7 +380,7 @@ REDCap is one example of software that explicitly creates a data dictionary that
 
 <div class = "hint">
 
-Discover:  The Arcus program at Children's Hospital of Philadelphia has a team of librarians and archivists who have created materials to help CHOP scientists with data management.  Their [Research Data Management Resources](https://www.research.chop.edu/arcus/resources) tend to be very practical and can be used right away to improve data management!
+Discover:  The Arcus program at Children's Hospital of Philadelphia has a team of librarians and archivists who have created materials to help CHOP scientists with data management.  Their [Research Data Management Resources](https://www.research.chop.edu/applications/arcus/resources) tend to be very practical and can be used right away to improve data management!  Simply click on the link and then expand the part of the accordion labeled "Research Data Management Resources (Public Access)".
 
 </div>
 
