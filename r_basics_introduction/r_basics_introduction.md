@@ -140,7 +140,9 @@ There is also an open and welcoming community of R users, which is just as impor
 
 <h3>RStudio</h3>
 
-Then, there's **RStudio**. RStudio is the name of a company and also the name of a piece of software this company makes (and makes available for free). You can think of RStudio as a fancy text editor for writing R code. The technical term for a fancy text editor for writing code is "Integrated Development Environment", or IDE (you pronounce each letter, eye-dee-ee). You can run RStudio on Mac, Windows, or Linux. It can run on a local computer like your laptop, or on a server that is accessed using a web browser.
+Then, there's **RStudio**. RStudio was the original name of a company as well as the name of a piece of software the company makes (and makes available in both free and paid versions). As of summer 2022, the company has [changed its name from RStudio to Posit](https://www.rstudio.com/blog/rstudio-is-becoming-posit), but you'll still hear people call the company by its old name.  
+
+You can think of RStudio (the software) as a fancy text editor for writing R code. The technical term for a fancy text editor for writing code is "Integrated Development Environment", or IDE (you pronounce each letter, eye-dee-ee). You can run RStudio on Mac, Windows, or Linux. It can run on a local computer like your laptop, or on a server that is accessed using a web browser.
 
 </div>
 </div>
