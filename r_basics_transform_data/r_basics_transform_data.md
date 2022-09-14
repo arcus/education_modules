@@ -563,11 +563,32 @@ And for comparison, let's add parentheses around the OR clause to accurately cap
 One of the most powerful concepts in the `tidyverse` suite of packages is the pipe operator, which is written in two possible ways:
 
 * as percent, greater than, percent (`%>%`) (this is the original pipe, from the `magrittr` package)
-* as "vertical pipe", greater than (`|>`) (this is a new option, is now "native", meaning it comes from base R, if you're using R version 4.1.0 or later)
+* as "vertical pipe", greater than (`|>`) (this is a newer option, is now "native", meaning it comes from base R, if you're using R version 4.1.0 or later)
 
-Both pipe operators pass the **object on its left** as the **first argument** to the **function on its right**.
+Both pipe operators pass the **object on its left** as the **first argument** to the **function on its right**.  In this module, **we'll use the "original" pipe (`%>%`)**, because we think this is the one you'll see the most in code that your coworkers share with you or you find in online examples.  This will gradually change, and as the "native" pipe (`|>`) gains market share, we'll likely change these materials to reflect that.
 
-Here's a drawing of what that looks like:
+<div class = "learnmore">
+Why are there two pipes?
+
+Lots of R users got used to using the pipe from `dplyr` (actually, it's from `magrittr`, which `dplyr` uses, but people think of the pipe as a `dplyr` thing).  It became very popular, but it meant having to load up a package, whether that was `tidyverse` (which includes `dplyr`), or just `dplyr` (which silently depends on `magrittr`), or `magrittr`.
+
+R users demanded a pipe functionality be included in the language itself, without having to load a package they might not use for anything else.  That's how the newer pipe came into being!
+
+Which one should you use?  Generally, you can use either.  That said, here are some things to keep in mind.
+
+The original `magrittr` pipe (`%>%`) is better when:
+
+* You're doing something other than passing the **first** argument (this is a bit advanced, you may never need this, and you'll often see "dot" notation when this happens)
+* You're working in an older version of R or you think your collaborators might be
+
+The new "native" pipe (`|>`) is better when:
+
+* You need to shave off microseconds from computational time (it's base R and is faster)
+* You want pipe functionality but nothing else from `dplyr` or other `tidyverse` packages
+
+</div>
+
+Here's a drawing of what the pipe function looks like:
 
 ![An arrow connects the first object, `covid_testing`, to its new location as the first argument in the filter statement.](media/pipe_mini.png)<!--
 style = "max-width:600px;"-->
@@ -584,6 +605,11 @@ is equivalent to:
 `filter(covid_testing, pan_day <= 10)`
 
 Those two lines of code are equivalent. In both cases we're taking the `covid_testing` data frame, passing it as the first argument to the `filter()` function, and adding a condition that we're filtering by.  In our case that condition is `pan_day` less than or equal to 10.
+
+The same thing is true for the statement:
+
+`covid_testing |> filter(pan_day <= 10)`
+
 
 **Why would we use this way of typing our commands?**  Are we complicating matters?  No, as you're about to see, this is a very useful way of writing out the changes you make on a data frame in the order you want them to take place.
 
