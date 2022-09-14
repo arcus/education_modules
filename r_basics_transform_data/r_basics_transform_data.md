@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.1.0
+version:  1.0.4
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -17,7 +17,6 @@ After completion of this module, learners will be able to:
 - Write R code that uses the `dplyr` package to select only desired columns from a data frame
 - Write R code that uses the `dplyr` package to filter only rows that meet a certain condition from a data frame
 - Write R code that uses the `dplyr` package to create a new column in a data frame
-- Use the "pipe" syntax to link a series of transformations in a "pipeline" that performs desired changes to a data frame
 
 @end
 
