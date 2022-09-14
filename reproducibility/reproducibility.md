@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.2.1
+version:  1.2.2
 language: en
 narrator: US English Female
 comment:  This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **data reuse**, and how technical approaches can help make these goals more attainable.
@@ -17,6 +17,11 @@ After completion of this module, learners will be able to:
 
 @end
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
+
+@version_history
+1.2.2: fix incorrect hyperlink
+
+@end
 
 @gifPreload
 <script>
