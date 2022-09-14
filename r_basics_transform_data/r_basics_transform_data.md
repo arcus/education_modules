@@ -204,10 +204,10 @@ If you're pulling branches after having worked in other R modules, you might hav
 
 You can use this module in a couple of different ways:
 
-* If you have experience working in R markdown and want to try out some of the code we share with you as we go along, please go ahead and open the "r\_basics\_transform\_data" directory, then open `transform_exercises.Rmd` and add some code chunks for your own experimentation.  Or, create a new R Markdown file that begins with reading in the .csv file in the "exercises" directory.
+* If you have experience working in R Markdown and want to try out some of the code we share with you as we go along, please go ahead and open the `r_basics_transform_data` directory, then open `transform_exercises.Rmd` and add some code chunks for your own experimentation.  
+* Or (more advanced option), create a new R Markdown file that begins with reading in the .csv file in the "exercises" directory.  This is more advanced because you'll want to save your new file to a location that makes sense (say, within `r_basics_transform_data`) and make sure you can successfully give the path the .csv file within the `exercises` directory of `r_basics_transform_data`.  If you aren't experienced with directory paths, this might be a bit too difficult for you.
 * Not sure you are ready to DIY?  Prefer to learn some concepts first, then do some hands-on work at the end?  Then just follow our steps and we'll guide you through the exercise file when you reach the end of the module.  No need to worry about trying out the code along the way.
 
-![RStudio showing the transform_exercises.Rmd file.  A text box suggests copying and pasting the first code chunk in transform_exercises.Rmd into a new R Markdown file, or adding chunks below the first chunk for experimentation.](media/rstudio_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
 
 ## The `dplyr` Package
 
@@ -558,11 +558,14 @@ And for comparison, let's add parentheses around the OR clause to accurately cap
 
 </div>
 
-## The "Pipe" Operator (`%>%`)
+## The "Pipe" Operator (`%>%`  or `|>`)
 
-One of the most powerful concepts in the `tidyverse` suite of packages is the pipe operator, which is written as percent, greater than, percent (`%>%`).  
+One of the most powerful concepts in the `tidyverse` suite of packages is the pipe operator, which is written in two possible ways:
 
-The pipe operator passes the **object on its left** as the **first argument** to the **function on its right**.
+* as percent, greater than, percent (`%>%`) (this is the original pipe, from the `magrittr` package)
+* as "vertical pipe", greater than (`|>`) (this is a new option, is now "native", meaning it comes from base R, if you're using R version 4.1.0 or later)
+
+Both pipe operators pass the **object on its left** as the **first argument** to the **function on its right**.
 
 Here's a drawing of what that looks like:
 
