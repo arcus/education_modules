@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.4
+version:  1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -24,6 +24,8 @@ After completion of this module, learners will be able to:
 @version_history
 1.0.2: revision to correct image links referring to wrong branch
 1.0.3: revamping environment setup section to mirror exactly other R basics modules, including only presenting the content once. Changed the hands-on section to follow appropriate structure. Also replaced hex art alt text with blank tags based on best practices for decorative images.
+1.1.0- Use the "pipe" syntax to link a series of transformations in a "pipeline" that performs desired changes to a data frame
+
 @end
 
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
