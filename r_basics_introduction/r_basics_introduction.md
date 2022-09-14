@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.2
+version:  1.0.3
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -24,6 +24,7 @@ After completion of this module, learners will be able to:
 
 @version_history
 1.0.1: small changes to environment setup alt text to be exactly mirrored across all 3 R basics modules.
+1.0.3: add information about name change, RStudio to Posit
 
 @end
 
