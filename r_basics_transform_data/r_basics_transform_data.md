@@ -565,7 +565,9 @@ One of the most powerful concepts in the `tidyverse` suite of packages is the pi
 * percent, greater than, percent (`%>%`) (this is the original pipe, from the `magrittr` package, which gets included as part of the `tidyverse`)
 * vertical pipe, greater than (`|>`) (this is a newer option, and is now "native", meaning it comes from base R, if you're using R version 4.1.0 or later)
 
-Both pipe operators pass the **object on its left** as the **first argument** to the **function on its right**.  In this module, **we'll use the "original" pipe (`%>%`)**, because we think this is the one you'll see the most in code that your coworkers share with you or you find in online examples.  This will gradually change, and as the "native" pipe (`|>`) gains market share, we'll likely change these materials to reflect that.
+Both pipe operators pass the **object on its left** as the **first argument** to the **function on its right**.  
+
+In this module, **we'll use the "original" pipe (`%>%`)** in code examples and quiz questions, because we think this is the one you'll see the most in code that your coworkers share with you or you find in online examples.  This will gradually change, and as the "native" pipe (`|>`) gains market share, we'll likely change these materials to reflect that.
 
 <div class = "learnmore">
 **Optional read: Why are there two pipes?**
@@ -573,26 +575,12 @@ Both pipe operators pass the **object on its left** as the **first argument** to
 Lots of R users got used to using the pipe after working in the `tidyverse`.  It became very popular, but it meant having to load up a package, whether that was `tidyverse` (which includes `dplyr`), or just `dplyr` (which silently depends on `magrittr`), or `magrittr`.
 
 R users demanded that pipe functionality be included in the R language itself, without having to load a package they might not use for anything else.  That's how the newer pipe came into being!
-
-Which one should you use?  Generally, you can use either.  That said, here are some things to keep in mind.
-
-The original `magrittr` pipe (`%>%`) is better when:
-
-* You're doing something other than passing the **first** argument (this is a bit advanced and you may never need this...)
-* You're working in an older version of R or you think your collaborators might be
-
-The new "native" pipe (`|>`) is better when:
-
-* You need to shave off microseconds from computational time (it's base R and is faster)
-* You want pipe functionality but nothing else from `dplyr` or other `tidyverse` packages
-
 </div>
 
 Here's a drawing of what the pipe function looks like:
 
 ![An arrow connects the first object, `covid_testing`, to its new location as the first argument in the filter statement.](media/pipe_mini.png)<!--
 style = "max-width:600px;"-->
-
 
 Here, for example, the pipe operator takes the object on its left, here the `covid_testing` data frame, and inserts it as the first argument of the function on its right ... in our case, the `filter()` function.
 
@@ -606,16 +594,30 @@ is equivalent to:
 
 Those two lines of code are equivalent. In both cases we're taking the `covid_testing` data frame, passing it as the first argument to the `filter()` function, and adding a condition that we're filtering by.  In our case that condition is `pan_day` less than or equal to 10.
 
-The same thing is true for the statement:
+The same thing is true for the following statement, which works the same way but uses the newer form of the pipe.
 
 `covid_testing |> filter(pan_day <= 10)`
 
+<div class = "options">
+Which version of the pipe should you use?  **Generally, you can use either.**  That said, here are some things to keep in mind.
 
-**Why would we use this way of typing our commands?**  Are we complicating matters?  No, as you're about to see, this is a very useful way of writing out the changes you make on a data frame in the order you want them to take place.
+The original `magrittr` pipe (`%>%`) is better when:
 
-### Why Use the "Pipe" (`%>%`)
+* You're doing something other than passing the **first** argument (this is a bit advanced and you may never need this...)
+* You're working in an older version of R or you think your collaborators might be
 
-Here's why the pipe (`%>%`) is so useful.
+The new "native" pipe (`|>`) is better when:
+
+* You need to shave off microseconds from computational time (it's base R and is faster)
+* You want pipe functionality but nothing else from `dplyr` or other `tidyverse` packages
+
+</div>
+
+**Why would we use the pipe?**  Are we complicating matters?  It seems like a lot of work to learn these new symbols if you're just doing one simple thing like a `filter`.  Well, as you're about to see, this is a very useful (and quick!) way of writing out multiple changes you make on a data frame in the order you want them to take place.
+
+### Why Use the "Pipe" (`%>%` or `|>`)
+
+Here's why the pipe (`%>%` or `|>`) is so useful.
 
 "Tidy" functions like `select()`, `filter()`, and others we'll see later always have as first argument a data frame, and they always return a data frame as well.  Data frame in, data frame out.
 
@@ -646,17 +648,17 @@ covid_testing %>%
 covid_testing%>%select(last_name,result)%>%filter(result=="positive")
 ```
 
-How you use whitespace is totally up to you, but we suggest that in a pipeline (steps in data transformation that are separated by `%>%`), each step appear in its own line, indented below the first step.
+How you use whitespace is totally up to you, but we suggest that in a pipeline (steps in data transformation that are separated by `%>%` or `|>`), each step appear in its own line, indented below the first step.
 
 </div>
 
-By connecting logical steps, you can get a **pipeline** of data analysis steps which are concise and also fairly human readable.  You can think of the `%>%` symbol as "then...", describing the steps in order.
+By connecting logical steps, you can get a **pipeline** of data analysis steps which are concise and also fairly human readable.  You can think of the `%>%` or `|>` symbol as "then...", describing the steps in order.
 
 This approach to coding is powerful because it makes it much easier for someone who doesn't know R well to read and understand your code as a series of instructions.   
 
 ### Quiz: `%>%`
 
-In the box below, rewrite the following statement with a pipe:
+In the box below, rewrite the following statement with a pipe, using the `%>%` version:
 
 `select(mydata, first_name, last_name)`
 
