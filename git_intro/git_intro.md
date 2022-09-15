@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.2
+version:  1.0.3
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -26,6 +26,9 @@ After completion of this module, learners will be able to:
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 script: https://kit.fontawesome.com/83b2343bd4.js
 
+@version_history
+1.0.3: Fix typos
+@end
 -->
 
 # Intro to Version Control
@@ -90,7 +93,7 @@ Unless multiple users make changes to the same section of the document - a confl
 
 ## Version control systems
 
-A version control system is a tool that keeps track of these changes for us, effectively creating different versions of our files. It allows us to decide which changes will be made to the next version (each record of these changes is called a [commit](https://swcarpentry.github.io/git-novice/reference.html#commit), and keeps useful metadata about them.
+A version control system is a tool that keeps track of these changes for us, effectively creating different versions of our files. It allows us to decide which changes will be made to the next version (each record of these changes is called a [commit](https://swcarpentry.github.io/git-novice/reference.html#commit)), and keeps useful metadata about them.
 
 The complete history of commits for a particular project and their metadata make up a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository). Repositories can be kept in sync across different computers, facilitating
 collaboration among different people.
@@ -98,12 +101,20 @@ collaboration among different people.
 <div class = "learnmore">
 **The Long History of Version Control Systems**
 
+
 Automated version control systems are nothing new.
+
+
 Tools like [RCS](https://en.wikipedia.org/wiki/Revision_Control_System), [CVS](https://en.wikipedia.org/wiki/Concurrent_Versions_System), or [Subversion](https://en.wikipedia.org/wiki/Apache_Subversion) have been around since the early 1980s and are used by many large companies.
+
+
 However, many of these are now considered legacy systems (i.e., outdated) due to various limitations in their capabilities.
+
+
 More modern systems, such as [Git](https://git-scm.com/) and [Mercurial](https://swcarpentry.github.io/hg-novice/), are **distributed**, meaning that they do not need a centralized server to host the repository.
-These modern systems also include powerful merging tools that make it possible for
-multiple authors to work on the same files concurrently.
+
+
+These modern systems also include powerful merging tools that make it possible for multiple authors to work on the same files concurrently.
 </div>
 
 ## Quiz: Version control
