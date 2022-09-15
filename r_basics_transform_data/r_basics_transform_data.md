@@ -24,7 +24,7 @@ After completion of this module, learners will be able to:
 @version_history
 1.0.2: revision to correct image links referring to wrong branch
 1.0.3: revamping environment setup section to mirror exactly other R basics modules, including only presenting the content once. Changed the hands-on section to follow appropriate structure. Also replaced hex art alt text with blank tags based on best practices for decorative images.
-1.1.0- Use the "pipe" syntax to link a series of transformations in a "pipeline" that performs desired changes to a data frame
+1.1.0: Use the "pipe" syntax to link a series of transformations in a "pipeline" that performs desired changes to a data frame
 
 @end
 
@@ -470,7 +470,6 @@ Here's a "truth table" to help you understand these operators:
 | OR (`|` in R) | False if and only if both sides are False | "Rabbits are reptiles OR rabbits are bipeds" is False |
 | NOT (`!` in R) | Turns True into False and False into True | ! "Rabbits are reptiles" is True, ! "Rabbits are mammals" is False |
 
-
 We also have to consider using parenthesis to ensure the proper order of operations.  The order of operations for boolean algebra, from highest to lowest priority is NOT, then AND, then OR.  Forgetting to account for order of operations is a common mistake by novice users of boolean logic.
 
 Let's go step by step.  First, let's convert each of our two conditions to code:
@@ -564,7 +563,7 @@ And for comparison, let's add parentheses around the OR clause to accurately cap
 
 One of the most powerful concepts in the `tidyverse` suite of packages is the pipe operator, which is written in two possible ways:
 
-* percent, greater than, percent (`%>%`) (this is the original pipe, from the `magrittr` package, which gets included as part of the `tidyverse`)
+* percent, greater than, percent (`%>%`) (this is the original pipe, from the `magrittr` package, which gets included as part of `dplyr` and `tidyverse`)
 * vertical pipe, greater than (`|>`) (this is a newer option, and is now "native", meaning it comes from base R, if you're using R version 4.1.0 or later)
 
 Both pipe operators pass the **object on its left** as the **first argument** to the **function on its right**.  
@@ -573,9 +572,9 @@ In this module, **we'll use the "original" pipe (`%>%`)** in code examples and q
 
 <div class = "learnmore">
 **Optional read: Why are there two pipes?**
-
+<br/>
 Lots of R users got used to using the pipe after working in the `tidyverse`.  It became very popular, but it meant having to load up a package, whether that was `tidyverse` (which includes `dplyr`), or just `dplyr` (which silently depends on `magrittr`), or `magrittr`.
-
+<br/>
 R users demanded that pipe functionality be included in the R language itself, without having to load a package they might not use for anything else.  That's how the newer pipe came into being!
 </div>
 
