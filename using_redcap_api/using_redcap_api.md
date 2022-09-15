@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.1
+version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -18,6 +18,12 @@ After completion of this module, learners will be able to:
 - Enable API usage on REDCap projects
 - Use the REDCap API to pull data into an R or Python data analysis
 
+
+@end
+
+
+@version_history
+1.0.2: make it clear that you need to have R or Python installed
 
 @end
 
@@ -40,7 +46,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This module assumes that learners already have access to the REDCap application at their institution. Learners will benefit from having used REDCap in the past, although new users of REDCap may find this module useful if they watch an overview video about REDCap (included in this module).  Some experience with either R or Python is necessary to use these languages to interact with the REDCap API, but template code will be provided within the module.
+This module assumes that learners already have access to the REDCap application at their institution. Learners will benefit from having used REDCap in the past, although new users of REDCap may find this module useful if they watch an overview video about REDCap (included in this module).  This module requires that learners have either R (preferably with RStudio) or Python (preferably the Anaconda distribution with Jupyter) installed in order to work with the API.  Therefore, some experience with either R or Python is necessary, but template code will be provided within the module.  
 
 **Learning Objectives**
 
