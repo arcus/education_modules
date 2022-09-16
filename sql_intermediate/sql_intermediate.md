@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho
 email:    camachop@chop.edu
-version:  1.0.1
+version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: US English Male
@@ -18,6 +18,12 @@ After completion of this module, learners will be able to:
 * Find text that matches a given pattern using `LIKE` and `REGEXP_LIKE` statements
 * Use `GROUP BY` and `HAVING` statements along with aggregate functions to understand group characteristics
 * Use `WITH` to create sub queries
+
+@end
+
+
+@version_history
+1.0.2: Clarify group by aggregation troubleshooting
 
 @end
 
@@ -820,8 +826,7 @@ GROUP BY
 
 </div>
 
-`GROUP BY` aggregations like the one above can be confusing and frustrating for new SQL users, because you have to remember that an aggregation returns **one and only one** value for the entire group of rows.  This means you **cannot** ask for something in your `SELECT` clause that could give more than one value for the  group.  You can include aggregate functions (they by definition give you one and only one value for the group) and you can include what you grouped by (because each member of the group is guaranteed to have the same value), but you can't add anything else.  For example, we couldn't add, say, `race` in the `SELECT` statement above, because each group (the group `sex` = 'F' and the group `sex` = 'M') could potentially have more than one value for `race`.
-
+`GROUP BY` aggregations like the one above can be confusing and frustrating for new SQL users, because you have to remember that an aggregation returns **one and only one** value for the entire group of rows.  This means you **cannot** ask for something in your `SELECT` clause that could give more than one value for the  group.  You can include aggregate functions (they by definition give you one and only one value for the group) and you can include what you grouped by (because each member of the group is guaranteed to have the same value), but you can't add anything else.  For example, we couldn't add `race` in the `SELECT` statement above without also adding it to the GROUP BY clause, because each group in the existing GROUP BY (i.e. the group `sex` = 'F' and the group `sex` = 'M') could potentially have more than one value for `race` in the data.
 
 ```sql
 SELECT
@@ -839,7 +844,7 @@ GROUP BY
 <table id="dataTable9b" border="1"></table><br>
 
 <div class = "warning">
-While AlaSQL gives up and just gives you empty data for `race` in the example above, the SQL dialects you'll use in the real world will probably give you an error that is something like `Error: Column is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.`  Remember, when you're aggregating, you can **only** add things to your `SELECT` statement that are **guaranteed** to have **one and only one value** per group of rows.  That means you can only use columns you used to group in a `GROUP BY` or functions that are aggregate functions, like `COUNT()`.
+While AlaSQL gives up and just gives you empty data for `race` in the example above, the SQL dialects you'll use in the real world will probably give you an error that is something like `Error: Column is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.`  Remember, when you're aggregating, you can **only** add things to your `SELECT` statement that are **guaranteed** to have **one and only one value** per group of rows.  That means (when using a `GROUP BY` in your query) you can only use items in your `SELECT` statement that are either: 1) columns that are also referenced in your `GROUP BY`, or 2) functions that are aggregate functions, like `COUNT()`.
 
 </div>
 
