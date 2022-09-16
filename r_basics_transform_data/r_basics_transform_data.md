@@ -573,11 +573,10 @@ In this module, **we'll use the "original" pipe (`%>%`)** in code examples and q
 <div class = "learnmore">
 **Optional read: Why are there two pipes?**
 
-
 Lots of R users got used to using the pipe after working in the `tidyverse`.  It became very popular, but it meant having to load up a package, whether that was `tidyverse` (which includes `dplyr`), or just `dplyr` (which silently depends on `magrittr`), or `magrittr`.
 
-
 R users demanded that pipe functionality be included in the R language itself, without having to load a package they might not use for anything else.  That's how the newer pipe came into being!
+
 </div>
 
 Here's a drawing of what the pipe function looks like:
