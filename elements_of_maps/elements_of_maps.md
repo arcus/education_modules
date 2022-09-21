@@ -27,7 +27,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
-# The Elements of a Map
+# The Elements of Maps
 
 <div class = "overview">
 
@@ -86,7 +86,7 @@ Here is a table of a few locations with their coordinates given as both decimal 
 | Philadelphia, USA | 39.952583, -75.165222 | 39° 57' 9.2988'' N, 75° 9' 54.7992'' W |
 | Gabororne, Botswana | -24.653257, 25.906792 | 24° 39' 11.7252'' S, 25° 54' 24.4512'' E |
 | Manila, Philippines | 14.556586, 121.023415| 14° 33' 23.7096'' N, 120° 59' 3.1992'' E|
-|Buenos Aires, Argentina | -34.603722, -58.381592 | 34° 36' 13.3992'' S, 58° 22' 53.7312'' W|
+| Buenos Aires, Argentina | -34.603722, -58.381592 | 34° 36' 13.3992'' S, 58° 22' 53.7312'' W|
 
 
 <div class = "important">
@@ -216,6 +216,8 @@ Legends and Keys
 ------------
 A **legend** or **key** is a way to associate language with colors, sizes, or symbols without crowding too much language onto the visual.
 
+![The Broad Street and Market-Frankford Lines are identified by a key in the lower right corner of this map of Philadelphia highspeed train lines.](media/Philadelphia_highspeed_trains_key.jpg)
+
 ## Displaying Data
 
 Now that you know what goes into the outlines of a map, you likely want to use a map to display your data. Perhaps you have data on the locations of car accidents, or household income by neighborhood, or maybe you have addresses of households in which children have childhood asthma. You will need to use other elements to communicate the data you care about.
@@ -303,7 +305,7 @@ In a proportional symbol map, the size of each symbol is proportional to the dat
 
 In the map below, each zip code has a single point in it, but the points range in size from very small dots to circles that almost fill their geographic region. The bigger the point, the more pedestrian stops that zip code had in 2021.
 
-![](media/2021_pedestrian_stops_proportional_symbol.jpg)
+![The zip codes of Philadelphia, each with a blue dot in its center.](media/2021_pedestrian_stops_proportional_symbol.jpg)
 
 Graduated symbol map
 --------------
@@ -311,7 +313,7 @@ A graduated symbol map is similar, but there are only a few different sizes of d
 
 Take a look at the two southernmost zip codes at the bottom of the map. In this graduated symbol map, they are marked by dots of the same tiny size. In the proportional symbol map you can see that though both are small dots, the one on the right is far smaller than the one on the left.
 
-![](media/2021_pedestrian_stops_graduated_symbol.jpg)
+![The zip codes of Philadelphia, each with a blue dot in its center.](media/2021_pedestrian_stops_graduated_symbol.jpg)
 
 
 <div class = "important">
@@ -333,21 +335,36 @@ Another way to display data using sizes is with a [**cartogram**](https://en.wik
 Symbols
 -------
 
+The maps we have seen previously have only used one type of symbol, a dot. While the sizes of the dots varied in the proportional and graduated symbol maps, we could also use multiple types of symbols to differentiate data points. Revisiting the vehicle crash data that we saw earlier, each incident includes a note of whether there were any pedestrian or bicyclist deaths. We can plot all of these incidents and use different symbols, a plus sign for pedestrians and a star for cyclists, to show which is which.
+
+![An outline of Philadelphia is marked with 28 blue plus signs and 2 orange stars.](media/ped_v_bike_deaths2019.jpg)
+
+Lines can also be represented differently to show, symbolically rather than with color, how they differ.
+
+![The Broad Street Line is marked as a dotted line while the Market-Frankford Line is marked with a dashed line.](media/Philadelphia_highspeed_trains_linestyle.jpg)
 
 Combining Types of Maps
 --------------------
+You are not restricted to using only one type of map at a time. The data you want to display might benefit from a combination of multiple features. Perhaps you want to look at a heat map of pedestrian stops made by police, overlayed with the locations of police stations, schools, and liquor stores, each identified by a different symbol.
 
+Or perhaps a choropleth could show you the concentration of green spaces in the city while each zip code is also labeled with the medium household income of its residents.
+
+<div class = "warning">
+
+Just because you can use different elements to create maps that show many types of data together, doesn't mean it is a good idea. Remember that the best maps communicate their message clearly. If fitting all of your data onto a single map means none of it is understandable, you probably need to use more than one map to display that data!
+
+</div>
 
 ## Reference
 
 Elements of Maps
 --------------
 
-| Shapes       | Colors                           | Sizes                    | Language    |
-|:--|:--|:--|:--|
-| Points   |  Hue (water is blue)          | Thick / thin lines   |  Scales  |
-| Lines    |  Intensity (e.g. water depth) | Large / small points |   Numbers |
-| Polygons |                                  |  Solid / broken lines |  Words   |
+| Shapes       | Colors                           | Sizes                    | Language    | Symbols |
+|:--|:--|:--|:--|:--|
+| Points   |  Hue (water is blue)          | Thick / thin lines   |  Scales   | Specify locations |
+| Lines    |  Intensity (e.g. water depth) | Large / small points |   Numbers | Solid / broken lines |
+| Polygons |                                  |                   |  Words    | Patterned regions |
 
 
 Types of Maps
