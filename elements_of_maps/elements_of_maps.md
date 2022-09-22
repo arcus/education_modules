@@ -17,7 +17,7 @@ After completion of this module, learners will be able to:
 
 - understand the latitude and longitude coordinate system
 - recognize the elements of maps
-- name types of maps that focus on particular elements.
+- describe types of maps that focus on particular elements.
 
 @end
 
@@ -339,9 +339,13 @@ The maps we have seen previously have only used one type of symbol, a dot. While
 
 ![An outline of Philadelphia is marked with 28 blue plus signs and 2 orange stars.](media/ped_v_bike_deaths2019.jpg)
 
-Lines can also be represented differently to show, symbolically rather than with color, how they differ.
+Lines can also be represented differently to show, symbolically rather than with color, how they differ. A dotted line might represent one type of boundary or path, while a dashed line could represent another.
 
 ![The Broad Street Line is marked as a dotted line while the Market-Frankford Line is marked with a dashed line.](media/Philadelphia_highspeed_trains_linestyle.jpg)
+
+Shapes can also be patterned or marked with symbols to indicate particular features. Be careful, though, as using patterns to differentiate regions can quickly get very busy-looking.
+
+![Philadelphia is partitioned into regions based on the day of the week for municipal trash collection. Regions are marked with left and right hatches, circles, dots, and exes.](media/Phila_trash_pickup.jpg)
 
 Combining Types of Maps
 --------------------
@@ -396,7 +400,7 @@ Every location on Earth can be described using latitude and longitude. Positive 
 ***
 
 
-Which types of geometry might be appropriate to represent a hospital? Select all possibilities.
+Which types of geometry might be appropriate to represent a hospital on a map? Select all possibilities.
 
 [[X]] Point
 [[X]] Multipoint
@@ -416,9 +420,21 @@ If you are studying how the hospital building interacts with the surrounding nei
 </div>
 ***
 
+Consider a data set that contains the home addresses of of participants in a study that measures the level of lead in their blood. What types of maps could be appropriate for representing this data? There is no one correct answer, so think about what you would do and then click on the checkmark to see some of our suggestions.
 
+[[____]]
+
+***
+<div class = "answer">
+
+possible answers here.... answer boxes don't work with surveys, figure out the other way to expand content....
+
+</div>
+***
 
 ## Additional Resources
+
+All of the maps shown in this module were created in a Jupyter notebook that you are welcome to explore for yourself media/elements_of_maps.ipynb
 
 (https://gisgeography.com/dot-distribution-graduated-symbols-proportional-symbol-maps/#:~:text=Graduated%20symbol%20maps%20and%20proportional%20symbol%20maps%20scale%20the%20size,instead%20of%20scaling%20them%20larger.)
 
