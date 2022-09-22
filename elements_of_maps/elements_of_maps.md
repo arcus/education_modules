@@ -434,12 +434,12 @@ possible answers here.... answer boxes don't work with surveys, figure out the o
 
 ## Additional Resources
 
-All of the maps shown in this module were created in a Jupyter notebook that you are welcome to explore for yourself media/elements_of_maps.ipynb
+All of the maps shown in this module were created in a Jupyter notebook that you are welcome to [explore for yourself](https://github.com/arcus/education_modules/blob/visual_vocab_of_geospatial_data/elements_of_maps/media/elements_of_maps.ipynb).
 
-(https://gisgeography.com/dot-distribution-graduated-symbols-proportional-symbol-maps/#:~:text=Graduated%20symbol%20maps%20and%20proportional%20symbol%20maps%20scale%20the%20size,instead%20of%20scaling%20them%20larger.)
 
-QGIS intro to geospatial data
+QGIS, an open source GIS platform has a [Gentle Introduction to GIS](https://docs.qgis.org/3.22/en/docs/gentle_gis_introduction/index.html).
 
+For more on the distinctions between different kinds of maps, check out these resources by [gisgeography.com](https://gisgeography.com/dot-distribution-graduated-symbols-proportional-symbol-maps/#:~:text=Graduated%20symbol%20maps%20and%20proportional%20symbol%20maps%20scale%20the%20size,instead%20of%20scaling%20them%20larger) and the [geopandas guide to mapping](https://geopandas.org/en/stable/docs/user_guide/mapping.html).
 
 
 ## Feedback
