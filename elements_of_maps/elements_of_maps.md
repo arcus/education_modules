@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  0.0.1
+version:  1.0.0
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
@@ -374,13 +374,16 @@ Elements of Maps
 Types of Maps
 --------------
 
+We have seen several named types of maps in this lesson:
+
+
 | Type | Example |
 |:--:|:--:|
-| Dot Distribution | ![](media/2019_crashes.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
-| Heat Map | ![](media/2019_crashes_heat_map.png)<!-- style = "max-width:200px;" border = 5px solid -->|
-| Choropleth | ![](media/2021_pedestrian_stops.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
-| Graduated Symbol Map | ![](media/2021_pedestrian_stops_graduated_symbol.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
-| Proportional Symbol Map | ![](media/2021_pedestrian_stops_proportional_symbol.jpg)<!-- style = "max-width:200px;" border = 5px solid -->  |
+| Dot Distribution | ![Philadelphia is outlined in grey and covered in tiny blue dots. The dots are most concentrated along large roadways and trace out partial street map of the city.](media/2019_crashes.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
+| Heat Map | ![Zip code boundaries of Philadelphia are outlined in black and bright colors, ranging from red to blue, blur into each other across the map. A large red region appears in the center, as do smaller reddish-orange regions in the upper right, and lower left of the city, with several orange and yellow regions scattered throughout. In between, the color fades to greens and blues, with the edge of the map surrounded by light blue.](media/2019_crashes_heat_map.png)<!-- style = "max-width:200px;" border = 5px solid -->|
+| Choropleth | ![Pedestrian Stops by Zip Code. Each zip code region of Philadelphia is colored a shade of red, ranging from a very light peach color (most regions) to intense dark reds (only a few regions). The legend indicates that the darkest colors indicate values of more than 1200 while the lightest colors indicate values less than 200.](media/2021_pedestrian_stops.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
+| Graduated Symbol Map | ![The zip codes of Philadelphia, each with a blue dot in its center. There are five distinct sizes of dots.](media/2021_pedestrian_stops_graduated_symbol.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
+| Proportional Symbol Map | ![The zip codes of Philadelphia, each with a blue dot in its center. The dot sizes vary continuously.](media/2021_pedestrian_stops_proportional_symbol.jpg)<!-- style = "max-width:200px;" border = 5px solid -->  |
 
 ## Quiz
 
@@ -420,17 +423,23 @@ If you are studying how the hospital building interacts with the surrounding nei
 </div>
 ***
 
-Consider a data set that contains the home addresses of of participants in a study that measures the level of lead in their blood. What types of maps could be appropriate for representing this data? There is no one correct answer, so think about what you would do and then click on the checkmark to see some of our suggestions.
+Consider a data set that contains the home addresses of of participants in a study that measures the level of lead in their blood. What types of maps could be appropriate for representing this data? There is no one correct answer, so think about what you would do and only then read our suggestions.
 
 [[____]]
+<details>
+<summary>Click to see some possible answers</summary>
 
-***
-<div class = "answer">
+<br>
 
-possible answers here.... answer boxes don't work with surveys, figure out the other way to expand content....
+The best ways to present this data with a map depends on both the quantity of data you have, and what you are trying to show with the data. A study with a large number of participants might benefit from a choropleth or heat map.
 
-</div>
-***
+- A choropleth map could show the percentage of participants living in each geographical subregion who have lead levels over a certain limit.
+- A heat map could be used to show where the participants with lead levels above a certain threshold are most concentrated.
+- A dot distribution where dots are colored by lead level, either continuously or in discrete buckets, might help illustrate if there are certain spots where lead is more prevalent.
+
+</details>
+
+<br>
 
 ## Additional Resources
 
