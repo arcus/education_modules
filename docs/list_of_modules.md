@@ -2,7 +2,7 @@
 title: Educational Modules
 ---
 
-The following list of courses is in alphabetical order:
+The following list of courses is in (approximately) alphabetical order:
 
 | Training Course | Description | Estimated Time |
 | -- | -- | -- |
