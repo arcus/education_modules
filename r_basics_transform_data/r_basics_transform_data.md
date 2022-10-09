@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.4
+version:  1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -154,6 +154,12 @@ style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
 
 If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
 
+<div class = "warning">
+Do you use Microsoft OneDrive?  
+
+Knitting files can sometimes be problematic with some versions of Microsoft OneDrive, so if you are working from your local computer and get strange errors when you try to knit, try to use a directory that's not within a OneDrive folder to see if that helps.  Newer versions of OneDrive seem to be less buggy, so you may also want to update your OneDrive software.
+</div>
+
 * In RStudio, open a new project (File, New Project)
 * Select Version Control, then Git
 * Drop this link into the "Repository URL": https://github.com/arcus/education_r_environment
@@ -198,10 +204,10 @@ If you're pulling branches after having worked in other R modules, you might hav
 
 You can use this module in a couple of different ways:
 
-* If you have experience working in R markdown and want to try out some of the code we share with you as we go along, please go ahead and open the "r\_basics\_transform\_data" directory, then open `transform_exercises.Rmd` and add some code chunks for your own experimentation.  Or, create a new R Markdown file that begins with reading in the .csv file in the "exercises" directory.
+* If you have experience working in R Markdown and want to try out some of the code we share with you as we go along, please go ahead and open the `r_basics_transform_data` directory, then open `transform_exercises.Rmd` and add some code chunks for your own experimentation.  
+* Or (more advanced option), create a new R Markdown file that begins with reading in the .csv file in the "exercises" directory.  This is more advanced because you'll want to save your new file to a location that makes sense (say, within `r_basics_transform_data`) and make sure you can successfully give the path the .csv file within the `exercises` directory of `r_basics_transform_data`.  If you aren't experienced with directory paths, this might be a bit too difficult for you.
 * Not sure you are ready to DIY?  Prefer to learn some concepts first, then do some hands-on work at the end?  Then just follow our steps and we'll guide you through the exercise file when you reach the end of the module.  No need to worry about trying out the code along the way.
 
-![RStudio showing the transform_exercises.Rmd file.  A text box suggests copying and pasting the first code chunk in transform_exercises.Rmd into a new R Markdown file, or adding chunks below the first chunk for experimentation.](media/rstudio_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
 
 ## The `dplyr` Package
 
@@ -462,7 +468,6 @@ Here's a "truth table" to help you understand these operators:
 | OR (`|` in R) | False if and only if both sides are False | "Rabbits are reptiles OR rabbits are bipeds" is False |
 | NOT (`!` in R) | Turns True into False and False into True | ! "Rabbits are reptiles" is True, ! "Rabbits are mammals" is False |
 
-
 We also have to consider using parenthesis to ensure the proper order of operations.  The order of operations for boolean algebra, from highest to lowest priority is NOT, then AND, then OR.  Forgetting to account for order of operations is a common mistake by novice users of boolean logic.
 
 Let's go step by step.  First, let's convert each of our two conditions to code:
@@ -552,17 +557,30 @@ And for comparison, let's add parentheses around the OR clause to accurately cap
 
 </div>
 
-## The "Pipe" Operator (`%>%`)
+## The "Pipe" Operator (`%>%`  or `|>`)
 
-One of the most powerful concepts in the `tidyverse` suite of packages is the pipe operator, which is written as percent, greater than, percent (`%>%`).  
+One of the most powerful concepts in the `tidyverse` suite of packages is the pipe operator, which is written in two possible ways:
 
-The pipe operator passes the **object on its left** as the **first argument** to the **function on its right**.
+* percent, greater than, percent (`%>%`) (this is the original pipe, from the `magrittr` package, which gets included as part of `dplyr` and `tidyverse`)
+* vertical pipe, greater than (`|>`) (this is a newer option, and is now "native", meaning it comes from base R, if you're using R version 4.1.0 or later)
 
-Here's a drawing of what that looks like:
+Both pipe operators pass the **object on its left** as the **first argument** to the **function on its right**.  
+
+In this module, **we'll use the "original" pipe (`%>%`)** in code examples and quiz questions, because we think this is the one you'll see the most in code that your coworkers share with you or you find in online examples.  This will gradually change, and as the "native" pipe (`|>`) gains market share, we'll likely change these materials to reflect that.
+
+<div class = "learnmore">
+**Optional read: Why are there two pipes?**
+
+Lots of R users got used to using the pipe after working in the `tidyverse`.  It became very popular, but it meant having to load up a package, whether that was `tidyverse` (which includes `dplyr`), or just `dplyr` (which silently depends on `magrittr`), or `magrittr`.
+
+R users demanded that pipe functionality be included in the R language itself, without having to load a package they might not use for anything else.  That's how the newer pipe came into being!
+
+</div>
+
+Here's a drawing of what the pipe function looks like:
 
 ![An arrow connects the first object, `covid_testing`, to its new location as the first argument in the filter statement.](media/pipe_mini.png)<!--
 style = "max-width:600px;"-->
-
 
 Here, for example, the pipe operator takes the object on its left, here the `covid_testing` data frame, and inserts it as the first argument of the function on its right ... in our case, the `filter()` function.
 
@@ -576,11 +594,30 @@ is equivalent to:
 
 Those two lines of code are equivalent. In both cases we're taking the `covid_testing` data frame, passing it as the first argument to the `filter()` function, and adding a condition that we're filtering by.  In our case that condition is `pan_day` less than or equal to 10.
 
-**Why would we use this way of typing our commands?**  Are we complicating matters?  No, as you're about to see, this is a very useful way of writing out the changes you make on a data frame in the order you want them to take place.
+The same thing is true for the following statement, which works the same way but uses the newer form of the pipe.
 
-### Why Use the "Pipe" (`%>%`)
+`covid_testing |> filter(pan_day <= 10)`
 
-Here's why the pipe (`%>%`) is so useful.
+<div class = "options">
+Which version of the pipe should you use?  **Generally, you can use either.**  That said, here are some things to keep in mind.
+
+The original `magrittr` pipe (`%>%`) is better when:
+
+* You're doing something other than passing the **first** argument (this is a bit advanced and you may never need this...)
+* You're working in an older version of R or you think your collaborators might be
+
+The new "native" pipe (`|>`) is better when:
+
+* You need to shave off microseconds from computational time (it's base R and is faster)
+* You want pipe functionality but nothing else from `dplyr` or other `tidyverse` packages
+
+</div>
+
+**Why would we use the pipe?**  Are we complicating matters?  It seems like a lot of work to learn these new symbols if you're just doing one simple thing like a `filter`.  Well, as you're about to see, this is a very useful (and quick!) way of writing out multiple changes you make on a data frame in the order you want them to take place.
+
+### Why Use the "Pipe" (`%>%` or `|>`)
+
+Here's why the pipe (`%>%` or `|>`) is so useful.
 
 "Tidy" functions like `select()`, `filter()`, and others we'll see later always have as first argument a data frame, and they always return a data frame as well.  Data frame in, data frame out.
 
@@ -611,17 +648,17 @@ covid_testing %>%
 covid_testing%>%select(last_name,result)%>%filter(result=="positive")
 ```
 
-How you use whitespace is totally up to you, but we suggest that in a pipeline (steps in data transformation that are separated by `%>%`), each step appear in its own line, indented below the first step.
+How you use whitespace is totally up to you, but we suggest that in a pipeline (steps in data transformation that are separated by `%>%` or `|>`), each step appear in its own line, indented below the first step.
 
 </div>
 
-By connecting logical steps, you can get a **pipeline** of data analysis steps which are concise and also fairly human readable.  You can think of the `%>%` symbol as "then...", describing the steps in order.
+By connecting logical steps, you can get a **pipeline** of data analysis steps which are concise and also fairly human readable.  You can think of the `%>%` or `|>` symbol as "then...", describing the steps in order.
 
 This approach to coding is powerful because it makes it much easier for someone who doesn't know R well to read and understand your code as a series of instructions.   
 
 ### Quiz: `%>%`
 
-In the box below, rewrite the following statement with a pipe:
+In the box below, rewrite the following statement with a pipe, using the `%>%` version:
 
 `select(mydata, first_name, last_name)`
 

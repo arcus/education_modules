@@ -257,6 +257,12 @@ style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
 
 If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
 
+<div class = "warning">
+Do you use Microsoft OneDrive?  
+
+Knitting files can sometimes be problematic with some versions of Microsoft OneDrive, so if you are working from your local computer and get strange errors when you try to knit, try to use a directory that's not within a OneDrive folder to see if that helps.  Newer versions of OneDrive seem to be less buggy, so you may also want to update your OneDrive software.
+</div>
+
 * In RStudio, open a new project (File, New Project)
 * Select Version Control, then Git
 * Drop this link into the "Repository URL": https://github.com/arcus/education_r_environment
