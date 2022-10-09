@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.2.1
+version:  1.2.2
 language: en
 narrator: US English Female
 comment:  This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **data reuse**, and how technical approaches can help make these goals more attainable.
@@ -17,6 +17,11 @@ After completion of this module, learners will be able to:
 
 @end
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
+
+@version_history
+1.2.2: fix incorrect hyperlink
+
+@end
 
 @gifPreload
 <script>
@@ -296,7 +301,7 @@ As you listen to the video, try to identify problematic research practices which
 
 ## Tools for Better Practices
 
-Here we aim to provide a broad overview of how some tools and practices (scripts, data management and metdata, version control, and dependency management) can ameliorate some of the challenges we've outlined earlier.  Technology alone cannot solve the reproducibility crisis, but tools can support researchers who are trying to apply rigor and clarity to their research efforts.
+Here we aim to provide a broad overview of how some tools and practices (scripts, data management and metadata, version control, and dependency management) can ameliorate some of the challenges we've outlined earlier.  Technology alone cannot solve the reproducibility crisis, but tools can support researchers who are trying to apply rigor and clarity to their research efforts.
 
 Areas we won't cover here, but are critical to the consistent production of reproducible science, include researcher bias, research incentivization, publication bias, research culture, mentorship, and more.  While we assert that proper use of technology is a **necessary** part of reproducible science, technology alone is not **sufficient**.
 
@@ -380,7 +385,7 @@ REDCap is one example of software that explicitly creates a data dictionary that
 
 <div class = "hint">
 
-Discover:  The Arcus program at Children's Hospital of Philadelphia has a team of librarians and archivists who have created materials to help CHOP scientists with data management.  Their [Research Data Management Resources](https://www.research.chop.edu/arcus/resources) tend to be very practical and can be used right away to improve data management!
+Discover:  The Arcus program at Children's Hospital of Philadelphia has a team of librarians and archivists who have created materials to help CHOP scientists with data management.  Their [Research Data Management Resources](https://www.research.chop.edu/applications/arcus/resources) tend to be very practical and can be used right away to improve data management!  Simply click on the link and then expand the part of the accordion labeled "Research Data Management Resources (Public Access)".
 
 </div>
 

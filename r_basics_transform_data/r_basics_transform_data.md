@@ -17,15 +17,13 @@ After completion of this module, learners will be able to:
 - Write R code that uses the `dplyr` package to select only desired columns from a data frame
 - Write R code that uses the `dplyr` package to filter only rows that meet a certain condition from a data frame
 - Write R code that uses the `dplyr` package to create a new column in a data frame
-- Use the "pipe" syntax to link a series of transformations in a "pipeline" that performs desired changes to a data frame
 
 @end
 
 @version_history
 1.0.2: revision to correct image links referring to wrong branch
 1.0.3: revamping environment setup section to mirror exactly other R basics modules, including only presenting the content once. Changed the hands-on section to follow appropriate structure. Also replaced hex art alt text with blank tags based on best practices for decorative images.
-1.1.0: Use the "pipe" syntax to link a series of transformations in a "pipeline" that performs desired changes to a data frame
-
+1.1.0: update pipe syntax, clarified "follow along" instructions, removed unhelpful image
 @end
 
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
