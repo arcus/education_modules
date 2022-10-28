@@ -7,7 +7,7 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 code_language: Python
-topic: 
+topic: Learn to Code
 title: Demystifying Python
 comment:  This module introduces the Python programming language, explores why Python is useful in research, and describes how to download Python and Jupyter.
 long_description: Python is a versatile programming language that is frequently used for data analysis, machine learning, web development, and more. If you are interested in using Python (or even just trying it out), and are looking for how to get set up, this module is a good place to start. This is appropriate for someone at the beginner level, including those with no prior knowledge of or experience with Python.

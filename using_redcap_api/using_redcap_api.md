@@ -5,7 +5,7 @@ version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
-code_language: 
+code_language: none
 topic: Data Management
 title: Using the REDCap API
 comment:  REDCap is a research data capture tool used by many researchers in basic, translational, and clinical research efforts.  Learn how to use the REDCap API in this module.

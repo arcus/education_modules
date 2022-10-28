@@ -7,7 +7,7 @@ module_template_version: 2.0.1
 language: en
 narrator: UK English Female
 code_language: Bash
-topic: 
+topic: Learn to Code 
 title:  Bash: Combining Commands
 comment:  This module will teach you how to combine two or more commands in bash to create more complicated pipelines in Bash.
 long_description: This module is for learners who can use some basic Bash commands and want to learn to how to use the output of one command as the input for another command.

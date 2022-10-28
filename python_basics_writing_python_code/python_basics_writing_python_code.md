@@ -7,7 +7,7 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 code_language: Python
-topic: 
+topic: Learn to Code
 title: Python Basics: Writing Python Code
 comment: Learn the foundations of writing Python code.
 long_description: Before using Python for data analysis, there are some basics to learn that will set the foundation for more advanced Python coding. This module will teach you about functions and methods, how to define and use variables, how to create and edit lists and dictionaries, and how use loops and conditional statements to perform tasks with these basic data structures.

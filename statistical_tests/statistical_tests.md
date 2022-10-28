@@ -6,7 +6,7 @@ version:  1.2.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
-code_language: 
+code_language: none
 topic: Statistics
 title: Statistical Tests in Open Source Software
 comment:  This module provides an overview of the most commonly used kinds of statistical tests and links to code for running many of them in both R and python.

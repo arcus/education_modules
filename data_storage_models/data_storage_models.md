@@ -6,7 +6,7 @@ version:  1.0.0
 module_template_version: 0.0.0
 language: en
 narrator: UK English Female
-code_language: 
+code_language: none
 topic: Data Management
 title: Types of Data Storage Solutions
 comment:  This course will focus on different data storage solutions available to an end user and the unique characteristics of each type. This course will also cover how each storage type impacts one's access to data and computing capabilities.

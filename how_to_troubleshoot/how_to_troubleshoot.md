@@ -5,7 +5,7 @@ version:  1.0.0
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
-code_language: 
+code_language: none
 topic: Introduction to Data Science
 title: How to Troubleshoot
 comment:  Learning to use technical methods like coding and version control in your research inevitably means running into problems.  Learn practical methods for troubleshooting and moving past error codes and other difficulties.

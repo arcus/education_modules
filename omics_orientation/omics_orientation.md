@@ -6,7 +6,7 @@ version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
-code_language: 
+code_language: none
 topic: Omics
 title: Omics Orientation
 comment: This module provides a brief introduction to omics and its associated fields.

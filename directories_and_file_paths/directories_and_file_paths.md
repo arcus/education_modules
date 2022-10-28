@@ -6,7 +6,7 @@ version:  1.2.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
-code_language: 
+code_language: none
 topic: Data Management
 title: Directories and File Paths
 comment: In this module, learners will explore what a directory is and how to describe the location of a file using its file path.   

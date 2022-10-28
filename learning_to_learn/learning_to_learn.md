@@ -6,7 +6,7 @@ version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
-code_language: 
+code_language: none
 topic: Introduction to Data Science
 title: Learning to Learn Data Science
 comment:  Discover how learning data science is different than learning other subjects.
