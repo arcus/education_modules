@@ -6,6 +6,8 @@ version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
+code_language: Git
+topic: Version Control
 title: Setting Up Git for Mac and Linux
 
 comment: This module provides recommendations and examples to help new users configure git on their computer for the first time on a Mac or Linux computer.

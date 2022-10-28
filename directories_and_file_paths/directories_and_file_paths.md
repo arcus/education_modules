@@ -6,6 +6,8 @@ version:  1.2.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
+code_language: 
+topic: Data Management
 title: Directories and File Paths
 comment: In this module, learners will explore what a directory is and how to describe the location of a file using its file path.   
 long_description: When doing data analysis in a programming language like R or Python, figuring out how to point the program to the file you need can be confusing. This module will help you learn about how files and folders are organized on your computer, how to describe the location of your file in a couple of different ways, and name files and folders in a descriptive and systematic way.

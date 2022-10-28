@@ -6,6 +6,8 @@ version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
+code_language: 
+topic: Version Control
 title: Intro to Version Control
 
 comment:  An introduction to what version control systems do and why you might want to use one.

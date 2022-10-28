@@ -6,6 +6,8 @@ version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
+code_language: Python
+topic: Data Transformation 
 title: Transform Data with pandas
 comment:  This is an introduction to transforming data using a Python library named pandas.
 long_description: This module is for learners who have some familiarity with Python, and want to learn how the pandas library can handle large tabular data sets. No previous experience with pandas is required, and only an introductory level understanding of Python is assumed.

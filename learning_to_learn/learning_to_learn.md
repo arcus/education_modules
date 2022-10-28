@@ -6,6 +6,8 @@ version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
+code_language: 
+topic: Introduction to Data Science
 title: Learning to Learn Data Science
 comment:  Discover how learning data science is different than learning other subjects.
 long_description: The process of learning data science can be different from that of learning other subjects. This module goes over some of those differences and provides advice for navigating this potentially unfamiliar territory.

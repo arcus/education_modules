@@ -5,6 +5,8 @@ version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: US English Male
+code_language: SQL
+topic: 
 title: SQL, Intermediate Level
 comment:  Learn how to do intermediate SQL queries on single tables, by using code, hands-on.
 long_description: Do you want to learn intermediate Structured Query Language (SQL) for more precise and complex data querying on single tables?  This module will give you hands on experience with single-table queries using keywords including CASE, LIKE, REGEXP_LIKE, GROUP BY, HAVING, and WITH, along with a number of aggregate functions like COUNT and AVG.  This module is appropriate for people who are comfortable writing basic SQL queries and are ready to practice more advanced sklls.

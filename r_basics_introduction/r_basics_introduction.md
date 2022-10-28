@@ -5,6 +5,8 @@ version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
+code_language: R 
+topic:
 title: R Basics: Introduction
 comment:  Introduction to R and hands-on first steps for brand new beginners.
 long_description: Are you brand new to R, and ready to get started?  This module teaches concepts and vocabulary related to R, RStudio, and R Markdown.  It also includes some introductory-level hands-on work in RStudio.  This is a good course if you know that you want to use R but haven't ever used it, or you've barely used it and need a refresher on the basics.

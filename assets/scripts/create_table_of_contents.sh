@@ -50,7 +50,7 @@ done
 
 # This file has a different columns than the .md table since it is for backend analysis rather than displaying to the public.
 
-csvCOLUMNS="title author email estimated_time  version module_template_version language narrator"
+csvCOLUMNS="title author email estimated_time  version module_template_version language narrator code_language topic"
 
 csvHEADINGS=""
 

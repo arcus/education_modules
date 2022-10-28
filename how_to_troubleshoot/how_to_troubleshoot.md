@@ -5,6 +5,8 @@ version:  1.0.0
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
+code_language: 
+topic: Introduction to Data Science
 title: How to Troubleshoot
 comment:  Learning to use technical methods like coding and version control in your research inevitably means running into problems.  Learn practical methods for troubleshooting and moving past error codes and other difficulties.
 long_description: When technical methods, such as writing code, using version control, and creating data visualizations are used, there will moments when a cryptic error message appears or the code simply doesn't do what it was intended to do.  This module will help people at various levels of technical expertise learn how to troubleshoot in tech more effectively.
@@ -40,7 +42,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This module assumes that learners have started using technical methods such as writing code.  However, this module is useful for learners at any stage of their technical journey, and is not specific to any particular methods or programming languages. 
+This module assumes that learners have started using technical methods such as writing code.  However, this module is useful for learners at any stage of their technical journey, and is not specific to any particular methods or programming languages.
 
 **Learning Objectives**
 
@@ -57,7 +59,7 @@ Some technical types (including the author of this module) are also fans of *The
 
 While not even the entirety of the Internet can promise to tell you **everything** you need to know about technology, we do believe that the slogan "Don't Panic" is a useful one.  Technology can be baffling, inconsistent, and frustrating, and lead its users to experience rage or fear or feel incompetent.  If you feel this way, you're not alone, and there are practical steps to troubleshooting we'll share with you in this module to help you feel more empowered.  Try not to panic!
 
-The "steps" we're describing in this module don't necessarily take place in the order we describe -- often there's a flow from one method to another and back again as you get closer and closer to understanding, describing, and solving your problem.  This module also is not exhaustive -- you may have tips, ideas, and methods we don't describe here. Everyone's debugging process looks a little bit different, and that's perfectly okay! 
+The "steps" we're describing in this module don't necessarily take place in the order we describe -- often there's a flow from one method to another and back again as you get closer and closer to understanding, describing, and solving your problem.  This module also is not exhaustive -- you may have tips, ideas, and methods we don't describe here. Everyone's debugging process looks a little bit different, and that's perfectly okay!
 
 <div class = "important">
 One thing that tends to intimidate people is the dreaded **error message**.  Error messages can seem cryptic, but we encourage you to read them aloud if possible.  Reading aloud makes it less likely that you'll skim over important, useful, and recognizably helpful information.  Yes, you can certainly search for error message text in your favorite web browser, but you might surprise yourself with your debugging prowess if you slow down and read your error messages aloud.  At the very least, reading it out loud might help you identify _which parts of the error code_ to search, as the messages can contain some generic text mixed with elements that are very specific to your code or data.
@@ -224,7 +226,7 @@ You'll also want to include important details like what language you're working 
 
 To go back to our car analogy, would you rather help a friend figure out what's wrong with their car if they said "OK, let it get warm for about five minutes, then put it in reverse and you'll hear it squeal" or "Well, I think I have seen this on long trips, so maybe drive it for an hour or two, and then try a few things like parallel parking or backing into a garage and I think you might hear the sound"?
 
-Creating a minimal reproducible example means that you might have to do a significant amount of work to figure out how exactly to reproduce the problem, but that effort is incredibly useful -- to you, and to your online helpers. In fact, the process of creating a reprex may end up leading you to your own solution, all without ever getting to the stage of posting it. And if it doesn't (because that won't always happen) you're perfectly set up to get help from others! 
+Creating a minimal reproducible example means that you might have to do a significant amount of work to figure out how exactly to reproduce the problem, but that effort is incredibly useful -- to you, and to your online helpers. In fact, the process of creating a reprex may end up leading you to your own solution, all without ever getting to the stage of posting it. And if it doesn't (because that won't always happen) you're perfectly set up to get help from others!
 
 Stack Overflow itself offers a great post called [How to create a Minimal, Reproducible Example](https://stackoverflow.com/help/minimal-reproducible-example) and we strongly urge you to read this post before asking your first question.  If you're not sure how in your circumstance to create such an example, say so!  You might, for example, post using text like this:
 

@@ -6,6 +6,8 @@ version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
+code_language: 
+topic: Data Visualization
 title: Data Visualization in Open Source Software
 comment:   Introduction to principles of data vizualization and typical data vizualization workflows using two common open source libraries: ggplot2 and seaborn.
 

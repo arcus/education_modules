@@ -6,6 +6,8 @@ version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
+code_language: 
+topic: Omics
 title: Omics Orientation
 comment: This module provides a brief introduction to omics and its associated fields.
 long_description: Omics is a wide-reaching field, with many different subfields. This module aims to disambiguate several omics-related terms and topics, discuss some of the most popular omics research fields, and examine the challenges of and caveats for omics research.

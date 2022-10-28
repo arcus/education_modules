@@ -6,6 +6,8 @@ version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
+code_language: Git
+topic: Version Control 
 title: Setting Up Git on Windows
 
 comment: This module provides recommendations and examples to help new users configure Git on their Windows computer for the first time.

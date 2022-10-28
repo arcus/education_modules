@@ -6,6 +6,8 @@ version:  1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
+code_language: Bash
+topic: 
 title:  Bash: Searching and Organizing Files
 comment:  This module will teach you how to use the bash shell to search and organize your files.
 long_description: This module is for people who have a bit of experience with bash scripting and want to learn to use its power to organize their file and folders.

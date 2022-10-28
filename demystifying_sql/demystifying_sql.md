@@ -5,6 +5,8 @@ version:  1.0.1
 module_template_version: 2.0.0
 language: en
 narrator: US English Male
+code_language: SQL
+topic: 
 title: Demystifying SQL
 comment:  SQL is a relational database solution that has been around for decades.  Learn more about this technology at a high level, without having to write code.
 long_description: Do you have colleagues who use SQL or refer to "databases" or "the data warehouse" and you're not sure what it all means?  This module will give you some very high level explanations to help you understand what SQL is and some basic concepts for working with it.  There is no code or hands-on application in this module, so it's appropriate for people who have zero experience and want an overview of SQL.

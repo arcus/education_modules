@@ -6,6 +6,8 @@ version:  1.2.2
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
+code_language: R
+topic: Data Visualization
 title: Data Visualization in ggplot2
 comment:  This module includes code and explanations for several popular data visualizations, using R's ggplot2 package. It also includes examples of how to modify ggplot2 plots to customize them for different uses (e.g. adhering to journal requirements for visualizations).
 long_description: You can use the ggplot2 library in R to make many different kinds of data visualizations (also called plots, or charts), including scatterplots, histograms, line plots, and trend lines. This module provides an example of each of these kinds of plots, including R code to make them using the ggplot2 library. It may be hard to follow if you are brand new to R, but it is appropriate for beginners with at least a small amount of R experience.
