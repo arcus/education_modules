@@ -7,6 +7,7 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 code_language: Bash
+code_language_prereqs: none
 topic: Learn to Code
 title: Bash / Command Line 101
 comment:  This course will focus on accessing a command line program (or CLI, "command line interface") and running shell scripts on your home computer and learning how to navigate your file system as well as editing and searching files.

@@ -7,6 +7,7 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 code_language: Bash
+code_language_prereqs: bash_command_line_101
 topic: Learn to Code
 title:  Bash: Searching and Organizing Files
 comment:  This module will teach you how to use the bash shell to search and organize your files.

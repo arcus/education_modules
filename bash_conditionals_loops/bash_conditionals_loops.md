@@ -7,6 +7,7 @@ module_template_version: 2.0.1
 language: en
 narrator: UK English Female
 code_language: Bash
+code_language_prereqs: bash_command_line_102
 topic: Learn to Code
 title: Bash: Conditionals and Loops
 comment:  This module teaches you how to iterate through "for" loops and write conditional statements in Bash.
