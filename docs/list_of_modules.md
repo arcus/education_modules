@@ -4,6 +4,8 @@ title: Educational Modules
 
 If you are interested in joining a research cohort, please do not open these modules and advanced exposure will render you ineligible for participation in the study.
 
+If you do access any of these modules, please fill out the module feedback survey at the end to let us know what you think.
+
 | Training Course | Description | Estimated Time | Subject Category | Coding Language |
 | -- | -- | -- | -- | -- |
 | [Bash: Combining Commands](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_103_combining_commands/bash_103_combining_commands.md) | This module will teach you how to combine two or more commands in bash to create more complicated pipelines in Bash. | 30 minutes | Learn to Code | Bash |
