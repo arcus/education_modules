@@ -2,8 +2,8 @@
 # try to generate a file that has mermaid flowchart of modules.
 #############################
 
-type=`$1 | tr -d '[:space:]'`
-classificatione=`$2 | tr -d '[:space:]'`
+type=$1
+classification=$2
 
 echo $type
 echo $classification
@@ -24,7 +24,6 @@ do
       fi
   fi
 done
-
 
 for FOLDER in *
 do
