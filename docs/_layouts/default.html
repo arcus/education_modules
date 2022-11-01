@@ -12,21 +12,21 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
 
-<!-- tablesorter scripts -->    
+<!-- tablesorter scripts -->
     <link rel="stylesheet" href="https://mottie.github.io/tablesorter/css/theme.default.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" 
-        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
-  
+
   <script type="text/javascript" src="https://mottie.github.io/tablesorter/dist/js/jquery.tablesorter.min.js"> </script>
 <script type="text/javascript" >
         $(function() {
-                console.log("sorting table");
+                
                 $("table").tablesorter();
         });
 </script>
 <!-- tablesorter-->
-    
+
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
@@ -81,7 +81,7 @@
                  <img src="https://raw.githubusercontent.com/arcus/education_modules/gh-pages/assets/media/DART.png" style="max-width: 100px;"
                     alt="DART logo" />
                  </a>
-              </figure>          
+              </figure>
         {% if site.github.is_project_page %}
           <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
         {% endif %}
