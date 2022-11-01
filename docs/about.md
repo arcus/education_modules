@@ -24,3 +24,7 @@ We invite and encourage you to help in any way you feel you can, from letting us
 ## Thanks
 
 This project is grateful for the generosity of [Liascript](https://github.com/LiaScript)'s creators and sustainers, André Dietrich and Sebastian Zug, for sharing their work (and advice!) freely.
+
+## Get Involved
+
+Fill out the [DART interest form](https://redcap.chop.edu/surveys/?s=FPHWFNEA9KN3HERF) to learn more about ways to get involved with the DART program.

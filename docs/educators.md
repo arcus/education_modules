@@ -7,7 +7,7 @@ layout: default
 
 You are welcome and encouraged to use any of the educational materials created on this site. You can tailor which modules you give to you learners based on their needs, or adapt them to fit your purposes. Please read the section [Remixing Our Materials](#remixing-our-materials) to learn about our Creative Commons Attribution-ShareAlike license and suggestions of ways to use this curriculum.
 
-Check out the list of [published educational modules](list_of_modules).
+Check out the list of [published educational modules](list_of_modules) and fill out the [DART interest form](https://redcap.chop.edu/surveys/?s=FPHWFNEA9KN3HERF) to be kept up to date on curriculum development!
 
 
 ## Remixing Our Materials

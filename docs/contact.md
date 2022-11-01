@@ -3,4 +3,4 @@ title: Contact DART
 layout: default
 ---
 
-You can email us at <dart@chop.edu>. A member of the [Arcus Education](https://education.arcus.chop.edu/team/) team will get back to you.
+Please fill out the [DART interest form](https://redcap.chop.edu/surveys/?s=FPHWFNEA9KN3HERF) to ask a question or receive more information about the program.
