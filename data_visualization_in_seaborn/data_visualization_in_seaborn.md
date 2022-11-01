@@ -7,7 +7,9 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 code_language: Python
+code_language_prereqs: python_basics_writing_python_code
 topic: Data Visualization
+topic_prereqs: data_visualization_in_open_source_software
 title: Data Visualization in seaborn
 
 comment:  This module includes code and explanations for several popular data visualizations using python's seaborn library. It also includes examples of how to modify seaborn plots to customize them for different uses.  

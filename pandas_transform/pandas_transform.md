@@ -7,6 +7,7 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 code_language: Python
+code_language_prereqs: python_basics_writing_python_code
 topic: Data Transformation 
 title: Transform Data with pandas
 comment:  This is an introduction to transforming data using a Python library named pandas.

@@ -7,6 +7,7 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 code_language: Python
+code_language_prereqs: demystifying_python
 topic: Learn to Code
 title: Python Basics: Writing Python Code
 comment: Learn the foundations of writing Python code.

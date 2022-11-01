@@ -31,7 +31,7 @@ do
           code_prereqs=`grep -m 1 "code_language_prereqs:" $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //"` ### make the code_language a variable
           for prereq in $code_prereqs
           do
-            if [[ "$prereq" != "none" ]] ##If a course is not a prereq to anything and has no prereqs itself, it won't show up... hmmm.... that may be a problem
+            if [[ "$prereq" != "none" ]] ##If a course has prereqs left blank... we can just make the QA force people to put "none" for their prereqs!
               then
                 prereq_title=`grep -m 1 "title:" $prereq/$prereq.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]' | tr ',' ' '`
                 module_title=`grep -m 1 "title:" $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]' | tr ',' ' '`

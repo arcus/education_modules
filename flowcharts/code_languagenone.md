@@ -1,0 +1,21 @@
+graph LR
+data_storage_models[Types of Data Storage Solutions];
+click data_storage_models href "https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_storage_models/data_storage_models.md";
+data_visualization_in_open_source_software[Data Visualization in Open Source Software];
+click data_visualization_in_open_source_software href "https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md";
+directories_and_file_paths[Directories and File Paths];
+click directories_and_file_paths href "https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md";
+how_to_troubleshoot[How to Troubleshoot];
+click how_to_troubleshoot href "https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/how_to_troubleshoot/how_to_troubleshoot.md";
+learning_to_learn[Learning to Learn Data Science];
+click learning_to_learn href "https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/learning_to_learn/learning_to_learn.md";
+omics_orientation[Omics Orientation];
+click omics_orientation href "https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/omics_orientation/omics_orientation.md";
+reproducibility[Reproducibility  Generalizability  and Reuse: How Technology Can Help];
+click reproducibility href "https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/reproducibility/reproducibility.md";
+statistical_tests[Statistical Tests in Open Source Software];
+click statistical_tests href "https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md";
+tidy_data[Tidy Data];
+click tidy_data href "https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/tidy_data/tidy_data.md";
+using_redcap_api[Using the REDCap API];
+click using_redcap_api href "https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/using_redcap_api/using_redcap_api.md";

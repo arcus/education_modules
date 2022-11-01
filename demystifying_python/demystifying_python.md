@@ -7,6 +7,7 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 code_language: Python
+code_language_prereqs: none 
 topic: Learn to Code
 title: Demystifying Python
 comment:  This module introduces the Python programming language, explores why Python is useful in research, and describes how to download Python and Jupyter.
