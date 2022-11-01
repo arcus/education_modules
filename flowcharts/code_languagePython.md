@@ -1,3 +1,4 @@
+```mermaid 
 graph LR
 data_visualization_in_seaborn[Data Visualization in seaborn];
 click data_visualization_in_seaborn href "https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md";
@@ -12,3 +13,4 @@ data_visualization_in_open_source_software[Data Visualization in Open Source Sof
 click data_visualization_in_open_source_software href "https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md";
 python_basics_writing_python_code[Python Basics: Writing Python Code] --> pandas_transform[Transform Data with pandas];
 demystifying_python[Demystifying Python] --> python_basics_writing_python_code[Python Basics: Writing Python Code];
+``` 

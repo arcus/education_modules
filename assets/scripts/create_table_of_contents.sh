@@ -81,11 +81,11 @@ done
 # This is an additional table of contents for use on our public facing website for learners and educators, not potential developers.
 #############################
 
-COLUMNS="title comment estimated_time"
+COLUMNS="title comment estimated_time topic code_language"
 
 # Create a .md file with the column headings specified above
 
-HEADINGS='| Training Course | Description | Estimated Time |'
+HEADINGS='| Training Course | Description | Estimated Time | Subject Category | Coding Language |'
 BREAK='|'
 for COL in $COLUMNS
 do
@@ -109,6 +109,10 @@ do
           ROW+=" `grep -m 1 "comment:" $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'` |"  # Pull the YAML entry but remove excess white space at the front, as well as any unprintable characters
       #Add estimated time
           ROW+=" `grep -m 1 "estimated_time:" $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'` |"  # Pull the YAML entry but remove excess white space at the front, as well as any unprintable characters
+      #Add Subject Category
+          ROW+=" `grep -m 1 "topic:" $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'` |"  # Pull the YAML entry but remove excess white space at the front, as well as any unprintable characters
+      #Add coding language
+          ROW+=" `grep -m 1 "code_language:" $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'` |"  # Pull the YAML entry but remove excess white space at the front, as well as any unprintable characters
       #  done
       echo $ROW >> site_table_of_contents.md
   fi

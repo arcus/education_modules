@@ -7,7 +7,8 @@ classification=$2
 
 echo $type
 echo $classification
-echo "graph LR" > flowcharts/$type$classification.md
+echo "\`\`\`mermaid ">flowcharts/$type$classification.md
+echo "graph LR" >> flowcharts/$type$classification.md
 
 ###
 for FOLDER in *
@@ -57,3 +58,5 @@ do
       fi
   fi
 done
+
+echo "\`\`\` ">>flowcharts/$type$classification.md
