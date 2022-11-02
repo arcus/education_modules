@@ -110,7 +110,7 @@ You do not need to configure Git at the this time, so following the instructions
 Once you have Git Bash installed, you are ready to get started learning how to use the bash shell!
 
 
-## The bash shell
+## The Bash Shell
 
 Your computer has an **Operating System** (OS), most commonly either Windows, Mac, or Linux. The core for the OS itself is called the **kernel**; it's the heart of how everything works in your computer, but you can't actually interface with it directly as a user. Programs that are designed to work with your OS can communicate with the kernel (Word, RStudio, Chrome, etc.), but if you want to do something outside of one of those programs you can't connect to the kernel directly yourself. That's where a shell comes in.
 
@@ -480,15 +480,7 @@ The quotes around the text can also be safely omitted in this case, but that isn
 ***
 
 
-## Additional Resources
-
-- [Brief Illustration of the Difference between Shell and Kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/)
-
-- [Reinforce Your New Knowledge through this Learning the Shell Page](https://linuxcommand.org/lc3_learning_the_shell.php)
-
-- Software Carpentries offers an open source course [introducing new users to the Unix Shell](https://swcarpentry.github.io/shell-novice/)
-
-### Getting help from the manual
+## Getting Help from the Manual
 
 <div class="warning">
 
@@ -507,6 +499,13 @@ When you want to exit the documentation, press the `Q` key on your keyboard to r
 
 ![Grep man command output with the full definition and some options displayed.](media/grep_output_large.png)
 
+## Additional Resources
+
+- [Brief Illustration of the Difference between Shell and Kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/)
+
+- [Reinforce Your New Knowledge through this Learning the Shell Page](https://linuxcommand.org/lc3_learning_the_shell.php)
+
+- Software Carpentries offers an open source course [introducing new users to the Unix Shell](https://swcarpentry.github.io/shell-novice/)
 
 ## Feedback
 
