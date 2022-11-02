@@ -27,7 +27,7 @@ This work is [licensed](LICENSE) with Creative Commons Attribution-ShareAlike 4.
 
 If you do use these materials, we would love to hear from you!  Please [let us know about your experience](mailto:dart@chop.edu) so we can continue to improve.
 
-## Links to Repository Contents
+## Links To Repository Contents
 
 |Name|LiaScript Link|Markdown Link|Current Version|Short Description|
 |--|--|--|--|--|
