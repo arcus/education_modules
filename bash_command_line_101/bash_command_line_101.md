@@ -428,7 +428,7 @@ Vim may be the default editor in your shell, but that doesn't mean it is the bes
 **Stuck in Vim? **
 
  
-The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. That is why we don't recommend it as a text editor. If you accidentally find yourself stuck in it, hit the `Esc` key, followed by `:`+`Q`+`!` (colon, lower-case 'q', exclamation mark), then hitting Return to return to the shell.
+The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. That is why we don't recommend it as a text editor. If you accidentally find yourself stuck in it, hit the `Esc` key, followed by `:`+`q`+`!` (colon, lower-case 'q', exclamation mark), then hitting Return to return to the shell.
 </div>
 
 
