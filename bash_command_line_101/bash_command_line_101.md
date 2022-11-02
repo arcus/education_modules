@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version:  1.2.0
+version:  1.2.1
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
@@ -261,7 +261,7 @@ The bash shell can see and move files of all types, but it is most useful for in
 A [**plain text**](https://en.wikipedia.org/wiki/Plain_text) file is a file that contains only text characters like the ones you can type directly using your keyboard. For example the words "plain text" at the beginning of this paragraph, which are both bolded and hyperlinked, are not being presented to you as plain text. You might have run into problems with files that aren't in plain text if, for example, you ever opened a file in a new program and lost some of the formatting like particular fonts in Word or conditional highlighting in Excel.
 
 <div class = "learnmore">
-Even though the words "plain text" in the previous paragraph have some non-text attributes, the are all recorded as plain text in the Markdown (`.md`) file of this lesson. If you open the [Markdown file](link/to/git/of/this/file), you will see only characters that can be typed by a keyboard:
+Even though the words "plain text" in the previous paragraph have some non-text attributes, they are all recorded as plain text in the Markdown (`.md`) file of this lesson. If you open the [Markdown file](link/to/git/of/this/file), you will see only characters that can be typed by a keyboard:
 
 ```
 [**plain text**](https://en.wikipedia.org/wiki/Plain_text)
@@ -288,7 +288,7 @@ Some common types of plain text files you might have seen before are:
 | `.html` | html file |
 
 <div class = "learnmore">
-The file endings (or **extensions**) like `.txt`, `.csv`, or `.doc` (Word), `.xslx` (Excel) are the part of the file name that lets your computer know what type of program to use to open it. The ending doesn't actually impact the contents of the file, which is why we will be able to create files like `my_file` in the next section with no file ending at all.
+The file endings (or **extensions**) like `.txt`, `.csv`, `.doc` (Word), or `.xslx` (Excel) are the part of the file name that lets your computer know what type of program to use to open it. The ending doesn't actually impact the contents of the file, which is why we will be able to create files like `my_file` in the next section with no file ending at all.
 </div>
 
 
@@ -425,9 +425,10 @@ Vim may be the default editor in your shell, but that doesn't mean it is the bes
 
 <div class = "help">
 
-**Stuck in Vim?**
+**Stuck in Vim? **
 
-The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. That is why we don't recommend it as a text editor. If you accidentally find yourself stuck in it, hit the `Esc` key, followed by `:`+`Q`+`!` (colon, lower-case 'q', exclamation mark), then hitting Return to return to the shell.
+ 
+The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. That is why we don't recommend it as a text editor. If you accidentally find yourself stuck in it, hit the `Esc` key, followed by `:`+`q`+`!` (colon, lower-case 'q', exclamation mark), then hitting Return to return to the shell.
 </div>
 
 
