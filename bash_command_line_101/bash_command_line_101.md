@@ -488,7 +488,7 @@ The bash manual is available to you in most bash shells, although not in Git Bas
 
 </div>
 
-Entering `man command_name` reveals the documentation (`man` is short for "manual") for the function `command_name`.  This can be useful if you think a command might be useful and want to learn more about it, or have forgotten how to use a command or what its options are.
+Entering `man command_name` reveals the documentation for the function `command_name`  (`man` is short for "manual").  This can be helpful if you think a command might be useful and want to learn more about it, or have forgotten how to use a command or what its options are.
 
 For example if you wanted to know more about the command `grep` you could type `man grep`. The output contains a description. The first sentence of the description tells us what `grep` does, it "searches any given input files, selecting lines that match one or more patterns."
 
