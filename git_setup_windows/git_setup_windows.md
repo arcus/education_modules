@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  1.0.2
+version:  1.0.3
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -10,7 +10,7 @@ title: Setting Up Git on Windows
 
 comment: This module provides recommendations and examples to help new users configure Git on their Windows computer for the first time.
 
-long_description: If you're ready to start using the Git version control system, this lesson will walk you through how to get set up. This lesson should be a good fit for people who already have an idea of what version control is but may not have any experience using it yet. No previous experience with Git is expected. This lesson is specific to Windows machines, If you are using Mac or Linux, please follow along with the [set-up guide for those computers](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md).
+long_description: If you're ready to start using the Git version control system, this lesson will walk you through how to get set up. This lesson should be a good fit for people who already have an idea of what version control is but may not have any experience using it yet. No previous experience with Git is expected. This lesson is specific to Windows machines, If you are using Mac or Linux, please follow along with the [set-up guide for those computers](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md).
 
 estimated_time: 25 min
 
@@ -53,7 +53,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 ## Lesson Preparation
 
 <div class = "important">
-Note that this module is written specifically for people working on Windows computers. If you are using a Mac or Linux machine, you should reference [Git Setup for Mac and Linux](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/setting_up_git_mac_and_linux/setting_up_git_mac_and_linux.md) instead.
+Note that this module is written specifically for people working on Windows computers. If you are using a Mac or Linux machine, you should reference [Git Setup for Mac and Linux](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md) instead.
 </div>
 
 Search in your Start Menu for the application Git Bash. If the Git Bash application is already on your computer, you can proceed to the section on [how to use Git Bash](#git-bash).
