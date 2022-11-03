@@ -57,7 +57,7 @@ You will get the most out of this lesson if you follow along with the examples a
 
 **Open a bash shell.**
 
-If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash 101](link/here) module.
+If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
 <div class = "important">
 We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
@@ -106,9 +106,11 @@ Whether or not a script has the traditional `.sh` ending to its file name, you s
 The two symbol sequence `#!` is called a [**shebang**](https://en.wikipedia.org/wiki/Shebang_(Unix) and without it your computer wouldn't know that it is expected to run what follows as code.
 
 <div class = "learnmore">
+
 The symbol `#` has [many names](https://en.wikipedia.org/wiki/Number_sign#). You might be most familiar with it as a "hashtag," "number sign," or the "pound sign." In the context of coding it is usually called either a "hash" or, borrowing from musical notation, a "sharp."
 
 In the context of coding, the symbol `!` is called a "bang." The word shebang is a shortening of either ha**sh**-bang or **sh**arp-bang.
+
 </div>
 
 
@@ -131,6 +133,7 @@ Which of the following statements about scripts are TRUE?
 **Every bash command is a script.** FALSE: Even though bash is a "scripting language," the word "script" refers to a small program, not an individual bash command.
 
 **If you are going to want to do a particular sequence of commands many times, a script can help you by automating that sequence.** TRUE
+
 </div>
 ***
 
