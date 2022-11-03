@@ -80,28 +80,30 @@ A **script** is a small program that you can run on your computer.
 
 A **bash script** is a small program that automates bash commands and lets you run the same sequence of commands as many times as you want. It might be as simple as a program that takes a file you have downloaded and standardizes the file name, or as complicated as creating new files based on information stored in several other files in other locations or doing complex tasks based on a user's typed responses to questions.
 
-You might have heard the terms "script" and "bash scripting" and "shell script" used interchangeably. This is probably because the bash language is most powerful when you use it to write short scripts that do exactly what you want. Once you get the hang of writing scripts, you can automate almost any work that you expect to need to use multiple times!
+You might have heard the terms "script" and "bash scripting" and "shell script" used interchangeably. This is probably because the Bash language is most powerful when you use it to write short scripts that do exactly what you want. Once you get the hang of writing scripts, you can automate almost any work that you expect to need to use multiple times!
 
 <div class = "learnmore">
 A **scripting language** is a type of programming language that, like bash or python, does not need to be compiled in order for your code to run.
 </div>
 
 
-### Recognizing a bash script
+### Recognizing a Bash script
 
-You don't have to be able to write a script in order to use one, but you do need to know how to recognize one.
+You don't have to be able to write a script in order to use one, but you do need to know how to recognize one. Any file could in theory be a Bash script, but there are a few conventions that good scripts frequently use to help you, and your computer, know that they file is a script.
 
 **File name**
 
-The conventional file ending for a script is `.sh`. Usually a script will be informatively named, for example `fibonacci.sh` might be a script that computes the numbers in the Fibonacci sequence. Even though scripts don't have to use the file ending `.sh`, this is the most common way to name them so that you and your collaborators can locate all of the scripts quickly and easily (i.e. `find *.sh`).
+The standard file ending for a script is `.sh`. Usually a script will be informatively named, for example `fibonacci.sh` might be a script that computes the numbers in the Fibonacci sequence. Even though scripts don't have to use the file ending `.sh`, this is the most common way to name them so that you and your collaborators can locate all of the scripts quickly and easily (i.e. `find *.sh`).
 
 **First line**
 
-Whether or not a script has the traditional `.sh` ending to its file name, you should be able to tell if a file is a script by looking at the first line of the file. The first line of a script tells your computer that it should run the rest of the file as code, and specifies what language the script in. Later in this lesson we will be working with scripts with the first line:
+Later in this lesson we will be working with scripts with the first line:
 
 ```
 #! /usr/bin/bash
 ```
+
+This first line of a file containing a Bash script tells your computer that it should run the rest of the file as Bash code. If you are in a Bash shell, the script will run even without this line. However as you use scripting to speed up more and more processes, you may want to run a Bash script from a different place, say inside of an R program, where telling your computer the following code is Bash is necessary. On the other hand you might see a script that starts with the first line `#! /usr/bin/python`. This would tell both you and your computer that the following code is not in Bash, but in the programming language Python.
 
 The two symbol sequence `#!` is called a [**shebang**](https://en.wikipedia.org/wiki/Shebang_(Unix) and without it your computer wouldn't know that it is expected to run what follows as code.
 
@@ -142,7 +144,9 @@ Which of the following statements about scripts are TRUE?
 downloadable examples?
 
 <div class = "warning">
+
 Using a script written by a trusted colleague can help you streamline your work without replicating their effort! But downloading a script off of the internet isn't a good idea unless you can look at the code and verify that it does what you think it should, and nothing else.
+
 </div>
 
 ### Basic examples
