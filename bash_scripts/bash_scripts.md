@@ -152,9 +152,9 @@ In this section we will learn how to use the pre-written scripts in the `scripts
 Navigate to the `scripts` folder and use `ls` to take a look at the example scripts there.
 
 ```
-list_animals.sh
-example2.sh
-example3.sh
+count_mammals.sh
+count_type.sh
+interactive_count_type.sh
 ```
 
 The `.sh` file extension tells us these are scripts, but they are also just plain text files so we can look at the contents with `cat`. Try `cat list_animals.sh` and see what it contains.
