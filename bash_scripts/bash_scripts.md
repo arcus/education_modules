@@ -97,13 +97,13 @@ The standard file ending for a script is `.sh`. Usually a script will be informa
 
 **First line**
 
-Later in this lesson we will be working with scripts with the first line:
+Sometimes scripts contain a special first line that looks something like this:
 
 ```
 #! /usr/bin/bash
 ```
 
-This first line of a file containing a Bash script tells your computer that it should run the rest of the file as Bash code. If you are in a Bash shell, the script will run even without this line. However as you use scripting to speed up more and more processes, you may want to run a Bash script from a different place, say inside of an R program, where telling your computer the following code is Bash is necessary. On the other hand you might see a script that starts with the first line `#! /usr/bin/python`. This would tell both you and your computer that the following code is not in Bash, but in the programming language Python.
+This first line tells your computer that it should run the rest of the file as Bash code. If you are in a Bash shell, the script will run even without this line. However as you use scripting to speed up more and more processes, you may want to run a Bash script from a different place, say inside of an R program, where telling your computer the following code is Bash is necessary. On the other hand you might see a script that starts with the first line `#! /usr/bin/python`. This would tell both you and your computer that the following code is not in Bash, but in the programming language Python.
 
 The two symbol sequence `#!` is called a [**shebang**](https://en.wikipedia.org/wiki/Shebang_(Unix) and without it your computer wouldn't know that it is expected to run what follows as code.
 
@@ -114,6 +114,12 @@ The symbol `#` has [many names](https://en.wikipedia.org/wiki/Number_sign#). You
 In the context of coding, the symbol `!` is called a "bang." The word shebang is a shortening of either ha**sh**-bang or **sh**arp-bang.
 
 </div>
+
+**The example scripts in this module will not start with `#! /usr/bin/bash` for two reasons:**
+
+1. Since we will be running all scripts from inside of a Bash shell, your computer will assume that the code is Bash without being told.
+2. The path `usr/bin/bash` may not be exactly where the Bash language lives on your computer. If you start combining scripts of different languages or running Bash scripts from outside of the Bash shell, you will need to find out where Bash is stored on your computer and use that path in the first line of any scripts. That, however, is outside the scope of this module.
+
 
 
 ### Quiz: Scripts
@@ -141,15 +147,30 @@ Which of the following statements about scripts are TRUE?
 
 ## Calling a script
 
-downloadable examples?
+In this section we will learn how to use the pre-written scripts in the `scripts` folder inside your `learning_bash-main` directory.
+
+Navigate to the `scripts` folder and use `ls` to take a look at the example scripts there.
+
+```
+list_animals.sh
+example2.sh
+example3.sh
+```
+
+The `.sh` file extension tells us these are scripts, but they are also just plain text files so we can look at the contents with `cat`. Try `cat list_animals.sh` and see what it contains.
+
+The first lines starting with `#`s are a description of what the code does. The `#` symbol (not followed by a `!`) tells the computer that what follows is a **comment** for human readers of this file, not code that the computer should try to read. While every script _should_ include a commented out section explaining its function, not every script does.
 
 <div class = "warning">
 
-Using a script written by a trusted colleague can help you streamline your work without replicating their effort! But downloading a script off of the internet isn't a good idea unless you can look at the code and verify that it does what you think it should, and nothing else.
+Using a script written by a trusted colleague can help you streamline your work without replicating their effort! But running a script you downloaded off of the internet isn't a good idea unless you can look at the code and verify that it does what you think it should, and nothing else.
 
 </div>
 
-### Basic examples
+### Running a basic script
+
+The `list_animals.sh` script is
+
 
 ### Scripts that take arguments
 
