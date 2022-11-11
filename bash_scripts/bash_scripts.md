@@ -6,7 +6,7 @@ version:  1.0.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
-title:  Bash: Scripting Basics
+title:  Bash: Reusable Scripts
 comment:  This module will teach you how to create and use simple bash scripts so to make repetitive tasks as simple as possible. If you have some experience with bash and want to learn how to save and reuse bash processes, this lesson is for you.
 estimated_time: 1 hour
 
@@ -24,7 +24,7 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/sty
 script: https://kit.fontawesome.com/83b2343bd4.js
 -->
 
-# Bash: Scripting Basics
+# Bash: Reusable Scripts
 
 <div class = "overview">
 
