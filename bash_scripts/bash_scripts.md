@@ -86,6 +86,31 @@ You might have heard the terms "script" and "bash scripting" and "shell script" 
 A **scripting language** is a type of programming language that, like bash or python, does not need to be compiled in order for your code to run.
 </div>
 
+### Why use a script?
+
+Anything that you can type into the command line can be incorporated into a script. But what makes a script better than entering code directly into the command line?
+
+Reproducibility
+---
+If you are processing research data, it is important for you, your collaborators, and any potential readers or users of your work to be able to reproduce your results. While you might be able to describe what steps you took, it is much easier and more robust to say "we processed the data using the `initial_processing.sh`" and providing that file so that others can exactly replicate your steps.
+
+Reusability
+---
+If you have data you will have to process each time it is updated, a script can save you from having to relearn how to code the steps each time.
+
+Organization and troubleshooting
+---
+
+Even if you don't care about reproducibility or reusability, putting a long command into a script can save you lots of time because you can edit the script if you make a typo instead of re-entering the entire command. This is particularly true when using loops or piping multiple commands in a sequence.
+
+Even the simplest of loops are easier handle as scripts than typed into the command line. Compare entering something like `bash scripts/identify_dat_files.sh` to entering this correctly:
+
+```
+for file in *.dat
+do
+  echo $file is a data file
+done
+```
 
 ### Recognizing a Bash script
 
@@ -279,16 +304,24 @@ You can also put the string `bear` in single or double quotes and it will still 
 
 ## Writing a script
 
-Anything that you can type into the command line can be incorporated into a script. Even if you aren't going to be reusing a command in the future, putting a long command into a script can save you lots of time because you can edit the script if you make a typo instead of re-entering the entire command. This is particularly true when using loops or piping multiple commands in a sequence.
+In this section you will be writing some scripts of your own. For consistency, put your new scripts in the `scripts` folder within the `learning_bash-main` directory.
 
-Even the simplest of loops are easier handle as scripts than typed into the command line. Compare entering something like `bash scripts/identify_dat_files.sh` to entering this correctly:
+Let's start by making a file
 
 ```
-for file in *.dat
-do
-  echo $file is a data file
-done
+echo "echo This is my first script" > first_script.sh
 ```
+
+You should now have a file called `first_script.sh` which contains the single line
+
+```
+echo This is my first script
+```
+
+What do you think will happen if you run `bash first_script.sh`? Try it and find out if you were right
+
+### Incorporating arguments
+`$1` `$2` `$@`
 
 ### Defining new variables
 
@@ -296,9 +329,6 @@ done
 ### Subshells
 
 `$( )`
-
-### Incorporating arguments
-`$1` `$2` `$@`
 
 ### Interactive inputs
 
