@@ -348,6 +348,10 @@ cat $@
 
 ### Defining new variables using subshells
 
+Define a subshell
+
+Explain the difference between `$()` and regular back ticks.
+
 `new_variable=$( )`
 
 ### Interactive inputs
