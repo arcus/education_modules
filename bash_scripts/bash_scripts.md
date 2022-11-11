@@ -261,7 +261,7 @@ You navigate to the `learning_bash-main` directory. You want a list of the anima
 [[bash scripts/my_code.sh bear]]
 <script>
   let input = "@input".trim();
-  input == "bash scripts/my_code.sh bear" || input == "bash scripts/my_code.sh \"bear\"" || input == "bash scripts/my_code.sh \'bear\';
+  input == "bash scripts/my_code.sh bear" || input == "bash scripts/my_code.sh \"bear\"" || input == "bash scripts/my_code.sh \'bear\'";
 </script>
 ***
 <div class = "answer">
