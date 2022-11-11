@@ -254,14 +254,13 @@ Suppose there were another file called `my_code.sh` in the folder `scripts`. A t
 ```
 # Takes one argument and returns a list of the animals listed in Animals.csv that contain that string
 # Run from the directory containing Animals.csv
-
 ```
 
 You navigate to the `learning_bash-main` directory. You want a list of the animals in that have the word "bear" in their name. What should you enter into the command line?
 
 [[bash scripts/my_code.sh bear]]
 <script>
-  let input = "@input".trim().toLowerCase();
+  let input = "@input".trim();
   input == "bash scripts/my_code.sh bear" || input == "bash scripts/my_code.sh \"bear\"" || input == "bash scripts/my_code.sh \'bear\';
 </script>
 ***
@@ -280,6 +279,16 @@ You can also put the string `bear` in single or double quotes and it will still 
 
 ## Writing a script
 
+Anything that you can type into the command line can be incorporated into a script. Even if you aren't going to be reusing a command in the future, putting a long command into a script can save you lots of time because you can edit the script if you make a typo instead of re-entering the entire command. This is particularly true when using loops or piping multiple commands in a sequence.
+
+Even the simplest of loops are easier handle as scripts than typed into the command line. Compare entering something like `bash scripts/identify_dat_files.sh` to entering this correctly:
+
+```
+for file in *.dat
+do
+  echo $file is a data file
+done
+```
 
 ### Defining new variables
 
