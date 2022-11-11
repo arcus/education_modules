@@ -249,11 +249,36 @@ Each time you run this interactive script, you can enter a different string to s
 
 ### Quiz: Calling scripts
 
+Suppose there were another file called `my_code.sh` in the folder `scripts`. A trusted colleague wrote it, and luckily they did a better job including comments than naming their file. The first two lines of the code are:
+
+```
+# Takes one argument and returns a list of the animals listed in Animals.csv that contain that string
+# Run from the directory containing Animals.csv
+
+```
+
+You navigate to the `learning_bash-main` directory. You want a list of the animals in that have the word "bear" in their name. What should you enter into the command line?
+
+[[bash scripts/my_code.sh bear]]
+<script>
+  let input = "@input".trim().toLowerCase();
+  input == "bash scripts/my_code.sh bear" || input == "bash scripts/my_code.sh \"bear\"" || input == "bash scripts/my_code.sh \'bear\';
+</script>
+***
+<div class = "answer">
+
+You can run the script with the command `bash scripts/my_code.sh bear`.
+
+- The `bash` command says you are going to run all of the lines of code inside the file.
+- The relative path to the script is `scripts/my_code.sh`.
+- The script takes one argument, the string you are searching for. In this case the string you are searching for is `bear`.
+
+You can also put the string `bear` in single or double quotes and it will still be interpreted as a single string.
+
+</div>
+***
 
 ## Writing a script
-
-### Incorporating arguments
-`$1` `$2` `$@`
 
 
 ### Defining new variables
@@ -262,6 +287,11 @@ Each time you run this interactive script, you can enter a different string to s
 ### Subshells
 
 `$( )`
+
+### Incorporating arguments
+`$1` `$2` `$@`
+
+### Interactive inputs
 
 
 ### Quiz: Writing scripts
