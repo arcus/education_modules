@@ -258,16 +258,6 @@ Setting up a User/Home Directory
 `/bin` folder?
 
 ### Basic commands
-### Bash syntax
-
-- `~` shortcut for your home directory
-- `.` shortcut for your current directory
-- `..` shortcut for your previous directory
-  The above three shortcuts are highly useful for executing scripts in the proper location once you are collaborating in an active project with multiple files and folders.
-
-  - `echo`: prints out text in the terminal window- especially useful for declaring environment variables which reveal both permissions and what strings can be passed.
-
-    ![Echo variable example demonstrating how to print and set the price of a pint.](media/echo_example_large.png)
 
 
 #### Writing output to a file with `>`
