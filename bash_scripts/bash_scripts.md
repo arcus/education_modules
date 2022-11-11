@@ -145,7 +145,7 @@ Which of the following statements about scripts are TRUE?
 </div>
 ***
 
-## Calling a script
+## Calling an existing script
 
 In this section we will learn how to use the pre-written scripts in the `scripts` folder inside your `learning_bash-main` directory.
 
@@ -157,7 +157,7 @@ count_type.sh
 interactive_count_type.sh
 ```
 
-The `.sh` file extension tells us these are scripts, but they are also just plain text files so we can look at the contents with `cat`. Try `cat list_animals.sh` and see what it contains.
+The `.sh` file extension tells us these are scripts, but they are also just plain text files so we can look at the contents with `cat`. Try `cat count_mammals.sh` and see what it contains.
 
 The first lines starting with `#`s are a description of what the code does. The `#` symbol (not followed by a `!`) tells the computer that what follows is a **comment** for human readers of this file, not code that the computer should try to read. While every script _should_ include a commented out section explaining its function, not every script does.
 
@@ -167,15 +167,79 @@ Using a script written by a trusted colleague can help you streamline your work 
 
 </div>
 
-### Running a basic script
+### Running a script with `bash`
 
-The `list_animals.sh` script is
+The command `bash` takes a file as its argument and executes all of the commands in that file. Every line in the file that is not commented out with a `#` will be automatically entered into the command line, in order.
 
+The `count_mammals.sh` script contains two lines of code:
+
+```
+count=`grep mammal Animals.csv | wc -l`
+
+echo There are $count mammals on the list.
+```
+
+Entering these two lines into the command line by hand will give you the exact same output as running the script.
+
+Where are you?
+---
+The first line of code above assumes that there is a file called `Animals.csv` in your present working directory. If you try to run that command from somewhere else, like inside the `scripts` directory, you will get an error message.
+
+Give it a try:
+
+```
+count=`grep mammal Animals.csv | wc -l`
+```
+
+If you are in `scripts` you will get the message:
+
+```
+No such file or directory
+```
+
+But if you are in `learning_bash-main` you won't get any output at all. This is because the code is defining a variable, `count`. Try running the second line and see what happens:
+
+```
+echo There are $count mammals on the list.
+```
+
+Where is the script?
+---
+The commands inside of the `count_mammals.sh` script need to be run from the `learning_bash-main` directory, but that is not where the script itself is. You can use the relative path `scripts/count_mammals.sh` to refer to the file from that main directory.
+
+Try it yourself
+---
+Use `pwd` to check that you are currently in the `learning_bash-main` directory, and if not, navigate there. Now you can call the script with the `bash` command:
+
+```
+bash scripts/count_mammals.sh
+```
 
 ### Scripts that take arguments
 
+The `bash` command takes only one argument, the name of a file, but that file may itself take one or more arguments. These arguments follow the name of the file.
+
+The `count_type.sh` script takes one argument. Give it a try:
+
+```
+bash scripts/count_type.sh mammal
+```
+
+Try running the command again but replacing the argument `mammal` with `fish`, `red`, `bear`, or `alien`. What happens?
+
 ### Interactive scripts
 
+The third script also takes an argument, but instead of getting that argument from the entry into the command line, this script prompts you (the user) to enter the argument it needs.
+
+Try running it:
+
+```
+bash scripts/interactive_count_type.sh
+```
+
+You will get a message asking you what string you want to search for. Type a string (e.g. `mammal` or `fish` or `red`) and press the `enter` or `return` key.
+
+Each time you run this interactive script, you can enter a different string to search for in the `Animals.csv` file.
 
 ### Quiz: Calling scripts
 
