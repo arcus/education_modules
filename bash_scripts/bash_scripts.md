@@ -318,10 +318,19 @@ You should now have a file called `first_script.sh` which contains the single li
 echo This is my first script
 ```
 
-What do you think will happen if you run `bash first_script.sh`? Try it and find out if you were right
+What do you think will happen if you run `bash first_script.sh`? Try it and find out if you were right.
 
 ### Incorporating arguments
-`$1` `$2` `$@`
+
+If your script has an argument, you need to be able to refer to that argument in the script even though you don't know what the user might input. Bash scripts can take any number of arguments, and they are referred to by the order in which they are entered:
+
+| Variable | References |
+| :-: | :- |
+| `$1` | First argument |
+| `$2` | Second argument |
+| `$29` | 29th argument |
+|`$@` | All entered arguments |
+
 
 ### Defining new variables
 
