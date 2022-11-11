@@ -1,22 +1,22 @@
 <!--
 
-author:   Nicole Feldman and Elizabeth Drellich
-email:    feldmanna@chop.edu and drelliche@chop.edu
+author:   Elizabeth Drellich
+email:    drelliche@chop.edu
 version:  1.0.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title:  Bash: Scripting Basics
 comment:  This module will teach you how to create and use simple bash scripts so to make repetitive tasks as simple as possible. If you have some experience with bash and want to learn how to save and reuse bash processes, this lesson is for you.
-estimated_time: 30 minutes
+estimated_time: 1 hour
 
 @learning_objectives
 
 After completion of this module, learners will be able to:
 
-- Identify the structure of a bash script
-- Call bash scripts
-- Write simple bash scripts
+- Identify the structure of a Bash script
+- Run existing Bash scripts
+- Write simple Bash scripts
 @end
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
@@ -180,6 +180,12 @@ echo There are $count mammals on the list.
 ```
 
 Entering these two lines into the command line by hand will give you the exact same output as running the script.
+
+<div class = "care">
+
+Don't worry if you haven't seen code like the `count=$( commands here )` line before, we will be going into more detail about it later in this module.
+
+</div>
 
 Where are you?
 ---
