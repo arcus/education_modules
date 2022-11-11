@@ -331,16 +331,30 @@ If your script has an argument, you need to be able to refer to that argument in
 | `$29` | 29th argument |
 |`$@` | All entered arguments |
 
+```
+grep $1 Animals.csv | wc -l
+```
 
-### Defining new variables
+or if it might be an argument with spaces:
 
+```
+grep "$1" Animals.csv | wc -l
+```
 
-### Subshells
+to print out the contents of all of the arguments:
+```
+cat $@
+```
 
-`$( )`
+### Defining new variables using subshells
+
+`new_variable=$( )`
 
 ### Interactive inputs
-
+```
+read new_var
+echo $new_var
+```
 
 ### Quiz: Writing scripts
 
