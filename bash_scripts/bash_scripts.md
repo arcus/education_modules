@@ -174,7 +174,7 @@ The command `bash` takes a file as its argument and executes all of the commands
 The `count_mammals.sh` script contains two lines of code:
 
 ```
-count=`grep mammal Animals.csv | wc -l`
+count=$(grep mammal Animals.csv | wc -l)
 
 echo There are $count mammals on the list.
 ```
@@ -188,7 +188,7 @@ The first line of code above assumes that there is a file called `Animals.csv` i
 Give it a try:
 
 ```
-count=`grep mammal Animals.csv | wc -l`
+count=$(grep mammal Animals.csv | wc -l)
 ```
 
 If you are in `scripts` you will get the message:
@@ -246,29 +246,16 @@ Each time you run this interactive script, you can enter a different string to s
 
 ## Writing a script
 
-### Location
-
-Setting up a User/Home Directory
-
-- As you get comfortable in bash, it is important to create a default home directory in an easily accessible place.
-- It is recommended that you use the native user directory in the home directory on your computer. Your user directory contains a folder named “bin” which is the root directory of any unix like operating system.
-- Bin is short for “binary” and is where you can store any configuration or executable files for programs you run on the CLI. This will be a good place to store bash scripts (.sh files) once you have become comfortable executing commands and learning syntax.
+### Incorporating arguments
+`$1` `$2` `$@`
 
 
-`/bin` folder?
-
-### Basic commands
+### Defining new variables
 
 
-#### Writing output to a file with `>`
-- `>` takes the output of the command you executed in the terminal and places it in a new file
+### Subshells
 
-#### Linking commands with `|`
-
-- `|` takes the output of one command and passes it to the next command in the sequence. Allows for integrating of commands
-
-#### Defining variables with `$`
-- `$` used to define a variable expression as used in the echo example above.
+`$( )`
 
 
 ### Quiz: Writing scripts
