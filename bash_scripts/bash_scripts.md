@@ -328,23 +328,75 @@ If your script has an argument, you need to be able to refer to that argument in
 | :-: | :- |
 | `$1` | First argument |
 | `$2` | Second argument |
+| `$3` | Third argument |
+| $\vdots$ | $\vdots$ |
 | `$29` | 29th argument |
-|`$@` | All entered arguments |
+| $\vdots$ | $\vdots$ |
+
+Let's update `first_script.sh` to an argument:
 
 ```
-grep $1 Animals.csv | wc -l
+echo "echo My script can take an argument, like \$1" >> first_script.sh
 ```
 
-or if it might be an argument with spaces:
+<div class = "warning">
+
+When using the `echo` command to write a line into the file `first_script,sh`, it is important to put a backslash `\ ` in front of the dollar sign `$`. The backslash functions as an **escape character**, telling Bash that you mean the **symbol** `$`.
+
+Without that backslash, `$1` will be interpreted as a **variable**, which you probably haven't defined yet, rather than the string `$1` which you want to appear verbatim in your file.
+
+</div>
+
+Use `cat` to check that `first_script.sh` now contains two lines:
 
 ```
-grep "$1" Animals.csv | wc -l
+echo This is my first script
+echo My script can take an argument, like $1
 ```
 
-to print out the contents of all of the arguments:
+Notice that the backslash doesn't appear in the file's second line, but the dollar sign does!
+
+<div class = "options">
+
+Using a text editor to write directly to your file `first_script.sh` can sometimes save you the worry of using escape characters, but if you want to write a script that writes a file with contents like `$1`, you will still need to use the backslash.
+
+</div>
+
+Now that `first_script.sh` takes an argument, try running it and see what happens:
+
 ```
-cat $@
+bash first_script.sh my_argument
 ```
+
+The order in which you enter arguments into the command line matters. Let's make a new script that will take 3 arguments:
+
+```
+echo "echo \$3 \$2 \$1" > reverse_three.sh
+```
+
+The `reverse_three.sh` script takes three arguments, let's give it a try:
+
+```
+bash reverse_three.sh alpha beta gamma
+```
+
+<div class = "important">
+
+If a script takes more arguments than you give it, it treats the arguments you didn't give it as empty strings. Try giving `reverse_three.sh` only two arguments and see what happens.
+
+If you give a script arguments it doesn't use, it just ignores the extra arguments. Try giving `reverse_three.sh` four arguments and see what happens.
+
+</div>
+
+An argument could even have spaces in it, as long as you surround the argument with quotes. Consider the following commands, how do you think their output will differ? Run them and see if you were right.
+
+```
+bash first_script.sh "I love Bash"
+bash first_script.sh I love Bash
+bash reverse_three.sh "I love Bash"
+bash reverse_three.sh I love Bash
+```
+
 
 ### Defining new variables using subshells
 
