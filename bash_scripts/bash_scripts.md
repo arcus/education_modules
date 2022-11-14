@@ -400,13 +400,21 @@ bash reverse_three.sh I love Bash
 
 ### Defining new variables using subshells
 
+Walk through the `count=$()` lines of the scripts from before
+
+We know what `grep mammal Animals.csv | wc -l` does, how do we make it into a variable we can use instead of just printing out the answer?
+
+Same question for `grep $1 Animals.csv | wc -l`
+
+
 Define a subshell
 
 Explain the difference between `$()` and regular back ticks.
 
-`new_variable=$( )`
+`new_variable=$( )` lets us call `$new_variable`
 
 ### Interactive inputs
+
 ```
 read new_var
 echo $new_var
