@@ -42,6 +42,12 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 Learners should be familiar with using a bash shell to navigate a directory system. Learners will get the most out of this lesson if they can also create directories and files, write text to files, and read files from their bash shell command line interface.
 
+Bash commands that will be used without explanation include:
+- `>` and `>>`
+- `echo`
+- `grep`
+- `wc`
+
 
 
 **Learning Objectives**
@@ -604,7 +610,6 @@ The variable `$string` is called in the last two lines of the script, so the use
 
 ## Additional Resources
 
-- [Brief Illustration of the Difference between Shell and Kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/)
 - [Exhaustive Wiki of Linux Filesystem Hierarchy](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/index.html)
 - [Reinforce Your New Knowledge through this Learning the Shell Page](https://linuxcommand.org/lc3_learning_the_shell.php)
 - [Unix Command Line I Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/3/)
