@@ -466,10 +466,24 @@ The last way to create new variables for a script is to have the script's user (
 
 
 You saw this in action when you called the script `interactive_count_type.sh` earlier in this module. Now we are going to look at how to make scripts interactive.
+
+Interactive scripts are most powerful when they include useful prompts, let's take a look at one:
+
 ```
+echo Enter your new variable here:
 read new_var
-echo $new_var
+echo You entered "$new_var"
 ```
+
+1. The first line is what the script will print. The user will see `Enter your new variable here:` and then can type anything they want.
+
+2. The second line is where the interactivity comes into play. The `read` command tells the script to pause and wait for the user to input something. Once they user presses `enter` or `return`, whatever they typed will be saved as `new_var` and the script will continue to the next line.
+
+3. The third line then takes the new variable and tells you what you entered. The quotes around `$new_var` are there because there may be spaces in the user input. These spaces would not make a difference in this script, but might if this line used a command expecting multiple arguments.
+
+This isn't a particularly useful script as currently written, but the structure a good setup for creating your own interactive scripts.
+
+
 
 ### Quiz: Writing scripts
 
