@@ -475,15 +475,63 @@ read new_var
 echo You entered "$new_var"
 ```
 
-1. The first line is what the script will print. The user will see `Enter your new variable here:` and then can type anything they want.
+1. The first line is what the script will initially print. The user will see `Enter your new variable here:` and then can type anything they want.
 
 2. The second line is where the interactivity comes into play. The `read` command tells the script to pause and wait for the user to input something. Once they user presses `enter` or `return`, whatever they typed will be saved as `new_var` and the script will continue to the next line.
 
 3. The third line then takes the new variable and tells you what you entered. The quotes around `$new_var` are there because there may be spaces in the user input. These spaces would not make a difference in this script, but might if this line used a command expecting multiple arguments.
 
-This isn't a particularly useful script as currently written, but the structure a good setup for creating your own interactive scripts.
+This isn't a particularly useful script as currently written, but the structure a good setup for creating your own interactive scripts, including scripts that take more than one user input.
 
+<div class = "important">
 
+An interactive script will execute each line in the order it appears. You can prompt the user for input multiple times and at each line starting with `read` the script will pause and wait for the user to enter their response.
+
+</div>
+
+### Putting it all together
+
+You are now going to create an interactive script that uses several of the techniques we have just learned. Since the script will contain several lines, it will be helpful to use a text editor. We suggest `nano` which you can open from the command line with
+
+```
+nano my_interactive_script.sh
+```
+
+This will open the nano text editor inside of the shell where you will be able to edit the (currently empty) plain text file `my_interactive_script.sh`
+
+![The empty file my_interactive_script.sh opened in nano.](media/empty_nano_window.png)
+
+<div class = "warning">
+
+The nano text editor is a very basic way to edit text files, and it doesn't have most of the user-friendly features that many other text editors employ. Within the nano program, you will need to navigate with the arrows on your keyboard, although you may be able to copy and paste text using your mouse.
+
+The `^` symbol next to each of the option at the bottom of the nano screen refers to the `control` button (which may or may not have a `^` symbol on it on your keyboard). For example, to exit the nano program, type `control` and `X`.
+
+</div>
+
+Now it is time to put some commands into this script. Here is an example you can copy and experiment with by changing some of the lines to other commands you know.
+
+```
+echo What is your name?
+read name
+echo What is your favorite number $name?
+read number
+echo Why do you prefer $number to $(($number + 1)?
+read answer
+echo That is an interesting answer $name. My favorite number is $(($number * 2 + 1)).
+```
+
+<div class = "important">
+
+Bash can do mathematical operations, including `+`, `-`, `*`, `/`, but they must be inside of a a special [Arithmetic Expansion](https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html) subshell, surrounded by double parentheses.
+
+</div>
+
+<div class ="warning">
+
+Each line of code must be on a single line. For example if you insert a line break into the last line, the `echo` command will only know to print out the text on the same line as it, and Bash will try to treat the next line as a new command. This will result in an error message like "command not found"
+
+</div>
 
 ### Quiz: Writing scripts
 
