@@ -523,17 +523,81 @@ echo That is an interesting answer $name. My favorite number is $(($number * 2 +
 
 <div class = "important">
 
-Bash can do mathematical operations, including `+`, `-`, `*`, `/`, but they must be inside of a a special [Arithmetic Expansion](https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html) subshell, surrounded by double parentheses.
+Bash can do mathematical operations, including `+`, `-`, `*`, `/`, but they must be inside of a a special [Arithmetic Expansion](https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html) subshell, surrounded by double parentheses:
+
+```
+$((mathematical expression here))
+```
 
 </div>
 
 <div class ="warning">
 
-Each line of code must be on a single line. For example if you insert a line break into the last line, the `echo` command will only know to print out the text on the same line as it, and Bash will try to treat the next line as a new command. This will result in an error message like "command not found"
+Each line of code must be on a single line inside the plain text file. For example if you insert a line break into the last line, the `echo` command will only know to print out the text on the same line as it, and Bash will try to treat the next line as a new command. This will result in an error message like "command not found"
 
 </div>
 
 ### Quiz: Writing scripts
+
+The contents of the script `interactive_count_type.sh` are shown below, with some of the contents replaced by underscores:
+
+```
+# This script is an interactive script that returns a count of how many animals
+# in Animals.csv contain that input string.
+
+# This script should be run from the directory containing Animals.csv.
+
+__1__ What string do you want to search for?
+
+__2__ __3__
+
+count=$(grep $string Animals.csv | wc -l)
+
+echo There are $count lines in Animals.csv that contain the string \"$string\".
+```
+
+Without looking at the contents of the original file `interactive_count_type.sh`, what should go in the three blank spots in the code?
+
+1.
+[[echo]]
+***
+
+<div class = "answer">
+
+The  `echo` command tells Bash to print out the question "What string do you want to search for?"
+
+</div>
+
+***
+
+
+
+2.
+[[read]]
+***
+
+<div class = "answer">
+
+The  `read` command tells Bash to expect user input and to save that input as a variable.
+
+</div>
+
+***
+
+3.
+[[string]]
+***
+
+<div class = "answer">
+
+The variable `$string` is called in the last two lines of the script, so the user's input must be assigned to the variable `string`.
+
+</div>
+
+***
+
+
+
 
 
 
