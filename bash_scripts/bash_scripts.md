@@ -208,7 +208,7 @@ Entering these two lines into the command line by hand will give you the exact s
 
 <div class = "care">
 
-Don't worry if you haven't seen code like the `count=$( commands here )` line before, we will be going into more detail about it later in this module.
+Don't worry if you haven't seen code like the `count=$(commands here)` line before, we will be going into more detail about it later in this module.
 
 </div>
 
@@ -400,21 +400,72 @@ bash reverse_three.sh I love Bash
 
 ### Defining new variables using subshells
 
-Walk through the `count=$()` lines of the scripts from before
+Let's take a closer look at the scripts we saw in the previous section of the module. The first line of `count_mammals.sh` reads
 
-We know what `grep mammal Animals.csv | wc -l` does, how do we make it into a variable we can use instead of just printing out the answer?
+```
+count=$(grep mammal Animals.csv | wc -l)
+```
 
-Same question for `grep $1 Animals.csv | wc -l`
+Inside the parentheses we see the command `grep mammal Animals.csv | wc -l` which
+
+1. finds all lines in the file `Animals.csv` that contain the string `mammal` and then
+2. pipes those lines into the word count command `wc -l` to return how many such lines were found.
+
+If we were to write a script containing just this command, running it would return the number of animals in `Animals.csv` that are mammals, (there are 14). But the script doesn't just return `14`, it defines the variable `count` to be that output. In order to do this, the script uses a **subshell**.
+
+<div class = "important">
+
+A **subshell** in Bash works much the same way as parentheses in a mathematical expression. Commands inside the subshell are executed first.
+
+</div>
+
+Surrounding commands with `$()` puts them into a subshell. In the first line of code in `count_mammals.sh` is telling  bash to define `count` to equal whatever the output of the subshell is, in this case 14.
+
+Why use subshells?
+---
+Using the subshell allows the script use that output in new ways. Without the subshell the only thing Bash could do with the output of `grep mammal Animals.csv | wc -l` is print it out on its own line. With the subshell, Bash can include that output in other commands. In this script, the variable `count` is included in the `echo` command on the second line.
+
+Why use variables?
+---
+Consider another script that contains only one line:
+
+```
+echo There are $(grep mammal Animals.csv | wc -l) mammals on the list.
+```
+
+This script does the same thing as the original 2 line `count_mammals.sh`, it has just replaced the variable `count` with what that variable was defined to be. This is unobjectionable in such a short script, but defining variables like `count` is a good habit to get into because using variables instead of including the entire subshell each time you need it
+
+- lets you change all instances of that variable in a single place,
+- makes your script much more human-readable, and  
+- prevents, or at least helps you catch, typos.
 
 
-Define a subshell
+Once you define a variable with `new_variable=$(commands here)` you can call it elsewhere in the script using `$new_variable`.
 
-Explain the difference between `$()` and regular back ticks.
+<div class = "warning">
 
-`new_variable=$( )` lets us call `$new_variable`
+When defining a new variable, there should not be any spaces on either side of the equals sign `=`.
+
+</div>
+
+<div class = "options">
+
+If you look at older Bash scripts, you may see backticks `\`commands here\`` used instead of the dollar sign and parentheses to create subshells.
+
+While backticks will work to create a subshell,  the `$()` construction has some advantages, namely that you can nest subshells like this:
+
+```
+$(outer subshell depends on $(inner subshell))
+```
+
+</div>
 
 ### Interactive inputs
 
+The last way to create new variables for a script is to have the script's user (maybe you, maybe someone else) enter them interactively.
+
+
+You saw this in action when you called the script `interactive_count_type.sh` earlier in this module. Now we are going to look at how to make scripts interactive.
 ```
 read new_var
 echo $new_var
