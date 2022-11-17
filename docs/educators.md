@@ -12,7 +12,7 @@ Check out the list of [published educational modules](list_of_modules) and fill 
 
 ## Remixing Our Materials
 
-This work is [licensed](LICENSE) with Creative Commons Attribution-ShareAlike 4.0.  There is also a helpful [summary](https://creativecommons.org/licenses/by-sa/4.0/) of the full [license](LICENSE) that describes what we permit in brief terms.  You are free to share and adapt these materials as long as you give appropriate credit and apply the same license to your version of these materials.  Some uses we foresee include:
+This work is [licensed](https://github.com/arcus/education_modules/blob/main/LICENSE) with Creative Commons Attribution-ShareAlike 4.0.  There is also a helpful [summary](https://creativecommons.org/licenses/by-sa/4.0/) of the full [license](https://github.com/arcus/education_modules/blob/main/LICENSE) that describes what we permit in brief terms.  You are free to share and adapt these materials as long as you give appropriate credit and apply the same license to your version of these materials.  Some uses we foresee include:
 
 * [Forking](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository and changing some elements to be more contextualized to your audience (such as translating materials or changing sample data), and sharing the remixed contents with your audience
 * [Forking](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository and adding or removing courses that best meet the needs of your audience
