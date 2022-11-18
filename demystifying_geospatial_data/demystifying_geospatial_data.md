@@ -15,7 +15,7 @@ estimated_time:  15 minutes
 
 After completion of this module, learners will be able to:
 
-- Identify geospatial data
+- Define geospatial data
 - Describe some of the benefits of using geospatial data
 - Recognize some of the issues learners may encounter when using geospatial data
 
@@ -52,7 +52,7 @@ If you have ever look at a map, followed GPS directions, or even just used a cel
 
 **Geospatial Data** is any data that includes information about the location of an object or event on the Earth. We think of these locations as being on the Earth's surface, but they might actually be a bit above the surface, like weather or airplane flight paths, or below, like oil deposits.
 
-We use [**latitutde**](https://en.wikipedia.org/wiki/Latitude) and [**longitude**](https://en.wikipedia.org/wiki/Longitude) to describe locations on Earth. If you have any data that includes latitude and longitude, you have geospatial data!
+We use [**latitude**](https://en.wikipedia.org/wiki/Latitude) and [**longitude**](https://en.wikipedia.org/wiki/Longitude) to describe locations on Earth. If you have any data that includes latitude and longitude, you have geospatial data!
 
 While geospatial data could be a specific **point**, give by a single set of latitude/longitude coordinates, it could also be a **line segment** connecting two locations, a series of line segments connecting a sequence of points, or a **polygon**, which is a region enclosed by points connected with line segments. These are the kinds of geospatial data that you will need to draw a map.
 
