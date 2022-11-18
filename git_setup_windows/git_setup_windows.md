@@ -83,7 +83,7 @@ While most of of the default options will work just fine, there are 16 screens t
 | 2. If you want to choose a different location for Git, you can do that on this screen. Click "Next" in the lower right. | ![Select destination location screen.](media/03select_destination.png)<!-- style = "max-width:400px;"  border = 5px solid -->  |
 | 3. They should already be checked, but make sure that Windows Explorer integration and Git Bash are both checked on this screen. | ![Select components screen.](media/04select_components.png)<!-- style = "max-width:400px;" border = 5px solid -->  |
 | 4. Click "Next" in the lower right. | ![Select Start Menu Folder screen.](media/05select_folder.png)<!-- style = "max-width:400px;" border = 5px solid --> |
-| 5. If you have a favorite text editor such as Atom, go ahead and select that. You can scroll up for more options like `nano`, or select Notepad, which will feel the most familiar if you are used to word processing programs. | ![Choosing the default editor screen. The "Use Notepad as Git's default editor" option is selected from the dropdown menu.](media/06default_editor.png)<!-- style = "max-width:400px;" border = 5px solid -->|
+| 5. If you have a favorite text editor such as VS Code, go ahead and select that. You can scroll up for more options like `nano`, or select Notepad, which will feel the most familiar if you are used to word processing programs. | ![Choosing the default editor screen. The "Use Notepad as Git's default editor" option is selected from the dropdown menu.](media/06default_editor.png)<!-- style = "max-width:400px;" border = 5px solid -->|
 | 6. On this screen you want to change the default branch name to "main" to match with the conventions of GitHub. | ![Branch naming screen. The second option, "Override the default branch name for new responses" is selected and the word "main" is entered into the text box.](media/07branch_naming.png)<!-- style = "max-width:400px;" border = 5px solid -->|
 | 7. Allowing 3rd parties, such as GitHub Desktop, may be extremely useful to you in the future, so we recommend selecting this option. | ![Adjusting your PATH screen. The second option, "Git from the command line and also from 3rd-party software" is selected.](media/08path.png)<!-- style = "max-width:400px;" border = 5px solid -->|
 | 8. You can click "Next" on each of the subsequent screens. | ![SSH screen.](media/09ssh.png)<!-- style = "max-width:400px;" border = 5px solid -->|
@@ -183,7 +183,6 @@ If you accepted the default settings during installation, your text editor is se
 
 | Editor             | Configuration command                            |
 |:-------------------|:-------------------------------------------------|
-| Atom | `$ git config --global core.editor "atom --wait"`|
 | nano               | `$ git config --global core.editor "nano -w"`    |
 | Sublime Text (Win, 32-bit install) | `$ git config --global core.editor "'c:/program files (x86)/sublime text 3/sublime_text.exe' -w"` |
 | Sublime Text (Win, 64-bit install) | `$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"` |
