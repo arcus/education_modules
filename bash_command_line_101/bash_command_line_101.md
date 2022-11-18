@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version:  1.2.1
+version:  1.3.1
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
@@ -404,7 +404,7 @@ The switch from a **word processor** program that lets you format text to a **te
 
 There are some text editors already installed in your bash shell, like nano. These are useful because they don't require new downloads, but can have a steep learning curve since you need to learn new commands to open, save, and quit in those programs.
 
-Other, more user-friendly, text editors exist and can be downloaded. [Atom](https://atom.io/) is a particularly good free text editor that includes helpful tools like color coding text.
+Other, more user-friendly, text editors exist and can be downloaded. [Visual Studio Code](https://code.visualstudio.com) is a particularly good free text editor that includes helpful tools like color coding text.
 
 
 **`nano`**
@@ -414,10 +414,9 @@ The `nano` text editor is already in Bash Shell. You can type `nano` to start a 
 For example to exit nano, the `^X` reminder at the bottom means that you should hold down the `control` button at the same time as the key `X`. You will then be helpfully asked if you want to "Save modified buffer," or in other words, save your changes. Type `Y` and you will be asked for the "File name to write." If you are working in a new file, give it a name here! Otherwise you can press `enter`/`return` to accept the name the file already had.  
 
 
-**Atom**
+**Visual Studio Code (VS Code)**
 
-Atom is a free text editor that you can download from [https://atom.io/](https://atom.io/). Once you open the Atom program, you will see "File" and "Edit" menus like you might expect from a word processing program. You can open files, save them, as well as create new folders and files from Atom's "File" menu.
-
+VS Code is a free program you can download from (https://code.visualstudio.com). Once you open the VS Code program, you will see "File" and "Edit" menus like you might expect from a word processing program. You can open files, save them, as well as create new folders and files from "File" menu, but you can also use the "Explorer" menu to navigate your files directly.
 
 **Vim**
 
