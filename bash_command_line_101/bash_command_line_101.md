@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version:  1.2.1
+version:  1.3.1
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
