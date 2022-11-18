@@ -177,7 +177,7 @@ Because of these reasons, you'll usually either be creating Python scripts or us
 
 For more complex tasks, it often makes sense to write a python **script** instead of writing instructions one at a time. Scripts allow you to write out a series of instructions ahead of time and then run in order with one command.
 
-Scripts are often written using special text editors that are designed for writing code (such as [Atom](https://atom.io) or [Sublime](https://sublimetext.com)) or full-featured integrated development environments (IDEs) such as [PyCharm](https://www.jetbrains.com/pycharm/) or [Spyder](https://www.spyder-ide.org/), which have more debugging and automation capabilities than text editors.
+Scripts are often written using special text editors that are designed for writing code (such as [VS Code](https://code.visualstudio.com) or [Sublime](https://sublimetext.com)) or full-featured integrated development environments (IDEs) such as [PyCharm](https://www.jetbrains.com/pycharm/) or [Spyder](https://www.spyder-ide.org/), which have more debugging and automation capabilities than text editors.
 
 Here is a short script written in the Spyder IDE:
 <div style = "margin: 1rem; width: 750;">
@@ -224,7 +224,7 @@ Which of the following is **not** a recommended way to write Python code?
 ***
 <div class = "answer">
 
-While it is technically possible to write Python scripts in a Google document, a word processor like Microsoft Word, or a text editor not designed to write code, it is generally not recommended and will make your life harder. There are a variety of text editors that are specifically designed for writing scripts. They generally support multiple languages and have special features that help you write code, such as syntax highlighting, smart code completion, and collaboration tools. Which features you have access to depends on on which editor you choose ([Atom](https://atom.io/) and [Visual Studio Code](https://code.visualstudio.com/) are two free options).
+While it is technically possible to write Python scripts in a Google document, a word processor like Microsoft Word, or a text editor not designed to write code, it is generally not recommended and will make your life harder. There are a variety of text editors that are specifically designed for writing scripts. They generally support multiple languages and have special features that help you write code, such as syntax highlighting, smart code completion, and collaboration tools. Which features you have access to depends on on which editor you choose ([Visual Studio Code](https://code.visualstudio.com/) is an excellent free option).
 
 </div>
 ***
