@@ -17,14 +17,17 @@ h2, h3, h4 {
   -webkit-font-smoothing: antialiased;
 }
 
-.important,
+
 .answer,
-.warning,
+.behind-the-scenes,
+.care,
+.cool-fact,
+.help,
+.history,
+.important,
 .learnmore,
 .options,
-.help,
-.care,
-.hint
+.warning
 {
   position: relative;
   padding: 1em 1em 1em 1em;
@@ -34,55 +37,123 @@ h2, h3, h4 {
   width = 100%;
 }
 
-.important:before,
 .answer:before,
-.warning:before,
+.behind-the-scenes:before,
+.care:before,
+.cool-fact:before,
+.help:before,
+.history:before,
+.important:before,
 .learnmore:before,
 .options:before,
-.help:before,
-.care:before,
-.hint:before
+.warning:before
 {
   display: table-cell;
   vertical-align: middle;
   padding: inherit;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   font-size: 2.5em;
   color: rgb(var(--color-highlight));
+}
+
+.answer span:before,
+.behind-the-scenes span:before,
+.care span:before,
+.cool-fact span:before,
+.help span:before,
+.history span:before,
+.important span:before,
+.learnmore span:before,
+.options span:before,
+.warning span:before
+{
+  white-space: pre;
+  font-weight: bold;
+  color: rgb(var(--color-highlight));
+}
+
+
+.answer:before {
+  content: "\f058";
+}
+
+.answer span:before {
+  content: "Solution \A\A";
+}
+
+.behind-the-scenes:before {
+  content: "\f085";
+}
+
+.behind-the-scenes span:before {
+  content: "Behind the scenes \A\A";
+}
+
+.care:before {
+  content: "\f4be";
+}
+
+.care span:before {
+  content: "A little encouragement \A\A";
+}
+
+.cool-fact:before {
+  content: "\f6b8";
+}
+
+.cool-fact span:before {
+  content: "Did you know? \A\A";
+}
+
+.help:before {
+  content: "\f059";
+}
+
+.help span:before {
+  content: "Troubleshooting help \A\A";
+}
+
+.history:before {
+  content: "\f0ac";
+}
+
+.history span:before {
+  content: "Historical context \A\A";
 }
 
 .important:before {
   content: "\f005";
 }
 
-.answer:before {
-  content: "\f058";
-}
-
-.warning:before {
-  content: "\f1e2";
+.important span:before {
+  content: "Important note \A\A";
 }
 
 .learnmore:before {
-  content: "\f4fb";
+  content: "\fe0c0";
+}
+
+.learnmore span:before {
+  content: "Learning connection \A\A";
 }
 
 .options:before {
-  content: "\f24e";
+  content: "\f337";
 }
 
-.help:before {
-  content: "\f479";
+.options span:before {
+  content: "Another option \A\A";
 }
 
-.care:before {
-  content: "\f004";
+.warning:before {
+  content: "\f071";
 }
 
-.hint:before {
-  content: "\f0eb";
+.warning span:before {
+  content: "Warning! \A\A";
 }
+
 
 .lia_header__logo {
   display: none;
