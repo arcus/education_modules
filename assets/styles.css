@@ -19,9 +19,9 @@ h2, h3, h4 {
 
 
 .answer,
-.behind-the-scenes,
+.behindthescenes,
 .care,
-.cool-fact,
+.coolfact,
 .help,
 .history,
 .important,
@@ -38,9 +38,9 @@ h2, h3, h4 {
 }
 
 .answer:before,
-.behind-the-scenes:before,
+.behindthescenes:before,
 .care:before,
-.cool-fact:before,
+.coolfact:before,
 .help:before,
 .history:before,
 .important:before,
@@ -58,9 +58,9 @@ h2, h3, h4 {
 }
 
 .answer span:before,
-.behind-the-scenes span:before,
+.behindthescenes span:before,
 .care span:before,
-.cool-fact span:before,
+.coolfact span:before,
 .help span:before,
 .history span:before,
 .important span:before,
@@ -82,11 +82,11 @@ h2, h3, h4 {
   content: "Solution \A\A";
 }
 
-.behind-the-scenes:before {
+.behindthescenes:before {
   content: "\f085";
 }
 
-.behind-the-scenes span:before {
+.behindthescenes span:before {
   content: "Behind the scenes \A\A";
 }
 
@@ -98,11 +98,11 @@ h2, h3, h4 {
   content: "A little encouragement \A\A";
 }
 
-.cool-fact:before {
+.coolfact:before {
   content: "\f5dc";
 }
 
-.cool-fact span:before {
+.coolfact span:before {
   content: "Did you know? \A\A";
 }
 
