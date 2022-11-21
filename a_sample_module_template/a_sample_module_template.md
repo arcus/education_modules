@@ -22,7 +22,7 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles-test.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
 
@@ -103,48 +103,157 @@ You can also include movies, audio, and any other embedded content in galleries 
 
 ## Including highlight boxes
 
-Include special notes with different formatting. The style "important" is for important points and key ideas. For example:
+Include special notes with different formatting.
 
-<div class = "important">
-Tip: It's generally much easier to make any necessary changes to the dataframe, such as mutating variables, before sending it to the plotting command.
+Note: There's an additional style of highlight not listed here, "answer", that is used in [quizzes](#quiz).
+
+
+### behind-the-scenes
+
+The style "behind-the-scenes" is for giving a little more technical detail about how something does what it does.
+It has a gears icon and always begins with the text "Behind the scenes".
+For example:
+
+<div class = "behind-the-scenes">
+
+The commit number is a hash and associated details
+
 </div>
 
-The style "care" is for content related to compassion, self-care, and motivation. For example:
+<div class = "behind-the-scenes">
+
+In R the `<-` and `=` can both be used for assignment because...
+
+</div>
+
+### care
+
+The style "care" is for content related to compassion, self-care, and motivation. For more technical help or troubleshooting, use "help" instead.
+It has a hand-holding-heart icon and always begins with the text "A little encouragement..."
+For example:
 
 <div class = "care">
+
 This is a topic with a tremendous amount of jargon, which can make resources you may find online hard to understand for folks new to the field. When that happens it's easy to feel like there's something wrong with you if you don't get it, but that's not the case! Those kinds of gatekeeping explanations are a failure on the part of the writer, not the learner.
+
+</div>
+
+<div class = "care">
+
+Feeling overwhelmed? It takes a long time to learn git, so don't be disheartened if it doesn't click initially. Just focus on stage, commit, and push. Ignore the rest for now, until you've had a chance to practice just the stage-commit-push process several times.
+
+</div>
+
+### cool-fact
+
+The style "cool-fact" is for any cool fact that really doesn't fit into any of our other categories.
+It has a brain icon and always begins with the text "Did you know?"
+For example:
+
+<div class = "cool-fact">
+
+Functions like this are sometimes called "syntactic sugar" because they don't change anything about how the code runs, they just make it easier for humans to read, the way that sugar makes food sweeter without adding any nutrition.
+
 </div>
 
 
-The style "help" is for educational first aid --- "help I'm lost!" suggestions. For example:
+### help
+
+The style "help" is for troubleshooting help, common errors, and specific technical problems. If you want to emphasize a very serious potential problem, use "warning" instead. For support that is more psycho/emotional or meta-learning in nature, use "care" instead.
+It has a circle-question icon and always begins with the text "Troubleshooting help".
+For example:
 
 <div class = "help">
-Feeling overwhelmed? It takes a long time to learn git, so don't be disheartened if it doesn't click initially. Just focus on stage, commit, and push. Ignore the rest for now, until you've had a chance to practice just the stage-commit-push process several times.
+
+A common mistake when using `filter` is to write = when you mean ==. Remember that = is for argument assignment, and == is for testing equality in conditions. If you get them mixed up, your code won't run!
+
 </div>
 
-The style "warning" alerts users to potential pitfalls. For example:
+### history
+
+The style "history" is for more historical context about how/when/why something came to be the way it currently is.
+It has a clock-rotate-left icon and always begins with the text "Historical context".
+For example:
+
+<div class = "history">
+
+The reason this command is named grep is...
+
+</div>
+
+<div class = "history">
+
+The first README file was from 1971, etc.
+
+</div>
+
+
+### important
+
+The style "important" is for important points and key ideas.
+It has a star icon and always begins with the text "Important note".
+For example:
+
+<div class = "important">
+
+It's generally much easier to make any necessary changes to the dataframe, such as mutating variables, before sending it to the plotting command.
+
+</div>
+
+### learn-more
+
+The style "learn-more" alerts users resources for further learning, especially links to a more in-depth discussion of an issue that might be touched on only briefly in the module. It can link to outside sources, or other modules by us.
+It has a book icon and always begins with the text "Learning connection".
+For example:
+
+<div class = "learn-more">
+
+To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf).
+
+</div>
+
+
+<div class = "learn-more">
+
+To do this in R instead of python, see [this other module](example.com).
+
+</div>
+
+### options
+
+The style "options" is for an aside to let learners know there's another possible approach. This is for short explanations rather than linked resources; to link to another approach (e.g. here's a tutorial for another way to do this), use "learn-more" instead.
+It has a left-right arrow icon and always begins with the text "Another option".
+For example:
+
+<div class = "options">
+
+You could also skip setting up an OSF account completely and just use github to publish and share your research products, but many people prefer to have OSF links available.
+
+</div>
+
+<div class = "options">
+
+You can run this in the cloud or download all of the files locally and run it on your computer. If you run it on your computer, be sure to make note of which directory you save the files in and update your working directory accordingly.
+
+</div>
+
+### warning
+
+The style "warning" alerts users to potential pitfalls, and should be reserved for serious problems only. For less serious problems, use "help" instead.
+It has a ! triangle icon and always begins with the text "Warning!".
+For example:
 
 <div class = "warning">
-A common mistake when using `filter` is to write = when you mean ==. Remember that = is for argument assignment, and == is for testing equality in conditions. If you get them mixed up, your code won't run!
+
+Double check your working directory before running this code. If you're in the wrong directory, you risk overwriting your files and losing all of your work with no way to recover it.
+
 </div>
 
-The style "learnmore" alerts users resources for further learning, especially links to a more in-depth discussion of an issue that might be touched on only briefly in the module.
+<div class = "warning">
 
-<div class = "learnmore">
-To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf)
+Files uploaded to this account will be **publicly visible**. Be very careful not to upload anything with sensitive information like passwords or private data.
+
 </div>
-
-The style "options" is for an aside to let learners know there's another possible approach. For example:
-
-<div class = "options">
-You could also skip setting up an OSF account completely and just use github to publish and share your research products, but many people prefer to have OSF links available.
-</div>
-or
-<div class = "options">
-To do this in R instead of python, see this other module.
-</div>
-
-There's an additional style of highlight, "answer", that is used in [quizzes](#quiz).
 
 ## Including math
 
