@@ -105,7 +105,7 @@ You can also include movies, audio, and any other embedded content in galleries 
 
 Include special notes with different formatting.
 
-Note: There's an additional style of highlight not listed here, "answer", that is used in [quizzes](#quiz).
+Note: There's an additional style of highlight not listed here, "answer", that is used in [quizzes](#quiz-quizzes).
 
 
 ### behind-the-scenes
