@@ -99,7 +99,7 @@ h2, h3, h4 {
 }
 
 .cool-fact:before {
-  content: "\f6b8";
+  content: "\f5dc";
 }
 
 .cool-fact span:before {
@@ -115,7 +115,7 @@ h2, h3, h4 {
 }
 
 .history:before {
-  content: "\f0ac";
+  content: "\f1da";
 }
 
 .history span:before {
@@ -131,7 +131,7 @@ h2, h3, h4 {
 }
 
 .learnmore:before {
-  content: "\fe0c0";
+  content: "\f518";
 }
 
 .learnmore span:before {
