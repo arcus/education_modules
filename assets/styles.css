@@ -19,13 +19,13 @@ h2, h3, h4 {
 
 
 .answer,
-.behindthescenes,
+.behind-the-scenes,
 .care,
-.coolfact,
+.cool-fact,
 .help,
 .history,
 .important,
-.learnmore,
+.learn-more,
 .options,
 .warning
 {
@@ -38,13 +38,13 @@ h2, h3, h4 {
 }
 
 .answer:before,
-.behindthescenes:before,
+.behind-the-scenes:before,
 .care:before,
-.coolfact:before,
+.cool-fact:before,
 .help:before,
 .history:before,
 .important:before,
-.learnmore:before,
+.learn-more:before,
 .options:before,
 .warning:before
 {
@@ -58,13 +58,13 @@ h2, h3, h4 {
 }
 
 .answer span:before,
-.behindthescenes span:before,
+.behind-the-scenes span:before,
 .care span:before,
-.coolfact span:before,
+.cool-fact span:before,
 .help span:before,
 .history span:before,
 .important span:before,
-.learnmore span:before,
+.learn-more span:before,
 .options span:before,
 .warning span:before
 {
@@ -82,11 +82,11 @@ h2, h3, h4 {
   content: "Solution \A\A";
 }
 
-.behindthescenes:before {
+.behind-the-scenes:before {
   content: "\f085";
 }
 
-.behindthescenes span:before {
+.behind-the-scenes span:before {
   content: "Behind the scenes \A\A";
 }
 
@@ -98,11 +98,11 @@ h2, h3, h4 {
   content: "A little encouragement \A\A";
 }
 
-.coolfact:before {
+.cool-fact:before {
   content: "\f5dc";
 }
 
-.coolfact span:before {
+.cool-fact span:before {
   content: "Did you know? \A\A";
 }
 
@@ -130,11 +130,11 @@ h2, h3, h4 {
   content: "Important note \A\A";
 }
 
-.learnmore:before {
+.learn-more:before {
   content: "\f518";
 }
 
-.learnmore span:before {
+.learn-more span:before {
   content: "Learning connection \A\A";
 }
 
