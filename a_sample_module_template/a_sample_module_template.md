@@ -156,6 +156,23 @@ Functions like this are sometimes called "syntactic sugar" because they don't ch
 
 </div>
 
+<div class = "cool-fact">
+
+![Carebear stare.](https://media.giphy.com/media/11z8mwhw0jxQiI/giphy.gif)
+
+This is a box showing how images work in a highlight box.
+
+</div>
+
+<div class = "cool-fact">
+
+This is a box showing how images work in a highlight box.
+
+![Carebear team.](https://media.giphy.com/media/W256ghnG9iV8I/giphy.gif)
+
+
+</div>
+
 
 ### help
 
