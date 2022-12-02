@@ -182,7 +182,7 @@ Understanding the amount and type of missing data you have is crucial to conduct
 Although techniques for analyzing and correcting for different missingness patterns is outside the scope of this module,
 one of the first steps in any of those techniques is checking how much missing data you have and on which variables, which we will cover here.
 
-<div class="learnmore">
+<div class="learn-more">
 For an excellent introduction to different types of missing data, read Rubin's classic paper [Inference and Missing Data](http://math.wsu.edu/faculty/xchen/stat115/lectureNotes3/Rubin%20Inference%20and%20Missing%20Data.pdf).
 </div>
 
@@ -194,7 +194,7 @@ So how can you tell when you have missing data in R?
 Different statistical software mark missing values in different ways.
 In R, missing values are marked with `NA`, which is short for "Not Available".
 
-<div class = "learnmore">
+<div class = "learn-more">
 Technically, there are actually four different kinds of `NA`, one for each of the different data types in R. To learn more, read about [missing values in the free online book R for Data Science](https://r4ds.had.co.nz/vectors.html?q=missing#missing-values-4).
 
 For most practical purposes, you don't need to know anything about these different kinds of `NA`, though; they all just mean "missing", and you can usually use `NA` to refer to all of them.
@@ -212,7 +212,7 @@ Here's an example of what some data with missing values might look like when pri
 Note that the second and third rows have `NA` instead of numerical values for some of the measurements.
 The `NA` indicates a lack of any information for each of those cells; those values are missing.
 
-<div class = "learnmore">
+<div class = "learn-more">
 **What about `NULL`?**
 
 If you've been using R for a while, you may have seen `NULL` in some cases instead of `NA` when things are missing.
@@ -315,7 +315,7 @@ If it returns `TRUE`, then it assigns the next argument, in this case `NA`, whic
 If it returns `FALSE`, then it assigns the last argument, in this case `rating`, which will leave the value untouched.
 So for any `rating` values that equal -99, we're asking it to replace them with `NA`, otherwise leave them as they were.
 
-<div class="learnmore">
+<div class="learn-more">
 For more on `mutate` and `ifelse`, see the [R Basics: Data Transformation sections on `mutate`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#the-mutate%28%29-function) and [logical operators](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#logical-operators), and the [`ifelse` section in the free online book Advanced R](https://adv-r.hadley.nz/control-flow.html#vectorised-if).
 </div>
 

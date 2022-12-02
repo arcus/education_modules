@@ -206,7 +206,7 @@ In ggplot2, you use the ggplot() function to generate an empty base plot, and th
 
 At first, this seems like more work than just using a single command in another plotting system, and it is true that ggplot visualizations are often more lines of code than other kinds of visualizations. The idea of breaking a plot into different kinds of pieces and applying each as a layer has some advantages, though, in that it makes it easier to tweak plots to get exactly what you want --- this is important both for generating plots that can be made to adhere to formatting rules (like for a journal article submission), and because tweaking a plot and re-visualizing the data is a powerful way to explore trends and patterns when you're analyzing a data set.
 
-<div class = "learnmore">
+<div class = "learn-more">
 To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf)
 </div>
 
@@ -238,7 +238,7 @@ library(ggplot2)
 
 ```
 
-<div class = "learnmore">
+<div class = "learn-more">
 The readr and dplyr packages, like ggplot2, are part of the [tidyverse](https://www.tidyverse.org/), a set of R packages for data science. Check out the free R for Data Science book online to learn more about both readr (the [data import](https://r4ds.had.co.nz/data-import.html) chapter) and dplyr (the [data transformation](https://r4ds.had.co.nz/transform.html) chapter).
 </div>
 
@@ -249,7 +249,7 @@ breast_cancer_data <- read_csv("https://archive.ics.uci.edu/ml/machine-learning-
 
 ```
 
-<div class="learnmore">
+<div class="learn-more">
 Run the above code yourself in binder (see [lesson preparation](#lesson-preparation) for links to start the binder instance) or on your own computer.
 
 In the @r_code rmd file, the code at the top of the file includes these library commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
@@ -347,7 +347,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
 
 Finally, we can control the background (and other aspects of the plot's general appearance) by adjusting the theme. There are quite a lot of [pre-made themes available](https://ggplot2-book.org/polishing.html#themes), or you can [specify your own](https://ggplot2-book.org/polishing.html#modifying-theme-components). I'll use the theme called theme_bw().
 
-<div class = "learnmore">
+<div class = "learn-more">
 Some journals or other organizations have pre-made ggplot2 themes available that you can apply to make your plots adhere to their aesthetic guidelines. It's worth asking! For more information about using themes and modifying them to meet journal requirements, see the [figures chaper in Writing Papers with R and Friends](https://bookdown.org/content/43652694-3819-41d2-9e70-8cfc8dd25fd1/figures.html).  
 </div>
 
@@ -610,7 +610,7 @@ Line plots are especially useful when you want to show data points that are conn
 A word of caution: You may see line plots where the data points don't actually share a meaningful theoretical connection (e.g. all being from the same patient, or the same group). Although it's not uncommon, this is generally not considered good practice and you may receive pushback from reviewers or readers.
 </div>
 
-<div class = "learnmore">
+<div class = "learn-more">
 A more detailed [tutorial on plotting time series in ggplot2](https://www.r-graph-gallery.com/279-plotting-time-series-with-ggplot2.html), including options for changing the way dates display along the x-axis.
 </div>
 
@@ -832,7 +832,7 @@ The geom\_abline() function allows you to specify a y-intercept and slope (which
 
 The first step is to run the linear model you want to get trend lines from. We won't step through how to run linear models in R here.
 
-<div class = "learnmore">
+<div class = "learn-more">
 For a more in-depth example of linear regression models in R, including using geom\_abline to draw linear trend lines, see this [Arcus Education post on ordinary linear regression](https://education.arcus.chop.edu/ordinary_linear_regression/).
 </div>
 

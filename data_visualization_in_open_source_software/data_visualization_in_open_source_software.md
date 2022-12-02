@@ -182,7 +182,7 @@ There are some basic best practice guidelines you can use to make your visualiza
 - Avoid using color as the sole indicator for important information. Instead, double color up with a second indicator like shape or line type.
 - Keep visualizations clean and simple, avoiding unnecessary visual clutter. In other words, keep the [data-to-ink ratio](https://infovis-wiki.net/wiki/Data-Ink_Ratio) high.
 
-<div class="learnmore">
+<div class="learn-more">
 
 **What about colorblind-friendly palettes?**
 

@@ -99,7 +99,7 @@ Principal Components Analysis (PCA) isn't an assessment of the strength of relat
 
 Models with continuous outcomes are the most commonly used statistical tests, and those which are most likely to be taught in an introductory stats text book. Many of them are actually not truly distinct tests but just different manifestations of one very powerful underlying model, the General Linear Model (GLM).
 
-<div class = "learnmore">
+<div class = "learn-more">
 For a deeper understanding of the GLM, it helps to use matrix algebra notation, as in this [matrix algebra explanation of regression models](https://online.stat.psu.edu/stat462/node/132/). It is definitely not necessary to understand the underlying math to effectively use GLM tests, though, so only go into that if it interests you.
 </div>
 

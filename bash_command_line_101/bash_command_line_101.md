@@ -70,7 +70,7 @@ On a Mac computer, bash has been the default login shell in the **Terminal** com
 
 2. The terminal may take a few seconds to start, once it is open you should see a blinking cursor where you can type.
 
-<div class = "learnmore">
+<div class = "learn-more">
 It should be noted that Macs with the Catalina Operating System or later are running zsh instead of bash. That said, zsh is [functionally a later and greater version of bash with some key differences noted](https://medium.com/@harrison.miller13_28580/bash-vs-z-shell-a-tale-of-two-command-line-shells-c65bb66e4658).
 </div>
 
@@ -116,7 +116,7 @@ Your computer has an **Operating System** (OS), most commonly either Windows, Ma
 
 The **shell** is like a layer outside the kernel that you as a user can communicate with. You can type commands in the shell, and it will execute them for you in the kernel. Back when computers were newer and there were few ready programs available, the shell was the primary way to get stuff done on a computer.
 
-<div class = "learnmore">
+<div class = "learn-more">
 To learn more, check out this post for [an excellent breakdown of the difference between the shell and the kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/).
 </div>
 
@@ -260,7 +260,7 @@ The bash shell can see and move files of all types, but it is most useful for in
 
 A [**plain text**](https://en.wikipedia.org/wiki/Plain_text) file is a file that contains only text characters like the ones you can type directly using your keyboard. For example the words "plain text" at the beginning of this paragraph, which are both bolded and hyperlinked, are not being presented to you as plain text. You might have run into problems with files that aren't in plain text if, for example, you ever opened a file in a new program and lost some of the formatting like particular fonts in Word or conditional highlighting in Excel.
 
-<div class = "learnmore">
+<div class = "learn-more">
 Even though the words "plain text" in the previous paragraph have some non-text attributes, they are all recorded as plain text in the Markdown (`.md`) file of this lesson. If you open the [Markdown file](link/to/git/of/this/file), you will see only characters that can be typed by a keyboard:
 
 ```
@@ -287,7 +287,7 @@ Some common types of plain text files you might have seen before are:
 | `.md` | markdown file |
 | `.html` | html file |
 
-<div class = "learnmore">
+<div class = "learn-more">
 The file endings (or **extensions**) like `.txt`, `.csv`, `.doc` (Word), or `.xslx` (Excel) are the part of the file name that lets your computer know what type of program to use to open it. The ending doesn't actually impact the contents of the file, which is why we will be able to create files like `my_file` in the next section with no file ending at all.
 </div>
 
@@ -389,7 +389,7 @@ Give it a try:
 cat my_sentences
 ```
 
-<div class = "learnmore">
+<div class = "learn-more">
 The command `cat` is very powerful three-part function that allows a reader to view, combine, or create a new version of a file. In fact `cat` is a shortening of the word "con**cat**enate."
 </div>
 

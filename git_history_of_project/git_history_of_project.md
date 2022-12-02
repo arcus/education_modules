@@ -143,7 +143,7 @@ Using `HEAD` to refer to your commits can be great for looking at recent version
 
 ![On the left, the stack of 3 flat white boxes are labeled `HEAD`, `HEAD~1`,  and `HEAD~2`. An arrow points to a stack on the right made of the 3 white boxes with a 4th red box now on top. This red box is now the one labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`, with all the white boxes having changed labels.](media/commit_stack_head1.svg)
 
-<div class = "learnmore">
+<div class = "learn-more">
 Git is a big pile of mixed metaphors, and in the case of `HEAD`, it is referencing the idea of a [recording head](https://en.wikipedia.org/wiki/Recording_head) which writes audio or video input to a tape.
 
 `HEAD` is a "pointer," it doesn't contain any information of its own. `HEAD` points to the commit you are currently working from, and it is possible to change which commit `HEAD` is pointing to. Moving `HEAD` so that it points somewhere else can be useful when you are trying to go back to an earlier version of your work, but is outside the scope of this module.
@@ -185,7 +185,7 @@ The first thing to notice is that your commit messages are here! This is a good 
 The second thing to notice is the structure of each entry in the log: commit, Author, Date, message.
 When you identify which commit you want to look at, the commit number is the 40 digit string of letters and numbers at the top of it after the word "commit". In Dracula's repository, the identifier for the commit in which he "add[ed] concerns about effects of Mars' moons on Wolfman" is `1e587d25f619aa0aa10fce19b44e4e71503fa41e`.
 
-<div class = "learnmore">
+<div class = "learn-more">
 **What is this number?**
 
 We are used to seeing numbers in base 10, which are made up of ten digits. Commit numbers are in base 16, called [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal). In this number system, we use the 10 familiar digits `1,2,3,4,5,6,7,8,9` as well as the digits `a,b,c,d,e,` and `f` corresponding to 10,11,12,13,14, and 15 respectively in base 10.
@@ -286,7 +286,7 @@ An ill-considered change
 
 Notice that we did NOT add or commit that last change to `mars.txt`. When you are working on a large project, it is very easy to lose track in your mind of when you last committed, or what changes you have made since. In this section we will see how to ask Git to tell us that information.
 
-<div class = "learnmore">
+<div class = "learn-more">
 You can change things in the `planets` directory that you downloaded from GitHub!
 
 Because these files now exist on your computer, you can change them and commit those changes. The author of the new commits will be you, not Vlad Dracula. You can use `git log` to see which of you made which commit.
