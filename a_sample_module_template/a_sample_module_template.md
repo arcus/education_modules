@@ -23,7 +23,7 @@ After completion of this module, learners will be able to:
 @end
 
 @learn_more
-<div class = "learn-more"> <b>Header Text</b> <br> @0</div>
+<div class = "learn-more"> <b>Block Header Text</b> <br> @0</div>
 @end
 
 
