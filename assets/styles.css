@@ -74,7 +74,17 @@ h2, h3, h4 {
 .important p:first-child:before,
 .learn-more p:first-child:before,
 .options p:first-child:before,
-.warning p:first-child:before
+.warning p:first-child:before,
+.answer figure:first-child:before,
+.behind-the-scenes figure:first-child:before,
+.care figure:first-child:before,
+.cool-fact figure:first-child:before,
+.help figure:first-child:before,
+.history figure:first-child:before,
+.important figure:first-child:before,
+.learn-more figure:first-child:before,
+.options figure:first-child:before,
+.warning figure:first-child:before
 {
   white-space: pre;
   font-weight: bold;
@@ -85,7 +95,9 @@ h2, h3, h4 {
   content: "\f058";
 }
 
-.answer p:first-child:before, .answer span:first-child:before {
+.answer p:first-child:before,
+.answer span:first-child:before,
+.answer figure:first-child:before {
   content: "Solution \A\A";
   white-space: pre;
 }
@@ -94,7 +106,9 @@ h2, h3, h4 {
   content: "\f085";
 }
 
-.behind-the-scenes p:first-child:before, .behind-the-scenes span:first-child:before {
+.behind-the-scenes p:first-child:before,
+.behind-the-scenes span:first-child:before,
+.behind-the-scenes figure:first-child:before {
   content: "Behind the scenes \A\A";
   white-space: pre;
 }
@@ -103,7 +117,9 @@ h2, h3, h4 {
   content: "\f4be";
 }
 
-.care p:first-child:before, .care span:first-child:before {
+.care p:first-child:before,
+.care span:first-child:before,
+.care figure:first-child:before {
   content: "A little encouragement \A\A";
   white-space: pre;
 }
@@ -112,7 +128,9 @@ h2, h3, h4 {
   content: "\f5dc";
 }
 
-.cool-fact p:first-child:before, .cool-fact span:first-child:before {
+.cool-fact p:first-child:before,
+.cool-fact span:first-child:before,
+.cool-fact figure:first-child:before {
   content: "Did you know? \A\A";
   white-space: pre;
 }
@@ -121,7 +139,9 @@ h2, h3, h4 {
   content: "\f059";
 }
 
-.help p:first-child:before, .help span:first-child:before {
+.help p:first-child:before,
+.help span:first-child:before,
+.help figure:first-child:before {
   content: "Troubleshooting help \A\A";
   white-space: pre;
 }
@@ -130,7 +150,9 @@ h2, h3, h4 {
   content: "\f1da";
 }
 
-.history p:first-child:before, .history span:first-child:before {
+.history p:first-child:before,
+.history span:first-child:before,
+.history figure:first-child:before {
   content: "Historical context \A\A";
   white-space: pre;
 }
@@ -139,7 +161,9 @@ h2, h3, h4 {
   content: "\f005";
 }
 
-.important p:first-child:before, .important span:first-child:before {
+.important p:first-child:before,
+.important span:first-child:before,
+.important figure:first-child:before {
   content: "Important note \A\A";
   white-space: pre;
 }
@@ -148,7 +172,9 @@ h2, h3, h4 {
   content: "\f518";
 }
 
-.learn-more p:first-child:before, .learn-more span:first-child:before {
+.learn-more p:first-child:before,
+.learn-more span:first-child:before,
+.learn-more figure:first-child:before {
   content: "Learning connection \A\A";
   white-space: pre;
 }
@@ -157,7 +183,9 @@ h2, h3, h4 {
   content: "\f337";
 }
 
-.options p:first-child:before, .options span:first-child:before {
+.options p:first-child:before,
+.options span:first-child:before,
+.options figure:first-child:before {
   content: "Another option \A\A";
   white-space: pre;
 }
@@ -166,7 +194,9 @@ h2, h3, h4 {
   content: "\f071";
 }
 
-.warning p:first-child:before, .warning span:first-child:before {
+.warning p:first-child:before, 
+.warning span:first-child:before,
+.warning figure:first-child:before {
   content: "Warning! \A\A";
   white-space: pre;
 }
