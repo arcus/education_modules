@@ -22,6 +22,8 @@ After completion of this module, learners will be able to:
 
 @end
 
+@learn-more: <div class = "learn-more">@0</div>
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
@@ -235,6 +237,8 @@ To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "
 To do this in R instead of python, see [this other module](example.com).
 
 </div>
+
+@learn-more(Testing macro box)
 
 ### options
 
