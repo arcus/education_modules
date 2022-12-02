@@ -123,10 +123,12 @@ done
 You don't have to be able to write a script in order to use one, but you do need to know how to recognize one. Any file could in theory be a Bash script, but there are a few conventions that good scripts frequently use to help you, and your computer, know that they file is a script.
 
 **File name**
+---
 
 The standard file ending for a script is `.sh`. Usually a script will be informatively named, for example `fibonacci.sh` might be a script that computes the numbers in the Fibonacci sequence. Even though scripts don't have to use the file ending `.sh`, this is the most common way to name them so that you and your collaborators can locate all of the scripts quickly and easily (i.e. `find *.sh`).
 
 **First line**
+---
 
 Sometimes scripts contain a special first line that looks something like this:
 
@@ -134,7 +136,12 @@ Sometimes scripts contain a special first line that looks something like this:
 #! /usr/bin/bash
 ```
 
-This first line tells your computer that it should run the rest of the file as Bash code. If you are in a Bash shell, the script will run even without this line. However as you use scripting to speed up more and more processes, you may want to run a Bash script from a different place, say inside of an R program, where telling your computer the following code is Bash is necessary. On the other hand you might see a script that starts with the first line `#! /usr/bin/python`. This would tell both you and your computer that the following code is not in Bash, but in the programming language Python.
+This first line does two things:
+
+1. It makes the script **executable**.  
+2. It tells your computer that it should run the rest of the file as Bash code. 
+
+An executable script can be run as its own command. We won't be creating executable scripts in this module, but it is good to know that they exist. Such scripts let you combine the power of multiple programming languages: you might see a script that starts with the first line `#! /usr/bin/python`. This would tell both you and your computer that the following code is not in Bash, but in the programming language Python.
 
 The two symbol sequence `#!` is called a [**shebang**](https://en.wikipedia.org/wiki/Shebang_(Unix) and without it your computer wouldn't know that it is expected to run what follows as code.
 
@@ -146,11 +153,13 @@ In the context of coding, the symbol `!` is called a "bang." The word shebang is
 
 </div>
 
-**The example scripts in this module will not start with `#! /usr/bin/bash` for two reasons:**
+**The example scripts in this module will NOT start with `#! /usr/bin/bash`**
+---
 
-1. Since we will be running all scripts from inside of a Bash shell, your computer will assume that the code is Bash without being told.
-2. The path `usr/bin/bash` may not be exactly where the Bash language lives on your computer. If you start combining scripts of different languages or running Bash scripts from outside of the Bash shell, you will need to find out where Bash is stored on your computer and use that path in the first line of any scripts. That, however, is outside the scope of this module.
+There are several reasons, but the two most important are
 
+1. Executing scripts frequently requires you to change the permissions on the script's file and possibly updating it to the location of the Bash language on your computer, both of which are beyond the scope of this module.
+2. We don't need to! Because we are working inside a Bash shell and only using the Bash language, we can run all of our scripts using the command `bash`.
 
 
 ### Quiz: Scripts
