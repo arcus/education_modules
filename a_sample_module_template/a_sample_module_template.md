@@ -22,10 +22,7 @@ After completion of this module, learners will be able to:
 
 @end
 
-@learn_more
-<div class = "learn-more"> <b>Block Header Text</b> <br> @0</div>
-@end
-
+@learn_more: <div class = "learnmore"><b style="color: rgb(var(--color-highlight))">Learning Connection</b> <br> @0 </div>
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
@@ -241,14 +238,27 @@ To do this in R instead of python, see [this other module](example.com).
 
 </div>
 
-@learn_more(To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf).
-
-I'm adding a list
-- one
-- two
+@learn_more(
+  To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf).
+  )
 
 
-)
+
+Can we add a list?
+
+- first
+- second
+
+@learn_more(``Try some code `function`.``)
+
+@learn_more(
+  Here's the first part.
+
+  This should be a new **paragraph**.
+  )
+
+
+@learn_more0
 
 ### options
 
