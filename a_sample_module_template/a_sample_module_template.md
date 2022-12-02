@@ -22,7 +22,9 @@ After completion of this module, learners will be able to:
 
 @end
 
-@learn_more: <div class = "learn-more"> <b>Header Text</b> <br> @0</div>
+@learn_more
+<div class = "learn-more"> <b>Header Text</b> <br> @0</div>
+@end
 
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
@@ -239,7 +241,14 @@ To do this in R instead of python, see [this other module](example.com).
 
 </div>
 
-@learn_more(To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf).)
+@learn_more(To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf).
+
+I'm adding a list
+- one
+- two
+
+
+)
 
 ### options
 
