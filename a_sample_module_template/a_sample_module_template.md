@@ -22,8 +22,8 @@ After completion of this module, learners will be able to:
 
 @end
 
-@learn_more: <div class = "learn-more">@0</div>
-@highlight: <b style="color: red">@0</b>
+@learn_more: <div class = "learn-more"> <b>Header Text</b> <br> @0</div>
+
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
@@ -239,9 +239,7 @@ To do this in R instead of python, see [this other module](example.com).
 
 </div>
 
-@learn_more(Testing macro box)
-
-@highlight(Another macro test)
+@learn_more(To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf).)
 
 ### options
 
