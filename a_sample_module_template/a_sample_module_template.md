@@ -22,7 +22,8 @@ After completion of this module, learners will be able to:
 
 @end
 
-@learn-more: <div class = "learn-more">@0</div>
+@learn_more: <div class = "learn-more">@0</div>
+@highlight: <b style="color: red">@0</b>
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
@@ -238,7 +239,9 @@ To do this in R instead of python, see [this other module](example.com).
 
 </div>
 
-@learn-more(Testing macro box)
+@learn_more(Testing macro box)
+
+@highlight(Another macro test)
 
 ### options
 
