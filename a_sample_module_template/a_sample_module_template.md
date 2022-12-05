@@ -22,8 +22,6 @@ After completion of this module, learners will be able to:
 
 @end
 
-@learn_more: <div class = "learnmore"><b style="color: rgb(var(--color-highlight))">Learning Connection</b> <br> @0 </div>
-
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
@@ -117,12 +115,14 @@ It has a gears icon and always begins with the text "Behind the scenes".
 For example:
 
 <div class = "behind-the-scenes">
+**Behind the scenes**
 
 The commit number is a hash and associated details
 
 </div>
 
 <div class = "behind-the-scenes">
+**Behind the scenes**
 
 In R the `<-` and `=` can both be used for assignment because...
 
@@ -135,12 +135,14 @@ It has a hand-holding-heart icon and always begins with the text "A little encou
 For example:
 
 <div class = "care">
+**A little encouragement...**
 
 This is a topic with a tremendous amount of jargon, which can make resources you may find online hard to understand for folks new to the field. When that happens it's easy to feel like there's something wrong with you if you don't get it, but that's not the case! Those kinds of gatekeeping explanations are a failure on the part of the writer, not the learner.
 
 </div>
 
 <div class = "care">
+**A little encouragement...**
 
 Feeling overwhelmed? It takes a long time to learn git, so don't be disheartened if it doesn't click initially. Just focus on stage, commit, and push. Ignore the rest for now, until you've had a chance to practice just the stage-commit-push process several times.
 
@@ -153,20 +155,15 @@ It has a brain icon and always begins with the text "Did you know?"
 For example:
 
 <div class = "cool-fact">
+**Did you know?**
 
 Functions like this are sometimes called "syntactic sugar" because they don't change anything about how the code runs, they just make it easier for humans to read, the way that sugar makes food sweeter without adding any nutrition.
 
 </div>
 
-<div class = "cool-fact">
-
-![Carebear stare.](https://media.giphy.com/media/11z8mwhw0jxQiI/giphy.gif)
-
-This is a box showing how images work in a highlight box.
-
-</div>
 
 <div class = "cool-fact">
+**Did you know?**
 
 This is a box showing how images work in a highlight box.
 
@@ -183,6 +180,7 @@ It has a circle-question icon and always begins with the text "Troubleshooting h
 For example:
 
 <div class = "help">
+**Troubleshooting help**
 
 A common mistake when using `filter` is to write = when you mean ==. Remember that = is for argument assignment, and == is for testing equality in conditions. If you get them mixed up, your code won't run!
 
@@ -195,12 +193,14 @@ It has a clock-rotate-left icon and always begins with the text "Historical cont
 For example:
 
 <div class = "history">
+**Historical context**
 
 The reason this command is named grep is...
 
 </div>
 
 <div class = "history">
+**Historical context**
 
 The first README file was from 1971, etc.
 
@@ -214,6 +214,7 @@ It has a star icon and always begins with the text "Important note".
 For example:
 
 <div class = "important">
+**Important note**
 
 It's generally much easier to make any necessary changes to the dataframe, such as mutating variables, before sending it to the plotting command.
 
@@ -226,6 +227,7 @@ It has a book icon and always begins with the text "Learning connection".
 For example:
 
 <div class = "learn-more">
+**Learning connection**
 
 To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf).
 
@@ -233,32 +235,12 @@ To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "
 
 
 <div class = "learn-more">
+**Learning connection**
 
 To do this in R instead of python, see [this other module](example.com).
 
 </div>
 
-@learn_more(
-  To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf).
-  )
-
-
-
-Can we add a list?
-
-- first
-- second
-
-@learn_more(``Try some code `function`.``)
-
-@learn_more(
-  Here's the first part.
-
-  This should be a new **paragraph**.
-  )
-
-
-@learn_more0
 
 ### options
 
@@ -267,12 +249,14 @@ It has a left-right arrow icon and always begins with the text "Another option".
 For example:
 
 <div class = "options">
+**Another option**
 
 You could also skip setting up an OSF account completely and just use github to publish and share your research products, but many people prefer to have OSF links available.
 
 </div>
 
 <div class = "options">
+**Another option**
 
 You can run this in the cloud or download all of the files locally and run it on your computer. If you run it on your computer, be sure to make note of which directory you save the files in and update your working directory accordingly.
 
@@ -285,12 +269,14 @@ It has a ! triangle icon and always begins with the text "Warning!".
 For example:
 
 <div class = "warning">
+**Warning!**
 
 Double check your working directory before running this code. If you're in the wrong directory, you risk overwriting your files and losing all of your work with no way to recover it.
 
 </div>
 
 <div class = "warning">
+**Warning!**
 
 Files uploaded to this account will be **publicly visible**. Be very careful not to upload anything with sensitive information like passwords or private data.
 
