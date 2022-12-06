@@ -113,7 +113,7 @@ To **iterate** an action or command is to run it again and again. A common situa
 A **loop** is a bit of code that allows you to run the same command again and again. The loop gives instructions for how many times to run your code, and if it requires input, what that input should be.  With loops, you get to write your command once and then tell it to run as many times as you want!
 
 
-<div class = "learnmore">
+<div class = "learn-more">
 
 There are two kinds of loops: "for loops" and "while loops." In this lesson we will focus on "for loops" which are generally easier to create. "While loops" can be more powerful than for loops in [certain situations](https://betterprogramming.pub/how-to-pick-between-a-while-and-for-loop-14ef217c3776), so once you understand "for loops" they are worth checking out in your preferred programming languages.
 
@@ -559,7 +559,7 @@ A lot of the statements we have used in this module use Bash's `test` utility. Y
 |`[ INTEGER1 -gt INTEGER2 ]` | INTEGER1 is greater than  INTEGER2|
 |`[ INTEGER1 -lt INTEGER2 ]` | INTEGER1 is less than INTEGER2|
 
-<div class = "learnmore">
+<div class = "learn-more">
 
 As you use them more, you will learn more and more ways to combine and mix mathematical statements to make new ones. An exclamation point `!` lets you negate a statement, and the double brackets we saw in the second example allow us to combine expressions with **and** and **or** statements.
 

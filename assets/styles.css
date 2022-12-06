@@ -9,22 +9,24 @@ h2, h3, h4 {
 }
 
 /* general info about how icons should render (see https://fontawesome.com/v5.15/how-to-use/on-the-web/advanced/css-pseudo-elements) */
+/* upgraded to 6 https://fontawesome.com/docs/web/setup/upgrade/pseudo-elements#contentHeader */
 .icon::before {
   display: inline-block;
-  font-style: normal;
-  font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
 }
 
-.important,
+
 .answer,
-.warning,
-.learnmore,
-.options,
-.help,
+.behind-the-scenes,
 .care,
-.hint
+.cool-fact,
+.help,
+.history,
+.important,
+.learn-more,
+.options,
+.warning
 {
   position: relative;
   padding: 1em 1em 1em 1em;
@@ -34,55 +36,73 @@ h2, h3, h4 {
   width = 100%;
 }
 
-.important:before,
 .answer:before,
-.warning:before,
-.learnmore:before,
-.options:before,
-.help:before,
+.behind-the-scenes:before,
 .care:before,
-.hint:before
+.cool-fact:before,
+.help:before,
+.history:before,
+.important:before,
+.learn-more:before,
+.options:before,
+.warning:before
 {
   display: table-cell;
   vertical-align: middle;
   padding: inherit;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+  font: var(--fa-font-solid);
   font-size: 2.5em;
   color: rgb(var(--color-highlight));
 }
 
-.important:before {
-  content: "\f005";
-}
 
 .answer:before {
   content: "\f058";
 }
 
-.warning:before {
-  content: "\f1e2";
+
+.behind-the-scenes:before {
+  content: "\f085";
 }
 
-.learnmore:before {
-  content: "\f4fb";
-}
-
-.options:before {
-  content: "\f24e";
-}
-
-.help:before {
-  content: "\f479";
-}
 
 .care:before {
-  content: "\f004";
+  content: "\f4be";
 }
 
-.hint:before {
-  content: "\f0eb";
+.cool-fact:before {
+  content: "\f5dc";
 }
+
+
+.help:before {
+  content: "\f059";
+}
+
+.history:before {
+  content: "\f1da";
+}
+
+
+.important:before {
+  content: "\f005";
+}
+
+
+.learn-more:before {
+  content: "\f518";
+}
+
+
+.options:before {
+  content: "\f337";
+}
+
+
+.warning:before {
+  content: "\f071";
+}
+
 
 .lia_header__logo {
   display: none;

@@ -142,7 +142,7 @@ import seaborn as sns
 </div>
 
 
-<div class = "learnmore">
+<div class = "learn-more">
 The [`pandas` module](https://pandas.pydata.org/docs/getting_started/index.html)) is for working with data in python. It is conventional to import `pandas` as `pd`.
 
 The [`numpy` module](https://numpy.org/) has several useful functions for statistical calculations and other mathematical operations useful in scientific computing. It is conventional to import `numpy` as `np`.
@@ -169,7 +169,7 @@ print(covid_data.shape) # gives the number of rows and columns
 These data are from a COVID-19 serological survey conducted in Yaounde, Cameroon (Nwosu, K., Fokam, J., Wanda, F. et al., 2021[^1](Kene David Nwosu, Joseph Fokam, Franck Wanda, Lucien Mama, Erol Orel, Nicolas Ray, Jeanine Meke, Armel Tassegning, Desire Takou, Eric Mimbe, Beat Stoll, Josselin Guillebert, Eric Comte, Olivia Keiser, & Laura Ciaffi. 2021. kendavidn/yaounde\_serocovpop\_shared: Initial release v1.0.0. Zenodo. https://doi.org/10.5281/zenodo.5218965)). The authors have made all of the code and data publicly available under a [creative commons 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode) to facilitate re-use.
 
 
-<div class="learnmore">
+<div class="learn-more">
 To learn more about the study, see the [zenodo page for this dataset](https://zenodo.org/record/5218965#.YeBq2RPMITW). You can also read the published article online: [SARS-CoV-2 antibody seroprevalence and associated risk factors in an urban district in Cameroon](https://www.nature.com/articles/s41467-021-25946-0).
 </div>
 
@@ -277,7 +277,7 @@ covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
 </div>
 
 
-<div class = "learnmore">
+<div class = "learn-more">
 For a refresher, see this tutorial on [recoding variables in a pandas dataframe](https://www.sfu.ca/~mjbrydon/tutorials/BAinPy/05_recode.html#replacing-values-from-a-list).
 </div>
 
@@ -394,7 +394,7 @@ For example, `sns.set_theme(palette="colorblind")` will set the colorblind palet
 We'll add that to the code that runs automatically at the top of each page.
 Now all of our plots will use the `colorblind` palette, unless we specify otherwise.
 
-<div class = "learnmore">
+<div class = "learn-more">
 The seaborn library has many different built-in color palettes to choose from. To learn more about setting custom colors in seaborn visualizations, see the [seaborn tutorial on color palettes](https://seaborn.pydata.org/tutorial/color_palettes.html).
 </div>
 
@@ -407,7 +407,7 @@ The seaborn library handles the appearance of plots with two kinds of functions:
 
 Seaborn controls style and context separately so that you can get a plot that has all the style elements you want, and then you can present that same plot scaled appropriately in different contexts --- for example, if you want to include it in a slide deck presentation, you probably want the fonts much larger and the lines heavier than you would if you wanted to include it as a figure in a paper. In this case, you would leave all of the style settings the same, but change context to "talk" to scale it for the slide deck and "paper" to scale it for use in the paper.
 
-<div class = "learnmore">
+<div class = "learn-more">
 We'll show a quick example of changing style and context here, but there are many more options available. To learn more about tweaking style and context, see the [seaborn tutorial on controlling figure aesthetics](https://seaborn.pydata.org/tutorial/aesthetics.html).
 </div>
 
@@ -761,7 +761,7 @@ plt.show()
 
 By default, it plots x and y as a scatterplot, adding a marginal histogram for each.
 
-<div class = "learnmore">
+<div class = "learn-more">
 Learn more about a variety of ways to add marginal distribution information to plots in the [seaborn distributions tutorial](https://seaborn.pydata.org/tutorial/distributions.html#distribution-visualization-in-other-settings).
 </div>
 
@@ -921,7 +921,7 @@ plt.show()
 
 </details>
 
-<div class = "learnmore">
+<div class = "learn-more">
 For many more examples of line plots, see the [seaborn relplot tutorial section on line plots](https://seaborn.pydata.org/tutorial/relational.html#emphasizing-continuity-with-line-plots).
 </div>
 
@@ -1173,7 +1173,7 @@ In general, polynomial models are a good choice when the polynomial relationship
 
 If you want a high level of flexibility in your trend line, you can achieve that with much less complexity by switching to a non-parametric approach like [local regression](https://en.wikipedia.org/wiki/Local_regression), one example of which is lowess ("locally weighted scatterplot smoothing") curves.
 
-<div class = "learnmore">
+<div class = "learn-more">
 For a deeper understanding of what is meant by parametric vs. non-parametric models, see section 2.1.2 of the book [Statistical Learning](https://hastie.su.domains/ISLR2/ISLRv2_website.pdf).
 
 For a good conceptual explanation of lowess curves in particular, see the [StatsQuest video "Lowess and Loess, Clearly Explained"](https://www.youtube.com/watch?v=Vf7oJ6z2LCc).
@@ -1211,7 +1211,7 @@ plt.show()
 
 </details>
 
-<div class = "learnmore">
+<div class = "learn-more">
 There are several more options for kinds of trend lines to draw in `seaborn`, including [logistic regression trend lines and robust regression trend lines](https://seaborn.pydata.org/tutorial/regression.html#fitting-different-kinds-of-models).
 </div>
 

@@ -149,7 +149,7 @@ You can navigate the pages of this course using left and right arrow keys. This 
 
 The `pandas` [package](https://pandas.pydata.org/) lets you store, examine, and manipulate tabular data using python. Since many machine learning tools use python, it can be particularly useful to process tabular data in that same environment.
 
-<div class = "learnmore">
+<div class = "learn-more">
 Most people associate "pandas" with the large mammals [Ailuropoda melanoleuca](https://en.wikipedia.org/wiki/Giant_panda). The `pandas` package is actually a shortening of "panel data."
 </div>
 
@@ -976,7 +976,7 @@ How would you **change** the the `last_name` column of `covid_testing` to be upp
 </div>
 ***
 
-<div class = "learnmore">
+<div class = "learn-more">
 
 The method `.str.lower()` will make every entry in a column lower case. There are several [other ways to manipulate the presentation of text](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.lower.html) in a pandas series.
 

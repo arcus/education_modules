@@ -169,7 +169,7 @@ including all files and sub-directories located within the project's directory.
 If we ever delete the `.git` subdirectory,
 we will lose the project's history.
 
-<div class = "learnmore">
+<div class = "learn-more">
 What are the series of dots preceding `.git`?  The `.` (pronounced "dot") refers to the directory you are currently in, while `..` ("dot dot") refers to the parent of the directory you are currently in. Every directory automatically contains both `.` and `..` as things you can use as quick shorthand if you need to use them to navigate through the file structure.  What we're seeing here, then, is really a list of three things that stay hidden unless you specify that you want to see hidden things: (1)`.`, (2) `..`, and (3) `.git`
 </div>
 
@@ -199,7 +199,7 @@ nothing to commit (create/copy files and use "git add" to track)
 If you are using a different version of Git, the exact
 wording of the output might be slightly different.
 
-<div class ="learnmore">
+<div class ="learn-more">
 You will see that the primary branch of some projects, particularly older projects, is called `master` instead of `main`. GitHub has joined the programming community in a concerted effort to [replace programming terms associated with slavery](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/).
 </div>
 
@@ -725,7 +725,7 @@ results/
 
 These patterns tell Git to ignore any file whose name ends in `.dat` and everything in the `results` directory. (If any of these files were already being tracked, Git would continue to track them.)
 
-<div class = "learnmore">
+<div class = "learn-more">
 There are many common file types that people frequently ask Git not to track. For example Mac users usually want Git to ignore `.DS_store`, which is an invisible file that gets created by opening a file in Finder. You can even start with [this collection of common configurations](https://gist.github.com/octocat/9257657) for `.gitignore`.
 </div>
 
@@ -789,7 +789,7 @@ results/
 nothing to commit, working directory clean
 ```
 
-<div class = "learnmore">
+<div class = "learn-more">
 For more details on how to use `.gitignore` to include or exclude particular files or folders check out Software Carpentry's [lesson on Ignoring Things](https://swcarpentry.github.io/git-novice/06-ignore/index.html).
 </div>
 

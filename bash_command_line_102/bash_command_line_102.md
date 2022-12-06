@@ -146,7 +146,7 @@ We could continue to individually look at the contents of each file, but that is
 
 
 
-<div class ="learnmore">
+<div class ="learn-more">
 Files that start with a `.` (period) are hidden when you enter `ls`. These are usually operational files that help navigate the file system or keep track of metadata. To see all of these files, enter `ls -a`. The `-a` flag tells bash to show you all files and folders.
 
 Since you just downloaded this folder from `GitHub`, you should see `.git` which keeps track of changes to this public directory.
@@ -237,7 +237,7 @@ grizzly_bear.txt:Ursus arctos horribilis
 polar_bear.txt:Ursus maritimus
 ```
 
-<div class = "learnmore">
+<div class = "learn-more">
 The [origin of "grep"](https://en.wikipedia.org/wiki/Grep) is that it is **g**lobally searching for a **r**egular **e**xpression and **p**rinting the matching lines. In the text editor `ed` that was part part of the original Unix operating system from 1969, you could do these action with the command `g/re/p` and the name has stuck.
 </div>
 

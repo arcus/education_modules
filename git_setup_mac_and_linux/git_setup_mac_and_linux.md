@@ -129,7 +129,7 @@ Different operating systems use different character(s) to represent the end of a
 Because Git uses these characters to compare files,
 it may cause unexpected issues when editing a file on different machines.
 
-<div class = "learnmore">
+<div class = "learn-more">
 Though it is beyond the scope of this lesson, you can read more about this issue
 [in the Pro Git book](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_core_autocrlf).
 </div>
@@ -280,7 +280,7 @@ Asking a peer (in person, or via an online community of practice) is probably th
 
 <summary>**Curious about that `alias` command? Click to learn more.**</summary>
 
-<div class = "learnmore">
+<div class = "learn-more">
 This command is an example of [how to set aliases in Git](https://www.atlassian.com/git/tutorials/git-alias), something we didn't cover in this lesson.
 
 Basically, aliases are shortcuts you can write for yourself so you don't have to type out full Git commands every time. We won't be using aliases in the lessons here, but you may like to set some up on your own computer if that sounds attractive to you!

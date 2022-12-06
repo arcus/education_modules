@@ -98,7 +98,7 @@ A version control system is a tool that keeps track of these changes for us, eff
 The complete history of commits for a particular project and their metadata make up a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository). Repositories can be kept in sync across different computers, facilitating
 collaboration among different people.
 
-<div class = "learnmore">
+<div class = "learn-more">
 **The Long History of Version Control Systems**
 
 Automated version control systems are nothing new.

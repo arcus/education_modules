@@ -125,7 +125,7 @@ Some common options are to ask for only some of this metadata using flags:
 - `wc -m` returns the number of characters followed by the file's name.
 
 
-<div class = "learnmore">
+<div class = "learn-more">
 
 **Words**   
 
@@ -199,7 +199,7 @@ You can change how the lines are ordered using flags. The `-r` flag reverses the
 ```
 sort -r Animals.csv
 ```
-<div class ="learnmore">
+<div class ="learn-more">
 
 There are lots of options for the `sort` command. All of the options are visible in the manual which you can see by typing `man sort`. In addition to reversing the order with `-r`, a few particularly useful ones include:
 
@@ -241,7 +241,7 @@ sort Animals.csv >> animals.txt
 
 Again there is no output shown because it was redirected into the file `animals.txt`. Check that `animals.txt` now contains the word count at the top, followed by a sorted copy of the data from `Animals.csv`.
 
-<div class = "learnmore">
+<div class = "learn-more">
 
 In the Bash language, right arrows `>` redirect output, and left arrows `<` redirect input. You are unlikely to need to redirect input since most of the time just entering the input you want, like `Animals.csv`, is sufficient. However if you end up writing more complicated pipelines in the future it may be useful to [learn more about redirecting input](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
 
@@ -405,7 +405,7 @@ wc -m *.txt | sort -n | head -1
 ```
 The Indian cobra, scientific name _Naja naja_ has the shortest character count of any of the animals listed here.
 
-<div class = "learnmore">
+<div class = "learn-more">
 
 **Why is the character count for `Naja naja` 10?**
 

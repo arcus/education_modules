@@ -568,7 +568,7 @@ Both pipe operators pass the **object on its left** as the **first argument** to
 
 In this module, **we'll use the "original" pipe (`%>%`)** in code examples and quiz questions, because we think this is the one you'll see the most in code that your coworkers share with you or you find in online examples.  This will gradually change, and as the "native" pipe (`|>`) gains market share, we'll likely change these materials to reflect that.
 
-<div class = "learnmore">
+<div class = "learn-more">
 **Optional read: Why are there two pipes?**
 
 Lots of R users got used to using the pipe after working in the `tidyverse`.  It became very popular, but it meant having to load up a package, whether that was `tidyverse` (which includes `dplyr`), or just `dplyr` (which silently depends on `magrittr`), or `magrittr`.
