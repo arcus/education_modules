@@ -3,7 +3,7 @@
 author:   Your Name
 email:    email@chop.edu
 version:  0.0.0
-module_template_version: 3.1.0
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Module Title
