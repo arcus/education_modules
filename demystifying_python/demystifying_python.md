@@ -2,8 +2,8 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.1.0
-module_template_version: 2.0.0
+version:  1.2.0
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Demystifying Python
@@ -271,8 +271,11 @@ Your computer most likely will **not** have Python already installed. To check, 
 
 * You can also download [just the latest version of Python directly at python.org](https://www.python.org/downloads/). If you also want Jupyter or any IDEs, you will need to download those separately as well. [You can install Jupyter here](https://jupyter.org/install) and [here is a list of IDEs where you can write Python code](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments).
 
-  <div class = "help">
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
   That list of IDEs might seem a bit intimidating! Let's narrow things down to a few good options. If you don't know where to start, [Thonney](https://thonny.org/) is a good option for beginners, and actually comes with Python built in. [Spyder](https://www.spyder-ide.org/) was designed for scientific programming, and is a popular option for data scientists and analysts. [PyCharm](https://www.jetbrains.com/pycharm/) is popular with professional developers and has many features that other IDEs lack, but may come with a steeper learning curve. Both Spyder and PyCharm come with the Anaconda distribution.
+  
   </div>
 
 Using Python in the Cloud
