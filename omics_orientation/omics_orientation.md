@@ -55,7 +55,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 "**Omics**" (pronounced OH-micks) is a suffix added to a large number of biological disciplines which denotes a "comprehensive, or global, assessment of a set of molecules" (Hasin et al., 2017) related to that domain.  Genomics is possibly the most well-known member of this family of disciplines, but is certainly not the only one! Omics has become something of a buzzword in recent years with the improvement of high-throughput technologies and increased ability to analyze large amounts of data.
 
 <div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
 Much of the content of this module, particularly the definitions of specific omics domains, was derived from an article by Hasin *et al.* published in the journal *Genome Biology*. The citation is below and the article is open source if you are interesting in reading more about this topic.
 
