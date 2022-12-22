@@ -2,8 +2,8 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.0.2
-module_template_version: 2.0.0
+version:  1.1.0
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Python Basics: Writing Python Code
@@ -128,15 +128,20 @@ print(7+2)
 
 Code will not persist from one page to the next, and you can always refresh the page to return the code (and the stored memory of the cell) to its initial state.
 
-<div class = "important">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 These cells will compute everything you ask them to, but will only display what you explicitly request using the `print()` command.
 
 </div>
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 **Navigating with arrow keys**
 
 You can navigate the pages of this course using left and right arrow keys. This means that you **cannot** use left and right arrow keys to navigate **within** a code cell.
+
 </div>
 
 ## Introduction to Python code
@@ -164,8 +169,11 @@ print("Hello World!")
 
 The `print()` function takes an argument (in this case the phrase "Hello World!") and displays it as output.
 
-<div class = "important">
-Tip: Some functions can be called on their own without any arguments, though this isn't common. The documentation for the function will tell you which, if any, arguments are required for that function. To call a function without any arguments, just leave the parentheses empty.
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
+Some functions can be called on their own without any arguments, though this isn't common. The documentation for the function will tell you which, if any, arguments are required for that function. To call a function without any arguments, just leave the parentheses empty.
+
 </div>
 
 There are many [built-in functions in Python](https://docs.python.org/3/library/functions.html), which means to perform many tasks, you only need to call the function without downloading anything other than Python itself. A couple of examples are `abs()`, which takes a number as its argument and returns the absolute value of that number and `len()`, which returns the length of its argument (which can be a word, a phrase, a sequence, or a collection of items)
@@ -210,7 +218,10 @@ print(type("Hello World!"))
 When we pass the phrase "Hello World!" to the `type()` function, we get the output `<class 'str'>`, "str" being short for "string". A **string** is a sequence of characters; you tell Python that a sequence is a string by surrounding it in quotation marks. You can use either single or double quotes, but it's a good idea to be consistent. Strings are a specific data type in Python; other data types include integers, floats (or decimal numbers), lists, and boolean (like True or False, which may look like strings but are a special data type and don't require quotation marks), but there are many more. Try editing the code cell above, replacing "Hello World" with different inputs (for example "Hi", 9.8, 10, or False) and run the cell again to see how the output changes.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Notice that in the above example, we have passed the `type("Hello World!")` function call as an argument to `print()`. Nesting functions like this is common (you can do the same with methods), but there is another option we'll discuss in the next section-- using variables!
+
 </div>
 
 ### Quiz: Functions and methods
@@ -261,7 +272,10 @@ print(my_num)
 While the above example may seem trivial, variables are extremely useful for re-using values and objects, for making your code easier to edit (if you store a value in a variable and then need to change it later, you only need to change the value in the variable definition, rather than every time in your code you've used that value), and making your code more readable.
 
 <div class = "important">
-Tip: It's a good idea to use descriptive names for your variables! Python won't care if you decide to assign a value to the variable `x`, but it's helpful to anyone reading your code (including yourself in 6 months!) to have your variable names describe the value that it holds.
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+It's a good idea to use descriptive names for your variables! Python won't care if you decide to assign a value to the variable `x`, but it's helpful to anyone reading your code (including yourself in 6 months!) to have your variable names describe the value that it holds.
+
 </div>
 
 @sage
@@ -279,7 +293,9 @@ print(all_pets)
 
 In the above example, we have defined variables to contain the number of dogs and the number of cats, and then used these variables in a calculation to get the total number of pets, which is itself assigned to a variable. The `all_pets` variable can then be used repeatedly later (maybe we want to calculate costs associated with feeding and housing all of these pets, for example, or how many collars we'll need). Now, if the number of dogs or cats changes, we can just change the value in the variable statement and re-run our code!
 
-<div class = "important">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 While strings in Python need to be in quotation marks, variable names do not. The reason that strings require quotation marks is so that Python knows that when you type "abc", you mean the **literal characters** "abc", and not some variable with the **name** `abc`.  
 
 Numbers and boolean values like `True` and `False` do not need quotation marks either, but you also cannot use numbers or boolean values by themselves as variable names (but naming a variable using a mix of letters and number is okay).
@@ -327,10 +343,13 @@ There are a few important characteristics of lists:
 
 * Lists are **ordered**: List items remain in the position that they are entered into the list, and you can access any item by its position, or **index**.
 
-  <div class = "important">
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
   An **index** in Python refers to a value's position in a sequence. The sequence can be a collection object like a list or even a string (which you can think of as a sequence of characters). The important thing to remember is that in Python, **indices start at 0**. This means that the index of the first item in a sequence is `0`! This is not always the case in other programming languages.
 
   To access an item by its index, you use **subsetting notation**, `sequence[index]`. To get the first letter of the string "Hello", for example, you would use the code `"Hello"[0]`.
+
   </div>
 
 * Lists are **changeable**; you can add, remove, and edit items in a list. There are a few ways to do this:
@@ -435,8 +454,11 @@ print(produce)
 
 You'll notice that with each step, our list `produce` has been permanently changed-- in order to "start over" with the original list, we simply need to re-run the first code chunk.
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 The code cells above are linked, meaning that all of the cells "remember" the code that has been run previously (as they would be in a [notebook](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md#jupyter-notebooks)). Because of this, if you run them out of order, you can get unexpected results or even errors! If things aren't working like they should, re-run the first code cell on the page or hit your refresh button.
+
 </div>
 
 ### Quiz: Lists
@@ -494,7 +516,10 @@ print(candy_day1)
 </div>
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Did you notice the explanatory text in the above code cell that started with a pound sign (or hash mark)? The pound sign / hash mark ( # ) in a code cell indicates the start of a **comment**. Comments aren't recognized as code and won't be run. Each line of a comment must be marked with a new pound sign. Comments are an excellent way to add brief explanations and clarifications about your code.
+
 </div>
 
 This example loops through the list of numbers, adds 5 to each number one at a time, and adds the sum to a new list using the `append()` method for lists. Finally, we printed the new list to our screen. This kind of loop is sometimes called a **for loop**; there is another kind of loop called a **while loop**, which is often used when we don't know the number of times we'll have to iterate through a block of code before we start ([check out this page for more information about while loops](https://www.geeksforgeeks.org/python-while-loop/)).
@@ -522,8 +547,11 @@ The code cell above is exactly the same as the one on the previous page. Notice 
 
 Try changing the code cell above by removing the indentation in the line `candy_day1.append(j)`. How does the output change? Why do you think it changes the way that it does?
 
-<div class = "help">
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 Indentation is tricky, especially for complex nested loops; experienced Python programmers sometimes struggle with this, so don't worry if it takes some trial and error to figure out! If you end up struggling with a tricky loop, try isolating the individual pieces, get those working, and then build outward. [Drawing a flowchart of the problem](https://problemsolvingwithpython.com/09-Loops/09.04-Flowcharts-Describing-Loops/) can also help!
+
 </div>
 
 
@@ -661,7 +689,10 @@ else:
 </div>
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 When coding in Python, it is important to remember that lines and blocks of code are run **in order**. This means that if your instructions aren't in logical order, you can get outputs that are "wrong."
+
 </div>
 
 **Your Turn**: Before you run the following code cell, predict what the outcome will be.
@@ -850,7 +881,9 @@ print(contact_info)
     </lia-keep>
     </div>
 
-    <div class="warning">
+    <div class = "help">
+    <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
     Note that this change is permanent! If you want to keep the original dictionary as-is, you should make a copy of the dictionary (using the `.copy()` method and assigning the copy to a new variable), and then using `.pop()` on the copy:
 
     @sage
@@ -903,7 +936,10 @@ While **values** can be repeated in a dictionary, each **key** must be unique. H
 ## Challenge Problem
 
 <div class = "important">
-Below is an example of a problem that can be solved using many of the concepts presented in this module. The next few pages will show you how to work through one possible solution, but feel free to give it a try on your own first!
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Now that you've learned a bit about the basics of Python programming, it's time to try to put these concepts together! Below is an example of a problem that can be solved using the skills you've learned in this module. While we encourage you to give it a try on your own first, the next few pages will describe one possible solution step by step.
+
 </div>
 
 A teacher friend of yours can never remember what the grade ranges are for letter grades. They have requested that you write some code that will take their students' final scores and return the letter grades corresponding to those scores. After doing some research, you know that:
@@ -1036,7 +1072,10 @@ print(letter_grades_dict)
 Congratulations! You can now send the letter grades off to your teacher friend.
 
 <div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 If this process seemed intimidating, that's understandable! Learning to code takes time, and there will be moments where things don't work. Things will come easier as you practice! And don't feel like failure if you have to Google how to do certain things over and over-- lots of people who write code for a living do the same thing!
+
 </div>
 
 ## Additional Resources
