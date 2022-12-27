@@ -6,16 +6,15 @@ version:  1.0.0
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
-title: The Elements of a Map
+title: The Elements of Maps
 comment:  This is a general overview of ways that geospatial data can be communicated visually using maps.
 long_description: Raw geospatial data can be particularly tricky for humans to read. However the shapes, colors, sizes, symbols, and language that make up a good map can effectively communicate a variety of detailed data even to readers looking at the map with only minimum specialized background knowledge. This module will demystify how raw data becomes a map and explain common components of maps. It is appropriate for anyone considering making maps from geospatial data.
-estimated_time: 45 minutes
+estimated_time: 30 minutes
 
 @learning_objectives  
 
 After completion of this module, learners will be able to:
 
-- understand the latitude and longitude coordinate system
 - recognize the elements of maps
 - describe types of maps that focus on particular elements.
 
@@ -39,69 +38,13 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 **Estimated time to completion:** @estimated_time
 
 **Pre-requisites**
-None
+Some familiarity with latitude and longitude is required to get the most out of this module as all location data will be presented in that coordinate system.
 
 **Learning Objectives**
 
 @learning_objectives
 
 </div>
-
-## Locations on Earth
-
-Before we can talk about locations all over the earth, we have to establish the locations of a few very special points. The first two are the **North Pole** and the **South Pole**. If you imagine a line going straight through the planet connecting the two poles, this is the axis around which the Earth rotates creating night and day.
-
-The **equator** is the circle around the surface of the earth that is exactly half way between the north and south poles. Any celestial body, like a planet or a star, that spins on an axis has two poles and an equator. Imagine a flat surface containing the equator and dividing the planet into a northern hemisphere and southern hemisphere. That flat surface is called the **equatorial plane**.
-
-A **meridian** is a straight line on the surface of the earth connecting the poles. The third point we need is the location of the [Greenwich Observatory](https://www.rmg.co.uk/royal-observatory) in London, England. The meridian running through the observatory is called the **Prime Meridian**. Unlike the poles, which are fixed points determined by the astronomical fact that the earth is spinning on an axis, the location of the Prime Meridian was a human decision made for [historical](https://greenwichmeantime.com/articles/history/navy/) rather than geographical reasons.
-
-Now that we have established the poles, the equator, and the prime meridian, we can use those to to create a coordinate system that will specify and point on earth!
-
-![On the left an image of Earth is shown from the side with the North Pole labeled at the top, the South Pole labeled at the bottom, and the equator represented as a dashed horizontal line around the middle. On the right Earth is shown from above so that the North Pole is visible. The prime meridian is represented by a dashed vertical line starting at the North Pole and continuing down through the United Kingdom, the western Mediterranean Sea, and West Africa.](media/poles_meridian_equator.svg)<!-- style = "max-width:800px;" border = 5px solid -->
-
-### Latitude and Longitude
-
-
-**Latitude** is a measure of how far north or south a location is from the equator. Given a point on the surface of the earth, imagine a straight line to the center of the earth. The angle that line makes with the equatorial plane, measured in degrees (denoted $ {}^\circ $), is the point's latitude. Since that angle could be either above or below the equatorial plane, we have to specify which angle we are talking about. The horizontal line on the picture below corresponding to 30 degrees north, or +30$ {}^\circ $, goes through the United States, while the line representing 30 degrees south, or -30$ {}^\circ $, runs through Chile and Argentina.
-
-![Earth with the poles, the equator, and latitudes marked at 30 degree increments ranging from -90 at the South Pole to 90 at the North Pole.](media/latitude.png)
-
-**Longitude** is similarly an angular measurement, but rather than measuring relative to the equatorial plane, it measures relative to the prime meridian. Positive angles correspond to locations to the east of the prime meridian, while negative angles refer to points west of it. The meridian on the exact opposite side of the world from the prime meridian is, by convention, +180$ {}^\circ $ or 180$ {}^\circ $ East, even though it could just as accurately be described as -180$ {}^\circ $ or 180$ {}^\circ $ West.
-
-![Earth with the prime meridian and longitude lines at 30 degree increments ranging from -150 to 180. Not shown is -180 degrees longitude which is the same as  180 degrees.](media/longitude.png)
-
-### Coordinate Systems
-
-Together, latitude and longitude form a (spherical) coordinate system that can specify any point on the planet, with high precision. To get that precision, degrees need to be divided into smaller units of measurement.
-
-Decimal Degrees (DD) vs. Degrees, Minutes, and Seconds (DMS)
----
-
-The location data produced today by satellites has no problem with long decimal numbers, but the first accurate measurements of longitude depended on the ability to accurately measure time. In the system of [degrees, minutes, and seconds (DMS)](https://gisgeography.com/decimal-degrees-dd-minutes-seconds-dms/) each angle of one degree is divided into 60 equal parts called "minutes" (denoted `'`) and each minute is further divided into 60 equal parts called "seconds" (denoted `"`).
-
-Here is a table of a few locations with their coordinates given as both decimal degrees and degrees, minutes, seconds.
-
-| City | Lat, Long (DD) | Lat, Long (DMS) |
-| -- | -- | -- |
-| Philadelphia, USA | 39.952583, -75.165222 | 39° 57' 9.2988'' N, 75° 9' 54.7992'' W |
-| Gabororne, Botswana | -24.653257, 25.906792 | 24° 39' 11.7252'' S, 25° 54' 24.4512'' E |
-| Manila, Philippines | 14.556586, 121.023415| 14° 33' 23.7096'' N, 120° 59' 3.1992'' E|
-| Buenos Aires, Argentina | -34.603722, -58.381592 | 34° 36' 13.3992'' S, 58° 22' 53.7312'' W|
-
-
-<div class = "important">
-
-It is common to associate the East/West axis of longitude with the the variable "x" and the North/South axis of latitude with the variable "y." Because of this it is common to see location data stored as longitude first, followed by latitude.
-
-</div>
-
-
-Accuracy and Relative Scale
----
-
-The Roberts Center for Pediatric Research at the Children's Hospital of Philadelphia, for example, is, [according to Google Maps](https://www.google.com/maps/place/CHOP+Roberts+Center+for+Pediatric+Research/@39.9458205,-75.18878,17z/data=!3m1!4b1!4m5!3m4!1s0x89c6c643a1cf897f:0x6f378f102e502212!8m2!3d39.9458205!4d-75.1865913) located at 39.94583795815241, -75.18659130245932. (You can right-click on the location icon to copy the latitude and longitude.) These numbers actually have far more significant digits than are appropriate, and correspond to a particular point in the building's lobby.
-
-While 14 significant digits is clearly overkill, the number of digits needed to be accurate within a certain distance depends on where on the planet your location is. This is because latitude and longitude are measuring angles, not distance. The point 90E 0 N (in the Indian Ocean part way between Sri Lanka and Indonesia) and 90W 0N (near the Galapagos Islands off the west coast of South America) are directly across the planet from each other, as a far away as two points can get (over 20,000 km). However 90E 89N and 90W 89N are both in the Arctic Circle, less than 240 km away from each other.
 
 ## Creating a Map
 
