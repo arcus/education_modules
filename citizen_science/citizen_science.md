@@ -39,90 +39,153 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
-
-* one skill we have [another module for, linked here](https://education.arcus.chop.edu)
-* some familiarity with [a topic](https://education.arcus.chop.edu)
-* understanding of [one thing](https://education.arcus.chop.edu) and [another](https://education.arcus.chop.edu)
-
-If relevant, you can include recommendations for somewhere else to start if the learner doesn't have these prereqs. For example: If you are brand new to R or python (or want a refresher) consider starting with [Intro to R](link) or [Intro to python](link) first and then coming back here.
+None.
 
 **Learning Objectives**
 
 @learning_objectives
 
-For help articulating learning objectives, see [this guide to learning objectives, including lots of example verbs](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/).
 
 </div>
 
-## How is citizen science used?
+## What is citizen science?
 
-Here's an example of a large ongoing citizen science project:
-[TestMyBrain.org](https://testmybrain.org/about.html)
+Citizen science is a broad term that is used to describe scientific projects that invite participation from the public in any of a number of ways.
+Some of the ways citizen scientists can participate in a project include the following:
 
-[GamesWithWords.org](http://gameswithwords.org/)
-
-
-### Activity
-
-Go to [TestMyBrain.org](https://testmybrain.org/about.html) and complete the following tasks:
-
-- Can you download the data obtained from participants using the site?
-- Can you, as a researcher, get access to the tests and quizzes used on the site to run your own studies?
-- Can you, as a researcher, get access to identifiable participant data (i.e. data that links a participant's responses to the test and quizzes with identifying information about them like their email address)?
+- collect data ([Alabama Water Watch](https://aaes.auburn.edu/alabamawaterwatch/); [eBird](https://science.ebird.org/en))
+- text coding, such as in the creation of training data for machine learning algorithms ([Injury Coding](https://github.com/NASA-Tournament-Lab/CDC-NLP-Occ-Injury-Coding))
+- image analysis ([Placenta Profiles](https://www.zooniverse.org/projects/msbrhonclif/science-scribbler-placenta-profiles/about/research))
+- problem solving ([Hewman game](https://citizensciencegames.com/games/hewmen/))
+- writing and debugging code, including complex data science projects ([EvidentlyAI's Hacktoberfest](https://www.evidentlyai.com/hacktoberfest-2022))
+- donate spare CPU time for computationally intense analyses ([Folding@Home](https://foldingathome.org/))
 
 
-## What can citizen scientists do?
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-- collect data [Alabama Water Watch](https://aaes.auburn.edu/alabamawaterwatch/); [eBird](https://science.ebird.org/en)
-- text coding, such as in the creation of training data for machine learning algorithms [Injury Coding](https://github.com/NASA-Tournament-Lab/CDC-NLP-Occ-Injury-Coding)
-- image analysis [Placenta Profiles](https://www.zooniverse.org/projects/msbrhonclif/science-scribbler-placenta-profiles/about/research)
-- problem solving [Hewman game](https://citizensciencegames.com/games/hewmen/)
-- writing and debugging code, including complex data science projects [EvidentlyAI's Hacktoberfest](https://www.evidentlyai.com/hacktoberfest-2022)
-- donate spare CPU time for computationally intense analyses [Folding@Home](https://foldingathome.org/)
+Read [an interview with biologist Caren Cooper](https://e360.yale.edu/features/interview_caren_cooper_how_rise_of_citizen_science_is_democratizing_research) about her experience with several citizen science projects, including what she's learned about how participating in citizen science can impact individuals and communities.
+
+</div>
+
+Citizen science is attractive to many researchers not only because of the possibility of outsourcing work on large complex data, but because it provides the potential to democratize science and allow the public more influence over and involvement in the scientific process.
+
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+Some projects focus especially on how public involvement in science can put power back in the hands of communities.
+For example, [Public Lab](https://publiclab.org/) works to pursue environmental justice through community science and open technology: "When people can easily and reliably track local effects associated with environmental injustices — increased flooding, poor air quality, pollution and destruction of wetlands — they can make better-informed decisions and take action.""
+
+</div>
+
+
+The prevalence of citizen science has increased dramatically in recent years, especially as more digital platforms emerge to support it (for example [Zooniverse](https://www.zooniverse.org/), [Globe at Night](https://www.globeatnight.org/), [Foldit](https://fold.it/), and [The Many Brains Project](https://www.testmybrain.org/)).
+
+
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
+
+[What Is Citizen Science? – A Scientometric Meta-Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147152) explores the history of citizen science projects, including which fields make the most use of citizen science and what scientific output they have produced.
+It includes a meta-anlaysis of more than 2000 published studies.
+
+</div>
+
+## Who participates in citizen science?
+
+Citizen scientists vary a tremendous amount in terms of the level of dedication they bring to a project, their expertise, and their motivation for participating.
+In some cases, participants are attracted just by the prospect of contributing to a scientific project, especially if it's on an issue they care about.
+Other times, the project is [designed as a game](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0100662) or includes more traditional incentives like money to attract participants.
+There are many possible reasons to donate time and effort to a project, and different reasons may apply for different kinds of projects as well as different citizen scientists.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+Check out this recent article exploring the reasons people participated in a citizen science project:
+
+[Why (not) participate in citizen science? Motivational factors and barriers to participate in a citizen science program for malaria control in Rwanda](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0237396)
+
+</div>
+
+As you learn about new citizen science projects, read their recruitment materials and think about what kinds of motivation they're attempting to tap into to attract citizen scientists.
 
 ## How to build a citizen science project
 
-Start small.
-
 Many citizen science projects take a long time to get off the ground but are worthwhile because they pay dividends for a long time once they reach a certain momentum.
-It may take years, and many person-hours from dedicated staff, before a project produces valuable scientific output.
+It may take years before a project produces valuable scientific output.
+Successful projects often rely on grant funding to pay for dedicated staff.
 
 See if there's an existing project you can join rather than starting your own.
 If you can contribute time and expertise to an existing project, it may be possible for you to add tests or experiments to their ongoing work.
 
 For an idea of what might be involved in setting up a larger project, see the [Federal Crowdsourcing and Citizen Science Toolkit](https://www.citizenscience.gov/toolkit/#) published by the U.S. government.
 
-Participating citizen scientists vary a tremendous amount in terms of the level of dedication they bring to a project, their expertise, and their motivation for participating.
-Often, participants are attracted just by the prospect of contributing to a scientific project.
-Other times, the project is [designed as a game](https://citizensciencegames.com/category/medicine/) or includes [more traditional incentives like money]() to attract participants.
-
-## Module Content
-
-Note that liascript will create a new page at each level 1, 2, or 3 header, so to avoid a page with only a header and no content, include text after each header before the next.
-
-Text after level 2 headers provides a good opportunity to give a sentence or two of overview, explain the structure of the coming content, and/or get preliminaries out of the way.
-
-## Including Media
+A more reasonable option for researchers looking to get started with citizen science is to post a project on an existing platform, like [Zooniverse](https://www.zooniverse.org/lab).
 
 
-![A valuable image, and this is its alt text.](https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG "Here is a subtitle that will display beneath the image.")
+## Quiz: Citizen Science
+
+Which of the following are ways citizen scientists can help a project? Check all that apply.
+
+[[X]] data/sample collection
+[[X]] data coding
+[[X]] scientific programming
+[[X]] donating computing power
+***
+<div class = "answer">
+These are all examples of how citizens can support scientific discovery!
+</div>
+***
+
+Which of the following might motivate someone to participate as a citizen scientist? Check all that apply.
+
+[[X]] learning something interesting
+[[X]] wanting to be involved in science
+[[X]] payment or gift incentives
+[[X]] fun
+[[X]] competitiveness
+[[X]] wanting to give back to their community
+[[X]] wanting support an important cause
+***
+<div class = "answer">
+All of these are reasons people put their time and effort towards citizen science projects!
+As you learn about new citizen science projects, notice the language they use on their recruitment materials and think about what kinds of motivation they're attempting to tap into.
+If you start your own citizen science project, carefully consider what might best motivate your participants.
+</div>
+***
+
+Go to [TestMyBrain.org](https://testmybrain.org/about.html).  Can you, as a researcher, get access to the tests and quizzes used on the site to run your own studies?
+
+[(X)] Yes
+[( )] No
+***
+<div class = "answer">
+Yes, they provide a special version of their website for use by researchers wanting to use their tests and quizzes.
+For more information, see their [research page](https://testmybrain.org/research.html).
+</div>
+***
+
+Read the abstract of this [journal article about using citizen science to identify novel drug targets for tuberculosis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0039808). Why did the authors opt to make this a citizen science project rather than using more traditional methods?
+
+[[the research question required a tremendous amount of work that could be done without special training]]
+<script>
+  let input = "@input".trim();
+  /./i.test(input);
+</script>
+***
+<div class = "answer">
+(Note that we can't automatically grade open ended answers to quiz questions, so the page will say your answer was correct no matter what you typed.)
+
+There are many potential reasons to start a citizen science project, but for the authors of this article, the primary reason was the scope of the work required to answer their research question.
+They needed many, many hours of annotation of the *Mycobacterium tuberculosis* genome in order to identify potential drug targets.
+Because this work could be done by people without special training, it was a good candidate for crowd sourcing.
+
+</div>
+***
 
 
-You can link to images online with their url, or locally with the file path, e.g. `![image caption](media/my_image.png)`
-
-If you want to provide several images in a gallery, just make a "paragraph" of image links and LiaScript will render it as a gallery:
-
-![img1 alt text.](https://upload.wikimedia.org/wikipedia/commons/6/68/Ailuropoda_melanoleuca_%28Panda_g%C3%A9ant%29_-_445.jpg) ![img2 alt text.](https://upload.wikimedia.org/wikipedia/commons/2/2d/Panda_giganti_al_Giant_Panda_Breeding_Research_Base_Chengdu.jpg) ![img3 alt text.](https://upload.wikimedia.org/wikipedia/commons/1/12/BabyPandaAtSDZ.jpg)
-
-
-!?[This video is hosted on youtube.](https://www.youtube.com/watch?v=iIAO4Htzn8M)
-
-You can also embed local videos, just as with images: `!?[An embedded video.](vid/intro.mp4 "This is its subtitle")`
-
-In theory, you should be able to embed just about anything. Read more [here](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md#24).
-
-You can also include movies, audio, and any other embedded content in galleries just by putting the links for them all in a paragraph.
+- Can you download the data obtained from participants using the site?
+- Can you, as a researcher, get access to identifiable participant data (i.e. data that links a participant's responses to the test and quizzes with identifying information about them like their email address)?
 
 ## Including highlight boxes
 
