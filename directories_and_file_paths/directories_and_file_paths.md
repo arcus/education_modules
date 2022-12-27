@@ -2,8 +2,8 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.2.0
-module_template_version: 2.0.0
+version:  1.3.0
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Directories and File Paths
@@ -195,7 +195,10 @@ Absolute file paths can be useful because you don't have to know what working di
 However, if you are working with collaborators or have plans to make your script public, using a relative path might be a better choice. If you keep every file that you need in a single project folder (which could have several subfolders) and maintain/share that folder as a single unit, then you can use file paths that are relative to where the script is being run, and it shouldn't matter where a collaborator saves the folder on their own computer. This is the reproducible choice!
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 When writing a script in a programming language like R or Python, it's possible to write code that sets your working directory to a specific location each time the script is run. While this might be tempting, in general it's not a great idea, especially in scripts you might share. The working directory you set may not exist on any other computer, and hardcoding it can cause problems later.
+
 </div>
 
 ### Quiz: Absolute vs. relative file paths
@@ -260,7 +263,10 @@ However, most file names would be hard to read without some way to distinguish t
 This is certainly not an exhaustive list, but these are some of the most common naming conventions you'll encounter. Some developers have a strong preference for one versus another; generally, the most important thing is that you and your team are internally consistent. If you're joining a new team, ask about their file naming preferences.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Although you can use a dot (`.`) in file names, you shouldn't use them at the beginning of your file name. By convention, a file that starts with a dot (like, for example, `.cache`) is hidden; you won't see it in your file system. There are certain circumstances where you might purposely create a hidden file, but it's uncommon.
+
 </div>
 
 ### Quiz: Naming files
