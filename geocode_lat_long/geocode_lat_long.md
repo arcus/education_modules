@@ -75,9 +75,9 @@ The next two descriptions, the addresses, are how a lot of location data is prov
 
 Precise Coordinates
 -------
-The last description, which gives the latitude and longitude of the building, pinpoints the exact location on the planet. The coordinates are enough to place the building precisely on a map, or take a picture of it from a satellite. If you had the latitude and longitude of another building it would be easy to calculate the distance between the two.
+The last description, which gives the latitude and longitude of the building, pinpoints the exact location on the planet. The coordinates are enough to place the building precisely on a map, or take a picture of it from a satellite. If you had the latitude and longitude of another building it would be easy to calculate the distance between the two. This is why having latitude and longitude coordinates can be so important when using location data in research.
 
-On the other hand, the precise coordinates leave out some important information that the building's address might provide. Precise distance, for example, turns out to be less relevant for calculating travel times when you know that the part of Schuylkill Avenue on which it sits is a one way street. Ultimately the best location data would ideally contain both addresses and coordinates.
+On the other hand, the precise coordinates leave out some important information that the building's address might provide. Precise distance, for example, turns out to be less relevant for calculating travel times when you know that the part of Schuylkill Avenue on which it sits is a one way street. The best location data would ideally contain both addresses and coordinates.
 
 The rest of this module will focus on the latitude and longitude coordinate system, and introduce the concept of **geocoding,** which is the process of converting addresses and other location data into coordinates that uniquely identify their place on planet Earth. 
 
@@ -181,7 +181,7 @@ Geocoding addresses one by one might be fine if you only have a few to do, but w
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
-When geocoding addresses for research, make sure that you are preserving the privacy and security of you participants. If you will be using addresses as part of research, you should have a plan for how you will geocode it approved by the appropriate regulatory bodies before you begin.
+When geocoding addresses for research, make sure that you are preserving the privacy and security of you participants. If you will be using addresses as part of research, you should have a plan for geocoding approved by the appropriate regulatory bodies before you begin.
 
 You might need a formal agreement with a geocoding service (see the [Texas A&M Geoservice's privacy and security page](https://geoservices.tamu.edu/About/Legal/)) or a plan to do all geocoding locally on a computer owned by your institution. 
 
