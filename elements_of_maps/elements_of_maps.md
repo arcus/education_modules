@@ -3,7 +3,7 @@
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
 version:  1.0.0
-module_template_version: 2.0.1
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: The Elements of Maps
@@ -48,15 +48,9 @@ Some familiarity with latitude and longitude is required to get the most out of 
 
 ## Creating a Map
 
-<div class = "warning">
+Interpreting the geospatial data presented by a map is one thing, but if you want to make a map, you need to know how geospatial data becomes a map. Throughout this module we will take a look at number of maps of the City of Philadelphia, and take a look at the elements that present or obscure data.
 
-Although a map can be an extremely effective way of sharing your data, be aware that as a visual medium, maps will be inaccessible to members of your audience who are visually impaired. While we are focusing on the visual aspects in this module, it is important to provide text summaries of your findings as well.
-
-</div>
-
-Interpreting the geospatial data presented by a map is one thing, but if you want to make a map, you need to know how geospatial data becomes a map.
-
-The following map shows the city of Philadelphia, along with a few specific attributes:
+The following map shows the city of Philadelphia with a few specific attributes:
 
 - zip codes divide the city into regions,
 - two train lines, the Broad Street Line (in orange) and the Market Frankfort Line (in dark blue) are also pictured,
@@ -65,6 +59,12 @@ The following map shows the city of Philadelphia, along with a few specific attr
 
 ![Map of Philadelphia highspeed train lines.](media/Philadelphia_highspeed_trains.jpg)
 
+<div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
+Although a map can be an extremely effective way of sharing your data, be aware that as a visual medium, maps will be inaccessible to members of your audience who are visually impaired. While we are focusing on the visual aspects in this module, it is important to provide text summaries of your findings as well.
+
+</div>
 
 ### Shapes
 
@@ -75,6 +75,7 @@ How did the data about stations, train lines (from [SEPTA](https://septaopendata
 - Polygons (and Multipolygons)
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 Raw location data is stored as a set of points. This set of points is called a **geometry**.
 
@@ -122,7 +123,8 @@ Similar to multilines are multipolygons. A **multipolygon** is a collection of t
 
 A **multipoint** is a collection of two or more points. Multipoints can be an extremely helpful data structure for some of the more complicated geographic analyses. For example if you want to know how far an address is from a subway station, you could create a multipoint of all of the stations and find the distance from that multipoint to the address. Without the multipoint, you would need to find the distance from the address to each of the stations and then find the minimum distance.
 
-<div class = "learnmore">
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
 
 Software programs sometimes use different names for some shapes. For example QGIS calls a line containing more than two points a [polyline](https://docs.qgis.org/3.22/en/docs/gentle_gis_introduction/vector_data.html#polyline-features-in-detail).
 
@@ -148,10 +150,13 @@ Numbers show the scale of a map. The map above has numbers on the side and botto
 Other common uses of numbers of maps include measurement scales like "1cm = 10km" and elevation or depth markers. Sometimes the label of a particular region is itself a number, like on a map of Philadelphia zip codes.
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
+
+Too much language on a map can be just as confusing as too little!
 
 ![Philadelphia is partitioned into regions and each region is labeled by its 5 digit zip code. Many of the labels overlap each other and are illegible.](media/zip_codes.jpg)
 
-Too much language on a map can be just as confusing as too little!
 
 </div>
 
@@ -180,8 +185,9 @@ In this section we will discuss other elements of maps, and learn about types of
 
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
-Not everyone can distinguish colors. While colors can be a powerful tool, if colors are the only way your are distinguishing features on your map, those features will be invisible to some of your audience.
+Not everyone can distinguish colors. While colors can be a powerful tool, if colors are the only way you are distinguishing features on your map, those features will be invisible to some of your audience.
 
 </div>
 
@@ -260,14 +266,16 @@ Take a look at the two southernmost zip codes at the bottom of the map. In this 
 
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-The difference between proportional and graduated symbol maps may look small, but touches on a a bigger question of what type of data you are working with. A proportional symbol map is more appropriate when you have **continuous data**, while a graduated symbol map is better at presenting **discrete data** in which each data point falls into one only a few bins.
+The difference between proportional and graduated symbol maps may look small, but touches on a bigger question of what type of data you are working with. A proportional symbol map is more appropriate when you have **continuous data**, while a graduated symbol map is better at presenting **discrete data** in which each data point falls into one only a few bins.
 
 This distinction between continuous and discrete data also shows up in the color choices of the choropleth maps we saw earlier.
 
 </div>
 
-<div class = "learnmore">
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
 
 Another way to display data using sizes is with a [**cartogram**](https://en.wikipedia.org/wiki/Cartogram). A cartogram scales and distorts regions so that the size of the region reflects the data.
 
@@ -296,9 +304,14 @@ You are not restricted to using only one type of map at a time. The data you wan
 
 Or perhaps a choropleth could show you the concentration of green spaces in the city while each zip code is also labeled with the medium household income of its residents.
 
-<div class = "warning">
-
 Just because you can use different elements to create maps that show many types of data together, doesn't mean it is a good idea. Remember that the best maps communicate their message clearly. If fitting all of your data onto a single map means none of it is understandable, you probably need to use more than one map to display that data!
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+Making good maps is hard work and can feel more like art than science. Creating a beautiful map that both communicates the data you are trying to show clearly is a lofty goal. 
+
+Focus on clearly presenting your data and the rest will follow.
 
 </div>
 
@@ -329,22 +342,6 @@ We have seen several named types of maps in this lesson:
 | Proportional Symbol Map | ![The zip codes of Philadelphia, each with a blue dot in its center. The dot sizes vary continuously.](media/2021_pedestrian_stops_proportional_symbol.jpg)<!-- style = "max-width:200px;" border = 5px solid -->  |
 
 ## Quiz
-
-Which of the following statements about latitude and longitude are TRUE?
-
-[[X]] Every location on Earth can be described using latitude and longitude.
-[[ ]] The location of equator was an arbitrary decision made by historical map makers.
-[[ ]] Locations east of the prime meridian are represented by positive longitudes and locations west of the prime meridian are represented by negative longitudes.
-[[X]] Locations north of the equator are represented by positive latitudes and locations south of the equator are represented by negative latitudes.
-***
-
-<div class = "answer">
-
-Every location on Earth can be described using latitude and longitude. Positive latitudes are north of the equator and positive longitudes are east of the prime meridian while negative latitudes and longitudes are to the south and west, respectively. While the location of the prime meridian was chosen for historical reasons, the location of the equator is fixed by the planet's rotation.
-
-</div>
-***
-
 
 Which types of geometry might be appropriate to represent a hospital on a map? Select all possibilities.
 
