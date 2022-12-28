@@ -195,8 +195,8 @@ The human visual system is much better adapted to see past the irrelevant variat
 
 The authors found that their non-expert human participants did classify the images with more success than the machine learning algorithm they tested.
 One neat thing about their approach, though, is that it suggests the possibility for using the human and machine systems productively together --- as the humans generate a larger and larger database of classified images, the machine learning algorithm can learn on a larger and larger training dataset, which will likely improve its performance.
-This is one of several studies showing how citizen science and machine learning can be used together.
 
+This is one of several studies showing how citizen science and machine learning can be used together.
 
 </div>
 ***
