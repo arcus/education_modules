@@ -183,6 +183,23 @@ Because this work could be done by people without special training, it was a goo
 </div>
 ***
 
+Read the abstract of this [journal article about the development of a tool for malaria diagnosis using citizen science](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037245). True or False: The authors hypothesized that non-expert humans would be able to out perform machine learning algorithms on classification of blood smear images.
+
+[(X)] TRUE
+[( )] FALSE
+***
+<div class = "answer">
+
+True! In this case, machine learning solutions for automatic detection of infected red blood cells have struggled because of the variability in images.
+The human visual system is much better adapted to see past the irrelevant variation and identify the key characteristics of infected vs. healthy cells, so this is a situation where untrained humans might out perform machine learning tools.
+
+The authors found that their non-expert human participants did classify the images with more success than the machine learning algorithm they tested.
+One neat thing about their approach, though, is that it suggests the possibility for using the human and machine systems productively together --- as the humans generate a larger and larger database of classified images, the machine learning algorithm can learn on a larger and larger training dataset, which will likely improve its performance.
+This is one of several studies showing how citizen science and machine learning can be used together.
+
+
+</div>
+***
 
 - Can you download the data obtained from participants using the site?
 - Can you, as a researcher, get access to identifiable participant data (i.e. data that links a participant's responses to the test and quizzes with identifying information about them like their email address)?
