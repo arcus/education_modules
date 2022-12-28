@@ -225,7 +225,7 @@ This is one of several studies showing how citizen science and machine learning 
 
 ## Additional Resources
 
-
+To learn more about citizen science and its applications in biomedical research, check out the NIH's [Guide to Biomedical Citizen Science](https://www.cancer.gov/research/resources/citizen-science).
 
 ## Feedback
 
