@@ -7,8 +7,8 @@ module_template_version: 3.1.0
 language: en
 narrator: UK English Female
 title: Citizen Science
-comment:  This is a short, focused description of the module.
-long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
+comment:  This is an overview of citizen science for biomedical researchers.
+long_description: This module describes what citizen science is, how it is used in research, and what motivates participants to contribute. It also highlights several examples of real citizen science projects being used in biomedical research and related fields. No prior knowledge is assumed.
 estimated_time: 30 minutes
 @learning_objectives  
 
@@ -26,7 +26,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
-# Title
+# Citizen Science
 
 ## Overview
 @comment
@@ -42,7 +42,6 @@ None.
 **Learning Objectives**
 
 @learning_objectives
-
 
 </div>
 
