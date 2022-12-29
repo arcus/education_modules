@@ -216,17 +216,20 @@ Because this work could be done by people without special training, it was a goo
 </div>
 ***
 
-Read the abstract of this [journal article about the development of a tool for malaria diagnosis using citizen science](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037245). True or False: The authors hypothesized that non-expert humans would be able to out perform machine learning algorithms on classification of blood smear images.
+Read the abstract of this [journal article about the development of a tool for malaria diagnosis using citizen science](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037245). True or False: The authors present classification of blood smear images by non-expert humans as a cheaper way to replace to machine learning algorithms.
 
-[(X)] TRUE
-[( )] FALSE
+[( )] TRUE
+[(X)] FALSE
 ***
 <div class = "answer">
 
-True! In this case, machine learning solutions for automatic detection of infected red blood cells have struggled because of the variability in images.
-The human visual system is much better adapted to see past the irrelevant variation and identify the key characteristics of infected vs. healthy cells, so this is a situation where untrained humans might out perform machine learning tools.
+False.
+They tried both machine learning and classification by non-expert humans as alternatives to analysis by trained experts with the goal of making diagnosis faster, cheaper, and more widely available.
 
-The authors found that their non-expert human participants did classify the images with more success than the machine learning algorithm they tested.
+If you read further in the article, you'll find they did compare the human coders to a machine learning algorithm to see which did a better job classifying blood smears, and they found that their non-expert human participants did classify the images with more success than the machine learning algorithm they tested.
+In this case, machine learning solutions for automatic detection of infected red blood cells have struggled because of the variability in images.
+The human visual system is much better adapted to see past the irrelevant variation and identify the key characteristics of infected vs. healthy cells, so this is a situation where untrained humans out perform machine learning tools.
+
 One neat thing about their approach, though, is that it suggests the possibility for using the human and machine systems productively together --- as the humans generate a larger and larger database of classified images, the machine learning algorithm can learn on a larger and larger training dataset, which will likely improve its performance.
 
 This is one of several studies showing how citizen science and machine learning can be used together.
