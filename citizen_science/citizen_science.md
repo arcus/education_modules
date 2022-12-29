@@ -74,7 +74,9 @@ Citizen science is attractive to many researchers not only because of the possib
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
 Some projects focus especially on how public involvement in science can put power back in the hands of communities.
-For example, [Public Lab](https://publiclab.org/) works to pursue environmental justice through community science and open technology: "When people can easily and reliably track local effects associated with environmental injustices — increased flooding, poor air quality, pollution and destruction of wetlands — they can make better-informed decisions and take action.""
+For example, Public Lab works to pursue environmental justice through community science and open technology. From the [Public Lab About page](https://publiclab.org/about):
+
+"When people can easily and reliably track local effects associated with environmental injustices — increased flooding, poor air quality, pollution and destruction of wetlands — they can make better-informed decisions and take action."
 
 </div>
 
