@@ -197,7 +197,7 @@ If you're curious about whether you could contribute, or if you're interested in
 </div>
 ***
 
-Read the abstract of this [journal article about using citizen science to identify novel drug targets for tuberculosis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0039808). Why did the authors opt to make this a citizen science project rather than using more traditional methods?
+Read the abstract of this [journal article about using citizen science to identify novel drug targets for tuberculosis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0039808) to get an overview of the study. Why might the authors have opted to make this a citizen science project rather than using more traditional methods?
 
 [[the research question required a tremendous amount of work that could be done without special training]]
 <script>
@@ -209,6 +209,7 @@ Read the abstract of this [journal article about using citizen science to identi
 (Note that we can't automatically grade open ended answers to quiz questions, so the page will say your answer was correct no matter what you typed.)
 
 There are many potential reasons to start a citizen science project, but for the authors of this article, the primary reason was the scope of the work required to answer their research question.
+
 They needed many, many hours of annotation of the *Mycobacterium tuberculosis* genome in order to identify potential drug targets.
 Because this work could be done by people without special training, it was a good candidate for crowd sourcing.
 
