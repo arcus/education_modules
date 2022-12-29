@@ -45,11 +45,12 @@ Learners should be familiar with using a Bash shell to navigate a directory syst
 
 Bash commands that will be used without explanation include:
 
+- `ls`
+- `cat`
 - `>` and `>>`
 - `echo`
 - `grep`
 - `wc`
-
 
 
 **Learning Objectives**
