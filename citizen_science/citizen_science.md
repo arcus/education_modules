@@ -57,7 +57,7 @@ Some of the ways citizen scientists can participate in a project include the fol
 - image analysis ([Placenta Profiles](https://www.zooniverse.org/projects/msbrhonclif/science-scribbler-placenta-profiles/about/research))
 - problem solving ([Hewman game](https://citizensciencegames.com/games/hewmen/))
 - writing and debugging code, including complex data science projects ([EvidentlyAI's Hacktoberfest](https://www.evidentlyai.com/hacktoberfest-2022))
-- donate spare CPU time for computationally intense analyses ([Folding@Home](https://foldingathome.org/))
+- donate spare CPU time for computationally intense analyses ([FoldingatHome](https://foldingathome.org/))
 
 
 <div class = "learn-more">
