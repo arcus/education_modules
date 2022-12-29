@@ -245,6 +245,8 @@ This is one of several studies showing how citizen science and machine learning 
 
 To learn more about citizen science and its applications in biomedical research, check out the NIH's [Guide to Biomedical Citizen Science](https://www.cancer.gov/research/resources/citizen-science).
 
+Read the following editorial in PLOS Computational Biology: [Ten Simple Rules for Cultivating Open Science and Collaborative R&D](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003244).
+
 ## Feedback
 
 In the beginning, we stated some goals.
