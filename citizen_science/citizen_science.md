@@ -88,7 +88,7 @@ The prevalence of citizen science has increased dramatically in recent years, es
 <b style="color: rgb(var(--color-highlight));">Historical context</b><br>
 
 [What Is Citizen Science? – A Scientometric Meta-Analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147152) explores the history of citizen science projects, including which fields make the most use of citizen science and what scientific output they have produced.
-It includes a meta-anlaysis of more than 2000 published studies.
+It includes a meta-analysis of more than 2000 published papers.
 
 </div>
 
