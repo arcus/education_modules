@@ -7,7 +7,7 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title:  Bash: Reusable Scripts
-comment:  This module will teach you how to create and use simple bash scripts to make repetitive tasks as simple as possible. 
+comment:  This module will teach you how to create and use simple Bash scripts to make repetitive tasks as simple as possible. 
 long_description: If you have some experience with Bash and want to learn how to save and reuse Bash processes, this lesson will teach you how to write your own Bash scripts and understand and use simple scripts written by others.
 estimated_time: 1 hour
 
@@ -41,7 +41,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-Learners should be familiar with using a bash shell to navigate a directory system. Learners will get the most out of this lesson if they can also create directories and files, write text to files, and read files from their bash shell command line interface.
+Learners should be familiar with using a Bash shell to navigate a directory system. Learners will get the most out of this lesson if they can also create directories and files, write text to files, and read files from their Bash shell command line interface.
 
 Bash commands that will be used without explanation include:
 
@@ -63,9 +63,9 @@ Bash commands that will be used without explanation include:
 
 You will get the most out of this lesson if you follow along with the examples and try out the commands.
 
-**Open a bash shell.**
+**Open a Bash shell.**
 
-If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
+If you are using a computer running macOS (i.e. an Apple computer) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -74,7 +74,7 @@ We want to be able to search, move, and rename files during this module, but don
 
 **Download the files.**
 
-We will be using a directory called `learning_bash` that is publicly available on GitHub. If you have already downloaded this directory for use in another bash module, you do not need to download a fresh copy.
+We will be using a directory called `learning_bash` that is publicly available on GitHub. If you have already downloaded this directory for use in another Bash module, you do not need to download a fresh copy.
 
 Navigate in your browser to the [`learning_bash` directory](https://github.com/arcus/learning_bash) on GitHub. Once you follow the link:
 
@@ -87,13 +87,13 @@ Navigate in your browser to the [`learning_bash` directory](https://github.com/a
 
 A **script** is a small program that you can run on your computer.
 
-A **bash script** is a small program that automates bash commands and lets you run the same sequence of commands as many times as you want. It might be as simple as a program that takes a file you have downloaded and standardizes the file name, or as complicated as creating new files based on information stored in several other files in other locations or doing complex tasks based on a user's typed responses to questions.
+A **Bash script** is a small program that automates Bash commands and lets you run the same sequence of commands as many times as you want. It might be as simple as a program that takes a file you have downloaded and standardizes the file name, or as complicated as creating new files based on information stored in several other files in other locations or doing complex tasks based on a user's typed responses to questions.
 
-You might have heard the terms "script" and "bash scripting" and "shell script" used interchangeably. This is probably because the Bash language is most powerful when you use it to write short scripts that do exactly what you want. Once you get the hang of writing scripts, you can automate almost any work that you expect to need to use multiple times!
+You might have heard the terms "script" and "Bash scripting" and "shell script" used interchangeably. This is probably because the Bash language is most powerful when you use it to write short scripts that do exactly what you want. Once you get the hang of writing scripts, you can automate almost any work that you expect to need to use multiple times!
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
-A **scripting language** is a type of programming language that, like bash or python, does not need to be compiled in order for your code to run.
+A **scripting language** is a type of programming language that, like Bash or Python, does not need to be compiled in order for your code to run.
 </div>
 
 ### Why use a script?
@@ -173,7 +173,7 @@ Which of the following statements about scripts are TRUE?
 
 [[ ]] A script isn't very useful because you could just as easily run code by typing it in line by line.
 [[X]] The standard file ending for a script file is `.sh`.
-[[ ]] Every bash command is a script.
+[[ ]] Every Bash command is a script.
 [[X]] If you are going to want to do a particular sequence of commands many times, a script can help you by automating that sequence.
 ***
 <div class = "answer">
@@ -182,7 +182,7 @@ Which of the following statements about scripts are TRUE?
 
 **The standard file ending for a script file is `.sh`.** TRUE: Although the file ending doesn't impact what the script does, ending the file name with `.sh` is standard practice.
 
-**Every bash command is a script.** FALSE: Even though bash is a "scripting language," the word "script" refers to a small program, not an individual bash command.
+**Every Bash command is a script.** FALSE: Even though Bash is a "scripting language," the word "script" refers to a small program, not an individual Bash command.
 
 **If you are going to want to do a particular sequence of commands many times, a script can help you by automating that sequence.** TRUE
 
@@ -445,7 +445,7 @@ A **subshell** in Bash works much the same way as parentheses in a mathematical 
 
 </div>
 
-Surrounding commands with `$()` puts them into a subshell. In the first line of code in `count_mammals.sh` is telling  bash to define `count` to equal whatever the output of the subshell is, in this case 14.
+Surrounding commands with `$()` puts them into a subshell. In the first line of code in `count_mammals.sh` is telling Bash to define `count` to equal whatever the output of the subshell is, in this case 14.
 
 Why use subshells?
 ---
