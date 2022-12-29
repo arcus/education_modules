@@ -88,13 +88,14 @@ Navigate in your browser to the [`learning_bash` directory](https://github.com/a
 
 A **script** is a small program that you can run on your computer.
 
-A **Bash script** is a small program that automates Bash commands and lets you run the same sequence of commands as many times as you want. It might be as simple as a program that takes a file you have downloaded and standardizes the file name, or as complicated as creating new files based on information stored in several other files in other locations or doing complex tasks based on a user's typed responses to questions.
+A **Bash script** is a small program that automates Bash commands and lets you run the same sequence of commands as many times as you want. It might be as simple as a program that takes a file you have downloaded and standardizes the file name, or as complicated as creating new files based on information stored in several other files in other locations or doing complex tasks based on a user's typed responses to questions. Once you get the hang of writing scripts, you can automate almost any work that you expect to need to use multiple times!  
 
-You might have heard the terms "script" and "Bash scripting" and "shell script" used interchangeably. This is probably because the Bash language is most powerful when you use it to write short scripts that do exactly what you want. Once you get the hang of writing scripts, you can automate almost any work that you expect to need to use multiple times!
-
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
 A **scripting language** is a type of programming language that, like Bash or Python, does not need to be compiled in order for your code to run.
+
+Even though "scripting" is not unique to the Bash language, you might sometimes hear the terms "script" and "Bash scripting" and "shell script" used interchangeably.
+
 </div>
 
 ### Why use a script?
