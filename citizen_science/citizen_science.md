@@ -92,13 +92,17 @@ It includes a meta-analysis of more than 2000 published papers.
 
 </div>
 
-## Who participates in citizen science?
+## Why participate in citizen science?
 
 Citizen scientists vary a tremendous amount in terms of the level of dedication they bring to a project, their expertise, and their motivation for participating.
 In some cases, participants are attracted just by the prospect of contributing to a scientific project, especially if it's an issue they care about.
+They also may be motivated by helping their community or themselves with the output of the research.
 
 
 Other times, the project is [designed as a game](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0100662) or includes more traditional incentives like money to attract participants.
+Some platforms encourage engagement by letting users track their contributions, earn points, and even [form teams to compete against other volunteers](https://stats.foldingathome.org/).
+
+
 There are many possible reasons to donate time and effort to a project, and different reasons may apply for different kinds of projects as well as different citizen scientists.
 
 <div class = "learn-more">
