@@ -95,7 +95,9 @@ It includes a meta-analysis of more than 2000 published papers.
 ## Who participates in citizen science?
 
 Citizen scientists vary a tremendous amount in terms of the level of dedication they bring to a project, their expertise, and their motivation for participating.
-In some cases, participants are attracted just by the prospect of contributing to a scientific project, especially if it's on an issue they care about.
+In some cases, participants are attracted just by the prospect of contributing to a scientific project, especially if it's an issue they care about.
+
+
 Other times, the project is [designed as a game](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0100662) or includes more traditional incentives like money to attract participants.
 There are many possible reasons to donate time and effort to a project, and different reasons may apply for different kinds of projects as well as different citizen scientists.
 
@@ -112,14 +114,19 @@ As you learn about new citizen science projects, read their recruitment material
 
 ## How to build a citizen science project
 
-Many citizen science projects take a long time to get off the ground but are worthwhile because they pay dividends for a long time once they reach a certain momentum.
+Large citizen science projects take a substantial effort to get off the ground but are worthwhile because they pay dividends for a long time once they reach a certain momentum.
 It may take years before a project produces valuable scientific output.
 Successful projects often rely on grant funding to pay for dedicated staff.
 
-See if there's an existing project you can join rather than starting your own.
+For a quicker start, see if there's an existing project you can join rather than starting your own.
 If you can contribute time and expertise to an existing project, it may be possible for you to add tests or experiments to their ongoing work.
 
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 For an idea of what might be involved in setting up a larger project, see the [Federal Crowdsourcing and Citizen Science Toolkit](https://www.citizenscience.gov/toolkit/#) published by the U.S. government.
+
+</div>
 
 A more reasonable option for researchers looking to get started with citizen science is to post a project on an existing platform, like [Zooniverse](https://www.zooniverse.org/lab).
 
