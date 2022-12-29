@@ -7,7 +7,7 @@ module_template_version: 2.0.0
 language: en
 narrator: UK English Female
 title:  Bash: Reusable Scripts
-comment:  This module will teach you how to create and use simple bash scripts so to make repetitive tasks as simple as possible. If you have some experience with bash and want to learn how to save and reuse bash processes, this lesson is for you.
+comment:  This module will teach you how to create and use simple bash scripts to make repetitive tasks as simple as possible. If you have some experience with bash and want to learn how to save and reuse bash processes, this lesson is for you.
 estimated_time: 1 hour
 
 @learning_objectives
@@ -43,6 +43,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 Learners should be familiar with using a bash shell to navigate a directory system. Learners will get the most out of this lesson if they can also create directories and files, write text to files, and read files from their bash shell command line interface.
 
 Bash commands that will be used without explanation include:
+
 - `>` and `>>`
 - `echo`
 - `grep`
@@ -66,12 +67,13 @@ You will get the most out of this lesson if you follow along with the examples a
 If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
 </div>
 
 **Download the files.**
 
-We will be using a directory called `learning-bash` that is publicly available on GitHub. If you have already downloaded this directory for use in another bash module, you do not need to download a fresh copy.
+We will be using a directory called `learning_bash` that is publicly available on GitHub. If you have already downloaded this directory for use in another bash module, you do not need to download a fresh copy.
 
 Navigate in your browser to the [`learning_bash` directory](https://github.com/arcus/learning_bash) on GitHub. Once you follow the link:
 
@@ -88,7 +90,8 @@ A **bash script** is a small program that automates bash commands and lets you r
 
 You might have heard the terms "script" and "bash scripting" and "shell script" used interchangeably. This is probably because the Bash language is most powerful when you use it to write short scripts that do exactly what you want. Once you get the hang of writing scripts, you can automate almost any work that you expect to need to use multiple times!
 
-<div class = "learnmore">
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 A **scripting language** is a type of programming language that, like bash or python, does not need to be compiled in order for your code to run.
 </div>
 
@@ -98,7 +101,7 @@ Anything that you can type into the command line can be incorporated into a scri
 
 Reproducibility
 ---
-If you are processing research data, it is important for you, your collaborators, and any potential readers or users of your work to be able to reproduce your results. While you might be able to describe what steps you took, it is much easier and more robust to say "we processed the data using the `initial_processing.sh`" and providing that file so that others can exactly replicate your steps.
+If you are processing research data, it is important for you, your collaborators, and any potential readers or users of your work to be able to reproduce your results. While you might be able to describe what steps you took, it is much easier and more robust to say "we processed the data using `initial_processing.sh`" and providing that file so that others can exactly replicate your steps.
 
 Reusability
 ---
@@ -120,14 +123,14 @@ done
 
 ### Recognizing a Bash script
 
-You don't have to be able to write a script in order to use one, but you do need to know how to recognize one. Any file could in theory be a Bash script, but there are a few conventions that good scripts frequently use to help you, and your computer, know that they file is a script.
+You don't have to be able to write a script in order to use one, but you do need to know how to recognize one. Any file could in theory be a Bash script, but there are a few conventions that good scripts frequently use to help you, and your computer, know that the file is a script.
 
-**File name**
+File name
 ---
 
 The standard file ending for a script is `.sh`. Usually a script will be informatively named, for example `fibonacci.sh` might be a script that computes the numbers in the Fibonacci sequence. Even though scripts don't have to use the file ending `.sh`, this is the most common way to name them so that you and your collaborators can locate all of the scripts quickly and easily (i.e. `find *.sh`).
 
-**First line**
+First line
 ---
 
 Sometimes scripts contain a special first line that looks something like this:
@@ -143,9 +146,10 @@ This first line does two things:
 
 An executable script can be run as its own command. We won't be creating executable scripts in this module, but it is good to know that they exist. Such scripts let you combine the power of multiple programming languages: you might see a script that starts with the first line `#! /usr/bin/python`. This would tell both you and your computer that the following code is not in Bash, but in the programming language Python.
 
-The two symbol sequence `#!` is called a [**shebang**](https://en.wikipedia.org/wiki/Shebang_(Unix) and without it your computer wouldn't know that it is expected to run what follows as code.
+The two symbol sequence `#!` is called a [**shebang**](https://en.wikipedia.org/wiki/hash-bang) and without it your computer wouldn't know that it is expected to run what follows as code.
 
-<div class = "learnmore">
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
 The symbol `#` has [many names](https://en.wikipedia.org/wiki/Number_sign#). You might be most familiar with it as a "hashtag," "number sign," or the "pound sign." In the context of coding it is usually called either a "hash" or, borrowing from musical notation, a "sharp."
 
@@ -153,7 +157,7 @@ In the context of coding, the symbol `!` is called a "bang." The word shebang is
 
 </div>
 
-**The example scripts in this module will NOT start with `#! /usr/bin/bash`**
+The example scripts in this module will NOT start with `#! /usr/bin/bash`
 ---
 
 There are several reasons, but the two most important are
@@ -166,7 +170,6 @@ There are several reasons, but the two most important are
 
 Which of the following statements about scripts are TRUE?
 
-
 [[ ]] A script isn't very useful because you could just as easily run code by typing it in line by line.
 [[X]] The standard file ending for a script file is `.sh`.
 [[ ]] Every bash command is a script.
@@ -174,7 +177,7 @@ Which of the following statements about scripts are TRUE?
 ***
 <div class = "answer">
 
-**A script isn't very useful because you could just as easily run code by typing it in line by line.** FALSE: You can speed up the process a lot, and avoid typos, but using a script to automate procedures you want to do multiple times!
+**A script isn't very useful because you could just as easily run code by typing it in line by line.** FALSE: You can speed up the process a lot, and avoid typos, by using a script to automate procedures you want to do multiple times!
 
 **The standard file ending for a script file is `.sh`.** TRUE: Although the file ending doesn't impact what the script does, ending the file name with `.sh` is standard practice.
 
@@ -199,9 +202,10 @@ interactive_count_type.sh
 
 The `.sh` file extension tells us these are scripts, but they are also just plain text files so we can look at the contents with `cat`. Try `cat count_mammals.sh` and see what it contains.
 
-The first lines starting with `#`s are a description of what the code does. The `#` symbol (not followed by a `!`) tells the computer that what follows is a **comment** for human readers of this file, not code that the computer should try to read. While every script _should_ include a commented out section explaining its function, not every script does.
+The first lines starting with `#`'s are a description of what the code does. The `#` symbol (not followed by a `!`) tells the computer that what follows is a **comment** for human readers of this file, not code that the computer should try to read. While every script _should_ include a commented out section explaining its function, not every script does.
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
 Using a script written by a trusted colleague can help you streamline your work without replicating their effort! But running a script you downloaded off of the internet isn't a good idea unless you can look at the code and verify that it does what you think it should, and nothing else.
 
@@ -222,6 +226,8 @@ echo There are $count mammals on the list.
 Entering these two lines into the command line by hand will give you the exact same output as running the script.
 
 <div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 
 Don't worry if you haven't seen code like the `count=$(commands here)` line before, we will be going into more detail about it later in this module.
 
@@ -354,7 +360,8 @@ Let's update `first_script.sh` to an argument:
 echo "echo My script can take an argument, like \$1" >> first_script.sh
 ```
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 When using the `echo` command to write a line into the file `first_script,sh`, it is important to put a backslash `\ ` in front of the dollar sign `$`. The backslash functions as an **escape character**, telling Bash that you mean the **symbol** `$`.
 
@@ -372,6 +379,7 @@ echo My script can take an argument, like $1
 Notice that the backslash doesn't appear in the file's second line, but the dollar sign does!
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
 
 Using a text editor to write directly to your file `first_script.sh` can sometimes save you the worry of using escape characters, but if you want to write a script that writes a file with contents like `$1`, you will still need to use the backslash.
 
@@ -396,6 +404,7 @@ bash reverse_three.sh alpha beta gamma
 ```
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 If a script takes more arguments than you give it, it treats the arguments you didn't give it as empty strings. Try giving `reverse_three.sh` only two arguments and see what happens.
 
@@ -429,6 +438,7 @@ Inside the parentheses we see the command `grep mammal Animals.csv | wc -l` whic
 If we were to write a script containing just this command, running it would return the number of animals in `Animals.csv` that are mammals, (there are 14). But the script doesn't just return `14`, it defines the variable `count` to be that output. In order to do this, the script uses a **subshell**.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 A **subshell** in Bash works much the same way as parentheses in a mathematical expression. Commands inside the subshell are executed first.
 
@@ -457,13 +467,15 @@ This script does the same thing as the original 2 line `count_mammals.sh`, it ha
 
 Once you define a variable with `new_variable=$(commands here)` you can call it elsewhere in the script using `$new_variable`.
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 When defining a new variable, there should not be any spaces on either side of the equals sign `=`.
 
 </div>
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
 
 If you look at older Bash scripts, you may see backticks `\`commands here\`` used instead of the dollar sign and parentheses to create subshells.
 
@@ -482,7 +494,7 @@ The last way to create new variables for a script is to have the script's user (
 
 You saw this in action when you called the script `interactive_count_type.sh` earlier in this module. Now we are going to look at how to make scripts interactive.
 
-Interactive scripts are most powerful when they include useful prompts, let's take a look at one:
+Interactive scripts are most powerful when they include useful prompts. Let's take a look at one:
 
 ```
 echo Enter your new variable here:
@@ -492,13 +504,14 @@ echo You entered "$new_var"
 
 1. The first line is what the script will initially print. The user will see `Enter your new variable here:` and then can type anything they want.
 
-2. The second line is where the interactivity comes into play. The `read` command tells the script to pause and wait for the user to input something. Once they user presses `enter` or `return`, whatever they typed will be saved as `new_var` and the script will continue to the next line.
+2. The second line is where the interactivity comes into play. The `read` command tells the script to pause and wait for the user to input something. Once the user presses `enter` or `return`, whatever they typed will be saved as `new_var` and the script will continue to the next line.
 
 3. The third line then takes the new variable and tells you what you entered. The quotes around `$new_var` are there because there may be spaces in the user input. These spaces would not make a difference in this script, but might if this line used a command expecting multiple arguments.
 
-This isn't a particularly useful script as currently written, but the structure a good setup for creating your own interactive scripts, including scripts that take more than one user input.
+This isn't a particularly useful script as currently written, but the structure is a good setup for creating your own interactive scripts, including scripts that take more than one user input.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 An interactive script will execute each line in the order it appears. You can prompt the user for input multiple times and at each line starting with `read` the script will pause and wait for the user to enter their response.
 
@@ -516,11 +529,12 @@ This will open the nano text editor inside of the shell where you will be able t
 
 ![The empty file my_interactive_script.sh opened in nano.](media/empty_nano_window.png)
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 The nano text editor is a very basic way to edit text files, and it doesn't have most of the user-friendly features that many other text editors employ. Within the nano program, you will need to navigate with the arrows on your keyboard, although you may be able to copy and paste text using your mouse.
 
-The `^` symbol next to each of the option at the bottom of the nano screen refers to the `control` button (which may or may not have a `^` symbol on it on your keyboard). For example, to exit the nano program, type `control` and `X`.
+The `^` symbol next to each of the option at the bottom of the nano screen refers to the `control` button (which may or may not have a `^` symbol on it on your keyboard). For example, to exit the nano program, hit `control` and `X`.
 
 </div>
 
@@ -537,8 +551,9 @@ echo That is an interesting answer $name. My favorite number is $(($number * 2 +
 ```
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-Bash can do mathematical operations, including `+`, `-`, `*`, `/`, but they must be inside of a a special [Arithmetic Expansion](https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html) subshell, surrounded by double parentheses:
+Bash can do mathematical operations, including `+`, `-`, `*`, `/`, but they must be inside of a special [Arithmetic Expansion](https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html) subshell, surrounded by double parentheses:
 
 ```
 $((mathematical expression here))
@@ -546,7 +561,8 @@ $((mathematical expression here))
 
 </div>
 
-<div class ="warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 Each line of code must be on a single line inside the plain text file. For example if you insert a line break into the last line, the `echo` command will only know to print out the text on the same line as it, and Bash will try to treat the next line as a new command. This will result in an error message like "command not found"
 
