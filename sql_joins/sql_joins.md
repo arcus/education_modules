@@ -7,7 +7,7 @@ language: en
 narrator: US English Male
 title: SQL Joins
 comment: Learn to extract data from more than one SQL table using JOIN commands in SQL.
-long_description: Usually, data in a SQL database is "normalized", which means reorganized into separate tables that reduce data duplication.  This means you will often have to bring data together from two or more tables into a single dataset.  To do this, you need to learn how JOIN commands work and how to avoid common pitfalls in SQL JOINs.  This module will help you do just that.
+long_description: Usually, data in a SQL database is organized into multiple interrelated tables.  This means you will often have to bring data together from two or more tables into a single dataset to answer your research questions.  This is accomplished using JOIN commands.  This module teaches you how JOINs work and how to avoid common pitfalls in SQL JOINs. 
 estimated_time: 1 hour
 
 @learning_objectives  
@@ -19,7 +19,7 @@ After completion of this module, learners will be able to:
 - Explain what a "Cartesian" JOIN is and why it's problematic
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles-joytest.css
 script: https://kit.fontawesome.com/83b2343bd4.js
 script: https://cdn.jsdelivr.net/npm/alasql@0.6.5/dist/alasql.min.js
 attribute: [AlaSQL](https://alasql.org)
@@ -348,8 +348,7 @@ Maybe your source tables look something like the tables below:
 
 **Table 1: `depression_scale`**
 
-<div style = "font-size: 0.7em;">
-<!-- data-type="none" -->
+<!-- data-type="none" class="tight-table" style="font-size:0.7rem"-->
 | subj_id  | date  | dep_q1  | dep_q2   | dep_q3  | dep_q4  | dep_total   |
 | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
 | 11234   | 2021-05-15   | 3    | 3  | 2    | 4    | 12    |
@@ -357,18 +356,16 @@ Maybe your source tables look something like the tables below:
 | 32660   | 2021-06-10   | 1    | 1  | 2    | 1    | 5   |
 | 86234   | 2022-01-13   | 2    | 2  | 1    | 3    | 8    |
 | 41356   | 2022-02-10   | 1    | 3  | 2    | 3    | 10   |
-</div>
 
 **Table 2: `subject_address`**
 
-<div style = "font-size: 0.7em;">
-<!-- data-type="none" -->
+<!-- data-type="none" class="tight-table" style="font-size:0.7rem"-->
 | subj_id  | street_address  | city  | state   | zip  | date_start  | date_end   |
 | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
 | 11234   | 123 Main Street   | Smithtown    | PA  | 19000    | 2022-01-01   | NULL    |
 | 11234   | 123 Oak Lane   | Old Towne    | PA  | 18000   | 2000-01-01    | 2021-12-31    |
 | 93452   | 123 Green Blvd  | Kirby    | TN  | 37000    | 2020-05-01    | NULL   |
-</div>
+
 
 What you end up with after your successful JOIN will be a single table of results that might just have three columns: `subj_id`, `dep_total`, and `zip`.  That way you can look at any relationship between depression inventory scale and zip code.
 
@@ -408,23 +405,23 @@ Which of the following is more efficient to correct, if we want to change "orane
 
 **One Table Option**
 
-<div style = "max-width: 100%">
 **`order_and_items`**
 
-<!-- data-type="none" -->
+<!-- data-type="none" class="tight-table" -->
 | order_num   | item_1   | item_2  | ...  | item_50  |
 | :--------- | :--------- | :--------- | :--------- | :--------- |
 | 23125    | orane juice     | pistachios     | ...    | NULL    |
 | 41320    | peanut butter    | plain bagels     | ...    | orane juice    |
-| ... hundreds more rows ... | ... | ... | ...| ... |
 | 53011    | napkins    | distilled water     | ...    | NULL    |
 | 14123    | pistachios    | orane juice     | ...    | peanut butter    |
-</div>
+
+In the one table option, we have to look for the phrase "orane juice" anywhere in 50 columns across all rows (consider that there could be thousands of rows).
 
 **Two Table Option**
 
 **`items`**
-<!-- data-type="none" -->
+
+<!-- data-type="none" class="tight-table" -->
 | item_id   | item_name  |
 | :--------- | :--------- |
 | 15 | distilled water |
@@ -433,10 +430,10 @@ Which of the following is more efficient to correct, if we want to change "orane
 | 97 | peanut butter |
 | 108 | pistachios  |
 | 233 | plain bagels  |
-| ...| ... additional items ...|
 
 **`orders`**
-<!-- data-type="none" -->
+
+<!-- data-type="none" class="tight-table" -->
 | order_id   | item_id |
 | :--------- | :--------- |
 | 23125 | 210 |
@@ -449,32 +446,34 @@ Which of the following is more efficient to correct, if we want to change "orane
 | 14123 | 108 |
 | 14123 | 210 |
 | 14123 | 97 |
-| ...| ... additional order - item pairs |
 
+In the two table option, we only have to find "orane juice" in a single column, `item_name`, and it occurs once only (this is )
 
 Therefore, data in SQL databases are fragmented in a process called **normalization**, to help reduce needless repetition and improve performance.
 
 Let's consider the data we looked at in the last section, the two tables related to a mental health research study.  To remind you, this is what that data looked like: 
 
-**Table 1: depression_scale**
+**Table 1: `depression_scale`**
 
-<!-- data-type="none" -->
+<!-- data-type="none" class="tight-table" -->
 | subj_id  | date  | dep_q1  | dep_q2   | dep_q3  | dep_q4  | dep_total   |
 | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
-| 01234   | 2021-05-15   | 3    | 3  | 2    | 4    | 12    |
+| 11234   | 2021-05-15   | 3    | 3  | 2    | 4    | 12    |
 | 86234   | 2021-06-01   | 4    | 4  | 3    | 4    | 15    |
 | 32660   | 2021-06-10   | 1    | 1  | 2    | 1    | 5   |
 | 86234   | 2022-01-13   | 2    | 2  | 1    | 3    | 8    |
 | 41356   | 2022-02-10   | 1    | 3  | 2    | 3    | 10   |
 
-**Table 2: pat_address**
 
-<!-- data-type="none" -->
+**Table 2: `subject_address`**
+
+<!-- data-type="none" class="tight-table" -->
 | subj_id  | street_address  | city  | state   | zip  | date_start  | date_end   |
 | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
-| 01234   | 123 Main Street   | Smithtown    | PA  | 19000    | 2022-01-01   | NULL    |
-| 01234   | 123 Oak Lane   | Old Towne    | PA  | 18000   | 2000-01-01    | 2021-12-31    |
-| 03452   | 123 Green Blvd  | Kirby    | TN  | 37000    | 2020-05-01    | NULL   |
+| 11234   | 123 Main Street   | Smithtown    | PA  | 19000    | 2022-01-01   | NULL    |
+| 11234   | 123 Oak Lane   | Old Towne    | PA  | 18000   | 2000-01-01    | 2021-12-31    |
+| 93452   | 123 Green Blvd  | Kirby    | TN  | 37000    | 2020-05-01    | NULL   |
+
 
 Notice the one-to-many aspects of this data.  The subject with id 86234 has two different administrations of the depression inventory, on different dates.  The subject with id 01234 has two different addresses for two different date ranges.
 
