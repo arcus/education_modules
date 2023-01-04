@@ -115,7 +115,27 @@ Check out this recent article exploring the reasons people participated in a cit
 
 </div>
 
+Analyze an existing citizen science project
+---
+
 As you learn about new citizen science projects, read their recruitment materials and think about what kinds of motivation they're attempting to tap into to attract citizen scientists.
+
+For example, here is part of the text from the [call for coding contributions for the EvidentlyAI project](https://www.evidentlyai.com/hacktoberfest-2022):
+
+>Evidently is an open-source project, and is always open for contributions. For Hacktoberfest, we added a special set of issues labeled “hacktoberfest” to the Evidently GitHub repository. We invite data scientists to dip their toes into open-source contribution and help us add new statistical metrics and tests to detect data drift for production ML models.
+>
+> Don’t forget to register for Hacktoberfest by October 31! If you register and have 4 pull requests accepted among the first 40000 participants, you can get a prize.
+
+And here is part of the homepage text from [TestMyBrain](https://testmybrain.org/):
+
+>TestMyBrain aims to engage and collaborate with citizen scientists like you, by providing tools to help you learn about yourself. When you test yourself, you contribute to brain research.
+
+What strategies do you notice each project using to try to recruit citizen scientists to help?
+
+Keep in mind that they're recruiting two very different auidences --- EvidentlyAI needs volunteers with a specialized skill set (data scientists), but TestMyBrain can recruit from the general population.
+In both cases, though, you can see they use multiple strategies to motivate potential participants.
+For EvidentlyAI, they emphasize the opportunity to learn something new and join a productive community of peers, but they also mention prizes.
+TestMyBrain motivates participants with the opportunity to get personlized information from the tests and also the opportunity to contribute to brain science.
 
 ## How to build a citizen science project
 
@@ -135,6 +155,15 @@ For an idea of what might be involved in setting up a larger project, see the [F
 
 A more reasonable option for researchers looking to get started with citizen science is to post a project on an existing platform, like [Zooniverse](https://www.zooniverse.org/lab).
 
+Analyze an existing citizen science project
+---
+
+Read the abstract and then scroll down to the Methodology section of this [journal article on an analysis of Google image results related to the Covid-19 pandemic](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9759662/).
+The authors used citizen scientists to build the sample of images they analyzed.
+How did they set up the project (how did they recruit volunteers, provide instructions, and collect the images)?
+
+Information about how projects are set up (such as what platforms were used, if any) is often available in the methods section of publications, but not always.
+In this case, the authors provide plenty of detail about the platform they used (clickwork) and how they used it.
 
 ## Quiz
 
@@ -172,7 +201,7 @@ If you start your own citizen science project, carefully consider what might bes
 </div>
 ***
 
-True or False: There are platforms available online to help you launch new citizen science projects quickly.
+True or False: There are platforms available online to help you launch new citizen science projects without having to do all of the setup work yourself.
 
 [(X)] TRUE
 [( )] FALSE
@@ -247,6 +276,8 @@ This is one of several studies showing how citizen science and machine learning 
 To learn more about citizen science and its applications in biomedical research, check out the NIH's [Guide to Biomedical Citizen Science](https://www.cancer.gov/research/resources/citizen-science).
 
 Read the following editorial in PLOS Computational Biology: [Ten Simple Rules for Cultivating Open Science and Collaborative R&D](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003244).
+
+To read about more examples of citizen science in action, check out this [review article covering 21 pulbished studies in the health sciences that used crowdsourcing](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3889976/).
 
 ## Feedback
 
