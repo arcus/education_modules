@@ -76,7 +76,7 @@ Citizen science is attractive to many researchers not only because of the possib
 Some projects focus especially on how public involvement in science can put power back in the hands of communities.
 For example, Public Lab works to pursue environmental justice through community science and open technology. From the [Public Lab About page](https://publiclab.org/about):
 
-"When people can easily and reliably track local effects associated with environmental injustices — increased flooding, poor air quality, pollution and destruction of wetlands — they can make better-informed decisions and take action."
+> When people can easily and reliably track local effects associated with environmental injustices — increased flooding, poor air quality, pollution and destruction of wetlands — they can make better-informed decisions and take action.
 
 </div>
 
@@ -99,7 +99,7 @@ In some cases, participants are attracted just by the prospect of contributing t
 They also may be motivated by helping their community or themselves with the output of the research.
 
 
-Other times, the project is [designed as a game](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0100662) or includes more traditional incentives like money to attract participants.
+Other times, the project includes more traditional incentives like money to attract participants, or is designed as a game. Using free smartphone games to collect research data can be quite effective, as this [article in PLOS]((https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0100662)  shows.
 Some platforms encourage engagement by letting users track their contributions, earn points, and even [form teams to compete against other volunteers](https://stats.foldingathome.org/).
 
 
@@ -135,7 +135,7 @@ For an idea of what might be involved in setting up a larger project, see the [F
 A more reasonable option for researchers looking to get started with citizen science is to post a project on an existing platform, like [Zooniverse](https://www.zooniverse.org/lab).
 
 
-## Quiz: Citizen Science
+## Quiz
 
 Which of the following are ways citizen scientists can help a project? Check all that apply.
 
