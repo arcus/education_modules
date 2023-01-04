@@ -2,8 +2,8 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.0
-module_template_version: 2.0.0
+version:  1.1.1
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Setting Up Git on Mac and Linux
@@ -56,6 +56,8 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 ## Lesson Preparation
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Note that this module is written specifically for people working on Mac or Linux computers. If you are using a Windows machine, you should reference [Git Setup for Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md) instead.
 </div>
 
@@ -73,7 +75,9 @@ git --version
 You should get some brief message giving the version number of Git installed on your machine (e.g. `git version 2.24.3 (Apple Git-128)` or something similar).
 If you get an error message instead, you may need to [install Git](https://carpentries.github.io/workshop-template/#git) before continuing with the lesson.  
 
-<div class = "important">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 If you don't have Git installed already, go ahead and try downloading it using the links above, but if you have problems talk to your own institution's tech support. Especially if your computer was issued by your employer, they might have put up very high barriers to downloading and installing things.
 </div>
 
@@ -87,6 +91,8 @@ Below are a few examples of configurations we will set as we get started with Gi
 *   and that we want to use these settings globally (i.e. for every project).
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 We will use `git config` with the `--global` option to configure a user name, email address, editor, and other preferences. This only needs to be done once per machine.
 </div>
 
@@ -101,6 +107,8 @@ $ git config --global user.name "Vlad Dracula"
 $ git config --global user.email "vlad@tran.sylvan.ia"
 ```
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 Please use your own name and email address instead of Dracula's.
 </div>
 
@@ -115,6 +123,8 @@ after this lesson will include this information.
 For this lesson, we will be interacting with [GitHub](https://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account.
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-email-preferences/setting-your-commit-email-address).
 </div>
 
@@ -129,9 +139,9 @@ Different operating systems use different character(s) to represent the end of a
 Because Git uses these characters to compare files,
 it may cause unexpected issues when editing a file on different machines.
 
-<div class = "learn-more">
-Though it is beyond the scope of this lesson, you can read more about this issue
-[in the Pro Git book](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_core_autocrlf).
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+Though it is beyond the scope of this lesson, you can read more about this issue [in the Pro Git book](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_core_autocrlf).
 </div>
 
 You can change the way Git recognizes and encodes line endings using the `core.autocrlf` command to `git config`.
@@ -161,8 +171,10 @@ It is possible to reconfigure the text editor for Git whenever you want to chang
 
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+<br>
 **Exiting Vim**
-
+<br>
 Note that Vim is the default editor for many programs. If you haven't used Vim before and wish to exit a session without saving your changes, press `Esc` then type `:q!` and hit `Enter` or `↵` or on Macs, `Return`.
 If you want to save your changes and quit, press `Esc` then type `:wq` and hit `Enter` or `↵` or on Macs, `Return`.
 
@@ -195,8 +207,10 @@ $ git config --list
 You can change your configuration as many times as you want: use the same commands to choose another editor or update your email address.
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+<br>
 **Proxy**
-
+<br>
 In some networks you need to use a
 [proxy](https://en.wikipedia.org/wiki/Proxy_server). If this is the case, you may also need to tell Git about the proxy:
 
@@ -213,7 +227,8 @@ $ git config --global --unset https.proxy
 ```
 
 Not sure whether or not your network uses a proxy? You should be able to check for a proxy by looking at the settings in your browser. For example, [here's what the proxy settings look like for the FireFox browser](https://support.mozilla.org/en-US/kb/connection-settings-firefox). You can search online to find more examples of proxy settings in different browsers, or just open the Settings for whatever browser you're using and poke around to see if you can find proxy information.
-
+<br>
+<br>
 **Note**: If your network does use a proxy, or if you can't determine whether there's a proxy or not, you may need to contact your own institution's tech support team for help. In some cases, proxy settings can be complex; you may not be able to find good information relevant to your specific situation without talking to the team that manages your network.
 </div>
 
