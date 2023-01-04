@@ -207,6 +207,7 @@ $ git config --list
 You can change your configuration as many times as you want: use the same commands to choose another editor or update your email address.
 
 <div class = "help">
+
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 <br>
 **Proxy**
@@ -230,6 +231,7 @@ Not sure whether or not your network uses a proxy? You should be able to check f
 <br>
 <br>
 **Note**: If your network does use a proxy, or if you can't determine whether there's a proxy or not, you may need to contact your own institution's tech support team for help. In some cases, proxy settings can be complex; you may not be able to find good information relevant to your specific situation without talking to the team that manages your network.
+
 </div>
 
 ## Git Help and Manual
@@ -242,7 +244,10 @@ $ git config -h
 $ git config --help
 ```
 
-<div class = "important">
+<div class = "help">
+
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 While viewing the manual, remember the `:` is a prompt waiting for commands and you can press `Q` to exit the manual.
 </div>
 

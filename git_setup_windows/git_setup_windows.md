@@ -2,8 +2,8 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  1.1.0
-module_template_version: 2.0.0
+version:  1.1.1
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Setting Up Git on Windows
@@ -53,7 +53,10 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 ## Lesson Preparation
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Note that this module is written specifically for people working on Windows computers. If you are using a Mac or Linux machine, you should reference [Git Setup for Mac and Linux](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md) instead.
+
 </div>
 
 Search in your Start Menu for the application Git Bash. If the Git Bash application is already on your computer, you can proceed to the section on [how to use Git Bash](#git-bash).
@@ -70,7 +73,10 @@ When you open the `.exe` file you may be asked to confirm that you want to run i
 ![Security warning window. Select the "Run" button in the middle to continue.](media/01run.exe.png)<!-- style = "max-width:300px;"  border = 5px solid -->
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 There are several helpful settings that you can choose in the Setup phase that will be useful in the future. However it is also possible to install with default settings and update them from the command line later.
+
 </div>
 
 ### Setting up Git
@@ -117,7 +123,10 @@ Below are a few examples of configurations we will set as we get started with Gi
 *   and that we want to use these settings globally (i.e. for every project).
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 We will use `git config` with the `--global` option to configure a user name, email address, editor, and other preferences. This only needs to be done once per machine.
+
 </div>
 
 ### Setting up your username and email
@@ -131,7 +140,10 @@ $ git config --global user.name "Vlad Dracula"
 $ git config --global user.email "vlad@tran.sylvan.ia"
 ```
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 Please use your own name and email address instead of Dracula's.
+
 </div>
 
 This user name and email will be associated with your subsequent Git activity,
@@ -145,7 +157,10 @@ after this lesson will include this information.
 For this lesson, we will be interacting with [GitHub](https://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account.
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-email-preferences/setting-your-commit-email-address].
+
 </div>
 
 If you elect to use a private email address with GitHub, then use that same email address for the `user.email` value, e.g. `username@users.noreply.github.com` replacing `username` with your GitHub one.
@@ -161,7 +176,8 @@ Different operating systems use different character(s) to represent the end of a
 Because Git uses these characters to compare files,
 it may cause unexpected issues when editing a file on different machines.
 
-<div class = "learn-more">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 Though it is beyond the scope of this lesson, you can read more about this issue
 [in the Pro Git book](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_core_autocrlf).
 </div>
@@ -197,8 +213,10 @@ It is possible to reconfigure the text editor for Git whenever you want to chang
 
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+<br>
 **Exiting Vim**
-
+<br>
 Note that Vim is the default editor for many programs. If you haven't used Vim before and wish to exit a session without saving your changes, press `Esc` then type `:q!` and hit `Enter` or `↵`.
 If you want to save your changes and quit, press `Esc` then type `:wq` and hit `Enter`.
 
@@ -232,10 +250,12 @@ $ git config --list
 You can change your configuration as many times as you want: use the same commands to choose another editor or update your email address.
 
 <div class = "help">
-**Proxy**
 
-In some networks you need to use a
-[proxy](https://en.wikipedia.org/wiki/Proxy_server). If this is the case, you may also need to tell Git about the proxy:
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+<br>
+**Proxy**
+<br>
+In some networks you need to use a [proxy](https://en.wikipedia.org/wiki/Proxy_server). If this is the case, you may also need to tell Git about the proxy:
 
 ```bash
 $ git config --global http.proxy proxy-url
@@ -250,8 +270,10 @@ $ git config --global --unset https.proxy
 ```
 
 Not sure whether or not your network uses a proxy? You should be able to check for a proxy by looking at the settings in your browser. For example, [here's what the proxy settings look like for the FireFox browser](https://support.mozilla.org/en-US/kb/connection-settings-firefox). You can search online to find more examples of proxy settings in different browsers, or just open the Settings for whatever browser you're using and poke around to see if you can find proxy information.
-
+<br>
+<br>
 **Note**: If your network does use a proxy, or if you can't determine whether there's a proxy or not, you may need to contact your own institution's tech support team for help. In some cases, proxy settings can be complex; you may not be able to find good information relevant to your specific situation without talking to the team that manages your network.
+
 </div>
 
 ## Git Help and Manual
@@ -264,7 +286,10 @@ $ git config -h
 $ git config --help
 ```
 
-<div class = "important">
+<div class = "help">
+
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 While viewing the manual, remember the `:` is a prompt waiting for commands and you can press `Q` to exit the manual.
 </div>
 
