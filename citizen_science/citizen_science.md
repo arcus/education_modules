@@ -92,7 +92,7 @@ It includes a meta-analysis of more than 2000 published papers.
 
 </div>
 
-## Why participate in citizen science?
+## What motivates citizen scientists?
 
 Citizen scientists vary a tremendous amount in terms of the level of dedication they bring to a project, their expertise, and their motivation for participating.
 In some cases, participants are attracted just by the prospect of contributing to a scientific project, especially if it's an issue they care about.
