@@ -92,6 +92,18 @@ It includes a meta-analysis of more than 2000 published papers.
 
 </div>
 
+What's the difference between a study participant and a citizen scientist?
+---
+
+Study participants provide only data to a project, whereas citizen scientists can be involved in a much wider range of tasks, often taking over work that would otherwise be done by research staff.
+Some of the most well-known citizen science projects use volunteers to help classify images or other raw data, or collect measurements and samples to be sent in for analysis.
+
+In some cases, though, the line between "participant" and "citizen scientist" can be blurry.
+For a project like [TestMyBrain](https://www.testmybrain.org/), the only contribution most volunteers make is completing the tests --- exactly what traditional study participants would do.
+What distinguishes it from a more traditional study is mostly the framing.
+The project organizers provide a lot of educational content about their study designs, process, and preliminary results, inviting participants to learn about the science from a different perspective than they normally would.
+Encouraging volunteers to think about how their contribution fits into the larger scientific process is characteristic of citizen science.
+
 ## What motivates citizen scientists?
 
 Citizen scientists vary a tremendous amount in terms of the level of dedication they bring to a project, their expertise, and their motivation for participating.
