@@ -1,10 +1,10 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.1
+version:  1.0.0
 module_template_version: 2.0.0
 language: en
-narrator: US English Male
+narrator: US English Female
 title: SQL Joins Demystified
 comment: Learn about SQL joins in a non-coding module.
 long_description: Usually, data in a SQL database is organized into multiple interrelated tables.  This means you will often have to bring data together from two or more tables into a single dataset to answer your research questions.  This is accomplished using JOIN commands.  This module teaches underlying data considerations and explains the type of JOINS, without going into detail about the SQL code itself.
