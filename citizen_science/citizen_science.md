@@ -51,6 +51,7 @@ None.
 ## What is citizen science?
 
 Citizen science is a broad term that is used to describe scientific projects that invite participation from the public in any of a number of ways.
+Often, volunteer citizen scientits take on work that would otherwise be done by research staff.
 Some of the ways citizen scientists can participate in a project include the following:
 
 - collect data ([Alabama Water Watch](https://aaes.auburn.edu/alabamawaterwatch/); [eBird](https://science.ebird.org/en))
@@ -63,7 +64,6 @@ Some of the ways citizen scientists can participate in a project include the fol
 
 
 Citizen science is attractive to many researchers not only because of the possibility of outsourcing work on large complex data, but because it provides the potential to democratize science and allow the public more influence over and involvement in the scientific process.
-
 
 <div class = "cool-fact">
 <b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
@@ -263,7 +263,7 @@ Another option for researchers looking to get started with citizen science witho
 Read the abstract and then scroll down to the Methodology section of this [journal article on an analysis of Google image results related to the Covid-19 pandemic](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9759662/).
 The authors used citizen scientists to build the sample of images they analyzed.
 
-**How did they set up the project (how did they recruit volunteers, provide instructions, and collect the images)?**
+**How did they set up the project? In other words, how did they recruit volunteers, provide instructions, and collect the images?**
 
 Information about how projects are set up (such as what platforms were used, if any) is often available in the methods section of publications, but not always.
 In this case, the authors provide plenty of detail about the platform they used (clickwork) and how they used it.
