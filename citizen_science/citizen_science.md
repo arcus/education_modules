@@ -8,15 +8,16 @@ language: en
 narrator: UK English Female
 title: Citizen Science
 comment:  This is an overview of citizen science for biomedical researchers.
-long_description: This module describes what citizen science is, how it is used in research, and what motivates participants to contribute. It also highlights several examples of real citizen science projects being used in biomedical research and related fields. No prior knowledge is assumed.
-estimated_time: 30 minutes
+long_description: This module covers the what, who, why, and how of citizen science research: what citizen science is, who volunteers, why citizen science might be a good choice for your research, and options for how to get started. Throughout, it highlights several examples of real citizen science projects being used in biomedical research and related fields. No prior knowledge is assumed.
+estimated_time: 45 minutes
 @learning_objectives  
 
 After completion of this module, learners will be able to:
 
 - list several ways members of the public can contribute to scientific projects
-- identify several different factors that may motivate people to participate in citizen science
-- analyze existing citizen science projects for things like policies on collaboration, goals of the research, and strategies for implementation
+- recognize several different factors that motivate people to volunteer in citizen science
+- identify research questions that may be a particularly good fit for citizen science
+- examine published materials from citizen science projects for things like policies on collaboration and strategies for implementation
 
 @end
 
@@ -58,14 +59,8 @@ Some of the ways citizen scientists can participate in a project include the fol
 - problem solving ([Hewman game](https://citizensciencegames.com/games/hewmen/))
 - writing and debugging code, including complex data science projects ([EvidentlyAI's Hacktoberfest](https://www.evidentlyai.com/hacktoberfest-2022))
 - donate spare CPU time for computationally intense analyses ([FoldingatHome](https://foldingathome.org/))
+- and more!
 
-
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
-
-Read [an interview with biologist Caren Cooper](https://e360.yale.edu/features/interview_caren_cooper_how_rise_of_citizen_science_is_democratizing_research) about her experience with several citizen science projects, including what she's learned about how participating in citizen science can impact individuals and communities.
-
-</div>
 
 Citizen science is attractive to many researchers not only because of the possibility of outsourcing work on large complex data, but because it provides the potential to democratize science and allow the public more influence over and involvement in the scientific process.
 
@@ -104,6 +99,23 @@ What distinguishes it from a more traditional study is mostly the framing.
 The project organizers provide a lot of educational content about their study designs, process, and preliminary results, inviting participants to learn about the science from a different perspective than they normally would.
 Encouraging volunteers to think about how their contribution fits into the larger scientific process is characteristic of citizen science.
 
+### Quiz: Defining citizen science
+
+Which of the following are ways citizen scientists can help a project? Check all that apply.
+
+[[X]] data/sample collection
+[[X]] data coding
+[[X]] scientific programming
+[[X]] donating computing power
+[[X]] influencing study design or the identification of research goals
+***
+<div class = "answer">
+
+These are all examples of how citizens can support scientific discovery!
+
+</div>
+***
+
 ## What motivates citizen scientists?
 
 Citizen scientists vary a tremendous amount in terms of the level of dedication they bring to a project, their expertise, and their motivation for participating.
@@ -127,8 +139,7 @@ Check out this recent article exploring the reasons people participated in a cit
 
 </div>
 
-Analyze an existing citizen science project
----
+### Consider an existing project: Motivating volunteers
 
 As you learn about new citizen science projects, read their recruitment materials and think about what kinds of motivation they're attempting to tap into to attract citizen scientists.
 
@@ -142,56 +153,14 @@ And here is part of the homepage text from [TestMyBrain](https://testmybrain.org
 
 >TestMyBrain aims to engage and collaborate with citizen scientists like you, by providing tools to help you learn about yourself. When you test yourself, you contribute to brain research.
 
-What strategies do you notice each project using to try to recruit citizen scientists to help?
+**What strategies do you notice each project using to try to recruit citizen scientists to help?**
 
 Keep in mind that they're recruiting two very different auidences --- EvidentlyAI needs volunteers with a specialized skill set (data scientists), but TestMyBrain can recruit from the general population.
 In both cases, though, you can see they use multiple strategies to motivate potential participants.
 For EvidentlyAI, they emphasize the opportunity to learn something new and join a productive community of peers, but they also mention prizes.
 TestMyBrain motivates participants with the opportunity to get personlized information from the tests and also the opportunity to contribute to brain science.
 
-## How to build a citizen science project
-
-Large citizen science projects take a substantial effort to get off the ground but are worthwhile because they pay dividends for a long time once they reach a certain momentum.
-It may take years before a project produces valuable scientific output.
-Successful projects often rely on grant funding to pay for dedicated staff.
-
-For a quicker start, see if there's an existing project you can join rather than starting your own.
-If you can contribute time and expertise to an existing project, it may be possible for you to add tests or experiments to their ongoing work.
-
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
-
-For an idea of what might be involved in setting up a larger project, see the [Federal Crowdsourcing and Citizen Science Toolkit](https://www.citizenscience.gov/toolkit/#) published by the U.S. government.
-
-</div>
-
-A more reasonable option for researchers looking to get started with citizen science is to post a project on an existing platform, like [Zooniverse](https://www.zooniverse.org/lab).
-
-Analyze an existing citizen science project
----
-
-Read the abstract and then scroll down to the Methodology section of this [journal article on an analysis of Google image results related to the Covid-19 pandemic](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9759662/).
-The authors used citizen scientists to build the sample of images they analyzed.
-How did they set up the project (how did they recruit volunteers, provide instructions, and collect the images)?
-
-Information about how projects are set up (such as what platforms were used, if any) is often available in the methods section of publications, but not always.
-In this case, the authors provide plenty of detail about the platform they used (clickwork) and how they used it.
-
-## Quiz
-
-Which of the following are ways citizen scientists can help a project? Check all that apply.
-
-[[X]] data/sample collection
-[[X]] data coding
-[[X]] scientific programming
-[[X]] donating computing power
-***
-<div class = "answer">
-
-These are all examples of how citizens can support scientific discovery!
-
-</div>
-***
+### Quiz: Motivating citizen scientists
 
 Which of the following might motivate someone to participate as a citizen scientist? Check all that apply.
 
@@ -212,6 +181,94 @@ If you start your own citizen science project, carefully consider what might bes
 
 </div>
 ***
+
+## Getting started in citizen science for researchers
+
+Although citizen science projects have been around for quite a long time, the recent increase in popularity means that for many researchers this is the first time they're considering using citizen science in their work.
+
+So what kinds of research questions might be a good fit for citizen science, and how can you get started?
+
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+
+One of the earliest citizen science projects is arguably the [Longitude Act of 1714](https://en.wikipedia.org/wiki/Longitude_Act), which offered a prize for anyone that could come up with an efficient way to determine a ship's longitude.
+
+</div>
+
+### Why choose citizen science?
+
+Not every research question is a good fit for citizen science.
+The health and medical sciences in particular often require very high levels of both data privacy and data quality, which can make crowdsourcing tricky.
+However, there is a large and growing body of published research in the biomedicine using citizen science (for several examples, see [this review article](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3889976/)).
+In many cases, the researchers are able to succesfully bring the public in to help with their work by presenting only a very narrow slice of the data to citizen scientists (e.g. images of tissue samples with no other linked information) so as to avoid potential risks to patient privacy.
+
+So why do biomedical researchers turn to citizen science?
+Here are a few common reasons:
+
+- to solve problems that are still too complex for computers to tackle effectively, especially [image analysis](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3285221/) and [problem solving](https://journals.plos.org/plosone/article/comment?id=10.1371/annotation/2271ef78-f7ef-4a0d-aa34-568e7054a32b)
+- to [replace expensive expert analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037245)
+- to do work that would traditionally be done by research staff but doesn't necessarily require any special knowledge or training, especially [collecting measurements or observations](https://malariajournal.biomedcentral.com/articles/10.1186/1475-2875-11-43) or [processing data](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0039808)
+- to access [larger and more diverse participant populations](http://cognitivehealth.tech/wp-content/uploads/2019/02/DodellFeder2019-SCZRes.pdf) than would otherwise be available through more traditional recruitment methods
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+Read [an interview with biologist Caren Cooper](https://e360.yale.edu/features/interview_caren_cooper_how_rise_of_citizen_science_is_democratizing_research) about her experience with several citizen science projects.
+She discusses how using citizen science has changed the kinds of research questions she's able to ask, and also the impact participating in science has had on the individuals and communities she works with.
+
+> In the beginning I didn’t really see the full benefits of citizen science. At first I did have this narrow, selfish view of it, like, “Oh, there are more people to help with the work and that will be great.”...
+
+</div>
+
+One thing to keep in mind is that nearly all projects that rely on crowdsourcing employ some kind of validity and quality checks for the work done by volunteers (in this [review article about crowdsourcing in medical and health science](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3889976/), they note that 100% of the studies they analyzed did some kind of validity checks and/or data quality improvement).
+
+#### Consider an existing project: Why use citizen science?
+
+Read the abstract of this [journal article about the development of a tool for malaria diagnosis using citizen science](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037245).
+
+**Why did the authors want to try using crowdsourcing to analyze the blood smears?**
+
+They tried both machine learning and classification by non-expert humans as alternatives to analysis by trained experts with the goal of making diagnosis faster, cheaper, and more widely available.
+Traditional evaluation of blood smears takes a lot of time and requires trained experts who may not be readily available, especially in some of the areas of the world that have the highest malaria burden.
+They wanted to see if it was feasible to get highly accurate malaria diagnoses without needing trained experts.
+
+If you read further in the article, you'll find they also compare the human coders to a machine learning algorithm to see which did a better job classifying blood smears, and they found that their non-expert human participants classified the images with more success than the machine learning algorithm they tested.
+In this case, machine learning solutions for automatic detection of infected red blood cells have struggled because of the variability in images.
+The human visual system is much better adapted to see past the irrelevant variation and identify the key characteristics of infected vs. healthy cells, so this is a situation where untrained humans out perform machine learning tools.
+
+One neat thing about their approach, though, is that it suggests the possibility for using the human and machine systems productively together --- as the humans generate a larger and larger database of classified images, the machine learning algorithm can learn on a larger and larger training dataset, which will likely improve its performance.
+
+This is one of several studies showing how citizen science and machine learning can be used together.
+
+### How to start a citizen science project
+
+Large citizen science projects take a substantial effort to get off the ground but are worthwhile because they pay dividends for a long time once they reach a certain momentum.
+It may take years before a project produces valuable scientific output.
+Successful projects often rely on grant funding to pay for dedicated staff.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+For an idea of what might be involved in setting up a larger project, see the [Federal Crowdsourcing and Citizen Science Toolkit](https://www.citizenscience.gov/toolkit/#) published by the U.S. government.
+
+</div>
+
+For a quicker start, see if there's an existing project you can join rather than starting your own.
+If you can contribute time and expertise to an existing project, it may be possible for you to add tests or experiments to their ongoing work.
+
+Another option for researchers looking to get started with citizen science without all the investment of launching a full project is to post a project on an existing platform, like [Zooniverse](https://www.zooniverse.org/lab).
+
+#### Consider an existing project: Platforms for citizen science
+
+Read the abstract and then scroll down to the Methodology section of this [journal article on an analysis of Google image results related to the Covid-19 pandemic](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9759662/).
+The authors used citizen scientists to build the sample of images they analyzed.
+
+**How did they set up the project (how did they recruit volunteers, provide instructions, and collect the images)?**
+
+Information about how projects are set up (such as what platforms were used, if any) is often available in the methods section of publications, but not always.
+In this case, the authors provide plenty of detail about the platform they used (clickwork) and how they used it.
+
+### Quiz: Getting started in citizen science
 
 True or False: There are platforms available online to help you launch new citizen science projects without having to do all of the setup work yourself.
 
@@ -258,27 +315,6 @@ There are many potential reasons to start a citizen science project, but for the
 
 They needed many, many hours of annotation of the *Mycobacterium tuberculosis* genome in order to identify potential drug targets.
 Because this work could be done by people without special training, it was a good candidate for crowd sourcing.
-
-</div>
-***
-
-Read the abstract of this [journal article about the development of a tool for malaria diagnosis using citizen science](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037245). True or False: The authors present classification of blood smear images by non-expert humans as a cheaper way to replace to machine learning algorithms.
-
-[( )] TRUE
-[(X)] FALSE
-***
-<div class = "answer">
-
-False.
-They tried both machine learning and classification by non-expert humans as alternatives to analysis by trained experts with the goal of making diagnosis faster, cheaper, and more widely available.
-
-If you read further in the article, you'll find they did compare the human coders to a machine learning algorithm to see which did a better job classifying blood smears, and they found that their non-expert human participants did classify the images with more success than the machine learning algorithm they tested.
-In this case, machine learning solutions for automatic detection of infected red blood cells have struggled because of the variability in images.
-The human visual system is much better adapted to see past the irrelevant variation and identify the key characteristics of infected vs. healthy cells, so this is a situation where untrained humans out perform machine learning tools.
-
-One neat thing about their approach, though, is that it suggests the possibility for using the human and machine systems productively together --- as the humans generate a larger and larger database of classified images, the machine learning algorithm can learn on a larger and larger training dataset, which will likely improve its performance.
-
-This is one of several studies showing how citizen science and machine learning can be used together.
 
 </div>
 ***
