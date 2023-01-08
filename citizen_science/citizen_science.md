@@ -65,8 +65,8 @@ Some of the ways citizen scientists can participate in a project include the fol
 Citizen science is attractive to many researchers not only because of the possibility of outsourcing work on large complex data, but because it provides the potential to democratize science and allow the public more influence over and involvement in the scientific process.
 
 
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
 
 Some projects focus especially on how public involvement in science can put power back in the hands of communities.
 For example, Public Lab works to pursue environmental justice through community science and open technology. From the [Public Lab About page](https://publiclab.org/about):
