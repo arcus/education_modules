@@ -160,7 +160,7 @@ In both cases, though, you can see they use multiple strategies to motivate pote
 For EvidentlyAI, they emphasize the opportunity to learn something new and join a productive community of peers, but they also mention prizes.
 TestMyBrain motivates participants with the opportunity to get personlized information from the tests and also the opportunity to contribute to brain science.
 
-### Quiz: Motivating citizen scientists
+### Quiz: Motivation
 
 Which of the following might motivate someone to participate as a citizen scientist? Check all that apply.
 
@@ -268,7 +268,7 @@ The authors used citizen scientists to build the sample of images they analyzed.
 Information about how projects are set up (such as what platforms were used, if any) is often available in the methods section of publications, but not always.
 In this case, the authors provide plenty of detail about the platform they used (clickwork) and how they used it.
 
-### Quiz: Getting started in citizen science
+### Quiz: Getting started
 
 True or False: There are platforms available online to help you launch new citizen science projects without having to do all of the setup work yourself.
 
