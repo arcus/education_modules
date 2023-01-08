@@ -325,7 +325,7 @@ To learn more about citizen science and its applications in biomedical research,
 
 Read the following editorial in PLOS Computational Biology: [Ten Simple Rules for Cultivating Open Science and Collaborative R&D](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003244).
 
-To read about more examples of citizen science in action, check out this [review article covering 21 pulbished studies in the health sciences that used crowdsourcing](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3889976/).
+To read about more examples of citizen science in action, check out this [review article covering 21 published studies in the health sciences that used crowdsourcing](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3889976/).
 
 ## Feedback
 
