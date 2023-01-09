@@ -65,8 +65,6 @@ If you do use these materials, we would love to hear from you!  Please [let us k
 |Tidy Data|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/tidy_data/tidy_data.md#1)|[Markdown](tidy_data/tidy_data.md)|1.0.1|Tidy is a technical term in data analysis and describes an optimal way for organizing data that will be analyzed computationally.|
 |Transform Data with pandas|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md)|[Markdown](pandas_transform/pandas_transform.md)|1.0.0|This is an introduction to transforming data using a Python library named pandas.|
 |Using the REDCap API|[Training Course](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/using_redcap_api/using_redcap_api.md)|[Markdown](using_redcap_api/using_redcap_api.md)|1.0.0|REDCap is a research data capture tool used by many researchers in basic, translational, and clinical research efforts.  Learn how to use the REDCap API in this module.|
-|Title   |[Training Course]()|[Markdown]()|1.0.0|   |
-|Title   |[Training Course]()|[Markdown]()|1.0.0|   |
 
 ## For Contributors
 
