@@ -246,7 +246,7 @@ Why is data normalized (carefully fragmented to reduce repetition and inefficien
 
 [[ ]] SQL has a limit on number of columns permitted in a table, and must break up data in order to keep tables smaller
 [[X]] Because data is often one-to-many, storing data in a single table is inefficient
-[[X]] Normalizing data makes correcting or changing data simpler and less prone to error
+[[X]] Normalizing data makes correcting or changing data simpler and less prone to error.
 [[ ]] Normalization is a holdover from when most databases were business-related, but it not necessary in biomedical research.
 [[?]] There are multiple correct answers!
 *********
