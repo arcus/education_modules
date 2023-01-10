@@ -15,9 +15,9 @@ estimated_time: 15 minutes
 
 After completion of this module, learners will be able to:
 
-- understand the importance of geocoding addresses
-- understand the latitude and longitude coordinate system
-- geocode single addresses.  
+- Understand the importance of geocoding addresses
+- Understand the latitude and longitude coordinate system
+- Geocode single addresses.  
 
 @end
 
