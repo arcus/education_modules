@@ -87,7 +87,7 @@ Data often has one-to-many relationships. What does one-to-many mean? Consider t
 
 * One patient has multiple encounters on different dates
 * One encounter may include multiple orders for different procedures and medications.
-* One medication order can give rise to multiple medication administrations
+* One medication order can give rise to multiple medication administrations.
 
 **Retail website one-to-many examples**
 
