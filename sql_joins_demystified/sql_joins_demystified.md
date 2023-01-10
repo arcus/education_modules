@@ -79,7 +79,7 @@ You may be asking yourself, "Why not just put all the information together in on
 
 The reason why this usually doesn't happen in a SQL database, and you instead see lots of different tables that you have to join together is because of a concept known as **normalization**.  To explain normalization, we'll first explain **one-to-many** data relationships.
 
-## One-to-many
+## One-to-Many
 
 Data often has one-to-many relationships. What does one-to-many mean? Consider two use cases, a hospital and a retail website.  Each organization has one-to-many data relationships:
 
