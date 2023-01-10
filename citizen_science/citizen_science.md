@@ -216,7 +216,7 @@ Here are a few common reasons:
 Read [an interview with biologist Caren Cooper](https://e360.yale.edu/features/interview_caren_cooper_how_rise_of_citizen_science_is_democratizing_research) about her experience with several citizen science projects.
 She discusses how using citizen science has changed the kinds of research questions she's able to ask, and also the impact participating in science has had on the individuals and communities she works with.
 
-> In the beginning I didn’t really see the full benefits of citizen science. At first I did have this narrow, selfish view of it, like, “Oh, there are more people to help with the work and that will be great.”...
+> In the beginning I didn’t really see the full benefits of citizen science. At first I did have this narrow, selfish view of it, like, “Oh, there are more people to help with the work and that will be great.” It didn’t take long though to learn two things. One was that I can ask these amazing questions that transcend single study sites. And the other was that I learned that these field experiences and this collaborative relationship between members of the public and scientists actually provide meaningful and really transformative experiences for individuals and for communities. 
 
 </div>
 
