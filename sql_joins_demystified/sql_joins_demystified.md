@@ -119,7 +119,7 @@ We hope that any gym member will have more than one recorded workout, so that re
 
 ***********
 
-### One-to-many Data in Research
+### One-to-Many Data in Research
 
 Let's consider again the data from our fictional multi-site research study on mental health and consider how its one-to-many relationships make it very unwise to try to store all of our research data in a single table.
 
