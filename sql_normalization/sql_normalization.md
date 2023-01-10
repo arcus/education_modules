@@ -24,7 +24,7 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/sty
 script: https://kit.fontawesome.com/83b2343bd4.js
 -->
 
-# SQL Joins
+# SQL Normalization
 
 <div class = "overview">
 
@@ -47,13 +47,13 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 Most SQL queries require something more complex than referencing data from a single table. 
 
-For example, consider the case where you have data about a multi-site study's research subjects. One table holds depression scores for patients and a different table holds patient addresses.  Your hypothesis is that people who live in certain zip codes have higher rates of depression.
+For example, consider the case where you have data about a multi-site study's research subjects. One table holds depression scores for subjects and a different table holds subject addresses.  Your hypothesis is that people who live in certain zip codes have higher rates of depression.
 
-To see if your hypothesis has evidence to back it, you need to combine data, taking the patient ID and depression score from one table, and the patient ID and zip code from another table, and combining them.  
+To see if your hypothesis has evidence to back it, you need to combine data, taking the subject ID and depression score from one table, and the subject ID and zip code from another table, and combining them.  
 
 Maybe your source tables look something like the tables below:
 
-**Table 1: `depression_scale`**
+**Table 1: depression\_scale**
 
 <!-- data-type="none" class="tight-table" style="font-size:80%"-->
 | subj_id  | date  | dep_q1  | dep_q2   | dep_q3  | dep_q4  | dep_total   |
@@ -64,7 +64,7 @@ Maybe your source tables look something like the tables below:
 | 86234   | 2022-01-13   | 2    | 2  | 1    | 3    | 8    |
 | 41356   | 2022-02-10   | 1    | 3  | 2    | 3    | 10   |
 
-**Table 2: `subject_address`**
+**Table 2: subject\_address**
 
 <!-- data-type="none" class="tight-table" style="font-size:80%"-->
 | subj_id  | street_address  | city  | state   | zip  | date_start  | date_end   |
@@ -73,7 +73,7 @@ Maybe your source tables look something like the tables below:
 | 11234   | 123 Oak Lane   | Old Towne    | PA  | 18000   | 2000-01-01    | 2021-12-31    |
 | 93452   | 123 Green Blvd  | Kirby    | TN  | 37000    | 2020-05-01    | `NULL`   |
 
-What you want to eventually end up with will be a single table of results that might only have three columns: `subj_id`, `dep_total`, and `zip`.  That way you can look at the relationship between depression inventory scale and zip code.
+What you want to eventually end up with will be a single table of results that might only have three columns: "subj\_id", "dep\_total", and "zip".  That way you can look at the relationship between depression inventory scale and zip code.
 
 You may be asking yourself, "Why don't the people collecting the data or designing the database just put all the information together in one table to start with?"  After all, getting one row per subject (or per sample, etc.) is how we usually prepare to apply statistical tests. If we could just **start** with one row per research subject in SQL, we'd be ready to jump into the science and not have so much data preparation work. 
 
@@ -104,7 +104,7 @@ It would be impossible to know ahead of time how many columns would be needed.  
 Which of the following relationships are likely to be one-to-many?  Select all the correct answers.
 
 [[X]] Gym member to workout
-[[ ]] Street address to corresponding congressional district
+[[ ]] Street address to corresponding legislative district
 [[X]] Patient to medical provider
 [[X]] Medical provider to patient
 [[ ]] Baseball team to mascot
@@ -113,7 +113,7 @@ Which of the following relationships are likely to be one-to-many?  Select all t
 
 <div class = "answer">
 
-We hope that any gym member will have more than one recorded workout, so that relationship is one-to-many.  However, a particular street address will only have one congressional district representing residents at that address.  That's not a one-to-many relationship.  A patient can have multiple providers, so that's one-to-many, and providers can have many patients, so that's also one-to-many.  In fact you could more accurately call this relationship many-to-many!  Finally, a baseball team (we argue) should have only one mascot, so that's not a one-to-many relationship.
+We hope that any gym member will have more than one recorded workout, so that relationship is one-to-many.  However, a particular street address will only have one legislative district representing residents at that address.  That's not a one-to-many relationship.  A patient can have multiple providers, so that's one-to-many, and providers can have many patients, so that's also one-to-many.  In fact you could more accurately call this relationship many-to-many!  Finally, a baseball team (we argue) should have only one mascot, so that's not a one-to-many relationship.
 
 </div>
 
@@ -123,7 +123,7 @@ We hope that any gym member will have more than one recorded workout, so that re
 
 Let's consider again the data from our fictional multi-site research study on mental health and consider how its one-to-many relationships make it very unwise to try to store all of our research data in a single table.
 
-**Table 1: `depression_scale`**
+**Table 1: depression\_scale**
 
 <!-- data-type="none" class="tight-table" style="font-size:80%"-->
 | subj_id  | date  | dep_q1  | dep_q2   | dep_q3  | dep_q4  | dep_total   |
@@ -134,7 +134,7 @@ Let's consider again the data from our fictional multi-site research study on me
 | 86234   | 2022-01-13   | 2    | 2  | 1    | 3    | 8    |
 | 41356   | 2022-02-10   | 1    | 3  | 2    | 3    | 10   |
 
-**Table 2: `subject_address`**
+**Table 2: subject\_address**
 
 <!-- data-type="none" class="tight-table" style="font-size:80%" -->
 | subj_id  | street_address  | city  | state   | zip  | date_start  | date_end   |
@@ -180,9 +180,9 @@ We tend to only include in these entity tables the data elements that have a sin
 
 Then, we make tables that represent **interactions** between entities.  For example, interactions between patients and medications might be stored in a "prescriptions" or "medication\_orders" table. Interactions between addresses and devices might be in a "device\_shipment" table.  These record relationships by including the id numbers of the entities involved, along with other data like the date of the interaction and other details.  A table called "medication\_orders", for example, will include a field for the patient id, a field for the medication id, a field for the prescribing provider id, the date and time of the medication order, the dose and duration of the order, the mode of medication delivery, and other important details such as any notes made by the prescriber.
 
-Whether these tables of interactions have primary keys and their own identifiers depends, but they often will.  For example, a "device_shipment" table might have a primary key called "device_shipment_id".
+Whether these tables of interactions have primary keys and their own identifiers depends, but they often will.  For example, a "device\_shipment" table might have a primary key called "device\_shipment\_id".
 
-**Why Bother With Normalization?**
+### Why Bother With Normalization?
 
 To show why organizing data in a normalized way is helpful, let's use an example.
 
@@ -190,7 +190,7 @@ Which of the following is more efficient to correct, if we want to change "orane
 
 **One Table Option**
 
-**`order_and_items`**
+**orders**
 
 <!-- data-type="none" class="tight-table" -->
 | order_num   | item_1   | item_2  | ...  | item_50  |
@@ -204,9 +204,9 @@ In the one table option, we have to look for the phrase "orane juice" anywhere i
 
 **Two Table Option**
 
-**`items`**
+**items**
 
-*Note: here we are using the `item_id` field as a primary key as well, which is why we include `(PK)`.* 
+*Note: here we are using the "item\_id" field as a primary key as well, which is why we include (PK) in the table header.  Often, SQL will do something similar and display a special symbol (like <span class="fa-solid fa-key"></span>) or the letters "PK" to draw your attention to the fact that a particular field is a primary key.* 
 
 <!-- data-type="none" class="tight-table" -->
 | item_id (PK)  | item_name  |
@@ -218,9 +218,9 @@ In the one table option, we have to look for the phrase "orane juice" anywhere i
 | 108 | pistachios  |
 | 233 | plain bagels  |
 
-**`orders`**
+**order_items**
 
-*Note: here we want to allow the `order_id` to repeat as many times as necessary to include all items, so it's not a primary key.* 
+*Note: here we want to allow the "order\_id" to repeat as many times as necessary to include all items, so it's not a primary key.* 
 
 <!-- data-type="none" class="tight-table" -->
 | order_id | item_id |
@@ -259,13 +259,45 @@ The reason for normalization isn't that SQL lacks the capacity for very wide tab
 
 ***********
 
-### A Bit of Vocab 
+## Key Vocabulary <span class="fa-solid fa-key"></span>
 
 Fields that appear in two or more SQL tables are also sometimes called **join keys**, because they can be used to join data from the two tables into one set of interrelated data.  Two categories of join keys are primary keys (which we talked about earlier) and **foreign keys**.
 
-A primary key, you'll recall, is a column (occasionally a set of columns) that contain a unique value for each row in your table.  For example, the "item\_id" is a primary key for the "items" table in our earlier example.  There will be no repeats of the "item\_id" in the "items" table.
+A **primary key**, you'll recall, is a column (occasionally a set of columns) that contain a unique value for each row in your table.  For example, the "item\_id" is a primary key for the "items" table in our earlier example.  There will be no repeats of the "item\_id" in the "items" table.
 
-A foreign key is a column in a table that make reference to a primary key in some other table.  For example, in our "orders" table earlier, we had a column called "item\_id", which contained numbers that corresponded to the "item\_id" column in the "items" table.  If we saw a row in the "orders" table that had "order\_id" of 34219 and "item\_id" of 15, the "item\_id" is a foreign key (*foreign* in this case meaning "not from here, originated elsewhere") that originated in the "items" table.  We could look up in that table to discover that "item\_id" 15 indicates that the order included the item "distilled water".
+**items**
+
+<!-- data-type="none" class="tight-table" -->
+| item_id (PK)  | item_name  |
+| :--------- | :--------- |
+| 15 | distilled water |
+| 178 | napkins |
+| 210 | orane juice |
+| 97 | peanut butter |
+| 108 | pistachios  |
+| 233 | plain bagels  |
+
+
+A **foreign key** is a column in a table that make reference to a primary key in some other table.  For example, in our "order\_items" table earlier, we had a column called "item\_id", which contained numbers that corresponded to the "item\_id" column in the "items" table.  If we saw a row in the "order\_items" table that had "order\_id" of 34219 and "item\_id" of 15, the "item\_id" is a foreign key (*foreign* in this case meaning "not from here, originated elsewhere") that originated in the "items" table.  We could look up in that table to discover that "item\_id" 15 indicates that the order included the item "distilled water".
+
+**order_items**
+
+*The second column here is a foreign key.  Sometimes (but not always!) you will see this noted in SQL diagrams as (FK) or a symbol like <span class="fa-solid fa-key"></span>.*
+
+<!-- data-type="none" class="tight-table" -->
+| order_id | item_id (FK) |
+| :--------- | :--------- |
+| 23125 | 210 |
+| 23125 | 108 |
+| 41320 | 97 |
+| 41320 | 233 |
+| 41320 | 210  |
+| 53011 | 178 |
+| 53011 | 15 |
+| 14123 | 108 |
+| 14123 | 210 |
+| 14123 | 97 |
+
 
 ### Quiz: Keys
 
@@ -317,8 +349,8 @@ A foreign key is an identifier that originates in another table.  It certainly s
 
 ## Additional Resources
 
-* A brief, very readable article that talks about one-to-many relationships and several kinds of normalization (including our normalization in this module, which is third normal form, or 3NF) can be found at <https://www.lifewire.com/one-to-many-relationships-1019756>.
-* On the same site, you can read in a bit more technical detail about the various levels of normalization: <https://www.lifewire.com/database-normalization-basics-1019735>
+* A brief, very readable article that talks about one-to-many relationships and several kinds of normalization (including our normalization in this module, which is third normal form, or 3NF) can be found at https://www.lifewire.com/one-to-many-relationships-1019756.
+* On the same site, you can read in a bit more technical detail about the various levels of normalization: https://www.lifewire.com/database-normalization-basics-1019735.
 
 
 ## Feedback
