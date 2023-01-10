@@ -16,6 +16,12 @@ When a module creator is ready to request that their module be included, they wi
   ![On the right side of the commits list there's a button with an image of two squares overlaid to the left of the commit value.](media/commit_hash.png)
   * When you paste this into the issue it will appear as a long string of letters and numbers -- don't worry, GitHub will automatically format this into the clickable short link.
 
+* How do you find the liascript link? You have to generate this!  But it's easy!
+  - First, go to the .md file that makes up the module (for example, the reproducibility module .md is reproducibility/reproducibility.md) in GitHub.
+  - Then, copy the URL of this file.  It will look something like https://github.com/arcus/education_modules/blob/name_of_branch/name_of_module/name_of_module.md
+  - Then, paste that URL into the box at https://liascript.github.io and click "load course".
+  - Copy the resulting URL, and that's your liascript link!  It will look something like this: https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/name_of_branch/name_of_module/name_of_module.md#1
+
 * Click on the "Preview" tab to see if everything is rendering nicely and there are at least two clickable links -- one to the PR (the top line in the issue) and one to the commit version (8th line).
 * Click "Submit new issue".
 
