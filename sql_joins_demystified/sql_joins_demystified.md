@@ -240,7 +240,7 @@ In the two table option, we only have to find "orane juice" in a single column, 
 
 The theory of how to separate data for top speed and efficiency is complex. However, it's enough for now to understand that data in SQL databases are fragmented in a process called normalization, to help reduce needless repetition, simplify data, and improve performance.
 
-### Quiz: Why is SQL Data In So Many Tables?
+### Quiz: Normalization
 
 Why is data normalized (carefully fragmented to reduce repetition and inefficiency) in SQL?  Select all the correct answers.
 
