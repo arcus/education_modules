@@ -5,9 +5,9 @@ version:  1.0.0
 module_template_version: 3.0.0
 language: en
 narrator: US English Female
-title: SQL Normalization
-comment: Learn about the concept of normalization and why it's important for SQL.
-long_description: Usually, data in a SQL database is organized into multiple interrelated tables with as little data repetition as possible. This module teaches underlying data considerations and explains how data is organized in SQL by introducing the concepts of one-to-many data relationships and normalization.
+title: Database Normalization
+comment: Learn about the concept of normalization and why it's important for organizing complicated data in relational databases.
+long_description: Usually, data in a relational database like SQL is organized into multiple interrelated tables with as little data repetition as possible. This module teaches underlying data considerations and explains how data is organized in SQL by introducing the concepts of one-to-many data relationships and normalization.
 estimated_time: 40 minutes
 
 @learning_objectives  
@@ -24,7 +24,7 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/sty
 script: https://kit.fontawesome.com/83b2343bd4.js
 -->
 
-# SQL Normalization
+# Database Normalization
 
 <div class = "overview">
 
@@ -35,7 +35,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Estimated time to completion:** @estimated_time
 
-**Pre-requisites**  Learners should have experience writing SQL code on single tables.  If you have successfully used a "SELECT... FROM... WHERE" SQL statement on a single table, this is sufficient for this module. If you need to develop basic SQL fluency we recommend our module [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md).  
+**Pre-requisites**  Learners should have experience working with data in tables.  This could included working with .csv files, SQL databases, R data frames, REDCap instruments, or other ways that data can be collected in tables. 
 
 **Learning Objectives**
 
