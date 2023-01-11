@@ -256,10 +256,25 @@ library(ggplot2)
 
 ```
 
+The readr, dplyr, and tidyr packages, like ggplot2, are part of the [tidyverse](https://www.tidyverse.org/), a set of R packages for data science.
+
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-The readr and dplyr packages, like ggplot2, are part of the [tidyverse](https://www.tidyverse.org/), a set of R packages for data science. Check out the free R for Data Science book online to learn more about both readr (the [data import](https://r4ds.had.co.nz/data-import.html) chapter) and dplyr (the [data transformation](https://r4ds.had.co.nz/transform.html) chapter).
+Check out the free R for Data Science book online to learn more about readr (the [data import](https://r4ds.had.co.nz/data-import.html) chapter), dplyr (the [data transformation](https://r4ds.had.co.nz/transform.html) chapter), and tidyr (the [tidy data](https://r4ds.had.co.nz/tidy-data.html) chapter).
+
+</div>
+
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
+Note that if you will be using several packages from the tidyverse, you can chose to load them all at once with a single command instead of individually:
+
+```r
+library(tidyverse)
+```
+
+This will load all the packages above (and a few more besides).
 
 </div>
 
