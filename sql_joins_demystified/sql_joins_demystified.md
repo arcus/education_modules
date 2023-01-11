@@ -8,7 +8,7 @@ narrator: US English Female
 title: SQL Joins Demystified
 comment: Learn about SQL joins in a non-coding module.
 long_description: Usually, data in a SQL database is organized into multiple interrelated tables.  This means you will often have to bring data together from two or more tables into a single dataset to answer your research questions.  This is accomplished using JOIN commands.  This module explains the type of joins, without going into detail about the SQL code itself.
-estimated_time: 40 minutes 
+estimated_time: 1 hour
 
 @learning_objectives  
 After completion of this module, learners will be able to:
@@ -25,7 +25,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
-# SQL Joins
+# SQL Joins, Demystified
 
 <div class = "overview">
 
@@ -93,7 +93,7 @@ It can be surprisingly tricky to figure out what makes data "match" or "go toget
 
 * What **type of join** do you want to use?  Let's say you have some students with math grades and some students with language grades.  Some students are in only the math table, some are only in the language table, and some are in both.  What part of the overlapping data do you want?  Only the data on students with both kinds of grades?  Or some other, larger set of student data?
 
-We'll address each of these in the next few sections.
+We'll address each of these in this module.
 
 ### Join Criteria
 
@@ -122,7 +122,7 @@ Join criteria will be some sort of relationship statement referencing shared inf
 
 Do you have subject identifiers or student id numbers in two different tables?  This shared information can be used to connect (join) data from these tables, based on the identifier being equal.  
 
-For example, if the subject id matches, a row from table A and a row from table B will be joined.  If the subject id doesn't match, these rows won't be joined.  Maybe we're trying to line up lung cancer occurrence and smoking exposure in the same row:
+For example, if the subject id matches, a row from table A and a row from table B will be joined.  If the subject id doesn't match, these rows won't be joined.  Maybe we're trying to match lung cancer occurrence and smoking exposure in the same row:
 
 **disease**
 
@@ -160,11 +160,11 @@ USING(subject_id)
 
 With either of the above code snippets:
 
-* subject 3 from disease lines up with subject 3 from smoking <i class="fa fa-check" aria-hidden="true"></i>
-* subject 5 from disease doesn't line up with anyone in smoking <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-* subject 8 from disease doesn't line up with anyone from smoking <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-* subject 2 from smoking doesn't line up with anyone from disease <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-* subject 4 from smoking doesn't line up with anyone from disease <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+* subject 3 from disease matches with subject 3 from smoking <i class="fa fa-check" aria-hidden="true"></i>
+* subject 5 from disease doesn't match with anyone in smoking <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+* subject 8 from disease doesn't match with anyone from smoking <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+* subject 2 from smoking doesn't match with anyone from disease <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+* subject 4 from smoking doesn't match with anyone from disease <i class="fa-solid fa-xmark" aria-hidden="true"></i>
 
 
 #### Equality, Example 2
@@ -196,8 +196,8 @@ ON math_grades.semester = language_grades.term
 
 In this example:
 
-* The A grade for Jan-May 2023 from math\_grades lines up with the B grade for Jan-May 2023 in language\_grades (whoops, even though the student_id doesn't match!)<i class="fa fa-check" aria-hidden="true"></i>
-* The C grade for Sep-Dec 2022 in language\_grades does not line up with any row in math\_grades <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+* The A grade for Jan-May 2023 from math\_grades matches with the B grade for Jan-May 2023 in language\_grades (whoops, even though the student_id doesn't match!)<i class="fa fa-check" aria-hidden="true"></i>
+* The C grade for Sep-Dec 2022 in language\_grades does not match with any row in math\_grades <i class="fa-solid fa-xmark" aria-hidden="true"></i>
 
 This highlights the importance of documenting your data so you can tell which fields hold which data in order to use them properly for joins.  If `semester` and `term` are  different things, not just the same thing with two different names, the result of your join will be disappointing.  
 
@@ -278,7 +278,7 @@ With this most recent join criteria:
 
 #### Using Other SQL Commands
 
-Especially for one-to-many data relationships, you might want to create a simplified table temporarily in order to have that be part of a join.  This means you may have to also do some complicated things like using GROUP BY with aggregation, using WHERE and/or HAVING, or creating subqueries.  
+Especially for one-to-many data relationships, you might want to create a simplified table temporarily in order to have that be part of a join.  This means you may have to also do some complicated things like using `GROUP BY` with aggregation, using `WHERE` and/or `HAVING`, or creating subqueries.  
 
 For example, let's say you want to only use the earliest depression inventory for each subject, not any subsequent depression inventories, for your analysis of the correlation between depression score and zip code.  Then you want to join that earliest depression inventory with the address of the subject at the time of administration of that earliest inventory.  That's a lot of logic!  The easiest way to do that is to first create a simplified table that only contains the earliest depression inventory for each subject id.  This is a great place to use `GROUP BY` and the aggregation function `MIN()` to find the earliest date of administration.  Then you can use that simpler table to join to subject addresses.  
 
@@ -645,8 +645,8 @@ Consider the scenario of a table of math grades for 9th grade students and a tab
 [(X)] Her math grade will appear and she'll have a blank for her language grade.
 [( )] The join command will fail, because a full join can only take place on fully overlapped tables.
 [( )] The join command will fail because there's no such type of join as a full outer join.
-
 ****
+
 <div class = "answer">
 
 A full outer join is indeed a type of join, and it can take place on any two tables, whether they have a full or partial overlap or even no overlap at all.  In this example case, Fatima's data will appear in the results table, because regardless of whether the math\_grades table was written on the left or the right, a full outer join includes both the left and right tables' data.  We know her math grade, so that will appear, but since there's no matching data for Fatima in the language\_grades table, she'll have empty cells with `NULL` values for any columns that come from the language\_grades table.
@@ -658,8 +658,8 @@ A full outer join is indeed a type of join, and it can take place on any two tab
 
 * Want to understand the basics of boolean algebra?  Check out a good tutorial at https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra.php.
 * The second part of that tutorial covers some of the rules (like commutativity) of boolean algebra: https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra-laws.php 
-* Finally, to understand the order of operations in boolean algebra a bit more intuitively, we recommend the third part of the same tutorial: https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra-expressions.php
-* A great page to practice joins and visualize them in the form of Venn diagrams is at https://www.w3schools.com/sql/sql_join.asp.
+* Finally, to understand the order of operations in boolean algebra a bit more intuitively, we recommend the third part of the same tutorial: https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra-expressions.php 
+* A great page to practice joins and visualize them in the form of Venn diagrams is at https://www.w3schools.com/sql/sql_join.asp
 
 ## Feedback
 
