@@ -110,10 +110,14 @@ If you are brand new to R (or want a refresher) consider starting with [Intro to
 Please do this step now, because we're going to ask you to follow along throughout and try out code as you go.  
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Please read over both options before you start performing any actions, to make sure you pick the right option for you.
+
 </div>
 
-<h3>Option 1: Work in the Cloud</h3>
+Option 1: Work in the Cloud
+---
 
 This might work well for you if you either can't or don't want to install R and RStudio on your computer.  The benefit is that you don't have to install anything, but one negative is that this option requires a bit of waiting for your environment to come online.
 
@@ -134,7 +138,8 @@ style = "border: 1px solid rgb(var(--color-highlight));"-->
 ![RStudio as shown in the cloud platform Binder.](media/binder_rstudio.png)<!--
 style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
 
-<h3>Option 2: Work on Your Computer</h3>
+Option 2: Work on Your Computer
+---
 
 If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
 
@@ -175,7 +180,10 @@ If you already completed this work for a previous module, and it's been a while 
 ![Tools menu with choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_example` exercise files, you might want to save your version of `example_exercises.Rmd` to `my_example_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `example_exercises.Rmd` while holding on to your changes in the new file.
+
 </div>
 
 
@@ -183,7 +191,9 @@ If you're pulling branches after having worked in other R modules, you might hav
 
 This module is a practical, hands-on guide to making data visualizations in R's ggplot2. Snippets of code are included throughout the text here, but you are strongly encouraged to try running the code yourself instead of just reading it. Better yet, try to modify the code for each of the example plots to use with your own data!
 
-<div class = "important">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 If you are using the [binder instance we prepared](#lesson-preparation), then all of the R packages you need will already be installed and you're all set.
 
 If you are using R on your own machine, though, then you may need to run the following code in R before continuing with the code examples here:
@@ -192,6 +202,7 @@ If you are using R on your own machine, though, then you may need to run the fol
 install.packages("tidyverse")
 
 ```
+
 </div>
 
 ### How ggplot2 works
@@ -207,7 +218,10 @@ In ggplot2, you use the ggplot() function to generate an empty base plot, and th
 At first, this seems like more work than just using a single command in another plotting system, and it is true that ggplot visualizations are often more lines of code than other kinds of visualizations. The idea of breaking a plot into different kinds of pieces and applying each as a layer has some advantages, though, in that it makes it easier to tweak plots to get exactly what you want --- this is important both for generating plots that can be made to adhere to formatting rules (like for a journal article submission), and because tweaking a plot and re-visualizing the data is a powerful way to explore trends and patterns when you're analyzing a data set.
 
 <div class = "learn-more">
-To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf)
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf).
+
 </div>
 
 ## Working through interactive coding examples in binder
@@ -219,7 +233,10 @@ When it is ready, you should see the RStudio application running in your browser
 All of the example code in this module is in that "@r_code .rmd" file. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Note that binder instances aren't stable. When you close the window or if it idles too long, it may erase all of your work. If you want to save any code or output you come up with while working in binder, you need to copy-paste the code to a new file to save it on your computer.
+
 </div>
 
 ## Scatterplots
@@ -234,12 +251,16 @@ First, we need to load the libraries we'll be using:
 # the libraries we'll be using
 library(readr)
 library(dplyr)
+library(tidyr)
 library(ggplot2)
 
 ```
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 The readr and dplyr packages, like ggplot2, are part of the [tidyverse](https://www.tidyverse.org/), a set of R packages for data science. Check out the free R for Data Science book online to learn more about both readr (the [data import](https://r4ds.had.co.nz/data-import.html) chapter) and dplyr (the [data transformation](https://r4ds.had.co.nz/transform.html) chapter).
+
 </div>
 
 And then read in the data set:
@@ -249,10 +270,13 @@ breast_cancer_data <- read_csv("https://archive.ics.uci.edu/ml/machine-learning-
 
 ```
 
-<div class="learn-more">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Run the above code yourself in binder (see [lesson preparation](#lesson-preparation) for links to start the binder instance) or on your own computer.
 
 In the @r_code rmd file, the code at the top of the file includes these library commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
+
 </div>
 
 
@@ -288,7 +312,10 @@ Note that when you add an aesthetic for color (or shape, line type, alpha, or si
 Now let's look at using color for a categorical variable. In this case, the variable is a categorical one (Classification, 1 or 2), but it isn't properly coded as a factor in the data frame. We'll fix that first and then send the corrected dataframe to the ggplot command.
 
 <div class = "important">
-Tip: It's generally much easier to make any necessary changes to the dataframe, such as mutating variables, before sending it to the plotting command.
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+It's generally much easier to make any necessary changes to the dataframe, such as mutating variables, before sending it to the plotting command.
+
 </div>
 
 ```r
@@ -327,7 +354,10 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor)
 ![Age and glucose scatterplot, with color showing classification as yellow and blue.](media/ggplot_scatter_4.png)
 
 <div class = "important">
-Tip: Don't use color alone to convey important information in your plots because if your end users are unable to distinguish the colors, the plot loses its value. Instead, double-up color information with another element, such as shape, to make the different groups easier to distinguish. For help selecting colors that are most likely to work for users with color vision deficiencies, [read about the colorspace package in R](https://arxiv.org/abs/1903.06490).
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Don't use color alone to convey important information in your plots because if your end users are unable to distinguish the colors, the plot loses its value. Instead, double-up color information with another element, such as shape, to make the different groups easier to distinguish. For help selecting colors that are most likely to work for users with color vision deficiencies, [read about the colorspace package in R](https://arxiv.org/abs/1903.06490).
+
 </div>
 
 We'll improve this plot by using shape and color together to mark the Classification groups.
@@ -348,7 +378,10 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
 Finally, we can control the background (and other aspects of the plot's general appearance) by adjusting the theme. There are quite a lot of [pre-made themes available](https://ggplot2-book.org/polishing.html#themes), or you can [specify your own](https://ggplot2-book.org/polishing.html#modifying-theme-components). I'll use the theme called theme_bw().
 
 <div class = "learn-more">
-Some journals or other organizations have pre-made ggplot2 themes available that you can apply to make your plots adhere to their aesthetic guidelines. It's worth asking! For more information about using themes and modifying them to meet journal requirements, see the [figures chaper in Writing Papers with R and Friends](https://bookdown.org/content/43652694-3819-41d2-9e70-8cfc8dd25fd1/figures.html).  
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+Some journals or other organizations have pre-made ggplot2 themes available that you can apply to make your plots adhere to their aesthetic guidelines. It's worth asking! For more information about using themes and modifying them to meet journal requirements, see the [figures chaper in Writing Papers with R and Friends](https://bookdown.org/content/43652694-3819-41d2-9e70-8cfc8dd25fd1/figures.html).
+
 </div>
 
 ```r
@@ -485,8 +518,11 @@ ggplot(breast_cancer_data, mapping = aes(x=Glucose)) +
 
 As with scatterplots, we can add information about an additional variable by using color. Let's add the Classification factor to our aesthetics so we can see how the distribution of glucose values differs in the two groups.
 
-<div class = "hint">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Tip: ggplot2 thinks about color differently for points and lines vs. filled in objects like bars. To adjust the color of the bars in a histogram, we need to use the fill aesthetic, not color.
+
 </div>
 
 Note that we can set fill manually, just as we did with color in the scatterplots. In fact, we can use the same vector of colors we specified there to control fill now, giving our plots a coherent appearance.
@@ -506,8 +542,11 @@ You may be noticing that the distribution for Class 1 appears to be stacked on t
 
 If we do this, we'll also need to control the transparency in the plot --- otherwise one distribution will obscure the other where they overlap. Alpha is a value between 0 (totally transparent) and 1 (totally opaque), and it defaults to 1. We'll try it at .5 here to see if that lets us see both distributions well enough.
 
-<div class = "hint">
-Tip: When your data overlap on a plot, use alpha to make them more transparent.
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+When your data overlap on a plot, use alpha to make them more transparent.
+
 </div>
 
 ```r
@@ -607,11 +646,17 @@ There are a few common transformations with their own ggplot2 functions, but the
 Line plots are especially useful when you want to show data points that are connected in a meaningful way. The most common application is repeated measures over time (also called time series data), such as when patients are measured on a given variable (plotted on the y-axis) at several times (plotted along the x-axis), and each line would represent one patient, or a summary across a group of patients.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 A word of caution: You may see line plots where the data points don't actually share a meaningful theoretical connection (e.g. all being from the same patient, or the same group). Although it's not uncommon, this is generally not considered good practice and you may receive pushback from reviewers or readers.
+
 </div>
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 A more detailed [tutorial on plotting time series in ggplot2](https://www.r-graph-gallery.com/279-plotting-time-series-with-ggplot2.html), including options for changing the way dates display along the x-axis.
+
 </div>
 
 ### Data for line plots
@@ -833,7 +878,10 @@ The geom\_abline() function allows you to specify a y-intercept and slope (which
 The first step is to run the linear model you want to get trend lines from. We won't step through how to run linear models in R here.
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 For a more in-depth example of linear regression models in R, including using geom\_abline to draw linear trend lines, see this [Arcus Education post on ordinary linear regression](https://education.arcus.chop.edu/ordinary_linear_regression/).
+
 </div>
 
 ```r
@@ -881,8 +929,11 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
 
 ![Scatterplot with age on the x-axis and glucose on the y-axis, and a straight black trend line running through the points.](media/ggplot_trend_6.png)
 
-<div class="seealso">
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 There's a second way to get predicted values from a model, the `predict` function. So `predict(model)` will give you the same set of fitted values as `model$fitted.values`. The `predict` function gives you a little more flexibility (for example, to get fitted values from a different dataset from the one you originally trained the model on), but at the default settings it will give you the exact same results as `model$fitted.values`.
+
 </div>
 
 Note that the results from the geom\_abline approach and the geom\_line approach look very similar, but there's one important difference: The geom\_abline approach will draw lines that extend all the way from one edge of your plot to the other, while geom\_line (like geom\_smooth) will only draw the trend line across the range of the observed data. This means geom\_abline can imply predictions outside of the observed range, which is often okay but sometimes not what you want.
