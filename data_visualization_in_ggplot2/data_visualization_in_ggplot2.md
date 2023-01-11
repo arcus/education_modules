@@ -481,7 +481,7 @@ ggplot(breast_cancer_data, mapping = aes(x=Glucose)) +
 
 ![Histogram showing the distribution of glucose values with many bins.](media/ggplot_hist_3.png)
 
-### Using color to show groups
+### Color by group
 
 As with scatterplots, we can add information about an additional variable by using color. Let's add the Classification factor to our aesthetics so we can see how the distribution of glucose values differs in the two groups.
 
@@ -583,7 +583,7 @@ What do you use to control transparency in ggplot2?
 ****
 <div class = "answer">
 
-Note the second plot in the [Using color to show groups](#using-color-to-show-groups), which includes an alpha adjustment.
+Note the second plot in the [Color by group](#color-by-group) section, which includes an alpha adjustment.
 
 </div>
 ****
