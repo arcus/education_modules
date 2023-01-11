@@ -7,7 +7,7 @@ language: en
 narrator: US English Female
 title: Database Normalization
 comment: Learn about the concept of normalization and why it's important for organizing complicated data in relational databases.
-long_description: Usually, data in a relational database like SQL is organized into multiple interrelated tables with as little data repetition as possible. This module teaches underlying data considerations and explains how data is organized in SQL by introducing the concepts of one-to-many data relationships and normalization.
+long_description: Usually, data in a relational database like SQL is organized into multiple interrelated tables with as little data repetition as possible. This concept can be useful to apply in other areas as well, such as organizing data in .csvs or in data frames in R or Python.  This module teaches underlying data considerations and explains how data can be efficiently organized by introducing the concepts of one-to-many data relationships and normalization.
 estimated_time: 40 minutes
 
 @learning_objectives  
@@ -45,7 +45,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 ## Multiple Tables
 
-Most SQL queries require something more complex than referencing data from a single table. 
+Most data analysis tasks require something more complex than referencing data from a single table. 
 
 For example, consider the case where you have data about a multi-site study's research subjects. One table holds depression scores for subjects and a different table holds subject addresses.  Your hypothesis is that people who live in certain zip codes have higher rates of depression.
 
@@ -75,9 +75,9 @@ Maybe your source tables look something like the tables below:
 
 What you want to eventually end up with will be a single table of results that might only have three columns: "subj\_id", "dep\_total", and "zip".  That way you can look at the relationship between depression inventory scale and zip code.
 
-You may be asking yourself, "Why don't the people collecting the data or designing the database just put all the information together in one table to start with?"  After all, getting one row per subject (or per sample, etc.) is how we usually prepare to apply statistical tests. If we could just **start** with one row per research subject in SQL, we'd be ready to jump into the science and not have so much data preparation work. 
+You may be asking yourself, "Why don't the people collecting the data or designing the database just put all the information together in one table to start with?"  After all, getting one row per subject (or per sample, etc.) is how we usually prepare to apply statistical tests. If we could just **start** with one row per research subject in our source data, we'd be ready to jump into the science and not have so much data preparation work. 
 
-The reason why this usually doesn't happen in a SQL database, and you instead see lots of different tables that you have to join together is because of a concept known as **normalization**.  To explain normalization, we'll first explain **one-to-many** data relationships.
+The reason why this usually doesn't happen in a database, and you instead see lots of different tables that you have to join together is because of a concept known as **normalization**.  To explain normalization, we'll first explain **one-to-many** data relationships.
 
 ## One-to-Many
 
@@ -172,7 +172,7 @@ In this module, we're discussing a kind of normalization called "third normal fo
 
 In a normalized database, we separate data into tables representing different logical **entities**, like "address", "procedure", "medication", "device", etc., and give each of these entities an identifier (like "device\_id" or "medication\_id") to identify a particular instance of the entity.  
 
-This id number can also be a **primary key** if it will only appear once in the entity table (say, for an item identifier that you don't want to be duplicated).  Imagine a "medication" table with rows that include a medication id and information about that medication (like its brand name, generic name, and whether it requires a prescription).  Or think of an "item" table which includes an item id, along with details about that item, like the manufacturer and description.  Each row is unique, and the id as a primary key won't repeat (SQL enforces this and won't let you add a new row with the same primary key).
+This id number can also be a **primary key** if it will only appear once in the entity table (say, for an item identifier that you don't want to be duplicated).  Imagine a "medication" table with rows that include a medication id and information about that medication (like its brand name, generic name, and whether it requires a prescription).  Or think of an "item" table which includes an item id, along with details about that item, like the manufacturer and description.  Each row is unique, and the id as a primary key won't repeat.  If you're using a SQL database, it's very helpful to know that SQL enforces this and won't let you add a new row in a table with a primary key that already exists.
 
 We tend to only include in these entity tables the data elements that have a single value that is relatively stable (like medication generic name, device bar code, patient date of birth, or medical procedure billing code).  We may exclude things from entity tables that could have multiple values or change frequently (for example, we would probably exclude patient insurance provider from the patient table).
 
@@ -206,7 +206,7 @@ In the one table option, we have to look for the phrase "orane juice" anywhere i
 
 **items**
 
-*Note: here we are using the "item\_id" field as a primary key as well, which is why we include (PK) in the table header.  Often, SQL will do something similar and display a special symbol (like <span class="fa-solid fa-key"></span>) or the letters "PK" to draw your attention to the fact that a particular field is a primary key.* 
+*Note: here we are using the "item\_id" field as a primary key as well, which is why we include (PK) in the table header.  Often, database tools will do something similar and display a special symbol (like <span class="fa-solid fa-key"></span>) or the letters "PK" to draw your attention to the fact that a particular field is a primary key.* 
 
 <!-- data-type="none" class="tight-table" -->
 | item_id (PK)  | item_name  |
@@ -238,13 +238,13 @@ In the one table option, we have to look for the phrase "orane juice" anywhere i
 
 In the two table option, we only have to find "orane juice" in a single column, "item\_name", and it occurs once only (this is because this id number is a primary key, which means it can only occur once).
 
-The theory of how to separate data for top speed and efficiency is complex. However, it's enough for now to understand that data in SQL databases are fragmented in a process called normalization, to help reduce needless repetition, simplify data, and improve system speed and performance.
+The theory of how to separate data for top speed and efficiency is complex. However, it's enough for now to understand that data in relational databases are fragmented in a process called normalization, to help reduce needless repetition, simplify data, and improve system speed and performance.
 
 ### Quiz: Normalization
 
-Why is data normalized (carefully fragmented to reduce repetition and inefficiency) in SQL?  Select all the correct answers.
+Why is data normalized (carefully fragmented to reduce repetition and inefficiency) in relational databases?  Select all the correct answers.
 
-[[ ]] SQL has a limit on number of columns permitted in a table, and must break up data in order to keep tables smaller.
+[[ ]] Relational database systems have a limit on number of columns permitted in a table, and must break up data in order to keep tables smaller.
 [[X]] Because data is often one-to-many, storing data in a single table is inefficient.
 [[X]] Normalizing data makes correcting or changing data simpler and less prone to error.
 [[ ]] Normalization is a holdover from when most databases were business-related, but it is not necessary in biomedical research.
@@ -253,7 +253,7 @@ Why is data normalized (carefully fragmented to reduce repetition and inefficien
 
 <div class = "answer">
 
-The reason for normalization isn't that SQL lacks the capacity for very wide tables with lots of columns.  Rather, the kind of rich data that is stored in SQL databases simply isn't right for storage in a single table.  There are many one-to-many relationships in data, and this means that using multiple tables, one for each kind of concept (like "address" or "order" or "encounter") makes sense.  There is also a lot of repetition in data.  For example, multiple patients might live at the same address, and multiple patients are prescribed the same medication.  Multiple orders each contain the same popular product.  This repetition means that it's much easier to correct or change data if we try to put as much data as possible into a single table. However, when a normalized model is used, and data is fragmented into concepts, things get easier.  Instead of correcting a product name thousands of times, once for each order that product appears on, we only have to correct it once, in the "product" table.
+The reason for normalization isn't that relational database software lacks the capacity for very wide tables with lots of columns.  Rather, the kind of rich data that is stored in relational databases simply isn't right for storage in a single table.  There are many one-to-many relationships in data, and this means that using multiple tables, one for each kind of concept (like "address" or "order" or "encounter") makes sense.  There is also a lot of repetition in data.  For example, multiple patients might live at the same address, and multiple patients are prescribed the same medication.  Multiple orders each contain the same popular product.  This repetition means that it's much easier to correct or change data if we try to put as much data as possible into a single table. However, when a normalized model is used, and data is fragmented into concepts, things get easier.  Instead of correcting a product name thousands of times, once for each order that product appears on, we only have to correct it once, in the "product" table.
 
 </div>
 
@@ -261,7 +261,7 @@ The reason for normalization isn't that SQL lacks the capacity for very wide tab
 
 ## Key Vocabulary <span class="fa-solid fa-key"></span>
 
-Fields that appear in two or more SQL tables are also sometimes called **join keys**, because they can be used to join data from the two tables into one set of interrelated data.  Two categories of join keys are primary keys (which we talked about earlier) and **foreign keys**.
+Fields that appear in two or more tables within a database are also sometimes called **join keys**, because they can be used to join data from the two tables into one set of interrelated data.  Two categories of join keys are primary keys (which we talked about earlier) and **foreign keys**.
 
 A **primary key**, you'll recall, is a column (occasionally a set of columns) that contain a unique value for each row in your table.  For example, the "item\_id" is a primary key for the "items" table in our earlier example.  There will be no repeats of the "item\_id" in the "items" table.
 
@@ -282,7 +282,7 @@ A **foreign key** is a column in a table that make reference to a primary key in
 
 **order_items**
 
-*The second column here is a foreign key.  Sometimes (but not always!) you will see this noted in SQL diagrams as (FK) or a symbol like <span class="fa-solid fa-key"></span>.*
+*The second column here is a foreign key.  Sometimes (but not always!) you will see this noted in database diagrams as (FK) or a symbol like <span class="fa-solid fa-key"></span>.*
 
 <!-- data-type="none" class="tight-table" -->
 | order_id | item_id (FK) |
@@ -367,4 +367,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22SQL+Normalization%22)!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Database+Normalization%22)!
