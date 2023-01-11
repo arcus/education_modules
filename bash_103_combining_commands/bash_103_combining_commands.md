@@ -96,7 +96,7 @@ This will open a command line interface at the correct location. Once there, you
 
 ## Inputs and Outputs
 
-The purpose of any command is to take some input and do something with it. The input might a file, a folder, or something you typed in. In the case of `ls` and `pwd` the input is your location in your file system.
+The purpose of any command is to take some input and do something with it. The input might be a file, a folder, or something you typed in. In the case of `ls` and `pwd` the input is your location in your file system.
 
 Some commands also return output based on the input. For example `grep` returns a list of lines that contain a given regular expression, but doesn't make any changes to any files.
 
