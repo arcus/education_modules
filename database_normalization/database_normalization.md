@@ -104,7 +104,7 @@ It would be impossible to know ahead of time how many columns would be needed.  
 Which of the following relationships are likely to be one-to-many?  Select all the correct answers.
 
 [[X]] Gym member to workout
-[[ ]] Street address to corresponding legislative district
+[[ ]] Street address to latitude and longitude coordinates
 [[X]] Patient to medical provider
 [[X]] Medical provider to patient
 [[ ]] Baseball team to mascot
@@ -113,7 +113,7 @@ Which of the following relationships are likely to be one-to-many?  Select all t
 
 <div class = "answer">
 
-We hope that any gym member will have more than one recorded workout, so that relationship is one-to-many.  However, a particular street address will only have one legislative district representing residents at that address.  That's not a one-to-many relationship.  A patient can have multiple providers, so that's one-to-many, and providers can have many patients, so that's also one-to-many.  In fact you could more accurately call this relationship many-to-many!  Finally, a baseball team (we argue) should have only one mascot, so that's not a one-to-many relationship.
+We hope that any gym member will have more than one recorded workout, so that relationship is one-to-many.  However, a particular street address will only be related to a single latitude and longitude. That's not a one-to-many relationship.  A patient can have multiple providers, so that's one-to-many, and providers can have many patients, so that's also one-to-many.  In fact you could more accurately call this relationship many-to-many!  Finally, a baseball team (we argue) should have only one mascot, so that's not a one-to-many relationship.
 
 </div>
 
@@ -143,17 +143,20 @@ Let's consider again the data from our fictional multi-site research study on me
 | 11234   | 123 Oak Lane   | Old Towne    | PA  | 18000   | 2000-01-01    | 2021-12-31    |
 | 93452   | 123 Green Blvd  | Kirby    | TN  | 37000    | 2020-05-01    | `NULL`   |
 
-Notice the one-to-many aspects of this data.  The subject with id 86234 has two different administrations of the depression inventory, on different dates.  The subject with id 11234 has two different addresses for two different date ranges.
+Notice the one-to-many aspects of this data.  The subject with subj_id 86234 has two different administrations of the depression inventory, on different dates.  The subject with subj_id 11234 has two different addresses for two different date ranges.
 
 **Column Conundrums**
+-----
 
 Imagining how to consolidate this data into one single table with one row per subject is challenging.  Would we provide two sets of columns for addresses?  Maybe the column names would be "street\_address\_1", "city\_1", etc., and "street\_address\_2", "city\_2", and so on.  But this is a longitudinal study and people might move 3, 5, even 10 times! The same problem emerges with multiple administrations of the depression inventory.  If we try to combine data that can repeat into a "one row per subject" model, we don't know how many columns to create.
 
 **Row Woes**
+-----
 
 And it gets worse.  We don't just have to worry about columns, but also rows.  Consider the fact that we also have other, unchanging data about subjects that we'd need to include, like their demographic information (date of birth, sex, race, etc.).  If someone has four administrations of the depression inventory, do we list their sex, race, and date of birth on all four of those administrations?  That's a lot of data repetition which takes up disk space and also opens up more possibilities for errors.
 
 **One Table?  Not a Good Idea!**
+-----
 
 In short, if we try to force all the data we care about into a single table, we have a problem of rapidly multiplying columns and data repetition in rows.  This makes maintaining, cleaning, correcting, and understanding data very tricky.
 
@@ -161,7 +164,8 @@ We're much better off collecting various groups of facts about our research subj
 
 ## Normalization
 
-When data is normalized, we organize data to reduce the possibility of needless data duplication and empty cells.  Normalization is a complex information science topic and has different degrees of completeness, so here we'll talk about what normalization **looks like** more than what it **is**.  
+When data is normalized, we organize data to reduce the possibility of needless data duplication and empty cells. 
+Normalization is a complex information science topic and there are various levels of normalization that can be performed.  Here, we won't go into details about various forms of normalization, rather, we'll talk about what normalization  **looks like** more than what it **is**.  
 
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
@@ -169,16 +173,18 @@ In this module, we're discussing a kind of normalization called "third normal fo
 </div>
 
 **Entities: What Kinds of Things Exist?**
+-----
 
 In a normalized database, we separate data into tables representing different logical **entities**, like "address", "procedure", "medication", "device", etc., and give each of these entities an identifier (like "device\_id" or "medication\_id") to identify a particular instance of the entity.  
 
-This id number can also be a **primary key** if it will only appear once in the entity table (say, for an item identifier that you don't want to be duplicated).  Imagine a "medication" table with rows that include a medication id and information about that medication (like its brand name, generic name, and whether it requires a prescription).  Or think of an "item" table which includes an item id, along with details about that item, like the manufacturer and description.  Each row is unique, and the id as a primary key won't repeat.  If you're using a SQL database, it's very helpful to know that SQL enforces this and won't let you add a new row in a table with a primary key that already exists.
+This ID number can also be a **primary key** if it will only appear once in the entity table (say, for an item identifier that you don't want to be duplicated).  Imagine a "medication" table with rows that include a medication ID and information about that medication (like its brand name, generic name, and whether it requires a prescription).  Or think of an "item" table which includes an item ID, along with details about that item, like the manufacturer and description.  Each row is unique, and the ID as a primary key won't repeat.  If you're using a SQL database, it's very helpful to know that SQL enforces this and won't let you add a new row in a table with a primary key that already exists.
 
-We tend to only include in these entity tables the data elements that have a single value that is relatively stable (like medication generic name, device bar code, patient date of birth, or medical procedure billing code).  We may exclude things from entity tables that could have multiple values or change frequently (for example, we would probably exclude patient insurance provider from the patient table).
+We tend to only include in these entity tables the data elements that have a single value that is relatively stable (like medication generic name, device bar code, patient date of birth, or medical procedure billing code).  We may exclude things from entity tables that could have multiple values or change frequently (for example, in the United States we would probably exclude patient insurance provider from the patient table).
 
 **Interactions: How do Entities Interact?**
+-----
 
-Then, we make tables that represent **interactions** between entities.  For example, interactions between patients and medications might be stored in a "prescriptions" or "medication\_orders" table. Interactions between addresses and devices might be in a "device\_shipment" table.  These record relationships by including the id numbers of the entities involved, along with other data like the date of the interaction and other details.  A table called "medication\_orders", for example, will include a field for the patient id, a field for the medication id, a field for the prescribing provider id, the date and time of the medication order, the dose and duration of the order, the mode of medication delivery, and other important details such as any notes made by the prescriber.
+Then, we make tables that represent **interactions** between entities.  For example, interactions between patients and medications might be stored in a "prescriptions" or "medication\_orders" table. Interactions between addresses and devices might be in a "device\_shipment" table.  These record relationships by including the ID numbers of the entities involved, along with other data like the date of the interaction and other details.  A table called "medication\_orders", for example, will include a field for the patient ID, a field for the medication ID, a field for the prescribing provider ID, the date and time of the medication order, the dose and duration of the order, the mode of medication delivery, and other important details such as any notes made by the prescriber.
 
 Whether these tables of interactions have primary keys and their own identifiers depends, but they often will.  For example, a "device\_shipment" table might have a primary key called "device\_shipment\_id".
 
@@ -186,9 +192,10 @@ Whether these tables of interactions have primary keys and their own identifiers
 
 To show why organizing data in a normalized way is helpful, let's use an example.
 
-Which of the following is more efficient to correct, if we want to change "orane juice" to "orange juice"? Is it easier to correct with the data stored in one table, or with the data in two tables, where items are given an id number?
+Consider the following example of a typo in a database. Is it easier to correct "orane juice" to "orange juice" with the data stored in one table, or with the data in two tables, where items are given an id number?
 
 **One Table Option**
+-----
 
 **orders**
 
@@ -203,6 +210,7 @@ Which of the following is more efficient to correct, if we want to change "orane
 In the one table option, we have to look for the phrase "orane juice" anywhere in 50 columns across all rows (consider that there could be thousands of rows).
 
 **Two Table Option**
+-----
 
 **items**
 
@@ -236,9 +244,12 @@ In the one table option, we have to look for the phrase "orane juice" anywhere i
 | 14123 | 210 |
 | 14123 | 97 |
 
-In the two table option, we only have to find "orane juice" in a single column, "item\_name", and it occurs once only (this is because this id number is a primary key, which means it can only occur once).
+In the two table option, we only have to find "orane juice" in a single column, "item\_name", and it occurs once only (this is because this ID number is a primary key, which means it can only occur once).
 
-The theory of how to separate data for top speed and efficiency is complex. However, it's enough for now to understand that data in relational databases are fragmented in a process called normalization, to help reduce needless repetition, simplify data, and improve system speed and performance.
+The theory of how to separate data for top speed and efficiency is complex. However, it's enough for now to understand that data in relational databases are fragmented in a process called normalization, which 
+- helps reduce needless repetition, 
+- simplifies data, 
+- and improves system speed and performance.
 
 ### Quiz: Normalization
 
