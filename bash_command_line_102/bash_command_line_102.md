@@ -106,7 +106,7 @@ ls
 
 <div class = "warning">
 
-Make sure to use the file path to `learning_bash-main` that you found for your own computer. If your computer uses Windows OS, make sure you replace the forward slashes ` \ ` in the path with back slashes `/`.
+Make sure to use the file path to `learning_bash-main` that you found for your own computer. If your computer uses Windows OS, make sure you replace the forward slashes ` / ` in the path with back slashes ` \ `.
 
 You can also follow the instructions on the previous page to open your command line interface where you want to end up, without having to use the `cd` command to get there.
 
@@ -275,7 +275,7 @@ The `grep` function searches the contents of the files, in this case all of the 
 
 While it would be great if all of your files came into being in the location you will want them in forever and with the naming conventions you want to keep forever, that simply isn't the way it works. Even if you put every file you create in the correct location and give it a perfectly formatted name, you will at some point have to interact with files that someone else created.
 
-Just because a file is in one location, doesn't mean it has to stay there forever, nor does it's name need to be permanent. In this section we will learn and practice moving files around, copying files, and renaming files.
+Just because a file is in one location, doesn't mean it has to stay there forever, nor does its name need to be permanent. In this section we will learn and practice moving files around, copying files, and renaming files.
 
 <div class = "important">
 Since **we will be making changes** to your files in this section, please use the `learning_bash-main` directory for practice.  
