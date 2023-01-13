@@ -187,7 +187,7 @@ You might need a formal agreement with a geocoding service (see the [Texas A&M G
 
 </div>
 
-If you have a public dataset, there are a number of geocoding services in existence, most of which will let you geocode addresses in batches. Google and Bing both have such services, and a more extensive list, along with links to the services, is available from [GISGeography.com](https://gisgeography.com/geocoders/).
+If you have a public dataset, there are a number of geocoding services in existence, most of which will let you geocode addresses in batches. Google and Bing both have such services. A more extensive list, along with links to the services, is available from [GISGeography.com](https://gisgeography.com/geocoders/).
 
 While using these tools is outside the scope of this module, many are free to try out, especially if you will be geocoding a relatively small number of addresses (e.g. only a few thousand).
 
