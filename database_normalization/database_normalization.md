@@ -212,9 +212,14 @@ In the one table option, we have to look for the phrase "orane juice" anywhere i
 **Two Table Option**
 -----
 
-**items**
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br/>
+In the **items** table, we are using the "item\_id" field as a primary key, which is why we include (PK) in the table header.  Often, database tools will do something similar and display a special symbol (like <span class="fa-solid fa-key"></span>) or the letters "PK" to draw your attention to the fact that a particular field is a primary key.
 
-*Note: here we are using the "item\_id" field as a primary key as well, which is why we include (PK) in the table header.  Often, database tools will do something similar and display a special symbol (like <span class="fa-solid fa-key"></span>) or the letters "PK" to draw your attention to the fact that a particular field is a primary key.* 
+In the **order\_items** table we want to allow the "order\_id" to repeat as many times as necessary to include all items, so it's not a primary key.
+</div>
+
+**items**
 
 <!-- data-type="none" class="tight-table" -->
 | item_id (PK)  | item_name  |
@@ -227,8 +232,6 @@ In the one table option, we have to look for the phrase "orane juice" anywhere i
 | 233 | plain bagels  |
 
 **order_items**
-
-*Note: here we want to allow the "order\_id" to repeat as many times as necessary to include all items, so it's not a primary key.* 
 
 <!-- data-type="none" class="tight-table" -->
 | order_id | item_id |
@@ -273,6 +276,11 @@ The reason for normalization isn't that relational database software lacks the c
 ## Key Vocabulary <span class="fa-solid fa-key"></span>
 
 Fields that appear in two or more tables within a database are also sometimes called **join keys**, because they can be used to join data from the two tables into one set of interrelated data.  Two categories of join keys are primary keys (which we talked about earlier) and **foreign keys**.
+
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+The phrases "primary key" and "foreign key" originated in SQL, and if you use SQL, you need to learn them.  However, the concepts are useful in other situations and you might hear these terms used (less strictly and precisely) outside of relational databases.  "Let's use the student ID as the primary key," might be suggested, for example, even when the data is stored in .csv files, not in a SQL database. 
+</div>
 
 A **primary key**, you'll recall, is a column (occasionally a set of columns) that contain a unique value for each row in your table.  For example, the "item\_id" is a primary key for the "items" table in our earlier example.  There will be no repeats of the "item\_id" in the "items" table.
 
