@@ -7,13 +7,14 @@ language: en
 narrator: US English Female
 title: SQL Joins Demystified
 comment: Learn about SQL joins in a non-coding module.
-long_description: Usually, data in a SQL database is organized into multiple interrelated tables.  This means you will often have to bring data together from two or more tables into a single dataset to answer your research questions.  This is accomplished using JOIN commands.  This module explains the type of joins, without going into detail about the SQL code itself.
+long_description: Usually, data in a SQL database is organized into multiple interrelated tables.  This means you will often have to bring data together from two or more tables into a single dataset to answer your research questions.  This is accomplished using JOIN commands.  This module explains the types of joins, without going into detail about the SQL code itself.
 estimated_time: 1 hour
 
 @learning_objectives  
 After completion of this module, learners will be able to:
 
-- Explain what "join criteria" are and give an example of what makes "matching" data in two separate tables
+- Explain what "join criteria" are
+- Give an example of what makes "matching" data in two separate tables
 - Describe the various "shapes" of SQL JOIN: inner, left, right, and full
 
 
@@ -675,4 +676,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22SQL+Joins%22Demystified)!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22SQL+Joins+Demystified%22)!
