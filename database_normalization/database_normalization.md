@@ -214,8 +214,7 @@ In the one table option, we have to look for the phrase "orane juice" anywhere i
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br/>
-In the **items** table, we are using the "item\_id" field as a primary key, which is why we include (PK) in the table header.  Often, database tools will do something similar and display a special symbol (like <span class="fa-solid fa-key"></span>) or the letters "PK" to draw your attention to the fact that a particular field is a primary key.
-
+In the **items** table, we are using the "item\_id" field as a primary key, which is why we include (PK) in the table header.  Often, database tools will do something similar and display a special symbol (like <span class="fa-solid fa-key"></span>) or the letters "PK" to draw your attention to the fact that a particular field is a primary key. <br/><br/>
 In the **order\_items** table we want to allow the "order\_id" to repeat as many times as necessary to include all items, so it's not a primary key.
 </div>
 
