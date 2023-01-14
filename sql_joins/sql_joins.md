@@ -119,7 +119,7 @@ It can be surprisingly tricky to figure out what makes data "match" or "go toget
 
 You'll combine join type and join criteria by using both the `FROM` component and the `ON` or `USING` component.  Your SQL query might include lines that look something like this: 
 
-```
+```sql
 ...
 FROM table_1 LEFT JOIN table_2
 ON table_1.pat_id = table_2.pat_id
@@ -492,7 +492,6 @@ For example, if the subject ID matches, a row from table A and a row from table 
 In code, we usually use an **ON** statement:
 
 ```sql
-
 ...
 ON disease.subject_id = smoking.subject_id
 ```
@@ -550,7 +549,7 @@ In this example:
 
 This highlights the importance of documenting your data so you can tell which fields hold which data in order to use them properly for joins.  If `semester` and `term` are  different things, not just the same thing with two different names, the result of your join will be disappointing.  <br/>
 
-This also shows that figuring out your join criteria requires close attention -- we probably don't mean to match student 11's math grades with student 14's language grades!
+This also shows that figuring out your join criteria requires close attention: we probably don't mean to match student 11's math grades with student 14's language grades!
 
 </div>
 
