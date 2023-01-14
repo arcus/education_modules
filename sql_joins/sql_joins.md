@@ -6,8 +6,8 @@ module_template_version: 3.0.0
 language: en
 narrator: US English Female
 title: SQL Joins
-comment: "Learn about SQL joins: what they accomplish, and how to write them."
-long_description: Usually, data in a SQL database is organized into multiple interrelated tables.  This means you will often have to bring data together from two or more tables into a single dataset to answer your research questions.  This "join" action is accomplished using `JOIN` commands.  This module explains the type of joins and how to write them.
+comment: Learn about SQL joins: what they accomplish, and how to write them.
+long_description: Usually, data in a SQL database is organized into multiple interrelated tables.  This means you will often have to bring data together from two or more tables into a single dataset to answer your research questions.  This "join" action is accomplished using `JOIN` commands.  This module teaches types of joins, join criteria, and how to write `JOIN` code.
 estimated_time: 1 hour
 
 @learning_objectives  
@@ -448,13 +448,13 @@ A full outer join is indeed a type of join, and it can take place on any two tab
 
 ### Join Criteria
 
-Join criteria are conditions that mean that rows from two different tables belong together or "match".  For example, what makes a row from `math\_grades` match up with a row from `language\_grades`?
+Join criteria are conditions that mean that rows from two different tables belong together or "match".  For example, what makes a row from the math\_grades table match up with a row from the language\_grades table?
 
 Your criteria might be something like:
 
-* Join the rows from "depression\_scale" with rows from "subject\_address" **... but only if the subject id field matches**
-* Join the rows from "items" with the rows from "orders" **... but only if the item id field matches**
-* Join the rows from "biology\_grades" with the rows from "psychology\_grades" **... but only if the student id is the same and the semester is the same**
+* Join the rows from "depression\_scale" with rows from "subject\_address" **... but only if the subject ID field matches**
+* Join the rows from "items" with the rows from "orders" **... but only if the item ID field matches**
+* Join the rows from "biology\_grades" with the rows from "psychology\_grades" **... but only if the student ID is the same and the semester is the same**
 
 When the conditions in your join criteria evaluate as TRUE for a row then a join will be performed for those rows, and when the join criteria are evaluated as FALSE no join for those rows will take place.
 
@@ -466,9 +466,9 @@ Join criteria will be some sort of relationship statement referencing data that 
 
 #### Equality, Example 1
 
-Do you have subject identifiers or student id numbers in two different tables?  This shared information can be used to connect (join) data from these tables, based on the identifier being equal.  
+Do you have subject identifiers or student ID numbers in two different tables?  This shared information can be used to connect (join) data from these tables, based on the identifier being equal.  
 
-For example, if the subject id matches, a row from table A and a row from table B will be joined.  If the subject id doesn't match, these rows won't be joined.  Maybe we're trying to match lung cancer occurrence and smoking exposure in the same row:
+For example, if the subject ID matches, a row from table A and a row from table B will be joined.  If the subject ID doesn't match, these rows won't be joined.  Maybe we're trying to match lung cancer occurrence and smoking exposure in the same row:
 
 **disease**
 
@@ -567,7 +567,7 @@ ON depression_scale.date BETWEEN
 
 **Multiple conditions**
 
-Of course, in the example of the depression inventory, we'd also want to make sure that there was a match on subject identifier (you don't want to match Lakshmi's depression score with Larry's address, just because the dates worked!).  You can combine conditions too.  Here, we look for an exact match on subject id and a date match that's between the correct dates:
+Of course, in the example of the depression inventory, we'd also want to make sure that there was a match on subject identifier (you don't want to match Lakshmi's depression score with Larry's address, just because the dates worked!).  You can combine conditions too.  Here, we look for an exact match on subject ID and a date match that's between the correct dates:
 
 ```sql
 ON depression_scale.subj_id = subject_address.subj_id AND
@@ -584,7 +584,7 @@ You can create arbitrarily complex **boolean logic** (or **boolean algebra**), u
 
 ```sql
 ON depression.subj_id = subject_address.subj_id AND 
--- subject id must match... AND...
+-- subject ID must match... AND...
 
 -- either:
    ((depression.date BETWEEN          
@@ -637,7 +637,7 @@ We won't show the code for this in this module, but be aware that you can think 
 
 #### Quiz: Join Criteria
 
-True or False: a matching id (like student\_id or patient\_id) is generally sufficient as a join criterion.
+True or False: a matching ID (like student\_id or patient\_id) is generally sufficient as a join criterion.
 
 [( )] True
 [(X)] False
