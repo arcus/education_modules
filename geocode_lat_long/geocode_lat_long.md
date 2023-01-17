@@ -204,7 +204,7 @@ TRUE or FALSE: Addresses are irrelevant for research into the social determinant
 
 <div class = "answer">
 
-Latitude and Longitude coordinates can tell you a lot that addresses can't, but they do not replace the important social and political information contained in a street address. Two people living geographically very close together but under different governmental regimes may have completely different healthcare options. Similarly, two people living seemingly far apart from each other but in the same town may both be impacted by the same municipal water source.
+Latitude and Longitude coordinates can tell you a lot that addresses can't, but they do not replace the important social and political information contained in a street address. Two people living geographically very close together but under different governmental regimes may have completely different healthcare options. Similarly, two people living seemingly far apart from each other but in the same town may both be impacted by the same city or district water source.
 
 </div>
 
