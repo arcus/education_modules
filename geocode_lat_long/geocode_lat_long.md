@@ -96,7 +96,9 @@ Now that we have established the poles, the equator, and the prime meridian, we 
 ### Latitude and Longitude
 
 
-**Latitude** is a measure of how far north or south a location is from the equator. Given a point on the surface of the earth, imagine a straight line to the center of the earth. The angle that line makes with the equatorial plane, measured in degrees (denoted $ {}^\circ $), is the point's latitude. Since that angle could be either above or below the equatorial plane, we have to specify which angle we are talking about. The horizontal line on the picture below corresponding to 30 degrees north, or +30$ {}^\circ $, goes through the United States, while the line representing 30 degrees south, or -30$ {}^\circ $, runs through Chile and Argentina.
+**Latitude** is a measure of how far north or south a location is from the equator. Given a point on the surface of the earth, imagine a straight line to the center of the earth. The angle that line makes with the equatorial plane, measured in degrees, is the point's latitude. The symbol for degrees is the superscript circle ${}^\circ $. 
+
+Since the angle could be either above or below the equatorial plane, we have to specify which angle we are talking about. The horizontal line on the picture below corresponding to 30 degrees north, or +30$ {}^\circ $, goes through the United States, while the line representing 30 degrees south, or -30$ {}^\circ $, runs through Chile and Argentina.
 
 ![Earth with the poles, the equator, and latitudes marked at 30 degree increments ranging from -90 at the South Pole to 90 at the North Pole.](media/latitude.png)
 
