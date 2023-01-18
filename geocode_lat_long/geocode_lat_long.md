@@ -62,7 +62,14 @@ Depending on who (or what) you ask, the answer could take many forms, each of wh
 - **Mailing Address**: "The research building is at 734 Schuylkill Ave. Philadelphia, PA 19146."
 
 - **Coordinates**: "The research building is at 39.9458 North, -75.1865 West."
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
+Place names add an additional level of difficulty to working with geospatial data. People may notice and care if you use the wrong name for a place, or if you mispronounce a common local name. When in doubt about how to pronounce a place name, it is always a good idea to ask!
+
+While you won't need to speak any place names out loud for this module, Philadelphians pronounce Schuylkill as "SKOO-kill."
+
+</div>
 Relative Location
 ------
 
