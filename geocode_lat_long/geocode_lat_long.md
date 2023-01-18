@@ -98,7 +98,6 @@ A **meridian** is a straight line on the surface of the earth connecting the pol
 
 Now that we have established the poles, the equator, and the prime meridian, we can use those to to create a coordinate system that will specify and point on earth!
 
-![On the left an image of Earth is shown from the side with the North Pole labeled at the top, the South Pole labeled at the bottom, and the equator represented as a dashed horizontal line around the middle. On the right Earth is shown from above so that the North Pole is visible. The prime meridian is represented by a dashed vertical line starting at the North Pole and continuing down through the United Kingdom, the western Mediterranean Sea, and West Africa.](media/poles_meridian_equator.svg)<!-- style = "max-width:800px;" border = 5px solid -->
 
 ### Latitude and Longitude
 
