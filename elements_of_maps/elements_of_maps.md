@@ -333,13 +333,13 @@ Types of Maps
 We have seen several named types of maps in this lesson:
 
 
-| Type | Example |
-|:--:|:--:|
-| Dot Distribution | ![Philadelphia is outlined in grey and covered in tiny blue dots. The dots are most concentrated along large roadways and trace out partial street map of the city.](media/2019_crashes.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
-| Heat Map | ![Zip code boundaries of Philadelphia are outlined in black and bright colors, ranging from red to blue, blur into each other across the map. A large red region appears in the center, as do smaller reddish-orange regions in the upper right, and lower left of the city, with several orange and yellow regions scattered throughout. In between, the color fades to greens and blues, with the edge of the map surrounded by light blue.](media/2019_crashes_heat_map.png)<!-- style = "max-width:200px;" border = 5px solid -->|
-| Choropleth | ![Pedestrian Stops by Zip Code. Each zip code region of Philadelphia is colored a shade of red, ranging from a very light peach color (most regions) to intense dark reds (only a few regions). The legend indicates that the darkest colors indicate values of more than 1200 while the lightest colors indicate values less than 200.](media/2021_pedestrian_stops.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
-| Graduated Symbol Map | ![The zip codes of Philadelphia, each with a blue dot in its center. There are five distinct sizes of dots.](media/2021_pedestrian_stops_graduated_symbol.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
-| Proportional Symbol Map | ![The zip codes of Philadelphia, each with a blue dot in its center. The dot sizes vary continuously.](media/2021_pedestrian_stops_proportional_symbol.jpg)<!-- style = "max-width:200px;" border = 5px solid -->  |
+| Type | Description | Example Map |
+|:--:|:--|:--:|
+| Dot Distribution | A dot distribution map represents each data point as a single dot on a map. | ![A dot distribution map.](media/2019_crashes.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
+| Heat Map | A heat map uses colors to show where data points are concentrated. Parts of the map with a higher concentration of points appear in brighter or more intense colors, while regions with low concentration of points appear in cooler or duller colors. Areas with intermediate concentration levels are colored along a gradient from the highest to lowest concentration colors. | ![A heat map.](media/2019_crashes_heat_map.png)<!-- style = "max-width:200px;" border = 5px solid -->|
+| Choropleth | A choropleth map colors each of a predetermined set of regions, like zip codes or counties, based on a statistic such as number of pedestrian stops in a year, or average household income. | ![A choropleth map.](media/2021_pedestrian_stops.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
+| Graduated Symbol Map | A graduated symbol map marks each region or location with a symbol. The size or color of the symbol is determined by a single statistic such as the number of pedestrian stops in a year. In a graduated symbol map there are a finite number of possible symbols, each representing a range of values, like 0-25, 26-50, 51-75, and 75+.  | ![A graduated symbol map.](media/2021_pedestrian_stops_graduated_symbol.jpg)<!-- style = "max-width:200px;" border = 5px solid --> |
+| Proportional Symbol Map | A proportional symbol map is similar to a graduate symbol map, but instead of the size or color of each symbol corresponding to a range of values, the symbols are taken from a continuous collection of options. For example a symbol representing 20 occurrences would be smaller than a symbol indicating a value of 21, but larger than one with a value of 19. | ![A proportional symbol map.](media/2021_pedestrian_stops_proportional_symbol.jpg)<!-- style = "max-width:200px;" border = 5px solid -->  |
 
 ## Quiz
 
