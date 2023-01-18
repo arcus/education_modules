@@ -7,17 +7,15 @@ layout: default
 
 Here are the answers to some of our most frequently asked questions.
 
-<button type="button" class="collapsible">Question 1</button>
-<div class="content">
-  <p>Answer to Question 1</p>
-</div>
-
-<button type="button" class="collapsible">Question 2</button>
-<div class="content">
-  <p>Answer to Question 2</p>
-</div>
-
-<button type="button" class="collapsible">Question 3</button>
-<div class="content">
-  <p>Answer to Question 3</p>
-</div>
+<details>
+  <summary>Question 1</summary>
+  Answer 1
+</details>
+<details>
+  <summary>Question 2</summary>
+  Answer 2
+</details>
+<details>
+  <summary>Question 3</summary>
+Answer 3
+</details>
