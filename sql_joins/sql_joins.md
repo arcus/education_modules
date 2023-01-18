@@ -22,6 +22,122 @@ After completion of this module, learners will be able to:
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 script: https://kit.fontawesome.com/83b2343bd4.js
 
+script: https://cdn.jsdelivr.net/npm/alasql@0.6.5/dist/alasql.min.js
+attribute: [AlaSQL](https://alasql.org)
+           by [Andrey Gershun](agershun@gmail.com)
+           & [Mathias Rangel Wulff](m@rawu.dk)
+           is licensed under [MIT](https://opensource.org/licenses/MIT)
+
+script: https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.1/papaparse.min.js
+attribute: [PapaParse](https://www.papaparse.com)
+           by [Matthew Holt](https://twitter.com/mholt6)
+           is licensed under [MIT](https://opensource.org/licenses/MIT)
+
+script: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
+attribute: [jQuery](https://jquery.com/)
+           is licensed under [OpenJS Foundation](https://openjsf.org/)
+
+@AlaSQL.eval
+<script>
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// BUILD FUNCTIONS
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function buildHtmlTable() {
+  // Builds the HTML Table out of myList, and writes output to the id attribute assigned via the "@0" argument to this marco.
+  var columns = addAllColumnHeaders(myList);
+  for (var i = 0 ; i < myList.length ; i++) {
+    var row$ = $('<tr/>');
+    for (var colIndex = 0 ; colIndex < columns.length ; colIndex++) {
+      var cellValue = myList[i][columns[colIndex]];
+      if (cellValue == null) { cellValue = ""; }
+      row$.append($('<td/>').html(cellValue).css({
+      "padding-left": "1em",
+      "padding-right": "1em"
+      }));
+    }
+    $(@0).append(row$);
+  }
+  try { // Error Handling for no null.
+    var rowCount = document.getElementById(@0.substring(1)).rows.length - 1;
+  } catch(err) {
+    var cnt = 0
+  }
+  if (rowCount > 0) {
+    var complete_message = "Query Execution Complete! (See Result Set Below)..."
+  } else {
+    var complete_message = "No Data to Return.."
+  }
+  return JSON.stringify(complete_message, null, 3);
+}
+function addAllColumnHeaders(myList) {
+  // Creates and Returns Header Row From Array Data Provided as Input.
+  var columnSet = [];
+  var headerTr$ = $('<tr/>');
+  for (var i = 0 ; i < myList.length ; i++) {
+    var rowHash = myList[i];
+    for (var key in rowHash) {
+      if ($.inArray(key, columnSet) == -1){
+        columnSet.push(key);
+        headerTr$.append($('<th/>').html(key));
+      }
+    }
+  }
+  $(@0).append(headerTr$);
+  return columnSet;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+try {
+    var myinput=`@input`
+    myinput=myinput.replace(/;/, ""); // remove all semi-colon
+    var myStriptArray= myinput.split(';');
+    var arrayLength = myStriptArray.length;
+    console.clear();
+    for (var i = 0; i < arrayLength; i++) {
+        if((myStriptArray[i].trim()).length != 0) { // ignore blank queries.
+            var myList=alasql(myStriptArray[i]);
+        }
+        if (myList != 1  & ((myStriptArray[i].trim()).length) != 0) { // If data is returned, format output as table.
+            $(@0).html(""); // clear out existing data
+            buildHtmlTable();
+        } else {
+            $(@0).html(""); // clear out existing data
+            JSON.stringify("No Data to Return..", null, 3);
+        }
+    }
+} catch(e) {
+  let error = new LiaError(e.message, 1);
+  try {
+    let log = e.message.match(/.*line (\d):.*\n.*\n.*\n(.*)/);
+    error.add_detail(0, e.name+": "+log[2], "error", log[1] -1 , 0);
+  } catch(e) {
+  }
+  throw error;
+}
+</script>
+@end
+
+@AlaSQL.buildTable_disease
+<script>
+    alasql("DROP TABLE IF EXISTS disease;");
+    alasql("create table disease (subject_id integer, lung_cancer boolean);");
+    alasql("INSERT INTO disease VALUES ('3','TRUE');");
+    alasql("INSERT INTO disease VALUES ('5','FALSE');");
+    alasql("INSERT INTO disease VALUES ('8','FALSE');");
+</script>
+@end
+
+@AlaSQL.buildTable_smoking
+<script>
+    alasql("DROP TABLE IF EXISTS smoking;");
+    alasql("create table smoking (subject_id integer, smoking_pack_years integer);");
+    alasql("INSERT INTO smoking VALUES ('2','10');");
+    alasql("INSERT INTO smoking VALUES ('3','10');");
+    alasql("INSERT INTO smoking VALUES ('4','0');");
+</script>
+@end
 
 -->
 
@@ -121,7 +237,7 @@ The join criteria shows up in SQL in an `ON` or `USING` statement, and will look
 
 OR
 
-`USING (field_name)` (this method is less frequently used)
+`USING(field_name)` (this method is less frequently used)
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -714,13 +830,22 @@ The term for indicating which table's data should be included and according to w
 </div>
 ****
 
-## Combining Join Type and Join Criteria
+## Combining It All
 
-In the next few sections, we'll combine our join type and join criteria, to show you how these work together.
+In the next few sections, we'll combine our join type and join criteria, to show you how these work together.  
 
-You'll see a `FROM` statement, which describes the type of join, and an `ON` statement, which describes the join criteria.
+And, since you have lots of reference pages to look back at, we are confident that you'll be able to write the code yourself!  
 
-Importantly, we will only show a few examples.  There are many combinations we could consider: 
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+Don't worry, we'll scaffold the code for you so you have the support you need to write the SQL code.  And if you don't get it right the first time, you can try a few times.  Still stuck?  You can click the "check" icon to show the answer!
+
+</div>
+
+You'll use a `FROM` statement, which describes the type of join, and an `ON` statement, which describes the join criteria.
+
+Importantly, we will only presesent a few examples.  There are many combinations we could consider, at all levels of complexity.  Here are a few we **won't** do:
 
 * A `LEFT JOIN` involving tables which require a "between" type relationship (like a "spend" value between a "budget\_floor" value and a "budget\_ceiling" value)
 * An `INNER JOIN` involving equality matching on three fields: two identifiers and one date field
@@ -751,33 +876,67 @@ To understand what an `INNER JOIN` with equality looks and acts like practically
 | 3 | 10  |
 | 4  | 0 |
 
-And let's combine our join criteria (subject\_id matching) with our join type (inner).  
+-----
+
+Let's combine our join criteria (subject\_id matching) with our join type (inner).   
+
+We've taken care of the join criteria, but we need you to add the join type.  Please add the `FROM` statement in the partial SQL code below.  You'll need two table names separated by some kind of `JOIN` command.  For now, leave the `ON` code unchanged.
+
+When you want to see the results of your code, click on the "play" button below the code block.
 
 ```sql
-SELECT
-  disease.subject_id
-  ,disease.lung_cancer
-  ,smoking.smoking_pack_years
+SELECT *
+FROM ...
+ON disease.subject_id = smoking.subject_id;
+```
+@AlaSQL.eval("#dataTable19a")
+
+<table id="dataTable19a" border="1"></table><br>
+
+<div style = "display:none;">
+
+@AlaSQL.buildTable_disease
+
+@AlaSQL.buildTable_smoking
+
+</div>
+
+--------
+
+<details>
+
+<summary>**Still stuck?  Click to see our solution!**</summary>
+
+<br/>
+
+<div class = "answer">
+
+Here's the code we used:
+
+```sql
+SELECT *
 FROM disease JOIN smoking
 ON disease.subject_id = smoking.subject_id;
 ```
 
-This is the result we would get.  It only includes data for subjects appearing in both tables:
+This is the result we got.  
 
 <!-- data-type="none" class="tight-table"-->
 | subject\_id  | lung\_cancer | smoking\_pack\_years |
 | :--------- | :--------- | :--------- | 
 | 3  | TRUE | 10 |
 
-<div class = "options">
-<b style="color: rgb(var(--color-highlight));">Another option</b><br>
-Did you notice that we used `JOIN` by itself here, without any other keywords?  `JOIN` by itself means `INNER JOIN`.
+Our resulting dataset only includes data for subjects appearing in both tables.
 
 </div>
 
+</details>
+
+<lia-keep></lia-keep>
+
 ### `LEFT JOIN` and Equality Condition
 
-To understand what a `LEFT JOIN` with equality looks and acts like practically, let's again go to a simple example of two tables we used earlier in this module:
+To understand what a `LEFT JOIN` with equality looks and acts like practically, let's again go to that same simple example of two tables we used earlier in this module:
 
 **disease**
 
@@ -797,18 +956,53 @@ To understand what a `LEFT JOIN` with equality looks and acts like practically, 
 | 3 | 10  |
 | 4  | 0 |
 
-And let's combine our join criteria (subject\_id matching) with our join type (left).  
+This time, let's combine our join criteria (subject\_id matching) with our join type (left).  We'll make **disease** the left table and **smoking** the right table.
+
+We're going to make things a bit harder.  Please add both the `FROM` and the `ON` code sections to the SQL code!  For now, use `ON`, and don't try `USING` just yet.
 
 ```sql
-SELECT
-  disease.subject_id
-  ,disease.lung_cancer
-  ,smoking.smoking_pack_years
+SELECT *
+FROM ...
+ON ...
+```
+@AlaSQL.eval("#dataTable20a")
+
+<table id="dataTable20a" border="1"></table><br>
+
+<div style = "display:none;">
+
+@AlaSQL.buildTable_disease
+
+@AlaSQL.buildTable_smoking
+
+</div>
+
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+Once you've got that code working, you might want to try `USING`.  The SQL dialect we're using here, AlaSQL, uses the word `USING` without parentheses.  So, while in many SQL dialects you would type `USING(subject_id)`, in this module, try `USING subject_id`.  Put `USING subject_id` in place of the ON statement to see if there are any changes in your result set!
+
+</div>
+
+
+--------
+
+<details>
+
+<summary>**Still stuck?  Click to see our solution!**</summary>
+
+<br/>
+
+<div class = "answer">
+
+Here's the code we used:
+
+```sql
+SELECT *
 FROM disease LEFT JOIN smoking
 ON disease.subject_id = smoking.subject_id;
 ```
 
-This is the result we would get.  We would have a row for each item of data in the left table, enriched where possible with data from the right table.
+This is the result we got.  We have a row for each item of data in the left table, enriched where possible with data from the right table.  
 
 <!-- data-type="none" class="tight-table"-->
 | subject\_id  | lung\_cancer | smoking\_pack\_years |
@@ -818,6 +1012,10 @@ This is the result we would get.  We would have a row for each item of data in t
 | 8  | FALSE | `NULL` |
 
 When there's no matching data from the right table to join to the data you included from the left, `NULL` values (empty cells) are added.
+
+</div>
+
+</details>
 
 ### `RIGHT JOIN` and Equality Condition
 
@@ -841,13 +1039,40 @@ To understand what a `RIGHT JOIN` with equality looks and acts like practically,
 | 3 | 10  |
 | 4  | 0 |
 
-And let's combine our join criteria (subject\_id matching) with our join type (right). 
+You're now combine our join criteria (subject\_id matching) with our join type (right).  Please use the **disease** table as the left table and the **smoking** table as the right table.
 
 ```sql
-SELECT
-  disease.subject_id
-  ,disease.lung_cancer
-  ,smoking.smoking_pack_years
+SELECT *
+FROM disease RIGHT JOIN smoking
+ON disease.subject_id = smoking.subject_id;
+```
+@AlaSQL.eval("#dataTable21a")
+
+<table id="dataTable21a" border="1"></table><br>
+
+<div style = "display:none;">
+
+@AlaSQL.buildTable_disease
+
+@AlaSQL.buildTable_smoking
+
+</div>
+
+
+--------
+
+<details>
+
+<summary>**Still stuck?  Click to see our solution!**</summary>
+
+<br/>
+
+<div class = "answer">
+
+Here's the code we used:
+
+```sql
+SELECT *
 FROM disease RIGHT JOIN smoking
 ON disease.subject_id = smoking.subject_id;
 ```
@@ -862,6 +1087,11 @@ This is the result we would get.  We're including all the data from the right ta
 | 4  | `NULL` | 0 |
 
 When there's no matching data from the left table to join to the data you included from the right, `NULL` values (empty cells) are added.
+
+</div>
+
+</details>
+
 
 ### `FULL JOIN` and Equality Criteria
 
@@ -888,13 +1118,21 @@ To understand what a `FULL JOIN` with equality looks and acts like practically, 
 And let's combine our join criteria (subject\_id matching) with our join type (full).
 
 ```sql
-SELECT
-  disease.subject_id
-  ,disease.lung_cancer
-  ,smoking.smoking_pack_years
-FROM disease FULL JOIN smoking
+SELECT *
+FROM disease FULL OUTER JOIN smoking
 ON disease.subject_id = smoking.subject_id;
 ```
+@AlaSQL.eval("#dataTable22a")
+
+<table id="dataTable22a" border="1"></table><br>
+
+<div style = "display:none;">
+
+@AlaSQL.buildTable_disease
+
+@AlaSQL.buildTable_smoking
+
+</div>
 
 This is the result we would get.  Each subject is represented here, both the ones who appear in the left table and in the right table.
 
