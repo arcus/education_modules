@@ -1,5 +1,5 @@
 ---
-title: DART: For Educators
+title: For Educators
 layout: default
 ---
 
