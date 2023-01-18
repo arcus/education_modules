@@ -13,10 +13,9 @@ estimated_time: 1 hour
 @learning_objectives  
 After completion of this module, learners will be able to:
 
+- Understand the parts of a JOIN
+- Describe the "shapes" of SQL JOINs: inner, left, right, and full
 - Explain what "join criteria" are
-- Give an example of what makes "matching" data in two separate tables
-- Describe the various "shapes" of SQL JOIN: inner, left, right, and full
-
 
 @end
 
@@ -48,7 +47,25 @@ If you need to develop basic SQL fluency we recommend our module [SQL Basics](ht
 
 </div>
 
-## Multiple Tables
+## Overview of Joins
+
+Data from two SQL tables can be joined together, using the `JOIN` command.  This is what a SQL join looks like. 
+
+
+```sql
+SELECT
+  disease.subject_id
+  ,disease.lung_cancer
+  ,smoking.smoking_pack_years
+FROM disease JOIN smoking
+ON disease.subject_id = smoking.subject_id;
+```
+
+
+By the end of this module, you'll understand how to construct the `FROM` and `ON` commands in SQL to perform a SQL join and unite data from two different tables into one result set.
+
+
+### Joins: Why?
 
 Most SQL queries require something more complex than referencing data from a single table. This is where SQL join functionality and the `JOIN` command come into play.
 
@@ -80,7 +97,7 @@ Maybe your source tables look something like the tables below:
 
 What you want to eventually end up with will be a single table of results that might only have three columns: "subj\_id", "dep\_total", and "zip".  That way you can look at the relationship between depression inventory scale and zip code.
 
-## Forming a JOIN 
+### Joins: How? 
 
 There are two basic pieces of information you need to know to write successful joins:
 
@@ -91,7 +108,7 @@ What **type of join** do you want to use?  Let's say you have some students with
 
 The type of join shows up in SQL in a `FROM` statement, and will look something like:
 
-`FROM [table_1_name] [optional keyword] JOIN [table_2_name]`.
+`FROM [table_1] [optional keyword] JOIN [table_2]`.
 
 **Join Criteria**
 ----
@@ -100,7 +117,7 @@ What **join criteria** would you like your join evaluated against?  In other wor
 
 The join criteria shows up in SQL in an `ON` or `USING` statement, and will look something like:
 
-`ON [table_1_name.field_name] = [table_2_name.field_name]` 
+`ON [table_1.field_name] = [table_2.field_name]` 
 
 OR
 
@@ -119,11 +136,14 @@ It can be surprisingly tricky to figure out what makes data "match" or "go toget
 
 You'll combine join type and join criteria by using both the `FROM` component and the `ON` or `USING` component.  Your SQL query might include lines that look something like this: 
 
+
 ```sql
-...
+SELECT 
+  table_1.*    -- all the fields from table_1
+  ,table_2.icd9     -- and a couple of fields 
+  ,table_2.dx_date  -- we want from table_2 
 FROM table_1 LEFT JOIN table_2
-ON table_1.pat_id = table_2.pat_id
-...
+ON table_1.pat_id = table_2.pat_id;
 ```
 
 For the rest of this module:
@@ -132,9 +152,15 @@ For the rest of this module:
 * Then we'll explain join criteria, and 
 * We'll finish up with fuller examples to help you understand how these two elements of a join work together to give you the results you care about.
 
-### Join Types 
 
-Let's consider the gradebook example we mentioned earlier.  You are assembling grade reports for students.  You have two tables, one called "math\_grades" and one called "language\_grades".  Some students appear in "math\_grades", some in "language\_grades", and some students have rows in both tables.  Depending on your purposes, you might want any one of several types of joins, each with its own SQL keyword combination.  Let's imagine a Venn diagram of side by side circles, the one on the left representing the group of students who appear in the math\_grades table, and the circle on the right representing the group of students who appear in the language\_grades table.  There's some overlap of these two circles, which consists of the students who appear in both tables.
+
+## Join Types 
+
+Let's consider the gradebook example we mentioned earlier.  You are assembling grade reports for students.  You have two tables, one called "math\_grades" and one called "language\_grades".  Some students appear in "math\_grades", some in "language\_grades", and some students have rows in both tables.  Depending on your purposes, you might want any one of several types of joins, each with its own SQL keyword combination.  
+
+Let's imagine a Venn diagram of side by side circles, the one on the left representing the group of students who appear in the math\_grades table, and the circle on the right representing the group of students who appear in the language\_grades table.  There's some overlap of these two circles, which consists of the students who appear in both tables.
+
+--------
 
 <lia-keep>
 
@@ -234,7 +260,7 @@ Here, we simply provide a visual highlight to indicate the part of the data that
 * **`FULL JOIN`**.  ![Overlapping circles with both circles highlighted](media/full_outer.png) 
 
 
-#### `INNER JOIN`
+### `INNER JOIN`
 
 Here, let's consider the left table to be **math\_grades** and the right table to be **language\_grades**.
 
@@ -279,7 +305,7 @@ FROM math_grades JOIN language_grades
 Note that the word `JOIN` by itself means `INNER JOIN`.  This is because this is the most frequently used kind of join.  Make sure you remember that the default kind of join, without any keywords, is an inner join, which may or may not be what you want!
 </div>
 
-#### `LEFT JOIN`
+### `LEFT JOIN`
 
 Here, let's consider the left table to be **math\_grades** and the right table to be **language\_grades**.
 
@@ -323,7 +349,7 @@ FROM math_grades LEFT OUTER JOIN language_grades
 ...
 ```
 
-#### `RIGHT JOIN`
+### `RIGHT JOIN`
 
 Here, let's consider the left table to be **math\_grades** and the right table to be **language\_grades**.
 
@@ -384,11 +410,12 @@ Can be rewritten as:
 <code>
 FROM language\_grades LEFT JOIN math\_grades
 </code>
+<br/><br/>
 
 In case you're wondering why you only see left joins, and never right joins, in other people's code: it's simply a convention some people follow, to swap table name order to always have left joins.
 </div>
 
-#### `FULL JOIN`
+### `FULL JOIN`
 
 Here, let's consider the left table to be **math\_grades** and the right table to be **language\_grades**.
 
@@ -438,7 +465,7 @@ FROM math_grades FULL OUTER JOIN language_grades
 ...
 ```
 
-#### Quiz: Types of Joins
+### Quiz: Types of Joins
 
 Consider the scenario of a table of math grades for 9th grade students and a table of language grades for 9th grade students.  Some 9th graders appear in both tables, but some appear only in one of them.  Fatima appears in the math\_grades table, but not in the language\_grades table.  When you perform a full outer join on these two tables, what will happen to Fatima's data in the resulting joined table?
 
@@ -455,7 +482,7 @@ A full outer join is indeed a type of join, and it can take place on any two tab
 </div>
 ****
 
-### Join Criteria
+## Join Criteria
 
 Join criteria are conditions that mean that rows from two different tables belong together or "match".  For example, what makes a row from the math\_grades table match up with a row from the language\_grades table?
 
@@ -473,7 +500,7 @@ As a reminder, SQL is a **relational database**, so it's not surprising that we 
 
 Join criteria will be some sort of relationship statement referencing data that occurs in both tables you want to join.  This relationship statment will be valuated to TRUE or FALSE when  your join is executed.  Often, the relationship is equality -- you're looking for a perfect match.  We'll start with equality, the most frequently used condition, on the next page. 
 
-#### Equality, Example 1
+### Equality, Example 1
 
 Do you have subject identifiers or student ID numbers in two different tables?  This shared information can be used to connect (join) data from these tables, based on the identifier being equal.  
 
@@ -510,20 +537,24 @@ ON disease.subject_id = smoking.subject_id
 
 In this case, we're comparing the equality of two fields that **have the same name**, so we could also use **USING**.  This special word only applies when you're looking for a perfect match between fields that have matching names, too.  It's okay if you never use `USING` and prefer to always stick with `ON`, which is more multi-purpose.
 
+</div>
+
 ```sql
 ...
 USING(subject_id)
-
-With either of the above code snippets:
-
-* subject 3 from disease matches with subject 3 from smoking <i class="fa fa-check" aria-hidden="true"></i>
-* subject 5 from disease doesn't match with anyone in smoking <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-* subject 8 from disease doesn't match with anyone from smoking <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-* subject 2 from smoking doesn't match with anyone from disease <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-* subject 4 from smoking doesn't match with anyone from disease <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+```
 
 
-#### Equality, Example 2
+With either of the above code snippets (`ON` or `USING`):
+
+* subject 3 from disease **matches** with subject 3 from smoking 
+* subject 5 from disease **doesn't match** with anyone in smoking 
+* subject 8 from disease **doesn't match** with anyone from smoking 
+* subject 2 from smoking **doesn't match** with anyone from disease 
+* subject 4 from smoking **doesn't match** with anyone from disease 
+
+
+### Equality, Example 2
 
 Sometimes the data that appears in the two tables has the same field name, as we just saw on the previous page.  Sometimes, however, the data might be stored under different names.  Let's consider this example:
 
@@ -552,8 +583,8 @@ ON math_grades.semester = language_grades.term
 
 In this example:
 
-* The A grade for Jan-May 2023 from math\_grades matches with the B grade for Jan-May 2023 in language\_grades (whoops, even though the student_id doesn't match!)<i class="fa fa-check" aria-hidden="true"></i>
-* The C grade for Sep-Dec 2022 in language\_grades does not match with any row in math\_grades <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+* The A grade for Jan-May 2023 from math\_grades **matches** with the B grade for Jan-May 2023 in language\_grades (whoops, even though the student_id doesn't match!)
+* The C grade for Sep-Dec 2022 in language\_grades **does not match** with any row in math\_grades 
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
@@ -564,7 +595,7 @@ This also shows that figuring out your join criteria requires close attention: w
 
 </div>
 
-#### Non-Equality and More
+### Non-Equality and More
 
 Sometimes you don't need equality as your condition.  For example, in our example from our multi-site mental health research (see the first page of this module for a reminder), let's say we want to associate a particular depression score with a particular address only if the depression inventory was given between the start and end dates of residency at that address. In a case like that, you might see something like:
 
@@ -587,7 +618,7 @@ ON depression_scale.subj_id = subject_address.subj_id AND
       subject_address.date_end
 ```
 
-#### Getting Really Complicated
+### Getting Really Complicated
 
 Let's keep thinking about our depression inventories and our goal of matching depression scores to addresses in our study. What if some addresses don't have end dates?  This could be because the subject is currently still living there.  There are some addresses with `NULL` end dates in our data, so this isn't an academic question.
 
@@ -634,12 +665,12 @@ Let's take this more comprehensive example and look at the example tables from t
 
 With this most recent join criteria:
 
-* The depression score (dep\_total) for subject 11234, measured on 2021-05-15, matches with the address 123 Oak Lane for the same subject and time period. <i class="fa fa-check" aria-hidden="true"></i>
-* The depression score (dep\_total) for subject 11234, measured on 2021-05-15, will **not** match with the address 123 Main Street for the same subject, because the time period doesn't match. <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-* The other rows in the depression\_scale don't match with any rows in the subject\_address table. <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-* The first and third rows of the subject\_address table don't have a match with any rows in the depression\_scale table. <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+* The depression score (dep\_total) for subject 11234, measured on 2021-05-15, **matches** with the address 123 Oak Lane for the same subject and time period. 
+* The depression score (dep\_total) for subject 11234, measured on 2021-05-15, will **not match** with the address 123 Main Street for the same subject, because the time period doesn't match. 
+* The other rows in the depression\_scale **don't match** with any rows in the subject\_address table. 
+* The first and third rows of the subject\_address table **don't match** with any rows in the depression\_scale table. 
 
-#### Using Other SQL Commands
+### Using Other SQL Commands
 
 Especially for one-to-many data relationships, you might want to create a simplified table temporarily in order to have that be part of a join.  This means you may have to also do some complicated things like using `GROUP BY` with aggregation, using `WHERE` and/or `HAVING`, or creating subqueries.  
 
@@ -647,7 +678,7 @@ For example, let's say you want to only use the earliest depression inventory fo
 
 We won't show the code for this in this module, but be aware that you can think about complex joins by first planning how you can simplify a table to make the logic easier to work with!
 
-#### Quiz: Join Criteria
+### Quiz: Join Criteria
 
 True or False: a matching ID (like student\_id or patient\_id) is generally sufficient as a join criterion.
 
@@ -660,6 +691,8 @@ Often, a matching identifier is part of what makes up good join criteria, but it
 
 </div>
 ****
+
+------
 
 Which of the following are true of join criteria? Select all that apply.
 
@@ -681,7 +714,7 @@ The term for indicating which table's data should be included and according to w
 </div>
 ****
 
-### Combining Join Type and Join Criteria
+## Combining Join Type and Join Criteria
 
 In the next few sections, we'll combine our join type and join criteria, to show you how these work together.
 
@@ -696,7 +729,7 @@ Importantly, we will only show a few examples.  There are many combinations we c
 
 Instead of being exhaustive, we've concentrated on the most frequent use case you'll encounter over and over: equality.  We'll go over each join type (inner, left, right, and full) on a simple equality matching a single field from each table.
 
-#### `INNER JOIN` and Equality Condition
+### `INNER JOIN` and Equality Condition
 
 To understand what an `INNER JOIN` with equality looks and acts like practically, let's go to a simple example of two tables we used earlier in this module:
 
@@ -718,12 +751,15 @@ To understand what an `INNER JOIN` with equality looks and acts like practically
 | 3 | 10  |
 | 4  | 0 |
 
-And let's combine our join criteria (subject\_id matching) with our join type (inner).  We won't show the whole query here, just the pertinent parts that describe the join:
+And let's combine our join criteria (subject\_id matching) with our join type (inner).  
 
 ```sql
-...
+SELECT
+  disease.subject_id
+  ,disease.lung_cancer
+  ,smoking.smoking_pack_years
 FROM disease JOIN smoking
-ON disease.subject_id = smoking.subject_id
+ON disease.subject_id = smoking.subject_id;
 ```
 
 This is the result we would get.  It only includes data for subjects appearing in both tables:
@@ -739,7 +775,7 @@ Did you notice that we used `JOIN` by itself here, without any other keywords?  
 
 </div>
 
-#### `LEFT JOIN` and Equality Condition
+### `LEFT JOIN` and Equality Condition
 
 To understand what a `LEFT JOIN` with equality looks and acts like practically, let's again go to a simple example of two tables we used earlier in this module:
 
@@ -761,12 +797,15 @@ To understand what a `LEFT JOIN` with equality looks and acts like practically, 
 | 3 | 10  |
 | 4  | 0 |
 
-And let's combine our join criteria (subject\_id matching) with our join type (left).  We won't show the whole query here, just the pertinent parts that describe the join:
+And let's combine our join criteria (subject\_id matching) with our join type (left).  
 
 ```sql
-...
+SELECT
+  disease.subject_id
+  ,disease.lung_cancer
+  ,smoking.smoking_pack_years
 FROM disease LEFT JOIN smoking
-ON disease.subject_id = smoking.subject_id
+ON disease.subject_id = smoking.subject_id;
 ```
 
 This is the result we would get.  We would have a row for each item of data in the left table, enriched where possible with data from the right table.
@@ -780,7 +819,7 @@ This is the result we would get.  We would have a row for each item of data in t
 
 When there's no matching data from the right table to join to the data you included from the left, `NULL` values (empty cells) are added.
 
-#### `RIGHT JOIN` and Equality Condition
+### `RIGHT JOIN` and Equality Condition
 
 To understand what a `RIGHT JOIN` with equality looks and acts like practically, let's again use our example tables:
 
@@ -802,12 +841,15 @@ To understand what a `RIGHT JOIN` with equality looks and acts like practically,
 | 3 | 10  |
 | 4  | 0 |
 
-And let's combine our join criteria (subject\_id matching) with our join type (right).  We won't show the whole query here, just the pertinent parts that describe the join:
+And let's combine our join criteria (subject\_id matching) with our join type (right). 
 
 ```sql
-...
+SELECT
+  disease.subject_id
+  ,disease.lung_cancer
+  ,smoking.smoking_pack_years
 FROM disease RIGHT JOIN smoking
-ON disease.subject_id = smoking.subject_id
+ON disease.subject_id = smoking.subject_id;
 ```
 
 This is the result we would get.  We're including all the data from the right table, enriched where possible with data from the left table.
@@ -821,7 +863,7 @@ This is the result we would get.  We're including all the data from the right ta
 
 When there's no matching data from the left table to join to the data you included from the right, `NULL` values (empty cells) are added.
 
-#### `FULL JOIN` and Equality Criteria
+### `FULL JOIN` and Equality Criteria
 
 To understand what a `FULL JOIN` with equality looks and acts like practically, let's go, one last time, to our example tables:
 
@@ -843,12 +885,15 @@ To understand what a `FULL JOIN` with equality looks and acts like practically, 
 | 3 | 10  |
 | 4  | 0 |
 
-And let's combine our join criteria (subject\_id matching) with our join type (full).  We won't show the whole query here, just the pertinent parts that describe the join:
+And let's combine our join criteria (subject\_id matching) with our join type (full).
 
 ```sql
-...
+SELECT
+  disease.subject_id
+  ,disease.lung_cancer
+  ,smoking.smoking_pack_years
 FROM disease FULL JOIN smoking
-ON disease.subject_id = smoking.subject_id
+ON disease.subject_id = smoking.subject_id;
 ```
 
 This is the result we would get.  Each subject is represented here, both the ones who appear in the left table and in the right table.
