@@ -134,7 +134,7 @@ For the rest of this module:
 
 ### Join Types 
 
-Let's consider the gradebook example we mentioned earlier.  You are assembling grade reports for students.  You have two tables, one called "math\_grades" and one called "language\_grades".  Some students appear in "math\_grades", some in "language\_grades", and some students have rows in both tables.  Depending on your purposes, you might want any one of several types of joins, each with its own SQL keyword combination.  Let's imagine a Venn diagram, as shown below:
+Let's consider the gradebook example we mentioned earlier.  You are assembling grade reports for students.  You have two tables, one called "math\_grades" and one called "language\_grades".  Some students appear in "math\_grades", some in "language\_grades", and some students have rows in both tables.  Depending on your purposes, you might want any one of several types of joins, each with its own SQL keyword combination.  Let's imagine a Venn diagram of side by side circles, the one on the left representing the group of students who appear in the math\_grades table, and the circle on the right representing the group of students who appear in the language\_grades table.  There's some overlap of these two circles, which consists of the students who appear in both tables.
 
 <lia-keep>
 
@@ -226,10 +226,10 @@ Here, we simply provide a visual highlight to indicate the part of the data that
 * **`INNER JOIN`**.  ![Overlapping circles with only the inner, overlapping part highlighted](media/inner.png) 
 
 
-* **`LEFT JOIN`**.  ![Overlapping circles with the left circle, including the overlapping part of the left circle, highlighted](media/left_outer.png) 
+* **`LEFT JOIN`**.  ![Overlapping side-by-side circles with the left circle, including the overlapping part of the left circle, highlighted](media/left_outer.png) 
 
 
-* **`RIGHT JOIN`**.  ![Overlapping circles with the right circle, including the overlapping part of the right circle, highlighted](media/right_outer.png) 
+* **`RIGHT JOIN`**.  ![Overlapping side-by-side circles with the right circle, including the overlapping part of the right circle, highlighted](media/right_outer.png) 
 
 * **`FULL JOIN`**.  ![Overlapping circles with both circles highlighted](media/full_outer.png) 
 
@@ -262,6 +262,7 @@ An `INNER JOIN` shows up in code like this:
 ```sql
 ...
 FROM math_grades INNER JOIN language_grades
+...
 ```
 
 or
@@ -269,6 +270,7 @@ or
 ```sql
 ...
 FROM math_grades JOIN language_grades
+...
 ```
 
 <div class = "important">
@@ -281,7 +283,7 @@ Note that the word `JOIN` by itself means `INNER JOIN`.  This is because this is
 
 Here, let's consider the left table to be **math\_grades** and the right table to be **language\_grades**.
 
-![Overlapping circles with the left circle, including the overlapping part of the left circle, highlighted](media/left_outer.png) 
+![Overlapping side-by-side circles with the left circle, including the overlapping part of the left circle, highlighted](media/left_outer.png) 
 
 **What is it?**
 -----
@@ -310,6 +312,7 @@ A `LEFT JOIN` shows up in code like this.  Note that one table is listed first, 
 ```sql
 ...
 FROM math_grades LEFT JOIN language_grades
+...
 ```
 
 or
@@ -317,13 +320,14 @@ or
 ```sql
 ...
 FROM math_grades LEFT OUTER JOIN language_grades
+...
 ```
 
 #### `RIGHT JOIN`
 
 Here, let's consider the left table to be **math\_grades** and the right table to be **language\_grades**.
 
-![Overlapping circles with the right circle, including the overlapping part of the right circle, highlighted](media/right_outer.png) 
+![Overlapping side-by-side circles with the right circle, including the overlapping part of the right circle, highlighted](media/right_outer.png) 
 
 **What is it?**
 -----
@@ -354,6 +358,7 @@ A `RIGHT JOIN` shows up in code like this.  Recall that "left" and "right" refer
 ```sql
 ...
 FROM math_grades RIGHT JOIN language_grades
+...
 ```
 
 or
@@ -361,10 +366,11 @@ or
 ```sql
 ...
 FROM math_grades RIGHT OUTER JOIN language_grades
+...
 ```
 
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
 
 You might not see a lot of right joins in code, because many people who write SQL code simply prefer to use all left joins. It's simple preference, it's not correct or incorrect practice.<br/><br/>
 Remember that "right" and "left" in the join types simply refers to the order in which you write the tables in the `FROM` statement.  So it's easy to turn a right join into a left join:<br/><br/>
@@ -406,8 +412,9 @@ This kind of join is important if you want to create a grade book that shows stu
 The result of a right join will be a table that has:
 
 * Rows of data for students who appear in the left table only
-* Rows of data for students who appear in the right table only
-* Rows of data for students who appear in both tables. 
+* Rows of data for students who appear in both tables
+* Rows of data for students who appear in the right table only.
+
 
 When there's no matching data from the one of the tables to join to the data you included from the other table, `NULL` values (empty cells) are added.
 
@@ -420,6 +427,7 @@ A `FULL JOIN` shows up in code like this:
 ```sql
 ...
 FROM math_grades FULL JOIN language_grades
+...
 ```
 
 or
@@ -427,6 +435,7 @@ or
 ```sql
 ...
 FROM math_grades FULL OUTER JOIN language_grades
+...
 ```
 
 #### Quiz: Types of Joins
@@ -496,12 +505,14 @@ In code, we usually use an **ON** statement:
 ON disease.subject_id = smoking.subject_id
 ```
 
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 In this case, we're comparing the equality of two fields that **have the same name**, so we could also use **USING**.  This special word only applies when you're looking for a perfect match between fields that have matching names, too.  It's okay if you never use `USING` and prefer to always stick with `ON`, which is more multi-purpose.
 
 ```sql
 ...
 USING(subject_id)
-```
 
 With either of the above code snippets:
 
@@ -569,6 +580,7 @@ ON depression_scale.date BETWEEN
 Of course, in the example of the depression inventory, we'd also want to make sure that there was a match on subject identifier (you don't want to match Lakshmi's depression score with Larry's address, just because the dates worked!).  You can combine conditions too.  Here, we look for an exact match on subject ID and a date match that's between the correct dates:
 
 ```sql
+...
 ON depression_scale.subj_id = subject_address.subj_id AND
    depression.date BETWEEN 
       subject_address.date_start AND 
@@ -582,6 +594,7 @@ Let's keep thinking about our depression inventories and our goal of matching de
 You can create arbitrarily complex **boolean logic** (or **boolean algebra**), using AND, OR, NOT, and parentheses as needed.  Much as in math, there's an order of operations in this kind of logic, and you might need several sets of parentheses to make sure you're applying the conditions correctly.  For example, see below.  We've added comments to help illustrate the logic.
 
 ```sql
+...
 ON depression.subj_id = subject_address.subj_id AND 
 -- subject ID must match... AND...
 
@@ -720,8 +733,8 @@ This is the result we would get.  It only includes data for subjects appearing i
 | :--------- | :--------- | :--------- | 
 | 3  | TRUE | 10 |
 
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
 Did you notice that we used `JOIN` by itself here, without any other keywords?  `JOIN` by itself means `INNER JOIN`.
 
 </div>
@@ -853,7 +866,7 @@ When there's no matching data from the one of the tables to join to the data you
 
 ## Additional Resources
 
-* Want to understand the basics of boolean algebra?  Check out a good tutorial at https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra.php.
+* Want to understand the basics of boolean algebra?  Check out a good tutorial at https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra.php
 * The second part of that tutorial covers some of the rules (like commutativity) of boolean algebra: https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra-laws.php 
 * Finally, to understand the order of operations in boolean algebra a bit more intuitively, we recommend the third part of the same tutorial: https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra-expressions.php 
 * A great page to practice joins and visualize them in the form of Venn diagrams is at https://www.w3schools.com/sql/sql_join.asp
