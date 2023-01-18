@@ -3,7 +3,7 @@ title: News
 layout: default
 ---
 
-# DART: News
+# News about the DART Program
 
 The first wave of participants begins on January 30th. With X Communities of Practice, this group is awesome. 
 

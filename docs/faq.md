@@ -3,7 +3,7 @@ title: Frequently Asked Question
 layout: default
 ---
 
-# DART: FAQs
+# Frequently Asked Questions
 
 Here are the answers to some of our most frequently asked questions.
 
