@@ -876,11 +876,9 @@ To understand what an `INNER JOIN` with equality looks and acts like practically
 | 3 | 10  |
 | 4  | 0 |
 
------
+Let's perform an inner join on these two tables.  To do this, we have to combine join criteria (subject\_id matching) with join type (inner).   
 
-Let's combine our join criteria (subject\_id matching) with our join type (inner).   
-
-We've taken care of the join criteria, but we need you to add the join type.  Please add the `FROM` statement in the partial SQL code below.  You'll need two table names separated by some kind of `JOIN` command.  For now, leave the `ON` code unchanged.
+We've taken care of the join criteria, but we need you to add the join type.  Please add the `FROM` statement in the partial SQL code below.  You'll need two table names separated by some kind of `JOIN` command.  For now, leave the `ON` code unchanged. Think about what rows you expect to see in your result set before you run any code.
 
 When you want to see the results of your code, click on the "play" button below the code block.
 
@@ -891,13 +889,23 @@ ON disease.subject_id = smoking.subject_id;
 ```
 @AlaSQL.eval("#dataTable19a")
 
-<table id="dataTable19a" border="1"></table><br>
+<lia-keep><table id="dataTable19a" border="1"></table><br></lia-keep>
 
 <div style = "display:none;">
 
 @AlaSQL.buildTable_disease
 
 @AlaSQL.buildTable_smoking
+
+</div>
+
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
+Once you've gotten your code to work, you might want to try the following variations.  How do they change your results?  Or do they?  
+
+* Swap the order of the tables 
+* Add or delete the `INNER` keyword before `JOIN`
 
 </div>
 
@@ -919,7 +927,7 @@ FROM disease JOIN smoking
 ON disease.subject_id = smoking.subject_id;
 ```
 
-This is the result we got.  
+This is the result we got. 
 
 <!-- data-type="none" class="tight-table"-->
 | subject\_id  | lung\_cancer | smoking\_pack\_years |
@@ -928,11 +936,16 @@ This is the result we got.
 
 Our resulting dataset only includes data for subjects appearing in both tables.
 
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+Did you notice that we used `JOIN` by itself here, without any other keywords?  `JOIN` by itself means `INNER JOIN`.
+
+</div>
+
 </div>
 
 </details>
 
-<lia-keep></lia-keep>
 
 ### `LEFT JOIN` and Equality Condition
 
@@ -956,9 +969,11 @@ To understand what a `LEFT JOIN` with equality looks and acts like practically, 
 | 3 | 10  |
 | 4  | 0 |
 
-This time, let's combine our join criteria (subject\_id matching) with our join type (left).  We'll make **disease** the left table and **smoking** the right table.
+Again let's combine our join criteria (subject\_id matching) with our join type (this time, a left join).  We'll make **disease** the left table and **smoking** the right table.  Think about what rows you expect to see in your result set before you run any code.
 
 We're going to make things a bit harder.  Please add both the `FROM` and the `ON` code sections to the SQL code!  For now, use `ON`, and don't try `USING` just yet.
+
+When you want to see the results of your code, click on the "play" button below the code block.
 
 ```sql
 SELECT *
@@ -967,7 +982,7 @@ ON ...
 ```
 @AlaSQL.eval("#dataTable20a")
 
-<table id="dataTable20a" border="1"></table><br>
+<lia-keep><table id="dataTable20a" border="1"></table><br></lia-keep>
 
 <div style = "display:none;">
 
@@ -979,7 +994,7 @@ ON ...
 
 <div class = "options">
 <b style="color: rgb(var(--color-highlight));">Another option</b><br>
-Once you've got that code working, you might want to try `USING`.  The SQL dialect we're using here, AlaSQL, uses the word `USING` without parentheses.  So, while in many SQL dialects you would type `USING(subject_id)`, in this module, try `USING subject_id`.  Put `USING subject_id` in place of the ON statement to see if there are any changes in your result set!
+Once you've got that code working, you might want to try `USING`.  The SQL dialect we're using here, AlaSQL, uses the word `USING` without parentheses.  So, while in many SQL dialects you would type `USING(subject_id)`, in this module, try `USING subject_id`.  Put `USING subject_id` in place of the `ON` statement to see if there are any changes in your result set!
 
 </div>
 
@@ -1002,7 +1017,7 @@ FROM disease LEFT JOIN smoking
 ON disease.subject_id = smoking.subject_id;
 ```
 
-This is the result we got.  We have a row for each item of data in the left table, enriched where possible with data from the right table.  
+This is the result we got.  We have a row for each item of data in the left table, enriched where possible with data from the right table.  Below, we've added `NULL` to show empty cells, but in your results from running SQL code you'll just see blanks.  
 
 <!-- data-type="none" class="tight-table"-->
 | subject\_id  | lung\_cancer | smoking\_pack\_years |
@@ -1012,6 +1027,19 @@ This is the result we got.  We have a row for each item of data in the left tabl
 | 8  | FALSE | `NULL` |
 
 When there's no matching data from the right table to join to the data you included from the left, `NULL` values (empty cells) are added.
+
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+We could have also used `USING`, and the following code would have given us the same results:
+
+```sql
+SELECT *
+FROM disease LEFT JOIN smoking
+USING subject_id;
+```
+
+
+</div>
 
 </div>
 
@@ -1039,16 +1067,15 @@ To understand what a `RIGHT JOIN` with equality looks and acts like practically,
 | 3 | 10  |
 | 4  | 0 |
 
-You're now combine our join criteria (subject\_id matching) with our join type (right).  Please use the **disease** table as the left table and the **smoking** table as the right table.
+You'll now combine our join criteria (subject\_id matching) with our join type (right).  Please use the **disease** table as the left table and the **smoking** table as the right table.
 
 ```sql
 SELECT *
-FROM disease RIGHT JOIN smoking
-ON disease.subject_id = smoking.subject_id;
+
 ```
 @AlaSQL.eval("#dataTable21a")
 
-<table id="dataTable21a" border="1"></table><br>
+<lia-keep><table id="dataTable21a" border="1"></table><br></lia-keep>
 
 <div style = "display:none;">
 
@@ -1077,7 +1104,7 @@ FROM disease RIGHT JOIN smoking
 ON disease.subject_id = smoking.subject_id;
 ```
 
-This is the result we would get.  We're including all the data from the right table, enriched where possible with data from the left table.
+This is the result we would get.  We're including all the data from the right table, enriched where possible with data from the left table.  Below, we've added `NULL` to show empty cells, but in your results from running SQL code you'll just see blanks. 
 
 <!-- data-type="none" class="tight-table"-->
 | subject\_id  | lung\_cancer | smoking\_pack\_years |
@@ -1092,8 +1119,7 @@ When there's no matching data from the left table to join to the data you includ
 
 </details>
 
-
-### `FULL JOIN` and Equality Criteria
+### `FULL JOIN` and Equality Condition
 
 To understand what a `FULL JOIN` with equality looks and acts like practically, let's go, one last time, to our example tables:
 
@@ -1115,16 +1141,23 @@ To understand what a `FULL JOIN` with equality looks and acts like practically, 
 | 3 | 10  |
 | 4  | 0 |
 
-And let's combine our join criteria (subject\_id matching) with our join type (full).
+And let's combine our join criteria (subject\_id matching) with our join type (full).  This time, we're going to have you write the entire query! 
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Different SQL dialects have different quirks.  We explained earlier, for example, that the SQL running behind the scenes in this module (AlaSQL) expects the `USING` keyword to appear without parentheses. 
+
+There's another important difference we want to point out here: AlaSQL **requires that you use `FULL OUTER JOIN` instead of just `FULL JOIN`.** That's not the case for every dialect of SQL, but here, please use `FULL OUTER JOIN`.
+
+</div>
 
 ```sql
-SELECT *
-FROM disease FULL OUTER JOIN smoking
-ON disease.subject_id = smoking.subject_id;
+
 ```
 @AlaSQL.eval("#dataTable22a")
 
-<table id="dataTable22a" border="1"></table><br>
+<lia-keep><table id="dataTable22a" border="1"></table><br></lia-keep>
 
 <div style = "display:none;">
 
@@ -1134,7 +1167,25 @@ ON disease.subject_id = smoking.subject_id;
 
 </div>
 
-This is the result we would get.  Each subject is represented here, both the ones who appear in the left table and in the right table.
+--------
+
+<details>
+
+<summary>**Still stuck?  Click to see our solution!**</summary>
+
+<br/>
+
+<div class = "answer">
+
+Here's the code we used:
+
+```sql
+SELECT *
+FROM disease FULL OUTER JOIN smoking
+ON disease.subject_id = smoking.subject_id;
+```
+
+This is the result we would get.  Each subject is represented here, both the ones who appear in the left table and in the right table. Below, we've added `NULL` to show empty cells, but in your results from running SQL code you'll just see blanks. 
 
 <!-- data-type="none" class="tight-table"-->
 | subject\_id  | lung\_cancer | smoking\_pack\_years |
@@ -1145,7 +1196,11 @@ This is the result we would get.  Each subject is represented here, both the one
 | 2  | `NULL` | 10 |
 | 4  | `NULL` | 0 |
 
-When there's no matching data from the one of the tables to join to the data you included from the other table, `NULL` values (empty cells) are added.
+When there's no matching data from the one of the tables to join to the data you included from the other table, `NULL` values (empty cells) are added.  
+
+</div>
+
+</details>
 
 ## Additional Resources
 
