@@ -1109,8 +1109,8 @@ This is the result we would get.  We're including all the data from the right ta
 <!-- data-type="none" class="tight-table"-->
 | subject\_id  | lung\_cancer | smoking\_pack\_years |
 | :--------- | :--------- | :--------- | 
-| 2  | `NULL` | 10 |
 | 3 | TRUE | 10  |
+| 2  | `NULL` | 10 |
 | 4  | `NULL` | 0 |
 
 When there's no matching data from the left table to join to the data you included from the right, `NULL` values (empty cells) are added.
