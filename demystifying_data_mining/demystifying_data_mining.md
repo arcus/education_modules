@@ -92,6 +92,5 @@ Data mining allowed the hospital to search through the gathered data for relevan
 
 ## Additional Resources
 
-
-
+[Top Ten Data Mining Applications in the Real World](https://intellipaat.com/blog/top-data-mining-applications/), provide more indepth examples of how data mining can be applied to real world situations and jobs.
 
