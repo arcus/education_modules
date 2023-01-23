@@ -38,7 +38,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Estimated time to completion:** @estimated_time
 
-**Pre-requisites:** Learners should be familiar with Python coding (https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md), including data transformation with pandas (https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md) and data transformation with seaborn (https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md). Learners should also have access to Python, either on their own computer or in the cloud. 
+**Pre-requisites:** Learners should be familiar with Python coding (https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md), including data transformation with pandas (https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md) and data visualization with matplotlib and seaborn (https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md). Learners should also have access to Python, either on their own computer or in the cloud. 
 
 **Learning Objectives**:
 
@@ -61,6 +61,19 @@ For this practice module we will be using real, publicly-available cervical canc
 - Editing/recoding data
 - Exploratory data visualization
 
+Stretch topics
+=====
+
+- Correlations and heat maps
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Finding correlations and creating heat maps are not topics that we have taught you in the preceding modules, but that might come in handy in solving the practice problem-- which means you might need to do some searching to figure out how to do these! This is an important step in your development as a programmer and a data scientist, but don't worry if it seems difficult in the beginning! It'll get easier with practice. To start, try googling "Python" and "correlations" and see where it takes you. 
+
+</div>
+
+
 ## Practice Problem
 
 According to the UCI Machine Learning database, the Cervical Cancer (Risk Factors) dataset "focuses on the prediction of indicators/diagnosis of cervical cancer. The features cover demographic information, habits, and historic medical records." Your tasks are to explore this dataset ad use the Python tools that you've learned so far to develop a hypothesis about some likely risk factors for a diagnosis of cervical cancer.  
@@ -69,7 +82,16 @@ Remember that there are several ways to approach this task; there is no one righ
 
 ### Stuck? 
 
-If this practice problem was challenging, [here is a link to an example notebook]() where we go through one possible solution to the practice problem. We encourage you to spend some time playing around with the data before you look at the example! And remember, just because your solution doesn't look exactly like the example doesn't mean it's wrong-- there are a variety of ways you might have approached the task we gave you.  
+If this practice problem was challenging, [here is a link to an example notebook]() where we go through one possible solution to the practice problem. If you would like to download the notebook to your own computer, you can also do that by selecting "File" and then "Download" in Google Colab. 
+
+We encourage you to spend some time playing around with the data before you look at the example! And remember, just because your solution doesn't look exactly like the example doesn't mean it's wrong-- there are a variety of ways you might have approached the task we gave you.  
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+Feeling overwhelmed? Learning data science in Python take time and practice. Don't worry if you feel like you have to go back and look and the modules over and over, or google lots of things-- folks who do this for a living google things every day! You don't have to memorize everything. Just keep your favorite resources close at hand so you remember what tools you have access to. 
+
+</div>
 
 
 
