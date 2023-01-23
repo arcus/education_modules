@@ -172,7 +172,7 @@ vignettes/*.pdf
 .Renviron
 
 # pkgdown site
-docs/
+# docs/
 
 # translation temp files
 po/*~
@@ -181,7 +181,7 @@ Terms
 Privacy
 Security
 Status
-Docs
+#Docs
 Contact GitHub
 Pricing
 API

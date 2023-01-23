@@ -1,1 +1,7 @@
-theme: jekyll-theme-dinky
+#theme: jekyll-theme-dinky
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+title: DART
+description: Data and Analytics for Research Training Program
+show_downloads: false
