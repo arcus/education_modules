@@ -1,24 +1,24 @@
 <!--
 
-author:   Your Name
-email:    email@chop.edu
-version:  0.0.0
+author:   Agoro Oluwadamilare
+email:    agoroo@chop.edu
+version:  1.0.0
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
-title: Module Title
-comment:  This is a short, focused description of the module.
-long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
+title: Demystifying Data Mining
+comment:  understand what data mining is and why it is important.
+long_description: Everyday, huge amount of data is generated, collected and stored. Learn what data mining is and why it is important. 
 estimated_time: This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview
 
 @learning_objectives  
 
 After completion of this module, learners will be able to:
 
-- identify key elements
-- create a product
-- do a task
-- articulate the rationale for something
+- Define data mining
+- Explain why data mining is important
+- Descibe cases in which data minig could be used
+- List the limitations in data mining
 
 @end
 
@@ -28,12 +28,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
-# Title
-
-(Note that the title is the only level-1 header in the document)
-
-To see how to use this template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6).
-To see what it looks like rendered via LiaScript, [click here](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6#1) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
+# Demystifying Data Mining
 
 <div class = "overview">
 
@@ -45,34 +40,30 @@ To see what it looks like rendered via LiaScript, [click here](https://liascript
 **Estimated time to completion:** @estimated_time
 
 **Pre-requisites**
-
-List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
-
-* one skill we have [another module for, linked here](https://education.arcus.chop.edu)
-* some familiarity with [a topic](https://education.arcus.chop.edu)
-* understanding of [one thing](https://education.arcus.chop.edu) and [another](https://education.arcus.chop.edu)
-
-If relevant, you can include recommendations for somewhere else to start if the learner doesn't have these prereqs. For example: If you are brand new to R or python (or want a refresher) consider starting with [Intro to R](link) or [Intro to python](link) first and then coming back here.
+No perequisites
 
 **Learning Objectives**
 
 @learning_objectives
 
-For help articulating learning objectives, see [this guide to learning objectives, including lots of example verbs](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/).
+
 
 </div>
 
-## Lesson Preparation
+## What is Data Mining?
 
-If your module includes code learners may want to run, then give links to a pangeo binder here so they can start it up now. Also provide a link to the raw code so learners can download the code itself and run it on their own machines or copy it into a cloud server.
+Data mining is basically extracting useful information from huge sets of data. During research, huge amount of data is gathered. Data mining is the process of mining that data to extract the relevant information that can be used to make informed decisions. 
 
-This module makes use of [pangeo binder](https://binder.pangeo.io/) for interactive code examples in R and python. You don't need to install anything or set up an account, but you need a modern web browser like Chrome and a moderately good wifi connection. If you have R and/or python already installed on your computer and you prefer to work through code examples there, you can <a href="https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.r" download>download the code for this module to run offline</a>.
+Data mining is the inbetween phase of gathering the data and creating a model.
 
-If you intend to do the hands-on activities in this module with pangeo binder, we have a bit of preparation for you to do now. Because it can take a few minutes for the environment to be created, we suggest you click the link below to start up the activity. We recommend using right-click to open it in a new tab or window, and then returning here to continue learning while the environment finishes loading. Here is the link:
+Models are a system of representation of events/instances
 
-[![Link to start Binder environment](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_environment/main?urlpath=rstudio) **Click the "launch binder" button!**
+Gathering Data -> Mining data (DATA MINING!) -> creating models.
 
-You don't have to do anything except come back here once the link opens in a new tab or window.
+The primary purpose of mining data is to identify trends, patterns, and relationships in order to make informed decisions and plans. 
+
+**Note:** Data mining becomes very useful when dealing with very large data i.e the more data available, the more accurate and indepth the trends, patterns and relationships identified.
+
 
 ## Module Content
 
