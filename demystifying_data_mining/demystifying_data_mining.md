@@ -9,8 +9,7 @@ narrator: UK English Female
 title: Demystifying Data Mining
 comment:  understand what data mining is and why it is important.
 long_description: Everyday, huge amount of data is generated, collected and stored. Learn what data mining is and why it is important. 
-estimated_time: This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview
-
+estimated_time: 15 minutes
 @learning_objectives  
 
 After completion of this module, learners will be able to:
@@ -72,8 +71,10 @@ As data mining is also used to predict trends, large companies use it in order t
 
 Back to the ability to predict trends, data mining can be used to predict the future. That is why it is so favoured by large business and cooperation (who doesnt want the ability to predict the next big thing!). Data mining does this by consolidating the data and using previous events(gotten from the data) to run a sort of probability test of what could happen in the future. 
 
-------
-**Example:** M hospital decided to get the data they have from the last five years, they clean the data and then mine it. After mining the data, it is found that during the last 3 springs, there has been a large influx of patient visitiing the hospital with cases of Rhinovirus. According to the data mined, it is predicted that the same would happen this spring.
+<div class = "Example">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+M hospital decided to get the data they have from the last five years, they clean the data and then mine it. After mining the data, it is found that during the last 3 springs, there has been a large influx of patient visitiing the hospital with cases of Rhinovirus. According to the data mined, it is predicted that the same would happen this spring.
 
 Data mining allowed the hospital to search through the gathered data for relevant information in order to make prediction about the future.
 
