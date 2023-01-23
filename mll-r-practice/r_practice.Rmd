@@ -1,0 +1,127 @@
+---
+title: "R Practice"
+author: "Meredith Lee"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Cervical Cancer Risk Factors
+
+## Introduction
+
+This is an example notebook in which we explore a dataset of cervical cancer risk factors from the [University of California Irvine Machine Learning Database](https://archive.ics.uci.edu/ml/index.php). Note that the "solution" below is not the only way to approach this task! 
+
+The first thing we'll want to do is to import any libraries/packages that we'll need. Recall that you can specify an alias for libraries or packages, so we don't have to type the longer name every time. 
+
+### Import packages
+
+```{r import packages}
+library(tidyverse)
+library(janitor)
+library(corrplot)
+```
+
+Next we need to import our data. We can do this by reading in the CSV using the `read_csv()` function in `dplyr` (part of the `tidyverse`).
+
+```{r import dataset}
+raw_data <- read_csv("http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv")
+```
+
+Looking through the data, there seem to be a lot of question marks! This is likely indicting missing data. R is not going to be able to handle question marks every well, and it will definitely mess up our math later! Let's re-import the data, letting R know that the question marks should be coded as `NA` (a special value in R that means "empty" or "null").
+
+```{r import data with NA}
+cervical_cancer_data <- read_csv("http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv", na = c("?", "NA"))
+```
+### Data exploration
+
+Next, let's dig into the data itself. First, let's look at a statistical summary table.
+
+```{r}
+summary(cervical_cancer_data)
+```
+One thing to notice here is that there spaces, capital letters, and colons in our column names. This (especially the spaces) will likely cause problems later when we want to work with the data. Let's change everything to lowercase and replace the spaces and colons with underscores. There are a few ways to do this: 
+1. We could create a vector with all of the new valid column names and replace the old ones. That's a lot of typing on our part though, which leaves lots of places for errors to be introduced! 
+2. We could use the functions `tolower()` to make everything lower case and then use the `str_replace_all()` from the `stringr` library to replace spaces and colons with underscores. This only requires two lines of code-- not bad! 
+3. We could use the `clean_names()` function from the `janitor` library after we make everything lower case (this step isn't always necessary, but it is in this case- trying running the code without the `tolower()` step and see what happens!). 
+
+```{r}
+names(cervical_cancer_data) <- tolower(names(cervical_cancer_data))
+cervical_cancer_data <- clean_names(cervical_cancer_data)
+names(cervical_cancer_data)
+```
+
+### Recoding Logical Variables
+
+If we look closely, we can see that there are a few columns that are likely True/False (or "logical") variables (like `Smokes` for example) that are being treated like numerical variables. We should look in the data dictionary of the dataset (found here: https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29). It's sparse, but we can find out which columns are supposed to be True/False and change those column types. Usually, when data are coded this way, 1 means "True" and 0 means "False". Let's list all of the logical variables and then change their data type using `lapply()` and `as.logical()`.
+
+```{r change variable types}
+logical_cols <- c("smokes", "hormonal_contraceptives", "iud", "stds", 
+                  "stds_condylomatosis", "stds_cervical_condylomatosis", 
+                  "stds_vaginal_condylomatosis", 
+                  "stds_vulvo_perineal_condylomatosis", 
+                  "stds_syphilis", "stds_pelvic_inflammatory_disease", 
+                  "stds_genital_herpes", "stds_molluscum_contagiosum", 
+                  "stds_aids", "stds_hiv", "stds_hepatitis_b", "stds_hpv",
+                  "dx_cancer", "dx_cin", "dx_hpv", "dx", "hinselmann",
+                  "schiller", "citology", "biopsy")
+cervical_cancer_data[logical_cols] <- lapply(cervical_cancer_data[logical_cols], as.logical)
+```
+
+Now that we've done that, let's look at a statistical summary of just the entries where the `dx_cancer` is True. 
+
+```{r}
+cancer_pos <- cervical_cancer_data %>% 
+  filter(dx_cancer == TRUE) %>% 
+  summary()
+cancer_pos
+```
+
+### Exploratory data visualization 
+
+Now, let's do some data visualization to explore the data. We may be able to find patterns that aren't easily seen by looking at numbers alone. 
+
+First, let's look at some histograms using `ggplot`.
+
+
+```{r}
+ggplot(data = cervical_cancer_data) +
+  geom_histogram(mapping = aes(x = age))
+```
+
+```{r}
+ggplot(data = cervical_cancer_data) +
+  geom_histogram(mapping = aes(x = smokes_years), binwidth = 1)
+```
+How about some scatterplots? 
+
+```{r}
+ggplot(data = cervical_cancer_data) +
+  geom_point(mapping = aes(x = number_of_sexual_partners, y = stds_number))
+```
+```{r}
+ggplot(data = cervical_cancer_data) +
+  geom_point(mapping = aes(x = age, y = stds_number))
+```
+
+Let's look at a box plot next.
+
+```{r}
+ggplot(data = cervical_cancer_data) +
+  geom_boxplot(mapping = aes(y = number_of_sexual_partners))
+```
+### Heat Maps and correlations
+
+Now, let's take a look at the correlations between all of the variables. We can do this by creating a correlation matrix with the `cor` function. Then, we can visualize those correlations in a heat map using the `corrplot()` function from the library also called `corrplot` (you may need to install this package). 
+
+```{r}
+corr_matrix <- cor(cervical_cancer_data, use="pairwise.complete.obs")
+corrplot(corr_matrix, type = "upper", tl.col = "black", tl.srt = 45, tl.cex = .5)
+```
+In the heat map above, dark blue indicates a highly positive correlation, while dark red indicates a strongly negative correlation. Notice anything interesting? Perhaps this can help you develop a hypothesis and you can test in a later module!
+
+
+
