@@ -45,8 +45,6 @@ No perequisites
 
 @learning_objectives
 
-
-
 </div>
 
 ## What is Data Mining?
@@ -71,8 +69,8 @@ As data mining is also used to predict trends, large companies use it in order t
 
 Back to the ability to predict trends, data mining can be used to predict the future. That is why it is so favoured by large business and cooperation (who doesnt want the ability to predict the next big thing!). Data mining does this by consolidating the data and using previous events(gotten from the data) to run a sort of probability test of what could happen in the future. 
 
-<div class = "Example">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">Example</b><br>
 
 M hospital decided to get the data they have from the last five years, they clean the data and then mine it. After mining the data, it is found that during the last 3 springs, there has been a large influx of patient visitiing the hospital with cases of Rhinovirus. According to the data mined, it is predicted that the same would happen this spring.
 
