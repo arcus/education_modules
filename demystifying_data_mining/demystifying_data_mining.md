@@ -64,6 +64,36 @@ The primary purpose of mining data is to identify trends, patterns, and relation
 
 **Note:** Data mining becomes very useful when dealing with very large data i.e the more data available, the more accurate and indepth the trends, patterns and relationships identified.
 
+## Why is Data Mining important?
+
+Data mining is used by large companies for different reasons, one of which is to get as much information from the data they have of their consumers as possible.
+
+As data mining is also used to predict trends, large companies use it in order to prepare for their next line of production. This prediction capability is also used by stores to determine things such as what consumers are buying most and what placements of good encourages the consumer to spend more at their respective stores. That is, if we place the cereal section close to the milk section, would the consumer feel more inclined to buy cereal?
+
+Back to the ability to predict trends, data mining can be used to predict the future. That is why it is so favoured by large business and cooperation (who doesnt want the ability to predict the next big thing!). Data mining does this by consolidating the data and using previous events(gotten from the data) to run a sort of probability test of what could happen in the future. 
+
+------
+**Example:** M hospital decided to get the data they have from the last five years, they clean the data and then mine it. After mining the data, it is found that during the last 3 springs, there has been a large influx of patient visitiing the hospital with cases of Rhinovirus. According to the data mined, it is predicted that the same would happen this spring.
+
+Data mining allowed the hospital to search through the gathered data for relevant information in order to make prediction about the future.
+
+## Applications of Data Mining
+
+**Data mining in Healtcare:** With the data accumulated in healthcare, data mining can help find the most appropriate and cost effective practices that benefit both the hospital and the pateints
+
+**Data mining in Research analysis:** Data mining is one of the best tools for cleaning data, pre-processing data and integrating data into a database, which makes it ideal for researchers. Data mining can help identify the correlation between activities or co-occurring sequences that can bring about change in the research direction. Data mining, when used with data visualization and visual data mining, can help clarify data in research.
+
+## Challenges of Data Mining
+
+**Big data:** Many existing systems struggle with handling, storing, and making use of the flood of unorganised input that come with handling big data set. Most system crash.
+
+**User competency:** To fully gain the benefits of data mining, the user must understand the data available and the context of the information they are seeking. They must also know, at least generally, how the tools (for data mining) work and what they can do. 
+
+**Data quality and availability:** Like with anything that need data to be gathered, the quality of the data gathered is very significant. Mining data from low quality data will give low quality result. When the input is bad, the output would also be bad. Privacy concerns are also important, both in terms of the acquisition of the data and the care and handling once it is in your possession.
+
+## Additional Resources
+
+
 
 ## Module Content
 
