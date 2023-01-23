@@ -157,7 +157,7 @@ Other common uses of numbers of maps include measurement scales like "1cm = 10km
 
 Too much language on a map can be just as confusing as too little!
 
-![Philadelphia is partitioned into regions and each region is labeled by its 5 digit zip code. Many of the labels overlap each other and are illegible.](media/zip_codes.jpg)
+![Each region of Philadelphia is labeled by its 5 digit zip code.](media/zip_codes.jpg "The many overlapping labels make this map illegible.")
 
 
 </div>
@@ -166,7 +166,7 @@ Legends and Keys
 ------------
 A **legend** or **key** is a way to associate language with colors, sizes, or symbols without crowding too much language onto the visual.
 
-![The Broad Street and Market-Frankford Lines are identified by a key in the lower right corner of this map of Philadelphia highspeed train lines.](media/Philadelphia_highspeed_trains_key.jpg)
+![A key is in the lower right corner of this map of Philadelphia highspeed train lines.](media/Philadelphia_highspeed_trains_key.jpg "The key shows which train line is which color.")
 
 ## Displaying Data
 
@@ -178,7 +178,7 @@ Dot Distribution Map
 -----------------
 A dot distribution map lets you display the location of many individual, related events. Using data from [OpenDataPhilly](https://www.opendataphilly.org/dataset/vehicular-crash-data) we can plot every reported vehicular crash in the city of Philadelphia from 2019:
 
-![Philadelphia is outlined in grey and covered in tiny blue dots. The dots are most concentrated along large roadways and trace out partial street map of the city.](media/2019_crashes.jpg)
+![Dot distribution map.](media/2019_crashes.jpg "Notice how the blue dots representing crashes are mostly concentrated along large roadways and trace out partial street map of the city.")
 
 In this section we will discuss other elements of maps, and learn about types of maps that use these elements to display data.
 
@@ -219,9 +219,9 @@ Using color intensity rather than changing hues to show differences can make a m
 Heat Maps
 ---------
 
-A heat map is a useful way to show how points cluster together. This heat map uses the same Philadelphia vehicle [crash data](https://www.opendataphilly.org/dataset/vehicular-crash-data) from 2019 from before:
+A heat map is a useful way to show how points cluster together. This heat map uses the same [Philadelphia vehicle crash data](https://www.opendataphilly.org/dataset/vehicular-crash-data) from 2019 from before:
 
-![Zip code boundaries of Philadelphia are outlined in black and bright colors, ranging from red to blue, blur into each other across the map. A large red region appears in the center, as do smaller reddish-orange regions in the upper right, and lower left of the city, with several orange and yellow regions scattered throughout. In between, the color fades to greens and blues, with the edge of the map surrounded by light blue.](media/2019_crashes_heat_map.png)<!-- style = "max-width:400px;" border = 5px solid -->
+![Bright colors, ranging from red to blue, blur into each other across the map of Philadelphia.](media/2019_crashes_heat_map.png "The darkest red region in the middle of the map indicates that the highest concentration of crashes is in the center of the city. The light blue around the edge of the map indicates much lower concentrations of Philadelphia vehicle crashes.")<!-- style = "max-width:400px;" border = 5px solid -->
 
 
 Instead of showing each individual crash, this map assigns colors based on how many of the crash locations are within a fixed distance. The brighter red you see on the map, the more crashes were close to that point. Green and blue colors are near to fewer crashes.
@@ -234,7 +234,7 @@ A choropleth map (pronounced "koro-pleth") colors map regions based on data. The
 
 The map below colors each zip code in Philadelphia by how many times police stopped pedestrians within that area in 2021. The darkest red regions are where the most stops occurred, while the lighter regions had fewer stops.
 
-![2021 Pedestrian Stops by Zip Code. Each zip code region of Philadelphia is colored a shade of red, ranging from a very light peach color (most regions) to intense dark reds (only a few regions). The legend indicates that the darkest colors indicate values of more than 1200 while the lightest colors indicate values less than 200. ](media/2021_pedestrian_stops.jpg)
+![Each zip code region of Philadelphia is colored a shade of red, ranging from a very light peach color (most regions) to intense dark reds (only a few regions).](media/2021_pedestrian_stops.jpg "The key tells us that the two darkest red zip code regions had well over a thousand pedestrian stops in 2021, while most zip codes had under 500, as shown by their light color.")
 
 The number of pedestrian stops in each zip code range from only three stops in 19109, which is a single square block near City Hall comprised mainly of office buildings, to 1371 stops in zip code 19134.
 
@@ -292,7 +292,7 @@ Symbols
 
 The maps we have seen previously have only used one type of symbol, a dot. While the sizes of the dots varied in the proportional and graduated symbol maps, we could also use multiple types of symbols to differentiate data points. Revisiting the vehicle crash data that we saw earlier, each incident includes a note of whether there were any pedestrian or bicyclist deaths. We can plot all of these incidents and use different symbols, a plus sign for pedestrians and a star for cyclists, to show which is which.
 
-![An outline of Philadelphia is marked with 28 blue plus signs and 2 orange stars.](media/ped_v_bike_deaths2019.jpg)
+![Philadelphia is marked with 28 blue plus signs and 2 orange stars.](media/ped_v_bike_deaths2019.jpg)
 
 Lines can also be represented differently to show, symbolically rather than with color, how they differ. A dotted line might represent one type of boundary or path, while a dashed line could represent another.
 
