@@ -64,11 +64,13 @@ The following map shows the city of Philadelphia with a few specific attributes:
 
 Although a map can be an extremely effective way of sharing your data, be aware that as a visual medium, maps will be inaccessible to members of your audience who are visually impaired. While we are focusing on the visual aspects in this module, it is important to provide text summaries of your findings as well.
 
+The [World Wide Web Consortium (W3C)](https://www.w3.org) develops standards for web accessibility. Their Wiki's [article on Accessible Maps](https://www.w3.org/WAI/RD/wiki/Accessible_Maps) describes several types of tactile maps that can make maps more accessible to people with visual disabilities.
+
 </div>
 
 ### Shapes
 
-How did the data about stations, train lines (from [SEPTA](https://septaopendata-septa.opendata.arcgis.com/search?tags=Highspeed)), and zip codes (from [OpenDataPhilly](https://www.opendataphilly.org/dataset/zip-codes)) become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
+How did the data about stations, train lines (from [SEPTA](https://gis-septa.hub.arcgis.com/search?tags=Highspeed)), and zip codes (from [OpenDataPhilly](https://www.opendataphilly.org/dataset/zip-codes)) become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
 
 - Points (and Multipoints)
 - Lines (and Mulitlines)
@@ -115,7 +117,7 @@ Multipoints, Multilines, and Multipolygons
 
 Geospatial data doesn't always cleanly fit into a single point, line, or polygon. The orange Broad Street Line on the map above actually has a small loop at its northern end, and a "spur" just north of where it meets the Market-Frankford Line. These attributes can't be stored as a single ordered sequence of line segments, so they appear in the data files as multilines.
 
-![Broad Street Line](media/broad_street_line.jpg)
+![Broad Street Line.](media/broad_street_line.jpg)
 
 A **multiline** is a collection of two or more lines that make up a single geographic feature. Many rivers are multilines to account for tributaries flowing into the main river.
 
@@ -189,9 +191,11 @@ In this section we will discuss other elements of maps, and learn about types of
 
 Not everyone can distinguish colors. While colors can be a powerful tool, if colors are the only way you are distinguishing features on your map, those features will be invisible to some of your audience.
 
+To expand the number of people who can read your maps, use a tool like [ColorBrewer](https://colorbrewer2.org/#) to select a palette of colors that more people will be able to distinguish.
+
 </div>
 
-While color isn't universally accessible, it is still an important way tool for distinguish features from each other on a map.
+While even a _more_ accessible color palette isn't _universally_ accessible, color can still be an important way tool for distinguish features from each other on a map.
 
 Hue
 ------
