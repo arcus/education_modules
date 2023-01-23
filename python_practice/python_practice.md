@@ -38,7 +38,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Estimated time to completion:** @estimated_time
 
-**Pre-requisites:** Learners should be familiar with Python coding (https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md), including data transformation with pandas (https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md) and data visualization with matplotlib and seaborn (https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md). Learners should also have access to Python, either on their own computer or in the cloud. 
+**Pre-requisites:** Learners should be familiar with [the basics of Python coding](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md), including [data transformation with pandas](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md) and [data visualization with matplotlib and seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md). Learners should also have access to Python, either on their own computer or in the cloud. 
 
 **Learning Objectives**:
 
@@ -76,13 +76,15 @@ Finding correlations and creating heat maps are not topics that we have taught y
 
 ## Practice Problem
 
-According to the UCI Machine Learning database, the Cervical Cancer (Risk Factors) dataset "focuses on the prediction of indicators/diagnosis of cervical cancer. The features cover demographic information, habits, and historic medical records." Your tasks are to explore this dataset ad use the Python tools that you've learned so far to develop a hypothesis about some likely risk factors for a diagnosis of cervical cancer.  
+According to the UCI Machine Learning database, the Cervical Cancer (Risk Factors) dataset "focuses on the prediction of indicators/diagnosis of cervical cancer. The features cover demographic information, habits, and historic medical records." 
+
+Your task is to explore this dataset and use the Python tools that you've learned so far to develop a hypothesis about some likely risk factors for a diagnosis of cervical cancer.  
 
 Remember that there are several ways to approach this task; there is no one right answer! So have fun, and good luck!
 
 ### Stuck? 
 
-If this practice problem was challenging, [here is a link to an example notebook]() where we go through one possible solution to the practice problem. If you would like to download the notebook to your own computer, you can also do that by selecting "File" and then "Download" in Google Colab. 
+If this practice problem was challenging, [here is a link to an example notebook](https://colab.research.google.com/github/arcus/education_modules/blob/mll_python_practice/python_practice/python_practice.ipynb) where we go through one possible solution to the practice problem. If you would like to download the notebook to your own computer, you can also do that by selecting "File" and then "Download" in Google Colab. 
 
 We encourage you to spend some time playing around with the data before you look at the example! And remember, just because your solution doesn't look exactly like the example doesn't mean it's wrong-- there are a variety of ways you might have approached the task we gave you.  
 
