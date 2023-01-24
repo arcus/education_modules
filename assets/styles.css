@@ -149,3 +149,14 @@ h2, h3, h4 {
 content: "\f144";
 font-family: "Font Awesome 5 Free";
 }
+
+table.tight-table {
+  width: unset !important;
+  max-width: 100% !important;
+}
+
+table.tight-table th,
+table.tight-table td
+ {
+    min-width: unset !important;
+}

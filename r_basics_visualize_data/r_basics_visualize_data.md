@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.3
+version:  1.0.4
 language: en
 module_template_version: 2.0.0
 narrator: US English Female
@@ -102,7 +102,7 @@ Minimal experience of using the RStudio IDE and writing R code (specifically, wi
 
 One potential way to get these basic skills is to take our [R Basics: Introduction](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) course.
 
-This course is designed for R beginners with minimal experience and it is not an advanced course in `ggplot2`.  If you have experience with `ggplot2` already, you may find our ["Data Visualization in ggplot2"](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md), which is more advanced, a better fit for your needs.
+This course is designed for R beginners with minimal experience and it is not an advanced course in `ggplot2`.  If you have experience with `ggplot2` already, you may find our ["Data Visualization in ggplot2"](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md), which is more advanced, a better fit for your needs.
 
 **Learning Objectives**
 

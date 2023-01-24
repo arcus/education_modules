@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.1
+version:  1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -1323,7 +1323,7 @@ There are also many questions and answers about `seaborn` available on [stackove
 
 You may find the [pandas cheatsheet (pdf)](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) helpful.
 
-To learn how to make plots in R using ggplot2, see [data visualization in ggplot2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_ggplot2.md).
+To learn how to make plots in R using ggplot2, see [data visualization in ggplot2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md).
 
 For resources about statistics in general, rather than data visualization specifically, see the [Additional Resources section of the module on statistical tests](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md#learning-statistics).
 
