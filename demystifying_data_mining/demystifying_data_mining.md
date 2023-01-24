@@ -88,7 +88,7 @@ Data mining allowed the hospital to search through the gathered data for relevan
 
 **User competency:** To fully gain the benefits of data mining, the user must understand the data available and the context of the information they are seeking. They must also know, at least generally, how the tools (for data mining) work and what they can do. 
 
-**Data quality and availability:** Like with anything that need data to be gathered, the quality of the data gathered is very significant. Mining data from low quality data will give low quality result. When the input is bad, the output would also be bad. Privacy concerns are also important, both in terms of the acquisition of the data and the care and handling once it is in your possession.
+**Data quality and availability:** Data quality and availability:If the input is of low quality, the output will also be low quality. Data mining needs data and like with anything that needs data to be collected, the quality of that data needs to high. Mining low quality data will give low quality information.
 
 ## Additional Resources
 
