@@ -48,7 +48,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 ## Lesson Preparation
 
-For this module, you'll need access to R, either on your own computer or in the cloud. For details about how to download R or use RStudio Cloud (a cloud-based notebook environment), you can take a look at the [preparation section of our R Basics: Introduction module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#5). 
+For this module, you'll need access to R, either on your own computer or in the cloud. For details about how to download R, you can take a look at the [preparation section of our R Basics: Introduction module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#5). If you'd prefer to work in the cloud, [posit.cloud](https://posit.cloud/) is a cloud-based R notebook environment. 
 
 ## The Data
 
@@ -70,6 +70,8 @@ Stretch topics
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 Finding correlations and creating heat maps are not topics that we have taught you in the preceding modules, but that might come in handy in solving the practice problem-- which means you might need to do some searching to figure out how to do these! This is an important step in your development as a programmer and a data scientist, but don't worry if it seems difficult in the beginning! It'll get easier with practice. To start, try googling "R" and "correlations" and see where it takes you.
+
+</div>
 
 ## Practice Problem
 
