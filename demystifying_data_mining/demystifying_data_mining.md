@@ -2,7 +2,7 @@
 
 author:   Agoro Oluwadamilare
 email:    agoroo@chop.edu
-version:  1.0.0
+version:  2.0.0
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
