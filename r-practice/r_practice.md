@@ -8,7 +8,7 @@ language: en
 narrator: UK English Female
 title: R Practice
 comment: Use the basics of R coding, data transformation, and data visualization to work with real data. 
-long_description: When learning R for data science, the ultimate goal is to be able to put all of the pieces together to analyze a dataset. This module aims to present a data science task in order to help learners practice R skills in a real-world context. 
+long_description: When learning R for data science, the ultimate goal is to be able to put all of the pieces together to analyze a dataset. This module aims to provide a data science task in order to help learners practice R skills in a real-world context. 
 estimated_time: 1 hour
 
 @learning_objectives
@@ -75,7 +75,12 @@ Finding correlations and creating heat maps are not topics that we have taught y
 
 ## Practice Problem
 
-According to the UCI Machine Learning database, the Cervical Cancer (Risk Factors) dataset "focuses on the prediction of indicators/diagnosis of cervical cancer. The features cover demographic information, habits, and historic medical records." Your tasks are to explore this dataset ad use the R tools that you've learned so far to develop a hypothesis about some likely risk factors for a diagnosis of cervical cancer.  
+According to the UCI Machine Learning database, the Cervical Cancer (Risk Factors) dataset "focuses on the prediction of indicators/diagnosis of cervical cancer. The features cover demographic information, habits, and historic medical records." 
+ 
+Your Task
+-----
+1. Explore [the Cervical Cancer (Risk Factors) dataset](http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv) and 
+2. Use the R skills that you've learned to **develop a hypothesis about some likely risk factors** for a diagnosis of cervical cancer.  
 
 Remember that there are several ways to approach this task; there is no one right answer! So have fun, and good luck!
 
@@ -92,4 +97,36 @@ Feeling overwhelmed? Learning data science in R take time and practice. Don't wo
 
 </div>
 
+## Additional Resources
+
+The best way to continue learning R for data science is to **do data science with R**! Here are some sources of publicly-available data that you can download and start practicing with today:
+
+- [Kaggle.com](https://www.kaggle.com/) has a lot datasets to practice with, and even competitions and short courses! 
+- [World Bank Data](https://data.worldbank.org/)-- this repository has many global development datasets
+- [Data.gov](https://data.gov/)
+- And so many more! Try searching "open" or "public" data and see what you can find!
+
+A great way to keep resources close at hand is to use cheat sheets:
+
+- [Posit.co](https://posit.co/) has many cheat sheets available to download, including one for [data transformation with dplyr](https://posit.co/wp-content/uploads/2022/10/data-transformation-1.pdf), [data visualization with ggplot2](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf).
+
+And as always, [R for Data Science](https://r4ds.had.co.nz/) is always a great resource!
+
+## Feedback
+
+In the beginning, we stated some goals.
+
+**Learning Objectives:**
+
+@learning_objectives
+
+We ask you to fill out a brief (5 minutes or less) survey to let us know:
+
+* If we achieved the learning objectives
+* If the module difficulty was appropriate
+* If we gave you the experience you expected
+
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Practice%22)!
+
+Remember to change the redcap link so that the module name is correct for this module!
 
