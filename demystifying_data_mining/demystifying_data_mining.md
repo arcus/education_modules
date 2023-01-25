@@ -76,6 +76,9 @@ M hospital decided to get the data they have from the last five years, they clea
 
 Data mining allowed the hospital to search through the gathered data for relevant information in order to make prediction about the future.
 
+</div>
+
+
 ## Applications of Data Mining
 
 **Data mining in Healtcare:** With the data accumulated in healthcare, data mining can help find the most appropriate and cost effective practices that benefit both the hospital and the pateints
