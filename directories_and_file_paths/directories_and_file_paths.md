@@ -163,7 +163,7 @@ It will take a few clicks to turn this on, but might ultimately save you a lot o
 
 #### Finding Absolute paths (Mac)
 
-Navigating the Finder application to locate a file or directory might make it clear where on your computer the file lives, but if you located it using "Search" it's exactly location might not be obvious at all. Here are two ways to identify the file path of a file you have located in the Finder.
+Navigating the Finder application to locate a file or directory might make it clear where on your computer the file lives, but if you located it using "Search" its exact location might not be obvious at all. Here are two ways to identify the file path of a file you have located in the Finder.
 
 **Show Path Bar**
 
