@@ -2,8 +2,8 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.2
-module_template_version: 2.0.0
+version:  1.1.0
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Missing Values in R
@@ -119,7 +119,8 @@ This might work well for you if you either can't or don't want to install R and 
 
   <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"></a> **← Click the "launch binder" button!**
 
-<div class = "hint" style = "align-items: center; display: flex;">
+<div class = "important" style = "align-items: center; display: flex;">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 <div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
 <div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen.](media/binder_loading.gif)<!--
@@ -173,7 +174,10 @@ If you already completed this work for a previous module, and it's been a while 
 ![Tools menu with choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.
+
 </div>
 
 ## What does "missing" look like in R?
@@ -182,8 +186,11 @@ Understanding the amount and type of missing data you have is crucial to conduct
 Although techniques for analyzing and correcting for different missingness patterns is outside the scope of this module,
 one of the first steps in any of those techniques is checking how much missing data you have and on which variables, which we will cover here.
 
-<div class="learn-more">
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 For an excellent introduction to different types of missing data, read Rubin's classic paper [Inference and Missing Data](http://math.wsu.edu/faculty/xchen/stat115/lectureNotes3/Rubin%20Inference%20and%20Missing%20Data.pdf).
+
 </div>
 
 Even if you won't be doing any formal techniques to correct for missing data, it's still important to know what missing data you have because it will impact your effective sample size.
@@ -194,10 +201,13 @@ So how can you tell when you have missing data in R?
 Different statistical software mark missing values in different ways.
 In R, missing values are marked with `NA`, which is short for "Not Available".
 
-<div class = "learn-more">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
 Technically, there are actually four different kinds of `NA`, one for each of the different data types in R. To learn more, read about [missing values in the free online book R for Data Science](https://r4ds.had.co.nz/vectors.html?q=missing#missing-values-4).
 
 For most practical purposes, you don't need to know anything about these different kinds of `NA`, though; they all just mean "missing", and you can usually use `NA` to refer to all of them.
+
 </div>
 
 Here's an example of what some data with missing values might look like when printed in R:
@@ -212,7 +222,9 @@ Here's an example of what some data with missing values might look like when pri
 Note that the second and third rows have `NA` instead of numerical values for some of the measurements.
 The `NA` indicates a lack of any information for each of those cells; those values are missing.
 
-<div class = "learn-more">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
 **What about `NULL`?**
 
 If you've been using R for a while, you may have seen `NULL` in some cases instead of `NA` when things are missing.
@@ -220,6 +232,7 @@ If you've been using R for a while, you may have seen `NULL` in some cases inste
 If you'd like to learn more, check out this [blog post explaining the difference between `NA` and `NULL`](https://www.r-bloggers.com/2010/04/r-na-vs-null/).
 
 If you're just beginning in R, though, you can safely ignore `NULL` for now.
+
 </div>
 
 ### How to check for missing values
@@ -233,9 +246,12 @@ It gives you some basic summary information about each variable in your data (mi
 Because it gives you summary statistics and missingness information at the same time, many people like to use it as a quick way to check their data as a start to their [exploratory data analysis](https://r4ds.had.co.nz/exploratory-data-analysis.html).
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 There are many more options for how to explore missing values in R!
 
 For some handy visualizations of missingness, see the [`visdat` package](https://cran.r-project.org/web/packages/visdat/vignettes/using_visdat.html), and the [`missmap` function from the `Amelia` package](https://www.rdocumentation.org/packages/Amelia/versions/1.8.0/topics/missmap).
+
 </div>
 
 Now **return to your RStudio instance** to work through practical examples on how to check for missing values in R.
@@ -308,15 +324,29 @@ The `ifelse` command is what's called a ternary operator, and it has three parts
  * a value to use if the test returns `TRUE`
  * a value to use if the test returns `FALSE`.
 
- Our `ifelse` statement begins with a conditional test, in this case `rating == -99`.
- Remember that the double equals sign is a comparison --- it's **asking** whether `rating` is equal to -99, while a single equals sign is a "setter", and it will try to **make** `rating` equal to -99.  
- For each value in `rating`, it will run the test and return either `TRUE` or `FALSE`.
+Our `ifelse` statement begins with a conditional test, in this case `rating == -99`.
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+Remember that the double equals sign is a comparison --- it's **asking** whether `rating` is equal to -99, while a single equals sign is a "setter", and it will try to **make** `rating` equal to -99.  
+
+</div>
+
+For each value in `rating`, it will run the test and return either `TRUE` or `FALSE`.
 If it returns `TRUE`, then it assigns the next argument, in this case `NA`, which will mark that value missing.
+
+
 If it returns `FALSE`, then it assigns the last argument, in this case `rating`, which will leave the value untouched.
+
+
 So for any `rating` values that equal -99, we're asking it to replace them with `NA`, otherwise leave them as they were.
 
-<div class="learn-more">
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 For more on `mutate` and `ifelse`, see the [R Basics: Data Transformation sections on `mutate`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#the-mutate%28%29-function) and [logical operators](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#logical-operators), and the [`ifelse` section in the free online book Advanced R](https://adv-r.hadley.nz/control-flow.html#vectorised-if).
+
 </div>
 
 We could make this command more general by replacing all values that fall outside of the 1-5 scale with `NA`:
@@ -329,11 +359,14 @@ Here we're using [the "or" operator](https://www.statmethods.net/management/oper
 So this checks whether each `rating` value is less than 1 or greater than 5, and if so changes it to `NA`.
 Otherwise it leaves it as it was.
 
-<div class="options">
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 There is another function, `case_when` from the `dplyr` package, that is similar to `ifelse` but can also handle more complex recoding situations.
 For a situation like the one when have here, with a single logical test, `ifelse` works fine.
 But if you find yourself needing multiple `ifelse` statements to recode a column, then `case_when` may be a better choice.
 To learn more, see the [`case_when` help documentation](https://dplyr.tidyverse.org/reference/case_when.html).
+
 </div>
 
 Now **return to your RStudio instance** to work through some practical examples of assigning values to missing in R.
@@ -373,12 +406,15 @@ The example code will walk you through several R functions with different kinds 
 - `geom_point`, from the [ggplot2 data visualization package](https://ggplot2.tidyverse.org/index.html), which is used to create [scatterplots](https://ggplot2.tidyverse.org/reference/geom_point.html)
 - `cor`, which is used to generate a [correlation matrix](https://www.displayr.com/what-is-a-correlation-matrix/)
 
-<div class="help">
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 **Are these functions new to you? No problem!**
 
 You don't need to understand the underlying statistics for any of these functions to work through the R code and learn from the missingness examples.
 
 If you want to learn more about these functions and what they do, click through the links above for explanations and tutorials.
+
 </div>
 
 Now **return to your RStudio instance** to work through practical examples of how R handles missing values in each of those functions.
