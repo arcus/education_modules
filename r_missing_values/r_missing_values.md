@@ -324,11 +324,22 @@ The `ifelse` command is what's called a ternary operator, and it has three parts
  * a value to use if the test returns `TRUE`
  * a value to use if the test returns `FALSE`.
 
- Our `ifelse` statement begins with a conditional test, in this case `rating == -99`.
- Remember that the double equals sign is a comparison --- it's **asking** whether `rating` is equal to -99, while a single equals sign is a "setter", and it will try to **make** `rating` equal to -99.  
- For each value in `rating`, it will run the test and return either `TRUE` or `FALSE`.
+Our `ifelse` statement begins with a conditional test, in this case `rating == -99`.
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+Remember that the double equals sign is a comparison --- it's **asking** whether `rating` is equal to -99, while a single equals sign is a "setter", and it will try to **make** `rating` equal to -99.  
+
+</div>
+
+For each value in `rating`, it will run the test and return either `TRUE` or `FALSE`.
 If it returns `TRUE`, then it assigns the next argument, in this case `NA`, which will mark that value missing.
+
+
 If it returns `FALSE`, then it assigns the last argument, in this case `rating`, which will leave the value untouched.
+
+
 So for any `rating` values that equal -99, we're asking it to replace them with `NA`, otherwise leave them as they were.
 
 <div class = "learn-more">
