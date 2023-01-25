@@ -8,7 +8,7 @@ language: en
 narrator: UK English Female
 title: Python Practice
 comment: Use the basics of Python coding, data transformation, and data visualization to work with real data. 
-long_description: When learning Python for data science, the ultimate goal is to be able to put all of the pieces together to analyze a dataset. This module aims to present a data science task in order to help learners practice Python skills in a real-world context. 
+long_description: When learning Python for data science, the ultimate goal is to be able to put all of the pieces together to analyze a dataset. This module aims to provide a data science task in order to help learners practice Python skills in a real-world context. 
 estimated_time: 1 hour
 
 @learning_objectives
