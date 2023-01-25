@@ -50,10 +50,6 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 For this module, you'll need access to Python, either on your own computer or in the cloud. For details about how to download Python or use Google Colab (a cloud-based notebook environment), you can take a look at the ["Accessing Python" section of our Demystifying Python module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md#9). 
 
-## The Data
-
-For this practice module we will be using real, publicly-available cervical cancer data from [UC Irvine's machine learning data repository](http://archive.ics.uci.edu/ml/index.php); you can download those data here: [http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv](http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv). If you have done the R Practice Module (**link required**), this dataset might be familiar! 
-
 ## Topics to Review
 
 - Importing Python libraries 
@@ -64,12 +60,26 @@ For this practice module we will be using real, publicly-available cervical canc
 Stretch topics
 =====
 
-- Correlations and heat maps
+There are a couple of additional skills that haven't been introduced in a module yet, but that might come in handy solving this data science problem: 
+
+- Correlation matrices
+- Heat maps
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-Finding correlations and creating heat maps are not topics that we have taught you in the preceding modules, but that might come in handy in solving the practice problem-- which means you might need to do some searching to figure out how to do them! This is an important step in your development as a programmer and a data scientist, but don't worry if it seems difficult in the beginning; it'll get easier with practice. To start, try googling "Python" and "correlations" and see where it takes you. 
+Finding correlations and creating heat maps are not topics that we have taught you in the preceding modules-- which means you might need to do some searching to figure out how to do them! This is an important step in your development as a programmer and a data scientist, but don't worry if it seems difficult in the beginning; it'll get easier with practice. To start, try googling "Python" and "correlations" and see where it takes you. 
+
+</div>
+
+## The Data
+
+For this practice module we will be using real, publicly-available cervical cancer data from [UC Irvine's machine learning data repository](http://archive.ics.uci.edu/ml/index.php); you can download those data here: [https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29](http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv). If you have done the R Practice Module (**link required**), this dataset might be familiar! 
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+The second link above will attempt to download a CSV file to your computer-- if you don't want to do that, or if your institution's permissions don't allow it, you can also access the dataset here: (https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29)[https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29]. If you want to download the CSV from there, just click the "Data Folder" link at the top of the page. 
 
 </div>
 
