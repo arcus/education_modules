@@ -271,7 +271,7 @@ Although you can use a dot (`.`) in file names, you shouldn't use them at the be
 
 ### Quiz: Naming files
 
-Mica has written an R script to extract from a patient cohort some data about all patients that are under 5 years of age. They have decided to name their script `my awesome R script 03/04/21!.R`. What is wrong with this file name? Select all that apply.
+Mica has written an R script to extract just the data about patients that are under 5 years of age from a larger pediatric data set. They have decided to name their script `my awesome R script 03/04/21!.R`. What is wrong with this file name? Select all that apply.
 
 [[X]] The file name contains spaces.
 [[X]] The file name contains special characters.
