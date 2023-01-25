@@ -78,7 +78,11 @@ Finding correlations and creating heat maps are not topics that we have taught y
 
 According to the UCI Machine Learning database, the Cervical Cancer (Risk Factors) dataset "focuses on the prediction of indicators/diagnosis of cervical cancer. The features cover demographic information, habits, and historic medical records." 
 
-Your task is to explore this dataset and use the Python tools that you've learned so far to develop a hypothesis about some likely risk factors for a diagnosis of cervical cancer.  
+Your Task
+-----
+
+1. Explore [the Cervical Cancer (Risk Factors) dataset](http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv) and 
+2. Use the Python tools that you've learned so far to **develop a hypothesis about some likely risk factors** for a diagnosis of cervical cancer.  
 
 Remember that there are several ways to approach this task; there is no one right answer! So have fun, and good luck!
 
