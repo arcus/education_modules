@@ -1,8 +1,8 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.2
-module_template_version: 2.0.0
+version:  1.1.0
+module_template_version: 3.0.0
 language: en
 narrator: US English Female
 title: Tidy Data
@@ -79,7 +79,9 @@ A data set is tidy, [according to Hadley Wickham and Garrett Grolemund](https://
 * Each observation is in its own row, and
 * Each value is in its own cell
 
-<div class = "hint">
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
+
 In a [previous work by Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10), a different third characteristic appears, and we think it's useful to mention here as another consideration.  This original third characteristic, however, is less critical to success than the three mentioned above, and we would argue it has been supplanted by the one listed above.  Still, it's something to keep in mind.  We'll touch on it a bit later in the module.
 
 * Each observational unit (topic) forms its own table
@@ -134,7 +136,9 @@ It's much easier to begin with a tidy structure when **data collection** begins,
 
 A "tidy" approach would be to begin data collection with, at the minimum, one column for first names and one column for last names.  In case you do need the entire name (for example, to address an envelope), remember that it's much easier to re-unite two or more fields that are stored separately than to try to define the rules of separating tangled-up data.  
 
-<div class = "hint">
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 This point is crucial enough that we want to make it stand out:
 
 **Uniting values is simpler than separating them.**
@@ -145,7 +149,9 @@ It's impossible to tease out individual grades from an average, but if you have 
 
 Another mistake that commonly occurs in human subjects research is the collection of race data with an assumption that a single value adequately captures race, such as "Asian", "Black", and so forth.  If a subject identifies with multiple races, "multiracial" could be added, for example.  But what if you want to study a genetic variant that occurs disproportionately in people of sub-sarahan African descent, and you're interested in all subjects with Black racial heritage, regardless of whether they identify with other races as well?  "Multiracial" does not answer your question about race, and unless you can track down your subject, there's no way to disentangle the wealth of information in the word "multiracial".
 
-<div class = "warning">
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 An aside about race: in addition to making for more difficult use of race data, collecting data as a single value does not comply with federal standards.  Human subjects (or their representatives) should be able to endorse any race they identify as their own.  Therefore, it's much more helpful to begin right away with a True / False endorsement column for each race, so that you can identify easily who fits into various categories based on particular race identification, counts, or specific combinations:
 
 * White only
@@ -155,6 +161,7 @@ An aside about race: in addition to making for more difficult use of race data, 
 * etc.
 
 An additional, important question that can be a source of disagreement in demographic and disparity research is what specific groups constitute races that can be endorsed.
+
 </div>
 
 ### Quiz: Three Characteristics of Tidy Data
@@ -191,7 +198,9 @@ Hadley Wickham, one of the authors mentioned in the last section, suggests in hi
 
 Let's take a look at each of these problems in turn.
 
-<div class = "hint">
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
+
 *Tidy Data* was published in 2014, and covers both the concepts around tidy data as well as the then state of the art code solutions in R for data reshaping.  In this module, we're not going to delve into the code examples provided by the article, for two reasons:
 
 * This module is intended to be code-free, making it useful for users of any programming language or none at all (this module can be useful just in terms of setting up data collection instruments well)
@@ -205,7 +214,11 @@ So, if you choose to [read along in the article](https://www.jstatsoft.org/artic
 
 Let's consider an example from section 3.1 of [Hadley's article](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/772).  The column headers in this table, taken from Pew Forum, contain values -- income values.  This table is readable for humans, and takes advantage of horizontal space on a page.  It makes sense that it would appear in a report for human consumption.  This data is messy, however, because it violates one of the important rules about tidy data.
 
-<div class = "hint"> Note that in the world of R users, Hadley Wickham is considered such a singularly important and yet friendly figure that he is often referred to simply as "Hadley".
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+
+Note that in the world of R users, Hadley Wickham is considered such a singularly important and yet friendly figure that he is often referred to simply as "Hadley".
+
 </div>
 
 <!-- data-type="none" -->
@@ -225,7 +238,8 @@ Let's consider an example from section 3.1 of [Hadley's article](https://www.jst
 
 While humans can make sense of this data, remember that computers must be told in sometimes agonizing detail what to do.  If we were to ask "which is the largest group?" using the table above, we'd have to say (in code, of course) something along the lines of "look inside each row, at columns 2-7, and take the largest value of all of those cells, and then take the value of the first column of the row with that largest-valued cell, and the column header of that cell, and that's your group".
 
-<div class = "hint">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 ![Rubber duck.](media/rubber_duck.png)<!-- style = "max-width: 200px;" -->
 
@@ -319,8 +333,11 @@ As you look over this table, see if you can describe the algorithm (rule-based p
 
 A tidy version of this data is shown below.  Is it simpler now to ask for the maximum temperature on March 13, 2010?
 
-<div class = "hint">
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Notice how the date field is united in the tidy data below, which may seem to go against some of the principles we've argued for.  Dates are so frequently used, however, that it's very easy to extract, from a given date, the year, month, day, and even the day of the week, using computational methods.  Whether to break out a date into year, month, and day depends a lot on your use case.  For example, are you planning on obtaining temperature averages across all of June, and comparing June low temperature averages across years?
+
 </div>
 
 <!-- data-type="none" -->
@@ -339,8 +356,13 @@ Notice how the date field is united in the tidy data below, which may seem to go
 
 ### Multiple Types in One Table (Optional)
 
-<div class = "hint">
-Remember that the original third rule of tidy data was replaced in later writings by Hadley Wickham?  Well, briefly, it's useful to bring up the original rule.  That original third rule asserts that each observational unit (or topic) forms its own table.  This section may be considered optional for people working with .csv documents or spreadsheets, but the topic we're going to cover is important in the world of SQL databases, so we want to explain it.  Feel free to skip if it seems unhelpful!
+Remember that the original third rule of tidy data was replaced in later writings by Hadley Wickham?  Well, briefly, it's useful to bring up the original rule.  That original third rule asserts that each observational unit (or topic) forms its own table.  
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+This section may be considered optional for people working with .csv documents or spreadsheets, but the topic we're going to cover is important in the world of SQL databases, so we want to explain it.  Feel free to skip if it seems unhelpful!
+
 </div>
 
 <h4>"Normalized" Data</h4>
