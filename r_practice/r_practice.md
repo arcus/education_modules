@@ -103,7 +103,10 @@ To work with our sample solution, you could do any of the three possibilities be
 
 * Copy / paste the code from [the link above](https://github.com/arcus/education_r_environment/blob/main/r_practice/r_practice.Rmd) 
   
-  * You can use the "Copy" button which looks like two pieces of paper in the menu bar across the top of the file: ![Copy raw contents button](media/copy_raw_contents.png)
+  * You can use the "Copy" button which looks like two pieces of paper in the menu bar across the top of the file: 
+  ![Copy raw contents button](media/copy_raw_contents.png)<!--
+style = "border: 1px solid rgb(var(--color-highlight));"-->
+  
   * Or you can just use your mouse and highlight all the code, and use the "copy" keyboard shortcut
   * Paste the sample code into your own R Markdown file
 
@@ -121,7 +124,9 @@ To work with our sample solution, you could do any of the three possibilities be
   
   * [Create a (free!) Posit Cloud account](https://posit.cloud/plans)
   * Open the "education\_r\_environment" project at https://posit.cloud/content/5273350.  That will give you a temporary copy so you can run our code, but not make any changes to it.
-  * Click on "Save a Permanent Copy" if you want to save any changes to your version of this code. ![Posit menu bar with "Make Permanent Copy"](media/make_copy.png)
+  * Click on "Save a Permanent Copy" if you want to save any changes to your version of this code. 
+  ![Posit menu bar with "Make Permanent Copy"](media/make_copy.png)<!--
+style = "border: 1px solid rgb(var(--color-highlight));"-->
 
 
 We encourage you to spend some time playing around with the data before you look at the example! And remember, just because your solution doesn't look exactly like the example doesn't mean it's wrong-- there are a variety of ways you might have approached the task we gave you.  
