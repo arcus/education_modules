@@ -118,9 +118,9 @@ You've perhaps seen visualizations of the research data lifecycle that show a ci
 mermaid.initialize({});
 
 var svg = mermaid.render(
-'approval_flowchart',
+'data_lifecycle',
 `flowchart LR
-  A[Discovery\\nand Planning] --> B[Data Collection];
+  A[Discovery\\nand Planning] --> B[Data Collection]
   B --> C[Preparation and\\nData Analysis]
   C --> D[Publication\\nand Sharing]
   D --> E[Long-Term\\nManagement]
@@ -134,6 +134,16 @@ function(g) {
 </script>
 
 </div>
+
+The diagram shows a circular diagram of the five phases of the research data lifecycle appear in a circle, including
+
+* Discovery and Planning
+* Data Collection
+* Preparation and Data Analysis
+* Publication and Sharing, and 
+* Long term Management
+
+The last phase reconnects to the first phase, discovery and planning, to start the cycle again in an iterative way.
 
 ### Discovery & Planning
 
@@ -239,7 +249,7 @@ Which of the following is not a responsibility of the principal investigator of 
 ****
 <div class = "answer">
 
-All of these are the responsibility of the principal investigator, except for handling disclosures of scientific data generated from the study, once that data is submitted to a central database.  Once data is submitted to a repository, it is generally the repository who handles data disclosures. Sometimes this is accomplished through a scientific committee, sometimes through a simple application or attestation, and occasionally by way of an unregulated download, in the case of non-sensitive data of general public interest.˚
+All of these are the responsibility of the principal investigator, except for handling disclosures of scientific data generated from the study, once that data is submitted to a central database.  Once data is submitted to a repository, it is generally the repository who handles data disclosures. Sometimes this is accomplished through a scientific committee, sometimes through a simple application or attestation, and occasionally by way of an unregulated download, in the case of non-sensitive data of general public interest.
 
 </div>
 ****
@@ -270,8 +280,7 @@ It's false that publishers don't apply their own standards. Publishers have an i
 
 ## Additional Resources
 
-The [data sharing policies and helpful information](https://sharing.nih.gov/data-management-and-sharing-policy
-) published online by the National Institutes of Health (NIH) are some of the best materials you can consult for help. 
+The [data sharing policies and helpful information](https://sharing.nih.gov/data-management-and-sharing-policy) published online by the National Institutes of Health (NIH) are some of the best materials you can consult for help. 
 
 We also recommend the NIH's [guidance around writing a Data Management and Sharing Plan](https://sharing.nih.gov/data-management-and-sharing-policy/planning-and-budgeting-for-data-management-and-sharing/writing-a-data-management-and-sharing-plan), which they now require for all grants planning to generate scientific data.
 
