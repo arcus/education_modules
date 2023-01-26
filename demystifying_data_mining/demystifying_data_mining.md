@@ -95,5 +95,21 @@ Data mining allowed the hospital to search through the gathered data for relevan
 
 ## Additional Resources
 
-The [Top Ten Data Mining Applications in the Real World](https://intellipaat.com/blog/top-data-mining-applications/),a free online eduational site,  provides more indepth examples of how data mining can be applied to real world situations and jobs.
+The [Top Ten Data Mining Applications in the Real World](https://intellipaat.com/blog/top-data-mining-applications/), a free online eduational site,  provides more indepth examples of how data mining can be applied to real world situations and jobs.
 
+
+## Feedback
+
+In the beginning, we stated some goals.
+
+**Learning Objectives**
+
+@learning_objectives
+
+We ask you to fill out a brief (5 minutes or less) survey to let us know:
+
+* If we achieved the learning objectives
+* If the module difficulty was appropriate
+* If we gave you the experience you expected
+
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Demystifying+Data+Mining%22)!
