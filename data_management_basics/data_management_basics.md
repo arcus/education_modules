@@ -15,7 +15,7 @@ estimated_time: 40 minutes
 After completion of this module, learners will be able to:
 
 - Define research data management
-- Explain the significance of data management as a component of the responsible conduct of research
+- Explain why data management forms an important part of the responsible conduct of research
 - Explain how various research stakeholders share responsibility for research data management
 - Give examples of research data management tasks within various stages of the research lifecycle
 
@@ -161,7 +161,7 @@ Researchers and research staff have to make a number of important decisions at t
 
 ### Data Collection
 
-At this point, researchers execute workflows and methods for arranging data, including digital data.  Digital data considerations include file backup plans and storage planning. This stage also includes exercising protocols for quality control and the establishment of security and access controls, whether for physical samples, digital files, or both.
+At this point, researchers carry out the workflows and methods they planned for their data organization.  This includes both physical assets as well as digital data.  For digital data, it is important to ensure that there are file backup plans and that appropriate storage is planned (including aspects such as the size, cost, and security of storage). At this point, investigators should be implementing their plans for quality control, security, and access controls, whether for physical samples, digital files, or both.
 
 As an example, you may use the REDCap research data capture software, and your institution may handle backing up those servers on your behalf.  You'll still have to exercise some governance on how data is entered (will double entry be used, for example?), who on your team has access to that data, and whether data downloading is permitted during data collection.  
 
