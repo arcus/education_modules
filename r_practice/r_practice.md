@@ -97,7 +97,7 @@ Remember that there are several ways to approach this task; there is no one righ
 
 ### Stuck? 
 
-If this practice problem was challenging, [here is a link to an example notebook]() where we go through one possible solution to the practice problem. If you'd like to download the R Markdown notebook to work with on your own computer, you can do that in RStudio Cloud. 
+If this practice problem was challenging, [here is a link to an example notebook]() where we go through one possible solution to the practice problem. If you'd like to download the R Markdown notebook to work with on your own computer, you can do that in Posit Cloud. 
 
 We encourage you to spend some time playing around with the data before you look at the example! And remember, just because your solution doesn't look exactly like the example doesn't mean it's wrong-- there are a variety of ways you might have approached the task we gave you.  
 
