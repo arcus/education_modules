@@ -19,7 +19,7 @@ Also keep in mind that this is an edited final product. The process of creating 
 
 ### Import packages
 
-The first thing we'll want to do is to import any libraries/packages that we'll need. 
+The first thing we'll want to do is to import any libraries/packages that we'll need. You might have to install some or all of these packages using `install.packages()`.
 
 ```{r import packages}
 library(tidyverse)
@@ -27,10 +27,16 @@ library(janitor)
 library(corrplot)
 ```
 
-Next we need to import our data. We can do this by reading in the CSV using the `read_csv()` function in `dplyr` (part of the `tidyverse`).
+Next we need to import our data. We can do this by reading in the CSV using the `read_csv()` function in `dplyr` (part of the `tidyverse`).  
 
 ```{r import dataset}
 raw_data <- read_csv("http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv")
+```
+
+Then, we can take a peek at data by using the Environment tab and clicking or by using `View()`. 
+
+```{r eval = FALSE}
+View(raw_data)
 ```
 
 Looking through the data, there seem to be a lot of question marks! This is likely indicting missing data. R is not going to be able to handle question marks every well, and it will definitely mess up our math later! Let's re-import the data, letting R know that the question marks should be coded as `NA` (a special value in R that means "empty" or "null").
@@ -38,6 +44,7 @@ Looking through the data, there seem to be a lot of question marks! This is like
 ```{r import data with NA}
 cervical_cancer_data <- read_csv("http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv", na = c("?", "NA"))
 ```
+
 ### Data exploration
 
 Next, let's dig into the data itself. First, let's look at a statistical summary table.
@@ -45,7 +52,9 @@ Next, let's dig into the data itself. First, let's look at a statistical summary
 ```{r}
 summary(cervical_cancer_data)
 ```
+
 One thing to notice here is that there spaces, capital letters, and colons in our column names. This (especially the spaces) will likely cause problems later when we want to work with the data. Let's change everything to lowercase and replace the spaces and colons with underscores. There are a few ways to do this: 
+
 1. We could create a vector with all of the new valid column names and replace the old ones. That's a lot of typing on our part though, which leaves lots of places for errors to be introduced! 
 2. We could use the functions `tolower()` to make everything lower case and then use the `str_replace_all()` from the `stringr` library to replace spaces and colons with underscores. This only requires two lines of code-- not bad! 
 3. We could use the `clean_names()` function from the `janitor` library after we make everything lower case (this step isn't always necessary, but it is in this case- trying running the code without the `tolower()` step and see what happens!). 
@@ -73,7 +82,7 @@ logical_cols <- c("smokes", "hormonal_contraceptives", "iud", "stds",
 cervical_cancer_data[logical_cols] <- lapply(cervical_cancer_data[logical_cols], as.logical)
 ```
 
-Now that we've done that, let's look at a statistical summary of just the entries where the `dx_cancer` is True. 
+Now that we've done that, let's look at a statistical summary of just the entries where the `dx_cancer` is `TRUE`.
 
 ```{r}
 cancer_pos <- cervical_cancer_data %>% 
@@ -86,7 +95,7 @@ cancer_pos
 
 Now, let's do some data visualization to explore the data. We may be able to find patterns that aren't easily seen by looking at numbers alone. 
 
-First, let's look at some histograms using `ggplot`.
+First, let's look at some histograms using `ggplot2`.
 
 
 ```{r}
@@ -104,6 +113,7 @@ How about some scatterplots?
 ggplot(data = cervical_cancer_data) +
   geom_point(mapping = aes(x = number_of_sexual_partners, y = stds_number))
 ```
+
 ```{r}
 ggplot(data = cervical_cancer_data) +
   geom_point(mapping = aes(x = age, y = stds_number))
@@ -115,6 +125,7 @@ Let's look at a box plot next.
 ggplot(data = cervical_cancer_data) +
   geom_boxplot(mapping = aes(y = number_of_sexual_partners))
 ```
+
 ### Heat Maps and correlations
 
 Now, let's take a look at the correlations between all of the variables. We can do this by creating a correlation matrix with the `cor` function. Then, we can visualize those correlations in a heat map using the `corrplot()` function from the library also called `corrplot` (you may need to install this package). 
@@ -123,7 +134,5 @@ Now, let's take a look at the correlations between all of the variables. We can 
 corr_matrix <- cor(cervical_cancer_data, use="pairwise.complete.obs")
 corrplot(corr_matrix, type = "upper", tl.col = "black", tl.srt = 45, tl.cex = .5)
 ```
-In the heat map above, dark blue indicates a highly positive correlation, while dark red indicates a strongly negative correlation. Notice anything interesting? Perhaps this can help you develop a hypothesis and you can test in a later module!
 
-
-
+In the heat map above, dark blue indicates a highly positive correlation, while dark red indicates a strongly negative correlation. Notice anything interesting? Perhaps this can help you develop a hypothesis and you can test later!
