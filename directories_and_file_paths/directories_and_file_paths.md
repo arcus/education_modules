@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.3.0
+version:  1.3.1
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
@@ -163,7 +163,7 @@ It will take a few clicks to turn this on, but might ultimately save you a lot o
 
 #### Finding Absolute paths (Mac)
 
-Navigating the Finder application to locate a file or directory might make it clear where on your computer the file lives, but if you located it using "Search" it's exactly location might not be obvious at all. Here are two ways to identify the file path of a file you have located in the Finder.
+Navigating the Finder application to locate a file or directory might make it clear where on your computer the file lives, but if you located it using "Search" its exact location might not be obvious at all. Here are two ways to identify the file path of a file you have located in the Finder.
 
 **Show Path Bar**
 
@@ -271,7 +271,7 @@ Although you can use a dot (`.`) in file names, you shouldn't use them at the be
 
 ### Quiz: Naming files
 
-Mica has written an R script to extract from a patient cohort some data about all patients that are under 5 years of age. They have decided to name their script `my awesome R script 03/04/21!.R`. What is wrong with this file name? Select all that apply.
+Mica has written an R script to extract just the data about patients that are under 5 years of age from a larger pediatric data set. They have decided to name their script `my awesome R script 03/04/21!.R`. What is wrong with this file name? Select all that apply.
 
 [[X]] The file name contains spaces.
 [[X]] The file name contains special characters.
