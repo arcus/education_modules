@@ -86,9 +86,9 @@ The second link above will attempt to download a CSV file to your computer-- if 
 ## Practice Problem
 
 According to the UCI Machine Learning database, the Cervical Cancer (Risk Factors) dataset "focuses on the prediction of indicators/diagnosis of cervical cancer. The features cover demographic information, habits, and historic medical records." 
- 
+
 Your Task
------
+=====
 
 1. Explore [the Cervical Cancer (Risk Factors) dataset](http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv) and 
 2. Use the R skills that you've learned to **develop a hypothesis about some likely risk factors** for a diagnosis of cervical cancer.  
@@ -97,14 +97,44 @@ Remember that there are several ways to approach this task; there is no one righ
 
 ### Stuck? 
 
-If this practice problem was challenging, [here is a link to an example notebook]() where we go through one possible solution to the practice problem. If you'd like to download the R Markdown notebook to work with on your own computer, you can do that in Posit Cloud. 
+If this practice problem was challenging, [here is a link to an example notebook](https://github.com/arcus/education_r_environment/blob/main/r_practice/r_practice.Rmd) where we go through one possible solution to the practice problem. 
+
+To work with our sample solution, you could do any of the three possibilities below:
+
+* Copy / paste the code from [the link above](https://github.com/arcus/education_r_environment/blob/main/r_practice/r_practice.Rmd) 
+  
+  * You can use the "Copy" button which looks like two pieces of paper in the menu bar across the top of the file: 
+  ![Copy raw contents button](media/copy_raw_contents.png)<!--
+style = "border: 1px solid rgb(var(--color-highlight));"-->
+  
+  * Or you can just use your mouse and highlight all the code, and use the "copy" keyboard shortcut
+  * Paste the sample code into your own R Markdown file
+
+* Make a clone of the "education\_r\_environment" repository:
+  
+  * In RStudio, open a new project (File, New Project)
+  * Select Version Control, then Git
+  * Drop this link into the "Repository URL": https://github.com/arcus/education_r_environment
+  * Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
+  * Click to select the "Open in new session" checkbox
+  * Click "Create Project"
+  * In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_practice". That's the code for this module!
+
+* Use Posit.Cloud:
+  
+  * [Create a (free!) Posit Cloud account](https://posit.cloud/plans)
+  * Open the "education\_r\_environment" project at https://posit.cloud/content/5273350.  That will give you a temporary copy so you can run our code, but not make any changes to it.
+  * Click on "Save a Permanent Copy" if you want to save any changes to your version of this code. 
+  ![Posit menu bar with "Make Permanent Copy"](media/make_copy.png)<!--
+style = "border: 1px solid rgb(var(--color-highlight));"-->
+
 
 We encourage you to spend some time playing around with the data before you look at the example! And remember, just because your solution doesn't look exactly like the example doesn't mean it's wrong-- there are a variety of ways you might have approached the task we gave you.  
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-Feeling overwhelmed? Learning data science in R take time and practice. Don't worry if you feel like you have to go back and look and the modules over and over, or google lots of things-- folks who do this for a living Google things every day! You don't have to memorize everything. Just keep your favorite resources close at hand so you remember what tools you have access to. 
+Feeling overwhelmed? Learning data science in R take time and practice. Don't worry if you feel like you have to go back and look and the modules over and over, or Google lots of things-- folks who do this for a living Google things every day! You don't have to memorize everything. Just keep your favorite resources close at hand so you remember what tools you have access to. 
 
 </div>
 

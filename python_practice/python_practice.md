@@ -89,7 +89,7 @@ The second link above will attempt to download a CSV file to your computer-- if 
 According to the UCI Machine Learning database, the Cervical Cancer (Risk Factors) dataset "focuses on the prediction of indicators/diagnosis of cervical cancer. The features cover demographic information, habits, and historic medical records." 
 
 Your Task
------
+=====
 
 1. Explore [the Cervical Cancer (Risk Factors) dataset](http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv) and 
 2. Use the Python tools that you've learned so far to **develop a hypothesis about some likely risk factors** for a diagnosis of cervical cancer.  
@@ -105,7 +105,7 @@ We encourage you to spend some time playing around with the data before you look
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-Feeling overwhelmed? Learning data science in Python takes time and practice. Don't worry if you feel like you have to go back and look at the modules over and over, or google lots of things-- folks who do this for a living google things every day! You don't have to memorize everything. Just keep your favorite resources close at hand so you remember what tools you have access to.
+Feeling overwhelmed? Learning data science in Python takes time and practice. Don't worry if you feel like you have to go back and look at the modules over and over, or Google lots of things-- folks who do this for a living google things every day! You don't have to memorize everything. Just keep your favorite resources close at hand so you remember what tools you have access to.
 
 </div>
 
