@@ -89,6 +89,7 @@ According to the UCI Machine Learning database, the Cervical Cancer (Risk Factor
  
 Your Task
 -----
+
 1. Explore [the Cervical Cancer (Risk Factors) dataset](http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv) and 
 2. Use the R skills that you've learned to **develop a hypothesis about some likely risk factors** for a diagnosis of cervical cancer.  
 
