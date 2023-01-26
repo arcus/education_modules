@@ -68,18 +68,18 @@ There are a couple of additional skills that haven't been introduced in a module
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-Finding correlations and creating heat maps are not topics that we have taught you in the preceding modules-- which means you might need to do some searching to figure out how to do them! This is an important step in your development as a programmer and a data scientist, but don't worry if it seems difficult in the beginning; it'll get easier with practice. To start, try googling "Python" and "correlations" and see where it takes you. 
+Finding correlations and creating heat maps are not topics that you have learned in preceding modules or in other prior learning -- which means you might need to do some searching to figure out how to do them! This is an important step in your development as a programmer and a data scientist, but don't worry if it seems difficult in the beginning; it'll get easier with practice. To start, try Googling "Python" and "correlations" and see where it takes you. 
 
 </div>
 
 ## The Data
 
-For this practice module we will be using real, publicly-available cervical cancer data from [UC Irvine's machine learning data repository](http://archive.ics.uci.edu/ml/index.php); you can download those data here: [https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29](http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv). If you have done the R Practice Module (**link required**), this dataset might be familiar! 
+For this practice module we will be using real, publicly-available cervical cancer data from [UC Irvine's machine learning data repository](http://archive.ics.uci.edu/ml/index.php); you can download those data here: [cervical cancer risk factors data](http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv). If you have done the [R Practice Module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_practice/r_practice.md), this dataset might be familiar! 
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-The second link above will attempt to download a CSV file to your computer-- if you don't want to do that, or if your institution's permissions don't allow it, you can also access the dataset here: (https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29)[https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29]. If you want to download the CSV from there, just click the "Data Folder" link at the top of the page. 
+The second link above will attempt to download a CSV file to your computer-- if you don't want to do that, or if your institution's permissions don't allow it, you can also access the dataset here: [https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29](https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29). If you want to download the CSV from there, just click the "Data Folder" link at the top of the page. 
 
 </div>
 
@@ -98,14 +98,14 @@ Remember that there are several ways to approach this task; there is no one righ
 
 ### Stuck? 
 
-If this practice problem was challenging, [here is a link to an example notebook](https://colab.research.google.com/github/arcus/education_modules/blob/mll_python_practice/python_practice/python_practice.ipynb) where we go through one possible solution to the practice problem. If you would like to download the notebook to your own computer, you can also do that by selecting "File" and then "Download" in Google Colab. 
+If this practice problem was challenging, [here is a link to an example notebook](https://colab.research.google.com/github/arcus/education_modules/blob/main/python_practice/python_practice.ipynb) where we go through one possible solution to the practice problem. If you would like to download the notebook to your own computer, you can also do that by selecting "File" and then "Download" in Google Colab. 
 
 We encourage you to spend some time playing around with the data before you look at the example! And remember, just because your solution doesn't look exactly like the example doesn't mean it's wrong-- there are a variety of ways you might have approached the task we gave you.  
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-Feeling overwhelmed? Learning data science in Python takes time and practice. Don't worry if you feel like you have to go back and look at the modules over and over, or Google lots of things-- folks who do this for a living google things every day! You don't have to memorize everything. Just keep your favorite resources close at hand so you remember what tools you have access to.
+Feeling overwhelmed? Learning data science in Python takes time and practice. Don't worry if you feel like you have to go back and look at the modules over and over, or Google lots of things-- folks who do this for a living Google things every day! You don't have to memorize everything. Just keep your favorite resources close at hand so you remember what tools you have access to.
 
 </div>
 
@@ -139,8 +139,6 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If we gave you the experience you expected
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Python+Practice%22)!
-
-Remember to change the redcap link so that the module name is correct for this module!
 
 
 
