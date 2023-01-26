@@ -74,7 +74,7 @@ Finding correlations and creating heat maps are not topics that we have taught y
 
 ## The Data
 
-For this practice module we will be using real, publicly-available cervical cancer data from [UC Irvine's machine learning data repository](http://archive.ics.uci.edu/ml/index.php); you can download those data here: [https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29](http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv). If you have done the R Practice Module (**link required**), this dataset might be familiar! 
+For this practice module we will be using real, publicly-available cervical cancer data from [UC Irvine's machine learning data repository](http://archive.ics.uci.edu/ml/index.php); you can download those data here: [https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29](http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv). If you have done the R Practice Module, this dataset might be familiar! 
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
