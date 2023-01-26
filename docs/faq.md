@@ -5,7 +5,7 @@ layout: default
 
 # Frequently Asked Questions
 
-Here are the answers to some of our most frequently asked questions.
+Here are the answers to some of our most frequently asked questions.  Click any question to see our answer, and submit new questions to [dart@chop.edu](mailto:dart@chop.edu).
 
 ## What is DART?
 

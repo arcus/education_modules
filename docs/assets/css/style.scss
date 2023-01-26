@@ -1,0 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+details {
+    margin: 1em;
+}
+
+details summary {
+    display: list-item;
+    cursor: pointer;
+    margin: 1em 0em;
+}
