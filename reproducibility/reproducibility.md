@@ -535,7 +535,7 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 * [Data Sharing and Privacy: A Very Cursory Overview](https://education.arcus.chop.edu/privacy-overview/)
 * [A Data Management and Sharing Snafu](https://www.youtube.com/watch?v=66oNv_DJuPc?cc_load_policy=1)
 * [Here’s How We Made Our Study Reproducible](https://slate.com/technology/2017/07/how-to-make-a-study-reproducible.html)
-* [Arcus Resources](https://www.research.chop.edu/arcus/resources)
+* [Arcus Resources](https://www.research.chop.edu/applications/arcus/resources)
 * [Git Commit](https://xkcd.com/1296)
 * [Enterprise GitHub](https://github.research.chop.edu)
 * [GitHub.com](https://github.com)
