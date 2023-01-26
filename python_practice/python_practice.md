@@ -79,7 +79,7 @@ For this practice module we will be using real, publicly-available cervical canc
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-The second link above will attempt to download a CSV file to your computer-- if you don't want to do that, or if your institution's permissions don't allow it, you can also access the dataset here: (https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29)[https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29]. If you want to download the CSV from there, just click the "Data Folder" link at the top of the page. 
+The second link above will attempt to download a CSV file to your computer-- if you don't want to do that, or if your institution's permissions don't allow it, you can also access the dataset here: [https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29](https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29). If you want to download the CSV from there, just click the "Data Folder" link at the top of the page. 
 
 </div>
 
