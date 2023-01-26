@@ -72,7 +72,7 @@ Research data management is a critical pain point for many data users.  There ar
 * Do digital copies of physical forms suffice, or will physical copies be kept?  Where? For how long? 
 * How should researchers deal with emails that are sent back and forth between researchers to define a specific cohort? 
 * What is the long-term storage strategy for this data?
-* Are there ways to save the data in multiple formats to accomodate unknown future needs?
+* Are there ways to save the data in multiple formats to accommodate unknown future needs?
 * Should data be de-identified?  At what stage?  
 * Should identifying data be discarded? When? By whom?
 
@@ -210,7 +210,7 @@ During which phase of the Research Data Lifecycle should researchers determine w
 <div class="answer">
 Data collection decisions should be made in the "Discovery and Planning" stage, **not** in the subsequent phase of initial data collection.  
 
-That being said, it sometimes happens that once data starts being collected, it becomes clear that new questions make sense to ask in a questionnaire, or that additional measurements should be made of a biosample.  This requires time-consuming amendments of protocols and can slow the progress of a project.  A good practice to avoid this is to have some practice runs of data collection with simulated subjects or samples in order to discover these potential enhancements before data collection begins!
+That being said, it sometimes happens that once data starts being collected, it becomes clear that new questions make sense to ask in a questionnaire, or that additional measurements should be made of a biosample. This requires time-consuming amendments of protocols and can slow the progress of a project. A good practice to avoid this is to have some practice runs of data collection with simulated subjects or samples in order to discover these potential enhancements before data collection begins!
 
 Final preparation and data analysis is far too late to consider data type and format, and the same can be said for publication and sharing.
 
@@ -225,8 +225,8 @@ Regardless of your role within a research project, you can contribute to success
 * Research Institution: Sets internal data management policy and normally provides assistance and some level of monitoring of higher-level regulatory requirements (such as the Federal Common Rule).
 * Data Repository: Curates and provides access to data.  A data respository typically ensures that data is organized according to repository standards, is submitted according to any required funder timelines, and is disclosed to parties with legitimate reasons to access or reuse the data.
 * User: Uses 3rd party data, and may be responsible for adherence to policies like a Data Use Agreement (DUA) and properly citing data stewards for their data if data is used in a subsequent manuscript or other publication.
-* Funder: Provides the resources to support a research project and sets standards for funds recipients.  In the case of many biomedical researchers, the funder may be a governmental agency which has the moral obligation to ensure that taxpayer funds are spent wisely, in support of science that uses best practices
-* Publisher: Disseminates discoveries and maintains the scientific record.  Increasingly, publishers require data sharing if ethically feasible, as well as other details such as data dictionaries, model and analysis details, and other artifacts of  research data management.
+* Funder: Provides the resources to support a research project and sets standards for funds recipients.  In the case of many biomedical researchers, the funder may be a governmental agency which has the moral obligation to ensure that taxpayer funds are spent wisely, in support of science that uses best practices.
+* Publisher: Disseminates discoveries and maintains the scientific record.  Increasingly, publishers require data sharing if ethically feasible, as well as other details such as data dictionaries, model and analysis details, and other artifacts of research data management.
 
 ### Quiz: Stakeholder Responsibilities
 
@@ -263,7 +263,7 @@ Research data management is important for multiple reasons, among which we highl
 * Research data management supports the long-term preservation of data for future use.
 * Funding agencies supporting the research require research data management.
 
-It's false that publishers don't apply their own standards.  Publishers have an important role to play in setting high standards for researchers who submit manuscripts for consideration.  It's also false that research data management is a new practice.  While it's true that RDM has gotten much more attention lately, research data management has been taking place since the first researchers developed the scientific method, and it's changed over time to adapt to new circumstances and requirements.
+It's false that publishers don't apply their own standards. Publishers have an important role to play in setting high standards for researchers who submit manuscripts for consideration. It's also false that research data management is a new practice. While it's true that RDM has gotten much more attention lately, research data management has been taking place since the first researchers developed the scientific method, and it's changed over time to adapt to new circumstances and requirements.
 
 </div>
 ***
@@ -292,4 +292,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Research+Data+Management+BAsics%22)!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Research+Data+Management+Basics%22)!
