@@ -59,7 +59,7 @@ As with any study, you can drop out for any reason and there is no harm done –
 
 
 <details>
-<summary>Does "free standing, asynchronous, practically focused" mean that you can doe each session at a time of your own choosing or is there a schedule for these sessions?</summary>
+<summary>Does "free standing, asynchronous, practically focused" mean that you can do each session at a time of your own choosing or is there a schedule for these sessions?</summary>
 You can do these training modules at your leisure, but we do suggest a sequence and ask you to do 2-3 hours a week of effort, knowing that sometimes you’ll have more time and sometimes less.
 </details>
 
