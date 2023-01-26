@@ -68,7 +68,7 @@ There are a couple of additional skills that haven't been introduced in a module
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-Finding correlations and creating heat maps are not topics that you have learned in preceding modules or in other prior learning -- which means you might need to do some searching to figure out how to do them! This is an important step in your development as a programmer and a data scientist, but don't worry if it seems difficult in the beginning; it'll get easier with practice. To start, try googling "Python" and "correlations" and see where it takes you. 
+Finding correlations and creating heat maps are not topics that you have learned in preceding modules or in other prior learning -- which means you might need to do some searching to figure out how to do them! This is an important step in your development as a programmer and a data scientist, but don't worry if it seems difficult in the beginning; it'll get easier with practice. To start, try Googling "Python" and "correlations" and see where it takes you. 
 
 </div>
 
@@ -105,7 +105,7 @@ We encourage you to spend some time playing around with the data before you look
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-Feeling overwhelmed? Learning data science in Python takes time and practice. Don't worry if you feel like you have to go back and look at the modules over and over, or google lots of things-- folks who do this for a living Google things every day! You don't have to memorize everything. Just keep your favorite resources close at hand so you remember what tools you have access to.
+Feeling overwhelmed? Learning data science in Python takes time and practice. Don't worry if you feel like you have to go back and look at the modules over and over, or Google lots of things-- folks who do this for a living Google things every day! You don't have to memorize everything. Just keep your favorite resources close at hand so you remember what tools you have access to.
 
 </div>
 
