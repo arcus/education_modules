@@ -260,7 +260,7 @@ Posit (the company formerly known as RStudio) provides a multi-tiered cloud envi
 
 First, you'll need to [create a (free!) Posit cloud account](https://posit.cloud/plans).  
 
-Then, once you're logged in at https://posit.cloud, open the "education\_r\_environment" project at https://posit.cloud/content/5273350.  That will give you a temporary copy so you can run our code, but not make any changes to it.
+Then, once you're logged in at [https://posit.cloud](https://posit.cloud), open the "education\_r\_environment" project at [https://posit.cloud/content/5273350](https://posit.cloud/content/5273350).  That will give you a temporary copy so you can run our code, but not make any changes to it.
 
 In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_introduction".  That's the code for this module!
 
