@@ -94,7 +94,7 @@ This [video](https://www.youtube.com/watch?v=gV0_raKR2UQ) that further provides 
 
 ## What is Algorithmic Fairness?
 
-Algorithmic Fairness is  described as a field of research dedicated to understanding biases such as those outlined in the previous section. Described as being an ethical way of approaching biases within machine learning, researchers aim to find ways to correct these biases. Of course, there is a high amount of complexity within this issue as a whole, and one universal clear policy seems unlikely to be attained any time soon. Although the field of Algorithmic Fairness is fairly new and is everchanging, learning about its core goals and its attempts is vital to better analyze how intertwined ethics can be in Data Science. 
+Algorithmic Fairness is  described as a field of research aiming to understand biases such as those outlined in the previous section. Described as being an ethical way of approaching biases within machine learning, researchers want to find ways to correct these biases. Of course, there is a high amount of complexity within this issue as a whole, and one universal clear policy seems unlikely to be attained any time soon. Although the field of Algorithmic Fairness is fairly new and is everchanging, learning about its core goals and its attempts is vital to better analyze how intertwined ethics can be in Data Science. 
 
 
 <div class = "important">
