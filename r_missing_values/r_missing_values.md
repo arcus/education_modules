@@ -567,5 +567,3 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If we gave you the experience you expected
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Missing+Values+in+R%22)!
-
-Remember to change the redcap link so that the module name is correct for this module!
