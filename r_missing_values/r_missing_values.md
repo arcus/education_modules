@@ -149,8 +149,9 @@ Then, once you're logged in at https://posit.cloud, open the "education\_r\_envi
 In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_missing\_values".  That's the code for this module!
 
 Click on "Save a Permanent Copy" if you want to save any changes to your version of this code. 
+
 ![Posit menu bar with "Make Permanent Copy"](media/make_copy.png)<!--
-style = "border: 1px solid rgb(var(--color-highlight));"-->
+style = "border: 1px solid rgb(var(--color-highlight)); clear:both;"-->
 
 Now you can not only work in the cloud, but also save your work.
 
