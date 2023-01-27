@@ -58,8 +58,8 @@ None. This lesson is appropriate for beginners looking to learn more about the e
 
 Although scientists before believed machine learning was an ethical, nonbiased mechanism to approach different problems, the truth is that bias still exists in algorithms. After all, humans create algorithms. Whether biases are enforced intentionally or without knowing, biases continue to exist.
 
-Below is a short video created by RSA with Cathy O'Neil voicing how discirmination in algorithm is very much present. 
-!?[This video is hosted on youtube.]https://www.youtube.com/watch?v=heQzqX35c9A 
+A [video](https://www.youtube.com/watch?v=heQzqX35c9A) created by RSA with Cathy O'Neil warns the dangers hidden on algorithms and asks for viewers to begin questioning data. 
+
 
 True or False: There are over more than 100 human biases recorded that can potentially impact algorithms.
 
@@ -89,9 +89,7 @@ There are several examples of machine learning impacting real people. Below are 
 * A much different example shows an action that can cause previous held biases to disrupt the status quote. According to a [SFGATE](https://www.sfgate.com/news/article/sanas-startup-creates-american-voice-17382771.php) article, Sanas is a startup aiming to make call center workers sound "American" by hiding their accent. This idea as a based on Sanas assumption that callers will be nicer to hearing a "White" voice.  While Sanas brags about how their startup will "bring millions of jobs to the Philippines, millions of jobs to India", many criticize the band-aid approach Sanas took to covering actual issues in call centers- such as low pay, little to no support, and long hours. Others argued the approach dehumanized the workers, though Sanas is still continoung with their business plan. 
 * And these are just some of the overwhelming amount of biases found in algorithms.
 
-Below is a video that further provides examples visually. It contains a list of examples regarding data and bias, while also addressing the issue and what algorithmic fairness hopes to achieve. 
-
-!?[This video is hosted on youtube.](https://www.youtube.com/watch?v=gV0_raKR2UQ)
+[This](https://www.youtube.com/watch?v=gV0_raKR2UQ) video further provides examples visually. It contains a list of examples regarding data and bias, while also addressing the issue and what algorithmic fairness hopes to achieve. 
 
 
 ## What is Algorithmic Fairness?
@@ -141,7 +139,7 @@ For more information on biases, [Google](https://developers.google.com/machine-l
 
 For more information on algorithmic fairness and possible solutions, this article published on [TowardsDataScience](https://towardsdatascience.com/what-is-algorithm-fairness-3182e161cf9f) covers some of it. 
 
-This [video](https://youtu.be/WNvQG2WqJG0) posted on YouTube  comes hand in hand with the previous article's content. 
+This [video](https://youtu.be/WNvQG2WqJG0) posted on YouTube comes hand in hand with the previous article's content. 
 
 
 ## Feedback
