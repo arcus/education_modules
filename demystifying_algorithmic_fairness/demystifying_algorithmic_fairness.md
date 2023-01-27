@@ -58,7 +58,7 @@ None. This lesson is appropriate for beginners looking to learn more about the e
 
 Although scientists before believed machine learning was an ethical, nonbiased mechanism to approach different problems, the truth is that bias still exists in algorithms. After all, humans create algorithms. Whether biases are enforced intentionally or without knowing, biases continue to exist.
 
-This short [video](https://www.youtube.com/watch?v=heQzqX35c9A) created by RSA with Cathy O'Neil narrates the dangers hidden with algorithms and machine learning.
+This [video](https://www.youtube.com/watch?v=heQzqX35c9A) created by RSA with Cathy O'Neil, a data scientists studyng AI bias, narrates the dangers hidden with algorithms and machine learning.
 
 
 True or False: There are over more than 100 human biases recorded that can potentially impact algorithms.
