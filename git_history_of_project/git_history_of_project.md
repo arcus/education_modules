@@ -2,8 +2,8 @@
 
 author:  Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  1.0.1
-module_template_version: 2.0.0
+version:  1.0.2
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Exploring the History of your Git Repository
@@ -65,18 +65,27 @@ Open up your command line interface and navigate to a place where you want to pu
 $ git clone https://www.github.com/arcus/planets
 ```
 
-<div class ="important">
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+ 
 The `$` at the beginning of the line is not part of the command. It symbolizes that the following code goes directly into the command line interface (CLI). Output and code that goes into a file (not directly into the CLI) will not start with a `$`.
+
 </div>
 
 This should be a very fast download. Now if you type `ls` within the repository directory, you should see a folder titled `planets`. Navigate into the this directory using `cd`; this is the directory we will be exploring throughout the module.
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 If you are on a computer running Windows, make sure you are in the Git Bash application. The Command Prompt (cmd) will not recognize the commands we are using in this module.
+
 </div>
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 If you are starting this module after following along with all of Dracula's code in the [Creating your Git Repository](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_creation_and_tracking/git_creation_and_tracking.md#1) module, you can follow along here in your own planets directory instead of downloading Dracula's repo.
+
 </div>
 
 
@@ -124,13 +133,19 @@ index 0000000..f451386
 The last thing that Dracula committed to the planets repository was the `.gitignore` file in which he told Git to "Ignore data files and the results folder."
 
 <div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 Sometimes a command will output many lines of code that may not be relevant to you. For example the `show` command will output not just the commit message, but also every single change that you made in that commit.
 
 The more you see this type of output, the more comfortable you will get with extracting the information you need and ignoring the rest.
+
 </div>
 
-<div class = "important">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 If the output of a command is longer than the number of lines your console displays, you can navigate that output using the down and up arrows on your keyboard, or press `Q` or `q` to **quit** the output and return to your command prompt.
+
 </div>
 
 Maybe you want to look one step further back into your work. By using `HEAD~n` you can look back n checkpoints in your repository. The `~` symbol is named "tilde" and pronounced "TIL-duh."
@@ -143,11 +158,16 @@ Using `HEAD` to refer to your commits can be great for looking at recent version
 
 ![On the left, the stack of 3 flat white boxes are labeled `HEAD`, `HEAD~1`,  and `HEAD~2`. An arrow points to a stack on the right made of the 3 white boxes with a 4th red box now on top. This red box is now the one labeled `HEAD` and the boxes below it are labeled, in order from top to bottom, `HEAD~1`, `HEAD~2`, `HEAD~3`, with all the white boxes having changed labels.](media/commit_stack_head1.svg)
 
-<div class = "learn-more">
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
+
 Git is a big pile of mixed metaphors, and in the case of `HEAD`, it is referencing the idea of a [recording head](https://en.wikipedia.org/wiki/Recording_head) which writes audio or video input to a tape.
 
+</div> 
+
 `HEAD` is a "pointer," it doesn't contain any information of its own. `HEAD` points to the commit you are currently working from, and it is possible to change which commit `HEAD` is pointing to. Moving `HEAD` so that it points somewhere else can be useful when you are trying to go back to an earlier version of your work, but is outside the scope of this module.
-</div>
+
+
 
 ### Using the commit number
 
@@ -185,7 +205,9 @@ The first thing to notice is that your commit messages are here! This is a good 
 The second thing to notice is the structure of each entry in the log: commit, Author, Date, message.
 When you identify which commit you want to look at, the commit number is the 40 digit string of letters and numbers at the top of it after the word "commit". In Dracula's repository, the identifier for the commit in which he "add[ed] concerns about effects of Mars' moons on Wolfman" is `1e587d25f619aa0aa10fce19b44e4e71503fa41e`.
 
-<div class = "learn-more">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
 **What is this number?**
 
 We are used to seeing numbers in base 10, which are made up of ten digits. Commit numbers are in base 16, called [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal). In this number system, we use the 10 familiar digits `1,2,3,4,5,6,7,8,9` as well as the digits `a,b,c,d,e,` and `f` corresponding to 10,11,12,13,14, and 15 respectively in base 10.
@@ -193,6 +215,7 @@ We are used to seeing numbers in base 10, which are made up of ten digits. Commi
 The 40 digit commit number is created by putting the entire repository, along with some metadata, including the commit message and a timestamp, through a function called a **hash**. With $16^{40}$ different numbers (also called **hashes**) you can think of these number as unique!
 
 If you are using the repo you created in an earlier module, your commits might have different commit numbers than the commit numbers in the examples. Be sure to use the commit number in YOUR log if it differs from Dracula's.
+
 </div>
 
 Now that we have found the identifier of the commit we want to examine, we can use it with `git show`. Don't worry, you won't need to type all 40 digits, the first six will suffice.
@@ -254,7 +277,10 @@ The command `git show HEAD~1` will show you one checkpoint earlier in your work,
 ***
 
 <div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 The error you get from entering a non-existent commit number starts with the word "fatal."  The word may be scary, but, in this case, all it is saying is that it could not execute the command. You did not harm anything!
+
 </div>
 
 ## Comparing files to prior commits
@@ -286,12 +312,15 @@ An ill-considered change
 
 Notice that we did NOT add or commit that last change to `mars.txt`. When you are working on a large project, it is very easy to lose track in your mind of when you last committed, or what changes you have made since. In this section we will see how to ask Git to tell us that information.
 
-<div class = "learn-more">
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+
 You can change things in the `planets` directory that you downloaded from GitHub!
 
 Because these files now exist on your computer, you can change them and commit those changes. The author of the new commits will be you, not Vlad Dracula. You can use `git log` to see which of you made which commit.
 
 This is a preview of how Git lets you work with collaborators to create a project together.
+
 </div>
 
 ### Using `diff`
@@ -487,6 +516,8 @@ This module was based on examples from [Software Carpentry](https://software-car
  - Lesson 5: [Exploring History](https://swcarpentry.github.io/git-novice/05-history/index.html)
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 If you have a repository with at least a few commits in it, such as the one created in the previous module in this series, you can use this module as a framework for exploring the history of that project.
 
 You can also clone any public repository you find on [GitHub](https://github.com) using
@@ -496,6 +527,7 @@ $ git clone https://www.github.com/RepositoryOwner/RepositoryName
 ```
 
 and explore how it was created! One repository with particularly good documentation is the [LiaScript project](https://github.com/LiaScript/LiaScript).
+
 </div>
 
 ## Feedback

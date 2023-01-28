@@ -2,8 +2,8 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version:  1.0.2
-module_template_version: 2.0.0
+version:  1.0.3
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Creating a Git Repository
@@ -64,9 +64,12 @@ Before you start this module, make sure you
 Open a new command line interface on your computer. All exercises in this module will be done in this interface.
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 If you are on computer that uses the Windows operating system, make sure you are using the Git Bash application as your command line interface. The Command Prompt (cmd) will not recognize the commands we are using in this module.  Git Bash is part of the [Windows install of Git](https://git-scm.com/download/win).
 
 ![Git Bash logo](media/git_bash.jpeg)<!-- style = "max-width:200px;" border = 5px solid -->
+
 </div>
 
 If you are not sure if Git is configured on your computer, enter `git config user.name` into your command line interface and see if it returns your name. You can also check that it it has the correct email for you with `git config user.email`. If these are correct you are all ready to start the module!
@@ -103,7 +106,10 @@ $ cd planets
 The `cd` command means **change directory**.  In our first command, we're changing directory to our home directory. (that's the `~`), and within that, to the directory called `Desktop`.  If you don't have this directory in your file system, you'll get an error.  That's okay -- just navigate to a different directory you'd like to work in (as long as that directory isn't within a Git repository).  The `mkdir` command tells the computer to **make** a **directory** with the name "planets." Once we have a `planets` directory, we use `cd` open that directory.
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Getting an error message when you type these commands? If you are using the Windows operating system, you need to switch over to Git Bash.  Windows uses a different system of commands than other computers like Linux, Unix, and Mac, and Git Bash makes it possible for you to use the commands common to the other operating systems, even though you're on Windows.
+
 </div>
 
 Next we tell Git to make `planets` a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository) (also called a **repo**)
@@ -169,8 +175,11 @@ including all files and sub-directories located within the project's directory.
 If we ever delete the `.git` subdirectory,
 we will lose the project's history.
 
-<div class = "learn-more">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
 What are the series of dots preceding `.git`?  The `.` (pronounced "dot") refers to the directory you are currently in, while `..` ("dot dot") refers to the parent of the directory you are currently in. Every directory automatically contains both `.` and `..` as things you can use as quick shorthand if you need to use them to navigate through the file structure.  What we're seeing here, then, is really a list of three things that stay hidden unless you specify that you want to see hidden things: (1)`.`, (2) `..`, and (3) `.git`
+
 </div>
 
 ### Creating the `main` branch
@@ -199,8 +208,11 @@ nothing to commit (create/copy files and use "git add" to track)
 If you are using a different version of Git, the exact
 wording of the output might be slightly different.
 
-<div class ="learn-more">
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
+
 You will see that the primary branch of some projects, particularly older projects, is called `master` instead of `main`. GitHub has joined the programming community in a concerted effort to [replace programming terms associated with slavery](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/).
+
 </div>
 
 
@@ -303,13 +315,19 @@ and then run:
 $ rm -rf moons/.git
 ```
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 The `rm` command **removes** files, and can be very useful, but the `-rf` flag is very powerful and should used with great caution. The `r` stands for "recursive" and instructs the computer to remove all contents of the file and then remove the file itself.  The `f` is for "force" and means you will not be asked if you are sure you want to delete the files.
 
 Dracula should be absolutely certain he wants to delete `moons/.git` before running this command.
+
 </div>
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 Dracula could have navigated to `~/Desktop/planets/moons` and then run `rm -rf .git` which would have had exactly the same effect. However if you were to run `rm -rf .git` in the `planets` directory, you would lose the history of your project. For that reason he should use the file path `moons/.git` to be sure that only the correct file is removed.
+
 </div>
 
 ## Tracking changes
@@ -348,9 +366,12 @@ Cold and dry, but everything is my favorite color
 ```
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Type `control X` or `Ctrl X` to exit `nano`. Your keyboard should have either a `control` or `Ctrl` key in the lower left and possibly other locations as well. When asked if you want to save changes, enter `Y` for yes. Then the "File Name to Write" field should be pre-filled with `mars.txt` so you can press `return` or `Enter`.
 
 When you are in `nano`, you can also refer to the reminders of commands at the bottom of window. The `^` in these commands means `control` or `Ctrl`.
+
 </div>
 
 Let's first verify that the file was properly created by running the list command (`ls`):
@@ -443,12 +464,15 @@ Git will launch `nano` (or whatever other editor we configured as `core.editor`)
 so that we can write a longer message.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 **Good commit messages**
 
 Commit messages start with a brief (less than 50 characters) statement in the present tense about the changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will..."
 
 
 If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
+
 </div>
 
 If we run `git status` now it tells us everything is up to date.
@@ -461,7 +485,9 @@ On branch main
 nothing to commit, working directory clean
 ```
 
-<div class= "care">
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 Even, and perhaps especially, those who use Git a lot can have trouble writing good commit messages. We are all just doing our best to document our work!
 
 ![XKCD Cartoon, the text of which reads "As a project drags on my Git commit messages get less and less informative."  The first message shown reads "Created main loop & timing control." By the 5th message it reads "more code" followed by messages including "Here have code," "AAAAAAAAA," "my hands are typing words" and finally "haaaaaaaaands."](media/git_commit_2x.png)
@@ -496,8 +522,13 @@ the commit's author,
 when it was created,
 and the log message Git was given when the commit was created.
 
-<div class = 'help'>
-**Where Are My Changes?** If we run `ls` at this point, we will still see just one file called `mars.txt`. That's because Git saves information about files' history in the special `.git` directory mentioned earlier so that our filesystem doesn't become cluttered (and so that we can't accidentally edit or delete an old version).
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+**Where Are My Changes?** 
+
+If we run `ls` at this point, we will still see just one file called `mars.txt`. That's because Git saves information about files' history in the special `.git` directory mentioned earlier so that our filesystem doesn't become cluttered (and so that we can't accidentally edit or delete an old version).
+
 </div>
 
 Now suppose Dracula adds more information to the file.
@@ -551,7 +582,9 @@ index df0654a..315bf3a 100644
 +The two moons may be a problem for Wolfman
 ```
 
-<div class = 'care'>
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 The output is cryptic because it is meant for a computer, not a human.
 It is actually a series of commands for tools like editors and `patch`
 telling them how to reconstruct one file given the other. Nevertheless we can gain some useful information
@@ -563,7 +596,9 @@ if we break it down into pieces:
   4. The remaining lines are the most interesting, they show us the actual differences and the lines on which they occur. In particular, the `+` marker in the first column shows where we added a line.
 </div>
 
-<div class = 'warning'>
+<div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 If we immediately commit this change using `git commit` what will happen?
 
 Git won't commit because we didn't use `git add` first! Git will give you a message reminding you to use `git add`.
@@ -634,8 +669,11 @@ Often, when we're working in a project, we change several files in the course of
 
 - **Commit regularly** Even if you are only making very small changes, don't forget to commit at regular intervals, like before you switch tasks or end your work day.
 
-<div class="care">
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 These are our recommendations for how often to commit, but that doesn't mean we are always good at following them. We all do the best we can, and sometimes we still end up committing every few minutes, giving each the commit message `"update file.txt"`. It's not ideal, but it gets the changes recorded even if it will be harder to see what was done later.
+
 </div>
 
 
@@ -682,9 +720,12 @@ The commit message should describe what this commit does. If you want to know th
 What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis?
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 It is likely that you will eventually share your repository.  This could be sharing it privately with a team, or publicly through [GitHub](github.com). When you do, everything that Git is tracking will become visible to everyone with access to the repository.  If there is an API key, password, sensitive data, or anything that requires any level of secrecy, make sure you tell Git to ignore it as soon as you create the file.
 
 Once information is committed and made public ("pushed" to GitHub), a record of it will persist even if you remove it in a later commit.
+
 </div>
 
 ### Creating `.gitignore`
@@ -725,8 +766,11 @@ results/
 
 These patterns tell Git to ignore any file whose name ends in `.dat` and everything in the `results` directory. (If any of these files were already being tracked, Git would continue to track them.)
 
-<div class = "learn-more">
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+
 There are many common file types that people frequently ask Git not to track. For example Mac users usually want Git to ignore `.DS_store`, which is an invisible file that gets created by opening a file in Finder. You can even start with [this collection of common configurations](https://gist.github.com/octocat/9257657) for `.gitignore`.
+
 </div>
 
 Once we have created the `.gitignore` file, the output of `git status` is much cleaner:
@@ -790,7 +834,10 @@ nothing to commit, working directory clean
 ```
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 For more details on how to use `.gitignore` to include or exclude particular files or folders check out Software Carpentry's [lesson on Ignoring Things](https://swcarpentry.github.io/git-novice/06-ignore/index.html).
+
 </div>
 
 ### Quiz: `.gitignore`

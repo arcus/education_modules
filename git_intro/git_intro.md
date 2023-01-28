@@ -2,8 +2,8 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.3
-module_template_version: 2.0.0
+version:  1.0.4
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Intro to Version Control
@@ -67,8 +67,11 @@ Microsoft Word's [Track Changes](https://support.office.com/en-us/article/Track-
 Google Docs' [version history](https://support.google.com/docs/answer/190843?hl=en), or
 LibreOffice's [Recording and Displaying Changes](https://help.libreoffice.org/Common/Recording_and_Displaying_Changes).
 
-<div class = "help">
-**Do you use ‘undo’ in your editor? ‘Undo’ is the simplest form of version control.**
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+Do you use ‘undo’ in your editor? ‘Undo’ is the simplest form of version control.
+<br><br>
 
 Most people already use aspects of a version control system already even if they don't realize it. Switching to a more formal version control system lets you take advantage of tools you already rely on (like undo, track changes, and the ability to work on documents collaboratively) but in a way that gives you much more power and control.
 </div>
@@ -98,8 +101,8 @@ A version control system is a tool that keeps track of these changes for us, eff
 The complete history of commits for a particular project and their metadata make up a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository). Repositories can be kept in sync across different computers, facilitating
 collaboration among different people.
 
-<div class = "learn-more">
-**The Long History of Version Control Systems**
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
 
 Automated version control systems are nothing new.
 
