@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.3.0
+version:  1.3.1
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
