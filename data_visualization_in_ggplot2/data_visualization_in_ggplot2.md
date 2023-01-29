@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.3.0
+version:  1.3.1
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
@@ -112,20 +112,20 @@ Please do this step now, because we're going to ask you to follow along througho
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-Please read over both options before you start performing any actions, to make sure you pick the right option for you.
+Please read over all the options before you start performing any actions, to make sure you pick the right option for you.
 
 </div>
 
-Option 1: Work in the Cloud
----
+<h3>Option 1: Work Anonymously in the Cloud</h3>
 
-This might work well for you if you either can't or don't want to install R and RStudio on your computer.  The benefit is that you don't have to install anything, but one negative is that this option requires a bit of waiting for your environment to come online.
+This might work well for you if you either can't or don't want to install R and RStudio on your computer.  The benefit is that you don't have to install anything or have any account set up with an online cloud provider.  This solution is completely anonymous.  However, there are some drawbacks.  One negative is that this option requires a bit of waiting for your environment to come online.  Another is that your changes aren't saved anywhere, and your environment will time out and disappear forever.  
 
 **First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
 
   <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"></a> **← Click the "launch binder" button!**
 
-<div class = "hint" style = "align-items: center; display: flex;">
+<div class = "important" style = "align-items: center; display: flex;">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 <div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
 <div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen.](media/binder_loading.gif)<!--
@@ -133,13 +133,29 @@ style = "border: 1px solid rgb(var(--color-highlight));"-->
 </div>
 </div>
 
-**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "@r_code".  That's the code for this module!
+**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "data\_visualization\_in\_ggplot2".  That's the code for this module!
 
 ![RStudio as shown in the cloud platform Binder.](media/binder_rstudio.png)<!--
 style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
 
-Option 2: Work on Your Computer
----
+<h3>Option 2: Use Posit Cloud</h3>
+
+Posit (the company formerly known as RStudio) provides a multi-tiered cloud environment for using RStudio.  Unlike option 1 above, this option does require you to have an account with Posit Cloud, their online RStudio server.  The good news is that the base level of Posit Cloud is free!
+
+First, you'll need to [create a (free!) Posit cloud account](https://posit.cloud/plans).  
+
+Then, once you're logged in at [https://posit.cloud](https://posit.cloud), open the "education\_r\_environment" project at [https://posit.cloud/content/5273350](https://posit.cloud/content/5273350).  That will give you a temporary copy so you can run our code, but not make any changes to it.
+
+In the file area to the lower right, you'll see, among multiple choices, the folder called "data\_visualization\_in\_ggplot2".  That's the code for this module!
+
+Click on "Save a Permanent Copy" if you want to save any changes to your version of this code.
+
+![Posit menu bar with "Make Permanent Copy"](media/make_copy.png)<!--
+style = "border: 1px solid rgb(var(--color-highlight)); clear:both;"-->
+
+Now you can not only work in the cloud, but also save your work.
+
+<h3>Option 3: Work on Your Computer</h3>
 
 If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
 
