@@ -97,7 +97,7 @@ Learn more about informative presence bias in electronic health records, includi
 
 Note that some times you will see the recommendation to enter a patient's total number of visits as a proxy for their overall health in an attempt to correct for informative presence bias.
 This may be effective in some situations, but there are a number of serious drawbacks to that approach as well.
-See discussion of this technique [in this article](https://pubmed.ncbi.nlm.nih.gov/27852603/), as well as in the article linked in the box above. 
+See discussion of this technique [in this article](https://pubmed.ncbi.nlm.nih.gov/27852603/), as well as in the article linked in the box above.
 
 ## Text data
 
@@ -172,6 +172,8 @@ need pennkey:
 https://www.nature.com/articles/nrg3208
 
 Recent example using ML and EHR, from DBHi: https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000073
+
+Check out this recent talk by Dr. Ian Campbell on [Harnessing the EHR for Timely Diagnosis and Personalized Management for Children with Rare Genetic Diseases](https://www.youtube.com/watch?v=xZqQL1lCX_A). It includes examples of several EHR analyses such as machine learning, natural language processing, and other techniques. 
 
 ## Additional Resources
 
