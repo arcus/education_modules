@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.1.1
+version:  1.1.2
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -25,7 +25,9 @@ After completion of this module, learners will be able to:
 1.0.3: revamping environment setup section to mirror exactly other R basics modules, including only presenting the content once. Changed the hands-on section to follow appropriate structure. Also replaced hex art alt text with blank tags based on best practices for decorative images.
 1.1.0: update pipe syntax, clarified "follow along" instructions, removed unhelpful image
 1.1.1: Add information about Posit Cloud
-@end
+1.1.2: Remove second attribution location
+
+@end 
 
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
@@ -890,5 +892,3 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If we gave you the experience you expected
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Basics+Transform+Data%22)!
-
-Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data workshop materials](https://skadauke.github.io/intro-to-r-for-clinicians-chop/).  We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.

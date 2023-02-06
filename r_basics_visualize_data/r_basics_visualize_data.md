@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.5
+version:  1.0.6
 language: en
 module_template_version: 2.0.0
 narrator: US English Female
@@ -23,6 +23,7 @@ After completion of this module, learners will be able to:
 @version_history
 1.0.1: revision to correct image links referring to wrong branch + small changes to environment setup language to be exactly mirrored across all 3 R basics modules.
 1.0.5: add information about Posit Cloud
+1.0.6: remove second attribution location
 
 @end
 
@@ -903,5 +904,3 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If we gave you the experience you expected
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Basics+Visualize+Data%22)!
-
-Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data workshop materials](https://skadauke.github.io/intro-to-r-for-clinicians-chop/).  We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.
