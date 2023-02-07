@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho
 email:    camachop@chop.edu
-version:  1.0.1
+version: 1.0.2
 module_template_version: 2.0.0
 language: en
 narrator: US English Male
@@ -334,4 +334,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Demystifying+SQL%22)!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Demystifying+SQL%22&version=1.0.2)!

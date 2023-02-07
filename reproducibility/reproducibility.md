@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.3.0
+version: 1.3.1
 module_template_version: 3.0.0
 language: en
 narrator: US English Female
@@ -553,4 +553,4 @@ Now that you've completed this module, we ask you to fill out a brief (5 minutes
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Reproducibility,+Generalizability,+and+Reuse:+How+Technology+Can+Help%22)!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Reproducibility,+Generalizability,+and+Reuse:+How+Technology+Can+Help%22&version=1.3.1)!
