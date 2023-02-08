@@ -196,7 +196,7 @@ When geocoding addresses for research, make sure that you are preserving the pri
 - a plan to do all geocoding locally on a computer owned by your institution that is not using internet tools to geocode, or
 - a formal agreement with a geocoding service to securely process addresses (for an example, see the [Texas A&M Geoservice's privacy and security page](https://geoservices.tamu.edu/About/Legal/)) 
 
-**Never share protected health information like addresses with an online tool!**
+**Never share protected health information like patient addresses with an online tool!**
 
 </div>
 
