@@ -189,9 +189,14 @@ Geocoding addresses one by one might be fine if you only have a few to do, but w
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
-When geocoding addresses for research, make sure that you are preserving the privacy and security of you participants. If you will be using addresses as part of research, you should have a plan for geocoding approved by the appropriate regulatory bodies before you begin.
+**Addresses are Protected Health Information (PHI)**
 
-You might need a formal agreement with a geocoding service (see the [Texas A&M Geoservice's privacy and security page](https://geoservices.tamu.edu/About/Legal/)) or a plan to do all geocoding locally on a computer owned by your institution. 
+When geocoding addresses for research, make sure that you are preserving the privacy and security of you participants. If you will be using addresses as part of research, you should have a plan for geocoding approved by the appropriate regulatory bodies before you begin. This might look like:
+
+- a plan to do all geocoding locally on a computer owned by your institution that is not using internet tools to geocode, or
+- a formal agreement with a geocoding service to securely process addresses (for an example, see the [Texas A&M Geoservice's privacy and security page](https://geoservices.tamu.edu/About/Legal/)) 
+
+**Never share protected health information like patient addresses with an online tool!**
 
 </div>
 
