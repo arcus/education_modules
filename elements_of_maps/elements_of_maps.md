@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.1
+version: 1.0.2
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
@@ -387,7 +387,7 @@ The best ways to present this data with a map depends on both the quantity of da
 
 ## Additional Resources
 
-All of the maps shown in this module were created in a Jupyter notebook that you are welcome to [explore for yourself](https://github.com/arcus/education_modules/blob/visual_vocab_of_geospatial_data/elements_of_maps/media/elements_of_maps.ipynb).
+All of the maps shown in this module were created in a Jupyter notebook that you are welcome to [explore for yourself](https://github.com/arcus/education_modules/blob/main/elements_of_maps/media/elements_of_maps.ipynb).
 
 
 QGIS, an open source GIS platform has a [Gentle Introduction to GIS](https://docs.qgis.org/3.22/en/docs/gentle_gis_introduction/index.html).
