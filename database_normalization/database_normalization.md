@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.1
+version: 1.0.2
 module_template_version: 3.0.0
 language: en
 narrator: US English Female
@@ -22,6 +22,12 @@ After completion of this module, learners will be able to:
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
+
+@version_history
+
+1.0.2 -- fix typo in quiz
+
+@end
 -->
 
 # Database Normalization
@@ -266,7 +272,11 @@ Why is data normalized (carefully fragmented to reduce repetition and inefficien
 
 <div class = "answer">
 
-The reason for normalization isn't that relational database software lacks the capacity for very wide tables with lots of columns.  Rather, the kind of rich data that is stored in relational databases simply isn't right for storage in a single table.  There are many one-to-many relationships in data, and this means that using multiple tables, one for each kind of concept (like "address" or "order" or "encounter") makes sense.  There is also a lot of repetition in data.  For example, multiple patients might live at the same address, and multiple patients are prescribed the same medication.  Multiple orders each contain the same popular product.  This repetition means that it's much easier to correct or change data if we try to put as much data as possible into a single table. However, when a normalized model is used, and data is fragmented into concepts, things get easier.  Instead of correcting a product name thousands of times, once for each order that product appears on, we only have to correct it once, in the "product" table.
+The reason for normalization isn't that relational database software lacks the capacity for very wide tables with lots of columns.  Rather, the kind of rich data that is stored in relational databases simply isn't right for storage in a single table.  
+
+There are many one-to-many relationships in data, and this means that using multiple tables, one for each kind of concept (like "address" or "order" or "encounter") makes sense.  There is also a lot of repetition in data.  For example, multiple patients might live at the same address, and multiple patients are prescribed the same medication.  Multiple orders each contain the same popular product.  
+
+This repetition means that it's much harder to correct or change data if we try to put as much data as possible into a single table. However, when a normalized model is used, and data is fragmented into concepts, things get easier.  Instead of correcting a product name thousands of times, once for each order that product appears on, we only have to correct it once, in the "product" table.
 
 </div>
 
