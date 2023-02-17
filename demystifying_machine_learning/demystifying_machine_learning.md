@@ -83,8 +83,22 @@ Within machine learning, there are two basic kinds of models: **supervised** and
 Supervised models are focused on prediction; there are input variables and a specific output variable that the model attempts to predict.
 For example, a model that uses data from electronic health records to predict which patients will need to be seen again within a month after discharge would be a supervised model.
 Unsupervised models, on the other hand, don't have a true outcome.
-Instead, they focus on identifying patterns and sturcture with the data.
+Instead, they focus on identifying patterns and structure with the data.
 A model identifying clusters within cancer cell lines would be an unsupervised model.
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+As in many fields, machine learning involves a lot of technical language, some of which is unclear, redundant, or downright confusing.
+For example:
+
+**Outcome** variables are also called **response**, or **dependent** variables.
+
+**Input** variables are also called **predictors**, **features**, **independent variables**, or even just **variables**.
+
+If you find yourself stumbling on vocabulary as you read about machine learning, know you're not alone!
+
+</div>
 
 ### Potential applications in biomedical science
 
@@ -172,10 +186,11 @@ So that's the tradeoff: If your model is not flexible enough, you'll have high b
 A model that is not flexible enough is said to be **underfit**, and a model that's too flexible is **overfit**.
 
 The goal of any machine learning analysis is to find a model that strikes the right balance between bias and variance, that's just the right level of complexity for the problem.
+In this pretend example, we know the true underlying relationship is quadratic, so a quadratic model will be the one that hits the sweet spot between underfitting and overfitting.
 
 ![The same data, this time shown with a quadratic curve that captures the pattern in the data well without chasing noise.](media/goodfit.png)
 
-Unlike this toy example, in a real analysis we never know what the true underlying relationship is, and that makes it very hard to know if you're under- or overfitting.
+Unlike this example, in a real analysis we never know what the true underlying relationship is, and that makes it very hard to know if you're under- or overfitting.
 There are a number of practical techniques you can use to try to hit the right balance, though, especially [cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)).
 Most of the machine learning tools you'll encounter are designed with the bias-variance tradeoff in mind.
 
@@ -231,21 +246,6 @@ base_plot +
 
 </details>
 
-![](https://r4ds.github.io/bookclub-islr/images/fig2_12.jpg)
-
-<div class = "care">
-<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
-
-As in many fields, machine learning involves a lot of technical language, some of which is unclear, redundant, or downright confusing.
-For example:
-
-**Outcome** variables are also called **response**, or **dependent** variables.
-
-**Input** variables are also called **predictors**, **features**, **independent variables**, or even just **variables**.
-
-If you find yourself stumbling on vocabulary as you read about machine learning, know you're not alone!
-
-</div>
 
 ## A word of caution about big data
 
