@@ -123,33 +123,6 @@ Which of the following would be examples of machine learning? Select all that ap
 
 ## The bias-variance tradeoff
 
-The bias-variance tradeoff is a central issue in machine learning.
-It refers to the fact that although of course you can only work with the data you have, what you actually want is for your model to be useful "in the real world".
-In other words, when you think about how good a model is, you don't just mean that you want it to fit the data in front of you --- you want it to work on new data as well.
-
-That means that the best model is not necessarily the one that fits your training data the best.
-Instead, the best model is one that captures as much of the systematic variability in your data as possible without getting so closely tuned to your training data that it starts to model noise.
-
-You can measure how well a model fits in a number of ways, but one very common method is the **Mean Squared Error (MSE)**; it captures how close your predictions are to the observed data.
-When the predictions are very close to the actual observed values, then MSE will be small.
-If some of the predictions are substantially off, then MSE gets larger.
-If all of your predictions exactly matched up with the observed values, you would have an MSE of 0.
-
-<div class = "behind-the-scenes">
-<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
-
-For those of you who find equations helpful for your understanding, here's the definition of Mean Squared Error:
-
-$ MSE = \frac{1}{n}\sum_{i=1}^n(y_i-\hat{f}(x_i))^2 $
-
-If equations don't help you, then feel free to skip over this!
-You don't need to understand the equation for MSE to learn this material.
-Just keep in mind that larger MSE means more/larger discrepencies between predictions and observations.
-
-</div>
-
-The problem of the bias-variance tradeoff arises because
-
 Briefly, **variance** is how much your model estimates jump around depending on which data you happen to train them on.
 You want to get variance as low as possible; if you reach a variance of 0, that means your model is totally robust to changes in the randomly sampled data it's trained on.
 
