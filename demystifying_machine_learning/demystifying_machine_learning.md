@@ -128,7 +128,7 @@ It refers to the fact that although of course you can only work with the data yo
 In other words, when you think about how good a model is, you don't just mean that you want it to fit the data in front of you --- you want it to work on new data as well.
 
 That means that the best model is not necessarily the one that fits your training data the best.
-Instead, the best model is one that captures as much of the systemtic variability in your data as possible without getting so closely tuned to your training data that it starts to model noise.
+Instead, the best model is one that captures as much of the systematic variability in your data as possible without getting so closely tuned to your training data that it starts to model noise.
 
 You can measure how well a model fits in a number of ways, but one very common method is the **Mean Squared Error (MSE)**; it captures how close your predictions are to the observed data.
 When the predictions are very close to the actual observed values, then MSE will be small.
@@ -154,12 +154,58 @@ Briefly, **variance** is how much your model estimates jump around depending on 
 You want to get variance as low as possible; if you reach a variance of 0, that means your model is totally robust to changes in the randomly sampled data it's trained on.
 
 **Bias** refers to how far off your predictions are from the underlying truth.
-You also want bias to be as low as possible; if you have a bias of 0, that means your model
+You also want bias to be as low as possible; if you have a bias of 0, that means your model accurately captures the real-life phenomenon that creates the data.
 
-![bias variance target image]()
 
-![Scatterplot of data with a pronounced U-shaped curve. There is a linear trend line that cuts straight through the data without capturing the curve.](media/underfit.png) ![The same data, this time with a very squiggly trend line that goes up and down with the random variability in the data.](media/overfit.png) ![The same data, this time shown with a quadratic curve that captures the pattern in the data well without chasing noise.](media/goodfit.png)
+For example, imagine you had collected measurements of body mass index (BMI) and depressive symptoms from a sample of adolescents (see [Bohon & Welch, 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8225589/)).
+Let's pretend that the true relationship between these variables in real life is perfectly quadratic (U-shaped), where medium BMI is associated with low depressive symptoms and BMI that is either low or high is associated with higher depressive symptoms --- it's certainly more complicated than that in reality, but let's assume it's that simple for now.
 
+One way to model the relationship between these variables would be a plain linear relationship, as depicted in the scatterplot below.
+There are only two parameters to estimate for a linear model like this: intercept and slope.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+Looking for a review of what linear regression models are and how they work?
+Check out [this tutorial on linear regression](https://education.arcus.chop.edu/ordinary_linear_regression/).
+
+</div>
+
+If you ran this study over and over, collecting data from new participants each time and always fitting a linear model, the exact parameter estimates for the model would change a little study to study (one time the slope might be .15, another time .21, then .17, etc.). That's the **variance**.
+But there's also the fact that your model will always be systematically off because a linear model isn't a good approximation of the true relationship in the data; you'll always underestimate depressive symptoms at the very low and very high BMIs.
+That's the **bias**.
+
+![Scatterplot of data with a pronounced U-shaped curve. The y-axis is labeled "Depressive Symptoms" and the x-axis is labeled "BMI"; no scales are provided for either axis. There is a linear trend line that cuts straight through the data without capturing the curve, underestimating depressive symptoms at the low and high extremes of BMI.](media/underfit.png)
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+This example is inspired by a real study ([Bohon & Welch, 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8225589/)), but the plots here are generated from **fake data** and may not accurately depict the relationship the authors found between BMI and depression.
+
+</div>
+
+A better model for these data would be more complex; it would allow a curve in the trend line, which would require estimating more parameters.
+In general, as you increase the complexity of your model, you can lower the **bias**; in other words, you can get closer to the truth.
+
+However, there's a point of diminishing returns.
+If you make your model too complex and flexible, it will start to model random noise in your data, and this increases the **variance**.
+In general, as models get more complex, variance increases.
+
+Here is the BMI and depression data again, this time with a model that is much too complex --- if you estimated that model on a different sample, you could get wildly different results.
+
+![The same scatterplot, this time with a very squiggly trend line that goes up and down with the random variability in the data.](media/overfit.png)
+
+So that's the tradeoff: If your model is not flexible enough, you'll have high bias. But if it's too flexible, you'll have high variance.
+
+A model that is not flexible enough is said to be **underfit**, and a model that's too flexible is **overfit**.
+
+The goal of any machine learning analysis is to find a model that strikes the right balance between bias and variance, that's just the right level of complexity for the problem.
+
+![The same data, this time shown with a quadratic curve that captures the pattern in the data well without chasing noise.](media/goodfit.png)
+
+Unlike this toy example, in a real analysis we never know what the true underlying relationship is, and that makes it very hard to know if you're under- or overfitting.
+There are a number of practical techniques you can use to try to hit the right balance, though, especially [cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)).
+Most of the machine learning tools you'll encounter are designed with the bias-variance tradeoff in mind.
 
 <details>
 
@@ -191,8 +237,8 @@ df <- data.frame(x=x,
 library(ggplot2)
 
 base_plot <- ggplot(df, aes(x=x, y=y)) +
-  geom_point() +
-  labs(x="BMI Z-scores", y="Depressive Symptoms") +
+  geom_point(alpha = .7) +
+  labs(x="BMI", y="Depressive Symptoms") +
   scale_x_continuous(breaks = NULL) +
   scale_y_continuous(breaks = NULL) +
   theme_classic()
@@ -214,6 +260,9 @@ base_plot +
 </details>
 
 More flexible models will fit the training data better, but at some point they'll start to become too specifically tuned to the training data.
+
+
+![bias variance target image]()
 
 ![](https://r4ds.github.io/bookclub-islr/images/fig2_12.jpg)
 
