@@ -57,12 +57,42 @@ If relevant, you can include recommendations for somewhere else to start if the 
 
 ## Machine learning and its uses
 
+### What exactly is machine learning?
+
+Machine learning is a general term used to describe a range of different techniques to find and use patterns in data, especially large and messy data.
+
+**Machine learning vs. statsitical modeling**
+
+
+
+[](https://www.nature.com/articles/nmeth.4642)
+
+**Machine learning vs. artificial intelligence**
+
+Artifical intelligence (AI) is a broader category that includes things like machine learning, but also other tools like computer vision and neural networks.
+AI is any computer system that seeks to mimic (or out perform) human capabilities.
+Machine learning is one example of this --- extracting patterns and making predictions from data is a lot of what human cognition is all about --- but not all AI can be described as machine learning.
+
+[](https://ai.engineering.columbia.edu/ai-vs-machine-learning/)
+
+**Supervised vs. unsupervised machine learning**
+
+
+Within machine learning, there are two basic kinds of models: **supervised** and **unsupervised**.
+
+Supervised models are focused on prediction; there are input variables and a specific output variable that the model attempts to predict.
+For example, a model that uses data from electronic health records to predict which patients will need to be seen again within a month after discharge would be a supervised model.
+Unsupervised models, on the other hand, don't have a true outcome.
+Instead, they focus on identifying patterns and sturcture with the data.
+A model identifying clusters within cancer cell lines would be an unsupervised model.
+
 ### Potential applications in biomedical science
 
 - [predict which tests a patient entering the emergency department might need](https://healthitanalytics.com/news/machine-learning-model-helped-streamline-22-of-pediatric-ed-visits) so they can be ordered automatically and care delivered more quickly
 - [more accurately estimate severity of osteoarthritis from knee X-ray images](https://www.nature.com/articles/s41591-020-01192-7), reducing unexplained racial disparities in pain that occur when images are graded by human physicians
 - [assess the feasibility of allocating Medicare funds based on predicted mortality](http://ziadobermeyer.com/wp-content/uploads/2019/09/eolspend.pdf), addressing the question of whether Medicare spending during what turns out to be the last year of life is wasteful from a policy perspective
 - [automatic extraction of things like symptoms and history from unstructured notes](https://arxiv.org/pdf/2107.02975.pdf)
+- [guide clinicians performing radiofrequency ablation](https://pubmed.ncbi.nlm.nih.gov/30939953/)
 
 
 ### Quiz: Machine learning and its uses
@@ -91,21 +121,171 @@ Which of the following would be examples of machine learning? Select all that ap
 
 ### Quiz: Machine learning models
 
+## The bias-variance tradeoff
+
+The bias-variance tradeoff is a central issue in machine learning.
+It refers to the fact that although of course you can only work with the data you have, what you actually want is for your model to be useful "in the real world".
+In other words, when you think about how good a model is, you don't just mean that you want it to fit the data in front of you --- you want it to work on new data as well.
+
+That means that the best model is not necessarily the one that fits your training data the best.
+Instead, the best model is one that captures as much of the systemtic variability in your data as possible without getting so closely tuned to your training data that it starts to model noise.
+
+You can measure how well a model fits in a number of ways, but one very common method is the **Mean Squared Error (MSE)**; it captures how close your predictions are to the observed data.
+When the predictions are very close to the actual observed values, then MSE will be small.
+If some of the predictions are substantially off, then MSE gets larger.
+If all of your predictions exactly matched up with the observed values, you would have an MSE of 0.
+
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
+For those of you who find equations helpful for your understanding, here's the definition of Mean Squared Error:
+
+$ MSE = \frac{1}{n}\sum_{i=1}^n(y_i-\hat{f}(x_i))^2 $
+
+If equations don't help you, then feel free to skip over this!
+You don't need to understand the equation for MSE to learn this material.
+Just keep in mind that larger MSE means more/larger discrepencies between predictions and observations.
+
+</div>
+
+The problem of the bias-variance tradeoff arises because
+
+Briefly, **variance** is how much your model estimates jump around depending on which data you happen to train them on.
+You want to get variance as low as possible; if you reach a variance of 0, that means your model is totally robust to changes in the randomly sampled data it's trained on.
+
+**Bias** refers to how far off your predictions are from the underlying truth.
+You also want bias to be as low as possible; if you have a bias of 0, that means your model
+
+![bias variance target image]()
+
+![Scatterplot of data with a pronounced U-shaped curve. There is a linear trend line that cuts straight through the data without capturing the curve.](media/underfit.png) ![The same data, this time with a very squiggly trend line that goes up and down with the random variability in the data.](media/overfit.png) ![The same data, this time shown with a quadratic curve that captures the pattern in the data well without chasing noise.](media/goodfit.png)
+
+
+<details>
+
+<summary> Want to see the R code that generated those plots? </summary>
+
+```r
+# generate fake quadratic trend data
+n <- 100
+set.seed(8675309)
+
+# x is randomly sampled from a normal distribution
+x <- rnorm(n=n, mean = 0, sd = 1)
+# y is x squared, plus random noise
+y <- x^2 + rnorm(n=n, mean = 0, sd = 2)
+
+# trend lines
+linear <- predict(lm(y ~ x))
+quadratic <- predict(lm(y ~ poly(x, 2, raw = TRUE)))
+nthpoly <- predict(lm(y ~ poly(x, n-2, raw = TRUE)))
+
+# put it into a data frame for plotting
+df <- data.frame(x=x,
+                 y=y,
+                 l = linear,
+                 q = quadratic,
+                 n = nthpoly)
+
+# plots
+library(ggplot2)
+
+base_plot <- ggplot(df, aes(x=x, y=y)) +
+  geom_point() +
+  labs(x="BMI Z-scores", y="Depressive Symptoms") +
+  scale_x_continuous(breaks = NULL) +
+  scale_y_continuous(breaks = NULL) +
+  theme_classic()
+
+# underfit
+base_plot +
+  geom_line(aes(y=l))
+
+# overfit
+base_plot +
+  geom_line(aes(y=n))
+
+# goodfit
+base_plot +
+  geom_line(aes(y=q))
+
+```
+
+</details>
+
+More flexible models will fit the training data better, but at some point they'll start to become too specifically tuned to the training data.
+
+![](https://r4ds.github.io/bookclub-islr/images/fig2_12.jpg)
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+As in many fields, machine learning involves a lot of technical language, some of which is unclear, redundant, or downright confusing.
+For example:
+
+**Outcome** variables are also called **response**, or **dependent** variables.
+
+**Input** variables are also called **predictors**, **features**, **independent variables**, or even just **variables**.
+
+If you find yourself stumbling on vocabulary as you read about machine learning, know you're not alone!
+
+</div>
+
+## A word of caution about big data
+
+Big data is often also messy data, and that can make it tricky to work with statistically.
+Two of the biggest problems are low-quality data, and non-random sampling.
+
+![](https://imgs.xkcd.com/comics/machine_learning.png)
+
+### Data quality
+
+[Garbage in, garbage out](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out) is such a common saying in mathematics and computer science that it's often simply abreviated GIGO.
+The idea is that if your inputs are bad, no analysis in the world will be able to produce valuable output from them.
+
+Data quality is of particular concern in machine learning because  very large datasets can sometimes make it harder to spot problems with data quality.
+If you have ten variables, you might notice that one of them looks like it was miscoded just by glancing at the data file, but what if you have hundreds of variables?
+And millions of observations?
+
+To make matters even worse, the models themselves are sometimes complex enough that even the people running the analysis might not understand exactly how the inputs and outputs are related --- that makes it harder to catch data quality problems by noticing confusing results.
+
+**So what do you do?**
+
+Don't skimp on exploratory data analysis.
+Check that distributions look like what you would expect, examine outliers, understand your missing data.
+If there's grouping structure in your data, run all of your exploratory analyses both within and across groups.
+If anything seems off, pursue it until you understand.
+
+Also, crucially, if you're using an existing dataset, be sure to read any accompanying documentation!
+There may be known quality issues in the data, and you can save yourself a lot of headaches by learning as much as you can **about** the data before you try to learn anything **from** the data.
+
+### Non-independent data
+
+For example, if you're working with genomic data, you
+[this tweet](https://twitter.com/jmschreiber91/status/1625192857920487424):
+
+> ...because genomic data is not i.i.d., you CANNOT just do cross-validation. You must do grouped cross-validation, accounting for as many covariates as possible. Then, you must critically inspect your results.
+
+Note: "i.i.d." stands for "independently and identically distributed".
+It means your observations are independent of each other, and they all come from the same distribution.
+
 ## Big data does not mean good data: Bias and inequality
 
 Although there are unfortunately many examples of explicit bias in data intentionally used to maintain inequalities (e.g. [the Home Owners Loan Corporation assessments during the New Deal era](https://dsl.richmond.edu/panorama/redlining/#loc=4/41.212/-109.995&text=intro)), there are also many cases where biased algorithms are actually well-intentioned attempts to solve difficult problems.
-Machine learning models have been used to try to bring efficiency and fairness to a range of tricky societal problems including [](), [how to effectively deploy police](), and [assist judges in predicting recidivism](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing).
-In each case, the people designing and using the models (presumably) did not intend biased results, but
-Why does this happen?
+Machine learning models have been used to try to bring efficiency and fairness to a range of tricky societal problems including [distributing COVID-19 relief funding](https://www.statnews.com/2020/08/07/racial-bias-in-government-covid19-hospital-aid-formula/), [how to effectively deploy police](), and [assist judges in predicting recidivism](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing).
 
-[racial disparities in the distribution of COVID-19 reflief funding](https://www.statnews.com/2020/08/07/racial-bias-in-government-covid19-hospital-aid-formula/)
 
-<div class = "learnmore">
+<div class = "learn-more">
 To learn more about one particularly salient example of this problem, read ["Dissecting racial bias in an algorithm used to manage the health of populations"](https://www.science.org/doi/full/10.1126/science.aax2342). From the abstract:
 
 > The U.S. health care system uses commercial algorithms to guide health decisions. Obermeyer et al. find evidence of racial bias in one widely used algorithm, such that Black patients assigned the same level of risk by the algorithm are sicker than White patients (see the Perspective by Benjamin). The authors estimated that this racial bias reduces the number of Black patients identified for extra care by more than half.
 
 </div>
+
+In each case, the people designing and using the models (presumably) did not intend biased results.
+Why does this happen?
+
+[racial disparities in the distribution of COVID-19 reflief funding](https://www.statnews.com/2020/08/07/racial-bias-in-government-covid19-hospital-aid-formula/)
 
 Cathy O'Neil's best selling book [Weapons of Math Destruction](https://www.penguinrandomhouse.com/books/241363/weapons-of-math-destruction-by-cathy-oneil/9780553418835/) or her [TED Talk, "The era of blind faith in big data must end"](https://www.ted.com/talks/cathy_o_neil_the_era_of_blind_faith_in_big_data_must_end).
 
