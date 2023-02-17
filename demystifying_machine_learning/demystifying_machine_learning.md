@@ -127,8 +127,7 @@ Briefly, **variance** is how much your model estimates jump around depending on 
 You want to get variance as low as possible; if you reach a variance of 0, that means your model is totally robust to changes in the randomly sampled data it's trained on.
 
 **Bias** refers to how far off your predictions are from the underlying truth.
-You also want bias to be as low as possible; if you have a bias of 0, that means your model accurately captures the real-life phenomenon that creates the data.
-
+You also want bias to be as low as possible; if you have a bias of 0, that means your model perfectly captures the real-life phenomenon that creates the data.
 
 For example, imagine you had collected measurements of body mass index (BMI) and depressive symptoms from a sample of adolescents (see [Bohon & Welch, 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8225589/)).
 Let's pretend that the true relationship between these variables in real life is perfectly quadratic (U-shaped), where medium BMI is associated with low depressive symptoms and BMI that is either low or high is associated with higher depressive symptoms --- it's certainly more complicated than that in reality, but let's assume it's that simple for now.
@@ -231,11 +230,6 @@ base_plot +
 ```
 
 </details>
-
-More flexible models will fit the training data better, but at some point they'll start to become too specifically tuned to the training data.
-
-
-![bias variance target image]()
 
 ![](https://r4ds.github.io/bookclub-islr/images/fig2_12.jpg)
 
