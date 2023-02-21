@@ -143,8 +143,8 @@ You want to get variance as low as possible; if you reach a variance of 0, that 
 **Bias** refers to how far off your predictions are from the underlying truth.
 You also want bias to be as low as possible; if you have a bias of 0, that means your model perfectly captures the real-life phenomenon that creates the data.
 
-For example, imagine you had collected measurements of body mass index (BMI) and depressive symptoms from a sample of adolescents (see [Bohon & Welch, 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8225589/)).
-Let's pretend that the true relationship between these variables in real life is perfectly quadratic (U-shaped), where medium BMI is associated with low depressive symptoms and BMI that is either low or high is associated with higher depressive symptoms --- it's certainly more complicated than that in reality, but let's assume it's that simple for now.
+For example, imagine you had collected measurements of blood pressure and cognitive performance from a sample of patients (these are made up data).
+Let's pretend that the true relationship between these variables in real life is perfectly quadratic (U-shaped), where medium blood pressure is associated with the best cognitive performance and blood pressure that is either too low or too high is associated with lower cognitive performance.
 
 One way to model the relationship between these variables would be a plain linear relationship, as depicted in the scatterplot below.
 There are only two parameters to estimate for a linear model like this: intercept and slope.
@@ -157,18 +157,11 @@ Check out [this tutorial on linear regression](https://education.arcus.chop.edu/
 
 </div>
 
-If you ran this study over and over, collecting data from new participants each time and always fitting a linear model, the exact parameter estimates for the model would change a little study to study (one time the slope might be .15, another time .21, then .17, etc.). That's the **variance**.
-But there's also the fact that your model will always be systematically off because a linear model isn't a good approximation of the true relationship in the data; you'll always underestimate depressive symptoms at the very low and very high BMIs.
+If you ran this study over and over, collecting data from new participants each time and always fitting a linear model, the exact parameter estimates for the model would change a little study to study (one time the slope might be -0.15, another time -0.21, then -0.17, etc.). That's the **variance**.
+But there's also the fact that your model will always be systematically off because a linear model isn't a good approximation of the true relationship in the data; you'll always overestimate cognitive performance at very low and very high blood pressures.
 That's the **bias**.
 
-![Scatterplot of data with a pronounced U-shaped curve. The y-axis is labeled "Depressive Symptoms" and the x-axis is labeled "BMI"; no scales are provided for either axis. There is a linear trend line that cuts straight through the data without capturing the curve, underestimating depressive symptoms at the low and high extremes of BMI.](media/underfit.png)
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-This example is inspired by a real study ([Bohon & Welch, 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8225589/)), but the plots here are generated from **fake data** and may not accurately depict the relationship the authors found between BMI and depression.
-
-</div>
+![Scatterplot of data with a pronounced upside down U-shaped curve. The y-axis is labeled "Cognitive Performance" and the x-axis is labeled "Blood Pressure"; no scales are provided for either axis. There is a linear trend line that cuts straight through the data without capturing the curve, overestimating cognitive performance at the low and high extremes of blood pressure.](media/underfit.png)
 
 A better model for these data would be more complex; it would allow a curve in the trend line, which would require estimating more parameters.
 In general, as you increase the complexity of your model, you can lower the **bias**; in other words, you can get closer to the truth.
@@ -177,7 +170,7 @@ However, there's a point of diminishing returns.
 If you make your model too complex and flexible, it will start to model random noise in your data, and this increases the **variance**.
 In general, as models get more complex, variance increases.
 
-Here is the BMI and depression data again, this time with a model that is much too complex --- if you estimated that model on a different sample, you could get wildly different results.
+Here are the blood pressure and cognitive performance data again, this time with a model that is much too complex --- if you estimated that model on a different sample, you could get wildly different results.
 
 ![The same scatterplot, this time with a very squiggly trend line that goes up and down with the random variability in the data.](media/overfit.png)
 
@@ -206,7 +199,7 @@ set.seed(8675309)
 # x is randomly sampled from a normal distribution
 x <- rnorm(n=n, mean = 0, sd = 1)
 # y is x squared, plus random noise
-y <- x^2 + rnorm(n=n, mean = 0, sd = 2)
+y <- -1*x^2 + rnorm(n=n, mean = 0, sd = 2)
 
 # trend lines
 linear <- predict(lm(y ~ x))
@@ -225,7 +218,7 @@ library(ggplot2)
 
 base_plot <- ggplot(df, aes(x=x, y=y)) +
   geom_point(alpha = .7) +
-  labs(x="BMI", y="Depressive Symptoms") +
+  labs(x="Blood Pressure", y="Cognitive Performance") +
   scale_x_continuous(breaks = NULL) +
   scale_y_continuous(breaks = NULL) +
   theme_classic()

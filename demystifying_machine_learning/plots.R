@@ -2,12 +2,12 @@
 
 # generate fake quadratic trend data
 n <- 100
-set.seed(8675309)
+set.seed(1234)
 
 # x is randomly sampled from a normal distribution
 x <- rnorm(n=n, mean = 0, sd = 1)
 # y is x squared, plus random noise
-y <- x^2 + rnorm(n=n, mean = 0, sd = 2)
+y <- -1*x^2 + rnorm(n=n, mean = 0, sd = 1)
 
 # trend lines
 linear <- predict(lm(y ~ x))
@@ -26,7 +26,7 @@ library(ggplot2)
 
 base_plot <- ggplot(df, aes(x=x, y=y)) + 
   geom_point(alpha = .7) + 
-  labs(x="BMI", y="Depressive Symptoms") + 
+  labs(x="Blood Pressure", y="Cognitive Performance") + 
   scale_x_continuous(breaks = NULL) + 
   scale_y_continuous(breaks = NULL) + 
   theme_classic()
