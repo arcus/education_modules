@@ -55,28 +55,49 @@ If relevant, you can include recommendations for somewhere else to start if the 
 
 </div>
 
-## Machine learning and its uses
-
-### What exactly is machine learning?
+## What exactly is machine learning?
 
 Machine learning is a general term used to describe a range of different techniques to find and use patterns in data, especially large and messy data.
 
-**Machine learning vs. statsitical modeling**
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+For a fun and detailed look at machine learning, check out [Google's comic about AI and machine learning tools](https://cloud.google.com/products/ai/ml-comic-1).
+
+![A flying robot, a cat, and a human software engineer discussing three signs saying "Supervised Learning", "Unsupervised Learning", and "Reinforcement Learning". The robot says, "These categories don’t account for ALL of machine learning, but they cover a lot of ground." The engineer says, "So self-playing arcade games are cool and all —— but I want to hear more about practical applications. What can this stuff be used for in the real world?"](https://cloud.google.com/static/products/ai/ml-comic-1/assets/panel_71_2x.png)
+
+</div>
+
+### Machine learning vs. statistics
+
+Machine learning is often based on classic statistical models (especially regression), but machine learning differs from more classic statistical tests in a few important ways:
+
+- Statistical tests are (usually) **computationally tractable**, meaning given enough time and knowledge of matrix algebra you could theoretically work out the results with a pencil and paper. In contrast, machine learning relies on tools like maximum likelihood estimation to "brute force" solutions by **iteratively fitting solutions** and checking them to identify the best one.
+- Statistical tests are generally designed for **inference** --- you measure relationships in your sample in order to infer something about the relationships in a larger population. Machine learning models are designed for **prediction** and **generalization** --- you build a model on your sample with the intention of predicting outcomes in new data and/or generalizing patterns to new data.
+- Most statistical tests are intended for relatively **small datasets** (no more than a dozen or so variables, and usually no more than hundreds or thousands of observations). It's possible to run many classic statistical tests on large datasets, but that's not the use they were designed for. Machine learning algorithms, on the other hand, were built for **large and messy data**. When you have a lot of variables to analyze and a lot of observations, machine learning may provide solutions that are quicker, more robust, and actually easier to interpret than more traditional statistical tests.
+
+If you read the list above and thought "I'm still not sure I understand how to tell machine learning from other kinds of statistics", you're not alone; it's a distinction with a lot of grey area.
+As the authors in this [article in Nature Methods](https://www.nature.com/articles/nmeth.4642) note, the boundary between statistics and machine learning is not always clear:
+
+>Classical statistics and ML vary in computational tractability as the number of variables per subject increases. Classical statistical modeling was designed for data with a few dozen input variables and sample sizes that would be considered small to moderate today. In this scenario, the model fills in the unobserved aspects of the system. However, as the numbers of input variables and possible associations among them increase, the model that captures these relationships becomes more complex. Consequently, statistical inferences become less precise and the boundary between statistical and ML approaches becomes hazier.
+
+In other words, an analysis that might be considered regular statistics on one dataset might look more like machine learning if applied to larger, more complex data.
 
 
+### Machine learning vs. artificial intelligence
 
-[](https://www.nature.com/articles/nmeth.4642)
-
-**Machine learning vs. artificial intelligence**
-
-Artifical intelligence (AI) is a broader category that includes things like machine learning, but also other tools like computer vision and neural networks.
+Artificial intelligence (AI) is a broader category that includes things like machine learning, but also other tools like computer vision and neural networks.
 AI is any computer system that seeks to mimic (or out perform) human capabilities.
 Machine learning is one example of this --- extracting patterns and making predictions from data is a lot of what human cognition is all about --- but not all AI can be described as machine learning.
 
-[](https://ai.engineering.columbia.edu/ai-vs-machine-learning/)
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-**Supervised vs. unsupervised machine learning**
+To read more on this topic, check out this [blog post on the distinction between AI and machine learning](https://ai.engineering.columbia.edu/ai-vs-machine-learning/).
 
+</div>
+
+### Supervised vs. unsupervised machine learning
 
 Within machine learning, there are two basic kinds of models: **supervised** and **unsupervised**.
 
@@ -86,19 +107,6 @@ Unsupervised models, on the other hand, don't have a true outcome.
 Instead, they focus on identifying patterns and structure with the data.
 A model identifying clusters within cancer cell lines would be an unsupervised model.
 
-<div class = "care">
-<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
-
-As in many fields, machine learning involves a lot of technical language, some of which is unclear, redundant, or downright confusing.
-For example:
-
-**Outcome** variables are also called **response**, or **dependent** variables.
-
-**Input** variables are also called **predictors**, **features**, **independent variables**, or even just **variables**.
-
-If you find yourself stumbling on vocabulary as you read about machine learning, know you're not alone!
-
-</div>
 
 ### Potential applications in biomedical science
 
@@ -114,7 +122,7 @@ If you find yourself stumbling on vocabulary as you read about machine learning,
 Which of the following would be examples of machine learning? Select all that apply.
 
 [[X]] Using ultrasound images, automatically flag potentially high-risk patient files for closer inspection by a clinician
-[[ ]] Estimate the difference
+[[ ]] Estimate the difference in average ER visits per year for patients with and without health insurance
 [[X]] Based on a large sample of electronic health records, build a model to give the probability that a given patient will be readmitted within a week of hospital discharge
 [[ ]]
 ****
@@ -124,6 +132,22 @@ Which of the following would be examples of machine learning? Select all that ap
 
 
 ## Different questions need different kinds of models
+
+
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+As in many fields, machine learning involves a lot of technical language, some of which is unclear, redundant, or downright confusing.
+For example:
+
+**Outcome** variables are also called **response**, or **dependent** variables.
+
+**Input** variables are also called **predictors**, **features**, **independent variables**, or even just **variables**.
+
+If you find yourself stumbling on vocabulary as you read about machine learning, know you're not alone!
+
+</div>
 
 ### Prediction
 
@@ -278,18 +302,29 @@ For example, if you're working with genomic data, you
 Note: "i.i.d." stands for "independently and identically distributed".
 It means your observations are independent of each other, and they all come from the same distribution.
 
+### Another kind of bias
+
+We've talked at length about bias in terms of **mathematical bias** in the [bias-variance tradeoff](#the-bias-variance-tradeoff), but there's another kind of bias that you need to consider in machine learning:
+
+Many of the large datasets that might be analyzed with machine learning reflect the unfair and immoral inequalities inherent in our society; models trained on data with that kind of bias will reproduce that bias in their predictions and suggestions.
+That means that it's very easy to unintentionally create machine learning systems that enforce racist/sexist/ableist reasoning, and that may have terrible consequences if applied in the real world.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To learn more about one particularly salient example of this problem, read ["Dissecting racial bias in an algorithm used to manage the health of populations"](https://www.science.org/doi/full/10.1126/science.aax2342). From the abstract:
+
+> The U.S. health care system uses commercial algorithms to guide health decisions. Obermeyer et al. find evidence of racial bias in one widely used algorithm, such that Black patients assigned the same level of risk by the algorithm are sicker than White patients (see the Perspective by Benjamin). The authors estimated that this racial bias reduces the number of Black patients identified for extra care by more than half.
+
+</div>
+
 ## Big data does not mean good data: Bias and inequality
 
 Although there are unfortunately many examples of explicit bias in data intentionally used to maintain inequalities (e.g. [the Home Owners Loan Corporation assessments during the New Deal era](https://dsl.richmond.edu/panorama/redlining/#loc=4/41.212/-109.995&text=intro)), there are also many cases where biased algorithms are actually well-intentioned attempts to solve difficult problems.
 Machine learning models have been used to try to bring efficiency and fairness to a range of tricky societal problems including [distributing COVID-19 relief funding](https://www.statnews.com/2020/08/07/racial-bias-in-government-covid19-hospital-aid-formula/), [how to effectively deploy police](), and [assist judges in predicting recidivism](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing).
 
 
-<div class = "learn-more">
-To learn more about one particularly salient example of this problem, read ["Dissecting racial bias in an algorithm used to manage the health of populations"](https://www.science.org/doi/full/10.1126/science.aax2342). From the abstract:
 
-> The U.S. health care system uses commercial algorithms to guide health decisions. Obermeyer et al. find evidence of racial bias in one widely used algorithm, such that Black patients assigned the same level of risk by the algorithm are sicker than White patients (see the Perspective by Benjamin). The authors estimated that this racial bias reduces the number of Black patients identified for extra care by more than half.
-
-</div>
 
 In each case, the people designing and using the models (presumably) did not intend biased results.
 Why does this happen?
@@ -326,182 +361,6 @@ Tidy Modeling with R https://www.tmwr.org/
 Introduction to Applied Machine Learning (online course) https://dionysus.psych.wisc.edu/iaml/
 
 https://www.deeplearning.ai/ Several world-class courses on machine learning topics ranging from intro to very advanced, all free.
-
-## Including highlight boxes
-
-Include special notes with different formatting. The style "important" is for important points and key ideas. For example:
-
-<div class = "important">
-Tip: It's generally much easier to make any necessary changes to the dataframe, such as mutating variables, before sending it to the plotting command.
-</div>
-
-The style "care" is for content related to compassion, self-care, and motivation. For example:
-
-<div class = "care">
-This is a topic with a tremendous amount of jargon, which can make resources you may find online hard to understand for folks new to the field. When that happens it's easy to feel like there's something wrong with you if you don't get it, but that's not the case! Those kinds of gatekeeping explanations are a failure on the part of the writer, not the learner.
-</div>
-
-
-The style "help" is for educational first aid --- "help I'm lost!" suggestions. For example:
-
-<div class = "help">
-Feeling overwhelmed? It takes a long time to learn git, so don't be disheartened if it doesn't click initially. Just focus on stage, commit, and push. Ignore the rest for now, until you've had a chance to practice just the stage-commit-push process several times.
-</div>
-
-The style "warning" alerts users to potential pitfalls. For example:
-
-<div class = "warning">
-A common mistake when using `filter` is to write = when you mean ==. Remember that = is for argument assignment, and == is for testing equality in conditions. If you get them mixed up, your code won't run!
-</div>
-
-The style "learnmore" alerts users resources for further learning, especially links to a more in-depth discussion of an issue that might be touched on only briefly in the module.
-
-<div class = "learnmore">
-To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf)
-</div>
-
-The style "options" is for an aside to let learners know there's another possible approach. For example:
-
-<div class = "options">
-You could also skip setting up an OSF account completely and just use github to publish and share your research products, but many people prefer to have OSF links available.
-</div>
-or
-<div class = "options">
-To do this in R instead of python, see this other module.
-</div>
-
-There's an additional style of highlight, "answer", that is used in [quizzes](#quiz).
-
-## Including math
-
-I want to include a math statement here: $ 1 + \beta = 2 $
-
-## Including code
-
-Next comes some code. This code won't do anything (it's not interactive).
-
-```r
-# You only need to install it once
-install.packages("ggplot2")
-
-# You'll need to load the library anew for each R session
-library("ggplot2")
-```
-You don't have to specify the programming language, but you can, and it should help you get appropriate syntax highlighting.
-
-```python
-print("This is python code")
-```
-
-It is possible to include interactive code, too! See [the Rextester template for LiaScript](https://github.com/LiaTemplates/Rextester).
-
-## Quiz: Quizzes
-
-Quizzes are just more markdown text, so if you want it to show up on its own page, put a new header before it. Otherwise you can include quiz questions at the end of a section, or even interspersed with the rest of your content.
-
-Quizzes should connect directly to your learning objectives. Each quiz question should connect to one learning objective, and every learning objective should have at least one quiz question associated with it somewhere in the module.
-
-Quizzes should always be navigable from the sidebar, meaning they should be labeled with a level 2 or 3 header. If there is only one quiz in the module, it should be labelled as "Quiz". If there is more than one each header should be structured as "Quiz: label" where "label" is a short (ideally 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
-
-Here is the first question. It's multiple choice.
-
-[(X)] This answer is right
-[( )] This is wrong
-[( )] Also wrong
-[[?]] Hint: Provide a hint here if you like. Hints are marked with the ?
-[[?]] Hint: You can include as many hints as you want.
-
-You can have questions with multiple correct answers. Select all of the following correct choices:
-
-[[ ]] Not this one
-[[X]] This is one of the correct ones
-[[X]] Here's another correct one
-[[ ]] This one is wrong, though
-[[?]] Hint: Remember to select ALL of the correct choices.
-
-True or False: This statement is NOT true. ;)
-
-[( )] TRUE
-[(X)] FALSE
-
-Short answer/text response. Note that, without any additional script, to get it marked "correct" the learner has to enter it exactly as you do.
-
-[[right answer]]
-[[?]] Hint: The answer is "right answer"
-***
-<div class = "answer">
-This is extra text that will show up after the learner clicks to have the correct answer revealed. It can be as long as you like, and allows any markdown formatting (you can embed pictures or videos, links, etc.).
-
-Use `<div class = "answer">` to mark these sections with special styling, so that they're visually distinct from the rest of the quiz. The style for `"answer"` is defined in the css file.
-
-For this context to show up automatically when the learner answers the question correctly or clicks to have the right answer revealed, it needs to be surrounded by `***` (at least three, but you can use more if you want a more visually distinct horizontal marker in your md file).
-</div>
-***
-
-We can allow some flexibility in what we accept as correct answers for text by adding a little script after the answer, though. For the following, either "right answer" or "correct answer" (not case sensitive) will be accepted:
-
-[[right answer]]
-<script>
-  let input = "@input".trim().toLowerCase();
-  input == "right answer" || input == "correct answer";
-</script>
-***
-<div class = "answer">
-For this question, either "right answer" or "correct answer" (not case sensitive) counts as correct.
-</div>
-***
-
-This question accepts any of several items from a list of possible correct answers. It is not case sensitive (that's the little `i` at the end of the regex).
-
-[[this text will never show up if they type a right answer and click "Check", only if they click the checkmark button to reveal the answer]]
-[[?]] Hint: The answers are like "item1", "item2", etc.
-<script>
-  let input = "@input".trim();
-  /item1|item2|item3|item4/i.test(input);
-</script>
-***
-<div class = "answer">
-With flexible answers like this, it's definitely a good idea to include a follow-up to help the learner put their answer in context.
-
-For example, if the question was "Name one or more colors" with acceptable answers including red, orange, yellow, green, blue, and purple, and they wrote "red, green, and the center of a black hole" that would be marked as correct because it contains at least one string from the acceptable list. Similarly, "hammered metal" would be marked as correct because it contains the string "red" ([you can prevent this if you want](https://www.w3schools.com/jsref/jsref_regexp_begin.asp)). On the other hand "teal, scarlet, indigo" would be marked wrong.
-
-Reiterate what the correct answer or answers should be, and try to anticipate likely wrong answers so you can explain why they're not correct.
-</div>
-***
-
-There are also questions that allow you to select from a drop down, but I don't know why that would be preferable over regular multiple choice. [Read more about quiz syntax here.](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#quizzes)
-
-Note that you can use any markdown formatting you want in quizzes, including bold, links, math, etc.
-
-Surveys (ungraded questions)
----
-
-You can ask questions with no graded answer as well. LiaScript calls these [surveys](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md#111).
-
-Here's an ungraded question with a text box three lines long:
-
-[[___ ___ ___]]
-
-Here's one that's just one line long:
-
-[[___]]
-
-Here's a multiple choice with no correct answer. What is your favorite Beatles album?
-
-[(rev)] Revolver
-[(wa)] The While Album
-[(ar)] Abbey Road
-[(sgtp)] Sgt. Pepper's Lonely Hearts Club Band
-
-Here's a survey multiple choice that lets you select more than one response. Which Beatles albums do you love super hard?
-
-[[rev]] Revolver
-[[wa]] The While Album
-[[ar]] Abbey Road
-[[sgtp]] Sgt. Pepper's Lonely Hearts Club Band
-
-Hints and follow-up explanations don't work for survey questions.
-
 
 ## Additional Resources
 
