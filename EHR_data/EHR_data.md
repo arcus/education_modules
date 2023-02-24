@@ -76,7 +76,10 @@ https://education.arcus.chop.edu/cartesian-results/
 
 ## Data quality
 
+### Informative presence bias
+
 One source of bias in EHR is **informative presence bias** (also called "informed presence bias") --- the fact that there are systematic differences in the health information recorded as a result of the reason for the appointment.
+
 Data collected at routine, scheduled appointments ("non-informative" visits) will be systematically different in a number of ways from data collected at appointments that occur in response to a health problem ("informative" visits).
 This is compounded by the fact that the amount and type of appointments available in a patient's EHR will depend in part on their overall health.
 Sicker patients are more likely to have more information recorded in their EHR than healthier patients.
@@ -89,7 +92,8 @@ people who seek care because they're feeling unwell may have higher temperatures
 These systematic differences in measurements depending on the nature of the appointment can have far-reaching and sometimes subtle effects on the results of any analysis of EHR, especially longitudinal analyses where some patients may have more measurements recorded than others based on their overall health.
 One way to protect against this type of bias in your analyses is to check the degree of informative presence bias in your variables of interest by checking how much measurements differ when recorded at routine versus patient-initiated appointments.
 
-<div class="learnmore">
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
 Learn more about informative presence bias in electronic health records, including how to measure and correct for it, by reading [this recent article](https://academic.oup.com/jamia/article/29/7/1191/6570639).
 
@@ -98,6 +102,49 @@ Learn more about informative presence bias in electronic health records, includi
 Note that some times you will see the recommendation to enter a patient's total number of visits as a proxy for their overall health in an attempt to correct for informative presence bias.
 This may be effective in some situations, but there are a number of serious drawbacks to that approach as well.
 See discussion of this technique [in this article](https://pubmed.ncbi.nlm.nih.gov/27852603/), as well as in the article linked in the box above.
+
+### EHR is made for providers, not researchers
+
+Unlike many sources of research data, EHR data is created largely by people who are not thinking at all about research applications -- instead, they are (rightly) thinking about patient care.
+
+When the electronic medical record system is not optimized for a particular patient care scenario, [people entering data are likely to use workarounds](https://doi.org/10.1093/jamia/ocad018) to record and share the information they and their team need to care for the patient, regardless of whether it is inconsistent with how the EHR is theoretically supposed to be organized.
+
+That means that analyzing EHR data -- especially data gathered across different departments, sites, or teams -- requires a very high level of vigilance and constant checking that each field contains the information you think it contains.
+
+For example, consider the `pain` field from this [subset of the MIMIC data](https://physionet.org/content/mimic-iv-ed-demo/2.2/):
+
+| subject_id| sbp| dbp|rhythm              |pain |
+|----------:|---:|---:|:-------------------|:----|
+|   10014729| 115|  70|Sinus Tachycardia   |5    |
+|   10014729| 114|  45|Sinus Tachycardia   |0    |
+|   10014729| 131|  60|Sinus Tachycardia   |0    |
+|   10026255| 132|  88|Atrial Fibrillation |7    |
+|   10026255| 124|  90|Sinus Rhythm        |7    |
+|   10026255| 133| 101|Atrial Fibrillation |8    |
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+The MIMIC data is an excellent resource, especially for those interested in EHR analysis.
+To learn more, check out the [MIMIC website](https://mimic.mit.edu/).
+From their About page:
+
+>MIMIC (Medical Information Mart for Intensive Care) is a large, freely-available database comprising deidentified health-related data from patients who were admitted to the critical care units of the Beth Israel Deaconess Medical Center.
+
+</div>
+
+**From this quick glance at the data, what do you think the `pain` field contains?**
+
+If you guessed patient ratings of pain on a standard [0-10 pain scale](https://pubmed.ncbi.nlm.nih.gov/17166126/), you're mostly right.
+But a closer look at the data reveals that in addition to 0-10 ratings, there are entries like `unable`, `uncooperative`, and `sleeping` that indicate reasons for missing data, and also entries like `critical` and `grimace with palpation` that do convey information about pain but not on the standard scale.
+There are also entries like `0/10` that are obviously intended to fit on the scale but won't be correctly interpreted by analysis software without data cleaning steps first.
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Practice with a questioning attitude: Even when you think you know what should be in a particular field, check your assumptions and follow up on any confusing patterns.
+
+</div>
 
 ## Text data
 
@@ -173,7 +220,7 @@ https://www.nature.com/articles/nrg3208
 
 Recent example using ML and EHR, from DBHi: https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000073
 
-Check out this recent talk by Dr. Ian Campbell on [Harnessing the EHR for Timely Diagnosis and Personalized Management for Children with Rare Genetic Diseases](https://www.youtube.com/watch?v=xZqQL1lCX_A). It includes examples of several EHR analyses such as machine learning, natural language processing, and other techniques. 
+Check out this recent talk by Dr. Ian Campbell on [Harnessing the EHR for Timely Diagnosis and Personalized Management for Children with Rare Genetic Diseases](https://www.youtube.com/watch?v=xZqQL1lCX_A). It includes examples of several EHR analyses such as machine learning, natural language processing, and other techniques.
 
 ## Additional Resources
 
