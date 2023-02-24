@@ -58,15 +58,19 @@ If relevant, you can include recommendations for somewhere else to start if the 
 ## What exactly is machine learning?
 
 Machine learning is a general term used to describe a range of different techniques to find and use patterns in data, especially large and messy data.
+In particular, it refers to algorithms whose performance improves as they are given more data --- that's why it's called "learning".
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
 For a fun and detailed look at machine learning, check out [Google's comic about AI and machine learning tools](https://cloud.google.com/products/ai/ml-comic-1).
+It follows the story of an engineer, Martha, as she learns about machine learning from a cat and a friendly flying robot.
 
 ![A flying robot, a cat, and a human software engineer discussing three signs saying "Supervised Learning", "Unsupervised Learning", and "Reinforcement Learning". The robot says, "These categories don’t account for ALL of machine learning, but they cover a lot of ground." The engineer says, "So self-playing arcade games are cool and all —— but I want to hear more about practical applications. What can this stuff be used for in the real world?"](https://cloud.google.com/static/products/ai/ml-comic-1/assets/panel_71_2x.png)
 
 </div>
+
+We'll start here by talking about how machine learning differs from other closely related fields like statistics and artificial intelligence.
 
 ### Machine learning vs. statistics
 
@@ -76,7 +80,7 @@ Machine learning is often based on classic statistical models (especially regres
 - Statistical tests are generally designed for **inference** --- you measure relationships in your sample in order to infer something about the relationships in a larger population. Machine learning models are designed for **prediction** and **generalization** --- you build a model on your sample with the intention of predicting outcomes in new data and/or generalizing patterns to new data.
 - Most statistical tests are intended for relatively **small datasets** (no more than a dozen or so variables, and usually no more than hundreds or thousands of observations). It's possible to run many classic statistical tests on large datasets, but that's not the use they were designed for. Machine learning algorithms, on the other hand, were built for **large and messy data**. When you have a lot of variables to analyze and a lot of observations, machine learning may provide solutions that are quicker, more robust, and actually easier to interpret than more traditional statistical tests.
 
-If you read the list above and thought "I'm still not sure I understand how to tell machine learning from other kinds of statistics", you're not alone; it's a distinction with a lot of grey area.
+If you read the list above and thought "I'm still not sure I understand how to tell machine learning from other kinds of statistics", don't worry; it's a distinction with a lot of grey area.
 As the authors in this [article in Nature Methods](https://www.nature.com/articles/nmeth.4642) note, the boundary between statistics and machine learning is not always clear:
 
 >Classical statistics and ML vary in computational tractability as the number of variables per subject increases. Classical statistical modeling was designed for data with a few dozen input variables and sample sizes that would be considered small to moderate today. In this scenario, the model fills in the unobserved aspects of the system. However, as the numbers of input variables and possible associations among them increase, the model that captures these relationships becomes more complex. Consequently, statistical inferences become less precise and the boundary between statistical and ML approaches becomes hazier.
@@ -87,7 +91,7 @@ In other words, an analysis that might be considered regular statistics on one d
 ### Machine learning vs. artificial intelligence
 
 Artificial intelligence (AI) is a broader category that includes things like machine learning, but also other tools like computer vision and neural networks.
-AI is any computer system that seeks to mimic (or out perform) human capabilities.
+AI is any computer system that seeks to mimic (or out-perform) human capabilities.
 Machine learning is one example of this --- extracting patterns and making predictions from data is a lot of what human cognition is all about --- but not all AI can be described as machine learning.
 
 <div class = "learn-more">
@@ -103,32 +107,31 @@ Within machine learning, there are two basic kinds of models: **supervised** and
 
 Supervised models are focused on prediction; there are input variables and a specific output variable that the model attempts to predict.
 For example, a model that uses data from electronic health records to predict which patients will need to be seen again within a month after discharge would be a supervised model.
+
 Unsupervised models, on the other hand, don't have a true outcome.
 Instead, they focus on identifying patterns and structure with the data.
 A model identifying clusters within cancer cell lines would be an unsupervised model.
 
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Although supervised and unsupervised machine learning covers a lot of techniques -- especially the more common ones -- there are plenty of machine learning models that fall into neither category.
+Learning the distinction between supervised and unsupervised models provides a helpful heuristic for thinking about the goals of machine learning in general, though.
+
+</div>
 
 ### Potential applications in biomedical science
 
-- [predict which tests a patient entering the emergency department might need](https://healthitanalytics.com/news/machine-learning-model-helped-streamline-22-of-pediatric-ed-visits) so they can be ordered automatically and care delivered more quickly
-- [more accurately estimate severity of osteoarthritis from knee X-ray images](https://www.nature.com/articles/s41591-020-01192-7), reducing unexplained racial disparities in pain that occur when images are graded by human physicians
-- [assess the feasibility of allocating Medicare funds based on predicted mortality](http://ziadobermeyer.com/wp-content/uploads/2019/09/eolspend.pdf), addressing the question of whether Medicare spending during what turns out to be the last year of life is wasteful from a policy perspective
-- [automatic extraction of things like symptoms and history from unstructured notes](https://arxiv.org/pdf/2107.02975.pdf)
-- [guide clinicians performing radiofrequency ablation](https://pubmed.ncbi.nlm.nih.gov/30939953/)
+Because machine learning covers such a wide range of techniques and models, there are many potential applications in biomedical science.
+Here are a handful of relevant examples:
 
+- [Predict which tests a patient entering the emergency department might need](https://healthitanalytics.com/news/machine-learning-model-helped-streamline-22-of-pediatric-ed-visits) so they can be ordered automatically and care delivered more quickly
+- [More accurately estimate severity of osteoarthritis from knee X-ray images](https://www.nature.com/articles/s41591-020-01192-7), reducing unexplained racial disparities in pain that occur when images are graded by human physicians
+- [Assess the feasibility of allocating Medicare funds based on predicted mortality](http://ziadobermeyer.com/wp-content/uploads/2019/09/eolspend.pdf), addressing the question of whether Medicare spending during what turns out to be the last year of life is wasteful from a policy perspective
+- [Automatically extract things like symptoms and history from unstructured notes](https://arxiv.org/pdf/2107.02975.pdf), making complicated EHR (electronic health record) data easier to analyze
+- [Guide clinicians performing radiofrequency ablation](https://pubmed.ncbi.nlm.nih.gov/30939953/)
 
-### Quiz: Machine learning and its uses
-
-Which of the following would be examples of machine learning? Select all that apply.
-
-[[X]] Using ultrasound images, automatically flag potentially high-risk patient files for closer inspection by a clinician
-[[ ]] Estimate the difference in average ER visits per year for patients with and without health insurance
-[[X]] Based on a large sample of electronic health records, build a model to give the probability that a given patient will be readmitted within a week of hospital discharge
-[[ ]]
-****
-<div class = "answer">
-</div>
-****
+Pick one or two of the above examples and click the link to read more about that particular application.
 
 
 ## Different questions need different kinds of models
@@ -157,7 +160,6 @@ If you find yourself stumbling on vocabulary as you read about machine learning,
 
 ### Dimension reduction
 
-### Quiz: Machine learning models
 
 ## The bias-variance tradeoff
 
@@ -286,7 +288,7 @@ To make matters even worse, the models themselves are sometimes complex enough t
 
 Don't skimp on exploratory data analysis.
 Check that distributions look like what you would expect, examine outliers, understand your missing data.
-If there's grouping structure in your data, run all of your exploratory analyses both within and across groups.
+If there is grouping structure in your data, run all of your exploratory analyses both within and across groups.
 If anything seems off, pursue it until you understand.
 
 Also, crucially, if you're using an existing dataset, be sure to read any accompanying documentation!
@@ -333,7 +335,37 @@ Why does this happen?
 
 Cathy O'Neil's best selling book [Weapons of Math Destruction](https://www.penguinrandomhouse.com/books/241363/weapons-of-math-destruction-by-cathy-oneil/9780553418835/) or her [TED Talk, "The era of blind faith in big data must end"](https://www.ted.com/talks/cathy_o_neil_the_era_of_blind_faith_in_big_data_must_end).
 
-### Quiz: Bias and inequality
+
+## Quiz
+
+
+Which of the following would be examples of machine learning? Select all that apply.
+
+[[X]] Using ultrasound images, automatically flag potentially high-risk patient files for closer inspection by a clinician
+[[ ]] Estimate the difference in average number of ER visits per year for patients with and without health insurance
+[[X]] Based on a large sample of electronic health records, build a model to give the probability that a given patient will be readmitted within a week of hospital discharge
+[[X]] Identify meaningful clusters of patients with similar symptoms
+[[ ]] Build a chatbot that will collect patient history information, replacing intake forms and questionnaires patients would otherwise have to complete
+****
+<div class = "answer">
+
+Three of the five examples are machine learning.
+
+Automatically flagging potentially high-risk patients based on ultrasound images is an example of machine learning.
+It would be supervised machine learning, since there is a clear outcome to predict (is the patient high risk?).
+The data analyzed would be images; image analysis is an excellent application of machine learning with a lot of active development (see, for example, this [collection in Nature](https://www.nature.com/collections/gfbjhfjfgg)).
+
+Estimating the difference in average number of ER visits per year for patients with and without health insurance is an example of statistics, but not a machine learning model.
+It is an example of statistical inference -- measure the difference in number of visits per year for each group in your collected data and take the difference, and use that to estimate (infer) the true difference between those two populations of patients.
+
+Building a model to give the probability that a given patient will be readmitted is another example of supervised machine learning, with a clear outcome variable to predict (readmittance).
+
+Identifying meaningful clusters of patients with similar symptoms would be an example of unsupervised machine learning.
+
+Building a chatbot would be artificial intelligence (AI), but not machine learning per se.
+
+</div>
+****
 
 True or False: Big data sets are generally higher quality than smaller data sets
 
@@ -341,6 +373,12 @@ True or False: Big data sets are generally higher quality than smaller data sets
 [(X)] FALSE
 ****
 <div class = "answer">
+
+False.
+Working with large datasets does not mean your data are higher quality --- in fact, problems with data quality can be harder to identify in big data, making them that much more problematic.
+
+Moreover, many sources of big data involve data that are not randomly sampled, making them potentially much more difficult to work with than smaller data without problems of non-independence.
+
 </div>
 ****
 
