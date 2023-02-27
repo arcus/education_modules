@@ -58,19 +58,14 @@ If relevant, you can include recommendations for somewhere else to start if the 
 ## What exactly is machine learning?
 
 Machine learning is a general term used to describe a range of different techniques to find and use patterns in data, especially large and messy data.
-In particular, it refers to algorithms whose performance improves as they are given more data --- that's why it's called "learning".
+In particular, it refers to **algorithms whose performance improves as they are given more data** --- that's why it's called "learning".
 
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+Machine learning is a complex field that shares a lot of overlap with other topics, which can make it difficult to know what machine learning even is, let alone how to do it.
+In fact, the impenetrability of a lot of machine learning analyses is a common source of humor, as in the comic below:
 
-For a fun and detailed look at machine learning, check out [Google's comic about AI and machine learning tools](https://cloud.google.com/products/ai/ml-comic-1).
-It follows the story of an engineer, Martha, as she learns about machine learning from a cat and a friendly flying robot.
+![One stick figure holding a large paddle stands on what looks like a compost pile with Greek letters, numbers, and matrices mixed in. There is a large data funnel on one side and an answers box at the other. A second person approaches and says, "This is your machine learning system?" The first person responds, "Yup! You pour the data into this big pile of linear algebra, then collect answers on the other side." The second asks, "What if the answers are wrong?" The first answers, "Just stir the pile until they start looking right."](https://imgs.xkcd.com/comics/machine_learning.png "[Machine Learning](https://xkcd.com/1838/) comic by xkcd, [used with permission](https://xkcd.com/license.html).")
 
-![A flying robot, a cat, and a human software engineer discussing three signs saying "Supervised Learning", "Unsupervised Learning", and "Reinforcement Learning". The robot says, "These categories don’t account for ALL of machine learning, but they cover a lot of ground." The engineer says, "So self-playing arcade games are cool and all —— but I want to hear more about practical applications. What can this stuff be used for in the real world?"](https://cloud.google.com/static/products/ai/ml-comic-1/assets/panel_71_2x.png)
-
-</div>
-
-We'll start here by talking about how machine learning differs from other closely related fields like statistics and artificial intelligence.
+We'll start here by talking about how machine learning differs from other closely related fields like statistics and artificial intelligence, and then look at some concrete applications in biomedical and health science.
 
 ### Machine learning vs. statistics
 
@@ -101,24 +96,7 @@ To read more on this topic, check out this [blog post on the distinction between
 
 </div>
 
-### Supervised vs. unsupervised machine learning
 
-Within machine learning, there are two basic kinds of models: **supervised** and **unsupervised**.
-
-Supervised models are focused on prediction; there are input variables and a specific output variable that the model attempts to predict.
-For example, a model that uses data from electronic health records to predict which patients will need to be seen again within a month after discharge would be a supervised model.
-
-Unsupervised models, on the other hand, don't have a true outcome.
-Instead, they focus on identifying patterns and structure with the data.
-A model identifying clusters within cancer cell lines would be an unsupervised model.
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-Although supervised and unsupervised machine learning covers a lot of techniques -- especially the more common ones -- there are plenty of machine learning models that fall into neither category.
-Learning the distinction between supervised and unsupervised models provides a helpful heuristic for thinking about the goals of machine learning in general, though.
-
-</div>
 
 ### Potential applications in biomedical science
 
@@ -152,14 +130,75 @@ If you find yourself stumbling on vocabulary as you read about machine learning,
 
 </div>
 
+### Supervised vs. unsupervised machine learning
+
+Within machine learning, there are two basic kinds of models: **supervised** and **unsupervised**.
+
+Supervised models are focused on prediction; there are input variables and a specific output variable that the model attempts to predict.
+For example, a model that uses data from electronic health records to predict which patients will need to be seen again within a month after discharge would be a supervised model.
+
+Unsupervised models, on the other hand, don't have a true outcome.
+Instead, they focus on identifying patterns and structure with the data.
+A model identifying clusters within cancer cell lines would be an unsupervised model.
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Although supervised and unsupervised machine learning cover a lot of techniques -- especially the more common ones used in research -- there are plenty of machine learning models that fall into neither category.
+One important example is [reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning).
+Learning the distinction between supervised and unsupervised models provides a helpful heuristic for thinking about the goals of machine learning in general, though.
+
+</div>
+
 ### Prediction
 
-### Anomoly detection
+For example, consider [this article on medical image analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037245).
+The authors used crowd sourcing to label a huge dataset of blood smear images as either infected with malaria or not, and then used that labeled dataset to train a machine learning algorithm (supervised machine learning) to correctly identify infected cells in new blood smear images.
+
+### Anomaly detection
+
+The goal of anomaly detection is to identify observations that deviate from the expected pattern in the rest of the data, also called [outliers](https://en.wikipedia.org/wiki/Outlier).
+Anomaly detection can be supervised or unsupervised.
+
+In supervised anomaly detection, you train the model on labeled data, where the anomalies you want to be able to detect are labeled.
+Unsupervised anomaly detection identifies outliers from unlabeled data.
+Typically, the model (sometimes called a detector) is trained on a dataset of only "normal" observations and is designed to detect any new observations that deviate from what it learned in the training data.
+
+Because by definition anomalies are much less common than typical observations, creating a training dataset with enough labeled anomalies to train a good supervised model is hard.
+Unsupervised anomaly detection is therefore more often used than supervised anomaly detection.
 
 ### Clustering
 
+The goal of clustering is to **group together observations** that show a similar pattern of response across variables.
+
+For example, if you have a dataset of a variety of risk factors in adolescents, you may want to run a clustering analysis to see what typical profiles emerge (see [Walsh et al., 2020](https://doi.org/10.1016/j.jadohealth.2020.02.012)).
+You might see one group of adolescents who are more likely to report both substance use and early sex, and another group who report insufficient nutrition, and so on.
+
+Two common approaches for clustering analysis are [hierarchical clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering) and [k-means clustering](https://en.wikipedia.org/wiki/K-means_clustering).
+
+
 ### Dimension reduction
 
+The goal of dimension reduction is to **summarize complex data**, so it can be represented with **fewer variables** (fewer dimensions).
+For example, if you have a dataset with 100 variables, you might use dimension reduction to get that down to just 10 variables that still capture nearly all of the information from the original data.
+
+There are two main ways to reduce the number of variables in your data: drop variables that you don't need, or summarize a lot of variables with fewer variables.
+Dropping unnecessary variables is called [feature selection](https://en.wikipedia.org/wiki/Feature_selection), and is built into some machine learning approaches such as [lasso regression](https://en.wikipedia.org/wiki/Lasso_(statistics)).
+There are many approaches for summarizing across multiple variables, but the most common approach is probably Principal Component Analysis (PCA).
+[StatQuest](https://statquest.org/about/) has a great video on Principal Component Analysis:
+
+!?[](https://www.youtube.com/watch?v=FgakZw6K1QQ)
+
+Dimension reduction is sometimes used as an initial step in machine learning, to simplify the data before running it through another kind of analysis.
+For example, you might use PCA to reduce a 100-variable dataset to just a handful of components, and then run a clustering analysis to see how your observations group together on those 10 components.
+This is especially helpful when you have so many variables that your data are computationally difficult to analyze.
+
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+
+Having data that are too complex to analyze is sometimes called the "[curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality)".
+
+</div>
 
 ## The bias-variance tradeoff
 
@@ -271,11 +310,12 @@ base_plot +
 Big data is often also messy data, and that can make it tricky to work with statistically.
 Two of the biggest problems are low-quality data, and non-random sampling.
 
-![](https://imgs.xkcd.com/comics/machine_learning.png)
+![Panel 1: Two people talking, one says "Our field has been struggling with this problem for years" as a third person approaches. Panel 2: Third person, holding up a laptop, says, "Struggle no more! I'm here to solve it with algorithms!" Panel 3: Third person working on laptop while the other two watch. Panel 4: Six months later, third person says "Wow, this problem is really hard." First person says "You don't say."](https://imgs.xkcd.com/comics/here_to_help_2x.png "[Here to Help](https://xkcd.com/1831/) comic by xkcd, [used with permission](https://xkcd.com/license.html).")
+
 
 ### Data quality
 
-[Garbage in, garbage out](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out) is such a common saying in mathematics and computer science that it's often simply abreviated GIGO.
+[Garbage in, garbage out](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out) is such a common saying in mathematics and computer science that it's often simply abbreviated GIGO.
 The idea is that if your inputs are bad, no analysis in the world will be able to produce valuable output from them.
 
 Data quality is of particular concern in machine learning because  very large datasets can sometimes make it harder to spot problems with data quality.
@@ -338,13 +378,12 @@ Cathy O'Neil's best selling book [Weapons of Math Destruction](https://www.pengu
 
 ## Quiz
 
-
 Which of the following would be examples of machine learning? Select all that apply.
 
 [[X]] Using ultrasound images, automatically flag potentially high-risk patient files for closer inspection by a clinician
 [[ ]] Estimate the difference in average number of ER visits per year for patients with and without health insurance
 [[X]] Based on a large sample of electronic health records, build a model to give the probability that a given patient will be readmitted within a week of hospital discharge
-[[X]] Identify meaningful clusters of patients with similar symptoms
+[[X]] Using data from electronic health records, identify meaningful clusters of patients with similar symptoms
 [[ ]] Build a chatbot that will collect patient history information, replacing intake forms and questionnaires patients would otherwise have to complete
 ****
 <div class = "answer">
@@ -367,7 +406,7 @@ Building a chatbot would be artificial intelligence (AI), but not machine learni
 </div>
 ****
 
-True or False: Big data sets are generally higher quality than smaller data sets
+True or False: Big data sets are generally higher quality than smaller data sets.
 
 [( )] TRUE
 [(X)] FALSE
@@ -377,7 +416,7 @@ True or False: Big data sets are generally higher quality than smaller data sets
 False.
 Working with large datasets does not mean your data are higher quality --- in fact, problems with data quality can be harder to identify in big data, making them that much more problematic.
 
-Moreover, many sources of big data involve data that are not randomly sampled, making them potentially much more difficult to work with than smaller data without problems of non-independence.
+Moreover, many sources of big data involve data that are not randomly sampled, making them potentially much more difficult to work with statistically than smaller data without problems of non-independence.
 
 </div>
 ****
@@ -400,6 +439,12 @@ Introduction to Applied Machine Learning (online course) https://dionysus.psych.
 
 https://www.deeplearning.ai/ Several world-class courses on machine learning topics ranging from intro to very advanced, all free.
 
+For a fun and detailed look at machine learning, check out [Google's comic about AI and machine learning tools](https://cloud.google.com/products/ai/ml-comic-1).
+It follows the story of an engineer, Martha, as she learns about machine learning from a cat and a friendly flying robot.
+
+![A flying robot, a cat, and a human software engineer discussing three signs saying "Supervised Learning", "Unsupervised Learning", and "Reinforcement Learning". The robot says, "These categories don’t account for ALL of machine learning, but they cover a lot of ground." The engineer says, "So self-playing arcade games are cool and all —— but I want to hear more about practical applications. What can this stuff be used for in the real world?"](https://cloud.google.com/static/products/ai/ml-comic-1/assets/panel_71_2x.png)
+
+
 ## Additional Resources
 
 The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
@@ -418,6 +463,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Module+Template%22)!
-
-Remember to change the redcap link so that the module name is correct for this module!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Demystifying+Machine+Learning%22)!
