@@ -97,125 +97,9 @@ To read more on this topic, check out this [blog post on the distinction between
 </div>
 
 
-
-### Potential applications in biomedical science
-
-Because machine learning covers such a wide range of techniques and models, there are many potential applications in biomedical science.
-Here are a handful of relevant examples:
-
-- [Predict which tests a patient entering the emergency department might need](https://healthitanalytics.com/news/machine-learning-model-helped-streamline-22-of-pediatric-ed-visits) so they can be ordered automatically and care delivered more quickly
-- [More accurately estimate severity of osteoarthritis from knee X-ray images](https://www.nature.com/articles/s41591-020-01192-7), reducing unexplained racial disparities in pain that occur when images are graded by human physicians
-- [Assess the feasibility of allocating Medicare funds based on predicted mortality](http://ziadobermeyer.com/wp-content/uploads/2019/09/eolspend.pdf), addressing the question of whether Medicare spending during what turns out to be the last year of life is wasteful from a policy perspective
-- [Automatically extract things like symptoms and history from unstructured notes](https://arxiv.org/pdf/2107.02975.pdf), making complicated EHR (electronic health record) data easier to analyze
-- [Guide clinicians performing radiofrequency ablation](https://pubmed.ncbi.nlm.nih.gov/30939953/)
-
-Pick one or two of the above examples and click the link to read more about that particular application.
-
-
-## Different questions need different kinds of models
-
-
-
-<div class = "care">
-<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
-
-As in many fields, machine learning involves a lot of technical language, some of which is unclear, redundant, or downright confusing.
-For example:
-
-**Outcome** variables are also called **response**, or **dependent** variables.
-
-**Input** variables are also called **predictors**, **features**, **independent variables**, or even just **variables**.
-
-If you find yourself stumbling on vocabulary as you read about machine learning, know you're not alone!
-
-</div>
-
-### Supervised vs. unsupervised machine learning
-
-Within machine learning, there are two basic kinds of models: **supervised** and **unsupervised**.
-
-Supervised models are focused on prediction; there are input variables and a specific output variable that the model attempts to predict.
-For example, a model that uses data from electronic health records to predict which patients will need to be seen again within a month after discharge would be a supervised model.
-
-Unsupervised models, on the other hand, don't have a true outcome.
-Instead, they focus on identifying patterns and structure with the data.
-A model identifying clusters within cancer cell lines would be an unsupervised model.
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-Although supervised and unsupervised machine learning cover a lot of techniques -- especially the more common ones used in research -- there are plenty of machine learning models that fall into neither category.
-One important example is [reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning).
-Learning the distinction between supervised and unsupervised models provides a helpful heuristic for thinking about the goals of machine learning in general, though.
-
-</div>
-
-### Prediction
-
-The goal of prediction models is to predict an outcome as accurately as possible.
-Prediction models are usually supervised, meaning the training data includes the outcome of interest.
-
-For example, consider [this article on medical image analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037245).
-The authors used crowd sourcing to label a huge dataset of blood smear images as either infected with malaria or not, and then used that labeled dataset to train a machine learning algorithm to correctly identify infected cells in new blood smear images.
-The outcome in this case is whether or not the cell is infected with malaria, and the input data are the images.
-
-### Anomaly detection
-
-The goal of anomaly detection is to identify observations that deviate from the expected pattern in the rest of the data, also called [outliers](https://en.wikipedia.org/wiki/Outlier).
-Anomaly detection can be supervised or unsupervised.
-
-In supervised anomaly detection, you train the model on labeled data, where all of the observations are marked as either normal or anomalous.
-Unsupervised anomaly detection identifies outliers from unlabeled data.
-Typically, the model (sometimes called a detector) is trained on a dataset of only normal observations and is designed to detect any new observations that deviate from what it learned in the training data.
-
-Because by definition anomalies are much less common than typical observations, creating a training dataset with enough labeled anomalies to train a good supervised model is hard.
-Unsupervised anomaly detection is therefore more often used than supervised anomaly detection.
-
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
-
-For an example of anomaly detection in action, check out this article on [outlier detection for patient monitoring and alerting](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3567774/).
-The authors created a machine learning algorithm that was trained on the electronic health records of post-cardiac surgical patients with the intention of flagging any anomalies in patient-management decisions.
-By detecting decisions that deviate from typical patient care, the system can alert providers, potentially reducing medical errors.
-
-</div>
-
-### Clustering
-
-The goal of clustering is to **group together observations** that show a similar pattern of response across variables.
-Clustering models are unsupervised, because there is no outcome variable present in the training data.
-
-For example, if you have a dataset of a variety of risk factors in adolescents, you may want to run a clustering analysis to see what typical profiles emerge (see [Walsh et al., 2020](https://doi.org/10.1016/j.jadohealth.2020.02.012)).
-You might see one group of adolescents who are more likely to report both substance use and early sex, and another group who report insufficient nutrition, and so on.
-
-Two common approaches for clustering analysis are [hierarchical clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering) and [k-means clustering](https://en.wikipedia.org/wiki/K-means_clustering).
-
-
-### Dimension reduction
-
-The goal of dimension reduction is to **summarize complex data**, so it can be represented with **fewer variables** (fewer dimensions).
-For example, if you have a dataset with 100 variables, you might use dimension reduction to get that down to just 10 variables that still capture nearly all of the information from the original data.
-Like clustering, dimension reduction models are unsupervised.
-
-There are two main ways to reduce the number of variables in your data: drop variables that you don't need, or summarize a lot of variables with fewer variables.
-Dropping unnecessary variables is called [feature selection](https://en.wikipedia.org/wiki/Feature_selection), and is built into some machine learning approaches such as [lasso regression](https://en.wikipedia.org/wiki/Lasso_(statistics)).
-There are many approaches for summarizing across multiple variables, but the most common approach is probably Principal Component Analysis (PCA).
-[StatQuest](https://statquest.org/about/) has a great video on Principal Component Analysis:
-
-!?[](https://www.youtube.com/watch?v=FgakZw6K1QQ)
-
-Dimension reduction is sometimes used as an initial step in machine learning, to simplify the data before running it through another kind of analysis.
-For example, you might use PCA to reduce a 100-variable dataset to just a handful of components, and then run a clustering analysis to see how your observations group together on those 10 components.
-This is especially helpful when you have so many variables that your data are computationally difficult to analyze.
-
-<div class = "cool-fact">
-<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
-
-Having data that are too complex to analyze is sometimes called the "[curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality)".
-
-</div>
-
 ## The bias-variance tradeoff
+
+No matter what kind of model you're using, there is a central problem that always comes up in machine learning: The bias-variance tradeoff.
 
 Briefly, **variance** is how much your model estimates jump around depending on which data you happen to train them on.
 You want to get variance as low as possible; if you reach a variance of 0, that means your model is totally robust to changes in the randomly sampled data it's trained on.
@@ -319,6 +203,113 @@ base_plot +
 
 </details>
 
+
+
+### Training vs. test
+
+Although the line between machine learning and other similar techniques can be blurry, one thing that is very typical of machine learning analyses is splitting your data into (at least) two separate pieces: one to **train** your model and another to **test** it.
+
+
+## Different questions need different kinds of models
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+As in many fields, machine learning involves a lot of technical language, some of which is unclear, redundant, or downright confusing.
+For example:
+
+**Outcome** variables are also called **response**, or **dependent** variables.
+
+**Input** variables are also called **predictors**, **features**, **independent variables**, or even just **variables**.
+
+If you find yourself stumbling on vocabulary as you read about machine learning, know you're not alone!
+
+</div>
+
+### Supervised vs. unsupervised machine learning
+
+Within machine learning, many techniques can be described as one of two basic kinds of models: **supervised** and **unsupervised**.
+
+Supervised models are focused on prediction; there are input variables and a specific output variable that the model attempts to predict.
+For example, a model that uses data from electronic health records to predict which patients will need to be seen again within a month after discharge would be a supervised model.
+
+Unsupervised models, on the other hand, don't have a true outcome.
+Instead, they focus on identifying patterns and structure with the data.
+A model identifying clusters within cancer cell lines would be an unsupervised model.
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Although supervised and unsupervised machine learning cover a lot of techniques -- especially the more common ones used in research -- there are plenty of machine learning models that fall into neither category.
+One important example is [reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning).
+Learning the distinction between supervised and unsupervised models provides a helpful heuristic for thinking about the goals of machine learning in general, though.
+
+</div>
+
+### Prediction
+
+The goal of prediction models is to predict an outcome as accurately as possible.
+Prediction models are usually supervised, meaning the training data includes the outcome of interest.
+
+For example, consider [this article on medical image analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037245).
+The authors used crowd sourcing to label a huge dataset of blood smear images as either infected with malaria or not, and then used that labeled dataset to train a machine learning algorithm to correctly identify infected cells in new blood smear images.
+The outcome in this case is whether or not the cell is infected with malaria, and the input data are the images.
+
+### Anomaly detection
+
+The goal of anomaly detection is to identify observations that deviate from the expected pattern in the rest of the data, also called [outliers](https://en.wikipedia.org/wiki/Outlier).
+Anomaly detection can be supervised or unsupervised.
+
+In supervised anomaly detection, you train the model on labeled data, where all of the observations are marked as either normal or anomalous.
+Unsupervised anomaly detection identifies outliers from unlabeled data.
+Typically, the model (sometimes called a detector) is trained on a dataset of only normal observations and is designed to detect any new observations that deviate from what it learned in the training data.
+
+Because by definition anomalies are much less common than typical observations, creating a training dataset with enough labeled anomalies to train a good supervised model is hard.
+Unsupervised anomaly detection is therefore more often used than supervised anomaly detection.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+For an example of anomaly detection in action, check out this article on [outlier detection for patient monitoring and alerting](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3567774/).
+The authors created a machine learning algorithm that was trained on the electronic health records of post-cardiac surgical patients with the intention of flagging any anomalies in patient-management decisions.
+By detecting decisions that deviate from typical patient care, the system can alert providers, potentially reducing medical errors.
+
+</div>
+
+### Clustering
+
+The goal of clustering is to **group together observations** that show a similar pattern of response across variables.
+Clustering models are unsupervised, because there is no outcome variable present in the training data.
+
+For example, if you have a dataset of a variety of risk factors in adolescents, you may want to run a clustering analysis to see what typical profiles emerge (see [Walsh et al., 2020](https://doi.org/10.1016/j.jadohealth.2020.02.012)).
+You might see one group of adolescents who are more likely to report both substance use and early sex, and another group who report insufficient nutrition, and so on.
+
+Two common approaches for clustering analysis are [hierarchical clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering) and [k-means clustering](https://en.wikipedia.org/wiki/K-means_clustering).
+
+
+### Dimension reduction
+
+The goal of dimension reduction is to **summarize complex data**, so it can be represented with **fewer variables** (fewer dimensions).
+For example, if you have a dataset with 100 variables, you might use dimension reduction to get that down to just 10 variables that still capture nearly all of the information from the original data.
+Like clustering, dimension reduction models are unsupervised.
+
+There are two main ways to reduce the number of variables in your data: drop variables that you don't need, or summarize a lot of variables with fewer variables.
+Dropping unnecessary variables is called [feature selection](https://en.wikipedia.org/wiki/Feature_selection), and is built into some machine learning approaches such as [lasso regression](https://en.wikipedia.org/wiki/Lasso_(statistics)).
+There are many approaches for summarizing across multiple variables, but the most common approach is probably Principal Component Analysis (PCA).
+[StatQuest](https://statquest.org/about/) has a great video on Principal Component Analysis:
+
+!?[](https://www.youtube.com/watch?v=FgakZw6K1QQ)
+
+Dimension reduction is sometimes used as an initial step in machine learning, to simplify the data before running it through another kind of analysis.
+For example, you might use PCA to reduce a 100-variable dataset to just a handful of components, and then run a clustering analysis to see how your observations group together on those 10 components.
+This is especially helpful when you have so many variables that your data are computationally difficult to analyze.
+
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+
+Having data that are too complex to analyze is sometimes called the "[curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality)".
+
+</div>
 
 ## A word of caution about big data
 
@@ -462,7 +453,15 @@ It follows the story of an engineer, Martha, as she learns about machine learnin
 
 ## Additional Resources
 
-The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
+This module includes links to many examples of machine learning applications, but there are so many more!
+Because machine learning covers such a wide range of techniques and models, there are many potential applications in biomedical science.
+If you want to read about more examples of machine learning in biomedical research, here's a list to get you started:
+
+- [Predict which tests a patient entering the emergency department might need](https://healthitanalytics.com/news/machine-learning-model-helped-streamline-22-of-pediatric-ed-visits) so they can be ordered automatically and care delivered more quickly
+- [More accurately estimate severity of osteoarthritis from knee X-ray images](https://www.nature.com/articles/s41591-020-01192-7), reducing unexplained racial disparities in pain that occur when images are graded by human physicians
+- [Assess the feasibility of allocating Medicare funds based on predicted mortality](http://ziadobermeyer.com/wp-content/uploads/2019/09/eolspend.pdf), addressing the question of whether Medicare spending during what turns out to be the last year of life is wasteful from a policy perspective
+- [Automatically extract things like symptoms and history from unstructured notes](https://arxiv.org/pdf/2107.02975.pdf), making complicated EHR (electronic health record) data easier to analyze
+- [Guide clinicians performing radiofrequency ablation](https://pubmed.ncbi.nlm.nih.gov/30939953/)
 
 ## Feedback
 
