@@ -152,24 +152,38 @@ Learning the distinction between supervised and unsupervised models provides a h
 
 ### Prediction
 
+The goal of prediction models is to predict an outcome as accurately as possible.
+Prediction models are usually supervised, meaning the training data includes the outcome of interest.
+
 For example, consider [this article on medical image analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037245).
-The authors used crowd sourcing to label a huge dataset of blood smear images as either infected with malaria or not, and then used that labeled dataset to train a machine learning algorithm (supervised machine learning) to correctly identify infected cells in new blood smear images.
+The authors used crowd sourcing to label a huge dataset of blood smear images as either infected with malaria or not, and then used that labeled dataset to train a machine learning algorithm to correctly identify infected cells in new blood smear images.
+The outcome in this case is whether or not the cell is infected with malaria, and the input data are the images.
 
 ### Anomaly detection
 
 The goal of anomaly detection is to identify observations that deviate from the expected pattern in the rest of the data, also called [outliers](https://en.wikipedia.org/wiki/Outlier).
 Anomaly detection can be supervised or unsupervised.
 
-In supervised anomaly detection, you train the model on labeled data, where the anomalies you want to be able to detect are labeled.
+In supervised anomaly detection, you train the model on labeled data, where all of the observations are marked as either normal or anomalous.
 Unsupervised anomaly detection identifies outliers from unlabeled data.
-Typically, the model (sometimes called a detector) is trained on a dataset of only "normal" observations and is designed to detect any new observations that deviate from what it learned in the training data.
+Typically, the model (sometimes called a detector) is trained on a dataset of only normal observations and is designed to detect any new observations that deviate from what it learned in the training data.
 
 Because by definition anomalies are much less common than typical observations, creating a training dataset with enough labeled anomalies to train a good supervised model is hard.
 Unsupervised anomaly detection is therefore more often used than supervised anomaly detection.
 
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+For an example of anomaly detection in action, check out this article on [outlier detection for patient monitoring and alerting](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3567774/).
+The authors created a machine learning algorithm that was trained on the electronic health records of post-cardiac surgical patients with the intention of flagging any anomalies in patient-management decisions.
+By detecting decisions that deviate from typical patient care, the system can alert providers, potentially reducing medical errors.
+
+</div>
+
 ### Clustering
 
 The goal of clustering is to **group together observations** that show a similar pattern of response across variables.
+Clustering models are unsupervised, because there is no outcome variable present in the training data.
 
 For example, if you have a dataset of a variety of risk factors in adolescents, you may want to run a clustering analysis to see what typical profiles emerge (see [Walsh et al., 2020](https://doi.org/10.1016/j.jadohealth.2020.02.012)).
 You might see one group of adolescents who are more likely to report both substance use and early sex, and another group who report insufficient nutrition, and so on.
@@ -181,6 +195,7 @@ Two common approaches for clustering analysis are [hierarchical clustering](http
 
 The goal of dimension reduction is to **summarize complex data**, so it can be represented with **fewer variables** (fewer dimensions).
 For example, if you have a dataset with 100 variables, you might use dimension reduction to get that down to just 10 variables that still capture nearly all of the information from the original data.
+Like clustering, dimension reduction models are unsupervised.
 
 There are two main ways to reduce the number of variables in your data: drop variables that you don't need, or summarize a lot of variables with fewer variables.
 Dropping unnecessary variables is called [feature selection](https://en.wikipedia.org/wiki/Feature_selection), and is built into some machine learning approaches such as [lasso regression](https://en.wikipedia.org/wiki/Lasso_(statistics)).
