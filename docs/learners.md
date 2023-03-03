@@ -15,4 +15,4 @@ The first wave of learners launched on January 30, 2023. Our next cohort is sche
 
 ## Independent Exploration
 
-We understand that waiting for a cohort and guided curriculum might be too long to wait. You are welcome to explore [these materials](list_of_modules) on your own, but doing so will exclude you from being able to participate in our research study in the future.  The benefits of waiting and participating in our research include receiving a customized curriculum of materials and the peership and support of a community of learners like you.
+We understand that waiting for a cohort and guided curriculum might be too long to wait. You are welcome to explore [these materials](list_of_modules) on your own, but will not get the full experience of the DART Program, including a customized curriculum of materials and the peership and support of a community of learners like you, unless you participate as a research subject.
