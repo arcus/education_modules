@@ -61,27 +61,58 @@ Machine learning is a general term used to describe a range of different techniq
 In particular, it refers to **algorithms whose performance improves as they are given more data** --- that's why it's called "learning".
 
 Machine learning is a complex field that shares a lot of overlap with other topics, which can make it difficult to know what machine learning even is, let alone how to do it.
-In fact, the impenetrability of a lot of machine learning analyses is a common source of humor, as in the comic below:
+
+We'll start here by talking about how machine learning differs from other closely related fields like statistics and artificial intelligence.
 
 ![One stick figure holding a large paddle stands on what looks like a compost pile with Greek letters, numbers, and matrices mixed in. There is a large data funnel on one side and an answers box at the other. A second person approaches and says, "This is your machine learning system?" The first person responds, "Yup! You pour the data into this big pile of linear algebra, then collect answers on the other side." The second asks, "What if the answers are wrong?" The first answers, "Just stir the pile until they start looking right."](https://imgs.xkcd.com/comics/machine_learning.png "[Machine Learning](https://xkcd.com/1838/) comic by xkcd, [used with permission](https://xkcd.com/license.html).")
-
-We'll start here by talking about how machine learning differs from other closely related fields like statistics and artificial intelligence, and then look at some concrete applications in biomedical and health science.
 
 ### Machine learning vs. statistics
 
 Machine learning is often based on classic statistical models (especially regression), but machine learning differs from more classic statistical tests in a few important ways:
 
-- Statistical tests are (usually) **computationally tractable**, meaning given enough time and knowledge of matrix algebra you could theoretically work out the results with a pencil and paper. In contrast, machine learning relies on tools like maximum likelihood estimation to "brute force" solutions by **iteratively fitting solutions** and checking them to identify the best one.
-- Statistical tests are generally designed for **inference** --- you measure relationships in your sample in order to infer something about the relationships in a larger population. Machine learning models are designed for **prediction** and **generalization** --- you build a model on your sample with the intention of predicting outcomes in new data and/or generalizing patterns to new data.
-- Most statistical tests are intended for relatively **small datasets** (no more than a dozen or so variables, and usually no more than hundreds or thousands of observations). It's possible to run many classic statistical tests on large datasets, but that's not the use they were designed for. Machine learning algorithms, on the other hand, were built for **large and messy data**. When you have a lot of variables to analyze and a lot of observations, machine learning may provide solutions that are quicker, more robust, and actually easier to interpret than more traditional statistical tests.
+The way you solve the equation
+---
 
-If you read the list above and thought "I'm still not sure I understand how to tell machine learning from other kinds of statistics", don't worry; it's a distinction with a lot of grey area.
-As the authors in this [article in Nature Methods](https://www.nature.com/articles/nmeth.4642) note, the boundary between statistics and machine learning is not always clear:
+Statistical tests are (usually) **computationally tractable**, meaning given enough time and knowledge of matrix algebra you could theoretically work out the results with a pencil and paper.
+In contrast, machine learning relies on tools like maximum likelihood estimation to "brute force" solutions by **iteratively fitting solutions** and checking them to identify the best one.
+You need a computer to do machine learning, but you don't necessarily need one for statistics.
 
->Classical statistics and ML vary in computational tractability as the number of variables per subject increases. Classical statistical modeling was designed for data with a few dozen input variables and sample sizes that would be considered small to moderate today. In this scenario, the model fills in the unobserved aspects of the system. However, as the numbers of input variables and possible associations among them increase, the model that captures these relationships becomes more complex. Consequently, statistical inferences become less precise and the boundary between statistical and ML approaches becomes hazier.
+The kind of data you apply it to
+---
 
-In other words, an analysis that might be considered regular statistics on one dataset might look more like machine learning if applied to larger, more complex data.
+Most statistical tests are intended for relatively **small datasets** (no more than a dozen or so variables, and usually no more than hundreds or thousands of observations).
+It's possible to run many classic statistical tests on large datasets, but that's not the use they were designed for.
+Machine learning algorithms, on the other hand, were built for **large and messy data**.
+When you have a lot of variables to analyze and a lot of observations, machine learning may provide solutions that are quicker, more robust, and actually easier to interpret than more traditional statistical tests.
 
+Moreover, many machine learning approaches actually won't work if your dataset is too small --- if you don't have enough information in the data, your machine learning algorithm may not be able to converge and you'll get no results at all.
+
+Inference vs. prediction: A subtle distinction
+---
+
+Statistical tests are generally designed for **inference** --- you measure relationships in your sample in order to infer something about the relationships in a larger population.
+Machine learning models are designed for **prediction** and **generalization** --- you build a model on your sample with the intention of predicting outcomes in new data and/or generalizing patterns to new data.
+
+This is a tricky distinction because, in practice, an analyst will often use a statistical model to infer something about the population of interest with the intention of making a prediction.
+
+For example, you might assess the relationship between [measurements taken during a prenatal ultrasound and the eventual weight of babies at birth](https://pubmed.ncbi.nlm.nih.gov/3881966/) because you want to be able to say for a particular patient, "Given the measurements we're seeing for the fetus today, I'd say she's at the 50th percentile for weight right now."
+You can't measure the fetus's weight directly, but you're making a prediction about it based on what you know about the relationship between weight and, for example, sonographic measurements of femur length.
+We frequently make predictions based on the results of inferential statistical tests.
+
+The key difference is that statistical methods start with inference (which you might then logically extend to make a prediction), but machine learning can start directly with prediction.
+Machine learning does not necessarily infer anything about the population.
+For example, we may eventually replace manual ultrasound measurements with a machine learning algorithm that can produce a fetal weight estimate from the images.
+Some machine learning approaches would produce those predictions without actually telling us anything interpretable at all about how information in the ultrasound relates to fetal weight.
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+If you read the section above and thought "I'm still not sure I understand how to tell machine learning from other kinds of statistics", don't worry; it's a distinction with a lot of grey area.
+As the authors in this [article in Nature Methods](https://www.nature.com/articles/nmeth.4642) note, the boundary is not always clear:
+
+>The boundary between statistical inference and ML is subject to debate --- some methods fall squarely into one or the other domain, but many are used in both.
+
+</div>
 
 ### Machine learning vs. artificial intelligence
 
