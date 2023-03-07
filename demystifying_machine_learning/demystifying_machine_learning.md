@@ -117,6 +117,7 @@ As the authors in this [article in Nature Methods](https://www.nature.com/articl
 ### Machine learning vs. artificial intelligence
 
 Artificial intelligence (AI) is a broader category that includes things like machine learning, but also other tools like computer vision and neural networks.
+
 AI is any computer system that seeks to mimic (or out-perform) human capabilities.
 Machine learning is one example of this --- extracting patterns and making predictions from data is a lot of what human cognition is all about --- but not all AI can be described as machine learning.
 
@@ -127,6 +128,11 @@ To read more on this topic, check out this [blog post on the distinction between
 
 </div>
 
+It's common in some publications to see machine learning approaches described as "artificial intelligence" rather than machine learning per se.
+That's fine, and it's technically correct --- all machine learning models are examples of AI.
+
+And some AI systems may include machine learning components in addition to other aspects of AI.
+For example, [driverless cars rely on machine learning algorithms to process their environment and make predictions](https://www.bu.edu/articles/2021/self-taught-self-driving-cars/), but driving a car safely requires other tasks, like route planning, that are still examples of AI without really being machine learning.
 
 ## The bias-variance tradeoff
 
