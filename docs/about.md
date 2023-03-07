@@ -13,7 +13,7 @@ These materials have been created for the purpose of sharing them widely with th
 
 ## Funders
 
-Support for this effort includes NIH funding via an R25 grant mechanism.
+DART is funded by the National Institutes of Health award number 5R25GM141501.
 
 ## Contributors
 
