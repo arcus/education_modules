@@ -66,6 +66,27 @@ We'll start here by talking about how machine learning differs from other closel
 
 ![One stick figure holding a large paddle stands on what looks like a compost pile with Greek letters, numbers, and matrices mixed in. There is a large data funnel on one side and an answers box at the other. A second person approaches and says, "This is your machine learning system?" The first person responds, "Yup! You pour the data into this big pile of linear algebra, then collect answers on the other side." The second asks, "What if the answers are wrong?" The first answers, "Just stir the pile until they start looking right."](https://imgs.xkcd.com/comics/machine_learning.png "[Machine Learning](https://xkcd.com/1838/) comic by xkcd, [used with permission](https://xkcd.com/license.html).")
 
+### Machine learning vs. artificial intelligence
+
+Artificial intelligence (AI) is a broader category that includes things like machine learning, but also other tools like computer vision and neural networks.
+
+AI is any computer system that seeks to mimic (or out-perform) human capabilities.
+Machine learning is one example of this --- extracting patterns and making predictions from data is a lot of what human cognition is all about --- but not all AI can be described as machine learning.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To read more on this topic, check out this [blog post on the distinction between AI and machine learning](https://ai.engineering.columbia.edu/ai-vs-machine-learning/).
+
+</div>
+
+It's common in some publications to see machine learning approaches described as "artificial intelligence" rather than machine learning per se.
+That's fine, and it's technically correct --- all machine learning models are examples of AI.
+
+And some AI systems may include machine learning components in addition to other aspects of AI.
+For example, [driverless cars rely on machine learning algorithms to process their environment and make predictions](https://www.bu.edu/articles/2021/self-taught-self-driving-cars/), but driving a car safely requires other tasks, like route planning, that are still examples of AI without really being machine learning.
+
+
 ### Machine learning vs. statistics
 
 Machine learning is often based on classic statistical models (especially regression), but machine learning differs from more classic statistical tests in a few important ways:
@@ -114,32 +135,21 @@ As the authors in this [article in Nature Methods](https://www.nature.com/articl
 
 </div>
 
-### Machine learning vs. artificial intelligence
-
-Artificial intelligence (AI) is a broader category that includes things like machine learning, but also other tools like computer vision and neural networks.
-
-AI is any computer system that seeks to mimic (or out-perform) human capabilities.
-Machine learning is one example of this --- extracting patterns and making predictions from data is a lot of what human cognition is all about --- but not all AI can be described as machine learning.
-
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
-
-To read more on this topic, check out this [blog post on the distinction between AI and machine learning](https://ai.engineering.columbia.edu/ai-vs-machine-learning/).
-
-</div>
-
-It's common in some publications to see machine learning approaches described as "artificial intelligence" rather than machine learning per se.
-That's fine, and it's technically correct --- all machine learning models are examples of AI.
-
-And some AI systems may include machine learning components in addition to other aspects of AI.
-For example, [driverless cars rely on machine learning algorithms to process their environment and make predictions](https://www.bu.edu/articles/2021/self-taught-self-driving-cars/), but driving a car safely requires other tasks, like route planning, that are still examples of AI without really being machine learning.
-
 ## The bias-variance tradeoff
 
-No matter what kind of model you're using, there is a central problem that always comes up in machine learning: The bias-variance tradeoff.
+The bias-variance tradeoff is a central problem that always comes up in machine learning.
 
 Briefly, **variance** is how much your model estimates jump around depending on which data you happen to train them on.
 You want to get variance as low as possible; if you reach a variance of 0, that means your model is totally robust to changes in the randomly sampled data it's trained on.
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Although the line between machine learning and other similar techniques can be blurry, one thing that is very typical of machine learning analyses is splitting your data into (at least) two separate pieces: one to **train** your model and another to **test** it.
+
+That means you use only part of your data to build your model, and you reserve the rest to test the model's performance on fresh data.
+
+</div>
 
 **Bias** refers to how far off your predictions are from the underlying truth.
 You also want bias to be as low as possible; if you have a bias of 0, that means your model perfectly captures the real-life phenomenon that creates the data.
@@ -239,12 +249,6 @@ base_plot +
 ```
 
 </details>
-
-
-
-### Training vs. test
-
-Although the line between machine learning and other similar techniques can be blurry, one thing that is very typical of machine learning analyses is splitting your data into (at least) two separate pieces: one to **train** your model and another to **test** it.
 
 
 ## Different questions need different kinds of models
