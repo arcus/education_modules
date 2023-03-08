@@ -70,6 +70,7 @@ If you are using a computer running macOS (i.e. an Apple computer) you can use t
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
 
 
