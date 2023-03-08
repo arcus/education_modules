@@ -63,6 +63,7 @@ You will get the most out of this lesson if you follow along with the examples a
 If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
 
@@ -74,6 +75,7 @@ The `learning_bash` folder contains a few different types of files and folders f
 </div>
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
 Please download a fresh copy of these files. If you have downloaded them for a previous module, you have likely moved and changed some of them while working through that module and the examples in this module assume that no changes have already been made to the directory.
 
@@ -120,7 +122,8 @@ To **iterate** an action or command is to run it again and again. A common situa
 A **loop** is a bit of code that allows you to run the same command again and again. The loop gives instructions for how many times to run your code, and if it requires input, what that input should be.  With loops, you get to write your command once and then tell it to run as many times as you want!
 
 
-<div class = "learn-more">
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
 
 There are two kinds of loops: "for loops" and "while loops." In this lesson we will focus on "for loops" which are generally easier to create. "While loops" can be more powerful than for loops in [certain situations](https://betterprogramming.pub/how-to-pick-between-a-while-and-for-loop-14ef217c3776), so once you understand "for loops" they are worth checking out in your preferred programming languages.
 
@@ -157,6 +160,7 @@ Print the square of 4
 ```
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 The code blocks above are written in **pseudocode**. Pseudocode is a description of code that shows humans its structure but isn't actually written in any programming language. Writing out what you want a program to do in pseudocode can be useful for [explaining, planning, and even debugging](https://towardsdatascience.com/pseudocode-101-an-introduction-to-writing-good-pseudocode-1331cb855be7) code!
 
@@ -351,7 +355,8 @@ That said, the Bash language does not make it easy to write conditional statemen
 * how to recognize conditionals in Bash
 * how to make small changes to existing code.
 
-<div class = "important">
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
 If you find that you need to use conditionals a lot in Bash, you will probably settle on a favorite cheat sheet, of which there are many, including [these](https://github.com/RehanSaeed/Bash-Cheat-Sheet#conditional-statements) [two](https://devhints.io/bash#conditionals).
 
@@ -371,7 +376,8 @@ The first statement is false, the second one is true, and the last three can be 
 
 Opinions, questions, and instructions are among the many things that we can say that do not fall into the category of mathematical statements.
 
-<div class = "warning">
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
 **True / False in Bash**
 
@@ -407,6 +413,7 @@ fi
 ```
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 **Bash's `test` utility**
 
@@ -451,6 +458,7 @@ fi
 The statement `[ $a -lt $b ]` tests whether the variable `$a` is less than the variable `$b`. Similarly, `[ $a -gt $b ]` tests whether `$a` is greater than `$b`.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 **Assigning Variables in Bash**
 
@@ -526,6 +534,7 @@ Double brackets are an extension of single square brackets, with more powerful t
 ===================
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 **True and False for other statements**
 
@@ -579,7 +588,8 @@ As you use them more, you will learn more and more ways to combine and mix mathe
 
 </div>
 
-<div class = "help">
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
 **Look up instead of memorizing**
 
