@@ -60,6 +60,8 @@ You will get the most out of this lesson if you follow along with the examples a
 If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
 
 
@@ -71,6 +73,7 @@ The `learning_bash` folder contains a few different types of files and folders f
 </div>
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
 Please download a fresh copy of these files. If you have downloaded them for a previous module, you have likely moved and changed some of them while working through that module and the examples in this module assume that no changes have already been made to the directory.
 
@@ -88,6 +91,7 @@ Download the [`learning_bash` directory](https://github.com/arcus/learning_bash)
 4. [Find out the file path](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#6) (location on your computer) of the new folder `learning_bash-main` and navigate there in your command line interface.
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 **Where is my folder?**
 
@@ -134,7 +138,8 @@ Some common options are to ask for only some of this metadata using flags:
 - `wc -m` returns the number of characters followed by the file's name.
 
 
-<div class = "learn-more">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
 **Words**   
 
@@ -208,7 +213,8 @@ You can change how the lines are ordered using flags. The `-r` flag reverses the
 ```
 sort -r Animals.csv
 ```
-<div class ="learn-more">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
 There are lots of options for the `sort` command. All of the options are visible in the manual which you can see by typing `man sort`. In addition to reversing the order with `-r`, a few particularly useful ones include:
 
@@ -250,7 +256,8 @@ sort Animals.csv >> animals.txt
 
 Again there is no output shown because it was redirected into the file `animals.txt`. Check that `animals.txt` now contains the word count at the top, followed by a sorted copy of the data from `Animals.csv`.
 
-<div class = "learn-more">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
 In the Bash language, right arrows `>` redirect output, and left arrows `<` redirect input. You are unlikely to need to redirect input since most of the time just entering the input you want, like `Animals.csv`, is sufficient. However if you end up writing more complicated pipelines in the future it may be useful to [learn more about redirecting input](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
 
@@ -315,7 +322,10 @@ We could link commands by writing the output of one command to a file, and then 
 The vertical line `|` is called a **pipe**. On American qwerty keyboards symbol `|` is located on the same key as the backslash ` \ ` and can be typed by using the `shift` key with ` \ `.
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 The pipe symbol is located in different places on different keyboards. If you have trouble finding it, try an internet search for "pipe symbol" along with the country or language of your keyboard.
+
 </div>
 
 With smaller files, the benefits of using pipes over making intermediate files are mostly from having fewer commands to type and run. But if you start working with really large datasets, maybe you are working in an "omics" field like genomics or metabolomics, creating and saving intermediate files, as well as writing and reading them, can use significant time and energy.  
@@ -414,7 +424,8 @@ wc -m *.txt | sort -n | head -1
 ```
 The Indian cobra, scientific name _Naja naja_ has the shortest character count of any of the animals listed here.
 
-<div class = "learn-more">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
 **Why is the character count for `Naja naja` 10?**
 
