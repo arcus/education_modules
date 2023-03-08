@@ -66,7 +66,9 @@ If you are using a computer with running iOS (i.e. a Mac) you can use the **Term
 
 We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
 
-The `learning_bash` folder contains a few different types of files for us to experiment with. The ones we will be using in this module are:
+
+The `learning_bash` folder contains a few different types of files and folders for us to experiment with. The ones we will be using in this module are:
+
 * `.txt` files like `black_bear.txt` containing a single line with the scientific name of an animal species.
 * `.dat` files like `blue_whale.dat` containing two lines with data about an animal's length and weight.
 </div>
