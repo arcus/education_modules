@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.1
+version: 1.1.0
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
@@ -66,6 +66,9 @@ If you are using a computer with running iOS (i.e. a Mac) you can use the **Term
 
 We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
 
+The `learning_bash` folder contains a few different types of files for us to experiment with. The ones we will be using in this module are:
+* `.txt` files like `black_bear.txt` containing a single line with the scientific name of an animal species.
+* `.dat` files like `blue_whale.dat` containing two lines with data about an animal's length and weight.
 </div>
 
 <div class = "warning">
@@ -78,8 +81,10 @@ Please download a fresh copy of these files. If you have downloaded them for a p
 
 Download the [`learning_bash` directory](https://github.com/arcus/learning_bash) from GitHub. Once you go to the link:
 
-1. Click on the green **Code** button.
-2. Select **Download ZIP**
+1. Click on the green **Code** button. There are two "Code" buttons! The one directly below `arcus/learning_bash` functions more like a "home" button. One line below is a dropdown menu labeled `main` and to the right of `main` are three buttons: `Go to File`, `Add File`, and `Code`. This is the **Code** button you want.
+
+2. Select **Download ZIP** from the options that appear on clicking the **Code** button.
+
 3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`. Depending on your computer's operating system, you may be able to un-zip the folder by double clicking on it, or may need to right click on it a select "Extract All." This may create an identically named folder inside `learning_bash-main` that contains all of the individual files.
 4. [Find out the file path](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#6) (location on your computer) of the new folder `learning_bash-main` and navigate there in your command line interface.
 
