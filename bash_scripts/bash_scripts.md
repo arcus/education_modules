@@ -82,6 +82,7 @@ The `learning_bash` folder contains a few different types of files and folders f
 </div>
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
 Please download a fresh copy of these files. If you have downloaded them for a previous module, you have likely moved and changed some of them while working through that module and the examples in this module assume that no changes have already been made to the directory.
 
@@ -108,6 +109,7 @@ A **Bash script** is a small program that automates Bash commands and lets you r
 
 <div class = "cool-fact">
 <b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+
 A **scripting language** is a type of programming language that, like Bash or Python, does not need to be compiled in order for your code to run.
 
 Even though "scripting" is not unique to the Bash language, you might sometimes hear the terms "script" and "Bash scripting" and "shell script" used interchangeably.
