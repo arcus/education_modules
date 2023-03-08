@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version: 1.3.2
+version: 1.4.0
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
@@ -381,7 +381,11 @@ Next, we will see learn how to look at the contents of our file to ensure that i
 
 ### Viewing the contents of a file
 
-The easiest way to see the contents of a file is the `cat` function. If you run `cat` followed by a file name, the command line interface will print out the contents of that file line by line.
+There are several different ways to view the contents of a file. You might want to see every line of a short file printed in its entirety, but if your file is 1000 lines long, or has lines containing thousands of characters, you might want to look at particular parts of the file.
+
+`cat`
+---
+The easiest way to see the contents of a short file is the `cat` function. If you run `cat` followed by a file name, the command line interface will print out the entire contents of that file line by line.
 
 Give it a try:
 
@@ -391,6 +395,18 @@ cat my_sentences
 
 <div class = "learn-more">
 The command `cat` is very powerful three-part function that allows a reader to view, combine, or create a new version of a file. In fact `cat` is a shortening of the word "con**cat**enate."
+</div>
+
+`less`
+---
+Put everything that Meredith says omics stuff needs to know about `less` here!
+
+
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
+
+The command `less` is so named because it is a companion to another function for viewing files called `more` that preceded it. Ironically, the `less` command has more capabilities than the `more` command.
+
 </div>
 
 
