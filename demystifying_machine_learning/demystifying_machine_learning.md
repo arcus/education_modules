@@ -412,6 +412,13 @@ For an excellent overview of the problem, watch her TED talk:
 
 !?[Cathy O'Neil's TED Talk, "The era of blind faith in big data must end".](https://www.youtube.com/watch?v=_2u_eHHzRto)
 
+**What should you do about unintended biases when developing your own algorithms?**
+
+As both O'Neil and Obermeyer emphasize, algorithms can be interrogated.
+In addition to assessing how accurate a model is, you can and should look for biases in your results.
+
+For example, if you expect that your model's predictions shouldn't be systematically different for patients on [Medicaid](https://www.hhs.gov/answers/medicare-and-medicaid/who-is-eligible-for-medicaid/index.html) vs. private insurance, then check the output to see if that's the case.
+
 ## Quiz
 
 Which of the following would be examples of machine learning? Select all that apply.
