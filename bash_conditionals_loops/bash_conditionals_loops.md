@@ -62,7 +62,13 @@ You will get the most out of this lesson if you follow along with the examples a
 **Open a bash shell.**
 If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
-We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+It can be scary to interact with files directly from the command line. To ensure that we aren't touching any of the important files on your computer, you will be downloading a small directory to experiment with. 
+
+This way you don't have to worry about accidentally changing something you didn't want to change. You can always download a fresh copy to start over if you want.
+</div>
 
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
