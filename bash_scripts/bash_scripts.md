@@ -85,9 +85,9 @@ We will be using a directory called `learning_bash` that is publicly available o
 
 Navigate in your browser to the [`learning_bash` directory](https://github.com/arcus/learning_bash) on GitHub. Once you follow the link:
 
-1. Click on the green **Code** button. There are two "Code" buttons! The one directly below `arcus/learning_bash` functions more like a "home" button. One line below is a dropdown menu labeled `main` and to the right of `main` are three buttons: `Go to File`, `Add File`, and `Code`. This is the **Code** button you want.
+1. Click on the green **Code** drop-down button towards the right-hand side of the screen. 
 
-2. Select **Download ZIP** from the options that appear on clicking the **Code** button.
+2. Select **Download ZIP**.
 
 3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`.
 4. Place this new folder `learning_bash-main` somewhere you can easily find it. In the examples we will assume that `learning_bash-main` is in the Downloads directory, but you are welcome to move it somewhere else that is convenient for you to navigate to in your command line interface.
