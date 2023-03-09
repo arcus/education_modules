@@ -62,17 +62,7 @@ You will get the most out of this lesson if you follow along with the examples a
 **Open a bash shell.**
 If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
 We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
-
-
-The `learning_bash` folder contains a few different types of files and folders for us to experiment with. The ones we will be using in this module are:
-
-* `.txt` files like `black_bear.txt` containing a single line with the scientific name of an animal species.
-* `.dat` files like `blue_whale.dat` containing two lines with data about an animal's length and weight.
-</div>
 
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
@@ -193,7 +183,16 @@ done
 
 Indentation doesn't impact the code at all, (unlike in some other languages like Python), so indenting the command C is purely to help make it easier for humans to read the code.
 
-Let's try out an example with our files. Make sure you `cd` into the `learning_bash-main` directory that you downloaded in the [lesson preparation section](#lesson-preparation). Try copying this code into your command line interface and see what happens:
+Let's try out an example with our files. Make sure you `cd` into the `learning_bash-main` directory that you downloaded in the [lesson preparation section](#lesson-preparation). 
+
+
+The `learning_bash` folder contains a few different types of files and folders for us to experiment with. The ones we will be using in this module are:
+
+* `.txt` files like `black_bear.txt` containing a single line with the scientific name of an animal species.
+* `.dat` files like `blue_whale.dat` containing two lines with data about an animal's length and weight.
+
+
+Try copying this code into your command line interface and see what happens:
 
 ```
 for file in *.dat

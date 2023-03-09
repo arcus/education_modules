@@ -68,18 +68,9 @@ You will get the most out of this lesson if you follow along with the examples a
 
 If you are using a computer running macOS (i.e. an Apple computer) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
 
-
-The `learning_bash` folder contains a few different types of files and folders for us to experiment with. The ones we will be using in this module are:
-
-* a `.csv` file called `Animals.csv` containing a list of animals and whether they are birds, mammals, fish, reptiles, or insects.
-* `.dat` files like `blue_whale.dat` containing two lines with data about an animal's length and weight.
-* a folder called `scripts` containing three `.sh` files.
-</div>
 
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
@@ -210,6 +201,13 @@ Which of the following statements about scripts are TRUE?
 ***
 
 ## Calling an existing script
+
+
+The `learning_bash` folder contains a few different types of files and folders for us to experiment with. The ones we will be using in this module are:
+
+* a `.csv` file called `Animals.csv` containing a list of animals and whether they are birds, mammals, fish, reptiles, or insects.
+* `.dat` files like `blue_whale.dat` containing two lines with data about an animal's length and weight.
+* a folder called `scripts` containing three `.sh` files.
 
 In this section we will learn how to use the pre-written scripts in the `scripts` folder inside your `learning_bash-main` directory.
 
