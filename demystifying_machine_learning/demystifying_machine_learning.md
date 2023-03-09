@@ -15,10 +15,10 @@ estimated_time: This is rough guess of how long it might take a learner to work 
 
 After completion of this module, learners will be able to:
 
-- list three potential applications of machine learning in biomedical science
-- describe three different statistical problems models can address and how they differ (e.g. prediction, anomoly detection, clustering, dimension reduction)
+- list at least three potential applications of machine learning in biomedical science
 - explain the bias-variance tradeoff
-- describe how biases inherent in the data can affect model outcomes and perpetuate inequalities
+- describe three different statistical problems models can address and how they differ (e.g. prediction, anomaly detection, clustering, dimension reduction)
+- describe some potential dangers of working with big data
 
 @end
 
@@ -137,10 +137,11 @@ As the authors in this [article in Nature Methods](https://www.nature.com/articl
 
 ## The bias-variance tradeoff
 
-The bias-variance tradeoff is a central problem that always comes up in machine learning.
+Machine learning covers a wide range of different analyses and techniques, but there is one idea that is central to pretty much any machine learning analysis: the bias-variance tradeoff.
 
-Briefly, **variance** is how much your model estimates jump around depending on which data you happen to train them on.
-You want to get variance as low as possible; if you were to reach a variance of 0 (this doesn't actually happen), that would mean your model was totally robust to changes in the randomly sampled data it was trained on.
+But first, a quick note about how data are used in machine learning.
+
+### Training data and test data
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -151,8 +152,15 @@ That means you use only part of your data to build your model, and you reserve t
 
 </div>
 
+### What is variance, and what is bias?
+
+Briefly, **variance** is how much your model estimates jump around depending on which data you happen to train them on.
+You want to get variance as low as possible; if you were to reach a variance of 0 (this doesn't actually happen), that would mean your model was totally robust to changes in the randomly sampled data it was trained on.
+
 **Bias** refers to how far off your predictions are from the underlying truth.
-You also want bias to be as low as possible; if you have a bias of 0, that means your model perfectly captures the real-life phenomenon that creates the data.
+You also want bias to be as low as possible; if you have a bias of 0 (again, this doesn't actually happen), that means your model perfectly captures the real-life phenomenon that creates the data.
+
+### An example
 
 For example, imagine you had collected measurements of blood pressure and cognitive performance from a sample of patients (these are made up data).
 Let's pretend that the true relationship between these variables in real life is perfectly quadratic (U-shaped), where medium blood pressure is associated with the best cognitive performance and blood pressure that is either too low or too high is associated with lower cognitive performance.
@@ -271,7 +279,7 @@ If you find yourself stumbling on vocabulary as you read about machine learning,
 
 Within machine learning, many techniques can be described as one of two basic kinds of models: **supervised** and **unsupervised**.
 
-Supervised models are focused on prediction; there are input variables and a specific output variable that the model attempts to predict.
+Supervised models are focused on an outcome; there are input variables and a specific output variable that the model attempts to predict.
 For example, a model that uses data from electronic health records to predict which patients will need to be seen again within a month after discharge would be a supervised model.
 
 Unsupervised models, on the other hand, don't have a true outcome.
@@ -401,9 +409,11 @@ That means that it's very easy to unintentionally create machine learning system
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-To learn more about one particularly salient example of this problem, read ["Dissecting racial bias in an algorithm used to manage the health of populations"](https://www.science.org/doi/full/10.1126/science.aax2342). From the abstract:
+To learn more about one particularly salient example of this problem, read ["Dissecting racial bias in an algorithm used to manage the health of populations"](https://www.science.org/doi/full/10.1126/science.aax2342) by Ziad Obermeyer and colleagues. From the abstract:
 
 > The U.S. health care system uses commercial algorithms to guide health decisions. Obermeyer et al. find evidence of racial bias in one widely used algorithm, such that Black patients assigned the same level of risk by the algorithm are sicker than White patients (see the Perspective by Benjamin). The authors estimated that this racial bias reduces the number of Black patients identified for extra care by more than half.
+
+You can also listen to the first author, [Ziad Obermeyer, talking about this paper at a workshop on algorithmic fairness](https://www.youtube.com/watch?v=u34e9CYIMZs).
 
 </div>
 
@@ -412,7 +422,7 @@ For an excellent overview of the problem, watch her TED talk:
 
 !?[Cathy O'Neil's TED Talk, "The era of blind faith in big data must end".](https://www.youtube.com/watch?v=_2u_eHHzRto)
 
-**What should you do about unintended biases when developing your own algorithms?**
+**What should you do about unintended biases in your own algorithms?**
 
 As both O'Neil and Obermeyer emphasize, algorithms can be interrogated.
 In addition to assessing how accurate a model is, you can and should look for biases in your results.
