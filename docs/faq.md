@@ -69,13 +69,13 @@ You can do these training modules at your leisure, but we do suggest a sequence 
 </details>
 
 <details>
-<summary><strong><strong>Do you anticipate offering another 4-month training program later this year?</strong></summary>
+<summary><strong>Do you anticipate offering another 4-month training program later this year?</strong></summary>
 Yes, we plan another session later in the year, starting in July or August of 2023.
 </details>
 
 ## Curriculum
 
 <details>
-<summary><strong><strong>Will the DART program be useful when using Excel and STATA?</strong></summary>
+<summary><strong>Will the DART program be useful when using Excel and STATA?</strong></summary>
 We have a strong emphasis on free, open source software (this does not include Stata or Excel).  Our course materials don't include instructions on Excel or Stata, but some of the principles we teach may be useful in data cleaning and preparation, regardless of how you do it.  
 </details>
