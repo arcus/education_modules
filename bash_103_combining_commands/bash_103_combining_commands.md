@@ -258,10 +258,10 @@ sort Animals.csv >> animals.txt
 
 Again there is no output shown because it was redirected into the file `animals.txt`. Check that `animals.txt` now contains the word count at the top, followed by a sorted copy of the data from `Animals.csv`.
 
-<div class = "behind-the-scenes">
-<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-In the Bash language, right arrows `>` redirect output, and left arrows `<` redirect input. You are unlikely to need to redirect input since most of the time just entering the input you want, like `Animals.csv`, is sufficient. However if you end up writing more complicated pipelines in the future it may be useful to [learn more about redirecting input](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
+In the Bash language, right arrows `>` redirect output, and left arrows `<` redirect input. We won't cover redirecting output in this module, however, if you end up writing more complicated pipelines in the future it may be useful to [learn more about redirecting input](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
 
 </div>
 

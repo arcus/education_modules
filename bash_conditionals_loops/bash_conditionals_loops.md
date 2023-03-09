@@ -360,12 +360,6 @@ That said, the Bash language does not make it easy to write conditional statemen
 * how to recognize conditionals in Bash
 * how to make small changes to existing code.
 
-<div class = "care">
-<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
-
-If you find that you need to use conditionals a lot in Bash, you will probably settle on a favorite cheat sheet, of which there are many, including [these](https://github.com/RehanSaeed/Bash-Cheat-Sheet#conditional-statements) [two](https://devhints.io/bash#conditionals).
-
-</div>
 
 ### Statements
 
@@ -381,8 +375,8 @@ The first statement is false, the second one is true, and the last three can be 
 
 Opinions, questions, and instructions are among the many things that we can say that do not fall into the category of mathematical statements.
 
-<div class = "care">
-<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
 **True / False in Bash**
 
@@ -655,6 +649,7 @@ For a purely theoretical explanation of how loops work, [this short video](https
 You can also use flow charts to visualize both [loops](https://www.zenflowchart.com/blog/for-loop-flowchart) and [conditionals](https://www.zenflowchart.com/guides/if-else-flowchart).
 
 Software Carpentry has a series of lessons on the [Unix Shell](https://swcarpentry.github.io/shell-novice/), including one specifically on [loops](https://swcarpentry.github.io/shell-novice/05-loop/index.html).
+
 
 
 ## Feedback
