@@ -57,6 +57,11 @@ We place learners in "communities of practice" with other learners and encourage
 As with any study, you can drop out for any reason and there is no harm done – we won't hold it against you, tell your boss, or email your thesis advisor.
 </details>
 
+<details>
+<summary><strong>If I do drop out can I re-enroll at a future time?</strong></summary>
+You can only enroll in the study as a research subject once. You can continue learning on your own at your convenience, since you will retain access to all of the educational materials and the learning pathway you were assigned. You will not, however, be eligible to join another cohort.
+</details>
+
 
 <details>
 <summary>Does "free standing, asynchronous, practically focused" mean that you can do each session at a time of your own choosing or is there a schedule for these sessions?</summary>
