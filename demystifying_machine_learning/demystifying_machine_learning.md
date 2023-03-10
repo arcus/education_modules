@@ -139,22 +139,13 @@ As the authors in this [article in Nature Methods](https://www.nature.com/articl
 
 Machine learning covers a wide range of different analyses and techniques, but there is one idea that is central to pretty much any machine learning analysis: the bias-variance tradeoff.
 
-But first, a quick note about how data are used in machine learning.
+But first, a quick note about how data are used in machine learning:
 
-### Training data and test data
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-Although the line between machine learning and other similar techniques can be blurry, one thing that is very typical of machine learning analyses is splitting your data into (at least) two separate pieces: one to **train** your model and another to **test** it.
-
-That means you use only part of your data to build your model, and you reserve the rest to test the model's performance on fresh data.
-
-</div>
+Because machine learning models "learn", the process of fitting a model to data is called **training**.
 
 ### What is variance, and what is bias?
 
-Briefly, **variance** is how much your model estimates jump around depending on which data you happen to train them on.
+Briefly, **variance** is how much your model fit changes depending on which data you happen to train them on.
 You want to get variance as low as possible; if you were to reach a variance of 0 (this doesn't actually happen), that would mean your model was totally robust to changes in the randomly sampled data it was trained on.
 
 **Bias** refers to how far off your predictions are from the underlying truth.
@@ -162,7 +153,7 @@ You also want bias to be as low as possible; if you have a bias of 0 (again, thi
 
 ### An example
 
-For example, imagine you had collected measurements of blood pressure and cognitive performance from a sample of patients (these are made up data).
+Imagine you had collected measurements of blood pressure and cognitive performance from a sample of patients (these are made up data).
 Let's pretend that the true relationship between these variables in real life is perfectly quadratic (U-shaped), where medium blood pressure is associated with the best cognitive performance and blood pressure that is either too low or too high is associated with lower cognitive performance.
 
 One way to model the relationship between these variables would be a plain linear relationship, as depicted in the scatterplot below.
@@ -183,17 +174,25 @@ That's the **bias**.
 ![Scatterplot of data with a pronounced upside down U-shaped curve. The y-axis is labeled "Cognitive Performance" and the x-axis is labeled "Blood Pressure"; no scales are provided for either axis. There is a linear trend line that cuts straight through the data without capturing the curve, overestimating cognitive performance at the low and high extremes of blood pressure.](media/underfit.png)
 
 A better model for these data would be more complex; it would allow a curve in the trend line, which would require estimating more parameters.
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 In general, as you increase the complexity of your model, you can lower the **bias**; in other words, you can get closer to the truth.
 
 However, there's a point of diminishing returns.
 If you make your model too complex and flexible, it will start to model random noise in your data, and this increases the **variance**.
 In general, as models get more complex, variance increases.
 
+</div>
+
 Here are the blood pressure and cognitive performance data again, this time with a model that is much too complex --- if you estimated that model on a different sample, you could get wildly different results.
 
 ![The same scatterplot, this time with a very squiggly trend line that goes up and down with the random variability in the data.](media/overfit.png)
 
-So that's the tradeoff: If your model is not flexible enough, you'll have high bias. But if it's too flexible, you'll have high variance.
+So that's the tradeoff:
+If your model is not flexible enough, you'll have high bias.
+But if it's too flexible, you'll have high variance.
 
 A model that is not flexible enough is said to be **underfit**, and a model that's too flexible is **overfit**.
 
@@ -202,9 +201,12 @@ In this pretend example, we know the true underlying relationship is quadratic, 
 
 ![The same data, this time shown with a quadratic curve that captures the pattern in the data well without chasing noise.](media/goodfit.png)
 
-Unlike this example, in a real analysis we never know what the true underlying relationship is, and that makes it very hard to know if you're under- or overfitting.
-There are a number of practical techniques you can use to try to hit the right balance, though, especially [cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)).
-Most of the machine learning tools you'll encounter are designed with the bias-variance tradeoff in mind.
+Unlike the example here, in a real analysis we never know what the true underlying relationship is, and that makes it very hard to know if you're under- or overfitting.
+
+**So how can you tell if your model is hitting a good balance between bias and variance?**
+
+As you increase the complexity of your model, the fit will just get better and better on the training data, which could lead you to overfit.
+That's why we separate out test data from the training data.
 
 <details>
 
@@ -258,8 +260,49 @@ base_plot +
 
 </details>
 
+### Training data and test data
+
+One thing that is very typical of machine learning analyses is splitting your data into (at least) two separate pieces: one to **train** your model and another to **test** it.
+
+That means you use only part of your data to build your model, and you reserve the rest to test the model's performance on fresh data.
+
+Testing your model on fresh data gives you a chance to catch an overfitting problem.
+As you train a model, you can always reduce errors by increasing its flexibility (i.e. making it more complex).
+But on the training data you can't tell if the improvement in model fit is mostly because you're reducing error from bias (good) or mostly because you're modeling random error from the idiosyncrasies of these particular data (bad).
+The only way to find out is by running the model on new data, so you can capture the variance.
+Splitting your data into training and test sets to estimate how well the model will generalize to new data is called [cross validation](https://developers.google.com/machine-learning/glossary#cross-validation).
+
+If you've let your model get too complex in your attempt to reduce bias, then when you test that model on fresh data, the error will go up on the fresh data because your variance got too high.
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+If your measure of model fit on the test data is substantially higher than your measure of model fit on the training data, you know you've overfit the model.
+
+</div>
+
+For an excellent video summary of how splitting your data into training and test sets helps with the bias-variance tradeoff, see this StatsQuest video (note that it's set to start about halfway through, but if you want to get a review of the definitions of bias and variance ):
+
+?!"["Machine Learning Fundamentals: Bias and Variance" by StatQuest](https://youtu.be/EuBBz3bI-aA?t=170)
+
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
+There are many different ways to handle the bias-variance tradeoff!
+
+To explore some ways to cross validate, you can read about two popular approaches: k-fold cross validation and leave one out cross validation (LOOCV, sometimes pronounced "luke-vee").
+Both are discussed in the [StatQuest video on cross validation](https://youtu.be/fSytzGwwBVw).
+
+You'll also see analyses that use [regularization](https://developers.google.com/machine-learning/crash-course/regularization-for-simplicity/l2-regularization), [boosting](https://developers.google.com/machine-learning/glossary#boosting), and [bagging](https://developers.google.com/machine-learning/glossary#bagging), all of which are different approaches to try to deal with the bias-variance tradeoff.
+
+Most of the machine learning tools you'll encounter are designed with the bias-variance tradeoff in mind.
+
+</div>
+
 
 ## Different questions need different kinds of models
+
+[Google's free course on how to identify and frame machine learning problems](https://developers.google.com/machine-learning/problem-framing)
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
@@ -291,7 +334,6 @@ A model identifying clusters within cancer cell lines would be an unsupervised m
 
 Although supervised and unsupervised machine learning cover a lot of techniques -- especially the more common ones used in research -- there are plenty of machine learning models that fall into neither category.
 One important example is [reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning).
-Learning the distinction between supervised and unsupervised models provides a helpful heuristic for thinking about the goals of machine learning in general, though.
 
 </div>
 
@@ -499,6 +541,15 @@ It follows the story of an engineer, Martha, as she learns about machine learnin
 
 
 ## Additional Resources
+
+There are many excellent (and free!) machine learning courses available online.
+Here are a few of our favorites:
+
+- [Google's Intro to Machine Learning](https://developers.google.com/machine-learning/intro-to-ml)
+- [DeepLearning.ai](https://www.deeplearning.ai/): Several world-class courses on machine learning topics ranging from intro to very advanced
+- [Introduction to Statistical Learning at Stanford](https://www.statlearning.com/online-course) (there is also a free [text book](https://hastie.su.domains/ISLR2/ISLRv2_website.pdf) and [R package](https://cran.r-project.org/web/packages/ISLR2/ISLR2.pdf) that go with this course)
+- [Introduction to Applied Machine Learning at the University of Wisconsin](https://dionysus.psych.wisc.edu/iaml/)
+
 
 This module includes links to many examples of machine learning applications, but there are so many more!
 Because machine learning covers such a wide range of techniques and models, there are many potential applications in biomedical science.
