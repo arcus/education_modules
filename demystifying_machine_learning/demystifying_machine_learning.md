@@ -475,16 +475,6 @@ For a detailed practical guide to data exploration in machine learning, check ou
 Also, crucially, if you're using an existing dataset, be sure to read any accompanying documentation!
 There may be known quality issues in the data, and you can save yourself a lot of headaches by learning as much as you can **about** the data before you try to learn anything **from** the data.
 
-### Non-independent data
-
-For example, if you're working with genomic data, you
-[this tweet](https://twitter.com/jmschreiber91/status/1625192857920487424):
-
-> ...because genomic data is not i.i.d., you CANNOT just do cross-validation. You must do grouped cross-validation, accounting for as many covariates as possible. Then, you must critically inspect your results.
-
-Note: "i.i.d." stands for "independently and identically distributed".
-It means your observations are independent of each other, and they all come from the same distribution.
-
 ### Another kind of bias
 
 We've talked at length about bias in terms of **mathematical bias** in the [bias-variance tradeoff](#the-bias-variance-tradeoff), but there's another kind of bias that you need to consider in machine learning:
