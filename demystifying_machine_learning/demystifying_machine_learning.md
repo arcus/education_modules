@@ -57,6 +57,9 @@ If relevant, you can include recommendations for somewhere else to start if the 
 
 </div>
 
+![Creative Commons Attribution-ShareAlike 4.0 International license.](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)<!-- style = "max-width: 150px;" -->
+We welcome others reusing and adapting our work. Please [cite us](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution) if you do.
+
 ## What exactly is machine learning?
 
 Machine learning is a general term used to describe a range of different techniques to find and use patterns in data, especially large and messy data.
@@ -66,7 +69,7 @@ Machine learning is a complex field that shares a lot of overlap with other topi
 
 We'll start here by talking about how machine learning differs from other closely related fields like statistics and artificial intelligence.
 
-![One stick figure holding a large paddle stands on what looks like a compost pile with Greek letters, numbers, and matrices mixed in. There is a large data funnel on one side and an answers box at the other. A second person approaches and says, "This is your machine learning system?" The first person responds, "Yup! You pour the data into this big pile of linear algebra, then collect answers on the other side." The second asks, "What if the answers are wrong?" The first answers, "Just stir the pile until they start looking right."](https://imgs.xkcd.com/comics/machine_learning.png "[Machine Learning](https://xkcd.com/1838/) comic by xkcd, [used with permission](https://xkcd.com/license.html).")
+![One stick figure holding a large paddle stands on what looks like a compost pile with Greek letters, numbers, and matrices mixed in. There is a large data funnel on one side and an answers box at the other. A second person approaches and says, "This is your machine learning system?" The first person responds, "Yup! You pour the data into this big pile of linear algebra, then collect answers on the other side." The second asks, "What if the answers are wrong?" The first answers, "Just stir the pile until they start looking right."](https://imgs.xkcd.com/comics/machine_learning.png "[Machine Learning](https://xkcd.com/1838/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")
 
 ### Machine learning vs. artificial intelligence
 
@@ -338,7 +341,7 @@ If you find yourself stumbling on vocabulary as you read about machine learning,
 
 Within machine learning, many techniques can be described as one of two basic kinds of models: **supervised** and **unsupervised**.
 
-From [Google's excellent introductory course on machine learning](https://developers.google.com/machine-learning/intro-to-ml/what-is-ml) (used with permission):
+From [Google's excellent introductory course on machine learning](https://developers.google.com/machine-learning/intro-to-ml/what-is-ml) ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)):
 
 > [Supervised learning](https://developers.google.com/machine-learning/glossary#supervised-machine-learning) models can make predictions after seeing lots of data with the correct answers and then discovering the connections between the elements in the data that produce the correct answers. This is like a student learning new material by studying old exams that contain both questions and answers. Once the student has trained on enough old exams, the student is well prepared to take a new exam. These ML systems are “supervised” in the sense that a human gives the ML system data with the known correct results.
 
@@ -441,7 +444,7 @@ Having data that are too complex to analyze is sometimes called the "[curse of d
 Big data is often also messy data, and that can make it tricky to work with statistically.
 Two of the biggest problems are low-quality data, and non-random sampling.
 
-![Panel 1: Two people talking, one says "Our field has been struggling with this problem for years" as a third person approaches. Panel 2: Third person, holding up a laptop, says, "Struggle no more! I'm here to solve it with algorithms!" Panel 3: Third person working on laptop while the other two watch. Panel 4: Six months later, third person says "Wow, this problem is really hard." First person says "You don't say."](https://imgs.xkcd.com/comics/here_to_help_2x.png "[Here to Help](https://xkcd.com/1831/) comic by xkcd, [used with permission](https://xkcd.com/license.html).")
+![Panel 1: Two people talking, one says "Our field has been struggling with this problem for years" as a third person approaches. Panel 2: Third person, holding up a laptop, says, "Struggle no more! I'm here to solve it with algorithms!" Panel 3: Third person working on laptop while the other two watch. Panel 4: Six months later, third person says "Wow, this problem is really hard." First person says "You don't say."](https://imgs.xkcd.com/comics/here_to_help_2x.png "[Here to Help](https://xkcd.com/1831/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")
 
 
 ### Data quality
