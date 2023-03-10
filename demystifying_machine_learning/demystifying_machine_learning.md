@@ -43,6 +43,8 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
 
+* some familiarity with [linear regression](https://www.youtube.com/watch?v=nk2CQITm_eo), the distinction between [continuous and discrete variables](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/discrete-and-continuous-random-variables)
+
 * one skill we have [another module for, linked here](https://education.arcus.chop.edu)
 * some familiarity with [a topic](https://education.arcus.chop.edu)
 * understanding of [one thing](https://education.arcus.chop.edu) and [another](https://education.arcus.chop.edu)
@@ -302,7 +304,20 @@ Most of the machine learning tools you'll encounter are designed with the bias-v
 
 ## Different questions need different kinds of models
 
-[Google's free course on how to identify and frame machine learning problems](https://developers.google.com/machine-learning/problem-framing)
+Of course, not every research question is a good fit for machine learning, and within machine learning there are many different kinds of models to choose from.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+For a more in-depth discussion of how to select a machine learning model, work through [Google's free course on how to identify and frame machine learning problems](https://developers.google.com/machine-learning/problem-framing).
+
+</div>
+
+To give you a sense of what kinds of problems researchers solve with machine learning, we'll include a quick overview here of some of the more popular techniques as well as some examples of how they've been used in the biomedical and health sciences.
+
+**This is nowhere near a complete list!**
+To keep learning about more kinds of machine learning models, check out the links in the [Additional Resources](#additional-resources) section.
+
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
@@ -310,10 +325,11 @@ Most of the machine learning tools you'll encounter are designed with the bias-v
 As in many fields, machine learning involves a lot of technical language, some of which is unclear, redundant, or downright confusing.
 For example:
 
-**Outcome** variables are also called **response**, or **dependent** variables.
+**Outcome** variables are also called **response variables**, **dependent variables**, or **labels**.
 
 **Input** variables are also called **predictors**, **features**, **independent variables**, or even just **variables**.
 
+To make matters worse, sometimes the same words are used to mean different things in different subfields.
 If you find yourself stumbling on vocabulary as you read about machine learning, know you're not alone!
 
 </div>
@@ -322,12 +338,19 @@ If you find yourself stumbling on vocabulary as you read about machine learning,
 
 Within machine learning, many techniques can be described as one of two basic kinds of models: **supervised** and **unsupervised**.
 
-Supervised models are focused on an outcome; there are input variables and a specific output variable that the model attempts to predict.
-For example, a model that uses data from electronic health records to predict which patients will need to be seen again within a month after discharge would be a supervised model.
+From [Google's excellent introductory course on machine learning](https://developers.google.com/machine-learning/intro-to-ml/what-is-ml) (used with permission):
 
-Unsupervised models, on the other hand, don't have a true outcome.
-Instead, they focus on identifying patterns and structure with the data.
+> [Supervised learning](https://developers.google.com/machine-learning/glossary#supervised-machine-learning) models can make predictions after seeing lots of data with the correct answers and then discovering the connections between the elements in the data that produce the correct answers. This is like a student learning new material by studying old exams that contain both questions and answers. Once the student has trained on enough old exams, the student is well prepared to take a new exam. These ML systems are “supervised” in the sense that a human gives the ML system data with the known correct results.
+
+For example, a model that predicts which patients will need to be rehospitalized within a month after discharge based on previous data from electronic health records for patients who did or didn't need to be rehospitalized would be a supervised model.
+Supervised models require [labeled data](https://developers.google.com/machine-learning/glossary#labeled-example) to train on --- data that has the outcome included.
+
+Again, from Google's machine learning course:
+
+> [Unsupervised learning](https://developers.google.com/machine-learning/glossary#unsupervised-machine-learning) models make predictions by being given data that does not contain any correct answers. An unsupervised learning model's goal is to identify meaningful patterns among the data. In other words, the model has no hints on how to categorize each piece of data, but instead it must infer its own rules.
+
 A model identifying clusters within cancer cell lines would be an unsupervised model.
+Unsupervised models train on unlabeled data.
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -346,6 +369,11 @@ For example, consider [this article on medical image analysis](https://journals.
 The authors used crowd sourcing to label a huge dataset of blood smear images as either infected with malaria or not, and then used that labeled dataset to train a machine learning algorithm to correctly identify infected cells in new blood smear images.
 The outcome in this case is whether or not the cell is infected with malaria, and the input data are the images.
 
+Prediction models can be **regression models**, when the outcome you want to predict is a continuous variable, or **classification models**, when the outcome is a discrete variable.
+Within classification models, there's a distinction between binary classification (when the outcome has only two possible values, like yes or no) and multi-class classification (when the outcome has more than two possible values).
+The article cited above is an example of a binary classification model.
+
+
 ### Anomaly detection
 
 The goal of anomaly detection is to identify observations that deviate from the expected pattern in the rest of the data, also called [outliers](https://en.wikipedia.org/wiki/Outlier).
@@ -358,14 +386,10 @@ Typically, the model (sometimes called a detector) is trained on a dataset of on
 Because by definition anomalies are much less common than typical observations, creating a training dataset with enough labeled anomalies to train a good supervised model is hard.
 Unsupervised anomaly detection is therefore more often used than supervised anomaly detection.
 
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
-
 For an example of anomaly detection in action, check out this article on [outlier detection for patient monitoring and alerting](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3567774/).
 The authors created a machine learning algorithm that was trained on the electronic health records of post-cardiac surgical patients with the intention of flagging any anomalies in patient-management decisions.
 By detecting decisions that deviate from typical patient care, the system can alert providers, potentially reducing medical errors.
 
-</div>
 
 ### Clustering
 
@@ -375,8 +399,18 @@ Clustering models are unsupervised, because there is no outcome variable present
 For example, if you have a dataset of a variety of risk factors in adolescents, you may want to run a clustering analysis to see what typical profiles emerge (see [Walsh et al., 2020](https://doi.org/10.1016/j.jadohealth.2020.02.012)).
 You might see one group of adolescents who are more likely to report both substance use and early sex, and another group who report insufficient nutrition, and so on.
 
-Two common approaches for clustering analysis are [hierarchical clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering) and [k-means clustering](https://en.wikipedia.org/wiki/K-means_clustering).
+Another common application of clustering algorithms is [identifying putative cell types in single-cell RNA sequencing](https://www.sciencedirect.com/science/article/pii/S0098299717300493?via%3Dihub).
 
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+Two common approaches for clustering analysis are [hierarchical clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering) and [k-means clustering](https://en.wikipedia.org/wiki/K-means_clustering), but there are many more techniques available.
+
+For a general overview of clustering algorithms, see the [Google course on clustering](https://developers.google.com/machine-learning/clustering/clustering-algorithms).
+
+For an overview of clustering algorithms specifically as applied in single cell RNA sequencing, see [Duò, Robinson and Soneson, 2020](https://f1000research.com/articles/7-1141/v3).
+
+</div>
 
 ### Dimension reduction
 
@@ -392,7 +426,7 @@ There are many approaches for summarizing across multiple variables, but the mos
 !?[](https://www.youtube.com/watch?v=FgakZw6K1QQ)
 
 Dimension reduction is sometimes used as an initial step in machine learning, to simplify the data before running it through another kind of analysis.
-For example, you might use PCA to reduce a 100-variable dataset to just a handful of components, and then run a clustering analysis to see how your observations group together on those 10 components.
+For example, because sequencing datasets are very complex, dimension reduction is an important step in RNA sequencing analysis (see [Risso et al., 2018](https://www.nature.com/articles/s41467-017-02554-5.pdf)).
 This is especially helpful when you have so many variables that your data are computationally difficult to analyze.
 
 <div class = "cool-fact">
@@ -427,6 +461,13 @@ Don't skimp on exploratory data analysis.
 Check that distributions look like what you would expect, examine outliers, understand your missing data.
 If there is grouping structure in your data, run all of your exploratory analyses both within and across groups.
 If anything seems off, pursue it until you understand.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+For a detailed practical guide to data exploration in machine learning, check out the [Google guide to good data analysis](https://developers.google.com/machine-learning/guides/good-data-analysis).
+
+</div>
 
 Also, crucially, if you're using an existing dataset, be sure to read any accompanying documentation!
 There may be known quality issues in the data, and you can save yourself a lot of headaches by learning as much as you can **about** the data before you try to learn anything **from** the data.
