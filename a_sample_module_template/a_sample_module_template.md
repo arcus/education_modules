@@ -62,6 +62,10 @@ For help articulating learning objectives, see [this guide to learning objective
 
 </div>
 
+
+![Creative Commons Attribution-ShareAlike 4.0 International license.](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)<!-- style = "max-width: 150px;" -->
+We welcome others reusing and adapting our work. Please [cite us](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution) if you do.
+
 ## Lesson Preparation
 
 If your module includes code learners may want to run, then give links to a pangeo binder here so they can start it up now. Also provide a link to the raw code so learners can download the code itself and run it on their own machines or copy it into a cloud server.
