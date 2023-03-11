@@ -3,13 +3,13 @@
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version:  0.0.1
-module_template_version: 2.0.0
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Demystifying Machine Learning
-comment:  This is a short, focused description of the module.
-long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
-estimated_time: This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview
+comment:  An approachable and practical introduction to machine learning for biomedical researchers.
+long_description: If you're curious about machine learning and whether or not it could be useful to you in your work, this is for you. It provides a high-level overview of machine learning techniques with an emphasis on applications in biomedical research. This module covers the what and the why of machine learning only, not the how -- it doesn't include instructions or code for running models, just background to help you think about how machine learning might fit into your work.
+estimated_time: 45 min
 
 @learning_objectives  
 
@@ -18,7 +18,7 @@ After completion of this module, learners will be able to:
 - list at least three potential applications of machine learning in biomedical science
 - explain the bias-variance tradeoff
 - describe three different statistical problems models can address and how they differ (e.g. prediction, anomaly detection, clustering, dimension reduction)
-- describe some potential pitfalls of working with big data
+- describe some potential pitfalls of machine learning and big data
 
 @end
 
