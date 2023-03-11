@@ -50,9 +50,6 @@ There are no coding exercises, and no programming experience is required.
 
 </div>
 
-![Creative Commons Attribution-ShareAlike 4.0 International license.](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)<!-- style = "max-width: 150px;" -->
-We welcome others reusing and adapting our work. Please [cite us](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution) if you do.
-
 ## What exactly is machine learning?
 
 Machine learning is a general term used to describe a range of different techniques to find and use patterns in data, especially large and messy data.
