@@ -635,30 +635,6 @@ There would be no outcome variable, so this is an unsupervised learning model.
 </div>
 ****
 
-## Sources
-
-R4DS https://r4ds.had.co.nz/
-
-Text analysis
-- Supervised Machine Learning for Text Analysis in R https://smltar.com/
-- Text Mining with R: https://www.tidytextmining.com/
-
-Applied Predictive Modeling https://vuquangnguyen2016.files.wordpress.com/2018/03/applied-predictive-modeling-max-kuhn-kjell-johnson_1518.pdf
-
-Feature Engineering and Selection: A Practical Approach for Predictive Models http://www.feat.engineering/
-
-Tidy Modeling with R https://www.tmwr.org/
-
-Introduction to Applied Machine Learning (online course) https://dionysus.psych.wisc.edu/iaml/
-
-https://www.deeplearning.ai/ Several world-class courses on machine learning topics ranging from intro to very advanced, all free.
-
-For a fun and detailed look at machine learning, check out [Google's comic about AI and machine learning tools](https://cloud.google.com/products/ai/ml-comic-1).
-It follows the story of an engineer, Martha, as she learns about machine learning from a cat and a friendly flying robot.
-
-![A flying robot, a cat, and a human software engineer discussing three signs saying "Supervised Learning", "Unsupervised Learning", and "Reinforcement Learning". The robot says, "These categories don’t account for ALL of machine learning, but they cover a lot of ground." The engineer says, "So self-playing arcade games are cool and all —— but I want to hear more about practical applications. What can this stuff be used for in the real world?"](https://cloud.google.com/static/products/ai/ml-comic-1/assets/panel_71_2x.png)
-
-
 ## Additional Resources
 
 There are many excellent (and free!) machine learning courses available online.
@@ -669,6 +645,13 @@ Here are a few of our favorites:
 - [Introduction to Statistical Learning at Stanford](https://www.statlearning.com/online-course) (there is also a free [text book](https://hastie.su.domains/ISLR2/ISLRv2_website.pdf) and [R package](https://cran.r-project.org/web/packages/ISLR2/ISLR2.pdf) that go with this course)
 - [Introduction to Applied Machine Learning at the University of Wisconsin](https://dionysus.psych.wisc.edu/iaml/)
 
+For a fun and detailed introduction to machine learning, check out [Google's comic about AI and machine learning tools](https://cloud.google.com/products/ai/ml-comic-1).
+It follows the story of an engineer, Martha, as she learns about machine learning from a cat and a friendly flying robot.
+
+![A flying robot, a cat, and a human software engineer discussing three signs saying "Supervised Learning", "Unsupervised Learning", and "Reinforcement Learning". The robot says, "These categories don’t account for ALL of machine learning, but they cover a lot of ground." The engineer says, "So self-playing arcade games are cool and all —— but I want to hear more about practical applications. What can this stuff be used for in the real world?"](https://cloud.google.com/static/products/ai/ml-comic-1/assets/panel_71_2x.png)
+
+More examples!
+---
 
 This module includes links to many examples of machine learning applications, but there are so many more!
 Because machine learning covers such a wide range of techniques and models, there are many potential applications in biomedical science.
@@ -680,7 +663,21 @@ If you want to read about more examples of machine learning in biomedical resear
 - [Automatically extract things like symptoms and history from unstructured notes](https://arxiv.org/pdf/2107.02975.pdf), making complicated EHR (electronic health record) data easier to analyze
 - [Guide clinicians performing radiofrequency ablation](https://pubmed.ncbi.nlm.nih.gov/30939953/)
 
-To learn more about social implications of problems in big data, read Cathy O'Neil's best selling book [Weapons of Math Destruction](https://www.penguinrandomhouse.com/books/241363/weapons-of-math-destruction-by-cathy-oneil/9780553418835/).
+<!--
+
+Some other resources, in case we want to add more or reference in other modules:
+
+Text analysis
+- Supervised Machine Learning for Text Analysis in R https://smltar.com/
+- Text Mining with R: https://www.tidytextmining.com/
+
+Applied Predictive Modeling https://vuquangnguyen2016.files.wordpress.com/2018/03/applied-predictive-modeling-max-kuhn-kjell-johnson_1518.pdf
+
+Feature Engineering and Selection: A Practical Approach for Predictive Models http://www.feat.engineering/
+
+Tidy Modeling with R https://www.tmwr.org/
+
+-->
 
 ## Feedback
 
