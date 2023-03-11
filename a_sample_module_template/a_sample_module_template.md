@@ -62,6 +62,15 @@ For help articulating learning objectives, see [this guide to learning objective
 
 </div>
 
+<div class = "attribution">
+<b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
+
+The content for this module was adapted from [Title](link_to_work) by [Author](link_to_author_if_reasonable) (licensed under [license shorthand](link_to_license)).
+We are so grateful to them for creating this wonderful content and publishing it with a license that allows us to reuse it!
+Please note that their work is shared without warranty of any kind, so any issues or errors here are our responsibility, not theirs.
+
+</div>
+
 
 ![Creative Commons Attribution-ShareAlike 4.0 International license.](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)<!-- style = "max-width: 150px;" -->
 We welcome others reusing and adapting our work. Please [cite us](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution) if you do.
