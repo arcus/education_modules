@@ -18,7 +18,7 @@ After completion of this module, learners will be able to:
 - list at least three potential applications of machine learning in biomedical science
 - explain the bias-variance tradeoff
 - describe three different statistical problems models can address and how they differ (e.g. prediction, anomaly detection, clustering, dimension reduction)
-- describe some potential dangers of working with big data
+- describe some potential pitfalls of working with big data
 
 @end
 
@@ -41,15 +41,8 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
-
-* some familiarity with [linear regression](https://www.youtube.com/watch?v=nk2CQITm_eo), the distinction between [continuous and discrete variables](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/discrete-and-continuous-random-variables)
-
-* one skill we have [another module for, linked here](https://education.arcus.chop.edu)
-* some familiarity with [a topic](https://education.arcus.chop.edu)
-* understanding of [one thing](https://education.arcus.chop.edu) and [another](https://education.arcus.chop.edu)
-
-If relevant, you can include recommendations for somewhere else to start if the learner doesn't have these prereqs. For example: If you are brand new to R or python (or want a refresher) consider starting with [Intro to R](link) or [Intro to python](link) first and then coming back here.
+This module assumes learners have been exposed to introductory statistics ideas, like the distinction between [continuous and discrete variables](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/discrete-and-continuous-random-variables) and have some familiarity with [linear regression](https://www.youtube.com/watch?v=nk2CQITm_eo).
+There are no coding exercises, and no programming experience is required.
 
 **Learning Objectives**
 
@@ -63,7 +56,7 @@ We welcome others reusing and adapting our work. Please [cite us](https://wiki.c
 ## What exactly is machine learning?
 
 Machine learning is a general term used to describe a range of different techniques to find and use patterns in data, especially large and messy data.
-In particular, it refers to **algorithms whose performance improves as they are given more data** --- that's why it's called "learning".
+In particular, it refers to **algorithms whose performance improves as they are given more data** -- that's why it's called "learning".
 
 Machine learning is a complex field that shares a lot of overlap with other topics, which can make it difficult to know what machine learning even is, let alone how to do it.
 
@@ -76,7 +69,7 @@ We'll start here by talking about how machine learning differs from other closel
 Artificial intelligence (AI) is a broader category that includes things like machine learning, but also other tools like computer vision and neural networks.
 
 AI is any computer system that seeks to mimic (or out-perform) human capabilities.
-Machine learning is one example of this --- extracting patterns and making predictions from data is a lot of what human cognition is all about --- but not all AI can be described as machine learning.
+Machine learning is one example of this -- extracting patterns and making predictions from data is a lot of what human cognition is all about -- but not all AI can be described as machine learning.
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
@@ -86,11 +79,10 @@ To read more on this topic, check out this [blog post on the distinction between
 </div>
 
 It's common in some publications to see machine learning approaches described as "artificial intelligence" rather than machine learning per se.
-That's fine, and it's technically correct --- all machine learning models are examples of AI.
+That's fine, and it's technically correct -- all machine learning models are examples of AI.
 
 And some AI systems may include machine learning components in addition to other aspects of AI.
 For example, [driverless cars rely on machine learning algorithms to process their environment and make predictions](https://www.bu.edu/articles/2021/self-taught-self-driving-cars/), but driving a car safely requires other tasks, like route planning, that are still examples of AI without really being machine learning.
-
 
 ### Machine learning vs. statistics
 
@@ -111,13 +103,13 @@ It's possible to run many classic statistical tests on large datasets, but that'
 Machine learning algorithms, on the other hand, were built for **large and messy data**.
 When you have a lot of variables to analyze and a lot of observations, machine learning may provide solutions that are quicker, more robust, and actually easier to interpret than more traditional statistical tests.
 
-Moreover, many machine learning approaches actually won't work if your dataset is too small --- if you don't have enough information in the data, your machine learning algorithm may not be able to converge and you'll get no results at all.
+Moreover, many machine learning approaches actually won't work if your dataset is too small -- if you don't have enough information in the data, your machine learning algorithm may not be able to converge and you'll get no results at all.
 
 Inference vs. prediction: A subtle distinction
 ---
 
-Statistical tests are generally designed for **inference** --- you measure relationships in your sample in order to infer something about the relationships in a larger population.
-Machine learning models are designed for **prediction** and **generalization** --- you build a model on your sample with the intention of predicting outcomes in new data and/or generalizing patterns to new data.
+Statistical tests are generally designed for **inference** -- you measure relationships in your sample in order to infer something about the relationships in a larger population.
+Machine learning models are designed for **prediction** and **generalization** -- you build a model on your sample with the intention of predicting outcomes in new data and/or generalizing patterns to new data.
 
 This is a tricky distinction because, in practice, an analyst will often use a statistical model to infer something about the population of interest with the intention of making a prediction.
 
@@ -136,7 +128,7 @@ Some machine learning approaches would produce those predictions without actuall
 If you read the section above and thought "I'm still not sure I understand how to tell machine learning from other kinds of statistics", don't worry; it's a distinction with a lot of grey area.
 As the authors in this [article in Nature Methods](https://www.nature.com/articles/nmeth.4642) note, the boundary is not always clear:
 
->The boundary between statistical inference and ML is subject to debate --- some methods fall squarely into one or the other domain, but many are used in both.
+>The boundary between statistical inference and ML is subject to debate -- some methods fall squarely into one or the other domain, but many are used in both.
 
 </div>
 
@@ -191,7 +183,7 @@ In general, as models get more complex, variance increases.
 
 </div>
 
-Here are the blood pressure and cognitive performance data again, this time with a model that is much too complex --- if you estimated that model on a different sample, you could get wildly different results.
+Here are the blood pressure and cognitive performance data again, this time with a model that is much too complex -- if you estimated that model on a different sample, you could get wildly different results.
 
 ![The same scatterplot, this time with a very squiggly trend line that goes up and down with the random variability in the data.](media/overfit.png)
 
@@ -286,9 +278,9 @@ If your measure of model fit on the test data is substantially higher than your 
 
 </div>
 
-For an excellent video summary of how splitting your data into training and test sets helps with the bias-variance tradeoff, see this StatsQuest video (note that it's set to start about halfway through, but if you want to get a review of the definitions of bias and variance ):
+For an excellent video summary of how splitting your data into training and test sets helps with the bias-variance tradeoff, see this StatsQuest video (note that it's set to start about halfway through, but scroll back to the beginning if you want to get a review of the definitions of bias and variance):
 
-?!"["Machine Learning Fundamentals: Bias and Variance" by StatQuest](https://youtu.be/EuBBz3bI-aA?t=170)
+!?["Machine Learning Fundamentals: Bias and Variance" by StatQuest](https://youtu.be/EuBBz3bI-aA?t=170)
 
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
@@ -303,7 +295,6 @@ You'll also see analyses that use [regularization](https://developers.google.com
 Most of the machine learning tools you'll encounter are designed with the bias-variance tradeoff in mind.
 
 </div>
-
 
 ## Different questions need different kinds of models
 
@@ -346,7 +337,7 @@ From [Google's excellent introductory course on machine learning](https://develo
 > [Supervised learning](https://developers.google.com/machine-learning/glossary#supervised-machine-learning) models can make predictions after seeing lots of data with the correct answers and then discovering the connections between the elements in the data that produce the correct answers. This is like a student learning new material by studying old exams that contain both questions and answers. Once the student has trained on enough old exams, the student is well prepared to take a new exam. These ML systems are “supervised” in the sense that a human gives the ML system data with the known correct results.
 
 For example, a model that predicts which patients will need to be rehospitalized within a month after discharge based on previous data from electronic health records for patients who did or didn't need to be rehospitalized would be a supervised model.
-Supervised models require [labeled data](https://developers.google.com/machine-learning/glossary#labeled-example) to train on --- data that has the outcome included.
+Supervised models require [labeled data](https://developers.google.com/machine-learning/glossary#labeled-example) to train on -- data that has the outcome included.
 
 Again, from Google's machine learning course:
 
@@ -375,7 +366,6 @@ The outcome in this case is whether or not the cell is infected with malaria, an
 Prediction models can be **regression models**, when the outcome you want to predict is a continuous variable, or **classification models**, when the outcome is a discrete variable.
 Within classification models, there's a distinction between binary classification (when the outcome has only two possible values, like yes or no) and multi-class classification (when the outcome has more than two possible values).
 The article cited above is an example of a binary classification model.
-
 
 ### Anomaly detection
 
@@ -426,7 +416,7 @@ Dropping unnecessary variables is called [feature selection](https://en.wikipedi
 There are many approaches for summarizing across multiple variables, but the most common approach is probably Principal Component Analysis (PCA).
 [StatQuest](https://statquest.org/about/) has a great video on Principal Component Analysis:
 
-!?[](https://www.youtube.com/watch?v=FgakZw6K1QQ)
+!?[StatQuest: Principal Component Analysis (PCA), Step-by-Step.](https://www.youtube.com/watch?v=FgakZw6K1QQ)
 
 Dimension reduction is sometimes used as an initial step in machine learning, to simplify the data before running it through another kind of analysis.
 For example, because sequencing datasets are very complex, dimension reduction is an important step in RNA sequencing analysis (see [Risso et al., 2018](https://www.nature.com/articles/s41467-017-02554-5.pdf)).
@@ -456,7 +446,7 @@ Data quality is of particular concern in machine learning because  very large da
 If you have ten variables, you might notice that one of them looks like it was miscoded just by glancing at the data file, but what if you have hundreds of variables?
 And millions of observations?
 
-To make matters even worse, the models themselves are sometimes complex enough that even the people running the analysis might not understand exactly how the inputs and outputs are related --- that makes it harder to catch data quality problems by noticing confusing results.
+To make matters even worse, the models themselves are sometimes complex enough that even the people running the analysis might not understand exactly how the inputs and outputs are related -- that makes it harder to catch data quality problems by noticing confusing results.
 
 **So what do you do?**
 
@@ -487,7 +477,7 @@ That means that it's very easy to unintentionally create machine learning system
 
 To learn more about one particularly salient example of this problem, read ["Dissecting racial bias in an algorithm used to manage the health of populations"](https://www.science.org/doi/full/10.1126/science.aax2342) by Ziad Obermeyer and colleagues. From the abstract:
 
-> The U.S. health care system uses commercial algorithms to guide health decisions. Obermeyer et al. find evidence of racial bias in one widely used algorithm, such that Black patients assigned the same level of risk by the algorithm are sicker than White patients (see the Perspective by Benjamin). The authors estimated that this racial bias reduces the number of Black patients identified for extra care by more than half.
+> The U.S. health care system uses commercial algorithms to guide health decisions. Obermeyer et al. find evidence of racial bias in one widely used algorithm, such that Black patients assigned the same level of risk by the algorithm are sicker than White patients (see the Perspective by Benjamin). The authors estimated that this racial bias reduces the number of Black patients identified for extra care by more than half. Bias occurs because the algorithm uses health costs as a proxy for health needs. Less money is spent on Black patients who have the same level of need, and the algorithm thus falsely concludes that Black patients are healthier than equally sick White patients. Reformulating the algorithm so that it no longer uses costs as a proxy for needs eliminates the racial bias in predicting who needs extra care.
 
 You can also listen to the first author, [Ziad Obermeyer, talking about this paper at a workshop on algorithmic fairness](https://www.youtube.com/watch?v=u34e9CYIMZs).
 
@@ -535,6 +525,38 @@ Building a chatbot would be artificial intelligence (AI), but not machine learni
 </div>
 ****
 
+Which of the following best summarizes the bias-variance tradeoff?
+
+[( )] As models get more complex, bias goes up but variance goes down
+[( )] As sample size increases, bias goes up but variance goes down
+[(X)] As models get more complex, bias goes down but variance goes up
+[( )] As sample size increases, bias goes down but variance goes up
+****
+<div class = "answer">
+
+Bias refers to how much a model deviates from the real underlying truth, and variance is how much the model changes on different samples of the same data.
+
+You can reduce bias by allowing your model to be more complex, but at some point you'll end up overfitting -- making your model too tightly tuned to the idiosyncrasies of the training data -- and the increase in variance will overtake any reduction in bias.
+The goal in any machine learning analysis is to hit the sweet spot of model complexity where bias is as low as you can get it without increasing variance too much.
+
+</div>
+****
+
+Which of the following are techniques to make it easier to hit the right balance between bias and variance? Select all that apply.
+
+[[X]] cross validation
+[[X]] regularization
+[[X]] bagging
+[[X]] boosting
+****
+<div class = "answer">
+
+These are all techniques to hit the right balance between bias and variance and reduce the chance of overfitting!
+For resources and links to learn more, go back to the section on [training data and test data](#training-data-and-test-data).
+
+</div>
+****
+
 True or False: Big data sets are generally higher quality than smaller data sets.
 
 [( )] TRUE
@@ -543,9 +565,72 @@ True or False: Big data sets are generally higher quality than smaller data sets
 <div class = "answer">
 
 False.
-Working with large datasets does not mean your data are higher quality --- in fact, problems with data quality can be harder to identify in big data, making them that much more problematic.
+Working with large datasets does not mean your data are higher quality -- in fact, problems with data quality can be harder to identify in big data, making them that much more problematic.
 
-Moreover, many sources of big data involve data that are not randomly sampled, making them potentially much more difficult to work with statistically than smaller data without problems of non-independence.
+</div>
+****
+
+True or False: If you use data that is nationally representative with respect to things like gender, race, and socioeconomic status, then machine learning models trained on it will not be biased (in the fairness and equity sense of the term).
+
+[( )] TRUE
+[(X)] FALSE
+****
+<div class = "answer">
+
+False.
+While using representative data is important for many research questions, it does not guarantee unbiased results.
+Bias can come from many different sources, including things like the choice of variables to use (as was the case for [Obermeyer and colleagues, 2019](https://www.science.org/doi/full/10.1126/science.aax2342)) or patterns in the data that reflect structural inequalities in society.
+
+</div>
+****
+
+Dr. Bronner has a large dataset of fMRI brain scans, and they want to examine how patterns of activation across the whole brain relate to other aspects of health.
+The scan data are very complex, though (more than 100,000 non-zero voxels), and Dr. Bronner is hesitant to estimate a model with that many variables.
+What should their first step be?
+
+[( )] prediction
+[( )] anomaly detection
+[( )] clustering
+[(X)] dimension reduction
+****
+<div class = "answer">
+
+Dimension reduction is often a valuable first step when working with large and complex data, especially in cases where the number of variables (in this example, each voxel would be one variable) is larger than the number of observations (the number of patients scanned).
+
+For an overview of dimension reduction techniques used in neuroimaging analysis, see [Mwangi, Tian and Soares, 2015](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4040248/).
+
+</div>
+****
+
+Now Dr. Bronner would like to use their fMRI data along with linked electronic health records (EHR), including diagnoses, to predict whether or not patients have Alzheimer's disease from their brain scans.
+What kind of model should they use?
+
+[(X)] prediction
+[( )] anomaly detection
+[( )] clustering
+[( )] dimension reduction
+****
+<div class = "answer">
+
+This would be a prediction model, specifically a binary classification model.
+The training data would be labeled (Alzheimer's diagnosis would be available via the linked EHR), so this is an example of a supervised learning model.
+
+</div>
+****
+
+A graduate student in Dr. Bronner's lab wants to analyze the EHR data to identify possible sub-groups of Alzheimer's patients with similar symptoms.
+What kind of model should they use?
+
+[( )] prediction
+[( )] anomaly detection
+[(X)] clustering
+[( )] dimension reduction
+****
+<div class = "answer">
+
+A clustering model would be the best fit here.
+The data would be measurements of all of the relevant symptoms (the input variables, or features) for each of the Alzheimer's patients.
+There would be no outcome variable, so this is an unsupervised learning model.
 
 </div>
 ****
