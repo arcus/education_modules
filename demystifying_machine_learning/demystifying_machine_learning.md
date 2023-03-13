@@ -8,7 +8,7 @@ language: en
 narrator: UK English Female
 title: Demystifying Machine Learning
 comment:  An approachable and practical introduction to machine learning for biomedical researchers.
-long_description: If you're curious about machine learning and whether or not it could be useful to you in your work, this is for you. It provides a high-level overview of machine learning techniques with an emphasis on applications in biomedical research. This module covers the what and the why of machine learning only, not the how -- it doesn't include instructions or code for running models, just background to help you think about how machine learning might fit into your work.
+long_description: If you're curious about machine learning and whether or not it could be useful to you in your work, this is for you. It provides a high-level overview of machine learning techniques with an emphasis on applications in biomedical research. This module covers the what and the why of machine learning only, not the how -- it doesn't include instructions or code for running models, just background to help you think about machine learning in research.
 estimated_time: 45 min
 
 @learning_objectives  
@@ -41,7 +41,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This module assumes learners have been exposed to introductory statistics ideas, like the distinction between [continuous and discrete variables](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/discrete-and-continuous-random-variables) and have some familiarity with [linear regression](https://www.youtube.com/watch?v=nk2CQITm_eo).
+This module assumes learners have been exposed to introductory statistics, like the distinction between [continuous and discrete variables](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/discrete-and-continuous-random-variables), and have some familiarity with [linear regression](https://www.youtube.com/watch?v=nk2CQITm_eo).
 There are no coding exercises, and no programming experience is required.
 
 **Learning Objectives**
@@ -89,7 +89,7 @@ The way you solve the equation
 ---
 
 Statistical tests are (usually) **computationally tractable**, meaning given enough time and knowledge of matrix algebra you could theoretically work out the results with a pencil and paper.
-In contrast, machine learning relies on tools like maximum likelihood estimation to "brute force" solutions by **iteratively fitting solutions** and checking them to identify the best one.
+In contrast, machine learning relies on tools like [gradient descent](https://www.youtube.com/watch?v=sDv4f4s2SB8) to "brute force" solutions by **iteratively fitting solutions** and checking them to identify the best one.
 You need a computer to do machine learning, but you don't necessarily need one for statistics.
 
 The kind of data you apply it to
@@ -165,7 +165,7 @@ If you ran this study over and over, collecting data from new participants each 
 But there's also the fact that your model will always be systematically off because a linear model isn't a good approximation of the true relationship in the data; you'll always overestimate cognitive performance at very low and very high blood pressures.
 That's the **bias**.
 
-![Scatterplot of data with a pronounced upside down U-shaped curve. The y-axis is labeled "Cognitive Performance" and the x-axis is labeled "Blood Pressure"; no scales are provided for either axis. There is a linear trend line that cuts straight through the data without capturing the curve, overestimating cognitive performance at the low and high extremes of blood pressure.](media/underfit.png)
+![Scatterplot of data with a pronounced upside down U-shaped curve. The y-axis is labeled "Cognitive Performance" and the x-axis is labeled "Blood Pressure"; no scales are provided for either axis. There is a linear trend line that cuts straight through the data without capturing the curve, overestimating cognitive performance at the low and high extremes of blood pressure.](media/underfit.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 A better model for these data would be more complex; it would allow a curve in the trend line, which would require estimating more parameters.
 
@@ -174,15 +174,24 @@ A better model for these data would be more complex; it would allow a curve in t
 
 In general, as you increase the complexity of your model, you can lower the **bias**; in other words, you can get closer to the truth.
 
-However, there's a point of diminishing returns.
+</div>
+
+Let's try a model that's much more flexible (and complex).
+If we give the model a lot of freedom to fit itself to the data, we should see it follow that U-shaped curve more, so it's no longer systematically overestimating cognitive performance at the low and high ends of blood pressure.
+
+Here are the blood pressure and cognitive performance data again, this time with a model that is much too complex -- if you estimated that model on a different sample, you could get wildly different results.
+There's less bias now, but the variance will be high.
+
+![The same scatterplot, this time with a very squiggly trend line that goes up and down with the random variability in the data.](media/overfit.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+So you can reduce bias by fitting a more complex model, but there's a point of diminishing returns.
 If you make your model too complex and flexible, it will start to model random noise in your data, and this increases the **variance**.
 In general, as models get more complex, variance increases.
 
 </div>
-
-Here are the blood pressure and cognitive performance data again, this time with a model that is much too complex -- if you estimated that model on a different sample, you could get wildly different results.
-
-![The same scatterplot, this time with a very squiggly trend line that goes up and down with the random variability in the data.](media/overfit.png)
 
 So that's the tradeoff:
 If your model is not flexible enough, you'll have high bias.
@@ -193,7 +202,7 @@ A model that is not flexible enough is said to be **underfit**, and a model that
 The goal of any machine learning analysis is to find a model that strikes the right balance between bias and variance, that's just the right level of complexity for the problem.
 In this pretend example, we know the true underlying relationship is quadratic, so a quadratic model will be the one that hits the sweet spot between underfitting and overfitting.
 
-![The same data, this time shown with a quadratic curve that captures the pattern in the data well without chasing noise.](media/goodfit.png)
+![The same data, this time shown with a quadratic curve that captures the pattern in the data well without chasing noise.](media/goodfit.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 Unlike the example here, in a real analysis we never know what the true underlying relationship is, and that makes it very hard to know if you're under- or overfitting.
 
