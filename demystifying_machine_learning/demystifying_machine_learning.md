@@ -153,6 +153,8 @@ Let's pretend that the true relationship between these variables in real life is
 One way to model the relationship between these variables would be a plain linear relationship, as depicted in the scatterplot below.
 There are only two parameters to estimate for a linear model like this: intercept and slope.
 
+![Scatterplot of data with a pronounced upside down U-shaped curve. The y-axis is labeled "Cognitive Performance" and the x-axis is labeled "Blood Pressure"; no scales are provided for either axis. There is a linear trend line that cuts straight through the data without capturing the curve, overestimating cognitive performance at the low and high extremes of blood pressure.](media/underfit_1.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
@@ -165,7 +167,8 @@ If you ran this study over and over, collecting data from new participants each 
 But there's also the fact that your model will always be systematically off because a linear model isn't a good approximation of the true relationship in the data; you'll always overestimate cognitive performance at very low and very high blood pressures.
 That's the **bias**.
 
-![Scatterplot of data with a pronounced upside down U-shaped curve. The y-axis is labeled "Cognitive Performance" and the x-axis is labeled "Blood Pressure"; no scales are provided for either axis. There is a linear trend line that cuts straight through the data without capturing the curve, overestimating cognitive performance at the low and high extremes of blood pressure.](media/underfit_1.png)![The same plot but with a different sample of data.](media/underfit_2.png)![The same plot but with a different sample of data.](media/underfit_3.png)
+![Same scatterplot as above, but shown three times, in three different panels, each on a different randome sample of data. The linear trend lines vary a little for each sample, but they all fail to capture the quadratic nature of the relationship.](media/underfit_2.png)
+
 
 A better model for these data would be more complex; it would allow a curve in the trend line, which would require estimating more parameters.
 
@@ -179,10 +182,15 @@ In general, as you increase the complexity of your model, you can lower the **bi
 Let's try a model that's much more flexible (and complex).
 If we give the model a lot of freedom to fit itself to the data, we should see it follow that U-shaped curve more, so it's no longer systematically overestimating cognitive performance at the low and high ends of blood pressure.
 
-Here are the blood pressure and cognitive performance data again, this time with a model that is much too complex -- if you estimated that model on a different sample, you could get wildly different results.
-There's less bias now, but the variance will be high.
+Here are the blood pressure and cognitive performance data again, this time with a model that allows a lot of flexibility.
 
-![The same scatterplot, this time with a very squiggly trend line that goes up and down with the random variability in the data.](media/overfit_1.png)![The same plot but with a different sample of data.](media/overfit_2.png)![The same plot but with a different sample of data.](media/overfit_3.png)
+![The same scatterplot, this time with a very squiggly trend line that goes up and down with the random variability in the data.](media/overfit_1.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
+
+This model is much too complex -- if you estimated that model on a different sample, you could get wildly different results.
+There's less bias now, but the variance will be high.
+When we estimate that model on different samples of random data, it produces quite differently shaped trend lines:
+
+![The same scatterplot again, but three times on three different random samples. The squiggly trend line looks very different one sample to the next.](media/overfit_2.png)
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -202,7 +210,7 @@ A model that is not flexible enough is said to be **underfit**, and a model that
 The goal of any machine learning analysis is to find a model that strikes the right balance between bias and variance, that's just the right level of complexity for the problem.
 In this pretend example, we know the true underlying relationship is quadratic, so a quadratic model will be the one that hits the sweet spot between underfitting and overfitting.
 
-![The same data, this time shown with a quadratic curve that captures the pattern in the data well without chasing noise.](media/goodfit_1.png)![The same plot but with a different sample of data.](media/goodfit_2.png)![The same plot but with a different sample of data.](media/goodfit_3.png)
+![The same data, this time shown with a quadratic curve that captures the pattern in the data well without chasing noise.](media/goodfit_1.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
 Unlike the example here, in a real analysis we never know what the true underlying relationship is, and that makes it very hard to know if you're under- or overfitting.
 
