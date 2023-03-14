@@ -41,7 +41,8 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This module assumes learners have been exposed to introductory statistics, like the distinction between [continuous and discrete variables](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/discrete-and-continuous-random-variables), and have some familiarity with [linear regression](https://www.youtube.com/watch?v=nk2CQITm_eo).
+This module assumes learners have been exposed to introductory statistics, like the distinction between [continuous and discrete variables](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/discrete-and-continuous-random-variables), [linear and quadratic relationships](https://www.khanacademy.org/math/statistics-probability/advanced-regression-inference-transforming#nonlinear-regression), and [ordinary least squares regression](https://www.youtube.com/watch?v=nk2CQITm_eo).
+It's fine if you don't know how to conduct a regression analysis, but you should be familiar with the concept.
 There are no coding exercises, and no programming experience is required.
 
 **Learning Objectives**
@@ -136,6 +137,19 @@ Machine learning covers a wide range of different analyses and techniques, but t
 But first, a quick note about how data are used in machine learning:
 
 Because machine learning models "learn", the process of fitting a model to data is called **training**.
+The goal of training is to get a final version of your model; often this means estimating the model's parameters (although depending on the technique, it could also be things like feature selection or identifying coordinates for group centroids).
+
+For a regression model, which we'll discuss more in the example, training means estimating the intercept and the coefficeint(s) for the predictor(s) -- for a linear regression with just one predictor, training is estimating the intercept and the slope.
+For a polynomial linear regression, training is estimating the intercept and each of the coefficients for the polynomial terms.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+Looking for a review of what linear regression models are and how they work?
+Check out [this tutorial on linear regression](https://education.arcus.chop.edu/ordinary_linear_regression/).
+
+</div>
+
 
 ### What is variance, and what is bias?
 
@@ -155,13 +169,6 @@ There are only two parameters to estimate for a linear model like this: intercep
 
 ![Scatterplot of data with a pronounced upside down U-shaped curve. The y-axis is labeled "Cognitive Performance" and the x-axis is labeled "Blood Pressure"; no scales are provided for either axis. There is a linear trend line that cuts straight through the data without capturing the curve, overestimating cognitive performance at the low and high extremes of blood pressure.](media/underfit_1.png)<!-- style = "max-width: 45%; display: block; margin-left: auto; margin-right: auto;"-->
 
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
-
-Looking for a review of what linear regression models are and how they work?
-Check out [this tutorial on linear regression](https://education.arcus.chop.edu/ordinary_linear_regression/).
-
-</div>
 
 If you ran this study over and over, collecting data from new participants each time and always fitting a linear model, the exact parameter estimates for the model would change a little study to study (one time the slope might be -0.15, another time -0.21, then -0.17, etc.). That's the **variance**.
 But there's also the fact that your model will always be systematically off because a linear model isn't a good approximation of the true relationship in the data; you'll always overestimate cognitive performance at very low and very high blood pressures.
