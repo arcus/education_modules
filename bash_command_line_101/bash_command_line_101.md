@@ -387,20 +387,46 @@ There are several different ways to view the contents of a file. You might want 
 ---
 The easiest way to see the contents of a short file is the `cat` function. If you run `cat` followed by a file name, the command line interface will print out the entire contents of that file line by line.
 
-Give it a try:
+**Give it a try:**
 
 ```
 cat my_sentences
 ```
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 The command `cat` is very powerful three-part function that allows a reader to view, combine, or create a new version of a file. In fact `cat` is a shortening of the word "con**cat**enate."
+
 </div>
+
+Many text files, however, are too big to usefully examine using the `cat` command, either because the lines are too long, or because there are too many lines. Some examples include:
+
+- files containing a genetic sequence, which will likely have the entire sequence, hundreds or thousands of characters long, stored as a single line.
+- files containing many data observations, which will likely record each observation on a new line. Actigraphy data collected by wearable monitors might record an observation once a minute so data from a single 24 hour period would be stored in a file 1440 lines long.
+
+One way to usefully look at such files is with `less`.
 
 `less`
 ---
-Put everything that Meredith says omics stuff needs to know about `less` here!
 
+Instead of printing out the entire contents of the file, entering the command `less file_name.txt` will open your file in the `less` program within your command line interface. Within this program, you can use the arrows on your keyboard to move around.
+
+To exit from the `less` program, press `q` (for "quit").
+
+
+**Try it out yourself:**
+
+If you have a larger text file on your computer, see what it looks like with the `less` command. If you don't have any larger text files, the Folger Shakespeare Library lets you [download text file of any one of Shakespeare's plays](https://www.folger.edu/explore/shakespeares-works/download/), or even a [folder of the complete collection of plays](https://flgr.sh/txtfssAlltxt).
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+The `less` program has a lot of capabilities beyond navigating with the arrow keys. Some are commands within the program, like searching for patterns in the text with `?pattern`. Others are options for how to open the file; `less -N file_name.txt` will open the file with line numbers on the left side.
+
+For a complete list of the possibilities, see the [manual entry for `less`](https://man7.org/linux/man-pages/man1/less.1.html).
+
+</div>
 
 <div class = "history">
 <b style="color: rgb(var(--color-highlight));">Historical context</b><br>
