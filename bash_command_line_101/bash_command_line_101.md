@@ -544,13 +544,22 @@ The quotes around the text can also be safely omitted in this case, but that isn
 
 ## Getting Help from the Manual
 
-<div class="warning">
+Bash has a very detailed (although sometimes very dense) manual, and every command has an entry describing all of its possible uses. An internet search for "`command_name` bash manual" will usually return the manual text as well as several blog posts or articles about uses for any command. 
 
-The bash manual is available to you in most bash shells, although not in Git Bash. If you are using Git Bash, an internet search for "`command_name` bash manual" will usually get you the same information.
+There are also ways to access the manual information from within your command line interface, although not all CLIs have these capabilities. 
 
-</div>
 
-Entering `man command_name` reveals the documentation for the function `command_name`  (`man` is short for "manual").  This can be helpful if you think a command might be useful and want to learn more about it, or have forgotten how to use a command or what its options are.
+`man`
+---
+
+Entering `man command_name` reveals the documentation for the function `command_name` (`man` is short for "manual").  This can be helpful if you think a command might be useful and want to learn more about it, or have forgotten how to use a command or what its options are.
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+The bash manual is not available in Git Bash. If you are using Git Bash, an internet search for "`command_name` bash manual" will usually get you the same information.
+
+</div> 
 
 For example if you wanted to know more about the command `grep` you could type `man grep`. The output contains a description. The first sentence of the description tells us what `grep` does, it "searches any given input files, selecting lines that match one or more patterns."
 
@@ -560,6 +569,11 @@ To navigate within the documentation, use the up and down arrows on your keyboar
 When you want to exit the documentation, press the `Q` key on your keyboard to return to your command line interface.
 
 ![Grep man command output with the full definition and some options displayed.](media/grep_output_large.png)
+
+`--help`
+---
+
+Entering `command_name --help` will give a summary of the options for the command. Since it won't give you a description, or as much detail about each option, this is not as useful for learning commands for the first time. It is, however, extremely useful for when you know that a command can do a certain thing, but need to be reminded of what tags turn on the options you want.
 
 ## Additional Resources
 
