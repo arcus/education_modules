@@ -117,7 +117,10 @@ Your computer has an **Operating System** (OS), most commonly either Windows, Ma
 The **shell** is like a layer outside the kernel that you as a user can communicate with. You can type commands in the shell, and it will execute them for you in the kernel. Back when computers were newer and there were few ready programs available, the shell was the primary way to get stuff done on a computer.
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 To learn more, check out this post for [an excellent breakdown of the difference between the shell and the kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/).
+
 </div>
 
 A **Command Line Interface** or **CLI** allows a user to pass a series of text (commands) to a program in order to execute code. Common command line interfaces include Terminal (Mac), WSL (Windows), and Git Bash (Windows). You opened one of these in the [lesson preparation](#lesson-preparation) for this module.
@@ -225,7 +228,10 @@ Once you start typing the first few letters of a directory, press `tab`. The she
 If there were another directory that started with the same few letters, the shell will guess as far as it can. For example if there were also a folder `my_random_files`, typing `cd m` followed by `tab` would prompt the shell to complete as much as it can: `cd my_` and then you could keep typing either an `r` or `d` followed by another `tab` to complete the line of code.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Tab completion is useful not just for navigating your file system, but for all sorts of commands in bash scripting. By minimizing the amount you have to type it can make your work both easier and more accurate. You should always be sure to double check that the `tab` completed the line to what you wanted it to be.
+
 </div>
 
 
@@ -260,7 +266,9 @@ The bash shell can see and move files of all types, but it is most useful for in
 
 A [**plain text**](https://en.wikipedia.org/wiki/Plain_text) file is a file that contains only text characters like the ones you can type directly using your keyboard. For example the words "plain text" at the beginning of this paragraph, which are both bolded and hyperlinked, are not being presented to you as plain text. You might have run into problems with files that aren't in plain text if, for example, you ever opened a file in a new program and lost some of the formatting like particular fonts in Word or conditional highlighting in Excel.
 
-<div class = "learn-more">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
 Even though the words "plain text" in the previous paragraph have some non-text attributes, they are all recorded as plain text in the Markdown (`.md`) file of this lesson. If you open the [Markdown file](link/to/git/of/this/file), you will see only characters that can be typed by a keyboard:
 
 ```
@@ -287,8 +295,11 @@ Some common types of plain text files you might have seen before are:
 | `.md` | markdown file |
 | `.html` | html file |
 
-<div class = "learn-more">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
 The file endings (or **extensions**) like `.txt`, `.csv`, `.doc` (Word), or `.xslx` (Excel) are the part of the file name that lets your computer know what type of program to use to open it. The ending doesn't actually impact the contents of the file, which is why we will be able to create files like `my_file` in the next section with no file ending at all.
+
 </div>
 
 
@@ -296,9 +307,12 @@ The file endings (or **extensions**) like `.txt`, `.csv`, `.doc` (Word), or `.xs
 
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 You will get the most out of this section if you follow along in your own command line interface, running the commands as you learn them.
 
 So that we don't change any of your pre-existing files, we will practice this in a new directory that you can play around with or delete later.
+
 </div>
 
 
@@ -339,6 +353,8 @@ Since these are files and not directories, we can't use `cd` to open them, and w
 
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 You might have noticed that none of the file or directory names we used had spaces in them. Bash scripting gets quite a bit more complicated when you have spaces in names, so it is considered best practice to avoid them.
 </div>
 
@@ -374,7 +390,10 @@ This is another sentence.
 **Give it a try!** Add some text to the files you already created!
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 Make sure you use the two greater than signs (here, we'll call them "arrows") in `>>`. Using only a single arrow will also write text to your file, but instead of appending it to the end of the file, it will replace the entire contents of the file with that new text.
+
 </div>
 
 Next, we will see learn how to look at the contents of our file to ensure that it really does contain what we think it should.
@@ -465,11 +484,12 @@ VS Code is a free program you can download from (https://code.visualstudio.com).
 Vim may be the default editor in your shell, but that doesn't mean it is the best one. It is notoriously un-friendly to new users so we don't recommend it as your first (or second) choice of text editor.
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 **Stuck in Vim? **
 
  
-The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. That is why we don't recommend it as a text editor. If you accidentally find yourself stuck in it, hit the `Esc` key, followed by `:`+`q`+`!` (colon, lower-case 'q', exclamation mark), then hitting Return to return to the shell.
+The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. That is why we don't recommend it as a text editor. If you accidentally find yourself stuck in it, hit the `Esc` key, followed by `:`+`q`+`!` (colon, lower-case 'q', exclamation mark), then hitting `Return` to return to the shell.
 </div>
 
 
