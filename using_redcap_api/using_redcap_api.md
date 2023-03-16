@@ -436,6 +436,184 @@ Click on "result" in the environment pane to open a file viewer.
 
 Now, your data is in a data frame and you're ready to do all sorts of work with that data (like cleaning question marks out of the data, getting summary statistics, finding correlations, visualizing data, and modeling data).  Importantly, you can re-run the chunks in this R Markdown at any time to get the latest version of the data from REDCap!  
 
+## Don't accidentally share your API token!
+
+Your API token is a secret.
+If someone else finds your API token, they can get unauthorized access to your REDCap project.
+
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
+There is so much code online, what are the chances of someone malicious just happening to find your API token?
+
+Unfortunately, it's more likely than you may think.
+Stealing API tokens can be lucrative; there's money in both illicitly accessing valuable private data and also misusing servers for things like cryptocurrency mining.
+People write scripts to automatically scan posted code for patterns that look like API tokens and other sensitive information, so they can efficiently process millions of lines of code posted all over the web.
+In fact, [companies like GitHub offer automatic scanning as a service](https://github.blog/2022-04-04-push-protection-github-advanced-security/), letting customers know if it looks like they've accidentally pushed a secret to their repository.
+If the GitHub engineers can make software to catch API tokens being posted to repositories, people with bad intentions can, too.
+
+</div>
+
+By far the best approach is to make sure your API token is never included in any code that could get pushed to an online repository.
+
+<div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
+If you use a system like git to version control your code (which we recommend you do!), then your token is compromised if it has **ever** been committed in a repository that is now public, even if it has since been overwritten.
+
+</div>
+
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+What should you do if you think your API token has been compromised?
+
+No matter how brief the exposure was, if your API token was online, you need to discard it and generate a new one.
+See the section above on [generating API tokens](#api-token) for instructions on how to get a new one.
+
+If your REDCap project contains protected information, such as protected health information (PHI), you may need to file a breach report.
+Consult with legal and ethics support at your institution if you're not sure how the law applies to you.
+
+</div>
+
+The example code from the REDCap API playground saves your API token in the first line of the script.
+Although this is okay if that script is saved in a secure way on your computer and will never be shared or published, it's very dangerous if you might end up sharing your code at some point (which we certainly hope you will!).
+
+**So how can you make your API token available to you when you run your script, but not have it saved anywhere where it could accidentally be shared online?**
+
+We'll walk through two strategies, one in Python and one in R.
+Feel free to just read the one in the coding language you prefer.
+
+### Protecting your API token in Python
+
+To protect your API token, never save it in your Python script or Jupyter notebook with the rest of your code.
+Instead, we can use [environment variables](https://developer.vonage.com/en/blog/python-environment-variables-a-primer) to save the API key separately so it's available on your computer but never saved in your Python code.
+
+There are lots of environment variables set for you automatically by your operating system (the [PATH variable](https://en.wikipedia.org/wiki/PATH_(variable)) is one you may have encountered before --- if not, no worries).
+You can add any new environment variables you want to and make them available to you in Python by creating a `.env` file.
+
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+
+Environment variables are case sensitive on Unix-like systems (e.g. Mac or Linux computers), but not on Windows systems.
+So `redcap_api_token` and `REDCAP_API_TOKEN` could be two different environment variables on a Unix computer, but they would refer to the same thing on a Windows computer!
+
+By convention, environment variables are usually written in all caps, but you can choose to use lower case if you prefer.
+
+</div>
+
+
+
+
+### Protecting your API token in R
+
+To protect your API token, never save it in your R script or R Markdown file with the rest of your code.
+Instead, we can use [environment variables](https://stat.ethz.ch/R-manual/R-devel/library/base/html/EnvVar.html) to save the API key separately so it's available on your computer but never saved in your R code.
+
+There are lots of environment variables set for you automatically by your operating system (the [PATH variable](https://en.wikipedia.org/wiki/PATH_(variable)) is one you may have encountered before --- if not, no worries).
+You can add any new environment variables you want to and make them available to you in R by editing the `.Renviron` file.
+
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+
+Environment variables are case sensitive on Unix-like systems (e.g. Mac or Linux computers), but not on Windows systems.
+So `redcap_api_token` and `REDCAP_API_TOKEN` could be two different environment variables on a Unix computer, but they would refer to the same thing on a Windows computer!
+
+By convention, environment variables are usually written in all caps, but you can choose to use lower case if you prefer.
+
+</div>
+
+Edit the .Renviron file
+---
+
+To open up the `.Renviron` file for editing, run the following R code in the [R Studio console](https://swcarpentry.github.io/r-novice-inflammation/09-supp-intro-rstudio/index.html#:~:text=The%20console%20window%20(in%20RStudio,when%20you%20close%20the%20session.):
+
+```r
+file.edit("~/.Renviron")
+```
+
+This will open a text file in the Editor pane called .Renviron.
+It will just be a blank file if you don't have any environment variables already saved there, or you may see some existing variables.
+If you have variables there, they'll look something like this:
+
+```
+VAR1 = "value1"
+VAR2 = "value2"
+```
+
+Add your API token to that file.
+You can name your API token anything you like, but we recommend either naming it with something relating to your project title (e.g. `REDCAP_API_SEPSIS_WAVE1`) or with the REDCap project ID number
+(e.g. `REDCAP_API_PID_12345`).
+This will make it easier for someone else looking at your code to know which REDCap project you're referencing when you use that token.
+
+So now your `.Renviron` file might look something like this (note `abc213` isn't a real API token --- your real API token will be longer):
+
+```
+REDCAP_API_PID_12345 = "abc123"
+```
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+Note that the `.Renviron` file is **not** R code, so you need to write a little differently than you might for normal R code.
+In particular, you have to use `=`, not `<-`, to assign values to variables.
+
+</div>
+
+Be sure to save the `.Renviron` file.
+
+Then you need to restart R for the changes to take effect.
+You can restart R quickly in RStudio by going to the `Session` menu at the top of the screen and selecting `Restart R`.
+
+Reference the environment variable in your R code
+---
+
+To use an environment variable in your R code, you need to use the `Sys.getenv()` function.
+For example, if you saved your API token as `REDCAP_API_PID_12345` above, then you can call it in R with `Sys.getenv("REDCAP_API_PID_12345")`.
+
+Let's take a look at how that would work in an API call to REDCap.
+
+Here's something like the code you should have generated in the [R example above](#r-and-the-redcap-api), but we've deleted the line at the top that included the API token.
+Instead, where it used to just call for `token` in the `formData` list, now it references the environment variable we set, `Sys.getenv("REDCAP_API_PID_12345")` (note that your environment variable will probably have a slightly different name, since it will reference your own REDCap project ID number or project name).
+
+```r
+formData <- list("token"=Sys.getenv("REDCAP_API_PID_12345"),
+    content='record',
+    action='export',
+    format='csv',
+    type='flat',
+    csvDelimiter='',
+    rawOrLabel='raw',
+    rawOrLabelHeaders='raw',
+    exportCheckboxLabel='false',
+    exportSurveyFields='false',
+    exportDataAccessGroups='false',
+    returnFormat='json'
+)
+response <- httr::POST(url, body = formData, encode = "form")
+result <- httr::content(response)
+print(result)
+```
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+If your API call isn't working now and it was before, double check the following:
+
+- Your environment variable needs to exactly match the way you wrote it in your `.Renviron` file
+- You must have saved the `.Renviron` file after adding your API token variable
+- You need to restart R after saving the `.Renviron` file for those changes to take effect
+- The name of the variable needs to be in quotes in the `Sys.getenv()` command (e.g. `Sys.getenv("API_TOKEN")`, not `Sys.getenv(API_TOKEN)`)
+
+</div>
+
+Now you can version control and share your code freely without worrying about accidentally sharing your API token!
+
+Even better, if everyone on your team uses the same strategy for storing API tokens, they'll be able to run your code on their computer without having to edit anything as long as they have their own API token saved in their `.Renviron` file and named the same way you name yours.
+
+
+
 ## Additional Resources
 
 We've barely scratched the surface of what you can do with the REDCap API.  Here are some helpful resources to allow you to advance!
