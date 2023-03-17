@@ -528,7 +528,7 @@ If you don't have a newline at the end of your `.env` file, it won't work.
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
-If you're working in a Juptyer notebook, make sure **not** to save the above code in your notebook!
+Make sure **not** to save the above code in your Jupyter notebook or script!
 It contains your API token.
 
 If you like, you can write a cell with the above code, run it, and then erase the code without saving the notebook.
@@ -573,7 +573,7 @@ For a refresher, here's a [tutorial on installing packages with conda](https://d
 
 </div>
 
-Then we can use `os.getenv` to reference the specific environment variable we want to use (in this example it's called "REDCAP_API_PID_12345", but yours will be whatever name you gave it in your `.env` file).
+Then we can use `os.getenv` to reference the specific environment variable we want to use (in this example it's called `REDCAP_API_PID_12345`, but yours will be whatever name you gave it in your `.env` file).
 
 We'll remove the token that was written out in our API call and replace it with `os.getenv('REDCAP_API_PID_12345')`.
 Your updated code should look something like this:
@@ -600,7 +600,8 @@ data = {
 
 And you're all set!
 You can save as many API tokens in `.env` as you like.
-You can edit existing tokens or add new ones either by opening the `.env` file directly and editing it, or and update them there whenever you need to by running `file.edit("~/.Renviron")`.
+
+You can edit existing tokens or add new ones either by opening the `.env` text file directly and editing it, or you can update them from within Python by using [`dotenv.set_key()`](https://saurabh-kumar.com/python-dotenv/reference/#dotenv.set_key).
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
@@ -609,8 +610,8 @@ If your API call isn't working now and it was before, double check the following
 
 - Your environment variable needs to exactly match the way you wrote it in your `.env` file
 - You must have saved the `.env` file after adding your API token variable
-- You need to restart R after saving the `.Renviron` file for those changes to take effect
-- The name of the variable needs to be in quotes in the `Sys.getenv()` command (e.g. `Sys.getenv("API_TOKEN")`, not `Sys.getenv(API_TOKEN)`)
+- To check that it's correctly finding your token, try running `print(os.getenv('REDCAP_API_PID_12345'))` (but with the name of your environment variable in place of our example one), which should print your token for you. Does it match what you see in REDCap?
+- The name of the variable needs to be in quotes in the `os.getenv()` command (e.g. `os.getenv('API_TOKEN')`, not `os.getenv(API_TOKEN)`)
 
 </div>
 
