@@ -490,7 +490,7 @@ Feel free to just read the one in the coding language you prefer.
 To protect your API token, never save it in your Python script or Jupyter notebook with the rest of your code.
 Instead, we can use [environment variables](https://developer.vonage.com/en/blog/python-environment-variables-a-primer) to save the API key separately so it's available on your computer but never saved in your Python code.
 
-There are lots of environment variables set for you automatically by your operating system (the [PATH variable](https://en.wikipedia.org/wiki/PATH_(variable)) is one you may have encountered before --- if not, no worries).
+There are lots of environment variables set for you automatically by your operating system (the [PATH variable](https://en.wikipedia.org/wiki/PATH_(variable) is one you may have encountered before --- if not, no worries).
 You can add any new environment variables you want to and make them available to you in Python by creating a `.env` file.
 
 <div class = "cool-fact">
@@ -503,15 +503,127 @@ By convention, environment variables are usually written in all caps, but you ca
 
 </div>
 
+Create the .env file
+---
 
+The `.env` file is just a text file, so you can create it in any text editor you like.
+Just be sure to save it as `.env`, and it should be saved in the same folder as your Python script or Jupyter notebook.
 
+If you prefer to create the file right in Python, you can do that with the following commands:
+
+```python
+# create a new file called .env
+fp = open('.env', 'w')
+# write your API token in it (replace abc123 with your token)
+fp.write('REDCAP_API_PID_12345 = "abc123"\n')
+# close the file
+fp.close()
+
+```
+
+Note the `\n` right after your token string.
+That's a newline.
+If you don't have a newline at the end of your `.env` file, it won't work.
+
+<div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
+If you're working in a Juptyer notebook, make sure **not** to save the above code in your notebook!
+It contains your API token.
+
+If you like, you can write a cell with the above code, run it, and then erase the code without saving the notebook.
+
+</div>
+
+You can name your API token anything you like, but we recommend either naming it with something relating to your project title (e.g. `REDCAP_API_SEPSIS_WAVE1`) or with the REDCap project ID number
+(e.g. `REDCAP_API_PID_12345`).
+This will make it easier for someone else looking at your code to know which REDCap project you're referencing when you use that token.
+
+<div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
+If you're using git to version control your project, be sure to add `.env` to your [.gitignore file](https://git-scm.com/docs/gitignore)!
+
+Here's [a tutorial on creating and editing a .gitignore file](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_creation_and_tracking/git_creation_and_tracking.md#telling-git-not-to-track-some-files) if you want a refresher.
+
+</div>
+
+Reference the environment variable in your Python code
+---
+
+There's a handy Python package for working with `.env` files called `dotenv`.
+We'll use `load_dotenv()`, which looks for a file called `.env` in the current working directory and loads all of the variables in it as environment variables (which means they're available in your OS but not yet within your Python session).
+
+Add the following code to your script or notebook, above your API call.
+
+```python
+from dotenv import load_dotenv
+load_dotenv()
+
+```
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+If you see the error `ModuleNotFoundError: No module named 'dotenv'`
+it means you need to install the `python-dotenv` package:
+At the command line, you'll need to run either `conda install python-dotenv` or `pip install python-dotenv`.
+
+For a refresher, here's a [tutorial on installing packages with conda](https://docs.anaconda.com/anaconda/user-guide/tasks/install-packages/) and one on [installing packages with pip](https://www.datacamp.com/tutorial/pip-python-package-manager#pip-in-action).
+
+</div>
+
+Then we can use `os.getenv` to reference the specific environment variable we want to use (in this example it's called "REDCAP_API_PID_12345", but yours will be whatever name you gave it in your `.env` file).
+
+We'll remove the token that was written out in our API call and replace it with `os.getenv('REDCAP_API_PID_12345')`.
+Your updated code should look something like this:
+
+```python
+import requests
+import os
+
+data = {
+    'token': os.getenv('REDCAP_API_PID_12345'),
+    'content': 'record',
+    'action': 'export',
+    'format': 'csv',
+    'type': 'flat',
+    'csvDelimiter': '',
+    'rawOrLabel': 'raw',
+    'rawOrLabelHeaders': 'raw',
+    'exportCheckboxLabel': 'false',
+    'exportSurveyFields': 'false',
+    'exportDataAccessGroups': 'false',
+    'returnFormat': 'json'
+}
+```
+
+And you're all set!
+You can save as many API tokens in `.env` as you like.
+You can edit existing tokens or add new ones either by opening the `.env` file directly and editing it, or and update them there whenever you need to by running `file.edit("~/.Renviron")`.
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+If your API call isn't working now and it was before, double check the following:
+
+- Your environment variable needs to exactly match the way you wrote it in your `.env` file
+- You must have saved the `.env` file after adding your API token variable
+- You need to restart R after saving the `.Renviron` file for those changes to take effect
+- The name of the variable needs to be in quotes in the `Sys.getenv()` command (e.g. `Sys.getenv("API_TOKEN")`, not `Sys.getenv(API_TOKEN)`)
+
+</div>
+
+Now you can version control and share your code freely without worrying about accidentally sharing your API token!
+
+Even better, if everyone on your team uses the same strategy for storing API tokens, they'll be able to run your code on their computer without having to edit anything as long as they have their own API token saved in their `.env` file and named the same way you name yours.
 
 ### Protecting your API token in R
 
 To protect your API token, never save it in your R script or R Markdown file with the rest of your code.
 Instead, we can use [environment variables](https://stat.ethz.ch/R-manual/R-devel/library/base/html/EnvVar.html) to save the API key separately so it's available on your computer but never saved in your R code.
 
-There are lots of environment variables set for you automatically by your operating system (the [PATH variable](https://en.wikipedia.org/wiki/PATH_(variable)) is one you may have encountered before --- if not, no worries).
+There are lots of environment variables set for you automatically by your operating system (the [PATH variable](https://en.wikipedia.org/wiki/PATH_(variable) is one you may have encountered before --- if not, no worries).
 You can add any new environment variables you want to and make them available to you in R by editing the `.Renviron` file.
 
 <div class = "cool-fact">
@@ -595,6 +707,9 @@ response <- httr::POST(url, body = formData, encode = "form")
 result <- httr::content(response)
 print(result)
 ```
+
+And you're all set!
+You can save as many API tokens in `.Renviron` as you like, and update them there whenever you need to by running `file.edit("~/.Renviron")`.
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
