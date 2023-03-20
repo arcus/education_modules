@@ -206,7 +206,7 @@ The command `cd` lets you **c**hange **d**irectory. Unlike the previous two comm
 
   * To navigate to the parent directory of your current location, use `cd ..`
 
-  * Use slashes `/` to link more than one navigation. For example `cd ../..` will navigate you up to the the parent directory (`..`) of your parent directory (`..`).
+  * Use slashes `/` to link more than one navigation. For example `cd ../..` will navigate you up to the parent directory (`..`) of your parent directory (`..`).
 
   * It is possible to move up and then back down in your file hierarchy. For example `cd ../other_directory` would move you to the `other_directory` that shares the same parent directory as your current location.
 
@@ -217,7 +217,13 @@ The command `cd` lets you **c**hange **d**irectory. Unlike the previous two comm
   * If you know how to get to the directory you want from your home directory, you can go directly there with `cd ~/fixed/path/to/directory`
 
 
-**Give it a try!** Use `cd`, `ls`, and `pwd` to explore the directories on your computer. Try navigating around some files and folders that you are already familiar with to get comfortable with how they look through the bash shell.
+**Give it a try!**
+---
+Use `cd`, `ls`, and `pwd` to explore the directories on your computer. Try navigating around some files and folders that you are already familiar with to get comfortable with how they look through the bash shell. 
+
+- Use `ls` to learn more about what's in your current directory.
+- Choose a specific nested folder somewhere on your computer (e.g., the location of your most recent manuscript draft) -- challenge yourself to see if you can get there via the command line.
+- Try moving up and then back down again in your file hierarchy all in one line.
 
 ### Tab completion
 
@@ -237,7 +243,9 @@ Tab completion is useful not just for navigating your file system, but for all s
 
 ### Quiz: Navigation
 
-Your project is located in the directory `project` which has fixed path `~/project` and contains directories `notes` and `data`. You run `pwd` and see that you are in `project/notes/1_jan_2022/`. How would you navigate to the `data` directory?
+Your project is located in the directory `project` which has fixed path `~/project` and contains directories `notes` and `data`. You run `pwd` and see that you are in `project/notes/1_jan_2022/`. How would you navigate to the `data` directory? 
+
+HINT: You can use either the relative path or the fixed path!
 
 [[cd ../../data]]
 <script>
@@ -253,7 +261,7 @@ The `cd` function changes what directory you are in. There are a couple of ways 
 
 - Relative to your current location, you can go up one level with `..` to the `notes` directory, then up another level with `..` to `project`. Once in the `project` directory you can move down a level into `data`.
 
-    * You can do this in three steps: `cd ..` followed by `cd ..` again and lastly `cd data`
+  * You can do this in three steps: `cd ..` followed by `cd ..` again and lastly `cd data`
 
   * You can link the three steps together with `cd ../../data`
 
