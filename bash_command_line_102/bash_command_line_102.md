@@ -170,7 +170,7 @@ The `find` command lets you search file and folder names. Since we just looked a
 
 The asterisk `*` is a character sequence wildcard. It allows you to search for strings of characters when you might know only a portion of the string.
 
-Every character sequence matches `*`, even the empty character sequence:
+Every character sequence matches `*`, even the "empty" character sequence which contains no characters at all:
 
 - `anim*` matches `anim`, `animal`, `animal.csv` `anim_132`
 
@@ -482,12 +482,12 @@ rm brown_bear.txt
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
-Removing files from your command line interface with the `rm` command **removes** them from your computer. It does not move them to your "Trash" folder.
+Removing files via your command line interface with the `rm` command **removes** them from your computer. It does not move them to your "Trash" folder.
 
-Be completely sure that you want to remove a file before using the `rm` command.
+Be completely sure that you want to remove a file before using the `rm` command as YOU WILL NOT BE ABLE TO GET REMOVED FILES BACK unless you have another copy backed up somewhere else.  
 </div>
 
-If you are sure you want to delete a directory, the recursive flag `-r` will recursively delete a folder and all of its contents, and the contents of any subfolders, and on an on until everything is gone.
+If you are sure you want to delete a directory, the recursive flag `-r` will recursively delete a folder and all of its contents, and the contents of any subfolders, and on and on until everything is gone.
 
 Maybe you no longer want a `red_animals` folder since all of its contents are available elsewhere:
 
