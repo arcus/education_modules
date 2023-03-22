@@ -1,7 +1,9 @@
 <!--
 
-author:   Origial Source of Module Content
-adapter:  Your Name
+author:   Your Name
+external_resources: 
+  resource1: First External Resource
+  resource2: Second External Resource
 email:    email@chop.edu
 version:  0.0.0
 module_template_version: 3.0.0
