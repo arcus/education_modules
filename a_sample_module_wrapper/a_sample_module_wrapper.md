@@ -66,17 +66,31 @@ For help articulating learning objectives, see [this guide to learning objective
 
 ## Lesson Preparation
 
+_This template should be used when a module is more than 50% content that is embedded or linked to. If more than half of the module content is in the LiaScript markdown itself, then the other template should be used, even if that content is primarily adapted from a single CC source._
+
 This module will direct you to external educational content.
 ---
 
-Many topics have great content already written! Still we want to express to learners (and ourselves) how we chose this content. Write a short sentence about this material for each of these important criteria used to select external modules.
+Many topics have great content written by others! We chose this content for you based on how well it meets our criteria. 
 
-- expert authors
-- well vetted/maintained
-- well-written
-- stable support
+_Not all selected materials will meet all of these criteria, but selected materials should meet as many as possible. Write a short sentence about how this material meets, or does not meet, each criterion._
 
-If this website/external resource is accessible, mention that here as well. If this outside resource is not particularly accessible, acknowledge its limitations here (and perhaps provide additional resources if possible?)
+**Resource 1 Name**
+Short optional summary sentence about resource 1.
+
+- (check/uncheck icon) Expert Authors / Well-Vetted: _who are the expert authors? or what institutional authority guarantees accuracy?_
+- (check/uncheck icon) Maintained: _who is in charge of implementing regular updates to this material, important in fast-changing fields._
+- (check/uncheck icon) Stable Support: _who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!_
+- (check/uncheck icon) Accessibility: _Does this meet our high standards for accessibility? What do we know it lacks?_ 
+
+**Resource 2 Name**
+Short optional summary sentence about resource 2.
+
+- (check/uncheck icon) Expert Authors / Well-Vetted: _who are the expert authors? or what institutional authority guarantees accuracy?_
+- (check/uncheck icon) Maintained: _who is in charge of implementing regular updates to this material, important in fast-changing fields._
+- (check/uncheck icon) Stable Support: _who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!_
+- (check/uncheck icon) Accessibility: _Does this meet our high standards for accessibility? What do we know it lacks?_ 
+
 
 The structure of this module:
 ---
