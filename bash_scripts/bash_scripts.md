@@ -166,8 +166,8 @@ An executable script can be run as its own command. We won't be creating executa
 
 The two symbol sequence `#!` is called a [**shebang**](https://en.wikipedia.org/wiki/hash-bang) and without it your computer wouldn't know that it is expected to run what follows as code.
 
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
 
 The symbol `#` has [many names](https://en.wikipedia.org/wiki/Number_sign#). You might be most familiar with it as a "hashtag," "number sign," or the "pound sign." In the context of coding it is usually called either a "hash" or, borrowing from musical notation, a "sharp."
 
@@ -504,7 +504,7 @@ When defining a new variable, there should not be any spaces on either side of t
 
 If you look at older Bash scripts, you may see backticks `\`commands here\`` used instead of the dollar sign and parentheses to create subshells.
 
-While backticks will work to create a subshell,  the `$()` construction has some advantages, namely that you can nest subshells like this:
+While backticks will work to create a subshell, the `$()` construction has some advantages, namely that you can nest subshells like this:
 
 ```
 $(outer subshell depends on $(inner subshell))
