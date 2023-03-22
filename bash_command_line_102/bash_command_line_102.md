@@ -64,10 +64,11 @@ If you are using a computer with running macOS (i.e. a Mac) you can use the **Te
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-It can be scary to interact with files directly from the command line. To ensure that we aren't touching any of the important files on your computer, you will be downloading a small directory to experiment with. 
+It can be stressful to interact with files directly from the command line. Throughout this module we will make sure you know what each command does before asking you to do it, and only ask you to make changes within a practice directory that you will download.
 
-This way you don't have to worry about accidentally changing something you didn't want to change. You can always download a fresh copy to start over if you want.
 </div>
+
+To ensure that we aren't touching any of the important files on your computer, you will be downloading a small directory to experiment with.  You can download a fresh copy to start over at any point. 
 
 **Download the files.**
 
@@ -75,7 +76,7 @@ Download the [`learning_bash` directory](https://github.com/arcus/learning_bash)
 
 1. Click on the green **Code** drop-down button towards the right-hand side of the screen. 
 
-2. Select **Download ZIP**.
+2. Select **Download ZIP** from the options that appear.
 
 3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`. Depending on your computer's operating system, you may be able to un-zip the folder by double clicking on it, or may need to right click on it a select "Extract All." This may create an identically named folder inside `learning_bash-main` that contains all of the individual files.
 
@@ -170,7 +171,7 @@ The `find` command lets you search file and folder names. Since we just looked a
 
 The asterisk `*` is a character sequence wildcard. It allows you to search for strings of characters when you might know only a portion of the string.
 
-Every character sequence matches `*`, even the "empty" character sequence which contains no characters at all:
+Every character sequence matches `*`, even the empty character sequence. (The empty character sequence is a sequence containing no characters at all).
 
 - `anim*` matches `anim`, `animal`, `animal.csv` `anim_132`
 
