@@ -3,7 +3,7 @@
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
 version: 1.4.0
-module_template_version: 2.0.1
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Bash / Command Line 101
@@ -71,7 +71,10 @@ On a Mac computer, bash has been the default login shell in the **Terminal** com
 2. The terminal may take a few seconds to start, once it is open you should see a blinking cursor where you can type.
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 It should be noted that Macs with the Catalina Operating System or later are running zsh instead of bash. That said, zsh is [functionally a later and greater version of bash with some key differences noted](https://medium.com/@harrison.miller13_28580/bash-vs-z-shell-a-tale-of-two-command-line-shells-c65bb66e4658).
+
 </div>
 
 ### Windows Computers
@@ -81,9 +84,12 @@ Check in your start menu if you have either **WLS** (the Windows Subsystem for L
 If you do not have either of those programs available, please follow the instructions below. **Do not use the PowerShell** program for this lesson, it utilizes a different scripting language.
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 There are two sets of instructions for Windows users, one for users who have administrative access to their computers, and one that will work for most users who don't. That said, your organization may have stricter controls on what a non-admin user can download.
 
 **If the instructions for non-admin users do not work for you, you may have to talk to your organization's IT support about getting access.**
+
 </div>
 
 **Windows users with admin access**
@@ -105,7 +111,7 @@ There are two sets of instructions for Windows users, one for users who have adm
 You will need to download and use the **Git Bash**, a bash shell that is downloaded when you set up **Git** on your computer.
 
 Git is a powerful version control system for organizing your work and you will likely want to use at some point in the (near) future if you don't use it already. For that reason, we recommend that you follow these instructions for [setting up Git on your Windows computer](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md#Lesson-Preparation).
-You do not need to configure Git at the this time, so following the instructions in the Lesson Preparation section will suffice. The installation process may take about 10 to 15 minutes.
+You do not need to configure Git at this time, so following the instructions in the Lesson Preparation section will suffice. The installation process may take about 10 to 15 minutes.
 
 Once you have Git Bash installed, you are ready to get started learning how to use the bash shell!
 
@@ -423,14 +429,16 @@ cat my_sentences
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-The command `cat` is very powerful three-part function that allows a reader to view, combine, or create a new version of a file. In fact `cat` is a shortening of the word "con**cat**enate."
+The command `cat` is very powerful function that allows a reader to view, combine, or create a new version of a file. In fact `cat` is a shortening of the word "con**cat**enate."
+
+You can learn more about this command's many uses in the [manual entry for `cat`](https://man.openbsd.org/cat.1).
 
 </div>
 
 Many text files, however, are too big to usefully examine using the `cat` command, either because the lines are too long, or because there are too many lines. Some examples include:
 
 - files containing a genetic sequence, which will likely have the entire sequence, hundreds or thousands of characters long, stored as a single line.
-- files containing many data observations, which will likely record each observation on a new line. Actigraphy data collected by wearable monitors might record an observation once a minute so data from a single 24 hour period would be stored in a file 1440 lines long.
+- files containing many data observations, which will likely record each observation on a new line. Actigraphy data collected by wearable monitors might record an observation once a minute, so data from a single 24-hour period would be stored in a file 1440 lines long.
 
 One way to usefully look at such files is with `less`.
 
