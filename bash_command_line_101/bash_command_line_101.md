@@ -2,8 +2,8 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version: 1.3.2
-module_template_version: 2.0.1
+version: 1.4.0
+module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Bash / Command Line 101
@@ -71,7 +71,10 @@ On a Mac computer, bash has been the default login shell in the **Terminal** com
 2. The terminal may take a few seconds to start, once it is open you should see a blinking cursor where you can type.
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 It should be noted that Macs with the Catalina Operating System or later are running zsh instead of bash. That said, zsh is [functionally a later and greater version of bash with some key differences noted](https://medium.com/@harrison.miller13_28580/bash-vs-z-shell-a-tale-of-two-command-line-shells-c65bb66e4658).
+
 </div>
 
 ### Windows Computers
@@ -81,9 +84,12 @@ Check in your start menu if you have either **WLS** (the Windows Subsystem for L
 If you do not have either of those programs available, please follow the instructions below. **Do not use the PowerShell** program for this lesson, it utilizes a different scripting language.
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 There are two sets of instructions for Windows users, one for users who have administrative access to their computers, and one that will work for most users who don't. That said, your organization may have stricter controls on what a non-admin user can download.
 
 **If the instructions for non-admin users do not work for you, you may have to talk to your organization's IT support about getting access.**
+
 </div>
 
 **Windows users with admin access**
@@ -105,7 +111,7 @@ There are two sets of instructions for Windows users, one for users who have adm
 You will need to download and use the **Git Bash**, a bash shell that is downloaded when you set up **Git** on your computer.
 
 Git is a powerful version control system for organizing your work and you will likely want to use at some point in the (near) future if you don't use it already. For that reason, we recommend that you follow these instructions for [setting up Git on your Windows computer](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md#Lesson-Preparation).
-You do not need to configure Git at the this time, so following the instructions in the Lesson Preparation section will suffice. The installation process may take about 10 to 15 minutes.
+You do not need to configure Git at this time, so following the instructions in the Lesson Preparation section will suffice. The installation process may take about 10 to 15 minutes.
 
 Once you have Git Bash installed, you are ready to get started learning how to use the bash shell!
 
@@ -117,7 +123,10 @@ Your computer has an **Operating System** (OS), most commonly either Windows, Ma
 The **shell** is like a layer outside the kernel that you as a user can communicate with. You can type commands in the shell, and it will execute them for you in the kernel. Back when computers were newer and there were few ready programs available, the shell was the primary way to get stuff done on a computer.
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 To learn more, check out this post for [an excellent breakdown of the difference between the shell and the kernel](https://www.geeksforgeeks.org/difference-between-shell-and-kernel/).
+
 </div>
 
 A **Command Line Interface** or **CLI** allows a user to pass a series of text (commands) to a program in order to execute code. Common command line interfaces include Terminal (Mac), WSL (Windows), and Git Bash (Windows). You opened one of these in the [lesson preparation](#lesson-preparation) for this module.
@@ -203,7 +212,7 @@ The command `cd` lets you **c**hange **d**irectory. Unlike the previous two comm
 
   * To navigate to the parent directory of your current location, use `cd ..`
 
-  * Use slashes `/` to link more than one navigation. For example `cd ../..` will navigate you up to the the parent directory (`..`) of your parent directory (`..`).
+  * Use slashes `/` to link more than one navigation. For example `cd ../..` will navigate you up to the parent directory (`..`) of your parent directory (`..`).
 
   * It is possible to move up and then back down in your file hierarchy. For example `cd ../other_directory` would move you to the `other_directory` that shares the same parent directory as your current location.
 
@@ -214,7 +223,13 @@ The command `cd` lets you **c**hange **d**irectory. Unlike the previous two comm
   * If you know how to get to the directory you want from your home directory, you can go directly there with `cd ~/fixed/path/to/directory`
 
 
-**Give it a try!** Use `cd`, `ls`, and `pwd` to explore the directories on your computer. Try navigating around some files and folders that you are already familiar with to get comfortable with how they look through the bash shell.
+**Give it a try!**
+---
+Use `cd`, `ls`, and `pwd` to explore the directories on your computer. Try navigating around some files and folders that you are already familiar with to get comfortable with how they look through the bash shell. 
+
+- Use `ls` to learn more about what's in your current directory.
+- Choose a specific nested folder somewhere on your computer (e.g., the location of your most recent manuscript draft) -- challenge yourself to see if you can get there via the command line.
+- Try moving up and then back down again in your file hierarchy all in one line.
 
 ### Tab completion
 
@@ -225,13 +240,18 @@ Once you start typing the first few letters of a directory, press `tab`. The she
 If there were another directory that started with the same few letters, the shell will guess as far as it can. For example if there were also a folder `my_random_files`, typing `cd m` followed by `tab` would prompt the shell to complete as much as it can: `cd my_` and then you could keep typing either an `r` or `d` followed by another `tab` to complete the line of code.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Tab completion is useful not just for navigating your file system, but for all sorts of commands in bash scripting. By minimizing the amount you have to type it can make your work both easier and more accurate. You should always be sure to double check that the `tab` completed the line to what you wanted it to be.
+
 </div>
 
 
 ### Quiz: Navigation
 
-Your project is located in the directory `project` which has fixed path `~/project` and contains directories `notes` and `data`. You run `pwd` and see that you are in `project/notes/1_jan_2022/`. How would you navigate to the `data` directory?
+Your project is located in the directory `project` which has fixed path `~/project` and contains directories `notes` and `data`. You run `pwd` and see that you are in `project/notes/1_jan_2022/`. How would you navigate to the `data` directory? 
+
+HINT: You can use either the relative path or the fixed path!
 
 [[cd ../../data]]
 <script>
@@ -247,7 +267,7 @@ The `cd` function changes what directory you are in. There are a couple of ways 
 
 - Relative to your current location, you can go up one level with `..` to the `notes` directory, then up another level with `..` to `project`. Once in the `project` directory you can move down a level into `data`.
 
-    * You can do this in three steps: `cd ..` followed by `cd ..` again and lastly `cd data`
+  * You can do this in three steps: `cd ..` followed by `cd ..` again and lastly `cd data`
 
   * You can link the three steps together with `cd ../../data`
 
@@ -260,7 +280,9 @@ The bash shell can see and move files of all types, but it is most useful for in
 
 A [**plain text**](https://en.wikipedia.org/wiki/Plain_text) file is a file that contains only text characters like the ones you can type directly using your keyboard. For example the words "plain text" at the beginning of this paragraph, which are both bolded and hyperlinked, are not being presented to you as plain text. You might have run into problems with files that aren't in plain text if, for example, you ever opened a file in a new program and lost some of the formatting like particular fonts in Word or conditional highlighting in Excel.
 
-<div class = "learn-more">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
 Even though the words "plain text" in the previous paragraph have some non-text attributes, they are all recorded as plain text in the Markdown (`.md`) file of this lesson. If you open the [Markdown file](link/to/git/of/this/file), you will see only characters that can be typed by a keyboard:
 
 ```
@@ -287,8 +309,11 @@ Some common types of plain text files you might have seen before are:
 | `.md` | markdown file |
 | `.html` | html file |
 
-<div class = "learn-more">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
 The file endings (or **extensions**) like `.txt`, `.csv`, `.doc` (Word), or `.xslx` (Excel) are the part of the file name that lets your computer know what type of program to use to open it. The ending doesn't actually impact the contents of the file, which is why we will be able to create files like `my_file` in the next section with no file ending at all.
+
 </div>
 
 
@@ -296,9 +321,12 @@ The file endings (or **extensions**) like `.txt`, `.csv`, `.doc` (Word), or `.xs
 
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 You will get the most out of this section if you follow along in your own command line interface, running the commands as you learn them.
 
 So that we don't change any of your pre-existing files, we will practice this in a new directory that you can play around with or delete later.
+
 </div>
 
 
@@ -339,6 +367,8 @@ Since these are files and not directories, we can't use `cd` to open them, and w
 
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 You might have noticed that none of the file or directory names we used had spaces in them. Bash scripting gets quite a bit more complicated when you have spaces in names, so it is considered best practice to avoid them.
 </div>
 
@@ -374,23 +404,70 @@ This is another sentence.
 **Give it a try!** Add some text to the files you already created!
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 Make sure you use the two greater than signs (here, we'll call them "arrows") in `>>`. Using only a single arrow will also write text to your file, but instead of appending it to the end of the file, it will replace the entire contents of the file with that new text.
+
 </div>
 
 Next, we will see learn how to look at the contents of our file to ensure that it really does contain what we think it should.
 
 ### Viewing the contents of a file
 
-The easiest way to see the contents of a file is the `cat` function. If you run `cat` followed by a file name, the command line interface will print out the contents of that file line by line.
+There are several different ways to view the contents of a file. You might want to see every line of a short file printed in its entirety, but if your file is 1000 lines long, or has lines containing thousands of characters, you might want to look at particular parts of the file.
 
-Give it a try:
+`cat`
+---
+The easiest way to see the contents of a short file is the `cat` function. If you run `cat` followed by a file name, the command line interface will print out the entire contents of that file line by line.
+
+**Give it a try:**
 
 ```
 cat my_sentences
 ```
 
 <div class = "learn-more">
-The command `cat` is very powerful three-part function that allows a reader to view, combine, or create a new version of a file. In fact `cat` is a shortening of the word "con**cat**enate."
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+The command `cat` is very powerful function that allows a reader to view, combine, or create a new version of a file. In fact `cat` is a shortening of the word "con**cat**enate."
+
+You can learn more about this command's many uses in the [manual entry for `cat`](https://man.openbsd.org/cat.1).
+
+</div>
+
+Many text files, however, are too big to usefully examine using the `cat` command, either because the lines are too long, or because there are too many lines. Some examples include:
+
+- files containing a genetic sequence, which will likely have the entire sequence, hundreds or thousands of characters long, stored as a single line.
+- files containing many data observations, which will likely record each observation on a new line. Actigraphy data collected by wearable monitors might record an observation once a minute, so data from a single 24-hour period would be stored in a file 1440 lines long.
+
+One way to usefully look at such files is with `less`.
+
+`less`
+---
+
+Instead of printing out the entire contents of the file, entering the command `less file_name.txt` will open your file in the `less` program within your command line interface. Within this program, you can use the arrows on your keyboard to move around.
+
+To exit from the `less` program, press `q` (for "quit").
+
+
+**Try it out yourself:**
+
+If you have a larger text file on your computer, see what it looks like with the `less` command. If you don't have any larger text files, the Folger Shakespeare Library lets you [download text file of any one of Shakespeare's plays](https://www.folger.edu/explore/shakespeares-works/download/), or even a [folder of the complete collection of plays](https://flgr.sh/txtfssAlltxt).
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+The `less` program has a lot of capabilities beyond navigating with the arrow keys. Some are commands within the program, like searching for patterns in the text with `?pattern`. Others are options for how to open the file; `less -N file_name.txt` will open the file with line numbers on the left side.
+
+For a complete list of the possibilities, see the [manual entry for `less`](https://man7.org/linux/man-pages/man1/less.1.html).
+
+</div>
+
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
+
+The command `less` is so named because it is a companion to another function for viewing files called `more` that preceded it. Ironically, the `less` command has more capabilities than the `more` command.
+
 </div>
 
 
@@ -423,11 +500,12 @@ VS Code is a free program you can download from (https://code.visualstudio.com).
 Vim may be the default editor in your shell, but that doesn't mean it is the best one. It is notoriously un-friendly to new users so we don't recommend it as your first (or second) choice of text editor.
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 **Stuck in Vim? **
 
  
-The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. That is why we don't recommend it as a text editor. If you accidentally find yourself stuck in it, hit the `Esc` key, followed by `:`+`q`+`!` (colon, lower-case 'q', exclamation mark), then hitting Return to return to the shell.
+The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. That is why we don't recommend it as a text editor. If you accidentally find yourself stuck in it, hit the `Esc` key, followed by `:`+`q`+`!` (colon, lower-case 'q', exclamation mark), then hitting `Return` to return to the shell.
 </div>
 
 
@@ -482,13 +560,22 @@ The quotes around the text can also be safely omitted in this case, but that isn
 
 ## Getting Help from the Manual
 
-<div class="warning">
+Bash has a very detailed (although sometimes very dense) manual, and every command has an entry describing all of its possible uses. An internet search for "`command_name` bash manual" will usually return the manual text as well as several blog posts or articles about uses for any command. 
 
-The bash manual is available to you in most bash shells, although not in Git Bash. If you are using Git Bash, an internet search for "`command_name` bash manual" will usually get you the same information.
+There are also ways to access the manual information from within your command line interface, although not all CLIs have these capabilities. 
 
-</div>
 
-Entering `man command_name` reveals the documentation for the function `command_name`  (`man` is short for "manual").  This can be helpful if you think a command might be useful and want to learn more about it, or have forgotten how to use a command or what its options are.
+`man`
+---
+
+Entering `man command_name` reveals the documentation for the function `command_name` (`man` is short for "manual").  This can be helpful if you think a command might be useful and want to learn more about it, or have forgotten how to use a command or what its options are.
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+The bash manual is not available in Git Bash. If you are using Git Bash, an internet search for "`command_name` bash manual" will usually get you the same information.
+
+</div> 
 
 For example if you wanted to know more about the command `grep` you could type `man grep`. The output contains a description. The first sentence of the description tells us what `grep` does, it "searches any given input files, selecting lines that match one or more patterns."
 
@@ -498,6 +585,11 @@ To navigate within the documentation, use the up and down arrows on your keyboar
 When you want to exit the documentation, press the `Q` key on your keyboard to return to your command line interface.
 
 ![Grep man command output with the full definition and some options displayed.](media/grep_output_large.png)
+
+`--help`
+---
+
+Entering `command_name --help` will give a summary of the options for the command. Since it won't give you a description, or as much detail about each option, this is not as useful for learning commands for the first time. It is, however, extremely useful for when you know that a command can do a certain thing, but need to be reminded of what tags turn on the options you want.
 
 ## Additional Resources
 
