@@ -82,17 +82,17 @@ Write a short sentence about how this material meets, or does not meet, each cri
 Short optional summary sentence about resource 1.
 
 - <i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Expert Authors / Well-Vetted: <!-- who are the expert authors? or what institutional authority guarantees accuracy?-->
-- <i class="fa-solid fa-do-not-enter" style="color: #f0bc00;" title="Unchecked"></i> Maintained: <!--who is in charge of implementing regular updates to this material, important in fast-changing fields.-->
-- <i class="fa-regular fa-circle-check" style="color: #158d0c;" title="Checked"></i> Stable Support: <!--who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!-->
-- <i class="fa-solid fa-do-not-enter" style="color: #f0bc00;" title="Unchecked"></i> Accessibility: <!--Does this meet our high standards for accessibility? What do we know it lacks?-->
+- <i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Maintained: <!--who is in charge of implementing regular updates to this material, important in fast-changing fields.-->
+- <i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Stable Support: <!--who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!-->
+- <i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Accessibility: <!--Does this meet our high standards for accessibility? What do we know it lacks?-->
 
 **Resource 2 Name**
 Short optional summary sentence about resource 2.
 
 - <i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Expert Authors / Well-Vetted: <!-- who are the expert authors? or what institutional authority guarantees accuracy?-->
-- <i class="fa-solid fa-do-not-enter" style="color: #f0bc00;" title="Unchecked"></i> Maintained: <!--who is in charge of implementing regular updates to this material, important in fast-changing fields.-->
-- <i class="fa-regular fa-circle-check" style="color: #158d0c;" title="Checked"></i> Stable Support: <!--who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!-->
-- <i class="fa-solid fa-do-not-enter" style="color: #f0bc00;" title="Unchecked"></i> Accessibility: <!--Does this meet our high standards for accessibility? What do we know it lacks?-->
+- <i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Maintained: <!--who is in charge of implementing regular updates to this material, important in fast-changing fields.-->
+- <i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Stable Support: <!--who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!-->
+- <i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Accessibility: <!--Does this meet our high standards for accessibility? What do we know it lacks?-->
 
 
 The structure of this module:
