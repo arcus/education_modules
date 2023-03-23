@@ -149,6 +149,7 @@ Many cells in this lesson will initially have the `print()` line commented out w
 You can navigate the pages of this course using left and right arrow keys. This means that you **cannot** use left and right arrow keys to navigate **within** a code cell.
 </div>
 
+
 ## The `pandas` Package
 
 The `pandas` [package](https://pandas.pydata.org/) lets you store, examine, and manipulate tabular data using python. Since many machine learning tools use python, it can be particularly useful to process tabular data in that same environment.
@@ -269,6 +270,7 @@ print(df)
 </div>
 ***
 
+
 ## Tabular Data in `pandas` DataFrames
 
 The tiny DataFrame we saw in the last section was exceptional in several ways. With real data you are likely to have some challenges that just can't be replicated with something that small:
@@ -280,7 +282,6 @@ The tiny DataFrame we saw in the last section was exceptional in several ways. W
 * Real data is often missing entries.
 
 <div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 For this module we will be looking at some fake Covid-19 testing data. Although this data is designed to mimic realistic data with plausible patterns and values, **there is no Protected Health Information in this data**. If you are a fan of the fictional series "Game of Thrones," however, you might recognize some familiar characters.
 
@@ -376,9 +377,7 @@ The methods `.columns` and `.index` will show you all of the column and row name
 
 The column names were imported with the `.csv` file. Since the original file didn't have labels for the rows, `pandas` automatically labeled them numerically 0 through 15523. If you imported tabular data that didn't have column headers, the column names would be numeric, the way the row indices are in our `covid_testing` DataFrame.
 
-<div class = "behind-the-scenes">
-<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
-
+<div class = "help">
 **What does that RangeIndex mean?**
 
 The `covid_testing.index` is `RangeIndex(start=0, stop=15524, step=1)`, but on the previous page we saw that the last row of this DataFrame is labeled 15523. Why is that?
@@ -461,10 +460,7 @@ A colon before the comma will show you all rows of the columns you selected and 
 <br>
 
 <div class = "options">
-<b style="color: rgb(var(--color-highlight));">Another option</b><br>
-
 If you look at other people's code, you may see columns refered to with `data_frame["column_name"]` instead of `data_frame.loc[:,"column_name"]`. While this will frequently give the same output, i.e. show you the entire column, it can [raise errors if you use it to try to update data](https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html). For that reason we are focusing on the `.loc` method.
-
 </div>
 
 ### Quiz: DataFrames
@@ -542,8 +538,6 @@ If, for example, we only want to look at instances where the covid test came bac
 In the example above we used the double equals sign `==` to check whether two objects were the same. This is different from the single equals sign we use at the top of the page to define `covid_testing`.
 
 <div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
 A double equals sign `==` tests for equality, while a single equals sign `=` is for assigning values.
 
 - `a = 7` sets 7 as the value of `a`. It is a declarative statement that from now on `a` is equal to 7. No output will be shown, but from now on if you enter `a`, the output will be `7`.
@@ -593,8 +587,6 @@ That is a whole lot of output when we see every column! You can ask to see fewer
 
 
 <div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
 **`.copy()`**
 
 The method `.copy()` at the very end of line one creates a new DataFrame separate from the original. Omitting the `.copy()` method won't change the output in the next code block, but can have consequences if you later want to make changes to your DataFrame.
@@ -802,9 +794,7 @@ There are two things we can do to make our data more useful.
 
 2. Edit the data in an existing column to improve its usefulness.
 
-<div class = "warning">
-<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
-
+<div class ="warning">
 Reproducibility must always been a priority when doing research, so whenever you are making changes to data, you must ensure that you keep a clear record of the calculations you did and even more importantly that you don't change the original copy of your data.
 
 **Recording calculations**
@@ -953,11 +943,8 @@ covid_testing = covid_testing.replace(["positive","negative"],[1,0])
 </lia-keep>
 </div>
 
-<div class = "warning">
-<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
-
+<div class= "warning">
 The order and length of these lists matter! Each element in the first list will be replaced by the element in the **same position** in the second list.
-
 </div>
 
 ### Quiz: Transforming DataFrames
@@ -983,7 +970,7 @@ You can change the all of the entries in a column to uppercase using the method 
 </div>
 <br>
 
-How would you **change** the `last_name` column of `covid_testing` to be uppercase?
+How would you **change** the the `last_name` column of `covid_testing` to be uppercase?
 
 [( )] `covid_testing.loc[:, "last_name"].str.upper()`
 [( )] `covid_testing.loc[:, "last_name"] == covid_testing.loc[:, "last_name"].str.upper()`
