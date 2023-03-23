@@ -67,7 +67,6 @@ If relevant, you can include recommendations for somewhere else to start if the 
 </div>
 
 ## Lesson Preparation
-
 <!-- This template should be used when a module is more than 50% content that is embedded or linked to.
 If more than half of the module content is in the LiaScript markdown itself, then the other template should be used, even if that content is primarily adapted from a single CC source. -->
 
@@ -75,17 +74,16 @@ This module will direct you to external educational content.
 ---
 
 Many topics have great content written by others! We chose this content for you based on how well it meets our criteria.
-
 <!-- Not all selected materials will meet all of these criteria, but selected materials should meet as many as possible.
 Write a short sentence about how this material meets, or does not meet, each criterion. -->
 
 **Resource 1 Name**
 Short optional summary sentence about resource 1.
 
-- <i class="fa-solid fa-square-check" style="color: #158d0c;"></i> Expert Authors / Well-Vetted: <!-- who are the expert authors? or what institutional authority guarantees accuracy?-->
-- <i class="fa-solid fa-square-check" style="color: #158d0c;"></i> Maintained: <!--who is in charge of implementing regular updates to this material, important in fast-changing fields.-->
-- <i class="fa-solid fa-square-check" style="color: #158d0c;"></i> Stable Support: <!--who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!-->
-- <i class="fa-solid fa-square-check" style="color: #158d0c;"></i> Accessibility: <!--Does this meet our high standards for accessibility? What do we know it lacks?-->
+- <i class="fa-regular fa-square-check" style="color: #158d0c;" title="Checked"></i> Expert Authors / Well-Vetted: <!-- who are the expert authors? or what institutional authority guarantees accuracy?-->
+- <i class="fa-regular fa-square" style="color: #d60505;" title="Unchecked"></i> Maintained: <!--who is in charge of implementing regular updates to this material, important in fast-changing fields.-->
+- <i class="fa-regular fa-square-check" style="color: #158d0c;" title="Checked"></i> Stable Support: <!--who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!-->
+- <i class="fa-regular fa-square" style="color: #d60505;" title="Unchecked"></i> Accessibility: <!--Does this meet our high standards for accessibility? What do we know it lacks?-->
 
 **Resource 2 Name**
 Short optional summary sentence about resource 2.
@@ -98,7 +96,6 @@ Short optional summary sentence about resource 2.
 
 The structure of this module:
 ---
-
 <!-- Give learners a short, concrete, description of what they will do. This might look like: -->
 
 Example Structure 1:
@@ -119,7 +116,6 @@ Example Structure 3:
 2. Read Section 2.1 and 2.2.
 3. Return to this LiaScript course to do an activity.
 4. Answer a few questions (again in the LiaScript course) to make sure you understood the key parts.
-
 <!-- These are just some examples of possible structures. The specific structure will depend greatly on the particular external module/educational resource you are using. -->
 
 
@@ -469,7 +465,6 @@ Hints and follow-up explanations don't work for survey questions.
 
 
 ## Additional Resources
-
 <!-- The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related. -->
 
 To learn more about one topic, check out these great things:
@@ -494,5 +489,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If we gave you the experience you expected
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Module+Template%22)!
-
 <!-- Remember to change the redcap link so that the module name is correct for this module! -->
