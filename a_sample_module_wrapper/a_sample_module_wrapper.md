@@ -6,7 +6,7 @@ external_resources:
   resource1: First External Resource
   resource2: Second External Resource
 version:  0.0.0
-module_template_version: 3.0.0
+wrapper_template_version: 1.0.0
 language: en
 narrator: UK English Female
 title: Module Title
