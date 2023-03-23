@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.1
+version: 1.1.0
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
@@ -175,6 +175,7 @@ Another method to preserve privacy is called **jittering**. Jittering means addi
 
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
 An internal review board, funding agency, or local law may lay out how you are required to anonymize and protect location data in your research. Be sure to follow all required steps to protect personal data when conducting research with geospatial data!
 
