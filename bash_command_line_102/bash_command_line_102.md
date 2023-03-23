@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
-version: 1.1.1
+version: 1.2.0
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -61,17 +61,22 @@ You will get the most out of this lesson if you follow along with the examples a
 **Open a bash shell.**
 If you are using a computer with running macOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
-<div class = "important">
-We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+It can be stressful to interact with files directly from the command line. Throughout this module we will make sure you know what each command does before asking you to do it.  Like any other computational skill, you'll get more comfortable with it the more you practice!
+
 </div>
+
+To ensure that we aren't touching any of the important files on your computer, you will be downloading a small directory to experiment with.  You can download a fresh copy to start over at any point. 
 
 **Download the files.**
 
 Download the [`learning_bash` directory](https://github.com/arcus/learning_bash) from GitHub. Once you go to the link:
 
-1. Click on the green **Code** button.
+1. Click on the green **Code** drop-down button towards the right-hand side of the screen. 
 
-2. Select **Download ZIP**
+2. Select **Download ZIP** from the options that appear.
 
 3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`. Depending on your computer's operating system, you may be able to un-zip the folder by double clicking on it, or may need to right click on it a select "Extract All." This may create an identically named folder inside `learning_bash-main` that contains all of the individual files.
 
@@ -79,6 +84,7 @@ Download the [`learning_bash` directory](https://github.com/arcus/learning_bash)
 
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 **Where is my folder?**
 
@@ -105,6 +111,7 @@ ls
 ```
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
 Make sure to use the file path to `learning_bash-main` that you found for your own computer. If your computer uses Windows OS, make sure you replace the forward slashes ` / ` in the path with back slashes ` \ `.
 
@@ -144,9 +151,10 @@ It looks like these might have some length and weight data in them.
 We could continue to individually look at the contents of each file, but that is a lot of work even with this small folder. Next we are going to learn how to search these files and folders.
 
 
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
 
-<div class ="learn-more">
 Files that start with a `.` (period) are hidden when you enter `ls`. These are usually operational files that help navigate the file system or keep track of metadata. To see all of these files, enter `ls -a`. The `-a` flag tells bash to show you all files and folders.
 
 Since you just downloaded this folder from `GitHub`, you should see `.git` which keeps track of changes to this public directory.
@@ -157,11 +165,13 @@ Since you just downloaded this folder from `GitHub`, you should see `.git` which
 The `find` command lets you search file and folder names. Since we just looked at `dog.txt`, we could search for it using `find dog.txt`. The output for this is just the file name  `dog.txt`. That isn't very helpful by itself, but with the `*` symbol we can make it extremely powerful.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 **Character sequence wildcard `*`**
 
 The asterisk `*` is a character sequence wildcard. It allows you to search for strings of characters when you might know only a portion of the string.
 
-Every character sequence matches `*`, even the empty character sequence:
+Every character sequence matches `*`, even the empty character sequence. (The empty character sequence is a sequence containing no characters at all).
 
 - `anim*` matches `anim`, `animal`, `animal.csv` `anim_132`
 
@@ -237,7 +247,9 @@ grizzly_bear.txt:Ursus arctos horribilis
 polar_bear.txt:Ursus maritimus
 ```
 
-<div class = "learn-more">
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
+
 The [origin of "grep"](https://en.wikipedia.org/wiki/Grep) is that it is **g**lobally searching for a **r**egular **e**xpression and **p**rinting the matching lines. In the text editor `ed` that was part part of the original Unix operating system from 1969, you could do these action with the command `g/re/p` and the name has stuck.
 </div>
 
@@ -278,6 +290,8 @@ While it would be great if all of your files came into being in the location you
 Just because a file is in one location, doesn't mean it has to stay there forever, nor does its name need to be permanent. In this section we will learn and practice moving files around, copying files, and renaming files.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Since **we will be making changes** to your files in this section, please use the `learning_bash-main` directory for practice.  
 
 If you have not yet downloaded it, please follow the instructions on the [Lesson Preparation](#Lesson-Preparation) page.
@@ -306,6 +320,8 @@ mv ~/your/file/path/here/learning_bash-main/blue_animals/blue_morpho.txt ~/your/
 ```
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 Make sure to replace `~/your/file/path/here/` with the path to `learning_bash-main` on your own computer.
 </div>
 
@@ -316,6 +332,8 @@ mv blue_and_yellow_macaw.txt blue_morpho.txt blue_animals
 ```
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Did you get a message informing you that "No such file or directory" exists? Make sure you are in the right directory with `cd ~/your/file/path/here/learning_bash-main`.
 </div>
 
@@ -351,6 +369,8 @@ mv koala.txt koala_bear.txt
 ```
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 You can also use the global location names for your files or folders. In the example above we could have gotten the same result with
 
 ```
@@ -406,6 +426,8 @@ cp -r blue_animals color_name_animals
 ```
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Moving a directory with `mv` will move all of its contents to the new location.
 
 Copying a directory with `cp` requires the `-r` flag in order to copy all of its contents.
@@ -459,12 +481,14 @@ rm brown_bear.txt
 ```
 
 <div class = "warning">
-Removing files from your command line interface with the `rm` command **removes** them from your computer. It does not move them to your "Trash" folder.
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
-Be completely sure that you want to remove a file before using the `rm` command.
+Removing files via your command line interface with the `rm` command **permanently removes** them from your computer. It does not move them to your "Trash" folder.
+
+Be completely sure that you no longer need a file before using the `rm` command as YOU WILL NOT BE ABLE TO GET REMOVED FILES BACK unless you have another copy backed up somewhere else.  
 </div>
 
-If you are sure you want to delete a directory, the recursive flag `-r` will recursively delete a folder and all of its contents, and the contents of any subfolders, and on an on until everything is gone.
+If you are sure you want to delete a directory, the recursive flag `-r` will recursively delete a folder and all of its contents, and the contents of any subfolders, and on and on until everything is gone.
 
 Maybe you no longer want a `red_animals` folder since all of its contents are available elsewhere:
 

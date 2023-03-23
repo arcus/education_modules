@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.1
+version: 1.1.0
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
@@ -62,13 +62,17 @@ You will get the most out of this lesson if you follow along with the examples a
 **Open a bash shell.**
 If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
-<div class = "important">
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
+It can be stressful to interact with files directly from the command line. Throughout this module we will make sure you know what each command does before asking you to do it.  Like any other computational skill, you'll get more comfortable with it the more you practice!
 
 </div>
 
+To ensure that we aren't touching any of the important files on your computer, you will be downloading a small directory to experiment with.  You can download a fresh copy to start over at any point. 
+
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
 Please download a fresh copy of these files. If you have downloaded them for a previous module, you have likely moved and changed some of them while working through that module and the examples in this module assume that no changes have already been made to the directory.
 
@@ -78,8 +82,10 @@ Please download a fresh copy of these files. If you have downloaded them for a p
 
 Download the [`learning_bash` directory](https://github.com/arcus/learning_bash) from GitHub. Once you go to the link:
 
-1. Click on the green **Code** button.
-2. Select **Download ZIP**
+1. Click on the green **Code** drop-down button towards the right-hand side of the screen. 
+
+2. Select **Download ZIP** from the options that appear.
+
 3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`. Depending on your computer's operating system, you may be able to un-zip the folder by double clicking on it, or may need to right click on it a select "Extract All." This may create an identically named folder inside `learning_bash-main` that contains all of the individual files.
 4. [Find out the file path](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#6) (location on your computer) of the new folder `learning_bash-main` and navigate there in your command line interface.
 
@@ -113,7 +119,8 @@ To **iterate** an action or command is to run it again and again. A common situa
 A **loop** is a bit of code that allows you to run the same command again and again. The loop gives instructions for how many times to run your code, and if it requires input, what that input should be.  With loops, you get to write your command once and then tell it to run as many times as you want!
 
 
-<div class = "learn-more">
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
 
 There are two kinds of loops: "for loops" and "while loops." In this lesson we will focus on "for loops" which are generally easier to create. "While loops" can be more powerful than for loops in [certain situations](https://betterprogramming.pub/how-to-pick-between-a-while-and-for-loop-14ef217c3776), so once you understand "for loops" they are worth checking out in your preferred programming languages.
 
@@ -150,6 +157,7 @@ Print the square of 4
 ```
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 The code blocks above are written in **pseudocode**. Pseudocode is a description of code that shows humans its structure but isn't actually written in any programming language. Writing out what you want a program to do in pseudocode can be useful for [explaining, planning, and even debugging](https://towardsdatascience.com/pseudocode-101-an-introduction-to-writing-good-pseudocode-1331cb855be7) code!
 
@@ -182,7 +190,16 @@ done
 
 Indentation doesn't impact the code at all, (unlike in some other languages like Python), so indenting the command C is purely to help make it easier for humans to read the code.
 
-Let's try out an example with our files. Make sure you `cd` into the `learning_bash-main` directory that you downloaded in the [lesson preparation section](#lesson-preparation). Try copying this code into your command line interface and see what happens:
+Let's try out an example with our files. Make sure you `cd` into the `learning_bash-main` directory that you downloaded in the [lesson preparation section](#lesson-preparation). 
+
+
+The `learning_bash` folder contains a few different types of files and folders for us to experiment with. The ones we will be using in this module are:
+
+* `.txt` files like `black_bear.txt` containing a single line with the scientific name of an animal species.
+* `.dat` files like `blue_whale.dat` containing two lines with data about an animal's length and weight.
+
+
+Try copying this code into your command line interface and see what happens:
 
 ```
 for file in *.dat
@@ -344,11 +361,6 @@ That said, the Bash language does not make it easy to write conditional statemen
 * how to recognize conditionals in Bash
 * how to make small changes to existing code.
 
-<div class = "important">
-
-If you find that you need to use conditionals a lot in Bash, you will probably settle on a favorite cheat sheet, of which there are many, including [these](https://github.com/RehanSaeed/Bash-Cheat-Sheet#conditional-statements) [two](https://devhints.io/bash#conditionals).
-
-</div>
 
 ### Statements
 
@@ -364,7 +376,8 @@ The first statement is false, the second one is true, and the last three can be 
 
 Opinions, questions, and instructions are among the many things that we can say that do not fall into the category of mathematical statements.
 
-<div class = "warning">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
 **True / False in Bash**
 
@@ -400,6 +413,7 @@ fi
 ```
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 **Bash's `test` utility**
 
@@ -444,6 +458,7 @@ fi
 The statement `[ $a -lt $b ]` tests whether the variable `$a` is less than the variable `$b`. Similarly, `[ $a -gt $b ]` tests whether `$a` is greater than `$b`.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 **Assigning Variables in Bash**
 
@@ -519,6 +534,7 @@ Double brackets are an extension of single square brackets, with more powerful t
 ===================
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 **True and False for other statements**
 
@@ -572,7 +588,8 @@ As you use them more, you will learn more and more ways to combine and mix mathe
 
 </div>
 
-<div class = "help">
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
 **Look up instead of memorizing**
 
@@ -633,6 +650,7 @@ For a purely theoretical explanation of how loops work, [this short video](https
 You can also use flow charts to visualize both [loops](https://www.zenflowchart.com/blog/for-loop-flowchart) and [conditionals](https://www.zenflowchart.com/guides/if-else-flowchart).
 
 Software Carpentry has a series of lessons on the [Unix Shell](https://swcarpentry.github.io/shell-novice/), including one specifically on [loops](https://swcarpentry.github.io/shell-novice/05-loop/index.html).
+
 
 
 ## Feedback

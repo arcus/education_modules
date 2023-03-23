@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.1
+version: 1.1.0
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
@@ -68,9 +68,21 @@ You will get the most out of this lesson if you follow along with the examples a
 
 If you are using a computer running macOS (i.e. an Apple computer) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
 
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-We want to be able to search, move, and rename files during this module, but don't want to do that with your important files. Therefore we will set up a little directory with a few files to experiment with. You can safely delete the whole thing afterwards if you want.
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+It can be stressful to interact with files directly from the command line. Throughout this module we will make sure you know what each command does before asking you to do it.  Like any other computational skill, you'll get more comfortable with it the more you practice!
+
+</div>
+
+To ensure that we aren't touching any of the important files on your computer, you will be downloading a small directory to experiment with.  You can download a fresh copy to start over at any point. 
+
+<div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
+Please download a fresh copy of these files. If you have downloaded them for a previous module, you have likely moved and changed some of them while working through that module and the examples in this module assume that no changes have already been made to the directory.
+
 </div>
 
 **Download the files.**
@@ -79,8 +91,10 @@ We will be using a directory called `learning_bash` that is publicly available o
 
 Navigate in your browser to the [`learning_bash` directory](https://github.com/arcus/learning_bash) on GitHub. Once you follow the link:
 
-1. Click on the green **Code** button.
-2. Select **Download ZIP**
+1. Click on the green **Code** drop-down button towards the right-hand side of the screen. 
+
+2. Select **Download ZIP** from the options that appear.
+
 3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`.
 4. Place this new folder `learning_bash-main` somewhere you can easily find it. In the examples we will assume that `learning_bash-main` is in the Downloads directory, but you are welcome to move it somewhere else that is convenient for you to navigate to in your command line interface.
 
@@ -92,6 +106,7 @@ A **Bash script** is a small program that automates Bash commands and lets you r
 
 <div class = "cool-fact">
 <b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+
 A **scripting language** is a type of programming language that, like Bash or Python, does not need to be compiled in order for your code to run.
 
 Even though "scripting" is not unique to the Bash language, you might sometimes hear the terms "script" and "Bash scripting" and "shell script" used interchangeably.
@@ -151,8 +166,8 @@ An executable script can be run as its own command. We won't be creating executa
 
 The two symbol sequence `#!` is called a [**shebang**](https://en.wikipedia.org/wiki/hash-bang) and without it your computer wouldn't know that it is expected to run what follows as code.
 
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
 
 The symbol `#` has [many names](https://en.wikipedia.org/wiki/Number_sign#). You might be most familiar with it as a "hashtag," "number sign," or the "pound sign." In the context of coding it is usually called either a "hash" or, borrowing from musical notation, a "sharp."
 
@@ -192,6 +207,13 @@ Which of the following statements about scripts are TRUE?
 ***
 
 ## Calling an existing script
+
+
+The `learning_bash` folder contains a few different types of files and folders for us to experiment with. The ones we will be using in this module are:
+
+* a `.csv` file called `Animals.csv` containing a list of animals and whether they are birds, mammals, fish, reptiles, or insects.
+* `.dat` files like `blue_whale.dat` containing two lines with data about an animal's length and weight.
+* a folder called `scripts` containing three `.sh` files.
 
 In this section we will learn how to use the pre-written scripts in the `scripts` folder inside your `learning_bash-main` directory.
 
@@ -482,7 +504,7 @@ When defining a new variable, there should not be any spaces on either side of t
 
 If you look at older Bash scripts, you may see backticks `\`commands here\`` used instead of the dollar sign and parentheses to create subshells.
 
-While backticks will work to create a subshell,  the `$()` construction has some advantages, namely that you can nest subshells like this:
+While backticks will work to create a subshell, the `$()` construction has some advantages, namely that you can nest subshells like this:
 
 ```
 $(outer subshell depends on $(inner subshell))
