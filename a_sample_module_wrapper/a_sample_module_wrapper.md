@@ -23,6 +23,8 @@ After completion of this module, learners will be able to:
 - do a task
 - articulate the rationale for something
 
+For help articulating learning objectives, see [this guide to learning objectives, including lots of example verbs](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/).
+
 @end
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
@@ -50,7 +52,7 @@ To see what it looks like rendered via LiaScript, [click here](https://liascript
 
 **Pre-requisites**
 
-<!-- List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog). -->
+List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
 
 * one skill we have [another module for, linked here](https://education.arcus.chop.edu)
 * some familiarity with [a topic](https://education.arcus.chop.edu)
@@ -62,10 +64,7 @@ If relevant, you can include recommendations for somewhere else to start if the 
 
 @learning_objectives
 
-<!-- For help articulating learning objectives, see [this guide to learning objectives, including lots of example verbs](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/). -->
-
 </div>
-
 
 ## Lesson Preparation
 
