@@ -65,7 +65,7 @@ If you are using a computer with running iOS (i.e. a Mac) you can use the **Term
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-It can be stressful to interact with files directly from the command line. Throughout this module we will make sure you know what each command does before asking you to do it, and only ask you to make changes within a practice directory that you will download.
+It can be stressful to interact with files directly from the command line. Throughout this module we will make sure you know what each command does before asking you to do it.  Like any other computational skill, you'll get more comfortable with it the more you practice!
 
 </div>
 
