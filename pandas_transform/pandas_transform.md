@@ -957,6 +957,7 @@ covid_testing = covid_testing.replace(["positive","negative"],[1,0])
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
 The order and length of these lists matter! Each element in the first list will be replaced by the element in the **same position** in the second list.
+
 </div>
 
 ### Quiz: Transforming DataFrames
