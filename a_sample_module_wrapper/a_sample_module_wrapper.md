@@ -1,10 +1,10 @@
 <!--
 
 author:   Your Name
-external_resources: 
+email:    email@chop.edu
+external_resources:
   resource1: First External Resource
   resource2: Second External Resource
-email:    email@chop.edu
 version:  0.0.0
 module_template_version: 3.0.0
 language: en
@@ -73,7 +73,7 @@ _This template should be used when a module is more than 50% content that is emb
 This module will direct you to external educational content.
 ---
 
-Many topics have great content written by others! We chose this content for you based on how well it meets our criteria. 
+Many topics have great content written by others! We chose this content for you based on how well it meets our criteria.
 
 _Not all selected materials will meet all of these criteria, but selected materials should meet as many as possible. Write a short sentence about how this material meets, or does not meet, each criterion._
 
@@ -83,7 +83,7 @@ Short optional summary sentence about resource 1.
 - (check/uncheck icon) Expert Authors / Well-Vetted: _who are the expert authors? or what institutional authority guarantees accuracy?_
 - (check/uncheck icon) Maintained: _who is in charge of implementing regular updates to this material, important in fast-changing fields._
 - (check/uncheck icon) Stable Support: _who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!_
-- (check/uncheck icon) Accessibility: _Does this meet our high standards for accessibility? What do we know it lacks?_ 
+- (check/uncheck icon) Accessibility: _Does this meet our high standards for accessibility? What do we know it lacks?_
 
 **Resource 2 Name**
 Short optional summary sentence about resource 2.
@@ -91,7 +91,7 @@ Short optional summary sentence about resource 2.
 - (check/uncheck icon) Expert Authors / Well-Vetted: _who are the expert authors? or what institutional authority guarantees accuracy?_
 - (check/uncheck icon) Maintained: _who is in charge of implementing regular updates to this material, important in fast-changing fields._
 - (check/uncheck icon) Stable Support: _who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!_
-- (check/uncheck icon) Accessibility: _Does this meet our high standards for accessibility? What do we know it lacks?_ 
+- (check/uncheck icon) Accessibility: _Does this meet our high standards for accessibility? What do we know it lacks?_
 
 
 The structure of this module:
