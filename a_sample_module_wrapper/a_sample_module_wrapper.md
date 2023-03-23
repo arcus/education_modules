@@ -35,6 +35,9 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 <!-- Throughout this template, instructions to authors will appear in comments like this. Feel free to leave them, or delete them. They won't appear in the rendered html page either way.
 
+This template should be used when a module is more than 50% content that is embedded or linked to.
+If more than half of the module content is in the LiaScript markdown itself, then the other template should be used, even if that content is primarily adapted from a single CC source.
+
 To see how to use this template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6).
 To see what it looks like rendered via LiaScript, [click here](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6#1) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course". -->
 
@@ -67,8 +70,6 @@ If relevant, you can include recommendations for somewhere else to start if the 
 </div>
 
 ## Lesson Preparation
-<!-- This template should be used when a module is more than 50% content that is embedded or linked to.
-If more than half of the module content is in the LiaScript markdown itself, then the other template should be used, even if that content is primarily adapted from a single CC source. -->
 
 This module will direct you to external educational content.
 ---
@@ -80,18 +81,18 @@ Write a short sentence about how this material meets, or does not meet, each cri
 **Resource 1 Name**
 Short optional summary sentence about resource 1.
 
-- <i class="fa-regular fa-square-check" style="color: #158d0c;" title="Checked"></i> Expert Authors / Well-Vetted: <!-- who are the expert authors? or what institutional authority guarantees accuracy?-->
-- <i class="fa-regular fa-square" style="color: #d60505;" title="Unchecked"></i> Maintained: <!--who is in charge of implementing regular updates to this material, important in fast-changing fields.-->
-- <i class="fa-regular fa-square-check" style="color: #158d0c;" title="Checked"></i> Stable Support: <!--who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!-->
-- <i class="fa-regular fa-square" style="color: #d60505;" title="Unchecked"></i> Accessibility: <!--Does this meet our high standards for accessibility? What do we know it lacks?-->
+- <i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Expert Authors / Well-Vetted: <!-- who are the expert authors? or what institutional authority guarantees accuracy?-->
+- <i class="fa-solid fa-do-not-enter" style="color: #f0bc00;" title="Unchecked"></i> Maintained: <!--who is in charge of implementing regular updates to this material, important in fast-changing fields.-->
+- <i class="fa-regular fa-circle-check" style="color: #158d0c;" title="Checked"></i> Stable Support: <!--who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!-->
+- <i class="fa-solid fa-do-not-enter" style="color: #f0bc00;" title="Unchecked"></i> Accessibility: <!--Does this meet our high standards for accessibility? What do we know it lacks?-->
 
 **Resource 2 Name**
 Short optional summary sentence about resource 2.
 
-- <i class="fa-solid fa-square-check" style="color: #158d0c;"></i> Expert Authors / Well-Vetted: <!-- who are the expert authors? or what institutional authority guarantees accuracy?-->
-- <i class="fa-solid fa-square-check" style="color: #158d0c;"></i> Maintained: <!--who is in charge of implementing regular updates to this material, important in fast-changing fields.-->
-- <i class="fa-solid fa-square-check" style="color: #158d0c;"></i> Stable Support: <!--who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!-->
-- <i class="fa-solid fa-square-check" style="color: #158d0c;"></i> Accessibility: <!--Does this meet our high standards for accessibility? What do we know it lacks?-->
+- <i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Expert Authors / Well-Vetted: <!-- who are the expert authors? or what institutional authority guarantees accuracy?-->
+- <i class="fa-solid fa-do-not-enter" style="color: #f0bc00;" title="Unchecked"></i> Maintained: <!--who is in charge of implementing regular updates to this material, important in fast-changing fields.-->
+- <i class="fa-regular fa-circle-check" style="color: #158d0c;" title="Checked"></i> Stable Support: <!--who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!-->
+- <i class="fa-solid fa-do-not-enter" style="color: #f0bc00;" title="Unchecked"></i> Accessibility: <!--Does this meet our high standards for accessibility? What do we know it lacks?-->
 
 
 The structure of this module:
