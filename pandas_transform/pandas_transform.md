@@ -139,6 +139,7 @@ Code will not persist from one page to the next, and you can always refresh the 
 These cells will compute everything you ask them to, but will only output what you explicitly request using the `print()` command.
 
 Many cells in this lesson will initially have the `print()` line commented out with a `#`. To print the output, delete the `#` and run the cell.
+
 </div>
 
 <div class = "warning">
@@ -147,6 +148,7 @@ Many cells in this lesson will initially have the `print()` line commented out w
 **Navigating with arrow keys**
 
 You can navigate the pages of this course using left and right arrow keys. This means that you **cannot** use left and right arrow keys to navigate **within** a code cell.
+
 </div>
 
 
@@ -201,6 +203,7 @@ import pandas as pd
 
 
 **DataFrames**
+---
 
 **DataFrame** is the name `pandas` gives to its primary data structure. You can think of a DataFrame like a spreadsheet: it has rows and columns, and you can look up the data in it by referencing those rows and columns.
 
@@ -219,6 +222,7 @@ df = pd.DataFrame(data=d);
 </div>
 
 **Series**
+---
 
 You might have noticed that in the above example, everything in the first column was an integer, everything in the second column had a decimal point, and the third column consisted of words. Each column in a DataFrame is called a **series**. A series is a one-dimensional array in which all of the data has the same **type**.
 
@@ -247,7 +251,8 @@ print(df)
 </script>
 </lia-keep>
 </div>
-<br>
+
+
 Your friend's code (above) isn't running, which is extremely frustrating because they copied and pasted it from the previous page of this module. What line must they add to make it work?
 
 [[import pandas as pd]]
@@ -282,6 +287,7 @@ The tiny DataFrame we saw in the last section was exceptional in several ways. W
 * Real data is often missing entries.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 For this module we will be looking at some fake Covid-19 testing data. Although this data is designed to mimic realistic data with plausible patterns and values, **there is no Protected Health Information in this data**. If you are a fan of the fictional series "Game of Thrones," however, you might recognize some familiar characters.
 
@@ -334,9 +340,10 @@ When you print a DataFrame or Series you will see the first five rows and the la
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 **Loading your own data**
+---
 
 To create a DataFrame of your data, make sure you use the right command for your file type, and make sure the location of the file is in quotes.
 | File type | Read command |
@@ -377,7 +384,9 @@ The methods `.columns` and `.index` will show you all of the column and row name
 
 The column names were imported with the `.csv` file. Since the original file didn't have labels for the rows, `pandas` automatically labeled them numerically 0 through 15523. If you imported tabular data that didn't have column headers, the column names would be numeric, the way the row indices are in our `covid_testing` DataFrame.
 
-<div class = "help">
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
 **What does that RangeIndex mean?**
 
 The `covid_testing.index` is `RangeIndex(start=0, stop=15524, step=1)`, but on the previous page we saw that the last row of this DataFrame is labeled 15523. Why is that?
@@ -389,6 +398,7 @@ Python ranges can be confusing even for people who use them all the time. Some t
 - Python ranges **do not include their upper bounds**.
 
 For example `range(0,4)` contains 4 elements. Those elements are 0,1,2, and 3.
+
 </div>
 
 ### Locating data with `.loc`
@@ -403,11 +413,12 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 The `.loc` method lets you select a subset of your DataFrame to display.
 
 **Selecting a single entry**
+---
 
 The grammar of the `.loc` method is `dataframe.loc[row(s), column(s)]`. To see the age of the of the very first person to be tested, i.e. extract the data from row `0` (python starts counting with 0) and column `"age"` enter `covid_testing.loc[0,"age"]`.
 
@@ -422,6 +433,7 @@ The grammar of the `.loc` method is `dataframe.loc[row(s), column(s)]`. To see t
 You need the `"` surrounding `age` because that column header is a string. No quotes are needed around the row index `0` because it is recognized as a known value.
 
 **Selecting multiple rows or columns**
+---
 
 If you want to see the ages of the first 3 patients tested, change the `0` to the list `[0,1,2]`. This indicates that you want to see the data in rows indexed 0,1, and 2. Similarly you can change the single column to be a list of columns.
 
@@ -434,6 +446,7 @@ If you want to see the ages of the first 3 patients tested, change the `0` to th
 </div>
 
 **Viewing full rows and columns**
+---
 
 If you want to show all of the data in a row or column, instead of a list you can use a colon `:` to indicate that you want to include everything.
 
@@ -444,11 +457,14 @@ If you want to show all of the data in a row or column, instead of a list you ca
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 A colon before the comma will show you all rows of the columns you selected and a colon after the comma will return all columns of the given rows.
 
-**Your turn:** What do you think will happen if you put colons both before and after the comma? Change the code below to check if you were correct.
+**Your turn:** 
+---
+
+What do you think will happen if you put colons both before and after the comma? Change the code below to check if you were correct.
 
 <div class="python_data">
 <lia-keep>
@@ -457,17 +473,20 @@ A colon before the comma will show you all rows of the columns you selected and 
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 <div class = "options">
-If you look at other people's code, you may see columns refered to with `data_frame["column_name"]` instead of `data_frame.loc[:,"column_name"]`. While this will frequently give the same output, i.e. show you the entire column, it can [raise errors if you use it to try to update data](https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html). For that reason we are focusing on the `.loc` method.
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
+If you look at other people's code, you may see columns referred to with `data_frame["column_name"]` instead of `data_frame.loc[:,"column_name"]`. While this will frequently give the same output, i.e. show you the entire column, it can [raise errors if you use it to try to update data](https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html). For that reason we are focusing on the `.loc` method.
+
 </div>
 
 ### Quiz: DataFrames
 
 @sage
 
-1. Complete the following code by replacing the two `__?__`s with your own code to find out the first and last name of the patient in row 11942.
+Complete the following code by replacing the two `__?__`s with your own code to find out the first and last name of the patient in row 11942.
 
 <div class="python">
 <lia-keep>
@@ -479,7 +498,7 @@ print(covid_testing.__?__[11942, ["first_name","last_name"]])
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 Enter their name below to check your answer:
 
@@ -520,7 +539,7 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 Let's say we only care about the positive Covid tests. We could make a new DataFrame consisting only of those tests that came back positive using a **conditional** argument. A condition is a statement that evaluates to either `True` or `False`.
 
@@ -533,15 +552,18 @@ If, for example, we only want to look at instances where the covid test came bac
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 In the example above we used the double equals sign `==` to check whether two objects were the same. This is different from the single equals sign we use at the top of the page to define `covid_testing`.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 A double equals sign `==` tests for equality, while a single equals sign `=` is for assigning values.
 
 - `a = 7` sets 7 as the value of `a`. It is a declarative statement that from now on `a` is equal to 7. No output will be shown, but from now on if you enter `a`, the output will be `7`.
 - `b == 8` is a checking for equality. It is a question "is `b` equal to 8?" You will get an answer back, either `True` or `False`.
+
 </div>
 
 In addition to using `==` to check if two values are the same, we can use other relational conditions to compare values in a DataFrame.
@@ -565,13 +587,16 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 When we used a column name or list of names as our argument in the row spot of the `.loc` method, we got back all rows in that list. When we put a condition  like `covid_testing.loc[:,"result"] == "positive"` in the row spot, it will return all rows for which that condition is `True`.
 
 If this is a subset of the data that you are likely to want to use again, it is a good practice to create a new DataFrame consisting only of the rows and columns that you want.
 
-**Create a new DataFrame** titled `positive_tests`. How many rows have positive test results?
+**Your turn:**
+---
+
+Create a new DataFrame titled `positive_tests`. How many rows have positive test results?
 
 <div class="python_data">
 <lia-keep>
@@ -581,12 +606,14 @@ positive_tests = covid_testing.loc[covid_testing.loc[:,"result"] == "positive",:
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 That is a whole lot of output when we see every column! You can ask to see fewer columns so that the output doesn't need to wrap. Try replacing `print(positive_tests)` with  `print(positive_tests.loc[:,["first_name","last_name"]])` and see if that output is easier to understand.
 
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 **`.copy()`**
 
 The method `.copy()` at the very end of line one creates a new DataFrame separate from the original. Omitting the `.copy()` method won't change the output in the next code block, but can have consequences if you later want to make changes to your DataFrame.
@@ -594,6 +621,7 @@ The method `.copy()` at the very end of line one creates a new DataFrame separat
 - `new_name = dataframe.loc[rows,columns].copy()` creates a new DataFrame called `new_name` that you can make changes to without impacting the original `dataframe` and vice versa.
 
 - `new_name = dataframe.loc[rows,columns]` does not create a new DataFrame. Instead every time you type `new_name` after this, it will understand that you mean `dataframe.loc[rows,columns]`.
+
 </div>
 
 
@@ -619,11 +647,12 @@ adult_positive = covid_testing.loc[(covid_testing.loc[:,"result"] == "positive")
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 Our code is starting to look quite messy. Giving each condition a name is a good way to keep your code from becoming an unreadable tangle of conditional statements.
 
 **Name your conditions**
+---
 
 When working with more complicated conditions it is extremely helpful to define your condition by giving it a name, and then refer to that name, rather than the chain of conditions, inside the `.loc` method. By carefully naming the compound condition, you can also make your code more human-readable. Take a moment to see what this code below is doing:
 
@@ -637,9 +666,10 @@ infant_positive = covid_testing.loc[is_positive_infant,:].copy()
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 **Use parentheses**
+---
 
 When combining conditions, you should use parentheses around each condition. This isn't just for the benefit of humans reading your code. If you are combining three or more conditions, the placement of parentheses can change the meaning of a condition.
 
@@ -670,7 +700,7 @@ Wherever the original csv file didn't have an entry, you will see `NaN` or `nan`
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 `NaN`s are special in a couple of ways.
 
@@ -688,7 +718,7 @@ are_NaNs_equal = (covid_testing.loc[2,"payor_group"] == covid_testing.loc[2, "pa
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 Notice that the above cell uses both of the techniques we learned for combining conditions: there are parentheses surrounding the condition `a == b` and the condition has a short, readable name.
 
@@ -701,7 +731,7 @@ Since using `==` to check if a cell is empty won't work, we have the methods `.i
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 The opposite of `.isna()` is the method `.notna()`.
 
@@ -718,7 +748,7 @@ known_payor_tests = covid_testing.loc[known_payor, :].copy()
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 ### Quiz: Conditional statements
 
@@ -731,7 +761,7 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 You come across the following code in which several conditions are defined but not given descriptive names:
 
@@ -749,7 +779,7 @@ my_condition = (condition_1 | condition_2) & condition_3
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 <div class="python_data">
 <lia-keep>
@@ -758,7 +788,7 @@ my_condition = (condition_1 | condition_2) & condition_3
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 What does `my_condition` test for? You can use the interactive cell above to test the conditions however you want.
 
@@ -795,6 +825,8 @@ There are two things we can do to make our data more useful.
 2. Edit the data in an existing column to improve its usefulness.
 
 <div class ="warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 Reproducibility must always been a priority when doing research, so whenever you are making changes to data, you must ensure that you keep a clear record of the calculations you did and even more importantly that you don't change the original copy of your data.
 
 **Recording calculations**
@@ -806,6 +838,7 @@ There are many environments from which you can save Python code. One of the most
 If you imported data from another source using `.read_csv()` or another such method, the original file still exists untouched! The best practice is to store your original data in a file that your code reads but does not change.
 
 If your original data is not already in a separate file you can use `.to_csv(data.csv)` to create a new file containing your DataFrame as a csv file. You can also create files in [many other formats](https://pandas.pydata.org/docs/reference/io.html).
+
 </div>
 
 ### Create new columns
@@ -819,7 +852,7 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 In `pandas` you can create a new column by calling your new column with the `.loc[:,"new_column"]` method and using a single equals sign `=` to define its contents.
 
@@ -833,7 +866,7 @@ covid_testing.loc[:,"new_column"] = 1
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 Your new column can also depend on data in columns that already exist. Remember that each column, or series, needs to be called using the format `dataframe.loc[:,"column_name"]`.
 
@@ -847,7 +880,7 @@ covid_testing.loc[:,"age_months"] = covid_testing.loc[:,"age"]*12
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 Or maybe you want a new column that displays the full name of each patient, rather than separate columns for first and last names.
 
@@ -878,6 +911,7 @@ You can make changes to existing entries using the same method and simply using 
 What if you wanted to reformat the gender column to use `M` and `F` instead of spelling out male and female?
 
 **Using `=` to assign values**
+---
 
 One way to approach this is to define a condition testing each row for whether the entry in the `gender` column is `male`. Then we can use that condition to change the entry to `M` if the condition is met.
 
@@ -891,9 +925,10 @@ covid_testing.loc[is_male, "gender"] = "M"
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 **Using `.replace`**
+---
 
 You can also use the `.replace` method to change entries in a column. The grammar required can be a bit tricky, but it is worth learning to use this powerful tool.
 
@@ -909,7 +944,7 @@ covid_testing.loc[:, "gender"] = covid_testing.loc[:, "gender"].replace("female"
 </script>
 </lia-keep>
 </div>
-<br>
+
 
 * The `.replace()` method takes two arguments: the entry you want to find, and what you want to replace it with.
 
@@ -926,6 +961,7 @@ covid_testing.loc[:, "gender"] = covid_testing.loc[:, "gender"].replace("female"
   * To change `a` to `b` in your DataFrame, redefine it: `dataframe = dataframe.replace("a","b")`. Now if you `print(dataframe)`, you will see all `a`s have been replaced by `b`.
 
 **Simultaneous replacement**
+---
 
 The `.replace` method lets you replace multiple kinds of entries simultaneously. The same way we could enter lists into `.loc`, `.replace` can also accept two lists.
 
@@ -944,7 +980,10 @@ covid_testing = covid_testing.replace(["positive","negative"],[1,0])
 </div>
 
 <div class= "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 The order and length of these lists matter! Each element in the first list will be replaced by the element in the **same position** in the second list.
+
 </div>
 
 ### Quiz: Transforming DataFrames
@@ -968,9 +1007,9 @@ You can change the all of the entries in a column to uppercase using the method 
 </script>
 </lia-keep>
 </div>
-<br>
 
-How would you **change** the the `last_name` column of `covid_testing` to be uppercase?
+
+How would you **change** the `last_name` column of `covid_testing` to be uppercase?
 
 [( )] `covid_testing.loc[:, "last_name"].str.upper()`
 [( )] `covid_testing.loc[:, "last_name"] == covid_testing.loc[:, "last_name"].str.upper()`
@@ -988,6 +1027,7 @@ How would you **change** the the `last_name` column of `covid_testing` to be upp
 ***
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
 The method `.str.lower()` will make every entry in a column lower case. There are several [other ways to manipulate the presentation of text](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.lower.html) in a pandas series.
 
