@@ -474,7 +474,7 @@ You may be working with a group that has an established SQL style guide, either 
 
 But if you don't have anyone to guide you in style, we'll do our best to instill some basic principles. It might seem silly to start talking about style now with very short queries, but we encourage you to develop good habits now.  We are going to advocate for some style conventions that not everyone will share.  As they say, there's no accounting for taste, and if you depart from our suggestions, that's fine -- but do start to develop your own standards for style, because it will help you immensely once your SQL queries get to be 5, 10, or 100 lines long and the number of queries you write increases.
 
-Here are our (opinionated but not necessarily "right" style suggestions).  These might not make sense right now, but once you see them in actual queries, we think you'll understand them more intuitively.
+Here are our (opinionated but not necessarily "right") style suggestions.  These might not make sense right now, but once you see them in actual queries, we think you'll understand them more intuitively.
 
 1) **Put keywords in CAPITAL LETTERS so they stand out.**  Examples of keywords are SELECT, LIKE, AS, WHERE, JOIN, DISTINCT, MEAN, ORDER BY, and many more.  While most code editors and SQL clients (software that lets you query a database) do a good job of color-coding these special words, you might end up seeing a SQL query in monochrome, and having keywords stand out helps you figure out where each part of your query is.  
 
@@ -533,7 +533,20 @@ FROM alasql.patients;
 
 <table id="dataTable6a" border="1"></table><br>
 
-Now, complete the code below.  How would you get all the fields from the table `alasql.allergies`?  When you think you have it, try running the code and see if you get it right!
+Now, complete the code below.  How would you get all the fields from the table `alasql.allergies`?  When you think you have it, add the code in the box below and try running the code to see if you get it right.
+
+<details>
+<summary style = "margin-bottom: 1rem;">*If you are absolutely stuck... click here to show/hide an answer!*</summary>
+
+Try:
+
+```sql
+SELECT * 
+FROM alasql.allergies;
+```
+
+</details>
+
 
 ```sql
 SELECT
@@ -549,6 +562,8 @@ FROM  ;
 @AlaSQL.buildTable_allergies
 
 </div>
+
+
 
 **Select Specific Columns**
 
@@ -588,6 +603,21 @@ This can be especially useful when exploring a dataset for the first time and tr
 You can also explore using `SELECT DISTINCT` on more than one field.  The code block below provides an example of using this syntax to invesitgate the unique combinations of values from the `sex` and `ethnicity` columns from the `patient` table.  As you can see, the `DISTINCT` clause will work on any number of columns.  Go ahead and execute this code to see the results.  
 
 Then, if you're up for a challenge, change the code to find out what unique combinations there are of race and ethnicity!
+
+
+<details>
+<summary style = "margin-bottom: 1rem;">*Click here to show/hide challenge answer.*</summary>
+
+Try:
+
+```sql
+SELECT DISTINCT
+  patients.race
+  ,patients.ethnicity
+FROM alasql.patients;
+```
+
+</details>
 
 ```sql
 SELECT DISTINCT
@@ -771,6 +801,24 @@ Ready to try your luck at a complex WHERE statement?
 
 Get every field from `patients` for all male patients who were born on or after January 1, 2001.  Not sure about the field name that holds sex, or whether male is coded "Male", "male", "M", or some other way?  Look at the results of other queries to get this information!
 
+<details>
+<summary style = "margin-bottom: 1rem;">*If you are absolutely stuck... click here to show/hide an answer!*</summary>
+
+Try:
+
+```sql
+SELECT *
+FROM alasql.patients
+WHERE 
+	patients.birthdate >= "2001-01-01" AND
+	patients.sex = "M";
+```
+
+</details>
+
+
+
+
 ```sql
 SELECT
 FROM
@@ -847,7 +895,22 @@ The fact that nulls aren't included in comparisons is a very subtle distinction 
 
 </div>
 
-Sometimes you want to evaluate missing data patterns.  For example, maybe there's a discernible pattern in patients who are missing sex or race data.  Write a query that will give you all the fields for rows in `patients` where either the sex or race data is missing.   (Hint: there might not be any rows that have missing data in those two fields).
+Sometimes you want to evaluate missing data patterns.  For example, maybe there's a discernible pattern in patients who are missing sex or race data.  Write and run a query in the code box below that will give you all the fields for rows in `patients` where either the sex or race data is missing.   (Hint: there might not be any rows that have missing data in those two fields).
+
+<details>
+<summary style = "margin-bottom: 1rem;">*If you are absolutely stuck... click here to show/hide an answer!*</summary>
+
+Try:
+
+```sql
+SELECT * 
+FROM alasql.patients
+WHERE 
+	patients.sex IS NULL OR
+	patients.race IS NULL;
+```
+
+</details>
 
 ```sql
 
@@ -863,14 +926,14 @@ Sometimes you want to evaluate missing data patterns.  For example, maybe there'
 
 ### Quiz: Comments, WHERE, Null Values
 
-What has to change to make this code work?  Select all that apply.  You will be able to check your own work!
+What has to change to make this code work?  Select all that apply.  You will be able to check your own work by making the corrections and seeing if the code runs!
 
 ```sql
 SELECT
 FROM alasql.patients
 WHERE
-  race = NULL OR
-  sex = NULL.
+  patients.race = NULL OR
+  patients.sex = NULL.
 ```
 @AlaSQL.eval("#dataTable0d")
 
@@ -887,13 +950,13 @@ WHERE
 
 First things first, what are you `SELECT`ing?  Also, you do need to replace the ` = NULL` to ` IS NULL `, and end the query with a semicolon, not a period.
 
-`OR` isn't case sensitive, but we suggest leaving it in CAPITAL letters so it stands out as a keyword.  And since there's no nesting and no mixing of `AND` and `OR`, parentheses around the `WHERE` clauses is totally optional.  You only really **have** to add parentheses when you're mixing operations (just as in math, to make sure things get added before they're multiplied).
+`OR` isn't case sensitive, but we suggest leaving it in CAPITAL letters so it stands out as a keyword.  And since there's no nesting and no mixing of `AND` and `OR`, the use of parentheses around the `WHERE` clauses is totally optional.  You only really **have** to add parentheses when you're mixing operations (just as you do in math, to make sure things get added before they're multiplied).
 
 </div>
 
 ***************
 
-What has to change to make this code work?  Select all that apply.  You will be able to check your own work!
+What has to change to make this code work?  Select all that apply. You will be able to check your own work by making the corrections and seeing if the code runs!
 
 ```sql
 SELECT *             # we want all the fields/columns
@@ -949,9 +1012,26 @@ Some things to think about:
 * What does the query above help you understand about your patient population?
 * How could you switch the sorting so that all the counties with a Latino / Hispanic patient population were at the top, followed by all the counties without a Latino / Hispanic patient population?  Try it!
 
+<details>
+<summary style = "margin-bottom: 1rem;">*Click here to show/hide a code suggestion for the second bullet point above.*</summary>
+
+Try:
+
+```sql
+SELECT DISTINCT
+  patients.county
+  ,patients.ethnicity
+FROM alasql.patients
+ORDER BY
+  patients.ethnicity ASC
+  ,patients.county ASC;
+```
+
+</details>
+
 <div class = "important">
 
-By default, all items in the `ORDER BY` clause will be sorted in `asc` order if no explicit ordering direction is provided.
+By default, all items in the `ORDER BY` clause will be sorted in `ASC` (ascending) order if no explicit ordering direction is provided.
 
 </div>
 
@@ -995,7 +1075,7 @@ In SQL, it is possible to assign a custom name (usually a kind of shortened name
 
 Aliases are assigned by placing the `AS` key word directly after the item (table/column) you would like to alias, followed by the name you would like to assign as its **alias**.
 
-In the example below, we can see aliasing being used to rename the `patient` table to `p`, and renaming the `pat_id` and `state_abbr` columns to `unique_patient_id` (because there are other id fields you're working with elsewhere) and `state_name` (because you want to point out that this isn't the state abbreviation).
+In the example below, we can see aliasing being used to rename the `patient` table to `p`, and renaming the `id` and `state` columns to `unique_patient_id` (because there are other id fields you're working with elsewhere) and `state_name` (because you want to point out that this isn't the state abbreviation).
 
 ```sql
 SELECT
@@ -1016,7 +1096,25 @@ In the SQL code block below, try writing a query that accomplishes the following
 * Aliases the `patients` table as `pt`
 * Aliases the `sex` field as `sex_assigned_at_birth`
 * Aliases `zip` as `postal_code`
-* Orders the result by zip
+* Orders the result by zip/postal code
+
+<details>
+<summary style = "margin-bottom: 1rem;">*If you are absolutely stuck... click here to show/hide an answer!*</summary>
+
+Try:
+
+```sql
+SELECT 
+	pt.id
+	,pt.sex as sex_assigned_at_birth
+	,pt.ethnicity
+	,pt.state
+	,pt.zip as postal_code
+FROM alasql.patients as pt
+ORDER BY postal_code;
+```
+
+</details>
 
 ```sql
 
