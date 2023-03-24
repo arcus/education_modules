@@ -1180,15 +1180,15 @@ In this module, you learned about the language SQL, which is an acronym for "Str
 
 We also introduced you to important functions, in terms of **keywords**.  You got a chance to read about and practice these keywords:
 
-* `SELECT`
-* `FROM`
-* `DISTINCT`
-* `WHERE`
-* `IS NULL`
-* `IS NOT NULL`
-* `ORDER BY`
-* `LIMIT`
-* `AS`
+* `SELECT`: used to indicate which fields (columns) you want to retrieve
+* `FROM`: used to indicate which table you want to retrieve data from
+* `DISTINCT`: used to ask for only a single example of each possible unique value
+* `WHERE`: used to give a condition which filters the data retrieved
+* `IS NULL`: used to compare a value to *NULL* (an empty/missing value)
+* `IS NOT NULL`: used to compare a value to not *NULL* (a value that is not missing and not empty)
+* `ORDER BY`: used to display results organized by the values in one or more columns
+* `LIMIT`: used to truncate (cut off) the number of result rows retrieved at a given number
+* `AS`: used to alias (rename) columns or tables
 
 We also learned about comparison operators, comments, and style -- how to write code in a specific way that promotes reusability and readability.
 
