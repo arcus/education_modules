@@ -33,16 +33,14 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 -->
 
-<!-- Throughout this template, instructions to authors will appear in comments like this. Feel free to leave them, or delete them. They won't appear in the rendered html page either way.
-
 This template should be used when a module is more than 50% content that is embedded or linked to.
 If more than half of the module content is in the LiaScript markdown itself, then the other template should be used, even if that content is primarily adapted from a single CC source.
 
 To see how to use this template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6).
-To see what it looks like rendered via LiaScript, [click here](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6#1) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course". -->
+To see what it looks like rendered via LiaScript, [click here](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6#1) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
 
 # Title
-<!-- Note that the title is the only level-1 header in the document -->
+Note that the title is the only level-1 header in the document
 
 <div class = "overview">
 
@@ -75,32 +73,35 @@ This module will direct you to external educational content.
 ---
 
 Many topics have great content written by others! We chose this content for you based on how well it meets our criteria.
-<!-- Not all selected materials will meet all of these criteria, but selected materials should meet as many as possible.
-Write a short sentence about how this material meets, or does not meet, each criterion. -->
+
+Not all selected materials will meet all of these criteria, but selected materials should meet as many as possible.
+Write a short sentence about how this material meets, or does not meet, each criterion.
 
 **Resource 1 Name**
+
 Short optional summary sentence about resource 1.
 
 <ul style="list-style-type: none">
-   <li><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Expert Authors / Well-Vetted: <!-- who are the expert authors? or what institutional authority guarantees accuracy?--></li>
-   <li><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Maintained: <!--who is in charge of implementing regular updates to this material, important in fast-changing fields.--></li>
-   <li><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Stable Support: <!--who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!--></li>
-   <li><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Accessibility: <!--Does this meet our high standards for accessibility? What do we know it lacks?--></li>
+   <li><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Expert Authors / Well-Vetted: _who are the expert authors? or what institutional authority guarantees accuracy?_</li>
+   <li><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Maintained: _who is in charge of implementing regular updates to this material, important in fast-changing fields._</li>
+   <li><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Stable Support: _who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!_</li>
+   <li><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Accessibility: _Does this meet our high standards for accessibility? What do we know it lacks?_</li>
 </ul>
 
 **Resource 2 Name**
+
 Short optional summary sentence about resource 2.
 
 <ul style="list-style-type: none">
-   <li><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Expert Authors / Well-Vetted: <!-- who are the expert authors? or what institutional authority guarantees accuracy?--></li>
-   <li><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Maintained: <!--who is in charge of implementing regular updates to this material, important in fast-changing fields.--></li>
-   <li><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Stable Support: <!--who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!--></li>
-   <li><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Accessibility: <!--Does this meet our high standards for accessibility? What do we know it lacks?--></li>
+   <li><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Expert Authors / Well-Vetted: _who are the expert authors? or what institutional authority guarantees accuracy?_</li>
+   <li><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Maintained: _who is in charge of implementing regular updates to this material, important in fast-changing fields._</li>
+   <li><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Stable Support: _who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!_</li>
+   <li><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Accessibility: _Does this meet our high standards for accessibility? What do we know it lacks?_</li>
 </ul>
 
 The structure of this module:
 ---
-<!-- Give learners a short, concrete, description of what they will do. This might look like: -->
+Give learners a short, concrete, description of what they will do. This might look like:
 
 Example Structure 1:
 
@@ -120,7 +121,7 @@ Example Structure 3:
 2. Read Section 2.1 and 2.2.
 3. Return to this LiaScript course to do an activity.
 4. Answer a few questions (again in the LiaScript course) to make sure you understood the key parts.
-<!-- These are just some examples of possible structures. The specific structure will depend greatly on the particular external module/educational resource you are using. -->
+These are just some examples of possible structures. The specific structure will depend greatly on the particular external module/educational resource you are using.
 
 
 ## Module Content
@@ -469,7 +470,7 @@ Hints and follow-up explanations don't work for survey questions.
 
 
 ## Additional Resources
-<!-- The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related. -->
+The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
 
 To learn more about one topic, check out these great things:
 
@@ -492,5 +493,4 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Module+Template%22)!
-<!-- Remember to change the redcap link so that the module name is correct for this module! -->
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Module+Template%22)! <!-- Remember to change the redcap link so that the module name is correct for this module!
