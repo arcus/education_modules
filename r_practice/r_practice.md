@@ -101,7 +101,7 @@ If this practice problem was challenging, [here is a link to an example notebook
 
 To work with our sample solution, you could do any of the three possibilities below:
 
-* Copy / paste the code from [the link above](https://github.com/arcus/education_r_environment/blob/main/r_practice/r_practice.Rmd)
+* Copy / paste the code from the link above
 
   * You can use the "Copy" button which looks like two pieces of paper in the menu bar across the top of the file:
   ![Copy raw contents button](media/copy_raw_contents.png)<!--
