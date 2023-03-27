@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.6
+version: 1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -276,10 +276,13 @@ Now you can not only work in the cloud, but also save your work.
 
 If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Do you use Microsoft OneDrive?  
 
 Knitting files can sometimes be problematic with some versions of Microsoft OneDrive, so if you are working from your local computer and get strange errors when you try to knit, try to use a directory that's not within a OneDrive folder to see if that helps.  Newer versions of OneDrive seem to be less buggy, so you may also want to update your OneDrive software.
+
 </div>
 
 * In RStudio, open a new project (File, New Project)
@@ -320,7 +323,10 @@ If you already completed this work for a previous module, and it's been a while 
 ![Tools tab in the highest level menu bar drops down with with a Version Control option. Under version control, there are choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.
+
 </div>
 
 ## Motivation: Reproducible Research
@@ -574,7 +580,8 @@ You can download and **install** a package with the command `install.packages`. 
 </div>
 </div>
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 On our RStudio Server, you won't need to install any packages for this course (as we have installed them for you). If you're using R on your own computer, however, **you will have to install packages**.  In the console, type `install.packages("tidyverse")` and you'll see a bunch of output (a sample of which is shown below -- don't worry if your output is a little different in terms of version or downloaded location).  Then you're ready to proceed!
 
