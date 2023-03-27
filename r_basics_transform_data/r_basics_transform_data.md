@@ -174,7 +174,9 @@ Now you can not only work in the cloud, but also save your work.
 
 If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Do you use Microsoft OneDrive?  
 
 Knitting files can sometimes be problematic with some versions of Microsoft OneDrive, so if you are working from your local computer and get strange errors when you try to knit, try to use a directory that's not within a OneDrive folder to see if that helps.  Newer versions of OneDrive seem to be less buggy, so you may also want to update your OneDrive software.
@@ -217,7 +219,10 @@ If you already completed this work for a previous module, and it's been a while 
 ![Tools tab in the highest level menu bar drops down with with a Version Control option. Under version control, there are choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_visualize_data` exercise files, you might want to save your version of `visualize_exercies.Rmd` to `my_visualize_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `visualize_exercises.Rmd` while holding on to your changes in the new file.
+
 </div>
 
 ### How to Follow Along
@@ -237,8 +242,11 @@ You can use this module in a couple of different ways:
 <div style = "margin: 1rem auto; max-width: 20%; float:left;">
 ![""](media/dplyr_logo.png)</div>
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`.  But if you're using the course materials in your own computer's installation of RStudio, it's possible you don't have `tidyverse` installed.  If you get a message telling you that there's no package installed with that name, issue this command: `install.packages("tidyverse")`.
+
 </div>
 
 
@@ -364,7 +372,9 @@ This filter statement will return a data frame that only contains the 4th row, i
 
 ![On the left, the first few columns of the `covid_testing data frame: mrn, first_name, and last_name`.  The first three rows are labeled "False", while the forth row is labeled "True" and colored blue, and there, the mrn value matches the one we're trying to match.  This data frame is followed by an arrow pointing to a new data frame on the right, which only has the one selected / blue row, the one that had the matching mrn value.](media/filter_covid_example.png)<!--style = "max-width:1000px;"-->
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 One common issue to be aware of is the difference between the single equals (=) and the double equals (==) operators.
 
 In R, using a single equals sign assigns a value.  It asserts "these things **are** equal."
@@ -437,7 +447,9 @@ In the box below, write a `filter()` statement that returns a data frame contain
 
 ********
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 When you do a comparison with a literal character string, such as "stark", that string needs to go inside quotes. A character string is anything that's not a number or a logical value such as TRUE and FALSE.  Quotes can be tricky in R, and practice makes perfect.
 
 * 945 is not the same value as "945"
@@ -514,7 +526,10 @@ filter(covid_testing,
 
 We added whitespace (carriage returns and indentation) above to make this a bit more readable, but you don't have to.
 
-<div class = "warning">
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 What happens if you don't use parentheses to create smaller units in your boolean logic?  As long as you're using all OR or all AND, you won't run into problems.
 
 For example, `filter(covid_testing, clinic_name == "clinical lab" & results == negative & last_name == "frey")` works as you might think... it gives you back rows of testing results (if there are any) which meet all three conditions.
@@ -588,8 +603,10 @@ Both pipe operators pass the **object on its left** as the **first argument** to
 
 In this module, **we'll use the "original" pipe (`%>%`)** in code examples and quiz questions, because we think this is the one you'll see the most in code that your coworkers share with you or you find in online examples.  This will gradually change, and as the "native" pipe (`|>`) gains market share, we'll likely change these materials to reflect that.
 
-<div class = "learn-more">
-**Optional read: Why are there two pipes?**
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
+
+**Why are there two pipes?**
 
 Lots of R users got used to using the pipe after working in the `tidyverse`.  It became very popular, but it meant having to load up a package, whether that was `tidyverse` (which includes `dplyr`), or just `dplyr` (which silently depends on `magrittr`), or `magrittr`.
 
@@ -619,6 +636,8 @@ The same thing is true for the following statement, which works the same way but
 `covid_testing |> filter(pan_day <= 10)`
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 Which version of the pipe should you use?  **Generally, you can use either.**  That said, here are some things to keep in mind.
 
 The original `magrittr` pipe (`%>%`) is better when:
@@ -652,6 +671,8 @@ covid_testing %>%
 ```
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 You might wonder why we've put each step in its own line.  Is this a requirement?  No, it's not.  Many R users like to use **whitespace** (new lines, tabs, spaces, indents) to make their code more human readable.  But these two code snippets work exactly the same way:
 
 **Option 1, Lots of Whitespace**
@@ -778,8 +799,11 @@ To work in this file:
 
 When you've done the best you can on your own, go to the next page, where we'll discuss the solutions.
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`.  But if you're using the course materials in your own computer's installation of RStudio, it's possible you don't have `tidyverse` installed.  If you get a message telling you that there's no package installed with that name, issue this command: `install.packages("tidyverse")`.
+
 </div>
 
 ### Solutions
@@ -835,7 +859,10 @@ We’ve only scratched the surface of data transformation functions in dplyr. Ot
 | `_join()` functions including `left_join()` that combine data frames by looking up matching values from one table in another | ![Small image that shows two data frames which are combined using only the rows in which there is data for the given observation in both tables](media/left_join_mini.png)<!-- style = "max-width:200px;" -->  |
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 You may notice here and elsewhere that we include international English spellings (e.g. `summarise()`) for some functions.  "American" spellings (`summarize()`) also work, and both spellings trigger the same function.  Feel free to use either.
+
 </div>
 
 

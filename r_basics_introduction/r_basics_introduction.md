@@ -677,8 +677,11 @@ Consider this line of code:
 ``` r
 covid_testing <- read_csv("covid_testing.csv")
 ```
-<div class = "warning">
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 We could speak aloud the line of code above saying "covid underscore testing gets read underscore csv of covid underscore testing dot csv", or we could gloss over the underscores and just say "covid testing" and "read csv".  When we talk with others about R, this is often what we do, so just be aware that you sometimes have to intuit underscores when someone is reading aloud or talking through a code issue.
+
 </div>
 
 <h3>Quotes</h3>
