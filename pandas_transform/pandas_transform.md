@@ -202,7 +202,7 @@ import pandas as pd
 </div>
 
 
-**DataFrames**
+DataFrames
 ---
 
 **DataFrame** is the name `pandas` gives to its primary data structure. You can think of a DataFrame like a spreadsheet: it has rows and columns, and you can look up the data in it by referencing those rows and columns.
@@ -221,7 +221,7 @@ df = pd.DataFrame(data=d);
 </lia-keep>
 </div>
 
-**Series**
+Series
 ---
 
 You might have noticed that in the above example, everything in the first column was an integer, everything in the second column had a decimal point, and the third column consisted of words. Each column in a DataFrame is called a **series**. A series is a one-dimensional array in which all of the data has the same **type**.
@@ -342,7 +342,7 @@ When you print a DataFrame or Series you will see the first five rows and the la
 </div>
 
 
-**Loading your own data**
+Loading your own data
 ---
 
 To create a DataFrame of your data, make sure you use the right command for your file type, and make sure the location of the file is in quotes.
@@ -417,7 +417,7 @@ covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_m
 
 The `.loc` method lets you select a subset of your DataFrame to display.
 
-**Selecting a single entry**
+Selecting a single entry
 ---
 
 The grammar of the `.loc` method is `dataframe.loc[row(s), column(s)]`. To see the age of the of the very first person to be tested, i.e. extract the data from row `0` (python starts counting with 0) and column `"age"` enter `covid_testing.loc[0,"age"]`.
@@ -432,7 +432,7 @@ The grammar of the `.loc` method is `dataframe.loc[row(s), column(s)]`. To see t
 
 You need the `"` surrounding `age` because that column header is a string. No quotes are needed around the row index `0` because it is recognized as a known value.
 
-**Selecting multiple rows or columns**
+Selecting multiple rows or columns
 ---
 
 If you want to see the ages of the first 3 patients tested, change the `0` to the list `[0,1,2]`. This indicates that you want to see the data in rows indexed 0,1, and 2. Similarly you can change the single column to be a list of columns.
@@ -445,7 +445,7 @@ If you want to see the ages of the first 3 patients tested, change the `0` to th
 </lia-keep>
 </div>
 
-**Viewing full rows and columns**
+Viewing full rows and columns
 ---
 
 If you want to show all of the data in a row or column, instead of a list you can use a colon `:` to indicate that you want to include everything.
@@ -461,7 +461,7 @@ If you want to show all of the data in a row or column, instead of a list you ca
 
 A colon before the comma will show you all rows of the columns you selected and a colon after the comma will return all columns of the given rows.
 
-**Your turn:** 
+Your turn:
 ---
 
 What do you think will happen if you put colons both before and after the comma? Change the code below to check if you were correct.
@@ -593,7 +593,7 @@ When we used a column name or list of names as our argument in the row spot of t
 
 If this is a subset of the data that you are likely to want to use again, it is a good practice to create a new DataFrame consisting only of the rows and columns that you want.
 
-**Your turn:**
+Your turn:
 ---
 
 Create a new DataFrame titled `positive_tests`. How many rows have positive test results?
@@ -651,7 +651,7 @@ adult_positive = covid_testing.loc[(covid_testing.loc[:,"result"] == "positive")
 
 Our code is starting to look quite messy. Giving each condition a name is a good way to keep your code from becoming an unreadable tangle of conditional statements.
 
-**Name your conditions**
+Name your conditions
 ---
 
 When working with more complicated conditions it is extremely helpful to define your condition by giving it a name, and then refer to that name, rather than the chain of conditions, inside the `.loc` method. By carefully naming the compound condition, you can also make your code more human-readable. Take a moment to see what this code below is doing:
@@ -668,7 +668,7 @@ infant_positive = covid_testing.loc[is_positive_infant,:].copy()
 </div>
 
 
-**Use parentheses**
+Use parentheses
 ---
 
 When combining conditions, you should use parentheses around each condition. This isn't just for the benefit of humans reading your code. If you are combining three or more conditions, the placement of parentheses can change the meaning of a condition.
@@ -910,7 +910,7 @@ You can make changes to existing entries using the same method and simply using 
 
 What if you wanted to reformat the gender column to use `M` and `F` instead of spelling out male and female?
 
-**Using `=` to assign values**
+Using `=` to assign values
 ---
 
 One way to approach this is to define a condition testing each row for whether the entry in the `gender` column is `male`. Then we can use that condition to change the entry to `M` if the condition is met.
@@ -927,7 +927,7 @@ covid_testing.loc[is_male, "gender"] = "M"
 </div>
 
 
-**Using `.replace`**
+Using `.replace`
 ---
 
 You can also use the `.replace` method to change entries in a column. The grammar required can be a bit tricky, but it is worth learning to use this powerful tool.
@@ -960,7 +960,7 @@ covid_testing.loc[:, "gender"] = covid_testing.loc[:, "gender"].replace("female"
 
   * To change `a` to `b` in your DataFrame, redefine it: `dataframe = dataframe.replace("a","b")`. Now if you `print(dataframe)`, you will see all `a`s have been replaced by `b`.
 
-**Simultaneous replacement**
+Simultaneous replacement
 ---
 
 The `.replace` method lets you replace multiple kinds of entries simultaneously. The same way we could enter lists into `.loc`, `.replace` can also accept two lists.
