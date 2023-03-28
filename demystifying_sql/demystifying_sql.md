@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho
 email:    camachop@chop.edu
-version: 1.0.2
+version: 1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: US English Male
@@ -161,9 +161,8 @@ If your source data comes from a relational database (like a data warehouse), yo
 
 This is because, especially for large datasets, SQL is a much more efficient tool for large-scale data transformations than your traditional scripting or analytic packages.
 
-<div class = "hint">
+
 If you think about carving a sculpture out of stone or wood, you can imagine that the rough work of getting rid of big slabs of material that aren't needed can be done with powerful instruments like chainsaws or jackhammers.  Then, when an artist gets close to the shape of the final product, they might switch to smaller tools to give the sculpture its final form.  In this analogy, SQL is the heavy duty tool that gets your data close to its final form.
-</div>
 
 It's a good idea to document your SQL queries and save them, because this allows you to show your steps and give data provenance.  This helps with reproducibility and standardization of your work, and might help provide a place to start for future projects.
 
@@ -200,7 +199,10 @@ That said, knowing the specific "flavor" of SQL your database uses is especially
 A SQL **query** is essentially a question or request for data, written in a specific structure.  Let's take a closer look at how to compose a SQL query!
 
 <div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 If you feel anxious when you see code, you have a great opportunity in this module.  We're going to give some simple examples of SQL code to help build your intuition about SQL.  You **won't** have to run any code and we're only going to barely scratch the surface of SQL **syntax** (supported commands and how to write them -- the grammar and vocabulary of SQL).  This will help build your intuition about what SQL is good at (picking out just the right data).
+
 </div>
 
 At a high level, we generally provide three pieces of information when constructing SQL "**queries**":
