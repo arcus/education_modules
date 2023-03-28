@@ -104,7 +104,7 @@ To work with our sample solution, you could do any of the three possibilities be
 * Copy / paste the code from the link above
 
   * You can use the "Copy" button which looks like two pieces of paper in the menu bar across the top of the file:
-  ![Copy raw contents button](media/copy_raw_contents.png)<!--
+  ![Copy raw contents button.](media/copy_raw_contents.png)<!--
 style = "border: 1px solid rgb(var(--color-highlight));"-->
 
   * Or you can just use your mouse and highlight all the code, and use the "copy" keyboard shortcut
@@ -125,7 +125,7 @@ style = "border: 1px solid rgb(var(--color-highlight));"-->
   * [Create a (free!) Posit Cloud account](https://posit.cloud/plans)
   * Open the "education\_r\_environment" project at https://posit.cloud/content/5273350.  That will give you a temporary copy so you can run our code, but not make any changes to it.
   * Click on "Save a Permanent Copy" if you want to save any changes to your version of this code.
-  ![Posit menu bar with "Make Permanent Copy"](media/make_copy.png)<!--
+  ![Posit menu bar with "Make Permanent Copy".](media/make_copy.png)<!--
 style = "border: 1px solid rgb(var(--color-highlight));"-->
 
 
