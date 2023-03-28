@@ -97,7 +97,8 @@ The primary benefit of the **relational database** model is the ability to use c
 
 Now that you have that background, you can think of SQL as the computer code (the "Language" in Structured Query Language) that you can use to ask explicit questions (the "Query" in SQL) about the information in your Relational Database.
 
-<div class = "hint">
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
 
 Where did SQL come from?  SQL was created in the early 1970's by IBM as a method for more easily accessing information from their internal database system.
 
@@ -106,6 +107,7 @@ By 1979 Relational Software, Inc. (now Oracle Corporation) released the first co
 Today SQL is the most common programming language for extracting and organizing data in relational database systems.
 
 </div>
+
 
 
 ### Quiz: SQL and Relational Databases
@@ -233,9 +235,13 @@ A **select statement** is used to specify which columns you would like to have r
 
 The basic components of a select statement are the `SELECT` and `FROM` keywords. The `FROM` keyword is used to specify the table or tables that hold the data you're interested in, and the `SELECT` keyword is used to provide a list of columns within those table(s) that you would like returned as output.  
 
-<div class = "hint">
-Many people choose write SQL keywords in all capital letters, but that's so that they stand out clearly in SQL code, not because it's a language requirement.  
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Many people choose to write SQL keywords in all capital letters, but that's so that they stand out clearly in SQL code, not because it's a language requirement.
+
 </div>
+
 
 **Select All Columns**
 
