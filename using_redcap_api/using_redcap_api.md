@@ -1,8 +1,8 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.3
-module_template_version: 2.0.0
+version: 2.0.0
+module_template_version: 3.0.0
 language: en
 narrator: US English Female
 title: Using the REDCap API
@@ -24,6 +24,7 @@ After completion of this module, learners will be able to:
 
 @version_history
 1.0.2: make it clear that you need to have R or Python installed
+2.0.0: add section on using environment variables to avoid accidentally sharing your API tokens, and bring highlight boxes up to date with current module template
 
 @end
 
