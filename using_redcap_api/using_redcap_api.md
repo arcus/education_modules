@@ -358,7 +358,7 @@ You requested your data to be in a .csv, so you should get some data that's "com
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-In the **Response** box, data is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text by clicking on the contents of the box and then using your browser's "Select All" function, followed by "Copy." Then paste it into a text editor like Atom or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here's the cervical cancer data before, as comma separated values in plain text, and after, as text saved as a .csv and opened in Excel:
+In the **Response** box, data is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text by clicking on the contents of the box and then using your browser's "Select All" function, followed by "Copy." Then paste it into a text editor like Visual Code Studio or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here's the cervical cancer data before, as comma separated values in plain text, and after, as text saved as a .csv and opened in Excel:
 
 ![Data shown as text, separated by commas.](media/execute_request.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
@@ -526,8 +526,19 @@ By convention, environment variables are usually written in all caps, but you ca
 Create the .env file
 ---
 
-The `.env` file is just a text file, so you can create it in any text editor you like.
+The `.env` file is just a text file, so you can create it in a text editor like Visual Code Studio or Notepad.
 Just be sure to save it as `.env`, and it should be saved in the same folder as your Python script or Jupyter notebook.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+**Is Microsoft Word a text editor?**
+
+No, Word and other similar programs are called "word processors", and they include formatting in addition to the text itself.
+A text editor is for creating files that are much simpler in structure.
+For a review (and information about downloading Visual Studio Code, if you don't have it already) see the [discussion of text editors in our Bash 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#text-editors).
+
+</div>
 
 If you prefer to create the file right in Python, you can do that with the following commands:
 
