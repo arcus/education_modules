@@ -76,11 +76,13 @@ Whenever possible, we've linked to tutorials that include explanation of what th
 
 Even when a rich tutorial is available, the information linked here will generally **not** be enough for you to effectively use a statistical technique you're not already familiar with. Before applying a test you don't fully understand, seek out advice from someone experienced in the technique you want to use. We also have [recommendations for further statistical education](#learning-statistics) at the end of this module.
 
-<div class="warning">
-**Important:**
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 This module provides links to code for running statistical tests, but it doesn't explain the statistical theory or assumptions behind the tests themselves (and neither do the linked tutorials and code examples, in many cases).
 
 You'll need to do some additional reading before applying the code for any tests you don't already understand (there are [recommended resources for learning statistical techniques](#additional-resources) at the end of the module).
+
 </div>
 
 ### No Distinct Outcome
@@ -100,7 +102,10 @@ Principal Components Analysis (PCA) isn't an assessment of the strength of relat
 Models with continuous outcomes are the most commonly used statistical tests, and those which are most likely to be taught in an introductory stats text book. Many of them are actually not truly distinct tests but just different manifestations of one very powerful underlying model, the General Linear Model (GLM).
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 For a deeper understanding of the GLM, it helps to use matrix algebra notation, as in this [matrix algebra explanation of regression models](https://online.stat.psu.edu/stat462/node/132/). It is definitely not necessary to understand the underlying math to effectively use GLM tests, though, so only go into that if it interests you.
+
 </div>
 
 #### One Continuous Outcome
@@ -228,8 +233,11 @@ The assumptions of the General Linear Model include the assumption of normally d
 
 **For each of the following examples, try to think through what kind of statistical test would be most appropriate and type your answer in the space provided.**
 
-<div class = "warning">
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Note that due to the open-ended nature of the questions, the quiz won't be able to automatically grade your response; it will accept any answer as correct for these questions. But when you submit your answer, explanation text will appear to help you assess your own understanding.
+
 </div>
 
 Dr. Rosado wants to test the relationship between patients' age and BMI. Both are continuous variables. What kind of test would you recommend?
