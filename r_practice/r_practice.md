@@ -149,7 +149,7 @@ The best way to continue learning R for data science is to **do data science wit
 
 A great way to keep resources close at hand is to use cheat sheets:
 
-- [Posit.co](https://posit.co/) has many cheat sheets available to download, including one for [data transformation with dplyr](https://posit.co/wp-content/uploads/2022/10/data-transformation-1.pdf), [data visualization with ggplot2](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf).
+- [Posit.co](https://posit.co/about/) has many cheat sheets available to download, including one for [data transformation with dplyr](https://posit.co/wp-content/uploads/2022/10/data-transformation-1.pdf), [data visualization with ggplot2](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf).
 
 And as always, [R for Data Science](https://r4ds.had.co.nz/) is always a great resource!
 
