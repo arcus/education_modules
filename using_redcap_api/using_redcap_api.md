@@ -65,6 +65,7 @@ Here's what the REDCap developers [say about REDCap](https://projectredcap.org/)
 >REDCap is a secure web application for building and managing online surveys and databases. While REDCap can be used to collect virtually any type of data in any environment (including compliance with 21 CFR Part 11, FISMA, HIPAA, and GDPR), it is specifically geared to support online and offline data capture for research studies and operations. The REDCap Consortium, a vast support network of collaborators, is composed of thousands of active institutional partners in over one hundred countries who utilize and support their own individual REDCap systems.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 If you've never used REDCap, there are [good instructional videos](https://projectredcap.org/resources/videos/) offered by Vanderbilt to help you understand and use REDCap.  One video that's particularly useful is [a fifteen minute video](https://redcap.vanderbilt.edu/consortium/videoplayer.php?video=redcap_overview03.mp4) that gives a high level overview of what REDCap is and how to use it.  That video is accompanied by a [.pdf transcript](https://redcap.vanderbilt.edu/consortium/redcap_video_transcripts/redcap_overview03.pdf).  If you're brand new to REDCap, please watch this video before proceeding.
 
@@ -84,7 +85,8 @@ Not sure whether your institution has REDCap?  You may find your institution in 
 
 ![An alphabetical list of institutions with a few "A" entries shown.](media/redcap_partners.png)<!-- style = "border : 1px solid rgb(var(--color-highlight)); max-width: 500px;"-->
 
-<div class = "important">
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
 Although these materials are intended for any researcher who finds them useful, we know the institutional affiliation of some of our users, so for your convenience we're adding some of the REDCap URLs that might be useful to you.  Want us to add your institution's REDCap link, so that this training is more useful for your peers, too?  Email us at [`dart@chop.edu`](mailto:dart@chop.edu).
 
@@ -147,8 +149,11 @@ Try copying and pasting that URL into your browser and you'll get some text that
 </IdList>
 ```
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Entrez, like many APIs, has a limit to what you can do anonymously.  If you try to run this a few times in a row, you'll get an error message that starts with `{"error":"API rate limit exceeded"`...
+
 </div>
 
 ### API Access
@@ -226,6 +231,7 @@ For the next part of this module, we'd like you to work with a real REDCap datab
 If you have a REDCap project in mind, log in and open that project.  On the left side, under **Applications,** do you see **User Rights**?  If so, congratulations, you can use this project to experiment with the REDCap API.  We will only be using the API to access project data, not change or destroy it or add new data, so what we're going to describe here is safe to perform on a real dataset.
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
 Just because we're not going to break any of your data doesn't mean that it's okay from a regulatory perspective to use the API to download data to your computer.  Think about whether the use of this data is governed by a protocol or data use agreement, and whether your computer is an approved place to do analysis of the data.  
 
@@ -330,8 +336,11 @@ For now, choose **Export Records** as the API method.  This will allow you to do
 
 You don't have to change any other fields.  Leaving everything else alone means you'll download all the records (rows) and all of the forms / instruments with all of their fields (columns) into a single .csv file.
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Be careful not to choose `.json` as the format -- `.csv`, or **comma separated values**, is the file format you want to download!
+
 </div>
 
 The **Raw Request Parameters** box below your selection will change to reflect whatever you chose. Here's an example of what you might see, if you're using the cervical cancer data.  If you're using your own dataset, things will look different.  Note that we've blurred out the API key here -- that's not something we want to share!
@@ -346,7 +355,8 @@ Look further down the API Playground page, in the **Response** area, and click o
 
 You requested your data to be in a .csv, so you should get some data that's "comma separated" – a bunch of fields that are separated by commas, with each new line of data being separated by a line break.
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 In the **Response** box, data is presented in plain text, not in a table, so it might look confusing or overwhelming. If you want to, you can copy that plain text by clicking on the contents of the box and then using your browser's "Select All" function, followed by "Copy." Then paste it into a text editor like Atom or Notepad, saving it with the .csv extension. That will allow you to then open it in Excel to see if the .csv is what you intended. Below, here's the cervical cancer data before, as comma separated values in plain text, and after, as text saved as a .csv and opened in Excel:
 
@@ -362,8 +372,11 @@ This is an example of trying out and learning about the API without having to wr
 
 In some API methods, like **Export Records**, you'll have a number of drop down menus you can choose from to tailor your request, including which "forms" and which "fields" you want to retrieve. You can make multiple choices in menus like these by holding down control while clicking (Windows) or command while clicking (Mac).  Helpfully, however, if you want **every** item listed (say, you want every form and every field), you don't click any selection at all, and REDCap assumes you mean everything that appears in the drop-down list.
 
-<div class = "important">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Do take a look and make sure your Response box contains comma separated values and shows a good return code (200).  If not, something has gone wrong -- either you don't have the correct rights, which means you need to take another look at your rights in the User Rights section of REDCap, or you've issued an API call that is incorrect in some way (for instance, maybe you requested a .json format instead of .csv).
+
 </div>
 
 ### API Playground: Code
@@ -378,10 +391,13 @@ We'll show you how to use Python and R in two separate sections, so you can feel
 
 ## Python and the REDCap API
 
-<div class = "important">
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 There is a useful Python library that makes importing REDCap data into Python simpler than the code REDCap suggests.  Nevertheless, we think it's important to show you how to use the code REDCap provides, because it is reliable and reflects the current state of the REDCap API.  
 
 The Python library, PyCap, that streamlines this effort is great and seems very stable, and we provide a link to it toward the end of this module, but Python libraries depend on volunteers who keep them updated.  Therefore, we think it's useful to know how to use the basic method we'll share here, even if in the future you prefer a different approach.
+
 </div>
 
 Open a Jupyter notebook (running Python 3) and paste the code from the API Playground's "Python" tab into your first cell and run that cell.  It works!  Kind of.  Take a look below to see what the result of our API call for the records of cervical cancer data looks like.
@@ -407,10 +423,13 @@ Now, your data is in a pandas data frame and you're ready to do all sorts of wor
 
 REDCap assumes you're going to use an R script and not an R Markdown document, but we advocate using R Markdown for just about everything you do in R, so we're going to teach that approach.
 
-<div class = "important">
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 There are useful R packages that make importing REDCap data into R simpler than the code REDCap suggests.  Nevertheless, we think it's important to show you how to use the code REDCap provides, because it is reliable and reflects the current state of the REDCap API.  
 
 The R packages that streamline this effort (we like REDCapR and redcapAPI) are great and seem very stable, and we provide links to them toward the end of this module, but R packages depend on volunteers who keep them updated.  Therefore, we think it's useful to know how to use the basic method we'll share here, even if in the future you prefer a different approach.
+
 </div>
 
 First, open RStudio and create a new R Markdown (File > New File > R Markdown).  Give your R Markdown the title and author information you want, leave the default output choice (HTML), and click on **OK.**
