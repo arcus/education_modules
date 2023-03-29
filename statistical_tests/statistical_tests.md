@@ -76,8 +76,8 @@ Whenever possible, we've linked to tutorials that include explanation of what th
 
 Even when a rich tutorial is available, the information linked here will generally **not** be enough for you to effectively use a statistical technique you're not already familiar with. Before applying a test you don't fully understand, seek out advice from someone experienced in the technique you want to use. We also have [recommendations for further statistical education](#learning-statistics) at the end of this module.
 
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+<div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
 This module provides links to code for running statistical tests, but it doesn't explain the statistical theory or assumptions behind the tests themselves (and neither do the linked tutorials and code examples, in many cases).
 
