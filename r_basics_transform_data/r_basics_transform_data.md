@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.3
+version: 1.2.0
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -447,8 +447,8 @@ In the box below, write a `filter()` statement that returns a data frame contain
 
 ********
 
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+Strings and Quotes
+---
 
 When you do a comparison with a literal character string, such as "stark", that string needs to go inside quotes. A character string is anything that's not a number or a logical value such as TRUE and FALSE.  Quotes can be tricky in R, and practice makes perfect.
 
@@ -456,7 +456,7 @@ When you do a comparison with a literal character string, such as "stark", that 
 * "TRUE" is not the same as "true", "True" or TRUE
 * "00321" is not the same as "321" or 321.
 
-</div>
+
 
 
 Which of these would successfully filter the `covid_testing` data frame to only tests with positive results?
@@ -799,12 +799,6 @@ To work in this file:
 
 When you've done the best you can on your own, go to the next page, where we'll discuss the solutions.
 
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
-
-Note -- in the cloud RStudio using Binder, we've already installed `tidyverse`.  But if you're using the course materials in your own computer's installation of RStudio, it's possible you don't have `tidyverse` installed.  If you get a message telling you that there's no package installed with that name, issue this command: `install.packages("tidyverse")`.
-
-</div>
 
 ### Solutions
 

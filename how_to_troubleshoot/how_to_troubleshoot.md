@@ -97,16 +97,14 @@ In both of these examples, describing a problem more thoroughly is the key to na
 
 When you're in a hurry, in a panic, or annoyed (at yourself, at your computer, or at the world), it can be very tempting to throw your hands up and give a very vague description like "data import is broken!".  However, that description won't help you pinpoint the cause of your problems, and it will make it very unlikely that people you're asking for help (say in a user group Slack or on a website like Stack Overflow) will go out of their way to help you, either.  While your problem feels very familiar to you, and rehashing it might seem like too much effort, other people reading your request for help aren't familiar with your data, your computer, your customary use of software, or your experience level.
 
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-Which of these problem descriptions would you rather tackle?  
+**Which of these problem descriptions would you rather tackle?**  
+---
 
 Option 1:  "I'm so frustrated. No matter what I try to import my data, I can't get it to work! I just keep getting error messages. "
 
 Option 2:  "I'm so frustrated.  I have been trying to load a .csv from my local drive using the `read_csv` function, which I've read is the best way to import .csv data, but I keep getting the error `Error in read_csv("intervention_case_control.csv") : could not find function "read_csv"`.  I know the file is there, and I'm 99% sure it's not a file path issue."
 
-</div>
 
 ### Rubber Duck Debugging
 

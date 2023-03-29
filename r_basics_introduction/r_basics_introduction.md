@@ -580,8 +580,6 @@ You can download and **install** a package with the command `install.packages`. 
 </div>
 </div>
 
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 On our RStudio Server, you won't need to install any packages for this course (as we have installed them for you). If you're using R on your own computer, however, **you will have to install packages**.  In the console, type `install.packages("tidyverse")` and you'll see a bunch of output (a sample of which is shown below -- don't worry if your output is a little different in terms of version or downloaded location).  Then you're ready to proceed!
 
@@ -600,6 +598,9 @@ The downloaded binary packages are in
 	/var/folders/9f/_svfj7g145711jjsr6jnpgsj5sb7dt/T//RtmppKqGtx/downloaded_packages
 </pre>
 </lia-keep>
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 Make sure you **include the quotes** around tidyverse. When to use quotes is a tricky topic that we will talk about more later in this module, but for now, keep in mind that you will *always* need to put quotes around the name of a package whenever using `install.packages()`.
 
