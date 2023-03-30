@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.1
+version: 1.0.2
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
@@ -225,7 +225,7 @@ Which of the following statements about latitude and longitude are TRUE?
 
 [[X]] Every location on Earth can be described using latitude and longitude.
 [[ ]] The location of the equator was an arbitrary decision made by historical mapmakers.
-[[ ]] Locations east of the prime meridian are represented by positive longitudes and locations west of the prime meridian are represented by negative longitudes.
+[[X]] Locations east of the prime meridian are represented by positive longitudes and locations west of the prime meridian are represented by negative longitudes.
 [[X]] Locations north of the equator are represented by positive latitudes and locations south of the equator are represented by negative latitudes.
 ***
 
