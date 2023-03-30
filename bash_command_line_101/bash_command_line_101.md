@@ -374,15 +374,19 @@ You might have noticed that none of the file or directory names we used had spac
 
 ### Writing to a file directly
 
-We have created 4 files, but so far all of them are empty. The most direct way to write text to a file is to use the `echo` and `>>` commands.
+We have created 4 files, but so far all of them are empty. The first way we will learn to way to write text to a file is to use the `echo` and `>>` commands.
 
 **`echo`**
 
 The bash command `echo` returns any text that follows it. Give it a try in your command line interface!
 
+Returning the text you just entered with `echo` might seem simple, but it is an incredibly useful command for turning input into output. Next we will see a command that can do something with that output.
+
 **`>>`**
 
-The bash command `>>` is used to write the output of a command to the end of a file. For example the following code will create a file called `my_sentences` and write the text `This is a sentence.` in that file.
+The bash command `>>` is used to write the output of a command to the end of a file. It tells the computer that instead of printing the output for you to see, instead, write that output in the file you designate.
+
+For example the following code will create a file called `my_sentences` and write the text `This is a sentence.` in that file.
 
 ```
 echo "This is a sentence." >> my_sentences
@@ -400,6 +404,8 @@ Now the file `my_sentences` has two lines:
 This is a sentence.
 This is another sentence.
 ```
+
+We just combined `>>` with the `echo` command, but as you learn more commands with interesting output, you will be able to use `>>` to write the output of any command to a file.
 
 **Give it a try!** Add some text to the files you already created!
 
