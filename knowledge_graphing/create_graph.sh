@@ -16,7 +16,8 @@ do
     then
       title="`grep -m 1 title: $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
       author="`grep -m 1 author: $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
-      create_node="G.add_node(\"$FOLDER\", title=\"$title\", author=\"$author\")"
+      estimated_time="`grep -m 1 estimated_time: $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
+      create_node="G.add_node(\"$FOLDER\", title=\"$title\", author=\"$author\", estimated_time=\"$estimated_time\")"
       echo $create_node >> $graph_data
   fi
 done
