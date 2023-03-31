@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.1
+version: 1.4.0
 module_template_version: 3.0.0
 language: en
 narrator: US English Female
@@ -15,9 +15,9 @@ estimated_time: 1 hour
 
 After completion of this module, learners will be able to:
 
-* Explain the importance of conducting research that is **reproducible** (can be re-done by a different, unaffiliated scientist)
-* Argue in support of a data analysis method that helps research be more reproducible
-* Argue in support of a method in the organization and description of documents, datasets, and other files that helps research be more reproducible
+* Explain the benefits of conducting research that is **reproducible** (can be re-done by a different, unaffiliated scientist)
+* Describe how technological approaches can help research be more reproducible
+* Argue in support of practices that organize and describe documents, datasets, and other files as a way to make research more reproducible
 
 @end
 
@@ -31,6 +31,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 @version_history
 1.2.2: fix incorrect hyperlink
 1.3.0: apply latest template 
+1.4.0: update learner outcomes, quizzes, article link
 
 @end
 
@@ -286,7 +287,7 @@ In early 2016, a policy requiring the consideration of sex as a biological varia
 
 </div>
 
-Human bias doesn't just lead to potentially misleading studies, but to potentially misleading research tools as well.  For example, in wearable sensor and computer vision development, engineers using skewed samples failed to realize that the optical sensors and computer vision algorithms they created may perform less well on dark skin. See, for example, [a STAT piece about Fitbits](https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/) and [a New York Times opinion piece about bias in facial analysis](https://www.nytimes.com/2018/06/21/opinion/facial-analysis-technology-bias.html).
+Human bias doesn't just lead to potentially misleading studies, but to potentially misleading research tools as well.  For example, in wearable sensor and computer vision development, engineers using skewed samples failed to realize that the optical sensors and computer vision algorithms they created may perform less well on dark skin. See, for example, [a *STAT* piece about Fitbits](https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/) and [a *Boston Magazine* report about MIT research on AI and racial bias](https://www.bostonmagazine.com/news/2018/02/23/artificial-intelligence-race-dark-skin-bias/).
 
 The challenge of generalizability is closely linked to reproducibility.  For example, a study that demonstrates the effectiveness of exercise to improve functioning in depressed suburban teenagers may not generalize to city-dwelling adults.  In order to gain broader generalizability, this promising experiment on a limited population should be reproduced in a broader or different population.  If the original study is difficult to reproduce, however, such broader application may prove impossible.
 
@@ -411,7 +412,9 @@ It's worth considering the words of an archaeological team that wrote an article
 
 **Data management** includes the organization, annotation, and preservation of data and metadata related to your research or clinical project.
 
-Data management is a critical pain point for many data users.  What's the best way to wrangle the data files needed to carry out a project?  Should documents be stored in a common drive?  Using what kinds of subfolders?  How should researchers deal with emails that are sent back and forth between researchers to define a specific cohort?  What is the long-term storage strategy for this data?  Are there ways to save the data in multiple formats to accomodate unknown future needs?  Even a small project organized by a single researcher can be complex, and when a team of several researchers and supporting staff are involved, individual data management practices can collide.  A few topics that fall under the category of data management include:
+Data management is a critical pain point for many data users.  What's the best way to wrangle the data files needed to carry out a project?  Should documents be stored in a common drive?  Using what kinds of subfolders?  How should researchers deal with emails that are sent back and forth between researchers to define a specific cohort?  What is the long-term storage strategy for this data?  Are there ways to save the data in multiple formats to accomodate unknown future needs?  
+
+Even a small project organized by a single researcher can be complex, and when a team of several researchers and supporting staff are involved, individual data management practices can collide.  A few topics that fall under the category of data management include:
 
 * File naming standards for project files
 * The format in which data is collected, and where it is stored
@@ -420,7 +423,7 @@ Data management is a critical pain point for many data users.  What's the best w
 * How processes and procedures are stored and kept up to date
 * Who has access to what assets and when that access expires
 
-Importantly, NIH has begun requiring more rigorous data sharing & management plans for all grants starting in January 2023.  Data management planning is now a critical skill for grant writing.
+Importantly, NIH has begun requiring more rigorous data sharing & management plans for all grants.  This requirement went into effect in January 2023.  Data management planning is now a critical skill for grant writing.
 
 **Metadata** is, in its simplest definition, data about data. Some examples of metadata might include:
 
@@ -445,6 +448,27 @@ REDCap is one example of software that explicitly creates a data dictionary that
 These [Research Data Management Resources](https://www.research.chop.edu/applications/arcus/resources) tend to be very practical and can be used right away to improve data management!  Simply click on the link and then expand the part of the accordion labeled "Research Data Management Resources (Public Access)".
 
 </div>
+
+#### Quiz: Data Management and Metadata
+
+Which of the following is true about data organization for researchers?
+
+[[X]] Data management planning is a critical part of grant writing, research planning, and the conduct of research.
+[[ ]] Metadata is specialized information used in complex computational projects and is best created by expert information scientists
+[[X]] When working with research data, small decisions, like column naming conventions, can have big implications for research success.
+[[ ]] Major funders of biomedical research understand that data management techniques are easy to carry out, and don't need these methods to be described.
+[[?]] Hint: There are two correct answers.
+***
+<div class = "answer">
+
+Data management planning is indeed a critical part of research, including grant writing.  In fact, NIH requires careful documentation of data management planning for new research (as of 2023).  
+
+Data management is both mundane (it includes seemingly simple decisions such as what to name a directory of files) and high-stakes (poor data management can make research slow down or even fail).  The fact that scientists constantly make incremental data management decisions, usually without consideration of downstream effects means that this skill is complex and requires practice and explicit planning.  It's not easy!
+
+Metadata (data about research data) doesn't have to be highly technical and specialized.  Metadata is present in every research project and includes simple information such as who collected the data and in what location.  The careful recording of metadata is important for research success and reproducibility.  For example, as we discussed earlier in our discussion of [A Data Management and Sharing Snafu](https://www.youtube.com/watch?v=66oNv_DJuPc?cc_load_policy=1), the creation of metadata, like a **data dictionary** might have helped researchers avoid the problem of trying to decode the meaning of "SAM1" and "SAM2". 
+
+</div>
+***
 
 ### Version Control
 
@@ -531,7 +555,7 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 * [Sex as a Biological Variable: A 5-Year Progress Report and Call to Action](https://pubmed.ncbi.nlm.nih.gov/31971851/)
 * [NIH: Scientists Must Include Female Animals In Testing](https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals)
 * [Fitbits and other wearables may not accurately track heart rates in people of color](https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/)
-* [When the Robot Doesn’t See Dark Skin](https://www.nytimes.com/2018/06/21/opinion/facial-analysis-technology-bias.html)
+* [MIT Researcher: Artificial Intelligence Has a Race Problem, and We Need to Fix It](https://www.bostonmagazine.com/news/2018/02/23/artificial-intelligence-race-dark-skin-bias/)
 * [Data Sharing and Privacy: A Very Cursory Overview](https://education.arcus.chop.edu/privacy-overview/)
 * [A Data Management and Sharing Snafu](https://www.youtube.com/watch?v=66oNv_DJuPc?cc_load_policy=1)
 * [Here’s How We Made Our Study Reproducible](https://slate.com/technology/2017/07/how-to-make-a-study-reproducible.html)
