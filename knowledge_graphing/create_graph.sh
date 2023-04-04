@@ -19,6 +19,7 @@ do
       estimated_time="`grep -m 1 estimated_time: $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
       create_node="G.add_node(\"$FOLDER\", title=\"$title\", author=\"$author\", estimated_time=\"$estimated_time\")"
       echo $create_node >> $graph_data
+      echo "('$FOLDER', '$title', '$author', '$estimated_time'),"
   fi
 done
 
@@ -37,6 +38,7 @@ do
            then
              create_edge="G.add_edge(\"$FOLDER\", \"$LINKED_COURSE\", link_type=\"internal_link\")"
              echo $create_edge >> $graph_data
+             #echo "('$FOLDER', '$LINKED_COURSE'),"
          fi
 
       fi 
