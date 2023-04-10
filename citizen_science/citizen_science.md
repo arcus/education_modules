@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.0.1
+version: 1.0.2
 module_template_version: 3.1.0
 language: en
 narrator: UK English Female
@@ -51,7 +51,7 @@ None.
 ## What is citizen science?
 
 Citizen science is a broad term that is used to describe scientific projects that invite participation from the public in any of a number of ways.
-Often, volunteer citizen scientits take on work that would otherwise be done by research staff.
+Often, volunteer citizen scientists take on work that would otherwise be done by research staff.
 Some of the ways citizen scientists can participate in a project include the following:
 
 - collect data ([Alabama Water Watch](https://aaes.auburn.edu/alabamawaterwatch/); [eBird](https://science.ebird.org/en))
