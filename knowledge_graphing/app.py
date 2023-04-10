@@ -1,4 +1,4 @@
-from dash import Dash, html, Input, Output
+from dash import Dash, html, Input, Output, dcc
 import dash_cytoscape as cyto
 
 app = Dash(__name__)
@@ -150,6 +150,27 @@ default_stylesheet = [
             #'background-color': '#BFD7B5',
             'label': 'data(title)',
         }
+    },
+    {
+        
+        #### Make nodes by my a different shape:
+        'selector': '[author *= "Elizabeth Drellich"]',
+        'style': {
+            #'background-color': '#BFD7B5',
+            'shape': 'square',
+        }
+    }
+    ,
+    {
+        
+        #### Make nodes by my a different shape:
+        'selector': '[author !*= "Elizabeth Drellich"]',
+        'style': {
+            #'background-color': '#BFD7B5',
+            'shape': 'triangle',
+            'opacity': 0.2
+            
+        }
     }
 ]
 
@@ -162,18 +183,45 @@ app.layout = html.Div([
         stylesheet=default_stylesheet,
         style={'width': '100%', 'height': '450px'}
     ),
-    html.P(id='cytoscape-tapNodeData-output'),
+    dcc.Dropdown(
+    id='dropdown-update-layout',
+    value='grid',
+    clearable=False,
+    options=[
+        {'label': name.capitalize(), 'value': name}
+        for name in ['grid', 'random', 'circle', 'cose', 'concentric']
+    ]
+),
+    dcc.Dropdown(
+    id='author_selector',
+    #value='grid',
+    clearable=True,
+    options=[
+        {'label': name, 'value': name}
+        for name in ['Elizabeth Drellich', 'Joy Payton', 'Rose Franzen', 'Rose Hartman', 'Meredith Lee', 'Nicole Feldman', 'Ene Belleh', 'Peter Camacho']
+    ]
+),
+    dcc.Markdown(id='cytoscape-tapNodeData-output'),
     html.P(id='cytoscape-tapEdgeData-output'),
     html.P(id='cytoscape-mouseoverNodeData-output'),
-    html.P(id='cytoscape-mouseoverEdgeData-output')
+    html.P(id='cytoscape-mouseoverEdgeData-output'),
+    
 ])
 
+
+@app.callback(Output('cytoscape-event-callbacks-2', 'layout'),
+              Input('dropdown-update-layout', 'value'))
+def update_layout(layout):
+    return {
+        'name': layout,
+        'animate': True
+    }
 
 @app.callback(Output('cytoscape-tapNodeData-output', 'children'),
               Input('cytoscape-event-callbacks-2', 'tapNodeData'))
 def displayTapNodeData(data):
     if data:
-        return "You recently clicked/tapped the module: " + data['title'] + " which was written by " + data['author'] +"."
+        return "The selected module is [**" + data['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data['id']+"/" +data['id'] + ".md) which was written by " + data['author'] +". We think it will take you about " +data['time']+"."
 
 
 @app.callback(Output('cytoscape-tapEdgeData-output', 'children'),
