@@ -1,0 +1,6063 @@
+{
+  "formatKey": {
+    "description": "TBD",
+    "type": "string",
+    "$ref": "./formatKey.json#/formatKey"
+  },
+  "dataTypeInformation": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "Data Tag Suite (DATS)",
+    "oneOf": [
+      {
+        "const": "gene expression",
+        "description": "Data is about studying how genes are manifested or suppressed."
+      },
+      {
+        "const": "proteomics",
+        "description": "Data is about the large-scale study of proteins."
+      },
+      {
+        "const": "phenotyping",
+        "description": "Data is about studying the observable characteristics of participants. This may or may not be paired with genotyping, as well."
+      },
+      {
+        "const": "metagenomics",
+        "description": "Data is about the study and analysis of the collective genetic material and resultant files from the participant, microorganisms, and their environment."
+      },
+      {
+        "const": "patient list",
+        "description": "Data is a list of participant MRNs."
+      },
+      {
+        "const": "clinical notes",
+        "description": "Data is about notes, often free text, produced from visits to a healthcare provider. N.B. Data or files produced directly from collection information about the physical state of the participant should take the term \"participant\"."
+      },
+      {
+        "const": "clinical encounters",
+        "description": "Data is about a defined set of information produced from visits to a healthcare provider. N.B. Data or files produced directly from collection information about the physical state of the participant should take the term \"participant\"."
+      },
+      {
+        "const": "datasets",
+        "description": "Describes how whole, discrete datasets comprising the series or collection are created, edited, and maintained."
+      },
+      {
+        "const": "files",
+        "description": "Describes how files comprising the dataset are created, edited, and maintained."
+      },
+      {
+        "const": "clinical registry",
+        "description": "Data is about a defined set of participants and defined set of information related to those participants."
+      },
+      {
+        "const": "set up and installation",
+        "description": "Data is about how the study, experiment, or analysis is designed and initially run."
+      },
+      {
+        "const": "workflow",
+        "description": "Data is about how the study, experiment, or analysis is conducted."
+      },
+      {
+        "const": "administration",
+        "description": "Data is about the archival governance of the study and its datasets."
+      },
+      {
+        "const": "participant",
+        "description": "Data is about and collected directly from living body of participant."
+      },
+      {
+        "const": "fluoroscopic tracings",
+        "description": "Videourodynamics (VUDS) fluoroscopic tracings."
+      },
+      {
+        "const": "genomics",
+        "description": "The study of all a person or organism's genes and their functions."
+      },
+      {
+        "const": "survey data",
+        "description": "Data collected from surveys."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "contentType": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "study questionnaire",
+        "description": "Questionnaire or survey distributed to study participants. Should contain the actual question text and generally should not contain answers (i.e. this is a blank questionnaire)."
+      },
+      {
+        "const": "response analysis",
+        "description": "Compiled set of survey of questionnaire responses, sometimes with additional analysis performed."
+      },
+      {
+        "const": "participant list",
+        "description": "List of individuals who participated in the research effort."
+      },
+      {
+        "const": "code object",
+        "description": "File written in a coding language such as python or Structured Query Language (SQL)."
+      },
+      {
+        "const": "clinical dataset",
+        "description": "Set of data consisting of information gathered during the course of clinical care visits."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "dataTypeName": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "Data Tag Suite (DATS)",
+    "maxLength": 50,
+    "oneOf": [
+      {
+        "$ref": "../../../omics-protocols/Vocabulary/sequencing-type.json#/protocolSequencingType",
+        "description": "The reference links out to the omics-protocols repository and contains all sequencing type values for Omics work."
+      },
+      {
+        "const": "microscopy imaging",
+        "description": "Images produced from using a microscope."
+      },
+      {
+        "const": "clinical",
+        "description": "Data produced from visits to a healthcare provider."
+      },
+      {
+        "const": "clinical research",
+        "description": "Data produced from visits to a healthcare provider or researcher conducting a study into the safety and effectiveness of a drug, medical device, or procedure."
+      },
+      {
+        "const": "clinical, registry",
+        "description": "Data is about a defined set of participants and defined set of information related to those participants."
+      },
+      {
+        "const": "genomics",
+        "description": "Data related to the study and analysis of genes. Whenever possible, the most specific term available for describing the technique used in genomic analysis should be applied. For example, if a study used whole exome sequencing in their research, \"exome sequence\" should be supplied for dataTypeName in favor of \"genomics\"."
+      },
+      {
+        "const": "pipeline",
+        "description": "A set of steps and tools for producing or analyzing data."
+      },
+      {
+        "const": "data dictionary",
+        "description": "A file that names and describes data elements."
+      },
+      {
+        "const": "SQL query",
+        "description": "Code written in Structured Query Language (SQL) programming language used to query a database."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      },
+      {
+        "const": "query description (human readable format)",
+        "description": "A human readable description of a Structured Query Language (SQL) query used to pull participant data matching given inclusion/exclusion criteria."
+      },
+      {
+        "const": "scripts",
+        "description": "Code used to automate functions of data creation or analysis."
+      },
+      {
+        "const": "documentation",
+        "description": "Information describing content and procedures used in the course of study or archiving."
+      },
+      {
+        "const": "configurations",
+        "description": "Information about the set up and specifications for a study or workflow."
+      },
+      {
+        "const": "genomic file protocols",
+        "description": "Files that provide information regarding the details of genomic analysis."
+      },
+      {
+        "const": "protocols",
+        "description": "Files that provide information regarding the details of non-genomic analysis."
+      },
+      {
+        "const": "somatic cancer panel",
+        "description": "Data related to panel used to search for genetic mutations in tumors or cancer cells."
+      },
+      {
+        "const": "publication materials",
+        "description": "Materials used for the publication of data, reports, or papers related to a given study."
+      },
+      {
+        "const": "clinical retrospective case series",
+        "description": "Set of clinical cases grouped together in the course of research. This clinical information was not originally collected for research purposes."
+      },
+      {
+        "const": "feature/annotation track",
+        "description": "Data related to annotation of one particular positional feature on a biomolecular (typically genome) sequence, suitable for import and display in a genome browser. This term should be used for dataTypeName when there is a format value of \"text/bed\"."
+      },
+      {
+        "const": "imaging",
+        "description": "Images and image data from MRI, x-ray, etc."
+      },
+      {
+        "const": "pulse oximetry",
+        "description": "Data and files showing measures of blood oxigenation."
+      },
+      {
+        "const": "machine learning",
+        "description": "Artifical intelligence and deep learning computer networks."
+      },
+      {
+        "const": "fluoroscopic tracings",
+        "description": "Videourodynamics (VUDS) fluoroscopic tracings."
+      },
+      {
+        "const": "survey responses",
+        "description": "Answers given by participants to questionnaries. When this term is used for dataTypeName, dataTypeMethod value should be \"survey\"."
+      },
+      {
+        "const": "patient list",
+        "description": "Data is a list of participant MRNs."
+      },
+      {
+        "const": "genome annotations",
+        "description": "Data is an annotation of a genome."
+      },
+      {
+        "const": "genotypes",
+        "description": "Data is a summary of genetic composition."
+      },
+      {
+        "const": "PLINK binary biallelic genotype table",
+        "description": "Primary representation of genotype calls at biallelic variants (from https://www.cog-genomics.org/plink/1.9/formats)."
+      },
+      {
+        "const": "unmapped BAMs",
+        "description": "Binary Alignment Map (BAM) files not mapped to a human reference genome. Commonly also referred to as uBAMS."
+      },
+      {
+        "const": "short germline variants",
+        "description": "A gene change in a reproductive cell (egg or sperm) that becomes incorporated into the DNA of every cell in the body of the offspring. From: https://www.cancer.gov/publications/dictionaries/genetics-dictionary/def/germline-variant."
+      },
+      {
+        "const": "cram files",
+        "description": "Data being manipulated or processed comes from Compressed Reference-oriented Alignment Map (CRAM) files."
+      },
+      {
+        "const": "annotations",
+        "description": "In genomics, description of significance for a given gene location."
+      },
+      {
+        "const": "relational database extraction",
+        "description": "Extraction from a relational database. Can be direct extraction or extract and transform to different format, e.g. Comma Separated Value (CSV) files."
+      },
+      {
+        "const": "quality control (QC) metrics",
+        "description": "Quality control metrics for processes involving transformations."
+      },
+      {
+        "const": "recalibration reports",
+        "description": "Reports detailing the results of recalibration of genomics files. The recalibration process is often applied to unmapped Binary Alignment Map (BAM) files as they are processed into calibrated BAMs and downstream artifacts like Rompressed Reference-Oriented Alignment Map (CRAM) and Variant Call Format (VCF) files"
+      }
+    ]
+  },
+  "dataTypeSource": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "$ref": "../../../omics-protocols/Vocabulary/genome-build.json#/protocolGenomeBuild",
+        "description": "The reference links out to the omics-protocols repository and contains all dataTypeSource genome build values for Omics work."
+      },
+      {
+        "const": "Epic Clarity",
+        "description": "Data being manipulated or processed comes from the backend Epic database, Clarity."
+      },
+      {
+        "const": "Nautilus",
+        "description": "Data being manipulated or processed comes from the Nautilus Laboratory Information Management System."
+      },
+      {
+        "const": "CDW",
+        "description": "Data being manipulated or processed comes from the CHOP Clinical Data Warehouse (CDW). Portions of this warehouse pre-date CHOP Epic and Epic Clarity data. The CDW also includes data from sources outside of CHOP Epic and Epic Clarity, collected either before or concurrent with Epic implementation at CHOP."
+      },
+      {
+        "const": "REDCap",
+        "description": "Data being manipulated or processed comes from the REDCap data capture system. This information can include various types of data collection instruments, such as surveys, as well as survey responses and data dictionaries."
+      },
+      {
+        "const": "file storage",
+        "description": "Data being manipulated or processed comes from either remote or local file storage. This can include cloud storage, such as that from Google Cloud Services (GCS) or Amazon Web Services (AWS), or files from a hard drive. This term should be used when describing a process that directly impacts the file system or where the file system is the main source for a process. For example, this term can be applied to a set of python script files designed to update file names on a data analyst's local computer."
+      },
+      {
+        "const": "PACS",
+        "description": "Data being manipulated or processed comes from a Picture Archiving and Communication System (PACS). Information from the PACS can include both images and reports."
+      },
+      {
+        "const": "wearable",
+        "description": "Data being manipulated or processed comes from a wearable object used to collect biological and environmental data. Example: FitBit."
+      },
+      {
+        "const": "LIMS",
+        "description": "Data being manipulated or processed comes from a Laboratory Information Management System (LIMS)."
+      },
+      {
+        "const": "external",
+        "description": "Data being manipulated or processed comes from a system outside of CHOP."
+      },
+      {
+        "const": "biological sample",
+        "description": "A biological sample itself, e.g. saliva, is being process or manipulated. In genomics, fastq files are produced from the processing of the biological sample."
+      },
+      {
+        "const": "bam files",
+        "description": "Data being manipulated or processed comes from Binary Alignment Map (BAM) files. BAM files provide the source for genomic variant call format (gVCF) files."
+      },
+      {
+        "const": "fastq files",
+        "description": "Data being manipulated or processed comes from fastq files. Fastq files provide the source for alignment files such as Binary Alignment Map (BAM) files or compressed reference-oriented alignment map (CRAM) files."
+      },
+      {
+        "const": "gvcf files",
+        "description": "Data being manipulated or processed comes from genomic variant call format (gVCF) files. gVCF files can provide the source for variant call format (VCF) files."
+      },
+      {
+        "const": "Pediatric Oncology Network Database (POND)",
+        "description": "Data being manipulated or processed comes from the Pediatric Oncology Network Database (POND)."
+      },
+      {
+        "const": "Arcus collection",
+        "description": "Data being manipulated or processed comes from a collection already in Arcus."
+      },
+      {
+        "const": "IDAT files",
+        "description": "Data being manipulated or processed comes from raw IDAT files."
+      },
+      {
+        "const": "genomics manifest files",
+        "description": "Data being manipulated or processed comes from or utilizes manifest files provided by Omics sequencing company. Files types often include .bpm, .egt, .csv."
+      },
+      {
+        "const": "genotypes",
+        "description": "Data is a summary of genetic composition."
+      },
+      {
+        "const": "genome annotations",
+        "description": "Data is an annotation of a genome."
+      },
+      {
+        "const": "cram files",
+        "description": "Data being manipulated or processed comes from Compressed Reference-oriented Alignment Map (CRAM) files."
+      },
+      {
+        "const": "unmapped BAMs",
+        "description": "Binary Alignment Map (BAM) files not mapped to a human reference genome. Commonly also referred to as uBAMS."
+      },
+      {
+        "const": "interim BAMs",
+        "description": "Binary Alignment Map (BAM) files created as part of a pipeline to serve as input. These files are typically not saved or archived."
+      },
+      {
+        "const": "relational database",
+        "description": "Data come from a relational database. Examples include Presto or PostGres."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "dateType": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "DataCite Metadata 4.3",
+    "oneOf": [
+      {
+        "const": "accepted",
+        "description": "The date that the publisher accepted the resource into their system."
+      },
+      {
+        "const": "available",
+        "description": "The date the resource is made publicly available. May be a range."
+      },
+      {
+        "const": "collected",
+        "description": "The date or date range in which the resource content was collected."
+      },
+      {
+        "const": "copyrighted",
+        "description": "The specific, documented date at which the resource receives a copyrighted status, if applicable."
+      },
+      {
+        "const": "created",
+        "description": "The date the resource itself was put together; this could refer to a timeframe in ancient history, be a date range or a single date for a final component, e.g. the finalized file with all of the data."
+      },
+      {
+        "const": "issued",
+        "description": "The date that the resource is published or distributed e.g. to a data centre"
+      },
+      {
+        "const": "other",
+        "description": "A date with a type other than the available values in the dateType vocabulary. Always check whether a type should be added to the vocabulary before using \"other\"."
+      },
+      {
+        "const": "submitted",
+        "description": "The date the creator submits the resource to the publisher. This could be different from Accepted if the publisher then applies a selection process."
+      },
+      {
+        "const": "updated",
+        "description": "The date of the last update to the resource, when the resource is being added to. May be a range."
+      },
+      {
+        "const": "valid",
+        "description": "The date or date range during which the dataset or resource is accurate. "
+      },
+      {
+        "const": "ingested",
+        "description": "The date the resource was ingested into archival storage."
+      },
+      {
+        "const": "initial cataloging",
+        "description": "The date cataloging work on the resource originally began."
+      },
+      {
+        "const": "updated cataloging",
+        "description": "The date the collection record for the resource was updated."
+      },
+      {
+        "const": "date of accession",
+        "description": "The date the resource was accessioned into the Archives."
+      },
+      {
+        "const": "date DCA signed",
+        "description": "The date the Data Contribution Agreement (DCA) was signed by the contributor."
+      },
+      {
+        "const": "date of deaccession",
+        "description": "The data the resource was deaccessioned (withdrawn) from the Archives."
+      },
+      {
+        "const": "accrual date",
+        "description": "The date additional content was accrued to the collection."
+      },
+      {
+        "const": "collection start date",
+        "description": "The date most relevant as a start date for the collection. This may be the date of funding, the initiation of data collection, or any other relevant date depending on the type and nature of the collection, and is best determined by the contributor."
+      },
+      {
+        "const": "collection end date",
+        "description": "The date most relevant as an end date for the collection. This may be the date of completion of funding, the end of data collection, or any other relevant date depending on the type and nature of the collection, and is best determined by the contributor."
+      },
+      {
+        "const": "collection dates",
+        "description": "Any date useful for describing the collection that does not fall under one of the existing collection specific dateType options."
+      },
+      {
+        "const": "retention period end",
+        "description": "Denotes the end of the retention period set out in the IRB protocol or other documentation. Data should be removed from the Archives in compliance with specifications of the protocol."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "funderIdentifierType": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "ISNI",
+        "description": "International Standard Name Identifier (ISNI). When using this value, set funderIdentifierTypeURI to \"isni.org\"."
+      },
+      {
+        "const": "GRID",
+        "description": "Global Research Identifier Database (GRID). When using this value, set funderIdentifierTypeURI to \"grid.ac\"."
+      },
+      {
+        "const": "crossref Funder ID",
+        "description": "Crossref Funder Identifier. When using this value, set funderIdentifierTypeURI to \"https://www.crossref.org/services/funder-registry\"."
+      },
+      {
+        "const": "LCNAF",
+        "description": "Library of Congress Name Authority File (LCNAF). When using this value, set funderIdentifierTypeURI to \"https://id.loc.gov/authorities/names.html\"."
+      },
+      {
+        "const": "other",
+        "description": "Another value not specified."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "identifiability": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "Controlled vocabulary includes a manually added local list as well as terms from the Arcus data tagging initiative",
+    "oneOf": [
+      {
+        "const": "fully identifiable",
+        "description": "Data contains full identifiers."
+      },
+      {
+        "const": "pseudo-anonymized",
+        "description": "Can also be called pseudonymized or pseudonymization. Data contains substituted artificial identifiers in place of actual identifiable information."
+      },
+      {
+        "const": "fully anonymized",
+        "description": "Can also be called deidentified. Data has been stripped of identifiers."
+      },
+      {
+        "const": "information not available",
+        "description": "Not enough information is available to make a determination about the level of identifability."
+      },
+      {
+        "const": "public",
+        "description": "Information that if disclosed would require no special protection and could be released to the public (e.g. anything approved for mass distribution)."
+      },
+      {
+        "const": "institutional_information",
+        "description": "Any information whether oral, electronic, or on paper that involves Hospital Workforce information (e.g., payroll information), non-public Hospital business information, non-public research information, vendor trade secrets, Personally Identifiable Information or other confidential Hospital information."
+      },
+      {
+        "const": "patient_information",
+        "description": "Information that may identify an individual and relates to an individual's past, present, or future physical/mental health or condition, health care or payment for healthcare."
+      },
+      {
+        "const": "not applicable",
+        "description": "Determination of identifability does not apply."
+      },
+      {
+        "const": "other",
+        "description": "Another value not specified."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "collectionType": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "basic or bench research",
+        "description": "Research exploring fundamental scientific principles."
+      },
+      {
+        "const": "clinical research study or trial",
+        "description": "Testing of scientific principles in a clinical setting, with human participants."
+      },
+      {
+        "const": "translational research",
+        "description": "Research exploring the application of fundamental scientific principles."
+      },
+      {
+        "const": "behavioral or psychosocial research study",
+        "description": "Research exploring behavior and the impact of social factors on behavior."
+      },
+      {
+        "const": "epidemiology",
+        "description": "Research relating to the spread of disease."
+      },
+      {
+        "const": "repository",
+        "description": "Collection of data curated about a specific disease, condition, participant, or group of participants."
+      },
+      {
+        "const": "quality improvement",
+        "description": "Systematic assessment undertaken to improve the quality of care or processes of administering care."
+      },
+      {
+        "const": "research",
+        "description": "Otherwise undefined or broad study."
+      },
+      {
+        "const": "reference cohort",
+        "description": "A cohort of participants based on predefined inclusion and exclusion criteria. These cohorts can be associated with a particular program or can be basic predefined cohorts defined by Arcus staff. An example of the latter include a healthy controls cohort. The reference cohort collection type is also an Arcus archival workflow designation representing a specific set of procedures and structures."
+      },
+      {
+        "const": "imaging",
+        "description": "A study using imaging techniques."
+      },
+      {
+        "const": "genomics",
+        "description": "A study using genomic sequencing techniques."
+      },
+      {
+        "const": "relational database",
+        "description": "Study utilizes or collects data in a relational database format."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "relatedIdentifierType": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "DataCite Metadata Schema 4.0 plus manually added items",
+    "oneOf": [
+      {
+        "const": "ARK",
+        "description": "Archival Resource Key (ARK); URL designed to support long\u2010term access to information objects. In general, ARK syntax is of the form (brackets indicate [optional] elements: [http://NMA/]ark:/NAAN/Name [Qualifier]."
+      },
+      {
+        "const": "arXiv",
+        "description": "arXiv identifier; arXiv.org is a repository of preprints of scientific papers in the fields of mathematics, physics, astronomy, computer science, quantitative biology, statistics, and quantitative finance."
+      },
+      {
+        "const": "bibcode",
+        "description": "Astrophysics Data System bibliographic codes; a standardized 19 character identifier according to the syntax yyyyjjjjjvvvvmppppa. See http://info\u2010 uri.info/registry/OAIHandler?ve rb=GetRecord&metadataPrefix= reg&identifier=info:bibcode/."
+      },
+      {
+        "const": "DOI",
+        "description": "Digital Object Identifier (DOI); a character string used to uniquely identify an object. A DOI name is divided into two parts, a prefix and a suffix, separated by a slash."
+      },
+      {
+        "const": "EAN13",
+        "description": "European Article Number (EAN), now renamed International Article Number, but retaining the original acronym, is a 13\u2010digit barcoding standard which is a superset of the original 12\u2010digit Universal Product Code (UPC) system."
+      },
+      {
+        "const": "EISSN",
+        "description": "Electronic International Standard Serial Number (EISSN); International Standard Serial Number (ISSN) used to identify periodicals in electronic form (eISSN or e\u2010 ISSN)."
+      },
+      {
+        "const": "Handle",
+        "description": "A handle is an abstract reference to a resource."
+      },
+      {
+        "const": "IGSN",
+        "description": "International Geo Sample Number (IGSN); a 9\u2010digit alphanumeric code that uniquely identifies samples from our natural environment and related sampling features."
+      },
+      {
+        "const": "ISBN",
+        "description": "International Standard Book Number (ISBN); a unique numeric book identifier. There are 2 formats: a 10\u2010digit ISBN format and a 13\u2010 digit ISBN."
+      },
+      {
+        "const": "ISSN",
+        "description": "International Standard Serial Number (ISSN); a unique 8\u2010digit number used to identify a print or electronic periodical publication."
+      },
+      {
+        "const": "ISTC",
+        "description": "International Standard Text Code (ISTC); a unique \u201cnumber\u201d assigned to a textual work. An ISTC consists of 16 numbers and/or letters."
+      },
+      {
+        "const": "LISSN",
+        "description": "Linking International Standard Serial Number (LISSN). The linking ISSN or ISSN\u2010L enables collocation or linking among different media versions of a continuing resource."
+      },
+      {
+        "const": "LSID",
+        "description": "Life Science Identifiers (LSID); a unique identifier for data in the Life Science domain. Format: urn:lsid:authority:namespace:id entifier:revision."
+      },
+      {
+        "const": "PMID",
+        "description": "PubMed identifier (PMID); a unique number assigned to each PubMed record."
+      },
+      {
+        "const": "PURL",
+        "description": "Persistent Uniform Resource Locator (PURL). A PURL has three parts: (1) a protocol, (2) a resolver address, and (3) a name."
+      },
+      {
+        "const": "UPC",
+        "description": "Universal Product Code (UPC) is a barcode symbology used for tracking trade items in stores. Its most common form, the UPC\u2010A, consists of 12 numerical digits."
+      },
+      {
+        "const": "URL",
+        "description": "Uniform Resource Locator (URL), also known as web address, is a specific character string that constitutes a reference to a resource. The syntax is: scheme://domain:port/path?qu ery_string#fragment_id."
+      },
+      {
+        "const": "URN",
+        "description": "Uniform Resource Name (URN); is a unique and persistent identifier of an electronic document. The syntax is: urn:< NID>:<NSS> The leading urn: sequence is case\u2010insensitive, <NID> is the namespace identifier, <NSS> is the namespace\u2010specific string."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      },
+      {
+        "const": "REDCap PID",
+        "description": "Persistent Identifier (PID) representing a REDCap project."
+      },
+      {
+        "const": "Arcus collection identifier",
+        "description": "Persistent Identifier representing an Arcus collection. The syntax is the letter C followed by the collection initiation date in ISO-8601 fomat followed by a 5 digit number. For example C2020010100035."
+      }
+    ]
+  },
+  "relatedIdentifierRelation": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "DataCite Metadata Schema 4.0 plus manually added items",
+    "oneOf": [
+      {
+        "const": "IsCitedBy",
+        "description": "Indicates that B includes A in a citation."
+      },
+      {
+        "const": "Cites",
+        "description": "Indicates that A includes A in a citation."
+      },
+      {
+        "const": "IsSupplementTo",
+        "description": "Indicates that A is a supplement to B."
+      },
+      {
+        "const": "IsSupplementedBy",
+        "description": "Indicates that B is a supplement to A."
+      },
+      {
+        "const": "IsContinuedBy",
+        "description": "Indicates A is continued by the work B."
+      },
+      {
+        "const": "Continues",
+        "description": "Indicates A is a continuation of the work B."
+      },
+      {
+        "const": "IsNewVersionOf",
+        "description": "Indicates A is a new edition of B, where the new edition has been modified or updated."
+      },
+      {
+        "const": "IsPreviousVersionOf",
+        "description": "Indicates A is a previous edition of B."
+      },
+      {
+        "const": "IsPartOf",
+        "description": "Indicates A is a portion of B; may be used for elements of a series."
+      },
+      {
+        "const": "HasPart",
+        "description": "Indicates A includes the part B."
+      },
+      {
+        "const": "IsReferencedBy",
+        "description": "Indicates A is used as a source of information by B."
+      },
+      {
+        "const": "References",
+        "description": "Indicates B is used as a source of information for A."
+      },
+      {
+        "const": "IsDocumentedBy",
+        "description": "Indicates B is documentation about/explaining A; e.g. points to software documentation."
+      },
+      {
+        "const": "Documents",
+        "description": "Indicates A is documentation about/B; e.g. points to software documentation."
+      },
+      {
+        "const": "IsCompiledBy",
+        "description": "Indicates B is used to compile or create A."
+      },
+      {
+        "const": "Compiles",
+        "description": "Indicates B is the result of a compile or creation event using A."
+      },
+      {
+        "const": "IsVariantFormOf",
+        "description": "Indicates A is a variant or different form of B."
+      },
+      {
+        "const": "IsOriginalFormOf",
+        "description": "Indicates A is the original form of B."
+      },
+      {
+        "const": "IsIdenticalTo",
+        "description": "Indicates that A is identical to B, for use when there is a need to register two separate instances of the same resource."
+      },
+      {
+        "const": "HasMetadata",
+        "description": "Indicates resource A has additional metadata B."
+      },
+      {
+        "const": "IsMetadataFor",
+        "description": "Indicates additional metadata A for a resource B."
+      },
+      {
+        "const": "Reviews",
+        "description": "Indicates that A is a review of B."
+      },
+      {
+        "const": "IsReviewedBy",
+        "description": "Indicates that A is reviewed by B."
+      },
+      {
+        "const": "IsDerivedFrom",
+        "description": "Indicates B is a source upon which A is based."
+      },
+      {
+        "const": "IsSourceOf",
+        "description": "Indicates A is a source upon which B is based."
+      },
+      {
+        "const": "Describes",
+        "description": "Indicates A describes B."
+      },
+      {
+        "const": "IsDescribedBy",
+        "description": "Indicates A is described by B."
+      },
+      {
+        "const": "HasVersion",
+        "description": "Indicates A has a version (B)."
+      },
+      {
+        "const": "IsVersionOf",
+        "description": "Indicates A is a version of B."
+      },
+      {
+        "const": "Requires",
+        "description": "Indicates A requires B."
+      },
+      {
+        "const": "IsRequiredBy",
+        "description": "Indicates A is required by B."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "seriesDescriptionType": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "DataCite 4.3, manually added items",
+    "oneOf": [
+      {
+        "const": "abstract",
+        "description": "A brief description of the resource and the context in which the resource was created."
+      },
+      {
+        "const": "methods",
+        "description": "The methodology employed for the study or research."
+      },
+      {
+        "const": "series information",
+        "description": "Description providing details about the nature and content of the series.",
+        "note": "This definition differs from the one used in DataCite Metadata 4.3."
+      },
+      {
+        "const": "table of contents",
+        "description": "A listing of the Table of Contents."
+      },
+      {
+        "const": "technical information",
+        "description": "Detailed information that may be associated with design, implementation, operation, use, and/or maintenance of a process or system."
+      },
+      {
+        "const": "other",
+        "description": "Other description information that does not fit into an existing category."
+      },
+      {
+        "const": "summary",
+        "description": "A short description explaining the basic features of the study."
+      },
+      {
+        "const": "inclusion/exclusion criteria summary",
+        "description": "Describes inclusion/exclusion criteria specifically structured and used for display in the ACD. This is more structured than the description provided in the protocol documentation and recorded as target population at the collection level. More detailed and granular information about inclusion/exclusion criteria should be listed in the studyCriteria field at the series level."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "status": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "regularly scheduled updates",
+        "description": "This collection is expected to receive additional or updated data or files on a regularly scheduled basis."
+      },
+      {
+        "const": "complete, regular updates not expected",
+        "description": "This research effort is complete and no additional updates or accruals are expected."
+      },
+      {
+        "const": "complete, intermittent updates expected",
+        "description": "This research effort is complete however additional or updated data or files may be added to the collection on an intermittent, non-regularly-scheduled basis."
+      },
+      {
+        "const": "commenced, deposits expected",
+        "description": "This research effort is still in process, so additional deposits of data and files are expected at least until completion of the effort."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "studyStage": {
+    "description": "Describes where in the research lifecycle the project is. The \"StudyStageRank\" variable in in the aggregate_rules.go file is used for automatic accumulation of values. Cumulative values only roll the most complete studyStage up to series from across all constituent subseries. The value in the \"StudyStageRank\" variable orders values from begining to end of the research lifecycle with lower value meaning closer to project start.",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "prep/feasability",
+        "description": "The study is in preparatory phases, full data collection has not yet begun."
+      },
+      {
+        "const": "study conduct",
+        "description": "The study is actively being conducted and data is in the process of being gathered."
+      },
+      {
+        "const": "study analysis",
+        "description": "Data collection is completed and the study team is now in the process of analyzing the data."
+      },
+      {
+        "const": "publication",
+        "description": "The study team is actively in the process of publishing findings from the study."
+      },
+      {
+        "const": "complete",
+        "description": "The study is complete and no additional data collection, analysis, or publication is happening at this time."
+      },
+      {
+        "const": "not applicable",
+        "description": "This concept does not apply."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "studyCriteriaType": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "age range",
+        "description": "This study has inclusion or exclusion criteria based on the age of participants."
+      },
+      {
+        "const": "cohort date range",
+        "description": "This study has inclusion or exclusion criteria based on dates."
+      },
+      {
+        "const": "race/ethnicity",
+        "description": "This study has inclusion or exclusion criteria based on the race and/or ethnicity of participants."
+      },
+      {
+        "const": "gender",
+        "description": "This study has inclusion or exclusion criteria based on the gender of participants."
+      },
+      {
+        "const": "clinical care location",
+        "description": "This study has inclusion or exclusion criteria based on clinical care location. Examples include inpatient, outpatient, and ED."
+      },
+      {
+        "const": "geographic location",
+        "description": "This study has inclusion or exclusion criteria based on geographic location. Examples include city, zip code, and county."
+      },
+      {
+        "const": "diagnosis (International Classification of Diseases (ICD) code)",
+        "description": "International Classification of Diseases (ICD). This study has inclusion or exclusion criteria based on patient diagnosis."
+      },
+      {
+        "const": "medications",
+        "description": "This study has inclusion or exclusion critera based on prescribed or administered medications."
+      },
+      {
+        "const": "lab test",
+        "description": "This study has inclusion or exclusion criteria based on lab tests."
+      },
+      {
+        "const": "procedures",
+        "description": "This study has inclusion or exclusion critera based on procedures."
+      },
+      {
+        "const": "visit type",
+        "description": "This study has inclusion or exlusion criteria based on the visit type."
+      },
+      {
+        "const": "questionnaire/form",
+        "description": "This study has inclusion or exclusion criteria based on the completion of a questionnaire or form."
+      },
+      {
+        "const": "allergens",
+        "description": "This study has inclusion or exclusion criteria based on the presence or absence of patient allergens."
+      },
+      {
+        "const": "language",
+        "description": "This study has inclusion or exclusion criteria based on the spoken or written language of the participant or their family. Language codes to be determined."
+      },
+      {
+        "const": "screener decision",
+        "description": "This study has inclusion or exclusion criteria based on a screener from the study team making a decision as to whether a patient can fit into the study."
+      },
+      {
+        "const": "relationship",
+        "description": "This study has inclusion or exclusion criteria based on the relationship of a potential participant to a confirmed participant in the study."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "protocolIdentifierType": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "IRB",
+        "description": "The Protocol Identifier comes from the Children\u2019s Hospital of Philadelphia Institutional Review Board (IRB). If the IRB number is automatically populated from the Children\u2019s Hospital of Philadelphia electronic Institutional Review Board (eIRB) system, set \"@studyProtocolIDSource\" value to \"eIRB\"."
+      },
+      {
+        "const": "University of Pennsylvania IRB",
+        "description": "The Protocol Identifier comes from the Institutional Review Board (IRB) at the University of Pennsylvania."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "protocolType": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "human subjects",
+        "description": "Protocol dealing with a study that involves human subjects research as determined by the appropriate Institutional Review Board (IRB)."
+      },
+      {
+        "const": "non-human subjects",
+        "description": "Protocol dealing with a study that does not involve human subjects research as determined by the appropriate Institutional Review Board (IRB)."
+      },
+      {
+        "const": "clinical investigation",
+        "description": "Protocol dealing with a study that involves human subjects research to determine the safety and/or effectiveness of a device, medication, or therapy."
+      },
+      {
+        "const": "other",
+        "description": "A protocol type not listed. If using this value, please provide explanation in the @studyProtocolNote field."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "studyTreatment": {
+    "description": "This will be used to describe clinical trials and will eventually need to be populated either with Medical Subject Headings (MeSH) terms or with terms from a different ontology. At this time because we do not have any clinical trial data, that final decision has not been made.",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "MeSH",
+        "description": "Medical Subject Headings (MeSH)."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      },
+      {
+        "const": "N/A",
+        "description": "TBD"
+      }
+    ]
+  },
+  "certificateOfConfidentiality": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "yes, at least one dataset has a CoC",
+        "description": "This should be used if any data set in the collection has a certificate of confidentiality (CoC)."
+      },
+      {
+        "const": "no",
+        "description": "Use this value only if NO datasets in the entire collection have certificates of confidentiality (CoC)."
+      }
+    ]
+  },
+  "dataTypeMethod": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "Data Tag Suite (DATS)",
+    "oneOf": [
+      {
+        "$ref": "../../../omics-protocols/Vocabulary/method.json#/protocolTool",
+        "description": "The reference links out to the omics-protocols repository and contains all values for the software program or tool used to to manipulate files in Omics work."
+      },
+      {
+        "$ref": "../../../omics-protocols/Vocabulary/method.json#/protocolAligner",
+        "description": "The reference links out to the omics-protocols repository and contains all aligner values for Omics work."
+      },
+      {
+        "$ref": "../../../omics-protocols/Vocabulary/method.json#/protocolStrandName",
+        "description": "The reference links out to the omics-protocols repository and contains all strand name values for Omics SNP Array work."
+      },
+      {
+        "const": "imaging",
+        "description": "Data was produced by a modality for creating images. This can include x-rays, MRIs, ultrasounds, etc."
+      },
+      {
+        "const": "clinical trial",
+        "description": "Data was produced through a structured study of the effects of a drug or device on participants."
+      },
+      {
+        "const": "SQL",
+        "description": "Data was produced and/or manipulated using Structured Query Language (SQL) queries."
+      },
+      {
+        "const": "REDCap",
+        "description": "Data was collected or manipulated using the REDCap data capture system."
+      },
+      {
+        "const": "longitudinal",
+        "description": "Data was collected over a protracted period of time."
+      },
+      {
+        "const": "python 2",
+        "description": "Data was produced or manipulated using python 2 programming language."
+      },
+      {
+        "const": "python 3",
+        "description": "Data was produced or manipulated using python 3 programming language."
+      },
+      {
+        "const": "manually created",
+        "description": "Data was produced through a manual, non-automated process."
+      },
+      {
+        "const": "extract, transform, load (ETL) process",
+        "description": "Data was produced using an extract, transform, load (ETL) process to manipulate the data."
+      },
+      {
+        "const": "STATA 14.2",
+        "description": "Data was produced using the STATA version 14.2 statistics and data science program."
+      },
+      {
+        "const": "Long Short Term Memory Recurrent Neural Network",
+        "description": "Long Short Term Memory Recurrent Neural Network (LSTM RNN)."
+      },
+      {
+        "const": "fluoroscopy",
+        "description": "TBD"
+      },
+      {
+        "const": "vt",
+        "description": "vt is a variant tool set that discovers short variants from Next Generation Sequencing (NGS) data."
+      },
+      {
+        "const": "survey",
+        "description": "Questionnaire administered to participants, usually standardized."
+      },
+      {
+        "const": "jupyter",
+        "description": "Jupyter notebooks, a web-based interactive computing platform."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "dataTypePlatform": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "Data Tag Suite (DATS)",
+    "oneOf": [
+      {
+        "$ref": "../../../omics-protocols/Vocabulary/platform.json#/protocolInstrumentModel",
+        "description": "The reference links out to the omics-protocols repository and contains all dataTypePlatform instrument model values for Omics work."
+      },
+      {
+        "$ref": "../../../omics-protocols/Vocabulary/platform.json#/protocolPlatformName",
+        "description": "The reference links out to the omics-protocols repository and contains all manufacturer values for Omics work."
+      },
+      {
+        "const": "mass spectrometer",
+        "description": "Data was produced using a mass spectrometer analytical tool."
+      },
+      {
+        "const": "wearable",
+        "description": "Data was collected using a wearable device. Example: FitBit."
+      },
+      {
+        "const": "NGS",
+        "description": "Data was produced or manipulated using Next Generation Sequencing (NGS) genomic techniques. Whenever possible, the most specific term available for describing the NGS technique should be applied."
+      },
+      {
+        "const": "python 2",
+        "description": "Data was produced or manipulated using python 2 programming language."
+      },
+      {
+        "const": "python 3",
+        "description": "Data was produced or manipulated using python 3 programming language."
+      },
+      {
+        "const": "GCP Dataflow",
+        "description": "Data was produced or manipulated using the Google Cloud Platform (GCP) Dataflow cloud service for running Apache Beam."
+      },
+      {
+        "const": "GCP Dataproc",
+        "description": "Data was produced or manipulated using the Google Cloud Platform (GCP) Dataproc cloud service for running Apache Spark and Apache Hadoop."
+      },
+      {
+        "const": "Apache Beam 2.7.0",
+        "description": "Data was produced or manipulated using Apache Beam version 2.7.0 programming model."
+      },
+      {
+        "const": "Apache Spark",
+        "description": "Data was produced or manipulated using the Apache Spark analytics model."
+      },
+      {
+        "const": "SQL",
+        "description": "Data was produced or manipulated using Structured Query Language (SQL) programming language."
+      },
+      {
+        "const": "JSON",
+        "description": "Data was produced using JavaScript Object Notation (JSON)."
+      },
+      {
+        "const": "yaml",
+        "description": "Data was produced using Yet Another Markup Language (YAML) notation."
+      },
+      {
+        "const": "STATA 14.2",
+        "description": "Data was produced using the STATA version 14.2 statistics and data science program."
+      },
+      {
+        "const": "3T Siemens Verio MRI",
+        "description": "Siemens brand MRI machine."
+      },
+      {
+        "const": "BHWorks",
+        "description": "Database run my Medical Decision Logix."
+      },
+      {
+        "const": "Epic",
+        "description": "Epic electronic health record system."
+      },
+      {
+        "const": "ultrasound imaging",
+        "description": "A method to view the inside of the body using high-frequency sound waves."
+      },
+      {
+        "const": "Computerized Neurocognitive Battery of Assessments",
+        "description": "Neurocognitive survey. Also referred to by acronym \"CNB\"."
+      },
+      {
+        "const": "REDCap",
+        "description": "Research Electronic Data Capture system."
+      },
+      {
+        "const": "jupyter",
+        "description": "Jupyter notebooks, a web-based interactive computing platform."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "dataTypeRefinement": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "Data Tag Suite (DATS)",
+    "oneOf": [
+      {
+        "const": "raw data",
+        "description": "Data has not been analyzed or manipulated. It is in the same state as when it was collected."
+      },
+      {
+        "const": "preprocessed data",
+        "description": "Raw data that has been cleaned to remove common errors or noise. Preprocessing does not produce substantial analysis."
+      },
+      {
+        "const": "analyzed data",
+        "description": "Data has been analyzed."
+      },
+      {
+        "const": "curated data",
+        "description": "Data that has been curated. This could mean it was cleaned, rearranged, or some other manipulation that resulted in a different presentation of the data."
+      },
+      {
+        "const": "summarized data",
+        "description": "Data presented in a simplified fashion, often with the aim of communicating general trends."
+      },
+      {
+        "const": "derived data",
+        "description": "Data that is the result of some process being applied to either raw or manipulated data."
+      },
+      {
+        "const": "metadata",
+        "description": "Information that describes another set of data."
+      },
+      {
+        "const": "transformation specification",
+        "description": "Technical information that describes how data has been manipulated."
+      },
+      {
+        "const": "aligned data",
+        "description": "Genomic data that has been aligned to a reference genome."
+      },
+      {
+        "const": "variant data",
+        "description": "Data that notes variations within a genomic sequence, usually compared to a reference genome."
+      },
+      {
+        "const": "jupyter",
+        "description": "Jupyter notebooks, a web-based interactive computing platform."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "studyMaterial": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "stool",
+        "description": "Fecal matter."
+      },
+      {
+        "const": "blood",
+        "description": "Blood (location, component, or type unspecified)."
+      },
+      {
+        "const": "tongue swab",
+        "description": "Sample gathered by swabbing subject's tongue."
+      },
+      {
+        "const": "buccal swab",
+        "description": "Sample gathered by swabbing interior of subject's cheek."
+      },
+      {
+        "const": "rectal swab",
+        "description": "Sample gathered by swabbing subject's rectum."
+      },
+      {
+        "const": "saliva",
+        "description": "Oral saliva sample collected directly from pooling in subject's mouth or by swab."
+      },
+      {
+        "const": "tissue",
+        "description": "Tissue (location or type unspecified)."
+      },
+      {
+        "const": "ostomy bag",
+        "description": "Sample gathered from contents of subject's ostomy bag or by swabbing subject's ostomy bag."
+      },
+      {
+        "const": "placenta",
+        "description": "Sample gathered from contents of subject's ostomy bag or by swabbing subject's ostomy bag."
+      },
+      {
+        "const": "cord blood",
+        "description": "Sample gathered from contents of subject's ostomy bag or by swabbing subject's ostomy bag."
+      },
+      {
+        "const": "amniotic fluid",
+        "description": "Sample gathered from contents of subject's ostomy bag or by swabbing subject's ostomy bag."
+      },
+      {
+        "const": "surgical and biopsy specimens",
+        "description": "Sample gathered from contents of subject's ostomy bag or by swabbing subject's ostomy bag."
+      },
+      {
+        "const": "slides from pathology examinations",
+        "description": "Sample gathered from contents of subject's ostomy bag or by swabbing subject's ostomy bag."
+      },
+      {
+        "const": "urine",
+        "description": "Sample gathered from contents of subject's ostomy bag or by swabbing subject's ostomy bag."
+      },
+      {
+        "const": "tears",
+        "description": "Sample gathered from contents of subject's ostomy bag or by swabbing subject's ostomy bag."
+      },
+      {
+        "const": "residual tissue and fluid specimens obtained for clinical indications",
+        "description": "Sample gathered from contents of subject's ostomy bag or by swabbing subject's ostomy bag."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "resourceTypeGeneral": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "DataCite Metadata 4.3",
+    "oneOf": [
+      {
+        "const": "audiovisual",
+        "description": "A series of visual representations imparting an impression of motion when shown in succession. May or may not include sound."
+      },
+      {
+        "const": "collection",
+        "description": "An aggregation of resources, which may encompass collections of one resourceType as well as those of mixed types. A collection is described as a group; its parts may also be separately described."
+      },
+      {
+        "const": "data paper",
+        "description": "A factual and objective publication with a focused intent to identify and describe specific data, sets of data, or data collections to facilitate discoverability."
+      },
+      {
+        "const": "dataset",
+        "description": "Data encoded in a defined structure."
+      },
+      {
+        "const": "event",
+        "description": "A non-persistent, timebased occurrence."
+      },
+      {
+        "const": "image",
+        "description": "A visual representation other than text."
+      },
+      {
+        "const": "interactive resource",
+        "description": "A resource requiring interaction from the user to be understood, executed, or experienced."
+      },
+      {
+        "const": "model",
+        "description": "An abstract, conceptual, graphical, mathematical or visualization model that represents empirical objects phenomena, or physical processes."
+      },
+      {
+        "const": "physical object",
+        "description": "An inanimate, three-dimensional object or substance."
+      },
+      {
+        "const": "service",
+        "description": "An organized system of apparatus, appliances, staff, etc., for supplying some function(s) required by end users."
+      },
+      {
+        "const": "software",
+        "description": "A computer program in source code (text) or compiled form. Use this type for all software components supporting scholarly research."
+      },
+      {
+        "const": "sound",
+        "description": "A resource primarily intended to be heard."
+      },
+      {
+        "const": "text",
+        "description": "A resource consisting primarily of words for reading."
+      },
+      {
+        "const": "workflow",
+        "description": "A structured series of steps which can be executed to produce a final outcome, allowing users a means to specify and enact their work in a more reproducible manner."
+      },
+      {
+        "const": "other",
+        "description": "If selected, supply a value for ResourceType."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "studyCriteriaCategory": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "inclusion",
+        "description": "This is a criterion used to select participants INTO the study group."
+      },
+      {
+        "const": "exclusion",
+        "description": "This is a criterion used to select participants OUT OF the study group."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "affiliationDepartment": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "$ref": "../definition/affiliationDivisionAndDepartment.json#/historicalAffiliationDepartment",
+        "description": "The reference links out to the file that contains the historical affiliationDepartment and Division terms."
+      },
+      {
+        "const": "Allergy & Immunology",
+        "description": ""
+      },
+      {
+        "const": "Allergy And Immunology",
+        "description": ""
+      },
+      {
+        "const": "Ancillary Hospital Services",
+        "description": ""
+      },
+      {
+        "const": "Ancillary Services",
+        "description": ""
+      },
+      {
+        "const": "Anesthesia",
+        "description": ""
+      },
+      {
+        "const": "Anesthesia Services",
+        "description": ""
+      },
+      {
+        "const": "Anesthesiology And Critical Care Medicine",
+        "description": ""
+      },
+      {
+        "const": "Audiology",
+        "description": ""
+      },
+      {
+        "const": "Behavioral Health",
+        "description": ""
+      },
+      {
+        "const": "Behavioral Health Services",
+        "description": ""
+      },
+      {
+        "const": "Behaviorial Health",
+        "description": ""
+      },
+      {
+        "const": "Behavorial Health",
+        "description": ""
+      },
+      {
+        "const": "Building Costs",
+        "description": ""
+      },
+      {
+        "const": "Building Facilities",
+        "description": ""
+      },
+      {
+        "const": "Building Operations",
+        "description": ""
+      },
+      {
+        "const": "Building Support Costs",
+        "description": ""
+      },
+      {
+        "const": "Caa - Research",
+        "description": ""
+      },
+      {
+        "const": "Cardiac Echo Labs",
+        "description": ""
+      },
+      {
+        "const": "Cardiac Ekg & Exercise Labs",
+        "description": ""
+      },
+      {
+        "const": "Cardiac Ekg And Exercise Labs",
+        "description": ""
+      },
+      {
+        "const": "Cardiac Icu",
+        "description": ""
+      },
+      {
+        "const": "Cardiac Lab Services",
+        "description": ""
+      },
+      {
+        "const": "Cardiology Support Services",
+        "description": ""
+      },
+      {
+        "const": "Care Network Community",
+        "description": ""
+      },
+      {
+        "const": "Care Network West Philadelphia",
+        "description": ""
+      },
+      {
+        "const": "Center Core",
+        "description": ""
+      },
+      {
+        "const": "Chca - Professional Services",
+        "description": ""
+      },
+      {
+        "const": "Chca - Research",
+        "description": ""
+      },
+      {
+        "const": "Chop Finance",
+        "description": ""
+      },
+      {
+        "const": "Choppa Administration",
+        "description": ""
+      },
+      {
+        "const": "Choppa Education",
+        "description": ""
+      },
+      {
+        "const": "Choppa Financial Services",
+        "description": ""
+      },
+      {
+        "const": "Choppa Information Systems",
+        "description": ""
+      },
+      {
+        "const": "Choppa Patient Financial Services",
+        "description": ""
+      },
+      {
+        "const": "Choppa Spf - End Support",
+        "description": ""
+      },
+      {
+        "const": "Choppa Sponsored Projects",
+        "description": ""
+      },
+      {
+        "const": "Cicu Room And Board",
+        "description": ""
+      },
+      {
+        "const": "Clinical Program Support",
+        "description": ""
+      },
+      {
+        "const": "Compliance, Legal & Insurance",
+        "description": ""
+      },
+      {
+        "const": "Compliance, Legal And Insurance",
+        "description": ""
+      },
+      {
+        "const": "Consolidated Patient And Family Services",
+        "description": ""
+      },
+      {
+        "const": "Contingency Funds",
+        "description": ""
+      },
+      {
+        "const": "Critical Care Medicine",
+        "description": ""
+      },
+      {
+        "const": "Csa - Professional Services",
+        "description": ""
+      },
+      {
+        "const": "Day Medicine",
+        "description": ""
+      },
+      {
+        "const": "Day Medicine - Bh",
+        "description": ""
+      },
+      {
+        "const": "Department Of Pediatrics",
+        "description": ""
+      },
+      {
+        "const": "Dept Of Anesthesiology And Critical Care Medicine - Research",
+        "description": ""
+      },
+      {
+        "const": "Discretionary",
+        "description": ""
+      },
+      {
+        "const": "Emergency Department",
+        "description": ""
+      },
+      {
+        "const": "Emergency Transport",
+        "description": ""
+      },
+      {
+        "const": "Endocrinology And Diabetes Services",
+        "description": ""
+      },
+      {
+        "const": "Enterprise Administration",
+        "description": ""
+      },
+      {
+        "const": "Enterprise Initiatives",
+        "description": ""
+      },
+      {
+        "const": "Executive Offices",
+        "description": ""
+      },
+      {
+        "const": "Facilities",
+        "description": ""
+      },
+      {
+        "const": "Food Services",
+        "description": ""
+      },
+      {
+        "const": "Foundation",
+        "description": ""
+      },
+      {
+        "const": "Foundation Financial Services",
+        "description": ""
+      },
+      {
+        "const": "Foundation Operations",
+        "description": ""
+      },
+      {
+        "const": "Frontier",
+        "description": ""
+      },
+      {
+        "const": "Frontline Clinicians",
+        "description": ""
+      },
+      {
+        "const": "Fundraising",
+        "description": ""
+      },
+      {
+        "const": "General Hospitalists",
+        "description": ""
+      },
+      {
+        "const": "General Pediatrics",
+        "description": ""
+      },
+      {
+        "const": "Hematology And Oncology Services",
+        "description": ""
+      },
+      {
+        "const": "Hematology/Oncology Services",
+        "description": ""
+      },
+      {
+        "const": "Home Care",
+        "description": ""
+      },
+      {
+        "const": "Home Care Pharmacy Services",
+        "description": ""
+      },
+      {
+        "const": "Home Care Respiratory Therapy",
+        "description": ""
+      },
+      {
+        "const": "Hospital Administration",
+        "description": ""
+      },
+      {
+        "const": "Hospital Financial Services",
+        "description": ""
+      },
+      {
+        "const": "Hospital Operations",
+        "description": ""
+      },
+      {
+        "const": "Hospital Pharmacy",
+        "description": ""
+      },
+      {
+        "const": "Human Genetics",
+        "description": ""
+      },
+      {
+        "const": "Human Resources",
+        "description": ""
+      },
+      {
+        "const": "INFORMATION SERVICES",
+        "description": ""
+      },
+      {
+        "const": "IS Data Center Ops",
+        "description": ""
+      },
+      {
+        "const": "IS Operating Systems",
+        "description": ""
+      },
+      {
+        "const": "Information Services - Hospital",
+        "description": ""
+      },
+      {
+        "const": "Information Systems",
+        "description": ""
+      },
+      {
+        "const": "Information Systems - Practice Plan",
+        "description": ""
+      },
+      {
+        "const": "Institutional Core",
+        "description": ""
+      },
+      {
+        "const": "Intensive Care Room & Board",
+        "description": ""
+      },
+      {
+        "const": "Intensive Care Room And Board",
+        "description": ""
+      },
+      {
+        "const": "Medical Room & Board",
+        "description": ""
+      },
+      {
+        "const": "Medical Room And Board",
+        "description": ""
+      },
+      {
+        "const": "Medical Staff Administration",
+        "description": ""
+      },
+      {
+        "const": "NURSING - FLEXIBLE STAFFING",
+        "description": ""
+      },
+      {
+        "const": "Neonatology",
+        "description": ""
+      },
+      {
+        "const": "Network Operations",
+        "description": ""
+      },
+      {
+        "const": "Neurology Services",
+        "description": ""
+      },
+      {
+        "const": "Nicu",
+        "description": ""
+      },
+      {
+        "const": "Nicu Room And Board",
+        "description": ""
+      },
+      {
+        "const": "Nursing - Ancillary Services",
+        "description": ""
+      },
+      {
+        "const": "Nursing - Anesthesia Services",
+        "description": ""
+      },
+      {
+        "const": "Nursing - Behavioral Health",
+        "description": ""
+      },
+      {
+        "const": "Nursing - Cardiac Surgical Services",
+        "description": ""
+      },
+      {
+        "const": "Nursing - General Services",
+        "description": ""
+      },
+      {
+        "const": "Nursing - Operations Support",
+        "description": ""
+      },
+      {
+        "const": "Nursing - Respiratory Services",
+        "description": ""
+      },
+      {
+        "const": "Nursing - Surgical Services",
+        "description": ""
+      },
+      {
+        "const": "Nursing- Surgical Services",
+        "description": ""
+      },
+      {
+        "const": "Observation",
+        "description": ""
+      },
+      {
+        "const": "Occupational Therapy",
+        "description": ""
+      },
+      {
+        "const": "Office of CIO",
+        "description": ""
+      },
+      {
+        "const": "Oncology",
+        "description": ""
+      },
+      {
+        "const": "Oncology Bmt",
+        "description": ""
+      },
+      {
+        "const": "Oncology Bmt Room And Board",
+        "description": ""
+      },
+      {
+        "const": "Oncology Pharmacy",
+        "description": ""
+      },
+      {
+        "const": "Oncology Support Services",
+        "description": ""
+      },
+      {
+        "const": "Orthopaedic Services",
+        "description": ""
+      },
+      {
+        "const": "Other Expense",
+        "description": ""
+      },
+      {
+        "const": "Outreach And Strategy",
+        "description": ""
+      },
+      {
+        "const": "PARC",
+        "description": ""
+      },
+      {
+        "const": "Pacu",
+        "description": ""
+      },
+      {
+        "const": "Partnerships",
+        "description": ""
+      },
+      {
+        "const": "Pathology & Lab Medicine",
+        "description": ""
+      },
+      {
+        "const": "Pathology And Lab Medicine",
+        "description": ""
+      },
+      {
+        "const": "Patient Access",
+        "description": ""
+      },
+      {
+        "const": "Patient Access Services",
+        "description": ""
+      },
+      {
+        "const": "Patient And Family Services",
+        "description": ""
+      },
+      {
+        "const": "Patient Care Administration",
+        "description": ""
+      },
+      {
+        "const": "Patient Care Clinical Support",
+        "description": ""
+      },
+      {
+        "const": "Patient Care Non-Clinical Support",
+        "description": ""
+      },
+      {
+        "const": "Patient Financial Services",
+        "description": ""
+      },
+      {
+        "const": "Patient Food Services",
+        "description": ""
+      },
+      {
+        "const": "Patient Information",
+        "description": ""
+      },
+      {
+        "const": "Pharmacy Services",
+        "description": ""
+      },
+      {
+        "const": "Physical Therapy",
+        "description": ""
+      },
+      {
+        "const": "Picu",
+        "description": ""
+      },
+      {
+        "const": "Picu Room And Board",
+        "description": ""
+      },
+      {
+        "const": "Poison Control",
+        "description": ""
+      },
+      {
+        "const": "Practice Plan Administration",
+        "description": ""
+      },
+      {
+        "const": "Practice Plan Education",
+        "description": ""
+      },
+      {
+        "const": "Practice Plan Finance",
+        "description": ""
+      },
+      {
+        "const": "Practice Plan Patient Financial Services",
+        "description": ""
+      },
+      {
+        "const": "Primary Care",
+        "description": ""
+      },
+      {
+        "const": "Primary Care - Support",
+        "description": ""
+      },
+      {
+        "const": "Program Support Services",
+        "description": ""
+      },
+      {
+        "const": "Quality & Safety Services",
+        "description": ""
+      },
+      {
+        "const": "Quality And Safety Services",
+        "description": ""
+      },
+      {
+        "const": "Radiology",
+        "description": ""
+      },
+      {
+        "const": "Radiology Services",
+        "description": ""
+      },
+      {
+        "const": "Radiology Support Services",
+        "description": ""
+      },
+      {
+        "const": "Rehab Room & Board",
+        "description": ""
+      },
+      {
+        "const": "Rehab Room And Board",
+        "description": ""
+      },
+      {
+        "const": "Rehabilitation Services",
+        "description": ""
+      },
+      {
+        "const": "Research",
+        "description": ""
+      },
+      {
+        "const": "Research - Administration",
+        "description": ""
+      },
+      {
+        "const": "Research - Building Facilities",
+        "description": ""
+      },
+      {
+        "const": "Research - Center Core",
+        "description": ""
+      },
+      {
+        "const": "Research - Crso",
+        "description": ""
+      },
+      {
+        "const": "Research - Enterprise Administration",
+        "description": ""
+      },
+      {
+        "const": "Research - Executive Administrative",
+        "description": ""
+      },
+      {
+        "const": "Research - Information Systems",
+        "description": ""
+      },
+      {
+        "const": "Research - Institutional Core",
+        "description": ""
+      },
+      {
+        "const": "Research - Nursing",
+        "description": ""
+      },
+      {
+        "const": "Research - Operations",
+        "description": ""
+      },
+      {
+        "const": "Research - Support Services",
+        "description": ""
+      },
+      {
+        "const": "Research Administration",
+        "description": ""
+      },
+      {
+        "const": "Research Facilities",
+        "description": ""
+      },
+      {
+        "const": "Research Organization",
+        "description": ""
+      },
+      {
+        "const": "Resident & Fellow Training",
+        "description": ""
+      },
+      {
+        "const": "Resident And Fellow Training",
+        "description": ""
+      },
+      {
+        "const": "Retail Food Services",
+        "description": ""
+      },
+      {
+        "const": "Retail Pharmacy",
+        "description": ""
+      },
+      {
+        "const": "Risk Management",
+        "description": ""
+      },
+      {
+        "const": "Room & Board",
+        "description": ""
+      },
+      {
+        "const": "Room And Board",
+        "description": ""
+      },
+      {
+        "const": "Scc",
+        "description": ""
+      },
+      {
+        "const": "Sdu Room & Board",
+        "description": ""
+      },
+      {
+        "const": "Sdu Room And Board",
+        "description": ""
+      },
+      {
+        "const": "Sdu Services",
+        "description": ""
+      },
+      {
+        "const": "Sedation Services",
+        "description": ""
+      },
+      {
+        "const": "Specialty Care",
+        "description": ""
+      },
+      {
+        "const": "Specialty Pharmacy",
+        "description": ""
+      },
+      {
+        "const": "Speech Therapy",
+        "description": ""
+      },
+      {
+        "const": "Sponsored Projects",
+        "description": ""
+      },
+      {
+        "const": "Supply Chain",
+        "description": ""
+      },
+      {
+        "const": "Supply Chain Services",
+        "description": ""
+      },
+      {
+        "const": "Surgical Room & Board",
+        "description": ""
+      },
+      {
+        "const": "Surgical Room And Board",
+        "description": ""
+      },
+      {
+        "const": "Urgent Care",
+        "description": ""
+      }
+    ]
+  },
+  "affiliationDivision": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "$ref": "../definition/affiliationDivisionAndDepartment.json#/historicalAffiliationDivision",
+        "description": "The reference links out to the file that contains the historical affiliationDepartment and Division terms."
+      },
+      {
+        "const": "1ST FLOOR OBSERVATION UNIT",
+        "description": ""
+      },
+      {
+        "const": "3E CSH - GP RHEUMATOLOGY",
+        "description": ""
+      },
+      {
+        "const": "3SE ONCOLOGY BMT",
+        "description": ""
+      },
+      {
+        "const": "4E/S - APN",
+        "description": ""
+      },
+      {
+        "const": "4W CSH ADOLESCENT",
+        "description": ""
+      },
+      {
+        "const": "5E COMPLEX CARE GEN PEDS",
+        "description": ""
+      },
+      {
+        "const": "5S 5WB GI ENDOCRINE",
+        "description": ""
+      },
+      {
+        "const": "5WA MEDICAL SUBSPECIALTY",
+        "description": ""
+      },
+      {
+        "const": "6E CARDIAC CARE UNIT",
+        "description": ""
+      },
+      {
+        "const": "7WMHT GENERAL PEDIATRICS",
+        "description": ""
+      },
+      {
+        "const": "8S PULMONARY GEN PEDS",
+        "description": ""
+      },
+      {
+        "const": "9S NEUROLOGY GEN PEDS",
+        "description": ""
+      },
+      {
+        "const": "ACCESS SERVICES",
+        "description": ""
+      },
+      {
+        "const": "ACCOUNTING",
+        "description": ""
+      },
+      {
+        "const": "ACCTS PAYABLE SHARED SERVICES",
+        "description": ""
+      },
+      {
+        "const": "ADMINISTRATION",
+        "description": ""
+      },
+      {
+        "const": "ADMISSIONS MANAGEMENT",
+        "description": ""
+      },
+      {
+        "const": "ADOLESCENT MEDICINE",
+        "description": ""
+      },
+      {
+        "const": "ADVANCED PRACTICE NURSING",
+        "description": ""
+      },
+      {
+        "const": "AFTER HOURS PGM",
+        "description": ""
+      },
+      {
+        "const": "ALLERGY",
+        "description": ""
+      },
+      {
+        "const": "AMBULATORY BILLING",
+        "description": ""
+      },
+      {
+        "const": "AMBULATORY NURSING ADMIN",
+        "description": ""
+      },
+      {
+        "const": "AMP'S PROGRAM",
+        "description": ""
+      },
+      {
+        "const": "ANESTH&CRIT CARE FELLOWS",
+        "description": ""
+      },
+      {
+        "const": "ANESTHESIOLOGIST IN CHIEF",
+        "description": ""
+      },
+      {
+        "const": "APHERESIS PGM",
+        "description": ""
+      },
+      {
+        "const": "APNEA TEAM (PULM NEONTL)",
+        "description": ""
+      },
+      {
+        "const": "AQUATIC CORE (ZEBRAFISH)",
+        "description": ""
+      },
+      {
+        "const": "ASC BUCKS COUNTY",
+        "description": ""
+      },
+      {
+        "const": "ASC EXTON",
+        "description": ""
+      },
+      {
+        "const": "ASC VOORHEES NJ",
+        "description": ""
+      },
+      {
+        "const": "ASC-BWV",
+        "description": ""
+      },
+      {
+        "const": "ASC-KOP",
+        "description": ""
+      },
+      {
+        "const": "AUDIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "AUTISM PROGRAM",
+        "description": ""
+      },
+      {
+        "const": "Access Services - Admissions",
+        "description": ""
+      },
+      {
+        "const": "Ancillary Hospital Services",
+        "description": ""
+      },
+      {
+        "const": "BALANCE SHEET & OTHER",
+        "description": ""
+      },
+      {
+        "const": "BASIC SCIENCE",
+        "description": ""
+      },
+      {
+        "const": "BEREAVEMENT PROGRAM",
+        "description": ""
+      },
+      {
+        "const": "BH ADHD MKT",
+        "description": ""
+      },
+      {
+        "const": "BH AMBULATORY ADMINISTRATION",
+        "description": ""
+      },
+      {
+        "const": "BH ATCO CIEBP",
+        "description": ""
+      },
+      {
+        "const": "BH FEEDING KOP",
+        "description": ""
+      },
+      {
+        "const": "BH HEALTHY MIND & KIDS",
+        "description": ""
+      },
+      {
+        "const": "BH HEALTHY MIND & KIDS URBAN",
+        "description": ""
+      },
+      {
+        "const": "BH MAIN CAMPUS ADMINISTRATION",
+        "description": ""
+      },
+      {
+        "const": "BH OUTPATIENT",
+        "description": ""
+      },
+      {
+        "const": "BH Operations",
+        "description": ""
+      },
+      {
+        "const": "BH PED PSYCH IP/DH",
+        "description": ""
+      },
+      {
+        "const": "BH PEDIATRIC PSYCHOLOGY",
+        "description": ""
+      },
+      {
+        "const": "BH PSYCHIATRIST IN CHIEF",
+        "description": ""
+      },
+      {
+        "const": "BH PSYCHIATRY TRAINING",
+        "description": ""
+      },
+      {
+        "const": "BH PSYCHOLOGY TRAINING",
+        "description": ""
+      },
+      {
+        "const": "BH TESTING",
+        "description": ""
+      },
+      {
+        "const": "BHIP MAIN",
+        "description": ""
+      },
+      {
+        "const": "BILLING",
+        "description": ""
+      },
+      {
+        "const": "BIOANALYTICAL CTRCORE 0615",
+        "description": ""
+      },
+      {
+        "const": "BIOMEDICAL ENGINEERING",
+        "description": ""
+      },
+      {
+        "const": "BIOSTAT AND DATA MGT CORE",
+        "description": ""
+      },
+      {
+        "const": "BLOOD TESTING",
+        "description": ""
+      },
+      {
+        "const": "BMT CLINICAL PGM",
+        "description": ""
+      },
+      {
+        "const": "BMT PROGRAM",
+        "description": ""
+      },
+      {
+        "const": "BODY IMAGING",
+        "description": ""
+      },
+      {
+        "const": "BUCKS COUNTY URGENT CARE",
+        "description": ""
+      },
+      {
+        "const": "BWV URGENT CARE",
+        "description": ""
+      },
+      {
+        "const": "CAA RESEARCH FUNDING",
+        "description": ""
+      },
+      {
+        "const": "CAG CORE",
+        "description": ""
+      },
+      {
+        "const": "CAMPAIGN",
+        "description": ""
+      },
+      {
+        "const": "CARDIAC ANESTHESIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "CARDIAC CATH LAB",
+        "description": ""
+      },
+      {
+        "const": "CARDIAC CENTER ADMIN",
+        "description": ""
+      },
+      {
+        "const": "CARDIAC CRITICAL CARE MEDICINE",
+        "description": ""
+      },
+      {
+        "const": "CARDIAC ECHO LAB",
+        "description": ""
+      },
+      {
+        "const": "CARDIAC EKG LAB",
+        "description": ""
+      },
+      {
+        "const": "CARDIAC EXERCISE LAB",
+        "description": ""
+      },
+      {
+        "const": "CARDIAC FETAL ECHO",
+        "description": ""
+      },
+      {
+        "const": "CARDIAC MRI",
+        "description": ""
+      },
+      {
+        "const": "CARDIAC NURSING ADMINISTRATION",
+        "description": ""
+      },
+      {
+        "const": "CARDIAC SCHEDULING CENTER",
+        "description": ""
+      },
+      {
+        "const": "CARDIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "CARE MANAGEMENT",
+        "description": ""
+      },
+      {
+        "const": "CASE MANAGEMENT",
+        "description": ""
+      },
+      {
+        "const": "CAST ROOM",
+        "description": ""
+      },
+      {
+        "const": "CELL AND GENE THERAPY LAB",
+        "description": ""
+      },
+      {
+        "const": "CENTR FOR FETAL DIAGN&TREATMNT",
+        "description": ""
+      },
+      {
+        "const": "CENTRAL LAB SERVICES",
+        "description": ""
+      },
+      {
+        "const": "CENTRAL STERILE PROCESSING",
+        "description": ""
+      },
+      {
+        "const": "CENTRALIZED BEHAVIORAL HEALTH",
+        "description": ""
+      },
+      {
+        "const": "CENTRALIZED STAFF",
+        "description": ""
+      },
+      {
+        "const": "CEREBRAL PALSY",
+        "description": ""
+      },
+      {
+        "const": "CHAIRMAN'S COMMITMENTS",
+        "description": ""
+      },
+      {
+        "const": "CHAIRMAN'S INITIATIVES",
+        "description": ""
+      },
+      {
+        "const": "CHCA Administration",
+        "description": ""
+      },
+      {
+        "const": "CHIEF MEDICAL OFFICER",
+        "description": ""
+      },
+      {
+        "const": "CHIEF SCIENTIC OFFICER",
+        "description": ""
+      },
+      {
+        "const": "CHILD DEVELOPMENT",
+        "description": ""
+      },
+      {
+        "const": "CHILD LIFE",
+        "description": ""
+      },
+      {
+        "const": "CHILD-FAMILY EDUCATION",
+        "description": ""
+      },
+      {
+        "const": "CHILDREN'S MIRACLE NETWORK",
+        "description": ""
+      },
+      {
+        "const": "CHN FOUNDATION INVESTMENT",
+        "description": ""
+      },
+      {
+        "const": "CHOP CONNECTION",
+        "description": ""
+      },
+      {
+        "const": "CHOP DEVELOPMENT CMN",
+        "description": ""
+      },
+      {
+        "const": "CHOP FOUNDATION DEVELOPMENT",
+        "description": ""
+      },
+      {
+        "const": "CHOPLINK PARC IMPLEMENTATION",
+        "description": ""
+      },
+      {
+        "const": "CICU",
+        "description": ""
+      },
+      {
+        "const": "CIEBP",
+        "description": ""
+      },
+      {
+        "const": "CL - CREATIVE ARTS THERAPY",
+        "description": ""
+      },
+      {
+        "const": "CLIN TRIAL RESIDUAL BALANCE",
+        "description": ""
+      },
+      {
+        "const": "CLINICAL DOCUMENTATN IMPROVMNT",
+        "description": ""
+      },
+      {
+        "const": "CLINICAL IMMUNOLOGY",
+        "description": ""
+      },
+      {
+        "const": "CLINICAL INFORMATICS",
+        "description": ""
+      },
+      {
+        "const": "CLINICAL NUTRITION",
+        "description": ""
+      },
+      {
+        "const": "CLINICAL OPS & MEDICAL NURSING",
+        "description": ""
+      },
+      {
+        "const": "CLINICAL OPS SUPPORT SERVICES",
+        "description": ""
+      },
+      {
+        "const": "CLINICAL RESEARCH SUPPORT OFF",
+        "description": ""
+      },
+      {
+        "const": "CLINICAL TEAM AT KARABOTS",
+        "description": ""
+      },
+      {
+        "const": "CLINICAL TRIAL SUPPORT",
+        "description": ""
+      },
+      {
+        "const": "CLINICAL TRIALS - SUB FDN",
+        "description": ""
+      },
+      {
+        "const": "CLINICAL TRIALS IND SOURCE",
+        "description": ""
+      },
+      {
+        "const": "CLINICAL TRIALS INDIVIDUAL",
+        "description": ""
+      },
+      {
+        "const": "CLINTRIALSFIN ADMINISTRATION",
+        "description": ""
+      },
+      {
+        "const": "CN ADMIN",
+        "description": ""
+      },
+      {
+        "const": "CN BROOMALL",
+        "description": ""
+      },
+      {
+        "const": "CN CAPE MAY",
+        "description": ""
+      },
+      {
+        "const": "CN CENTRAL BUCKS",
+        "description": ""
+      },
+      {
+        "const": "CN CHADDS FORD",
+        "description": ""
+      },
+      {
+        "const": "CN CHESTNUT HILL",
+        "description": ""
+      },
+      {
+        "const": "CN COATESVILLE",
+        "description": ""
+      },
+      {
+        "const": "CN COBBS CREEK",
+        "description": ""
+      },
+      {
+        "const": "CN DREXEL HILL",
+        "description": ""
+      },
+      {
+        "const": "CN FLOURTOWN",
+        "description": ""
+      },
+      {
+        "const": "CN GIBBSBORO",
+        "description": ""
+      },
+      {
+        "const": "CN HAVERFORD",
+        "description": ""
+      },
+      {
+        "const": "CN HIGH POINT",
+        "description": ""
+      },
+      {
+        "const": "CN INDIAN VALLEY",
+        "description": ""
+      },
+      {
+        "const": "CN KARABOTS-MKT ST.",
+        "description": ""
+      },
+      {
+        "const": "CN KENNETT SQUARE",
+        "description": ""
+      },
+      {
+        "const": "CN MEDIA",
+        "description": ""
+      },
+      {
+        "const": "CN MEDICAL ADMINISTATION",
+        "description": ""
+      },
+      {
+        "const": "CN MOUNT LAUREL",
+        "description": ""
+      },
+      {
+        "const": "CN NEWTOWN",
+        "description": ""
+      },
+      {
+        "const": "CN NORRISTOWN",
+        "description": ""
+      },
+      {
+        "const": "CN NORTH HILLS",
+        "description": ""
+      },
+      {
+        "const": "CN PAOLI",
+        "description": ""
+      },
+      {
+        "const": "CN POTTSTOWN",
+        "description": ""
+      },
+      {
+        "const": "CN ROXBOROUGH",
+        "description": ""
+      },
+      {
+        "const": "CN SALEM ROAD",
+        "description": ""
+      },
+      {
+        "const": "CN SMITHVILLE",
+        "description": ""
+      },
+      {
+        "const": "CN SOMERS POINT",
+        "description": ""
+      },
+      {
+        "const": "CN SOUTH PHILA",
+        "description": ""
+      },
+      {
+        "const": "CN SPRINGFIELD",
+        "description": ""
+      },
+      {
+        "const": "CN WEST CHESTER",
+        "description": ""
+      },
+      {
+        "const": "CN WEST GROVE",
+        "description": ""
+      },
+      {
+        "const": "COG PCR - WLI",
+        "description": ""
+      },
+      {
+        "const": "COG-2148G DIRECT FEDERAL AWARD",
+        "description": ""
+      },
+      {
+        "const": "COLLECTIONS DEPARTMENT",
+        "description": ""
+      },
+      {
+        "const": "COMMUNITY RELATIONS",
+        "description": ""
+      },
+      {
+        "const": "CONCUSSION CLINIC",
+        "description": ""
+      },
+      {
+        "const": "CONTINUING MEDICAL EDUCATION",
+        "description": ""
+      },
+      {
+        "const": "COPY CENTER",
+        "description": ""
+      },
+      {
+        "const": "CORE LAB",
+        "description": ""
+      },
+      {
+        "const": "CORP FINANCE - BI & ANALYTICS",
+        "description": ""
+      },
+      {
+        "const": "CORP FINANCE-REV&REIMB",
+        "description": ""
+      },
+      {
+        "const": "CORP OFFICE OF REV INTEGRITY",
+        "description": ""
+      },
+      {
+        "const": "CORP SERVICES INFRASTRUCTURE",
+        "description": ""
+      },
+      {
+        "const": "CORPORATE COMPLIANCE PRGRM",
+        "description": ""
+      },
+      {
+        "const": "CPCE AND POLICY LAB CORE",
+        "description": ""
+      },
+      {
+        "const": "CPRU-CARDIAC PREP&RECOV UNIT",
+        "description": ""
+      },
+      {
+        "const": "CRITICAL CARE MEDICINE",
+        "description": ""
+      },
+      {
+        "const": "CRITICAL CARE RESEARCH",
+        "description": ""
+      },
+      {
+        "const": "CRSO-IND/IDE",
+        "description": ""
+      },
+      {
+        "const": "CRSO-MAIN",
+        "description": ""
+      },
+      {
+        "const": "CRSO-REC",
+        "description": ""
+      },
+      {
+        "const": "CSH BALANCE SHEET AND OTHER",
+        "description": ""
+      },
+      {
+        "const": "CSO THRU 041515",
+        "description": ""
+      },
+      {
+        "const": "CT SCAN",
+        "description": ""
+      },
+      {
+        "const": "CT SURG PHYSICIAN ASSISTANT",
+        "description": ""
+      },
+      {
+        "const": "CT SURGERY",
+        "description": ""
+      },
+      {
+        "const": "Cafeteria Services",
+        "description": ""
+      },
+      {
+        "const": "Care Network Souderton",
+        "description": ""
+      },
+      {
+        "const": "Central Sterile Processing",
+        "description": ""
+      },
+      {
+        "const": "Centralized Behavioral Health",
+        "description": ""
+      },
+      {
+        "const": "Centralized Staff",
+        "description": ""
+      },
+      {
+        "const": "Child Life Programs",
+        "description": ""
+      },
+      {
+        "const": "Compliance",
+        "description": ""
+      },
+      {
+        "const": "DATA AND ANALYTICS",
+        "description": ""
+      },
+      {
+        "const": "DAY MED UNIT",
+        "description": ""
+      },
+      {
+        "const": "DENTAL",
+        "description": ""
+      },
+      {
+        "const": "DEPARTMENT OF ARMY",
+        "description": ""
+      },
+      {
+        "const": "DEPARTMENT OF SURGERY",
+        "description": ""
+      },
+      {
+        "const": "DEPT OF MEDICAL ETHICS",
+        "description": ""
+      },
+      {
+        "const": "DEPT OF PEDIATRICS SUPPORT",
+        "description": ""
+      },
+      {
+        "const": "DEV CORP & FOUND RELATIONS",
+        "description": ""
+      },
+      {
+        "const": "DEV DEVELOPMENT SERVICES",
+        "description": ""
+      },
+      {
+        "const": "DEV LEADERSHIP GIFTS",
+        "description": ""
+      },
+      {
+        "const": "DEV MAJOR GIFTS",
+        "description": ""
+      },
+      {
+        "const": "DEV PROSPECT MANAGEMENT",
+        "description": ""
+      },
+      {
+        "const": "DEVELOPMENT OPERATIONS",
+        "description": ""
+      },
+      {
+        "const": "DEVELOPMENT-ANNUAL GIVING",
+        "description": ""
+      },
+      {
+        "const": "DEVELOPMENT-CONCIERGE SERVICES",
+        "description": ""
+      },
+      {
+        "const": "DEVELOPMENT-DIRECT MARKETING",
+        "description": ""
+      },
+      {
+        "const": "DEVELOPMENT-DONOR RELATIONS",
+        "description": ""
+      },
+      {
+        "const": "DEVELOPMNT- EVENTS FUNDRAISING",
+        "description": ""
+      },
+      {
+        "const": "DEVELOPMNT-EXECUTIVE EVENTS",
+        "description": ""
+      },
+      {
+        "const": "DIABETES EDUCATION  PRGRM",
+        "description": ""
+      },
+      {
+        "const": "DIAGNOSTIC RADIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "DIALYSIS",
+        "description": ""
+      },
+      {
+        "const": "DIVERSITY POST DOC FELLOWSHIP",
+        "description": ""
+      },
+      {
+        "const": "DVR CORE - ARC",
+        "description": ""
+      },
+      {
+        "const": "DVR CORE - CTRB",
+        "description": ""
+      },
+      {
+        "const": "Dermatology",
+        "description": ""
+      },
+      {
+        "const": "Developmental and Behavioral Pediatrics",
+        "description": ""
+      },
+      {
+        "const": "Diagnostic Radiology - Hospital Services",
+        "description": ""
+      },
+      {
+        "const": "ECMO PGM",
+        "description": ""
+      },
+      {
+        "const": "EMERG DEPT EXTENDED CARE UNIT",
+        "description": ""
+      },
+      {
+        "const": "EMERG DEPT-MD SUPPORT",
+        "description": ""
+      },
+      {
+        "const": "EMERGENCY CARE PROGRAM",
+        "description": ""
+      },
+      {
+        "const": "EMERGENCY DEPT",
+        "description": ""
+      },
+      {
+        "const": "EMERGENCY DEPT ADMIN",
+        "description": ""
+      },
+      {
+        "const": "EMERGENCY MEDICINE",
+        "description": ""
+      },
+      {
+        "const": "EMERGENCY PREPAREDNESS",
+        "description": ""
+      },
+      {
+        "const": "EMERGENCY TRANSPORT",
+        "description": ""
+      },
+      {
+        "const": "END-REST-DEPT. OF SURGERY",
+        "description": ""
+      },
+      {
+        "const": "END-REST-FAMILY SUPPORT SVCS",
+        "description": ""
+      },
+      {
+        "const": "END-REST-NURSING",
+        "description": ""
+      },
+      {
+        "const": "END-UNR-DEPT. OF PEDIATRICS",
+        "description": ""
+      },
+      {
+        "const": "END-UNR-FAMILY SUPPORT SVCS",
+        "description": ""
+      },
+      {
+        "const": "ENDOCRINE DIABETES CLIN PRGRM",
+        "description": ""
+      },
+      {
+        "const": "ENDOCRINOLOGY AND DIABETES",
+        "description": ""
+      },
+      {
+        "const": "ENTERRPISE DIVERSITY & INCLUSI",
+        "description": ""
+      },
+      {
+        "const": "ENV SVCS-LINEN ADMINISTRATION",
+        "description": ""
+      },
+      {
+        "const": "ENVIRONMENTAL HEALTH & SAFETY",
+        "description": ""
+      },
+      {
+        "const": "ENVIRONMENTAL SERVICES-ARC",
+        "description": ""
+      },
+      {
+        "const": "ENVIRONMENTAL SVC-BUERGER",
+        "description": ""
+      },
+      {
+        "const": "ENVIRONMENTAL SVCS",
+        "description": ""
+      },
+      {
+        "const": "ENVIRONMENTAL SVCS-CTRB",
+        "description": ""
+      },
+      {
+        "const": "Emergency Medicine",
+        "description": ""
+      },
+      {
+        "const": "Environmental Services",
+        "description": ""
+      },
+      {
+        "const": "FACILITIES - BUERGER",
+        "description": ""
+      },
+      {
+        "const": "FACILITIES BSO",
+        "description": ""
+      },
+      {
+        "const": "FACILITIES MGT - MAIN",
+        "description": ""
+      },
+      {
+        "const": "FACILITIES PLANNING",
+        "description": ""
+      },
+      {
+        "const": "FACILITIES-PROJECT MANAGMNT",
+        "description": ""
+      },
+      {
+        "const": "FACILITIES-REAL ESTATE MANGMNT",
+        "description": ""
+      },
+      {
+        "const": "FAMILY RELATIONS DEPARTMENT",
+        "description": ""
+      },
+      {
+        "const": "FAMILY SERVICES",
+        "description": ""
+      },
+      {
+        "const": "FAMILY-OUT OF AREA COVERAGE",
+        "description": ""
+      },
+      {
+        "const": "FEDERAL STIMULUS FUNDING",
+        "description": ""
+      },
+      {
+        "const": "FEDERAL TRAINING - 2148P",
+        "description": ""
+      },
+      {
+        "const": "FEDERAL TRAINING GRANTS",
+        "description": ""
+      },
+      {
+        "const": "FEEDING DAY HOSPITAL",
+        "description": ""
+      },
+      {
+        "const": "FELLOWS ANESTH & CRIT CARE MED",
+        "description": ""
+      },
+      {
+        "const": "FETAL SURGERY",
+        "description": ""
+      },
+      {
+        "const": "FIELD FINANCE",
+        "description": ""
+      },
+      {
+        "const": "FIN GENERAL ACCOUNTING",
+        "description": ""
+      },
+      {
+        "const": "FIN PAYROLL",
+        "description": ""
+      },
+      {
+        "const": "FINANCE",
+        "description": ""
+      },
+      {
+        "const": "FINANCE BUSINESS OPERATIONS",
+        "description": ""
+      },
+      {
+        "const": "FINANCIAL PLANNING",
+        "description": ""
+      },
+      {
+        "const": "FINANCIAL STRATEGY",
+        "description": ""
+      },
+      {
+        "const": "FLOC MD & CAP MGMT",
+        "description": ""
+      },
+      {
+        "const": "FLUOROSCOPY",
+        "description": ""
+      },
+      {
+        "const": "FOERDERER FUNDS",
+        "description": ""
+      },
+      {
+        "const": "FORMULA ROOM",
+        "description": ""
+      },
+      {
+        "const": "FOUNDATION-PROGRAMS",
+        "description": ""
+      },
+      {
+        "const": "FOUNDATION-RESEARCH",
+        "description": ""
+      },
+      {
+        "const": "FOUR EAST/SOUTH",
+        "description": ""
+      },
+      {
+        "const": "FRONTIER PROGRAMS",
+        "description": ""
+      },
+      {
+        "const": "FRONTIER PROGRAMS - RESEARCH",
+        "description": ""
+      },
+      {
+        "const": "FRONTIER SPRINT PROGRAMS",
+        "description": ""
+      },
+      {
+        "const": "Fetal Diagnosis & Treatment",
+        "description": ""
+      },
+      {
+        "const": "GASTRO, HEPATOLOGY & NUTRITION",
+        "description": ""
+      },
+      {
+        "const": "GENERAL ANESTHESIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "GENERAL PEDIATRICS",
+        "description": ""
+      },
+      {
+        "const": "GENERAL SURGERY",
+        "description": ""
+      },
+      {
+        "const": "GENETICS",
+        "description": ""
+      },
+      {
+        "const": "GENOMICS",
+        "description": ""
+      },
+      {
+        "const": "GENOMICS MEDICINE",
+        "description": ""
+      },
+      {
+        "const": "GI & NUTRITION",
+        "description": ""
+      },
+      {
+        "const": "GI - Endocrine",
+        "description": ""
+      },
+      {
+        "const": "GI ENDOSCOPY SUITE",
+        "description": ""
+      },
+      {
+        "const": "GI Hepatology and Nutrition",
+        "description": ""
+      },
+      {
+        "const": "GIFT ADMINISTRATION",
+        "description": ""
+      },
+      {
+        "const": "GLOBAL MEDICINE BUSINESS DEV",
+        "description": ""
+      },
+      {
+        "const": "GLOBAL MEDICINE CLINIC",
+        "description": ""
+      },
+      {
+        "const": "GLOBAL PATIENT SERVICES",
+        "description": ""
+      },
+      {
+        "const": "GLOBAL PEDIATRIC EDUCATION",
+        "description": ""
+      },
+      {
+        "const": "GOVERNMENT AFFAIRS",
+        "description": ""
+      },
+      {
+        "const": "GRADUATE MEDICAL EDUCATION",
+        "description": ""
+      },
+      {
+        "const": "General Anesthesia",
+        "description": ""
+      },
+      {
+        "const": "General Pediatrics",
+        "description": ""
+      },
+      {
+        "const": "HAVERFORD URGENT CARE",
+        "description": ""
+      },
+      {
+        "const": "HC-RX PATIENT FINANCIAL SVC",
+        "description": ""
+      },
+      {
+        "const": "HEALTH INFO MGT",
+        "description": ""
+      },
+      {
+        "const": "HEALTHIER TOGETHER PROGRAM",
+        "description": ""
+      },
+      {
+        "const": "HEALTHY WEIGHT",
+        "description": ""
+      },
+      {
+        "const": "HEALTHY WEIGHT PROGRAM",
+        "description": ""
+      },
+      {
+        "const": "HEM/ONC KOP",
+        "description": ""
+      },
+      {
+        "const": "HEM/ONC VOORHEES",
+        "description": ""
+      },
+      {
+        "const": "HEMATOLOGY",
+        "description": ""
+      },
+      {
+        "const": "HEMATOLOGY PGM",
+        "description": ""
+      },
+      {
+        "const": "HEMOPHILIA PGM",
+        "description": ""
+      },
+      {
+        "const": "HESC/IPSC CORE (STEM CELL)",
+        "description": ""
+      },
+      {
+        "const": "HOME CARE ADMIN",
+        "description": ""
+      },
+      {
+        "const": "HOME CARE DELIVERY",
+        "description": ""
+      },
+      {
+        "const": "HOME CARE HME-RT",
+        "description": ""
+      },
+      {
+        "const": "HOME CARE NURSING",
+        "description": ""
+      },
+      {
+        "const": "HOME CARE PHARMACY",
+        "description": ""
+      },
+      {
+        "const": "HOSPITAL ADMIN",
+        "description": ""
+      },
+      {
+        "const": "HOSPITAL OPERATORS",
+        "description": ""
+      },
+      {
+        "const": "HOSPITALIST-ATLANTIC COUNTY",
+        "description": ""
+      },
+      {
+        "const": "HOSPITALIST-CHESTER COUNTY",
+        "description": ""
+      },
+      {
+        "const": "HOSPITALIST-PRINCETON",
+        "description": ""
+      },
+      {
+        "const": "HOSPITALIST-VIRTUA-VOORHEES",
+        "description": ""
+      },
+      {
+        "const": "HOSPITALISTS-GRAND VIEW",
+        "description": ""
+      },
+      {
+        "const": "HOSPITALISTS-LANCASTER G H",
+        "description": ""
+      },
+      {
+        "const": "HR BUSINESS PARTNER SVCS",
+        "description": ""
+      },
+      {
+        "const": "HR CHOP LEADERSHIP INSTITUTE",
+        "description": ""
+      },
+      {
+        "const": "HR COMP-BENEFITS-HRIS",
+        "description": ""
+      },
+      {
+        "const": "HR CORPORATE SUPPORT SVCS",
+        "description": ""
+      },
+      {
+        "const": "HR DIGITAL WORKFORCE",
+        "description": ""
+      },
+      {
+        "const": "HR LEADERSHIP TEAM",
+        "description": ""
+      },
+      {
+        "const": "HR LEARNING SERVICES",
+        "description": ""
+      },
+      {
+        "const": "HR NURSNG&RESP CAREER CENTER",
+        "description": ""
+      },
+      {
+        "const": "HR RESEARCH",
+        "description": ""
+      },
+      {
+        "const": "HR STRATEGIC PRGRM DEVELOPMENT",
+        "description": ""
+      },
+      {
+        "const": "HR TALENT ACQUISITION",
+        "description": ""
+      },
+      {
+        "const": "HR-COMPENSATION",
+        "description": ""
+      },
+      {
+        "const": "HRSA EARMARK AWARDS",
+        "description": ""
+      },
+      {
+        "const": "Hospital Administration",
+        "description": ""
+      },
+      {
+        "const": "Human Genetics",
+        "description": ""
+      },
+      {
+        "const": "IBD PROGRAM",
+        "description": ""
+      },
+      {
+        "const": "ID DIAGNOSTICS LAB",
+        "description": ""
+      },
+      {
+        "const": "IDF DEPT OF PEDS FUNDED",
+        "description": ""
+      },
+      {
+        "const": "IDS-PHARM-RES",
+        "description": ""
+      },
+      {
+        "const": "IMMUNOGENETICS LAB",
+        "description": ""
+      },
+      {
+        "const": "IMMUNOLOGY",
+        "description": ""
+      },
+      {
+        "const": "INFECTION CONTROL DEPT",
+        "description": ""
+      },
+      {
+        "const": "INFECTIOUS DISEASES",
+        "description": ""
+      },
+      {
+        "const": "INJURY PREVENTION PROGRM-KOHL",
+        "description": ""
+      },
+      {
+        "const": "INNOVATION AND ADVANCEMENT",
+        "description": ""
+      },
+      {
+        "const": "INSURANCE ADMINISTRATION",
+        "description": ""
+      },
+      {
+        "const": "INTEGRATIVE HEALTH",
+        "description": ""
+      },
+      {
+        "const": "INTERNAL AUDIT DEPT",
+        "description": ""
+      },
+      {
+        "const": "INTERVENTIONAL RAD-NURSING",
+        "description": ""
+      },
+      {
+        "const": "INTERVENTIONAL RADIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "IRB",
+        "description": ""
+      },
+      {
+        "const": "IS - Business Operations",
+        "description": ""
+      },
+      {
+        "const": "IS - NETWORKING",
+        "description": ""
+      },
+      {
+        "const": "IS CLINICAL TECH & INFORMATICS",
+        "description": ""
+      },
+      {
+        "const": "IS FINANCIAL SYSTEMS",
+        "description": ""
+      },
+      {
+        "const": "IS- ARCHTITECTURE",
+        "description": ""
+      },
+      {
+        "const": "IS- EPIC SERVICE/MAINTENANCE",
+        "description": ""
+      },
+      {
+        "const": "IS-ACUTE/AMBULATORY OPERATIONS",
+        "description": ""
+      },
+      {
+        "const": "IS-ADMIN FINANCIAL",
+        "description": ""
+      },
+      {
+        "const": "IS-BUSINESS OPERATIONS",
+        "description": ""
+      },
+      {
+        "const": "IS-CARDIAC SUPPORT",
+        "description": ""
+      },
+      {
+        "const": "IS-CLIENT SVCS",
+        "description": ""
+      },
+      {
+        "const": "IS-DATA",
+        "description": ""
+      },
+      {
+        "const": "IS-DATA CENTER OPS",
+        "description": ""
+      },
+      {
+        "const": "IS-DATA INTEGRATION",
+        "description": ""
+      },
+      {
+        "const": "IS-DATABASE MANAGEMENT",
+        "description": ""
+      },
+      {
+        "const": "IS-DESKTOP ENGINEERING",
+        "description": ""
+      },
+      {
+        "const": "IS-DEVICES/WORKSTATIONS",
+        "description": ""
+      },
+      {
+        "const": "IS-DIGITAL HEALTH",
+        "description": ""
+      },
+      {
+        "const": "IS-EPIC CORE SUPPORT",
+        "description": ""
+      },
+      {
+        "const": "IS-HIM SUPPORT",
+        "description": ""
+      },
+      {
+        "const": "IS-IDENTITY&ACCESS MANAGEMENT",
+        "description": ""
+      },
+      {
+        "const": "IS-INFORM SERV TRAINING",
+        "description": ""
+      },
+      {
+        "const": "IS-INFORMATION SECURITY",
+        "description": ""
+      },
+      {
+        "const": "IS-LAB SUPPORT",
+        "description": ""
+      },
+      {
+        "const": "IS-NETWORK SUPPORT",
+        "description": ""
+      },
+      {
+        "const": "IS-OPERATING SYSTEMS",
+        "description": ""
+      },
+      {
+        "const": "IS-PERIOP SUPPORT/DEVICES",
+        "description": ""
+      },
+      {
+        "const": "IS-PHARMACY",
+        "description": ""
+      },
+      {
+        "const": "IS-PMO",
+        "description": ""
+      },
+      {
+        "const": "IS-QUALITY MANAGEMENT/BACOE",
+        "description": ""
+      },
+      {
+        "const": "IS-RADIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "IS-STRATEGY CONSULTING SERVICE",
+        "description": ""
+      },
+      {
+        "const": "IS-SUPPORT CENTER",
+        "description": ""
+      },
+      {
+        "const": "IS-WEB CENTER",
+        "description": ""
+      },
+      {
+        "const": "Infectious Diseases",
+        "description": ""
+      },
+      {
+        "const": "JOINT VENTURE PRINCETON",
+        "description": ""
+      },
+      {
+        "const": "JOINT VENTURE-VIRTUA",
+        "description": ""
+      },
+      {
+        "const": "JOINT VENTURE-VIRTUA-IMAGING",
+        "description": ""
+      },
+      {
+        "const": "KING OF PRUSSIA URGENT CARE",
+        "description": ""
+      },
+      {
+        "const": "KOP IMAGING",
+        "description": ""
+      },
+      {
+        "const": "LAB ADMIN",
+        "description": ""
+      },
+      {
+        "const": "LAB POINT OF CARE",
+        "description": ""
+      },
+      {
+        "const": "LABORATORY OUTREACH",
+        "description": ""
+      },
+      {
+        "const": "LACTATION PROGRAM",
+        "description": ""
+      },
+      {
+        "const": "LANGUAGE SERVICES",
+        "description": ""
+      },
+      {
+        "const": "LINEN SVCS",
+        "description": ""
+      },
+      {
+        "const": "LUNG TRANSPLANT PROGRAM SUPPRT",
+        "description": ""
+      },
+      {
+        "const": "LYMPHATIC CENTER",
+        "description": ""
+      },
+      {
+        "const": "M C -CONTRACT MANAGEMENT",
+        "description": ""
+      },
+      {
+        "const": "M C -PAYER RELATIONS",
+        "description": ""
+      },
+      {
+        "const": "MAGNETO ENCEPHALOGRAPHY-MEG",
+        "description": ""
+      },
+      {
+        "const": "MARKET ST OP REGISTRATION",
+        "description": ""
+      },
+      {
+        "const": "MARKETING & PUBLIC RELATIONS",
+        "description": ""
+      },
+      {
+        "const": "MATERIALS DISTRIBUTION",
+        "description": ""
+      },
+      {
+        "const": "MED SUBSPECIALTY APPS",
+        "description": ""
+      },
+      {
+        "const": "MED SUBSPECIALTY FLOC APPS",
+        "description": ""
+      },
+      {
+        "const": "MEDICAL BEHAVIORAL UNIT",
+        "description": ""
+      },
+      {
+        "const": "MEDICAL HOSPITALIST",
+        "description": ""
+      },
+      {
+        "const": "MEDICAL LIBRARY DEPT",
+        "description": ""
+      },
+      {
+        "const": "MEDICAL STAFF AFFAIRS",
+        "description": ""
+      },
+      {
+        "const": "METABOLIC LAB",
+        "description": ""
+      },
+      {
+        "const": "METABOLISM",
+        "description": ""
+      },
+      {
+        "const": "MRI",
+        "description": ""
+      },
+      {
+        "const": "Medical Subspecialty",
+        "description": ""
+      },
+      {
+        "const": "NAP CORE",
+        "description": ""
+      },
+      {
+        "const": "NASA",
+        "description": ""
+      },
+      {
+        "const": "NATIONAL ALLIANCES",
+        "description": ""
+      },
+      {
+        "const": "NATIONAL SCIENCE FOUNDATION",
+        "description": ""
+      },
+      {
+        "const": "NEONATAL OUTREACH",
+        "description": ""
+      },
+      {
+        "const": "NEONATAL SURG NURSE PRACTITNRS",
+        "description": ""
+      },
+      {
+        "const": "NEONATOLOGY",
+        "description": ""
+      },
+      {
+        "const": "NEPHROLOGY",
+        "description": ""
+      },
+      {
+        "const": "NETWORK ADMINISTRATION",
+        "description": ""
+      },
+      {
+        "const": "NETWORK OPERATIONS",
+        "description": ""
+      },
+      {
+        "const": "NEUROLOGY",
+        "description": ""
+      },
+      {
+        "const": "NEUROLOGY DIAGNOSTIC",
+        "description": ""
+      },
+      {
+        "const": "NEUROLOGY FLOC APPS",
+        "description": ""
+      },
+      {
+        "const": "NEURORADIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "NEUROSURGERY",
+        "description": ""
+      },
+      {
+        "const": "NICU-EAST",
+        "description": ""
+      },
+      {
+        "const": "NONCLIN TRIAL RESIDUAL BAL",
+        "description": ""
+      },
+      {
+        "const": "NUCLEAR MED",
+        "description": ""
+      },
+      {
+        "const": "NURSE PR CARDIAC OP SUBSPEC",
+        "description": ""
+      },
+      {
+        "const": "NURSE PRACT-RADIOLOGY SEDATION",
+        "description": ""
+      },
+      {
+        "const": "NURSE PRACTITIONER ANESTHESIA",
+        "description": ""
+      },
+      {
+        "const": "NURSE PRACTITIONER CCU",
+        "description": ""
+      },
+      {
+        "const": "NURSE PRACTITIONER CICU",
+        "description": ""
+      },
+      {
+        "const": "NURSE PRACTITIONER EMERG DEPT",
+        "description": ""
+      },
+      {
+        "const": "NURSE PRACTITIONERS GI",
+        "description": ""
+      },
+      {
+        "const": "NURSE PRACTITIONERS NEONATAL",
+        "description": ""
+      },
+      {
+        "const": "NURSE PRACTITNRS CRITICAL CARE",
+        "description": ""
+      },
+      {
+        "const": "NURSING ADMIN",
+        "description": ""
+      },
+      {
+        "const": "NURSING EDUCATION",
+        "description": ""
+      },
+      {
+        "const": "NURSING INFORMATICS",
+        "description": ""
+      },
+      {
+        "const": "NURSING OPERATIONS",
+        "description": ""
+      },
+      {
+        "const": "NURSING PRACTICE&SAFETY",
+        "description": ""
+      },
+      {
+        "const": "NURSING RESEARCH",
+        "description": ""
+      },
+      {
+        "const": "NUTRITION SUPPORT",
+        "description": ""
+      },
+      {
+        "const": "NUTRITION SVCS",
+        "description": ""
+      },
+      {
+        "const": "Neurology",
+        "description": ""
+      },
+      {
+        "const": "Neurosurgery",
+        "description": ""
+      },
+      {
+        "const": "Nursing - Operations",
+        "description": ""
+      },
+      {
+        "const": "Nursing - Practice and Education",
+        "description": ""
+      },
+      {
+        "const": "OCCRC-OFF COLL & CORP RES CONT",
+        "description": ""
+      },
+      {
+        "const": "OCCUPATIONAL HEALTH",
+        "description": ""
+      },
+      {
+        "const": "OCCUPATIONAL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "OCTR-MAIN",
+        "description": ""
+      },
+      {
+        "const": "OFF OF ENTREPENEURSHIP&INNOV",
+        "description": ""
+      },
+      {
+        "const": "OFF OF SAFETY & MEDICAL OPS",
+        "description": ""
+      },
+      {
+        "const": "OFFICE OF CIO",
+        "description": ""
+      },
+      {
+        "const": "OFFICE OF GENERAL COUNSEL",
+        "description": ""
+      },
+      {
+        "const": "OFFICE OF IACUC ADMINISTRATION",
+        "description": ""
+      },
+      {
+        "const": "OFFICE OF PATIENT ACCOUNTS",
+        "description": ""
+      },
+      {
+        "const": "OFFICE OF THE PRES - ADMIN",
+        "description": ""
+      },
+      {
+        "const": "OFFICE OF THE PRESIDENT",
+        "description": ""
+      },
+      {
+        "const": "OFFICE SVCS",
+        "description": ""
+      },
+      {
+        "const": "ONCOLOGY",
+        "description": ""
+      },
+      {
+        "const": "ONCOLOGY CLINIC",
+        "description": ""
+      },
+      {
+        "const": "ONCOLOGY HOUSE DOCTORS",
+        "description": ""
+      },
+      {
+        "const": "ONCOLOGY INFORMATION MGT",
+        "description": ""
+      },
+      {
+        "const": "ONCOLOGY NURSE PRACTITIONERS",
+        "description": ""
+      },
+      {
+        "const": "ONCOLOGY PGM",
+        "description": ""
+      },
+      {
+        "const": "ONCOLOGY PHARMACY",
+        "description": ""
+      },
+      {
+        "const": "ONCOLOGY SERVICE LINE",
+        "description": ""
+      },
+      {
+        "const": "OP SVCS 3550 MARKET ST",
+        "description": ""
+      },
+      {
+        "const": "OPERATIONS",
+        "description": ""
+      },
+      {
+        "const": "OPHTHALMOLOGY",
+        "description": ""
+      },
+      {
+        "const": "OR ADMIN STAFF",
+        "description": ""
+      },
+      {
+        "const": "OR CARDIOTHOR-ANESTHESIA",
+        "description": ""
+      },
+      {
+        "const": "OR CARDIOTHORACIC",
+        "description": ""
+      },
+      {
+        "const": "OR SURG SERV-ANESTHESIA",
+        "description": ""
+      },
+      {
+        "const": "OR SURG SVCS",
+        "description": ""
+      },
+      {
+        "const": "OR Surgical Services - Bucks",
+        "description": ""
+      },
+      {
+        "const": "ORTHOPEDICS",
+        "description": ""
+      },
+      {
+        "const": "OTOLARYNGOLOGY",
+        "description": ""
+      },
+      {
+        "const": "OUTPATIENT REGISTRATION",
+        "description": ""
+      },
+      {
+        "const": "Oncology",
+        "description": ""
+      },
+      {
+        "const": "Orthopaedics",
+        "description": ""
+      },
+      {
+        "const": "PA BILLING",
+        "description": ""
+      },
+      {
+        "const": "PA BUSINESS OFFICE ADMIN",
+        "description": ""
+      },
+      {
+        "const": "PA PAYMNT POSTNG/CUSTOMER SVCS",
+        "description": ""
+      },
+      {
+        "const": "PACU",
+        "description": ""
+      },
+      {
+        "const": "PALLIATIVE CARE PROGRAM",
+        "description": ""
+      },
+      {
+        "const": "PARC-COVERAGE VERIFICATION",
+        "description": ""
+      },
+      {
+        "const": "PARC-PRECERTIFICATION",
+        "description": ""
+      },
+      {
+        "const": "PARKING GARAGE - BUERGER",
+        "description": ""
+      },
+      {
+        "const": "PARKING GARAGE MAIN",
+        "description": ""
+      },
+      {
+        "const": "PATHOLOGIST-IN-CHIEF DISC FUND",
+        "description": ""
+      },
+      {
+        "const": "PATHOLOGY",
+        "description": ""
+      },
+      {
+        "const": "PATHOLOGY AS&T",
+        "description": ""
+      },
+      {
+        "const": "PATHOLOGY CORE",
+        "description": ""
+      },
+      {
+        "const": "PATHOLOGY FACULTY",
+        "description": ""
+      },
+      {
+        "const": "PATHOLOGY FELLOWS",
+        "description": ""
+      },
+      {
+        "const": "PATIENT AND FAMILY SERVICES",
+        "description": ""
+      },
+      {
+        "const": "PATIENT FAMILY EXPERIENCE",
+        "description": ""
+      },
+      {
+        "const": "PATIENT FINANCIAL CLEARANCE",
+        "description": ""
+      },
+      {
+        "const": "PATIENT INFORMATION DESK",
+        "description": ""
+      },
+      {
+        "const": "PATIENT SAFETY",
+        "description": ""
+      },
+      {
+        "const": "PEDIATRIC FELLOWS",
+        "description": ""
+      },
+      {
+        "const": "PEDIATRIC RESIDENTS",
+        "description": ""
+      },
+      {
+        "const": "PEDIATRIC STROKE CENTER",
+        "description": ""
+      },
+      {
+        "const": "PEDIATRIC TRANSPLNT CENTER",
+        "description": ""
+      },
+      {
+        "const": "PERFUSION SVCS",
+        "description": ""
+      },
+      {
+        "const": "PET CT SCAN",
+        "description": ""
+      },
+      {
+        "const": "PFS - INTERNATIONAL MEDICINE",
+        "description": ""
+      },
+      {
+        "const": "PFS REV CYCLE FINANCIAL ANALYS",
+        "description": ""
+      },
+      {
+        "const": "PHARM VOORHEES NJ HEM-ONC",
+        "description": ""
+      },
+      {
+        "const": "PHARMACY",
+        "description": ""
+      },
+      {
+        "const": "PHARMACY RETAIL SERVICES",
+        "description": ""
+      },
+      {
+        "const": "PHARMACY SPECIALTY SERVICES",
+        "description": ""
+      },
+      {
+        "const": "PHLEBOTOMY",
+        "description": ""
+      },
+      {
+        "const": "PHYSICAL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "PHYSICIAN REFERRAL SVCS",
+        "description": ""
+      },
+      {
+        "const": "PHYSICIAN-IN-CHIEF",
+        "description": ""
+      },
+      {
+        "const": "PICU",
+        "description": ""
+      },
+      {
+        "const": "PLASTIC SURGERY",
+        "description": ""
+      },
+      {
+        "const": "POISON CONTROL",
+        "description": ""
+      },
+      {
+        "const": "POPULATION HEALTH",
+        "description": ""
+      },
+      {
+        "const": "PRACTICE-RESEARCH",
+        "description": ""
+      },
+      {
+        "const": "PROCEDURAL SEDATION",
+        "description": ""
+      },
+      {
+        "const": "PROCUREMENT CONTRACTING",
+        "description": ""
+      },
+      {
+        "const": "PROCUREMENT OPERATIONS",
+        "description": ""
+      },
+      {
+        "const": "PROGRESSIVE CARE UNIT",
+        "description": ""
+      },
+      {
+        "const": "PROTEIN CORE",
+        "description": ""
+      },
+      {
+        "const": "PROTON THERAPY",
+        "description": ""
+      },
+      {
+        "const": "PSYCHIATRY RESIDENTS",
+        "description": ""
+      },
+      {
+        "const": "PT-SPORTS MEDICINE-MAIN",
+        "description": ""
+      },
+      {
+        "const": "PULMONARY FUNCTION",
+        "description": ""
+      },
+      {
+        "const": "PULMONARY MEDICINE",
+        "description": ""
+      },
+      {
+        "const": "PULMONARY OUTPATIENT",
+        "description": ""
+      },
+      {
+        "const": "PURCHASE BLOOD-ARC",
+        "description": ""
+      },
+      {
+        "const": "Pathology and Lab Administration",
+        "description": ""
+      },
+      {
+        "const": "Patient Financial Services - HB",
+        "description": ""
+      },
+      {
+        "const": "Physical Therapy - Outpatient",
+        "description": ""
+      },
+      {
+        "const": "Precertification and Financial Counseling",
+        "description": ""
+      },
+      {
+        "const": "Pulmonary Gen Peds",
+        "description": ""
+      },
+      {
+        "const": "QUALITY AND SAFETY ADMIN",
+        "description": ""
+      },
+      {
+        "const": "QUALITY ASSURANCE TESTING",
+        "description": ""
+      },
+      {
+        "const": "QUALITY IMPROVEMENT",
+        "description": ""
+      },
+      {
+        "const": "RACH Administration",
+        "description": ""
+      },
+      {
+        "const": "RADIATION THERAPY",
+        "description": ""
+      },
+      {
+        "const": "RADIOLOGY ADMINISTRATION",
+        "description": ""
+      },
+      {
+        "const": "RADIOLOGY CLERICAL",
+        "description": ""
+      },
+      {
+        "const": "RADIOLOGY INFORMATICS",
+        "description": ""
+      },
+      {
+        "const": "RADIOLOGY MULTI-MEDIA",
+        "description": ""
+      },
+      {
+        "const": "RADIOLOGY RESIDENTS",
+        "description": ""
+      },
+      {
+        "const": "RADIOLOGY-3D LAB",
+        "description": ""
+      },
+      {
+        "const": "REGISTRATION",
+        "description": ""
+      },
+      {
+        "const": "REGULATORY AFFAIRS",
+        "description": ""
+      },
+      {
+        "const": "REHAB ADMIN",
+        "description": ""
+      },
+      {
+        "const": "REHAB DAY HOSPITAL",
+        "description": ""
+      },
+      {
+        "const": "REHAB MEDICINE",
+        "description": ""
+      },
+      {
+        "const": "REHAB NURSING UNIT",
+        "description": ""
+      },
+      {
+        "const": "REIMB, PLAN & ABS",
+        "description": ""
+      },
+      {
+        "const": "RES BIOREPOSITORY CORE",
+        "description": ""
+      },
+      {
+        "const": "RES BUSINESS OFFICE",
+        "description": ""
+      },
+      {
+        "const": "RES CHOP ENDOWED CHAIRS",
+        "description": ""
+      },
+      {
+        "const": "RES CHOP IDF",
+        "description": ""
+      },
+      {
+        "const": "RES CHOP RESEARCH NEW PGMS",
+        "description": ""
+      },
+      {
+        "const": "RES CITY CONTRACTS",
+        "description": ""
+      },
+      {
+        "const": "RES CLINICAL TRIALS",
+        "description": ""
+      },
+      {
+        "const": "RES COG ADMIN",
+        "description": ""
+      },
+      {
+        "const": "RES CORE ADMIN",
+        "description": ""
+      },
+      {
+        "const": "RES CORPORATE SPONSORED",
+        "description": ""
+      },
+      {
+        "const": "RES FEDERAL CONTRACTS",
+        "description": ""
+      },
+      {
+        "const": "RES FEDERAL CTRC",
+        "description": ""
+      },
+      {
+        "const": "RES FEDERAL DOE",
+        "description": ""
+      },
+      {
+        "const": "RES FEDERAL GRANT- 2148P",
+        "description": ""
+      },
+      {
+        "const": "RES FEDERAL GRANTS - 2148G",
+        "description": ""
+      },
+      {
+        "const": "RES FEDERAL SUBCONTRACTS",
+        "description": ""
+      },
+      {
+        "const": "RES FLOW CYTO CORE",
+        "description": ""
+      },
+      {
+        "const": "RES FOUNDATION SPONSORED",
+        "description": ""
+      },
+      {
+        "const": "RES HTS CORE",
+        "description": ""
+      },
+      {
+        "const": "RES LOCAL CONTR DR",
+        "description": ""
+      },
+      {
+        "const": "RES MISC ENDOWMENT FUNDS",
+        "description": ""
+      },
+      {
+        "const": "RES NON FED SUBCONTRACTS",
+        "description": ""
+      },
+      {
+        "const": "RES PEDIATRIC DEVELOPMENT FUND",
+        "description": ""
+      },
+      {
+        "const": "RES RESOURCE MANAGEMENT",
+        "description": ""
+      },
+      {
+        "const": "RES SPECIAL PURPOSE FUNDS",
+        "description": ""
+      },
+      {
+        "const": "RES SPONS PROJ OFFICE (SPO)",
+        "description": ""
+      },
+      {
+        "const": "RES STATE CONTRACTS",
+        "description": ""
+      },
+      {
+        "const": "RES STATECONTR/GRANTS AR",
+        "description": ""
+      },
+      {
+        "const": "RES TECHNOLOGY TRANSFER DEPT",
+        "description": ""
+      },
+      {
+        "const": "RES TOBACCO SETTLEMENT ACT",
+        "description": ""
+      },
+      {
+        "const": "RES-CSSO",
+        "description": ""
+      },
+      {
+        "const": "RESEARCH COMMUNICATIONS",
+        "description": ""
+      },
+      {
+        "const": "RESEARCH COMPLIANCE",
+        "description": ""
+      },
+      {
+        "const": "RESEARCH FINANCE DEPARTMENT",
+        "description": ""
+      },
+      {
+        "const": "RESEARCH HR",
+        "description": ""
+      },
+      {
+        "const": "RESEARCH INFO TECHNOLOGY",
+        "description": ""
+      },
+      {
+        "const": "RESEARCH LABOR SUSPENSE",
+        "description": ""
+      },
+      {
+        "const": "RESEARCH LABOR SUSPENSE NTP",
+        "description": ""
+      },
+      {
+        "const": "RESEARCH LOCAL CONTRACTS AR",
+        "description": ""
+      },
+      {
+        "const": "RESEARCH SAFETY",
+        "description": ""
+      },
+      {
+        "const": "RESEARCH SHIPPING CORE",
+        "description": ""
+      },
+      {
+        "const": "RESEARCH STAFFING CORE",
+        "description": ""
+      },
+      {
+        "const": "RESIDENCY EDUCATION",
+        "description": ""
+      },
+      {
+        "const": "RESPIRATORY THERAPY",
+        "description": ""
+      },
+      {
+        "const": "RHEUMATOLOGY",
+        "description": ""
+      },
+      {
+        "const": "RI-ACADEMIC TRAINING",
+        "description": ""
+      },
+      {
+        "const": "RI-OUTREACH PROGRAMS",
+        "description": ""
+      },
+      {
+        "const": "RISK MGT DEPT",
+        "description": ""
+      },
+      {
+        "const": "ROBERTS CENTER BUILDING",
+        "description": ""
+      },
+      {
+        "const": "Radiology - Operations",
+        "description": ""
+      },
+      {
+        "const": "Research - Comparative Medicine Core",
+        "description": ""
+      },
+      {
+        "const": "Research - Institutional Review Board",
+        "description": ""
+      },
+      {
+        "const": "Respiratory Therapy",
+        "description": ""
+      },
+      {
+        "const": "SAIF CORE",
+        "description": ""
+      },
+      {
+        "const": "SCC BUCKS COUNTY",
+        "description": ""
+      },
+      {
+        "const": "SCC EXTON",
+        "description": ""
+      },
+      {
+        "const": "SCC KOP",
+        "description": ""
+      },
+      {
+        "const": "SCC KOP HEM-ONC",
+        "description": ""
+      },
+      {
+        "const": "SCC LANCASTER GENERAL",
+        "description": ""
+      },
+      {
+        "const": "SCC PRINCETON NJ",
+        "description": ""
+      },
+      {
+        "const": "SCC VOORHEES NJ",
+        "description": ""
+      },
+      {
+        "const": "SCC VOORHEES NJ CARDIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "SCC VOORHEES NJ HEM-ONC",
+        "description": ""
+      },
+      {
+        "const": "SCC-ABINGTON",
+        "description": ""
+      },
+      {
+        "const": "SCC-ATL COUNTY SPECIALTY CARE",
+        "description": ""
+      },
+      {
+        "const": "SCC-ATL-OCCUPATIONAL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-ATL-SPEECH THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-BUC-AUDIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "SCC-BUC-OCCUPATIONAL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-BUC-SMC-PHYSICAL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-BUC-SPEECH THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-BWV",
+        "description": ""
+      },
+      {
+        "const": "SCC-BWV-AUDIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "SCC-BWV-OCCUPATIONAL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-BWV-PHYSICAL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-CHFD-MOLECULAR GENETICS",
+        "description": ""
+      },
+      {
+        "const": "SCC-EXT-AUDIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-AUDIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-FLUOROSCOPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-MRI",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-NUCLEAR MEDICINE",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-NUTRITION",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-OCCUPATIONAL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-ONCOLOGY CLINIC",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-PHARMACY",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-PHYSICAL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-SEDATION UNIT",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-SLEEP CENTER",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-SMC-NUTRITION",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-SMC-PHYSICAL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-KOP-SPEECH THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-LGH-CARDIAC ECHO LAB",
+        "description": ""
+      },
+      {
+        "const": "SCC-LGH-DIABETES EDUCATION",
+        "description": ""
+      },
+      {
+        "const": "SCC-PNJ-OCCUPATIONAL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-PNJ-PHYSICAL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-PNJ-SPEECH THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-SPUH-CARDIAC ECHO LAB",
+        "description": ""
+      },
+      {
+        "const": "SCC-VIRTUA-OCCUPATIONAL THERAP",
+        "description": ""
+      },
+      {
+        "const": "SCC-VIRTUA-PHYSICAL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-VIRTUA-SMC-PHYSICL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCC-VIRTUA-VOORHEES",
+        "description": ""
+      },
+      {
+        "const": "SCC-VNJ-AUDIOLOGY",
+        "description": ""
+      },
+      {
+        "const": "SCC-VNJ-ONCOLOGY CLINIC",
+        "description": ""
+      },
+      {
+        "const": "SCC-VNJ-SPEECH THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SCHOOL PROGRAM",
+        "description": ""
+      },
+      {
+        "const": "SDU LABOR&DELIVERY PROCEDURES",
+        "description": ""
+      },
+      {
+        "const": "SECURITY",
+        "description": ""
+      },
+      {
+        "const": "SEDATION-RADIOLOGY-MRI UNIT",
+        "description": ""
+      },
+      {
+        "const": "SELF PAY CUSTOMER SERVICE",
+        "description": ""
+      },
+      {
+        "const": "SERVICE MANAGEMENT TECHNOLOGY",
+        "description": ""
+      },
+      {
+        "const": "SIMULATION CENTER",
+        "description": ""
+      },
+      {
+        "const": "SINGLE VENTRICLE CENTER",
+        "description": ""
+      },
+      {
+        "const": "SLEEP CENTER",
+        "description": ""
+      },
+      {
+        "const": "SOCIAL WORK DIVISION",
+        "description": ""
+      },
+      {
+        "const": "SOLID ORGAN TRANSPLANT SUPPORT",
+        "description": ""
+      },
+      {
+        "const": "SPECIAL DELIVERY UNIT",
+        "description": ""
+      },
+      {
+        "const": "SPECIAL IMMUNOLOGY DEPT",
+        "description": ""
+      },
+      {
+        "const": "SPEECH THERAPY",
+        "description": ""
+      },
+      {
+        "const": "SPF RES SUPPORT",
+        "description": ""
+      },
+      {
+        "const": "SPF-CARE NETWORK",
+        "description": ""
+      },
+      {
+        "const": "SPF-CHIEF MEDICAL OFFICER",
+        "description": ""
+      },
+      {
+        "const": "SPF-DEPT. OF PEDIATRICS",
+        "description": ""
+      },
+      {
+        "const": "SPF-DEPT. OF SURGERY",
+        "description": ""
+      },
+      {
+        "const": "SPF-GLOBAL HEALTH",
+        "description": ""
+      },
+      {
+        "const": "SPF-GOVERNMENT AFFAIRS",
+        "description": ""
+      },
+      {
+        "const": "SPF-NURSING",
+        "description": ""
+      },
+      {
+        "const": "SPF-OUTPATIENT/CLINICAL SVCS",
+        "description": ""
+      },
+      {
+        "const": "SPORTS MED",
+        "description": ""
+      },
+      {
+        "const": "STRATEGY",
+        "description": ""
+      },
+      {
+        "const": "STRATEGY-FRONTIER & OTHER PGMS",
+        "description": ""
+      },
+      {
+        "const": "SUPPLY CHAIN ADMINISTRATION",
+        "description": ""
+      },
+      {
+        "const": "SUPPLY CHAIN TECHNOLOGY",
+        "description": ""
+      },
+      {
+        "const": "SURGICAL HOUSE STAFF",
+        "description": ""
+      },
+      {
+        "const": "SURGICAL SUBSPECIALTY NPS",
+        "description": ""
+      },
+      {
+        "const": "Supply Chain Logistics",
+        "description": ""
+      },
+      {
+        "const": "T-CELL THERAPY",
+        "description": ""
+      },
+      {
+        "const": "TECHNOLOGY ADMINISTRATION",
+        "description": ""
+      },
+      {
+        "const": "THYROID PROGRAM",
+        "description": ""
+      },
+      {
+        "const": "TRANSGENIC CORE",
+        "description": ""
+      },
+      {
+        "const": "TRANSPORT COMMUNICATION CENTER",
+        "description": ""
+      },
+      {
+        "const": "TRAUMA PROGRAM",
+        "description": ""
+      },
+      {
+        "const": "Translational Research",
+        "description": ""
+      },
+      {
+        "const": "ULTRASOUND",
+        "description": ""
+      },
+      {
+        "const": "ULTRASOUND-FETAL",
+        "description": ""
+      },
+      {
+        "const": "UNIV OF PA -NON SUB AGREEMENTS",
+        "description": ""
+      },
+      {
+        "const": "UROLOGY",
+        "description": ""
+      },
+      {
+        "const": "Urology",
+        "description": ""
+      },
+      {
+        "const": "VASCULAR ACCESS",
+        "description": ""
+      },
+      {
+        "const": "VIRAL VECTOR CLINICAL CORE",
+        "description": ""
+      },
+      {
+        "const": "VIRAL VECTOR RESEARCH CORE",
+        "description": ""
+      },
+      {
+        "const": "VOICE COMMUNICATIONS",
+        "description": ""
+      },
+      {
+        "const": "VOLUNTEERS",
+        "description": ""
+      },
+      {
+        "const": "VP - RESEARCH OPERATIONS",
+        "description": ""
+      },
+      {
+        "const": "WASTE AND SUSTAINABILITY",
+        "description": ""
+      },
+      {
+        "const": "WC CLINICAL SUPPORT",
+        "description": ""
+      },
+      {
+        "const": "WOOD CTR OPERATIONS ADMIN",
+        "description": ""
+      }
+    ]
+  },
+  "collectionDescriptionType": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "DataCite Metadata 4.3, CHOP eIRB System",
+    "oneOf": [
+      {
+        "const": "abstract",
+        "description": "A brief description of the resource and the context in which the resource was created."
+      },
+      {
+        "const": "methods",
+        "description": "The methodology employed for the study or research."
+      },
+      {
+        "const": "seriesInformation",
+        "description": "Information about a series or subseries.",
+        "note": "This definition differs than the one used in DataCite Metadata 4.3."
+      },
+      {
+        "const": "table of contents",
+        "description": "A listing of the Table of Contents."
+      },
+      {
+        "const": "technical information",
+        "description": "Detailed information that may be associated with design, implementation, operation, use, and/or maintenance of a process or system."
+      },
+      {
+        "const": "other",
+        "description": "Other description information that does not fit into an existing category."
+      },
+      {
+        "const": "background rationale",
+        "description": "Describes the setting and rationale for the study. Includes subsections for introduction, relevant literature and data, and compliance statement."
+      },
+      {
+        "const": "objectives",
+        "description": "Describes the overall objectives of the study. Includes subsections for primary objectives (or aim) and secondary objectives (or aim)."
+      },
+      {
+        "const": "target population",
+        "description": "Describes the study population using inclusion and exclusion criteria, regardless of study design. For each subject group, there needs to be separate inclusion/exclusion criteria. For example, the control population may have different selection criteria than the population with the disease or condition of interest. This field is related to inclusion/exclusion criteria summary description type but is free text and taken directly from protocol documentation."
+      },
+      {
+        "const": "interventions",
+        "description": "Describes the interventions/procedures that will take place as part of the study."
+      },
+      {
+        "const": "study outcome measures",
+        "description": "Describes the main study outcome measures/endpoints."
+      },
+      {
+        "const": "structured study abstract",
+        "description": "A combined description including sections: background rationale, objectives, target population, interventions, study outcome measures."
+      },
+      {
+        "const": "protocol description",
+        "description": "Description sourced from the study protocol documentation other than any section included in the structured study abstract."
+      },
+      {
+        "const": "archival abstract",
+        "description": "Description of the collection from an archival standpoint, usually created during the data contribution process."
+      },
+      {
+        "const": "historical note",
+        "description": "Describes any relevant historical information related to the collection."
+      },
+      {
+        "const": "scope and contents",
+        "description": "Description of the contents and extent of the collection, usually created by an archivist during the data contribution process."
+      },
+      {
+        "const": "summary",
+        "description": "Brief description of the collection not sourced from protocol documentation, usually created by the PI or someone on the study team."
+      },
+      {
+        "const": "inclusion/exclusion criteria summary",
+        "description": "Describes inclusion/exclusion criteria specifically structured and used for display in the ACD. This is more structured than the description provided in the protocol documentation and recorded as target population. More detailed and granular information about inclusion/exclusion criteria should be listed in the studyCriteria field at the series level."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "nameType": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "organizational",
+        "description": "Indicates the name provided represents an organization and not a single person."
+      },
+      {
+        "const": "personal",
+        "description": "Indicates the name provided represents an individual person and not an organization."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "personType": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "DataCite Metadata Schema 4.3, University of Massachusetts Amherst Research Administration Policy, plus manually added items",
+    "oneOf": [
+      {
+        "const": "principal investigator",
+        "description": "A Principal Investigator is the primary individual responsible for the preparation, conduct, and administration of a research grant, cooperative agreement, training or public service project, contract, or other sponsored project in compliance with applicable laws and regulations and institutional policy governing the conduct of sponsored research."
+      },
+      {
+        "const": "organization",
+        "description": "An institution sponsoring or producing the materials."
+      },
+      {
+        "const": "co-investigator",
+        "description": "Co-investigators (Co-Is) are key personnel who have responsibilities similar to that of a Principal Investigator (PI) on research projects. While the PI has ultimate responsibility for the conduct of a research project, the Co-I is also obligated to ensure the project is conducted in compliance with applicable laws and regulations and institutional policy governing the conduct of sponsored research."
+      },
+      {
+        "const": "study coordinator",
+        "description": "Also, clinical research coordinator. A person, not necessarily a clinician, responsible for the conduct of the clincal trial."
+      },
+      {
+        "const": "lead investigator",
+        "description": "Lead investigators are key personnel who have responsibilities similar to that of a Principal Investigator (PI) on research projects.  While the PI has ultimate responsibility for the conduct of a research project, the lead investigator is also obligated to ensure the project is conducted in compliance with applicable laws and regulations and institutional policy governing the conduct of sponsored research."
+      },
+      {
+        "const": "study staff",
+        "description": "A member of the group who supports the science or conduct of the research effort in ways that may not be directly related to the science of the study, e.g. administration. When possible, a more specific term should be used to describe the person's role."
+      },
+      {
+        "const": "requestor",
+        "description": "Person or group of people requesting to recieve data."
+      },
+      {
+        "const": "data integration analyst",
+        "description": "Data integration analyst (DIA). A person responsible for cleaning, normalizing, and unifying data and datsets."
+      },
+      {
+        "const": "fellow",
+        "description": "A person in an academic research position at a university or a similar research institution, usually for academic staff or faculty members. A research fellow may act either as an independent investigator or under the supervision of a principal investigator."
+      },
+      {
+        "const": "study team",
+        "description": "A member of the group working directly on the science of a research study. When possible, a more specific term should be used to describe the person's role."
+      },
+      {
+        "const": "lab",
+        "description": "A person or group of people working as part of a single laboratory."
+      },
+      {
+        "const": "research center",
+        "description": "A group of people, often across varying departments, working together to advance a single goal or knowledge on a single topic."
+      },
+      {
+        "const": "bioinformatiscist",
+        "description": "Person responsible for using biology, computer science, information engineering, mathematics and statistics to analyze and interpret the biological data."
+      },
+      {
+        "const": "co-PI",
+        "description": "Co-Principal Investigators (co-PIs) are key personnel who have responsibilities similar to that of a Principal Investigator (PI) on research projects. The PI and co-PI or group of co-PIs may share ultimate responsibility for the conduct of a research project. Co-PIs are obligated to ensure the project is conducted in compliance with applicable laws and regulations and institutional policy governing the conduct of sponsored research."
+      },
+      {
+        "const": "information analyst",
+        "description": "Person responsible for creating reports, analyzing data, troubleshooting, researching and fixing issues."
+      },
+      {
+        "const": "contact person",
+        "description": "Person with knowledge of how to access, troubleshoot, or otherwise field issues related to the resource."
+      },
+      {
+        "const": "data collector",
+        "description": "Person/institution responsible for finding, gathering, and/or collecting data under the guidelines of the author(s) or Principal Investigator (PI)."
+      },
+      {
+        "const": "data curator",
+        "description": "Person tasked with reviewing, enhancing, cleaning, or standardizing metadata and the associated data submitted for storage, use, and maintenance within a data centre or repository."
+      },
+      {
+        "const": "data manager",
+        "description": "Person (or organisation with a staff of data managers, such as a data centre) responsible for maintaining the finished resource."
+      },
+      {
+        "const": "distributor",
+        "description": "Institution tasked with responsibility to generate/disseminate copies of the resource in either electronic or print form."
+      },
+      {
+        "const": "editor",
+        "description": "A person who oversees the details related to the publication format of the resource."
+      },
+      {
+        "const": "hosting institution",
+        "description": "Typically, the organisation allowing the resource to be available on the internet through the provision of its hardware/software operating support."
+      },
+      {
+        "const": "producer",
+        "description": "Typically a person or organisation responsible for the artistry and form of a media product."
+      },
+      {
+        "const": "project leader",
+        "description": "Person officially designated as head of project team or subproject team instrumental in the work necessary to development of the resource."
+      },
+      {
+        "const": "project manager",
+        "description": "Person officially designated as manager of a project. Project may consist of one or many project teams and sub-teams."
+      },
+      {
+        "const": "project member",
+        "description": "Person on the membership list of a designated project/project team."
+      },
+      {
+        "const": "registration agency",
+        "description": "Institution/organisation officially appointed by a Registration Authority to handle specific tasks within a defined area of responsibility."
+      },
+      {
+        "const": "registration authority",
+        "description": "A standards-setting body from which Registration Agencies obtain official recognition and guidance."
+      },
+      {
+        "const": "related person",
+        "description": "A person without a specifically defined role in the development of the resource, but who is someone the author wishes to recognize."
+      },
+      {
+        "const": "researcher",
+        "description": "A person involved in analyzing data or the results of an experiment or formal study. May indicate an intern or assistant to one of the authors who helped with research but who was not so 'key' as to be listed as an author."
+      },
+      {
+        "const": "research group",
+        "description": "Typically refers to a group of individuals with a lab, department, or division; the group has a particular, defined focus of activity."
+      },
+      {
+        "const": "rights holder",
+        "description": "Person or institution owning or managing property rights including intellectual property rights over the resource."
+      },
+      {
+        "const": "sponsor",
+        "description": "Person or organisation that issued a contract or under the auspices of which a work has been written, printed, published, developed, etc."
+      },
+      {
+        "const": "supervisor",
+        "description": "Designated administrator over one or more groups/teams working to produce a resource or over one or more steps of a development process."
+      },
+      {
+        "const": "work package leader",
+        "description": "A Work Package is a recognized data product, not all of which is included in publication. The package, instead, may include notes, discarded documents, etc. The Work Package Leader is responsible for ensuring the comprehensive contents, versioning, and availability of the Work Package during the development of the resource."
+      },
+      {
+        "const": "archivist",
+        "description": "Person resonsible for the arrangement, processing, and preservation of the materials related to the study."
+      },
+      {
+        "const": "privacy analyst",
+        "description": "Person responsible for reviewing regulatory and subject protection documentation to determine what restrictions or conditions need to be placed on the data."
+      },
+      {
+        "const": "statistician",
+        "description": "Person responsible for statistical analysis and reporting of study data."
+      },
+      {
+        "const": "post doctoral researcher",
+        "description": "A person professionally conducting research after the completion of their doctoral studies."
+      },
+      {
+        "const": "collaborator",
+        "description": "A person working with the main study team. They may work on a specfic topic or area or more broadly."
+      },
+      {
+        "const": "other",
+        "description": "Any person or institution making a significant contribution to the development and/or maintenance of the resource, but whose contribution does not fit other controlled vocabulary terms."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "qualifier": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "external",
+        "description": "TBD"
+      },
+      {
+        "const": "genetics",
+        "description": "TBD"
+      },
+      {
+        "const": "congenital",
+        "description": "TBD"
+      },
+      {
+        "const": "immunology",
+        "description": "TBD"
+      },
+      {
+        "const": "MeSH substance term or supplementary concept",
+        "description": "Medical Subject Headings (MeSH)."
+      },
+      {
+        "const": "psychology",
+        "description": "TBD"
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "seriesType": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "archival administration",
+        "description": "Series that holds information regarding the process of arranging, ingesting, and describing a collection."
+      },
+      {
+        "const": "research administration",
+        "description": "Series that holds information regarding the conduct and logistics of the research study."
+      },
+      {
+        "const": "contextual data",
+        "description": "Series that holds files needed to understand the way research in the study was conducted both for analysis and publication."
+      },
+      {
+        "const": "access tools",
+        "description": "Series that holds tools, methods, and/or models used in the conduct of the study."
+      },
+      {
+        "const": "research data",
+        "description": "Series which holds files that maintain descriptions of data along with samples and their associated files and metadata in raw and processed formats."
+      },
+      {
+        "const": "models",
+        "description": "Access Tools subseries that holds models used in the conduct of the study. These can include but are not limited to machine learning models, model predictions, and model summaries."
+      },
+      {
+        "const": "src",
+        "description": "The src, or sources, subseries is an Access Tools subseries that holds various tools or methods used in the conduct of the study. These can include but are not limited to workflows, custom scripts, tests, and/or Jupyter notebooks."
+      },
+      {
+        "const": "configs",
+        "description": "Contextual Files subseries that holds configuration files for workflows and applications."
+      },
+      {
+        "const": "references",
+        "description": "Contextual Files subseries that holds IRBs, reference papers, sample information, and lab prep instructions."
+      },
+      {
+        "const": "reports",
+        "description": "Contextual Files subseries that holds content for producing reports, papers, metrics, and websites associated with the project."
+      },
+      {
+        "const": "requirements",
+        "description": "Contextual Files subseries that holds module or library dependencies for workflows."
+      },
+      {
+        "const": "endpoints",
+        "description": "Research Data subseries that holds the final results from research analysis and/or files generated to support papers or grants."
+      },
+      {
+        "const": "interim",
+        "description": "Research Data subseries that holds intermediate or temporary files."
+      },
+      {
+        "const": "raw",
+        "description": "Research Data subseries that holds lab-created, CHOP Center-created, or externally created data that has not been analyzed or altered."
+      },
+      {
+        "const": "ref-data",
+        "description": "The ref-data, or reference data, subseries is a Research Data subseries that holds external or public datasets not supplied by Research Information Services or a CHOP lab."
+      },
+      {
+        "const": "staging",
+        "description": "Archival Administration File subseries that holds files used in the preparation of collection files for archiving."
+      },
+      {
+        "const": "access and discovery",
+        "description": "Archival Administration File subseries that holds documents relating to refining details surrounding the access conditions and discovery preferences for the collection."
+      },
+      {
+        "const": "appraisal",
+        "description": "Archival Administration File subseries that holds documents relating to the evaluation of the institutional and intellectual value of the collection."
+      },
+      {
+        "const": "data contribution agreement",
+        "description": "Archival Administration File subseries that holds communications, drafts, and final versions of the collection's data contribution agreement (DCA)."
+      },
+      {
+        "const": "data survey",
+        "description": "Archival Administration File subseries that holds information relating to the conduct of the archival data survey, used to understand what data and contextual files were produced in the study and should be archived."
+      },
+      {
+        "const": "ingest specifications",
+        "description": "Archival Administration File subseries that holds specifications about the archival ingestion process for the collection."
+      },
+      {
+        "const": "legal due diligence",
+        "description": "Archival Administration File subseries that holds documents related to the legal and privacy due diligence process."
+      },
+      {
+        "const": "meetings",
+        "description": "Archival Administration File subseries that holds documents related to meetings held between the Arcus team and the study team in the process of ingesting the collection."
+      },
+      {
+        "const": "metadata documentation",
+        "description": "Archival Administration File subseries that holds documents related to metadata creation, updating, validation, and approval."
+      },
+      {
+        "const": "processing plans",
+        "description": "Archival Administration File subseries that holds documents related to archival processing and arrangement."
+      },
+      {
+        "const": "accession record",
+        "description": "Archival Administration File (AAF) subseries that holds documents related to archival processing and arrangement. This part of the AAF holds the accession record created by the archivist."
+        },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "source": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "ACDR",
+        "description": "Arcus Clinical Data Repository (ACDR)."
+      },
+      {
+        "const": "eIRB",
+        "description": "CHOP's electronic Institutional Review Board system (eIRB)."
+      },
+      {
+        "const": "REDCap",
+        "description": "CHOP's REDCap instance."
+      },
+      {
+        "const": "Protocol",
+        "description": "The protocol documents associated with one or more of the protocol ID numbers listed in this collection."
+      },
+      {
+        "const": "ClinicalTrials.gov",
+        "description": "The corresponding entry for this research study on found in the clinicaltrials.gov database."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "subjectTerm": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "external",
+        "description": "TBD"
+      },
+      {
+        "const": "MeSH descriptor",
+        "description": "Medical Subject Headings (MeSH)."
+      },
+      {
+        "const": "Epilepsy",
+        "description": "TBD"
+      },
+      {
+        "const": "Genetics",
+        "description": "TBD"
+      },
+      {
+        "const": "Microbiota",
+        "description": "TBD"
+      },
+      {
+        "const": "Inflammatory Bowel Diseases",
+        "description": "TBD"
+      },
+      {
+        "const": "Clostridium Difficile",
+        "description": "TBD"
+      },
+      {
+        "const": "Clostridium Infection",
+        "description": "TBD"
+      },
+      {
+        "const": "Leukocyte L1 Antigen Complex",
+        "description": "TBD"
+      },
+      {
+        "const": "Anti-Bacterial Agents",
+        "description": "TBD"
+      },
+      {
+        "const": "Genetic Variation",
+        "description": "TBD"
+      },
+      {
+        "const": "Electronic Health Records",
+        "description": "TBD"
+      },
+      {
+        "const": "Registries",
+        "description": "TBD"
+      },
+      {
+        "const": "Emergency Medical Services",
+        "description": "TBD"
+      },
+      {
+        "const": "Sepsis",
+        "description": "TBD"
+      },
+      {
+        "const": "Shock, Septic",
+        "description": "TBD"
+      },
+      {
+        "const": "Cohort Studies",
+        "description": "TBD"
+      },
+      {
+        "const": "Natural Language Processing",
+        "description": "TBD"
+      },
+      {
+        "const": "Pattern Recognition, Automated",
+        "description": "TBD"
+      },
+      {
+        "const": "Organization and Administration",
+        "description": "TBD"
+      },
+      {
+        "const": "Archives",
+        "description": "TBD"
+      },
+      {
+        "const": "Metabolomics",
+        "description": "TBD"
+      },
+      {
+        "const": "Pediatric Crohn's disease",
+        "description": "TBD"
+      },
+      {
+        "const": "Crohn Disease",
+        "description": "TBD"
+      },
+      {
+        "const": "Phenotype",
+        "description": "TBD"
+      },
+      {
+        "const": "Food Hypersensitivity",
+        "description": "TBD"
+      },
+      {
+        "const": "Polymorphism, Single Nucleotide",
+        "description": "TBD"
+      },
+      {
+        "const": "Eosinophilic Esophagitis",
+        "description": "TBD"
+      },
+      {
+        "const": "Immunoglobulin E",
+        "description": "TBD"
+      },
+      {
+        "const": "Genomics",
+        "description": "TBD"
+      },
+      {
+        "const": "Neuroimaging",
+        "description": "TBD"
+      },
+      {
+        "const": "Genotype",
+        "description": "TBD"
+      },
+      {
+        "const": "Gene-Environment Interaction",
+        "description": "TBD"
+      },
+      {
+        "const": "Genetic Testing",
+        "description": "TBD"
+      },
+      {
+        "const": "Exome",
+        "description": "TBD"
+      },
+      {
+        "const": "Mental Disorders",
+        "description": "TBD"
+      },
+      {
+        "const": "Enterocolitis",
+        "description": "TBD"
+      },
+      {
+        "const": "Healthy Volunteers",
+        "description": "TBD"
+      },
+      {
+        "const": "Primary Health Care",
+        "description": "TBD"
+      },
+      {
+        "const": "Bacterial Infections",
+        "description": "TBD"
+      },
+      {
+        "const": "Software",
+        "description": "TBD"
+      },
+      {
+        "const": "Data Anonymization",
+        "description": "TBD"
+      },
+      {
+        "const": "Documentation",
+        "description": "TBD"
+      },
+      {
+        "const": "Rhinitis, Allergic",
+        "description": "TBD"
+      },
+      {
+        "const": "Dermatitis, Atopic",
+        "description": "TBD"
+      },
+      {
+        "const": "Asthma",
+        "description": "TBD"
+      },
+      {
+        "const": "COVID-19",
+        "description": "TBD"
+      },
+      {
+        "const": "Betacoronavirus",
+        "description": "TBD"
+      },
+      {
+        "const": "COVID-19 Diagnostic Testing",
+        "description": "TBD"
+      },
+      {
+        "const": "Severe Acute Respiratory Syndrome Coronavirus 2",
+        "description": "TBD"
+      },
+      {
+        "const": "Infections",
+        "description": "TBD"
+      },
+      {
+        "const": "Medical Oncology",
+        "description": "TBD"
+      },
+      {
+        "const": "Retrospective Studies",
+        "description": "TBD"
+      },
+      {
+        "const": "Dominican Republic",
+        "description": "TBD"
+      },
+      {
+        "const": "Leukemia",
+        "description": "TBD"
+      },
+      {
+        "const": "Kidney Failure, Chronic",
+        "description": "TBD"
+      },
+      {
+        "const": "Cognition",
+        "description": "TBD"
+      },
+      {
+        "const": "Multimodal Imaging",
+        "description": "TBD"
+      },
+      {
+        "const": "Hyperinsulinism",
+        "description": "TBD"
+      },
+      {
+        "const": "Adolescent",
+        "description": "TBD"
+      },
+      {
+        "const": "Health Surveys",
+        "description": "TBD"
+      },
+      {
+        "const": "Databases, Factual",
+        "description": "TBD"
+      },
+      {
+        "const": "Cross-Sectional Studies",
+        "description": "TBD"
+      },
+      {
+        "const": "Urinary Bladder",
+        "description": "TBD"
+      },
+      {
+        "const": "Urodynamics",
+        "description": "TBD"
+      },
+      {
+        "const": "Machine Learning",
+        "description": "TBD"
+      },
+      {
+        "const": "Adult",
+        "description": "TBD"
+      },
+      {
+        "const": "Mental Health",
+        "description": "TBD"
+      },
+      {
+        "const": "Psychotic Disorders",
+        "description": "TBD"
+      },
+      {
+        "const": "Anxiety Disorders",
+        "description": "TBD"
+      },
+      {
+        "const": "Attention Deficit Disorder with Hyperactivity",
+        "description": "TBD"
+      },
+      {
+        "const": "Prenatal Diagnosis",
+        "description": "TBD"
+      },
+      {
+        "const": "Congenital Abnormalities",
+        "description": "TBD"
+      },
+      {
+        "const": "Neoplasms",
+        "description": "TBD"
+      },
+      {
+        "const": "Intensive Care Units, Neonatal",
+        "description": "TBD"
+      },
+      {
+        "const": "Rotavirus",
+        "description": "TBD"
+      },
+      {
+        "const": "Rotavirus Vaccines",
+        "description": "TBD"
+      },
+      {
+        "const": "Polymorphism, Single Nucleotide",
+        "description": "TBD"
+      },
+      {
+        "const": "Genes",
+        "description": "TBD"
+      },
+      {
+        "const": "Single-Cell Gene Expression Analysis",
+        "description": "TBD"
+      },
+      {
+        "const": "RNA-Seq",
+        "description": "TBD"
+      },
+      {
+        "const": "Colitis, Ulcerative",
+        "description": "TBD"
+      },
+      {
+        "const": "Organoids",
+        "description": "TBD"
+      },
+      {
+        "const": "Gene Expression Profiling",
+        "description": "TBD"
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "titleType": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "alternativeTitle",
+        "description": "Another option for the name of the object."
+      },
+      {
+        "const": "subtitle",
+        "description": "A subordinate name for the object."
+      },
+      {
+        "const": "translatedTitle",
+        "description": "A name for the object in a language other than the original, full name."
+      },
+      {
+        "const": "shortTitle",
+        "description": "The shortened, abbreviated, or acronomized name for the object."
+      },
+      {
+        "const": "fullTitle",
+        "description": "The complete name of the object."
+      },
+      {
+        "const": "originalTitle",
+        "description": "The initial name of the object prior to new versions."
+      },
+      {
+        "const": "other",
+        "description": "Type of title not otherwise specified."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "recordRole": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "administrator",
+        "description": "Person responsible for the Arcus-internal administration of the collection."
+      },
+      {
+        "const": "contributor",
+        "description": "Person(s) who assisted in the conduct of the study, collection, or its archiving."
+      },
+      {
+        "const": "creator",
+        "description": "Person(s) responsible for the creation of the collection or any of its parts."
+      },
+      {
+        "const": "data survey lead",
+        "description": "Person(s) responsible for conducting the archival data survey, used to understand what data and contextual files were produced in the study and should be archived."
+      }
+    ]
+  },
+  "restrictionSource": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "DCA",
+        "description": "Data Contribution Agreement (DCA)."
+      },
+      {
+        "const": "consent",
+        "description": "TBD"
+      },
+      {
+        "const": "default",
+        "description": "TBD"
+      },
+      {
+        "const": "protocol",
+        "description": "TBD"
+      },
+      {
+        "const": "PI and primary contact",
+        "description": "Principal Investigator (PI)."
+      }
+    ]
+  },
+  "restrictionsForUseTerm": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "general research use",
+        "description": "TBD"
+      },
+      {
+        "const": "research specific restrictions",
+        "description": "TBD"
+      },
+      {
+        "const": "time limit on use",
+        "description": "TBD"
+      },
+      {
+        "const": "user specific restriction",
+        "description": "TBD"
+      },
+      {
+        "const": "institution specific restriction",
+        "description": "TBD"
+      },
+      {
+        "const": "disease specific research",
+        "description": "TBD"
+      },
+      {
+        "const": "ethics approval required",
+        "description": "TBD"
+      },
+      {
+        "const": "no restriction",
+        "description": "TBD"
+      }
+    ]
+  },
+  "participantType": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "chop",
+        "description": "Children's Hospital of Philadelphia (CHOP) Medical Record Number (MRN)."
+      },
+      {
+        "const": "arcus_contrib_id",
+        "description": "Identifier assigned by Arcus for a participant in a given collection. Often assigned when participant is in an Arcus collection but do not have a Children's Hospital of Philadelphia (CHOP) Medical Record Number (MRN)."
+      },
+      {
+        "const": "arcus_participant_id",
+        "description": "Arcus-derived participant identifier generated by the Research Data Service (RDS)."
+      },
+      {
+        "const": "TBD",
+        "description": "To be determined. Placeholder value."
+      }
+    ]
+  }
+}
