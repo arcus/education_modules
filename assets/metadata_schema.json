@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "description": "Arcus cohort tool stub record schema. This schema can be used when a cohort requires metadata for display in the cohort tool but does not have a collection record.",
+  "definitions": {
+    "stubRecordDef": {
+      "additionalProperties": false,
+      "properties": {
+        "titles": {
+          "items": {
+            "$ref": "./common.json#/definitions/titleDef"
+          },
+          "type": "array",
+          "section": "basic description"
+        },
+        "stubIdentifier": {
+          "description": "A unique string that identifies a collection within Arcus.",
+          "catalogingNote": "The format is dependent upon collectionIdentifierType.",
+          "type": "string",
+          "default": "TBD"
+        },
+        "subject": {
+          "items": {
+            "$ref": "./common.json#/definitions/subjectDef"
+          },
+          "type": "array",
+          "section": "basic description",
+          "inheritance": "^S",
+          "catalogingNote": "N/A"
+        },
+        "stubRecordDescription": {
+          "items": {
+            "$ref": "#/definitions/stubRecordDescriptionDef"
+          },
+          "type": "array",
+          "section": "basic description",
+          "catalogingNote": "N/A"
+        },
+        "creators": {
+          "items": {
+            "$ref": "#/definitions/creatorsDef"
+          },
+          "section": "roles",
+          "type": "array",
+          "catalogingNote": "N/A"
+        },
+        "restrictionsForUse": {
+          "items": {
+            "$ref": "./collection.json#/definitions/restrictionsForUseDef"
+          },
+          "type": "array",
+          "description": "Field that lists any known restrictions for use, for example if data may be used only for a specific type of research.",
+          "catalogingNote": "These may be specified in the protocol or the consent, or elsewhere. This should not be used to denote restrictions related to identified vs. deidentified data- those should be noted in the fields provided for that designation.",
+          "section": "access"
+        }
+      },
+      "required": [
+        "titles",
+        "subject",
+        "stubRecordDescription",
+        "creators",
+        "restrictionsForUse"
+      ],
+      "type": "object"
+    },
+    "stubRecordDescriptionDef": {
+      "additionalProperties": false,
+      "properties": {
+        "stubRecordDescriptionValue": {
+          "type": "string",
+          "description": "General information on the item.",
+          "catalogingNote": " All additional information that does not fit in any of the other categories. May be used for technical information. It is a best practice to supply a description. Free text. It is a best practice to supply a description.",
+          "section": "basic description",
+          "default": "TBD"
+        },
+        "@stubRecordDescriptionType": {
+          "$ref": "./vocabulary.json#/collectionDescriptionType",
+          "description": "The type of the description.",
+          "catalogingNote": "N/A",
+          "type": "string",
+          "section": "basic description",
+          "default": "TBD"
+        },
+        "@stubRecordDescriptionSource": {
+          "$ref": "./vocabulary.json#/source",
+          "description": "System source of the value populated in the description.",
+          "catalogingNote": "This should be filled in any time a value is extracted/taken wholesale from another existing system.",
+          "type": "string",
+          "section": "basic description",
+          "default": "TBD"
+        }
+      },
+      "required": ["stubRecordDescriptionValue", "@stubRecordDescriptionType"],
+      "type": ["object"]
+    },
+    "creatorsDef": {
+      "description": "The main researcher involved in producing the data or the authors of the publication.",
+      "catalogingNote": "May be a corporate/institutional or a personal name.",
+      "$ref": "./person.json#/definitions/personDef",
+      "section": "roles"
+    }
+  },
+  "properties": {
+    "stubRecord": {
+      "$ref": "#/definitions/stubRecordDef"
+    }
+  },
+  "required": ["stubRecord"],
+  "type": "object"
+}
