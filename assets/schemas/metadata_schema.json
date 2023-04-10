@@ -63,32 +63,7 @@
         "catalogingNote": "Somehow include @end tag - TBD note!",
         "type": "string",
         "default": "TBD"
-       },
-        "subject": {
-          "items": {
-            "$ref": "./common.json#/definitions/subjectDef"
-          },
-          "type": "array",
-          "section": "basic description",
-          "inheritance": "^S",
-          "catalogingNote": "N/A"
-        },
-        "stubRecordDescription": {
-          "items": {
-            "$ref": "#/definitions/stubRecordDescriptionDef"
-          },
-          "type": "array",
-          "section": "basic description",
-          "catalogingNote": "N/A"
-        },
-        "creators": {
-          "items": {
-            "$ref": "#/definitions/creatorsDef"
-          },
-          "section": "roles",
-          "type": "array",
-          "catalogingNote": "N/A"
-        }
+       }
       },
       "required": [
         "titles",
@@ -128,19 +103,13 @@
       },
       "required": ["stubRecordDescriptionValue", "@stubRecordDescriptionType"],
       "type": ["object"]
-    },
-    "creatorsDef": {
-      "description": "The main researcher involved in producing the data or the authors of the publication.",
-      "catalogingNote": "May be a corporate/institutional or a personal name.",
-      "$ref": "./person.json#/definitions/personDef",
-      "section": "roles"
     }
   },
   "properties": {
     "stubRecord": {
-      "$ref": "#/definitions/stubRecordDef"
+      "$ref": "#/definitions/education_moduleDef"
     }
   },
-  "required": ["stubRecord"],
+  "required": ["education_module"],
   "type": "object"
 }
