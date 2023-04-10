@@ -1,24 +1,69 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "additionalProperties": false,
-  "description": "Arcus cohort tool stub record schema. This schema can be used when a cohort requires metadata for display in the cohort tool but does not have a collection record.",
+  "description": "Education module metadata schema.",
   "definitions": {
-    "stubRecordDef": {
+    "education_moduleDef": {
       "additionalProperties": false,
       "properties": {
-        "titles": {
-          "items": {
-            "$ref": "./common.json#/definitions/titleDef"
-          },
-          "type": "array",
-          "section": "basic description"
-        },
-        "stubIdentifier": {
-          "description": "A unique string that identifies a collection within Arcus.",
-          "catalogingNote": "The format is dependent upon collectionIdentifierType.",
+        "author": {
+          "description": "Author of the module.",
           "type": "string",
           "default": "TBD"
         },
+        "email": {
+          "description": "Email for author of the module.",
+          "type": "string",
+          "default": "TBD"
+        },
+        "version": {
+          "description": "Version of the module.",
+          "type": "string",
+          "catalogingNote": "Please follow versioning guidelines here: https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md.",
+          "default": "TBD"
+        },
+        "module_template_version": {
+          "description": "Version of the template the module was built from.",
+          "type": "string",
+          "catalogingNote": "Please follow versioning guidelines here: https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md.",
+          "default": "TBD"
+        },
+        "language": {
+        "description": "LiaScript language of the module.",
+        "type": "string",
+        "default": "TBD"
+       },
+       "narrator": {
+        "description": "LiaScript default voice narrator of the module.",
+        "type": "string",
+        "default": "TBD"
+       },
+       "title": {
+        "description": "Title of the module.",
+        "type": "string",
+        "default": "TBD"
+       },
+       "comment": {
+        "description": "This is a short, focused description of the module.",
+        "type": "string",
+        "default": "TBD"
+       },
+       "long_description": {
+        "description": "This is a longer description, which should be understandable for a lay audience. It will print under \"Is this module right for me?\" in the overview.",
+        "type": "string",
+        "default": "TBD"
+       },
+       "estimated_time": {
+        "description": "This is rough guess of how long it might take a learner to work through the module. It will print under \"Estimated time to completion\" in the overview",
+        "type": "string",
+        "default": "TBD"
+       },
+       "@learning_objectives": {
+        "description": "After completion of this module, learners will be able to: \n- identify key elements \n- create a product \n- do a task \n- articulate the rationale for something.",
+        "catalogingNote": "Somehow include @end tag - TBD note!",
+        "type": "string",
+        "default": "TBD"
+       },
         "subject": {
           "items": {
             "$ref": "./common.json#/definitions/subjectDef"
@@ -43,15 +88,6 @@
           "section": "roles",
           "type": "array",
           "catalogingNote": "N/A"
-        },
-        "restrictionsForUse": {
-          "items": {
-            "$ref": "./collection.json#/definitions/restrictionsForUseDef"
-          },
-          "type": "array",
-          "description": "Field that lists any known restrictions for use, for example if data may be used only for a specific type of research.",
-          "catalogingNote": "These may be specified in the protocol or the consent, or elsewhere. This should not be used to denote restrictions related to identified vs. deidentified data- those should be noted in the fields provided for that designation.",
-          "section": "access"
         }
       },
       "required": [
