@@ -174,10 +174,32 @@ default_stylesheet = [
     }
 ]
 
+def author_selected(author_name):
+    ### Create a stylesheet based on the selected author
+    select_author_modules = []
+    
+    ### Turn on nodes corresponding to that author
+    selection=str('[author *= "')+ str(author_name) + str('" ]')
+    turned_on = {}
+    turned_on['selector'] = selection
+    turned_on['style'] = {'shape': 'square', 'color':'#BFD7B5', 'label': 'data(title)'}
+    select_author_modules.append(turned_on)
+
+    ### Turn off nodes not corresponding to that author
+    selection=str('[author !*= "')+ str(author_name) + str('" ]')
+    turned_off = {}
+    turned_off['selector'] = selection
+    turned_off['style'] = {'shape': 'square', 'color':'#BFD7B5', 'opacity': 0.2}
+    select_author_modules.append(turned_off)
+    
+    return select_author_modules
+
+
+
 
 app.layout = html.Div([
     cyto.Cytoscape(
-        id='cytoscape-event-callbacks-2',
+        id='module_visualization',
         layout={'name': 'cose'},
         elements=edges+nodes,
         stylesheet=default_stylesheet,
@@ -194,8 +216,8 @@ app.layout = html.Div([
 ),
     dcc.Dropdown(
     id='author_selector',
-    #value='grid',
-    clearable=True,
+    value='Joy Payton',
+    clearable=False,
     options=[
         {'label': name, 'value': name}
         for name in ['Elizabeth Drellich', 'Joy Payton', 'Rose Franzen', 'Rose Hartman', 'Meredith Lee', 'Nicole Feldman', 'Ene Belleh', 'Peter Camacho']
@@ -209,7 +231,14 @@ app.layout = html.Div([
 ])
 
 
-@app.callback(Output('cytoscape-event-callbacks-2', 'layout'),
+@app.callback(Output('module_visualization', 'stylesheet'),
+              Input('author_selector', 'value'))
+def update_author_selection(author_name):
+    return author_selected(author_name)
+
+
+
+@app.callback(Output('module_visualization', 'layout'),
               Input('dropdown-update-layout', 'value'))
 def update_layout(layout):
     return {
@@ -218,14 +247,14 @@ def update_layout(layout):
     }
 
 @app.callback(Output('cytoscape-tapNodeData-output', 'children'),
-              Input('cytoscape-event-callbacks-2', 'tapNodeData'))
+              Input('module_visualization', 'tapNodeData'))
 def displayTapNodeData(data):
     if data:
         return "The selected module is [**" + data['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data['id']+"/" +data['id'] + ".md) which was written by " + data['author'] +". We think it will take you about " +data['time']+"."
 
 
 @app.callback(Output('cytoscape-tapEdgeData-output', 'children'),
-              Input('cytoscape-event-callbacks-2', 'tapEdgeData'))
+              Input('module_visualization', 'tapEdgeData'))
 def displayTapEdgeData(data):
     if data:
         return "You recently clicked/tapped the edge between " + \
@@ -233,14 +262,14 @@ def displayTapEdgeData(data):
 
 
 @app.callback(Output('cytoscape-mouseoverNodeData-output', 'children'),
-              Input('cytoscape-event-callbacks-2', 'mouseoverNodeData'))
+              Input('module_visualization', 'mouseoverNodeData'))
 def displayTapNodeData(data):
     if data:
         return "You recently hovered over the city: " + data['title']
 
 
 @app.callback(Output('cytoscape-mouseoverEdgeData-output', 'children'),
-              Input('cytoscape-event-callbacks-2', 'mouseoverEdgeData'))
+              Input('module_visualization', 'mouseoverEdgeData'))
 def displayTapEdgeData(data):
     if data:
         return "You recently hovered over the edge between " + \
