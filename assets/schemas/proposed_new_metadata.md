@@ -25,9 +25,18 @@
   - geospatial
   - ehr
 - [ ] `data_task`: optional metadata. What type of task/action/skill does this module teach?
-  - data_visualization
-  - data_management
-  - data_cleaning
-  - data_transformation
-  - data_analysis
+  - `data_visualization`
+  - `data_management`
+  - `data_cleaning`
+  - `data_transformation`
+  - `data_analysis`
+- [ ] `sequence`: this is an optional category for modules that are part of a named sequence of modules like the R Basics sequence or the Bash sequence.
+  - `sequence_number`: suggested linear order for moving through the sequence. 
  
+#### Relationship metadata
+
+- Directed relationship where one module assumes knowledge taught in another module:
+  - A `is_a_prereq_to` B or 
+  - B `depends_on_knowledge_from` A
+- Symmetric relationship where the same content is presented in different languages or for different opperating systems:
+  - C `is_parallel_to` D
