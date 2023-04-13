@@ -9,7 +9,6 @@ assignees: ''
 
 # Module Quality Assurance Report for PR #[PR number here]
 ----
-Date: {yyyy-mm-dd}
 Reviewer: {your name}
 qa_template_version: 2.0.0
 Name of Module: {take from the title of the main markdown in the PR}
