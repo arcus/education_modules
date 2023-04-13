@@ -43,15 +43,25 @@ import: https://raw.githubusercontent.com/arcus/education_modules/template_test/
 
 # Title
 
+@overview
+
+## Instructions for authors
+
+This is the template for **wrapper modules**. 
 This template should be used when a module is more than 50% content that is embedded or linked to.
 If more than half of the module content is in the LiaScript markdown itself, then the other template should be used, even if that content is primarily adapted from a single CC source.
 
-(Note that the title is the only level-1 header in the document)
+To see how to use this template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/wrapper_module_template.md).
+To see what it looks like rendered via LiaScript, [click here](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/wrapper_module_template.md) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
+This template is **not** a great example of what a real module should look like, though. 
 
-To see how to use this template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6).
-To see what it looks like rendered via LiaScript, [click here](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6#1) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
+To see what real modules look like, see [our list of completed modules](https://arcus.github.io/education_modules/list_of_modules).
+If this is your first time writing a module, be sure to read our [how to guide for authors](https://github.com/arcus/education_modules/blob/main/how_to.md) before you get started.
 
-@overview
+Some important things to keep in mind:
+
+- The title is the only level-1 header in the document.
+- We use "macros" for a lot of our standardized text. For exmaple, the overview and feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. All available macros are in the [module macros file](https://github.com/arcus/education_modules/blob/main/_module_templates/module_macros.md). For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
 
 ## Lesson Preparation
 
