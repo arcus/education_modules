@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.2
+version: 1.0.3
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
@@ -244,7 +244,7 @@ The colors in this map are points along a gradient, but a choropleth map could a
 
 The sizes of the regions on a map are usually determined by the geometry we looked at in the [Shapes](#shapes) section. While you might zoom into or out of a particular region, the sizes of those regions don't communicate non-geographic data.
 
-But while polygons stay the same size, a lot can be conveyed by modifying the size of points and lines. A road map might us a very thick line for a highway, a medium thickness line for a paved road that is not a highway, and a thin line for dirt roads. Similarly the size of the text describing locations might vary from large text for large cities to very small text for small towns.
+But while polygons stay the same size, a lot can be conveyed by modifying the size of points and lines. A road map might use a very thick line for a highway, a medium thickness line for a paved road that is not a highway, and a thin line for dirt roads. Similarly the size of the text describing locations might vary from large text for large cities to very small text for small towns.
 
 While polygons stay the same size and lines can really only vary in thickness, points have a lot of flexibility in their size. By changing the size of a point's marker, a map can convey a substantial amount of non-geographic data without compromising its locational accuracy.
 
