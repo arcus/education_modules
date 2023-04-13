@@ -42,12 +42,19 @@ import: https://raw.githubusercontent.com/arcus/education_modules/template_test/
 
 # Title
 
-(Note that the title is the only level-1 header in the document)
-
-To see how to use this template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6).
-To see what it looks like rendered via LiaScript, [click here](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_r25/main/working_documentation/template_modules.md?token=ACEVZUTXZ6BTRFIIBXPN4SDBD3FR6#1) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
-
 @overview
+
+## Instructions for authors
+
+To see how to use this template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/standard_module_template.md).
+To see what it looks like rendered via LiaScript, [click here](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/standard_module_template.md) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
+This template is not a great example of what a real module should look like, though. 
+
+To see what real modules look like, see [our list of completed modules](https://arcus.github.io/education_modules/list_of_modules).
+
+A couple important things to keep in mind:
+
+- the title is the only level-1 header in the document
 
 ## Lesson Preparation: RStudio
 
