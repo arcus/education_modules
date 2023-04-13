@@ -318,11 +318,13 @@ Files uploaded to this account will be **publicly visible**. Be very careful not
 
 ## Including math
 
-I want to include a math statement here: $ 1 + \beta = 2 $
+Surround inline math statements with `$`: $ 1 + \beta = 2 $
 
-## Including code
+## Including non-interactive code
 
-Next comes some code. This code won't do anything (it's not interactive).
+Include inline code with single backticks: `library(ggplot2)`. 
+
+Make code blocks with at least three backticks:
 
 ```r
 # You only need to install it once
@@ -337,7 +339,15 @@ You don't have to specify the programming language, but you can, and it should h
 print("This is python code")
 ```
 
-It is possible to include interactive code, too! See [the Rextester template for LiaScript](https://github.com/LiaTemplates/Rextester).
+## Including interactive coding exercises
+
+We use three main approaches for interactive coding exercises: 
+
+- We can link to interactive notebooks hosted on binder (see example notebooks in https://github.com/arcus/education_r_environment). This is our approach for most R modules, for example: https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md 
+- We can have interactive coding cells in modules themselves using sagemath. This is our approach for most python modules, for example: https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md 
+- We can also have interactive coding cells in modules using AlaSQL, which is our approach for SQL modules, for example: https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md
+
+We don't have a way to include interactive code for git or bash. For those modules, we just instruct learners to work on their own machines.
 
 ## Quiz: Quizzes
 
