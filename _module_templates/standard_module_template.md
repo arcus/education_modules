@@ -14,7 +14,7 @@ comment:  This is a short, focused description of the module.
 
 long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
 
-estimated_time: This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview
+estimated_time_in_minutes: This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview. Valid values are any integer 1-60. 
 
 r_file: this\_r\_module
 
