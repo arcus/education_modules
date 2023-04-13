@@ -59,8 +59,9 @@ If this is your first time writing a module, be sure to read our [how to guide f
 
 Some important things to keep in mind:
 
-- The title is the only level-1 header in the document.
 - We use "macros" for a lot of our standardized text. For exmaple, the overview and feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. All available macros are in the [module macros file](https://github.com/arcus/education_modules/blob/main/_module_templates/module_macros.md). For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
+- The title is the only level-1 header in the document.
+- LiaScript will create a new page at each level 1, 2, or 3 header, so to avoid a page with only a header and no content, include text after each header before the next.
 
 ## Lesson Preparation: RStudio
 
@@ -74,17 +75,11 @@ If your lesson includes interactive python code in sagemath cells, then insert t
 
 @lesson_prep_python
 
-## Module Content
-
-Note that liascript will create a new page at each level 1, 2, or 3 header, so to avoid a page with only a header and no content, include text after each header before the next.
-
-Text after level 2 headers provides a good opportunity to give a sentence or two of overview, explain the structure of the coming content, and/or get preliminaries out of the way.
-
 ## Including Media
 
+This section includes examples of embedded media.
 
 ![A valuable image, and this is its alt text.](https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG "Here is a subtitle that will display beneath the image.")
-
 
 You can link to images online with their url, or locally with the file path, e.g. `![image caption](media/my_image.png)`
 
@@ -97,9 +92,6 @@ If you want to provide several images in a gallery, just make a "paragraph" of i
 
 You can also embed local videos, just as with images: `!?[An embedded video.](vid/intro.mp4 "This is its subtitle")`
 
-In theory, you should be able to embed just about anything. Read more [here](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md#24).
-
-You can also include movies, audio, and any other embedded content in galleries just by putting the links for them all in a paragraph.
 
 ## Including highlight boxes
 
@@ -172,6 +164,33 @@ This is a box showing how images work in a highlight box.
 
 </div>
 
+### external-resource
+
+The style "external-resource" is specifically for wrapper modules, for linking to the external resource, as a way to draw attention to the fact that we're sending them out of the module and then they should come back. This is different from learn-more boxes we use in standard modules. 
+It has a arrow-pointing-out-of-a-box icon and always begins with the text "External Content".
+For example:
+
+<div class = "external-resource">
+<b style="color: rgb(var(--color-highlight));">External Content</b><br>
+
+Next, complete the [Docker 101 tutorial](https://www.docker.com/101-tutorial/), which can be done either on your computer or in the cloud. 
+
+Work through the whole tutorial, then return here to finish this module.
+
+</div>
+
+### gratitude
+
+The style "gratitude" is for thanking authors of original sources we're using or adapting for our modules. There should always be a gratitude box for each external source linked in a wrapper module, but it's also something we will use in some standard modules when we adapt material (e.g. from carpentries lessons).
+It has a heart icon and always begins with the text "Thank you!".
+For example:
+
+<div class = "gratitude">
+<b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
+
+Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data](https://skadauke.github.io/intro-to-r-for-clinicians-chop/) workshop materials. We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.
+
+</div>
 
 ### help
 
@@ -259,6 +278,21 @@ You could also skip setting up an OSF account completely and just use github to 
 <b style="color: rgb(var(--color-highlight));">Another option</b><br>
 
 You can run this in the cloud or download all of the files locally and run it on your computer. If you run it on your computer, be sure to make note of which directory you save the files in and update your working directory accordingly.
+
+</div>
+
+### version-update
+
+The style "version-update" is for alerting learners to changes to a module.
+It has a pencil icon and always begins with the text "Changes to this module".
+For example:
+
+<div class = "version-update">
+<b style="color: rgb(var(--color-highlight));">Changes to this module</b><br>
+
+We're constantly improving our materials, and this module has had recent changes. Specifically, we added a new section at the end explaining how to protect your API token when using git and GitHub for your code.
+
+If you like, you can still access the [previous version of this module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/using_redcap_api/using_redcap_api.md). 
 
 </div>
 
