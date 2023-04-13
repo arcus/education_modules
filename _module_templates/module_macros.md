@@ -16,7 +16,7 @@ comment:  This is placeholder module to save macros used in other modules.
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes minutes
 
 **Pre-requisites**
 
