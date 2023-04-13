@@ -11,7 +11,7 @@ There are a few handy features that make this much more powerful than it first a
 - you can call macros from other macros
 - you can include markdown, html, css, and javascript in the text you're subbing in, and it will execute
 - you can pass arguments to macros (especially helpful when your macro includes javascript)
-- you can automatically load all of the macros for another module by just linking to that module as an `input` in your new module's header. This means we can have one macro module where we save all of the macros, and then load them all with a single line in each new module.
+- you can automatically load all of the macros for another module by just linking to that module as an `import` in your new module's header. This means we can have one macro module where we save all of the macros, and then load them all with a single line in each new module.
 
 ## Example: Overview section
 
