@@ -2,6 +2,7 @@
 
 #### Already exist, to be included in front matter:
 - [ ] `pre_reqs` : currently stored only on the overview page of each module.
+  - Does it makes sense to add a True/False level of metadata about whether this module requires no pre-existing knowledge? This would mark some modules as good starting places for complete novices (the atoms of the poset of modules). 
 
 
 #### New module metadata:
