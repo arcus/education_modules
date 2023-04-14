@@ -40,7 +40,7 @@ After completion of this module, learners will be able to:
 import: https://raw.githubusercontent.com/arcus/education_modules/template_test/a_sample_module_template/module_macros.md
 -->
 
-# Title
+# Module Title
 
 @overview
 
@@ -50,12 +50,12 @@ This is the template for **standard modules**.
 Use this template if at least 50% of the module content will be written in this file (even if adapted from other open source content) rather than embedded or linked to. 
 If more than half of the content is embedded or linked to, then use the wrapper module template instead.
 
-To see how to use this template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/standard_module_template.md).
+To see how to use this **standard module** template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/standard_module_template.md).
 To see what it looks like rendered via LiaScript, [click here](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/standard_module_template.md) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
 This template is **not** a great example of what a real module should look like, though. 
 
 To see what real modules look like, see [our list of completed modules](https://arcus.github.io/education_modules/list_of_modules).
-If this is your first time writing a module, be sure to read our [contributors guide](https://github.com/arcus/education_modules/blob/main/CONTRIBUTING) before you get started.
+If this is your first time writing a module, be sure to check out our [contributors guide](https://github.com/arcus/education_modules/blob/main/CONTRIBUTING) before you get started.
 
 Some important things to keep in mind:
 
@@ -87,6 +87,17 @@ The YAML for a **standard module** should include the following elements:
   * prerequisites appropriately filled out (see instructions in YAML)
   * learning_objectives appropriately filled out (see instructions in YAML)
   * import link provided to the macros module (`import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/module_macros.md`). Note that this imports all the macros needed for our modules, as well as the style sheet and javascript kit for our icons. 
+
+### Tips for writing
+
+When you're ready to start writing a new module:
+
+1. Clone the education_modules repo if you don't already have it. Start a new git branch for your module. 
+2. Open this template in a text editor like VSCode, and then use "save as" to save it in a new directory and with a filename that conveys the point of the module (e.g. "r_logistic_regression/r_logistic_regression.md"). You may find it helpful to have the examples of highlight boxes and quiz questions in this template that you can quickly copy-paste as you write.
+3. Create a new empty subfolder in your module directory called "media". If you include images in your module, store them here.
+4. Open up the **standard module** QA template (in the .github/ISSUE_TEMPLATE directory) as a reference, maybe keep it open side-by-side with your module draft.
+5. You can use the LiaScript preview extension in VSCode to see what your rendered module will look like, or generate it from https://liascript.github.io/ after pushing your changes to GitHub (while your still drafting, remember that you'll need to link to your raw md file on your branch, since it won't be available yet on main).
+
 
 ## Lesson Preparation: RStudio
 
