@@ -349,9 +349,9 @@ We use three main approaches for interactive coding exercises:
 
 We don't have a way to include interactive code for git or bash. For those modules, we just instruct learners to work on their own machines.
 
-## Quiz: Quizzes
+## Quizzes (automatically graded questions)
 
-Quizzes are just more markdown text, so if you want it to show up on its own page, put a new header before it. Otherwise you can include quiz questions at the end of a section, or even interspersed with the rest of your content.
+We use quizzes for [formative assessment](https://www.cmu.edu/teaching/assessment/basics/formative-summative.html). There is no point value or grading, and students are allowed to retry quizzes as many times as they like until they get the right answer. The goal is to provide learners an opportunity to check their own understanding. 
 
 Quizzes should connect directly to your learning objectives. Each quiz question should connect to one learning objective, and every learning objective should have at least one quiz question associated with it somewhere in the module.
 
@@ -364,28 +364,11 @@ Here is the first question. It's multiple choice.
 [( )] Also wrong
 [[?]] Hint: Provide a hint here if you like. Hints are marked with the ?
 [[?]] Hint: You can include as many hints as you want.
-
-You can have questions with multiple correct answers. Select all of the following correct choices:
-
-[[ ]] Not this one
-[[X]] This is one of the correct ones
-[[X]] Here's another correct one
-[[ ]] This one is wrong, though
-[[?]] Hint: Remember to select ALL of the correct choices.
-
-True or False: This statement is NOT true. ;)
-
-[( )] TRUE
-[(X)] FALSE
-
-Short answer/text response. Note that, without any additional script, to get it marked "correct" the learner has to enter it exactly as you do.
-
-[[right answer]]
-[[?]] Hint: The answer is "right answer"
 ***
 <div class = "answer">
 
-This is extra text that will show up after the learner clicks to have the correct answer revealed. It can be as long as you like, and allows any markdown formatting (you can embed pictures or videos, links, etc.).
+Nearly every quiz question should have an  `answer` box after it to explain why the correct answer is correct. 
+This text will show up after the learner answers the question correctly or clicks to have the right answer revealed. It can be as long as you like, and allows any markdown formatting (you can embed pictures or videos, links, etc.).
 
 Use `<div class = "answer">` to mark these sections with special styling, so that they're visually distinct from the rest of the quiz. The style for `"answer"` is defined in the css file.
 
@@ -394,6 +377,34 @@ For this context to show up automatically when the learner answers the question 
 </div>
 ***
 
+You can have questions with multiple correct answers. Select all of the following correct choices:
+
+[[ ]] Not this one
+[[X]] This is one of the correct ones
+[[X]] Here's another correct one
+[[ ]] This one is wrong, though
+[[?]] Hint: Remember to select ALL of the correct choices.
+***
+<div class = "answer">
+
+Here is the answer box for this question.
+
+</div>
+***
+
+True or False: This statement is NOT true. ;)
+
+[( )] TRUE
+[(X)] FALSE
+***
+<div class = "answer">
+
+Here is the answer box for this question.
+
+</div>
+***
+
+Short answer/text response. Note that, without any additional script, to get it marked "correct" the learner has to enter it exactly as you do.
 We can allow some flexibility in what we accept as correct answers for text by adding a little script after the answer, though. For the following, either "right answer" or "correct answer" (not case sensitive) will be accepted:
 
 [[right answer]]
@@ -429,12 +440,35 @@ Reiterate what the correct answer or answers should be, and try to anticipate li
 </div>
 ***
 
-There are also questions that allow you to select from a drop down, but I don't know why that would be preferable over regular multiple choice. [Read more about quiz syntax here.](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#quizzes)
+Note that you can use any markdown formatting you want in quizzes, including bold, links, math, lists, embedded media, code blocks, etc. For accessibility for learners using screenreaders, if your question is more than a single markdown paragraph, you must enclose it in `<div>` tags. For example:
 
-Note that you can use any markdown formatting you want in quizzes, including bold, links, math, etc.
+<div>
+In the following code block, what should fill in the blank?
 
-Surveys (ungraded questions)
----
+```r
+install.packages(____)
+```
+</div>
+
+[(X)] "ggplot2"
+[( )] ggplot2
+[( )] package = ggplot2
+***
+<div class = "answer">
+
+Note that the `<div>` tags surround the full content of the question being asked (in this case, a sentence in markdown followed by the code block), and then there is one blank line, then the multiple choice options. 
+
+For more details, see [notes about quizzes in the LiaScript documentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/do.cs/master/README.md#notes-about-questions)
+
+</div>
+***
+
+There are many more options and examples of quiz questions in the LiaScript documentation. [Read more about quiz syntax here.](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#quizzes)
+
+
+## Ungraded quiz questions
+
+Useful formative assessment doesn't have to be an actual quiz question. 
 
 You can ask questions with no graded answer as well. LiaScript calls these [surveys](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md#111).
 
@@ -446,26 +480,91 @@ Here's one that's just one line long:
 
 [[___]]
 
-Here's a multiple choice with no correct answer. What is your favorite Beatles album?
+Hints and follow-up explanations don't work for survey questions, but you can use [html detail tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) to create a solution that won't be visible to the learner until they choose to open it. For example:
 
-[(rev)] Revolver
-[(wa)] The While Album
-[(ar)] Abbey Road
-[(sgtp)] Sgt. Pepper's Lonely Hearts Club Band
+Think about your own research, and write out three ways you could make your work more reproducible this year.
 
-Here's a survey multiple choice that lets you select more than one response. Which Beatles albums do you love super hard?
+[[___ ___ ___]]
 
-[[rev]] Revolver
-[[wa]] The While Album
-[[ar]] Abbey Road
-[[sgtp]] Sgt. Pepper's Lonely Hearts Club Band
+<details>
 
-Hints and follow-up explanations don't work for survey questions.
+<summary>Click here to see our answer</summary>
 
+<div class = "answer">
+
+The best approach for you depends on your research, of course! 
+
+Here are some concrete, actionable changes to improve the reproducibility of your work:
+
+- Switch from point-and-click to scripted analysis
+- Share your data in a public repository
+- Share your code on GitHub
+- Write a pre-registration for your next study
+
+</div>
+</details>
+
+You can also set a code block to be closed until the learner chooses to open it by giving it a title beginning with `-` (e.g. `-Solution`). For example:
+
+Modify the code from the final example, the [lowess curve trend line](#lowess-curve-trend-lines), to separate out respondents by smoking status (`is_smoker`) with a separate facet for each.
+
+```python  -Solution
+sns.lmplot(data = covid_data,
+            x="val_age", y="val_height_cm",
+           scatter_kws={"alpha": .1},
+           lowess=True,
+           col = "is_smoker")
+
+# Note that row = "is_smoker" would also work.
+# If you used col, try switching to row now to see how the plot changes!
+```
+
+You can even use this to provide multiple possible correct options. Each solution will be closed until the learner clicks to open it. For example:
+
+Write code to draw a linear trend line showing the relationship between Age and Glucose, but create a plot with just the line, no scatterplot underneath. Try it each of the three ways, using geom\_smooth, geom\_abline, and geom\_line.
+
+```r  -Solution using geom_smooth
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_smooth(method = "lm") +
+  theme_bw()
+```
+```r  -Solution using geom_abline
+# note that this doesn't actually plot a line, since there are no observations to set the x and y scales
+# you'll see a blank plot
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_abline(intercept = model$coefficients[1], slope = model$coefficients[2]) +
+  theme_bw()
+
+# you can set the x and y scales yourself manually by adding a layer for each
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_abline(intercept = model$coefficients[1], slope = model$coefficients[2]) +
+  scale_y_continuous(limits = c(min(breast_cancer_data$Glucose), max(breast_cancer_data$Glucose))) +
+  scale_x_continuous(limits = c(min(breast_cancer_data$Age), max(breast_cancer_data$Age))) +
+  theme_bw()
+```
+```r  -Solution using geom_line
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_line(mapping = aes(y=model$fitted.values)) +
+  theme_bw()
+```
+```r  -Another solution, using alpha
+# you can also make any element of a plot invisible by setting its alpha to 0
+# in this case, we can make the dots of the scatterplot disappear from any of the plots we made above
+# for example:
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_point(alpha = 0) +
+  geom_line(mapping = aes(y=model$fitted.values)) +
+  theme_bw()
+
+# this has the advantage of keeping the scales for the plot consistent
+# and it means you don't have to set the scales manually when using geom_abline
+```
 
 ## Additional Resources
 
-The last section of the module content should be a list of additional resources, both ours and outside sources, including links to other modules that build on this content or are otherwise related.
+The last section of the module content should be a list of additional resources to learn more about this topic.
+
+Avoid linking to other modules we've written here.
 
 ## Feedback
 @feedback
