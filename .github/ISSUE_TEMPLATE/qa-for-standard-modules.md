@@ -73,7 +73,7 @@ If the module includes code that learners may want to run:
 
 ## Formative assessment
 
-* [ ] Sufficient [formative assessment](https://carpentries.github.io/instructor-training/02-practice-learning/#identifying-and-correcting-misconceptions) in the form of quizzes and/or hands-on exercises
+* [ ] Sufficient [formative assessment](https://carpentries.github.io/instructor-training/aio.html#using-formative-assessment-to-support-memory-consolidation) in the form of quizzes and/or hands-on exercises
 * [ ] Clear explanations available after questions unless the nature of the question itself or answer options makes it unnecessary (e.g. a T/F question may not always require follow-up explanation)
 * [ ] Quiz questions and hands-on exercises relate directly to learning objectives
 * [ ] Every learning objective has at least one associated question
