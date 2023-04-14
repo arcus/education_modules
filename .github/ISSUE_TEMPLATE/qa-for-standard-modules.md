@@ -28,7 +28,7 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
   * [ ] email
   * [ ] module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](versioning_guidelines.md)
   * module_type should be standard
-  * [ ] module_template_version number is up to date with the [current sample module](https://raw.githubusercontent.com/arcus/education_modules/main/a_sample_module_template/a_sample_module_template.md) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing with QA
+  * [ ] module_template_version number is up to date with the [current standard module template](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/standard_module_template.md) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing with QA
   * [ ] language
   * [ ] narrator
   * [ ] comment appropriately filled out
@@ -40,11 +40,11 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
   * [ ] import link provided to the macros module (`import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/module_macros.md`)
 * [ ] Title is the first line after the end of the YAML
   * [ ] only level-1 header in the entire document.
-* [ ] Overview section immediately following Title
+* [ ] Overview section immediately following title, and generated via the @overview macro rather than being written out explicitly in the text file.
 * [ ] All sections following Overview have content (no pages with just header and no additional text / media material).
 * [ ] All quizzes start with a level 2 or 3 header. If there is only one quiz in the module, it is labelled "Quiz", or if there are multiple, each header is structured as "Quiz: label" where "label" is a short (~ 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
 * [ ] Educational content ends with a section of additional resources
-* [ ] Final section is Feedback.
+* [ ] Final section is Feedback, which is generated via the @feedback macro
 
 ## Module Content
 
