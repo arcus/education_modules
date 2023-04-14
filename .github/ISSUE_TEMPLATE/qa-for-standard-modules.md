@@ -41,18 +41,10 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
 * [ ] Title is the first line after the end of the YAML
   * [ ] only level-1 header in the entire document.
 * [ ] Overview section immediately following Title
-  * [ ] surrounded in div with class overview
-  * [ ] Comment is at the top of the Overview, linked from YAML rather than rewritten
-  * [ ] "Is this module right for me?" contents linked from long_description YAML rather than rewritten
-  * [ ] "Estimated time to completion" contents linked from estimated_time YAML rather than rewritten
-  * [ ] Prerequisites listed and do not require learner to have specifically attained those skills through any of our other modules.
-  * [ ] Learning objectives linked from learning_objectives YAML rather than rewritten
 * [ ] All sections following Overview have content (no pages with just header and no additional text / media material).
 * [ ] All quizzes start with a level 2 or 3 header. If there is only one quiz in the module, it is labelled "Quiz", or if there are multiple, each header is structured as "Quiz: label" where "label" is a short (~ 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
-* [ ] Educational content ends with a section of additional resources, both ours and outside sources
+* [ ] Educational content ends with a section of additional resources
 * [ ] Final section is Feedback.
-  * [ ] Learning objectives linked from YAML rather than rewritten
-  * [ ] Feedback link is updated appropriately to automatically fill in the module name when clicked by learner.
 
 ## Module Content
 
