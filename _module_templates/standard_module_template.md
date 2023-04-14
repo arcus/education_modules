@@ -105,7 +105,7 @@ If your lesson includes R code examples hosted in binder from the repo https://g
 
 @lesson_prep_r
 
-Note that you should have `r_file` filled out in the YAML header. It should be the 
+Note that you should have `r_file` filled out in the YAML header. 
 
 ## Lesson Preparation: Interactive Python
 
