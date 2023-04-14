@@ -67,6 +67,17 @@ Some important things to keep in mind:
   * Folder and file names use lowercase and underscores (no dashes)
   * Main module directory folder name is identical to the name of the module content markdown file.
   * Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
+- Learning objectives are a very important element of the module. 
+  * Learning objectives should be clearly defined using strong, descriptive verbs. (See [Bloom's taxonomy](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/) for ideas.)
+  * Every learning objective should be covered in the module content.
+  * All major topics covered should be represented by a learning objective -- there should be no significant knowledge imparted that isn't specified in the learning objectives
+- Headers should be informative and follow a sensible hierarchical structure (the TOC in the left margin should give a good overview of the content covered)
+- Avoid unclear language: unexplained idioms or references, unexplained acronyms, unnecessary technical language.
+- Unusual words, or words taking on a very specific meaning in context, should always be defined for the learner, either on the page (e.g. using footnotes) or with links to a definition/glossary.
+- Provide pronunciation guides for any especially unusual words of particular importance (a common example is package names, such as dplyr)
+- Avoid unnecessarily gendered language (e.g. uses "they" singular rather than "he or she" for an unknown person).
+- Use informative link text (e.g. instead of "To learn more about python, click [here](www.example.com)", say "Read this article to [learn more about python](www.example.com)."
+- Try to write in short, digestible pieces --- avoid long paragraphs and break long sections up with sub-headers
 
 ### How to use the YAML header
 
