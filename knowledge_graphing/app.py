@@ -14,7 +14,7 @@ styles = {
 
 nodes = [
     {
-        'data': {'id': short, 'title': title, 'author': author, 'time': time, 'comment': comment},
+        'data': {'id': short, 'title': title, 'author': author, 'time': time, 'comment': comment},#'selected': True
         ### Use classes here for all fo the data!!! 'classes': author
         #'position': {'x': 20*lat, 'y': -20*long}
     }
@@ -160,6 +160,7 @@ default_stylesheet = [
         'style': {
             #'background-color': '#BFD7B5',
             'shape': 'square',
+            'selected': True
         }
     }
     ,
@@ -209,6 +210,7 @@ app.layout = html.Div([
         stylesheet=default_stylesheet,
         style={'width': '100%', 'height': '450px'}
     ),
+    dcc.Markdown("Pick an author to see their modules."),
     dcc.Dropdown(
     id='author_selector',
     #value='Joy Payton',
@@ -220,6 +222,20 @@ app.layout = html.Div([
 ),
 
     dcc.Markdown(id='selected_module_text'),
+
+    # dcc.Dropdown(
+    #     id='links_to',
+    #     options=[]
+    # ),
+
+    dcc.Markdown("Select a module from the dropdown menu to select it on the graph (I hope)."),
+    dcc.Dropdown(
+        id='list_of_all_modules',
+        options=[
+            {'label': module["data"]["title"], 'value': module["data"]["id"]}
+            for module in nodes
+        ]
+    )
     #html.P(id='cytoscape-tapEdgeData-output'),
     #html.P(id='cytoscape-mouseoverNodeData-output'),
     #html.P(id='cytoscape-mouseoverEdgeData-output'),
@@ -238,7 +254,29 @@ def update_author_selection(author_name):
 def displayTapNodeData(data):
     if data:
         return "### [**" + data['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data['id']+"/" +data['id'] + ".md) \n \n  By " + data['author'] +" \n \n Estimated length: " + data['time']+". \n \n" + data['comment'] + "\n #### Connected modules: \n "
+    else:
+        return "Click on a node in the graph to see information about that module."
 
+
+@app.callback(Output('module_visualization', 'elements'),
+                Input('list_of_all_modules', 'value'))
+def select_node_from_dropdown(id):
+    return nodes+edges
+
+
+
+### TODO Make this callback connect to the edges connecting to that node. Add another callback that lets users select a node via the dropdown menu.
+
+# @app.callback(Output('links_to', 'options'),
+#                 Input('module_visualization', 'tapNodeData'))
+# def links_to_modules(data):
+#     if data:
+#         return [{'label': data['title'], 'value': data['id']}, {'label': 2, 'value': 2} ]
+#     else:
+#         return [{'label': 'not1', 'value': 'not1'}, {'label': 'not2', 'value': 'not2'} ]
+
+
+### REMAINING CODE FROM cytpscape EXAMPLE
 
 # @app.callback(Output('cytoscape-tapEdgeData-output', 'children'),
 #               Input('module_visualization', 'tapEdgeData'))
