@@ -12,9 +12,6 @@ When a module creator is ready to request that their module be included, they wi
 * In the "Write" tab area, paste the text of the [quality assurance template](https://github.com/arcus/education_modules/blob/main/quality_assurance_template.md) (from `# Module Quality Assurance Report for PR #[put in the PR number here] ` to `* [ ] description or quote, line ___ in file ____` Do not include the three back ticks at the beginning or end of the file.).  
 
 * Where curly brackets appear, remove the curly brackets and their contents and replace with the appropriate values. To see a completed review, check out https://github.com/arcus/education_modules/issues/53.
-  * To find the clickable short link to the latest commit, open the pull request and click the "commits" tab. That page will show all commits to the pull request. If there are multiple commits to the PR, the newest will be at the bottom of the page. Click the button next to the commit value.
-  ![On the right side of the commits list there's a button with an image of two squares overlaid to the left of the commit value.](media/commit_hash.png)
-  * When you paste this into the issue it will appear as a long string of letters and numbers -- don't worry, GitHub will automatically format this into the clickable short link.
 
 * How do you find the liascript link? You have to generate this!  But it's easy!
   - First, go to the .md file that makes up the module (for example, the reproducibility module .md is reproducibility/reproducibility.md) in GitHub.
