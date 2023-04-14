@@ -115,21 +115,42 @@ If your lesson includes interactive python code in sagemath cells, then insert t
 
 ## Including Media
 
-This section includes examples of embedded media.
+This section includes examples of embedded media. 
+
+Please note, we have guidelines in place to help keep our modules as accessible as possible, including **requirements for alt text for images and transcripts for audio**. Review our requirements for media in the relevant QA template saved in the .github/ISSUE_TEMPLATE directory. 
+
+Important visuals (in video, image, or gif) should always be described in the audio or in accompanying text.
+
+  - For example, in a screencast, instead of just, "And then click here," provide description that could help scaffold someone without visual access like, "And then click on the button that says 'Run' in the top-right corner of the screen". Be sure to make use of text cues when available (e.g. button labels), not just visual signals like color or location.
+  - When important content is conveyed in a visual, describe the key elements. For example, "Running this query produces the table below. It displays the first 5 rows by default, and columns for ID, encounter ID, diagnosis, and outcome."
+  - When including a data visualization, describe important features, such as both axis labels and visible trends in the data. For example, "Here's a scatterplot showing number of encounters on the y-axis and age on the x-axis. All 183 patients from our sample are represented here, and it looks like a weak positive trend, with older patients being more likely to have had more encounters. There are a few important outliers, though, such as this patient at about 6 months old with more than 20 encounters already."
+  - When visual information is repeated with minimal changes, it's fine to indicate that without providing a full description again. For example, "And here's the updated table, filtered to only show patients who have been seen in the last 2 years."
+  - When important visual information in a video is too complex to include sufficient audio description (i.e. it would slow the content down so much as to impair its utility), an alternative video file should be provided with audio descriptions included.
+
+Here are several examples of embedded media:  
 
 ![A valuable image, and this is its alt text.](https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG "Here is a subtitle that will display beneath the image.")
 
-You can link to images online with their url, or locally with the file path, e.g. `![image caption](media/my_image.png)`
+You can change things like the size of the image two ways. 
+
+You can add a comment with additional html after the markdown:
+
+![RStudio as shown in the cloud platform Binder.](media/binder_rstudio.png)<!--
+style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
+
+Or you can use html to specify the whole embedded image:
+
+<img src="https://github.com/arcus/education_r_environment/blob/main/media/binder_rstudio.png?raw=true" alt="RStudio as shown in the cloud platform Binder." style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;">
+
+You can link to images online with their url, or locally with the file path, e.g. `![This is the alt text.](media/my_image.png)`
 
 If you want to provide several images in a gallery, just make a "paragraph" of image links and LiaScript will render it as a gallery:
 
 ![img1 alt text.](https://upload.wikimedia.org/wikipedia/commons/6/68/Ailuropoda_melanoleuca_%28Panda_g%C3%A9ant%29_-_445.jpg) ![img2 alt text.](https://upload.wikimedia.org/wikipedia/commons/2/2d/Panda_giganti_al_Giant_Panda_Breeding_Research_Base_Chengdu.jpg) ![img3 alt text.](https://upload.wikimedia.org/wikipedia/commons/1/12/BabyPandaAtSDZ.jpg)
 
-
 !?[This video is hosted on youtube.](https://www.youtube.com/watch?v=iIAO4Htzn8M)
 
-You can also embed local videos, just as with images: `!?[An embedded video.](vid/intro.mp4 "This is its subtitle")`
-
+You can also embed local videos, just as with images: `!?[An embedded video.](media/intro.mp4 "This is its subtitle")`
 
 ## Including highlight boxes
 
