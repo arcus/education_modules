@@ -27,14 +27,17 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
   * [ ] author name
   * [ ] email
   * [ ] module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](versioning_guidelines.md)
+  * module_type should be standard
   * [ ] module_template_version number is up to date with the [current sample module](https://raw.githubusercontent.com/arcus/education_modules/main/a_sample_module_template/a_sample_module_template.md) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing with QA
   * [ ] language
   * [ ] narrator
   * [ ] comment appropriately filled out
   * [ ] long_description appropriately filled out
+  * [ ] estimated_time_in_minutes appropriately filled out
+  * [ ] r_file appropriately filled out, if this module uses binder for an interactive rmd file
+  * [ ] prerequisites appropriately filled out
   * [ ] learning_objectives appropriately filled out
-  * [ ] link to CSS (currently https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css)
-  * [ ] script to Font Awesome kit (currently https://kit.fontawesome.com/83b2343bd4.js)
+  * [ ] import link provided to the macros module (`import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/module_macros.md`)
 * [ ] Title is the first line after the end of the YAML
   * [ ] only level-1 header in the entire document.
 * [ ] Overview section immediately following Title
