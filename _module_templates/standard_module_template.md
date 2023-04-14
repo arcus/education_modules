@@ -156,8 +156,7 @@ You can also embed local videos, just as with images: `!?[An embedded video.](me
 
 Include special notes with different formatting.
 
-Note: There's an additional style of highlight not listed here, "answer", that is used in [quizzes](#quiz-quizzes).
-
+Note: There's an additional style of highlight not listed here, "answer", that is used in quizzes.
 
 ### behind-the-scenes
 
