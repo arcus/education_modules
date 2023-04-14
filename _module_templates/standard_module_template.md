@@ -61,6 +61,7 @@ Some important things to keep in mind:
 
 - We use "macros" for a lot of our standardized text. For exmaple, the overview and feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. All available macros are in the [module macros file](https://github.com/arcus/education_modules/blob/main/_module_templates/module_macros.md). For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
 - The title is the only level-1 header in the document.
+- We use the module title to collate feedback in our REDCap survey, so if the title is edited after learners have begun sending in feedback we'll lose the ability to quickly group feedback for this module. Avoid making changes to the title after publication.
 - LiaScript will create a new page at each level 1, 2, or 3 header, so to avoid a page with only a header and no content, include text after each header before the next.
 - We have a standardized naming convention and directory structure:
   * Folder and file names use lowercase and underscores (no dashes)
