@@ -38,7 +38,7 @@
 #### Relationship metadata
 
 - Directed relationship where one module assumes knowledge taught in another module:
-  - A `is_a_prereq_to` B or 
-  - B `depends_on_knowledge_from` A
+  - A `sets_you_up_for` B or 
+  - B `depends_on_knowledge_available_in` A
 - Symmetric relationship where the same content is presented in different languages or for different opperating systems:
   - C `is_parallel_to` D
