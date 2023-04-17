@@ -63,7 +63,55 @@
         "catalogingNote": "Somehow include @end tag - TBD note!",
         "type": "string",
         "default": "TBD"
-       }
+       },
+       "@pre_reqs": {
+        "description": "List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog). \n- one skill we have [another module for, linked here](https://education.arcus.chop.edu) \n- some familiarity with [a topic](https://education.arcus.chop.edu) \n- * understanding of [one thing](https://education.arcus.chop.edu) and [another](https://education.arcus.chop.edu) \n- If relevant, you can include recommendations for somewhere else to start if the learner doesn't have these prereqs. For example: If you are brand new to R or python (or want a refresher) consider starting with [Intro to R](link) or [Intro to python](link) first and then coming back here.",
+        "catalogingNote": "Somehow include @end tag - TBD note!",
+        "type": "string",
+        "default": "TBD"
+       },
+       "good_first_module": {
+        "description": "True or false value for whether the module would be a good first start for a beginner. Need definition for what constitutes a good first module.",
+        "type": "boolean",
+        "default": "TBD"
+       },
+       "coding_required_deprecate": {
+        "description": "True/False based on whether achieving the module's learning objectives requires coding. This includes a user running code locally or interacting with code in the module.",
+        "type": "boolean",
+        "default": "TBD"
+       },
+       "coding_required": {
+        "additionalProperties": false,
+        "description": "True/False based on whether achieving the module's learning objectives requires coding. This includes a user running code locally or interacting with code in the module.",
+        "catalogingNote": "TBD",
+        "items": {
+          "properties": {
+            "coding_language": {
+              "$ref": "./vocabulary.json#/dataTypeName",
+              "description": "The typology of the dataset, identifying its type or nature.",
+              "catalogingNote": "Terms from a controlled vocabulary.",
+              "type": "string",
+              "section": "research description",
+              "fieldSource": "Data Tag Suite (DATS)",
+              "default": "TBD"
+            },
+            "coding_level": {
+              "$ref": "./vocabulary.json#/coding_level",
+              "description": "The coding level required for the module as a whole.",
+              "catalogingNote": "Terms from a controlled vocabulary.",
+              "type": "string",
+              "default": "TBD"
+            }
+          },
+          "required": [
+            "dataTypeName",
+            "dataTypeMethod",
+            "dataTypeRefinement"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      }
       },
       "required": [
         "titles",

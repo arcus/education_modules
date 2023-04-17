@@ -18,11 +18,14 @@
         ]
       }
     ],
-    "stubRecordDescription": [
+    "coding": [
       {
-        "stubRecordDescriptionValue": "TBD",
-        "@stubRecordDescriptionType": "TBD",
-        "@stubRecordDescriptionSource": "TBD"
+      "coding_required": true,
+      "coding_level": "beginner",
+      "coding_language": { 
+          "sql",
+          "regex"
+        }
       }
     ],
     "creators": [
