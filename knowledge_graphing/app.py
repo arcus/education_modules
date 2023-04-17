@@ -200,6 +200,22 @@ def author_selected(author_name):
     return select_author_modules
 
 
+### turn on a selected node
+
+def node_select(node_id):
+    non_selected_nodes =[]
+    selected_node = []
+    for module in nodes:
+        if module['data']['id'] == node_id:
+            select_module = module
+            select_module['selected'] = True
+            selected_node.append(select_module)
+        else:
+            un_select_module = module
+            un_select_module['selected'] = False
+            non_selected_nodes.append(un_select_module)
+    newly_selected_nodes = non_selected_nodes+selected_node
+    return newly_selected_nodes
 
 
 app.layout = html.Div([
@@ -261,7 +277,8 @@ def displayTapNodeData(data):
 @app.callback(Output('module_visualization', 'elements'),
                 Input('list_of_all_modules', 'value'))
 def select_node_from_dropdown(id):
-    return nodes+edges
+    new_nodes=node_select(id)
+    return new_nodes+edges
 
 
 
