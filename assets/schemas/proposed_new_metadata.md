@@ -21,10 +21,11 @@
     - intermediate: These modules require some previous coding exposure
     - advanced: These modules focus on particularly difficult or specialized tasks.
     - practice exercise: These modules do not introduce new content.
-- [ ] `data_type `: optional metadata for modules that focus on a particular type of data, either as the topic of the module or as the main type of examples.
+- [ ] `data_domain` : optional metadata for modules that focus on a particular type of data, either as the topic of the module or as the main type of examples.
   - omics
   - geospatial
   - ehr
+  - look at gene for more?
 - [ ] `data_task`: optional metadata. What type of task/action/skill does this module teach?
   - `data_visualization`
   - `data_management`
