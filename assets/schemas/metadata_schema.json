@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "additionalProperties": false,
   "description": "Education module metadata schema.",
   "definitions": {
     "education_moduleDef": {
@@ -75,25 +74,27 @@
         "type": "boolean",
         "default": "TBD"
        },
-       "coding_required_deprecate": {
-        "description": "True/False based on whether achieving the module's learning objectives requires coding. This includes a user running code locally or interacting with code in the module.",
-        "type": "boolean",
-        "default": "TBD"
-       },
-       "coding_required": {
+       "coding": {
         "additionalProperties": false,
         "description": "True/False based on whether achieving the module's learning objectives requires coding. This includes a user running code locally or interacting with code in the module.",
         "catalogingNote": "TBD",
         "items": {
           "properties": {
-            "coding_language": {
-              "$ref": "./vocabulary.json#/dataTypeName",
-              "description": "The typology of the dataset, identifying its type or nature.",
+            "coding_required": {
+              "description": "The coding level required for the module as a whole.",
               "catalogingNote": "Terms from a controlled vocabulary.",
-              "type": "string",
-              "section": "research description",
-              "fieldSource": "Data Tag Suite (DATS)",
-              "default": "TBD"
+              "type": "boolean",
+              "default": true
+            },
+            "coding_language": {
+              "description": "The coding level required used in the module.",
+              "catalogingNote": "Terms from a controlled vocabulary.",
+              "items": {
+                "$ref": "./vocabulary.json#/coding_language",
+                "type": "string",
+                "default": "TBD"
+              },
+              "type": "array"
             },
             "coding_level": {
               "$ref": "./vocabulary.json#/coding_level",
@@ -104,9 +105,7 @@
             }
           },
           "required": [
-            "dataTypeName",
-            "dataTypeMethod",
-            "dataTypeRefinement"
+            "coding_required"
           ],
           "type": "object"
         },
@@ -121,40 +120,10 @@
         "restrictionsForUse"
       ],
       "type": "object"
-    },
-    "stubRecordDescriptionDef": {
-      "additionalProperties": false,
-      "properties": {
-        "stubRecordDescriptionValue": {
-          "type": "string",
-          "description": "General information on the item.",
-          "catalogingNote": " All additional information that does not fit in any of the other categories. May be used for technical information. It is a best practice to supply a description. Free text. It is a best practice to supply a description.",
-          "section": "basic description",
-          "default": "TBD"
-        },
-        "@stubRecordDescriptionType": {
-          "$ref": "./vocabulary.json#/collectionDescriptionType",
-          "description": "The type of the description.",
-          "catalogingNote": "N/A",
-          "type": "string",
-          "section": "basic description",
-          "default": "TBD"
-        },
-        "@stubRecordDescriptionSource": {
-          "$ref": "./vocabulary.json#/source",
-          "description": "System source of the value populated in the description.",
-          "catalogingNote": "This should be filled in any time a value is extracted/taken wholesale from another existing system.",
-          "type": "string",
-          "section": "basic description",
-          "default": "TBD"
-        }
-      },
-      "required": ["stubRecordDescriptionValue", "@stubRecordDescriptionType"],
-      "type": ["object"]
     }
   },
   "properties": {
-    "stubRecord": {
+    "education_module": {
       "$ref": "#/definitions/education_moduleDef"
     }
   },

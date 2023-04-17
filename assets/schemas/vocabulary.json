@@ -2,7 +2,6 @@
   "coding_language": {
     "description": "TBD",
     "type": "string",
-    "fieldSource": "Data Tag Suite (DATS)",
     "oneOf": [
       {
         "const": "gene expression",

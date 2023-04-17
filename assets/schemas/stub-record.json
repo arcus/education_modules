@@ -1,6 +1,6 @@
 {
   "$schema": "./metadata_schema.json",
-  "stubRecord": {
+  "education_module": {
     "titles": [
       {
         "titleValue": "TBD",
@@ -22,10 +22,10 @@
       {
       "coding_required": true,
       "coding_level": "beginner",
-      "coding_language": { 
+      "coding_language": [ 
           "sql",
           "regex"
-        }
+      ]
       }
     ],
     "creators": [
