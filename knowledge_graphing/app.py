@@ -240,12 +240,24 @@ app.layout = html.Div([
 
     dcc.Markdown(id='selected_module_text'),
 
-    # dcc.Dropdown(
-    #     id='links_to',
-    #     options=[]
-    # ),
-
-    dcc.Markdown("Select a module from the dropdown menu to select it on the graph (I hope)."),
+    dcc.Markdown("Select a module from the dropdown menu to select it on the graph."),
+    dcc.Markdown("Modules that the selected module links to:"),
+    dcc.Dropdown(
+        id='modules_incoming',
+        options=[
+            {'label': module["data"]["title"], 'value': module["data"]["id"]}
+            for module in nodes
+        ]
+    ),
+        dcc.Markdown("Modules that link to the selected module:"),
+    dcc.Dropdown(
+        id='modules_outgoing',
+        options=[
+            #{'label': module["data"]["title"], 'value': module["data"]["id"]}
+            #for module in nodes
+        ]
+    ),
+    dcc.Markdown("List of all modules:"),
     dcc.Dropdown(
         id='list_of_all_modules',
         options=[
@@ -253,9 +265,6 @@ app.layout = html.Div([
             for module in nodes
         ]
     )
-    #html.P(id='cytoscape-tapEdgeData-output'),
-    #html.P(id='cytoscape-mouseoverNodeData-output'),
-    #html.P(id='cytoscape-mouseoverEdgeData-output'),
     
 ])
 
@@ -266,60 +275,50 @@ def update_author_selection(author_name):
     return author_selected(author_name)
 
 
-### When a module node is tapped (clicked on? this is different from selected) information about it is displayed.
+### When a module node is selected (either clicked on or selected via a menu) information about it is displayed.
 @app.callback(Output('selected_module_text', 'children'),
-              Input('module_visualization', 'tapNodeData'))
+              Input('module_visualization', 'selectedNodeData')
+              )
 def displayTapNodeData(data):
     if data:
-        return "### [**" + data['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data['id']+"/" +data['id'] + ".md) \n \n  By " + data['author'] +" \n \n Estimated length: " + data['time']+". \n \n" + data['comment'] + "\n #### Connected modules: \n "
+        return  "### [**" + data[0]['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data[0]['id']+"/" +data[0]['id'] + ".md) \n \n  By " + data[0]['author'] +" \n \n Estimated length: " + data[0]['time']+". \n \n" + data[0]['comment'] + "\n #### Connected modules: \n "
     else:
         return "Click on a node in the graph to see information about that module."
 
-### When a module is selected from the dropdown menu it becomes selected
-### TODO: currently doesn't seem to unselect previously selected modules
-### TODO: make it update tapNodeData so that selecting here updates which module you see information about.
+### When a module node is selected, the modules it links to appear in a drop down menu of their own.
+@app.callback(Output('modules_incoming','options'),
+                Input('module_visualization','selectedNodeData')
+                )
+def update_incoming_modules(data):
+    new_options=[]
+    if data: 
+        for module in nodes:
+            check_edge = {'data': {'source': data[0]["id"], 'target': module['data']['id']}}
+            if check_edge in edges:
+                new_options.append({'label': module['data']['title'], 'value': module['data']['id']})
+    return new_options
+
+### When a module node is selected, the modules that link to it appear in a drop down menu of their own.
+@app.callback(Output('modules_outgoing','options'),
+                Input('module_visualization','selectedNodeData')
+                )
+def update_incoming_modules(data):
+    new_options=[]
+    if data: 
+        for module in nodes:
+            check_edge = {'data': {'source': module['data']['id'], 'target': data[0]["id"]}}
+            if check_edge in edges:
+                new_options.append({'label': module['data']['title'], 'value': module['data']['id']})
+    return new_options
+
+### When a module is selected from the list of all modules, it becomes selected.
+### TODO: When a module is selected from ANY dropdown menu it becomes selected
 @app.callback(Output('module_visualization', 'elements'),
                 Input('list_of_all_modules', 'value'))
 def select_node_from_dropdown(id):
     new_nodes=node_select(id)
     return new_nodes+edges
 
-
-
-### TODO Make this callback connect to the edges connecting to that node. Add another callback that lets users select a node via the dropdown menu.
-
-# @app.callback(Output('links_to', 'options'),
-#                 Input('module_visualization', 'tapNodeData'))
-# def links_to_modules(data):
-#     if data:
-#         return [{'label': data['title'], 'value': data['id']}, {'label': 2, 'value': 2} ]
-#     else:
-#         return [{'label': 'not1', 'value': 'not1'}, {'label': 'not2', 'value': 'not2'} ]
-
-
-### REMAINING CODE FROM cytpscape EXAMPLE
-
-# @app.callback(Output('cytoscape-tapEdgeData-output', 'children'),
-#               Input('module_visualization', 'tapEdgeData'))
-# def displayTapEdgeData(data):
-#     if data:
-#         return "You recently clicked/tapped the edge between " + \
-#                data['source'].upper() + " and " + data['target'].upper()
-
-
-# @app.callback(Output('cytoscape-mouseoverNodeData-output', 'children'),
-#               Input('module_visualization', 'mouseoverNodeData'))
-# def displayTapNodeData(data):
-#     if data:
-#         return "You recently hovered over the city: " + data['title']
-
-
-# @app.callback(Output('cytoscape-mouseoverEdgeData-output', 'children'),
-#               Input('module_visualization', 'mouseoverEdgeData'))
-# def displayTapEdgeData(data):
-#     if data:
-#         return "You recently hovered over the edge between " + \
-#                data['source'].upper() + " and " + data['target'].upper()
 
 
 if __name__ == '__main__':
