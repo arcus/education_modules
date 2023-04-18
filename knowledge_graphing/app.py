@@ -217,6 +217,7 @@ def node_select(node_id):
     newly_selected_nodes = non_selected_nodes+selected_node
     return newly_selected_nodes
 
+#### The app itself:
 
 app.layout = html.Div([
     cyto.Cytoscape(
@@ -258,13 +259,14 @@ app.layout = html.Div([
     
 ])
 
-
+### When an author is selected from the dropdown menu, that author's modules are made darker and labeled.
 @app.callback(Output('module_visualization', 'stylesheet'),
               Input('author_selector', 'value'))
 def update_author_selection(author_name):
     return author_selected(author_name)
 
 
+### When a module node is tapped (clicked on? this is different from selected) information about it is displayed.
 @app.callback(Output('selected_module_text', 'children'),
               Input('module_visualization', 'tapNodeData'))
 def displayTapNodeData(data):
@@ -273,7 +275,9 @@ def displayTapNodeData(data):
     else:
         return "Click on a node in the graph to see information about that module."
 
-
+### When a module is selected from the dropdown menu it becomes selected
+### TODO: currently doesn't seem to unselect previously selected modules
+### TODO: make it update tapNodeData so that selecting here updates which module you see information about.
 @app.callback(Output('module_visualization', 'elements'),
                 Input('list_of_all_modules', 'value'))
 def select_node_from_dropdown(id):
