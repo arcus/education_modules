@@ -1,8 +1,8 @@
 <!--
 author:   Peter Camacho
 email:    camachop@chop.edu
-version: 1.0.2
-module_template_version: 2.0.0
+version: 1.1.0
+module_template_version: 3.0.0
 language: en
 narrator: US English Male
 title: SQL Basics
@@ -352,6 +352,7 @@ Experience working with rectangular data (data in rows and columns) is required,
 A relational database is a data storage solution that stores data tables, which are comprised of columns (also called 'fields') and rows.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 Sometimes we'll use the word "column" and sometimes we'll use the word "field".  These refer to the same thing!
 
@@ -376,7 +377,8 @@ LIMIT 10;
 ```
 @AlaSQL.eval("#dataTable2a")
 
-<table id="dataTable2a" border="1"></table><br>
+<table id="dataTable2a" border="1"></table>
+
 
 <div style = "display:none;">
 
@@ -385,6 +387,7 @@ LIMIT 10;
 </div>
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 Don't worry -- the data here, although it **looks** like human subject or patient data, is completely fabricated.  We used sample data from the open source project [Synthea](https://synthetichealth.github.io/synthea).
 
@@ -474,7 +477,7 @@ You may be working with a group that has an established SQL style guide, either 
 
 But if you don't have anyone to guide you in style, we'll do our best to instill some basic principles. It might seem silly to start talking about style now with very short queries, but we encourage you to develop good habits now.  We are going to advocate for some style conventions that not everyone will share.  As they say, there's no accounting for taste, and if you depart from our suggestions, that's fine -- but do start to develop your own standards for style, because it will help you immensely once your SQL queries get to be 5, 10, or 100 lines long and the number of queries you write increases.
 
-Here are our (opinionated but not necessarily "right" style suggestions).  These might not make sense right now, but once you see them in actual queries, we think you'll understand them more intuitively.
+Here are our (opinionated but not necessarily "right") style suggestions.  These might not make sense right now, but once you see them in actual queries, we think you'll understand them more intuitively.
 
 1) **Put keywords in CAPITAL LETTERS so they stand out.**  Examples of keywords are SELECT, LIKE, AS, WHERE, JOIN, DISTINCT, MEAN, ORDER BY, and many more.  While most code editors and SQL clients (software that lets you query a database) do a good job of color-coding these special words, you might end up seeing a SQL query in monochrome, and having keywords stand out helps you figure out where each part of your query is.  
 
@@ -486,7 +489,8 @@ Here are our (opinionated but not necessarily "right" style suggestions).  These
 
 5) **Use a comma-first style.**  This one can be a little jarring at first, but it does have real advantages, especially if you end up doing SQL for more than a few hours a week.  In a list of length n, don't put the comma **after** items 1 through n-1.  Rather, put the comma **before** items 2 through n.  
 
-<div class = 'options'>
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
 
 As long as you put a comma between the columns you are requesting (but not after the last column), your syntax is valid.  However, we propose a "comma-first" syntax.  To explain what comma-first syntax looks like, here are two shopping lists.  One is in comma-first style, where the first item is lacking a comma, and the other is comma-last, where the last item is missing a comma:
 
@@ -531,9 +535,11 @@ FROM alasql.patients;
 ```
 @AlaSQL.eval("#dataTable6a")
 
-<table id="dataTable6a" border="1"></table><br>
+<table id="dataTable6a" border="1"></table>
 
-Now, complete the code below.  How would you get all the fields from the table `alasql.allergies`?  When you think you have it, try running the code and see if you get it right!
+
+Now, complete the code below.  How would you get all the fields from the table `alasql.allergies`?  When you think you have it, add the code in the box below and try running the code to see if you get it right.
+
 
 ```sql
 SELECT
@@ -541,7 +547,8 @@ FROM  ;
 ```
 @AlaSQL.eval("#dataTable6b")
 
-<table id="dataTable6b" border="1"></table><br>
+<table id="dataTable6b" border="1"></table>
+
 
 <div style = "display:none;">
 
@@ -549,6 +556,18 @@ FROM  ;
 @AlaSQL.buildTable_allergies
 
 </div>
+
+<details>
+<summary style = "margin-bottom: 1rem;">*If you have given it a good try and are stuck... click here to show/hide an answer!*</summary>
+
+Try:
+
+```sql
+SELECT * 
+FROM alasql.allergies;
+```
+
+</details>
 
 **Select Specific Columns**
 
@@ -571,7 +590,8 @@ FROM alasql.patients;
 ```
 @AlaSQL.eval("#dataTable6c")
 
-<table id="dataTable6c" border="1"></table><br>
+<table id="dataTable6c" border="1"></table>
+
 
 <div style = "display:none;">
 
@@ -589,6 +609,7 @@ You can also explore using `SELECT DISTINCT` on more than one field.  The code b
 
 Then, if you're up for a challenge, change the code to find out what unique combinations there are of race and ethnicity!
 
+
 ```sql
 SELECT DISTINCT
   patients.sex
@@ -597,9 +618,11 @@ FROM alasql.patients;
 ```
 @AlaSQL.eval("#dataTable7a")
 
-<table id="dataTable7a" border="1"></table><br>
+<table id="dataTable7a" border="1"></table>
+
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 Here's a pro tip!  The `DISTINCT` keyword is especially useful for removing duplicates rows from the result set of your SQL queries.  If you suspect that there may be duplicate data, you can use `SELECT DISTINCT` to make sure you only get one copy of any identical rows of results.  
 
@@ -610,6 +633,21 @@ However, if you notice an increasing reliance on `SELECT DISTINCT` to eliminate 
 <div style = "display:none;">
 @AlaSQL.buildTable_patients
 </div>
+
+
+<details>
+<summary style = "margin-bottom: 1rem;">*Click here to show/hide challenge answer.*</summary>
+
+Try:
+
+```sql
+SELECT DISTINCT
+  patients.race
+  ,patients.ethnicity
+FROM alasql.patients;
+```
+
+</details>
 
 ### Quiz: SELECT, FROM, DISTINCT
 
@@ -636,7 +674,8 @@ In the code block below, write a query that will return the unique combinations 
 
 ```
 @AlaSQL.eval("#dataTable8a")
-<table id="dataTable8a" border="1"></table><br>
+<table id="dataTable8a" border="1"></table>
+
 
 How many rows do you have in your results?  Type the number with no spaces or extra characters.
 
@@ -673,7 +712,8 @@ SELECT DISTINCT
 FROM alasql.patients;
 ```
 @AlaSQL.eval("#dataTable8b")
-<table id="dataTable8b" border="1"></table><br>
+<table id="dataTable8b" border="1"></table>
+
 
 
 </div>
@@ -717,7 +757,8 @@ FROM alasql.patients;
 ```
 @AlaSQL.eval("#dataTable9a")
 
-<table id="dataTable9a" border="1"></table><br>
+<table id="dataTable9a" border="1"></table>
+
 
 <div style = "display:none;">
 
@@ -739,7 +780,8 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable10a")
 
-<table id="dataTable10a" border="1"></table><br>
+<table id="dataTable10a" border="1"></table>
+
 
 Although the above example lists only one constraint for the dataset, the WHERE clause can contain any number of filtering arguments needed.
 
@@ -761,15 +803,20 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable10b")
 
-<table id="dataTable10b" border="1"></table><br>
+<table id="dataTable10b" border="1"></table>
 
-<div class ="warning">
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 When you mix `AND` and `OR`, you have to be careful.  It's easy to make a logical order-of-operations mistake.  That's why it's crucial to include parentheses to show the scope of your `AND` and `OR` logical operators.  To see this in action, remove the second set of parentheses, around the `race` and `ethnicity` comparisons, and re-run the query.  What happens?  Why?  
+
 </div>
 
 Ready to try your luck at a complex WHERE statement?
 
 Get every field from `patients` for all male patients who were born on or after January 1, 2001.  Not sure about the field name that holds sex, or whether male is coded "Male", "male", "M", or some other way?  Look at the results of other queries to get this information!
+
 
 ```sql
 SELECT
@@ -779,11 +826,29 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable10c")
 
-<table id="dataTable10c" border="1"></table><br>
+<table id="dataTable10c" border="1"></table>
+
 
 <div style = "display:none;">
 @AlaSQL.buildTable_patients
 </div>
+
+
+<details>
+<summary style = "margin-bottom: 1rem;">*If you have given it a good try and are stuck... click here to show/hide an answer!*</summary>
+
+Try:
+
+```sql
+SELECT *
+FROM alasql.patients
+WHERE 
+	patients.birthdate >= "2001-01-01" AND
+	patients.sex = "M";
+```
+
+</details>
+
 
 ### Dealing with Null Values
 
@@ -803,7 +868,8 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable11a")
 
-<table id="dataTable11a" border="1"></table><br>
+<table id="dataTable11a" border="1"></table>
+
 
 It's also worth noting that null values are treated very differently from actual data.  Note that you cannot use operators like `=` to ask if something is null, because null values are inherently unknowable, so we can't know what a null value is equal to.  You can't do math with a null value and you can't compare to a null value.  To illustrate this point, we can look at an example below.  
 
@@ -824,7 +890,8 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable11b")
 
-<table id="dataTable11b" border="1"></table><br>
+<table id="dataTable11b" border="1"></table>
+
 
 Why is this interesting?  Because sometimes we want to return a mix of null and non-null values.  For example, maybe you're aware that allergies with a `stop` date prior to March 1, 2020 have data quality issues and need to be checked -- these could be real allergies that should not have a `stop` date.  And to that group of possible allergies you want to add the cases where there is no `stop` date at all, where we can presume that the allergy wasn't ruled out.  In order to make sure that records where the `stop` date is null are also included in our output we will need to add another line to  the select statement to explicitly include them, as shown below.  
 
@@ -839,42 +906,61 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable11c")
 
-<table id="dataTable11c" border="1"></table><br>
+<table id="dataTable11c" border="1"></table>
 
-<div class = "warning">
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 The fact that nulls aren't included in comparisons is a very subtle distinction that can drastically alter the output of your SQL statements.  This can be very important when writing inclusion and exclusion logic and thinking about what cases belong in your data set.  Always keep in mind that you might have missing values, and consider what that might mean for your selection of rows.  
 
 </div>
 
-Sometimes you want to evaluate missing data patterns.  For example, maybe there's a discernible pattern in patients who are missing sex or race data.  Write a query that will give you all the fields for rows in `patients` where either the sex or race data is missing.   (Hint: there might not be any rows that have missing data in those two fields).
+Sometimes you want to evaluate missing data patterns.  For example, maybe there's a discernible pattern in patients who are missing sex or race data.  Write and run a query in the code box below that will give you all the fields for rows in `patients` where either the sex or race data is missing.   (Hint: there might not be any rows that have missing data in those two fields).
 
 ```sql
 
 ```
 @AlaSQL.eval("#dataTable11b")
 
-<table id="dataTable11d" border="1"></table><br>
+<table id="dataTable11d" border="1"></table>
+
 
 <div style = "display:none;">
 @AlaSQL.buildTable_allergies
 @AlaSQL.buildTable_patients
 </div>
 
+<details>
+<summary style = "margin-bottom: 1rem;">*If you have given it a good try and are stuck... click here to show/hide an answer!*</summary>
+
+Try:
+
+```sql
+SELECT * 
+FROM alasql.patients
+WHERE 
+	patients.sex IS NULL OR
+	patients.race IS NULL;
+```
+
+</details>
+
 ### Quiz: Comments, WHERE, Null Values
 
-What has to change to make this code work?  Select all that apply.  You will be able to check your own work!
+What has to change to make this code work?  Select all that apply.  You will be able to check your own work by making the corrections and seeing if the code runs!
 
 ```sql
 SELECT
 FROM alasql.patients
 WHERE
-  race = NULL OR
-  sex = NULL.
+  patients.race = NULL OR
+  patients.sex = NULL.
 ```
 @AlaSQL.eval("#dataTable0d")
 
-<table id="dataTable0d" border="1"></table><br>
+<table id="dataTable0d" border="1"></table>
+
 
 [[X]] ` = NULL ` should be changed to ` IS NULL `
 [[ ]] `OR` should be in lowercase
@@ -887,13 +973,13 @@ WHERE
 
 First things first, what are you `SELECT`ing?  Also, you do need to replace the ` = NULL` to ` IS NULL `, and end the query with a semicolon, not a period.
 
-`OR` isn't case sensitive, but we suggest leaving it in CAPITAL letters so it stands out as a keyword.  And since there's no nesting and no mixing of `AND` and `OR`, parentheses around the `WHERE` clauses is totally optional.  You only really **have** to add parentheses when you're mixing operations (just as in math, to make sure things get added before they're multiplied).
+`OR` isn't case sensitive, but we suggest leaving it in CAPITAL letters so it stands out as a keyword.  And since there's no nesting and no mixing of `AND` and `OR`, the use of parentheses around the `WHERE` clauses is totally optional.  You only really **have** to add parentheses when you're mixing operations (just as you do in math, to make sure things get added before they're multiplied).
 
 </div>
 
 ***************
 
-What has to change to make this code work?  Select all that apply.  You will be able to check your own work!
+What has to change to make this code work?  Select all that apply. You will be able to check your own work by making the corrections and seeing if the code runs!
 
 ```sql
 SELECT *             # we want all the fields/columns
@@ -903,7 +989,8 @@ WITH
 ```
 @AlaSQL.eval("#dataTable12a")
 
-<table id="dataTable12a" border="1"></table><br>
+<table id="dataTable12a" border="1"></table>
+
 
 
 [[ ]] `alasql.patients` should be changed to just `patients`
@@ -942,16 +1029,35 @@ ORDER BY
 ```
 @AlaSQL.eval("#dataTable13a")
 
-<table id="dataTable13a" border="1"></table><br>
+<table id="dataTable13a" border="1"></table>
+
 
 Some things to think about:
 
 * What does the query above help you understand about your patient population?
 * How could you switch the sorting so that all the counties with a Latino / Hispanic patient population were at the top, followed by all the counties without a Latino / Hispanic patient population?  Try it!
 
-<div class = "important">
+<details>
+<summary style = "margin-bottom: 1rem;">*Click here to show/hide a code suggestion for the second bullet point above.*</summary>
 
-By default, all items in the `ORDER BY` clause will be sorted in `asc` order if no explicit ordering direction is provided.
+Try:
+
+```sql
+SELECT DISTINCT
+  patients.county
+  ,patients.ethnicity
+FROM alasql.patients
+ORDER BY
+  patients.ethnicity ASC
+  ,patients.county ASC;
+```
+
+</details>
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+By default, all items in the `ORDER BY` clause will be sorted in `ASC` (ascending) order if no explicit ordering direction is provided.
 
 </div>
 
@@ -976,7 +1082,8 @@ LIMIT 3;
 ```
 @AlaSQL.eval("#dataTable14a")
 
-<table id="dataTable14a" border="1"></table><br>
+<table id="dataTable14a" border="1"></table>
+
 
 <div style = "display:none;">
 
@@ -995,7 +1102,7 @@ In SQL, it is possible to assign a custom name (usually a kind of shortened name
 
 Aliases are assigned by placing the `AS` key word directly after the item (table/column) you would like to alias, followed by the name you would like to assign as its **alias**.
 
-In the example below, we can see aliasing being used to rename the `patient` table to `p`, and renaming the `pat_id` and `state_abbr` columns to `unique_patient_id` (because there are other id fields you're working with elsewhere) and `state_name` (because you want to point out that this isn't the state abbreviation).
+In the example below, we can see aliasing being used to rename the `patient` table to `p`, and renaming the `id` and `state` columns to `unique_patient_id` (because there are other id fields you're working with elsewhere) and `state_name` (because you want to point out that this isn't the state abbreviation).
 
 ```sql
 SELECT
@@ -1008,7 +1115,8 @@ FROM alasql.patients AS p;
 ```
 @AlaSQL.eval("#dataTable15a")
 
-<table id="dataTable15a" border="1"></table><br>
+<table id="dataTable15a" border="1"></table>
+
 
 In the SQL code block below, try writing a query that accomplishes the following.  Because there are several constraints, try starting with a simple query (something like a `SELECT * ...`) and gradually changing it so that you knock out one bullet point at a time.
 
@@ -1016,7 +1124,7 @@ In the SQL code block below, try writing a query that accomplishes the following
 * Aliases the `patients` table as `pt`
 * Aliases the `sex` field as `sex_assigned_at_birth`
 * Aliases `zip` as `postal_code`
-* Orders the result by zip
+* Orders the result by zip/postal code
 
 ```sql
 
@@ -1024,11 +1132,30 @@ In the SQL code block below, try writing a query that accomplishes the following
 ```
 @AlaSQL.eval("#dataTable15b")
 
-<table id="dataTable15b" border="1"></table><br>
+<table id="dataTable15b" border="1"></table>
+
 
 <div style = "display:none;">
 @AlaSQL.buildTable_patients
 </div>
+
+<details>
+<summary style = "margin-bottom: 1rem;">*If you have given it a good try and are stuck... click here to show/hide an answer!*</summary>
+
+Try:
+
+```sql
+SELECT 
+	pt.id
+	,pt.sex as sex_assigned_at_birth
+	,pt.ethnicity
+	,pt.state
+	,pt.zip as postal_code
+FROM alasql.patients as pt
+ORDER BY postal_code;
+```
+
+</details>
 
 ### Quiz: ORDER BY, LIMIT, AS
 
@@ -1082,15 +1209,15 @@ In this module, you learned about the language SQL, which is an acronym for "Str
 
 We also introduced you to important functions, in terms of **keywords**.  You got a chance to read about and practice these keywords:
 
-* `SELECT`
-* `FROM`
-* `DISTINCT`
-* `WHERE`
-* `IS NULL`
-* `IS NOT NULL`
-* `ORDER BY`
-* `LIMIT`
-* `AS`
+* `SELECT`: used to indicate which fields (columns) you want to retrieve
+* `FROM`: used to indicate which table you want to retrieve data from
+* `DISTINCT`: used to ask for only a single example of each possible unique value
+* `WHERE`: used to give a condition which filters the data retrieved
+* `IS NULL`: used to compare a value to *NULL* (an empty/missing value)
+* `IS NOT NULL`: used to compare a value to not *NULL* (a value that is not missing and not empty)
+* `ORDER BY`: used to display results organized by the values in one or more columns
+* `LIMIT`: used to truncate (cut off) the number of result rows retrieved at a given number
+* `AS`: used to alias (rename) columns or tables
 
 We also learned about comparison operators, comments, and style -- how to write code in a specific way that promotes reusability and readability.
 
