@@ -535,18 +535,6 @@ FROM alasql.patients;
 
 Now, complete the code below.  How would you get all the fields from the table `alasql.allergies`?  When you think you have it, add the code in the box below and try running the code to see if you get it right.
 
-<details>
-<summary style = "margin-bottom: 1rem;">*If you are absolutely stuck... click here to show/hide an answer!*</summary>
-
-Try:
-
-```sql
-SELECT * 
-FROM alasql.allergies;
-```
-
-</details>
-
 
 ```sql
 SELECT
@@ -563,7 +551,17 @@ FROM  ;
 
 </div>
 
+<details>
+<summary style = "margin-bottom: 1rem;">*If you are absolutely stuck... click here to show/hide an answer!*</summary>
 
+Try:
+
+```sql
+SELECT * 
+FROM alasql.allergies;
+```
+
+</details>
 
 **Select Specific Columns**
 
@@ -605,20 +603,6 @@ You can also explore using `SELECT DISTINCT` on more than one field.  The code b
 Then, if you're up for a challenge, change the code to find out what unique combinations there are of race and ethnicity!
 
 
-<details>
-<summary style = "margin-bottom: 1rem;">*Click here to show/hide challenge answer.*</summary>
-
-Try:
-
-```sql
-SELECT DISTINCT
-  patients.race
-  ,patients.ethnicity
-FROM alasql.patients;
-```
-
-</details>
-
 ```sql
 SELECT DISTINCT
   patients.sex
@@ -640,6 +624,21 @@ However, if you notice an increasing reliance on `SELECT DISTINCT` to eliminate 
 <div style = "display:none;">
 @AlaSQL.buildTable_patients
 </div>
+
+
+<details>
+<summary style = "margin-bottom: 1rem;">*Click here to show/hide challenge answer.*</summary>
+
+Try:
+
+```sql
+SELECT DISTINCT
+  patients.race
+  ,patients.ethnicity
+FROM alasql.patients;
+```
+
+</details>
 
 ### Quiz: SELECT, FROM, DISTINCT
 
@@ -801,6 +800,22 @@ Ready to try your luck at a complex WHERE statement?
 
 Get every field from `patients` for all male patients who were born on or after January 1, 2001.  Not sure about the field name that holds sex, or whether male is coded "Male", "male", "M", or some other way?  Look at the results of other queries to get this information!
 
+
+```sql
+SELECT
+FROM
+WHERE
+
+```
+@AlaSQL.eval("#dataTable10c")
+
+<table id="dataTable10c" border="1"></table><br>
+
+<div style = "display:none;">
+@AlaSQL.buildTable_patients
+</div>
+
+
 <details>
 <summary style = "margin-bottom: 1rem;">*If you are absolutely stuck... click here to show/hide an answer!*</summary>
 
@@ -816,22 +831,6 @@ WHERE
 
 </details>
 
-
-
-
-```sql
-SELECT
-FROM
-WHERE
-
-```
-@AlaSQL.eval("#dataTable10c")
-
-<table id="dataTable10c" border="1"></table><br>
-
-<div style = "display:none;">
-@AlaSQL.buildTable_patients
-</div>
 
 ### Dealing with Null Values
 
@@ -897,6 +896,18 @@ The fact that nulls aren't included in comparisons is a very subtle distinction 
 
 Sometimes you want to evaluate missing data patterns.  For example, maybe there's a discernible pattern in patients who are missing sex or race data.  Write and run a query in the code box below that will give you all the fields for rows in `patients` where either the sex or race data is missing.   (Hint: there might not be any rows that have missing data in those two fields).
 
+```sql
+
+```
+@AlaSQL.eval("#dataTable11b")
+
+<table id="dataTable11d" border="1"></table><br>
+
+<div style = "display:none;">
+@AlaSQL.buildTable_allergies
+@AlaSQL.buildTable_patients
+</div>
+
 <details>
 <summary style = "margin-bottom: 1rem;">*If you are absolutely stuck... click here to show/hide an answer!*</summary>
 
@@ -911,18 +922,6 @@ WHERE
 ```
 
 </details>
-
-```sql
-
-```
-@AlaSQL.eval("#dataTable11b")
-
-<table id="dataTable11d" border="1"></table><br>
-
-<div style = "display:none;">
-@AlaSQL.buildTable_allergies
-@AlaSQL.buildTable_patients
-</div>
 
 ### Quiz: Comments, WHERE, Null Values
 
@@ -1098,6 +1097,18 @@ In the SQL code block below, try writing a query that accomplishes the following
 * Aliases `zip` as `postal_code`
 * Orders the result by zip/postal code
 
+```sql
+
+
+```
+@AlaSQL.eval("#dataTable15b")
+
+<table id="dataTable15b" border="1"></table><br>
+
+<div style = "display:none;">
+@AlaSQL.buildTable_patients
+</div>
+
 <details>
 <summary style = "margin-bottom: 1rem;">*If you are absolutely stuck... click here to show/hide an answer!*</summary>
 
@@ -1115,18 +1126,6 @@ ORDER BY postal_code;
 ```
 
 </details>
-
-```sql
-
-
-```
-@AlaSQL.eval("#dataTable15b")
-
-<table id="dataTable15b" border="1"></table><br>
-
-<div style = "display:none;">
-@AlaSQL.buildTable_patients
-</div>
 
 ### Quiz: ORDER BY, LIMIT, AS
 
