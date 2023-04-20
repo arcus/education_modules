@@ -800,6 +800,7 @@ WHERE
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 When you mix `AND` and `OR`, you have to be careful.  It's easy to make a logical order-of-operations mistake.  That's why it's crucial to include parentheses to show the scope of your `AND` and `OR` logical operators.  To see this in action, remove the second set of parentheses, around the `race` and `ethnicity` comparisons, and re-run the query.  What happens?  Why?  
+
 </div>
 
 Ready to try your luck at a complex WHERE statement?
