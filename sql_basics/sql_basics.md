@@ -352,6 +352,7 @@ Experience working with rectangular data (data in rows and columns) is required,
 A relational database is a data storage solution that stores data tables, which are comprised of columns (also called 'fields') and rows.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 Sometimes we'll use the word "column" and sometimes we'll use the word "field".  These refer to the same thing!
 
@@ -385,6 +386,7 @@ LIMIT 10;
 </div>
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 Don't worry -- the data here, although it **looks** like human subject or patient data, is completely fabricated.  We used sample data from the open source project [Synthea](https://synthetichealth.github.io/synthea).
 
@@ -486,7 +488,8 @@ Here are our (opinionated but not necessarily "right") style suggestions.  These
 
 5) **Use a comma-first style.**  This one can be a little jarring at first, but it does have real advantages, especially if you end up doing SQL for more than a few hours a week.  In a list of length n, don't put the comma **after** items 1 through n-1.  Rather, put the comma **before** items 2 through n.  
 
-<div class = 'options'>
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
 
 As long as you put a comma between the columns you are requesting (but not after the last column), your syntax is valid.  However, we propose a "comma-first" syntax.  To explain what comma-first syntax looks like, here are two shopping lists.  One is in comma-first style, where the first item is lacking a comma, and the other is comma-last, where the last item is missing a comma:
 
@@ -614,6 +617,7 @@ FROM alasql.patients;
 <table id="dataTable7a" border="1"></table><br>
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 Here's a pro tip!  The `DISTINCT` keyword is especially useful for removing duplicates rows from the result set of your SQL queries.  If you suspect that there may be duplicate data, you can use `SELECT DISTINCT` to make sure you only get one copy of any identical rows of results.  
 
@@ -792,7 +796,9 @@ WHERE
 
 <table id="dataTable10b" border="1"></table><br>
 
-<div class ="warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 When you mix `AND` and `OR`, you have to be careful.  It's easy to make a logical order-of-operations mistake.  That's why it's crucial to include parentheses to show the scope of your `AND` and `OR` logical operators.  To see this in action, remove the second set of parentheses, around the `race` and `ethnicity` comparisons, and re-run the query.  What happens?  Why?  
 </div>
 
@@ -888,7 +894,8 @@ WHERE
 
 <table id="dataTable11c" border="1"></table><br>
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 The fact that nulls aren't included in comparisons is a very subtle distinction that can drastically alter the output of your SQL statements.  This can be very important when writing inclusion and exclusion logic and thinking about what cases belong in your data set.  Always keep in mind that you might have missing values, and consider what that might mean for your selection of rows.  
 
@@ -1029,6 +1036,7 @@ ORDER BY
 </details>
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 By default, all items in the `ORDER BY` clause will be sorted in `ASC` (ascending) order if no explicit ordering direction is provided.
 
