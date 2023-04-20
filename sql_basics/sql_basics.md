@@ -552,7 +552,7 @@ FROM  ;
 </div>
 
 <details>
-<summary style = "margin-bottom: 1rem;">*If you are absolutely stuck... click here to show/hide an answer!*</summary>
+<summary style = "margin-bottom: 1rem;">*If you have given it a good try and are stuck... click here to show/hide an answer!*</summary>
 
 Try:
 
@@ -817,7 +817,7 @@ WHERE
 
 
 <details>
-<summary style = "margin-bottom: 1rem;">*If you are absolutely stuck... click here to show/hide an answer!*</summary>
+<summary style = "margin-bottom: 1rem;">*If you have given it a good try and are stuck... click here to show/hide an answer!*</summary>
 
 Try:
 
@@ -909,7 +909,7 @@ Sometimes you want to evaluate missing data patterns.  For example, maybe there'
 </div>
 
 <details>
-<summary style = "margin-bottom: 1rem;">*If you are absolutely stuck... click here to show/hide an answer!*</summary>
+<summary style = "margin-bottom: 1rem;">*If you have given it a good try and are stuck... click here to show/hide an answer!*</summary>
 
 Try:
 
@@ -1110,7 +1110,7 @@ In the SQL code block below, try writing a query that accomplishes the following
 </div>
 
 <details>
-<summary style = "margin-bottom: 1rem;">*If you are absolutely stuck... click here to show/hide an answer!*</summary>
+<summary style = "margin-bottom: 1rem;">*If you have given it a good try and are stuck... click here to show/hide an answer!*</summary>
 
 Try:
 
