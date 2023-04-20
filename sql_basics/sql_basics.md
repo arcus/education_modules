@@ -377,7 +377,8 @@ LIMIT 10;
 ```
 @AlaSQL.eval("#dataTable2a")
 
-<table id="dataTable2a" border="1"></table><br>
+<table id="dataTable2a" border="1"></table>
+
 
 <div style = "display:none;">
 
@@ -534,7 +535,8 @@ FROM alasql.patients;
 ```
 @AlaSQL.eval("#dataTable6a")
 
-<table id="dataTable6a" border="1"></table><br>
+<table id="dataTable6a" border="1"></table>
+
 
 Now, complete the code below.  How would you get all the fields from the table `alasql.allergies`?  When you think you have it, add the code in the box below and try running the code to see if you get it right.
 
@@ -545,7 +547,8 @@ FROM  ;
 ```
 @AlaSQL.eval("#dataTable6b")
 
-<table id="dataTable6b" border="1"></table><br>
+<table id="dataTable6b" border="1"></table>
+
 
 <div style = "display:none;">
 
@@ -587,7 +590,8 @@ FROM alasql.patients;
 ```
 @AlaSQL.eval("#dataTable6c")
 
-<table id="dataTable6c" border="1"></table><br>
+<table id="dataTable6c" border="1"></table>
+
 
 <div style = "display:none;">
 
@@ -614,7 +618,8 @@ FROM alasql.patients;
 ```
 @AlaSQL.eval("#dataTable7a")
 
-<table id="dataTable7a" border="1"></table><br>
+<table id="dataTable7a" border="1"></table>
+
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -669,7 +674,8 @@ In the code block below, write a query that will return the unique combinations 
 
 ```
 @AlaSQL.eval("#dataTable8a")
-<table id="dataTable8a" border="1"></table><br>
+<table id="dataTable8a" border="1"></table>
+
 
 How many rows do you have in your results?  Type the number with no spaces or extra characters.
 
@@ -706,7 +712,8 @@ SELECT DISTINCT
 FROM alasql.patients;
 ```
 @AlaSQL.eval("#dataTable8b")
-<table id="dataTable8b" border="1"></table><br>
+<table id="dataTable8b" border="1"></table>
+
 
 
 </div>
@@ -750,7 +757,8 @@ FROM alasql.patients;
 ```
 @AlaSQL.eval("#dataTable9a")
 
-<table id="dataTable9a" border="1"></table><br>
+<table id="dataTable9a" border="1"></table>
+
 
 <div style = "display:none;">
 
@@ -772,7 +780,8 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable10a")
 
-<table id="dataTable10a" border="1"></table><br>
+<table id="dataTable10a" border="1"></table>
+
 
 Although the above example lists only one constraint for the dataset, the WHERE clause can contain any number of filtering arguments needed.
 
@@ -794,7 +803,8 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable10b")
 
-<table id="dataTable10b" border="1"></table><br>
+<table id="dataTable10b" border="1"></table>
+
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
@@ -816,7 +826,8 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable10c")
 
-<table id="dataTable10c" border="1"></table><br>
+<table id="dataTable10c" border="1"></table>
+
 
 <div style = "display:none;">
 @AlaSQL.buildTable_patients
@@ -857,7 +868,8 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable11a")
 
-<table id="dataTable11a" border="1"></table><br>
+<table id="dataTable11a" border="1"></table>
+
 
 It's also worth noting that null values are treated very differently from actual data.  Note that you cannot use operators like `=` to ask if something is null, because null values are inherently unknowable, so we can't know what a null value is equal to.  You can't do math with a null value and you can't compare to a null value.  To illustrate this point, we can look at an example below.  
 
@@ -878,7 +890,8 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable11b")
 
-<table id="dataTable11b" border="1"></table><br>
+<table id="dataTable11b" border="1"></table>
+
 
 Why is this interesting?  Because sometimes we want to return a mix of null and non-null values.  For example, maybe you're aware that allergies with a `stop` date prior to March 1, 2020 have data quality issues and need to be checked -- these could be real allergies that should not have a `stop` date.  And to that group of possible allergies you want to add the cases where there is no `stop` date at all, where we can presume that the allergy wasn't ruled out.  In order to make sure that records where the `stop` date is null are also included in our output we will need to add another line to  the select statement to explicitly include them, as shown below.  
 
@@ -893,7 +906,8 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable11c")
 
-<table id="dataTable11c" border="1"></table><br>
+<table id="dataTable11c" border="1"></table>
+
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
@@ -909,7 +923,8 @@ Sometimes you want to evaluate missing data patterns.  For example, maybe there'
 ```
 @AlaSQL.eval("#dataTable11b")
 
-<table id="dataTable11d" border="1"></table><br>
+<table id="dataTable11d" border="1"></table>
+
 
 <div style = "display:none;">
 @AlaSQL.buildTable_allergies
@@ -944,7 +959,8 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable0d")
 
-<table id="dataTable0d" border="1"></table><br>
+<table id="dataTable0d" border="1"></table>
+
 
 [[X]] ` = NULL ` should be changed to ` IS NULL `
 [[ ]] `OR` should be in lowercase
@@ -973,7 +989,8 @@ WITH
 ```
 @AlaSQL.eval("#dataTable12a")
 
-<table id="dataTable12a" border="1"></table><br>
+<table id="dataTable12a" border="1"></table>
+
 
 
 [[ ]] `alasql.patients` should be changed to just `patients`
@@ -1012,7 +1029,8 @@ ORDER BY
 ```
 @AlaSQL.eval("#dataTable13a")
 
-<table id="dataTable13a" border="1"></table><br>
+<table id="dataTable13a" border="1"></table>
+
 
 Some things to think about:
 
@@ -1064,7 +1082,8 @@ LIMIT 3;
 ```
 @AlaSQL.eval("#dataTable14a")
 
-<table id="dataTable14a" border="1"></table><br>
+<table id="dataTable14a" border="1"></table>
+
 
 <div style = "display:none;">
 
@@ -1096,7 +1115,8 @@ FROM alasql.patients AS p;
 ```
 @AlaSQL.eval("#dataTable15a")
 
-<table id="dataTable15a" border="1"></table><br>
+<table id="dataTable15a" border="1"></table>
+
 
 In the SQL code block below, try writing a query that accomplishes the following.  Because there are several constraints, try starting with a simple query (something like a `SELECT * ...`) and gradually changing it so that you knock out one bullet point at a time.
 
@@ -1112,7 +1132,8 @@ In the SQL code block below, try writing a query that accomplishes the following
 ```
 @AlaSQL.eval("#dataTable15b")
 
-<table id="dataTable15b" border="1"></table><br>
+<table id="dataTable15b" border="1"></table>
+
 
 <div style = "display:none;">
 @AlaSQL.buildTable_patients
