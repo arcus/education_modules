@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
-version: 1.1.0
+version: 1.2.0
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
@@ -350,7 +350,7 @@ What do you think will happen if you switch the order of `sort` and `tail`? Try 
 ```
 tail -3 Animals.csv | sort
 ```
-Now the blue morpho butterfly is first, instead of the red panda because the last three lines of `Animals.csv` were tiger, wolf, and blue morpho.
+Now the blue morpho butterfly is first, instead of the red panda because the last three lines of `Animals.csv` were wolf, blue morpho, and koala.
 
 ### Combining `|` and `>`
 
@@ -411,7 +411,7 @@ Maybe you want to know how many unique animals are in the file `last.txt`. We sa
 sort last.txt | uniq | wc -l
 ```
 
-This gives us the single numeric output `4`; there are 4 lines corresponding to the 4 unique animals listed in `last.txt`.
+This gives us the single numeric output `5`; there are five lines corresponding to the five unique animals listed in `last.txt`.
 
 What if we want to know which animal has the shortest scientific name? This also becomes a three step process:
 
