@@ -3,7 +3,7 @@
 author:   Elizabeth Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
 version: 1.1.0
-module_template_version: 2.0.1
+module_template_version: 2.1.0
 language: en
 narrator: UK English Female
 title:  Bash: Combining Commands
