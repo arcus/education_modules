@@ -527,8 +527,8 @@ filter(covid_testing,
 We added whitespace (carriage returns and indentation) above to make this a bit more readable, but you don't have to.
 
 
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+Parentheses and boolean logic
+---
 
 What happens if you don't use parentheses to create smaller units in your boolean logic?  As long as you're using all OR or all AND, you won't run into problems.
 
@@ -590,7 +590,7 @@ And for comparison, let's add parentheses around the OR clause to accurately cap
 #   col_rec_tat <dbl>, rec_ver_tat <dbl>
 ```
 
-</div>
+
 
 ## The "Pipe" Operator (`%>%`  or `|>`)
 
