@@ -90,5 +90,158 @@
         "description": "Placeholder value."
       }
     ]
+  },
+  "relation_type": {
+    "description": "TBD",
+    "type": "string",
+    "fieldSource": "DataCite Metadata Schema 4.0 plus manually added items",
+    "oneOf": [
+      {
+        "const": "IsCitedBy",
+        "description": "Indicates that B includes A in a citation."
+      },
+      {
+        "const": "Cites",
+        "description": "Indicates that A includes A in a citation."
+      },
+      {
+        "const": "IsSupplementTo",
+        "description": "Indicates that A is a supplement to B."
+      },
+      {
+        "const": "IsSupplementedBy",
+        "description": "Indicates that B is a supplement to A."
+      },
+      {
+        "const": "IsContinuedBy",
+        "description": "Indicates A is continued by the work B."
+      },
+      {
+        "const": "Continues",
+        "description": "Indicates A is a continuation of the work B."
+      },
+      {
+        "const": "IsNewVersionOf",
+        "description": "Indicates A is a new edition of B, where the new edition has been modified or updated."
+      },
+      {
+        "const": "IsPreviousVersionOf",
+        "description": "Indicates A is a previous edition of B."
+      },
+      {
+        "const": "IsPartOf",
+        "description": "Indicates A is a portion of B; may be used for elements of a series."
+      },
+      {
+        "const": "HasPart",
+        "description": "Indicates A includes the part B."
+      },
+      {
+        "const": "IsReferencedBy",
+        "description": "Indicates A is used as a source of information by B."
+      },
+      {
+        "const": "References",
+        "description": "Indicates B is used as a source of information for A."
+      },
+      {
+        "const": "IsDocumentedBy",
+        "description": "Indicates B is documentation about/explaining A; e.g. points to software documentation."
+      },
+      {
+        "const": "Documents",
+        "description": "Indicates A is documentation about/B; e.g. points to software documentation."
+      },
+      {
+        "const": "IsCompiledBy",
+        "description": "Indicates B is used to compile or create A."
+      },
+      {
+        "const": "Compiles",
+        "description": "Indicates B is the result of a compile or creation event using A."
+      },
+      {
+        "const": "IsVariantFormOf",
+        "description": "Indicates A is a variant or different form of B."
+      },
+      {
+        "const": "IsOriginalFormOf",
+        "description": "Indicates A is the original form of B."
+      },
+      {
+        "const": "IsIdenticalTo",
+        "description": "Indicates that A is identical to B, for use when there is a need to register two separate instances of the same resource."
+      },
+      {
+        "const": "HasMetadata",
+        "description": "Indicates resource A has additional metadata B."
+      },
+      {
+        "const": "IsMetadataFor",
+        "description": "Indicates additional metadata A for a resource B."
+      },
+      {
+        "const": "Reviews",
+        "description": "Indicates that A is a review of B."
+      },
+      {
+        "const": "IsReviewedBy",
+        "description": "Indicates that A is reviewed by B."
+      },
+      {
+        "const": "IsDerivedFrom",
+        "description": "Indicates B is a source upon which A is based."
+      },
+      {
+        "const": "IsSourceOf",
+        "description": "Indicates A is a source upon which B is based."
+      },
+      {
+        "const": "Describes",
+        "description": "Indicates A describes B."
+      },
+      {
+        "const": "IsDescribedBy",
+        "description": "Indicates A is described by B."
+      },
+      {
+        "const": "HasVersion",
+        "description": "Indicates A has a version (B)."
+      },
+      {
+        "const": "IsVersionOf",
+        "description": "Indicates A is a version of B."
+      },
+      {
+        "const": "Requires",
+        "description": "Indicates A requires B."
+      },
+      {
+        "const": "IsRequiredBy",
+        "description": "Indicates A is required by B."
+      },
+      {
+        "const": "sequence",
+        "description": "Denotes that the relationship represents a seuqence."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "sequence_name": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "R Basics",
+        "description": "R Basics sequence."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
   }
 }
