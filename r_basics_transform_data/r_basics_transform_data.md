@@ -372,8 +372,8 @@ This filter statement will return a data frame that only contains the 4th row, i
 
 ![On the left, the first few columns of the `covid_testing data frame: mrn, first_name, and last_name`.  The first three rows are labeled "False", while the forth row is labeled "True" and colored blue, and there, the mrn value matches the one we're trying to match.  This data frame is followed by an arrow pointing to a new data frame on the right, which only has the one selected / blue row, the one that had the matching mrn value.](media/filter_covid_example.png)<!--style = "max-width:1000px;"-->
 
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+The difference between `=` and `==`
+---
 
 One common issue to be aware of is the difference between the single equals (=) and the double equals (==) operators.
 
@@ -403,7 +403,6 @@ OR
 invalid (do_set) left-hand side to assignment
 </code>
 
-</div>
 
 ### Logical Operators
 
