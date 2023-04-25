@@ -1,23 +1,21 @@
 {
   "$schema": "./metadata_schema.json",
   "education_module": {
-    "titles": [
-      {
-        "titleValue": "TBD",
-        "@titleType": "TBD",
-        "@titleSource": "TBD"
-      }
-    ],
-    "subject": [
-      {
-        "subjectTerm": "TBD",
-        "schemeURI": "https://www.nlm.nih.gov/mesh/introduction.html",
-        "valueURI": "TBD",
-        "qualifier": [
-          "TBD"
-        ]
-      }
-    ],
+    "author": "TBD",
+    "email": "TBD", 
+    "version": "TBD",
+    "module_template_version": "TBD",
+    "language": "TBD",
+    "narrator":"TBD",
+    "title": "TBD",
+    "comment": "TBD",
+    "long_description": "TBD",
+    "estimated_time": "TBD",
+    "@learning_objectives": "TBD",
+    "@pre_reqs": "TBD",
+    "good_first_module": "TBD",
+    "data_domain": "TBD",
+    "data_task": "data_analysis",
     "coding": [
       {
       "coding_required": true,
@@ -44,7 +42,7 @@
           "git_setup_windows",
           "bash_command_line_101"
         ]
-        },
+      },
       {
         "this_module": "git_setup_windows",
         "relation_type": "is_parallel_to",
@@ -80,67 +78,6 @@
           "pandas_transform"
         ]
       }
-    ],
-    "creators": [
-      {
-        "name": {
-          "nameValue": "TBD",
-          "@nameType": "TBD"
-        },
-        "contactInfo": {
-          "email": "TBD",
-          "organisation": "TBD",
-          "department": "TBD",
-          "jobTitle": "TBD",
-          "mailingAddress": "TBD",
-          "name": "TBD",
-          "telephone": "TBD",
-          "website": "TBD"
-        },
-        "personType": {
-          "personTypeValue": "TBD",
-          "@personTypeNote": "TBD"
-        },
-        "contact": false,
-        "affiliation": [
-          {
-            "affiliationOrganization": "TBD",
-            "affiliationDepartment": "TBD",
-            "affiliationDivision": "TBD"
-          }
-        ],
-        "familyName": "TBD",
-        "givenName": "TBD",
-        "nameIdentifier": [
-          {
-            "nameIdentifierURI": "TBD",
-            "@nameIdentifierScheme": "TBD",
-            "@schemeURI": "TBD"
-          }
-        ],
-        "@personSource": "TBD"
-      }
-    ],
-    "restrictionsForUse": [
-      {
-        "DUOTerm": "general research use",
-        "DUOTermIdentifier": "DUO_000042",
-        "DUOTermURI": "http://purl.obolibrary.org/obo/DUO_0000042",
-        "schemeURI": "http://purl.obolibrary.org/obo/duo.owl",
-        "restrictionSource": "default",
-        "note": "This collection is available for reuse for any research purposes.",
-        "diseaseRestriction": [
-          {
-            "diseaseRestrictionTerm": "TBD",
-            "diseaseRestrictionURI": "TBD",
-            "diseaseRestrictionQualifier": [
-              "TBD"
-            ],
-            "diseaseRestrictionSchemeURI": "https://www.nlm.nih.gov/mesh/introduction.html"
-          }
-        ]
-      }
-    ],
-    "stubIdentifier": "TBD"
-  }
+    ]
+  }  
 }

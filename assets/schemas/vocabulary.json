@@ -8,68 +8,24 @@
         "description": "Data is about studying how genes are manifested or suppressed."
       },
       {
-        "const": "proteomics",
-        "description": "Data is about the large-scale study of proteins."
+        "const": "r",
+        "description": "TBD."
       },
       {
-        "const": "phenotyping",
-        "description": "Data is about studying the observable characteristics of participants. This may or may not be paired with genotyping, as well."
+        "const": "sql",
+        "description": "TBD."
       },
       {
-        "const": "metagenomics",
-        "description": "Data is about the study and analysis of the collective genetic material and resultant files from the participant, microorganisms, and their environment."
+        "const": "python",
+        "description": "TBD."
       },
       {
-        "const": "patient list",
-        "description": "Data is a list of participant MRNs."
+        "const": "bash",
+        "description": "TBD."
       },
       {
-        "const": "clinical notes",
-        "description": "Data is about notes, often free text, produced from visits to a healthcare provider. N.B. Data or files produced directly from collection information about the physical state of the participant should take the term \"participant\"."
-      },
-      {
-        "const": "clinical encounters",
-        "description": "Data is about a defined set of information produced from visits to a healthcare provider. N.B. Data or files produced directly from collection information about the physical state of the participant should take the term \"participant\"."
-      },
-      {
-        "const": "datasets",
-        "description": "Describes how whole, discrete datasets comprising the series or collection are created, edited, and maintained."
-      },
-      {
-        "const": "files",
-        "description": "Describes how files comprising the dataset are created, edited, and maintained."
-      },
-      {
-        "const": "clinical registry",
-        "description": "Data is about a defined set of participants and defined set of information related to those participants."
-      },
-      {
-        "const": "set up and installation",
-        "description": "Data is about how the study, experiment, or analysis is designed and initially run."
-      },
-      {
-        "const": "workflow",
-        "description": "Data is about how the study, experiment, or analysis is conducted."
-      },
-      {
-        "const": "administration",
-        "description": "Data is about the archival governance of the study and its datasets."
-      },
-      {
-        "const": "participant",
-        "description": "Data is about and collected directly from living body of participant."
-      },
-      {
-        "const": "fluoroscopic tracings",
-        "description": "Videourodynamics (VUDS) fluoroscopic tracings."
-      },
-      {
-        "const": "genomics",
-        "description": "The study of all a person or organism's genes and their functions."
-      },
-      {
-        "const": "survey data",
-        "description": "Data collected from surveys."
+        "const": "git",
+        "description": "TBD."
       },
       {
         "const": "TBD",
@@ -84,6 +40,26 @@
       {
         "const": "getting started",
         "description": "These modules are primarily about getting a platform set up."
+      },
+      {
+        "const": "beginner",
+        "description": "TBD."
+      },
+      {
+        "const": "basics",
+        "description": "TBD."
+      },
+      {
+        "const": "intermediate",
+        "description": "TBD."
+      },
+      {
+        "const": "advanced",
+        "description": "TBD."
+      },
+      {
+        "const": "practice exercise",
+        "description": "TBD."
       },
       {
         "const": "TBD",
@@ -222,7 +198,19 @@
       },
       {
         "const": "sequence",
-        "description": "Denotes that the relationship represents a seuqence."
+        "description": "Denotes that the relationship represents a sequence."
+      },
+      {
+        "const": "depends_on_knowledge_available_in",
+        "description": "Not a strict requirement or pre-requisite but notes where user can find useful knowledge in other modules."
+      },
+      {
+        "const": "sets_you_up_for",
+        "description": "Not a strict requirement or pre-requisite but notes how knowledge in this module will prepare the user for other concepts."
+      },
+      {
+        "const": "is_parallel_to",
+        "description": "Select one and only one of the related modules."
       },
       {
         "const": "TBD",
@@ -237,6 +225,58 @@
       {
         "const": "R Basics",
         "description": "R Basics sequence."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "data_task": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "data_visualization",
+        "description": "TBD."
+      },
+      {
+        "const": "data_management",
+        "description": "TBD."
+      },
+      {
+        "const": "data_cleaning",
+        "description": "TBD."
+      },
+      {
+        "const": "data_transformation",
+        "description": "TBD."
+      },
+      {
+        "const": "data_analysis",
+        "description": "TBD."
+      },
+      {
+        "const": "TBD",
+        "description": "Placeholder value."
+      }
+    ]
+  },
+  "data_domain": {
+    "description": "TBD",
+    "type": "string",
+    "oneOf": [
+      {
+        "const": "omics",
+        "description": "TBD."
+      },
+      {
+        "const": "geospatial",
+        "description": "TBD."
+      },
+      {
+        "const": "ehr",
+        "description": "TBD."
       },
       {
         "const": "TBD",

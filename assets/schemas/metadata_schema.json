@@ -72,6 +72,18 @@
        "good_first_module": {
         "description": "True or false value for whether the module would be a good first start for a beginner. Need definition for what constitutes a good first module.",
         "type": "boolean",
+        "default": false
+       },
+       "data_domain": {
+        "$ref": "./vocabulary.json#/data_domain",
+        "description": "Optional metadata for modules that focus on a particular type of data, either as the topic of the module or as the main type of examples.",
+        "type": "string",
+        "default": "TBD"
+       },
+       "data_task": {
+        "$ref": "./vocabulary.json#/data_task",
+        "description": "Optional metadata. What type of task/action/skill does this module teach?",
+        "type": "string",
         "default": "TBD"
        },
        "coding": {
@@ -110,14 +122,81 @@
           "type": "object"
         },
         "type": "array"
-      }
+      },
+      "sequence": {
+        "additionalProperties": false,
+        "description": "Groups together modules in a sequence.",
+        "items": {
+          "properties": {
+            "sequence_name": {
+              "description": "Name of the sequence as a whole.",
+              "type": "string",
+              "default": "TBD"
+            },
+            "relation_type": {
+              "$ref": "./vocabulary.json#/relation_type",
+              "description": "Type of relationship between modules. For a sequence the relation_type should be \"sequence\".",
+              "type": "string"
+            },
+            "next_sequential_module": {
+              "description": "Identifier of next module in the sequence.",
+              "type": "string",
+              "default": "TBD"
+            }
+          },
+          "required": [
+            "sequence_name",
+            "relation_type",
+            "next_sequential_module"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "relationship": {
+        "additionalProperties": false,
+        "description": "Relates two or more modules to one another.",
+        "items": {
+          "properties": {
+            "this_module": {
+              "description": "Name of the sequence as a whole.",
+              "type": "string",
+              "default": "TBD"
+            },
+            "relation_type": {
+              "$ref": "./vocabulary.json#/relation_type",
+              "description": "Type of relationship between modules.",
+              "type": "string"
+            },
+            "related_module": {
+              "description": "Identifier of related module.",
+              "items": {
+                "type": "string",
+                "default": "TBD"
+              },
+              "type": "array"
+            }
+          }, 
+          "required": [
+            "this_module",
+            "relation_type",
+            "related_module"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      }      
       },
       "required": [
-        "titles",
-        "subject",
-        "stubRecordDescription",
-        "creators",
-        "restrictionsForUse"
+        "author",
+        "title",
+        "email",
+        "comment",
+        "long_description",
+        "estimated_time",
+        "@learning_objectives",
+        "@pre_reqs",
+        "good_first_module"
       ],
       "type": "object"
     }
