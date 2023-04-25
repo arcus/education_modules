@@ -4,10 +4,6 @@
     "type": "string",
     "oneOf": [
       {
-        "const": "gene expression",
-        "description": "Data is about studying how genes are manifested or suppressed."
-      },
-      {
         "const": "r",
         "description": "TBD."
       },
@@ -25,6 +21,10 @@
       },
       {
         "const": "git",
+        "description": "TBD."
+      },
+      {
+        "const": "regex",
         "description": "TBD."
       },
       {

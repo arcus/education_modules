@@ -13,7 +13,7 @@
     "estimated_time": "TBD",
     "@learning_objectives": "TBD",
     "@pre_reqs": "TBD",
-    "good_first_module": "TBD",
+    "good_first_module": false,
     "data_domain": "TBD",
     "data_task": "data_analysis",
     "coding": [
