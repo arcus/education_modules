@@ -42,3 +42,9 @@
   - B `depends_on_knowledge_available_in` A
 - Symmetric relationship where the same content is presented in different languages or for different opperating systems:
   - C `is_parallel_to` D
+
+#### Suggestions from Ed Team:
+- `dependencies`: True/False you need to install something/have something already installed/have an account somewhere
+  - `account`: with google colab/Posit/etc.
+  - `software`: jupyter notebook/command line interface
+  - `dependency_options`: (software download OR account) AND (other account)
