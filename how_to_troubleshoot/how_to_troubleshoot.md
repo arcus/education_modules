@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.1
+version: 1.1.0
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -59,8 +59,12 @@ While not even the entirety of the Internet can promise to tell you **everything
 
 The "steps" we're describing in this module don't necessarily take place in the order we describe -- often there's a flow from one method to another and back again as you get closer and closer to understanding, describing, and solving your problem.  This module also is not exhaustive -- you may have tips, ideas, and methods we don't describe here. Everyone's debugging process looks a little bit different, and that's perfectly okay! 
 
+
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 One thing that tends to intimidate people is the dreaded **error message**.  Error messages can seem cryptic, but we encourage you to read them aloud if possible.  Reading aloud makes it less likely that you'll skim over important, useful, and recognizably helpful information.  Yes, you can certainly search for error message text in your favorite web browser, but you might surprise yourself with your debugging prowess if you slow down and read your error messages aloud.  At the very least, reading it out loud might help you identify _which parts of the error code_ to search, as the messages can contain some generic text mixed with elements that are very specific to your code or data.
+
 </div>
 
 
@@ -93,15 +97,14 @@ In both of these examples, describing a problem more thoroughly is the key to na
 
 When you're in a hurry, in a panic, or annoyed (at yourself, at your computer, or at the world), it can be very tempting to throw your hands up and give a very vague description like "data import is broken!".  However, that description won't help you pinpoint the cause of your problems, and it will make it very unlikely that people you're asking for help (say in a user group Slack or on a website like Stack Overflow) will go out of their way to help you, either.  While your problem feels very familiar to you, and rehashing it might seem like too much effort, other people reading your request for help aren't familiar with your data, your computer, your customary use of software, or your experience level.
 
-<div class = "important">
 
-Which of these problem descriptions would you rather tackle?  
+**Which of these problem descriptions would you rather tackle?**  
+---
 
 Option 1:  "I'm so frustrated. No matter what I try to import my data, I can't get it to work! I just keep getting error messages. "
 
 Option 2:  "I'm so frustrated.  I have been trying to load a .csv from my local drive using the `read_csv` function, which I've read is the best way to import .csv data, but I keep getting the error `Error in read_csv("intervention_case_control.csv") : could not find function "read_csv"`.  I know the file is there, and I'm 99% sure it's not a file path issue."
 
-</div>
 
 ### Rubber Duck Debugging
 

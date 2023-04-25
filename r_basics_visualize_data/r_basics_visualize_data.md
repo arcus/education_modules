@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.7
+version: 1.1.0
 language: en
 module_template_version: 2.0.0
 narrator: US English Female
@@ -179,10 +179,13 @@ Now you can not only work in the cloud, but also save your work.
 
 If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Do you use Microsoft OneDrive?  
 
 Knitting files can sometimes be problematic with some versions of Microsoft OneDrive, so if you are working from your local computer and get strange errors when you try to knit, try to use a directory that's not within a OneDrive folder to see if that helps.  Newer versions of OneDrive seem to be less buggy, so you may also want to update your OneDrive software.
+
 </div>
 
 * In RStudio, open a new project (File, New Project)
@@ -224,7 +227,10 @@ If you already completed this work for a previous module, and it's been a while 
 
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
+
 </div>
 
 ### How to Follow Along
@@ -491,7 +497,10 @@ Let's take on the third step: writing aesthetic mappings.  This is where you tel
 Of course, there are other visual elements of a data visualization that **wouldn't** automatically change if you change the data you provide. For example, the color of the background of the graph and the label of the axes won't change even if new data is added. R gives us a lot of control over these elements as well. Please note, however: since they aren't "mapped" to a specific quality of the data, we **"set"** them, rather than "map" them, which means we don't put these assignments inside `aes()`.
 
 <div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 Don't worry if this distinction seems a bit fuzzy at first -- it can be tricky to grapple with, and will become clearer over time as you gain more experience manipulating visualizations in R. Even advanced coders sometimes set an aesthetic they meant to map, and vice versa.
+
 </div>
 
 Let's consider an example in a data frame with three columns, called "a", "b", and "c".  
