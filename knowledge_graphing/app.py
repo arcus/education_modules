@@ -2,7 +2,7 @@ from dash import Dash, html, Input, Output, dcc
 import dash_bootstrap_components as dbc
 import dash_cytoscape as cyto
 
-app = Dash(__name__)
+app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 styles = {
     'pre': {
@@ -209,6 +209,8 @@ def node_select(node_id):
         if module['data']['id'] == node_id:
             select_module = module
             select_module['selected'] = True
+            module_name = module['data']['title']
+            select_module['style'] = {'shape': 'triangle'}
             selected_node.append(select_module)
         else:
             un_select_module = module
@@ -220,13 +222,57 @@ def node_select(node_id):
 #### The app itself:
 
 app.layout = html.Div([
-    cyto.Cytoscape(
-        id='module_visualization',
-        layout={'name': 'cose'},
-        elements=edges+nodes,
-        stylesheet=default_stylesheet,
-        style={'width': '100%', 'height': '450px'}
+    dbc.Row( children=[
+        dbc.Col(html.Div(["DART Module Discovery Tool"]), style={'textAlign': 'center','font-size':'40px'}, align='end', width=6),
+        dbc.Col(html.Div(      
+            dbc.Row(      [
+
+                ### Make these into working Nav buttons? Or maybe Tabs are better for this use case?
+                dbc.Col(html.Div("Explore Categories")),
+                dbc.Col(html.Div("Explore Modules")),
+                dbc.Col(html.Div("Explore Pathways")),
+            ], 
+                style={'font-size':'20px'})),  
+            align='end')
+    ]
     ),
+        dbc.Row(
+            [
+                dbc.Col(
+                    cyto.Cytoscape(
+                    id='module_visualization',
+                    layout={'name': 'cose'},
+                    elements=edges+nodes,
+                    stylesheet=default_stylesheet,
+                    style={'width': '100%', 'height': '450px'},
+                    userZoomingEnabled=False
+                     ), width=6
+                ),
+                dbc.Col([
+                    dbc.Row(html.Div(dcc.Markdown(id='selected_module_text'))),
+                    dbc.Row([
+                        dbc.Col(html.Div([
+                                dcc.Markdown("Modules that the selected module links to:"),
+                                dcc.Dropdown(
+                                    id='modules_incoming',
+                                    options=[
+                                        {'label': module["data"]["title"], 'value': module["data"]["id"]}
+                                        for module in nodes
+                                    ]
+                                )
+                        ])),
+                dbc.Col(html.Div([        
+                    dcc.Markdown("Modules that link to the selected module:"),
+                    dcc.Dropdown(
+                    id='modules_outgoing',
+                    options=[ ]
+                    ),
+    ]))
+                    ], align = 'start'),
+            ],
+            width=6
+        ),
+
     dcc.Markdown("Pick an author to see their modules."),
     dcc.Dropdown(
     id='author_selector',
@@ -238,25 +284,9 @@ app.layout = html.Div([
     ]
 ),
 
-    dcc.Markdown(id='selected_module_text'),
+    
 
     dcc.Markdown("Select a module from the dropdown menu to select it on the graph."),
-    dcc.Markdown("Modules that the selected module links to:"),
-    dcc.Dropdown(
-        id='modules_incoming',
-        options=[
-            {'label': module["data"]["title"], 'value': module["data"]["id"]}
-            for module in nodes
-        ]
-    ),
-        dcc.Markdown("Modules that link to the selected module:"),
-    dcc.Dropdown(
-        id='modules_outgoing',
-        options=[
-            #{'label': module["data"]["title"], 'value': module["data"]["id"]}
-            #for module in nodes
-        ]
-    ),
     dcc.Markdown("List of all modules:"),
     dcc.Dropdown(
         id='list_of_all_modules',
@@ -266,6 +296,7 @@ app.layout = html.Div([
         ]
     )
     
+])
 ])
 
 ### When an author is selected from the dropdown menu, that author's modules are made darker and labeled.
@@ -281,9 +312,9 @@ def update_author_selection(author_name):
               )
 def displayTapNodeData(data):
     if data:
-        return  "### [**" + data[0]['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data[0]['id']+"/" +data[0]['id'] + ".md) \n \n  By " + data[0]['author'] +" \n \n Estimated length: " + data[0]['time']+". \n \n" + data[0]['comment'] + "\n #### Connected modules: \n "
+        return  " --- \n ### [**" + data[0]['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data[0]['id']+"/" +data[0]['id'] + ".md) \n \n  By " + data[0]['author'] +" \n \n Estimated length: " + data[0]['time']+". \n \n" + data[0]['comment'] + "\n --- \n "
     else:
-        return "Click on a node in the graph to see information about that module."
+        return " --- \n Click on a node in the graph to see information about that module. \n --- "
 
 ### When a module node is selected, the modules it links to appear in a drop down menu of their own.
 @app.callback(Output('modules_incoming','options'),
