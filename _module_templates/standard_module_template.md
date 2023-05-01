@@ -37,7 +37,7 @@ After completion of this module, learners will be able to:
 - articulate the rationale for something
 @end
 
-import: https://raw.githubusercontent.com/arcus/education_modules/template_test/a_sample_module_template/module_macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros.md
 -->
 
 # Module Title
@@ -123,6 +123,28 @@ Note that you should have `r_file` filled out in the YAML header.
 If your lesson includes interactive python code in sagemath cells, then insert the following macro:
 
 @lesson_prep_python
+
+## Lesson Preparation: SQL
+
+If your lesson includes interactive SQL code, you'll need to load the SQL macros. Each table is generated, row by row, in the macros for that lesson, so to avoid loading large macros unnecessarily, there are several different SQL macro modules available to load:
+
+ - `module_macros_sql` is required for any module with interactive SQL
+ - `module_macros_sql_table_allergies` loads the allergies table
+ - `module_macros_sql_table_patients` loads the patients table
+ - `module_macros_sql_table_observations` loads the observations table
+
+Note that very small tables (just a few rows) can be constructed right in the YAML header for the module that uses them. Any larger tables, or tables that need to be re-used across different modules, should be created in separate table macro modules, though.
+
+To use SQL macros (including tables), add the relevant `import` statements to your module's YAML header. For example: 
+
+```
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros_sql
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros_sql_table_patients
+```
+
+To insert text providing a brief refresher on SQL, including our style guide and an example interactive code block, use the following macro:
+
+@lesson_prep_sql
 
 ## Including Media
 
@@ -389,6 +411,22 @@ Files uploaded to this account will be **publicly visible**. Be very careful not
 
 Surround inline math statements with `$`: $ 1 + \beta = 2 $
 
+## Including tables
+
+If you wish to print a table, you can use markdown table formatting. 
+
+Note that LiaScript has defaults that will allow users to toggle tables of data between table format and a plot of the data --- if you don't want to allow that functionality, you need to set the data-type to none. For example:
+
+<!-- data-type="none" class="tight-table" style="font-size:80%"-->
+| subj_id  | street_address  | city  | state   | zip  | date_start  | date_end   |
+| :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
+| 11234   | 123 Main Street   | Smithtown    | PA  | 19000    | 2022-01-01   | `NULL`    |
+| 11234   | 123 Oak Lane   | Old Towne    | PA  | 18000   | 2000-01-01    | 2021-12-31    |
+| 93452   | 123 Green Blvd  | Kirby    | TN  | 37000    | 2020-05-01    | `NULL`   |
+
+
+For more information about using tables in LiaScript, see the [tables section of the LiaScript documentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#tables).
+
 ## Including non-interactive code
 
 Include inline code with single backticks: `library(ggplot2)`. 
@@ -402,6 +440,7 @@ install.packages("ggplot2")
 # You'll need to load the library anew for each R session
 library("ggplot2")
 ```
+
 You don't have to specify the programming language, but you can, and it should help you get appropriate syntax highlighting.
 
 ```python
