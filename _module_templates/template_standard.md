@@ -589,25 +589,6 @@ For more details, see [notes about quizzes in the LiaScript documentation](https
 </div>
 ***
 
-You can also embed quiz questions into other kinds of markdown text, such as putting quiz questions inside a code block:
-
-<div>
-
-Fill in the correct geom to create a scatterplot in the following code block.
-
-```r
-ggplot(data, mapping = aes(x = time, y = weight)) + 
-  [[geom_point]]()
-```
-</div>
-***
-<div class = "answer">
-
-Hopefully this shows up correctly.
-
-</div>
-***
-
 There are many more options and examples of quiz questions in the LiaScript documentation. [Read more about quiz syntax here.](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#quizzes)
 
 
