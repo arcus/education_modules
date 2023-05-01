@@ -22,6 +22,37 @@ After completion of this module, learners will be able to:
 - View and edit the contents of a file from the bash shell
 @end
 
+@pre_reqs
+
+Learners should be familiar with locating files and folders stored in a directory system.  Our [Directories and File Paths](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#1) module can provide some help with gaining these skills.
+
+@end
+
+good_first_module: true
+
+coding:
+- coding_required: true
+  coding_language: bash
+  coding_level: basic
+
+sequence:
+- sequence_name: Bash Basics
+  next_sequential_module: bash_command_line_102
+  relation_type: sequence
+
+relationship:
+- this_module: bash_command_line_101
+  relation_type: sets_you_up_for
+  related_module: 
+  - bash_command_line_102
+  - bash_103_combining_commands
+  - bash_conditionals_loops
+  - bash_scripts
+- this_module: bash_command_line_101
+  relation_type: depends_on_knowledge_available_in
+  related_module: 
+  - git_setup_windows
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
@@ -43,8 +74,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-Learners should be familiar with locating files and folders stored in a directory system.  Our [Directories and File Paths](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#1) module can provide some help with gaining these skills.
-
+@pre_reqs
 
 
 **Learning Objectives**
