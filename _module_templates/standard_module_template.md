@@ -59,7 +59,12 @@ If this is your first time writing a module, be sure to check out our [contribut
 
 Some important things to keep in mind:
 
-- We use "macros" for a lot of our standardized text. For exmaple, the overview and feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. All available macros are in the [module macros file](https://github.com/arcus/education_modules/blob/main/_module_templates/module_macros.md). For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
+- We use "macros" for a lot of our standardized text. For exmaple, the overview and feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. 
+
+  * General use macros are in the [module macros file](https://github.com/arcus/education_modules/blob/main/_module_templates/module_macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in every module. 
+  * Macros for hands-on code in R, Python, and SQL modules are available in `module_macros_r.md`, `module_macros_python.md`, and `module_macros_sql.md`, respectively. SQL tables are loaded with additional files. For more details, see the sections on including interactive code in this template.
+  * For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
+
 - The title is the only level-1 header in the document.
 - We use the module title to collate feedback in our REDCap survey, so if the title is edited after learners have begun sending in feedback we'll lose the ability to quickly group feedback for this module. Avoid making changes to the title after publication.
 - LiaScript will create a new page at each level 1, 2, or 3 header, so to avoid a page with only a header and no content, include text after each header before the next.
@@ -112,7 +117,13 @@ When you're ready to start writing a new module:
 
 ## Lesson Preparation: RStudio
 
-If your lesson includes R code examples hosted in binder from the repo https://github.com/arcus/education_r_environment, then insert the following macro:
+If your lesson includes R code examples hosted in binder from the repo https://github.com/arcus/education_r_environment, then you'll need to load the R macros by adding the following `import` statement to the YAML header of your module:
+
+```
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros_r.md
+```
+
+You can then insert the following macro, which includes instructions for opening up the relevant rmd document, in your Lesson Preparation section:
 
 @lesson_prep_r
 
@@ -120,13 +131,19 @@ Note that you should have `r_file` filled out in the YAML header.
 
 ## Lesson Preparation: Interactive Python
 
-If your lesson includes interactive python code in sagemath cells, then insert the following macro:
+If your lesson includes interactive python code in sagemath cells, then you'll need to load the Python macros by adding the following `import` statement to the YAML header of your module: 
+
+```
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros_python.md
+```
+
+You can then insert the following macro, which includes instructions and an example interactive code block, in your Lesson Preparation section:
 
 @lesson_prep_python
 
 ## Lesson Preparation: SQL
 
-If your lesson includes interactive SQL code, you'll need to load the SQL macros. Each table is generated, row by row, in the macros for that lesson, so to avoid loading large macros unnecessarily, there are several different SQL macro modules available to load:
+If your lesson includes interactive SQL code, you'll need to load the SQL macros. Each table is generated, row by row, in the macros for that lesson, so to avoid loading large macros unnecessarily, there are several different SQL macro modules available:
 
  - `module_macros_sql` is required for any module with interactive SQL
  - `module_macros_sql_table_allergies` loads the allergies table
@@ -138,11 +155,11 @@ Note that very small tables (just a few rows) can be constructed right in the YA
 To use SQL macros (including tables), add the relevant `import` statements to your module's YAML header. For example: 
 
 ```
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros_sql
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros_sql_table_patients
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros_sql.md
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros_sql_table_patients.md
 ```
 
-To insert text providing a brief refresher on SQL, including our style guide and an example interactive code block, use the following macro:
+To insert text providing a brief refresher on SQL, including our style guide and an example interactive code block, use the following macro in your Lesson Preparation section:
 
 @lesson_prep_sql
 

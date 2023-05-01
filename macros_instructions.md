@@ -11,11 +11,11 @@ There are a few handy features that make this much more powerful than it first a
 - you can call macros from other macros
 - you can include markdown, html, css, and javascript in the text you're subbing in, and it will execute
 - you can pass arguments to macros (especially helpful when your macro includes javascript)
-- you can automatically load all of the macros for another module by just linking to that module as an `import` in your new module's header. This means we can have one macro module where we save all of the macros, and then load them all with a single line in each new module.
+- you can automatically load all of the macros for another module by just linking to that module as an `import` in your new module's header. This means we can have a separate macro module where we save all of the macros, and then load them all with a single line in each new module.
 
 ## Example: Overview section
 
-We have a very formulaic start to every module. Currently, we copy-paste most of the boiler plate and use small macros to sub in module-specific text, estimated_time. Because we can call macros from other macros, though, we can define a macro for the overview that calls each of the module-specific macros within it.
+We have a very formulaic start to every module. Previously, we copy-pasted most of the boiler plate and used small macros to sub in module-specific text, estimated_time. Because we can call macros from other macros, though, we can define a macro for the overview that calls each of the module-specific macros within it.
 
 ## Example: Lesson Prep sections
 
@@ -31,12 +31,22 @@ The most complicated example currently is the feedback section because we need a
 
 Then there's a `feedback` macro that is mostly just text substitution, like the overview, but includes a line that uses the `make_survey_url` macro and plugs in macros from this template as the arguments: `Thank you in advance for filling out @make_survey_url('@title', '@version', '@module_type')!`
 
+## Our macro files
+
+To avoid loading lots of macros unnecessarily, and to make the macro files themselves easier to read and edit, we have more than one md file for storing macros. 
+
+- `module_macros.md` includes the general-purpose macros such as those to generate the overview and feedback sections.
+- `module_macros_r.md` includes the macro `lesson_prep_r` that inserts instructions for opening and using interactive rmd files 
+- `module_macros_python.md` includes the macros `lesson_prep_python`, which inserts instructions for using interactive python cells in the lesson, and `sage`, which is necessary to make those cells work. It also loads associated scripts for sagemath. 
+- `module_macros_sql.md` includes the macros `lesson_prep_sql`, which inserts instructions for using interactive SQL cells and a brief refresher on SQL including our style guide, and also `AlaSQL.eval`, which builds the functions to make the interactive SQL cells work. 
+
+Additionally, there is a separate file for each SQL table to load.  This is because the tables are generated, row by row, in the macros, which takes up a lot of space --- storing tables separately keeps our general SQL macros file easier to read, and avoids generating tables we may not need in a given module. 
+
 ## Steps for adding a macro
 
-1. Add the text you want to sub in to the macros module, in the header, specified as either a [single line or block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#single-line)
-2. Make sure the macros module is listed as an input in the header of your new macro
+1. Add the text you want to sub in to the appropriate macros module, in the header, specified as either a [single line or block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#single-line)
+2. Make sure that macros module is listed as an import in the header of your new macro
 3. Insert your macro wherever you want it to appear with `@macro_name` (note that macro names are case-sensitive, so `@author` is different from `@Author`)
 4. Check that all of the substituted text is rendering as expected in your final module. 
 
-Note: If you want to change an existing macro in the module_macros template, **you must check how the changes render in all modules referencing that macro**. To get a list of all modules using the macro, try `grep -r "macro_name"` in the terminal for the education_modules directory.  
- 
+Note: If you want to change an existing macro in one of the module macros files, **you must check how the changes render in all modules referencing that macro**. To get a list of all modules using the macro, try `grep -r "macro_name"` in the terminal for the education_modules directory.   
