@@ -219,36 +219,9 @@ def node_select(node_id):
     newly_selected_nodes = non_selected_nodes+selected_node
     return newly_selected_nodes
 
-#### The app itself:
+### What appears when the "explore modules" tab is clicked
 
-app.layout = html.Div([
-    dbc.Row( children=[
-        dbc.Col(html.Div(["DART Module Discovery Tool"]), style={'textAlign': 'center','font-size':'40px'}, align='end', width=6),
-        dbc.Col(html.Div(      
-            dbc.Row(      [
-
-                ### Make these into working Nav buttons? Or maybe Tabs are better for this use case?
-                dbc.Col(html.Div("Explore Categories")),
-                dbc.Col(html.Div("Explore Modules")),
-                dbc.Col(html.Div("Explore Pathways")),
-            ], 
-                style={'font-size':'20px'})),  
-            align='end')
-    ]
-    ),
-        dbc.Row(
-            [
-                dbc.Col(
-                    cyto.Cytoscape(
-                    id='module_visualization',
-                    layout={'name': 'cose'},
-                    elements=edges+nodes,
-                    stylesheet=default_stylesheet,
-                    style={'width': '100%', 'height': '450px'},
-                    userZoomingEnabled=False
-                     ), width=6
-                ),
-                dbc.Col([
+module_tab_content = [
                     dbc.Row(html.Div(dcc.Markdown(id='selected_module_text'))),
                     dbc.Row([
                         dbc.Col(html.Div([
@@ -269,11 +242,11 @@ app.layout = html.Div([
                     ),
     ]))
                     ], align = 'start'),
-            ],
-            width=6
-        ),
+            ]
 
-    dcc.Markdown("Pick an author to see their modules."),
+### What appears when the "Explore Categories" tab is clicked
+categories_tab_content = [dcc.Markdown("### Content here for how to explore by categories. \n For example, maybe you want to see all of the modules by a particular author"),
+                                dcc.Markdown("Pick an author to see their modules."),
     dcc.Dropdown(
     id='author_selector',
     #value='Joy Payton',
@@ -282,9 +255,61 @@ app.layout = html.Div([
         {'label': name, 'value': name}
         for name in ['Elizabeth Drellich', 'Joy Payton', 'Rose Franzen', 'Rose Hartman', 'Meredith Lee', 'Nicole Feldman', 'Ene Belleh', 'Peter Camacho']
     ]
-),
+),]
 
-    
+### What appears when the "Explore Pathways" tab is clicked
+pathways_tab_content = [dcc.Markdown("content hear showing different pre-made pathways")]
+
+### What appears when the "Search" tab is clicked
+search_tab_content = [dcc.Markdown("search box to search for modules by entering a keyword")]
+
+#### The app itself:
+
+app.layout = html.Div([
+    dbc.Row( children=[
+        dbc.Col(html.Div(["DART Module Discovery Tool"]), style={'textAlign': 'center','font-size':'40px'}, align='end', width=6),
+        dbc.Col(html.Div(      
+            dbc.Tabs([
+                dbc.Tab(label="Explore Categories", tab_id='categories'),
+                dbc.Tab(label="Explore Modules", tab_id='modules'),
+                dbc.Tab(label="Explore Pathways", tab_id='pathways'),
+                dbc.Tab(label="Search", tab_id='search'),
+            ],
+            id="tab_options",
+            active_tab="modules"
+            )
+                ),  
+            align='end')
+    ]
+    ),
+    html.Hr(),
+        dbc.Row(
+            [
+                dbc.Col(
+                    cyto.Cytoscape(
+                    id='module_visualization',
+                    layout={'name': 'cose'},
+                    elements=edges+nodes,
+                    stylesheet=default_stylesheet,
+                    style={'width': '100%', 'height': '450px'},
+                    userZoomingEnabled=False
+                     ), width=6
+                ),
+                dbc.Col(html.Div(
+                    children= dcc.Markdown("click on a tab to see what it does"),
+                    id='tab_selection'
+                    ),
+                    width=6
+                )],
+            
+        ),
+    html.Hr(),   
+    dbc.Row(
+        [dbc.Col(html.Div("My Modules selection goes here. Use multiselect dropdown?"), width=6),
+        dbc.Col(html.Div("My pathway display goes here. Use/create induced subgraph from selected modules?"), width=6)]
+    ),
+    ### Stuff below here isn't front-end format yet
+    html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Hr(), html.Hr(), html.Hr(), html.Br(),html.Br(),html.Br(),
 
     dcc.Markdown("Select a module from the dropdown menu to select it on the graph."),
     dcc.Markdown("List of all modules:"),
@@ -296,8 +321,10 @@ app.layout = html.Div([
         ]
     )
     
-])
-])
+],
+            style={
+            'padding' : '25px'
+            },)
 
 ### When an author is selected from the dropdown menu, that author's modules are made darker and labeled.
 @app.callback(Output('module_visualization', 'stylesheet'),
@@ -312,9 +339,9 @@ def update_author_selection(author_name):
               )
 def displayTapNodeData(data):
     if data:
-        return  " --- \n ### [**" + data[0]['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data[0]['id']+"/" +data[0]['id'] + ".md) \n \n  By " + data[0]['author'] +" \n \n Estimated length: " + data[0]['time']+". \n \n" + data[0]['comment'] + "\n --- \n "
+        return  "### [**" + data[0]['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data[0]['id']+"/" +data[0]['id'] + ".md) \n \n  By " + data[0]['author'] +" \n \n Estimated length: " + data[0]['time']+". \n \n" + data[0]['comment'] + "\n --- \n "
     else:
-        return " --- \n Click on a node in the graph to see information about that module. \n --- "
+        return "### Click on a node in the graph to see information about that module. \n --- "
 
 ### When a module node is selected, the modules it links to appear in a drop down menu of their own.
 @app.callback(Output('modules_incoming','options'),
@@ -341,6 +368,23 @@ def update_incoming_modules(data):
             if check_edge in edges:
                 new_options.append({'label': module['data']['title'], 'value': module['data']['id']})
     return new_options
+
+### Update selected tab info when tabs are clicked:
+@app.callback(
+    Output("tab_selection", "children"), Input("tab_options", "active_tab")
+)
+def tab_content(active_tab):
+    if active_tab == "modules":
+        return module_tab_content
+    elif active_tab == "categories":
+        return categories_tab_content
+    elif active_tab == "pathways":
+        return pathways_tab_content
+    elif active_tab == "search":
+        return search_tab_content
+    else:
+        return dcc.Markdown("How did you turn off ALL of the tabs? time to debug something!")
+
 
 ### When a module is selected from the list of all modules, it becomes selected.
 ### TODO: When a module is selected from ANY dropdown menu it becomes selected
