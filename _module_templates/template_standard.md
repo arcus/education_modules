@@ -102,7 +102,8 @@ The YAML for a **standard module** should include the following elements:
   * r_file appropriately filled out, if this module uses binder for an interactive rmd file (see instructions in YAML)
   * prerequisites appropriately filled out (see instructions in YAML)
   * learning_objectives appropriately filled out (see instructions in YAML)
-  * import link provided to the macros module (`import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md`). Note that this imports all the macros needed for our modules, as well as the style sheet and javascript kit for our icons. 
+  * import link provided to the macros module (`import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md`). Note that this imports all the general-use macros needed for our modules, as well as the style sheet and javascript kit for our icons. 
+  * Additional import links as needed for R, Python, or SQL.  
 
 ### Tips for writing
 
