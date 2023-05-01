@@ -35,10 +35,10 @@ Then there's a `feedback` macro that is mostly just text substitution, like the 
 
 To avoid loading lots of macros unnecessarily, and to make the macro files themselves easier to read and edit, we have more than one md file for storing macros. 
 
-- `module_macros.md` includes the general-purpose macros such as those to generate the overview and feedback sections.
-- `module_macros_r.md` includes the macro `lesson_prep_r` that inserts instructions for opening and using interactive rmd files 
-- `module_macros_python.md` includes the macros `lesson_prep_python`, which inserts instructions for using interactive python cells in the lesson, and `sage`, which is necessary to make those cells work. It also loads associated scripts for sagemath. 
-- `module_macros_sql.md` includes the macros `lesson_prep_sql`, which inserts instructions for using interactive SQL cells and a brief refresher on SQL including our style guide, and also `AlaSQL.eval`, which builds the functions to make the interactive SQL cells work. 
+- `macros.md` includes the general-purpose macros such as those to generate the overview and feedback sections.
+- `macros_r.md` includes the macro `lesson_prep_r` that inserts instructions for opening and using interactive rmd files 
+- `macros_python.md` includes the macros `lesson_prep_python`, which inserts instructions for using interactive python cells in the lesson, and `sage`, which is necessary to make those cells work. It also loads associated scripts for sagemath. 
+- `macros_sql.md` includes the macros `lesson_prep_sql`, which inserts instructions for using interactive SQL cells and a brief refresher on SQL including our style guide, and also `AlaSQL.eval`, which builds the functions to make the interactive SQL cells work. 
 
 Additionally, there is a separate file for each SQL table to load.  This is because the tables are generated, row by row, in the macros, which takes up a lot of space --- storing tables separately keeps our general SQL macros file easier to read, and avoids generating tables we may not need in a given module. 
 

@@ -37,7 +37,7 @@ After completion of this module, learners will be able to:
 - articulate the rationale for something
 @end
 
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
 -->
 
 # Module Title
@@ -50,8 +50,8 @@ This is the template for **standard modules**.
 Use this template if at least 50% of the module content will be written in this file (even if adapted from other open source content) rather than embedded or linked to. 
 If more than half of the content is embedded or linked to, then use the wrapper module template instead.
 
-To see how to use this **standard module** template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/standard_module_template.md).
-To see what it looks like rendered via LiaScript, [click here](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/standard_module_template.md) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
+To see how to use this **standard module** template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/template_standard.md).
+To see what it looks like rendered via LiaScript, [click here](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/template_standard.md) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
 This template is **not** a great example of what a real module should look like, though. 
 
 To see what real modules look like, see [our list of completed modules](https://arcus.github.io/education_modules/list_of_modules).
@@ -61,8 +61,8 @@ Some important things to keep in mind:
 
 - We use "macros" for a lot of our standardized text. For exmaple, the overview and feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. 
 
-  * General use macros are in the [module macros file](https://github.com/arcus/education_modules/blob/main/_module_templates/module_macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in every module. 
-  * Macros for hands-on code in R, Python, and SQL modules are available in `module_macros_r.md`, `module_macros_python.md`, and `module_macros_sql.md`, respectively. SQL tables are loaded with additional files. For more details, see the sections on including interactive code in this template.
+  * General use macros are in the [module macros file](https://github.com/arcus/education_modules/blob/main/_module_templates/macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in every module. 
+  * Macros for hands-on code in R, Python, and SQL modules are available in `macros_r.md`, `macros_python.md`, and `macros_sql.md`, respectively. SQL tables are loaded with additional files. For more details, see the sections on including interactive code in this template.
   * For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
 
 - The title is the only level-1 header in the document.
@@ -102,7 +102,7 @@ The YAML for a **standard module** should include the following elements:
   * r_file appropriately filled out, if this module uses binder for an interactive rmd file (see instructions in YAML)
   * prerequisites appropriately filled out (see instructions in YAML)
   * learning_objectives appropriately filled out (see instructions in YAML)
-  * import link provided to the macros module (`import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/module_macros.md`). Note that this imports all the macros needed for our modules, as well as the style sheet and javascript kit for our icons. 
+  * import link provided to the macros module (`import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md`). Note that this imports all the macros needed for our modules, as well as the style sheet and javascript kit for our icons. 
 
 ### Tips for writing
 
@@ -120,7 +120,7 @@ When you're ready to start writing a new module:
 If your lesson includes R code examples hosted in binder from the repo https://github.com/arcus/education_r_environment, then you'll need to load the R macros by adding the following `import` statement to the YAML header of your module:
 
 ```
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros_r.md
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_r.md
 ```
 
 You can then insert the following macro, which includes instructions for opening up the relevant rmd document, in your Lesson Preparation section:
@@ -134,7 +134,7 @@ Note that you should have `r_file` filled out in the YAML header.
 If your lesson includes interactive python code in sagemath cells, then you'll need to load the Python macros by adding the following `import` statement to the YAML header of your module: 
 
 ```
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros_python.md
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_python.md
 ```
 
 You can then insert the following macro, which includes instructions and an example interactive code block, in your Lesson Preparation section:
@@ -145,18 +145,18 @@ You can then insert the following macro, which includes instructions and an exam
 
 If your lesson includes interactive SQL code, you'll need to load the SQL macros. Each table is generated, row by row, in the macros for that lesson, so to avoid loading large macros unnecessarily, there are several different SQL macro modules available:
 
- - `module_macros_sql` is required for any module with interactive SQL
- - `module_macros_sql_table_allergies` loads the allergies table
- - `module_macros_sql_table_patients` loads the patients table
- - `module_macros_sql_table_observations` loads the observations table
+ - `macros_sql` is required for any module with interactive SQL
+ - `macros_sql_table_allergies` loads the allergies table
+ - `macros_sql_table_patients` loads the patients table
+ - `macros_sql_table_observations` loads the observations table
 
 Note that very small tables (just a few rows) can be constructed right in the YAML header for the module that uses them. Any larger tables, or tables that need to be re-used across different modules, should be created in separate table macro modules, though.
 
 To use SQL macros (including tables), add the relevant `import` statements to your module's YAML header. For example: 
 
 ```
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros_sql.md
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/module_macros_sql_table_patients.md
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_sql.md
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_sql_table_patients.md
 ```
 
 To insert text providing a brief refresher on SQL, including our style guide and an example interactive code block, use the following macro in your Lesson Preparation section:
