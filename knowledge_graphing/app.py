@@ -263,6 +263,21 @@ pathways_tab_content = [dcc.Markdown("content hear showing different pre-made pa
 ### What appears when the "Search" tab is clicked
 search_tab_content = [dcc.Markdown("search box to search for modules by entering a keyword")]
 
+
+### Create My Modules lists:
+
+my_modules_list = [
+    dcc.Markdown("Select the modules you are interested in:"),
+    dcc.Dropdown(
+        id='my_modules',
+        options=[
+            {'label': module["data"]["title"], 'value': module["data"]["id"]}
+            for module in nodes
+        ],
+        multi=True
+
+    )]
+
 #### The app itself:
 
 app.layout = html.Div([
@@ -305,7 +320,7 @@ app.layout = html.Div([
         ),
     html.Hr(),   
     dbc.Row(
-        [dbc.Col(html.Div("My Modules selection goes here. Use multiselect dropdown?"), width=6),
+        [dbc.Col(html.Div(my_modules_list), width=6),
         dbc.Col(html.Div("My pathway display goes here. Use/create induced subgraph from selected modules?"), width=6)]
     ),
     ### Stuff below here isn't front-end format yet
@@ -319,6 +334,7 @@ app.layout = html.Div([
             {'label': module["data"]["title"], 'value': module["data"]["id"]}
             for module in nodes
         ]
+
     )
     
 ],
@@ -384,6 +400,28 @@ def tab_content(active_tab):
         return search_tab_content
     else:
         return dcc.Markdown("How did you turn off ALL of the tabs? time to debug something!")
+
+
+### When a module is selected in the my_module_list panel, it turns green in the graph and has its name turned on.
+@app.callback(
+    Output("module_visualization","stylesheet", allow_duplicate=True), [Input("my_modules", "value")], prevent_initial_call=True
+)
+def highligh_my_modules(my_modules):
+    new_style_sheet= []
+    for module in my_modules:
+        selector = "[id *= \"" + module + "\"]"
+        make_green = {
+        'selector': selector,
+        'style': {
+            'background-color': "#454B1B",
+            'shape': 'square',
+            'color': "black",
+            'label': 'data(title)'
+        }
+        }
+        new_style_sheet.append(make_green)
+    return new_style_sheet
+
 
 
 ### When a module is selected from the list of all modules, it becomes selected.
