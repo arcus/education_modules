@@ -16,8 +16,6 @@ long_description: This is a longer description, which should be understandable f
 
 estimated_time_in_minutes: This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview. Valid values are any integer 1-60. 
 
-r_file: If this module uses binder to host an interactive rmd file, include the bare name of that file here, for example: this\_r\_module. Note that rmds in the education_r_environment repo should be saved in a directory that matches the file name, like "this_r_module/this_r_module.rmd". When you use the r_lesson_prep macro, it will fill in the text from r_file to use as both the directory name and file name for this lesson's notebook. Use backslashes to escape underscores (e.g. this\_r\_module rather than this_r_module). 
-
 @prerequisites
 List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
 
@@ -37,8 +35,7 @@ After completion of this module, learners will be able to:
 - articulate the rationale for something
 @end
 
-
-import: https://raw.githubusercontent.com/arcus/education_modules/template_test/a_sample_module_template/module_macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
 -->
 
 # Module Title
@@ -49,10 +46,10 @@ import: https://raw.githubusercontent.com/arcus/education_modules/template_test/
 
 This is the template for **wrapper modules**. 
 This template should be used when a module is more than 50% content that is embedded or linked to.
-If more than half of the module content is in the LiaScript markdown itself, then the other template should be used, even if that content is primarily adapted from other open source content.
+If more than half of the module content is in the LiaScript markdown itself, then the standard template should be used, even if that content is primarily adapted from other open source content.
 
-To see how to use this **wrapper module** template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/wrapper_module_template.md).
-To see what it looks like rendered via LiaScript, [click here](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/wrapper_module_template.md) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
+To see how to use this **wrapper module** template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/template_wrapper.md).
+To see what it looks like rendered via LiaScript, [click here](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/template_wrapper.md) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
 This template is **not** a great example of what a real module should look like, though. 
 
 To see what real modules look like, see [our list of completed modules](https://arcus.github.io/education_modules/list_of_modules).
@@ -60,7 +57,12 @@ If this is your first time writing a module, be sure to check out our [contribut
 
 Some important things to keep in mind:
 
-- We use "macros" for a lot of our standardized text. For exmaple, the overview and feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. All available macros are in the [module macros file](https://github.com/arcus/education_modules/blob/main/_module_templates/module_macros.md). For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
+- We use "macros" for a lot of our standardized text. For exmaple, the overview and feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. 
+
+  * General use macros are in the [module macros file](https://github.com/arcus/education_modules/blob/main/_module_templates/macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in every module. 
+  * Macros for hands-on code in R, Python, and SQL modules are available in `macros_r.md`, `macros_python.md`, and `macros_sql.md`, respectively. SQL tables are loaded with additional files. For more details, see the sections on including interactive code in this template.
+  * For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
+
 - The title is the only level-1 header in the document.
 - We use the module title to collate feedback in our REDCap survey, so if the title is edited after learners have begun sending in feedback we'll lose the ability to quickly group feedback for this module. Avoid making changes to the title after publication.
 - LiaScript will create a new page at each level 1, 2, or 3 header, so to avoid a page with only a header and no content, include text after each header before the next.
@@ -84,21 +86,21 @@ Some important things to keep in mind:
 
 We store a lot of important information in the YAML header section at the top of each module. Part of the module Quality Assurance (QA) process is checking that everything is correctly encoded in the YAML. 
 
-The YAML for a **standard module** should include the following elements:
+The YAML for a **wrapper module** should include the following elements:
   * author name
   * email
   * module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md)
-  * module_type should be standard
-  * module_template_version number is up to date with the current standard module template (this document) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing with QA
+  * module_type should be wrapper
+  * module_template_version number is up to date with the current wrapper module template (this document) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing with QA
   * language
   * narrator
   * comment appropriately filled out (see instructions in YAML)
   * long_description appropriately filled out (see instructions in YAML)
   * estimated_time_in_minutes appropriately filled out (see instructions in YAML)
-  * r_file appropriately filled out, if this module uses binder for an interactive rmd file (see instructions in YAML)
   * prerequisites appropriately filled out (see instructions in YAML)
   * learning_objectives appropriately filled out (see instructions in YAML)
-  * import link provided to the macros module (`import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/module_macros.md`). Note that this imports all the macros needed for our modules, as well as the style sheet and javascript kit for our icons. 
+  * import link provided to the macros module (`import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/module_macros.md`). Note that this imports all the general-use macros needed for our modules, as well as the style sheet and javascript kit for our icons. 
+  * Additional import links as needed for R, Python, or SQL.
 
 ### Tips for writing
 
@@ -107,7 +109,7 @@ When you're ready to start writing a new module:
 1. Clone the education_modules repo if you don't already have it. Start a new git branch for your module. 
 2. Open this template in a text editor like VSCode, and then use "save as" to save it in a new directory and with a filename that conveys the point of the module (e.g. "r_logistic_regression/r_logistic_regression.md"). You may find it helpful to have the examples of highlight boxes and quiz questions in this template that you can quickly copy-paste as you write.
 3. Create a new empty subfolder in your module directory called "media". If you include images in your module, store them here.
-4. Open up the **standard module** QA template (in the .github/ISSUE_TEMPLATE directory) as a reference, maybe keep it open side-by-side with your module draft.
+4. Open up the **wrapper module** QA template (in the .github/ISSUE_TEMPLATE directory) as a reference, maybe keep it open side-by-side with your module draft.
 5. You can use the LiaScript preview extension in VSCode to see what your rendered module will look like, or generate it from https://liascript.github.io/ after pushing your changes to GitHub (while your still drafting, remember that you'll need to link to your raw md file on your branch, since it won't be available yet on main).
 
 ## Lesson Preparation
