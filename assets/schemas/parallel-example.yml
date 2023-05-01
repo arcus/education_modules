@@ -1,0 +1,65 @@
+name: scit835-omics
+deid: false
+cohort: all_matching
+
+request_versions:
+- '2022_03_28'
+- '2022_04_28' # request updated to include fastqs
+
+request_description: all cram and fastq files for all participants in collections with Omics files in Arcus Archives
+
+source_collections:
+
+- collection_id: C2019050100002
+  contrib_repo: arcus-archives/contrib-ujo
+  contrib_repo_commit: d99f490a3cb7cc05484c32d2f7696657a0894872
+  # I don't think supplying the link to the participant crosswalk is useful because we're not using local participant ids anywhere else
+  sub_cohort: https://github.research.chop.edu/arcus/contrib-egrp/blob/master/sources/manifests/participant-crosswalk.txt
+  series:
+  - series_id: C2019050100002S05B03 # egrp cram
+    file_pattern:
+    - arcus/library/main/ingestion-schemas/templates/cram-formats.txt # All cram files in series
+  - series_id: C2019050100002S05B03 # egrp fastq
+    subdirectory_path: subseries_raw/data/Clinical_Exomes # egrp fastq clinical exomes
+    file_pattern:
+    - arcus/library/main/ingestion-schemas/templates/fastq-formats.txt # All fastq files in specified subdirectory
+  - series_id: C2019050100002S05B01 # egrp gvcf
+    # these urls should be the raw ones not the web ui
+    file_pattern:
+    - arcus/library/main/ingestion-schemas/templates/gvcf-formats.txt # All gvcf files in series
+  # since we generate new files when delivering deidentified data, this probably shouldn't be included
+  - series_id: C2019050100002S05B04 # egrp research data ref-data manifests (includes participant_family_role.csv for family relationships and cohort info participant_manifest.csv in column B)
+    # series needs a boolean to indicate reference files that need to be included even though they don't have a participant associated
+  - series_id: C2019050100002S03B02 # egrp references protocols # Not explicitly requested files
+    files:
+      - file_id: C2019050100002S03B02F5ace1014 # cram protocol yml
+      - file_id: C2019050100002S03B02Fea6f60f2 # gvcf protocol yml
+      - file_id: C2019050100002S03B02F93e48c19 # fastq protocol yml
+      - file_id: C2019050100002S03B02Fc2ac2419 # fastq protocol yml
+
+- collection_id: C2019050100004
+  contrib_repo: arcus-archives/contrib-dgd
+  contrib_repo_commit: d99f490a3cb7cc05484c32d2f7696657a0894872
+  series: # identify series within collection that contain requested files.
+  - series_id: C2019050100004S05B03
+    file_pattern:
+    - arcus/library/main/ingestion-schemas/templates/cram-formats.txt
+  - series_id: C2019050100004S05B03 # dgd fastq
+    file_pattern:
+    - arcus/library/main/ingestion-schemas/templates/fastq-formats.txt # All fastq files in series
+  - series_id: C2019050100004S05B01 # dgd gvcf
+    file_pattern:
+    - arcus/library/main/ingestion-schemas/templates/gvcf-formats.txt # All gvcf files in series
+  - series_id: C2019050100002S05B04 # dgd research data ref-data manifests
+  - series_id: C2019050100004S03B02 # dgd references protocols
+    files:
+    - file_id: C2019050100004S03B02Fa79cb7f7 # cram protocol yml
+    - file_id: C2019050100004S03B02F41b71de3 # one of the gvcf protocol ymls
+    - file_id: C2019050100004S03B02Fe8b25636 # one of the gvcf protocol ymls
+    - file_id: C2019050100004S03B02Fdc391a67 # one of the gvcf protocol ymls
+
+- collection_id: C2019050100001
+  contrib_repo: arcus-archives/contrib-dynamic
+  contrib_repo_commit: d99f490a3cb7cc05484c32d2f7696657a0894872
+  file_pattern:
+  - arcus/library/main/ingestion-schemas/templates/fastq-formats.txt # All fastq files in collection regardless of series
