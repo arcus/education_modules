@@ -49,8 +49,6 @@ Many topics have great content written by others! We chose this content for you 
 Not all selected materials will meet all of these criteria, but selected materials should meet as many as possible.
 Write a short sentence about how this material meets, or does not meet, each criterion.
 
-@print_resources_list
-
 **Resource 1 Name**
 
 Short optional summary sentence about resource 1.
@@ -88,4 +86,4 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 # Module Macros
 
-There are <script>@external_resources.length</script> external resources. 
+@print_resources_list 
