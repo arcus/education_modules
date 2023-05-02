@@ -53,35 +53,40 @@ If more than half of the content is embedded or linked to, then use the wrapper 
 To see how to use this **standard module** template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/template_standard.md).
 To see what it looks like rendered via LiaScript, [click here](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/template_standard.md) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
 This template is **not** a great example of what a real module should look like, though. 
-
 To see what real modules look like, see [our list of completed modules](https://arcus.github.io/education_modules/list_of_modules).
 If this is your first time writing a module, be sure to check out our [contributors guide](https://github.com/arcus/education_modules/blob/main/CONTRIBUTING) before you get started.
 
 Some important things to keep in mind:
 
-- We use "macros" for a lot of our standardized text. For exmaple, the overview and feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. 
+- We use "macros" for a lot of our standardized text. For example, the overview and feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. 
 
   * General use macros are in the [module macros file](https://github.com/arcus/education_modules/blob/main/_module_templates/macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in every module. 
   * Macros for hands-on code in R, Python, and SQL modules are available in `macros_r.md`, `macros_python.md`, and `macros_sql.md`, respectively. SQL tables are loaded with additional files. For more details, see the sections on including interactive code in this template.
   * For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
 
-- The title is the only level-1 header in the document.
-- We use the module title to collate feedback in our REDCap survey, so if the title is edited after learners have begun sending in feedback we'll lose the ability to quickly group feedback for this module. Avoid making changes to the title after publication.
+- The title is the only level-1 header in the module md document.
+  
+  * Note: We use the module title to collate feedback in our REDCap survey, so if the title is edited after learners have begun sending in feedback we'll lose the ability to quickly group feedback for this module. Avoid making changes to the title after publication.
+
 - LiaScript will create a new page at each level 1, 2, or 3 header, so to avoid a page with only a header and no content, include text after each header before the next.
 - We have a standardized naming convention and directory structure:
+
   * Folder and file names use lowercase and underscores (no dashes)
   * Main module directory folder name is identical to the name of the module content markdown file.
   * Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
+
 - Learning objectives are a very important element of the module. 
+
   * Learning objectives should be clearly defined using strong, descriptive verbs. (See [Bloom's taxonomy](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/) for ideas.)
   * Every learning objective should be covered in the module content.
   * All major topics covered should be represented by a learning objective -- there should be no significant knowledge imparted that isn't specified in the learning objectives
+
 - Headers should be informative and follow a sensible hierarchical structure (the TOC in the left margin should give a good overview of the content covered)
 - Avoid unclear language: unexplained idioms or references, unexplained acronyms, unnecessary technical language.
 - Unusual words, or words taking on a very specific meaning in context, should always be defined for the learner, either on the page (e.g. using footnotes) or with links to a definition/glossary.
 - Provide pronunciation guides for any especially unusual words of particular importance (a common example is package names, such as dplyr)
-- Avoid unnecessarily gendered language (e.g. uses "they" singular rather than "he or she" for an unknown person).
-- Use informative link text (e.g. instead of "To learn more about python, click [here](www.example.com)", say "Read this article to [learn more about python](www.example.com)."
+- Avoid unnecessarily gendered language (e.g. use "they" singular rather than "he or she" for an unknown person).
+- Use informative link text (e.g. instead of "To learn more about python, click [here](www.example.com)", say "Read this article to [learn more about python](www.example.com).")
 - Try to write in short, digestible pieces --- avoid long paragraphs and break long sections up with sub-headers
 
 ### How to use the YAML header
@@ -89,6 +94,7 @@ Some important things to keep in mind:
 We store a lot of important information in the YAML header section at the top of each module. Part of the module Quality Assurance (QA) process is checking that everything is correctly encoded in the YAML. 
 
 The YAML for a **standard module** should include the following elements:
+
   * author name
   * email
   * module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md)
