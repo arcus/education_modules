@@ -95,21 +95,21 @@ We store a lot of important information in the YAML header section at the top of
 
 The YAML for a **standard module** should include the following elements:
 
-  * author name
-  * email
-  * module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md)
-  * module_type should be standard
-  * module_template_version number is up to date with the current standard module template (this document) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing with QA
-  * language
-  * narrator
-  * comment appropriately filled out (see instructions in YAML)
-  * long_description appropriately filled out (see instructions in YAML)
-  * estimated_time_in_minutes appropriately filled out (see instructions in YAML)
-  * r_file appropriately filled out, if this module uses binder for an interactive rmd file (see instructions in YAML)
-  * prerequisites appropriately filled out (see instructions in YAML)
-  * learning_objectives appropriately filled out (see instructions in YAML)
-  * import link provided to the macros module (`import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md`). Note that this imports all the general-use macros needed for our modules, as well as the style sheet and javascript kit for our icons. 
-  * Additional import links as needed for R, Python, or SQL.  
+* author name
+* email
+* module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md)
+* module_type should be standard
+* module_template_version number is up to date with the current standard module template (this document) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing with QA
+* language
+* narrator
+* comment appropriately filled out (see instructions in YAML)
+* long_description appropriately filled out (see instructions in YAML)
+* estimated_time_in_minutes appropriately filled out (see instructions in YAML)
+* r_file appropriately filled out, if this module uses binder for an interactive rmd file (see instructions in YAML)
+* prerequisites appropriately filled out (see instructions in YAML)
+* learning_objectives appropriately filled out (see instructions in YAML)
+* import link provided to the macros module (`import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md`). Note that this imports all the general-use macros needed for our modules, as well as the style sheet and javascript kit for our icons. 
+* Additional import links as needed for R, Python, or SQL.  
 
 ### Tips for writing
 
