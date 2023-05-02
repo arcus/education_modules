@@ -201,11 +201,5 @@
       "type": "object"
     }
   },
-  "properties": {
-    "education_module": {
-      "$ref": "#/definitions/education_moduleDef"
-    }
-  },
-  "required": ["education_module"],
-  "type": "object"
+  "$ref": "#/definitions/education_moduleDef"
 }
