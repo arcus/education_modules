@@ -436,3 +436,11 @@ def select_node_from_dropdown(id):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+
+#### TODO CHECKLIST:
+#### make all of the stylesheet updates a single callback that updates default_stylesheet rather than overwriting it
+#### Replace incoming and outgoing module dropdowns with dbc.Buttons
+#### Make those buttons "select" the module noded
+#### Ensure only one node can be selected (the active node?) at a time
+#### Add a button to add the selected module to the "my modules" panel (or remove it if it is already there?)
+#### Move node and edge data to another file so it can be automatically generated.
