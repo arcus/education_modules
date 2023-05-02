@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.0.0
+version:  0.0.0
 language: en
 narrator: UK English Female
 title: Module Macros
