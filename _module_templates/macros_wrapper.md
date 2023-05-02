@@ -8,15 +8,36 @@ narrator: UK English Female
 title: Module Macros
 comment:  This is placeholder module to save macros used in other modules.
 
-external_resources:
-- name: Useful Website
-  expert_authors_check: FALSE
-  expert_authors_text: These are not expert authors
-  a11y_issues: Only automatic subtitles available for video transcript. 
-- name: Journal Article
-  expert_authors_check: TRUE
-  expert_authors_text: These are expert authors
-  a11y_issues: No known issues, but we may have missed something. If you encounter an issue, please [let us know in our feedback form](#feedback)!
+@external_resources
+<script>
+var external_resources = [
+   {
+      resource1: {
+        name:"Java-101",
+        description:"Introduction to Java",
+        expert_author_check: true,
+        expert_author_text: "This is written by a total expert."
+        
+      },
+      resource2: {
+        name:"Java-102",
+        description:"Introduction to More Java",
+        expert_author_check: false,
+        expert_author_text: "This is an anonymous post."
+      },     
+   }
+]
+@end
+
+@print_resources_list
+external_resources.map((resource_list)=>{
+   if (typeof resource_list.resource1 != 'undefined')
+   send.html(`<b "${resource_list.resource1.name}"</b>)"\n${resource_list.resource1.description}"`)
+   if (typeof resource_list.resource2 != 'undefined')
+   send.html(`<b "${resource_list.resource2.name}"</b>)"\n${resource_list.resource2.description}"`)   
+})
+</script>
+@end
 
 @lesson_prep_wrapper
 
@@ -27,6 +48,8 @@ Many topics have great content written by others! We chose this content for you 
 
 Not all selected materials will meet all of these criteria, but selected materials should meet as many as possible.
 Write a short sentence about how this material meets, or does not meet, each criterion.
+
+@print_resources_list
 
 **Resource 1 Name**
 
@@ -65,4 +88,4 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 # Module Macros
 
-@external_resources
+There are <script>@external_resources.length</script> external resources. 
