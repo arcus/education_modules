@@ -27,11 +27,7 @@ var external_resources = [
       },     
    }
 ]
-</script>
-@end
 
-@print_resources_list
-<script>
 external_resources.map((resource_list)=>{
    if (typeof resource_list.resource1 != 'undefined')
    send.html(`<b "${resource_list.resource1.name}"</b>)"\n${resource_list.resource1.description}"`)
@@ -88,4 +84,4 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 # Module Macros
 
-@print_resources_list 
+@external_resources 
