@@ -22,12 +22,28 @@ if (@0) {
 @format_list
 <script>
 send.html(`<ul style="list-style-type: none">`)
-</script>
-check_list_item(@0,"Expert Authors / Well-Vetted",@2)
-check_list_item(@1,"Maintained",@2)
-check_list_item(@0,"Stable Support",@2)
-<script>
+
+@check_list_item(@0,"Well-Vetted",@2)
+@check_list_item(@1,"Maintained",@2)
+@check_list_item(@0,"Stable Support",@2)
+
 send.html(`</ul>`)
+</script>
+@end
+
+@make_survey_url
+<script>
+function makeURL(title, version_number, module_type) {
+  let url = new URL('https://redcap.chop.edu/surveys');
+  url.searchParams.set('s', 'KHTXCXJJ93');
+  url.searchParams.set('module_name', title);
+  url.searchParams.set('version_number', version_number);
+  url.searchParams.set('module_type', module_type);
+  return url;
+}
+var surveyURL = makeURL(@0, @1, @2);
+
+send.html(`<a href="${surveyURL}")">our brief survey</a>`)
 </script>
 @end
 
