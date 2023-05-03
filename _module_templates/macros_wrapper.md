@@ -8,19 +8,6 @@ narrator: UK English Female
 title: Module Macros
 comment:  This is placeholder module to save macros used in other modules.
 
-@external_resources
-
-@end
-
-@format_list
-<script>
-send.html(`<ul style="list-style-type: none">`)
-check_list_item(@0,"Expert Authors / Well-Vetted",@2)
-check_list_item(@1,"Maintained",@2)
-check_list_item(@0,"Stable Support",@2)
-send.html(`</ul>`)
-</script>
-@end
 
 @check_list_item
 <script>
@@ -32,6 +19,15 @@ if (@0) {
 </script>
 @end
 
+@format_list
+<script>
+send.html(`<ul style="list-style-type: none">`)
+check_list_item(@0,"Expert Authors / Well-Vetted",@2)
+check_list_item(@1,"Maintained",@2)
+check_list_item(@0,"Stable Support",@2)
+send.html(`</ul>`)
+</script>
+@end
 
 @external_resources_javascript
 <script>
@@ -95,7 +91,6 @@ Short optional summary sentence about resource 2.
 </ul>
 
 **Known issues with accessibility and inclusive design:** Explain any known problems related to accessibility and inclusive design here. If there are none, you can write "No known issues, but we may have missed something. If you encounter an issue, please [let us know in our feedback form](#feedback)!"
-
 
 @end
 
