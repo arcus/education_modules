@@ -22,9 +22,11 @@ if (@0) {
 @format_list
 <script>
 send.html(`<ul style="list-style-type: none">`)
+</script>
 check_list_item(@0,"Expert Authors / Well-Vetted",@2)
 check_list_item(@1,"Maintained",@2)
 check_list_item(@0,"Stable Support",@2)
+<script>
 send.html(`</ul>`)
 </script>
 @end
