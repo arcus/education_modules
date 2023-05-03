@@ -435,6 +435,13 @@ Files uploaded to this account will be **publicly visible**. Be very careful not
 
 Surround inline math statements with `$`: $ 1 + \beta = 2 $
 
+You can also put in blocks of math:
+
+$$
+   \sum_{i=1}^\infty\frac{1}{n^2}
+        =\frac{\pi^2}{6}
+$$
+
 ## Including tables
 
 If you wish to print a table, you can use markdown table formatting. 
