@@ -27,13 +27,22 @@ var external_resources = [
       },     
    }
 ]
+@end
 
+@print_external_resources
 external_resources.map((resource_list)=>{
    if (typeof resource_list.resource1 != 'undefined')
    send.html(`<b "${resource_list.resource1.name}"</b>)"\n${resource_list.resource1.description}"`)
    if (typeof resource_list.resource2 != 'undefined')
    send.html(`<b "${resource_list.resource2.name}"</b>)"\n${resource_list.resource2.description}"`)   
 })
+</script>
+@end
+
+@test
+<script>
+var doc = jsyaml.load('greeting: hello\nname: world');
+send.html("${var}")
 </script>
 @end
 
@@ -84,4 +93,4 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 # Module Macros
 
-@external_resources 
+@test
