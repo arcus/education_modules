@@ -51,7 +51,7 @@ Use this template if at least 50% of the module content will be written in this 
 If more than half of the content is embedded or linked to, then use the wrapper module template instead.
 
 To see how to use this **standard module** template, you'll need to look at this file in its [raw format](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/template_standard.md).
-To see what it looks like rendered via LiaScript, [click here](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/template_standard.md) or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
+If you prefer, you can see what it looks like [rendered via LiaScript](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/template_standard.md). To create  or go to [https://liascript.github.io/](https://liascript.github.io/) and paste the link to the **raw** file into the box on that page and click "load course".
 This template is **not** a great example of what a real module should look like, though. 
 To see what real modules look like, see [our list of completed modules](https://arcus.github.io/education_modules/list_of_modules).
 If this is your first time writing a module, be sure to check out our [contributors guide](https://github.com/arcus/education_modules/blob/main/CONTRIBUTING) before you get started.
