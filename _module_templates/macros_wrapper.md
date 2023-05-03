@@ -11,7 +11,7 @@ comment:  This is placeholder module to save macros used in other modules.
 
 @check_list_item
 <script>
-if (@0) {
+if (@0 === "Checked") {
     send.html(`  <li><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> ${@1} : ${@2}</li>`);
   } else {
     send.html(`  <li><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> ${@1} : ${@2}</li>`);
@@ -122,4 +122,4 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 # Module Macros
 
-@format_list(true, false, "Description here.")
+@format_list("Checked","Unchecked","Description here.")
