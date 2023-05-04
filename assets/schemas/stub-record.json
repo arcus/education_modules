@@ -1,83 +1,80 @@
 {
-  "$schema": "./metadata_schema.json",
-  "education_module": {
-    "author": "TBD",
-    "email": "TBD", 
-    "version": "TBD",
-    "module_template_version": "TBD",
-    "language": "TBD",
-    "narrator":"TBD",
-    "title": "TBD",
-    "comment": "TBD",
-    "long_description": "TBD",
-    "estimated_time": "TBD",
-    "@learning_objectives": "TBD",
-    "@pre_reqs": "TBD",
-    "good_first_module": false,
-    "data_domain": "TBD",
-    "data_task": "data_analysis",
-    "coding": [
-      {
-      "coding_required": true,
-      "coding_level": "beginner",
-      "coding_language": [ 
-          "sql",
-          "regex"
-      ]
-      }
-    ],
-    "sequence": [
-      {
-      "sequence_name": "Git",
-      "relation_type": "sequence",
-      "next_sequential_module": "r_basics_transform_data"
-      }
-    ],
-    "relationship": [
-      {
-        "this_module": "git_intro",
-        "relation_type": "sets_you_up_for",
-        "related_module": [
-          "git_creation_and_tracking",
-          "git_setup_windows",
-          "bash_command_line_101"
-        ]
-      },
-      {
-        "this_module": "git_setup_windows",
-        "relation_type": "is_parallel_to",
-        "related_module": [
-          "git_setup_mac_and_linux"
-        ]
-      },
-      {
-        "this_module": "git_setup_windows",
-        "relation_type": "depends_on_knowledge_available_in",
-        "related_module": [
-        "git_intro"
-       ]
-      },
-      {
-      "this_module": "git_setup_windows",
-      "relation_type": "sets_you_up_for",
-      "related_module": [ 
-        "git_creation_and_tracking"
-      ]
-      },
-      {
-        "this_module": "pandas_transform",
-        "relation_type": "sets_you_up_for",
-        "related_module": [
-          "python_practice"
-        ]
-      },
-      {
-        "this_module": "python_practice",
-        "relation_type": "depends_on_knowledge_available_in",
-        "related_module": [
-          "pandas_transform"
-        ]
-      }
+  "author": "TBD",
+  "email": "TBD", 
+  "version": "TBD",
+  "module_template_version": "TBD",
+  "language": "TBD",
+  "narrator":"TBD",
+  "title": "TBD",
+  "comment": "TBD",
+  "long_description": "TBD",
+  "estimated_time": "TBD",
+  "@learning_objectives": "TBD",
+  "@pre_reqs": "TBD",
+  "good_first_module": false,
+  "data_domain": "TBD",
+  "data_task": "data_analysis",
+  "coding": [
+    {
+    "coding_required": true,
+    "coding_level": "beginner",
+    "coding_language": [ 
+        "sql",
+        "regex"
     ]
-  }  
+    }
+  ],
+  "sequence": [
+    {
+    "sequence_name": "Git",
+    "relation_type": "sequence",
+    "next_sequential_module": "r_basics_transform_data"
+    }
+  ],
+  "relationship": [
+    {
+      "this_module": "git_intro",
+      "relation_type": "sets_you_up_for",
+      "related_module": [
+        "git_creation_and_tracking",
+        "git_setup_windows",
+        "bash_command_line_101"
+      ]
+    },
+    {
+      "this_module": "git_setup_windows",
+      "relation_type": "is_parallel_to",
+      "related_module": [
+        "git_setup_mac_and_linux"
+      ]
+    },
+    {
+      "this_module": "git_setup_windows",
+      "relation_type": "depends_on_knowledge_available_in",
+      "related_module": [
+      "git_intro"
+      ]
+    },
+    {
+    "this_module": "git_setup_windows",
+    "relation_type": "sets_you_up_for",
+    "related_module": [ 
+      "git_creation_and_tracking"
+    ]
+    },
+    {
+      "this_module": "pandas_transform",
+      "relation_type": "sets_you_up_for",
+      "related_module": [
+        "python_practice"
+      ]
+    },
+    {
+      "this_module": "python_practice",
+      "relation_type": "depends_on_knowledge_available_in",
+      "related_module": [
+        "pandas_transform"
+      ]
+    }
+  ]
 }

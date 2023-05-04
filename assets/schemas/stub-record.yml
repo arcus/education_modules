@@ -1,0 +1,42 @@
+author:   Nicole Feldman and Elizabeth Drellich
+email:    feldmanna@chop.edu drelliche@chop.edu
+version: 1.4.0
+module_template_version: 3.0.0
+language: en
+narrator: UK English Female
+title: Bash / Command Line 101
+comment:  This course teaches learners to navigate their computer, as well as view and edit files, from the command line using Bash.
+
+long_description: This course is designed to be both an introduction to bash / command line for those who are total newbies as well as refresher for those some with experience running code who want a more solid command of the basics.
+
+estimated_time: 40 minutes
+
+"@learning_objectives": "After completion of this module, learners will be able to: \n- Describe what bash scripting is and why they might want to learn it for data management and research \n- Navigate their file system using the bash shell \n- View and edit the contents of a file from the bash shell @end"
+
+"@pre_reqs": "Learners should be familiar with locating files and folders stored in a directory system.  Our [Directories and File Paths](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#1) module can provide some help with gaining these skills.@end"
+
+good_first_module: true
+
+coding:
+- coding_required: true
+  coding_language: 
+  - bash
+  coding_level: basics
+
+sequence:
+- sequence_name: Bash Basics
+  next_sequential_module: bash_command_line_102
+  relation_type: sequence
+
+relationship:
+- this_module: bash_command_line_101
+  relation_type: sets_you_up_for
+  related_module: 
+  - bash_command_line_102
+  - bash_103_combining_commands
+  - bash_conditionals_loops
+  - bash_scripts
+- this_module: bash_command_line_101
+  relation_type: depends_on_knowledge_available_in
+  related_module: 
+  - git_setup_windows
