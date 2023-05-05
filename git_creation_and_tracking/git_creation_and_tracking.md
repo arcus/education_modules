@@ -25,6 +25,36 @@ After completion of this module, learners will be able to:
 
 @end
 
+@pre_reqs
+
+Before you start this module, make sure you
+
+* Know how to access a command line interface (CLI) on your computer.
+* Have Git configured on your computer. If Git is not yet configured, see the module on setting up Git on a [Mac, Linux](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md), or [Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md) machine.
+* Can edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file), one of many text editors that you can access directly from the command line interface (CLI).
+
+@end
+
+coding_required: true
+coding_language: git
+coding_level: basic
+
+sequence_name: Git
+next_sequential_module: git_history_of_project
+
+@sets_you_up_for
+
+- git_history_of_project
+
+@end
+
+@depends_on_knowledge_available_in
+
+- git_setup_windows
+- git_setup_mac_and_linux
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js

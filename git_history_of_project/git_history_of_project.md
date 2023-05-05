@@ -21,6 +21,30 @@ After completion of this module, learners will be able to:
 
 @end
 
+@pre_reqs
+
+To best learn from this module make sure that you:
+
+* have Git configured on your computer,
+* can view and edit `.txt` files, and
+* can make changes to a Git repository using `add` and `commit` from a command line interface (CLI).
+
+@end
+
+coding_required: true
+coding_language: git
+coding_level: basic
+
+sequence_name: Git
+
+@depends_on_knowledge_available_in
+
+- git_setup_windows
+- git_setup_mac_and_linux
+- git_creation_and_tracking
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
