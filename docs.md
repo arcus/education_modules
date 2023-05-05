@@ -129,6 +129,8 @@ version:  0.0.0
 
 When you're ready to submit your module for QA, it should have a module version number of at least 1.0.0 if first public version, or if this is an update then an [appropriately incremented version number](https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md)
 
+It's a good idea to keep your version set to `0.0.0` while you're still drafting as it will help prevent your browser from caching the module, making it easier for you to review changes as they render online. 
+For more details, see the [LiaScript documentation about state](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#state).
 
 ### `module_type`
 
@@ -136,7 +138,7 @@ When you're ready to submit your module for QA, it should have a module version 
 module_type: standard
 ```
 
-Should be one of `standard`, `wrapper`, or `exercise` (see [Which module template to use](#which-module-template-to-use)).
+Should be one of `standard`, `wrapper`, or `exercise` (see [which module template to use](#which-module-template-to-use)).
 
 ### `module_template_version` 
 
@@ -204,7 +206,7 @@ r_file: r\_logistic\_regression
 
 If this module uses binder to host an interactive rmd file, include the bare name of that file here, for example: `this\_r\_module` 
 
-Note that rmds in the education_r_environment repo should be saved in a directory that matches the file name, like `this_r_module/this_r_module.rmd`. When you use the [r_lesson_prep macro](#interactive-r), it will fill in the text from `r_file` to use as both the directory name and file name for this lesson's notebook. Use backslashes to escape underscores (e.g. `this\_r\_module` rather than `this_r_module`). 
+Note that rmds in the education_r_environment repo should be saved in a directory that matches the file name, like `this_r_module/this_r_module.rmd`. When you use the [r\_lesson\_prep macro](#interactive-r), it will fill in the text from `r_file` to use as both the directory name and file name for this lesson's notebook. Use backslashes to escape underscores (e.g. `this\_r\_module` rather than `this_r_module`). 
 
 ### `prerequisites` 
 
