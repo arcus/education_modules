@@ -19,6 +19,34 @@ After completion of this module, learners will be able to:
 - Chain commands directly using the pipe `|`
 @end
 
+@pre_reqs
+
+Learners should be familiar with using a bash shell and [navigating a file system from the command line and look at the contents of a file](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md).
+
+The only commands that will be assumed are the navigation commands `cd`, `ls`, and `pwd` and `cat`, all of which are explained in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
+
+@end
+
+coding_required: true
+coding_language: bash
+coding_level: intermediate
+
+sequence_name: Bash Basics
+next_sequential_module: bash_conditionals_loops
+
+@sets_you_up_for:
+
+- bash_scripts
+
+@end
+
+@depends_on_knowledge_available_in:
+
+- bash_command_line_101
+- bash_command_line_102
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js

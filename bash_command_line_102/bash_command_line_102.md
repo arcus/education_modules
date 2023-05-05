@@ -22,6 +22,33 @@ After completion of this module, learners will be able to:
 - Delete files and directories.
 @end
 
+@pre_reqs
+
+Learners should be familiar with using a bash shell to navigate a directory system. Learners will get the most out of this lesson if they can also create directories and files, write text to files, and read files from their bash shell command line interface.
+
+@end
+
+coding_required: true
+coding_language: bash
+coding_level: basic
+
+sequence_name: Bash Basics
+next_sequential_module: bash_103_combining_commands
+
+@sets_you_up_for:
+
+- bash_103_combining_commands
+- bash_conditionals_loops
+- bash_scripts
+
+@end
+
+@depends_on_knowledge_available_in:
+
+- bash_command_line_101
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
