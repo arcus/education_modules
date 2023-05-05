@@ -40,7 +40,7 @@ coding_level: intermediate
 sequence_name: Bash Basics
 next_sequential_module: bash_scripts
 
-@depends_on_knowledge_available_in:
+@depends_on_knowledge_available_in
 
 - bash_command_line_101
 - bash_command_line_102

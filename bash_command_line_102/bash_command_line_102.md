@@ -35,7 +35,7 @@ coding_level: basic
 sequence_name: Bash Basics
 next_sequential_module: bash_103_combining_commands
 
-@sets_you_up_for:
+@sets_you_up_for
 
 - bash_103_combining_commands
 - bash_conditionals_loops
@@ -43,7 +43,7 @@ next_sequential_module: bash_103_combining_commands
 
 @end
 
-@depends_on_knowledge_available_in:
+@depends_on_knowledge_available_in
 
 - bash_command_line_101
 

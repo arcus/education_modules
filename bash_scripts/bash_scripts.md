@@ -41,13 +41,13 @@ coding_level: intermediate
 
 sequence_name: Bash Basics
 
-@sets_you_up_for:
+@sets_you_up_for
 
 - bash_scripts
 
 @end
 
-@depends_on_knowledge_available_in:
+@depends_on_knowledge_available_in
 
 - bash_command_line_101
 - bash_command_line_102

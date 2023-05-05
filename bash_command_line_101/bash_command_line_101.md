@@ -37,7 +37,7 @@ coding_level: basic
 sequence_name: Bash Basics
 next_sequential_module: bash_command_line_102
 
-@sets_you_up_for:
+@sets_you_up_for
 
 - bash_command_line_102
 - bash_103_combining_commands
@@ -46,7 +46,7 @@ next_sequential_module: bash_command_line_102
 
 @end
 
-@depends_on_knowledge_available_in:
+@depends_on_knowledge_available_in
 
 - git_setup_windows
 
