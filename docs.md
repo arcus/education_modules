@@ -20,7 +20,7 @@ LiaScript is a [markdown](https://en.wikipedia.org/wiki/Markdown) dialect, so wr
 
 To see this document as an interactive LiaScript rendered version, click on the following link/badge:
 
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/docs.md)
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/roseh_docs/docs.md)
 
 </div>
 
