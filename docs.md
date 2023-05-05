@@ -40,7 +40,7 @@ To see how markdown works in LiaScript, look over the [LiaScript documentation o
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
 This document is itself a LiaScript markdown file! 
-To see what the text looks like, open the [raw version of this file]().
+To see what the text looks like, open the [raw version of this file](https://raw.githubusercontent.com/arcus/education_modules/roseh_docs/docs.md).
 
 </div>
 
