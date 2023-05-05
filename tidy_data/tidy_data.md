@@ -21,6 +21,22 @@ After completion of this module, learners will be able to:
 
 @end
 
+@pre_reqs
+
+Experience working with rectangular data (data in rows and columns) will be helpful.  For example, experience working in Excel, Google Sheets, or other software that helps organize data into rows and columns is sufficient expertise to take this module.
+
+@end
+
+data_task: data_management
+
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
