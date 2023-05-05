@@ -19,11 +19,7 @@ estimated_time_in_minutes:
 r_file: 
 
 @prerequisites
-This module assumes some familiarity with X and Y, in particular:
-
-- one skill we have [another module for](https://education.arcus.chop.edu)
-- some familiarity with [a topic](https://education.arcus.chop.edu)
-- understanding of [one thing](https://education.arcus.chop.edu) and [another](https://education.arcus.chop.edu)
+List any skills or knowledge needed to complete this module here.
 @end
 
 @learning_objectives  
