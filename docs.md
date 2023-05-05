@@ -342,12 +342,30 @@ The style "behind-the-scenes" is for giving a little more technical detail about
 It has a gears icon and always begins with the text "Behind the scenes".
 For example:
 
+```
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
 The commit number is a hash and associated details
 
 </div>
+```
+
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
+The commit number is a hash and associated details
+
+</div>
+
+```
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
+In R the `<-` and `=` can both be used for assignment because...
+
+</div>
+```
 
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
@@ -362,12 +380,30 @@ The style "care" is for content related to compassion, self-care, and motivation
 It has a hand-holding-heart icon and always begins with the text "A little encouragement..."
 For example:
 
+```
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
 This is a topic with a tremendous amount of jargon, which can make resources you may find online hard to understand for folks new to the field. When that happens it's easy to feel like there's something wrong with you if you don't get it, but that's not the case! Those kinds of gatekeeping explanations are a failure on the part of the writer, not the learner.
 
 </div>
+```
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+This is a topic with a tremendous amount of jargon, which can make resources you may find online hard to understand for folks new to the field. When that happens it's easy to feel like there's something wrong with you if you don't get it, but that's not the case! Those kinds of gatekeeping explanations are a failure on the part of the writer, not the learner.
+
+</div>
+
+```
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+Feeling overwhelmed? It takes a long time to learn git, so don't be disheartened if it doesn't click initially. Just focus on stage, commit, and push. Ignore the rest for now, until you've had a chance to practice just the stage-commit-push process several times.
+
+</div>
+```
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
@@ -382,6 +418,15 @@ The style "cool-fact" is for any cool fact that really doesn't fit into any of o
 It has a brain icon and always begins with the text "Did you know?"
 For example:
 
+```
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+
+Functions like this are sometimes called "syntactic sugar" because they don't change anything about how the code runs, they just make it easier for humans to read, the way that sugar makes food sweeter without adding any nutrition.
+
+</div>
+```
+
 <div class = "cool-fact">
 <b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
 
@@ -389,6 +434,16 @@ Functions like this are sometimes called "syntactic sugar" because they don't ch
 
 </div>
 
+```
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+
+This is a box showing how images work in a highlight box.
+
+![Carebear team.](https://media.giphy.com/media/W256ghnG9iV8I/giphy.gif)
+
+</div>
+```
 
 <div class = "cool-fact">
 <b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
@@ -397,7 +452,6 @@ This is a box showing how images work in a highlight box.
 
 ![Carebear team.](https://media.giphy.com/media/W256ghnG9iV8I/giphy.gif)
 
-
 </div>
 
 ### external-resource
@@ -405,6 +459,17 @@ This is a box showing how images work in a highlight box.
 The style "external-resource" is specifically for wrapper modules, for linking to the external resource, as a way to draw attention to the fact that we're sending them out of the module and then they should come back. This is different from learn-more boxes we use in standard modules. 
 It has a arrow-pointing-out-of-a-box icon and always begins with the text "External Content".
 For example:
+
+```
+<div class = "external-resource">
+<b style="color: rgb(var(--color-highlight));">External Content</b><br>
+
+Next, complete the [Docker 101 tutorial](https://www.docker.com/101-tutorial/), which can be done either on your computer or in the cloud. 
+
+Work through the whole tutorial, then return here to finish this module.
+
+</div>
+```
 
 <div class = "external-resource">
 <b style="color: rgb(var(--color-highlight));">External Content</b><br>
@@ -421,6 +486,15 @@ The style "gratitude" is for thanking authors of original sources we're using or
 It has a heart icon and always begins with the text "Thank you!".
 For example:
 
+```
+<div class = "gratitude">
+<b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
+
+Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data](https://skadauke.github.io/intro-to-r-for-clinicians-chop/) workshop materials. We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.
+
+</div>
+```
+
 <div class = "gratitude">
 <b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
 
@@ -433,6 +507,15 @@ Material for this module was adapted, with permission, from [Stephan Kadauke's R
 The style "help" is for troubleshooting help, common errors, and specific technical problems. If you want to emphasize a very serious potential problem, use "warning" instead. For support that is more psycho/emotional or meta-learning in nature, use "care" instead.
 It has a circle-question icon and always begins with the text "Troubleshooting help".
 For example:
+
+```
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+A common mistake when using `filter` is to write = when you mean ==. Remember that = is for argument assignment, and == is for testing equality in conditions. If you get them mixed up, your code won't run!
+
+</div>
+```
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
@@ -447,12 +530,30 @@ The style "history" is for more historical context about how/when/why something 
 It has a clock-rotate-left icon and always begins with the text "Historical context".
 For example:
 
+```
 <div class = "history">
 <b style="color: rgb(var(--color-highlight));">Historical context</b><br>
 
 The reason this command is named grep is...
 
 </div>
+```
+
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
+
+The reason this command is named grep is...
+
+</div>
+
+```
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
+
+The first README file was from 1971, etc.
+
+</div>
+```
 
 <div class = "history">
 <b style="color: rgb(var(--color-highlight));">Historical context</b><br>
@@ -461,12 +562,20 @@ The first README file was from 1971, etc.
 
 </div>
 
-
 ### important
 
 The style "important" is for important points and key ideas.
 It has a star icon and always begins with the text "Important note".
 For example:
+
+```
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+It's generally much easier to make any necessary changes to the dataframe, such as mutating variables, before sending it to the plotting command.
+
+</div>
+```
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -481,6 +590,15 @@ The style "learn-more" alerts users resources for further learning, especially l
 It has a book icon and always begins with the text "Learning connection".
 For example:
 
+```
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf).
+
+</div>
+```
+
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
@@ -488,6 +606,14 @@ To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "
 
 </div>
 
+```
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To do this in R instead of python, see [this other module](example.com).
+
+</div>
+```
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
@@ -496,12 +622,20 @@ To do this in R instead of python, see [this other module](example.com).
 
 </div>
 
-
 ### options
 
 The style "options" is for an aside to let learners know there's another possible approach. This is for short explanations rather than linked resources; to link to another approach (e.g. here's a tutorial for another way to do this), use "learn-more" instead.
 It has a left-right arrow icon and always begins with the text "Another option".
 For example:
+
+```
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
+You could also skip setting up an OSF account completely and just use github to publish and share your research products, but many people prefer to have OSF links available.
+
+</div>
+```
 
 <div class = "options">
 <b style="color: rgb(var(--color-highlight));">Another option</b><br>
@@ -509,6 +643,15 @@ For example:
 You could also skip setting up an OSF account completely and just use github to publish and share your research products, but many people prefer to have OSF links available.
 
 </div>
+
+```
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
+You can run this in the cloud or download all of the files locally and run it on your computer. If you run it on your computer, be sure to make note of which directory you save the files in and update your working directory accordingly.
+
+</div>
+```
 
 <div class = "options">
 <b style="color: rgb(var(--color-highlight));">Another option</b><br>
@@ -522,6 +665,17 @@ You can run this in the cloud or download all of the files locally and run it on
 The style "version-update" is for alerting learners to changes to a module.
 It has a pencil icon and always begins with the text "Changes to this module".
 For example:
+
+```
+<div class = "version-update">
+<b style="color: rgb(var(--color-highlight));">Changes to this module</b><br>
+
+We're constantly improving our materials, and this module has had recent changes. Specifically, we added a new section at the end explaining how to protect your API token when using git and GitHub for your code.
+
+If you like, you can still access the [previous version of this module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/using_redcap_api/using_redcap_api.md). 
+
+</div>
+```
 
 <div class = "version-update">
 <b style="color: rgb(var(--color-highlight));">Changes to this module</b><br>
@@ -538,12 +692,30 @@ The style "warning" alerts users to potential pitfalls, and should be reserved f
 It has a ! triangle icon and always begins with the text "Warning!".
 For example:
 
+```
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
 Double check your working directory before running this code. If you're in the wrong directory, you risk overwriting your files and losing all of your work with no way to recover it.
 
 </div>
+```
+
+<div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
+Double check your working directory before running this code. If you're in the wrong directory, you risk overwriting your files and losing all of your work with no way to recover it.
+
+</div>
+
+```
+<div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
+Files uploaded to this account will be **publicly visible**. Be very careful not to upload anything with sensitive information like passwords or private data.
+
+</div>
+```
 
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
@@ -558,6 +730,16 @@ Include inline code with single backticks: `library(ggplot2)`.
 
 Make code blocks with at least three backticks:
 
+````
+```r
+# You only need to install it once
+install.packages("ggplot2")
+
+# You'll need to load the library anew for each R session
+library("ggplot2")
+```
+````
+
 ```r
 # You only need to install it once
 install.packages("ggplot2")
@@ -567,6 +749,12 @@ library("ggplot2")
 ```
 
 You don't have to specify the programming language, but you can, and it should help you get appropriate syntax highlighting.
+
+````
+```python
+print("This is python code")
+```
+````
 
 ```python
 print("This is python code")
@@ -661,16 +849,29 @@ Review our [inclusivity guidelines](https://github.com/arcus/education_modules/b
 
 Here are several examples of embedded media:  
 
+```
+![A valuable image, and this is its alt text.](https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG "Here is a subtitle that will display beneath the image.")
+```
+
 ![A valuable image, and this is its alt text.](https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG "Here is a subtitle that will display beneath the image.")
 
 You can change things like the size of the image two ways. 
 
 You can add a comment with additional html after the markdown:
 
-![RStudio as shown in the cloud platform Binder.](media/binder_rstudio.png)<!--
+```
+![RStudio as shown in the cloud platform Binder.](https://github.com/arcus/education_r_environment/blob/main/media/binder_rstudio.png?raw=true)<!--
+style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
+```
+
+![RStudio as shown in the cloud platform Binder.](https://github.com/arcus/education_r_environment/blob/main/media/binder_rstudio.png?raw=true)<!--
 style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
 
 Or you can use html to specify the whole embedded image:
+
+```
+<img src="https://github.com/arcus/education_r_environment/blob/main/media/binder_rstudio.png?raw=true" alt="RStudio as shown in the cloud platform Binder." style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;">
+```
 
 <img src="https://github.com/arcus/education_r_environment/blob/main/media/binder_rstudio.png?raw=true" alt="RStudio as shown in the cloud platform Binder." style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;">
 
@@ -678,7 +879,15 @@ You can link to images online with their url, or locally with the file path, e.g
 
 If you want to provide several images in a gallery, just make a "paragraph" of image links and LiaScript will render it as a gallery:
 
+```
 ![img1 alt text.](https://upload.wikimedia.org/wikipedia/commons/6/68/Ailuropoda_melanoleuca_%28Panda_g%C3%A9ant%29_-_445.jpg) ![img2 alt text.](https://upload.wikimedia.org/wikipedia/commons/2/2d/Panda_giganti_al_Giant_Panda_Breeding_Research_Base_Chengdu.jpg) ![img3 alt text.](https://upload.wikimedia.org/wikipedia/commons/1/12/BabyPandaAtSDZ.jpg)
+```
+
+![img1 alt text.](https://upload.wikimedia.org/wikipedia/commons/6/68/Ailuropoda_melanoleuca_%28Panda_g%C3%A9ant%29_-_445.jpg) ![img2 alt text.](https://upload.wikimedia.org/wikipedia/commons/2/2d/Panda_giganti_al_Giant_Panda_Breeding_Research_Base_Chengdu.jpg) ![img3 alt text.](https://upload.wikimedia.org/wikipedia/commons/1/12/BabyPandaAtSDZ.jpg)
+
+```
+!?[This video is hosted on youtube.](https://www.youtube.com/watch?v=iIAO4Htzn8M)
+```
 
 !?[This video is hosted on youtube.](https://www.youtube.com/watch?v=iIAO4Htzn8M)
 
@@ -686,9 +895,22 @@ You can also embed local videos, just as with images: `!?[An embedded video.](me
 
 ## Including math
 
-Surround inline math statements with `$`: $ 1 + \beta = 2 $
+Surround inline math statements with `$`: 
+
+```
+Here's a sentence with some math in it $ 1 + \beta = 2 $.
+```
+
+Here's a sentence with some math in it $ 1 + \beta = 2 $.
 
 You can also put in blocks of math:
+
+```
+$$
+   \sum_{i=1}^\infty\frac{1}{n^2}
+        =\frac{\pi^2}{6}
+$$
+```
 
 $$
    \sum_{i=1}^\infty\frac{1}{n^2}
@@ -700,6 +922,15 @@ $$
 If you wish to print a table, you can use markdown table formatting. 
 
 Note that LiaScript has defaults that will allow users to toggle tables of data between table format and a plot of the data --- if you don't want to allow that functionality, you need to set the data-type to none. For example:
+
+```
+<!-- data-type="none" class="tight-table" style="font-size:80%"-->
+| subj_id  | street_address  | city  | state   | zip  | date_start  | date_end   |
+| :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
+| 11234   | 123 Main Street   | Smithtown    | PA  | 19000    | 2022-01-01   | `NULL`    |
+| 11234   | 123 Oak Lane   | Old Towne    | PA  | 18000   | 2000-01-01    | 2021-12-31    |
+| 93452   | 123 Green Blvd  | Kirby    | TN  | 37000    | 2020-05-01    | `NULL`   |
+```
 
 <!-- data-type="none" class="tight-table" style="font-size:80%"-->
 | subj_id  | street_address  | city  | state   | zip  | date_start  | date_end   |
@@ -718,6 +949,30 @@ We use quizzes for [formative assessment](https://carpentries.github.io/instruct
 Quizzes should connect directly to your learning objectives. Each quiz question should connect to one learning objective, and every learning objective should have at least one quiz question associated with it somewhere in the module. Learners should be able to answer all the questions based on the content within the module alone; they should not need to have read or consulted any of the linked learn-more resources. 
 
 Quizzes should always be navigable from the sidebar, meaning they should be labeled with a level 2 or 3 header. If there is only one quiz in the module, it should be labelled as "Quiz". If there is more than one each header should be structured as "Quiz: label" where "label" is a short (ideally 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
+
+```
+Here is the first question. It's multiple choice.
+
+[(X)] This answer is right
+[( )] This is wrong
+[( )] Also wrong
+[[?]] Hint: Provide a hint here if you like. Hints are marked with the ?
+[[?]] Hint: You can include as many hints as you want.
+***
+<div class = "answer">
+
+Nearly every quiz question should have an  `answer` box after it to explain why the correct answer is correct. 
+This text will show up after the learner answers the question correctly or clicks to have the right answer revealed. It can be as long as you like, and allows any markdown formatting (you can embed pictures or videos, links, etc.).
+
+Use `<div class = "answer">` to mark these sections with special styling, so that they're visually distinct from the rest of the quiz. The style for `"answer"` is defined in the css file.
+
+For this context to show up automatically when the learner answers the question correctly or clicks to have the right answer revealed, it needs to be surrounded by `***` (at least three, but you can use more if you want a more visually distinct horizontal marker in your md file).
+
+</div>
+***
+```
+
+### Multiple choice
 
 Here is the first question. It's multiple choice.
 
@@ -739,7 +994,26 @@ For this context to show up automatically when the learner answers the question 
 </div>
 ***
 
-You can have questions with multiple correct answers. Select all of the following correct choices:
+You can have questions with multiple correct answers. 
+
+```
+Select all of the following correct choices:
+
+[[ ]] Not this one
+[[X]] This is one of the correct ones
+[[X]] Here's another correct one
+[[ ]] This one is wrong, though
+[[?]] Hint: Remember to select ALL of the correct choices.
+***
+<div class = "answer">
+
+Here is the answer box for this question.
+
+</div>
+***
+```
+
+Select all of the following correct choices:
 
 [[ ]] Not this one
 [[X]] This is one of the correct ones
@@ -754,6 +1028,20 @@ Here is the answer box for this question.
 </div>
 ***
 
+```
+True or False: This statement is NOT true. ;)
+
+[( )] TRUE
+[(X)] FALSE
+***
+<div class = "answer">
+
+Here is the answer box for this question.
+
+</div>
+***
+```
+
 True or False: This statement is NOT true. ;)
 
 [( )] TRUE
@@ -766,8 +1054,29 @@ Here is the answer box for this question.
 </div>
 ***
 
-Short answer/text response. Note that, without any additional script, to get it marked "correct" the learner has to enter it exactly as you do.
+### Short answer/text response 
+
+Note that, without any additional script, to get it marked "correct" the learner has to enter it exactly as you do.
 We can allow some flexibility in what we accept as correct answers for text by adding a little script after the answer, though. For the following, either "right answer" or "correct answer" (not case sensitive) will be accepted:
+
+```
+What is the right answer?
+
+[[right answer]]
+<script>
+  let input = "@input".trim().toLowerCase();
+  input == "right answer" || input == "correct answer";
+</script>
+***
+<div class = "answer">
+
+For this question, either "right answer" or "correct answer" (not case sensitive) counts as correct.
+
+</div>
+***
+```
+
+What is the right answer?
 
 [[right answer]]
 <script>
@@ -784,6 +1093,13 @@ For this question, either "right answer" or "correct answer" (not case sensitive
 
 This question accepts any of several items from a list of possible correct answers. It is not case sensitive (that's the little `i` at the end of the regex).
 
+With flexible answers like this, it's definitely a good idea to include a follow-up to help the learner put their answer in context.
+
+For example, if the question was "Name one or more colors" with acceptable answers including red, orange, yellow, green, blue, and purple, and they wrote "red, green, and the center of a black hole" that would be marked as correct because it contains at least one string from the acceptable list. Similarly, "hammered metal" would be marked as correct because it contains the string "red" ([you can prevent this if you want](https://www.w3schools.com/jsref/jsref_regexp_begin.asp)). On the other hand "teal, scarlet, indigo" would be marked wrong.
+
+```
+What are some items?
+
 [[this text will never show up if they type a right answer and click "Check", only if they click the checkmark button to reveal the answer]]
 [[?]] Hint: The answers are like "item1", "item2", etc.
 <script>
@@ -793,16 +1109,53 @@ This question accepts any of several items from a list of possible correct answe
 ***
 <div class = "answer">
 
-With flexible answers like this, it's definitely a good idea to include a follow-up to help the learner put their answer in context.
+Reiterate what the correct answer or answers should be, and try to anticipate likely wrong answers so you can explain why they're not correct.
 
-For example, if the question was "Name one or more colors" with acceptable answers including red, orange, yellow, green, blue, and purple, and they wrote "red, green, and the center of a black hole" that would be marked as correct because it contains at least one string from the acceptable list. Similarly, "hammered metal" would be marked as correct because it contains the string "red" ([you can prevent this if you want](https://www.w3schools.com/jsref/jsref_regexp_begin.asp)). On the other hand "teal, scarlet, indigo" would be marked wrong.
+</div>
+***
+```
+
+What are some items?
+
+[[this text will never show up if they type a right answer and click "Check", only if they click the checkmark button to reveal the answer]]
+[[?]] Hint: The answers are like "item1", "item2", etc.
+<script>
+  let input = "@input".trim();
+  /item1|item2|item3|item4/i.test(input);
+</script>
+***
+<div class = "answer">
 
 Reiterate what the correct answer or answers should be, and try to anticipate likely wrong answers so you can explain why they're not correct.
 
 </div>
 ***
 
-Note that you can use any markdown formatting you want in quizzes, including bold, links, math, lists, embedded media, code blocks, etc. For accessibility for learners using screenreaders, if your question is more than a single markdown paragraph, you must enclose it in `<div>` tags. For example:
+Note that you can use any markdown formatting you want in quizzes, including bold, links, math, lists, embedded media, code blocks, etc. 
+For accessibility for learners using screenreaders, if your question is more than a single markdown paragraph, you must enclose it in `<div>` tags. For example:
+
+```
+<div>
+In the following code block, what should fill in the blank?
+
+```r
+install.packages(____)
+```
+</div>
+
+[(X)] "ggplot2"
+[( )] ggplot2
+[( )] package = ggplot2
+***
+<div class = "answer">
+
+Note that the `<div>` tags surround the full content of the question being asked (in this case, a sentence in markdown followed by the code block), and then there is one blank line, then the multiple choice options. 
+
+For more details, see [notes about quizzes in the LiaScript documentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/do.cs/master/README.md#notes-about-questions)
+
+</div>
+***
+```
 
 <div>
 In the following code block, what should fill in the blank?
@@ -836,13 +1189,45 @@ You can ask questions with no graded answer as well. LiaScript calls these [surv
 
 Here's an ungraded question with a text box three lines long:
 
+```
+[[___ ___ ___]]
+```
+
 [[___ ___ ___]]
 
 Here's one that's just one line long:
 
+```
+[[___]]
+```
+
 [[___]]
 
 Hints and follow-up explanations don't work for survey questions, but you can use [html detail tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) to create a solution that won't be visible to the learner until they choose to open it. For example:
+
+```
+Think about your own research, and write out three ways you could make your work more reproducible this year.
+
+[[___ ___ ___]]
+
+<details>
+
+<summary>Click here to see our answer</summary>
+
+<div class = "answer">
+
+The best approach for you depends on your research, of course! 
+
+Here are some concrete, actionable changes to improve the reproducibility of your work:
+
+- Switch from point-and-click to scripted analysis
+- Share your data in a public repository
+- Share your code on GitHub
+- Write a pre-registration for your next study
+
+</div>
+</details>
+```
 
 Think about your own research, and write out three ways you could make your work more reproducible this year.
 
@@ -868,6 +1253,21 @@ Here are some concrete, actionable changes to improve the reproducibility of you
 
 You can also set a code block to be closed until the learner chooses to open it by giving it a title beginning with `-` (e.g. `-Solution`). For example:
 
+````
+Modify the code from the final example, the [lowess curve trend line](#lowess-curve-trend-lines), to separate out respondents by smoking status (`is_smoker`) with a separate facet for each.
+
+```python  -Solution
+sns.lmplot(data = covid_data,
+            x="val_age", y="val_height_cm",
+           scatter_kws={"alpha": .1},
+           lowess=True,
+           col = "is_smoker")
+
+# Note that row = "is_smoker" would also work.
+# If you used col, try switching to row now to see how the plot changes!
+```
+````
+
 Modify the code from the final example, the [lowess curve trend line](#lowess-curve-trend-lines), to separate out respondents by smoking status (`is_smoker`) with a separate facet for each.
 
 ```python  -Solution
@@ -882,6 +1282,47 @@ sns.lmplot(data = covid_data,
 ```
 
 You can even use this to provide multiple possible correct options. Each solution will be closed until the learner clicks to open it. For example:
+
+````
+Write code to draw a linear trend line showing the relationship between Age and Glucose, but create a plot with just the line, no scatterplot underneath. Try it each of the three ways, using geom\_smooth, geom\_abline, and geom\_line.
+
+```r  -Solution using geom_smooth
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_smooth(method = "lm") +
+  theme_bw()
+```
+```r  -Solution using geom_abline
+# note that this doesn't actually plot a line, since there are no observations to set the x and y scales
+# you'll see a blank plot
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_abline(intercept = model$coefficients[1], slope = model$coefficients[2]) +
+  theme_bw()
+
+# you can set the x and y scales yourself manually by adding a layer for each
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_abline(intercept = model$coefficients[1], slope = model$coefficients[2]) +
+  scale_y_continuous(limits = c(min(breast_cancer_data$Glucose), max(breast_cancer_data$Glucose))) +
+  scale_x_continuous(limits = c(min(breast_cancer_data$Age), max(breast_cancer_data$Age))) +
+  theme_bw()
+```
+```r  -Solution using geom_line
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_line(mapping = aes(y=model$fitted.values)) +
+  theme_bw()
+```
+```r  -Another solution, using alpha
+# you can also make any element of a plot invisible by setting its alpha to 0
+# in this case, we can make the dots of the scatterplot disappear from any of the plots we made above
+# for example:
+ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
+  geom_point(alpha = 0) +
+  geom_line(mapping = aes(y=model$fitted.values)) +
+  theme_bw()
+
+# this has the advantage of keeping the scales for the plot consistent
+# and it means you don't have to set the scales manually when using geom_abline
+```
+````
 
 Write code to draw a linear trend line showing the relationship between Age and Glucose, but create a plot with just the line, no scatterplot underneath. Try it each of the three ways, using geom\_smooth, geom\_abline, and geom\_line.
 
