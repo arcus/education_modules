@@ -105,7 +105,7 @@ To see examples of DART modules, see [our list of completed modules](https://arc
 
 ## How to use the front matter
 
-We store a lot of important information in the front matter section at the top of each module. Part of the module Quality Assurance (QA) process is checking that everything is correctly encoded in the front matter. 
+We store a lot of important information in the front matter section at the top of each module. Part of the [module QA process](#module-review-process) is checking that everything is correctly encoded in the front matter. 
 
 The front matter for a module should include all of the elements from the template.
 
