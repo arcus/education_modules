@@ -21,6 +21,20 @@ After completion of this module, learners will be able to:
 
 @end
 
+@pre_reqs
+
+The only pre-requisite suggested for this module is experience working in research in any capacity.
+
+@end
+
+data_task: data_management
+
+@depends_on_knowledge_available_in
+
+- reproducibility
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
