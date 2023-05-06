@@ -9,6 +9,36 @@ title: Module Macros
 comment:  This is placeholder module to save macros used in other modules.
 
 
+resource1_name: Docker Tutorial
+resource1_description: This is a tutorial on using Docker
+resource1_wellvetted: true
+resource1_wellvetted_text: This is a well-known thing.
+resource1_maintained: true
+resource1_maintained_text: Maintained by Docker.
+resource1_stablesupport: false
+resource1_stablesupport_text: Not stable?
+resource1_a11y_issues: No known issues with accessibility, but if you encounter something, please [let us know](#feedback)!
+
+resource2_name:
+resource2_description:
+resource2_wellvetted:
+resource2_wellvetted_text:
+resource2_maintained:
+resource2_maintained_text:
+resource2_stablesupport:
+resource2_stablesupport_text:
+resource2_a11y_issues:
+
+resource3_name:
+resource3_description:
+resource3_wellvetted:
+resource3_wellvetted_text:
+resource3_maintained:
+resource3_maintained_text:
+resource3_stablesupport:
+resource3_stablesupport_text:
+resource3_a11y_issues:
+
 @check_list_item
 <script>
 if (@0) {
@@ -23,12 +53,18 @@ if (@0) {
 <script>
 send.html(`<ul style="list-style-type: none">`)
 </script>
-@check_list_item(@0,"Well-Vetted",@2)
-@check_list_item(@1,"Maintained",@2)
-@check_list_item(@0,"Stable Support",@2)
+@check_list_item(@0,"Well-Vetted",@1)
+@check_list_item(@2,"Maintained",@3)
+@check_list_item(@4,"Stable Support",@5)
 <script>
 send.html(`</ul>`)
 </script>
+@end
+
+@print_list
+
+@format_list(@resource1_wellvetted,@resource1_wellvetted_text,@resource1_maintained,@resource1_maintained_text,@resource1_stablesupport,@resource1_stablesupport_text)
+
 @end
 
 @make_survey_url
@@ -122,4 +158,4 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 # Module Macros
 
-@format_list(true,false, "Description here.")
+@print_list
