@@ -16,8 +16,6 @@ long_description: This is a longer description, which should be understandable f
 
 estimated_time_in_minutes: 
 
-r_file: 
-
 @prerequisites
 List any skills or knowledge needed to complete this module here.
 @end
@@ -32,28 +30,14 @@ After completion of this module, learners will be able to:
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_r.md
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_python.md
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_sql.md
 -->
 
 # Module Title
 
 @overview
 
-## Lesson Preparation: RStudio
-
-@lesson_prep_r
-
-## Lesson Preparation: Interactive Python
-
-@lesson_prep_python
-
-## Lesson Preparation: SQL
-
-@lesson_prep_sql
-
 ## Additional Resources
 
 ## Feedback
+
 @feedback
