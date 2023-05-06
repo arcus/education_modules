@@ -802,12 +802,12 @@ If your lesson includes interactive python code in sagemath cells, then you'll n
 import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_python.md
 ```
 
-You can then insert the `@lesson_prep_python` macro, which includes instructions and an example interactive code block, in your Lesson Preparation section:
+You can then insert the `@ lesson_prep_python_sage` macro, which includes instructions and an example interactive code block, in your Lesson Preparation section:
 
 ```
 ## Lesson Preparation: Interactive Python
 
-@lesson_prep_python
+@ lesson_prep_python_sage
 ```
 
 ### Interactive SQL
