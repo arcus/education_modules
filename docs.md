@@ -156,13 +156,17 @@ When you're ready to submit your module for QA, it should have a template versio
 language: en
 ```
 
+This defintes the language for the file (default is English, `en`). 
+See the [LiaScript documentation on `language`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#%60language%60) for more details. 
+
 ### `narrator`
 
 ```
 narrator: UK English Female
 ```
 
-See the [LiaScript documentation on `narrator`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#189) for more details. 
+This defines the voice to be used for text to voice, if the learner chooses to use that.
+See the [LiaScript documentation on `narrator`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#%60narrator%60) for more details. 
 
 ### `title` 
 
