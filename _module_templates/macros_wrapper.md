@@ -158,4 +158,14 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 # Module Macros
 
+checklist
+
+@checklist_item(@resource1_wellvetted,"Well-Vetted",@resource1_wellvetted_text)
+
+format list
+
+@format_list(@resource1_wellvetted,@resource1_wellvetted_text,@resource1_maintained,@resource1_maintained_text,@resource1_stablesupport,@resource1_stablesupport_text)
+
+print list 
+
 @print_list
