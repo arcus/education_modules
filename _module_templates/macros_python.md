@@ -8,7 +8,7 @@ narrator: UK English Female
 title: Python Module Macros
 comment:  This is placeholder module to save macros used in other modules.
 
-@lesson_prep_python
+@lesson_prep_python_sage
 @sage
 
 You will have opportunities for hands-on coding as you work your way through this module using interactive python cells.
@@ -112,4 +112,4 @@ script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
 @sage
 
-@lesson_prep_python
+@lesson_prep_python_sage
