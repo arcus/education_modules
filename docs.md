@@ -1140,7 +1140,7 @@ Reiterate what the correct answer or answers should be, and try to anticipate li
 Note that you can use any markdown formatting you want in quizzes, including bold, links, math, lists, embedded media, code blocks, etc. 
 For accessibility for learners using screenreaders, if your question is more than a single markdown paragraph, you must enclose it in `<div>` tags. For example:
 
-```
+````
 <div>
 In the following code block, what should fill in the blank?
 
@@ -1161,7 +1161,7 @@ For more details, see [notes about quizzes in the LiaScript documentation](https
 
 </div>
 ***
-```
+````
 
 <div>
 In the following code block, what should fill in the blank?
