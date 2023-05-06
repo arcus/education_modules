@@ -257,7 +257,7 @@ The learning objectives will be automatically printed twice in each module: Once
 ### `import`
 
 ```
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
 ```
 
 Note that importing `macros.md` imports all the general-use macros needed for our modules (see [DART macros](#dart-macros) for details), as well as the style sheet and javascript kit for our icons. 
@@ -279,10 +279,10 @@ For more details, including lots of examples, see the [LiaScript documentation o
 We use macros for a lot of our standardized text. 
 For example, the Overview and Feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. 
 
-- General use macros are in the [module macros file](https://github.com/arcus/education_modules/blob/main/_module_templates/macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in **every module**. 
+- General use macros are in the [module macros file](https://github.com/arcus/education_modules/blob/templates_update/_module_templates/macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in **every module**. 
 - Macros for hands-on code in R, Python, and SQL modules are available in `macros_r.md`, `macros_python.md`, and `macros_sql.md`, respectively. SQL tables are loaded with additional files. For more details, see the sections on [including interactive code](#including-interactive-code) in this documentation.
 
-For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
+For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/templates_update/macros_instructions.md).
 
 ## Tips for writing
 
@@ -824,7 +824,7 @@ Note that very small tables (just a few rows) can be constructed right in the fr
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-To learn about creating a new macro, such as a new SQL table, see our [instructions for DART macros](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
+To learn about creating a new macro, such as a new SQL table, see our [instructions for DART macros](https://github.com/arcus/education_modules/blob/templates_update/macros_instructions.md).
 
 </div>
 
