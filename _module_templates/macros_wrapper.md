@@ -158,9 +158,9 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 # Module Macros
 
-checklist
+check list
 
-@checklist_item(@resource1_wellvetted,"Well-Vetted",@resource1_wellvetted_text)
+@check_list_item(@resource1_wellvetted,"Well-Vetted",@resource1_wellvetted_text)
 
 format list
 
