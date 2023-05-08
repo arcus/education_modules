@@ -108,7 +108,30 @@ To see examples of DART modules, see [our list of completed modules](https://arc
 
 We store a lot of important information in the front matter section at the top of each module. Part of the [module QA process](#module-review-process) is checking that everything is correctly encoded in the front matter. 
 
-The front matter for a module should include all of the elements from the template.
+Which front matter items are required? It depends on the content of the module you're writing:
+
+|                           | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                    |
+| :------------------------ | :---------: | :---: | :---------: | :--------------------------------------------------------------------------------------- |
+| author                    |      X      |   X   |      X      |                                                                                          |
+| email                     |      X      |   X   |      X      |                                                                                          |
+| version                   |      X      |   X   |      X      |                                                                                          |
+| module_type               |      X      |   X   |      X      |                                                                                          |
+| module_template_version   |      X      |   X   |      X      |                                                                                          |
+| lanaguge                  |      X      |   X   |      X      |                                                                                          |
+| narrator                  |      X      |   X   |      X      |                                                                                          |
+| title                     |      X      |   X   |      X      |                                                                                          |
+| comment                   |      X      |   X   |      X      |                                                                                          |
+| long_description          |      X      |   X   |      X      |                                                                                          |
+| estimated_time_in_minutes |      X      |   X   |      X      |                                                                                          |
+| r_file                    |             |   X   |             |                                                                                          |
+| prerequisites             |      X      |   X   |      X      |                                                                                          |
+| learning_objectives       |      X      |   X   |      X      |                                                                                          |
+| import                    |      x      |   X   |      X      | Importing `macro.md` is required for all modules. Additional import files may be needed. |
+
+
+[^1]: Modules using [interactive R code](#interactive-r).
+[^2]: Wrapper modules are built using the wrapper template (see [which module template to use](#which-module-template-to-use)).
+
 
 ### `author`
 
