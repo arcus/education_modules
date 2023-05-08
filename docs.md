@@ -67,6 +67,7 @@ You can also see revisions and comments on [pull requests for other modules that
   * Folder and file names use lowercase and underscores (no dashes)
   * Main module directory folder name is identical to the name of the module content markdown file.
   * Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
+  * Code files (including scripts, notebooks, etc.) are saved within a `src` folder within the module directory
 
 - Headers should be informative and follow a sensible hierarchical structure (the TOC in the left margin should give a good overview of the content covered)
 - Avoid unclear language: unexplained idioms or references, unexplained acronyms, unnecessary technical language.
