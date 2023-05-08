@@ -86,7 +86,7 @@
         "type": "string",
         "default": "TBD"
        },
-       "coding": {
+      "coding": {
         "additionalProperties": false,
         "description": "True/False based on whether achieving the module's learning objectives requires coding. This includes a user running code locally or interacting with code in the module.",
         "catalogingNote": "TBD",
@@ -133,11 +133,6 @@
               "type": "string",
               "default": "TBD"
             },
-            "relation_type": {
-              "$ref": "./vocabulary.json#/relation_type",
-              "description": "Type of relationship between modules. For a sequence the relation_type should be \"sequence\".",
-              "type": "string"
-            },
             "next_sequential_module": {
               "description": "Identifier of next module in the sequence.",
               "type": "string",
@@ -146,46 +141,36 @@
           },
           "required": [
             "sequence_name",
-            "relation_type",
             "next_sequential_module"
           ],
           "type": "object"
         },
         "type": "array"
       },
-      "relationship": {
-        "additionalProperties": false,
-        "description": "Relates two or more modules to one another.",
+      "@sets_you_up_for": {
+        "description": "Not a strict requirement or pre-requisite but notes how knowledge in this module will prepare the user for other concepts.",
         "items": {
-          "properties": {
-            "this_module": {
-              "description": "Name of the sequence as a whole.",
-              "type": "string",
-              "default": "TBD"
-            },
-            "relation_type": {
-              "$ref": "./vocabulary.json#/relation_type",
-              "description": "Type of relationship between modules.",
-              "type": "string"
-            },
-            "related_module": {
-              "description": "Identifier of related module.",
-              "items": {
-                "type": "string",
-                "default": "TBD"
-              },
-              "type": "array"
-            }
-          }, 
-          "required": [
-            "this_module",
-            "relation_type",
-            "related_module"
-          ],
           "type": "object"
         },
-        "type": "array"
-      }      
+        "type": "array",
+        "default": "TBD"
+       },
+       "@depends_on_knowledge_available_in": {
+        "description": "Not a strict requirement or pre-requisite but notes where user can find useful knowledge in other modules.",
+        "items": {
+          "type": "object"
+        },
+        "type": "array",
+        "default": "TBD"
+       },
+       "@is_parallel_to": {
+        "description": "Select one and only one of the related modules.",
+        "items": {
+          "type": "object"
+        },
+        "type": "array",
+        "default": "TBD"
+       }       
       },
       "required": [
         "author",
@@ -196,7 +181,9 @@
         "estimated_time",
         "@learning_objectives",
         "@pre_reqs",
-        "good_first_module"
+        "good_first_module",
+        "@sets_you_up_for",
+        "@depends_on_knowledge_available_in"
       ],
       "type": "object"
     }
