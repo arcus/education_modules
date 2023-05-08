@@ -110,23 +110,23 @@ We store a lot of important information in the front matter section at the top o
 
 Which front matter items are required? It depends on the content of the module you're writing:
 
-|                           | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                    |
-| :------------------------ | :---------: | :---: | :---------: | :--------------------------------------------------------------------------------------- |
-| author                    |      X      |   X   |      X      |                                                                                          |
-| email                     |      X      |   X   |      X      |                                                                                          |
-| version                   |      X      |   X   |      X      |                                                                                          |
-| module_type               |      X      |   X   |      X      |                                                                                          |
-| module_template_version   |      X      |   X   |      X      |                                                                                          |
-| lanaguge                  |      X      |   X   |      X      |                                                                                          |
-| narrator                  |      X      |   X   |      X      |                                                                                          |
-| title                     |      X      |   X   |      X      |                                                                                          |
-| comment                   |      X      |   X   |      X      |                                                                                          |
-| long_description          |      X      |   X   |      X      |                                                                                          |
-| estimated_time_in_minutes |      X      |   X   |      X      |                                                                                          |
-| r_file                    |             |   X   |             |                                                                                          |
-| prerequisites             |      X      |   X   |      X      |                                                                                          |
-| learning_objectives       |      X      |   X   |      X      |                                                                                          |
-| import                    |      x      |   X   |      X      | Importing `macro.md` is required for all modules. Additional import files may be needed. |
+|                             | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                    |
+| :-------------------------- | :---------: | :---: | :---------: | :--------------------------------------------------------------------------------------- |
+| `author`                    |      X      |   X   |      X      |                                                                                          |
+| `email`                     |      X      |   X   |      X      |                                                                                          |
+| `version`                   |      X      |   X   |      X      |                                                                                          |
+| `module_type`               |      X      |   X   |      X      |                                                                                          |
+| `module_template_version`   |      X      |   X   |      X      |                                                                                          |
+| `lanaguge`                  |      X      |   X   |      X      |                                                                                          |
+| `narrator`                  |      X      |   X   |      X      |                                                                                          |
+| `title`                     |      X      |   X   |      X      |                                                                                          |
+| `comment`                   |      X      |   X   |      X      |                                                                                          |
+| `long_description`          |      X      |   X   |      X      |                                                                                          |
+| `estimated_time_in_minutes` |      X      |   X   |      X      |                                                                                          |
+| `r_file`                    |             |   X   |             |                                                                                          |
+| `prerequisites`             |      X      |   X   |      X      |                                                                                          |
+| `learning_objectives`       |      X      |   X   |      X      |                                                                                          |
+| `import`                    |      x      |   X   |      X      | Importing `macro.md` is required for all modules. Additional import files may be needed. |
 
 
 [^1]: Modules using [interactive R code](#interactive-r).
