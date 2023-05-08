@@ -43,7 +43,7 @@ print_resource3: @print_list(@resource3_name,@resource3_description,@resource3_w
 
 @lesson_prep_wrapper
 
-<h4>This module will direct you to external educational content.</h4>
+<h3>This module will direct you to external educational content.</h3>
 
 Many topics have great content written by others! We chose this content for you based on how well it meets our criteria.
 
