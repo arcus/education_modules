@@ -29,6 +29,7 @@ sequence_name: SQL
 next_sequential_module: database_normalization
 
 data_task: data_management
+good_first_module: false
 
 @sets_you_up_for
 

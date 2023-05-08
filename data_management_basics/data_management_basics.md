@@ -29,6 +29,8 @@ The only pre-requisite suggested for this module is experience working in resear
 
 data_task: data_management
 
+good_first_module: false
+
 @depends_on_knowledge_available_in
 
 - reproducibility

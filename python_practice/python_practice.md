@@ -27,6 +27,8 @@ Learners should be familiar with [the basics of Python coding](https://liascript
 
 @end
 
+good_first_module: false
+
 coding_required: true
 coding_language: Python
 coding_level: practice exercise

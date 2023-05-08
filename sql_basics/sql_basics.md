@@ -29,6 +29,8 @@ Experience working with rectangular data (data in rows and columns) is required,
 
 @end
 
+good_first_module: true
+
 coding_required: true
 coding_language: SQL
 coding_level: basic

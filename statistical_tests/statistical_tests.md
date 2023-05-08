@@ -30,6 +30,7 @@ After completion of this module, learners will be able to:
 @end
 
 data_task: data_analysis
+good_first_module: false
 
 @depends_on_knowledge_available_in
 

@@ -27,6 +27,8 @@ The only commands that will be assumed are the navigation commands `cd`, `ls`, a
 
 @end
 
+good_first_module: false
+
 coding_required: true
 coding_language: bash
 coding_level: intermediate

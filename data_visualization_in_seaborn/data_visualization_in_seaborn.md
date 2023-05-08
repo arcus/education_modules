@@ -39,6 +39,7 @@ If you are brand new to python (or want a refresher) consider starting with [Dem
 @end
 
 data_task: data_visualization
+good_first_module: false
 
 coding_required: true
 coding_language: Python

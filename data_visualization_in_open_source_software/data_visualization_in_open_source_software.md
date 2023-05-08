@@ -36,6 +36,7 @@ This module also assumes some basic familiarity with either R or python, but is 
 @end
 
 data_task: data_visualization
+good_first_module: false
 
 @sets_you_up_for
 

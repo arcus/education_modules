@@ -28,6 +28,7 @@ Experience working with rectangular data (data in rows and columns) will be help
 @end
 
 data_task: data_management
+good_first_module: true
 
 @sets_you_up_for
 

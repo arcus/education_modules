@@ -29,6 +29,8 @@ After completion of this module, learners will be able to:
 
 @end
 
+good_first_module: false
+
 coding_required: true
 coding_language: git
 coding_level: getting started

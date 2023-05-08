@@ -27,6 +27,8 @@ If you need to develop basic SQL fluency we recommend our module [SQL Basics](ht
 
 @end
 
+good_first_module: false
+
 coding_required: true
 coding_language: SQL
 coding_level: intermediate

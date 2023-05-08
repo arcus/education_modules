@@ -27,6 +27,8 @@ Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this
 
 @end
 
+good_first_module: false
+
 coding_required: true
 coding_language: SQL
 coding_level: intermediate

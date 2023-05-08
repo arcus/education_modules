@@ -34,6 +34,7 @@ Before starting this module it is useful for you to:
 @end
 
 data_task: data_transformation
+good_first_module: false
 
 coding_required: true
 coding_language: Python

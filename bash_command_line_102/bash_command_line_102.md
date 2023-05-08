@@ -28,6 +28,8 @@ Learners should be familiar with using a bash shell to navigate a directory syst
 
 @end
 
+good_first_module: false
+
 coding_required: true
 coding_language: bash
 coding_level: basic
