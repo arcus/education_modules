@@ -20,7 +20,7 @@ LiaScript is a [markdown](https://en.wikipedia.org/wiki/Markdown) dialect, so wr
 
 To see this document as an interactive LiaScript rendered version, click on the following link/badge:
 
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/roseh_docs/docs.md)
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md)
 
 </div>
 
@@ -40,7 +40,7 @@ To see how markdown works in LiaScript, look over the [LiaScript documentation o
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
 This document is itself a LiaScript markdown file! 
-To see what the text looks like, open the [raw version of this file](https://raw.githubusercontent.com/arcus/education_modules/roseh_docs/docs.md).
+To see what the text looks like, open the [raw version of this file](https://raw.githubusercontent.com/arcus/education_modules/main/docs.md).
 
 </div>
 
@@ -53,7 +53,7 @@ The instructions in this documentation will help you make sure your module will 
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
 Our QA process is very transparent. 
-You can view the [QA checklist](https://github.com/arcus/education_modules/blob/templates_update/.github/ISSUE_TEMPLATE/qa-for-standard-modules.md) that will be used to check your module at any time. 
+You can view the [QA checklist](https://github.com/arcus/education_modules/blob/main/.github/ISSUE_TEMPLATE/qa-for-standard-modules.md) that will be used to check your module at any time. 
 You can also see revisions and comments on [pull requests for other modules that have already been QAed](https://github.com/arcus/education_modules/pulls?q=is%3Apr+is%3Aclosed+label%3A%22Quality+Assurance%22) to see what kinds of adjustments were made. 
 
 </div>
