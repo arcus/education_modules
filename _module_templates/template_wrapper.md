@@ -16,8 +16,6 @@ long_description: This is a longer description, which should be understandable f
 
 estimated_time_in_minutes: 
 
-r_file: 
-
 @prerequisites
 List any skills or knowledge needed to complete this module here.
 @end
@@ -31,51 +29,37 @@ After completion of this module, learners will be able to:
 - articulate the rationale for something
 @end
 
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
--->
+resource1_name: Docker Tutorial
+resource1_description: This is a tutorial on using Docker
+resource1_wellvetted: true
+resource1_wellvetted_text: This is a well-known thing.
+resource1_maintained: true
+resource1_maintained_text: Maintained by Docker.
+resource1_stablesupport: false
+resource1_stablesupport_text: Not stable?
+resource1_a11y_issues: No known issues with accessibility, but if you encounter something, please [let us know](#feedback)!
 
-# Module Title
+resource2_name: Regexone Website
+resource2_description: An interactive website for learning regex
+resource2_wellvetted: false
+resource2_wellvetted_text: No idea.
+resource2_maintained: true
+resource2_maintained_text: Yeah
+resource2_stablesupport: true
+resource2_stablesupport_text: Yep
+resource2_a11y_issues: Good question...
 
-@overview
+resource3_name:
+resource3_description:
+resource3_wellvetted:
+resource3_wellvetted_text:
+resource3_maintained:
+resource3_maintained_text:
+resource3_stablesupport:
+resource3_stablesupport_text:
+resource3_a11y_issues:
 
-## Lesson Preparation
-
-This module will direct you to external educational content.
----
-
-Many topics have great content written by others! We chose this content for you based on how well it meets our criteria.
-
-Not all selected materials will meet all of these criteria, but selected materials should meet as many as possible.
-Write a short sentence about how this material meets, or does not meet, each criterion.
-
-**Resource 1 Name**
-
-Short optional summary sentence about resource 1.
-
-<ul style="list-style-type: none">
-   <li><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Expert Authors / Well-Vetted: _who are the expert authors? or what institutional authority guarantees accuracy?_</li>
-   <li><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Maintained: _who is in charge of implementing regular updates to this material, important in fast-changing fields._</li>
-   <li><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Stable Support: _who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!_</li>
-</ul>
-
-**Known issues with accessibility and inclusive design:** Explain any known problems related to accessibility and inclusive design here. If there are none, you can write "No known issues, but we may have missed something. If you encounter an issue, please [let us know in our feedback form](#feedback)!"
-
-**Resource 2 Name**
-
-Short optional summary sentence about resource 2.
-
-<ul style="list-style-type: none">
-   <li><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Expert Authors / Well-Vetted: _who are the expert authors? or what institutional authority guarantees accuracy?_</li>
-   <li><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i> Maintained: _who is in charge of implementing regular updates to this material, important in fast-changing fields._</li>
-   <li><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i> Stable Support: _who hosts this material so it won't disappear? If it does, please let us know in a feedback form ASAP!_</li>
-</ul>
-
-**Known issues with accessibility and inclusive design:** Explain any known problems related to accessibility and inclusive design here. If there are none, you can write "No known issues, but we may have missed something. If you encounter an issue, please [let us know in our feedback form](#feedback)!"
-
-The structure of this module:
----
-Give learners a short, concrete, description of what they will do. This might look like:
-
+@module_structure
 Example Structure 1:
 
 1. Read about how this topic fits into some bigger picture here in this LiaScript course.
@@ -94,7 +78,34 @@ Example Structure 3:
 2. Read Section 2.1 and 2.2.
 3. Return to this LiaScript course to do an activity.
 4. Answer a few questions (again in the LiaScript course) to make sure you understood the key parts.
+
 These are just some examples of possible structures. The specific structure will depend greatly on the particular external module/educational resource you are using.
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_wrapper.md
+-->
+
+# Module Title
+
+@overview
+
+## Lesson Preparation
+
+@lesson_prep_wrapper
+
+@print_resource1
+
+@print_resource2
+
+@print_resource3
+
+<h3>The structure of this module:</h3>
+
+Give learners a short, concrete, description of what they will do. This might look like:
+
+@module_structure
+
 
 Wrapper modules may or may not include much text in the LiaScript file itself. 
 For instructions and examples about including embedded media, highlight boxes, math, code, and quiz questions, see the [standard module template](https://github.com/arcus/education_modules/blob/main/_module_templates/standard_module_template.md).
