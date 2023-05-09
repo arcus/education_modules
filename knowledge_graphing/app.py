@@ -32,83 +32,14 @@ nodes = [
     for row in df.index 
 ]
 
-### Once relationship metadata is incorporated into the front matter, update process_data.sh to pull it into the dataframe and import it directly to here. In the meantime these relationships can remain hard coded.
+### Once relationship metadata is incorporated into the front matter, update process_data.sh to pull it into the dataframe and import it directly to here. In the meantime these relationships can remain definted by what links to what. 
+### Note that when there are other link types, those can also be categorized by 'relationship' tags.
 
-edges = [
-    {'data': {'source': source, 'target': target}}
-    for source, target in (
-        
-        ('bash_103_combining_commands', 'bash_command_line_101'),
-        ('bash_103_combining_commands', 'bash_command_line_102'),
-        ('bash_103_combining_commands', 'directories_and_file_paths'),
-        ('bash_command_line_101', 'directories_and_file_paths'),
-        ('bash_command_line_101', 'git_setup_windows'),
-        ('bash_command_line_102', 'bash_command_line_101'),
-        ('bash_command_line_102', 'directories_and_file_paths'),
-        ('bash_conditionals_loops', 'bash_command_line_101'),
-        ('bash_conditionals_loops', 'bash_command_line_102'),
-        ('bash_conditionals_loops', 'directories_and_file_paths'),
-        ('bash_scripts', 'bash_command_line_101'),
-        ('bash_scripts', 'reproducibility'),
-        ('data_management_basics', 'reproducibility'),
-        ('data_visualization_in_ggplot2', 'data_visualization_in_open_source_software'),
-        ('data_visualization_in_ggplot2', 'data_visualization_in_seaborn'),
-        ('data_visualization_in_ggplot2', 'r_basics_introduction'),
-        ('data_visualization_in_ggplot2', 'statistical_tests'),
-        ('data_visualization_in_open_source_software', 'data_visualization_in_ggplot2'),
-        ('data_visualization_in_open_source_software', 'data_visualization_in_seaborn'),
-        ('data_visualization_in_open_source_software', 'demystifying_python'),
-        ('data_visualization_in_open_source_software', 'r_basics_introduction'),
-        ('data_visualization_in_seaborn', 'data_visualization_in_ggplot2'),
-        ('data_visualization_in_seaborn', 'demystifying_python'),
-        ('data_visualization_in_seaborn', 'statistical_tests'),
-        ('demystifying_python', 'bash_command_line_101'),
-        ('demystifying_python', 'python_basics_writing_python_code'),
-        ('demystifying_sql', 'reproducibility'),
-        ('git_creation_and_tracking', 'git_setup_mac_and_linux'),
-        ('git_creation_and_tracking', 'git_setup_windows'),
-        ('git_history_of_project', 'git_creation_and_tracking'),
-        ('git_setup_mac_and_linux', 'git_setup_windows'),
-        ('git_setup_windows', 'git_setup_mac_and_linux'),
-        ('learning_to_learn', 'reproducibility'),
-        ('pandas_transform', 'python_basics_writing_python_code'),
-        ('python_basics_writing_python_code', 'demystifying_python'),
-        ('python_practice', 'data_visualization_in_seaborn'),
-        ('python_practice', 'demystifying_python'),
-        ('python_practice', 'pandas_transform'),
-        ('python_practice', 'python_basics_writing_python_code'),
-        ('python_practice', 'r_practice'),
-        ('r_basics_introduction', 'r_basics_transform_data'),
-        ('r_basics_introduction', 'r_basics_visualize_data'),
-        ('r_basics_introduction', 'reproducibility'),
-        ('r_basics_transform_data', 'r_basics_introduction'),
-        ('r_basics_transform_data', 'r_basics_visualize_data'),
-        ('r_basics_visualize_data', 'data_visualization_in_ggplot2'),
-        ('r_basics_visualize_data', 'r_basics_introduction'),
-        ('r_basics_visualize_data', 'r_basics_transform_data'),
-        ('r_basics_visualize_data', 'tidy_data'),
-        ('r_missing_values', 'r_basics_introduction'),
-        ('r_missing_values', 'r_basics_transform_data'),
-        ('r_practice', 'data_visualization_in_ggplot2'),
-        ('r_practice', 'python_practice'),
-        ('r_practice', 'r_basics_introduction'),
-        ('r_practice', 'r_basics_transform_data'),
-        ('r_reshape_long_wide', 'r_basics_introduction'),
-        ('r_reshape_long_wide', 'r_basics_transform_data'),
-        ('r_reshape_long_wide', 'tidy_data'),
-        ('sql_basics', 'demystifying_sql'),
-        ('sql_intermediate', 'demystifying_sql'),
-        ('sql_intermediate', 'sql_basics'),
-        ('sql_joins', 'database_normalization'),
-        ('sql_joins', 'sql_basics'),
-        ('sql_joins', 'sql_intermediate'),
-        ('statistical_tests', 'data_visualization_in_open_source_software'),
-        ('statistical_tests', 'python_basics_writing_python_code'),
-        ('statistical_tests', 'r_basics_introduction'),
-        ('tidy_data', 'reproducibility'),
-        ('using_redcap_api', 'reproducibility')
-    )
-]
+edges = []
+for row in df.index:
+    for linked_module in df.loc[row, 'Linked Courses']:
+        edges.append({'data': {'source': linked_module, 'target': row, 'relationship': 'internal_link'}})
+
 
 
 default_stylesheet = [

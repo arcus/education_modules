@@ -253,4 +253,157 @@ df.loc["using_redcap_api", "time"] = "1 hour"
 df.loc["using_redcap_api", "comment"] = "REDCap is a research data capture tool used by many researchers in basic, translational, and clinical research efforts.  Learn how to use the REDCap API in this module." 
 df.loc["using_redcap_api", "long_description"] = "If your institution provides access to REDCap, this module is right for you.  REDCap is a convenient and powerful way to collect and store research data.  This module will teach you how to interact with the REDCap API, or +Application Programming Interface,+ which can help you automate your data analysis. This will also help you understand APIs in general and what makes their use so appealing for reproducible research efforts." 
 df.loc["using_redcap_api", "Learning Objectives"] = "&After completion of this module, learners will be able to:&&- Define what an API is and why it's useful to researchers&- Enable API usage on REDCap projects&- Use the REDCap API to pull data into an R or Python data analysis&&&" 
-
+df["Linked Courses"] = [list() for x in range(len(df.index))]
+a = df.loc["bash_103_combining_commands", "Linked Courses"]
+a.append("bash_command_line_101")
+a.append("bash_command_line_102")
+a.append("directories_and_file_paths")
+df.at["bash_103_combining_commands", "Linked Courses"] = list(a)
+a = df.loc["bash_command_line_101", "Linked Courses"]
+a.append("directories_and_file_paths")
+a.append("git_setup_windows")
+df.at["bash_command_line_101", "Linked Courses"] = list(a)
+a = df.loc["bash_command_line_102", "Linked Courses"]
+a.append("bash_command_line_101")
+a.append("directories_and_file_paths")
+df.at["bash_command_line_102", "Linked Courses"] = list(a)
+a = df.loc["bash_conditionals_loops", "Linked Courses"]
+a.append("bash_command_line_101")
+a.append("bash_command_line_102")
+a.append("directories_and_file_paths")
+df.at["bash_conditionals_loops", "Linked Courses"] = list(a)
+a = df.loc["bash_scripts", "Linked Courses"]
+a.append("bash_command_line_101")
+a.append("reproducibility")
+df.at["bash_scripts", "Linked Courses"] = list(a)
+a = df.loc["citizen_science", "Linked Courses"]
+df.at["citizen_science", "Linked Courses"] = list(a)
+a = df.loc["data_management_basics", "Linked Courses"]
+a.append("reproducibility")
+df.at["data_management_basics", "Linked Courses"] = list(a)
+a = df.loc["data_storage_models", "Linked Courses"]
+df.at["data_storage_models", "Linked Courses"] = list(a)
+a = df.loc["data_visualization_in_ggplot2", "Linked Courses"]
+a.append("data_visualization_in_open_source_software")
+a.append("data_visualization_in_seaborn")
+a.append("r_basics_introduction")
+a.append("statistical_tests")
+df.at["data_visualization_in_ggplot2", "Linked Courses"] = list(a)
+a = df.loc["data_visualization_in_open_source_software", "Linked Courses"]
+a.append("data_visualization_in_ggplot2")
+a.append("data_visualization_in_seaborn")
+a.append("demystifying_python")
+a.append("r_basics_introduction")
+df.at["data_visualization_in_open_source_software", "Linked Courses"] = list(a)
+a = df.loc["data_visualization_in_seaborn", "Linked Courses"]
+a.append("data_visualization_in_ggplot2")
+a.append("demystifying_python")
+a.append("statistical_tests")
+df.at["data_visualization_in_seaborn", "Linked Courses"] = list(a)
+a = df.loc["database_normalization", "Linked Courses"]
+df.at["database_normalization", "Linked Courses"] = list(a)
+a = df.loc["demystifying_geospatial_data", "Linked Courses"]
+df.at["demystifying_geospatial_data", "Linked Courses"] = list(a)
+a = df.loc["demystifying_python", "Linked Courses"]
+a.append("bash_command_line_101")
+a.append("python_basics_writing_python_code")
+df.at["demystifying_python", "Linked Courses"] = list(a)
+a = df.loc["demystifying_sql", "Linked Courses"]
+a.append("reproducibility")
+df.at["demystifying_sql", "Linked Courses"] = list(a)
+a = df.loc["directories_and_file_paths", "Linked Courses"]
+df.at["directories_and_file_paths", "Linked Courses"] = list(a)
+a = df.loc["elements_of_maps", "Linked Courses"]
+df.at["elements_of_maps", "Linked Courses"] = list(a)
+a = df.loc["geocode_lat_long", "Linked Courses"]
+df.at["geocode_lat_long", "Linked Courses"] = list(a)
+a = df.loc["git_creation_and_tracking", "Linked Courses"]
+a.append("git_setup_mac_and_linux")
+a.append("git_setup_windows")
+df.at["git_creation_and_tracking", "Linked Courses"] = list(a)
+a = df.loc["git_history_of_project", "Linked Courses"]
+a.append("git_creation_and_tracking")
+df.at["git_history_of_project", "Linked Courses"] = list(a)
+a = df.loc["git_intro", "Linked Courses"]
+df.at["git_intro", "Linked Courses"] = list(a)
+a = df.loc["git_setup_mac_and_linux", "Linked Courses"]
+a.append("git_setup_windows")
+df.at["git_setup_mac_and_linux", "Linked Courses"] = list(a)
+a = df.loc["git_setup_windows", "Linked Courses"]
+a.append("git_setup_mac_and_linux")
+df.at["git_setup_windows", "Linked Courses"] = list(a)
+a = df.loc["how_to_troubleshoot", "Linked Courses"]
+df.at["how_to_troubleshoot", "Linked Courses"] = list(a)
+a = df.loc["learning_to_learn", "Linked Courses"]
+a.append("reproducibility")
+df.at["learning_to_learn", "Linked Courses"] = list(a)
+a = df.loc["omics_orientation", "Linked Courses"]
+df.at["omics_orientation", "Linked Courses"] = list(a)
+a = df.loc["pandas_transform", "Linked Courses"]
+a.append("python_basics_writing_python_code")
+df.at["pandas_transform", "Linked Courses"] = list(a)
+a = df.loc["python_basics_writing_python_code", "Linked Courses"]
+a.append("demystifying_python")
+df.at["python_basics_writing_python_code", "Linked Courses"] = list(a)
+a = df.loc["python_practice", "Linked Courses"]
+a.append("data_visualization_in_seaborn")
+a.append("demystifying_python")
+a.append("pandas_transform")
+a.append("python_basics_writing_python_code")
+a.append("r_practice")
+df.at["python_practice", "Linked Courses"] = list(a)
+a = df.loc["r_basics_introduction", "Linked Courses"]
+a.append("r_basics_transform_data")
+a.append("r_basics_visualize_data")
+a.append("reproducibility")
+df.at["r_basics_introduction", "Linked Courses"] = list(a)
+a = df.loc["r_basics_transform_data", "Linked Courses"]
+a.append("r_basics_introduction")
+a.append("r_basics_visualize_data")
+df.at["r_basics_transform_data", "Linked Courses"] = list(a)
+a = df.loc["r_basics_visualize_data", "Linked Courses"]
+a.append("data_visualization_in_ggplot2")
+a.append("r_basics_introduction")
+a.append("r_basics_transform_data")
+a.append("tidy_data")
+df.at["r_basics_visualize_data", "Linked Courses"] = list(a)
+a = df.loc["r_missing_values", "Linked Courses"]
+a.append("r_basics_introduction")
+a.append("r_basics_transform_data")
+df.at["r_missing_values", "Linked Courses"] = list(a)
+a = df.loc["r_practice", "Linked Courses"]
+a.append("data_visualization_in_ggplot2")
+a.append("python_practice")
+a.append("r_basics_introduction")
+a.append("r_basics_transform_data")
+df.at["r_practice", "Linked Courses"] = list(a)
+a = df.loc["r_reshape_long_wide", "Linked Courses"]
+a.append("r_basics_introduction")
+a.append("r_basics_transform_data")
+a.append("tidy_data")
+df.at["r_reshape_long_wide", "Linked Courses"] = list(a)
+a = df.loc["reproducibility", "Linked Courses"]
+df.at["reproducibility", "Linked Courses"] = list(a)
+a = df.loc["sql_basics", "Linked Courses"]
+a.append("demystifying_sql")
+df.at["sql_basics", "Linked Courses"] = list(a)
+a = df.loc["sql_intermediate", "Linked Courses"]
+a.append("demystifying_sql")
+a.append("sql_basics")
+df.at["sql_intermediate", "Linked Courses"] = list(a)
+a = df.loc["sql_joins", "Linked Courses"]
+a.append("database_normalization")
+a.append("sql_basics")
+a.append("sql_intermediate")
+df.at["sql_joins", "Linked Courses"] = list(a)
+a = df.loc["statistical_tests", "Linked Courses"]
+a.append("data_visualization_in_open_source_software")
+a.append("python_basics_writing_python_code")
+a.append("r_basics_introduction")
+df.at["statistical_tests", "Linked Courses"] = list(a)
+a = df.loc["tidy_data", "Linked Courses"]
+a.append("reproducibility")
+df.at["tidy_data", "Linked Courses"] = list(a)
+a = df.loc["using_redcap_api", "Linked Courses"]
+a.append("reproducibility")
+df.at["using_redcap_api", "Linked Courses"] = list(a)
