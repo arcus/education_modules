@@ -4,6 +4,7 @@ import dash_cytoscape as cyto
 import module_data 
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 styles = {
     'pre': {
