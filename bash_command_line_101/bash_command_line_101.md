@@ -30,28 +30,28 @@ Learners should be familiar with locating files and folders stored in a director
 
 good_first_module: true
 
-coding:
-- coding_required: true
-  coding_language: bash
-  coding_level: basic
+coding_required: true
+coding_language: bash
+coding_level: basic
 
-sequence:
-- sequence_name: Bash Basics
-  next_sequential_module: bash_command_line_102
-  relation_type: sequence
+sequence_name: Bash Basics
+next_sequential_module: bash_command_line_102
 
-relationship:
-- this_module: bash_command_line_101
-  relation_type: sets_you_up_for
-  related_module: 
-  - bash_command_line_102
-  - bash_103_combining_commands
-  - bash_conditionals_loops
-  - bash_scripts
-- this_module: bash_command_line_101
-  relation_type: depends_on_knowledge_available_in
-  related_module: 
-  - git_setup_windows
+@sets_you_up_for
+
+- bash_command_line_102
+- bash_103_combining_commands
+- bash_conditionals_loops
+- bash_scripts
+
+@end
+
+@depends_on_knowledge_available_in
+
+- git_setup_windows
+
+@end
+
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 

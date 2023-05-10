@@ -20,6 +20,43 @@ After completion of this module, learners will be able to:
 - Write simple Bash scripts
 @end
 
+@pre_reqs
+
+Learners should be familiar with using a Bash shell to navigate a directory system. Learners will get the most out of this lesson if they can also create directories and files, write text to files, and read files from their Bash shell command line interface.
+
+Bash commands that will be used without explanation include:
+
+- `ls`
+- `cat`
+- `>` and `>>`
+- `echo`
+- `grep`
+- `wc`
+
+@end
+
+good_first_module: false
+
+coding_required: true
+coding_language: bash
+coding_level: intermediate
+
+sequence_name: Bash Basics
+
+@sets_you_up_for
+
+- bash_scripts
+
+@end
+
+@depends_on_knowledge_available_in
+
+- bash_command_line_101
+- bash_command_line_102
+- bash_103_combining_commands
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js

@@ -23,6 +23,35 @@ After completion of this module, learners will be able to:
 
 @end
 
+@pre_reqs
+
+Experience working with rectangular data (data in rows and columns) is required, as is some exposure to the idea of SQL and its use of tables with rows and columns.  No experience writing SQL code is expected or required for this module.  If you would like a code-free overview to SQL we recommend our module [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md).
+
+@end
+
+good_first_module: true
+
+coding_required: true
+coding_language: SQL
+coding_level: basic
+
+sequence_name: SQL
+next_sequential_module: sql_intermediate
+
+@sets_you_up_for
+
+- sql_intermediate
+
+@end
+
+@depends_on_knowledge_available_in
+
+- demystifying_sql
+
+@end
+
+
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js

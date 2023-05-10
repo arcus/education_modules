@@ -21,6 +21,22 @@ After completion of this module, learners will be able to:
 
 @end
 
+good_first_module: true 
+
+@pre_reqs
+
+It is helpful if learners have conducted research, are familiar with -- by reading or writing -- peer-reviewed literature, and have experience using data and methods developed by other people.  There is no need to have any specific scientific or medical domain knowledge or technical background.  
+
+@end
+
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js

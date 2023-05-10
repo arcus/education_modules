@@ -25,18 +25,12 @@ coding:
 
 sequence:
 - sequence_name: Bash Basics
-  next_sequential_module: bash_command_line_102
-  relation_type: sequence
+- next_sequential_module: bash_command_line_102
 
-relationship:
-- this_module: bash_command_line_101
-  relation_type: sets_you_up_for
-  related_module: 
-  - bash_command_line_102
+"@sets_you_up_for": bash_command_line_102
   - bash_103_combining_commands
   - bash_conditionals_loops
-  - bash_scripts
-- this_module: bash_command_line_101
-  relation_type: depends_on_knowledge_available_in
-  related_module: 
-  - git_setup_windows
+  - bash_scripts @end
+
+"@depends_on_knowledge_available_in":
+  - git_setup_windows @end

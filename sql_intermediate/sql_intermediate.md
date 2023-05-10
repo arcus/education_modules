@@ -21,6 +21,33 @@ After completion of this module, learners will be able to:
 
 @end
 
+@pre_reqs
+
+Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this module.  If you would like a code-free overview to SQL we recommend our module [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md).  If you need to develop basic SQL fluency we recommend our module [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md).
+
+@end
+
+good_first_module: false
+
+coding_required: true
+coding_language: SQL
+coding_level: intermediate
+
+sequence_name: SQL
+next_sequential_module: database_normalization
+
+@sets_you_up_for
+
+- sql_joins
+
+@end
+
+@depends_on_knowledge_available_in
+
+- sql_basics
+
+@end
+
 
 @version_history
 1.0.2: Clarify group by aggregation troubleshooting

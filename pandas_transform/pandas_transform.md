@@ -23,6 +23,40 @@ After completion of this module, learners will be able to:
 
 @end
 
+@pre_reqs
+
+Before starting this module it is useful for you to:
+
+* have some familiarity with tabular data: data stored in an array of rows and columns.
+
+* have an introductory level exposure to coding in [Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md)
+
+@end
+
+data_task: data_transformation
+good_first_module: false
+
+coding_required: true
+coding_language: Python
+coding_level: intermediate
+
+sequence_name: Python
+next_sequential_module: data_visualization_in_seaborn
+
+@sets_you_up_for
+
+- data_visualization_in_seaborn
+- python_practice
+
+@end
+
+@depends_on_knowledge_available_in
+
+- demystifying_python
+- python_basics_writing_python_code
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js

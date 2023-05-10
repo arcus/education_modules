@@ -23,6 +23,45 @@ After completion of this module, learners will be able to:
 
 @end
 
+@pre_reqs
+
+This module assumes some familiarity with statistical concepts like distributions, outliers, and linear regression, but even if you don't understand those concepts well you should be able to learn and apply the data visualization content.
+When statistical concepts are referenced in the lesson, links to learn more are generally provided.
+
+This module also assumes some basic familiarity with python, including
+
+* installing and importing python modules
+* reading in data
+* manipulating data frames, including calculating new columns
+
+If you are brand new to python (or want a refresher) consider starting with [Demystifying Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md) first.
+
+@end
+
+data_task: data_visualization
+good_first_module: false
+
+coding_required: true
+coding_language: Python
+coding_level: intermediate
+
+sequence_name: Python
+next_sequential_module: python_practice
+
+@sets_you_up_for
+
+- python_practice
+
+@end
+
+@depends_on_knowledge_available_in
+
+- demystifying_python
+- python_basics_writing_python_code
+- pandas_transform
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 script: https://kit.fontawesome.com/83b2343bd4.js
 

@@ -19,6 +19,25 @@ After completion of this module, learners will be able to:
 
 @end
 
+@pre_reqs
+
+Learners should have experience working with data in tables.  This could included working with .csv files, SQL databases, R data frames, REDCap instruments, or other ways that data can be collected in tables. 
+
+@end
+
+sequence_name: SQL
+next_sequential_module: database_normalization
+
+data_task: data_management
+good_first_module: false
+
+@sets_you_up_for
+
+- sql_joins
+
+@end
+
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js

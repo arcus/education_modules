@@ -23,6 +23,36 @@ After completion of this module, learners will be able to:
 
 @end
 
+@pre_reqs
+
+- Have used the command line interface (CLI) on your computer before
+- Have Git installed on your computer (note that it is probably installed already even if you've never used it)
+- Have an account on github.com (you can [sign up now](https://github.com/signup) if you haven't yet --- it's free)
+
+@end
+
+good_first_module: false
+
+coding_required: true
+coding_language: git
+coding_level: getting started
+
+sequence_name: Git
+next_sequential_module: git_creation_and_tracking
+
+@sets_you_up_for
+
+- git_creation_and_tracking
+- git_history_of_project
+
+@end
+
+@is_parallel_to
+
+- git_setup_windows
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js

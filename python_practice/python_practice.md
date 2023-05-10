@@ -21,6 +21,33 @@ After completion of this module, learners will be able to:
 
 @end
 
+@pre_reqs
+
+Learners should be familiar with [the basics of Python coding](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md), including [data transformation with pandas](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md) and [data visualization with matplotlib and seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md). Learners should also have access to Python, either on their own computer or in the cloud. 
+
+@end
+
+good_first_module: false
+
+coding_required: true
+coding_language: Python
+coding_level: practice exercise
+
+sequence_name: Python
+
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+- demystifying_python
+- python_basics_writing_python_code
+- pandas_transform
+- data_visualization_in_seaborn
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js

@@ -22,6 +22,23 @@ After completion of this module, learners will be able to:
 
 @end
 
+@pre_reqs
+
+* Learners should already be familiar with the purpose and assumptions of any test they intend to run --- this module covers the "how" only, not the "why".
+* This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md) first and then coming back here.
+
+@end
+
+data_task: data_analysis
+good_first_module: false
+
+@depends_on_knowledge_available_in
+
+- r_basics_introduction
+- python_basics_writing_python_code
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js

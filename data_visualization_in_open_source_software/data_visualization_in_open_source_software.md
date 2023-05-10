@@ -24,6 +24,31 @@ After completion of this module, learners will be able to:
 
 @end
 
+@pre_reqs
+
+This module assumes some familiarity with data and statistics, in particular
+
+* familiarity with some different kinds of plots, although deep understanding is not needed --- people who are used to seeing plots presented in research articles will be sufficiently prepared
+* the distinction between [continuous and categorical variables](https://education.arcus.chop.edu/variable-types/)
+
+This module also assumes some basic familiarity with either R or python, but is appropriate for beginners.
+
+@end
+
+data_task: data_visualization
+good_first_module: false
+
+@sets_you_up_for
+
+- data_visualization_in_ggplot2
+- data_visualization_in_seaborn
+
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 script:  https://kit.fontawesome.com/83b2343bd4.js
 
