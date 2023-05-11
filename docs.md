@@ -135,7 +135,7 @@ Which front matter items are required? It depends on the content of the module y
 | `resource1_maintained`[^3]    |             |       |      X      |                                                                                          |
 | `resource1_stablesupport`[^3] |             |       |      X      |                                                                                          |
 | `resource1_a11y_issues`[^3]   |             |       |      X      |                                                                                          |
-| `import`                      |      X      |   X   |      X      | Importing `macro.md` is required for all modules. Additional import files may be needed. |
+| `import`                      |      X      |   X   |      X      | Importing `macros.md` is required for all modules. Additional import files may be needed. |
 
 
 [^1]: Modules using [interactive R code](#interactive-r).
@@ -383,7 +383,7 @@ Must be one of `true` or `false`.
 ### `resource1_maintained_text` 
 
 ```
-resource1_maintained_text: 
+resource1_maintained_text: This tutorial is maintained by Docker Inc, so we expect that it will remain up to date whenever changes are implemented in docker.
 ```
 
 This is a short explanation justifying the `true` or `false` decision recorded for `resource1_maintained`. If this is a resource that is well maintained, then explain. If it is not, mention the shortcoming, and explain why you think it's worth linking to in a module anyway.
@@ -403,7 +403,7 @@ Must be one of `true` or `false`.
 ### `resource1_stablesupport_text`
 
 ```
-resource1_stablesupport_text: 
+resource1_stablesupport_text: This is hosted on the Docker website, and it is a popular and widely-shared tutorial. We expect it will continue to be available for the foreseeable future.
 ```
 
 This is a short explanation justifying the `true` or `false` decision recorded for `resource1_stablesupport`. If this is a resource that we expect to have stable support, then explain. If it is not, mention the shortcoming, and explain why you think it's worth linking to in a module anyway.
@@ -423,9 +423,17 @@ import: https://raw.githubusercontent.com/arcus/education_modules/templates_upda
 ```
 
 Note that importing `macros.md` imports all the general-use macros needed for our modules (see [DART macros](#dart-macros) for details), as well as the style sheet and javascript kit for our icons. 
-Every single module should import `macros.md`.
+Every single module should import `macros.md`. 
+For most modules, this is the only import file needed, but there are some notable exceptions.
 
-Include additional import links as needed for R, Python, or SQL (see the sections on [interactive coding](#including-interactive-code) for details).  
+Wrapper modules must import the wrapper macros as well: 
+
+```
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_wrapper.md
+```
+
+Modules using interactive R, Python, or SQL will need additional import files (see the sections on [interactive coding](#including-interactive-code) for details).  
 
 ## DART macros
 
@@ -434,7 +442,7 @@ Macros are a way to include flexible text substitution with LiaScript.
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-For more details, including lots of examples, see the [LiaScript documentation on macros](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#macros).
+To learn more about how macros work in general, including lots of examples, see the [LiaScript documentation on macros](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#macros).
 
 </div>
 
@@ -442,6 +450,7 @@ We use macros for a lot of our standardized text.
 For example, the Overview and Feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. 
 
 - General use macros are in the [module macros file](https://github.com/arcus/education_modules/blob/templates_update/_module_templates/macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in **every module**. 
+- Macros to create the descriptions of external resources for wrapper modules are in the [wrapper macros file](https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_wrapper.md).
 - Macros for hands-on code in R, Python, and SQL modules are available in `macros_r.md`, `macros_python.md`, and `macros_sql.md`, respectively. SQL tables are loaded with additional files. For more details, see the sections on [including interactive code](#including-interactive-code) in this documentation.
 
 For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/templates_update/macros_instructions.md).
@@ -451,10 +460,11 @@ For more information about our macros and instructions for writing new ones, see
 When you're ready to start writing a new module:
 
 1. Clone the education_modules repo if you don't already have it. Start a new git branch for your module. 
-2. Open this template in a text editor like VSCode, and then use "save as" to save it in a new directory and with a filename that conveys the point of the module (e.g. `r_logistic_regression/r_logistic_regression.md`). You may find it helpful to have the examples of highlight boxes and quiz questions in this template that you can quickly copy-paste as you write.
-3. Create a new empty subfolder in your module directory called "media". If you include images in your module, store them here.
-4. Open up the QA template for standard/wrapper/exercise modules (in the .`github/ISSUE_TEMPLATE` directory) as a reference, maybe keep it open side-by-side with your module draft.
-5. You can use the LiaScript preview extension in VSCode to see what your rendered module will look like, or generate it from https://liascript.github.io/ after pushing your changes to GitHub (while your still drafting, remember that you'll need to link to your raw md file on your branch, since it won't be available yet on main).
+2. Open the [relevant module template](#which-module-template-to-use) in a text editor like VSCode, and then use "save as" to save it in a new directory and with a filename that conveys the point of the module (e.g. `r_logistic_regression/r_logistic_regression.md`). 
+3. Open up this documentaion file either in your text editor or in a browser. In addition to the instructions, you may find it helpful to have the examples of highlight boxes and quiz questions in this document so you can quickly copy-paste them as you write.
+4. Create a new empty subfolder in your module directory called "media". If you include images in your module, store them here. If your module will include code files (scripts, notebooks, etc.)
+5. Open up the QA template for standard/wrapper/exercise modules (in the .`github/ISSUE_TEMPLATE` directory) as a reference, maybe keep it open side-by-side with your module draft.
+6. You can use the LiaScript preview extension in VSCode to see what your rendered module will look like, or generate it from https://liascript.github.io/ after pushing your changes to GitHub (while your still drafting, remember that you'll need to link to your raw md file on your branch, since it won't be available yet on main).
 
 ## Module sections
 
