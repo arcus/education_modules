@@ -22,7 +22,7 @@ nodes = [
             'id': row, 
             'title': df.loc[row,'title'], 
             'author': df.loc[row, 'author'], 
-            'time': df.loc[row,'time'], 
+            'estimated_time': df.loc[row,'estimated_time'], 
             'comment': df.loc[row,'comment'], 
             'long_description': df.loc[row,'long_description'],
             'Learning Objectives': df.loc[row,'Learning Objectives']
@@ -255,7 +255,7 @@ def update_author_selection(author_name):
               )
 def displayTapNodeData(data):
     if data:
-        return  "### [**" + data[0]['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data[0]['id']+"/" +data[0]['id'] + ".md) \n \n  By " + data[0]['author'] +" \n \n Estimated length: " + data[0]['time']+". \n \n" + data[0]['comment'] + "\n --- \n "
+        return  "### [**" + data[0]['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data[0]['id']+"/" +data[0]['id'] + ".md) \n \n  By " + data[0]['author'] +" \n \n Estimated length: " + data[0]['estimated_time']+". \n \n" + data[0]['comment'] + "\n --- \n "
     else:
         return "### Click on a node in the graph to see information about that module. \n --- "
 
@@ -335,7 +335,7 @@ def select_node_from_dropdown(id):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=0.0.0.0:80)
 
 #### TODO CHECKLIST:
 #### make all of the stylesheet updates a single callback that updates default_stylesheet rather than overwriting it

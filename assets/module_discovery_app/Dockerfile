@@ -12,4 +12,4 @@ RUN pip install -r /requirements.txt
 COPY . . /
 
 # Run locally
-CMD gunicorn --bind 0.0.0.0:8050 app:server
+CMD ["gunicorn", "--preload", "-b 0.0.0.0:80 app:server"]

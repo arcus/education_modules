@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+ web:
+  build:
+   context: .
+   dockerfile: Dockerfile
+  volumes:
+    - ./:/module_discovery_app
+  container_name: module_discovery_app 
+  tty: true
+  networks:
+    - module_discovery_network
+
+networks:
+  module_discovery_network:
+    name: module_discovery_network
