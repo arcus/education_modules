@@ -22,12 +22,15 @@ The guidelines presented here are inspired by several other guides including the
   - Color should never be the sole method for distinguishing visual content
 * Provide clear, consistent organization and content structure to reduce cognitive load for users
   - Use clear, informative headers for each subsection. The resulting table of contents should give a good sense of the flow and structure of the module. Avoid titles and headers that sacrifice clarity for playfulness.
+  - Use informative link text (e.g. instead of "To learn more about python, click [here](www.example.com)", say "Read this article to [learn more about python](www.example.com).")
   - Use parallel structure across modules covering similar content.
   - Use consistent formatting (e.g. consistent page headers and footers, consistent style controlled by css file)
 * Reduce language barriers
   - The language of each page is identified in the HTML (e.g. `<html lang="en-US">`)
+  - Avoid unclear language: unexplained idioms or references, unexplained acronyms, unnecessary technical language. 
+  - Try to write in short, digestible pieces --- avoid long paragraphs and break long sections up with sub-headers
   - Unusual words, or words taking on a very specific meaning in context, should be defined for the user, either on the page (e.g. using footnotes) or with links to a definition/glossary
-  - Provide pronunciation guides for especially unusual words of particular importance
+  - Provide pronunciation guides for especially unusual words of particular importance (a common example is package names, such as dplyr)
 * Take proactive steps to be welcoming to a diverse group of potential users
   - Avoid unnecessarily gendered language (e.g. use "they" singular rather than "he or she" for an unknown person)
   - Intentionally represent diversity in our examples and images
