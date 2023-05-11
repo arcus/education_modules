@@ -110,27 +110,36 @@ We store a lot of important information in the front matter section at the top o
 
 Which front matter items are required? It depends on the content of the module you're writing:
 
-|                             | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                    |
-| :-------------------------- | :---------: | :---: | :---------: | :--------------------------------------------------------------------------------------- |
-| `author`                    |      X      |   X   |      X      |                                                                                          |
-| `email`                     |      X      |   X   |      X      |                                                                                          |
-| `version`                   |      X      |   X   |      X      |                                                                                          |
-| `module_type`               |      X      |   X   |      X      |                                                                                          |
-| `module_template_version`   |      X      |   X   |      X      |                                                                                          |
-| `lanaguge`                  |      X      |   X   |      X      |                                                                                          |
-| `narrator`                  |      X      |   X   |      X      |                                                                                          |
-| `title`                     |      X      |   X   |      X      |                                                                                          |
-| `comment`                   |      X      |   X   |      X      |                                                                                          |
-| `long_description`          |      X      |   X   |      X      |                                                                                          |
-| `estimated_time_in_minutes` |      X      |   X   |      X      |                                                                                          |
-| `r_file`                    |             |   X   |             |                                                                                          |
-| `prerequisites`             |      X      |   X   |      X      |                                                                                          |
-| `learning_objectives`       |      X      |   X   |      X      |                                                                                          |
-| `import`                    |      x      |   X   |      X      | Importing `macro.md` is required for all modules. Additional import files may be needed. |
+|                               | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                    |
+| :---------------------------- | :---------: | :---: | :---------: | :--------------------------------------------------------------------------------------- |
+| `author`                      |      X      |   X   |      X      |                                                                                          |
+| `email`                       |      X      |   X   |      X      |                                                                                          |
+| `version`                     |      X      |   X   |      X      |                                                                                          |
+| `module_type`                 |      X      |   X   |      X      |                                                                                          |
+| `module_template_version`     |      X      |   X   |      X      |                                                                                          |
+| `lanaguge`                    |      X      |   X   |      X      |                                                                                          |
+| `narrator`                    |      X      |   X   |      X      |                                                                                          |
+| `title`                       |      X      |   X   |      X      |                                                                                          |
+| `comment`                     |      X      |   X   |      X      |                                                                                          |
+| `long_description`            |      X      |   X   |      X      |                                                                                          |
+| `estimated_time_in_minutes`   |      X      |   X   |      X      |                                                                                          |
+| `r_file`                      |             |   X   |             |                                                                                          |
+| `prerequisites`               |      X      |   X   |      X      |                                                                                          |
+| `learning_objectives`         |      X      |   X   |      X      |                                                                                          |
+| `module_structure`            |             |       |      X      |                                                                                          |
+| `resource1_name`[^3]          |             |       |      X      |                                                                                          |
+| `resource1_description`[^3]   |             |       |      X      |                                                                                          |
+| `resource1_wellvetted`[^3]    |             |       |      X      |                                                                                          |
+| `resource1_maintained`[^3]    |             |       |      X      |                                                                                          |
+| `resource1_stablesupport`[^3] |             |       |      X      |                                                                                          |
+| `resource1_a11y_issues`[^3]   |             |       |      X      |                                                                                          |
+| `import`                      |      X      |   X   |      X      | Importing `macro.md` is required for all modules. Additional import files may be needed. |
 
 
 [^1]: Modules using [interactive R code](#interactive-r).
 [^2]: Wrapper modules are built using the wrapper template (see [which module template to use](#which-module-template-to-use)).
+[^3]: You can include up to three external resources in a wrapper module. 
+  To add additional external resources, follow the same instructions for all the `resource1` front matter items for `resource2` items (e.g. `resource2_name`, `resource2_description`) and `resource3` items.
 
 
 ### `author`
@@ -277,6 +286,133 @@ Learning objectives are a very important element of the module.
 Note that `@learning_objectives` is a [block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#blocks) in LiaScript, which means it has `@end` after the last line.
 
 The learning objectives will be automatically printed twice in each module: Once in the [Overview](#overview) and then again in the [Feedback](#feedback) section.
+
+### `module_structure`
+
+```
+@module_structure
+1. Part 1
+2. Part 2
+3. Part 3
+@end
+```
+
+The point of `@module_structure` is to give learners a sense of the learning steps in a wrapper module --- in particular, it should emphasize what pieces they'll do in the LiaScript module itself and which they'll do elsewhere. It can include as many or as few steps as needed.
+
+The following are just some examples of possible structures. The specific structure will depend greatly on the particular external module/educational resource(s) you are using in your wrapper module.
+
+Example Structure 1:
+
+```
+@module_structure
+1. Read about how this topic fits into some bigger picture here in this LiaScript course.
+2. Do the activities embedded in this module (using iFrames).
+3. Answer a few questions to make sure you understood the key parts.
+@end
+```
+
+Example Structure 2:
+
+```
+@module_structure
+1. Open the external resource in a new browser window.
+2. Read Chapter 1 and do the activities at the end.
+3. Return to this LiaScript course to answer a few questions to make sure you understood the key parts.
+@end
+```
+
+Example Structure 3:
+
+```
+@module_structure
+1. Open this external resource in a new browser window.
+2. Read Section 2.1 and 2.2.
+3. Return to this LiaScript course to do an activity.
+4. Answer a few questions (again in the LiaScript course) to make sure you understood the key parts.
+@end
+```
+
+Note that `@module_structure` is a [block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#blocks) in LiaScript, which means it has `@end` after the last line.
+It will automcatically be printed in the Lesson Preparation section of wrapper modules. 
+
+### `resource1_name`
+
+```
+resource1_name: Docker 101 Tutorial
+```
+
+
+### `resource1_description`
+
+```
+resource1_description: In this self-paced, hands-on tutorial, you will learn how to build images, run containers, use volumes to persist data and mount in source code, and define your application using Docker Compose. You’ll even learn about a few advanced topics, such as networking and image building best practices.
+```
+
+### `resource1_wellvetted` 
+
+```
+resource1_wellvetted: true
+```
+
+**Do we have reason to believe in the accuracy of this content?**
+Who are the expert authors? Or what institutional authority guarantees accuracy? 
+
+Must be one of `true` or `false`.
+
+### `resource1_wellvetted_text` 
+
+```
+resource1_wellvetted_text: The Docker 101 tutorial is an [open source project](https://github.com/docker/getting-started), so it has many authors, but it is sponsored and hosted by Docker Inc, the company that produces the docker software. The open source nature of the tutorial also helps ensure that any errors or problems can be caught and addressed quickly. 
+```
+
+This is a short explanation justifying the `true` or `false` decision recorded for `resource1_wellvetted`. If this is a resource by expert authors and/or well-vetted, then explain. If it is not, mention the shortcoming, and explain why you think it's worth linking to in a module anyway.
+ 
+### `resource1_maintained` 
+
+```
+resource1_maintained: true
+```
+
+**Do we have reason to believe this material will stay up to date?**
+Who is in charge of implementing regular updates to this material? This is important in fast-changing fields.
+
+Must be one of `true` or `false`.
+
+### `resource1_maintained_text` 
+
+```
+resource1_maintained_text: 
+```
+
+This is a short explanation justifying the `true` or `false` decision recorded for `resource1_maintained`. If this is a resource that is well maintained, then explain. If it is not, mention the shortcoming, and explain why you think it's worth linking to in a module anyway.
+
+### `resource1_stablesupport`
+
+```
+resource1_stablesupport: true
+```
+
+**Do we have reason to believe this material won't disappear?**
+Who hosts it?
+
+Must be one of `true` or `false`.
+
+
+### `resource1_stablesupport_text`
+
+```
+resource1_stablesupport_text: 
+```
+
+This is a short explanation justifying the `true` or `false` decision recorded for `resource1_stablesupport`. If this is a resource that we expect to have stable support, then explain. If it is not, mention the shortcoming, and explain why you think it's worth linking to in a module anyway.
+
+### `resource1_a11y_issues`
+
+```
+resource1_a11y_issues: No known issues with accessibility, but we may have missed something. If you encounter an issue, please [let us know](#feedback)!
+```
+
+If you are aware of any issues with this resource related to inclusion or accessibility, list them here so learners can be forewarned. Anything that could create a barrier for a learner, or make it more difficult or frustrating to use the resource counts. Common problems are lack of transcript available for videos, lack of alt text (or sufficient written explanation in surrounding text) for images, sites that rely heavily on visual demonstration and/or point-and-click interaction for instruction, and anything that requires a credit card to sign up. 
 
 ### `import`
 
