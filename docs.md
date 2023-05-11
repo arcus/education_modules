@@ -455,17 +455,6 @@ For example, the Overview and Feedback sections of each module are created by th
 
 For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/templates_update/macros_instructions.md).
 
-## Tips for writing
-
-When you're ready to start writing a new module:
-
-1. Clone the education_modules repo if you don't already have it. Start a new git branch for your module. 
-2. Open the [relevant module template](#which-module-template-to-use) in a text editor like VSCode, and then use "save as" to save it in a new directory and with a filename that conveys the point of the module (e.g. `r_logistic_regression/r_logistic_regression.md`). 
-3. Open up this documentaion file either in your text editor or in a browser. In addition to the instructions, you may find it helpful to have the examples of highlight boxes and quiz questions in this document so you can quickly copy-paste them as you write.
-4. Create a new empty subfolder in your module directory called "media". If you include images in your module, store them here. If your module will include code files (scripts, notebooks, etc.)
-5. Open up the QA template for standard/wrapper/exercise modules (in the .`github/ISSUE_TEMPLATE` directory) as a reference, maybe keep it open side-by-side with your module draft.
-6. You can use the LiaScript preview extension in VSCode to see what your rendered module will look like, or generate it from https://liascript.github.io/ after pushing your changes to GitHub (while your still drafting, remember that you'll need to link to your raw md file on your branch, since it won't be available yet on main).
-
 ## Module sections
 
 There are a few required sections to every module: Overview, Additional Resources, and Feedback. 
