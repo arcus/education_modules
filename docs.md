@@ -343,12 +343,17 @@ It will automcatically be printed in the Lesson Preparation section of wrapper m
 resource1_name: Docker 101 Tutorial
 ```
 
+This is the title of the external resource you'll be linking to. 
+Don't make it a hyperlink (we want to wait to link to the resource until the right point in the module).
 
 ### `resource1_description`
 
 ```
 resource1_description: In this self-paced, hands-on tutorial, you will learn how to build images, run containers, use volumes to persist data and mount in source code, and define your application using Docker Compose. You’ll even learn about a few advanced topics, such as networking and image building best practices.
 ```
+
+A brief description of the external resource. 
+This will print underneath the name of the resource and just above the criteria checklist.
 
 ### `resource1_wellvetted` 
 
@@ -360,6 +365,8 @@ resource1_wellvetted: true
 Who are the expert authors? Or what institutional authority guarantees accuracy? 
 
 Must be one of `true` or `false`.
+If true, this item will show up with a green checkmark circle in the criteria list. 
+If false, then it will show as a yellow circle with a horizontal line. 
 
 ### `resource1_wellvetted_text` 
 
@@ -378,7 +385,9 @@ resource1_maintained: true
 **Do we have reason to believe this material will stay up to date?**
 Who is in charge of implementing regular updates to this material? This is important in fast-changing fields.
 
-Must be one of `true` or `false`.
+Must be one of `true` or `false`. 
+If true, this item will show up with a green checkmark circle in the criteria list. 
+If false, then it will show as a yellow circle with a horizontal line. 
 
 ### `resource1_maintained_text` 
 
@@ -397,8 +406,9 @@ resource1_stablesupport: true
 **Do we have reason to believe this material won't disappear?**
 Who hosts it?
 
-Must be one of `true` or `false`.
-
+Must be one of `true` or `false`. 
+If true, this item will show up with a green checkmark circle in the criteria list. 
+If false, then it will show as a yellow circle with a horizontal line. 
 
 ### `resource1_stablesupport_text`
 
@@ -415,6 +425,9 @@ resource1_a11y_issues: No known issues with accessibility, but we may have misse
 ```
 
 If you are aware of any issues with this resource related to inclusion or accessibility, list them here so learners can be forewarned. Anything that could create a barrier for a learner, or make it more difficult or frustrating to use the resource counts. Common problems are lack of transcript available for videos, lack of alt text (or sufficient written explanation in surrounding text) for images, sites that rely heavily on visual demonstration and/or point-and-click interaction for instruction, and anything that requires a credit card to sign up. 
+
+Note that this text will print just beneath the criteria checklist, but it isn't part of the checklist and won't have a green or yellow check icon. 
+We don't include accessibility and inclusion as a criterion intentionally because it isn't reasonable or helpful to assert that something is generally "accessible" or "inclusive" to all learners. 
 
 ### `import`
 
@@ -470,11 +483,15 @@ The overview section comes immediately after the initial level-1 header, which w
 
 ```
 
+### Lesson Preparation
+
+Many (but not all) modules include a Lesson Preparation section with any setup required to complete the module (see the section on [including interactive code](#including-interactive-code) for macros to create Lesson Preparation sections for R, Python, and SQL).
+
+Wrapper modules include a special section describing the external resource(s) linked to and outlining the structure of the module. 
+
 ### Content sections
 
-After the overview, begin your module content with whatever level-2 headers make sense for your topic. 
-
-Many (but not all) modules include a Lesson Preparation section with any setup required to complete the module (see the section on [including interactive code](#including-interactive-code) for macros to create Lesson Preparation sections in R, Python, and SQL).
+Begin your module content with whatever level-2 headers make sense for your topic. 
 
 Most modules include at least one quiz section (see [Quizzes](#quizzes-automatically-graded-questions)).
 
