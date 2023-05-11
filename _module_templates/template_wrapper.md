@@ -60,26 +60,9 @@ resource3_stablesupport_text:
 resource3_a11y_issues:
 
 @module_structure
-Example Structure 1:
-
-1. Read about how this topic fits into some bigger picture here in this LiaScript course.
-2. Do the activities embedded in this module (using iFrames).
-3. Answer a few questions to make sure you understood the key parts.
-
-Example Structure 2:
-
-1. Open this external resource in a new browser window.
-2. Read Chapter 1 and do the activities at the end.
-3. Return to this LiaScript course to answer a few questions to make sure you understood the key parts.
-
-Example Structure 3:
-
-1. Open this external resource in a new browser window.
-2. Read Section 2.1 and 2.2.
-3. Return to this LiaScript course to do an activity.
-4. Answer a few questions (again in the LiaScript course) to make sure you understood the key parts.
-
-These are just some examples of possible structures. The specific structure will depend greatly on the particular external module/educational resource you are using.
+1. Part 1
+2. Part 2
+3. Part 3
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
