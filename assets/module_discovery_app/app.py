@@ -53,28 +53,28 @@ default_stylesheet = [
             'label': 'data(title)',
         }
     },
-    {
+    # {
         
-        #### Make nodes by my a different shape:
-        'selector': '[author *= "Elizabeth Drellich"]',
-        'style': {
-            #'background-color': '#BFD7B5',
-            'shape': 'square',
-            'selected': True
-        }
-    }
-    ,
-    {
+    #     #### Make nodes by my a different shape:
+    #     'selector': '[author *= "Elizabeth Drellich"]',
+    #     'style': {
+    #         #'background-color': '#BFD7B5',
+    #         'shape': 'square',
+    #         'selected': True
+    #     }
+    # }
+    # ,
+    # {
         
-        #### Make nodes by my a different shape:
-        'selector': '[author !*= "Elizabeth Drellich"]',
-        'style': {
-            #'background-color': '#BFD7B5',
-            'shape': 'triangle',
-            'opacity': 0.2
+    #     #### Make nodes by my a different shape:
+    #     'selector': '[author !*= "Elizabeth Drellich"]',
+    #     'style': {
+    #         #'background-color': '#BFD7B5',
+    #         'shape': 'triangle',
+    #         'opacity': 0.2
             
-        }
-    }
+    #     }
+    # }
 ]
 
 ### Create a function that changes the stylesheet based on user inputs.
@@ -201,6 +201,8 @@ app.layout = html.Div([
         dbc.Row(
             [
                 dbc.Col(
+                    children=[
+                    dcc.Markdown("To learn more about a module, click on its node:"),
                     cyto.Cytoscape(
                     id='module_visualization',
                     layout={'name': 'cose'},
@@ -208,7 +210,7 @@ app.layout = html.Div([
                     stylesheet=default_stylesheet,
                     style={'width': '100%', 'height': '450px'},
                     userZoomingEnabled=False
-                     ), width=6
+                     )], width=6
                 ),
                 dbc.Col(html.Div(
                     children= dcc.Markdown("click on a tab to see what it does"),
@@ -335,7 +337,7 @@ def select_node_from_dropdown(id):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=0.0.0.0:80)
+    app.run_server(debug=True)
 
 #### TODO CHECKLIST:
 #### make all of the stylesheet updates a single callback that updates default_stylesheet rather than overwriting it
