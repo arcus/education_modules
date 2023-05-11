@@ -69,13 +69,15 @@ You can also see revisions and comments on [pull requests for other modules that
   * Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
   * Code files (including scripts, notebooks, etc.) are saved within a `src` folder within the module directory
 
-- Headers should be informative and follow a sensible hierarchical structure (the TOC in the left margin should give a good overview of the content covered)
-- Avoid unclear language: unexplained idioms or references, unexplained acronyms, unnecessary technical language.
-- Unusual words, or words taking on a very specific meaning in context, should always be defined for the learner, either on the page (e.g. using footnotes) or with links to a definition/glossary.
-- Provide pronunciation guides for any especially unusual words of particular importance (a common example is package names, such as dplyr)
-- Avoid unnecessarily gendered language (e.g. use "they" singular rather than "he or she" for an unknown person).
-- Use informative link text (e.g. instead of "To learn more about python, click [here](www.example.com)", say "Read this article to [learn more about python](www.example.com).")
-- Try to write in short, digestible pieces --- avoid long paragraphs and break long sections up with sub-headers
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+In addition to the basic formatting requirements listed here, we have detailed [inclusivity guidelines](https://github.com/arcus/education_modules/blob/joy-contributors/_for_authors/inclusivity_guidelines.md) with requirements (and helpful examples!) for language choice, style, and accessibility.
+
+**Please read the inclusivity guidelines carefully before you begin writing.** 
+It's much easier to plan an inclusively designed module from the start than to attempt to fix a module you've already drafted.
+
+</div>
 
 ## Which module template to use
 
