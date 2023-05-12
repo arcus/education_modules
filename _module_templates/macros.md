@@ -30,7 +30,7 @@ comment:  This is placeholder module to save macros used in other modules.
 @end
 
 @make_survey_url
-<script>
+<script modify="false">
 function makeURL(title, version_number, module_type) {
   let url = new URL('https://redcap.chop.edu/surveys');
   url.searchParams.set('s', 'KHTXCXJJ93');
