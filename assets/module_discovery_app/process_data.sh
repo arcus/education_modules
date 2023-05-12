@@ -20,20 +20,13 @@ do
       do
         category_metadata="`grep -m 1 "$CATEGORY": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
         echo "df.loc[\"$FOLDER\", \"$CATEGORY\"] = \"$category_metadata\"" >> $graph_data
-
-        # title="`grep -m 1 title: $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
-        # echo "df.loc[\"$FOLDER\", \"title\"] = \"$title\" " >> $graph_data
-        # author="`grep -m 1 author: $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
-        # echo "df.loc[\"$FOLDER\", \"author\"] = \"$author\" " >> $graph_data
-        # estimated_time="`grep -m 1 estimated_time: $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
-        # echo "df.loc[\"$FOLDER\", \"time\"] = \"$estimated_time\" " >> $graph_data
       done
 
       ### good_first_module is not yet everywhere, but will be a required field 
       if grep "good_first_module" -q $FOLDER/$FOLDER.md
       then
         good_first_module="`grep -m 1 good_first_module: $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
-      echo "df.loc[\"$FOLDER\", \"Good First Module\"] = \"$good_first_module\" " >> $graph_data
+      echo "df.loc[\"$FOLDER\", \"good_first_module\"] = \"$good_first_module\" " >> $graph_data
       fi
       
       ### Coding metadata and sequence metadata will always be in some modules but not others
