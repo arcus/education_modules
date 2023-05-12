@@ -8,6 +8,12 @@ narrator: UK English Female
 title: Wrapper Module Macros
 comment:  This is placeholder module to save macros used in other modules.
 
+@module_structure
+1. Part 1
+2. Part 2
+3. Part 3
+@end
+
 @print_list
 <h4>@0</h4> 
 
@@ -33,6 +39,8 @@ comment:  This is placeholder module to save macros used in other modules.
   list.appendChild(fragList);
 </script>
 <b>Known issues with accessibility and/or inclusion:</b> @8
+
+We do our best to list potential problems here, but we might have missed something! If you encounter an issue, please let us know in @make_survey_url('@title', '@version', '@module_type').
 @end
 
 print_resource1: @print_list(@resource1_name,@resource1_description,@resource1_wellvetted,@resource1_wellvetted_text,@resource1_maintained,@resource1_maintained_text,@resource1_stablesupport,@resource1_stablesupport_text,@resource1_a11y_issues,@uid)
