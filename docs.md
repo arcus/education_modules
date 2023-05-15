@@ -108,7 +108,165 @@ To see examples of DART modules, see [our list of completed modules](https://arc
 
 We store a lot of important information in the front matter section at the top of each module. Part of the [module QA process](#module-review-process) is checking that everything is correctly encoded in the front matter. 
 
-The front matter for a module should include all of the elements from the template.
+Which front matter fields are required? It depends on what kind of module you're writing:
+
+**Which of the following describe your module?** 
+
+- [ ] includes interactive R
+- [ ] includes interactive Python
+- [ ] includes interactive SQL
+- [ ] learner will need to code to meet the learning objectives
+- [ ] is about a particular kind of data (EHR, omics data, geospatial data, etc.)
+- [ ] teaches a particular data skill or task (visualization, anlaysis, cleaning, etc.)
+- [ ] is a [wrapper module](#which-module-template-to-use)
+- [ ] is in a sequence (including the first module in the sequence)
+- [ ] follows other modules in a sequence (i.e. it's not the first in the sequence)
+- [ ] is parallel to one or more other modules (i.e. covers the same content but in a different coding langauge/operating system)
+<script output="module_characteristics">"@input"</script>
+
+You'll need the following fields in your front matter (new fields added by checking boxes above will be followed by 💫): 
+
+- author
+- email
+- version
+- module\_type
+- module\_template\_version
+- language
+- narrator
+- title
+- comment
+- long\_description
+- estimated\_time\_in\_minutes
+
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[0]) {
+    send.liascript(`- r\_file 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+
+* pre\_reqs
+* learning\_objectives
+* good\_first\_module
+
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[4]) {
+    send.liascript(`- data\_domain 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[5]) {
+    send.liascript(`- data\_tasks 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[3]) {
+    send.liascript(`- coding\_required 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[0] || module_characteristics[1] || module_characteristics[2] || module_characteristics[3]) {
+    send.liascript(`- coding\_level 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[0] || module_characteristics[1] || module_characteristics[2] || module_characteristics[3]) {
+    send.liascript(`- coding\_language 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[7] || module_characteristics[8]) {
+    send.liascript(`- sequence\_name 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[8]) {
+    send.liascript(`- previous\_sequential\_module 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+
+* sets\_you\_up\_for
+* depends\_on\_knowledge\_available\_in
+
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[9]) {
+    send.liascript(`- is\_parallel\_to 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+
+* import macros.md
+
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[6]) {
+    send.liascript(`- import macros_wrapper.md 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[0]) {
+    send.liascript(`- import macros_r.md 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[1]) {
+    send.liascript(`- import macros_python.md 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[2]) {
+    send.liascript(`- import macros_sql.md 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
 
 ### `author`
 
@@ -374,8 +532,6 @@ previous_sequential_module: sql_basics
 
 If it's in a sequence and there is another module before it (i.e. it's not the first module in its sequence), list the previous module here. 
 Use the modules directory name (this should be the same as the name of its md file).
-
-Required for all modules in a sequence other than the first module. 
 
 ### `sets_you_up_for`
 
