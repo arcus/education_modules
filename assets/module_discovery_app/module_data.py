@@ -8,8 +8,7 @@ df.loc["bash_103_combining_commands", "good_first_module"] = "false"
 df.loc["bash_103_combining_commands", "coding_required"] = "true"
 df.loc["bash_103_combining_commands", "coding_language"] = "bash"
 df.loc["bash_103_combining_commands", "coding_level"] = "intermediate"
-df.loc["bash_103_combining_commands", "sequence_name"] = "Bash Basics"
-df.loc["bash_103_combining_commands", "next_sequential_module"] = "bash_conditionals_loops"
+df.loc["bash_103_combining_commands", "sequence_name"] = "Learn Bash"
 df.loc["bash_103_combining_commands", "comment"] = "This module will teach you how to combine two or more commands in bash to create more complicated pipelines in Bash." 
 df.loc["bash_103_combining_commands", "long_description"] = "This module is for learners who can use some basic Bash commands and want to learn to how to use the output of one command as the input for another command." 
 df.loc["bash_103_combining_commands", "Learning Objectives"] = "&After completion of this module, learners will be able to:&&- Write the output of a command to a file using `>` and `>>`&- Chain commands directly using the pipe `|`&" 
@@ -23,8 +22,7 @@ df.loc["bash_command_line_101", "good_first_module"] = "true"
 df.loc["bash_command_line_101", "coding_required"] = "true"
 df.loc["bash_command_line_101", "coding_language"] = "bash"
 df.loc["bash_command_line_101", "coding_level"] = "basic"
-df.loc["bash_command_line_101", "sequence_name"] = "Bash Basics"
-df.loc["bash_command_line_101", "next_sequential_module"] = "bash_command_line_102"
+df.loc["bash_command_line_101", "sequence_name"] = "Learn Bash"
 df.loc["bash_command_line_101", "comment"] = "This course teaches learners to navigate their computer, as well as view and edit files, from the command line using Bash." 
 df.loc["bash_command_line_101", "long_description"] = "This course is designed to be both an introduction to bash / command line for those who are total newbies as well as refresher for those some with experience running code who want a more solid command of the basics." 
 df.loc["bash_command_line_101", "Learning Objectives"] = "&After completion of this module, learners will be able to:&&- Describe what bash scripting is and why they might want to learn it for data management and research&- Navigate their file system using the bash shell&- View and edit the contents of a file from the bash shell&" 
@@ -38,8 +36,7 @@ df.loc["bash_command_line_102", "good_first_module"] = "false"
 df.loc["bash_command_line_102", "coding_required"] = "true"
 df.loc["bash_command_line_102", "coding_language"] = "bash"
 df.loc["bash_command_line_102", "coding_level"] = "basic"
-df.loc["bash_command_line_102", "sequence_name"] = "Bash Basics"
-df.loc["bash_command_line_102", "next_sequential_module"] = "bash_103_combining_commands"
+df.loc["bash_command_line_102", "sequence_name"] = "Learn Bash"
 df.loc["bash_command_line_102", "comment"] = "This module will teach you how to use the bash shell to search and organize your files." 
 df.loc["bash_command_line_102", "long_description"] = "This module is for people who have a bit of experience with bash scripting and want to learn to use its power to organize their file and folders." 
 df.loc["bash_command_line_102", "Learning Objectives"] = "&After completion of this module, learners will be able to:&&- Search existing files for particular character strings.&- Search folders for files with certain titles.&- Move files to new locations in a directory system.&- Copy files and directories.&- Delete files and directories.&" 
@@ -53,8 +50,7 @@ df.loc["bash_conditionals_loops", "good_first_module"] = "false"
 df.loc["bash_conditionals_loops", "coding_required"] = "true"
 df.loc["bash_conditionals_loops", "coding_language"] = "bash"
 df.loc["bash_conditionals_loops", "coding_level"] = "intermediate"
-df.loc["bash_conditionals_loops", "sequence_name"] = "Bash Basics"
-df.loc["bash_conditionals_loops", "next_sequential_module"] = "bash_scripts"
+df.loc["bash_conditionals_loops", "sequence_name"] = "Leanr Bash"
 df.loc["bash_conditionals_loops", "comment"] = "This module teaches you how to iterate through +for+ loops and write conditional statements in Bash." 
 df.loc["bash_conditionals_loops", "long_description"] = "This lesson teaches the basics of loops (for all x, do y) and conditional statements (if x is true, do y) in Bash. Since the grammar of Bash can be non-intuitive this module is appropriate both for learners who have experience with conditionals and loops in other languages, as well as learners who are learning about these kinds of commands for the first time." 
 df.loc["bash_conditionals_loops", "Learning Objectives"] = "&After completion of this module, learners will be able to:&&- Understand how a +for loop+ works&- Write a +for loop+ in Bash  &- Understand how an +if/then+ statement works&- Recognize and reuse +if/then+ statements in Bash&&" 
@@ -67,7 +63,7 @@ df.loc["bash_scripts", "good_first_module"] = "false"
 df.loc["bash_scripts", "coding_required"] = "true"
 df.loc["bash_scripts", "coding_language"] = "bash"
 df.loc["bash_scripts", "coding_level"] = "intermediate"
-df.loc["bash_scripts", "sequence_name"] = "Bash Basics"
+df.loc["bash_scripts", "sequence_name"] = "Learn Bash"
 df.loc["bash_scripts", "comment"] = "This module will teach you how to create and use simple Bash scripts to make repetitive tasks as simple as possible. " 
 df.loc["bash_scripts", "long_description"] = "If you have some experience with Bash and want to learn how to save and reuse Bash processes, this lesson will teach you how to write your own Bash scripts and understand and use simple scripts written by others." 
 df.loc["bash_scripts", "Learning Objectives"] = "&After completion of this module, learners will be able to:&&- Identify the structure of a Bash script&- Run existing Bash scripts&- Write simple Bash scripts&" 
@@ -121,7 +117,6 @@ df.loc["data_visualization_in_seaborn", "coding_required"] = "true"
 df.loc["data_visualization_in_seaborn", "coding_language"] = "Python"
 df.loc["data_visualization_in_seaborn", "coding_level"] = "intermediate"
 df.loc["data_visualization_in_seaborn", "sequence_name"] = "Python"
-df.loc["data_visualization_in_seaborn", "next_sequential_module"] = "python_practice"
 df.loc["data_visualization_in_seaborn", "comment"] = "This module includes code and explanations for several popular data visualizations using python's seaborn library. It also includes examples of how to modify seaborn plots to customize them for different uses.  " 
 df.loc["data_visualization_in_seaborn", "long_description"] = "You can use the seaborn module in python to make many different kinds of data visualizations (also called plots or charts), including scatterplots, histograms, line plots, and trend lines. This module provides an example of each of these kinds of plots, including python code to make them using the seaborn module. It may be hard to follow if you are brand new to python, but it is appropriate for beginners with at least a small amount of python experience." 
 df.loc["data_visualization_in_seaborn", "Learning Objectives"] = "&After completion of this module, learners will be able to:&&- use seaborn to create several common data visualizations&- customize some elements of a plot, and know where to look to learn how to customize others&&" 
@@ -133,7 +128,6 @@ df.loc["database_normalization", "author"] = "Joy Payton"
 df.loc["database_normalization", "estimated_time"] = "40 minutes"
 df.loc["database_normalization", "good_first_module"] = "false" 
 df.loc["database_normalization", "sequence_name"] = "SQL"
-df.loc["database_normalization", "next_sequential_module"] = "database_normalization"
 df.loc["database_normalization", "comment"] = "Learn about the concept of normalization and why it's important for organizing complicated data in relational databases." 
 df.loc["database_normalization", "long_description"] = "Usually, data in a relational database like SQL is organized into multiple interrelated tables with as little data repetition as possible. This concept can be useful to apply in other areas as well, such as organizing data in .csvs or in data frames in R or Python.  This module teaches underlying data considerations and explains how data can be efficiently organized by introducing the concepts of one-to-many data relationships and normalization." 
 df.loc["database_normalization", "Learning Objectives"] = "After completion of this module, learners will be able to:&&- Explain the significance of +one to many+ data relationships and how these relationships affect data organization&- Describe how a normalized database is typically organized&- Explain how data can be linked between tables and define +primary keys+ and +foreign keys+&&" 
@@ -183,7 +177,6 @@ df.loc["git_creation_and_tracking", "coding_required"] = "true"
 df.loc["git_creation_and_tracking", "coding_language"] = "git"
 df.loc["git_creation_and_tracking", "coding_level"] = "basic"
 df.loc["git_creation_and_tracking", "sequence_name"] = "Git"
-df.loc["git_creation_and_tracking", "next_sequential_module"] = "git_history_of_project"
 df.loc["git_creation_and_tracking", "comment"] = "Create a new Git repository and get started with version control." 
 df.loc["git_creation_and_tracking", "long_description"] = "If you have Git set up on your computer and are ready to start tracking your files, then this module is for you. This module will teach you how to create a Git repository, add files to it, update files in it, and keep track of those changes in a clear and organized manner." 
 df.loc["git_creation_and_tracking", "Learning Objectives"] = "&After completion of this module, learners will be able to:&&- Create a Git repository&- Add and make changes to files in the repository&- Write short helpful descriptions, called +commit messages+ to track the changes&- Use `.gitignore`&- Understand the `add` and `commit` workflow.&&&" 
@@ -217,7 +210,6 @@ df.loc["git_setup_mac_and_linux", "coding_required"] = "true"
 df.loc["git_setup_mac_and_linux", "coding_language"] = "git"
 df.loc["git_setup_mac_and_linux", "coding_level"] = "getting started"
 df.loc["git_setup_mac_and_linux", "sequence_name"] = "Git"
-df.loc["git_setup_mac_and_linux", "next_sequential_module"] = "git_creation_and_tracking"
 df.loc["git_setup_mac_and_linux", "comment"] = "This module provides recommendations and examples to help new users configure git on their computer for the first time on a Mac or Linux computer." 
 df.loc["git_setup_mac_and_linux", "long_description"] = "If you're ready to start using the Git version control system, this lesson will walk you through how to get set up. This lesson should be a good fit for people who already have an idea of what version control is (although may not have any experience using it yet), and know how to open the command line interface (CLI) on their computer. No previous experience with Git is expected." 
 df.loc["git_setup_mac_and_linux", "Learning Objectives"] = "&After completion of this module, learners will be able to:&&- Configure `git` the first time it is used on a computer&- Understand the meaning of the `--global` configuration flag&&" 
@@ -231,7 +223,6 @@ df.loc["git_setup_windows", "coding_required"] = "true"
 df.loc["git_setup_windows", "coding_language"] = "git"
 df.loc["git_setup_windows", "coding_level"] = "getting started"
 df.loc["git_setup_windows", "sequence_name"] = "Git"
-df.loc["git_setup_windows", "next_sequential_module"] = "git_creation_and_tracking"
 df.loc["git_setup_windows", "comment"] = "This module provides recommendations and examples to help new users configure Git on their Windows computer for the first time." 
 df.loc["git_setup_windows", "long_description"] = "If you're ready to start using the Git version control system, this lesson will walk you through how to get set up. This lesson should be a good fit for people who already have an idea of what version control is but may not have any experience using it yet. No previous experience with Git is expected. This lesson is specific to Windows machines, If you are using Mac or Linux, please follow along with the [set-up guide for those computers](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md)." 
 df.loc["git_setup_windows", "Learning Objectives"] = "&After completion of this module, learners will be able to:&&- Configure `git` the first time it is used on a computer&- Understand the meaning of the `--global` configuration flag&&" 
@@ -263,7 +254,6 @@ df.loc["pandas_transform", "coding_required"] = "true"
 df.loc["pandas_transform", "coding_language"] = "Python"
 df.loc["pandas_transform", "coding_level"] = "intermediate"
 df.loc["pandas_transform", "sequence_name"] = "Python"
-df.loc["pandas_transform", "next_sequential_module"] = "data_visualization_in_seaborn"
 df.loc["pandas_transform", "comment"] = "This is an introduction to transforming data using a Python library named pandas." 
 df.loc["pandas_transform", "long_description"] = "This module is for learners who have some familiarity with Python, and want to learn how the pandas library can handle large tabular data sets. No previous experience with pandas is required, and only an introductory level understanding of Python is assumed." 
 df.loc["pandas_transform", "Learning Objectives"] = "&After completion of this module, learners will be able to:&&- Import `pandas` and use functions from the `pandas` package.&- Load data into a `pandas` DataFrame.&- Use the `.loc` method to explore the contents of a DataFrame&- Filter a DataFrame using conditional statements.&- Transform data in a DataFrame.&&" 
@@ -344,7 +334,6 @@ df.loc["sql_basics", "coding_required"] = "true"
 df.loc["sql_basics", "coding_language"] = "SQL"
 df.loc["sql_basics", "coding_level"] = "basic"
 df.loc["sql_basics", "sequence_name"] = "SQL"
-df.loc["sql_basics", "next_sequential_module"] = "sql_intermediate"
 df.loc["sql_basics", "comment"] = "Structured Query Language, or SQL, is a relational database solution that has been around for decades.  Learn how to do basic SQL queries on single tables, by using code, hands-on." 
 df.loc["sql_basics", "long_description"] = "Do you want to learn basic Structured Query Language (SQL) either to understand concepts or prepare for access to a relational database?  This module will give you hands on experience with simple queries using keywords including SELECT, WHERE, FROM, DISTINCT, and AS.  We'll also briefly cover working with empty (NULL) values using IS NULL and IS NOT NULL.  This module is appropriate for people who have little or no experience in SQL and are ready to practice with real queries." 
 df.loc["sql_basics", "Learning Objectives"] = "&After completion of this module, learners will be able to:&&- Use SELECT, FROM, and WHERE to do a basic query on a SQL table&- Use IS NULL and IS NOT NULL operators to work with empty values&- Explain the use of DISTINCT and how it can be useful&- Use AS and ORDER BY to change how query results appear&- Explain why the LIMIT keyword can be useful&&&" 
@@ -359,7 +348,6 @@ df.loc["sql_intermediate", "coding_required"] = "true"
 df.loc["sql_intermediate", "coding_language"] = "SQL"
 df.loc["sql_intermediate", "coding_level"] = "intermediate"
 df.loc["sql_intermediate", "sequence_name"] = "SQL"
-df.loc["sql_intermediate", "next_sequential_module"] = "database_normalization"
 df.loc["sql_intermediate", "comment"] = "Learn how to do intermediate SQL queries on single tables, by using code, hands-on." 
 df.loc["sql_intermediate", "long_description"] = "Do you want to learn intermediate Structured Query Language (SQL) for more precise and complex data querying on single tables?  This module will give you hands on experience with single-table queries using keywords including CASE, LIKE, REGEXP_LIKE, GROUP BY, HAVING, and WITH, along with a number of aggregate functions like COUNT and AVG.  This module is appropriate for people who are comfortable writing basic SQL queries and are ready to practice more advanced sklls." 
 df.loc["sql_intermediate", "Learning Objectives"] = "&After completion of this module, learners will be able to:&&* Create new data classifications using `CASE` statements&* Find text that matches a given pattern using `LIKE` and `REGEXP_LIKE` statements&* Use `GROUP BY` and `HAVING` statements along with aggregate functions to understand group characteristics&* Use `WITH` to create sub queries&&" 
@@ -408,7 +396,6 @@ df["Linked Courses"] = [list() for x in range(len(df.index))]
 a = df.loc["bash_103_combining_commands", "Linked Courses"]
 a.append("bash_command_line_101")
 a.append("bash_command_line_102")
-a.append("bash_conditionals_loops")
 a.append("bash_scripts")
 a.append("directories_and_file_paths")
 df.at["bash_103_combining_commands", "Linked Courses"] = list(a)
@@ -428,15 +415,16 @@ a.append("bash_scripts")
 a.append("directories_and_file_paths")
 df.at["bash_command_line_102", "Linked Courses"] = list(a)
 a = df.loc["bash_conditionals_loops", "Linked Courses"]
+a.append("bash_103_combining_commands")
 a.append("bash_command_line_101")
 a.append("bash_command_line_102")
-a.append("bash_scripts")
 a.append("directories_and_file_paths")
 df.at["bash_conditionals_loops", "Linked Courses"] = list(a)
 a = df.loc["bash_scripts", "Linked Courses"]
 a.append("bash_103_combining_commands")
 a.append("bash_command_line_101")
 a.append("bash_command_line_102")
+a.append("bash_conditionals_loops")
 a.append("reproducibility")
 df.at["bash_scripts", "Linked Courses"] = list(a)
 a = df.loc["citizen_science", "Linked Courses"]
@@ -467,6 +455,7 @@ a.append("python_practice")
 a.append("statistical_tests")
 df.at["data_visualization_in_seaborn", "Linked Courses"] = list(a)
 a = df.loc["database_normalization", "Linked Courses"]
+a.append("sql_intermediate")
 a.append("sql_joins")
 df.at["database_normalization", "Linked Courses"] = list(a)
 a = df.loc["demystifying_geospatial_data", "Linked Courses"]
@@ -499,12 +488,14 @@ df.at["git_intro", "Linked Courses"] = list(a)
 a = df.loc["git_setup_mac_and_linux", "Linked Courses"]
 a.append("git_creation_and_tracking")
 a.append("git_history_of_project")
+a.append("git_intro")
 a.append("git_setup_windows")
 df.at["git_setup_mac_and_linux", "Linked Courses"] = list(a)
 a = df.loc["git_setup_windows", "Linked Courses"]
 a.append("bash_command_line_101")
 a.append("git_creation_and_tracking")
 a.append("git_history_of_project")
+a.append("git_intro")
 a.append("git_setup_mac_and_linux")
 df.at["git_setup_windows", "Linked Courses"] = list(a)
 a = df.loc["how_to_troubleshoot", "Linked Courses"]
@@ -567,7 +558,6 @@ a.append("demystifying_sql")
 a.append("sql_intermediate")
 df.at["sql_basics", "Linked Courses"] = list(a)
 a = df.loc["sql_intermediate", "Linked Courses"]
-a.append("database_normalization")
 a.append("demystifying_sql")
 a.append("sql_basics")
 a.append("sql_joins")
