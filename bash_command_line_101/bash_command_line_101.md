@@ -34,8 +34,7 @@ coding_required: true
 coding_language: bash
 coding_level: basic
 
-sequence_name: Bash Basics
-next_sequential_module: bash_command_line_102
+sequence_name: Learn Bash
 
 @sets_you_up_for
 

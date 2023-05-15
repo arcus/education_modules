@@ -26,7 +26,7 @@ Learners should have experience working with data in tables.  This could include
 @end
 
 sequence_name: SQL
-next_sequential_module: database_normalization
+previous_sequential_module: sql_intermediate
 
 data_task: data_management
 good_first_module: false

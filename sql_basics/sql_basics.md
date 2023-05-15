@@ -36,7 +36,6 @@ coding_language: SQL
 coding_level: basic
 
 sequence_name: SQL
-next_sequential_module: sql_intermediate
 
 @sets_you_up_for
 

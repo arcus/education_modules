@@ -42,7 +42,7 @@ coding_language: git
 coding_level: basic
 
 sequence_name: Git
-next_sequential_module: git_history_of_project
+previous_sequential_module: git_setup_mac_and_linux
 
 @sets_you_up_for
 

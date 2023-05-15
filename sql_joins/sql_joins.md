@@ -34,6 +34,7 @@ coding_language: SQL
 coding_level: intermediate
 
 sequence_name: SQL
+previous_sequential_module: database_normalization
 
 @depends_on_knowledge_available_in
 

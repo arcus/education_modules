@@ -38,6 +38,7 @@ coding_language: git
 coding_level: basic
 
 sequence_name: Git
+previous_sequential_module: git_creation_and_tracking
 
 @depends_on_knowledge_available_in
 

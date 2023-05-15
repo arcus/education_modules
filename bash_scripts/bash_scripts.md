@@ -41,7 +41,8 @@ coding_required: true
 coding_language: bash
 coding_level: intermediate
 
-sequence_name: Bash Basics
+sequence_name: Learn Bash
+previous_sequential_module: bash_conditionals_loops
 
 @sets_you_up_for
 

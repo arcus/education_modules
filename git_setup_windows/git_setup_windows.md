@@ -36,7 +36,7 @@ coding_language: git
 coding_level: getting started
 
 sequence_name: Git
-next_sequential_module: git_creation_and_tracking
+previous_sequential_module: git_intro
 
 @sets_you_up_for
 

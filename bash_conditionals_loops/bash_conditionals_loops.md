@@ -39,8 +39,8 @@ coding_required: true
 coding_language: bash
 coding_level: intermediate
 
-sequence_name: Bash Basics
-next_sequential_module: bash_scripts
+sequence_name: Leanr Bash
+previous_sequential_module: bash_103_combining_commands
 
 @depends_on_knowledge_available_in
 

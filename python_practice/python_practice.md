@@ -34,6 +34,7 @@ coding_language: Python
 coding_level: practice exercise
 
 sequence_name: Python
+previous_sequential_module: data_visualization_in_seaborn
 
 @sets_you_up_for
 

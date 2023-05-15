@@ -41,7 +41,7 @@ coding_language: Python
 coding_level: intermediate
 
 sequence_name: Python
-next_sequential_module: data_visualization_in_seaborn
+previous_sequential_module: python_basics_writing_code
 
 @sets_you_up_for
 

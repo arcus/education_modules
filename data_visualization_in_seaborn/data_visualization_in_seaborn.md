@@ -46,7 +46,7 @@ coding_language: Python
 coding_level: intermediate
 
 sequence_name: Python
-next_sequential_module: python_practice
+previous_sequential_module: pandas_transform
 
 @sets_you_up_for
 
