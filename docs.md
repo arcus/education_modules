@@ -90,7 +90,7 @@ The overwhelming majority of our existing modules are standard modules.
 
 You should use the **wrapper** template if more than 50% of the content is embedded or linked to external resources (things not hosted in the DART repository). 
 
-You should use the **exercise** template if the module is mostly practice, not instruction. 
+You should use the **exercise** template if the module is mostly practice, not instruction. This template is similar to the standard template but not exactly the same, and the module content will be very different. This type of module might present the learner with a problem to solve using the skills that could be acquired in our instructional modules, and might include a dataset to explore. 
 
 ## How to use template files
 
@@ -157,7 +157,7 @@ When you're ready to submit your module for QA, it should have a template versio
 language: en
 ```
 
-This defintes the language for the file (default is English, `en`). 
+This defines the language for the file (default is English, `en`). 
 See the [LiaScript documentation on `language`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#%60language%60) for more details. 
 
 ### `narrator`
@@ -320,6 +320,14 @@ Most modules include at least one quiz section (see [Quizzes](#quizzes-automatic
 
 As you write, keep in mind that the headers should be clear and informative. 
 The table of contents automatically generated from the headers should give learners a good overview of what to expect in the module content.
+
+#### Lesson Preparation
+
+This section will appear in any module that requires the learner to prepare in some way. For example:
+- the learner needs to download software (like git or bash)
+- the learner needs an account with an external resource (like Google Colab or AWS)
+- the learner will need to interact with an external resource (like a binderhub environment) 
+- the function of the module requires explanation, such as how sagemath cells work 
 
 ### Additional Resources
 
@@ -954,6 +962,8 @@ For more information about using tables in LiaScript, see the [tables section of
 We use quizzes for [formative assessment](https://carpentries.github.io/instructor-training/aio.html#using-formative-assessment-to-support-memory-consolidation). There is no point value or grading, and students are allowed to retry quizzes as many times as they like until they get the right answer. The goal is to provide learners an opportunity to check their own understanding. 
 
 Quizzes should connect directly to your learning objectives. Each quiz question should connect to one learning objective, and every learning objective should have at least one quiz question associated with it somewhere in the module. Learners should be able to answer all the questions based on the content within the module alone; they should not need to have read or consulted any of the linked learn-more resources. 
+
+Note that sometimes it won't make sense to include quiz questions in a module. Exercise modules, for example, generally won't contain quizzes (though you are welcome to include them if you feel they add value to your module).
 
 Quizzes should always be navigable from the sidebar, meaning they should be labeled with a level 2 or 3 header. If there is only one quiz in the module, it should be labelled as "Quiz". If there is more than one each header should be structured as "Quiz: label" where "label" is a short (ideally 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
 
