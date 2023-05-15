@@ -157,7 +157,7 @@ When you're ready to submit your module for QA, it should have a template versio
 language: en
 ```
 
-This defintes the language for the file (default is English, `en`). 
+This defines the language for the file (default is English, `en`). 
 See the [LiaScript documentation on `language`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#%60language%60) for more details. 
 
 ### `narrator`
