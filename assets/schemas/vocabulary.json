@@ -42,28 +42,24 @@
         "description": "These modules are primarily about getting a platform set up."
       },
       {
-        "const": "beginner",
-        "description": "TBD."
-      },
-      {
-        "const": "basics",
-        "description": "TBD."
+        "const": "basic",
+        "description": "These modules require little or no previous exposure to coding."
       },
       {
         "const": "intermediate",
-        "description": "TBD."
+        "description": "These modules require some previous coding exposure."
       },
       {
         "const": "advanced",
-        "description": "TBD."
+        "description": "These modules focus on particularly difficult or specialized tasks."
       },
       {
         "const": "practice exercise",
-        "description": "TBD."
+        "description": "These modules do not introduce new content."
       },
       {
         "const": "TBD",
-        "description": "Placeholder value."
+        "description": "To be determined."
       }
     ]
   },

@@ -17,7 +17,7 @@
   "coding": [
     {
     "coding_required": true,
-    "coding_level": "beginner",
+    "coding_level": "basic",
     "coding_language": [ 
         "sql",
         "regex"
