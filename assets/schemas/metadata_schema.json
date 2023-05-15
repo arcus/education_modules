@@ -52,7 +52,7 @@
         "type": "string",
         "default": "TBD"
        },
-       "estimated_time": {
+       "estimated_time_in_minutes": {
         "description": "This is rough guess of how long it might take a learner to work through the module. It will print under \"Estimated time to completion\" in the overview",
         "type": "string",
         "default": "TBD"
@@ -133,7 +133,7 @@
               "type": "string",
               "default": "TBD"
             },
-            "next_sequential_module": {
+            "previous_sequential_module": {
               "description": "Identifier of next module in the sequence.",
               "type": "string",
               "default": "TBD"
@@ -164,7 +164,7 @@
         "default": "TBD"
        },
        "@is_parallel_to": {
-        "description": "Select one and only one of the related modules.",
+        "description": "The same instruction presented in a different coding language/envrionment.operating system.",
         "items": {
           "type": "object"
         },

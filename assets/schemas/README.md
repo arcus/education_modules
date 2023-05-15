@@ -37,3 +37,12 @@ Follow the documentation for how to include metadata in the [DART documentation 
 ### Database for exploration
 
 A script will pull all of the metadata from all modules on main into a single pandas dataframe that can then be processed for other purposes like building the network graph of modules and the module discovery app. This could be automatically recreated every time something is merged into `main`.
+
+### docs.md correspondance to metadata-schema.json 
+
+Becuase docs.md is user facing, it may need to include additional information not necessary or approrpiate to be stroed in the metadata-schema.json. However, where the two (docs.ms and metadata-schema.json) do need to share values, they should be automatically source from the source of truth schema. Below is a list of correspondances for building out that automation.  
+
+- The free-text description in docs.md should come from metadata-schema.json/key/description. 
+- The list of possible controlled terms should come from the const key in the referenced section of vaocabulary.json from metadata-schema.json. 
+- A description of each of these possible terms, glossing them in a list, should come from the const key in the referenced section of vocabulary.json from metadata-schema.json. 
+- Required fields are listed in the metadata-schema.json required array for each field. Others are not required for validation purposes.

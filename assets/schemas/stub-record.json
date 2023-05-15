@@ -8,7 +8,7 @@
   "title": "TBD",
   "comment": "TBD",
   "long_description": "TBD",
-  "estimated_time": "TBD",
+  "estimated_time_in_minutes": "TBD",
   "@learning_objectives": "TBD",
   "@pre_reqs": "TBD",
   "good_first_module": false,
@@ -17,9 +17,9 @@
   "coding": [
     {
     "coding_required": true,
-    "coding_level": "beginner",
+    "coding_level": "basic",
     "coding_language": [ 
-        "sql",
+        "SQL",
         "regex"
     ]
     }
@@ -27,8 +27,7 @@
   "sequence": [
     {
     "sequence_name": "Git",
-    "relation_type": "sequence",
-    "next_sequential_module": "r_basics_transform_data"
+    "previous_sequential_module": "r_basics_transform_data"
     }
   ],
   "relationship": [
