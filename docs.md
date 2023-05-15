@@ -213,10 +213,10 @@ If this module uses binder to host an interactive rmd file, include the bare nam
 
 Note that rmds in the education_r_environment repo should be saved in a directory that matches the file name, like `this_r_module/this_r_module.rmd`. When you use the [r\_lesson\_prep macro](#interactive-r), it will fill in the text from `r_file` to use as both the directory name and file name for this lesson's notebook. Use backslashes to escape underscores (e.g. `this\_r\_module` rather than `this_r_module`). 
 
-### `prerequisites` 
+### `pre_reqs` 
 
 ```
-@prerequisites
+@pre_reqs
 This module assumes some familiarity with X and Y, in particular:
 
 * one skill we have [another module for](https://education.arcus.chop.edu)
@@ -229,7 +229,7 @@ If relevant, you can include recommendations for somewhere else to start if the 
 
 List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
 
-Note that `@prerequisites` is a [block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#blocks) in LiaScript, which means it has `@end` after the last line.
+Note that `@pre_reqs` is a [block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#blocks) in LiaScript, which means it has `@end` after the last line.
 
 ### `learning_objectives` 
 
@@ -254,6 +254,170 @@ Learning objectives are a very important element of the module.
 Note that `@learning_objectives` is a [block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#blocks) in LiaScript, which means it has `@end` after the last line.
 
 The learning objectives will be automatically printed twice in each module: Once in the [Overview](#overview) and then again in the [Feedback](#feedback) section.
+
+### `good_first_module`
+
+```
+good_first_module: false
+```
+
+If this was a learner's very first experience with DART, would you be happy with this module being their first impression?
+
+Required.
+
+Must be one of `true` or `false`.
+
+### `data_domain`
+
+```
+data_domain: EHR
+```
+
+This module is primarily useful for or focused on this type of data.
+
+Not required.
+
+Must be one of the following:
+
+- `EHR`
+- `omics`
+- `geospatial`
+
+As we write additional modules, we may add new data domains to this list!
+
+### `data_task`
+
+```
+data_task: 
+```
+
+What type of task/action/skill does this module teach?
+
+Not required.
+
+Must be one of the following:
+
+- `data_visualization`
+- `data_management`
+- `data_cleaning`
+- `data_transformation`
+- `data_analysis`
+
+As we write additional modules, we may add new data tasks to this list!
+
+### `coding_required`
+
+```
+coding_required: true
+```
+
+True/False based on whether achieving the module's learning objectives requires coding. This includes a user running code locally or interacting with code in the module. 
+
+Required.
+
+Must be one of `true` or `false`.
+
+### `coding_level`
+
+```
+coding_level: getting started
+```
+
+The coding level required for the module as a whole.
+
+Not required.
+
+Must be one of the following:
+
+- `getting started`: These modules are primarily about getting a platform set up
+- `basic`: These modules require little or no previous exposure to coding
+- `intermediate`: These modules require some previous coding exposure
+- `advanced`: These modules focus on particularly difficult or specialized tasks.
+- `practice exercise`: These modules do not introduce new content.
+
+### `coding_language`
+
+```
+coding_language: r, python
+```
+
+Not required.
+
+Must be one or more of the following:
+
+- r
+- python
+- bash
+- SQL
+
+### `sequence_name`
+
+```
+sequence_name: bash basics
+```
+
+Not required. 
+
+Must be one of the following: 
+
+- `bash basics`
+- `r basics`
+- `sql`
+- `python basics`
+- (add more here)
+
+### `previous_sequential_module`
+
+```
+previous_sequential_module: sql_basics
+```
+
+If it's in a sequence and there is another module before it (i.e. it's not the first module in its sequence), list the previous module here. 
+Use the modules directory name (this should be the same as the name of its md file).
+
+Required for all modules in a sequence other than the first module. 
+
+### `sets_you_up_for`
+
+```
+@sets_you_up_for
+
+- sql_intermediate
+- sql_joins
+
+@end
+```
+
+Not a strict requirement or pre-requisite but notes how knowledge in this module will prepare the user for other concepts.
+
+Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for module_a to list that it sets you up for module_b without module_b also saying it depends on knowledge availabe in module_a.
+
+### `depends_on_knowledge_available_in`
+
+```
+@depends_on_knowledge_available_in
+
+- bash_command_line_101
+- bash_command_line_102
+
+@end
+```
+
+Not a strict requirement or pre-requisite but notes where user can find useful knowledge in other modules.
+
+Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for module_a to list that it sets you up for module_b without module_b also saying it depends on knowledge availabe in module_a.
+
+### `is_parallel_to`
+
+```
+@is_parallel_to
+
+- git_setup_windows
+
+@end
+```
+
+The same instruction presented in a different coding language/environment/operating system. 
 
 ### `import`
 
