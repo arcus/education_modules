@@ -44,4 +44,5 @@ Becuase docs.md is user facing, it may need to include additional information no
 
 - The free-text description in docs.md should come from metadata-schema.json/key/description. 
 - The list of possible controlled terms should come from the const key in the referenced section of vaocabulary.json from metadata-schema.json. 
-- A description of each of these possible terms, glossing them in a list, should come from the const key in the referenced section of vaocabulary.json from metadata-schema.json. 
+- A description of each of these possible terms, glossing them in a list, should come from the const key in the referenced section of vocabulary.json from metadata-schema.json. 
+- Required fields are listed in the metadata-schema.json required array for each field. Others are not required for validation purposes.
