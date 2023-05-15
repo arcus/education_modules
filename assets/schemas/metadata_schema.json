@@ -164,7 +164,7 @@
         "default": "TBD"
        },
        "@is_parallel_to": {
-        "description": "Select one and only one of the related modules.",
+        "description": "The same instruction presented in a different coding language/envrionment.operating system.",
         "items": {
           "type": "object"
         },
