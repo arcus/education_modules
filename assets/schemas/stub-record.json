@@ -27,7 +27,6 @@
   "sequence": [
     {
     "sequence_name": "Git",
-    "relation_type": "sequence",
     "next_sequential_module": "r_basics_transform_data"
     }
   ],
