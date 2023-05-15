@@ -133,7 +133,7 @@
               "type": "string",
               "default": "TBD"
             },
-            "next_sequential_module": {
+            "previous_sequential_module": {
               "description": "Identifier of next module in the sequence.",
               "type": "string",
               "default": "TBD"

@@ -25,7 +25,7 @@ coding:
 
 sequence:
 - sequence_name: Bash Basics
-- next_sequential_module: bash_command_line_102
+- previous_sequential_module: bash_command_line_102
 
 "@sets_you_up_for": bash_command_line_102
   - bash_103_combining_commands
