@@ -52,7 +52,7 @@
         "type": "string",
         "default": "TBD"
        },
-       "estimated_time": {
+       "estimated_time_in_minutes": {
         "description": "This is rough guess of how long it might take a learner to work through the module. It will print under \"Estimated time to completion\" in the overview",
         "type": "string",
         "default": "TBD"
