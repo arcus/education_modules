@@ -1,4 +1,4 @@
-from dash import Dash, html, Input, Output, dcc
+from dash import Dash, html, Input, Output, dcc, ctx
 import dash_bootstrap_components as dbc
 import dash_cytoscape as cyto
 import module_data 
@@ -208,7 +208,7 @@ my_modules_list = [
 #### The app itself:
 
 app.layout = html.Div([
-    #dbc.Row(active_node),
+    dbc.Row(active_node),
     dbc.Row( children=[
         dbc.Col(html.Div(["DART Module Discovery Tool"]), style={'textAlign': 'center','font-size':'40px'}, align='end', width=6),
         dbc.Col(html.Div(      
@@ -328,13 +328,13 @@ def update_stylesheet(selected_modules,author_name, data):
 def get_active_node(data, value):
     if data:
         if value:
-            return data[0]['id'] + value 
+            return data[0]['id'] + value +ctx.triggered_id
         else:
-            return data[0]['id'] + " no drop down value"
+            return data[0]['id'] + " no drop down value" + ctx.triggered_id
     elif value:
-        return "no click data" + value 
+        return "no click data" + value +ctx.triggered_id
     else:
-        return "no data at all"
+        return "no data at all" + ctx.triggered_id
 
 
 
@@ -406,11 +406,11 @@ def tab_content(active_tab):
 
 ### When a module is selected from the list of all modules, it becomes selected.
 ### TODO: When a module is selected from ANY dropdown menu it becomes selected
-@app.callback(Output('module_visualization', 'elements'),
-                Input('list_of_all_modules', 'value'))
-def select_node_from_dropdown(id):
-    new_nodes=node_select(id)
-    return new_nodes+edges
+# @app.callback(Output('module_visualization', 'elements'),
+#                 Input('list_of_all_modules', 'value'))
+# def select_node_from_dropdown(id):
+#     new_nodes=node_select(id)
+#     return new_nodes+edges
 
 
 
