@@ -8,6 +8,16 @@ narrator: UK English Female
 title: Wrapper Module Macros
 comment:  This is placeholder module to save macros used in other modules.
 
+resource1_name: Docker Tutorial
+resource1_description: A tutorial on using Docker
+resource1_wellvetted: true
+resource1_wellvetted_text: This is a well-known thing.
+resource1_maintained: true
+resource1_maintained_text: Maintained by Docker.
+resource1_stablesupport: false
+resource1_stablesupport_text: Not stable?
+resource1_a11y_issues: No known issues with accessibility.
+
 @module_structure
 1. Part 1
 2. Part 2
@@ -20,7 +30,7 @@ comment:  This is placeholder module to save macros used in other modules.
 @1 
 
 <ul class="fa-ul" id="id_@9"></ul>
-<script>
+<script modify="false">
   let checks = [@2, @4, @6];
   let data = ['<b>Expert Authors / Well-Vetted: </b>'+`@3`, '<b>Maintained: </b>'+`@5`, '<b>Stable Support: </b>'+`@7`];
   
@@ -40,7 +50,7 @@ comment:  This is placeholder module to save macros used in other modules.
 </script>
 <b>Known issues with accessibility and/or inclusion:</b> @8
 
-We do our best to list potential problems here, but we might have missed something! If you encounter an issue, please let us know in @make_survey_url('@title', '@version', '@module_type').
+We do our best to list potential problems here, but we might have missed something! If you encounter an issue, please let us know in @make_survey_url(\'@title\', \'@version\', \'@module_type\').
 @end
 
 print_resource1: @print_list(@resource1_name,@resource1_description,@resource1_wellvetted,@resource1_wellvetted_text,@resource1_maintained,@resource1_maintained_text,@resource1_stablesupport,@resource1_stablesupport_text,@resource1_a11y_issues,@uid)
@@ -53,12 +63,17 @@ print_resource3: @print_list(@resource3_name,@resource3_description,@resource3_w
 
 <h3>This module will direct you to external educational content.</h3>
 
-Many topics have great content written by others! We chose this content for you based on how well it meets our criteria.
+Many topics have great content alerady available online! For this module, here's what to expect:
 
-Not all selected materials will meet all of these criteria, but selected materials should meet as many as possible.
-Write a short sentence about how this material meets, or does not meet, each criterion.
+@module_structure
+
+<h3>More information about the resources we link to</h3>
+
+We only link to external resources that we think do an excellent job of teaching the content. 
+We also evaluate each resource based on how well it meets our criteria.
 
 @end
+
 -->
 
 # Wrapper Module Macros
