@@ -108,7 +108,14 @@ To see examples of DART modules, see [our list of completed modules](https://arc
 
 We store a lot of important information in the front matter section at the top of each module. Part of the [module QA process](#module-review-process) is checking that everything is correctly encoded in the front matter. 
 
+
 Which front matter fields are required? It depends on what kind of module you're writing:
+
+(insert table here)
+
+### Your front matter checklist
+
+Use the checklist below to help make sure you're including all the front matter fields you need for your module.
 
 **Which of the following describe your module?** 
 
@@ -211,7 +218,7 @@ try {
   let module_characteristics = @input(`module_characteristics`)
 
   if(module_characteristics[8]) {
-    send.liascript(`- previous\_sequential\_module 💫`)
+    send.liascript(`- previous\\_sequential\\_module 💫`)
   } else send.clear()
 } catch(e) { }
 </script>
@@ -224,7 +231,7 @@ try {
   let module_characteristics = @input(`module_characteristics`)
 
   if(module_characteristics[9]) {
-    send.liascript(`- is\_parallel\_to 💫`)
+    send.liascript(`- is\\_parallel\\_to 💫`)
   } else send.clear()
 } catch(e) { }
 </script>
