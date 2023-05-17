@@ -188,6 +188,89 @@ try {
 
 * pre\_reqs
 * learning\_objectives
+
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[6]) {
+    send.liascript(`- resource1\\_name 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[6]) {
+    send.liascript(`- resource1\\_description 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[6]) {
+    send.liascript(`- resource1\\_wellvetted 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[6]) {
+    send.liascript(`- resource1\\_wellvetted_text 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[6]) {
+    send.liascript(`- resource1\\_maintained 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[6]) {
+    send.liascript(`- resource1\\_maintained_text 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[6]) {
+    send.liascript(`- resource1\\_stablesupport 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[6]) {
+    send.liascript(`- resource1\\_stablesupport_text 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[6]) {
+    send.liascript(`- resource1\\_a11y_issues 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+
 * good\_first\_module
 
 <script modify="false">
