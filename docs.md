@@ -124,7 +124,7 @@ Which front matter items are required? It depends on the content of the module y
 | `long_description`                 |      X      |   X   |      X      |                                                                                           |
 | `estimated_time_in_minutes`        |      X      |   X   |      X      |                                                                                           |
 | `r_file`                           |             |   X   |             |                                                                                           |
-| `prerequisites`                    |      X      |   X   |      X      |                                                                                           |
+| `pre_reqs`                         |      X      |   X   |      X      |                                                                                           |
 | `learning_objectives`              |      X      |   X   |      X      |                                                                                           |
 | `module_structure`                 |             |       |      X      |                                                                                           |
 | `resource1_name`[^3]               |             |       |      X      |                                                                                           |
