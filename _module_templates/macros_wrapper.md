@@ -8,16 +8,6 @@ narrator: UK English Female
 title: Wrapper Module Macros
 comment:  This is placeholder module to save macros used in other modules.
 
-resource1_name: Docker Tutorial
-resource1_description: A tutorial on using Docker
-resource1_wellvetted: true
-resource1_wellvetted_text: This is a well-known thing.
-resource1_maintained: true
-resource1_maintained_text: Maintained by Docker.
-resource1_stablesupport: false
-resource1_stablesupport_text: Not stable?
-resource1_a11y_issues: No known issues with accessibility.
-
 @module_structure
 1. Part 1
 2. Part 2
