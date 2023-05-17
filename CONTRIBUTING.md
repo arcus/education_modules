@@ -18,7 +18,7 @@ If you have an idea for a way we could improve an existing module by adding new 
 ## Proposing a new module
 
 If have an idea for a new module we should write, or if you are interested in writing a module for us, we'd love to hear from you! 
-Please get in touch with us at dart@chop.edu, and review our [instructions on how to create an educational module](#_for_authors/write_a_module.md). 
+Please get in touch with us at dart@chop.edu, and review our [instructions on how to create an educational module](https://github.com/arcus/education_modules/blob/main/_for_authors/write_a_module.md). 
 
 ## Translating an exisiting module
 
