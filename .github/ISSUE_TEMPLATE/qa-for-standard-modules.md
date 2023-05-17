@@ -9,12 +9,10 @@ assignees: ''
 
 # Module Quality Assurance Report for PR #[PR number here]
 ----
-Date: {yyyy-mm-dd}
 Reviewer: {your name}
 qa_template_version: 2.0.0
 Name of Module: {take from the title of the main markdown in the PR}
 Current Liascript URL: {makes it easy for reviewers and authors to look at content as learners will}
-Current Version of Module (use the latest commit value):  {click on the PR and get the clickable short link to the latest commit -- see [quality_assurance_guide.md](quality_assurance_guide.md)}
 
 # Checklist Reports:
 
@@ -28,29 +26,24 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
   * [ ] author name
   * [ ] email
   * [ ] module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](versioning_guidelines.md)
-  * [ ] module_template_version number is up to date with the [current sample module](https://raw.githubusercontent.com/arcus/education_modules/main/a_sample_module_template/a_sample_module_template.md) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing with QA
+  * module_type should be standard
+  * [ ] module_template_version number is up to date with the [current standard module template](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/standard_module_template.md) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing with QA
   * [ ] language
   * [ ] narrator
   * [ ] comment appropriately filled out
   * [ ] long_description appropriately filled out
+  * [ ] estimated_time_in_minutes appropriately filled out
+  * [ ] r_file appropriately filled out, if this module uses binder for an interactive rmd file
+  * [ ] prerequisites appropriately filled out
   * [ ] learning_objectives appropriately filled out
-  * [ ] link to CSS (currently https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css)
-  * [ ] script to Font Awesome kit (currently https://kit.fontawesome.com/83b2343bd4.js)
+  * [ ] import link provided to the macros module (`import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/module_macros.md`)
 * [ ] Title is the first line after the end of the YAML
   * [ ] only level-1 header in the entire document.
-* [ ] Overview section immediately following Title
-  * [ ] surrounded in div with class overview
-  * [ ] Comment is at the top of the Overview, linked from YAML rather than rewritten
-  * [ ] "Is this module right for me?" contents linked from long_description YAML rather than rewritten
-  * [ ] "Estimated time to completion" contents linked from estimated_time YAML rather than rewritten
-  * [ ] Prerequisites listed and do not require learner to have specifically attained those skills through any of our other modules.
-  * [ ] Learning objectives linked from learning_objectives YAML rather than rewritten
+* [ ] Overview section immediately following title, and generated via the @overview macro rather than being written out explicitly in the text file.
 * [ ] All sections following Overview have content (no pages with just header and no additional text / media material).
 * [ ] All quizzes start with a level 2 or 3 header. If there is only one quiz in the module, it is labelled "Quiz", or if there are multiple, each header is structured as "Quiz: label" where "label" is a short (~ 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
-* [ ] Educational content ends with a section of additional resources, both ours and outside sources
-* [ ] Final section is Feedback.
-  * [ ] Learning objectives linked from YAML rather than rewritten
-  * [ ] Feedback link is updated appropriately to automatically fill in the module name when clicked by learner.
+* [ ] Educational content ends with a section of additional resources
+* [ ] Final section is Feedback, which is generated via the @feedback macro
 
 ## Module Content
 
@@ -79,7 +72,7 @@ If the module includes code that learners may want to run:
 
 ## Formative assessment
 
-* [ ] Sufficient [formative assessment](https://carpentries.github.io/instructor-training/02-practice-learning/#identifying-and-correcting-misconceptions) in the form of quizzes and/or hands-on exercises
+* [ ] Sufficient [formative assessment](https://carpentries.github.io/instructor-training/aio.html#using-formative-assessment-to-support-memory-consolidation) in the form of quizzes and/or hands-on exercises
 * [ ] Clear explanations available after questions unless the nature of the question itself or answer options makes it unnecessary (e.g. a T/F question may not always require follow-up explanation)
 * [ ] Quiz questions and hands-on exercises relate directly to learning objectives
 * [ ] Every learning objective has at least one associated question
@@ -114,8 +107,5 @@ List here any internal references (stated or hyperlinked) that work now because 
 * [ ] {description or quote, line ___ in file ____}
 * [ ] {description or quote, line ___ in file ____}
 * [ ] {description or quote, line ___ in file ____}
-
-## Just Before Approval
-* [ ] Once there are no more commits to be made, get the newest commit value for the PR and update the commit value ("Current Version of Module:") at the top of this document.
 
 Congratulations! You can now approve the PR, merge to main, and close (not delete) this issue.
