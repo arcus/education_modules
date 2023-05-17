@@ -108,10 +108,38 @@ To see examples of DART modules, see [our list of completed modules](https://arc
 
 We store a lot of important information in the front matter section at the top of each module. Part of the [module QA process](#module-review-process) is checking that everything is correctly encoded in the front matter. 
 
+Which front matter items are required? It depends on the content of the module you're writing:
 
-Which front matter fields are required? It depends on what kind of module you're writing:
+|                               | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                    |
+| :---------------------------- | :---------: | :---: | :---------: | :--------------------------------------------------------------------------------------- |
+| `author`                      |      X      |   X   |      X      |                                                                                          |
+| `email`                       |      X      |   X   |      X      |                                                                                          |
+| `version`                     |      X      |   X   |      X      |                                                                                          |
+| `module_type`                 |      X      |   X   |      X      |                                                                                          |
+| `module_template_version`     |      X      |   X   |      X      |                                                                                          |
+| `lanaguge`                    |      X      |   X   |      X      |                                                                                          |
+| `narrator`                    |      X      |   X   |      X      |                                                                                          |
+| `title`                       |      X      |   X   |      X      |                                                                                          |
+| `comment`                     |      X      |   X   |      X      |                                                                                          |
+| `long_description`            |      X      |   X   |      X      |                                                                                          |
+| `estimated_time_in_minutes`   |      X      |   X   |      X      |                                                                                          |
+| `r_file`                      |             |   X   |             |                                                                                          |
+| `prerequisites`               |      X      |   X   |      X      |                                                                                          |
+| `learning_objectives`         |      X      |   X   |      X      |                                                                                          |
+| `module_structure`            |             |       |      X      |                                                                                          |
+| `resource1_name`[^3]          |             |       |      X      |                                                                                          |
+| `resource1_description`[^3]   |             |       |      X      |                                                                                          |
+| `resource1_wellvetted`[^3]    |             |       |      X      |                                                                                          |
+| `resource1_maintained`[^3]    |             |       |      X      |                                                                                          |
+| `resource1_stablesupport`[^3] |             |       |      X      |                                                                                          |
+| `resource1_a11y_issues`[^3]   |             |       |      X      |                                                                                          |
+| `import`                      |      X      |   X   |      X      | Importing `macros.md` is required for all modules. Additional import files may be needed. |
 
-(insert table here)
+
+[^1]: Modules using [interactive R code](#interactive-r).
+[^2]: Wrapper modules are built using the wrapper template (see [which module template to use](#which-module-template-to-use)).
+[^3]: You can include up to three external resources in a wrapper module. 
+  To add additional external resources, follow the same instructions for all the `resource1` front matter items for `resource2` items (e.g. `resource2_name`, `resource2_description`) and `resource3` items.
 
 ### Your front matter checklist
 
