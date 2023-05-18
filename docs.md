@@ -210,6 +210,7 @@ You'll need the following fields in your front matter (new fields added by check
 @add_item(4,data\_domain)
 @add_item(5,data\_task)
 @add_item(3,coding\_required)
+
 <script modify="false">
 try {
   let module_characteristics = @input(`module_characteristics`)
@@ -670,7 +671,7 @@ Use the modules directory name (this should be the same as the name of its md fi
 
 Not a strict requirement or pre-requisite but notes how knowledge in this module will prepare the user for other concepts.
 
-Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for module_a to list that it sets you up for module_b without module_b also saying it depends on knowledge availabe in module_a.
+Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
 
 ### `depends_on_knowledge_available_in`
 
@@ -685,8 +686,7 @@ Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need 
 
 Not a strict requirement or pre-requisite but notes where user can find useful knowledge in other modules.
 
-Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for module_a to list that it sets you up for module_b without module_b also saying it depends on knowledge availabe in module_a.
-
+Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
 ### `is_parallel_to`
 
 ```
