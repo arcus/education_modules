@@ -611,11 +611,11 @@ Not required.
 
 Must be one of the following:
 
-- `getting started`: These modules are primarily about getting a platform set up
+- `getting_started`: These modules are primarily about getting a platform set up
 - `basic`: These modules require little or no previous exposure to coding
 - `intermediate`: These modules require some previous coding exposure
 - `advanced`: These modules focus on particularly difficult or specialized tasks.
-- `practice exercise`: These modules do not introduce new content.
+- `practice_exercise`: These modules do not introduce new content.
 
 ### `coding_language`
 
@@ -642,10 +642,10 @@ Not required.
 
 Must be one of the following: 
 
-- `bash basics`
-- `r basics`
+- `bash_basics`
+- `r_basics`
 - `sql`
-- `python basics`
+- `python_basics`
 - (add more here)
 
 ### `previous_sequential_module`
