@@ -7,6 +7,20 @@ language: en
 narrator: UK English Female
 title: DART LiaScript docs
 
+@add_item
+
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[@0]) {
+    send.liascript(`- @1 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+
+@end
+
 import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
 -->
 
@@ -176,130 +190,26 @@ You'll need the following fields in your front matter (new fields added by check
 - long\_description
 - estimated\_time\_in\_minutes
 
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[0]) {
-    send.liascript(`- r\_file 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
+@add_item(0,r\_file)
 
 * pre\_reqs
 * learning\_objectives
 
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[6]) {
-    send.liascript(`- resource1\\_name 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[6]) {
-    send.liascript(`- resource1\\_description 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[6]) {
-    send.liascript(`- resource1\\_wellvetted 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[6]) {
-    send.liascript(`- resource1\\_wellvetted_text 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[6]) {
-    send.liascript(`- resource1\\_maintained 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[6]) {
-    send.liascript(`- resource1\\_maintained_text 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[6]) {
-    send.liascript(`- resource1\\_stablesupport 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[6]) {
-    send.liascript(`- resource1\\_stablesupport_text 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[6]) {
-    send.liascript(`- resource1\\_a11y_issues 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
+@add_item(6,resource1\_name)
+@add_item(6,resource1\_description)
+@add_item(6,resource1\_wellvetted)
+@add_item(6,resource1\_wellvetted\_text)
+@add_item(6,resource1\_maintained)
+@add_item(6,resource1\_maintained\_text)
+@add_item(6,resource1\_stablesupport)
+@add_item(6,resource1\_stablesupport\_text)
+@add_item(6,resource1\_a11y\_issues)
 
 * good\_first\_module
 
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[4]) {
-    send.liascript(`- data\_domain 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[5]) {
-    send.liascript(`- data\_tasks 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[3]) {
-    send.liascript(`- coding\_required 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
+@add_item(4,data\_domain)
+@add_item(5,data\_task)
+@add_item(3,coding\_required)
 <script modify="false">
 try {
   let module_characteristics = @input(`module_characteristics`)
@@ -327,67 +237,20 @@ try {
   } else send.clear()
 } catch(e) { }
 </script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
 
-  if(module_characteristics[8]) {
-    send.liascript(`- previous\\_sequential\\_module 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
+@add_item(8,previous\_sequential\_module)
 
 * sets\_you\_up\_for
 * depends\_on\_knowledge\_available\_in
 
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[9]) {
-    send.liascript(`- is\\_parallel\\_to 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
+@add_item(9,is\_parallel\_to)
 
 * import macros.md
 
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[6]) {
-    send.liascript(`- import macros_wrapper.md 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[0]) {
-    send.liascript(`- import macros_r.md 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[1]) {
-    send.liascript(`- import macros_python.md 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
-<script modify="false">
-try {
-  let module_characteristics = @input(`module_characteristics`)
-
-  if(module_characteristics[2]) {
-    send.liascript(`- import macros_sql.md 💫`)
-  } else send.clear()
-} catch(e) { }
-</script>
+@add_item(6,import macros_wrapper.md)
+@add_item(0,import macros_r.md)
+@add_item(1,import macros_python.md)
+@add_item(2,import macros_sql.md)
 
 ### `author`
 
