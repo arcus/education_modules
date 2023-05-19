@@ -50,7 +50,8 @@ neutral_node_styling = {
         'color': "gray",
         "font-size": "20px",
         'width': "20px",
-        'height': "20px"
+        'height': "20px",
+        'opacity': .3
          }
 
 neutral_edge_styling = {
@@ -66,7 +67,7 @@ default_stylesheet = [
     'style': {
         'background-color': 'lightgray',
         'color': 'gray',
-        'label': 'data(title)',
+        #'label': 'data(title)',
         'opacity': 0.3
         }
     },
@@ -99,7 +100,7 @@ left_hand_nav_bar = [dcc.Markdown("Use the checkboxes to find modules that may i
     dbc.Collapse(dcc.Checklist(
            options=[
        {'label': ' Good first module', 'value': 'good_first_module'},
-       {'label': ' Doesn\'t require coding', 'value': 'requires_coding'}
+       {'label': ' Doesn\'t require coding', 'value': 'no_coding_required'}
        ],
           value=['good_first_module'],
           id='general_options_checklist'),
@@ -120,7 +121,7 @@ left_hand_nav_bar = [dcc.Markdown("Use the checkboxes to find modules that may i
         {'label': ' SQL', 'value': 'SQL'},
         {'label': ' Git', 'value': 'git'},
         ],
-        id='coding_checklist'
+        id='coding_language_checklist'
         )
         ),],
     id='coding_language_collapse_checklist',
@@ -132,7 +133,7 @@ left_hand_nav_bar = [dcc.Markdown("Use the checkboxes to find modules that may i
     id="coding_level_collapse_button"),
         dbc.Collapse([
     dbc.Col([
-        dcc.Checklist(
+        dcc.RadioItems(
         options=[
         {'label': ' Get started', 'value': 'getting_started'},
         {'label': ' Basic', 'value': 'basic'},
@@ -146,6 +147,37 @@ left_hand_nav_bar = [dcc.Markdown("Use the checkboxes to find modules that may i
     is_open=False,
     ),
 ]
+
+### Function to sort nodes based on whether they meet the criteria denoted in the checkboxes
+
+def matches_checked_selections(general,coding_language):
+    selected = []
+    not_selected =[]
+    general_options = general if general else []
+    for node in nodes:
+        if 'no_coding_required' in set(general_options) and node['data']['coding_required']=="true":
+            not_selected.append(node)
+        elif 'good_first_module' in set(general_options) and node['data']['good_first_module']!= "true":
+            not_selected.append(node)
+        elif coding_language and node['data']['coding_language'] not in set(coding_language):
+            not_selected.append(node)
+        # elif node['coding_level'] not in set(coding_level):
+        #     not_selected.append(node)
+        else:
+            selected.append(node)
+    return selected, not_selected 
+        
+
+### Create buttons for the modules that match the criteria
+
+def create_module_buttons(list_of_modules):
+    button_list = []
+    for module in list_of_modules:
+        button_name = module['data']['id']+"_button"
+        module_button = html.Button(module['data']['title'], id=module['data']['id'], n_clicks=0)
+        button_list.append(module_button)
+    return button_list 
+                    
 
 
 @app.callback(
@@ -331,7 +363,12 @@ app.layout = html.Div([
                     stylesheet=default_stylesheet,
                     style={'width': '100%', 'height': '450px'},
                     userZoomingEnabled=False
-                     )], width=5
+                     ),
+                     html.Div([
+                        dcc.Markdown("buttons with all of the selected modules goes here"),
+                        html.Div(create_module_buttons(nodes), id='matching_module_buttons')
+                     ])
+                     ], width=5
                 ),
                 dbc.Col(html.Div(
                     children=left_hand_nav_bar,
@@ -380,42 +417,68 @@ app.layout = html.Div([
 
 ### Put all of the "update stylesheet" callbacks in one callback.
 @app.callback(Output('module_visualization', 'stylesheet'),
-              Input("my_modules", "value"),
-              Input('author_selector', 'value'),
-              Input('module_visualization', 'selectedNodeData'))
-def update_stylesheet(selected_modules,author_name, data):
+              #Input("my_modules", "value"),
+              #Input('author_selector', 'value'),
+              Input('module_visualization', 'selectedNodeData'),
+              Input('general_options_checklist','value'),
+              Input('coding_language_checklist','value'),
+              Input('coding_level_checklist','value'))
+def update_stylesheet(data, general_options_checked,coding_language_checked, coding_level_checked):
     new_stylesheet = default_stylesheet 
-    if author_name:
-        new_stylesheet += author_selected(author_name)
-
-    ### If a node is selected, restyle it highlight it on the graph
-    if data:
-        module_id = data[0]["id"]
-        selector = "[id *= \"" + module_id +"\"]" 
-        deselector = "[id !*= \"" + module_id +"\"]" 
-        highlight_selected_node = {
+    # if author_name:
+    #     new_stylesheet += author_selected(author_name)
+    
+    ## Change display based on checkbox selection
+    selected, not_selected = matches_checked_selections(general_options_checked,coding_language_checked)
+    for node in selected:
+        selector = "[id *= \""+node['data']['id']+"\"]" 
+        make_appear = {
             'selector': selector,
-            'style': {
-                #'background-color': "red",
-                'opacity': 1,
-                'color': "black",
-                'label': 'data(title)',
-                "font-size": "30px",
-                'width': "40px",
-                'height': "40px"
+            'style':{
+                'label': node['data']['title'],
+                'opacity': .5
             }
+        }
+        new_stylesheet.append(make_appear)
+    for node in not_selected:
+        selector = "[id *= \""+node['data']['id']+"\"]" 
+        make_appear = {
+            'selector': selector,
+            'style':{
+                'label': " ",
+                'color': 'blue',
+                'opacity': .1
             }
-        deselect_other_nodes = {
-            'selector': deselector,
-            'style': neutral_node_styling
-            }
-        new_stylesheet.append(highlight_selected_node)
-        new_stylesheet.append(deselect_other_nodes)
+        }
+
+    # ### If a node is selected, restyle it highlight it on the graph
+    # if data:
+    #     module_id = data[0]["id"]
+    #     selector = "[id *= \"" + module_id +"\"]" 
+    #     deselector = "[id !*= \"" + module_id +"\"]" 
+    #     highlight_selected_node = {
+    #         'selector': selector,
+    #         'style': {
+    #             #'background-color': "red",
+    #             'opacity': 1,
+    #             'color': "black",
+    #             'label': 'data(title)',
+    #             "font-size": "30px",
+    #             'width': "40px",
+    #             'height': "40px"
+    #         }
+    #         }
+    #     deselect_other_nodes = {
+    #         'selector': deselector,
+    #         'style': neutral_node_styling
+    #         }
+    #     new_stylesheet.append(highlight_selected_node)
+    #     new_stylesheet.append(deselect_other_nodes)
         
-        #### Not sure if edges need to be restated here, but they seem to be important...
-        new_stylesheet.append({'selector': 'edge','style':neutral_edge_styling})
-    # if selected_modules:
-    #     new_stylesheet += highligh_my_modules(selected_modules)
+    #     #### Not sure if edges need to be restated here, but they seem to be important...
+    #     new_stylesheet.append({'selector': 'edge','style':neutral_edge_styling})
+    # # if selected_modules:
+    # #     new_stylesheet += highligh_my_modules(selected_modules)
     return new_stylesheet
 
 ### Keep track of the "active" node can dash.callback_context help? 
@@ -449,7 +512,7 @@ def turn_on_module_details_panel(data):
 
 ### When a module node is selected (either clicked on or selected via a menu) information about it is displayed.
 @app.callback(Output('selected_module_text', 'children'),
-              Input('module_visualization', 'selectedNodeData')
+              Input('module_visualization', 'selectedNodeData'),
               )
 def displayTapNodeData(data):
     if data:
@@ -458,6 +521,7 @@ def displayTapNodeData(data):
         return  "### [**" + data[0]['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data[0]['id']+"/" +data[0]['id'] + ".md) \n \n  By " + data[0]['author'] +" \n \n Estimated length: " + data[0]['estimated_time_in_minutes']+". \n \n" + data[0]['comment'] + "\n \n" + learning_objectives + "\n --- \n "
     else:
         return "### Module details \n When you select a module, this panel will display information about that module. \n --- "
+
 
 ### When a module node is selected, the modules it links to appear in a drop down menu of their own.
 @app.callback(Output('modules_incoming','options'),
