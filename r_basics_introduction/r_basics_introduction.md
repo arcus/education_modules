@@ -8,7 +8,7 @@ narrator: US English Female
 title: R Basics: Introduction
 comment:  Introduction to R and hands-on first steps for brand new beginners.
 long_description: Are you brand new to R, and ready to get started?  This module teaches concepts and vocabulary related to R, RStudio, and R Markdown.  It also includes some introductory-level hands-on work in RStudio.  This is a good course if you know that you want to use R but haven't ever used it, or you've barely used it and need a refresher on the basics.
-estimated_time: 1 hour
+estimated_time_in_minutes: 1 hour
 
 @learning_objectives  
 
@@ -95,7 +95,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

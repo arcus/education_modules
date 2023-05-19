@@ -9,7 +9,7 @@ narrator: UK English Female
 title: Citizen Science
 comment:  This is an overview of citizen science for biomedical researchers.
 long_description: This module covers the what, who, why, and how of citizen science research: what citizen science is, who volunteers, why citizen science might be a good choice for your research, and options for how to get started. Throughout, it highlights several examples of real citizen science projects being used in biomedical research and related fields. No prior knowledge is assumed.
-estimated_time: 45 minutes
+estimated_time_in_minutes: 45 minutes
 @learning_objectives  
 
 After completion of this module, learners will be able to:
@@ -44,7 +44,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

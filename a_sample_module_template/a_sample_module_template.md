@@ -9,7 +9,7 @@ narrator: UK English Female
 title: Module Title
 comment:  This is a short, focused description of the module.
 long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
-estimated_time: This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview
+estimated_time_in_minutes: This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview
 
 @learning_objectives  
 
@@ -42,7 +42,7 @@ To see what it looks like rendered via LiaScript, [click here](https://liascript
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

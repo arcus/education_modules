@@ -9,7 +9,7 @@ narrator: UK English Female
 title:  Bash: Combining Commands
 comment:  This module will teach you how to combine two or more commands in bash to create more complicated pipelines in Bash.
 long_description: This module is for learners who can use some basic Bash commands and want to learn to how to use the output of one command as the input for another command.
-estimated_time: 30 minutes
+estimated_time_in_minutes: 30 minutes
 
 @learning_objectives
 
@@ -66,7 +66,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

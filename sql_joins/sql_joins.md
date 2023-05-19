@@ -8,7 +8,7 @@ narrator: US English Female
 title: SQL Joins
 comment: Learn about SQL joins: what they accomplish, and how to write them.
 long_description: Usually, data in a SQL database is organized into multiple interrelated tables.  This means you will often have to bring data together from two or more tables into a single dataset to answer your research questions.  This "join" action is accomplished using `JOIN` commands.  This module teaches types of joins, join criteria, and how to write `JOIN` code.
-estimated_time: 1 hour
+estimated_time_in_minutes: 1 hour
 
 @learning_objectives  
 After completion of this module, learners will be able to:
@@ -176,7 +176,7 @@ try {
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**   
 Learners should have experience writing SQL code on single tables.  If you have successfully used a "SELECT... FROM... WHERE" SQL statement on a single table, and have at least seen "GROUP BY" commands in action, even if you would need help writing the GROUP BY code, you have enough code ability.  We also highly recommend that you understand the concepts of one-to-many data relationships and database normalization to get the most out of this module. 

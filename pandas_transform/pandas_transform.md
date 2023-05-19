@@ -9,7 +9,7 @@ narrator: UK English Female
 title: Transform Data with pandas
 comment:  This is an introduction to transforming data using a Python library named pandas.
 long_description: This module is for learners who have some familiarity with Python, and want to learn how the pandas library can handle large tabular data sets. No previous experience with pandas is required, and only an introductory level understanding of Python is assumed.
-estimated_time: 1 hour
+estimated_time_in_minutes: 1 hour
 
 @learning_objectives  
 
@@ -119,7 +119,7 @@ persistent: true
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

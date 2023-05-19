@@ -8,7 +8,7 @@ narrator: US English Female
 title: How to Troubleshoot
 comment:  Learning to use technical methods like coding and version control in your research inevitably means running into problems.  Learn practical methods for troubleshooting and moving past error codes and other difficulties.
 long_description: When technical methods, such as writing code, using version control, and creating data visualizations are used, there will moments when a cryptic error message appears or the code simply doesn't do what it was intended to do.  This module will help people at various levels of technical expertise learn how to troubleshoot in tech more effectively.
-estimated_time: 30 minutes
+estimated_time_in_minutes: 30 minutes
 
 @learning_objectives  
 
@@ -36,7 +36,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

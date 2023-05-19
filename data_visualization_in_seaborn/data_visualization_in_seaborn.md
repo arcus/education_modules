@@ -12,7 +12,7 @@ comment:  This module includes code and explanations for several popular data vi
 
 long_description: You can use the seaborn module in python to make many different kinds of data visualizations (also called plots or charts), including scatterplots, histograms, line plots, and trend lines. This module provides an example of each of these kinds of plots, including python code to make them using the seaborn module. It may be hard to follow if you are brand new to python, but it is appropriate for beginners with at least a small amount of python experience.
 
-estimated_time: 1 hour
+estimated_time_in_minutes: 1 hour
 
 @learning_objectives  
 
@@ -95,7 +95,7 @@ sagecell.makeSagecell({inputLocation: 'div.python_run',
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

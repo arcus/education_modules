@@ -34,7 +34,7 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
   * [ ] surrounded in div with class overview
   * [ ] Comment is at the top of the Overview, linked from YAML rather than rewritten
   * [ ] "Is this module right for me?" contents linked from long_description YAML rather than rewritten
-  * [ ] "Estimated time to completion" contents linked from estimated_time YAML rather than rewritten
+  * [ ] "Estimated time to completion" contents linked from estimated_time_in_minutes YAML rather than rewritten
   * [ ] Prerequisites listed and do not require learner to have specifically attained those skills through any of our other modules.
   * [ ] Learning objectives linked from learning_objectives YAML rather than rewritten
 * [ ] All sections following Overview have content (no pages with just header and no additional text / media material).

@@ -16,7 +16,7 @@ do
   if [[ -s $FOLDER/$FOLDER.md && "$FOLDER" != "a_sample_module_template" ]]      ## Only do this for folders that have a course .md file inside an identically named folder in education_modules
     then
       ### pull the one-line macros
-      for CATEGORY in "title" "author" "estimated_time"
+      for CATEGORY in "title" "author" "estimated_time_in_minutes"
       do
         category_metadata="`grep -m 1 "$CATEGORY": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
         echo "df.loc[\"$FOLDER\", \"$CATEGORY\"] = \"$category_metadata\"" >> $graph_data

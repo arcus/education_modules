@@ -9,7 +9,7 @@ narrator: UK English Female
 title: Directories and File Paths
 comment: In this module, learners will explore what a directory is and how to describe the location of a file using its file path.   
 long_description: When doing data analysis in a programming language like R or Python, figuring out how to point the program to the file you need can be confusing. This module will help you learn about how files and folders are organized on your computer, how to describe the location of your file in a couple of different ways, and name files and folders in a descriptive and systematic way.
-estimated_time: 15m
+estimated_time_in_minutes: 15m
 
 @learning_objectives  
 
@@ -39,7 +39,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**: None.
 

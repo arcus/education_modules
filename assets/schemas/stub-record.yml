@@ -9,7 +9,7 @@ comment:  This course teaches learners to navigate their computer, as well as vi
 
 long_description: This course is designed to be both an introduction to bash / command line for those who are total newbies as well as refresher for those some with experience running code who want a more solid command of the basics.
 
-estimated_time: 40 minutes
+estimated_time_in_minutes: 40 minutes
 
 "@learning_objectives": "After completion of this module, learners will be able to: \n- Describe what bash scripting is and why they might want to learn it for data management and research \n- Navigate their file system using the bash shell \n- View and edit the contents of a file from the bash shell @end"
 

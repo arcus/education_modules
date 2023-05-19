@@ -10,7 +10,7 @@ title: Missing Values in R
 comment:  A practical demonstration of how missing values show up in R and how to deal with them. Note that this module does **not** cover statistical approaches for handling missing data, but instead focuses on the code you need to find, work with, and assign missing values in R.
 long_description: This is a beginner's guide to handling missing values in R. It covers what `NA` values are and how to check for them, how to mark values as missing, how to work around missing values in your analysis, and how to filter your data to remove missingness. This module is appropriate for learners who feel comfortable with R basics and are ready to get into the realities of data analysis, like dealing with missing values.
 
-estimated_time: 45 min
+estimated_time_in_minutes: 45 min
 
 @learning_objectives  
 
@@ -94,7 +94,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

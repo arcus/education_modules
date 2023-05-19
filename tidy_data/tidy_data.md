@@ -8,7 +8,7 @@ narrator: US English Female
 title: Tidy Data
 comment:  Tidy is a technical term in data analysis and describes an optimal way for organizing data that will be analyzed computationally.
 long_description: Are you concerned about how to organize your data so that it's easier to work with in a computational solution like R, Python, or other statistical software?  This module will explain the concept of "tidy data", which will help make analysis and data reuse a bit simpler.
-estimated_time: 45 minutes
+estimated_time_in_minutes: 45 minutes
 
 @learning_objectives  
 
@@ -53,7 +53,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

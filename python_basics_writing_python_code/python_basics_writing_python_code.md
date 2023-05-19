@@ -9,7 +9,7 @@ narrator: UK English Female
 title: Python Basics: Writing Python Code
 comment: Learn the foundations of writing Python code.
 long_description: Before using Python for data analysis, there are some basics to learn that will set the foundation for more advanced Python coding. This module will teach you about functions and methods, how to define and use variables, how to create and edit lists and dictionaries, and how use loops and conditional statements to perform tasks with these basic data structures.
-estimated_time: 1 hour
+estimated_time_in_minutes: 1 hour
 
 @learning_objectives
 
@@ -100,7 +100,7 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 
 **Is this module right for me?:** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites:** Learners should be familiar with [Python as a programming language](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md), but need not have any experience with actually writing Python code.
 

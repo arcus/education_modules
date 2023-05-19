@@ -10,7 +10,7 @@ title: Creating a Git Repository
 comment:  Create a new Git repository and get started with version control.
 long_description: If you have Git set up on your computer and are ready to start tracking your files, then this module is for you. This module will teach you how to create a Git repository, add files to it, update files in it, and keep track of those changes in a clear and organized manner.
 
-@estimated_time: 1 hour
+@estimated_time_in_minutes: 1 hour
 
 @learning_objectives
 
@@ -76,7 +76,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Estimated time to completion:**
 
-@estimated_time
+@estimated_time_in_minutes
 
 **Pre-requisites**
 

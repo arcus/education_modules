@@ -11,7 +11,7 @@ comment:   Introduction to principles of data vizualization and typical data viz
 
 long_description: This module introduces ggplot2 and seaborn, popular data visualization libraries in R and python, respectively. It lays the groundwork for using ggplot2 and seaborn by 1) highlighting common features of plots that can be manipulated in plot code, 2) discussing a typical data visualization workflow and best practices, and 3) discussing data preparation for plotting. This content will be most useful for people who have some experience creating data visualizations and/or reading plots presented in research articles or similar contexts. Some prior exposure to R and/or python is helpful but not required. This is appropriate for beginners.
 
-estimated_time: 20 minutes
+estimated_time_in_minutes: 20 minutes
 
 @learning_objectives
 
@@ -64,7 +64,7 @@ script:  https://kit.fontawesome.com/83b2343bd4.js
 
 @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

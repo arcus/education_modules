@@ -9,7 +9,7 @@ narrator: UK English Female
 title: R Practice
 comment: Use the basics of R coding, data transformation, and data visualization to work with real data. 
 long_description: When learning R for data science, the ultimate goal is to be able to put all of the pieces together to analyze a dataset. This module aims to provide a data science task in order to help learners practice R skills in a real-world context. 
-estimated_time: 1 hour
+estimated_time_in_minutes: 1 hour
 
 @learning_objectives
 
@@ -36,7 +36,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?:** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites:** Learners should be familiar with [the basics of R coding](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#1), including [data transformation with dplyr](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#1) and [data visualization with ggplot2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1). Learners should also have access to R, either on their own computer or in the cloud. 
 

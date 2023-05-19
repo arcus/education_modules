@@ -9,7 +9,7 @@ narrator: UK English Female
 title: Encoding Geospatial Data: Latitude and Longitude
 comment:  This is an introduction to latitude and longitude and the importance of geocoding - encoding geospatial data in the coordinate system.
 long_description: If you use any geospatial data, such as patient or participant addresses, it is important that that location data be in a usable form. This means using the same coordinate system that Global Positioning Systems use: latitude and longitude. This module is appropriate, as either an introduction or review, for anyone considering using geospatial data in their analysis. 
-estimated_time: 15 minutes
+estimated_time_in_minutes: 15 minutes
 
 @learning_objectives  
 
@@ -36,7 +36,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 None

@@ -8,7 +8,7 @@ narrator: US English Female
 title: R Basics: Visualizing Data With ggplot2
 comment:  Learn how to visualize data using R's `ggplot2` package.
 long_description: Do you want to learn how to make some basic data visualizations (graphs) in R?  In this module you'll learn about the "grammar of graphics" and the base code that you need to get started.  We'll use the basic ingredients of a tidy data frame, a geometric type, and some aesthetic mappings (we'll explain what all of those are).  This module teaches the use of the `ggplot2` package, which is part of the `tidyverse` suite of packages.
-estimated_time: 1 hour
+estimated_time_in_minutes: 1 hour
 
 @learning_objectives  
 
@@ -92,7 +92,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

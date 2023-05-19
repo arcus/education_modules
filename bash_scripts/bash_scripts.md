@@ -9,7 +9,7 @@ narrator: UK English Female
 title:  Bash: Reusable Scripts
 comment:  This module will teach you how to create and use simple Bash scripts to make repetitive tasks as simple as possible. 
 long_description: If you have some experience with Bash and want to learn how to save and reuse Bash processes, this lesson will teach you how to write your own Bash scripts and understand and use simple scripts written by others.
-estimated_time: 1 hour
+estimated_time_in_minutes: 1 hour
 
 @learning_objectives
 
@@ -75,7 +75,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

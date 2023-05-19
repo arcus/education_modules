@@ -8,7 +8,7 @@ narrator: US English Male
 title: Demystifying SQL
 comment:  SQL is a relational database solution that has been around for decades.  Learn more about this technology at a high level, without having to write code.
 long_description: Do you have colleagues who use SQL or refer to "databases" or "the data warehouse" and you're not sure what it all means?  This module will give you some very high level explanations to help you understand what SQL is and some basic concepts for working with it.  There is no code or hands-on application in this module, so it's appropriate for people who have zero experience and want an overview of SQL.
-estimated_time: 40 minutes
+estimated_time_in_minutes: 40 minutes
 
 @learning_objectives  
 
@@ -36,7 +36,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

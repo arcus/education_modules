@@ -12,7 +12,7 @@ comment: This module provides recommendations and examples to help new users con
 
 long_description: If you're ready to start using the Git version control system, this lesson will walk you through how to get set up. This lesson should be a good fit for people who already have an idea of what version control is but may not have any experience using it yet. No previous experience with Git is expected. This lesson is specific to Windows machines, If you are using Mac or Linux, please follow along with the [set-up guide for those computers](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md).
 
-estimated_time: 25 min
+estimated_time_in_minutes: 25 min
 
 @learning_objectives  
 
@@ -67,7 +67,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

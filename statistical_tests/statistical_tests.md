@@ -10,7 +10,7 @@ title: Statistical Tests in Open Source Software
 comment:  This module provides an overview of the most commonly used kinds of statistical tests and links to code for running many of them in both R and python.
 
 long_description: This module contains a curated list of links to tutorials and examples of many common statistical tests in both R and python. If you want to use R or python for data analysis but aren't sure how to write code for the statistical tests you want to run, this is a great place to start. This will be an especially valuable resource for people who have experience conducting analysis in other software (e.g. SAS, SPSS, MPlus, Matlab) and are looking to move to R and/or python. If you are new to data analysis, this module provides some structure to help you think about which statistical tests to run, and examples of code to execute them. It doesn't cover the statistical theory itself, though, so you'll need to do some additional reading before applying the code for any tests you don't already understand (there are recommended resources for learning statistical techniques at the end of the module).
-estimated_time: 20 minutes (although reading through the linked tutorials may take much longer, depending on which tests you choose to read about)
+estimated_time_in_minutes: 20 minutes (although reading through the linked tutorials may take much longer, depending on which tests you choose to read about)
 
 @learning_objectives  
 
@@ -54,7 +54,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion**: @estimated_time
+**Estimated time to completion**: @estimated_time_in_minutes
 
 **Pre-requisites**:
 

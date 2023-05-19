@@ -10,7 +10,7 @@ title: Bash: Conditionals and Loops
 comment:  This module teaches you how to iterate through "for" loops and write conditional statements in Bash.
 long_description: This lesson teaches the basics of loops (for all x, do y) and conditional statements (if x is true, do y) in Bash. Since the grammar of Bash can be non-intuitive this module is appropriate both for learners who have experience with conditionals and loops in other languages, as well as learners who are learning about these kinds of commands for the first time.
 
-estimated_time: 1 hour
+estimated_time_in_minutes: 1 hour
 @learning_objectives  
 
 After completion of this module, learners will be able to:
@@ -64,7 +64,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

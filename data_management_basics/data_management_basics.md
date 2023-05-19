@@ -8,7 +8,7 @@ narrator: US English Female
 title: Research Data Management Basics
 comment: Learn the basics about research data management.
 long_description:  If you conduct research or work with research data or researchers, it's likely that research data management topics affect you.  Learn what research data management is, how to think about it in a structured way, and understand its scientific importance.
-estimated_time: 40 minutes
+estimated_time_in_minutes: 40 minutes
 
 @learning_objectives  
 
@@ -54,7 +54,7 @@ script: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

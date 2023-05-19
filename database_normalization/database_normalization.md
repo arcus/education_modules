@@ -8,7 +8,7 @@ narrator: US English Female
 title: Database Normalization
 comment: Learn about the concept of normalization and why it's important for organizing complicated data in relational databases.
 long_description: Usually, data in a relational database like SQL is organized into multiple interrelated tables with as little data repetition as possible. This concept can be useful to apply in other areas as well, such as organizing data in .csvs or in data frames in R or Python.  This module teaches underlying data considerations and explains how data can be efficiently organized by introducing the concepts of one-to-many data relationships and normalization.
-estimated_time: 40 minutes
+estimated_time_in_minutes: 40 minutes
 
 @learning_objectives  
 After completion of this module, learners will be able to:
@@ -58,7 +58,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**  Learners should have experience working with data in tables.  This could included working with .csv files, SQL databases, R data frames, REDCap instruments, or other ways that data can be collected in tables. 
 

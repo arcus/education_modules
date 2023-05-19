@@ -11,7 +11,7 @@ comment:  This course teaches learners to navigate their computer, as well as vi
 
 long_description: This course is designed to be both an introduction to bash / command line for those who are total newbies as well as refresher for those some with experience running code who want a more solid command of the basics.
 
-estimated_time: 40 minutes
+estimated_time_in_minutes: 40 minutes
 
 @learning_objectives
 
@@ -69,7 +69,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 

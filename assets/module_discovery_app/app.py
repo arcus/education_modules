@@ -22,7 +22,7 @@ nodes = [
             'id': row, 
             'title': df.loc[row,'title'], 
             'author': df.loc[row, 'author'], 
-            'estimated_time': df.loc[row,'estimated_time'], 
+            'estimated_time_in_minutes': df.loc[row,'estimated_time_in_minutes'], 
             'comment': df.loc[row,'comment'], 
             'long_description': df.loc[row,'long_description'],
             'Learning Objectives': df.loc[row,'Learning Objectives'],
@@ -356,7 +356,7 @@ def displayTapNodeData(data):
     if data:
         learning_objectives = data[0]['Learning Objectives']
         learning_objectives = learning_objectives.replace("&", "\n")
-        return  "### [**" + data[0]['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data[0]['id']+"/" +data[0]['id'] + ".md) \n \n  By " + data[0]['author'] +" \n \n Estimated length: " + data[0]['estimated_time']+". \n \n" + data[0]['comment'] + "\n \n" + learning_objectives + "\n --- \n "
+        return  "### [**" + data[0]['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data[0]['id']+"/" +data[0]['id'] + ".md) \n \n  By " + data[0]['author'] +" \n \n Estimated length: " + data[0]['estimated_time_in_minutes']+". \n \n" + data[0]['comment'] + "\n \n" + learning_objectives + "\n --- \n "
     else:
         return "### Module details \n When you select a module, this panel will display information about that module. \n --- "
 

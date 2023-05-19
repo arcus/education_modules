@@ -9,7 +9,7 @@ narrator: US English Female
 title: Reproducibility, Generalizability, and Reuse
 comment:  This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **data reuse**, and how technical approaches can help make these goals more attainable.
 long_description: **If you currently conduct research or expect to in the future**, the concepts we talk about here are important to grasp.  This material will help you understand much of the current literature and debate around how research should be conducted, and will provide you with a starting point for understanding why some practices (like writing code, even for researchers who have never programmed a computer) are gaining traction in the research field.  **If research doesn't form part of your future plans, but you want to *use* research** (for example, as a clinician or public health official), this material will help you form criteria for what research to consider the most rigorous and useful and help you understand why science can seem to vacillate or be self-contradictory.
-estimated_time: 1 hour
+estimated_time_in_minutes: 1 hour
 
 @learning_objectives  
 
@@ -111,7 +111,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites** 
 

@@ -9,7 +9,7 @@ narrator: UK English Female
 title: The Elements of Maps
 comment:  This is a general overview of ways that geospatial data can be communicated visually using maps.
 long_description: Raw geospatial data can be particularly tricky for humans to read. However the shapes, colors, sizes, symbols, and language that make up a good map can effectively communicate a variety of detailed data even to readers looking at the map with only minimum specialized background knowledge. This module will demystify how raw data becomes a map and explain common components of maps. It is appropriate for anyone considering making maps from geospatial data.
-estimated_time: 45 minutes
+estimated_time_in_minutes: 45 minutes
 
 @learning_objectives  
 
@@ -35,7 +35,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**
 Some familiarity with latitude and longitude is required to get the most out of this module as all location data will be presented in that coordinate system.

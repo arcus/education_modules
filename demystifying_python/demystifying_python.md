@@ -9,7 +9,7 @@ narrator: UK English Female
 title: Demystifying Python
 comment:  This module introduces the Python programming language, explores why Python is useful in research, and describes how to download Python and Jupyter.
 long_description: Python is a versatile programming language that is frequently used for data analysis, machine learning, web development, and more. If you are interested in using Python (or even just trying it out), and are looking for how to get set up, this module is a good place to start. This is appropriate for someone at the beginner level, including those with no prior knowledge of or experience with Python.
-estimated_time: 20m
+estimated_time_in_minutes: 20m
 @learning_objectives  
 
 After completion of this module, learners will be able to:
@@ -94,7 +94,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 ### Details
 
-**Estimated time to completion**: @estimated_time
+**Estimated time to completion**: @estimated_time_in_minutes
 
 **Pre-requisites**: Learners should be familiar with tabular data (data stored in a rectangular format, like an Excel spreadsheet or a comma separated file). It is helpful to have some familiarity with [navigating to specific directories](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) and running programs in the Command Line/Terminal. Learners do not need to have access to Python or Jupyter notebooks on their own computers.
 

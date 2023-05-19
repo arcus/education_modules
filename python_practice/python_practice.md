@@ -9,7 +9,7 @@ narrator: UK English Female
 title: Python Practice
 comment: Use the basics of Python coding, data transformation, and data visualization to work with real data. 
 long_description: When learning Python for data science, the ultimate goal is to be able to put all of the pieces together to analyze a dataset. This module aims to provide a data science task in order to help learners practice Python skills in a real-world context. 
-estimated_time: 1 hour
+estimated_time_in_minutes: 1 hour
 
 @learning_objectives
 
@@ -64,7 +64,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?:** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites:** Learners should be familiar with [the basics of Python coding](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md), including [data transformation with pandas](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md) and [data visualization with matplotlib and seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md). Learners should also have access to Python, either on their own computer or in the cloud. 
 

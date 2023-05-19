@@ -9,7 +9,7 @@ narrator: UK English Female
 title: Demystifying Geospatial Data
 comment:  This module is a brief introduction to geospatial (location) data.
 long_description: This module will survey some of the benefits of using geospatial data for research purposes. No previous exposure to geospatial data is expected. If you have any interest in maps or are wondering if using geospatial data might be helpful for your work, this lesson is designed to help you decide whether learning more about geospatial techniques is right for you and your project.
-estimated_time:  15 minutes
+estimated_time_in_minutes:  15 minutes
 
 @learning_objectives  
 
@@ -36,7 +36,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites**: No prior knowledge or experience of geospatial data is required.
 

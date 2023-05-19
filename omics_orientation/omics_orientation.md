@@ -9,7 +9,7 @@ narrator: UK English Female
 title: Omics Orientation
 comment: This module provides a brief introduction to omics and its associated fields.
 long_description: Omics is a wide-reaching field, with many different subfields. This module aims to disambiguate several omics-related terms and topics, discuss some of the most popular omics research fields, and examine the challenges of and caveats for omics research.
-estimated_time: 15m
+estimated_time_in_minutes: 15m
 
 @learning_objectives
 
@@ -38,7 +38,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Is this module right for me?** @long_description
 
-**Estimated time to completion:** @estimated_time
+**Estimated time to completion:** @estimated_time_in_minutes
 
 **Pre-requisites:** None
 
