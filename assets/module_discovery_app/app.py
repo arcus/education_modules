@@ -25,8 +25,11 @@ nodes = [
             'estimated_time_in_minutes': df.loc[row,'estimated_time_in_minutes'], 
             'comment': df.loc[row,'comment'], 
             'long_description': df.loc[row,'long_description'],
-            'Learning Objectives': df.loc[row,'Learning Objectives'],
-            'good_first_module': df.loc[row,'good_first_module']
+            'learning_objectives': df.loc[row,'learning_objectives'],
+            'good_first_module': df.loc[row,'good_first_module'],
+            'coding_required': df.loc[row,'coding_required'],
+            'coding_language': df.loc[row,'coding_language'],
+            'coding_level': df.loc[row,'coding_level'],
             },#'selected': True
         ### Use classes here for all fo the data!!! 'classes': author
         #'position': {'x': 20*lat, 'y': -20*long}
@@ -354,7 +357,7 @@ def turn_on_module_details_panel(data):
               )
 def displayTapNodeData(data):
     if data:
-        learning_objectives = data[0]['Learning Objectives']
+        learning_objectives = data[0]['learning_objectives']
         learning_objectives = learning_objectives.replace("&", "\n")
         return  "### [**" + data[0]['title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ data[0]['id']+"/" +data[0]['id'] + ".md) \n \n  By " + data[0]['author'] +" \n \n Estimated length: " + data[0]['estimated_time_in_minutes']+". \n \n" + data[0]['comment'] + "\n \n" + learning_objectives + "\n --- \n "
     else:

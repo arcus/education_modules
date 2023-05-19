@@ -51,7 +51,7 @@ do
       end=$(( $(tail -n +$start $FOLDER/$FOLDER.md | grep -n -m 1 "@end" | cut -f1 -d:) - 1 ))
       #### TODO figure out line breaks!
       learning_objectives=$(tail -n +$start $FOLDER/$FOLDER.md | head -n $end | tr '\n' '&' | tr '"' '+')
-      echo "df.loc[\"$FOLDER\", \"Learning Objectives\"] = \"$learning_objectives\" " >> $graph_data
+      echo "df.loc[\"$FOLDER\", \"learning_objectives\"] = \"$learning_objectives\" " >> $graph_data
 
       #### pre_reqs (The "IF" is because not every module has the prereqs in this format yet...)
       if grep "@pre_reqs" -q $FOLDER/$FOLDER.md
