@@ -1,4 +1,4 @@
-from dash import Dash, html, Input, Output, dcc, ctx
+from dash import Dash, html, Input, Output, dcc, ctx, State
 import dash_bootstrap_components as dbc
 import dash_cytoscape as cyto
 import module_data 
@@ -87,6 +87,96 @@ default_stylesheet = [
 ]
 
 active_node = [dcc.Markdown("none selected", id= "active_node")]
+
+### Navigation bar in the middle of the screen
+    
+
+
+left_hand_nav_bar = [dcc.Markdown("Use the checkboxes to find modules that may interest you:"),
+    dbc.Button(
+    "General options",
+    id="general_options_collapse_button"),
+    dbc.Collapse(dcc.Checklist(
+           options=[
+       {'label': ' Good first module', 'value': 'good_first_module'},
+       {'label': ' Doesn\'t require coding', 'value': 'requires_coding'}
+       ],
+          value=['good_first_module'],
+          id='general_options_checklist'),
+          id='general_options_collapse_checklist',
+    is_open=True),
+
+    html.Br(),
+    dbc.Button(
+        "Coding Language",
+        id="coding_collapse_button"),
+    dbc.Collapse([
+    dbc.Col( 
+    dcc.Checklist(
+        options=[
+        {'label': ' Bash', 'value': 'bash'},
+        {'label': ' Python', 'value': 'python'},
+        {'label': ' R', 'value': 'r'},
+        {'label': ' SQL', 'value': 'SQL'},
+        {'label': ' Git', 'value': 'git'},
+        ],
+        id='coding_checklist'
+        )
+        ),],
+    id='coding_language_collapse_checklist',
+    is_open=False,
+    ),
+    html.Br(),
+    dbc.Button(
+    "Coding Level",
+    id="coding_level_collapse_button"),
+        dbc.Collapse([
+    dbc.Col([
+        dcc.Checklist(
+        options=[
+        {'label': ' Get started', 'value': 'getting_started'},
+        {'label': ' Basic', 'value': 'basic'},
+        {'label': ' Intermediate', 'value': 'intermediate'},
+        {'label': ' Advanced', 'value': 'advanced'},
+        {'label': ' Exercises', 'value': 'practice_exercise'},
+        ],
+        id='coding_level_checklist')
+    ],)],
+    id='coding_level_collapse_checklist',
+    is_open=False,
+    ),
+]
+
+
+@app.callback(
+    Output("coding_language_collapse_checklist", "is_open"),
+    [Input("coding_collapse_button", "n_clicks")],
+    [State("coding_language_collapse_checklist", "is_open")],
+)
+def toggle_collapse(n, is_open):
+    if n:
+        return not is_open
+    return is_open
+
+@app.callback(
+    Output("general_options_collapse_checklist", "is_open"),
+    [Input("general_options_collapse_button", "n_clicks")],
+    [State("general_options_collapse_checklist", "is_open")],
+)
+def toggle_collapse(n, is_open):
+    if n:
+        return not is_open
+    return is_open
+
+@app.callback(
+    Output("coding_level_collapse_checklist", "is_open"),
+    [Input("coding_level_collapse_button", "n_clicks")],
+    [State("coding_level_collapse_checklist", "is_open")],
+)
+def toggle_collapse(n, is_open):
+    if n:
+        return not is_open
+    return is_open
 
 ### Create a function that changes the stylesheet based on user selecting an author.
 
@@ -213,11 +303,11 @@ my_modules_list = [
 app.layout = html.Div([
     dbc.Row(active_node),
     dbc.Row( children=[
-        dbc.Col(html.Div(["DART Module Discovery Tool"]), style={'textAlign': 'center','font-size':'40px'}, align='end', width=6),
+        dbc.Col(html.Div(["DART Module Discovery Tool"]), style={'textAlign': 'center','font-size':'40px'}, align='end', width=7),
         dbc.Col(html.Div(      
             dbc.Tabs([
                 dbc.Tab(label="Home", tab_id='instructions'),
-                dbc.Tab(label="Explore Categories", tab_id='categories'),
+                #dbc.Tab(label="Explore Categories", tab_id='categories'),
                 dbc.Tab(label="Explore Pathways", tab_id='pathways'),
                 dbc.Tab(label="Search", tab_id='search'),
             ],
@@ -241,13 +331,19 @@ app.layout = html.Div([
                     stylesheet=default_stylesheet,
                     style={'width': '100%', 'height': '450px'},
                     userZoomingEnabled=False
-                     )], width=6
+                     )], width=5
+                ),
+                dbc.Col(html.Div(
+                    children=left_hand_nav_bar,
+                    id='left_hand_nav_bar'
+                ),
+                width=2
                 ),
                 dbc.Col(html.Div(
                     children= dcc.Markdown("click on a tab to see what it does"),
                     id='tab_selection'
                     ),
-                    width=6
+                    width=5
                 )],
             
         ),
