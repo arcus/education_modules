@@ -29,15 +29,15 @@ After completion of this module, learners will be able to:
 - articulate the rationale for something
 @end
 
-resource1_name: Docker Tutorial
-resource1_description: This is a tutorial on using Docker
-resource1_wellvetted: true
-resource1_wellvetted_text: This is a well-known thing.
-resource1_maintained: true
-resource1_maintained_text: Maintained by Docker.
-resource1_stablesupport: false
-resource1_stablesupport_text: Not stable?
-resource1_a11y_issues: No known issues with accessibility, but if you encounter something, please [let us know](#feedback)!
+resource1_name: 
+resource1_description: 
+resource1_wellvetted: 
+resource1_wellvetted_text: 
+resource1_maintained: 
+resource1_maintained_text: 
+resource1_stablesupport: 
+resource1_stablesupport_text: 
+resource1_a11y_issues: 
 
 
 @module_structure
