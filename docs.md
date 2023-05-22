@@ -602,7 +602,7 @@ Must be one of `true` or `false`.
 ### `coding_level`
 
 ```
-coding_level: getting started
+coding_level: getting_started
 ```
 
 The coding level required for the module as a whole.
