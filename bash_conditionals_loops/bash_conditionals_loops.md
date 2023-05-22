@@ -152,7 +152,7 @@ Print the square of 4
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-The code blocks above are written in **pseudocode**. Pseudocode is a description of code that shows humans its structure but isn't actually written in any programming language. Writing out what you want a program to do in pseudocode can be useful for [explaining, planning, and even debugging](https://towardsdatascience.com/pseudocode-101-an-introduction-to-writing-good-pseudocode-1331cb855be7) code!
+The code blocks above are written in **pseudocode**. Pseudocode is a description of code that shows humans its structure but isn't actually written in any programming language. Writing out what you want a program to do in pseudocode can be useful for [explaining, planning, and even debugging](https://builtin.com/data-science/pseudocode) code!
 
 </div>
 
