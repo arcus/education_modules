@@ -635,7 +635,7 @@ Must be one or more of the following:
 ### `sequence_name`
 
 ```
-sequence_name: bash basics
+sequence_name: bash_basics
 ```
 
 Not required. 
