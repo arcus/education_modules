@@ -34,7 +34,9 @@ app.layout = html.Div([
         center_nav_bar,
         #information_panel
         ])
-    ])
+    ],
+    style={'padding' : '25px'}
+    )
 
 ### center_nav_bar expands and contracts based on user interactions
 @app.callback(
