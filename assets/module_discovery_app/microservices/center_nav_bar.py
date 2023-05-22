@@ -6,7 +6,7 @@ import module_data
 center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that may interest you:"),
     dbc.Button(
     "General options",
-    id="general_options_collapse_button"),
+    id="general_options_collapse_button", color="light"),
     dbc.Collapse(dcc.Checklist(
            options=[
        {'label': ' Good first module', 'value': 'good_first_module'},
@@ -20,7 +20,7 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
     html.Br(),
     dbc.Button(
         "Coding Language",
-        id="coding_collapse_button"),
+        id="coding_collapse_button", color="light"),
     dbc.Collapse([
     dbc.Col( 
     dcc.Checklist(
@@ -40,7 +40,7 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
     html.Br(),
     dbc.Button(
     "Coding Level",
-    id="coding_level_collapse_button"),
+    id="coding_level_collapse_button", color="light"),
         dbc.Collapse([
     dbc.Col([
         dcc.RadioItems(
