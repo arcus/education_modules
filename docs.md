@@ -631,7 +631,7 @@ Must be one or more of the following:
 - python
 - bash
 - SQL
-
+- git
 ### `sequence_name`
 
 ```
