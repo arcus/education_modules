@@ -7,6 +7,20 @@ language: en
 narrator: UK English Female
 title: DART LiaScript docs
 
+@add_item
+
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[@0]) {
+    send.liascript(`- @1 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+
+@end
+
 import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
 -->
 
@@ -108,7 +122,136 @@ To see examples of DART modules, see [our list of completed modules](https://arc
 
 We store a lot of important information in the front matter section at the top of each module. Part of the [module QA process](#module-review-process) is checking that everything is correctly encoded in the front matter. 
 
-The front matter for a module should include all of the elements from the template.
+Which front matter items are required? It depends on the content of the module you're writing:
+
+|                                    | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                     |
+| :--------------------------------- | :---------: | :---: | :---------: | :---------------------------------------------------------------------------------------- |
+| `author`                           |      X      |   X   |      X      |                                                                                           |
+| `email`                            |      X      |   X   |      X      |                                                                                           |
+| `version`                          |      X      |   X   |      X      |                                                                                           |
+| `module_type`                      |      X      |   X   |      X      |                                                                                           |
+| `module_template_version`          |      X      |   X   |      X      |                                                                                           |
+| `lanaguge`                         |      X      |   X   |      X      |                                                                                           |
+| `narrator`                         |      X      |   X   |      X      |                                                                                           |
+| `title`                            |      X      |   X   |      X      |                                                                                           |
+| `comment`                          |      X      |   X   |      X      |                                                                                           |
+| `long_description`                 |      X      |   X   |      X      |                                                                                           |
+| `estimated_time_in_minutes`        |      X      |   X   |      X      |                                                                                           |
+| `r_file`                           |             |   X   |             |                                                                                           |
+| `pre_reqs`                         |      X      |   X   |      X      |                                                                                           |
+| `learning_objectives`              |      X      |   X   |      X      |                                                                                           |
+| `module_structure`                 |             |       |      X      |                                                                                           |
+| `resource1_name`[^3]               |             |       |      X      |                                                                                           |
+| `resource1_description`[^3]        |             |       |      X      |                                                                                           |
+| `resource1_wellvetted`[^3]         |             |       |      X      |                                                                                           |
+| `resource1_wellvetted_text`[^3]    |             |       |      X      |                                                                                           |
+| `resource1_maintained`[^3]         |             |       |      X      |                                                                                           |
+| `resource1_maintained_text`[^3]    |             |       |      X      |                                                                                           |
+| `resource1_stablesupport`[^3]      |             |       |      X      |                                                                                           |
+| `resource1_stablesupport_text`[^3] |             |       |      X      |                                                                                           |
+| `resource1_a11y_issues`[^3]        |             |       |      X      |                                                                                           |
+| `import`                           |      X      |   X   |      X      | Importing `macros.md` is required for all modules. Additional import files may be needed. |
+
+
+[^1]: Modules using [interactive R code](#interactive-r).
+[^2]: Wrapper modules are built using the wrapper template (see [which module template to use](#which-module-template-to-use)).
+[^3]: You can include up to three external resources in a wrapper module. 
+  To add additional external resources, follow the same instructions for all the `resource1` front matter items for `resource2` items (e.g. `resource2_name`, `resource2_description`) and `resource3` items.
+
+### Your front matter checklist
+
+Use the checklist below to help make sure you're including all the front matter fields you need for your module.
+
+**Which of the following describe your module?** 
+
+- [ ] includes interactive R
+- [ ] includes interactive Python
+- [ ] includes interactive SQL
+- [ ] learner will need to code to meet the learning objectives
+- [ ] is about a particular kind of data (EHR, omics data, geospatial data, etc.)
+- [ ] teaches a particular data skill or task (visualization, anlaysis, cleaning, etc.)
+- [ ] is a [wrapper module](#which-module-template-to-use)
+- [ ] is in a sequence (including the first module in the sequence)
+- [ ] follows other modules in a sequence (i.e. it's not the first in the sequence)
+- [ ] is parallel to one or more other modules (i.e. covers the same content but in a different coding langauge/operating system)
+<script output="module_characteristics">"@input"</script>
+
+You'll need the following fields in your front matter (new fields added by checking boxes above will be followed by 💫): 
+
+- author
+- email
+- version
+- module\_type
+- module\_template\_version
+- language
+- narrator
+- title
+- comment
+- long\_description
+- estimated\_time\_in\_minutes
+
+@add_item(0,r\_file)
+
+* pre\_reqs
+* learning\_objectives
+
+@add_item(6,resource1\_name)
+@add_item(6,resource1\_description)
+@add_item(6,resource1\_wellvetted)
+@add_item(6,resource1\_wellvetted\_text)
+@add_item(6,resource1\_maintained)
+@add_item(6,resource1\_maintained\_text)
+@add_item(6,resource1\_stablesupport)
+@add_item(6,resource1\_stablesupport\_text)
+@add_item(6,resource1\_a11y\_issues)
+
+* good\_first\_module
+
+@add_item(4,data\_domain)
+@add_item(5,data\_task)
+@add_item(3,coding\_required)
+
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[0] || module_characteristics[1] || module_characteristics[2] || module_characteristics[3]) {
+    send.liascript(`- coding\_level 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[0] || module_characteristics[1] || module_characteristics[2] || module_characteristics[3]) {
+    send.liascript(`- coding\_language 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[7] || module_characteristics[8]) {
+    send.liascript(`- sequence\_name 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+
+@add_item(8,previous\_sequential\_module)
+
+* sets\_you\_up\_for
+* depends\_on\_knowledge\_available\_in
+
+@add_item(9,is\_parallel\_to)
+
+* import macros.md
+
+@add_item(6,import macros_wrapper.md)
+@add_item(0,import macros_r.md)
+@add_item(1,import macros_python.md)
+@add_item(2,import macros_sql.md)
 
 ### `author`
 
@@ -213,10 +356,10 @@ If this module uses binder to host an interactive rmd file, include the bare nam
 
 Note that rmds in the education_r_environment repo should be saved in a directory that matches the file name, like `this_r_module/this_r_module.rmd`. When you use the [r\_lesson\_prep macro](#interactive-r), it will fill in the text from `r_file` to use as both the directory name and file name for this lesson's notebook. Use backslashes to escape underscores (e.g. `this\_r\_module` rather than `this_r_module`). 
 
-### `prerequisites` 
+### `pre_reqs` 
 
 ```
-@prerequisites
+@pre_reqs
 This module assumes some familiarity with X and Y, in particular:
 
 * one skill we have [another module for](https://education.arcus.chop.edu)
@@ -229,7 +372,7 @@ If relevant, you can include recommendations for somewhere else to start if the 
 
 List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
 
-Note that `@prerequisites` is a [block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#blocks) in LiaScript, which means it has `@end` after the last line.
+Note that `@pre_reqs` is a [block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#blocks) in LiaScript, which means it has `@end` after the last line.
 
 ### `learning_objectives` 
 
@@ -255,6 +398,306 @@ Note that `@learning_objectives` is a [block macro](https://liascript.github.io/
 
 The learning objectives will be automatically printed twice in each module: Once in the [Overview](#overview) and then again in the [Feedback](#feedback) section.
 
+### `module_structure`
+
+```
+@module_structure
+1. Part 1
+2. Part 2
+3. Part 3
+@end
+```
+
+The point of `@module_structure` is to give learners a sense of the learning steps in a wrapper module --- in particular, it should emphasize what pieces they'll do in the LiaScript module itself and which they'll do elsewhere. It can include as many or as few steps as needed.
+
+The following are just some examples of possible structures. The specific structure will depend greatly on the particular external module/educational resource(s) you are using in your wrapper module.
+
+Example Structure 1:
+
+```
+@module_structure
+1. Read about how this topic fits into some bigger picture here in this LiaScript course.
+2. Do the activities embedded in this module (using iFrames).
+3. Answer a few questions to make sure you understood the key parts.
+@end
+```
+
+Example Structure 2:
+
+```
+@module_structure
+1. Open the external resource in a new browser window.
+2. Read Chapter 1 and do the activities at the end.
+3. Return to this LiaScript course to answer a few questions to make sure you understood the key parts.
+@end
+```
+
+Example Structure 3:
+
+```
+@module_structure
+1. Open this external resource in a new browser window.
+2. Read Section 2.1 and 2.2.
+3. Return to this LiaScript course to do an activity.
+4. Answer a few questions (again in the LiaScript course) to make sure you understood the key parts.
+@end
+```
+
+Note that `@module_structure` is a [block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#blocks) in LiaScript, which means it has `@end` after the last line.
+It will automcatically be printed in the Lesson Preparation section of wrapper modules. 
+
+### `resource1_name`
+
+```
+resource1_name: Docker 101 Tutorial
+```
+
+This is the title of the external resource you'll be linking to. 
+Don't make it a hyperlink (we want to wait to link to the resource until the right point in the module).
+
+### `resource1_description`
+
+```
+resource1_description: In this self-paced, hands-on tutorial, you will learn how to build images, run containers, use volumes to persist data and mount in source code, and define your application using Docker Compose. You’ll even learn about a few advanced topics, such as networking and image building best practices.
+```
+
+A brief description of the external resource. 
+This will print underneath the name of the resource and just above the criteria checklist.
+
+### `resource1_wellvetted` 
+
+```
+resource1_wellvetted: true
+```
+
+**Do we have reason to believe in the accuracy of this content?**
+Who are the expert authors? Or what institutional authority guarantees accuracy? 
+
+Must be one of `true` or `false`.
+If true, this item will show up with a green checkmark circle in the criteria list. 
+If false, then it will show as a yellow circle with a horizontal line. 
+
+### `resource1_wellvetted_text` 
+
+```
+resource1_wellvetted_text: The Docker 101 tutorial is an [open source project](https://github.com/docker/getting-started), so it has many authors, but it is sponsored and hosted by Docker Inc, the company that produces the docker software. The open source nature of the tutorial also helps ensure that any errors or problems can be caught and addressed quickly. 
+```
+
+This is a short explanation justifying the `true` or `false` decision recorded for `resource1_wellvetted`. If this is a resource by expert authors and/or well-vetted, then explain. If it is not, mention the shortcoming, and explain why you think it's worth linking to in a module anyway.
+ 
+### `resource1_maintained` 
+
+```
+resource1_maintained: true
+```
+
+**Do we have reason to believe this material will stay up to date?**
+Who is in charge of implementing regular updates to this material? This is important in fast-changing fields.
+
+Must be one of `true` or `false`. 
+If true, this item will show up with a green checkmark circle in the criteria list. 
+If false, then it will show as a yellow circle with a horizontal line. 
+
+### `resource1_maintained_text` 
+
+```
+resource1_maintained_text: This tutorial is maintained by Docker Inc, so we expect that it will remain up to date whenever changes are implemented in docker.
+```
+
+This is a short explanation justifying the `true` or `false` decision recorded for `resource1_maintained`. If this is a resource that is well maintained, then explain. If it is not, mention the shortcoming, and explain why you think it's worth linking to in a module anyway.
+
+### `resource1_stablesupport`
+
+```
+resource1_stablesupport: true
+```
+
+**Do we have reason to believe this material won't disappear?**
+Who hosts it?
+
+Must be one of `true` or `false`. 
+If true, this item will show up with a green checkmark circle in the criteria list. 
+If false, then it will show as a yellow circle with a horizontal line. 
+
+### `resource1_stablesupport_text`
+
+```
+resource1_stablesupport_text: This is hosted on the Docker website, and it is a popular and widely-shared tutorial. We expect it will continue to be available for the foreseeable future.
+```
+
+This is a short explanation justifying the `true` or `false` decision recorded for `resource1_stablesupport`. If this is a resource that we expect to have stable support, then explain. If it is not, mention the shortcoming, and explain why you think it's worth linking to in a module anyway.
+
+### `resource1_a11y_issues`
+
+```
+resource1_a11y_issues: No known issues with accessibility, but we may have missed something. If you encounter an issue, please [let us know](#feedback)!
+```
+
+If you are aware of any issues with this resource related to inclusion or accessibility, list them here so learners can be forewarned. Anything that could create a barrier for a learner, or make it more difficult or frustrating to use the resource counts. Common problems are lack of transcript available for videos, lack of alt text (or sufficient written explanation in surrounding text) for images, sites that rely heavily on visual demonstration and/or point-and-click interaction for instruction, and anything that requires a credit card to sign up. 
+
+Note that this text will print just beneath the criteria checklist, but it isn't part of the checklist and won't have a green or yellow check icon. 
+We don't include accessibility and inclusion as a criterion intentionally because it isn't reasonable or helpful to assert that something is generally "accessible" or "inclusive" to all learners. 
+
+### `good_first_module`
+
+```
+good_first_module: false
+```
+
+If this was a learner's very first experience with DART, would you be happy with this module being their first impression?
+
+Required.
+
+Must be one of `true` or `false`.
+
+### `data_domain`
+
+```
+data_domain: EHR
+```
+
+This module is primarily useful for or focused on this type of data.
+
+Not required.
+
+Must be one of the following:
+
+- `EHR`
+- `omics`
+- `geospatial`
+
+As we write additional modules, we may add new data domains to this list!
+
+### `data_task`
+
+```
+data_task: 
+```
+
+What type of task/action/skill does this module teach?
+
+Not required.
+
+Must be one of the following:
+
+- `data_visualization`: Creating representations of data such as plots, graphs, maps, etc.
+- `data_management`: Organizing and storing data, including database structures, data sharing, cloud vs. local storage, and metadata
+- `data_wrangling`: Data processing steps in preparation for analysis and visualization, including cleaning, transforming, and reshaping data
+- `data_analysis`: Identifying and quantifying patterns in the data, including exploratory analysis, descriptive statistics, and more formal modeling
+
+As we write additional modules, we may add new data tasks to this list!
+
+### `coding_required`
+
+```
+coding_required: true
+```
+
+True/False based on whether achieving the module's learning objectives requires coding. This includes a user running code locally or interacting with code in the module. 
+
+Required.
+
+Must be one of `true` or `false`.
+
+### `coding_level`
+
+```
+coding_level: getting_started
+```
+
+The coding level required for the module as a whole.
+
+Not required.
+
+Must be one of the following:
+
+- `getting_started`: These modules are primarily about getting a platform set up
+- `basic`: These modules require little or no previous exposure to coding
+- `intermediate`: These modules require some previous coding exposure
+- `advanced`: These modules focus on particularly difficult or specialized tasks.
+- `practice_exercise`: These modules do not introduce new content.
+
+### `coding_language`
+
+```
+coding_language: r, python
+```
+
+Not required.
+
+Must be one or more of the following:
+
+- r
+- python
+- bash
+- SQL
+- git
+### `sequence_name`
+
+```
+sequence_name: bash_basics
+```
+
+Not required. 
+
+Must be one of the following: 
+
+- `bash_basics`
+- `r_basics`
+- `sql`
+- `python_basics`
+- (add more here)
+
+### `previous_sequential_module`
+
+```
+previous_sequential_module: sql_basics
+```
+
+If it's in a sequence and there is another module before it (i.e. it's not the first module in its sequence), list the previous module here. 
+Use the modules directory name (this should be the same as the name of its md file).
+
+### `sets_you_up_for`
+
+```
+@sets_you_up_for
+
+- sql_intermediate
+- sql_joins
+
+@end
+```
+
+Not a strict requirement or pre-requisite but notes how knowledge in this module will prepare the user for other concepts.
+
+Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
+
+### `depends_on_knowledge_available_in`
+
+```
+@depends_on_knowledge_available_in
+
+- bash_command_line_101
+- bash_command_line_102
+
+@end
+```
+
+Not a strict requirement or pre-requisite but notes where user can find useful knowledge in other modules.
+
+Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
+### `is_parallel_to`
+
+```
+@is_parallel_to
+
+- git_setup_windows
+
+@end
+```
+
+The same instruction presented in a different coding language/environment/operating system. 
+
 ### `import`
 
 ```
@@ -262,10 +705,17 @@ import: https://raw.githubusercontent.com/arcus/education_modules/templates_upda
 ```
 
 Note that importing `macros.md` imports all the general-use macros needed for our modules (see [DART macros](#dart-macros) for details), as well as the style sheet and javascript kit for our icons. 
-Every single module should import `macros.md`.
+Every single module should import `macros.md`. 
+For most modules, this is the only import file needed, but there are some notable exceptions.
 
-Include additional import links as needed for R, Python, or SQL (see the sections on [interactive coding](#including-interactive-code) for details).  
+Wrapper modules must import the wrapper macros as well: 
 
+```
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_wrapper.md
+```
+
+Modules using interactive R, Python, or SQL will need additional import files (see the sections on [interactive coding](#including-interactive-code) for details).
 ## DART macros
 
 Macros are a way to include flexible text substitution with LiaScript. 
