@@ -93,7 +93,7 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
         {'label': ' Data Wrangling', 'value': 'data_wrangling'},
         {'label': ' Data Analysis', 'value': 'data_analysis'},
         ],
-        id='coding_level_checklist')
+        id='data_task_checklist')
     ],)],
     id='data_task_collapse_checklist',
     is_open=False,

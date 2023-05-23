@@ -26,6 +26,8 @@ heading_tabs = heading_tabs.heading_tabs
 # Import inter-component callbacks
 import turn_nodes_on_off_callbacks
 
+import filter_modules
+filter_modules = filter_modules.filter_modules
 
 
 
@@ -45,11 +47,19 @@ app.layout = html.Div([
         visualization_panel,
         center_nav_bar,
         #information_panel
-        ])
+        ]),
+    html.Div("none selected", id= "debugging_helper")
+
     ],
     style={'padding' : '25px'}
     )
 
+@app.callback(Output('debugging_helper', 'children'),
+              Input('general_options_checklist', 'value'),
+            Input('coding_level_checklist', 'value'),
+              )
+def get_active_node(value, coding_level):
+    return filter_modules(value)
 
 
 # Initialize all INTRAcomponent callbacks
