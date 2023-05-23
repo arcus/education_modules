@@ -8,7 +8,7 @@ module_template_version: 1.0.0
 language: en
 narrator: UK English Female
 
-title: Docker 101 Tutorial
+title: Getting Started with Docker for Research
 
 comment:  This module introduces the popular Docker 101 tutorial, a hands-on way to get started using containers.
 
@@ -43,16 +43,17 @@ resource1_a11y_issues: No known issues with accessibility, but we may have misse
 
 
 @module_structure
-1. Read [Docker for Scientists](#docker-for-scientists) to help contextualize the tutorial for research applications.
-2. Do the Docker 101 tutorial.
-3. Return to this module to complete the [Quiz](#quiz) to check your understanding and consolidate your knowledge.
+1. Do the first half of the Docker 101 tutorial.
+2. Return to this module to complete the [Docker 101 Quiz](#docker-101-quiz) to check your understanding and consolidate your knowledge.
+3. Read "Ten simple rules for writing Dockerfiles for reproducible data science" by Nüst et al. 2020
+4. Return to this module for the final sections
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_wrapper.md
 -->
 
-# Module Title
+# Getting Started with Docker for Research
 
 @overview
 
@@ -62,14 +63,34 @@ import: https://raw.githubusercontent.com/arcus/education_modules/templates_upda
 
 @print_resource1
 
-## Docker for Scientists
+## Docker 101 Tutorial
 
-The tutorial we link to in the next section is an excellent practical introduction to using containers, but it's written with a software developer audience in mind, rather than people who might want to use containers for their research. 
+The tutorial we link to in this section is an excellent practical introduction to using containers, but it's written with a software developer audience in mind, rather than people who might want to use containers for their research. 
 
 As you work through the tutorial, you'll open and edit javascript files for a simple app (Don't worry! You don't need to know any javascript at all to be able to to the tutorial.).
-The use cases you'll work through include sharing the app with other developers
 
-## Docker 101 Tutorial
+
+### Before you Start
+
+To do the Docker 101 tutorial, you'll need a couple things set up: 
+
+- create an account (it's free) at Docker Hub ([Docker Hub signup page](https://hub.docker.com/signup/))
+- install [Docker Desktop](https://docs.docker.com/desktop/) on your computer ([installation instrutcions for Windows](https://docs.docker.com/desktop/install/windows-install/), [installation instructions for Mac](https://docs.docker.com/desktop/install/mac-install/), and [installation instructions for Linux](https://docs.docker.com/desktop/install/linux-install/))
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+To check that you have successfully installed docker on your computer, open the comand line and run the following: 
+
+```
+docker run hello-world
+```
+
+You should see a message that starts with "Hello from Docker!"
+
+</div>
+
+### Work through the Tutorial
 
 Now it's time to open the Docker 101 tutorial in a new tab!
 We recommend you keep this module open in another window so it's easy for you to return. 
@@ -77,18 +98,18 @@ We recommend you keep this module open in another window so it's easy for you to
 <div class = "external-resource">
 <b style="color: rgb(var(--color-highlight));">External Content</b><br>
 
-Complete the [Docker 101 tutorial](https://www.docker.com/101-tutorial/), which can be done either on your computer or in the cloud. 
+Complete the **first half** of the [Docker 101 tutorial](https://www.docker.com/101-tutorial/), through the section called "Sharing our App". 
+You are welcome to continue past that point if you wish, but it focuses on topics that are more relevant for software development and less likely to be of use in a research context.
 
-**Work through the whole tutorial, then return here to finish this module.**
+**Work through the first half of the tutorial only, then return here to finish this module.**
 
 </div>
 
-Note that you'll need to 
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-**Does your first container fail in the `Our Application` section?**
+**Does your first container fail in the "Our Application" section?**
 
 If you get an error message like `ERROR [2/5] RUN apk add --no-cache python g++ make` when you try to run the `docker build` command to create the container, you may be experiencing a known issue with that line. 
 If so, try deleting that line from your Dockerfile (it should be the second line in the file), save the file, and then run the `docker build` command again.
@@ -97,12 +118,12 @@ See [this post on stackoverflow](https://stackoverflow.com/questions/71200635/ca
 
 </div>
 
-Other tips:
+Other tips you can apply at any time:
 
 - To see all the docker images you've built on your computer use `docker image ls`.
 - To see all docker containers currently running use `docker ps`.
 
-## Quiz
+### Docker 101 Quiz
 
 Which of the following are part of the container image? Select all that apply.
 
@@ -114,7 +135,7 @@ Which of the following are part of the container image? Select all that apply.
 ***
 <div class = "answer">
 
-Everything needed to run your code is part of the container image! That includes the directory system itself, all the files (scripts, data, etc.) needed, any dependencies, things like environment variables, configuration files, and metadata. 
+Everything needed to run your code is part of the container image! That includes the directory system itself, all the files (scripts, etc.) needed, any dependencies, things like environment variables, configuration files, and metadata. 
 
 </div>
 ***
@@ -149,15 +170,33 @@ Note that you can (and should!) include comments in your Dockerfile describing w
 </div>
 ***
 
-True or False: The command to create a container image is `docker run`.
+In the command `docker build -t getting-started .` what does the `-t` flag stand for?
 
-[( )] True
-[(X)] False
+[[tag]]
+<script>
+  let input = "@input".trim().toLowerCase();
+  input == "tag";
+</script>
 ***
 <div class = "answer">
 
+It refers to a tag, a custom identifier you can use to refer to this image (instead of relying on the long, random IDs docker assigns by default). 
+The tag in this example is `getting-started`, so if we want to run this container we just built we can use a command like `docker run getting-started` and docker will know we're talking about the image we built and tagged above.
+
+To learn more, see the [docker handbook section on tags](https://docker-handbook.farhan.dev/image-manipulation-basics#tagging-images).
+
+</div>
+***
+
+True or False: The command to create a container image is `docker build`.
+
+[(X)] True
+[( )] False
+***
+<div class = "answer">
+
+Yes, you use `docker build` to create a container image.
 The command `docker run` starts a container that you've already built. 
-Use `docker build` to create a container image.
 
 </div>
 ***
@@ -177,27 +216,145 @@ Note that sending just the Dockerfile to someone isn't enough for them to be abl
 </div>
 ***
 
+## Using Docker in Research
+
+Most of the tutorials and explanations you'll find online about docker (including the Docker 101 tutorial you just worked on) focus on its use in software development. 
+Importantly, most of the example Dockerfiles you'll find online are also written by and for developers. 
+As someone new to docker (and even for experienced users!), being able to copy existing Dockerfiles is an important time saver.
+Although you might be able to get these images to work for your research needs, there are a lot of special considerations that come up when you're using containers for reproducible research rather than software develpoment. 
+
+So what do you need to keep in mind as you think about how to use docker in your research? 
+
+One big difference is the value placed on **transparency** and **interpretability** in the research community. 
+A good, reproducible container for a research project should be not only functional, but easy for others to understand. 
+Because of that, you should think of your Dockerfile as not just a set of instructions but an important form of communication.
+Here's a brief quote from the article you'll be reading:
+
+>The differences between a helpful, stable Dockerfile and one that is misleading, prone to failure, and full of potential obstacles are not obvious, especially for researchers who do not have extensive software development experience or formal training. By committing to this article’s rules, one can ensure that their workflows are reproducible and reusable, that computing environments are understandable by others, and that researchers have the opportunity to collaborate effectively.
 
 
-If you update your code in a container you're already running, which of the following do you have to do to for the changes to be implemented? Select all that apply.
 
-[[X]] Stop and remove the current container
-[[X]] Re-run the `docker build` command
-[[X]] Re-run the `docker run` command
+<div class = "external-resource">
+<b style="color: rgb(var(--color-highlight));">External Content</b><br>
+
+Next, read [Ten simple rules for writing Dockerfiles for reproducible data science](https://doi.org/10.1371/journal.pcbi.1008316) by Nüst et al. (2020). 
+
+Read the whole article, then return here to finish this module.
+
+</div>
+
+### Quiz: Docker for Research
+
+True or False: The authors recommend including your dataset in the container, to make your analysis fully reproducible.
+
+[( )] True
+[(X)] False
 ***
 <div class = "answer">
 
-In the section `Updating Our App`, the tutorial uses all three of the above steps to implement a change in the code. 
+They recommend storing datafiles outside of the container and using bind mounts to attach the data just when you run the container, rather than building it into the image. 
+See [Rule 7: Mount datasets at run time](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316#sec020). 
+
+For more guidance on using bind mounts, see the [docker documentation on bind mounts](https://docs.docker.com/storage/bind-mounts/).
 
 </div>
 ***
 
-## Adding Containers to your Research Workflow
+Which of the following would the authors say is more important?
 
-So now that you have an idea of how to use docker, how should you apply that in your research? 
+[(X)] Making your Dockerfile as explicit as possible, so the layers in the image are easier to see
+[( )] Making your Dockerfile as efficient as posisble, so the image is smaller and more portable
+***
+<div class = "answer">
 
+See [Rule 3: Format for clarity](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316#sec009). 
+In particular:
 
->The differences between a helpful, stable Dockerfile and one that is misleading, prone to failure, and full of potential obstacles are not obvious, especially for researchers who do not have extensive software development experience or formal training. By committing to this article’s rules, one can ensure that their workflows are reproducible and reusable, that computing environments are understandable by others, and that researchers have the opportunity to collaborate effectively.
+> In general, if your container is mostly software dependencies, you should not need to worry about image size because (a) your data is likely to have much larger storage requirements; and (b) transparency and inspectability outweigh storage concerns in data science. 
+
+</div>
+***
+
+What character is used to start a comment line in a Dockerfile?
+
+[[#]]
+<script>
+  let input = "@input".trim().toLowerCase();
+  input == "#";
+</script>
+***
+<div class = "answer">
+
+See [Rule 4: Document within the Dockerfile](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316#sec010) for examples.
+
+</div>
+***
+
+The practice of specifying versions of software is called:
+
+[[ version pinning ]]
+<script>
+  let input = "@input".trim().toLowerCase();
+  input == "version pinning";
+</script>
+***
+<div class = "answer">
+
+See [Rule 4: Document within the Dockerfile](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316#sec010) for examples.
+
+</div>
+***
+
+True or False: For a container with complex anlaysis code, the authors recommend writing your Dockerfile so that the whole analysis workflow runs automatically when you start the container.
+
+[( )] True
+[(X)] False
+***
+<div class = "answer">
+
+While they do recommend you set the container up to run the "entrypoint" of the workflow, running the whole workflow automatically might be surprising (and unwelcome) for someone who just wanted to run the container to inspect it. 
+See [Rule 8: Make the image one-click runable](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316#sec021).
+
+For a concrete example, checkout the [demo Dockerfile](https://github.com/nuest/ten-simple-rules-dockerfiles/blob/master/examples/full-demo/Dockerfile) the authors posted on their GitHub repository for this paper. 
+As written, the Dockerfile will set up a container with all the software and scripts needed to run the analysis, but it won't execute the analysis yet. 
+At the end of the Dockerfile, they provide additional commented-out lines that can be used to optionally also run the preprocessing tasks as part of the `docker build` command. 
+And they provide detailed usage instructions for how to run the whole workflow with `docker run`, and then how to extract the data and figures using `docker cp` commands (to learn more about `docker cp` see the [Docker Command Line documentation](https://docs.docker.com/engine/reference/commandline/cp/)). 
+
+</div>
+***
+
+True or False: When you run `docker build`, it will execute each line in the Dockerfile in order, starting at the top and working its way down.
+
+[(X)] True
+[( )] False
+***
+<div class = "answer">
+
+Yes, docker executes instructions in the Dockerfile in the order in which they appear. 
+
+This is valuable to know because docker also uses [caching](https://en.wikipedia.org/wiki/Cache_(computing)) to store the results of executed instructions. 
+Then the next time you build the image, it will check each line of the Dockerfile to see if it's changed since the last build, and if there have been no changes it will just use the cached results until it reaches a line that's been edited. 
+At that point, it will switch back to executing instead of using the cache and will run all remaining lines in the Dockerfile. 
+That means re-running a build when you've only made edits to the end of a Dockerfile will be potentially much faster than if you had made the same edits at the beginning. 
+
+So when you're actively working on developing a container, it's a good idea to arrange the Dockerfile with the lines least likely to change at the top and lines more likely to change at the bottom. 
+When you're ready to finalize and share your container, though, it's a good idea to re-order the lines so that the order of the instructions makes sense logically to a human reader.
+They provide a suggested order of sections under [Rule 9: Order the instructions](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316#sec022). 
+
+</div>
+***
+
+## Additional Resources
+
+[An Introduction to Rocker: Docker Containers for R](https://journal.r-project.org/archive/2017/RJ-2017-065/RJ-2017-065.pdf) by Boettiger and Eddelbuettel (2017).
+
+For an overview using containers with high performance computing (HPC) centers, see [Singularity: Scientific containers for mobility of compute](https://doi.org/10.1371/journal.pone.0177459) by Kurtzer, Sochat, and Bauer (2017).
+
+[Docker 101 for Reproducible Science](https://kordinglab.com/2022/10/28/LabTeaching-Docker-for-Science.html) by the Kording Lab
+
+[Docker for Reproducible Research](https://tilburgsciencehub.com/building-blocks/automate-and-execute-your-work/reproducible-work/docker/) by Tilburg Science Hub
+
+### Example Docker Images
 
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
@@ -207,16 +364,24 @@ So now that you have an idea of how to use docker, how should you apply that in 
 Anyone can write and publish docker containers, so it is possible that someone could intentionally use a container to spread malware or for other malicious purposes (although we don't know of any documented cases of that actually happening within research communities).
 A more common problem is that docker containers may not be updated after they're published, which means some use old versions of software and operating systems and may be missing important security patches. 
 
-Either way, it's important to carefully evaluate any docker container you're thinking of using. 
-In particular, look for [Docker Official Images](https://docs.docker.com/docker-hub/official_images/), which are kept up to date and are very unlikely to have vulnerabilities. 
+When possible, use [Docker Official Images](https://docs.docker.com/docker-hub/official_images/), which are kept up to date and are very unlikely to have vulnerabilities. 
+Note that the official images are built for very general-purpose containers, though, and are often not setup properly for research needs.
+A good second-best option is to use images published and maintained by recognized communities --- see our list below.
+There's a good chance you'll find an existing image already built with all of the software and dependencies you need for your analysis workflow.
+
+Either way, it's important to carefully evaluate any docker container you're thinking of using, and never use a container if you don't have access to its Dockerfile. 
 
 </div>
 
+It's a great idea to use already-existing container images when possible. 
+It saves you time, and it also makes your work even more reproducible since you're using a container that's already available in your research community rather than writing one from scratch. 
 
-## Additional Resources
+- For R and RStudio, see images maintained by [rocker](https://rocker-project.org/)
+- For Jupyter notebook images, see [Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html)
+- For bioinformatics, see [Bioconductor Docker images](https://bioconductor.org/help/docker/)
+- For neuroscience, see [NeuroDebian images](https://hub.docker.com/_/neurodebian)
 
-[An Introduction to Rocker: Docker Containers for R](https://journal.r-project.org/archive/2017/RJ-2017-065/RJ-2017-065.pdf) by Carl Boettiger and Dirk Eddelbuettel
-
+Do you know of other sets of docker images we should list here? Please [let us know](#feedback)!
 
 ## Feedback
 
