@@ -18,7 +18,7 @@ neutral_edge_styling = {
          }
 
 default_stylesheet = [
-    #### Have every node labeled with its title, and initially gray:
+    #### Have every node initially gray:
     {'selector': 'node', 'style': neutral_node_styling},
     {'selector': 'node',
     'style': {
@@ -34,13 +34,13 @@ default_stylesheet = [
     'style': neutral_edge_styling
     },
     #### Highlight the good_first_module modules
-    {
-    'selector': '[good_first_module *= "true"]',
-    'style': {
-        'background-color': 'gray',
-        'color': 'black',
-        'opacity': 1,
-        'label': 'data(title)'
-        }
-    }
+    # {
+    # 'selector': '[good_first_module *= "true"]',
+    # 'style': {
+    #     'background-color': 'gray',
+    #     'color': 'black',
+    #     'opacity': 1,
+    #     'label': 'data(title)'
+    #     }
+    # }
 ]

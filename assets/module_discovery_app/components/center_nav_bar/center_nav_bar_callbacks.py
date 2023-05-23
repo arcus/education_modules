@@ -6,10 +6,10 @@ import dash_cytoscape as cyto
 def get_center_nav_bar_callbacks(app):
     @app.callback(
         Output("coding_language_collapse_checklist", "is_open"),
-        [Input("coding_collapse_button", "n_clicks")],
+        [Input("coding_language_collapse_button", "n_clicks")],
         [State("coding_language_collapse_checklist", "is_open")],
         )
-    def toggle_collapse1(n, is_open):
+    def toggle_collapse(n, is_open):
         if n:
             return not is_open
         return is_open
@@ -34,3 +34,22 @@ def get_center_nav_bar_callbacks(app):
             return not is_open
         return is_open
         
+    @app.callback(
+        Output("data_task_collapse_checklist", "is_open"),
+        [Input("data_task_collapse_button", "n_clicks")],
+        [State("data_task_collapse_checklist", "is_open")],
+        )
+    def toggle_collapse3(n, is_open):
+        if n:
+            return not is_open
+        return is_open
+        
+    @app.callback(
+        Output("data_domain_collapse_checklist", "is_open"),
+        [Input("data_domain_collapse_button", "n_clicks")],
+        [State("data_domain_collapse_checklist", "is_open")],
+        )
+    def toggle_collapse3(n, is_open):
+        if n:
+            return not is_open
+        return is_open
