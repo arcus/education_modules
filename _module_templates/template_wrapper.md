@@ -7,6 +7,7 @@ module_type: wrapper
 module_template_version: 1.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 
 title: Module Title
 

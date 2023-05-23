@@ -7,6 +7,7 @@ module_type: exercise
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 
 title: Module Title
 
