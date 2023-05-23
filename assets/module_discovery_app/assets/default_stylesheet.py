@@ -8,7 +8,8 @@ neutral_node_styling = {
         "font-size": "20px",
         'width': "20px",
         'height': "20px",
-        'opacity': .3
+        'opacity': .3,
+        'label': " "
          }
 
 neutral_edge_styling = {
@@ -17,30 +18,33 @@ neutral_edge_styling = {
         'width': '3px'
          }
 
+selected_styling = {
+                'label': 'data(title)',
+                'color': 'black',
+                'background_color': 'gray',
+                'opacity': 1
+                    }
+
+unselected_styling = {
+                    'color': 'black',
+                    'label': ' ',
+                        }
+
+
 default_stylesheet = [
-    #### Have every node initially gray:
+    # make all the nodes neutrally styled
     {'selector': 'node', 'style': neutral_node_styling},
     {'selector': 'node',
     'style': {
         'background-color': 'lightgray',
         'color': 'gray',
-        #'label': 'data(title)',
+        'label': ' ',
         'opacity': 0.3
         }
     },
-    #### Make the edges also opaque
+    # make all the edges neutrally styled
     {
     'selector': 'edge',
     'style': neutral_edge_styling
     },
-    #### Highlight the good_first_module modules
-    # {
-    # 'selector': '[good_first_module *= "true"]',
-    # 'style': {
-    #     'background-color': 'gray',
-    #     'color': 'black',
-    #     'opacity': 1,
-    #     'label': 'data(title)'
-    #     }
-    # }
 ]

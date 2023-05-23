@@ -6,6 +6,9 @@ import dash_cytoscape as cyto
 import module_data
 df = module_data.df
 
+# Import styling from assets directory
+from assets import default_stylesheet 
+
 # Import app components and their internal callbacks
 from components.center_nav_bar import center_nav_bar, center_nav_bar_callbacks 
 center_nav_bar = center_nav_bar.center_nav_bar
@@ -20,8 +23,10 @@ from components.heading_tabs import heading_tabs
 heading_tabs = heading_tabs.heading_tabs
 
 
-# Import styling from assets directory
-from assets import default_stylesheet 
+# Import inter-component callbacks
+import turn_nodes_on_off_callbacks
+
+
 
 
 # Initialize the app
@@ -51,6 +56,7 @@ app.layout = html.Div([
 center_nav_bar_callbacks.get_center_nav_bar_callbacks(app)
 
 # Initialize all INTERcomponent callbacks next...
+turn_nodes_on_off_callbacks.turn_nodes_on_off(app)
     
 if __name__ == '__main__':
     app.run_server(debug=True)
