@@ -2,7 +2,7 @@ from dash import Dash, html, Input, Output, dcc, ctx, State
 import dash_bootstrap_components as dbc
 import dash_cytoscape as cyto
 import module_data 
-from microservices import default_stylesheet 
+from assets import default_stylesheet 
 
 df = module_data.df
 
@@ -20,9 +20,7 @@ nodes = [
             'coding_required': df.loc[row,'coding_required'],
             'coding_language': df.loc[row,'coding_language'],
             'coding_level': df.loc[row,'coding_level'],
-            },#'selected': True
-        ### Use classes here for all fo the data!!! 'classes': author
-        #'position': {'x': 20*lat, 'y': -20*long}
+            },
     }
     for row in df.index 
 ]

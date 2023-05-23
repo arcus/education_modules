@@ -13,3 +13,4 @@ heading_tabs = dbc.Col(html.Div(
             )
                 ),  
             align='end')
+            
