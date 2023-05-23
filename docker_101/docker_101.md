@@ -45,8 +45,8 @@ resource1_a11y_issues: No known issues with accessibility, but we may have misse
 @module_structure
 1. Do the first half of the Docker 101 tutorial.
 2. Return to this module to complete the [Docker 101 Quiz](#docker-101-quiz) to check your understanding and consolidate your knowledge.
-3. Read "Ten simple rules for writing Dockerfiles for reproducible data science" by Nüst et al. 2020
-4. Return to this module for the final sections
+3. Read the article "Ten simple rules for writing Dockerfiles for reproducible data science" by Nüst et al. 2020
+4. Return to this module for the [Docker for Research Quiz](#quiz-docker-for-research), and for the final sections of the module.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
