@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  0.0.0
+version:  1.0.0
 language: en
 narrator: UK English Female
 title: DART LiaScript docs
@@ -28,6 +28,8 @@ import: https://raw.githubusercontent.com/arcus/education_modules/templates_upda
 
 This is the technical documentation for DART modules written with [LiaScript](https://liascript.github.io/). 
 LiaScript is a [markdown](https://en.wikipedia.org/wiki/Markdown) dialect, so writing a DART module is a lot like writing any other plain text document, with a few exceptions for special formatting. 
+
+**This is verison @version of this document.**
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -286,15 +288,17 @@ module_type: standard
 
 Should be one of `standard`, `wrapper`, or `exercise` (see [which module template to use](#which-module-template-to-use)).
 
-### `module_template_version` 
+### `docs_version` 
 
 ```
-module_template_version: 3.0.0
+docs_version: 1.0.0
 ```
 
-This value will already be filled in for you when you open the template file. 
+This value refers to this document, `docs.md`, and it's how we keep track of what our module writing guidelines were when a module was last updated.
 
-When you're ready to submit your module for QA, it should have a template version number that is up to date with the current module template (`template_standard.md`, `template_wrapper.md`, or `template_exercise.md`) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing submitting it for QA.
+When you're ready to submit your module for QA, it should have a docs version number that is up to date with the **major** version of this document (@version, note that it's fine if there have been minor updates or revisions to docs.md, you only need to worry about the major version) -- if not, the module should be brought in line with any changes that have occurred to docs.md before continuing to submit it for QA.
+
+If you wrote a module using a previous version of docs.md, look for a [checklist issue template](#updating-this-document) help you bring your module up to date. 
 
 ### `language`
 
@@ -303,7 +307,7 @@ language: en
 ```
 
 This defines the language for the file (default is English, `en`). 
-See the [LiaScript documentation on `language`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#%60language%60) for more details. 
+See the [LiaScript documentation on `language`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#language) for more details. 
 
 ### `narrator`
 
@@ -312,7 +316,17 @@ narrator: UK English Female
 ```
 
 This defines the voice to be used for text to voice, if the learner chooses to use that.
-See the [LiaScript documentation on `narrator`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#%60narrator%60) for more details. 
+See the [LiaScript documentation on `narrator`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#narrator) for more details. 
+
+### `mode`
+
+```
+mode: Textbook
+```
+
+This sets the [default mode of display for LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#mode). 
+
+It should be `Textbook`.
 
 ### `title` 
 
@@ -1828,3 +1842,22 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
 # this has the advantage of keeping the scales for the plot consistent
 # and it means you don't have to set the scales manually when using geom_abline
 ```
+
+## Updating this document
+
+**This is verison @version of this document.**
+
+When you update docs.md, be sure to [increment its version](https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md) in the front matter.
+
+For any **major** updates to docs.md, you should also provide an issue template checklist for bringing modules up to date with the new version of docs. 
+For example, see the [checklist for docs v1](https://github.com/arcus/education_modules/blob/main/.github/ISSUE_TEMPLATE/docs_update_checklist_v1.md).
+This will create a new option in our list of available issues (see [create a new issue](https://github.com/arcus/education_modules/issues/new/choose)), which we can then use to bring all of the current modules up to date with the new guidelines. 
+
+If a module misses a round of updates (e.g. it never gets updated for docs 1.0.0 but there's already a docs 2.0.0 out), then it will need to go through all of the checklists to bring it up to date. 
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+If you're planning major updates to docs.md, it's a good idea to start your checklist issue template right at the beginning of your editing process and add to it gradually as you make changes in docs.md so you don't forget anything.
+
+</div>

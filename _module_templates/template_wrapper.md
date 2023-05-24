@@ -4,7 +4,7 @@ author:   Your Name
 email:    email@chop.edu
 version:  0.0.0
 module_type: wrapper
-docs_version: 0.0.0
+docs_version: 1.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
