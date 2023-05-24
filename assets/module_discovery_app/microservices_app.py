@@ -56,10 +56,12 @@ app.layout = html.Div([
 
 @app.callback(Output('debugging_helper', 'children'),
               Input('general_options_checklist', 'value'),
+            Input('coding_language_checklist', 'value'),
             Input('coding_level_checklist', 'value'),
+            Input('data_task_checklist', 'value')
               )
-def get_active_node(value, coding_level):
-    return filter_modules(value)
+def get_active_node(value, coding_language_value, coding_level_value, data_task_value):
+    return filter_modules(value, coding_language_value, coding_level_value, data_task_value)[0]
 
 
 # Initialize all INTRAcomponent callbacks

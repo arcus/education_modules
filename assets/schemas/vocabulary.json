@@ -54,7 +54,7 @@
         "description": "These modules focus on particularly difficult or specialized tasks."
       },
       {
-        "const": "practice exercise",
+        "const": "practice_exercise",
         "description": "These modules do not introduce new content."
       },
       {
@@ -241,11 +241,11 @@
         "description": "TBD."
       },
       {
-        "const": "data_cleaning",
+        "const": "",
         "description": "TBD."
       },
       {
-        "const": "data_transformation",
+        "const": "data_wrangling",
         "description": "TBD."
       },
       {

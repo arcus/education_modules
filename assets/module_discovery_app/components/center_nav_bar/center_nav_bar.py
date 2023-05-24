@@ -21,12 +21,13 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
     is_open=True),
 
     html.Br(),
+    html.Br(),
 
     # CODING LANGUAGE
 
     dbc.Button(
         "Coding Language",
-        id="coding_language_collapse_button", color="light"),
+        id="coding_language_collapse_button", color="dark", outline=True),
     dbc.Collapse([
     dbc.Col( 
     dcc.Checklist(
@@ -44,12 +45,13 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
     is_open=False,
     ),
     html.Br(),
+    html.Br(),
 
     # CODING LEVEL
 
     dbc.Button(
     "Coding Level",
-    id="coding_level_collapse_button", color="light"),
+    id="coding_level_collapse_button", color="dark", outline=True),
         dbc.Badge("?", id="coding_level_info_button", pill=True,  color="light", text_color="dark"),
     dbc.Popover(
             dbc.PopoverBody(dcc.Markdown("Put something **about stuff** _here!_")),
@@ -71,6 +73,7 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
     id='coding_level_collapse_checklist',
     is_open=False,
     ),
+    html.Br(),
     html.Br(),
 
     # DATA TASK
@@ -98,6 +101,7 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
     id='data_task_collapse_checklist',
     is_open=False,
     ),
+    html.Br(),
     html.Br(),
 
     # DATA DOMAIN

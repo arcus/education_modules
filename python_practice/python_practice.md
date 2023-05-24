@@ -31,7 +31,7 @@ good_first_module: false
 
 coding_required: true
 coding_language: Python
-coding_level: practice exercise
+coding_level: practice_exercise
 
 sequence_name: Python
 previous_sequential_module: data_visualization_in_seaborn

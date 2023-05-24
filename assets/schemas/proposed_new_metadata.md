@@ -29,8 +29,8 @@
 - [ ] `data_task`: optional metadata. What type of task/action/skill does this module teach?
   - `data_visualization`
   - `data_management`
-  - `data_cleaning`
-  - `data_transformation`
+  - ``
+  - `data_wrangling`
   - `data_analysis`
 - [ ] `sequence`: this is an optional category for modules that are part of a named sequence of modules like the R Basics sequence or the Bash sequence.
   - `sequence_number`: suggested linear order for moving through the sequence. 
