@@ -12,24 +12,23 @@ title: Getting Started with Docker for Research
 
 comment: This tutorial combines a hands-on interactive docker tutorial published by Docker Inc with an academic article outlining best practices for using docker for research. 
 
-long_description: The Docker 101 tutorial is a popular, hands-on approach to learning docker that will get you using 
-containers right away, so you can learn by doing. 
+long_description: This module will help you get started using docker, the most widely-used container software, for your research. The Docker 101 tutorial is a popular, hands-on approach to learning docker that will get you using containers right away, so you can learn by doing. To help you bridge the gap between basic docker use and best practices for using docker in research, you'll also read an article outlining 10 rules to help you create great containers for research. We also provide links to ready-to-use docker images for a variety of analysis workflows. This module includes running and editing comamnds in the terminal, so you'll need some basic familiarity with bash, but it is otherwise appropriate for beginniners. No prior experience with docker or containers is assumed. 
 
-estimated_time_in_minutes: 
+estimated_time_in_minutes: 60
 
 @pre_reqs
 You will need some familiarity with the command line, such as being able to change directories and run bash commands that will be supplied for you to copy and paste. You will need to create and edit text files in a text editor like VSCode. 
 
-You'll also need to create an account on [Docker Hub](https://hub.docker.com/) (it's free), if you don't have one already. 
+You'll also need to create an account on [Docker Hub](https://hub.docker.com/) (it's free), if you don't have one already, and you'll need to be able to install the Docker Desktop software on your machine (also free). 
 @end
 
 @learning_objectives  
 After completion of this module, learners will be able to:
 
-- identify key elements
-- create a product
-- do a task
-- articulate the rationale for something
+- Use `docker build` to create an image from a Dockerfile
+- Start, stop, and remove containers
+- Share containers
+- Identify best practices for Dockerfiles in research
 @end
 
 resource1_name: Docker 101 Tutorial
@@ -42,6 +41,15 @@ resource1_stablesupport: true
 resource1_stablesupport_text: This is hosted on the Docker website, and it is a popular and widely-shared tutorial. We expect it will continue to be available for the foreseeable future.
 resource1_a11y_issues: No known issues with accessibility, but we may have missed something. If you encounter an issue, please [let us know](#feedback)!
 
+resource2_name: Ten simple rules for writing Dockerfiles for reproducible data science
+resource2_description: From the Docker website: "In this self-paced, hands-on tutorial, you will learn how to build images, run containers, use volumes to persist data and mount in source code, and define your application using Docker Compose. You’ll even learn about a few advanced topics, such as networking and image building best practices."
+resource2_wellvetted: true
+resource2_wellvetted_text: This article was written by expert authors and published in PLOS Computational Biology, a peer reviewed scientific journal (you can read about their [editorial and peer review process](https://journals.plos.org/ploscompbiol/s/editorial-and-peer-review-process) on their website). 
+resource2_maintained: true
+resource2_maintained_text: PLOS Computational Biology links any corrections, expressions of concern, or retractions to the affected article's PLOS web page, so any important updates should be available there (for more details read [PLOS's policy on posting corrections](https://journals.plos.org/ploscompbiol/s/corrections-expressions-of-concern-and-retractions)).
+resource2_stablesupport: true
+resource2_stablesupport_text: This article has an assigned DOI (digital identifier of an object), which helps to ensure it will continue to be available (read more about DOIs at [doi.org](https://www.doi.org/the-identifier/what-is-a-doi/)). 
+resource2_a11y_issues: No known issues with accessibility, but we may have missed something. If you encounter an issue, please [let us know](#feedback)!
 
 @module_structure
 1. Do the first half of the Docker 101 tutorial.
@@ -63,6 +71,8 @@ import: https://raw.githubusercontent.com/arcus/education_modules/templates_upda
 @lesson_prep_wrapper
 
 @print_resource1
+
+@print_resource2
 
 ## Docker 101 Tutorial
 
