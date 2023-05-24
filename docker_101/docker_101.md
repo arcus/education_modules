@@ -10,13 +10,14 @@ narrator: UK English Female
 
 title: Getting Started with Docker for Research
 
-comment:  This module introduces the popular Docker 101 tutorial, a hands-on way to get started using containers.
+comment: This tutorial combines a hands-on interactive docker tutorial published by Docker Inc with an academic article outlining best practices for using docker for research. 
 
-long_description: This is a longer description, which should be understandable for a lay audience.
+long_description: The Docker 101 tutorial is a popular, hands-on approach to learning docker that will get you using 
+containers right away, so you can learn by doing. 
 
 estimated_time_in_minutes: 
 
-@prerequisites
+@pre_reqs
 You will need some familiarity with the command line, such as being able to change directories and run bash commands that will be supplied for you to copy and paste. You will need to create and edit text files in a text editor like VSCode. 
 
 You'll also need to create an account on [Docker Hub](https://hub.docker.com/) (it's free), if you don't have one already. 
