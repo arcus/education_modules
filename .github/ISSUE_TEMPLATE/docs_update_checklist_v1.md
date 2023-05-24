@@ -1,17 +1,17 @@
 ---
 name: Checklist for updating modules
-about: Checklist for updating a module to comply with docs.md 1.0.0
+about: Checklist for updating a module to comply with docs.md v1
 title: Docs Update Checklist
 assignees: ''
 
 ---
 
-# Module Update Checklist for docs version 1.0.0
+# Module Update Checklist
 ----
 Name of Module: {take from the title of the main markdown file for the module}
 PR for module update: #[PR number here]
 
-This is the checklist for bringing a module up to date with the [latest version of docs.md: 0.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d618d1503328dbeb2239993f6136d7c48e3a782a/docs.md#1) 
+This is the checklist for bringing a module up to date with the [latest major version of docs.md: v1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ddc7d4a1a8659723c3f0db0a87fcc3b26a0ae071/docs.md#1) 
 Note that this link points to a specific commit and is therefore frozen in time. 
 If you want to update this checklist after pushing new changes to docs.md, be sure to update this link as well.
 
