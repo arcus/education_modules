@@ -1,7 +1,5 @@
 from dash import Dash, html, Input, Output, dcc, ctx, State
 import dash_bootstrap_components as dbc
-import dash_cytoscape as cyto
-import module_data 
 
 center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that may interest you:"),
     

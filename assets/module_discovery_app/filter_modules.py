@@ -1,5 +1,6 @@
 ### The filter_modules function takes the checklist and radio buttons from the center_nav_bar and returns a list of all modules that match the given filters.
-
+from dash import Dash, html, Input, Output, dcc, ctx, State
+import dash_bootstrap_components as dbc
 import module_data 
 
 def filter_modules(general_options_value, coding_language_value, coding_level_value, data_task_value, data_domain_value):
@@ -51,3 +52,13 @@ def filter_modules(general_options_value, coding_language_value, coding_level_va
     return matching_modules, non_matching_modules
             
 
+def update_hidden_filtered_modules(app):
+    @app.callback(Output('hidden_filtered_modules_list', 'children'),
+                Input('general_options_checklist', 'value'),
+                Input('coding_language_checklist', 'value'),
+                Input('coding_level_checklist', 'value'),
+                Input('data_task_checklist', 'value'),
+                Input('data_domain_checklist', 'value')
+                )
+    def filtering(value, coding_language_value, coding_level_value, data_task_value, data_domain_value):
+        return filter_modules(value, coding_language_value, coding_level_value, data_task_value, data_domain_value)[0]

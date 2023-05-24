@@ -43,9 +43,5 @@ visualization_panel = dbc.Col(
                     style={'width': '100%', 'height': '450px'},
                     userZoomingEnabled=False
                      ),
-                     html.Div([
-                        dcc.Markdown("buttons with all of the selected modules goes here"),
-                        #html.Div(create_module_buttons(nodes), id='matching_module_buttons')
-                     ])
-                     ], width=5
+                     ]
                 )

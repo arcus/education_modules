@@ -22,12 +22,20 @@ app_title = app_title.app_title
 from components.heading_tabs import heading_tabs
 heading_tabs = heading_tabs.heading_tabs
 
+from components.clickable_module_list import clickable_module_list, clickable_module_list_callbacks
+clickable_module_list_panel = clickable_module_list.clickable_module_list
+
+# Import the hidden components that keep track of the filtered modules and the active module
+from components import hidden_filtered_modules, hidden_active_module
+hidden_filtered_modules = hidden_filtered_modules.hidden_filtered_modules
+hidden_active_module = hidden_active_module.hidden_active_module
 
 # Import inter-component callbacks
 import turn_nodes_on_off_callbacks
 
 import filter_modules
-filter_modules = filter_modules.filter_modules
+import determine_active_node
+
 
 
 
@@ -44,32 +52,25 @@ app.layout = html.Div([
         ),
     html.Hr(),
     dbc.Row(children=[
-        visualization_panel,
+        dbc.Col(children=[visualization_panel, html.Br(), clickable_module_list_panel],width=5),
         center_nav_bar,
         #information_panel
         ]),
-    html.Div("none selected", id= "debugging_helper")
+    html.Div(hidden_filtered_modules), # visible for debugging purposes, change to 'display': 'none' for production purposes.
+    html.Div(hidden_active_module) # visible for debugging purposes, change to 'display': 'none' for production purposes.
 
     ],
     style={'padding' : '25px'}
     )
-
-@app.callback(Output('debugging_helper', 'children'),
-              Input('general_options_checklist', 'value'),
-            Input('coding_language_checklist', 'value'),
-            Input('coding_level_checklist', 'value'),
-            Input('data_task_checklist', 'value'),
-            Input('data_domain_checklist', 'value')
-              )
-def get_active_node(value, coding_language_value, coding_level_value, data_task_value, data_domain_value):
-    return filter_modules(value, coding_language_value, coding_level_value, data_task_value, data_domain_value)[0]
-
 
 # Initialize all INTRAcomponent callbacks
 center_nav_bar_callbacks.get_center_nav_bar_callbacks(app)
 
 # Initialize all INTERcomponent callbacks next...
 turn_nodes_on_off_callbacks.turn_nodes_on_off(app)
+filter_modules.update_hidden_filtered_modules(app)
+clickable_module_list_callbacks.create_clickable_module_list(app)
+determine_active_node.determine_active_node(app)
     
 if __name__ == '__main__':
     app.run_server(debug=True)
