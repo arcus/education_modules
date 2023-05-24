@@ -7,6 +7,20 @@ language: en
 narrator: UK English Female
 title: DART LiaScript docs
 
+@add_item
+
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[@0]) {
+    send.liascript(`- @1 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+
+@end
+
 import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
 -->
 
@@ -92,7 +106,7 @@ The overwhelming majority of our existing modules are standard modules.
 
 You should use the **wrapper** template if more than 50% of the content is embedded or linked to external resources (things not hosted in the DART repository). 
 
-You should use the **exercise** template if the module is mostly practice, not instruction. 
+You should use the **exercise** template if the module is mostly practice, not instruction. This template is similar to the standard template but not exactly the same, and the module content will be very different. This type of module might present the learner with a problem to solve using the skills that could be acquired in our instructional modules, and might include a dataset to explore. 
 
 ## How to use template files
 
@@ -112,30 +126,33 @@ We store a lot of important information in the front matter section at the top o
 
 Which front matter items are required? It depends on the content of the module you're writing:
 
-|                               | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                    |
-| :---------------------------- | :---------: | :---: | :---------: | :--------------------------------------------------------------------------------------- |
-| `author`                      |      X      |   X   |      X      |                                                                                          |
-| `email`                       |      X      |   X   |      X      |                                                                                          |
-| `version`                     |      X      |   X   |      X      |                                                                                          |
-| `module_type`                 |      X      |   X   |      X      |                                                                                          |
-| `module_template_version`     |      X      |   X   |      X      |                                                                                          |
-| `lanaguge`                    |      X      |   X   |      X      |                                                                                          |
-| `narrator`                    |      X      |   X   |      X      |                                                                                          |
-| `title`                       |      X      |   X   |      X      |                                                                                          |
-| `comment`                     |      X      |   X   |      X      |                                                                                          |
-| `long_description`            |      X      |   X   |      X      |                                                                                          |
-| `estimated_time_in_minutes`   |      X      |   X   |      X      |                                                                                          |
-| `r_file`                      |             |   X   |             |                                                                                          |
-| `prerequisites`               |      X      |   X   |      X      |                                                                                          |
-| `learning_objectives`         |      X      |   X   |      X      |                                                                                          |
-| `module_structure`            |             |       |      X      |                                                                                          |
-| `resource1_name`[^3]          |             |       |      X      |                                                                                          |
-| `resource1_description`[^3]   |             |       |      X      |                                                                                          |
-| `resource1_wellvetted`[^3]    |             |       |      X      |                                                                                          |
-| `resource1_maintained`[^3]    |             |       |      X      |                                                                                          |
-| `resource1_stablesupport`[^3] |             |       |      X      |                                                                                          |
-| `resource1_a11y_issues`[^3]   |             |       |      X      |                                                                                          |
-| `import`                      |      X      |   X   |      X      | Importing `macros.md` is required for all modules. Additional import files may be needed. |
+|                                    | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                     |
+| :--------------------------------- | :---------: | :---: | :---------: | :---------------------------------------------------------------------------------------- |
+| `author`                           |      X      |   X   |      X      |                                                                                           |
+| `email`                            |      X      |   X   |      X      |                                                                                           |
+| `version`                          |      X      |   X   |      X      |                                                                                           |
+| `module_type`                      |      X      |   X   |      X      |                                                                                           |
+| `module_template_version`          |      X      |   X   |      X      |                                                                                           |
+| `lanaguge`                         |      X      |   X   |      X      |                                                                                           |
+| `narrator`                         |      X      |   X   |      X      |                                                                                           |
+| `title`                            |      X      |   X   |      X      |                                                                                           |
+| `comment`                          |      X      |   X   |      X      |                                                                                           |
+| `long_description`                 |      X      |   X   |      X      |                                                                                           |
+| `estimated_time_in_minutes`        |      X      |   X   |      X      |                                                                                           |
+| `r_file`                           |             |   X   |             |                                                                                           |
+| `pre_reqs`                         |      X      |   X   |      X      |                                                                                           |
+| `learning_objectives`              |      X      |   X   |      X      |                                                                                           |
+| `module_structure`                 |             |       |      X      |                                                                                           |
+| `resource1_name`[^3]               |             |       |      X      |                                                                                           |
+| `resource1_description`[^3]        |             |       |      X      |                                                                                           |
+| `resource1_wellvetted`[^3]         |             |       |      X      |                                                                                           |
+| `resource1_wellvetted_text`[^3]    |             |       |      X      |                                                                                           |
+| `resource1_maintained`[^3]         |             |       |      X      |                                                                                           |
+| `resource1_maintained_text`[^3]    |             |       |      X      |                                                                                           |
+| `resource1_stablesupport`[^3]      |             |       |      X      |                                                                                           |
+| `resource1_stablesupport_text`[^3] |             |       |      X      |                                                                                           |
+| `resource1_a11y_issues`[^3]        |             |       |      X      |                                                                                           |
+| `import`                           |      X      |   X   |      X      | Importing `macros.md` is required for all modules. Additional import files may be needed. |
 
 
 [^1]: Modules using [interactive R code](#interactive-r).
@@ -143,6 +160,100 @@ Which front matter items are required? It depends on the content of the module y
 [^3]: You can include up to three external resources in a wrapper module. 
   To add additional external resources, follow the same instructions for all the `resource1` front matter items for `resource2` items (e.g. `resource2_name`, `resource2_description`) and `resource3` items.
 
+### Your front matter checklist
+
+Use the checklist below to help make sure you're including all the front matter fields you need for your module.
+
+**Which of the following describe your module?** 
+
+- [ ] includes interactive R
+- [ ] includes interactive Python
+- [ ] includes interactive SQL
+- [ ] learner will need to code to meet the learning objectives
+- [ ] is about a particular kind of data (EHR, omics data, geospatial data, etc.)
+- [ ] teaches a particular data skill or task (visualization, anlaysis, cleaning, etc.)
+- [ ] is a [wrapper module](#which-module-template-to-use)
+- [ ] is in a sequence (including the first module in the sequence)
+- [ ] follows other modules in a sequence (i.e. it's not the first in the sequence)
+- [ ] is parallel to one or more other modules (i.e. covers the same content but in a different coding langauge/operating system)
+<script output="module_characteristics">"@input"</script>
+
+You'll need the following fields in your front matter (new fields added by checking boxes above will be followed by 💫): 
+
+- author
+- email
+- version
+- module\_type
+- module\_template\_version
+- language
+- narrator
+- title
+- comment
+- long\_description
+- estimated\_time\_in\_minutes
+
+@add_item(0,r\_file)
+
+* pre\_reqs
+* learning\_objectives
+
+@add_item(6,resource1\_name)
+@add_item(6,resource1\_description)
+@add_item(6,resource1\_wellvetted)
+@add_item(6,resource1\_wellvetted\_text)
+@add_item(6,resource1\_maintained)
+@add_item(6,resource1\_maintained\_text)
+@add_item(6,resource1\_stablesupport)
+@add_item(6,resource1\_stablesupport\_text)
+@add_item(6,resource1\_a11y\_issues)
+
+* good\_first\_module
+
+@add_item(4,data\_domain)
+@add_item(5,data\_task)
+@add_item(3,coding\_required)
+
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[0] || module_characteristics[1] || module_characteristics[2] || module_characteristics[3]) {
+    send.liascript(`- coding\_level 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[0] || module_characteristics[1] || module_characteristics[2] || module_characteristics[3]) {
+    send.liascript(`- coding\_language 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[7] || module_characteristics[8]) {
+    send.liascript(`- sequence\_name 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
+
+@add_item(8,previous\_sequential\_module)
+
+* sets\_you\_up\_for
+* depends\_on\_knowledge\_available\_in
+
+@add_item(9,is\_parallel\_to)
+
+* import macros.md
+
+@add_item(6,import macros_wrapper.md)
+@add_item(0,import macros_r.md)
+@add_item(1,import macros_python.md)
+@add_item(2,import macros_sql.md)
 
 ### `author`
 
@@ -191,7 +302,7 @@ When you're ready to submit your module for QA, it should have a template versio
 language: en
 ```
 
-This defintes the language for the file (default is English, `en`). 
+This defines the language for the file (default is English, `en`). 
 See the [LiaScript documentation on `language`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#%60language%60) for more details. 
 
 ### `narrator`
@@ -247,10 +358,10 @@ If this module uses binder to host an interactive rmd file, include the bare nam
 
 Note that rmds in the education_r_environment repo should be saved in a directory that matches the file name, like `this_r_module/this_r_module.rmd`. When you use the [r\_lesson\_prep macro](#interactive-r), it will fill in the text from `r_file` to use as both the directory name and file name for this lesson's notebook. Use backslashes to escape underscores (e.g. `this\_r\_module` rather than `this_r_module`). 
 
-### `prerequisites` 
+### `pre_reqs` 
 
 ```
-@prerequisites
+@pre_reqs
 This module assumes some familiarity with X and Y, in particular:
 
 * one skill we have [another module for](https://education.arcus.chop.edu)
@@ -263,7 +374,7 @@ If relevant, you can include recommendations for somewhere else to start if the 
 
 List any skills and knowledge needed to do this module here. When available, include links to resources, especially other modules we've made (to show learners where this falls within our catalog).
 
-Note that `@prerequisites` is a [block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#blocks) in LiaScript, which means it has `@end` after the last line.
+Note that `@pre_reqs` is a [block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#blocks) in LiaScript, which means it has `@end` after the last line.
 
 ### `learning_objectives` 
 
@@ -429,6 +540,167 @@ If you are aware of any issues with this resource related to inclusion or access
 Note that this text will print just beneath the criteria checklist, but it isn't part of the checklist and won't have a green or yellow check icon. 
 We don't include accessibility and inclusion as a criterion intentionally because it isn't reasonable or helpful to assert that something is generally "accessible" or "inclusive" to all learners. 
 
+### `good_first_module`
+
+```
+good_first_module: false
+```
+
+If this was a learner's very first experience with DART, would you be happy with this module being their first impression?
+
+Required.
+
+Must be one of `true` or `false`.
+
+### `data_domain`
+
+```
+data_domain: EHR
+```
+
+This module is primarily useful for or focused on this type of data.
+
+Not required.
+
+Must be one of the following:
+
+- `EHR`
+- `omics`
+- `geospatial`
+
+As we write additional modules, we may add new data domains to this list!
+
+### `data_task`
+
+```
+data_task: 
+```
+
+What type of task/action/skill does this module teach?
+
+Not required.
+
+Must be one of the following:
+
+- `data_visualization`: Creating representations of data such as plots, graphs, maps, etc.
+- `data_management`: Organizing and storing data, including database structures, data sharing, cloud vs. local storage, and metadata
+- `data_wrangling`: Data processing steps in preparation for analysis and visualization, including cleaning, transforming, and reshaping data
+- `data_analysis`: Identifying and quantifying patterns in the data, including exploratory analysis, descriptive statistics, and more formal modeling
+
+As we write additional modules, we may add new data tasks to this list!
+
+### `coding_required`
+
+```
+coding_required: true
+```
+
+True/False based on whether achieving the module's learning objectives requires coding. This includes a user running code locally or interacting with code in the module. 
+
+Required.
+
+Must be one of `true` or `false`.
+
+### `coding_level`
+
+```
+coding_level: getting_started
+```
+
+The coding level required for the module as a whole.
+
+Not required.
+
+Must be one of the following:
+
+- `getting_started`: These modules are primarily about getting a platform set up
+- `basic`: These modules require little or no previous exposure to coding
+- `intermediate`: These modules require some previous coding exposure
+- `advanced`: These modules focus on particularly difficult or specialized tasks.
+- `practice_exercise`: These modules do not introduce new content.
+
+### `coding_language`
+
+```
+coding_language: r, python
+```
+
+Not required.
+
+Must be one or more of the following:
+
+- r
+- python
+- bash
+- SQL
+- git
+
+### `sequence_name`
+
+```
+sequence_name: bash_basics
+```
+
+Not required. 
+
+Must be one of the following: 
+
+- `bash_basics`
+- `r_basics`
+- `sql`
+- `python_basics`
+- (add more here)
+
+### `previous_sequential_module`
+
+```
+previous_sequential_module: sql_basics
+```
+
+If it's in a sequence and there is another module before it (i.e. it's not the first module in its sequence), list the previous module here. 
+Use the modules directory name (this should be the same as the name of its md file).
+
+### `sets_you_up_for`
+
+```
+@sets_you_up_for
+
+- sql_intermediate
+- sql_joins
+
+@end
+```
+
+Not a strict requirement or pre-requisite but notes how knowledge in this module will prepare the user for other concepts.
+
+Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
+
+### `depends_on_knowledge_available_in`
+
+```
+@depends_on_knowledge_available_in
+
+- bash_command_line_101
+- bash_command_line_102
+
+@end
+```
+
+Not a strict requirement or pre-requisite but notes where user can find useful knowledge in other modules.
+
+Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
+### `is_parallel_to`
+
+```
+@is_parallel_to
+
+- git_setup_windows
+
+@end
+```
+
+The same instruction presented in a different coding language/environment/operating system. 
+
 ### `import`
 
 ```
@@ -446,7 +718,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/templates_upda
 import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_wrapper.md
 ```
 
-Modules using interactive R, Python, or SQL will need additional import files (see the sections on [interactive coding](#including-interactive-code) for details).  
+Modules using interactive R, Python, or SQL will need additional import files (see the sections on [interactive coding](#including-interactive-code) for details).
 
 ## DART macros
 
@@ -497,6 +769,14 @@ Most modules include at least one quiz section (see [Quizzes](#quizzes-automatic
 
 As you write, keep in mind that the headers should be clear and informative. 
 The table of contents automatically generated from the headers should give learners a good overview of what to expect in the module content.
+
+#### Lesson Preparation
+
+This section will appear in any module that requires the learner to prepare in some way. For example:
+- the learner needs to download software (like git or bash)
+- the learner needs an account with an external resource (like Google Colab or AWS)
+- the learner will need to interact with an external resource (like a binderhub environment) 
+- the function of the module requires explanation, such as how sagemath cells work 
 
 ### Additional Resources
 
@@ -1131,6 +1411,8 @@ For more information about using tables in LiaScript, see the [tables section of
 We use quizzes for [formative assessment](https://carpentries.github.io/instructor-training/aio.html#using-formative-assessment-to-support-memory-consolidation). There is no point value or grading, and students are allowed to retry quizzes as many times as they like until they get the right answer. The goal is to provide learners an opportunity to check their own understanding. 
 
 Quizzes should connect directly to your learning objectives. Each quiz question should connect to one learning objective, and every learning objective should have at least one quiz question associated with it somewhere in the module. Learners should be able to answer all the questions based on the content within the module alone; they should not need to have read or consulted any of the linked learn-more resources. 
+
+Note that sometimes it won't make sense to include quiz questions in a module. Exercise modules, for example, generally won't contain quizzes (though you are welcome to include them if you feel they add value to your module).
 
 Quizzes should always be navigable from the sidebar, meaning they should be labeled with a level 2 or 3 header. If there is only one quiz in the module, it should be labelled as "Quiz". If there is more than one each header should be structured as "Quiz: label" where "label" is a short (ideally 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
 
