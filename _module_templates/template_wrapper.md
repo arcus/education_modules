@@ -4,7 +4,7 @@ author:   Your Name
 email:    email@chop.edu
 version:  0.0.0
 module_type: wrapper
-module_template_version: 1.0.0
+docs_version: 0.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -17,7 +17,7 @@ long_description: This is a longer description, which should be understandable f
 
 estimated_time_in_minutes: 
 
-@prerequisites
+@pre_reqs
 List any skills or knowledge needed to complete this module here.
 @end
 
