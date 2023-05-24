@@ -2,7 +2,7 @@
 
 import module_data 
 
-def filter_modules(general_options_value, coding_language_value, coding_level_value, data_task_value):# , data_domain_value):
+def filter_modules(general_options_value, coding_language_value, coding_level_value, data_task_value, data_domain_value):
     matching_modules = list(module_data.df.index).copy()
     non_matching_modules = []
     for module in module_data.df.index:
