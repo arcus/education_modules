@@ -294,7 +294,7 @@ Should be one of `standard`, `wrapper`, or `exercise` (see [which module templat
 docs_version: 1.0.0
 ```
 
-This value refers to this document, `docs.md`, and it's how we keep track of what our module writing guidelines were when a module was last updated.
+This value refers to this document, docs.md, and it's how we keep track of what our module writing guidelines were when a module was last updated.
 
 When you're ready to submit your module for QA, it should have a docs version number that is up to date with the **major** version of this document (@version, note that it's fine if there have been minor updates or revisions to docs.md, you only need to worry about the major version) -- if not, the module should be brought in line with any changes that have occurred to docs.md before continuing to submit it for QA.
 
