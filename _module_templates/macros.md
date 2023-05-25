@@ -2,11 +2,19 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.0.0
+version:  1.1.0
+current_version_description: Add current_version_description and version_history metadata
 language: en
 narrator: UK English Female
 title: Module Macros
 comment:  This is placeholder module to save macros used in other modules.
+
+@version_history 
+
+Previous versions: 
+
+- [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/e983922162e6fbf971c03dc96052f68713cc72af/_module_templates/macros.md#1): Initial version
+@end
 
 @overview
 <div class = "overview">
@@ -25,6 +33,12 @@ comment:  This is placeholder module to save macros used in other modules.
 **Learning Objectives**
 
 @learning_objectives
+
+**Version History**
+
+This version (@version): @current_version_description
+
+@version_history
 
 </div>
 @end
