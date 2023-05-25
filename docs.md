@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  0.0.0
+version:  1.0.0
 language: en
 narrator: UK English Female
 title: DART LiaScript docs
@@ -28,6 +28,8 @@ import: https://raw.githubusercontent.com/arcus/education_modules/templates_upda
 
 This is the technical documentation for DART modules written with [LiaScript](https://liascript.github.io/). 
 LiaScript is a [markdown](https://en.wikipedia.org/wiki/Markdown) dialect, so writing a DART module is a lot like writing any other plain text document, with a few exceptions for special formatting. 
+
+**This is verison @version of this document.**
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -83,13 +85,15 @@ You can also see revisions and comments on [pull requests for other modules that
   * Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
   * Code files (including scripts, notebooks, etc.) are saved within a `src` folder within the module directory
 
-- Headers should be informative and follow a sensible hierarchical structure (the TOC in the left margin should give a good overview of the content covered)
-- Avoid unclear language: unexplained idioms or references, unexplained acronyms, unnecessary technical language.
-- Unusual words, or words taking on a very specific meaning in context, should always be defined for the learner, either on the page (e.g. using footnotes) or with links to a definition/glossary.
-- Provide pronunciation guides for any especially unusual words of particular importance (a common example is package names, such as dplyr)
-- Avoid unnecessarily gendered language (e.g. use "they" singular rather than "he or she" for an unknown person).
-- Use informative link text (e.g. instead of "To learn more about python, click [here](www.example.com)", say "Read this article to [learn more about python](www.example.com).")
-- Try to write in short, digestible pieces --- avoid long paragraphs and break long sections up with sub-headers
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+In addition to the basic formatting requirements listed here, we have detailed [inclusivity guidelines](https://github.com/arcus/education_modules/blob/joy-contributors/_for_authors/inclusivity_guidelines.md) with requirements (and helpful examples!) for language choice, style, and accessibility.
+
+**Please read the inclusivity guidelines carefully before you begin writing.** 
+It's much easier to plan an inclusively designed module from the start than to attempt to fix a module you've already drafted.
+
+</div>
 
 ## Which module template to use
 
@@ -284,15 +288,17 @@ module_type: standard
 
 Should be one of `standard`, `wrapper`, or `exercise` (see [which module template to use](#which-module-template-to-use)).
 
-### `module_template_version` 
+### `docs_version` 
 
 ```
-module_template_version: 3.0.0
+docs_version: 1.0.0
 ```
 
-This value will already be filled in for you when you open the template file. 
+This value refers to this document, docs.md, and it's how we keep track of what our module writing guidelines were when a module was last updated.
 
-When you're ready to submit your module for QA, it should have a template version number that is up to date with the current module template (`template_standard.md`, `template_wrapper.md`, or `template_exercise.md`) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing submitting it for QA.
+When you're ready to submit your module for QA, it should have a docs version number that is up to date with the **major** version of this document (@version, note that it's fine if there have been minor updates or revisions to docs.md, you only need to worry about the major version) -- if not, the module should be brought in line with any changes that have occurred to docs.md before continuing to submit it for QA.
+
+If you wrote a module using a previous version of docs.md, look for a [checklist issue template](#updating-this-document) help you bring your module up to date. 
 
 ### `language`
 
@@ -301,7 +307,7 @@ language: en
 ```
 
 This defines the language for the file (default is English, `en`). 
-See the [LiaScript documentation on `language`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#%60language%60) for more details. 
+See the [LiaScript documentation on `language`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#language) for more details. 
 
 ### `narrator`
 
@@ -310,7 +316,17 @@ narrator: UK English Female
 ```
 
 This defines the voice to be used for text to voice, if the learner chooses to use that.
-See the [LiaScript documentation on `narrator`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#%60narrator%60) for more details. 
+See the [LiaScript documentation on `narrator`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#narrator) for more details. 
+
+### `mode`
+
+```
+mode: Textbook
+```
+
+This sets the [default mode of display for LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#mode). 
+
+It should be `Textbook`.
 
 ### `title` 
 
@@ -632,6 +648,7 @@ Must be one or more of the following:
 - bash
 - SQL
 - git
+
 ### `sequence_name`
 
 ```
@@ -716,6 +733,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/templates_upda
 ```
 
 Modules using interactive R, Python, or SQL will need additional import files (see the sections on [interactive coding](#including-interactive-code) for details).
+
 ## DART macros
 
 Macros are a way to include flexible text substitution with LiaScript. 
@@ -723,7 +741,7 @@ Macros are a way to include flexible text substitution with LiaScript.
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-For more details, including lots of examples, see the [LiaScript documentation on macros](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#macros).
+To learn more about how macros work in general, including lots of examples, see the [LiaScript documentation on macros](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#macros).
 
 </div>
 
@@ -731,19 +749,10 @@ We use macros for a lot of our standardized text.
 For example, the Overview and Feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. 
 
 - General use macros are in the [module macros file](https://github.com/arcus/education_modules/blob/templates_update/_module_templates/macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in **every module**. 
+- Macros to create the descriptions of external resources for wrapper modules are in the [wrapper macros file](https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_wrapper.md).
 - Macros for hands-on code in R, Python, and SQL modules are available in `macros_r.md`, `macros_python.md`, and `macros_sql.md`, respectively. SQL tables are loaded with additional files. For more details, see the sections on [including interactive code](#including-interactive-code) in this documentation.
 
 For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/templates_update/macros_instructions.md).
-
-## Tips for writing
-
-When you're ready to start writing a new module:
-
-1. Clone the education_modules repo if you don't already have it. Start a new git branch for your module. 
-2. Open this template in a text editor like VSCode, and then use "save as" to save it in a new directory and with a filename that conveys the point of the module (e.g. `r_logistic_regression/r_logistic_regression.md`). You may find it helpful to have the examples of highlight boxes and quiz questions in this template that you can quickly copy-paste as you write.
-3. Create a new empty subfolder in your module directory called "media". If you include images in your module, store them here.
-4. Open up the QA template for standard/wrapper/exercise modules (in the .`github/ISSUE_TEMPLATE` directory) as a reference, maybe keep it open side-by-side with your module draft.
-5. You can use the LiaScript preview extension in VSCode to see what your rendered module will look like, or generate it from https://liascript.github.io/ after pushing your changes to GitHub (while your still drafting, remember that you'll need to link to your raw md file on your branch, since it won't be available yet on main).
 
 ## Module sections
 
@@ -760,11 +769,15 @@ The overview section comes immediately after the initial level-1 header, which w
 
 ```
 
+### Lesson Preparation
+
+Many (but not all) modules include a Lesson Preparation section with any setup required to complete the module (see the section on [including interactive code](#including-interactive-code) for macros to create Lesson Preparation sections for R, Python, and SQL).
+
+Wrapper modules include a special section describing the external resource(s) linked to and outlining the structure of the module. 
+
 ### Content sections
 
-After the overview, begin your module content with whatever level-2 headers make sense for your topic. 
-
-Many (but not all) modules include a Lesson Preparation section with any setup required to complete the module (see the section on [including interactive code](#including-interactive-code) for macros to create Lesson Preparation sections in R, Python, and SQL).
+Begin your module content with whatever level-2 headers make sense for your topic. 
 
 Most modules include at least one quiz section (see [Quizzes](#quizzes-automatically-graded-questions)).
 
@@ -1829,3 +1842,22 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
 # this has the advantage of keeping the scales for the plot consistent
 # and it means you don't have to set the scales manually when using geom_abline
 ```
+
+## Updating this document
+
+**This is verison @version of this document.**
+
+When you update docs.md, be sure to [increment its version](https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md) in the front matter.
+
+For any **major** updates to docs.md, you should also provide an issue template checklist for bringing modules up to date with the new version of docs. 
+For example, see the [checklist for docs v1](https://github.com/arcus/education_modules/blob/main/.github/ISSUE_TEMPLATE/docs_update_checklist_v1.md).
+This will create a new option in our list of available issues (see [create a new issue](https://github.com/arcus/education_modules/issues/new/choose)), which we can then use to bring all of the current modules up to date with the new guidelines. 
+
+If a module misses a round of updates (e.g. it never gets updated for docs 1.0.0 but there's already a docs 2.0.0 out), then it will need to go through all of the checklists to bring it up to date. 
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+If you're planning major updates to docs.md, it's a good idea to start your checklist issue template right at the beginning of your editing process and add to it gradually as you make changes in docs.md so you don't forget anything.
+
+</div>
