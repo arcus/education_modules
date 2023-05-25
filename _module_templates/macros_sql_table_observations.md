@@ -62,4 +62,6 @@ comment:  This is alaSQL code to generate the observations table.
 
 -->
 
+# Table observations
+
 Must also import sql macros.

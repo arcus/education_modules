@@ -42,4 +42,6 @@ alasql("INSERT INTO patients VALUES ('fcc61454-1b07-4e49-a25b-29e5064e0063', '19
 
 -->
 
+# Table patients
+
 Must also import sql macros.

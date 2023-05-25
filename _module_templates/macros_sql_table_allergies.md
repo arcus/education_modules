@@ -174,4 +174,6 @@ comment:  This is alaSQL code to generate the allergies table.
 
 -->
 
+# Table allergies
+
 Must also import sql macros.
