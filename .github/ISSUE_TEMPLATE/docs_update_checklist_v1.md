@@ -45,7 +45,7 @@ TIP: You can also use the "Your front matter checklist" section of docs.md to ge
     - [ ] good\_first\_module
     - [ ] sets\_you\_up\_for
     - [ ] depends\_on\_knowledge\_available\_in
-    - [ ] import https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
+    - [ ] import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 * [ ] If the learner will need to code to meet the learning objectives, the following are required:
 
@@ -58,19 +58,19 @@ TIP: You can also use the "Your front matter checklist" section of docs.md to ge
     - [ ] r_file
     - [ ] coding_level
     - [ ] coding_language
-    - [ ] import https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_r.md
+    - [ ] import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
     
 * [ ] For modules using interactive Python code (sagemath), the following are required:
 
     - [ ] coding_level
     - [ ] coding_language
-    - [ ] import https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_python.md
+    - [ ] import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
 
 * [ ] For modules using interactive SQL (AlaSQL), the following are required:
 
     - [ ] coding_level
     - [ ] coding_language
-    - [ ] import https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_sql.md
+    - [ ] import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_sql.md
     - [ ] import statements for any SQL tables needed
 
 * [ ] For modules about a particular kind of data, or teaching a particular data task/skill:
@@ -100,7 +100,7 @@ TIP: You can also use the "Your front matter checklist" section of docs.md to ge
     - [ ] resource1\_a11y\_issues
     - [ ] for wrapper modules with a second external resource, include all of the above for resource2 as well
     - [ ] for wrapper modules with a third external resource, include all of the above for resource3 as well
-    - [ ] import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_wrapper.md
+    - [ ] import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md
 
 The following should **NOT** be included in module front matter: 
 
