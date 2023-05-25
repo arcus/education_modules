@@ -30,7 +30,7 @@ After completion of this module, learners will be able to:
 - articulate the rationale for something
 @end
 
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
 # Module Title

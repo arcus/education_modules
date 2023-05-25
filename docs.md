@@ -21,7 +21,7 @@ try {
 
 @end
 
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
 # DART LiaScript docs
@@ -44,7 +44,7 @@ To see this document as an interactive LiaScript rendered version, click on the 
 
 This documentation covers the technical part of writing only, i.e. how to use our custom DART templates and macros, and how to make sure a module you're writing will pass our Quality Assurance process. 
 
-For more general guidance about how to contribute to the DART project, including how to propose a new module, see our [contributing guidelines](https://github.com/arcus/education_modules/blob/templates_update/CONTRIBUTING.md). 
+For more general guidance about how to contribute to the DART project, including how to propose a new module, see our [contributing guidelines](https://github.com/arcus/education_modules/blob/main/CONTRIBUTING.md). 
 Also, before you begin writing a new module for the first time, be sure to look at some of our [existing modules](https://arcus.github.io/education_modules/list_of_modules) for examples of formatting, style, and tone.
 
 If you're new to markdown, check out this general [guide to markdown syntax](https://daringfireball.net/projects/markdown/syntax). 
@@ -718,7 +718,7 @@ The same instruction presented in a different coding language/environment/operat
 ### `import`
 
 ```
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 ```
 
 Note that importing `macros.md` imports all the general-use macros needed for our modules (see [DART macros](#dart-macros) for details), as well as the style sheet and javascript kit for our icons. 
@@ -728,8 +728,8 @@ For most modules, this is the only import file needed, but there are some notabl
 Wrapper modules must import the wrapper macros as well: 
 
 ```
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_wrapper.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md
 ```
 
 Modules using interactive R, Python, or SQL will need additional import files (see the sections on [interactive coding](#including-interactive-code) for details).
@@ -748,11 +748,11 @@ To learn more about how macros work in general, including lots of examples, see 
 We use macros for a lot of our standardized text. 
 For example, the Overview and Feedback sections of each module are created by the `@overview` and `@feedback` macros, respectively. 
 
-- General use macros are in the [module macros file](https://github.com/arcus/education_modules/blob/templates_update/_module_templates/macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in **every module**. 
-- Macros to create the descriptions of external resources for wrapper modules are in the [wrapper macros file](https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_wrapper.md).
+- General use macros are in the [module macros file](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in **every module**. 
+- Macros to create the descriptions of external resources for wrapper modules are in the [wrapper macros file](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md).
 - Macros for hands-on code in R, Python, and SQL modules are available in `macros_r.md`, `macros_python.md`, and `macros_sql.md`, respectively. SQL tables are loaded with additional files. For more details, see the sections on [including interactive code](#including-interactive-code) in this documentation.
 
-For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/templates_update/macros_instructions.md).
+For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
 
 ## Module sections
 
@@ -1253,7 +1253,7 @@ We don't have a way to include interactive code for git or bash. For those modul
 If your lesson includes R code examples hosted in binder from [our R notebook repository](https://github.com/arcus/education_r_environment), then you'll need to load the R macros by adding the following `import` statement to the front matter of your module:
 
 ```
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_r.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
 ```
 
 You can then insert the `@lesson_prep_r` macro, which includes instructions for opening up the relevant rmd document, in your Lesson Preparation section:
@@ -1271,7 +1271,7 @@ Note that you must have `r_file` filled out in the front matter.
 If your lesson includes interactive python code in sagemath cells, then you'll need to load the Python macros by adding the following `import` statement to the front matter of your module: 
 
 ```
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_python.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
 ```
 
 You can then insert the `@ lesson_prep_python_sage` macro, which includes instructions and an example interactive code block, in your Lesson Preparation section:
@@ -1296,15 +1296,15 @@ Note that very small tables (just a few rows) can be constructed right in the fr
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-To learn about creating a new macro, such as a new SQL table, see our [instructions for DART macros](https://github.com/arcus/education_modules/blob/templates_update/macros_instructions.md).
+To learn about creating a new macro, such as a new SQL table, see our [instructions for DART macros](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
 
 </div>
 
 To use SQL macros (including tables), add the relevant `import` statements to your module's front matter. For example: 
 
 ```
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_sql.md
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_sql_table_patients.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_sql.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_sql_table_patients.md
 ```
 
 To insert text providing a brief refresher on SQL, including our style guide and an example interactive code block, use the following macro in your Lesson Preparation section:
