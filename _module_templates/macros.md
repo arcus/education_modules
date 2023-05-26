@@ -28,7 +28,7 @@ Previous versions:
 
 **Pre-requisites**
 
-@prerequisites
+@pre_reqs
 
 **Learning Objectives**
 
