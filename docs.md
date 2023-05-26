@@ -133,6 +133,7 @@ Which front matter items are required? It depends on the content of the module y
 | `author`                           |      X      |   X   |      X      |                                                                                           |
 | `email`                            |      X      |   X   |      X      |                                                                                           |
 | `version`                          |      X      |   X   |      X      |                                                                                           |
+| `current_version_description`      |      X      |   X   |      X      |                                                                                           |
 | `module_type`                      |      X      |   X   |      X      |                                                                                           |
 | `module_template_version`          |      X      |   X   |      X      |                                                                                           |
 | `lanaguge`                         |      X      |   X   |      X      |                                                                                           |
@@ -154,6 +155,7 @@ Which front matter items are required? It depends on the content of the module y
 | `resource1_stablesupport`[^3]      |             |       |      X      |                                                                                           |
 | `resource1_stablesupport_text`[^3] |             |       |      X      |                                                                                           |
 | `resource1_a11y_issues`[^3]        |             |       |      X      |                                                                                           |
+| `version_history`                  |      X      |   X   |      X      |                                                                                           |
 | `import`                           |      X      |   X   |      X      | Importing `macros.md` is required for all modules. Additional import files may be needed. |
 
 
@@ -185,6 +187,7 @@ You'll need the following fields in your front matter (new fields added by check
 - author
 - email
 - version
+- current\_version\_description
 - module\_type
 - module\_template\_version
 - language
@@ -250,6 +253,7 @@ try {
 
 @add_item(9,is\_parallel\_to)
 
+* version\_history
 * import macros.md
 
 @add_item(6,import macros_wrapper.md)
@@ -279,6 +283,22 @@ When you're ready to submit your module for QA, it should have a module version 
 
 It's a good idea to keep your version set to `0.0.0` while you're still drafting as it will help prevent your browser from caching the module, making it easier for you to review changes as they render online. 
 For more details, see the [LiaScript documentation about state](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#state).
+
+### `current_version_description`
+
+```
+current_version_description: Initial version
+```
+
+This is a single-line description of the current version of the module. Start with `Initial version` for 1.0.0.
+Then whenever the module gets a major or minor update (not revision), this field should be updated to describe **from the learner's point of view** what meaningful changes have occured since the last version.   
+In otherwords, focus on changes in module content rather than technical updates that might be invisible to learners (e.g. standardized text being replaced with a macro).
+
+For example, for a module that has undergone at least one new version (major or minor), this field might look something like this:
+
+```
+current_version_description: add less command, update man section, improve quiz and appearance
+```
 
 ### `module_type`
 
@@ -714,6 +734,34 @@ Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need 
 ```
 
 The same instruction presented in a different coding language/environment/operating system. 
+
+### `version_history`
+
+```
+@version_history 
+
+Previous versions: 
+
+- [x.x.x](link): that version's current version description
+- [x.x.x](link): that version's current version description
+- [x.x.x](link): that version's current version description
+@end
+```
+
+As modules are updated, every time we increment the version (major or minor only, ignore revisions) the description for the previous version (see [`current_version_description`](#current_version_description)) should be added to this `version_history` field. 
+
+For the version number, use the highest one within that version (e.g. if there were 5 revisions during version 1.2.x, you would use 1.2.5 to record for the version history).
+
+Include a link to the module rendered in LiaScript from that point in time.
+Note that the links must be to **specific commits**, so that the module is frozen in time. 
+For example:
+
+```
+[1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ba1dba7a4c1d4393ae8b42346fe5c69d587b8ee6/bash_command_line_101/bash_command_line_101.md#1): Remove Atom references
+```
+
+Note: `version_history` should have **max** 3 previous versions recorded. 
+So when a module is on its 4+ version, every time you add a new entry to `version_history` you will also remove the oldest one.
 
 ### `import`
 
