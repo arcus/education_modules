@@ -57,8 +57,8 @@ resource1_a11y_issues:
 3. Part 3
 @end
 
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md
+import: https://raw.githubusercontent.com/arcus/education_modules/joy-versioning-info/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/joy-versioning-info/_module_templates/macros_wrapper.md
 -->
 
 # Module Title
