@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.0
+version: 1.1.1
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
@@ -119,13 +119,6 @@ To **iterate** an action or command is to run it again and again. A common situa
 A **loop** is a bit of code that allows you to run the same command again and again. The loop gives instructions for how many times to run your code, and if it requires input, what that input should be.  With loops, you get to write your command once and then tell it to run as many times as you want!
 
 
-<div class = "options">
-<b style="color: rgb(var(--color-highlight));">Another option</b><br>
-
-There are two kinds of loops: "for loops" and "while loops." In this lesson we will focus on "for loops" which are generally easier to create. "While loops" can be more powerful than for loops in [certain situations](https://betterprogramming.pub/how-to-pick-between-a-while-and-for-loop-14ef217c3776), so once you understand "for loops" they are worth checking out in your preferred programming languages.
-
-</div>
-
 ### Structure of For Loops
 
 **For loops** are a type of coding structure that exist across many programming languages. Once you understand how for loops work in theory, you can look up the specifics of running one in any language.
@@ -159,9 +152,21 @@ Print the square of 4
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-The code blocks above are written in **pseudocode**. Pseudocode is a description of code that shows humans its structure but isn't actually written in any programming language. Writing out what you want a program to do in pseudocode can be useful for [explaining, planning, and even debugging](https://towardsdatascience.com/pseudocode-101-an-introduction-to-writing-good-pseudocode-1331cb855be7) code!
+The code blocks above are written in **pseudocode**. Pseudocode is a description of code that shows humans its structure but isn't actually written in any programming language. Writing out what you want a program to do in pseudocode can be useful for [explaining, planning, and even debugging](https://builtin.com/data-science/pseudocode) code!
 
 </div>
+
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
+There are actually two kinds of loops: "for loops" and "while loops." 
+
+In this lesson we focus on "for loops" which are generally easier to create. "While loops" can be more powerful than for loops because they can be used without needing to know how many times the command will be repeated. They can also introduce new problems as it is possible to write a "while loop" that repeats forever. Almost every programmer has accidentally done that a few times!
+
+Once you understand "for loops" it is worth [checking out "while loops"](https://en.wikipedia.org/wiki/While_loop) in your preferred programming languages.
+
+</div>
+
 
 ### Bash grammar of for loops
 
