@@ -3,10 +3,12 @@
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version:  0.0.0
+current_version_description: Initial version
 module_type: wrapper
 docs_version: 1.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 
 title: Getting Started with Docker for Research
 
@@ -57,6 +59,10 @@ resource2_a11y_issues: No known issues with accessibility, but we may have misse
 4. Return to this module for the "Docker for Research Quiz", and for the final sections of the module.
 @end
 
+@version_history
+
+@end
+
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md
 -->
@@ -84,14 +90,19 @@ A more common application in research might be a container that loads required l
 Or a container that takes a set of RMarkdown files and images and compiles them into a pdf version of the article you're drafting. 
 Or a container that trains a machine learning model on a provided dataset. 
 
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 As you consider the tutorial, imagine the kind of coding projects you typically work on --- whatever that is --- rather than the example code they provide. 
+
+</div>
 
 ### Before you Start
 
 To do the Docker 101 tutorial, you'll need a couple things set up: 
 
-- create an account (it's free) at Docker Hub ([Docker Hub signup page](https://hub.docker.com/signup/))
-- install [Docker Desktop](https://docs.docker.com/desktop/) on your computer ([installation instrutcions for Windows](https://docs.docker.com/desktop/install/windows-install/), [installation instructions for Mac](https://docs.docker.com/desktop/install/mac-install/), and [installation instructions for Linux](https://docs.docker.com/desktop/install/linux-install/))
+- Create an account (it's free) at Docker Hub ([Docker Hub signup page](https://hub.docker.com/signup/)).
+- Install [Docker Desktop](https://docs.docker.com/desktop/) on your computer ([installation instrutcions for Windows](https://docs.docker.com/desktop/install/windows-install/), [installation instructions for Mac](https://docs.docker.com/desktop/install/mac-install/), and [installation instructions for Linux](https://docs.docker.com/desktop/install/linux-install/)).
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
@@ -121,6 +132,10 @@ You are welcome to continue past that point if you wish, but it focuses on topic
 <b style="color: rgb(var(--color-highlight));">Work through the first half of the tutorial, then return here to finish this module.</b>
 </div>
 
+Some tips you can apply at any time:
+
+- To see all the docker images you've built on your computer use `docker image ls`.
+- To see all docker containers currently running use `docker ps`.
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
@@ -133,11 +148,6 @@ If so, try deleting that line from your Dockerfile (it should be the second line
 See [this post on stackoverflow](https://stackoverflow.com/questions/71200635/can-i-remove-run-apk-add-no-cache-python2-g-make-from-my-dockerfile) for some additional context.
 
 </div>
-
-Other tips you can apply at any time:
-
-- To see all the docker images you've built on your computer use `docker image ls`.
-- To see all docker containers currently running use `docker ps`.
 
 ### Docker 101 Quiz
 
@@ -227,7 +237,7 @@ Once you've built a docker image, what is the easiest way to share it?
 
 The best way to share a container image is with the [Docker Hub](https://hub.docker.com/) repository. For a review, see the "Sharing our App" section of the tutorial.
 
-Note that sending just the Dockerfile to someone isn't enough for them to be able to build the container image, so that won't work. 
+Note that sending just the Dockerfile to someone isn't enough for them to be able to build the container image (just as sending a recipe to someone won't let them cook the dish unless you also send the ingredients), so that won't work. 
 
 </div>
 ***
@@ -239,7 +249,7 @@ Importantly, most of the example Dockerfiles you'll find online are also written
 As someone new to docker (and even for experienced users!), being able to copy existing Dockerfiles is an important time saver.
 Although you might be able to get these images to work for your research needs, there are a lot of special considerations that come up when you're using containers for reproducible research rather than software develpoment. 
 
-So what do you need to keep in mind as you think about how to use docker in your research? 
+**So what do you need to keep in mind as you think about how to use docker in your research?** 
 
 One big difference is the value placed on **transparency** and **interpretability** in the research community. 
 A good, reproducible container for a research project should be not only functional, but easy for others to understand. 
