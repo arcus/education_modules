@@ -12,12 +12,12 @@ title: Getting Started with Docker for Research
 
 comment: This tutorial combines a hands-on interactive docker tutorial published by Docker Inc with an academic article outlining best practices for using docker for research. 
 
-long_description: This module will help you get started using docker, the most widely-used container software, for your research. The Docker 101 tutorial is a popular, hands-on approach to learning docker that will get you using containers right away, so you can learn by doing. To help you bridge the gap between basic docker use and best practices for using docker in research, you'll also read an article outlining 10 rules to help you create great containers for research. We also provide links to ready-to-use docker images for a variety of analysis workflows. This module includes running and editing comamnds in the terminal, so you'll need some basic familiarity with bash, but it is otherwise appropriate for beginniners. No prior experience with docker or containers is assumed. 
+long_description: If you've been curious about how to use docker for your research, this module is a great place to start. The Docker 101 tutorial is a popular, hands-on approach to learning docker that will get you using containers right away, so you can learn by doing. To help you bridge the gap between basic docker use and best practices for using docker in research, we also link to an article outlining 10 rules to help you create great containers for research, and lists of ready-to-use docker images for a variety of analysis workflows. This module includes running and editing comamnds in the terminal, so you'll need some basic familiarity with bash, but it is otherwise appropriate for beginniners. No prior experience with docker or containers is assumed. 
 
 estimated_time_in_minutes: 60
 
 @pre_reqs
-You will need some familiarity with the command line, such as being able to change directories and run bash commands that will be supplied for you to copy and paste. You will need to create and edit text files in a text editor like VSCode. 
+This module assumes no prior experience with containers, and no particular coding other than some familiarity with the command line, such as being able to change directories and run bash commands that will be supplied for you to copy and paste. You will need to create and edit text files in a text editor like VSCode. 
 
 You'll also need to create an account on [Docker Hub](https://hub.docker.com/) (it's free), if you don't have one already, and you'll need to be able to install the Docker Desktop software on your machine (also free). 
 @end
@@ -25,7 +25,7 @@ You'll also need to create an account on [Docker Hub](https://hub.docker.com/) (
 @learning_objectives  
 After completion of this module, learners will be able to:
 
-- Use the command line to create and run an image from a Dockerfile
+- Use the command line to create and run a container from a Dockerfile
 - Share containers 
 - Understand both technical requirements and best practices for writing Dockerfiles for use in research
 @end
@@ -41,20 +41,20 @@ resource1_stablesupport_text: This is hosted on the Docker website, and it is a 
 resource1_a11y_issues: No known issues with accessibility, but we may have missed something. If you encounter an issue, please [let us know](#feedback)!
 
 resource2_name: Ten simple rules for writing Dockerfiles for reproducible data science
-resource2_description: From the Docker website: "In this self-paced, hands-on tutorial, you will learn how to build images, run containers, use volumes to persist data and mount in source code, and define your application using Docker Compose. You’ll even learn about a few advanced topics, such as networking and image building best practices."
+resource2_description: From the abstract: "By following the rules in this article, researchers can create containers suitable for sharing with fellow scientists, for including in scholarly communication such as education or scientific papers, and for effective and sustainable personal workflows."
 resource2_wellvetted: true
-resource2_wellvetted_text: This article was written by expert authors and published in PLOS Computational Biology, a peer reviewed scientific journal (you can read about their [editorial and peer review process](https://journals.plos.org/ploscompbiol/s/editorial-and-peer-review-process) on their website). 
+resource2_wellvetted_text: This article was written by expert authors and published in PLOS Computational Biology, a peer reviewed scientific journal (you can read about their <a href="https://journals.plos.org/ploscompbiol/s/editorial-and-peer-review-process">editorial and peer review process</a> on their website). 
 resource2_maintained: true
-resource2_maintained_text: PLOS Computational Biology links any corrections, expressions of concern, or retractions to the affected article's PLOS web page, so any important updates should be available there (for more details read [PLOS's policy on posting corrections](https://journals.plos.org/ploscompbiol/s/corrections-expressions-of-concern-and-retractions)).
+resource2_maintained_text: PLOS Computational Biology links any corrections, expressions of concern, or retractions to the affected article's PLOS web page, so any important updates should be available there (for more details read <a href="https://journals.plos.org/ploscompbiol/s/corrections-expressions-of-concern-and-retractions">PLOS's policy on posting corrections</a>).
 resource2_stablesupport: true
-resource2_stablesupport_text: This article has an assigned DOI (digital identifier of an object), which helps to ensure it will continue to be available (read more about DOIs at [doi.org](https://www.doi.org/the-identifier/what-is-a-doi/)). 
+resource2_stablesupport_text: This article has an assigned DOI (digital identifier of an object), which helps to ensure it will continue to be available (read more <a href="https://www.doi.org/the-identifier/what-is-a-doi/">about DOIs at doi.org</a>). 
 resource2_a11y_issues: No known issues with accessibility, but we may have missed something. If you encounter an issue, please [let us know](#feedback)!
 
 @module_structure
-1. Do the first half of the Docker 101 tutorial.
-2. Return to this module to complete the [Docker 101 Quiz](#docker-101-quiz) to check your understanding and consolidate your knowledge.
-3. Read the article "Ten simple rules for writing Dockerfiles for reproducible data science" by Nüst et al. 2020
-4. Return to this module for the [Docker for Research Quiz](#quiz-docker-for-research), and for the final sections of the module.
+1. Do the first half of the "Docker 101" tutorial (on docker.com).
+2. Return to this module to complete the "Docker 101 Quiz" to check your understanding and consolidate your knowledge.
+3. Read the article "Ten simple rules for writing Dockerfiles for reproducible data science" by Nüst et al. 2020 (on plos.org).
+4. Return to this module for the "Docker for Research Quiz", and for the final sections of the module.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -117,6 +117,7 @@ We recommend you keep this module open in another window or tab so it's easy for
 Complete the **first half** of the [Docker 101 tutorial](https://www.docker.com/101-tutorial/), through the section called "Sharing our App". 
 You are welcome to continue past that point if you wish, but it focuses on topics that are more relevant for software development and less likely to be of use in a research context.
 
+<br>
 <b style="color: rgb(var(--color-highlight));">Work through the first half of the tutorial, then return here to finish this module.</b>
 </div>
 
@@ -252,6 +253,7 @@ Here's a brief quote from the article you'll be reading:
 
 Next, read [Ten simple rules for writing Dockerfiles for reproducible data science](https://doi.org/10.1371/journal.pcbi.1008316) by Nüst et al. (2020). 
 
+<br>
 <b style="color: rgb(var(--color-highlight));">Read the whole article, then return here to finish this module.</b>
 </div>
 
