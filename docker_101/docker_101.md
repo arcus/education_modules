@@ -4,7 +4,7 @@ author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version:  0.0.0
 module_type: wrapper
-module_template_version: 1.0.0
+docs_version: 1.0.0
 language: en
 narrator: UK English Female
 
@@ -25,10 +25,9 @@ You'll also need to create an account on [Docker Hub](https://hub.docker.com/) (
 @learning_objectives  
 After completion of this module, learners will be able to:
 
-- Use `docker build` to create an image from a Dockerfile
-- Start, stop, and remove containers
-- Share containers
-- Identify best practices for Dockerfiles in research
+- Use the command line to create and run an image from a Dockerfile
+- Share containers 
+- Understand both technical requirements and best practices for writing Dockerfiles for use in research
 @end
 
 resource1_name: Docker 101 Tutorial
@@ -58,8 +57,8 @@ resource2_a11y_issues: No known issues with accessibility, but we may have misse
 4. Return to this module for the [Docker for Research Quiz](#quiz-docker-for-research), and for the final sections of the module.
 @end
 
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros_wrapper.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md
 -->
 
 # Getting Started with Docker for Research
@@ -79,7 +78,13 @@ import: https://raw.githubusercontent.com/arcus/education_modules/templates_upda
 The tutorial we link to in this section is an excellent practical introduction to using containers, but it's written with a software developer audience in mind, rather than people who might want to use containers for their research. 
 
 As you work through the tutorial, you'll open and edit javascript files for a simple app (Don't worry! You don't need to know any javascript at all to be able to to the tutorial.).
+The tutorial sets you up to build a container that, when run, starts the app. 
 
+A more common application in research might be a container that loads required libraries in Python and does the first stage of data preprocessing on startup. 
+Or a container that takes a set of RMarkdown files and images and compiles them into a pdf version of the article you're drafting. 
+Or a container that trains a machine learning model on a provided dataset. 
+
+As you consider the tutorial, imagine the kind of coding projects you typically work on --- whatever that is --- rather than the example code they provide. 
 
 ### Before you Start
 
@@ -101,10 +106,10 @@ You should see a message that starts with "Hello from Docker!"
 
 </div>
 
-### Work through the Tutorial
+### Work through the first half of the Docker 101
 
-Now it's time to open the Docker 101 tutorial in a new tab!
-We recommend you keep this module open in another window so it's easy for you to return. 
+Now it's time to open the Docker 101 tutorial!
+We recommend you keep this module open in another window or tab so it's easy for you to return. 
 
 <div class = "external-resource">
 <b style="color: rgb(var(--color-highlight));">External Content</b><br>
@@ -112,8 +117,7 @@ We recommend you keep this module open in another window so it's easy for you to
 Complete the **first half** of the [Docker 101 tutorial](https://www.docker.com/101-tutorial/), through the section called "Sharing our App". 
 You are welcome to continue past that point if you wish, but it focuses on topics that are more relevant for software development and less likely to be of use in a research context.
 
-**Work through the first half of the tutorial only, then return here to finish this module.**
-
+<b style="color: rgb(var(--color-highlight));">Work through the first half of the tutorial, then return here to finish this module.</b>
 </div>
 
 
@@ -243,15 +247,12 @@ Here's a brief quote from the article you'll be reading:
 
 >The differences between a helpful, stable Dockerfile and one that is misleading, prone to failure, and full of potential obstacles are not obvious, especially for researchers who do not have extensive software development experience or formal training. By committing to this article’s rules, one can ensure that their workflows are reproducible and reusable, that computing environments are understandable by others, and that researchers have the opportunity to collaborate effectively.
 
-
-
 <div class = "external-resource">
 <b style="color: rgb(var(--color-highlight));">External Content</b><br>
 
 Next, read [Ten simple rules for writing Dockerfiles for reproducible data science](https://doi.org/10.1371/journal.pcbi.1008316) by Nüst et al. (2020). 
 
-Read the whole article, then return here to finish this module.
-
+<b style="color: rgb(var(--color-highlight));">Read the whole article, then return here to finish this module.</b>
 </div>
 
 ### Quiz: Docker for Research
@@ -292,21 +293,6 @@ What character is used to start a comment line in a Dockerfile?
 <script>
   let input = "@input".trim().toLowerCase();
   input == "#";
-</script>
-***
-<div class = "answer">
-
-See [Rule 4: Document within the Dockerfile](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316#sec010) for examples.
-
-</div>
-***
-
-The practice of specifying versions of software is called:
-
-[[ version pinning ]]
-<script>
-  let input = "@input".trim().toLowerCase();
-  input == "version pinning";
 </script>
 ***
 <div class = "answer">
