@@ -31,6 +31,7 @@ TIP: You can also use the "Your front matter checklist" section of docs.md to ge
     - [ ] author
     - [ ] email
     - [ ] version
+    - [ ] current_version_description
     - [ ] module_type
     - [ ] module\_template\_version (should this change to docs_version?)
     - [ ] language
@@ -45,6 +46,7 @@ TIP: You can also use the "Your front matter checklist" section of docs.md to ge
     - [ ] good\_first\_module
     - [ ] sets\_you\_up\_for
     - [ ] depends\_on\_knowledge\_available\_in
+    - [ ] version_history
     - [ ] import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 * [ ] If the learner will need to code to meet the learning objectives, the following are required:
