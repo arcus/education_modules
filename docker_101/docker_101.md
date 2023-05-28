@@ -43,7 +43,7 @@ resource1_stablesupport_text: This is hosted on the Docker website, and it is a 
 resource1_a11y_issues: No known issues with accessibility, but we may have missed something. If you encounter an issue, please [let us know](#feedback)!
 
 resource2_name: Ten simple rules for writing Dockerfiles for reproducible data science
-resource2_description: From the abstract: "By following the rules in this article, researchers can create containers suitable for sharing with fellow scientists, for including in scholarly communication such as education or scientific papers, and for effective and sustainable personal workflows."
+resource2_description: From the article: "The differences between a helpful, stable Dockerfile and one that is misleading, prone to failure, and full of potential obstacles are not obvious, especially for researchers who do not have extensive software development experience or formal training. By committing to this article’s rules, one can ensure that their workflows are reproducible and reusable, that computing environments are understandable by others, and that researchers have the opportunity to collaborate effectively."
 resource2_wellvetted: true
 resource2_wellvetted_text: This article was written by expert authors and published in PLOS Computational Biology, a peer reviewed scientific journal (you can read about their <a href="https://journals.plos.org/ploscompbiol/s/editorial-and-peer-review-process">editorial and peer review process</a> on their website). 
 resource2_maintained: true
@@ -254,9 +254,6 @@ Although you might be able to get these images to work for your research needs, 
 One big difference is the value placed on **transparency** and **interpretability** in the research community. 
 A good, reproducible container for a research project should be not only functional, but easy for others to understand. 
 Because of that, you should think of your Dockerfile as not just a set of instructions but an important form of communication.
-Here's a brief quote from the article you'll be reading:
-
->The differences between a helpful, stable Dockerfile and one that is misleading, prone to failure, and full of potential obstacles are not obvious, especially for researchers who do not have extensive software development experience or formal training. By committing to this article’s rules, one can ensure that their workflows are reproducible and reusable, that computing environments are understandable by others, and that researchers have the opportunity to collaborate effectively.
 
 <div class = "external-resource">
 <b style="color: rgb(var(--color-highlight));">External Content</b><br>
