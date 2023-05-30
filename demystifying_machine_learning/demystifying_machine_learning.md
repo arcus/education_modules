@@ -3,6 +3,8 @@
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version:  0.0.0
+current_version_description: Initial version
+module_type: standard
 docs_version: 1.0.0
 language: en
 narrator: UK English Female
@@ -32,6 +34,20 @@ After completion of this module, learners will be able to:
 - explain the bias-variance tradeoff
 - describe three different statistical problems models can address and how they differ (e.g. prediction, anomaly detection, clustering, dimension reduction)
 - describe some potential pitfalls of machine learning and big data
+
+@end
+
+good_first_module: false
+
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
+@version_history
 
 @end
 
