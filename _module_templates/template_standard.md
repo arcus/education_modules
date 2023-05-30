@@ -3,8 +3,9 @@
 author:   Your Name
 email:    email@chop.edu
 version:  0.0.0
+current_version_description: Brief description of why this version exists
 module_type: standard
-docs_version: 1.0.0
+docs_version: 1.1.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -28,6 +29,15 @@ After completion of this module, learners will be able to:
 - create a product
 - do a task
 - articulate the rationale for something
+@end
+
+@version_history 
+
+Previous versions: 
+
+- [x.x.x](link): that version's current version description
+- [x.x.x](link): that version's current version description
+- [x.x.x](link): that version's current version description
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md

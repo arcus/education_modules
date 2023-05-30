@@ -3,10 +3,14 @@
 author:   DART Team
 email:    dart@chop.edu
 version:  1.0.0
+current_version_description: Initial version
 language: en
 narrator: UK English Female
 title: SQL observations table
 comment:  This is alaSQL code to generate the observations table.
+
+@version_history 
+@end
 
 @AlaSQL.buildTable_observations
 <script>
@@ -61,5 +65,7 @@ comment:  This is alaSQL code to generate the observations table.
 @end
 
 -->
+
+# Table observations
 
 Must also import sql macros.

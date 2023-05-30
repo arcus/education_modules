@@ -28,29 +28,22 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
   * [ ] author name
   * [ ] email
   * [ ] module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](versioning_guidelines.md)
-  * [ ] module_template_version number is up to date with the [current sample module](https://raw.githubusercontent.com/arcus/education_modules/main/a_sample_module_template/a_sample_module_template.md) -- if not, the module should be brought in line with any changes that have occurred to the module template before continuing with QA
+  * [ ] current_version_description is a short, present-tense text fragment without bullets, and gives a learner-centric quick overview of version changes from the learner perspective
+  * [ ] docs_version number replaces the former module_template_version number, and it is up to date with the current [docs.md](https://raw.githubusercontent.com/arcus/education_modules/main/docs.md) -- if not, the module should be brought in line with any changes that have occurred to the docs.md standard before continuing with QA
   * [ ] language
   * [ ] narrator
   * [ ] comment appropriately filled out
   * [ ] long_description appropriately filled out
   * [ ] learning_objectives appropriately filled out
-  * [ ] link to CSS (currently https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css)
-  * [ ] script to Font Awesome kit (currently https://kit.fontawesome.com/83b2343bd4.js)
+  * [ ] version_history contains 1-3 past versions with bulleted links to commit-specific documents, unless this is an initial version of a module, in which case version_history can be empty.
+  * [ ] imports macros (currently this line should read `import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md`)
 * [ ] Title is the first line after the end of the YAML
   * [ ] only level-1 header in the entire document.
-* [ ] Overview section immediately following Title
-  * [ ] surrounded in div with class overview
-  * [ ] Comment is at the top of the Overview, linked from YAML rather than rewritten
-  * [ ] "Is this module right for me?" contents linked from long_description YAML rather than rewritten
-  * [ ] "Estimated time to completion" contents linked from estimated_time YAML rather than rewritten
-  * [ ] Prerequisites listed and do not require learner to have specifically attained those skills through any of our other modules.
-  * [ ] Learning objectives linked from learning_objectives YAML rather than rewritten
+* [ ] Overview section immediately following Title, using the `@overview` macro
 * [ ] All sections following Overview have content (no pages with just header and no additional text / media material).
 * [ ] All quizzes start with a level 2 or 3 header. If there is only one quiz in the module, it is labelled "Quiz", or if there are multiple, each header is structured as "Quiz: label" where "label" is a short (~ 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
 * [ ] Educational content ends with a section of additional resources, both ours and outside sources
-* [ ] Final section is Feedback.
-  * [ ] Learning objectives linked from YAML rather than rewritten
-  * [ ] Feedback link is updated appropriately to automatically fill in the module name when clicked by learner.
+* [ ] Final section is Feedback, using the @feedback macro
 
 ## Module Content
 

@@ -3,10 +3,14 @@
 author:   DART Team
 email:    dart@chop.edu
 version:  1.0.0
+current_version_description: Initial version
 language: en
 narrator: UK English Female
 title: SQL allergies table
 comment:  This is alaSQL code to generate the allergies table.
+
+@version_history 
+@end
 
 @AlaSQL.buildTable_allergies
 <script>
@@ -170,8 +174,11 @@ comment:  This is alaSQL code to generate the allergies table.
     alasql("INSERT INTO allergies VALUES ('2000-01-03',null,'e6ff4bf9-09c2-4976-aa84-cca142207cf8','6c760807-a6b7-4af4-8d50-f32325803448','Allergy to eggs');");
     alasql("INSERT INTO allergies VALUES ('2000-01-03',null,'e6ff4bf9-09c2-4976-aa84-cca142207cf8','6c760807-a6b7-4af4-8d50-f32325803448','Allergy to peanuts');");
 </script>
+
 @end
 
 -->
+
+# Table allergies
 
 Must also import sql macros.

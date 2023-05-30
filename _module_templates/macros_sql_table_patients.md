@@ -3,10 +3,14 @@
 author:   DART Team
 email:    dart@chop.edu
 version:  1.0.0
+current_version_description: Initial version
 language: en
 narrator: UK English Female
 title: SQL patients table
 comment:  This is alaSQL code to generate the patients table.
+
+@version_history 
+@end
 
 @AlaSQL.buildTable_patients
 <script>
@@ -41,5 +45,7 @@ alasql("INSERT INTO patients VALUES ('fcc61454-1b07-4e49-a25b-29e5064e0063', '19
 @end
 
 -->
+
+# Table patients
 
 Must also import sql macros.
