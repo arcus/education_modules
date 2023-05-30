@@ -31,7 +31,7 @@ TIP: You can also use the "Your front matter checklist" section of docs.md to ge
     - [ ] author
     - [ ] email
     - [ ] version
-    - [ ] current_version_description
+    - [ ] current\_version\_description
     - [ ] module_type
     - [ ] module\_template\_version (should this change to docs_version?)
     - [ ] language

@@ -35,7 +35,7 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
   * [ ] comment appropriately filled out
   * [ ] long_description appropriately filled out
   * [ ] learning_objectives appropriately filled out
-  * [ ] version_history contains 1-3 past versions with bulleted links to commit-specific documents, unless this is an initial version of a module, in which case version_history can be empty or absent.
+  * [ ] version_history contains 1-3 past versions with bulleted links to commit-specific documents, unless this is an initial version of a module, in which case version_history can be empty.
   * [ ] imports macros (currently this line should read `import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md`)
 * [ ] Title is the first line after the end of the YAML
   * [ ] only level-1 header in the entire document.
