@@ -3,6 +3,8 @@
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version:  0.0.0
+current_version_description: Initial version
+module_type: standard
 docs_version: 1.0.0
 language: en
 narrator: UK English Female
@@ -43,7 +45,27 @@ After completion of this module, learners will be able to:
 
 @end
 
-import: https://raw.githubusercontent.com/arcus/education_modules/template_test/a_sample_module_template/module_macros.md
+good_first_module: false
+data_task: analysis
+coding_required: true
+coding_level: intermediate
+coding_language: R
+seqeunce_name: 
+
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
+@version_history
+
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
 
 -->
 
@@ -778,8 +800,12 @@ For inspiration (and lots of examples of things to try), check out [the `tbl_sum
 
 ## Additional Resources
 
+For general background on statistics: 
 
+- [StatsQuest videos on Statistics Fundamentals](https://www.youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9)
+- [Videos on statistics from Kahn Academy](https://www.khanacademy.org/math/statistics-probability)
 
+For more on the `gtsummary` package, see their website, especially the [FAQ and gallery of example tables](https://www.danieldsjoberg.com/gtsummary/articles/gallery.html)
 
 ## Feedback
 @feedback
