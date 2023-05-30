@@ -46,18 +46,19 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
-data_task: analysis
+data_task: data_analysis
 coding_required: true
 coding_level: intermediate
-coding_language: R
-seqeunce_name: 
+coding_language: r
+seqeunce_name: r_analysis
 
 @sets_you_up_for
 
 @end
 
 @depends_on_knowledge_available_in
-
+r_basics_introduction
+r_basics_transform_data
 @end
 
 @version_history
