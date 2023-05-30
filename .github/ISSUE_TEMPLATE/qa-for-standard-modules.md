@@ -1,4 +1,12 @@
-```
+---
+name: QA for Standard Modules
+about: QA template for standard modules
+title: QA Module Title
+labels: Quality Assurance
+assignees: ''
+
+---
+
 # Module Quality Assurance Report for PR #[PR number here]
 ----
 Date: {yyyy-mm-dd}
@@ -111,4 +119,3 @@ List here any internal references (stated or hyperlinked) that work now because 
 * [ ] Once there are no more commits to be made, get the newest commit value for the PR and update the commit value ("Current Version of Module:") at the top of this document.
 
 Congratulations! You can now approve the PR, merge to main, and close (not delete) this issue.
-```

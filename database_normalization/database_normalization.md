@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.2
+version: 1.0.3
 module_template_version: 3.0.0
 language: en
 narrator: US English Female
@@ -377,8 +377,8 @@ A foreign key is an identifier that originates in another table.  It certainly s
 
 ## Additional Resources
 
-* A brief, very readable article that talks about one-to-many relationships and several kinds of normalization (including our normalization in this module, which is third normal form, or 3NF) can be found at https://www.lifewire.com/one-to-many-relationships-1019756.
-* On the same site, you can read in a bit more technical detail about the various levels of normalization: https://www.lifewire.com/database-normalization-basics-1019735.
+* A brief, very readable [article that talks about one-to-many relationships and several kinds of normalization](https://www.lifewire.com/one-to-many-relationships-1019756) (including our normalization in this module, which is third normal form, or 3NF).
+* On the same site, you can read in [a bit more technical detail about the various levels of normalization](https://www.lifewire.com/database-normalization-basics-1019735).
 
 
 ## Feedback
