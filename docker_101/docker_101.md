@@ -255,6 +255,8 @@ One big difference is the value placed on **transparency** and **interpretabilit
 A good, reproducible container for a research project should be not only functional, but easy for others to understand. 
 Because of that, you should think of your Dockerfile as not just a set of instructions but an important form of communication.
 
+This article provides concrete guidance on how to set up your containers for use in research. 
+
 <div class = "external-resource">
 <b style="color: rgb(var(--color-highlight));">External Content</b><br>
 
@@ -338,7 +340,7 @@ True or False: When you run `docker build`, it will execute each line in the Doc
 
 Yes, docker executes instructions in the Dockerfile in the order in which they appear. 
 
-This is valuable to know because docker also uses [caching](https://en.wikipedia.org/wiki/Cache_(computing)) to store the results of executed instructions. 
+This is valuable to know because docker also uses [caching](https://en.wikipedia.org/wiki/Cache_%28computing%29) to store the results of executed instructions. 
 Then the next time you build the image, it will check each line of the Dockerfile to see if it's changed since the last build, and if there have been no changes it will just use the cached results until it reaches a line that's been edited. 
 At that point, it will switch back to executing instead of using the cache and will run all remaining lines in the Dockerfile. 
 That means re-running a build when you've only made edits to the end of a Dockerfile will be potentially much faster than if you had made the same edits at the beginning. 
@@ -365,13 +367,12 @@ For an overview using containers with high performance computing (HPC) centers, 
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
-**Thinking about security**
-
-Anyone can write and publish docker containers, so it is possible that someone could intentionally use a container to spread malware or for other malicious purposes (although we don't know of any documented cases of that actually happening within research communities).
+Anyone can write and publish docker containers, so it is possible that someone could intentionally [use a container to spread malware](https://www.cyber.nj.gov/alerts-advisories/malicious-cryptojacking-images-in-docker-hub) (although we don't know of any documented cases of that actually happening within research communities).
 A more common problem is that docker containers may not be updated after they're published, which means some use old versions of software and operating systems and may be missing important security patches. 
 
 When possible, use [Docker Official Images](https://docs.docker.com/docker-hub/official_images/), which are kept up to date and are very unlikely to have vulnerabilities. 
 Note that the official images are built for very general-purpose containers, though, and are often not setup properly for research needs.
+
 A good second-best option is to use images published and maintained by recognized communities --- see our list below.
 There's a good chance you'll find an existing image already built with all of the software and dependencies you need for your analysis workflow.
 
