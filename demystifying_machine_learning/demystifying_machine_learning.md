@@ -2,14 +2,27 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  0.0.1
-module_template_version: 3.0.0
+version:  0.0.0
+docs_version: 1.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
+
 title: Demystifying Machine Learning
+
 comment:  An approachable and practical introduction to machine learning for biomedical researchers.
+
 long_description: If you're curious about machine learning and whether or not it could be useful to you in your work, this is for you. It provides a high-level overview of machine learning techniques with an emphasis on applications in biomedical research. This module covers the what and the why of machine learning only, not the how -- it doesn't include instructions or code for running models, just background to help you think about machine learning in research.
-estimated_time: 45 min
+
+estimated_time_in_minutes: 45
+
+@pre_reqs
+
+This module assumes learners have been exposed to introductory statistics, like the distinction between [continuous and discrete variables](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/discrete-and-continuous-random-variables), [linear and quadratic relationships](https://www.khanacademy.org/math/statistics-probability/advanced-regression-inference-transforming#nonlinear-regression), and [ordinary least squares regression](https://www.youtube.com/watch?v=nk2CQITm_eo).
+It's fine if you don't know how to conduct a regression analysis, but you should be familiar with the concept.
+There are no coding exercises, and no programming experience is required.
+
+@end
 
 @learning_objectives  
 
@@ -22,34 +35,12 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-
-script: https://kit.fontawesome.com/83b2343bd4.js
-
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
 # Demystifying Machine Learning
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-This module assumes learners have been exposed to introductory statistics, like the distinction between [continuous and discrete variables](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/discrete-and-continuous-random-variables), [linear and quadratic relationships](https://www.khanacademy.org/math/statistics-probability/advanced-regression-inference-transforming#nonlinear-regression), and [ordinary least squares regression](https://www.youtube.com/watch?v=nk2CQITm_eo).
-It's fine if you don't know how to conduct a regression analysis, but you should be familiar with the concept.
-There are no coding exercises, and no programming experience is required.
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## What exactly is machine learning?
 
@@ -702,16 +693,4 @@ Tidy Modeling with R https://www.tmwr.org/
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Demystifying+Machine+Learning%22)!
+@feedback
