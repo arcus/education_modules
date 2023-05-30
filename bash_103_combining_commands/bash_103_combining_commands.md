@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
-version: 1.2.0
+version: 1.3.0
 module_template_version: 2.0.1
 language: en
 narrator: UK English Female
@@ -15,7 +15,8 @@ estimated_time: 30 minutes
 
 After completion of this module, learners will be able to:
 
-- Write the output of a command to a file using `>` and `>>`
+- Use the commands `wc`, `head`, `tail`,`sort`, and `uniq`
+- Redirect output to a file using `>` and `>>`
 - Chain commands directly using the pipe `|`
 @end
 
@@ -235,7 +236,10 @@ We will use this command more in combination with some other commands, but in a 
 
 ### Writing output to a file
 
+If you did the [Bash / Command Line 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md), you have already written the output of one command, `echo` to a file. Now we are going to see how the same principles work with these new commands.
+
 The commands we just saw give us information and insight through their outputs, but that output isn't actually preserved anywhere. If we want to see it again, or use it for something later without re-running the command, we need to save that output in a file. This process is called "writing output to a file" or "redirecting output to a file" because instead of the output being shown to us in the command line interface, it is instead going to be written and saved to the file we name.
+
 
 The "greater than" symbol, also known as an arrow or more specifically "right arrow" lets us redirect output. On a standard American qwerty keyboard, the `>` is located on the same key as the period `.`
 
