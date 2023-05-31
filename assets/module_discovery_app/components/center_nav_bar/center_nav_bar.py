@@ -109,7 +109,7 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
     id="data_domain_collapse_button", color="light"),
     dbc.Badge("?", id="data_domain_info_button", pill=True,  color="light", text_color="dark"),
     dbc.Popover(
-            dbc.PopoverBody(dcc.Markdown("Do we need to disambiguate these? Or would it be better to do that directly in the button names?")),
+            dbc.PopoverBody(dcc.Markdown("Some modules focus on particular types of data. These modules might introduce be focused on getting learners used to working with a particular type of data, or they might be focused on other tasks but use examples from a specific domain like geospatial (location) data, Electronic Health Records, etc.")),
             target="data_domain_info_button",
             trigger="click",
         ),
