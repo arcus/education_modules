@@ -31,10 +31,10 @@ hidden_filtered_modules = hidden_filtered_modules.hidden_filtered_modules
 hidden_active_module = hidden_active_module.hidden_active_module
 
 # Import inter-component callbacks
-import turn_nodes_on_off_callbacks
+import callbacks.turn_nodes_on_off_callbacks
 
-import filter_modules
-import determine_active_node
+import callbacks.filter_modules
+
 
 
 
@@ -67,10 +67,10 @@ app.layout = html.Div([
 center_nav_bar_callbacks.get_center_nav_bar_callbacks(app)
 
 # Initialize all INTERcomponent callbacks next...
-turn_nodes_on_off_callbacks.turn_nodes_on_off(app)
-filter_modules.update_hidden_filtered_modules(app)
+callbacks.turn_nodes_on_off_callbacks.turn_nodes_on_off(app)
+callbacks.filter_modules.update_hidden_filtered_modules(app)
 clickable_module_list_callbacks.create_clickable_module_list(app)
-determine_active_node.determine_active_node(app)
+#determine_active_node.determine_active_node(app)
     
 if __name__ == '__main__':
     app.run_server(debug=True)
