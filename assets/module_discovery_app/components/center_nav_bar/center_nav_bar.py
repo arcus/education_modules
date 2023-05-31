@@ -52,7 +52,7 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
     id="coding_level_collapse_button", color="dark", outline=True),
         dbc.Badge("?", id="coding_level_info_button", pill=True,  color="light", text_color="dark"),
     dbc.Popover(
-            dbc.PopoverBody(dcc.Markdown("Put something **about stuff** _here!_")),
+            dbc.PopoverBody(dcc.Markdown("**Getting Started:** These modules are primarily about getting a platform set up. \n\n **Basic:** These modules require little or no previous exposure to coding. \n\n **Intermediate** These modules require some previous coding exposure. \n\n **Advanced:** These modules focus on particularly difficult or specialized tasks. \n\n **Practice Exercises:** These modules do not introduce new content.")),
             target="coding_level_info_button",
             trigger="click",
         ),
@@ -81,7 +81,7 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
     id="data_task_collapse_button", color="light"),
     dbc.Badge("?", id="data_task_info_button", pill=True,  color="light", text_color="dark"),
     dbc.Popover(
-            dbc.PopoverBody(dcc.Markdown("Put something **about stuff** _here!_")),
+            dbc.PopoverBody(dcc.Markdown("**Data Visualization:** Creating representations of data such as plots, graphs, maps, etc.\n\n **Data Management:** Organizing and storing data, including database structures, data sharing, cloud vs. local storage, and metadata. \n\n **Data Wrangling:** Data processing steps in preparation for analysis and visualization, including cleaning, transforming, and reshaping data.\n\n **Data Analysis:** Identifying and quantifying patterns in the data, including exploratory analysis, descriptive statistics, and more formal modeling.")),
             target="data_task_info_button",
             trigger="click",
         ),
@@ -109,7 +109,7 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
     id="data_domain_collapse_button", color="light"),
     dbc.Badge("?", id="data_domain_info_button", pill=True,  color="light", text_color="dark"),
     dbc.Popover(
-            dbc.PopoverBody(dcc.Markdown("Put something **about stuff** _here!_")),
+            dbc.PopoverBody(dcc.Markdown("Do we need to disambiguate these? Or would it be better to do that directly in the button names?")),
             target="data_domain_info_button",
             trigger="click",
         ),
