@@ -21,6 +21,8 @@ nodes = [
             'coding_language': df.loc[row,'coding_language'],
             'coding_level': df.loc[row,'coding_level'],
             },
+            'selected':True,
+            #'selectable': True
     }
     for row in df.index 
 ]
@@ -28,7 +30,7 @@ nodes = [
 edges = []
 for row in df.index:
     for linked_module in df.loc[row, 'Linked Courses']:
-        edges.append({'data': {'source': linked_module, 'target': row, 'relationship': 'internal_link', 'selectable': False}})
+        edges.append({'data': {'source': linked_module, 'target': row, 'relationship': 'internal_link'}})
 
 default_stylesheet = default_stylesheet.default_stylesheet
 

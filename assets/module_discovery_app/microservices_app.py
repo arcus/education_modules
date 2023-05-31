@@ -32,8 +32,10 @@ hidden_active_module = hidden_active_module.hidden_active_module
 
 # Import inter-component callbacks
 import callbacks.turn_nodes_on_off_callbacks
-
+import callbacks.determine_active_node
+import callbacks.active_node_updates
 import callbacks.filter_modules
+import callbacks.debugger
 
 
 
@@ -57,8 +59,9 @@ app.layout = html.Div([
         #information_panel
         ]),
     html.Div(hidden_filtered_modules), # visible for debugging purposes, change to 'display': 'none' for production purposes.
-    html.Div(hidden_active_module) # visible for debugging purposes, change to 'display': 'none' for production purposes.
-
+    dcc.Markdown("current active node"),
+    html.Div(hidden_active_module), # visible for debugging purposes, change to 'display': 'none' for production purposes.
+    html.Div(children=["blue"], id="debugger"),     html.Div(children=["blue"], id="debugger2")
     ],
     style={'padding' : '25px'}
     )
@@ -70,7 +73,9 @@ center_nav_bar_callbacks.get_center_nav_bar_callbacks(app)
 callbacks.turn_nodes_on_off_callbacks.turn_nodes_on_off(app)
 callbacks.filter_modules.update_hidden_filtered_modules(app)
 clickable_module_list_callbacks.create_clickable_module_list(app)
-#determine_active_node.determine_active_node(app)
-    
+callbacks.determine_active_node.determine_active_node(app)
+#callbacks.active_node_updates.active_node_updates(app)
+callbacks.debugger.debugger(app)
+
 if __name__ == '__main__':
     app.run_server(debug=True)

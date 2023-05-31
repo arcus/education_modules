@@ -7,8 +7,13 @@ def create_clickable_module_list(app):
                Input('hidden_filtered_modules_list', 'children'))
    def create_module_links(matching_modules):
       matches = []
-      for module_id in matching_modules:
+      for module_id in module_data.df.index:
          title = module_data.df.loc[module_id, 'title']
-         button = dbc.Button(title, value=module_id)
-         matches.append(button)
+         button_id = str(module_id)+"_button"
+         if module_id in matching_modules:
+            button = dbc.Button(title, id=button_id)
+            matches.append(button)
+         else:
+            button = html.Button(module_id, id=button_id, style={'display':'hidden'})
+            matches.append(button)
       return matches
