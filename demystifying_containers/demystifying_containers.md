@@ -25,7 +25,7 @@ estimated_time_in_minutes: 20
 @learning_objectives  
 After completion of this module, learners will be able to:
 
-- understand when it might be useful to use containers for development
+- understand when it might be useful to use containers for research
 - describe the basic concept of containerization
 - identify several containerization implementations
 @end
