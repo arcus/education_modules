@@ -25,13 +25,16 @@ heading_tabs = heading_tabs.heading_tabs
 from components.clickable_module_list import clickable_module_list, clickable_module_list_callbacks
 clickable_module_list_panel = clickable_module_list.clickable_module_list
 
+from components.module_details_panel import module_details_panel
+module_information = module_details_panel.module_details_panel
+
 # Import the hidden components that keep track of the filtered modules and the active module
 from components import hidden_filtered_modules, hidden_active_module
 hidden_filtered_modules = hidden_filtered_modules.hidden_filtered_modules
 hidden_active_module = hidden_active_module.hidden_active_module
 
 # Import inter-component callbacks
-import callbacks.turn_nodes_on_off_callbacks
+import callbacks.stylesheet_callbacks
 import callbacks.active_node_in
 import callbacks.active_node_out
 import callbacks.filter_modules_in
@@ -54,12 +57,13 @@ app.layout = html.Div([
         ),
     html.Hr(),
     dbc.Row(children=[
-        dbc.Col(children=[visualization_panel, html.Br(), clickable_module_list_panel],width=5),
+        dbc.Col(children=[visualization_panel, html.Br(), clickable_module_list_panel, html.Br(), html.Hr(), html.Br(),
+        module_information],width=5),
         center_nav_bar,
-        #information_panel
         ]),
-    html.Div(hidden_filtered_modules), # visible for debugging purposes, change to 'display': 'none' for production purposes.
-    html.Div(hidden_active_module), # visible for debugging purposes, change to 'display': 'none' for production purposes.
+    html.Hr(), html.Hr(),
+    html.Div(hidden_filtered_modules), # DONT COMMENT OUT this is visible for debugging purposes, change to 'display': 'none' for production purposes. 
+    html.Div(hidden_active_module), # DONT COMMENT OUT this is visible for debugging purposes, change to 'display': 'none' for production purposes.
     #html.Div(children=["blue"], id="debugger"),     html.Div(children=["blue"], id="debugger2")
     html.Button("dummy", id="dummy_button", style = dict(display='none')), ## This is a workaround to deal with an initial trigger for the callbacks
     ],
@@ -70,7 +74,7 @@ app.layout = html.Div([
 center_nav_bar_callbacks.get_center_nav_bar_callbacks(app)
 
 # Initialize all INTERcomponent callbacks next...
-callbacks.turn_nodes_on_off_callbacks.turn_nodes_on_off(app)
+callbacks.stylesheet_callbacks.turn_nodes_on_off(app)
 callbacks.filter_modules_in.update_hidden_filtered_modules(app)
 clickable_module_list_callbacks.create_clickable_module_list(app)
 callbacks.active_node_in.active_node_in(app)

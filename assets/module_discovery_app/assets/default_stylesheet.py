@@ -20,31 +20,21 @@ neutral_edge_styling = {
 
 selected_styling = {
                 'label': 'data(title)',
-                'color': 'black',
-                'background_color': 'gray',
-                'opacity': 1
+                'background_color': 'blue',
+                'opacity': 1,
+
                     }
 
 unselected_styling = {
-                    'color': 'black',
+                   'background-color': '#FF4136',
                     'label': ' ',
+                    'opacity': .3,
                         }
 
 
 default_stylesheet = [
     # make all the nodes neutrally styled
     {'selector': 'node', 'style': neutral_node_styling},
-    {'selector': 'node',
-    'style': {
-        'background-color': 'lightgray',
-        'color': 'gray',
-        'label': ' ',
-        'opacity': 0.3
-        }
-    },
     # make all the edges neutrally styled
-    {
-    'selector': 'edge',
-    'style': neutral_edge_styling
-    },
-]
+    {'selector': 'edge', 'style': neutral_edge_styling},
+    ]

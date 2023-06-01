@@ -6,7 +6,7 @@ def create_clickable_module_list(app):
    @app.callback(Output('clickable_module_links', 'children'),
                Input('hidden_filtered_modules_list', 'children'))
    def create_module_links(matching_modules):
-      matches = [html.Button("dummy", id="dummy_button", style = dict(display='none'))] ## This is a workaround to deal with an initial trigger for the callbacks
+      matches = []
       for module_id in module_data.df.index:
          title = module_data.df.loc[module_id, 'title']
          button_id = str(module_id)+"_button"
