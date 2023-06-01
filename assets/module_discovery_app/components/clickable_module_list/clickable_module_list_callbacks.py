@@ -11,9 +11,9 @@ def create_clickable_module_list(app):
          title = module_data.df.loc[module_id, 'title']
          button_id = str(module_id)+"_button"
          if module_id in matching_modules:
-            button = dbc.Button(title, id=button_id)
+            button = dbc.Button(title, id=button_id, n_clicks=0)
             matches.append(button)
          else:
-            button = html.Button(module_id, id=button_id)#, style = dict(display='none'))
+            button = html.Button(module_id, id=button_id, n_clicks=0)#, style = dict(display='none'))
             matches.append(button)
       return matches

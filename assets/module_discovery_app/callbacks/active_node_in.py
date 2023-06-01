@@ -14,7 +14,8 @@ def active_node_in(app):
         trigger = ctx.triggered_id
         if trigger == "module_visualization":
             return data['id']
-        elif trigger == "dummy_button": ## This is always going to make an initial call, the hidden dummy button makes sure it doesn't just return the alphabetically first module.
-            return trigger
+        elif sum(args) != 0:
+             return trigger[:-7]
         else:
-            return trigger[:-7]
+            return "no_active_module"
+
