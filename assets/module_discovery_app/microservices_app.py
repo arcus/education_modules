@@ -42,7 +42,7 @@ import callbacks.debugger
 
 
 # Initialize the app
-app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_callback_exceptions=True) ## suppress_callback_exceptions prevents all of the errors from callbacks calling things not yet set up by other callbacks.
 server = app.server
 
 
@@ -61,6 +61,7 @@ app.layout = html.Div([
     html.Div(hidden_filtered_modules), # visible for debugging purposes, change to 'display': 'none' for production purposes.
     html.Div(hidden_active_module), # visible for debugging purposes, change to 'display': 'none' for production purposes.
     #html.Div(children=["blue"], id="debugger"),     html.Div(children=["blue"], id="debugger2")
+    html.Button("dummy", id="dummy_button", style = dict(display='none')), ## This is a workaround to deal with an initial trigger for the callbacks
     ],
     style={'padding' : '25px'}
     )
@@ -74,7 +75,7 @@ callbacks.filter_modules_in.update_hidden_filtered_modules(app)
 clickable_module_list_callbacks.create_clickable_module_list(app)
 callbacks.active_node_in.active_node_in(app)
 #callbacks.active_node_out.active_node_out(app)
-callbacks.debugger.debugger(app)
+#callbacks.debugger.debugger(app)
 
 if __name__ == '__main__':
     app.run_server(debug=True)
