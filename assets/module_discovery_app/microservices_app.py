@@ -59,9 +59,8 @@ app.layout = html.Div([
         #information_panel
         ]),
     html.Div(hidden_filtered_modules), # visible for debugging purposes, change to 'display': 'none' for production purposes.
-    dcc.Markdown("current active node"),
     html.Div(hidden_active_module), # visible for debugging purposes, change to 'display': 'none' for production purposes.
-    html.Div(children=["blue"], id="debugger"),     html.Div(children=["blue"], id="debugger2")
+    #html.Div(children=["blue"], id="debugger"),     html.Div(children=["blue"], id="debugger2")
     ],
     style={'padding' : '25px'}
     )
