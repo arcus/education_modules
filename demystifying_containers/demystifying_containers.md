@@ -147,7 +147,6 @@ True or false: A Docker container is the only kind of container.
 
 [( )] True
 [(X)] False 
-
 ***
 <div class = "answer">
 
