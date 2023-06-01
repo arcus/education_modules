@@ -37,7 +37,9 @@ good_first_module: false
 @end
 
 depends_on_knowledge_available_in:
+@version_history
 
+@end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/templates_update/_module_templates/macros.md
 -->
