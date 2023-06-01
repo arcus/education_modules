@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  0.0.0
+version:  1.0.0
 current_version_description: Initial version
 module_type: wrapper
 docs_version: 1.0.0
@@ -59,8 +59,21 @@ resource2_a11y_issues: No known issues with accessibility, but we may have misse
 4. Return to this module for the "Docker for Research Quiz", and for the final sections of the module.
 @end
 
-@version_history
+good_first_module: false
+coding_required: true
+coding_level: intermediate
+coding_language: bash
 
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+- demystifying_containers
+@end
+
+@version_history
+No previous versions.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
