@@ -133,7 +133,7 @@ Unlike a container, which is a lightweight bundle of software with all of the co
 
 There are a variety of choices when it comes to containerization technology, but the most popular is **Docker**. [Docker's website](https://www.docker.com/) has many resources and articles to help you get started, as well as a [registry for container images, called DockerHub](https://hub.docker.com/), where you can store your own container images and make use of images already out there. 
 
-However there are other providers that you might come across, that are very similar to Docker but might have subtle differences that may make them better for specific workflows (don't worry about those differences right now though). Here are just a few:
+However, there are other providers that you might come across that are very similar to Docker but might have subtle differences that may make them better for specific workflows (don't worry about those differences right now though). Here are just a few:
 
 - [Podman](https://podman.io/) is a container service developed by [RedHat](https://www.redhat.com/en). It is often used in conjunction with [Buildah](https://buildah.io/).
 - [Linux Daemon, or LXD](https://linuxcontainers.org/)
