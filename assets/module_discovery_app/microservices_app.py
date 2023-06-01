@@ -65,7 +65,6 @@ app.layout = html.Div([
     html.Div(hidden_filtered_modules), # DONT COMMENT OUT this is visible for debugging purposes, change to 'display': 'none' for production purposes. 
     html.Div(hidden_active_module), # DONT COMMENT OUT this is visible for debugging purposes, change to 'display': 'none' for production purposes.
     #html.Div(children=["blue"], id="debugger"),     html.Div(children=["blue"], id="debugger2")
-    html.Button("dummy", id="dummy_button", style = dict(display='none')), ## This is a workaround to deal with an initial trigger for the callbacks
     ],
     style={'padding' : '25px'}
     )

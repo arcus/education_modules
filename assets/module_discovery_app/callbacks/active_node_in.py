@@ -7,14 +7,14 @@ import module_data
 def active_node_in(app):
     @app.callback(Output('hidden_active_module', 'children'),
                  Input('module_visualization', 'tapNodeData'),
-                 Input('dummy_button', 'n_clicks'),
-                 [Input(module_id+"_button", 'n_clicks') for module_id in module_data.df.index] ### this is super cludgy and requires us to create all the buttons for stuff we don't need and just hide them.
-                )
+                 #Input('dummy_button', 'n_clicks'),
+                 [Input(module_id+"_button", 'n_clicks') for module_id in module_data.df.index], ### this is super cludgy and requires us to create all the buttons for stuff we don't need and just hide them.
+                prevent_initial_call=True)
     def activate(data, *args):
         trigger = ctx.triggered_id
         if trigger == "module_visualization":
             return data['id']
         elif trigger == "dummy_button": ## This is always going to make an initial call, the hidden dummy button makes sure it doesn't just return the alphabetically first module.
-            return
+            return trigger
         else:
             return trigger[:-7]

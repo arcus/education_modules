@@ -19,8 +19,8 @@ neutral_edge_styling = {
          }
 
 selected_styling = {
+                'background-color': 'blue',
                 'label': 'data(title)',
-                'background_color': 'blue',
                 'opacity': 1,
 
                     }
