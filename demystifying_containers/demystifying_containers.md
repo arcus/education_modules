@@ -36,7 +36,9 @@ good_first_module: false
 - docker_101
 @end
 
-depends_on_knowledge_available_in:
+@depends_on_knowledge_available_in
+
+@end
 @version_history
 
 @end
