@@ -35,7 +35,8 @@ After completion of this module, learners will be able to:
 resource1_name: Docker 101 Tutorial
 resource1_description: From the Docker website: "In this self-paced, hands-on tutorial, you will learn how to build images, run containers, use volumes to persist data and mount in source code, and define your application using Docker Compose. You’ll even learn about a few advanced topics, such as networking and image building best practices."
 resource1_wellvetted: true
-resource1_wellvetted_text:  The Docker 101 tutorial is an [open source project](https://github.com/docker/getting-started), so it has many authors, but it is sponsored and hosted by Docker Inc, the company that produces the docker software. The open source nature of the tutorial also helps ensure that any errors or problems can be caught and addressed quickly.
+resource1_wellvetted_text:  The Docker 101 tutorial is an <a href="https://github.com/docker/getting-started">open source project</a>, so it has many authors, but it is sponsored and hosted by Docker Inc, the company that produces the docker software. The open source nature of the tutorial also helps ensure that any errors or problems can be caught and addressed quickly.
+
 resource1_maintained: true
 resource1_maintained_text: This tutorial is maintained by Docker Inc, so we expect that it will remain up to date whenever changes are implemented in docker.
 resource1_stablesupport: true
@@ -53,7 +54,7 @@ resource2_stablesupport_text: This article has an assigned DOI (digital identifi
 resource2_a11y_issues: No known issues with accessibility, but we may have missed something. If you encounter an issue, please [let us know](#feedback)!
 
 @module_structure
-1. Do the first half of the "Docker 101" tutorial (on docker.com).
+1. Do the first half of the "Docker 101" tutorial (on the Docker website).
 2. Return to this module to complete the "Docker 101 Quiz" to check your understanding and consolidate your knowledge.
 3. Read the article "Ten simple rules for writing Dockerfiles for reproducible data science" by Nüst et al. 2020 (on plos.org).
 4. Return to this module for the "Docker for Research Quiz", and for the final sections of the module.
@@ -96,7 +97,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 The tutorial we link to in this section is an excellent practical introduction to using containers, but it's written with a software developer audience in mind, rather than people who might want to use containers for their research. 
 
-As you work through the tutorial, you'll open and edit javascript files for a simple app (Don't worry! You don't need to know any javascript at all to be able to to the tutorial.).
+As you work through the tutorial, you'll open and edit javascript files for a simple app. (Don't worry! You don't need to know any javascript at all to be able to to the tutorial.)
 The tutorial sets you up to build a container that, when run, starts the app. 
 
 A more common application in research might be a container that loads required libraries in Python and does the first stage of data preprocessing on startup. 
@@ -106,7 +107,7 @@ Or a container that trains a machine learning model on a provided dataset.
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-As you consider the tutorial, imagine the kind of coding projects you typically work on --- whatever that is --- rather than the example code they provide. 
+As you consider the tutorial, imagine the kinds of coding projects you typically work on --- whatever those are --- rather than the example code they provide. 
 
 </div>
 
@@ -115,7 +116,7 @@ As you consider the tutorial, imagine the kind of coding projects you typically 
 To do the Docker 101 tutorial, you'll need a couple things set up: 
 
 - Create an account (it's free) at Docker Hub ([Docker Hub signup page](https://hub.docker.com/signup/)).
-- Install [Docker Desktop](https://docs.docker.com/desktop/) on your computer ([installation instrutcions for Windows](https://docs.docker.com/desktop/install/windows-install/), [installation instructions for Mac](https://docs.docker.com/desktop/install/mac-install/), and [installation instructions for Linux](https://docs.docker.com/desktop/install/linux-install/)).
+- Install [Docker Desktop](https://docs.docker.com/desktop/) on your computer ([installation instructions for Windows](https://docs.docker.com/desktop/install/windows-install/), [installation instructions for Mac](https://docs.docker.com/desktop/install/mac-install/), and [installation instructions for Linux](https://docs.docker.com/desktop/install/linux-install/)).
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
@@ -162,7 +163,7 @@ See [this post on stackoverflow](https://stackoverflow.com/questions/71200635/ca
 
 </div>
 
-### Docker 101 Quiz
+### Quiz: Docker 101
 
 Which of the following are part of the container image? Select all that apply.
 
