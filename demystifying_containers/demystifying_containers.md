@@ -2,7 +2,8 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  0.0.1
+version:  1.0.0
+current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
 language: en
