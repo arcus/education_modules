@@ -11,7 +11,7 @@ narrator: UK English Female
 
 title: Demystifying Containers
 
-comment: Containers can be a useful tool for reproducible workflows and collaboration. This module aims to describe what containers are, why a researcher might want to use them, and how to get started. 
+comment: Containers can be a useful tool for reproducible workflows and collaboration. This module describes what containers are, why a researcher might want to use them, and what your options are for implementation. 
 
 long_description: Writing code in multiple environments can be tricky. Collaboration can be hindered by different language versions, packages, and even operating systems. Developing code in containers can be a solution to this problem. In this module, we'll describe what containers are at a high level and discuss how they might be useful to researchers. 
 
