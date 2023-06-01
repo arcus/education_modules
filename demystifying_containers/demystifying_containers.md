@@ -4,7 +4,7 @@ author:   Meredith Lee
 email:    leemc@chop.edu
 version:  0.0.1
 module_type: standard
-module_template_version: 3.1.0
+docs_version: 1.0.0
 language: en
 narrator: UK English Female
 
