@@ -17,7 +17,7 @@ long_description: Writing code in multiple environments can be tricky. Collabora
 
 estimated_time_in_minutes: 20
 
-@prerequisites
+@pre_reqs
 - some familiarity with programming is helpful, but not required
 @end
 
