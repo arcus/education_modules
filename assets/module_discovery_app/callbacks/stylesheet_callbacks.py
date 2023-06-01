@@ -9,9 +9,14 @@ import module_data
 
 def turn_nodes_on_off(app):
     @app.callback(Output('module_visualization', 'stylesheet'),
-                Input('hidden_filtered_modules_list','children'))
-    def update_stylesheet(filtered_module_list):
-        new_stylesheet = []
+                Input('hidden_filtered_modules_list','children'),
+                Input('hidden_active_module', 'children'))
+    def update_stylesheet(filtered_module_list,active_node):
+        active_node_selector = str('[id *= "')+str(active_node)+str('" ]')
+        new_stylesheet = [
+            {'selector': 'edge', 'style': default_stylesheet.neutral_edge_styling},
+            {'selector': active_node_selector, 'style': default_stylesheet.active_node_styling}
+            ]
         for module_id in module_data.df.index:
             selector = str('[id *= "')+str(module_id)+str('" ]')
             if module_id in filtered_module_list:
@@ -22,6 +27,5 @@ def turn_nodes_on_off(app):
                 new_stylesheet +=[{'selector': selector,
                                 'style': default_stylesheet.unselected_styling
                                     }]
-
         return new_stylesheet
 

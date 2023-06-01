@@ -31,6 +31,12 @@ unselected_styling = {
                     'opacity': .3,
                         }
 
+active_node_styling = {
+                   'background-color': 'green',
+                    'label': 'data(title)',
+                    'opacity': 1,
+                        }
+
 
 default_stylesheet = [
     # make all the nodes neutrally styled
