@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 import module_data 
 
 ### Whatever the ACTIVE NODE is, it will be visually displayed and its information will be shown in the panel
-def active_node_updates(app):
+def active_node_out(app):
     @app.callback(Output('debugger', 'children'),
                  Input('hidden_active_module', 'children')
                 )
