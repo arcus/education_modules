@@ -32,7 +32,9 @@ After completion of this module, learners will be able to:
 
 good_first_module: false
 
-sets_you_up_for: docker_101
+@sets_you_up_for 
+- docker_101
+@end
 
 depends_on_knowledge_available_in:
 
