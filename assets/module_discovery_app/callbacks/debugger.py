@@ -19,5 +19,5 @@ def debugger(app):
                   [Input(button, 'n_clicks') for button in module_buttons] ### this is super cludgy and creates all the buttons for stuff we don't need...
                 )
     def filtering(*args):
-        trigger = ctx.triggered[0]
+        trigger = ctx.triggered_id
         return trigger

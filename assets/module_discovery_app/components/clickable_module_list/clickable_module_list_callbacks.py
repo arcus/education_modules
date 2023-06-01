@@ -14,6 +14,6 @@ def create_clickable_module_list(app):
             button = dbc.Button(title, id=button_id)
             matches.append(button)
          else:
-            button = html.Button(module_id, id=button_id, style={'display':'hidden'})
+            button = html.Button(module_id, id=button_id, style = dict(display='none'))
             matches.append(button)
       return matches
