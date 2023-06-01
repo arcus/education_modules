@@ -8,6 +8,7 @@ module_type: standard
 docs_version: 1.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 
 title: Demystifying Containers
 
