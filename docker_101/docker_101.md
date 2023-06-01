@@ -12,9 +12,9 @@ mode: Textbook
 
 title: Getting Started with Docker for Research
 
-comment: This tutorial combines a hands-on interactive docker tutorial published by Docker Inc with an academic article outlining best practices for using docker for research. 
+comment: This tutorial combines a hands-on interactive Docker tutorial published by Docker Inc with an academic article outlining best practices for using Docker for research. 
 
-long_description: If you've been curious about how to use docker for your research, this module is a great place to start. The Docker 101 tutorial is a popular, hands-on approach to learning docker that will get you using containers right away, so you can learn by doing. To help you bridge the gap between basic docker use and best practices for using docker in research, we also link to an article outlining 10 rules to help you create great containers for research, and lists of ready-to-use docker images for a variety of analysis workflows. This module includes running and editing comamnds in the terminal, so you'll need some basic familiarity with bash, but it is otherwise appropriate for beginniners. No prior experience with docker or containers is assumed. 
+long_description: If you've been curious about how to use Docker for your research, this module is a great place to start. The Docker 101 tutorial is a popular, hands-on approach to learning Docker that will get you using containers right away, so you can learn by doing. To help you bridge the gap between basic Docker use and best practices for using Docker in research, we also link to an article outlining 10 rules to help you create great containers for research, and lists of ready-to-use Docker images for a variety of analysis workflows. This module includes running and editing comamnds in the terminal, so you'll need some basic familiarity with bash, but it is otherwise appropriate for beginniners. No prior experience with Docker or containers is assumed. 
 
 estimated_time_in_minutes: 60
 
@@ -35,10 +35,10 @@ After completion of this module, learners will be able to:
 resource1_name: Docker 101 Tutorial
 resource1_description: From the Docker website: "In this self-paced, hands-on tutorial, you will learn how to build images, run containers, use volumes to persist data and mount in source code, and define your application using Docker Compose. You’ll even learn about a few advanced topics, such as networking and image building best practices."
 resource1_wellvetted: true
-resource1_wellvetted_text:  The Docker 101 tutorial is an <a href="https://github.com/docker/getting-started">open source project</a>, so it has many authors, but it is sponsored and hosted by Docker Inc, the company that produces the docker software. The open source nature of the tutorial also helps ensure that any errors or problems can be caught and addressed quickly.
+resource1_wellvetted_text:  The Docker 101 tutorial is an <a href="https://github.com/docker/getting-started">open source project</a>, so it has many authors, but it is sponsored and hosted by Docker Inc, the company that produces the Docker software. The open source nature of the tutorial also helps ensure that any errors or problems can be caught and addressed quickly.
 
 resource1_maintained: true
-resource1_maintained_text: This tutorial is maintained by Docker Inc, so we expect that it will remain up to date whenever changes are implemented in docker.
+resource1_maintained_text: This tutorial is maintained by Docker Inc, so we expect that it will remain up to date whenever changes are implemented in Docker.
 resource1_stablesupport: true
 resource1_stablesupport_text: This is hosted on the Docker website, and it is a popular and widely-shared tutorial. We expect it will continue to be available for the foreseeable future.
 resource1_a11y_issues: No known issues with accessibility, but we may have missed something. If you encounter an issue, please [let us know](#feedback)!
@@ -121,7 +121,7 @@ To do the Docker 101 tutorial, you'll need a couple things set up:
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-To check that you have successfully installed docker on your computer, open the comand line and run the following: 
+To check that you have successfully installed Docker on your computer, open the comand line and run the following: 
 
 ```
 docker run hello-world
@@ -148,8 +148,8 @@ You are welcome to continue past that point if you wish, but it focuses on topic
 
 Some tips you can apply at any time:
 
-- To see all the docker images you've built on your computer use `docker image ls`.
-- To see all docker containers currently running use `docker ps`.
+- To see all the Docker images you've built on your computer use `docker image ls`.
+- To see all Docker containers currently running use `docker ps`.
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
@@ -220,10 +220,10 @@ In the command `docker build -t getting-started .` what does the `-t` flag stand
 ***
 <div class = "answer">
 
-It refers to a tag, a custom identifier you can use to refer to this image (instead of relying on the long, random IDs docker assigns by default). 
-The tag in this example is `getting-started`, so if we want to run this container we just built we can use a command like `docker run getting-started` and docker will know we're talking about the image we built and tagged above.
+It refers to a tag, a custom identifier you can use to refer to this image (instead of relying on the long, random IDs Docker assigns by default). 
+The tag in this example is `getting-started`, so if we want to run this container we just built we can use a command like `docker run getting-started` and Docker will know we're talking about the image we built and tagged above.
 
-To learn more, see the [docker handbook section on tags](https://docker-handbook.farhan.dev/image-manipulation-basics#tagging-images).
+To learn more, see the [Docker handbook section on tags](https://docker-handbook.farhan.dev/image-manipulation-basics#tagging-images).
 
 </div>
 ***
@@ -241,7 +241,7 @@ The command `docker run` starts a container that you've already built.
 </div>
 ***
 
-Once you've built a docker image, what is the easiest way to share it?
+Once you've built a Docker image, what is the easiest way to share it?
 
 [( )] Send the Dockerfile via email
 [(X)] Share the image via an online repository
@@ -258,12 +258,12 @@ Note that sending just the Dockerfile to someone isn't enough for them to be abl
 
 ## Using Docker in Research
 
-Most of the tutorials and explanations you'll find online about docker (including the Docker 101 tutorial you just worked on) focus on its use in software development. 
+Most of the tutorials and explanations you'll find online about Docker (including the Docker 101 tutorial you just worked on) focus on its use in software development. 
 Importantly, most of the example Dockerfiles you'll find online are also written by and for developers. 
-As someone new to docker (and even for experienced users!), being able to copy existing Dockerfiles is an important time saver.
+As someone new to Docker (and even for experienced users!), being able to copy existing Dockerfiles is an important time saver.
 Although you might be able to get these images to work for your research needs, there are a lot of special considerations that come up when you're using containers for reproducible research rather than software develpoment. 
 
-**So what do you need to keep in mind as you think about how to use docker in your research?** 
+**So what do you need to keep in mind as you think about how to use Docker in your research?** 
 
 One big difference is the value placed on **transparency** and **interpretability** in the research community. 
 A good, reproducible container for a research project should be not only functional, but easy for others to understand. 
@@ -292,7 +292,7 @@ True or False: The authors recommend including your dataset in the container, to
 They recommend storing datafiles outside of the container and using bind mounts to attach the data just when you run the container, rather than building it into the image. 
 See [Rule 7: Mount datasets at run time](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316#sec020). 
 
-For more guidance on using bind mounts, see the [docker documentation on bind mounts](https://docs.docker.com/storage/bind-mounts/).
+For more guidance on using bind mounts, see the [Docker documentation on bind mounts](https://docs.docker.com/storage/bind-mounts/).
 
 </div>
 ***
@@ -352,9 +352,9 @@ True or False: When you run `docker build`, it will execute each line in the Doc
 ***
 <div class = "answer">
 
-Yes, docker executes instructions in the Dockerfile in the order in which they appear. 
+Yes, Docker executes instructions in the Dockerfile in the order in which they appear. 
 
-This is valuable to know because docker also uses [caching](https://en.wikipedia.org/wiki/Cache_%28computing%29) to store the results of executed instructions. 
+This is valuable to know because Docker also uses [caching](https://en.wikipedia.org/wiki/Cache_%28computing%29) to store the results of executed instructions. 
 Then the next time you build the image, it will check each line of the Dockerfile to see if it's changed since the last build, and if there have been no changes it will just use the cached results until it reaches a line that's been edited. 
 At that point, it will switch back to executing instead of using the cache and will run all remaining lines in the Dockerfile. 
 That means re-running a build when you've only made edits to the end of a Dockerfile will be potentially much faster than if you had made the same edits at the beginning. 
@@ -367,6 +367,15 @@ They provide a suggested order of sections under [Rule 9: Order the instructions
 ***
 
 ## Additional Resources
+
+**Curious about the second half of that Docker 101 tutorial?**
+
+We prioritized the first half of the [Docker 101 tutorial](docker-101-tutorial) for this lesson because those are the sections that will be most directly relevant to a typical research workflow. 
+
+There's great content in the remaining sections, though, and you may wish to work through them as well, especially now that you have additional context about how Docker gets used in research after reading Nüst et al. (2020).
+The tutorial section on bind mounts ("Using Bind Mounts") may be particularly useful, as it gives you a chance to practice the approach Nüst et al. advocate for in [Rule 7: Mount datasets at runtime](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316#sec020).
+
+**Here are some other sources you may find helpful:**
 
 [An Introduction to Rocker: Docker Containers for R](https://journal.r-project.org/archive/2017/RJ-2017-065/RJ-2017-065.pdf) by Boettiger and Eddelbuettel (2017).
 
@@ -381,8 +390,8 @@ For an overview using containers with high performance computing (HPC) centers, 
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
-Anyone can write and publish docker containers, so it is possible that someone could intentionally [use a container to spread malware](https://www.cyber.nj.gov/alerts-advisories/malicious-cryptojacking-images-in-docker-hub) (although we don't know of any documented cases of that actually happening within research communities).
-A more common problem is that docker containers may not be updated after they're published, which means some use old versions of software and operating systems and may be missing important security patches. 
+Anyone can write and publish Docker containers, so it is possible that someone could intentionally [use a container to spread malware](https://www.cyber.nj.gov/alerts-advisories/malicious-cryptojacking-images-in-docker-hub) (although we don't know of any documented cases of that actually happening within research communities).
+A more common problem is that Docker containers may not be updated after they're published, which means some use old versions of software and operating systems and may be missing important security patches. 
 
 When possible, use [Docker Official Images](https://docs.docker.com/docker-hub/official_images/), which are kept up to date and are very unlikely to have vulnerabilities. 
 Note that the official images are built for very general-purpose containers, though, and are often not setup properly for research needs.
@@ -390,7 +399,7 @@ Note that the official images are built for very general-purpose containers, tho
 A good second-best option is to use images published and maintained by recognized communities --- see our list below.
 There's a good chance you'll find an existing image already built with all of the software and dependencies you need for your analysis workflow.
 
-Either way, it's important to carefully evaluate any docker container you're thinking of using, and never use a container if you don't have access to its Dockerfile. 
+Either way, it's important to carefully evaluate any Docker container you're thinking of using, and never use a container if you don't have access to its Dockerfile. 
 
 </div>
 
@@ -402,7 +411,7 @@ It saves you time, and it also makes your work even more reproducible since you'
 - For bioinformatics, see [Bioconductor Docker images](https://bioconductor.org/help/docker/)
 - For neuroscience, see [NeuroDebian images](https://hub.docker.com/_/neurodebian)
 
-Do you know of other sets of docker images we should list here? Please [let us know](#feedback)!
+Do you know of other sets of Docker images we should list here? Please [let us know](#feedback)!
 
 ## Feedback
 
