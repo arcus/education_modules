@@ -19,7 +19,7 @@ long_description: Writing code in multiple environments can be tricky. Collabora
 estimated_time_in_minutes: 20
 
 @pre_reqs
-- some familiarity with programming is helpful, but not required
+The module assumes no prior familiarity with containers and requires no coding experience.  
 @end
 
 @learning_objectives  
@@ -40,7 +40,7 @@ good_first_module: false
 
 @end
 @version_history
-
+No previous versions. 
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -63,7 +63,7 @@ If you have spent some time learning programming, you might have come across som
 
 Essentially, a **container** is a lightweight, portable bundle that contains some code along with the necessary packages, files, and other dependencies that are required to run the code. It can seem like most of the information out there suggests that containers are exclusively used by software developers, but that's not true-- anyone working with code may run into situations in which containerizing that code would be beneficial. 
 
-So why should you consider "containerizing" your code? The real power of developing code in a container is that you can control the environment in which that code will run. Have you ever had the problem where a script or application runs on your own computer, but when a coworker tries to run it, it doesn't work? This could be due to different language or package versions, or even completely different operating systems! This problem can largely be avoided by working in a container. 
+So why should you consider "containerizing" your code? The real power of developing code in a container is that you can control the environment in which that code will run. Have you ever had the problem where a script or application runs on your own computer, but when a coworker tries to run it on their machine, it doesn't work? This could be due to different language or package versions, or even completely different operating systems! This problem can largely be avoided by working in a container. 
 
 Here are a few possible scenarios: 
 
@@ -101,7 +101,9 @@ Generally, to get started making your container image, you'll need a couple of t
 - A set of instructions for building your container: This is usually the most difficult part of containerization. Usually you will start with a base image, then add anything else required. 
 - A list of required packages: This lets the container platform you are using know what libraries to install. This is generally in a separate file from the other instructions, so that it is easy to update. 
 
-After you have created your image, then the container platform you are using can take your instructions and build the container itself, a small computing environment that runs on your computer, but isolated from it, with only the components that it needs and nothing more. It only has access to what you have put inside it via your instructions, and once you're done, you can turn it off and it no longer exists until the next time you need it. You can even attach folders from your computer to the container, if you need to save data before the container stops running. 
+After you have created your image, then the container platform you are using can take your instructions and build the container itself, a small computing environment that runs on your computer, but isolated from it, with only the components that it needs and nothing more. It only has access to what you have put inside it via your instructions, and once you're done, you can turn it off and it no longer exists until the next time you need it. You can even attach folders from your computer to the container, if you need to save data before the container stops running.
+
+Additionally, and perhaps most powerfully, this means that you can send the container image to someone else and be confident that the code that you've developed will run on their computer just like it runs on yours! Collaborators will be able to create the exact same container with one command, regardless of how their environment is set up. 
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
