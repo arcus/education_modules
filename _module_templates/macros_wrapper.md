@@ -31,7 +31,7 @@ comment:  This is placeholder module to save macros used in other modules.
   let list = document.getElementById("id_@9");
   let fragList = document.createDocumentFragment();
 
-  for (let i = 0; i < data.length; i++) {
+  let i = 0;
     let li = document.createElement('li');
     if(checks[i]){
       li.innerHTML = '<span class="fa-li"><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i></span>'+data[i]
@@ -39,7 +39,7 @@ comment:  This is placeholder module to save macros used in other modules.
       li.innerHTML = '<span class="fa-li"><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i></span>'+data[i]
     }
     fragList.appendChild(li);
-  }
+  
   list.appendChild(fragList);
 </script>
 <b>Known issues with accessibility and/or inclusion:</b> @8
