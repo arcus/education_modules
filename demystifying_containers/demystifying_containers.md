@@ -112,7 +112,7 @@ Feeling overwhelmed? Containerization is a topic that can be difficult to wrap y
 
 ### Containers vs. virtual machines
 
-![On left side is a schematic of a Docker container with six applications labeled A through F. They sit on top of a Docker layer, which sits on top of a a host operating system layer, which in turn sits on top of an infrastructure layer. On the right side is a schematic of three virtual machines, each with its own guest operating system and application. These three virtual machines sit on top of a hypervisor layer, which sits on top of an infrastructure layer.](media/docker-containerized-and-vm.png)
+![A comparison of schematics for Docker containers (left) and virtual machines (right). The left side is a repeat of the earlier Docker schematic, and the right side is a schematic of three virtual machines, each with its own guest operating system and application; this is in contrast to the Docker containers which do not include their own operating systems.](media/docker-containerized-and-vm.png)
 
 Some of you might be thinking that containers sound a bit like virtual machines. While virtual machines (or VMs) and containers can serve similar purposes, they aren't exactly the same. 
 
