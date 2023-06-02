@@ -8,15 +8,15 @@ import module_data
 module_buttons = [module_id+'_button' for module_id in module_data.df.index]
 
 def debugger(app):
-    @app.callback(Output('debugger2', 'children'), Input('using_redcap_api_button', 'n_clicks'))
-    def help(n):
-        if n is None:
-            return "Not clicked."
-        else:
-            return f"Clicked {n} times."
+    # @app.callback(Output('debugger2', 'children'), Input('using_redcap_api_button', 'n_clicks'))
+    # def help(n):
+    #     if n is None:
+    #         return "Not clicked."
+    #     else:
+    #         return f"Clicked {n} times."
 
     @app.callback(Output('debugger', 'children'),
-                  [Input(button, 'n_clicks') for button in module_buttons] ### this is super cludgy and creates all the buttons for stuff we don't need...
+                [Input(module_id+"_nottub", 'n_clicks') for module_id in module_data.df.index], ## The nottub buttons are the buttons in the module details pannel about what links to the active node. They need to have separate ids hence the button/nottub thing
                 )
     def filtering(*args):
         trigger = ctx.triggered_id

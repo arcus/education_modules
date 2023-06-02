@@ -79,7 +79,7 @@ callbacks.filter_modules_in.update_hidden_filtered_modules(app)
 clickable_module_list_callbacks.create_clickable_module_list(app)
 callbacks.active_node_in.active_node_in(app)
 #callbacks.active_node_out.active_node_out(app)
-#callbacks.debugger.debugger(app)
+callbacks.debugger.debugger(app)
 
 if __name__ == '__main__':
     app.run_server(debug=True)
