@@ -93,6 +93,15 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 @print_resource2
 
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+This is a hands-on module, and it jumps right into how to use Docker without much preamble. 
+
+If you'd prefer a more high-level overview of what containers are and when they're useful, check out our module on [Demystifying Containers](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_containers/demystifying_containers.md).
+
+</div>
+
 ## Docker 101 Tutorial
 
 The tutorial we link to in this section is an excellent practical introduction to using containers, but it's written with a software developer audience in mind, rather than people who might want to use containers for their research. 
