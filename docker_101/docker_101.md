@@ -309,7 +309,7 @@ For more guidance on using bind mounts, see the [Docker documentation on bind mo
 Which of the following would the authors say is more important?
 
 [(X)] Making your Dockerfile as explicit as possible, so the layers in the image are easier to see
-[( )] Making your Dockerfile as efficient as posisble, so the image is smaller and more portable
+[( )] Making your Dockerfile as efficient as possible, so the image is smaller and more portable
 ***
 <div class = "answer">
 
