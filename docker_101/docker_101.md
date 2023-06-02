@@ -336,7 +336,7 @@ See [Rule 4: Document within the Dockerfile](https://journals.plos.org/ploscompb
 </div>
 ***
 
-True or False: For a container with complex anlaysis code, the authors recommend writing your Dockerfile so that the whole analysis workflow runs automatically when you start the container.
+True or False: For a container with complex analysis code, the authors recommend writing your Dockerfile so that the whole analysis workflow runs automatically when you start the container.
 
 [( )] True
 [(X)] False
