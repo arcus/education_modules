@@ -130,7 +130,7 @@ To do the Docker 101 tutorial, you'll need a couple things set up:
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-To check that you have successfully installed Docker on your computer, open the comand line and run the following: 
+To check that you have successfully installed Docker on your computer, open the command line and run the following: 
 
 ```
 docker run hello-world
