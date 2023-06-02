@@ -26,7 +26,7 @@ comment:  This is placeholder module to save macros used in other modules.
 <ul class="fa-ul" id="id_@9"></ul>
 <script modify="false">
   let checks = [@2, @4, @6];
-  let data = ['<b>Expert Authors / Well-Vetted: </b>'+`@3`, '<b>Maintained: </b>'+`@5`, '<b>Stable Support: </b>'+`@7`];
+  let data = ['<b>Expert Authors / Well-Vetted: </b>'+`@3`, '<b>Maintained TEXT: </b>'+`@5`, '<b>Stable Support: </b>'+`@7`];
   
   let list = document.getElementById("id_@9");
   let fragList = document.createDocumentFragment();
