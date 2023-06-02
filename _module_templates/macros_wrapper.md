@@ -23,26 +23,24 @@ comment:  This is placeholder module to save macros used in other modules.
 
 @1 
 
-Remove the for loop, remove append fragList to list
-
 <ul class="fa-ul" id="id_@9"></ul>
 <script modify="false">
   let checks = [@2, @4, @6];
   let data = ['<b>Expert Authors / Well-Vetted: </b>'+`@3`, '<b>Maintained: </b>'+`@5`, '<b>Stable Support: </b>'+`@7`];
   
   let list = document.getElementById("id_@9");
-  let fragList = document.createDocumentFragment();
+  var fragList = document.createDocumentFragment();
 
-  let i = 0;
-    let li = document.createElement('li');
+  for (let i = 0; i < data.length; i++) {
+    var li = document.createElement('li');
     if(checks[i]){
       li.innerHTML = '<span class="fa-li"><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i></span>'+data[i]
     } else {
       li.innerHTML = '<span class="fa-li"><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i></span>'+data[i]
     }
     fragList.appendChild(li);
-  
-
+  }
+  list.appendChild(fragList);
 </script>
 <b>Known issues with accessibility and/or inclusion:</b> @8
 @end
@@ -79,4 +77,3 @@ We also evaluate each resource based on how well it meets our criteria.
 @print_resource2
 
 @print_resource3
-
