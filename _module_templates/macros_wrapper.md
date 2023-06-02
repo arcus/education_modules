@@ -29,10 +29,10 @@ comment:  This is placeholder module to save macros used in other modules.
   let data = ['<b>Expert Authors / Well-Vetted: </b>'+`@3`, '<b>Maintained: </b>'+`@5`, '<b>Stable Support: </b>'+`@7`];
   
   let list = document.getElementById("id_@9");
-  var fragList = document.createDocumentFragment();
+  let fragList = document.createDocumentFragment();
 
   for (let i = 0; i < data.length; i++) {
-    var li = document.createElement('li');
+    let li = document.createElement('li');
     if(checks[i]){
       li.innerHTML = '<span class="fa-li"><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i></span>'+data[i]
     } else {
@@ -42,7 +42,7 @@ comment:  This is placeholder module to save macros used in other modules.
   }
   list.appendChild(fragList);
 </script>
-
+<b>Known issues with accessibility and/or inclusion:</b> @8
 @end
 
 print_resource1: @print_list(@resource1_name,@resource1_description,@resource1_wellvetted,@resource1_wellvetted_text,@resource1_maintained,@resource1_maintained_text,@resource1_stablesupport,@resource1_stablesupport_text,@resource1_a11y_issues,@uid)
