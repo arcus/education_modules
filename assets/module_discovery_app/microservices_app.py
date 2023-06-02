@@ -25,7 +25,7 @@ heading_tabs = heading_tabs.heading_tabs
 from components.clickable_module_list import clickable_module_list, clickable_module_list_callbacks
 clickable_module_list_panel = clickable_module_list.clickable_module_list
 
-from components.module_details_panel import module_details_panel
+from components.module_details_panel import module_details_panel, module_details_panel_callbacks
 module_information = module_details_panel.module_details_panel
 
 # Import the hidden components that keep track of the filtered modules and the active module
@@ -71,6 +71,7 @@ app.layout = html.Div([
 
 # Initialize all INTRAcomponent callbacks
 center_nav_bar_callbacks.get_center_nav_bar_callbacks(app)
+module_details_panel_callbacks.update_module_info_panel(app)
 
 # Initialize all INTERcomponent callbacks next...
 callbacks.stylesheet_callbacks.turn_nodes_on_off(app)
@@ -78,7 +79,7 @@ callbacks.filter_modules_in.update_hidden_filtered_modules(app)
 clickable_module_list_callbacks.create_clickable_module_list(app)
 callbacks.active_node_in.active_node_in(app)
 #callbacks.active_node_out.active_node_out(app)
-callbacks.debugger.debugger(app)
+#callbacks.debugger.debugger(app)
 
 if __name__ == '__main__':
     app.run_server(debug=True)

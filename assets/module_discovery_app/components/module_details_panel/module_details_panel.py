@@ -9,4 +9,5 @@ import dash_bootstrap_components as dbc
 import module_data 
 
 
-module_details_panel=html.Div(html.Div("some text goes here about selecting a module to learn more about it"))
+module_details_panel=html.Div(children=[html.Div("some text goes here about selecting a module to learn more about it")], id='active_module_details_panel')
+
