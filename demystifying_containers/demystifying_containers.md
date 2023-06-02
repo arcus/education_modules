@@ -165,11 +165,30 @@ Unlike a container, which is a lightweight bundle of software with all of the co
 
 There are a variety of choices when it comes to containerization technology, but the most popular is **Docker**. [Docker's website](https://www.docker.com/) has many resources and articles to help you get started, as well as a [registry for container images, called DockerHub](https://hub.docker.com/), where you can store your own container images and make use of images already out there. 
 
-However, there are other providers that you might come across that are very similar to Docker but might have subtle differences that may make them better for specific workflows (don't worry about those differences right now though). Here are just a few:
+However, there are other providers that you might come across. Some of these are **container engines**, like Docker, and they are generally very similar, so we won't go into the details of the differences here. A good suggestion is to use the container engine that is most widely used in your field, as there will be more resources available to you. 
+
+Container engines
+=======
+
+While this is far from an exhaustive list, here are a few "Docker alternatives" you might encounter: 
 
 - [Podman](https://podman.io/) is a container service developed by [RedHat](https://www.redhat.com/en). It is often used in conjunction with [Buildah](https://buildah.io/).
 - [Linux Daemon, or LXD](https://linuxcontainers.org/)
 - [rkt](https://github.com/rkt/rkt), pronounced like "rocket", is a free container engine that is available on GitHub (although the project has ended and is no longer in active development, you can still use it).
+
+Container orchestrators
+=======
+
+For individuals and small groups of collaborators who are only working with small numbers of containers, container orchestration is not a concern. However, you'll sometimes run across these tools for large-scale research projects where large numbers of containers are required and managing them manually would be difficult or impossible. Here are just a few of the most common tools you might encounter:
+
+- [Kubernetes, pronounced "koo-br-neh-teez" and sometimes abbreviated k8s](https://kubernetes.io/) is the most popular container orchestration tool. It's open-source and was designed and developed by Google engineers, though it's now maintained by the [Cloud Native Computing Foundation](https://www.cncf.io/projects/).
+
+- Docker has its own orchestration tool called [Docker Swarm](https://docs.docker.com/engine/swarm/). Docker Swarm is more light-weight than Kubernetes but also more limited in its capabilities. 
+
+- [Nomad by HashiCorp](https://www.nomadproject.io/) is a flexible option that can be an alternative to or supplement Kubernetes, and can orchestration containerized and non-containerized workloads.
+
+Containers in the Cloud 
+=======
 
 You can also run containers on cloud platforms like [Amazon Web Services, or AWS](https://aws.amazon.com/) and [Google Cloud Platform, or GCP](https://cloud.google.com/) using various orchestration (or automation of the operational tasks that are involved in deploying and managing containers) and computing tools. You can check out [containers in AWS](https://aws.amazon.com/containers/services/) and [containers in GCP](https://cloud.google.com/containers) for more information. 
 
