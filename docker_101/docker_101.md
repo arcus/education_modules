@@ -270,7 +270,7 @@ Note that sending just the Dockerfile to someone isn't enough for them to be abl
 Most of the tutorials and explanations you'll find online about Docker (including the Docker 101 tutorial you just worked on) focus on its use in software development. 
 Importantly, most of the example Dockerfiles you'll find online are also written by and for developers. 
 As someone new to Docker (and even for experienced users!), being able to copy existing Dockerfiles is an important time saver.
-Although you might be able to get these images to work for your research needs, there are a lot of special considerations that come up when you're using containers for reproducible research rather than software develpoment. 
+Although you might be able to get these images to work for your research needs, there are a lot of special considerations that come up when you're using containers for reproducible research rather than software development. 
 
 **So what do you need to keep in mind as you think about how to use Docker in your research?** 
 
