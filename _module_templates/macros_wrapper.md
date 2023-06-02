@@ -42,7 +42,7 @@ comment:  This is placeholder module to save macros used in other modules.
   }
   list.appendChild(fragList);
 </script>
-<b>Known issues with accessibility and/or inclusion:</b> @8
+
 @end
 
 print_resource1: @print_list(@resource1_name,@resource1_description,@resource1_wellvetted,@resource1_wellvetted_text,@resource1_maintained,@resource1_maintained_text,@resource1_stablesupport,@resource1_stablesupport_text,@resource1_a11y_issues,@uid)
