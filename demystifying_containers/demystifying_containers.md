@@ -75,6 +75,30 @@ Here are a few possible scenarios:
 
 Working in a container can make all of these scenarios much easier to deal with-- it just requires a bit more work up-front. 
 
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+What does all of this mean for researchers? Recently, there have been calls to raise expectations for sharing code in published research, and sharing just the analysis scripts themselves is often insufficient. Containers offer a much better solution for sharing your code. To read more about these standards, see [this article by Heil et. al about reproducibility standards for machine learning](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9131851) and [this study by Trisovic et. al investigating the quality and execution of research code](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8861064/).
+
+</div>
+
+#### When not to use containers
+
+While there are many situations in which containerization can improve your research by making code sharing and re-use easier, there are some occasions where containers are not the answer:
+
+- If you are only ever going to run a script on your own computer, there's no need for containerization, which is most useful for sharing and re-using code in multiple environments. 
+
+	<div class = "learn-more">
+	<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+	If you want to maintain a specific environment for running a particular script on your computer (for example, if you've got multiple analyses that require different language or package versions), you can instead use a **virtual environment**. Here are some resources about [virtual environments in R](https://posit.co/blog/renv-project-environments-for-r/) and [virtual environments in Python](https://docs.python.org/3/library/venv.html).
+
+	</div>
+
+- If you use one-and-click software for analysis, containers aren't optimal for that kind of work, because the whole purpose of a container image is to lay out a reproducible set of instructions. If you want your analyses to be transparent, sharable, and reusable, consider using scripted analyses (which can be containerized)!
+
+- If you need to use proprietary software that requires a license, you can include those in a container image; however, you are still limited by license requirements and limits, which could limit re-use. We recommend using open-source tools whenever possible. 
+
 ### Quiz: Why Containers?
 
 Which of the following are situations that might be improved with containerization? Select all that apply. 
