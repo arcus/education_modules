@@ -23,7 +23,7 @@ comment:  This is placeholder module to save macros used in other modules.
 
 @1 
 
-Remove the for loop
+Remove the for loop, remove append fragList to list
 
 <ul class="fa-ul" id="id_@9"></ul>
 <script modify="false">
