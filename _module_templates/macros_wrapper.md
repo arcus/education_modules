@@ -42,7 +42,7 @@ Remove the for loop
     }
     fragList.appendChild(li);
   
-  list.appendChild(fragList);
+
 </script>
 <b>Known issues with accessibility and/or inclusion:</b> @8
 @end
