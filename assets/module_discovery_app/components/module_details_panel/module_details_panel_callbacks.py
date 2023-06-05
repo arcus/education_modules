@@ -10,6 +10,7 @@ from .title_link import title_link
 from .connected_modules import connected_modules
 from .tags import find_tags
 from .learning_objectives import learning_objectives
+from .pre_reqs import pre_reqs
 
 # This is the automatically displayed metadata about the active module:
 def module_info(active_node):
@@ -20,9 +21,11 @@ def module_info(active_node):
                         dcc.Markdown("Estimated length: " + module_data.df.loc[active_node,'estimated_time_in_minutes']+"."),
                         dcc.Markdown(module_data.df.loc[active_node,'comment']),
                         dcc.Markdown(learning_objectives(active_node)),
-        html.Hr(),
-        html.Hr(),
-        html.Div(connected_modules(active_node))]
+                        html.Hr(),
+                        pre_reqs(active_node),
+                        html.Hr(),
+                        html.Div(connected_modules(active_node)),
+                        ]
         return module_info_panel
     else:
         initialize_buttons = [html.Button(module_data.df.loc[module,"title"], id=module+"_nottub", n_clicks=0, style = dict(display='none')) for module in list(module_data.df.index)]

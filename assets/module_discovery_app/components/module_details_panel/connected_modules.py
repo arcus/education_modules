@@ -6,7 +6,6 @@
 from dash import Dash, html, Input, Output, dcc, ctx, State
 import dash_bootstrap_components as dbc
 import module_data 
-from .title_link import title_link
 
 # Create buttons for all of the connected modules using module_data.df info
 def connected_modules(active_node):
@@ -32,36 +31,3 @@ def connected_modules(active_node):
         return [dbc.Row([left_subpanel, right_subpanel]), html.Div(hidden_button_list)]
     else:
         return "no current active node"
-
-
-# TODO Create buttons for the categories that this module is tagged as
-def find_tags(active_module):
-    tags = []
-    for tag_key in ["good_first_module","coding_required", "coding_language","coding_level"]:
-        if len(str(module_data.df.loc[active_module, tag_key]))>0:
-            tags.append(module_data.df.loc[active_module, tag_key])
-        
-    return dcc.Markdown(tags)
-
-# This is the automatically displayed metadata about the active module:
-def module_info(active_node):
-    if active_node in list(module_data.df.index):
-        learning_objectives = module_data.df.loc[active_node,'learning_objectives']
-        learning_objectives = learning_objectives.replace("&", "\n") # remnants of a fight I had with bash and quotations/newlines.
-        learning_objectives = learning_objectives.replace("+", '"') # remnants of a fight I had with bash and quotations/newlines.
-        return  [title_link(active_node),html.P([html.A(module_data.df.loc[active_node,'title'],href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ active_node +"/" + active_node + ".md" , target="_blank")], style={'font-size':'200%', "font-weight": "bold"}),find_tags(active_node),dcc.Markdown("By " + module_data.df.loc[active_node,'author'] +" \n \n Estimated length: " + module_data.df.loc[active_node,'estimated_time_in_minutes']+". \n \n" + module_data.df.loc[active_node,'comment'] + "\n \n" + learning_objectives),
-        html.Hr(),
-        html.Hr(),
-        html.Div(connected_modules(active_node))]
-    else:
-        initialize_buttons = [html.Button(module_data.df.loc[module,"title"], id=module+"_nottub", n_clicks=0, style = dict(display='none')) for module in list(module_data.df.index)]
-        return html.Div([dcc.Markdown("##### Use the buttons or click on a module's node in the graph to learn more about it. \n --- "), html.Div(initialize_buttons)])
-
-
-
-def update_module_info_panel(app):
-    @app.callback(
-            Output('active_module_details_panel', 'children'),
-            Input('hidden_active_module', 'children'))
-    def update_module_info_panel(active_node):
-        return module_info(active_node)
