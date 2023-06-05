@@ -7,7 +7,7 @@ from dash import Dash, html, Input, Output, dcc, ctx, State
 import dash_bootstrap_components as dbc
 import module_data 
 
-# TODO create buttons for all of the connected modules using module_data.df info
+# Create buttons for all of the connected modules using module_data.df info
 def connected_modules(active_node):
     if active_node in list(module_data.df.index):
         sets_you_up_button_list = []
@@ -38,7 +38,7 @@ def module_info(active_node):
     if active_node in list(module_data.df.index):
         learning_objectives = module_data.df.loc[active_node,'learning_objectives']
         learning_objectives = learning_objectives.replace("&", "\n")
-        return  [dcc.Markdown("### [**" + module_data.df.loc[active_node,'title'] + "**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ active_node +"/" + active_node + ".md) \n \n  By " + module_data.df.loc[active_node,'author'] +" \n \n Estimated length: " + module_data.df.loc[active_node,'estimated_time_in_minutes']+". \n \n" + module_data.df.loc[active_node,'comment'] + "\n \n" + learning_objectives),
+        return  [html.P([html.A(module_data.df.loc[active_node,'title'],href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/"+ active_node +"/" + active_node + ".md" , target="_blank")], style={'font-size':'200%', "font-weight": "bold"}),dcc.Markdown("By " + module_data.df.loc[active_node,'author'] +" \n \n Estimated length: " + module_data.df.loc[active_node,'estimated_time_in_minutes']+". \n \n" + module_data.df.loc[active_node,'comment'] + "\n \n" + learning_objectives),
         html.Hr(),
         html.Hr(),
         html.Div(connected_modules(active_node))]
