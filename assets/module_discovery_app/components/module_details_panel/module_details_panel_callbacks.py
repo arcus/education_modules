@@ -15,7 +15,8 @@ from .pre_reqs import pre_reqs
 # This is the automatically displayed metadata about the active module:
 def module_info(active_node):
     if active_node in list(module_data.df.index):
-        module_info_panel = [title_link(active_node),
+        module_info_panel = [dcc.Markdown("##### Module details"),
+                        title_link(active_node),
                         #find_tags(active_node),
                         dcc.Markdown("By " + module_data.df.loc[active_node,'author']),
                         dcc.Markdown("Estimated length: " + module_data.df.loc[active_node,'estimated_time_in_minutes']+"."),
@@ -29,7 +30,7 @@ def module_info(active_node):
         return module_info_panel
     else:
         initialize_buttons = [html.Button(module_data.df.loc[module,"title"], id=module+"_nottub", n_clicks=0, style = dict(display='none')) for module in list(module_data.df.index)]
-        return html.Div([dcc.Markdown("##### Use the buttons or click on a module's node in the graph to learn more about it. \n --- "), html.Div(initialize_buttons)])
+        return html.Div([dcc.Markdown("##### Module details \n Use the buttons above or click on a node in the graph to the right to learn more about and get a link to an individual module. \n --- "), html.Div(initialize_buttons)])
 
 
 

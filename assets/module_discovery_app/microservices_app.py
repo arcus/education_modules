@@ -59,7 +59,7 @@ app.layout = html.Div([
     dbc.Row(children=[
         left_hand_nav_bar,
         dbc.Col([clickable_module_list_panel, html.Hr(), html.Br(),module_information], width=5),
-        dbc.Col(children=[visualization_panel, html.Br(), html.Br(), html.Hr(), html.Br(),
+        dbc.Col(children=[visualization_panel
         ],width=5),
         
         
