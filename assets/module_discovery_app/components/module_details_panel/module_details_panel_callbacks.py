@@ -16,7 +16,7 @@ from .pre_reqs import pre_reqs
 def module_info(active_node):
     if active_node in list(module_data.df.index):
         module_info_panel = [title_link(active_node),
-                        find_tags(active_node),
+                        #find_tags(active_node),
                         dcc.Markdown("By " + module_data.df.loc[active_node,'author']),
                         dcc.Markdown("Estimated length: " + module_data.df.loc[active_node,'estimated_time_in_minutes']+"."),
                         dcc.Markdown(module_data.df.loc[active_node,'comment']),

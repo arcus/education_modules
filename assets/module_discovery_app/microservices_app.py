@@ -51,15 +51,18 @@ server = app.server
 
 # Set up the layout of the app
 app.layout = html.Div([
-    dbc.Row(children=[
+    dbc.Row(children=[heading_tabs,
         app_title,
-        heading_tabs]
+        ]
         ),
     html.Hr(),
     dbc.Row(children=[
-        dbc.Col(children=[visualization_panel, html.Br(), clickable_module_list_panel, html.Br(), html.Hr(), html.Br(),
-        module_information],width=5),
         center_nav_bar,
+        dbc.Col([clickable_module_list_panel,module_information], width=5),
+        dbc.Col(children=[visualization_panel, html.Br(), html.Br(), html.Hr(), html.Br(),
+        ],width=5),
+        
+        
         ]),
     html.Hr(), html.Hr(),
     html.Div(hidden_filtered_modules), # DONT COMMENT OUT this is visible for debugging purposes, change to 'display': 'none' for production purposes. 

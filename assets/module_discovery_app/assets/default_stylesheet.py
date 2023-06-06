@@ -15,26 +15,33 @@ neutral_node_styling = {
 neutral_edge_styling = {
         'color': "lightgray",
         'opacity': .15,
-        'width': '3px'
+        'width': '3px',
+        
          }
 
 selected_styling = {
                 'background-color': 'blue',
                 'label': 'data(title)',
                 'opacity': 1,
+                'width': "20px",
+                'height': "20px",
 
                     }
 
 unselected_styling = {
-                   'background-color': '#FF4136',
+                   'background-color': 'lightgrey',
                     'label': ' ',
-                    'opacity': .3,
+                    #'opacity': .3,
+                    'width': "20px",
+                    'height': "20px",
                         }
 
 active_node_styling = {
-                   'background-color': 'green',
+                   'background-color': 'black',
                     'label': 'data(title)',
                     'opacity': 1,
+                    'width': "40px",
+                    'height': "40px",
                         }
 
 
