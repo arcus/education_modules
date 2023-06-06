@@ -14,7 +14,7 @@ neutral_node_styling = {
 
 neutral_edge_styling = {
         'color': "lightgray",
-        'opacity': .15,
+        'opacity': .2,
         'width': '3px',
         
          }
@@ -39,9 +39,10 @@ unselected_styling = {
 active_node_styling = {
                    'background-color': 'black',
                     'label': 'data(title)',
+                    "font-size": "20px",
                     'opacity': 1,
-                    'width': "40px",
-                    'height': "40px",
+                    'width': "30px",
+                    'height': "30px",
                         }
 
 

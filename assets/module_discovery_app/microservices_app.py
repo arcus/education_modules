@@ -10,8 +10,8 @@ df = module_data.df
 from assets import default_stylesheet 
 
 # Import app components and their internal callbacks
-from components.center_nav_bar import center_nav_bar, center_nav_bar_callbacks 
-center_nav_bar = center_nav_bar.center_nav_bar
+from components.left_hand_nav_bar import left_hand_nav_bar, left_hand_nav_bar_callbacks 
+left_hand_nav_bar = left_hand_nav_bar.left_hand_nav_bar
 
 from components.visualization_panel import visualization_panel
 visualization_panel = visualization_panel.visualization_panel
@@ -57,7 +57,7 @@ app.layout = html.Div([
         ),
     html.Hr(),
     dbc.Row(children=[
-        center_nav_bar,
+        left_hand_nav_bar,
         dbc.Col([clickable_module_list_panel,module_information], width=5),
         dbc.Col(children=[visualization_panel, html.Br(), html.Br(), html.Hr(), html.Br(),
         ],width=5),
@@ -73,7 +73,7 @@ app.layout = html.Div([
     )
 
 # Initialize all INTRAcomponent callbacks
-center_nav_bar_callbacks.get_center_nav_bar_callbacks(app)
+left_hand_nav_bar_callbacks.get_left_hand_nav_bar_callbacks(app)
 module_details_panel_callbacks.update_module_info_panel(app)
 
 # Initialize all INTERcomponent callbacks next...

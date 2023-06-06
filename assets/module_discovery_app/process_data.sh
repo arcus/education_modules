@@ -30,7 +30,7 @@ do
       fi
       
       ### Coding metadata and sequence metadata will always be in some modules but not others
-      for CATEGORY in "coding_required" "coding_language" "coding_level" "sequence_name" "next_sequential_module"
+      for CATEGORY in "coding_required" "coding_language" "coding_level" "sequence_name" "next_sequential_module" "data_task" "data_domain"
       do
         if grep "$CATEGORY" -q $FOLDER/$FOLDER.md
         then

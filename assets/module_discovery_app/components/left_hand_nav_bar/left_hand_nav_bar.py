@@ -1,7 +1,7 @@
 from dash import Dash, html, Input, Output, dcc, ctx, State
 import dash_bootstrap_components as dbc
 
-center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that may interest you:"),
+left_hand_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that may interest you:"),
     
     # GENERAL OPTIONS
 
@@ -26,15 +26,21 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
     dbc.Button(
         "Coding Language",
         id="coding_language_collapse_button", color="dark", outline=True),
+    dbc.Popover(
+        dbc.PopoverBody(dcc.Markdown("Do we want some sort of information here?")),
+        target="coding_language_info_button",
+        trigger="click",
+    ),
     dbc.Collapse([
     dbc.Col( 
-    dcc.Checklist(
+    dcc.RadioItems(
         options=[
         {'label': ' Bash', 'value': 'bash'},
         {'label': ' Python', 'value': 'python'},
         {'label': ' R', 'value': 'r'},
         {'label': ' SQL', 'value': 'SQL'},
         {'label': ' Git', 'value': 'git'},
+        {'label': html.A(' Clear selection', style={'color': 'grey'}), 'value': '', }, ## This empty value helps with the callbacks
         ],
         id='coding_language_checklist'
         )
@@ -65,6 +71,7 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
         {'label': ' Intermediate', 'value': 'intermediate'},
         {'label': ' Advanced', 'value': 'advanced'},
         {'label': ' Exercises', 'value': 'practice_exercise'},
+        {'label': html.A(' Clear selection', style={'color': 'grey'}), 'value': '', },
         ],
         id='coding_level_checklist')
     ],)],
@@ -78,7 +85,7 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
 
     dbc.Button(
     "Data Task",
-    id="data_task_collapse_button", color="light"),
+    id="data_task_collapse_button", color="dark", outline=True),
     dbc.Badge("?", id="data_task_info_button", pill=True,  color="light", text_color="dark"),
     dbc.Popover(
             dbc.PopoverBody(dcc.Markdown("**Data Visualization:** Creating representations of data such as plots, graphs, maps, etc.\n\n **Data Management:** Organizing and storing data, including database structures, data sharing, cloud vs. local storage, and metadata. \n\n **Data Wrangling:** Data processing steps in preparation for analysis and visualization, including cleaning, transforming, and reshaping data.\n\n **Data Analysis:** Identifying and quantifying patterns in the data, including exploratory analysis, descriptive statistics, and more formal modeling.")),
@@ -87,12 +94,13 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
         ),
     dbc.Collapse([
     dbc.Col([
-        dcc.Checklist(
+        dcc.RadioItems(
         options=[
         {'label': ' Data Visualization', 'value': 'data_visualization'},
         {'label': ' Data Management', 'value': 'data_management'},
         {'label': ' Data Wrangling', 'value': 'data_wrangling'},
         {'label': ' Data Analysis', 'value': 'data_analysis'},
+        {'label': html.A(' Clear selection', style={'color': 'grey'}), 'value': '', },
         ],
         id='data_task_checklist')
     ],)],
@@ -106,7 +114,7 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
 
     dbc.Button(
     "Data Domain",
-    id="data_domain_collapse_button", color="light"),
+    id="data_domain_collapse_button", color="dark", outline=True),
     dbc.Badge("?", id="data_domain_info_button", pill=True,  color="light", text_color="dark"),
     dbc.Popover(
             dbc.PopoverBody(dcc.Markdown("Some modules focus on particular types of data. These modules might introduce be focused on getting learners used to working with a particular type of data, or they might be focused on other tasks but use examples from a specific domain like geospatial (location) data, Electronic Health Records, etc.")),
@@ -120,6 +128,7 @@ center_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that 
         {'label': ' Omics', 'value': 'omics'},
         {'label': ' Electronic Health Records', 'value': 'EHR'},
         {'label': ' Geospatial Data', 'value': 'geospatial'},
+        {'label': html.A(' Clear selection', style={'color': 'grey'}), 'value': '', },
         ],
         id='data_domain_checklist')
     ],)],
