@@ -51,14 +51,14 @@ server = app.server
 
 # Set up the layout of the app
 app.layout = html.Div([
-    dbc.Row(children=[heading_tabs,
+    dbc.Row(children=[
         app_title,
         ]
         ),
     html.Hr(),
     dbc.Row(children=[
         left_hand_nav_bar,
-        dbc.Col([clickable_module_list_panel,module_information], width=5),
+        dbc.Col([clickable_module_list_panel, html.Hr(), html.Br(),module_information], width=5),
         dbc.Col(children=[visualization_panel, html.Br(), html.Br(), html.Hr(), html.Br(),
         ],width=5),
         

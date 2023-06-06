@@ -1,7 +1,7 @@
 from dash import Dash, html, Input, Output, dcc, ctx, State
 import dash_bootstrap_components as dbc
 
-left_hand_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules that may interest you:"),
+left_hand_nav_bar = dbc.Col([dcc.Markdown("Filter modules by what you want to learn about:"),
     
     # GENERAL OPTIONS
 
@@ -26,11 +26,12 @@ left_hand_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules th
     dbc.Button(
         "Coding Language",
         id="coding_language_collapse_button", color="dark", outline=True),
+    dbc.Badge("?", id="coding_language_info_button", pill=True,  color="light", text_color="dark"),
     dbc.Popover(
-        dbc.PopoverBody(dcc.Markdown("Do we want some sort of information here?")),
-        target="coding_language_info_button",
-        trigger="click",
-    ),
+            dbc.PopoverBody(dcc.Markdown("Should we have an explainer of some type here?")),
+            target="coding_language_info_button",
+            trigger="click",
+        ),
     dbc.Collapse([
     dbc.Col( 
     dcc.RadioItems(
@@ -135,5 +136,5 @@ left_hand_nav_bar = dbc.Col([dcc.Markdown("Use the checkboxes to find modules th
     id='data_domain_collapse_checklist',
     is_open=False,
     ),
-], width=2)
+], width=2, style={'background-color': '#ADD8E6'})
 
