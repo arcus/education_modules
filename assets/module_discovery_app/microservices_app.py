@@ -28,6 +28,9 @@ clickable_module_list_panel = clickable_module_list.clickable_module_list
 from components.module_details_panel import module_details_panel, module_details_panel_callbacks
 module_information = module_details_panel.module_details_panel
 
+from components.left_hand_nav_bar import search_panel
+search_panel = search_panel.search_panel
+
 # Import the hidden components that keep track of the filtered modules and the active module
 from components import hidden_filtered_modules, hidden_active_module
 hidden_filtered_modules = hidden_filtered_modules.hidden_filtered_modules

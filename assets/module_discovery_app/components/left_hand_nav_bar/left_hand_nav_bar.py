@@ -1,8 +1,14 @@
 from dash import Dash, html, Input, Output, dcc, ctx, State
 import dash_bootstrap_components as dbc
+from .search_panel import search_panel as search_panel
 
-left_hand_nav_bar = dbc.Col([dcc.Markdown("Filter modules by what you want to learn about:"),
+left_hand_nav_bar = dbc.Col([dcc.Markdown("Search by keyword or filter modules by what you want to learn about:"),
     
+    # SEARCH DOESN'T DO ANYTHING YET
+
+    search_panel,
+    html.Br(),
+    html.Br(),
     # GENERAL OPTIONS
 
     dbc.Button(
