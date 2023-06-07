@@ -62,7 +62,7 @@ r_basics_transform_data
 @end
 
 @version_history
-
+No previous versions.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
