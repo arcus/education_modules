@@ -2,13 +2,35 @@
 author:   Joy Payton
 email:    paytonk@chop.edu
 version: 1.1.0
+current_version_description: Updating formatting for highlight boxes.
+module_type: standard
+docs_version: 1.0.0
 language: en
-module_template_version: 2.0.0
 narrator: US English Female
+mode: Textbook
+
 title: R Basics: Visualizing Data With ggplot2
+
 comment:  Learn how to visualize data using R's `ggplot2` package.
+
 long_description: Do you want to learn how to make some basic data visualizations (graphs) in R?  In this module you'll learn about the "grammar of graphics" and the base code that you need to get started.  We'll use the basic ingredients of a tidy data frame, a geometric type, and some aesthetic mappings (we'll explain what all of those are).  This module teaches the use of the `ggplot2` package, which is part of the `tidyverse` suite of packages.
-estimated_time: 1 hour
+
+r_file: r\_basics\_visualize\_data
+estimated_time_in_minutes: 60
+
+@pre_reqs
+
+Minimal experience of using the RStudio IDE and writing R code (specifically, within an R Markdown document) is necessary to understand and use this material.  If you can understand and do the following, you'll be able to complete this course:
+
+* Run a command that's provided to you in the console
+* Use the Environment tab to find a data frame and learn more about it
+* Insert a new code chunk in an R Markdown document
+
+One potential way to get these basic skills is to take our [R Basics: Introduction](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) course.
+
+This course is designed for R beginners with minimal experience and it is not an advanced course in `ggplot2`.  If you have experience with `ggplot2` already, you may find our ["Data Visualization in ggplot2"](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md), which is more advanced, a better fit for your needs.
+
+@end
 
 @learning_objectives  
 
@@ -20,67 +42,35 @@ After completion of this module, learners will be able to:
 
 @end
 
+good_first_module: false
+data_task: data_visualization
+coding_required: true
+coding_level: basic
+coding_language: r
+sequence_name: r_basics
+previous_sequential_module: r_basics_transform_data
+
+@sets_you_up_for
+
+- r_practice
+
+@end
+
+@depends_on_knowledge_available_in
+
+-r_basics_intrduction
+-r_basics_transform_data
+
+@end
+
 @version_history
-1.0.1: revision to correct image links referring to wrong branch + small changes to environment setup language to be exactly mirrored across all 3 R basics modules.
-1.0.5: add information about Posit Cloud
-1.0.6: remove second attribution location
+
+- [1.0.7](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/r_basics_visualize_data/r_basics_visualize_data.md): remove second attribution location, add information about Posit Cloud, revision to correct image links referring to wrong branch + small changes to environment setup language to be exactly mirrored across all 3 R basics modules.
 
 @end
 
-script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
-
-@gifPreload
-<script>
-(function($) {
-
-  // Get the .gif images from the "data-alt".
-	var getGif = function() {
-		var gif = [];
-		$('img').each(function() {
-			var data = $(this).data('alt');
-			gif.push(data);
-		});
-		return gif;
-	}
-
-	var gif = getGif();
-
-	// Preload all the gif images.
-	var image = [];
-
-	$.each(gif, function(index) {
-		image[index]     = new Image();
-		image[index].src = gif[index];
-	});
-
-	// Change the image to .gif when clicked and vice versa.
-	$('figure').on('click', function() {
-
-		var $this   = $(this),
-				$index  = $this.index(),
-
-				$img    = $this.children('img'),
-				$imgSrc = $img.attr('src'),
-				$imgAlt = $img.attr('data-alt'),
-				$imgExt = $imgAlt.split('.');
-
-		if($imgExt[1] === 'gif') {
-			$img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
-		} else {
-			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-		}
-
-		// Add play class to help with the styling.
-		$this.toggleClass('play');
-
-	});
-
-})(jQuery);
-</script>
-@end
-
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-script: https://kit.fontawesome.com/83b2343bd4.js
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
 -->
 # R Basics: Visualizing Data With `ggplot2`
 
@@ -96,15 +86,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-Minimal experience of using the RStudio IDE and writing R code (specifically, within an R Markdown document) is necessary to understand and use this material.  If you can understand and do the following, you'll be able to complete this course:
 
-* Run a command that's provided to you in the console
-* Use the Environment tab to find a data frame and learn more about it
-* Insert a new code chunk in an R Markdown document
-
-One potential way to get these basic skills is to take our [R Basics: Introduction](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) course.
-
-This course is designed for R beginners with minimal experience and it is not an advanced course in `ggplot2`.  If you have experience with `ggplot2` already, you may find our ["Data Visualization in ggplot2"](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md), which is more advanced, a better fit for your needs.
 
 **Learning Objectives**
 
