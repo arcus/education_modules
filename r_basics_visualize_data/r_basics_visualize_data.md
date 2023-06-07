@@ -86,7 +86,7 @@ Material for this module was adapted, with permission, from [Stephan Kadauke's R
 
 </div>
 
-## Lesson Preparation
+## The Data
 
 Let's start by taking a peek at the data we'll be using.
 
@@ -99,112 +99,11 @@ style = "max-width:800px;"-->
 
 On the next page, you'll learn how to get access to the sample code.  
 
-### Our RStudio Environment
+## Lesson Preparation
 
-Please do this step now, because we're going to ask you to follow along throughout and try out code as you go.  
+@lesson_prep_r
 
-Please read over all the options before you start performing any actions, to make sure you pick the right option for you.
-
-<h3>Option 1: Work Anonymously in the Cloud</h3>
-
-This might work well for you if you either can't or don't want to install R and RStudio on your computer.  The benefit is that you don't have to install anything or have any account set up with an online cloud provider.  This solution is completely anonymous.  However, there are some drawbacks.  One negative is that this option requires a bit of waiting for your environment to come online.  Another is that your changes aren't saved anywhere, and your environment will time out and disappear forever.  
-
-**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
-
-<a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"  alt="Launch Binder"></a> **← Click the "launch binder" button!**
-
-
-<div class = "hint" style = "align-items: center; display: flex;">
-
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen](media/binder_loading.gif)<!--
-style = "border: 1px solid rgb(var(--color-highlight));"-->
-</div>
-</div>
-
-**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_visualize\_data".  That's the code for this module!
-
-![RStudio as shown in the cloud platform Binder. The left side of the screen displays the "Console" tab. On the right there is a split between an "upper" and "lower" section. The upper section is the "Environment", which is empty. The lower section, "files", shows one file (environment.yml) and three folders (r_basics_introduction, r_basics_transform_data, r_basics_visualize_data)](media/binder_rstudio.png)<!--
-
-style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
-
-
-<h3>Option 2: Use Posit Cloud</h3>
-
-Posit (the company formerly known as RStudio) provides a multi-tiered cloud environment for using RStudio.  Unlike option 1 above, this option does require you to have an account with Posit Cloud, their online RStudio server.  The good news is that the base level of Posit Cloud is free!
-
-First, you'll need to [create a (free!) Posit cloud account](https://posit.cloud/plans).  
-
-Then, once you're logged in at [https://posit.cloud](https://posit.cloud), open the "education\_r\_environment" project at [https://posit.cloud/content/5273350](https://posit.cloud/content/5273350).  That will give you a temporary copy so you can run our code, but not make any changes to it.
-
-In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_visualize\_data".  That's the code for this module!
-
-Click on "Save a Permanent Copy" if you want to save any changes to your version of this code. 
-
-![Posit menu bar with "Make Permanent Copy"](media/make_copy.png)<!--
-style = "border: 1px solid rgb(var(--color-highlight)); clear:both;"-->
-
-Now you can not only work in the cloud, but also save your work.
-
-<h3>Option 3: Work on Your Computer</h3>
-
-If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
-
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
-
-Do you use Microsoft OneDrive?  
-
-Knitting files can sometimes be problematic with some versions of Microsoft OneDrive, so if you are working from your local computer and get strange errors when you try to knit, try to use a directory that's not within a OneDrive folder to see if that helps.  Newer versions of OneDrive seem to be less buggy, so you may also want to update your OneDrive software.
-
-</div>
-
-* In RStudio, open a new project (File, New Project)
-* Select Version Control, then Git
-* Drop this link into the "Repository URL": https://github.com/arcus/education_r_environment
-* Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
-* Click to select the "Open in new session" checkbox
-* Click "Create Project"
-* In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_visualize\_data".  That's the code for this module!
-
-**Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
-
-<div style="display:none">
-
-@gifPreload
-
-</div>
-
-<figure>
-
-  <img src="https://github.com/arcus/education_modules/blob/main/r_basics_visualize_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_visualize_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
-
-<figcaption style = "font-size: 1em;">
-
-Click on the image to play the demo of the above steps!
-
-</figcaption>
-
-</figure>
-
-If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime:
-
-* Open your project.
-* In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
-
-![Version control button in RStudio menu at top of window drops down with choices to pull and push branches.](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
-
-![Tools tab in the highest level menu bar drops down with with a Version Control option. Under version control, there are choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
-
-
-<div class = "warning">
-<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
-
-If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
-
-</div>
-
-### How to Follow Along
+## How to Follow Along
 
 Open the "r\_basics\_visualize\_data" directory in whichever RStudio environment you're working in. Then, open the "visualize_exercises.Rmd" which we'll use for our first hands-on activity in just a bit!
 
