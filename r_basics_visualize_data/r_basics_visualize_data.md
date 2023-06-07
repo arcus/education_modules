@@ -16,6 +16,7 @@ comment:  Learn how to visualize data using R's `ggplot2` package.
 long_description: Do you want to learn how to make some basic data visualizations (graphs) in R?  In this module you'll learn about the "grammar of graphics" and the base code that you need to get started.  We'll use the basic ingredients of a tidy data frame, a geometric type, and some aesthetic mappings (we'll explain what all of those are).  This module teaches the use of the `ggplot2` package, which is part of the `tidyverse` suite of packages.
 
 r_file: r\_basics\_visualize\_data
+
 estimated_time_in_minutes: 60
 
 @pre_reqs
@@ -65,6 +66,8 @@ previous_sequential_module: r_basics_transform_data
 
 @version_history
 
+Previous versions: 
+
 - [1.0.7](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/r_basics_visualize_data/r_basics_visualize_data.md): remove second attribution location, add information about Posit Cloud, revision to correct image links referring to wrong branch + small changes to environment setup language to be exactly mirrored across all 3 R basics modules.
 
 @end
@@ -74,28 +77,14 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 -->
 # R Basics: Visualizing Data With `ggplot2`
 
-<div class = "overview">
+@overview
 
-## Overview
-
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+<div class = "gratitude">
+<b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
 
 Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data workshop materials](https://skadauke.github.io/intro-to-r-for-clinicians-chop/).  We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.
 
+</div>
 
 ## Lesson Preparation
 
@@ -881,17 +870,4 @@ To find official cheat sheets, go to the Help menu and choose "Cheat Sheets".  T
 ![RStudio help menu, with Cheat Sheets selected and the submenu option "Data Visualization with ggplot2" selected](media/cheat_sheets.png)<!-- style = "max-width:700px;" -->
 
 ## Feedback
-
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Basics+Visualize+Data%22&version=1.0.7)!
+@feedback
