@@ -86,7 +86,7 @@ Material for this module was adapted, with permission, from [Stephan Kadauke's R
 
 </div>
 
-## The Data
+## Lesson Preparation
 
 Let's start by taking a peek at the data we'll be using.
 
@@ -99,11 +99,11 @@ style = "max-width:800px;"-->
 
 On the next page, you'll learn how to get access to the sample code.  
 
-## Lesson Preparation
+### Our RStudio Environment
 
 @lesson_prep_r
 
-## How to Follow Along
+### How to Follow Along
 
 Open the "r\_basics\_visualize\_data" directory in whichever RStudio environment you're working in. Then, open the "visualize_exercises.Rmd" which we'll use for our first hands-on activity in just a bit!
 
