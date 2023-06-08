@@ -394,6 +394,25 @@ Here's a visual that might help:
 
 ![Small table of data with columns a, b, and c next to a blank x-y coordinate plane. An arrow is drawn from column a to the x-axis, and an arrow from column b to the y-axis. Rows that have a "M" in column C have blue dots, and rows that have an "F" get green dots.](media/abc_aesthetics.png)
 
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+To include multiple mappings in your `aes()` command, **separate them with commas**. 
+
+For example, if you have a scatterplot with the variable `a` on the x-axis and `b` on the y-axis, your initial aesthetic mapping would look like this:
+
+```
+aes(x = a, y= b)
+```
+
+If you want to modify your plot to color each of the points differently depending on the value of column `c`, then you would add that to your mapping like this:
+
+```
+aes(x = a, y = b, color = c)
+```
+
+</div>
+
 
 ### Quiz: Aesthetic Mappings
 
