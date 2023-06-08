@@ -16,8 +16,17 @@ def debugger(app):
     #         return f"Clicked {n} times."
 
     @app.callback(Output('debugger', 'children'),
-                [Input(module_id+"_nottub", 'n_clicks') for module_id in module_data.df.index], ## The nottub buttons are the buttons in the module details pannel about what links to the active node. They need to have separate ids hence the button/nottub thing
-                )
-    def filtering(*args):
-        trigger = ctx.triggered_id
-        return trigger
+                Input('search_input', 'value'))
+    def search_results(value):
+        matches = []
+        if value:
+            for module in module_data.df.index:
+                if value in str(module_data.df.loc[module,'title']):
+                    matches.append(module)
+                elif value in str(module_data.df.loc[module,'comment']):
+                    matches.append(module)
+                elif value in str(module_data.df.loc[module,'long_description']):
+                    matches.append(module)
+                elif value in str(module_data.df.loc[module,'learning_objectives']):
+                    matches.append(module)
+        return matches

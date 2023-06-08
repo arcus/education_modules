@@ -2,8 +2,10 @@
 from dash import Dash, html, Input, Output, dcc, ctx, State
 import dash_bootstrap_components as dbc
 import module_data 
+from components.left_hand_nav_bar import search_panel 
+search_results = search_panel.search_results
 
-def filter_modules_in(general_options_value, coding_language_value, coding_level_value, data_task_value, data_domain_value):
+def filter_modules_in(general_options_value, coding_language_value, coding_level_value, data_task_value, data_domain_value, search_term):
     matching_modules = list(module_data.df.index).copy()
     non_matching_modules = []
     for module in module_data.df.index:
@@ -26,6 +28,8 @@ def filter_modules_in(general_options_value, coding_language_value, coding_level
         if data_domain_value: # coding level is a radio button, so the output is a string, not a list of strings
             if data_domain_value not in str(module_data.df.loc[module,'data_domain']).lower():
                 tracker = tracker*0
+        if search_term and module not in search_results(search_term):
+            tracker = tracker*0
         if tracker == 0:
             matching_modules.remove(module)
             non_matching_modules.append(module)
@@ -38,7 +42,8 @@ def update_hidden_filtered_modules(app):
                 Input('coding_language_checklist', 'value'),
                 Input('coding_level_checklist', 'value'),
                 Input('data_task_checklist', 'value'),
-                Input('data_domain_checklist', 'value')
+                Input('data_domain_checklist', 'value'),
+                Input('search_input', 'value')
                 )
-    def filtering(value, coding_language_value, coding_level_value, data_task_value, data_domain_value):
-        return filter_modules_in(value, coding_language_value, coding_level_value, data_task_value, data_domain_value)[0]
+    def filtering(value, coding_language_value, coding_level_value, data_task_value, data_domain_value, search_value):
+        return filter_modules_in(value, coding_language_value, coding_level_value, data_task_value, data_domain_value, search_value)[0]
