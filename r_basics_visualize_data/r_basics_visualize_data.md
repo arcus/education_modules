@@ -207,6 +207,7 @@ The idea of the grammar of graphics is that you should be able to specify any ty
 Having a consistent grammar means that once you learn how to make a histogram that knowledge can be applied to make a scatter plot with little extra effort. This makes it easy to generate lots of different graphs quickly which helps you understand your data more quickly.
 
 Also, `ggplot2` graphs look great and the package can be used to generate publication-quality plots.
+
 </div>
 <div style = "margin: 1rem auto; max-width: 30%; float:left;">
 
