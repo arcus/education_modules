@@ -179,6 +179,17 @@ When you run this code, you get what looks like an error in the console but is a
 
 R lets you know that when you ask it to draw a histogram, you should probably tell it how wide each bin should be, because this affects the granularity of the data displayed.  You can either set the number of bins (say, 10 bins or 100 bins) or you can set the bin width (like 1 to make a bin 1 day wide, 7 to make a bin one week wide, etc.)
 
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+Want to make that binwidth message go away? 
+That's one of the first things you'll work through in the hands-on exercise notebook! 
+
+There is important instruction (including how to set `binwidth` for a histogram) that is in the exercise file and not in this module. 
+If you just read through the explanations here without [following along](#how-to-follow-along), you'll miss valuable content.
+
+</div>
+
 ### The Power of Data Visualizations
 
 ![Histogram of covid tests by day of pandemic from Day 0 to Day 125. In the first 30 days, the number of tests being run slowly ramps up to around 625 tests. After 30 days, the number of tests stays fairly high with some oscillation over time between about 375 and 825.](media/covid_histogram.png)<!-- style = "max-width: 800px;"  -->
