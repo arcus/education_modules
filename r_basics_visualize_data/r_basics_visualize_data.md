@@ -651,9 +651,10 @@ You can customize color scales.
 library(colorspace)
 
 cols <- c(
-  "invalid" = "grey80",
+  "grey80",
   qualitative_hcl(2, palette = "dark3")
 )
+names(cols) <- c("invalid", "negative", "positive")
 
 ggplot(covid_testing) +
   geom_histogram(
