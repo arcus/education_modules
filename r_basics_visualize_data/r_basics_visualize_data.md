@@ -135,9 +135,13 @@ Here's another example of that kind of plot:
 
 ![A normally distributed or bell-shaped curve.  The x axis ranges from -3 to 3 while the y axis goes from 0 to 200](media/small_histogram.png)<!-- style = "max-width:800px;"-->
 
-In the box below, write what you think the name of this is (all lowercase, please).
+In the box below, write what you think the name of this is.
 
 [[histogram]]
+<script>
+  let input = "@input".trim().toLowerCase();
+  input == "histogram" || input == "a histogram";
+</script>
 [[?]] Hint: this word ends in "gram"
 ***
 <div class = "answer">
