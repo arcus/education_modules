@@ -521,9 +521,9 @@ Which statements about the remove command `rm` are **TRUE**?
 
 ## Additional Resources
 
-You can always use the manual command `man` to read the documentation of any command. Give it a try with `man cp`!
+Check out the built-in manual or help function in your CLI. You can try it out by typing a command followed by `--help`. Unless you are using Git Bash, you can also try the manual command `man` to read even more of the documentation. Give it a try with `man cp` or `cp --help`!
 
-Reading the manual isn't always the easiest way to get more comfortable with a programming language, so here are some other resources:
+Reading a manual isn't always the easiest way to get more comfortable with a programming language, so here are some other resources:
 
 - Software Carpentries makes all the materials from their [Unix Shell lessons](https://swcarpentry.github.io/shell-novice/) available.
 
