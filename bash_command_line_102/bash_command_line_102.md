@@ -58,6 +58,12 @@ previous_sequential_module: bash_command_line_101
 
 @end
 
+current_version_description: Updated module metadata
+@version_history
+- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_command_line_102/bash_command_line_102.md#1) Improved Lesson Preparation instructions
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/738a57ce41189c219ae9288bed4fbde834bb46d4/bash_command_line_102/bash_command_line_102.md#1) Initial version
+@end
+
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
