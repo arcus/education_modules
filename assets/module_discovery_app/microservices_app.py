@@ -70,7 +70,7 @@ app.layout = html.Div([
     html.Hr(), html.Hr(),
     html.Div(hidden_filtered_modules), # DONT COMMENT OUT this is visible for debugging purposes, change to 'display': 'none' for production purposes. 
     html.Div(hidden_active_module), # DONT COMMENT OUT this is visible for debugging purposes, change to 'display': 'none' for production purposes.
-    html.Div(children=["blue"], id="debugger"),     html.Div(children=["blue"], id="debugger2")
+    #html.Div(children=["blue"], id="debugger"),     html.Div(children=["blue"], id="debugger2")
     ],
     style={'padding' : '25px'}
     )
@@ -81,8 +81,8 @@ module_details_panel_callbacks.update_module_info_panel(app)
 
 # Initialize all INTERcomponent callbacks next...
 callbacks.stylesheet_callbacks.turn_nodes_on_off(app)
-callbacks.filter_modules_in.update_hidden_filtered_modules(app)
 clickable_module_list_callbacks.create_clickable_module_list(app)
+callbacks.filter_modules_in.update_hidden_filtered_modules(app)
 callbacks.active_node_in.active_node_in(app)
 #callbacks.active_node_out.active_node_out(app)
 callbacks.debugger.debugger(app)
