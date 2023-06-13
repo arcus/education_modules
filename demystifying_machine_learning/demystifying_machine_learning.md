@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  0.0.0
+version:  1.0.0
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
@@ -108,7 +108,15 @@ It's possible to run many classic statistical tests on large datasets, but that'
 Machine learning algorithms, on the other hand, were built for **large and messy data**.
 When you have a lot of variables to analyze and a lot of observations, machine learning may provide solutions that are quicker, more robust, and actually easier to interpret than more traditional statistical tests.
 
-Moreover, many machine learning approaches actually won't work if your dataset is too small -- if you don't have enough information in the data, your machine learning algorithm may not be able to converge and you'll get no results at all.
+Moreover, many machine learning approaches actually won't work if your dataset is too small.  If you don't have enough information in the data, your machine learning algorithm may not be able to **converge**, and you'll get no results at all.
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+What is convergence?  When an algorithm converges, it is closing in on a potential solution (a reasonably accurate prediction, for example) as it iteratively changes its models in attempts to improve.  If you remember playing games as a child where a player would say "warmer... warmer... hot!" as you got closer to the correct location or guess, that's what convergence is like.  The algorithm tweaks its guess by making changes in a given direction which consistently leads to a better outcome, making it easy to tell when it's on the right track and which direction to go in to get an even better guess.
+
+Convergence fails when changes to a machine learning model instead lead to chaotic outcomes, like very poor predictions followed by good ones followed by terrible ones followed by great ones.  It means there's no clear direction to move in: "Warmer! Cold!  Colder! Hot!".  
+
+</div>
 
 Inference vs. prediction: A subtle distinction
 ---
@@ -145,6 +153,15 @@ But first, a quick note about how data are used in machine learning:
 
 Because machine learning models "learn", the process of fitting a model to data is called **training**.
 The goal of training is to get a final version of your model; often this means estimating the model's parameters (although depending on the technique, it could also be things like feature selection or identifying coordinates for group centroids).
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+What are **parameters**?  Parameters are like the dials and switches that govern how an algorithm works and how it mathematically works with our data to make predictions.  For example, one kind of parameter would be the coefficient used in a linear model.  Is 3, 2.2, or -1.6 the best coefficient for creating a good linear model?  Machine learning can rapidly change parameters to optimize things like weights and coefficients, which is what makes it so attractive.  
+
+What's a **feature**?  A feature is something we're bringing in from our data that will be mathematically included in our model making.  Sometimes we might experiment to see whether adding information we have but aren't sure is useful is actually helpful.  For example, birth order may not seem to be very clinically relevant, but we might try adding that data in as a new feature and discover that for our area of interest, that feature is useful and improves our model outcome.  Other times, we might realize that simplifying our model and leaving out some features makes our model more generalizable (for example, not every patient record has birth order, so it might be better to leave it out) or easier to calculate.
+
+</div>
 
 For a regression model, which we'll discuss more in the example, training means estimating the intercept and the coefficeint(s) for the predictor(s) -- for a linear regression with just one predictor, training is estimating the intercept and the slope.
 For a polynomial linear regression, training is estimating the intercept and each of the coefficients for the polynomial terms.
@@ -440,7 +457,7 @@ For example, if you have a dataset with 100 variables, you might use dimension r
 Like clustering, dimension reduction models are unsupervised.
 
 There are two main ways to reduce the number of variables in your data: drop variables that you don't need, or summarize a lot of variables with fewer variables.
-Dropping unnecessary variables is called [feature selection](https://en.wikipedia.org/wiki/Feature_selection), and is built into some machine learning approaches such as [lasso regression](https://en.wikipedia.org/wiki/Lasso_(statistics)).
+Dropping unnecessary variables is called [feature selection](https://en.wikipedia.org/wiki/Feature_selection), and is built into some machine learning approaches such as [lasso regression](https://en.wikipedia.org/wiki/Lasso_(statistics\)).
 There are many approaches for summarizing across multiple variables, but the most common approach is probably Principal Component Analysis (PCA).
 [StatQuest](https://statquest.org/about/) has a great video on Principal Component Analysis:
 
