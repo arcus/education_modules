@@ -116,7 +116,7 @@ Collaborating on code and creating web applications are great uses of containers
 
 ## How containers work
 
-![Schematic of a Docker container with six applications labeled A through F. They sit on top of a Docker layer, which sits on top of a a host operating system layer, which in turn sits on top of an Infrastructure layer.](media/docker-containerized-application.png)
+![Schematic of a container with three applications. They sit on top of a container engine layer, which sits on top of a a host operating system layer, which in turn sits on top of an Infrastructure layer.](media/containerized_apps.png)
 
 Before you build a container, you need a container **image**. An image is essentially the instructions for how to build the container: the code or application that you want in the container, what dependencies should be installed, and what should happen when the container launches. Often, you don't need to start completely from scratch when creating a container image. Many container platforms have **base images** that already have some basic building blocks in place (for example, you might select a Python base image, which will already have the instructions for installing Python and its dependencies); all you need to do then is to add anything special that your container needs. 
 
@@ -138,7 +138,7 @@ Feeling overwhelmed? Containerization is a topic that can be difficult to wrap y
 
 ### Containers vs. virtual machines
 
-![A comparison of schematics for Docker containers (left) and virtual machines (right). The left side is a repeat of the earlier Docker schematic, and the right side is a schematic of three virtual machines, each with its own guest operating system and application; this is in contrast to the Docker containers which do not include their own operating systems.](media/docker-containerized-and-vm.png)
+![A comparison of schematics for containers (left) and virtual machines (right). The left side is a repeat of the earlier container schematic, and the right side is a schematic of three virtual machines, each with its own guest operating system and application; this is in contrast to the containers which do not include their own operating systems.](media/container_vs_vm_apps.png)
 
 Some of you might be thinking that containers sound a bit like virtual machines. While virtual machines (or VMs) and containers can serve similar purposes, they aren't exactly the same. 
 
