@@ -691,22 +691,6 @@ If you want to read about more examples of machine learning in biomedical resear
 - [Automatically extract things like symptoms and history from unstructured notes](https://arxiv.org/pdf/2107.02975.pdf), making complicated EHR (electronic health record) data easier to analyze
 - [Guide clinicians performing radiofrequency ablation](https://pubmed.ncbi.nlm.nih.gov/30939953/)
 
-<!--
-
-Some other resources, in case we want to add more or reference in other modules:
-
-Text analysis
-- Supervised Machine Learning for Text Analysis in R https://smltar.com/
-- Text Mining with R: https://www.tidytextmining.com/
-
-Applied Predictive Modeling https://vuquangnguyen2016.files.wordpress.com/2018/03/applied-predictive-modeling-max-kuhn-kjell-johnson_1518.pdf
-
-Feature Engineering and Selection: A Practical Approach for Predictive Models http://www.feat.engineering/
-
-Tidy Modeling with R https://www.tmwr.org/
-
--->
-
 ## Feedback
 
 @feedback
