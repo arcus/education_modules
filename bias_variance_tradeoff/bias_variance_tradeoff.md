@@ -168,10 +168,6 @@ In this pretend example, we know the true underlying relationship is quadratic, 
 
 Unlike the example here, in a real analysis we never know what the true underlying relationship is, and that makes it very hard to know if you're under- or overfitting.
 
-**So how can you tell if your model is hitting a good balance between bias and variance?**
-
-As you increase the complexity of your model, the fit will just get better and better on the training data, which could lead you to overfit.
-That's why we separate out test data from the training data.
 
 <details>
 
@@ -224,6 +220,29 @@ base_plot +
 ```
 
 </details>
+
+## What to do 
+
+When you're faced with an actual dataset, the temptation is often to just focus on getting the best model fit you can, but that can lead you into trouble. 
+As you increase the complexity of your model, the fit will just get better and better on the training data, which could lead you to overfit.
+
+In the example above, you might consider testing a cubic or even quartic polynomial regression (adding terms for blood pressure raised to the third, or third and fourth power, respectively); that adds only a little more complexity to the model, but it would allow you to model a more subtle relationship between blood pressure and cognitive performance. 
+If you don't know the true underlying relationship (which, in any real analysis, you never will), how could you be expected to know that a quartic relationship is overly complicated in this case?
+
+If you were to run a quartic polynomial model on your data, there's a good chance it would reveal a better fit (less error) than the quadratic model. 
+When we move from a simple linear regression to a quadratic regression, we see a reduction in error because we've substantially reduced the bias.
+But when we move from a quadratic model to a cubic or quartic model, we would still see a reduction in error --- the problem is that now that reduction in error will be accompanied by an increase in variance. 
+
+That shift from reducing bias to increasing variance happens invisibly, though.
+All we can see in our results is an improvement in model fit. 
+
+**So how can you tell if your model is hitting a good balance between bias and variance?**
+
+It would be great if we could measure bias directly, since the real goal is generally to get a model that's as close as possible to the truth (i.e. low bias).
+But except in a made-up example, we never know the real underlying truth, so it's not possible to measure how far our model is from it.
+
+Instead, we can work to **reduce error as much as possible without increasing the variance**, and variance, unlike bias, is measurable.
+That's why we separate out test data from the training data.
 
 ### Training data and test data
 
