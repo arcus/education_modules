@@ -16,7 +16,7 @@ comment:  An approachable and practical introduction to machine learning for bio
 
 long_description: If you're curious about machine learning and whether or not it could be useful to you in your work, this is for you. It provides a high-level overview of machine learning techniques with an emphasis on applications in biomedical research. This module covers the what and the why of machine learning only, not the how -- it doesn't include instructions or code for running models, just background to help you think about machine learning in research.
 
-estimated_time_in_minutes: 45
+estimated_time_in_minutes: 60
 
 @pre_reqs
 
