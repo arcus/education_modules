@@ -250,7 +250,7 @@ For an excellent video summary of how splitting your data into training and test
 
 !?["Machine Learning Fundamentals: Bias and Variance" by StatQuest](https://youtu.be/EuBBz3bI-aA?t=170)
 
-### Additional techniques
+### Techniques
 
 There are many different ways to handle the bias-variance tradeoff!
 
