@@ -112,6 +112,7 @@ Moreover, many machine learning approaches actually won't work if your dataset i
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 What is convergence?  When an algorithm converges, it is closing in on a potential solution (a reasonably accurate prediction, for example) as it iteratively changes its models in attempts to improve.  If you remember playing games as a child where a player would say "warmer... warmer... hot!" as you got closer to the correct location or guess, that's what convergence is like.  The algorithm tweaks its guess by making changes in a given direction which consistently leads to a better outcome, making it easy to tell when it's on the right track and which direction to go in to get an even better guess.
 
 Convergence fails when changes to a machine learning model instead lead to chaotic outcomes, like very poor predictions followed by good ones followed by terrible ones followed by great ones.  It means there's no clear direction to move in: "Warmer! Cold!  Colder! Hot!".  
@@ -559,8 +560,13 @@ They can be very accurate for prediction and can do a good job of finding relati
 An example of a black box algorithm might be credit card anomaly detection. 
 If you've ever had someone say to you, "well, it's not clear why we thought your credit card was stolen, but there was just something about your purchases and travel that made us automatically block your card," you have experienced the unexplainability of a black box algorithm.
 
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Explainability is less important in some fields and more important in others. 
 If you are creating models that require human buy-in or are aimed at helping people change behaviors to reduce risk, explainability is paramount.  
+
+</div>
 
 For example, consider a black box model of cancer risk, which takes hundreds of variables including where people lived at different points in their life, jobs they've had, lab values, marital status, diet and exercise habits, genomic data, known heavy metal exposures, etc. 
 This is a staggeringly complex model that can accurately predict solid tumor risk, but because it combines and recombines data and uses strategies that are hard to describe to people without computer science PhDs, it's not explainable. 
