@@ -266,9 +266,15 @@ Like clustering, dimension reduction models are unsupervised.
 There are two main ways to reduce the number of variables in your data: drop variables that you don't need, or summarize a lot of variables with fewer variables.
 Dropping unnecessary variables is called [feature selection](https://en.wikipedia.org/wiki/Feature_selection), and is built into some machine learning approaches such as [lasso regression](https://static1.squarespace.com/static/5ff2adbe3fe4fe33db902812/t/6062a083acbfe82c7195b27d/1617076404560/ISLR%2BSeventh%2BPrinting.pdf#page=226).
 There are many approaches for summarizing across multiple variables, but the most common approach is probably Principal Component Analysis (PCA).
-[StatQuest](https://statquest.org/about/) has a great video on Principal Component Analysis:
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+For more detail, check out [StatQuest](https://statquest.org/about/)'s great video on Principal Component Analysis:
 
 !?[StatQuest: Principal Component Analysis (PCA), Step-by-Step.](https://www.youtube.com/watch?v=FgakZw6K1QQ)
+
+</div>
 
 Dimension reduction is sometimes used as an initial step in machine learning, to simplify the data before running it through another kind of analysis.
 For example, because sequencing datasets are very complex, dimension reduction is an important step in RNA sequencing analysis (see [Risso et al., 2018](https://www.nature.com/articles/s41467-017-02554-5.pdf)).
