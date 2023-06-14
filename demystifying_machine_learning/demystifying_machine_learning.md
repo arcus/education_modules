@@ -157,13 +157,22 @@ The goal of training is to get a final version of your model; often this means e
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-What are **parameters**?  Parameters are like the dials and switches that govern how an algorithm works and how it mathematically works with our data to make predictions.  For example, one kind of parameter would be the coefficient used in a linear model.  Is 3, 2.2, or -1.6 the best coefficient for creating a good linear model?  Machine learning can rapidly change parameters to optimize things like weights and coefficients, which is what makes it so attractive.  
+What are **parameters**?  
+Parameters are like the dials and switches that govern how an algorithm works and how it mathematically works with our data to make predictions.  
+For example, one kind of parameter would be the coefficient used in a linear model.  
+Is 3, 2.2, or -1.6 the best coefficient for creating a good linear model?  
+Machine learning can rapidly change parameters to optimize things like weights and coefficients, which is what makes it so attractive.  
 
-What's a **feature**?  A feature is something we're bringing in from our data that will be mathematically included in our model making.  Sometimes we might experiment to see whether adding information we have but aren't sure is useful is actually helpful.  For example, birth order may not seem to be very clinically relevant, but we might try adding that data in as a new feature and discover that for our area of interest, that feature is useful and improves our model outcome.  Other times, we might realize that simplifying our model and leaving out some features makes our model more generalizable (for example, not every patient record has birth order, so it might be better to leave it out) or easier to calculate.
+What's a **feature**?  
+A feature is something we're bringing in from our data that will be mathematically included in our model making.  
+Sometimes we might experiment to see whether adding information we have but aren't sure is useful is actually helpful.  
+For example, birth order may not seem to be very clinically relevant, but we might try adding that data in as a new feature and discover that for our area of interest, that feature is useful and improves our model outcome.  
+Other times, we might realize that simplifying our model and leaving out some features makes our model more generalizable (for example, not every patient record has birth order, so it might be better to leave it out) or easier to calculate.
 
 </div>
 
 For a regression model, which we'll discuss more in the example, training means estimating the intercept and the coefficeint(s) for the predictor(s) -- for a linear regression with just one predictor, training is estimating the intercept and the slope.
+
 For a polynomial linear regression, training is estimating the intercept and each of the coefficients for the polynomial terms.
 
 <div class = "learn-more">
@@ -539,24 +548,32 @@ As both O'Neil and Obermeyer emphasize, algorithms can be interrogated.
 In addition to assessing how accurate a model is, you can and should look for biases in your results.
 
 For example, if you expect that your model's predictions shouldn't be systematically different for patients on [Medicaid](https://www.hhs.gov/answers/medicare-and-medicaid/who-is-eligible-for-medicaid/index.html) vs. private insurance, then check the output to see if that's the case.
+
 ## Model explainability
 
-In machine learning, especially on big data, sometimes models are so complex in the way they combine and perform math on features that it's not clear in human terms why a particular prediction was made.  This feels very different from simple statistical inference, which can usually be described in a sentence or two: "as number of school days lost to illness rises, patient-reported quality of life scores fall in a linearly inverse relationship."  
+In machine learning, especially on big data, sometimes models are so complex in the way they combine and perform math on features that it's not clear in human terms why a particular prediction was made. 
+This feels very different from simple statistical inference, which can usually be described in a sentence or two: "as number of school days lost to illness rises, patient-reported quality of life scores fall in a linearly inverse relationship."  
 
-Particularly complex models which are hard to explain because they use many steps or do advanced mathematical techniques are called "black boxes".  They can be very accurate for prediction and can do a good job of finding relationships that humans would miss, as they combine hundreds of data points on millions of observations.  An example of a black box algorithm might be credit card anomaly detection.  If you've ever had someone say to you, "well, it's not clear why we thought your credit card was stolen, but there was just something about your purchases and travel that made us automatically block your card," you have experienced the unexplainability of a black box algorithm.
+Particularly complex models which are hard to explain because they use many steps or do advanced mathematical techniques are called "black boxes". 
+They can be very accurate for prediction and can do a good job of finding relationships that humans would miss, as they combine hundreds of data points on millions of observations. 
+An example of a black box algorithm might be credit card anomaly detection. 
+If you've ever had someone say to you, "well, it's not clear why we thought your credit card was stolen, but there was just something about your purchases and travel that made us automatically block your card," you have experienced the unexplainability of a black box algorithm.
 
-Explainability is less important in some fields and more important in others.  If you are creating models that require human buy-in or are aimed at helping people change behaviors to reduce risk, explainability is paramount.  
+Explainability is less important in some fields and more important in others. 
+If you are creating models that require human buy-in or are aimed at helping people change behaviors to reduce risk, explainability is paramount.  
 
-For example, consider a black box model of cancer risk, which takes hundreds of variables including where people lived at different points in their life, jobs they've had, lab values, marital status, diet and exercise habits, genomic data, known heavy metal exposures, etc.  This is a staggeringly complex model that can accurately predict solid tumor risk, but because it combines and recombines data and uses strategies that are hard to describe to people without computer science PhDs, it's not explainable.  That means that if a patient asks, "will reducing my red meat consumption improve my cancer risk?" there's no way to know how that particular variable affects the final model outcome.
+For example, consider a black box model of cancer risk, which takes hundreds of variables including where people lived at different points in their life, jobs they've had, lab values, marital status, diet and exercise habits, genomic data, known heavy metal exposures, etc. 
+This is a staggeringly complex model that can accurately predict solid tumor risk, but because it combines and recombines data and uses strategies that are hard to describe to people without computer science PhDs, it's not explainable. 
+That means that if a patient asks, "will reducing my red meat consumption improve my cancer risk?" there's no way to know how that particular variable affects the final model outcome.
 
-Black box models can also be unfair in ways that are obscured, and result in giving results that are biased in terms of race, gender, or other category of human bias.  Demonstrating and ameliorating bias in black box models can be tricky because of the number of potentially biased features and the complex algorithm that processes those features.
+Black box models can also be unfair in ways that are obscured, and may produce results that are biased in terms of race, gender, or other category of human bias. 
+Demonstrating and ameliorating bias in black box models can be tricky because of the number of potentially biased features and the complex algorithm that processes those features.
 
 Explainable machine learning (also known as explainable AI) can be achieved by:
 
  * Using algorithms that are simpler and more intuitive (for example, using decision trees instead of neural networks)
  * Simulating the results of changing a single feature to measure how much that feature influences the prediction, and how
  * Using software or code libraries that can show the relative salience or weight of various features
-
 
 ## Quiz
 
