@@ -333,7 +333,7 @@ If your measure of model fit on the test data is substantially worse than your m
 
 </div>
 
-For an excellent video summary of how splitting your data into training and test sets helps with the bias-variance tradeoff, see this StatsQuest video (note that it's set to start about halfway through, but scroll back to the beginning if you want to get a review of the definitions of bias and variance):
+For an excellent video summary of how splitting your data into training and test sets helps with the bias-variance tradeoff, see this StatsQuest video (note the section on splitting your data starts about halfway through, but feel free to also watch the beginning if you want to get a review of the definitions of bias and variance):
 
 !?["Machine Learning Fundamentals: Bias and Variance" by StatQuest](https://youtu.be/EuBBz3bI-aA?t=170)
 
