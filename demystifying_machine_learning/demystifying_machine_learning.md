@@ -467,7 +467,7 @@ For example, if you have a dataset with 100 variables, you might use dimension r
 Like clustering, dimension reduction models are unsupervised.
 
 There are two main ways to reduce the number of variables in your data: drop variables that you don't need, or summarize a lot of variables with fewer variables.
-Dropping unnecessary variables is called [feature selection](https://en.wikipedia.org/wiki/Feature_selection), and is built into some machine learning approaches such as [lasso regression](https://en.wikipedia.org/wiki/Lasso_(statistics\)).
+Dropping unnecessary variables is called [feature selection](https://en.wikipedia.org/wiki/Feature_selection), and is built into some machine learning approaches such as [lasso regression](https://static1.squarespace.com/static/5ff2adbe3fe4fe33db902812/t/6062a083acbfe82c7195b27d/1617076404560/ISLR%2BSeventh%2BPrinting.pdf#page=226).
 There are many approaches for summarizing across multiple variables, but the most common approach is probably Principal Component Analysis (PCA).
 [StatQuest](https://statquest.org/about/) has a great video on Principal Component Analysis:
 
