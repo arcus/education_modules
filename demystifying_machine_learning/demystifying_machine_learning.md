@@ -329,7 +329,7 @@ If you've let your model get too complex in your attempt to reduce bias, then wh
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-If your measure of model fit on the test data is substantially higher than your measure of model fit on the training data, you know you've overfit the model.
+If your measure of model fit on the test data is substantially worse than your measure of model fit on the training data, you know you've overfit the model.
 
 </div>
 
