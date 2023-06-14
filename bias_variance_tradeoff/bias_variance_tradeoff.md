@@ -250,8 +250,7 @@ For an excellent video summary of how splitting your data into training and test
 
 !?["Machine Learning Fundamentals: Bias and Variance" by StatQuest](https://youtu.be/EuBBz3bI-aA?t=170)
 
-<div class = "behind-the-scenes">
-<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+### Additional techniques
 
 There are many different ways to handle the bias-variance tradeoff!
 
@@ -261,8 +260,6 @@ Both are discussed in the [StatQuest video on cross validation](https://youtu.be
 You'll also see analyses that use [regularization](https://developers.google.com/machine-learning/crash-course/regularization-for-simplicity/l2-regularization), [boosting](https://developers.google.com/machine-learning/glossary#boosting), and [bagging](https://developers.google.com/machine-learning/glossary#bagging), all of which are different approaches to try to deal with the bias-variance tradeoff.
 
 Most of the machine learning tools you'll encounter are designed with the bias-variance tradeoff in mind.
-
-</div>
 
 ## Quiz
 
