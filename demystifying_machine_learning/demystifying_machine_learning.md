@@ -484,10 +484,10 @@ Having data that are too complex to analyze is sometimes called the "[curse of d
 
 </div>
 
-## A word of caution about big data
+## A word of caution
 
 Big data is often also messy data, and that can make it tricky to work with statistically.
-Two of the biggest problems are low-quality data, and non-random sampling.
+Moreover, the complexity of some machine learning models can create new problems, especially with respect to explainability and fairness. 
 
 ![Panel 1: Two people talking, one says "Our field has been struggling with this problem for years" as a third person approaches. Panel 2: Third person, holding up a laptop, says, "Struggle no more! I'm here to solve it with algorithms!" Panel 3: Third person working on laptop while the other two watch. Panel 4: Six months later, third person says "Wow, this problem is really hard." First person says "You don't say."](https://imgs.xkcd.com/comics/here_to_help_2x.png "[Here to Help](https://xkcd.com/1831/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")
 
@@ -497,7 +497,7 @@ Two of the biggest problems are low-quality data, and non-random sampling.
 [Garbage in, garbage out](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out) is such a common saying in mathematics and computer science that it's often simply abbreviated GIGO.
 The idea is that if your inputs are bad, no analysis in the world will be able to produce valuable output from them.
 
-Data quality is of particular concern in machine learning because  very large datasets can sometimes make it harder to spot problems with data quality.
+Data quality is of particular concern in machine learning because very large datasets can sometimes make it harder to spot problems with data quality.
 If you have ten variables, you might notice that one of them looks like it was miscoded just by glancing at the data file, but what if you have hundreds of variables?
 And millions of observations?
 
@@ -519,6 +519,37 @@ For a detailed practical guide to data exploration in machine learning, check ou
 
 Also, crucially, if you're using an existing dataset, be sure to read any accompanying documentation!
 There may be known quality issues in the data, and you can save yourself a lot of headaches by learning as much as you can **about** the data before you try to learn anything **from** the data.
+
+### Model explainability
+
+In machine learning, especially on big data, sometimes models are so complex in the way they combine and perform math on features that it's not clear in human terms why a particular prediction was made. 
+This feels very different from simple statistical inference, which can usually be described in a sentence or two: "as number of school days lost to illness rises, patient-reported quality of life scores fall in a linearly inverse relationship."  
+
+Particularly complex models which are hard to explain because they use many steps or do advanced mathematical techniques are called "black boxes". 
+They can be very accurate for prediction and can do a good job of finding relationships that humans would miss, as they combine hundreds of data points on millions of observations. 
+An example of a black box algorithm might be credit card anomaly detection. 
+If you've ever had someone say to you, "well, it's not clear why we thought your credit card was stolen, but there was just something about your purchases and travel that made us automatically block your card," you have experienced the unexplainability of a black box algorithm.
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Explainability is less important in some fields and more important in others. 
+If you are creating models that require human buy-in or are aimed at helping people change behaviors to reduce risk, explainability is paramount.  
+
+</div>
+
+For example, consider a hypothetical black box model of cancer risk, which takes hundreds of variables including where people lived at different points in their life, jobs they've had, lab values, marital status, diet and exercise habits, genomic data, known heavy metal exposures, etc. 
+This is a staggeringly complex model that can accurately predict solid tumor risk, but because it combines and recombines data and uses strategies that are hard to describe, it's not explainable. 
+That means that if a patient asks, "will reducing my red meat consumption lower my cancer risk?" there's no way to know how that particular variable affects the final model outcome.
+
+Black box models can also be unfair in ways that are obscured, and may produce results that are biased in terms of race, gender, or other category of human bias. 
+Demonstrating and ameliorating bias in black box models can be tricky because of the number of potentially biased features and the complex algorithm that processes those features.
+
+Explainable machine learning (also known as explainable AI) can be achieved by:
+
+ * Using algorithms that are simpler and more intuitive (for example, using decision trees instead of neural networks)
+ * Simulating the results of changing a single feature to measure how much that feature influences the prediction, and how
+ * Using software or code libraries that can show the relative salience or weight of various features
 
 ### Another kind of bias
 
@@ -550,36 +581,6 @@ In addition to assessing how accurate a model is, you can and should look for bi
 
 For example, if you expect that your model's predictions shouldn't be systematically different for patients on [Medicaid](https://www.hhs.gov/answers/medicare-and-medicaid/who-is-eligible-for-medicaid/index.html) vs. private insurance, then check the output to see if that's the case.
 
-## Model explainability
-
-In machine learning, especially on big data, sometimes models are so complex in the way they combine and perform math on features that it's not clear in human terms why a particular prediction was made. 
-This feels very different from simple statistical inference, which can usually be described in a sentence or two: "as number of school days lost to illness rises, patient-reported quality of life scores fall in a linearly inverse relationship."  
-
-Particularly complex models which are hard to explain because they use many steps or do advanced mathematical techniques are called "black boxes". 
-They can be very accurate for prediction and can do a good job of finding relationships that humans would miss, as they combine hundreds of data points on millions of observations. 
-An example of a black box algorithm might be credit card anomaly detection. 
-If you've ever had someone say to you, "well, it's not clear why we thought your credit card was stolen, but there was just something about your purchases and travel that made us automatically block your card," you have experienced the unexplainability of a black box algorithm.
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-Explainability is less important in some fields and more important in others. 
-If you are creating models that require human buy-in or are aimed at helping people change behaviors to reduce risk, explainability is paramount.  
-
-</div>
-
-For example, consider a black box model of cancer risk, which takes hundreds of variables including where people lived at different points in their life, jobs they've had, lab values, marital status, diet and exercise habits, genomic data, known heavy metal exposures, etc. 
-This is a staggeringly complex model that can accurately predict solid tumor risk, but because it combines and recombines data and uses strategies that are hard to describe to people without computer science PhDs, it's not explainable. 
-That means that if a patient asks, "will reducing my red meat consumption improve my cancer risk?" there's no way to know how that particular variable affects the final model outcome.
-
-Black box models can also be unfair in ways that are obscured, and may produce results that are biased in terms of race, gender, or other category of human bias. 
-Demonstrating and ameliorating bias in black box models can be tricky because of the number of potentially biased features and the complex algorithm that processes those features.
-
-Explainable machine learning (also known as explainable AI) can be achieved by:
-
- * Using algorithms that are simpler and more intuitive (for example, using decision trees instead of neural networks)
- * Simulating the results of changing a single feature to measure how much that feature influences the prediction, and how
- * Using software or code libraries that can show the relative salience or weight of various features
 
 ## Quiz
 
