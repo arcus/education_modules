@@ -95,7 +95,7 @@ While there are many situations in which containerization can improve your resea
 
 	</div>
 
-- If you use one-and-click software for analysis, containers aren't optimal for that kind of work, because the whole purpose of a container image is to lay out a reproducible set of instructions. If you want your analyses to be transparent, sharable, and reusable, consider using scripted analyses (which can be containerized)!
+- If you use point-and-click software for analysis, containers aren't optimal for that kind of work, because the whole purpose of a container image is to lay out a reproducible set of instructions. If you want your analyses to be transparent, sharable, and reusable, consider using scripted analyses (which can be containerized)!
 
 - If you need to use proprietary software that requires a license, you can include those in a container image; however, you are still limited by license requirements and limits, which could limit re-use. We recommend using open-source tools whenever possible. 
 
