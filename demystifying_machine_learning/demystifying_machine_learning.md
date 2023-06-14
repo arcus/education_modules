@@ -489,6 +489,8 @@ Having data that are too complex to analyze is sometimes called the "[curse of d
 Big data is often also messy data, and that can make it tricky to work with statistically.
 Moreover, the complexity of some machine learning models can create new problems, especially with respect to explainability and fairness. 
 
+Machine learning is an important and powerful tool, but it has its shortcomings.
+
 ![Panel 1: Two people talking, one says "Our field has been struggling with this problem for years" as a third person approaches. Panel 2: Third person, holding up a laptop, says, "Struggle no more! I'm here to solve it with algorithms!" Panel 3: Third person working on laptop while the other two watch. Panel 4: Six months later, third person says "Wow, this problem is really hard." First person says "You don't say."](https://imgs.xkcd.com/comics/here_to_help_2x.png "[Here to Help](https://xkcd.com/1831/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")
 
 
@@ -548,7 +550,7 @@ Demonstrating and ameliorating bias in black box models can be tricky because of
 Explainable machine learning (also known as explainable AI) can be achieved by:
 
  * Using algorithms that are simpler and more intuitive (for example, using decision trees instead of neural networks)
- * Simulating the results of changing a single feature to measure how much that feature influences the prediction, and how
+ * Simulating the results of changing a single feature to measure how that feature influences the prediction
  * Using software or code libraries that can show the relative salience or weight of various features
 
 ### Another kind of bias
