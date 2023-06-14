@@ -246,7 +246,7 @@ If your measure of model fit on the test data is substantially worse than your m
 
 </div>
 
-For an excellent video summary of how splitting your data into training and test sets helps with the bias-variance tradeoff, see this StatsQuest video (note the section on splitting your data starts about halfway through, but feel free to also watch the beginning if you want to get a review of the definitions of bias and variance):
+For an excellent video summary of how splitting your data into training and test sets helps with the bias-variance tradeoff, see this StatQuest video (note the section on splitting your data starts about halfway through, but feel free to also watch the beginning if you want to get a review of the definitions of bias and variance):
 
 !?["Machine Learning Fundamentals: Bias and Variance" by StatQuest](https://youtu.be/EuBBz3bI-aA?t=170)
 
@@ -255,7 +255,9 @@ For an excellent video summary of how splitting your data into training and test
 There are many different ways to handle the bias-variance tradeoff!
 
 To explore some ways to cross validate, you can read about two popular approaches: k-fold cross validation and leave one out cross validation (LOOCV, sometimes pronounced "luke-vee").
-Both are discussed in the [StatQuest video on cross validation](https://youtu.be/fSytzGwwBVw).
+Both are discussed in the StatQuest video on cross validation:
+
+!?["Machine Learning Fundamentals: Cross Validation" by StatQuest.](https://youtu.be/fSytzGwwBVw)
 
 You'll also see analyses that use [regularization](https://developers.google.com/machine-learning/crash-course/regularization-for-simplicity/l2-regularization), [boosting](https://developers.google.com/machine-learning/glossary#boosting), and [bagging](https://developers.google.com/machine-learning/glossary#bagging), all of which are different approaches to try to deal with the bias-variance tradeoff.
 
