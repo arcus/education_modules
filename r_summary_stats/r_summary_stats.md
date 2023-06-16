@@ -50,7 +50,6 @@ data_task: data_analysis
 coding_required: true
 coding_level: intermediate
 coding_language: r
-seqeunce_name: r_analysis
 
 @sets_you_up_for
 
