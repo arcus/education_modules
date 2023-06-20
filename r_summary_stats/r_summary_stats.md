@@ -90,7 +90,7 @@ For continuous variables, there are many more options. Summary statistics genera
 
 For example, consider a variable like age. A measure of central tendency would tell you, generally, how old are the research subjects? Is this a pediatric population, or adult? 
 
-Examples of statistics that capture central tendency are the **mean** and the **median**. Let's say the mean age of particpants in our study was 45. Now you have an idea of where on the scale we are --- this is not a population of children, nor is it a study about advanced age. 
+Examples of statistics that capture central tendency are the **mean** and the **median**. Let's say the mean age of participants in our study was 45. Now you have an idea of where on the scale we are --- this is not a population of children, nor is it a study about advanced age. 
 
 But how spread out are the data? This could be a population sampled from across the lifespan, with participants ranging from 5 to 90, or it could be a focused investigation of people in middle age, with all of the subjects in their 40s or even in their mid-40s. 
 
@@ -99,7 +99,7 @@ Examples of statistics that capture variability are **variance**, **standard dev
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-We won't get into the mathematical defintions of each of these statistics here, but if you'd like a refresher, check out these excellent Khan academy videos:
+We won't get into the mathematical definitions of each of these statistics here, but if you'd like a refresher, check out these excellent Khan academy videos:
 
 - [Statistics Intro: Mean, Median, and Mode](https://www.khanacademy.org/math/engageny-alg-1/alg1-2/alg1-2a-center/v/statistics-intro-mean-median-and-mode)
 - [Measures of Spread: Range, Variance, and Standard Deviation](https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-population/v/range-variance-and-standard-deviation-as-measures-of-dispersion)
@@ -666,7 +666,7 @@ table_data |>
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-If you're feeling like these arguments look confusing (why is it start with `list()`? What does the `~` mean??), you're not alone! 
+If you're feeling like these arguments look confusing (why does it start with `list()`? What does the `~` mean??), you're not alone! 
 
 As you get further away from the default settings in `gtsummary` (and other packages), your code is likely to become less intuitive and harder to read. 
 That's okay!
