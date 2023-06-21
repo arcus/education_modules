@@ -1345,14 +1345,13 @@ You can then insert the `@ lesson_prep_python_sage` macro, which includes instru
 
 ### Interactive SQL
 
-If your lesson includes interactive SQL code, you'll need to load the SQL macros. Each table is generated, row by row, in the macros for that lesson, so to avoid loading large macros unnecessarily, there are several different SQL macro modules available:
+If your lesson includes interactive SQL code, you'll need to load the SQL macros. The SQL macros file includes the code to generate each of the tables, row by row. You'll need the following import statement in your front matter:
 
- - `macros_sql.md` is required for any module with interactive SQL
- - `macros_sql_table_allergies.md` loads the allergies table
- - `macros_sql_table_patients.md` loads the patients table
- - `macros_sql_table_observations.md` loads the observations table
+```
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_sql.md
+```
 
-Note that very small tables (just a few rows) can be constructed right in the front matter for the module that uses them. Any larger tables, or tables that need to be re-used across different modules, should be created in separate table macro modules, though.
+Note that very small tables (just a few rows) can be constructed right in the front matter for the module that uses them. Any larger tables, or tables that need to be re-used across different modules, should be added to the `macros_sql.md` file though.
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
@@ -1360,13 +1359,6 @@ Note that very small tables (just a few rows) can be constructed right in the fr
 To learn about creating a new macro, such as a new SQL table, see our [instructions for DART macros](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
 
 </div>
-
-To use SQL macros (including tables), add the relevant `import` statements to your module's front matter. For example: 
-
-```
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_sql.md
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_sql_table_patients.md
-```
 
 To insert text providing a brief refresher on SQL, including our style guide and an example interactive code block, use the following macro in your Lesson Preparation section:
 
