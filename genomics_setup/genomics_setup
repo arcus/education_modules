@@ -12,31 +12,28 @@ mode: Textbook
 
 title: Genomics Tools and Methods: Computing Setup
 
-comment:  This is a short, focused description of the module.
+comment:  This module walks you through setting up your own copy of a genomics analysis AMI (Amazon Machine Image) to run genomics analyses in the cloud. 
 
-long_description: This is a longer description, which should be understandable for a lay audience.
+long_description: One challenge to getting started with genomics is that it's often not feasible to run even basic analyses on a personal computer; to work with genomics data, you need to first set up a cloud computing environment that will support it. This module walks you through how to set up the AMI (Amazon Machine Image) published by Data Carpentry as part of their Genomics Workshop. 
 
-estimated_time_in_minutes: 
+estimated_time_in_minutes: 30
 
 @pre_reqs
 This lesson assumes a working understanding of the bash shell.
 If you aren’t familiar with the bash shell, please review our [Command Line 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md) and/or the [Shell Genomics lesson by Data Carpentry](http://www.datacarpentry.org/shell-genomics/) before starting this lesson.
-
-This lesson also assumes some familiarity with biological concepts, including the structure of DNA, nucleotide abbreviations, and the concept of genomic variation within a population.
 
 @end
 
 @learning_objectives  
 After completion of this module, learners will be able to:
 
-- identify key elements
-- create a product
-- do a task
-- articulate the rationale for something
+- Launch and terminate instances on AWS
+- Use the Data Carpentry Community AMI to set up an AMI set up for genomics anlaysis
+
 @end
 
 resource1_name: Data Carpentry AMI Setup Instructions
-resource1_description: 
+resource1_description: Instructions published along with the Data Carpenry Genomics Workshop to launch the AMI for genomics analysis.
 resource1_wellvetted: true
 resource1_wellvetted_text: Data Carpentries is a well-established organization with a great reputation and high standards for accuracy. The open source nature of the tutorial also helps ensure that any errors or problems can be caught and addressed quickly.
 resource1_maintained: true
