@@ -110,7 +110,7 @@ For more information on why this particular dataset was chosen, see the [Data Ca
 We will be working with three sample events from the **Ara-3** strain of this experiment, one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations.
 The population changed substantially during the course of the experiment, and we will be exploring how (the evolution of a **Cit+** mutant and **hypermutability**) with our variant calling workflow.
 
-The [metadata file associated with this lesson can be downloaded directly here](https://raw.githubusercontent.com/datacarpentry/wrangling-genomics/gh-pages/files/Ecoli_metadata_composite.csv) or [viewed in Github](https://github.com/datacarpentry/wrangling-genomics/blob/gh-pages/files/Ecoli_metadata_composite.csv).
+The metadata file associated with this lesson can be [downloaded directly here](files/Ecoli_metadata_composite.csv) or [viewed in Github](https://github.com/datacarpentry/wrangling-genomics/blob/main/episodes/files/Ecoli_metadata_composite.csv). 
 
 Open the metadata file and examine it now.
 
@@ -134,11 +134,11 @@ The metadata describes information on the *Ara-3* clones, and the columns repres
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-If you would like to know details of how the file was created, you can look at [some notes and sources here](https://github.com/datacarpentry/wrangling-genomics/blob/gh-pages/files/Ecoli_metadata_composite_README.md).
+If you would like to know details of how the file was created, you can look at [some notes and sources here](https://github.com/datacarpentry/wrangling-genomics/blob/main/episodes/files/Ecoli_metadata_composite_README.md).
 
 </div>
 
-## Quiz: The data
+### Quiz: The data
 
 **Based on the metadata, answer the following questions:**
 
@@ -213,8 +213,11 @@ The ENA also provides sequencing data in the fastq format, an important format f
 To download the data, run the commands below.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Here we are using the `-p` option for `mkdir`. This option allows `mkdir` to create the new directory, even if one of the parent directories does not already exist.
 It also suppresses errors if the directory already exists, without overwriting that directory.
+
 </div>
 
 It will take about 15 minutes to download the files.
@@ -314,11 +317,14 @@ We can now see that there are a range of quality scores, but that the end of the
 very poor (`#` = a quality score of 2).
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 Although we have used a particular quality encoding system to demonstrate interpretation of read quality, different sequencing machines use different encoding systems.
 This means that, depending on which sequencer you use to generate your data, a `#` may not be an indicator of a poor quality base call.
 
 This mainly relates to older Solexa/Illumina data, but it is essential that you know which sequencing platform was used to generate your data, so that you can tell your quality control program which encoding to use.
 If you choose the wrong encoding, you run the risk of throwing away good reads or (even worse) not throwing away bad reads!
+
 </div>
 
 ### Quiz: Quality scores
@@ -331,6 +337,7 @@ How does the quality of this read compare to the quality of the first read, exam
 [(X)] The last read seems to be higher quality
 ****
 <div class = "answer">
+
 Here is the output you should see when running the above command:
 
 ```
@@ -420,7 +427,10 @@ cd ~/genomics_tools_and_methods/data/untrimmed_fastq/
 How big are the files?
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Hint: Look at the options for the `ls` command to see how to show file sizes.
+
 </div>
 
 ```
@@ -514,8 +524,11 @@ So the easiest way to look at these webpage summary reports will be to transfer 
 
 To transfer a file from a remote server to our own machines, we will use `scp`.
 
-<div class = "learnmore">
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 For a review of `scp`, see the section on [transferring data between your local machine and the cloud](https://datacarpentry.org/shell-genomics/05-writing-scripts/#transferring-data-between-your-local-machine-and-the-cloud) from the Data Carpentry Shell Genomics lesson.
+
 </div>
 
 First we will make a new directory on our computer to store the HTML files we are transferring.
@@ -541,6 +554,8 @@ you want to put the files. This is on your local computer and is the
 directory we just created `~/Desktop/fastqc_html`.
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 **Note on using zsh**:
 If you are using zsh instead of bash (macOS for example changed the default recently to zsh), it is likely that a no matches found error will be displayed.
 The reason for this is that the wildcard ("*") is not correctly interpreted. To fix this problem the wildcard needs to be escaped with a "\":
@@ -554,6 +569,7 @@ Alternatively, you can put the whole path into quotation marks:
 ```
 scp "dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/dc_workshop/results/fastqc_untrimmed_reads/*.html" ~/Desktop/fastqc_html
 ```
+
 </div>
 
 You should see a status output like this:
@@ -578,7 +594,9 @@ Take a look at your samples. Which sample(s) looks the best in terms of per base
 [[describe sample quality]]
 ***
 <div class = "answer">
+
 All of the reads contain usable data, but the quality decreases toward the end of the reads.
+
 </div>
 ***
 
@@ -643,8 +661,11 @@ Someday you may have 500 files to unzip!
 
 A more efficient way is to use a `for` loop lesson to iterate through all of our `.zip` files.
 
-<div class = "learnmore">
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 For a refresher on how to write `for` loops, see the section on [writing for loops in the Data Carpentry Shell Genomics lesson](https://datacarpentry.org/shell-genomics/04-redirection/index.html#writing-for-loops).
+
 </div>
 
 Let's see what that looks like and then we will  discuss what we are doing with each line of our loop.
@@ -767,6 +788,8 @@ cat */summary.txt > ~/dc_workshop/docs/fastqc_summaries.txt
 ```
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 **Same symbols, different meanings**
 
 As you work through this code, you will see `>` being used as a shell prompt, but `>` is also used to redirect output. Similarly, `$` is used as a shell prompt, but, as we saw earlier, it is also used to ask the shell to get the value of a variable.
@@ -774,6 +797,7 @@ As you work through this code, you will see `>` being used as a shell prompt, bu
 If the shell prints `>` or `$` then it expects you to type something, and the symbol is a prompt.
 
 If you type `>` or `$` yourself, it is an instruction from you that the shell should redirect output or get the value of a variable.
+
 </div>
 
 ## Quiz
