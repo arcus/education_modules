@@ -1,0 +1,262 @@
+<!--
+
+author:   Rose Hartman
+email:    hartmanr1@chop.edu
+version:  0.0.1
+current_version_description: Initial version
+module_type: wrapper
+docs_version: 1.1.0
+language: en
+narrator: UK English Female
+mode: Textbook
+
+title: Genomics Tools and Methods: Setup
+
+comment:  This is a short, focused description of the module.
+
+long_description: This is a longer description, which should be understandable for a lay audience.
+
+estimated_time_in_minutes: 
+
+@pre_reqs
+This lesson assumes a working understanding of the bash shell.
+If you aren’t familiar with the bash shell, please review our [Command Line 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md) and/or the [Shell Genomics lesson by Data Carpentry](http://www.datacarpentry.org/shell-genomics/) before starting this lesson.
+
+This lesson also assumes some familiarity with biological concepts, including the structure of DNA, nucleotide abbreviations, and the concept of genomic variation within a population.
+
+@end
+
+@learning_objectives  
+After completion of this module, learners will be able to:
+
+- identify key elements
+- create a product
+- do a task
+- articulate the rationale for something
+@end
+
+resource1_name: Data Carpentry AMI Setup Instructions
+resource1_description: 
+resource1_wellvetted: true
+resource1_wellvetted_text: Data Carpentries is a well-established organization with a great reputation and high standards for accuracy. The open source nature of the tutorial also helps ensure that any errors or problems can be caught and addressed quickly.
+resource1_maintained: true
+resource1_maintained_text: Data Carpentries assigns <a href="https://carpentries.org/maintainers/">lesson maintainers</a> to make sure tutorials, like this one, stay up to date.
+resource1_stablesupport: true
+resource1_stablesupport_text: This is hosted on the Carpentries website, and it is a popular and widely-shared tutorial. We expect it will continue to be available for the foreseeable future.
+resource1_a11y_issues: No known issues with accessibility, but we may have missed something. If you encounter a problem, you can let us know in the [feedback form](#feedback) at the end of this module, or post [an issue directly on the Data Carpentry repository for these instructions](https://github.com/datacarpentry/genomics-workshop/issues). 
+
+
+@module_structure
+1. Read through an overview about the genomics data we'll be working with, adapted from the Data Carpentry Genomics Workshop Overview.
+2. Complete the AMI instructions from the Data Carpentry Genomics Workshop Setup page.
+3. Return for the final sections of the module. 
+@end
+
+good_first_module: false
+data_domain: omics
+coding_required: true
+coding_level: intermediate
+coding_language: bash
+
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
+@version_history 
+No previous versions.
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md
+-->
+
+# Module Title
+
+@overview
+
+<div class = "gratitude">
+<b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
+
+We are grateful to the team of authors and maintainers at [Data Carpentry](https://datacarpentry.org/) for creating their Genomics Workshop and generously sharing it under a [CC-BY license](https://github.com/datacarpentry/genomics-workshop/blob/gh-pages/LICENSE.md): 
+
+Erin Alison Becker, Tracy Teal, François Michonneau, Maneesha Sane, Taylor Reiter, Jason Williams, et al. (2019, June). datacarpentry/genomics-workshop: Data Carpentry: Genomics Workshop Overview, June 2019 (Version v2019.06.1). Zenodo. http://doi.org/10.5281/zenodo.3260309
+
+</div>
+
+## Lesson Preparation
+
+@lesson_prep_wrapper
+
+@print_resource1
+
+## Getting started with genomics
+
+Analysis of genomic sequencing data is different from many other kinds of analysis in several important ways:
+
+- the data files are often so large that normal computing tools won't work to analyze them
+- there are special issues of data quality to consider that are specific to sequencing data
+- because of the unique challenges of genomics data, a number of specialized tools have been developed for each stage of the workflow, many of which have to be accessed via the command line
+
+This module focuses specifically on how to set yourself up for genomics analysis; we won't actually start the analysis process here (there are related modules on that).
+
+As you progress through the material in this and related lessons, keep in mind that, even if you aren’t going to be doing this exact same workflow in your research, you will be learning some very important lessons about using command-line bioinformatic tools.
+What you learn here will enable you to use a variety of bioinformatic tools with confidence and greatly enhance your research efficiency and productivity.
+
+## Using the command line
+
+A lot of genomics analysis is done using command-line tools for three reasons:
+
+1. you will often be working with a large number of files, and working through the command-line rather than through a graphical user interface (GUI) allows you to **automate** repetitive tasks
+2. you will often need more compute power than is available on your personal computer, and connecting to and interacting with **remote** computers requires a command-line interface
+3. you will often need to **customize** your analyses, and command-line tools often enable more customization than the corresponding GUI tools (if in fact a GUI tool even exists)
+
+Before starting this lesson, you should have tried using the bash shell to interact with your computer through a command line interface.
+Now you will be applying this knowledge to carry out a common genomics workflow - identifying variants among sequencing samples taken from multiple individuals within a population.
+
+We will be starting with a set of sequenced reads (.fastq files), performing some quality control steps, aligning those reads to a reference genome, and ending by identifying and visualizing variations among these samples.
+
+## The data
+
+We are going to use a long-term sequencing dataset from a population of *Escherichia coli*.
+
+**What is *E. coli*?**
+
+*E. coli* are rod-shaped bacteria that can survive under a wide variety of conditions including variable temperatures, nutrient availability, and oxygen levels. Most strains are harmless, but some are associated with food-poisoning.
+
+![ [Wikimedia](https://species.wikimedia.org/wiki/Escherichia_coli#/media/File:EscherichiaColi_NIAID.jpg) ](../img/172px-EscherichiaColi_NIAID.jpg)
+
+<!-- https://species.wikimedia.org/wiki/Escherichia_coli#/media/File:EscherichiaColi_NIAID.jpg -->
+
+**Why is *E. coli* important?**
+
+*E. coli* are one of the most well-studied model organisms in science. As a single-celled organism, *E. coli* reproduces rapidly, typically doubling its population every 20 minutes, which means it can be manipulated easily in experiments. In addition, most naturally occurring strains of *E. coli* are harmless. Most importantly, the genetics of *E. coli* are fairly well understood and can be manipulated to study adaptation and evolution.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+For more information on why this particular dataset was chosen, see the [Data Carpentry summary page on these data](https://datacarpentry.org/organization-genomics/data/).
+
+</div>
+
+### This dataset
+
+- The data we are going to use is part of a long-term evolution experiment led by [Richard Lenski](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment).
+
+- The experiment was designed to assess adaptation in *E. coli*. A population was propagated for more than 40,000 generations in a glucose-limited minimal medium (in most conditions glucose is the best carbon source for *E. coli*, providing faster growth than other sugars). This medium was supplemented with citrate, which *E. coli* cannot metabolize in the aerobic conditions of the experiment. Sequencing of the populations at regular time points revealed that spontaneous citrate-using variant (**Cit+**) appeared between 31,000 and 31,500 generations, causing an increase in population size and diversity. In addition, this experiment showed hypermutability in certain regions. Hypermutability is important and can help accelerate adaptation to novel environments, but also can be selected against in well-adapted populations.
+
+- To see a timeline of the experiment to date, check out this [figure](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment#/media/File:LTEE_Timeline_as_of_May_28,_2016.png), and this paper [Blount et al. 2008: Historical contingency and the evolution of a key innovation in an experimental population of *Escherichia coli*](http://www.pnas.org/content/105/23/7899).
+
+### The metadata
+
+We will be working with three sample events from the **Ara-3** strain of this experiment, one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations.
+The population changed substantially during the course of the experiment, and we will be exploring how (the evolution of a **Cit+** mutant and **hypermutability**) with our variant calling workflow.
+
+The [metadata file associated with this lesson can be downloaded directly here](https://raw.githubusercontent.com/datacarpentry/wrangling-genomics/gh-pages/files/Ecoli_metadata_composite.csv) or [viewed in Github](https://github.com/datacarpentry/wrangling-genomics/blob/gh-pages/files/Ecoli_metadata_composite.csv).
+
+Open the metadata file and examine it now.
+
+The metadata describes information on the *Ara-3* clones, and the columns represent:
+
+| Column           | Description                                |
+|------------------|--------------------------------------------|
+| strain           | strain name					|
+| generation       | generation when sample frozen		|
+| clade            | based on parsimony-based tree		|
+| reference        | study the samples were originally sequenced for				|
+| population       | ancestral population group |
+| mutator          | hypermutability mutant status |
+| facility         | facility samples were sequenced at |
+| run              | Sequence read archive sample ID		|
+| read_type        | library type of reads |
+| read_length      | length of reads in sample |
+| sequencing_depth | depth of sequencing |
+| cit              | citrate-using mutant status		|
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+If you would like to know details of how the file was created, you can look at [some notes and sources here](https://github.com/datacarpentry/wrangling-genomics/blob/gh-pages/files/Ecoli_metadata_composite_README.md).
+
+</div>
+
+## Quiz
+
+**Based on the metadata, answer the following questions:**
+
+How many different generations exist in the data?
+
+[[25]]
+****
+<div class = "answer">
+</div>
+****
+
+How many rows are in this data?
+
+[[62]]
+****
+<div class = "answer">
+There are 62 rows, 12 columns.
+</div>
+****
+
+How many citrate+ mutants have been recorded in **Ara-3**?
+
+[[10]]
+****
+<div class = "answer">
+</div>
+****
+
+How many hypermutable mutants have been recorded in **Ara-3**?
+
+[[6]]
+****
+<div class = "answer">
+</div>
+****
+
+## Setting up your computing environment in AWS
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Genomics analyses use large data files.
+Even for the example data used here, which is from a relatively simple genome, many of the files will be too big to work with on a standard personal computer.
+Therefore, **we strongly recommend that you perform the analyses in the cloud (AWS) rather than on your own machine**.
+
+</div>
+
+For these lessons, we will take advantage of the AMI instances generously built and freely shared by Data Carpentry.
+You will need to create your own copy of the AMI instance using the instructions below from Data Carpentry.
+
+The cost of using this AMI for a few days, with the t2.medium instance type is very low (about USD $1.50 per day).
+Data Carpentry has no control over AWS pricing structure and provides this cost estimate with no guarantees.
+Please read [AWS documentation on pricing](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-getting-started.html) for up-to-date information.
+
+
+<div class = "external-resource">
+<b style="color: rgb(var(--color-highlight));">External Content</b><br>
+
+Now it's time to complete the AMI Setup instructions! 
+Go to the [Data Carpentry AMI Setup instructions](https://datacarpentry.org/genomics-workshop/AMI-setup/) and complete all the steps listed. 
+
+When you're done, return to this page to finish the module.
+
+</div>
+
+
+## Additional Resources
+
+AWS is one option for cloud computing, but you may prefer another platform, especially if your institution provides something they specifically support. 
+Reach out to research tech support and/or information services at your institution for details.
+
+Another popular platform is [Terra](https://terra.bio/resources/new-to-cloud/). 
+
+## Feedback
+
+@feedback
