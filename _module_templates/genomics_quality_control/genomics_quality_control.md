@@ -19,10 +19,11 @@ long_description: This is a longer description, which should be understandable f
 estimated_time_in_minutes: 
 
 @pre_reqs
-This lesson assumes a working understanding of the bash shell.
+This lesson assumes a working understanding of the bash shell, including the following commands: `ls`, `cd`, `mkdir`, `grep`, `less`, `cat`, `ssh`, `scp`, and `for` loops.
 If you aren’t familiar with the bash shell, please review our [Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripting_101/bash_scripting_101.md) module and/or the [Shell Genomics lesson by Data Carpentry](http://www.datacarpentry.org/shell-genomics/) before starting this lesson.
 
-This lesson also assumes some familiarity with biological concepts, including the structure of DNA, nucleotide abbreviations, and the concept of genomic variation within a population.
+This lesson also assumes some familiarity with biological concepts (including the structure of DNA, nucleotide abbreviations, and the concept of genomic variation within a population) and genomics (concepts like sequencing). 
+It does not assume any experience with genomics analysis. 
 @end
 
 @learning_objectives  
@@ -40,6 +41,7 @@ No previous versions.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_genomics.md
 -->
 
 # Genomics Tools and Methods: Quality Control
@@ -58,23 +60,14 @@ doi: 10.5281/zenodo.1064254
 
 </div>
 
-## Lesson Preparation
+## Lesson preparation
 
 Before starting this lesson, you should have tried using the bash shell to interact with your computer through a command line interface.
 Now you will be applying this knowledge to carry out a common genomics workflow - identifying variants among sequencing samples taken from multiple individuals within a population.
 
 We will be starting with a set of sequenced reads (.fastq files), performing some quality control steps, aligning those reads to a reference genome, and ending by identifying and visualizing variations among these samples.
 
-This lesson uses data hosted on an Amazon Machine Instance (AMI).
-In order to run the code examples here, you will need to set up their own AMI.
-For step-by-step instructions, see the module on [setting up your computing environment in AWS](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/genomics_setup/genomics_setup.md).
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-If you made an AWS account and set up the AMI instance for a previous genomics module, you won't need to set it up again. 
-
-</div>
+@lesson_prep_ami
 
 ## The data
 
@@ -234,7 +227,9 @@ curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/006/SRR2584866/SRR2584866_1.fa
 curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/006/SRR2584866/SRR2584866_2.fastq.gz
 ```
 
-The data comes in a compressed format, which is why there is a `.gz` at the end of the file names. This makes it faster to transfer, and allows it to take up less space on our computer. Let’s unzip one of the files so that we can look at the fastq format.
+The data comes in a compressed format, which is why there is a `.gz` at the end of the file names. 
+This makes it faster to transfer, and allows it to take up less space on our computer. 
+Let’s unzip one of the files so that we can look at the fastq format.
 
 ```
 gunzip SRR2584863_1.fastq.gz
@@ -289,6 +284,7 @@ CCCFFFFFGHHHHJIJJJJIJJJIIJJJJIIIJJGFIIIJEDDFEGGJIFHHJIJJDECCGGEGIIJFHFFFACD:BBBD
 
 The numerical value assigned to each of these characters depends on the
 sequencing platform that generated the reads.
+
 The sequencing machine used to generate our data
 uses the standard Sanger quality PHRED score encoding, using by Illumina version 1.8 onwards.
 Each character is assigned a quality score between 0 and 40 as shown in the chart below.
@@ -375,12 +371,19 @@ FastQC reads a set of sequence files and produces from each one a quality
 (truncated)
 ```
 
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 If `fastqc` is not installed, then you would expect to see an error like
 
 ```
 The program 'fastqc' is currently not installed. You can install it by typing:
 sudo apt-get install fastqc
 ```
+
+If `fastqc` is not installed, see the [installation instructions for your operating system](https://raw.githubusercontent.com/s-andrews/FastQC/master/INSTALL.txt).
+
+</div>
 
 ## Assessing quality using FastQC
 
@@ -776,7 +779,14 @@ WARN    Adapter Content SRR2584863_1.fastq
 ```
 
 The summary file gives us a list of tests that FastQC ran, and tells
-us whether this sample passed, failed, or is borderline (`WARN`). Remember, to quit from `less` you must type `q`.
+us whether this sample passed, failed, or is borderline (`WARN`). 
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+Remember, to quit from `less` you must type `q`.
+
+</div>
 
 ## Documenting our work
 
@@ -842,6 +852,10 @@ FAIL    Adapter Content SRR2589044_2.fastq.gz
 
 </div>
 ***
+
+## Terminate your instance
+
+@aws_billing_reminder
 
 ## Additional Resources
 
