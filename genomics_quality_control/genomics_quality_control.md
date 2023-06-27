@@ -653,8 +653,8 @@ Take a look at your samples. Which sample(s) looks the best in terms of per base
 
 [[describe sample quality]]
 <script>
-  let input = "@input".trim().toLowerCase();
-  input == ".*";
+  let input = "@input".trim();
+  /.*/i.test(input);
 </script>
 ***
 <div class = "answer">
