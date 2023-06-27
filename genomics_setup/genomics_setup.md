@@ -131,6 +131,13 @@ The cost of using this AMI for a few days, with the t2.medium instance type is v
 Data Carpentry has no control over AWS pricing structure and provides this cost estimate with no guarantees.
 Please read [AWS documentation on pricing](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-getting-started.html) for up-to-date information.
 
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+If you like, you can use a Visa prepaid debit card (instead of a credit card) for your payment method on AWS to ensure you won't go over your budget.
+
+</div>
+
 
 <div class = "external-resource">
 <b style="color: rgb(var(--color-highlight));">External Content</b><br>
