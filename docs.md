@@ -1769,6 +1769,46 @@ For more details, see [notes about quizzes in the LiaScript documentation](https
 </div>
 ***
 
+Sometimes you may wish to include a quiz question that would be impossible to automatically grade (i.e. one with an open-ended repsonse). 
+To mark all possible answers as correct, use a brief script to match everything with regex:
+
+```
+Take a look at your samples. Which sample(s) looks the best in terms of per base sequence quality? Which sample(s) look the worst?
+
+[[describe sample quality]]
+<script>
+  let input = "@input".trim();
+  /.*/i.test(input);
+</script>
+***
+<div class = "answer">
+
+(Note that we can't automatically grade an open-ended question like this, so it will be marked "correct" no matter what you write.)
+
+All of the reads contain usable data, but the quality decreases toward the end of the reads.
+
+</div>
+***
+```
+
+Take a look at your samples. Which sample(s) looks the best in terms of per base sequence quality? Which sample(s) look the worst?
+
+[[describe sample quality]]
+<script>
+  let input = "@input".trim();
+  /.*/i.test(input);
+</script>
+***
+<div class = "answer">
+
+(Note that we can't automatically grade an open-ended question like this, so it will be marked "correct" no matter what you write.)
+
+All of the reads contain usable data, but the quality decreases toward the end of the reads.
+
+</div>
+***
+
+
 There are many more options and examples of quiz questions in the LiaScript documentation. [Read more about quiz syntax here.](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#quizzes)
 
 
