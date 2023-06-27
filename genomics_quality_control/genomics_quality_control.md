@@ -683,7 +683,7 @@ For more information, please see the FastQC documentation [here](https://www.bio
 - [**Adapter Content**](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/10%20Adapter%20Content.html): a graph indicating where adapater sequences occur in the reads.
 - [**K-mer Content**](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/11%20Kmer%20Content.html): a graph showing any sequences which may show a positional bias within the reads.
 
-## Working with the FastQC text output
+### Working with the FastQC text output
 
 Now that we have looked at our HTML reports to get a feel for the data, let's look more closely at the other output files.
 Go back to the tab in your terminal program that is connected to your AWS instance (the tab label will start with `dcuser@ip`) and make sure you are in our results subdirectory.   
@@ -851,7 +851,7 @@ Remember, to quit from `less` you must type `q`.
 
 </div>
 
-## Documenting our work
+### Documenting our work
 
 We can make a record of the results we obtained for all our samples by concatenating all of our `summary.txt` files into a single file using the `cat` command.
 We will call this `fastqc_summaries.txt` and move it to `~/dc_workshop/docs`.
@@ -873,7 +873,7 @@ If you type `>` or `$` yourself, it is an instruction from you that the shell sh
 
 </div>
 
-## Quiz
+### Quiz: Additional FastQC tests
 
 What command would you use to see which samples failed at least one of FastQC's quality tests, and what test(s) those samples failed?
 
