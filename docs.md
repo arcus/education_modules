@@ -190,9 +190,10 @@ You'll need the following fields in your front matter (new fields added by check
 - version
 - current\_version\_description
 - module\_type
-- module\_template\_version
+- docs\_version
 - language
 - narrator
+- mode
 - title
 - comment
 - long\_description
