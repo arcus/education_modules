@@ -97,7 +97,7 @@ We are going to use a long-term sequencing dataset from a population of *Escheri
 
 *E. coli* are rod-shaped bacteria that can survive under a wide variety of conditions including variable temperatures, nutrient availability, and oxygen levels. Most strains are harmless, but some are associated with food-poisoning.
 
-![Escherichia coli: Scanning electron micrograph of Escherichia coli, grown in culture and adhered to a cover slip.](media/EscherichiaColi_NIAID.jpg "Credit: Rocky Mountain Laboratories, NIAID, NIH. [Public domain](https://commons.wikimedia.org/wiki/File:EscherichiaColi_NIAID.jpg?uselang=en#Licensing).")<!-- style = "max-width:200px;" -->
+![Escherichia coli: Scanning electron micrograph of Escherichia coli, grown in culture and adhered to a cover slip.](media/EscherichiaColi_NIAID.jpg "Credit: Rocky Mountain Laboratories, NIAID, NIH. [Public domain](https://commons.wikimedia.org/wiki/File:EscherichiaColi_NIAID.jpg?uselang=en#Licensing).")<!-- style = "max-width:200px; display: block; margin-left: auto;margin-right: auto;" -->
 
 **Why is *E. coli* important?**
 
@@ -125,7 +125,7 @@ To read more about the history of the experiment, see this paper [Blount et al. 
 
 A timeline of the experiment from Wikipedia shows a history of major events (the timeline only shows to 2016, but note that the experiment is on-going): 
 
-![*E. coli* long-term evolution experiment timeline from 1988 to 2016, with *E. coli* generations from 0 to 65,000. The **Cit+** variant does not appear until approximately 31,000 generations, more than a decade into the experiment.](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment#/media/File:LTEE_Timeline_as_of_May_28,_2016.png)
+![*E. coli* long-term evolution experiment timeline from 1988 to 2016, with *E. coli* generations from 0 to 65,000. The **Cit+** variant does not appear until approximately 31,000 generations, more than a decade into the experiment.](media/LTEE_Timeline.png)<!-- style = "max-width:300px; display: block; margin-left: auto;margin-right: auto;" -->
 
 </div>
 
