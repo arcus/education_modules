@@ -16,7 +16,7 @@ comment:  Get started with genomics! This module walks you through how to analyz
 
 long_description: This module uses command line tools to complete the first steps of genomics analysis using cloud computing. We'll look at real sequencing data from an *E. coli* experiment and walk through how to assess the quality of sequenced reads using FastQC. You'll learn about FASTQ files and how to analyze them. This module assumes some familiarity with bash; if you've worked through some bash training already, this is a great opportunity to practice those skills while getting hands-on experience with genomics.  
 
-estimated_time_in_minutes: 
+estimated_time_in_minutes: 40
 
 @pre_reqs
 This lesson assumes a working understanding of the bash shell, including the following commands: `ls`, `cd`, `mkdir`, `grep`, `less`, `cat`, `ssh`, `scp`, and `for` loops.
