@@ -66,7 +66,7 @@ No previous versions.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_genomics.md
+import: https://raw.githubusercontent.com/arcus/education_modules/omics_tools_and_methods/_module_templates/macros_genomics.md
 -->
 
 # Genomics Tools and Methods: Quality Control
