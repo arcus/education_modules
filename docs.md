@@ -686,6 +686,7 @@ Must be one of the following:
 - `r_basics`
 - `sql`
 - `python_basics`
+- `genomics_tools_and_methods`
 - (add more here)
 
 ### `previous_sequential_module`
