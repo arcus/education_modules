@@ -24,6 +24,11 @@ try {
 
 @version_history
 
+Previous versions: 
+
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/8f41dd25216329b785335e15f1824b13d6240778/docs.md): Update SQL macros instructions (note that version number wasn't correctly incremented here)
+- [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ad25398d0eef884402cff0f0c4fb4ca360d3b8f4/docs.md): Added versioning info, initial version.
+
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
