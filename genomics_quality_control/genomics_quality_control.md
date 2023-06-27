@@ -563,15 +563,15 @@ We want to keep our data files and our results files separate,
 so we will move these output files into a new directory within our `results/` directory.
 
 ```bash
-mkdir -p ~/dc_workshop/results/fastqc_untrimmed_reads
-mv *.zip ~/dc_workshop/results/fastqc_untrimmed_reads/
-mv *.html ~/dc_workshop/results/fastqc_untrimmed_reads/
+mkdir -p ~/genomics_tools_and_methods/results/fastqc_untrimmed_reads
+mv *.zip ~/genomics_tools_and_methods/results/fastqc_untrimmed_reads/
+mv *.html ~/genomics_tools_and_methods/results/fastqc_untrimmed_reads/
 ```
 
 Now we can navigate into this results directory and do some closer inspection of our output files.
 
 ```bash
-cd ~/dc_workshop/results/fastqc_untrimmed_reads/
+cd ~/genomics_tools_and_methods/results/fastqc_untrimmed_reads/
 ```
 
 ### Viewing the FastQC results
@@ -596,7 +596,7 @@ Let’s put it on our desktop for now.
 Open a new tab in your terminal program (you can use the pull down menu at the top of your screen or the Cmd+t keyboard shortcut) and type:
 
 ```bash
-scp dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/dc_workshop/results/fastqc_untrimmed_reads/*.html ~/Desktop/fastqc_html
+scp dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/genomics_tools_and_methods/results/fastqc_untrimmed_reads/*.html ~/Desktop/fastqc_html
 ```
 
 As a reminder, the first part
@@ -621,13 +621,13 @@ If you are using zsh instead of bash (macOS for example changed the default rece
 The reason for this is that the wildcard ("*") is not correctly interpreted. To fix this problem the wildcard needs to be escaped with a "\":
 
 ```bash
-scp dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/dc_workshop/results/fastqc_untrimmed_reads/\*.html ~/Desktop/fastqc_html
+scp dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/genomics_tools_and_methods/results/fastqc_untrimmed_reads/\*.html ~/Desktop/fastqc_html
 ```
 
 Alternatively, you can put the whole path into quotation marks:
 
 ```bash
-scp "dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/dc_workshop/results/fastqc_untrimmed_reads/*.html" ~/Desktop/fastqc_html
+scp "dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/genomics_tools_and_methods/results/fastqc_untrimmed_reads/*.html" ~/Desktop/fastqc_html
 ```
 
 </div>
@@ -689,7 +689,7 @@ Now that we have looked at our HTML reports to get a feel for the data, let's lo
 Go back to the tab in your terminal program that is connected to your AWS instance (the tab label will start with `dcuser@ip`) and make sure you are in our results subdirectory.   
 
 ```bash
-cd ~/dc_workshop/results/fastqc_untrimmed_reads/
+cd ~/genomics_tools_and_methods/results/fastqc_untrimmed_reads/
 ls
 ```
 
@@ -854,10 +854,10 @@ Remember, to quit from `less` you must type `q`.
 ### Documenting our work
 
 We can make a record of the results we obtained for all our samples by concatenating all of our `summary.txt` files into a single file using the `cat` command.
-We will call this `fastqc_summaries.txt` and move it to `~/dc_workshop/docs`.
+We will call this `fastqc_summaries.txt` and move it to `~/genomics_tools_and_methods/docs`.
 
 ```bash
-cat */summary.txt > ~/dc_workshop/docs/fastqc_summaries.txt
+cat */summary.txt > ~/genomics_tools_and_methods/docs/fastqc_summaries.txt
 ```
 
 <div class = "help">
@@ -888,7 +888,7 @@ For a review of `grep` and how to use it, see the section on [searching files in
 First, make sure you're in the correct directory:
 
 ```bash
-cd ~/dc_workshop/docs
+cd ~/genomics_tools_and_methods/docs
 ```
 
 Then use `grep` to return every line that includes the phrase "FAIL" within the file `fastqc_summaries.txt`.
