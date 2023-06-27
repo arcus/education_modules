@@ -12,9 +12,9 @@ mode: Textbook
 
 title: Genomics Tools and Methods: Quality Control
 
-comment:  Get started with genomics! This module walks you through how to analyze FASTQ files to assess read quality, the first step in a common genomics workflow - identifying variants among sequencing samples taken from multiple individuals within a population. 
+comment:  Get started with genomics! This module walks you through how to analyze FASTQ files to assess read quality, the first step in a common genomics workflow - identifying variants among sequencing samples taken from multiple individuals within a population (variant calling). 
 
-long_description: This module uses command line tools to complete the first steps of genomics analysis using cloud computing. We'll look at real sequencing data from an *E. coli* experiment and walk through how to assess the quality of sequenced reads using FastQC. You'll learn about FASTQ files and how to analyze them. This module assumes some familiarity with bash. 
+long_description: This module uses command line tools to complete the first steps of genomics analysis using cloud computing. We'll look at real sequencing data from an *E. coli* experiment and walk through how to assess the quality of sequenced reads using FastQC. You'll learn about FASTQ files and how to analyze them. This module assumes some familiarity with bash; if you've worked through some bash training already, this is a great opportunity to practice those skills while getting hands-on experience with genomics.  
 
 estimated_time_in_minutes: 
 
@@ -97,7 +97,7 @@ We are going to use a long-term sequencing dataset from a population of *Escheri
 
 *E. coli* are rod-shaped bacteria that can survive under a wide variety of conditions including variable temperatures, nutrient availability, and oxygen levels. Most strains are harmless, but some are associated with food-poisoning.
 
-![Microscopic image of E. coli bacteria.](https://species.wikimedia.org/wiki/Escherichia_coli#/media/File:EscherichiaColi_NIAID.jpg)
+![Microscopic image of *E. coli* bacteria.](https://species.wikimedia.org/wiki/Escherichia_coli#/media/File:EscherichiaColi_NIAID.jpg)
 
 **Why is *E. coli* important?**
 
@@ -112,11 +112,22 @@ For more information on why this particular dataset was chosen, see the [Data Ca
 
 ### This dataset
 
-- The data we are going to use is part of a long-term evolution experiment led by [Richard Lenski](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment).
+The data we are going to use is part of a long-term evolution experiment led by [Richard Lenski](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment).
 
-- The experiment was designed to assess adaptation in *E. coli*. A population was propagated for more than 40,000 generations in a glucose-limited minimal medium (in most conditions glucose is the best carbon source for *E. coli*, providing faster growth than other sugars). This medium was supplemented with citrate, which *E. coli* cannot metabolize in the aerobic conditions of the experiment. Sequencing of the populations at regular time points revealed that spontaneous citrate-using variant (**Cit+**) appeared between 31,000 and 31,500 generations, causing an increase in population size and diversity. In addition, this experiment showed hypermutability in certain regions. Hypermutability is important and can help accelerate adaptation to novel environments, but also can be selected against in well-adapted populations.
+The experiment was designed to assess adaptation in *E. coli*. A population was propagated for more than 40,000 generations in a glucose-limited minimal medium (in most conditions glucose is the best carbon source for *E. coli*, providing faster growth than other sugars). This medium was supplemented with citrate, which *E. coli* cannot metabolize in the aerobic conditions of the experiment. 
 
-- To see a timeline of the experiment to date, check out this [figure](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment#/media/File:LTEE_Timeline_as_of_May_28,_2016.png), and this paper [Blount et al. 2008: Historical contingency and the evolution of a key innovation in an experimental population of *Escherichia coli*](http://www.pnas.org/content/105/23/7899).
+Sequencing of the populations at regular time points revealed that spontaneous citrate-using variant (**Cit+**) appeared between 31,000 and 31,500 generations, causing an increase in population size and diversity. In addition, this experiment showed hypermutability in certain regions. Hypermutability is important and can help accelerate adaptation to novel environments, but also can be selected against in well-adapted populations.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To read more about the history of the experiment, see this paper [Blount et al. 2008: Historical contingency and the evolution of a key innovation in an experimental population of *Escherichia coli*](http://www.pnas.org/content/105/23/7899).
+
+A timeline of the experiment from Wikipedia shows a history of major events (the timeline only shows to 2016, but note that the experiment is on-going): 
+
+![*E. coli* long-term evolution experiment timeline from 1988 to 2016, with *E. coli* generations from 0 to 65,000. The **Cit+** variant does not appear until approximately 31,000 generations, more than a decade into the experiment.](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment#/media/File:LTEE_Timeline_as_of_May_28,_2016.png)
+
+</div>
 
 ### The metadata
 
@@ -160,15 +171,18 @@ How many different generations exist in the data?
 [[25]]
 ****
 <div class = "answer">
-</div>
-****
 
-How many rows are in this data?
+If you look in the `generations` column of the metadata file, you'll see there are 25 unique values there. 
 
-[[62]]
-****
-<div class = "answer">
-There are 62 rows, 12 columns.
+If you want to try doing this in bash for fun, check out [the `cut` command](https://stackoverflow.com/questions/4921879/getting-the-count-of-unique-values-in-a-column-in-bash) to get just the second column, and then [use `sort` and `uniq` to print just the unique values](https://stackoverflow.com/questions/618378/select-unique-or-distinct-values-from-a-list-in-unix-shell-script): 
+
+```bash
+cut -d "," -f 2 Ecoli_metadata_composite.csv | sort | uniq
+```
+
+Note that if you would rather just look at the metadata in spreadsheet software, like Excel, or using a tool like R or Python, that's perfectly fine! 
+We're just providing a little extra bash practice here for those that want to try it.
+
 </div>
 ****
 
@@ -177,6 +191,18 @@ How many citrate+ mutants have been recorded in **Ara-3**?
 [[10]]
 ****
 <div class = "answer">
+
+Note that all of the samples here are from the **Ara-3** population, so we just need to look at the `cit` column. 
+Look at the values in that column and you'll see there are 10 that say "plus", indicating that they have the **Cit+** mutation.
+
+If you want to try this in bash, add the `-c` flag to the `uniq` command to get counts of each value. We want the 12th column (`cit`), so use `-f 12` instead of `-f 2` from before.
+
+```bash
+cut -d "," -f 12 Ecoli_metadata_composite.csv | sort | uniq -c
+```
+
+(You'll notice `cut` doesn't do well with the empty fields that are in some columns, which is why we end up with some extraneous numbers showing up.)
+
 </div>
 ****
 
@@ -185,6 +211,14 @@ How many hypermutable mutants have been recorded in **Ara-3**?
 [[6]]
 ****
 <div class = "answer">
+
+Note that all of the samples here are from the **Ara-3** population, so we just need to look at the `mutator` column (the 6th column). 
+If you count down the values in that column, you'll see there are 6 "plus" values, meaning they are hypermutable.
+
+```bash
+cut -d "," -f 6 Ecoli_metadata_composite.csv | sort | uniq -c
+```
+
 </div>
 ****
 
@@ -204,7 +238,9 @@ An example of the workflow we will be using for our variant calling analysis is 
 5. Variant calling
 
 These workflows in bioinformatics adopt a plug-and-play approach in that the output of one tool can be easily used as input to another tool without any extensive configuration.
-Having standards for data formats is what makes this feasible.
+
+**Having standards for data formats is what makes this feasible.**
+
 Standards ensure that data is stored in a way that is generally accepted and agreed upon within the community.
 The tools that are used to analyze data at different stages of the workflow are therefore built under the assumption that the data will be provided in a specific format.
 
