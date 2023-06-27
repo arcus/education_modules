@@ -2,7 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.0.0
+version:  1.2.0
+current_version_description: Add genomics macros
 language: en
 narrator: UK English Female
 title: DART LiaScript docs
@@ -18,6 +19,10 @@ try {
   } else send.clear()
 } catch(e) { }
 </script>
+
+@end
+
+@version_history
 
 @end
 
