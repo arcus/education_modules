@@ -835,6 +835,13 @@ The overview section comes immediately after the initial level-1 header, which w
 
 Many (but not all) modules include a Lesson Preparation section with any setup required to complete the module (see the section on [including interactive code](#including-interactive-code) for macros to create Lesson Preparation sections for R, Python, and SQL).
 
+This section will appear in any module that requires the learner to prepare in some way. For example:
+
+- the learner needs to download software (like git or bash)
+- the learner needs an account with an external resource (like Google Colab or AWS)
+- the learner will need to interact with an external resource (like a binderhub environment) 
+- the function of the module requires explanation, such as how sagemath cells work 
+
 Wrapper modules include a special section describing the external resource(s) linked to and outlining the structure of the module. 
 
 ### Content sections
@@ -845,14 +852,6 @@ Most modules include at least one quiz section (see [Quizzes](#quizzes-automatic
 
 As you write, keep in mind that the headers should be clear and informative. 
 The table of contents automatically generated from the headers should give learners a good overview of what to expect in the module content.
-
-#### Lesson Preparation
-
-This section will appear in any module that requires the learner to prepare in some way. For example:
-- the learner needs to download software (like git or bash)
-- the learner needs an account with an external resource (like Google Colab or AWS)
-- the learner will need to interact with an external resource (like a binderhub environment) 
-- the function of the module requires explanation, such as how sagemath cells work 
 
 ### Additional Resources
 
