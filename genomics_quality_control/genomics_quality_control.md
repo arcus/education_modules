@@ -125,7 +125,7 @@ To read more about the history of the experiment, see this paper [Blount et al. 
 
 A timeline of the experiment from Wikipedia shows a history of major events (the timeline only shows to 2016, but note that the experiment is on-going): 
 
-![*E. coli* long-term evolution experiment timeline from 1988 to 2016, with *E. coli* generations from 0 to 65,000. The **Cit+** variant does not appear until approximately 31,000 generations, more than a decade into the experiment.](media/LTEE_Timeline.png "Credit: [Zachary Blount](https://commons.wikimedia.org/wiki/User:Uncle_Zooey), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).)<!-- style = "max-width:300px; display: block; margin-left: auto;margin-right: auto;" -->
+![*E. coli* long-term evolution experiment timeline from 1988 to 2016, with *E. coli* generations from 0 to 65,000. The **Cit+** variant does not appear until approximately 31,000 generations, more than a decade into the experiment.](media/LTEE_Timeline.png "Credit: [Zachary Blount](https://commons.wikimedia.org/wiki/User:Uncle_Zooey), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).")<!-- style = "max-width:300px; display: block; margin-left: auto;margin-right: auto;" -->
 
 </div>
 
