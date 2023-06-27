@@ -271,7 +271,7 @@ It also suppresses errors if the directory already exists, without overwriting t
 
 It will take about 15 minutes to download the files.
 
-```
+```bash
 mkdir -p ~/genomics_tools_and_methods/data/untrimmed_fastq/
 cd ~/genomics_tools_and_methods/data/untrimmed_fastq
 
@@ -287,7 +287,7 @@ The data comes in a compressed format, which is why there is a `.gz` at the end 
 This makes it faster to transfer, and allows it to take up less space on our computer. 
 Let’s unzip one of the files so that we can look at the fastq format.
 
-```
+```bash
 gunzip SRR2584863_1.fastq.gz
 ```
 
@@ -313,7 +313,7 @@ Although it looks complicated (and it is), we can understand the [fastq](https:/
 We can view the first complete read in one of the files our dataset by using `head` to look at
 the first four lines.
 
-```
+```bash
 head -n 4 SRR2584863_1.fastq
 ```
 
@@ -358,7 +358,7 @@ These probability values are the results from the base calling algorithm and dep
 
 Looking back at our read:
 
-```
+``` +output
 @SRR2584863.1 HWI-ST957:244:H73TDADXX:1:1101:4712:2181/1
 TTCACATCCTGACCATTCAGTTGAGCAAAATAGTTCTTCAGTGCCTGTTTAACCGAGTCACGCAGGGGTTTTTGGGTTACCTGATCCTGAGAGTTAACGGTAGAAACGGTCAGTACGTCAGAATTTACGCGTTGTTCGAACATAGTTCTG
 +
@@ -392,7 +392,7 @@ How does the quality of this read compare to the quality of the first read, exam
 
 Here is the output you should see when running the above command:
 
-```
+``` +output
 @SRR2584863.1553259 HWI-ST957:245:H73R4ADXX:2:2216:21048:100894/1
 CTGCAATACCACGCTGATCTTTCACATGATGTAAGAAAAGTGGGATCAGCAAACCGGGTGCTGCTGTGGCTAGTTGCAGCAAACCATGCAGTGAACCCGCCTGTGCTTCGCTATAGCCGTGACTGATGAGGATCGCCGGAAGCCAGCCAA
 +
@@ -410,7 +410,7 @@ We will look at variations in position-based quality in the next section.
 Before proceeding, lets validate that all the relevant tools are installed by running `fastqc -h`.
 If it is correctly installed, you should see the help file:
 
-```
+``` +output
 FastQC - A high throughput sequence QC analysis tool
 
 SYNOPSIS
@@ -432,12 +432,13 @@ FastQC reads a set of sequence files and produces from each one a quality
 
 If `fastqc` is not installed, then you would expect to see an error like
 
-```
+``` +output
 The program 'fastqc' is currently not installed. You can install it by typing:
 sudo apt-get install fastqc
 ```
 
 If `fastqc` is not installed, see the [installation instructions for your operating system](https://raw.githubusercontent.com/s-andrews/FastQC/master/INSTALL.txt).
+Note that if you're using the Data Carpentry AMI, then everything should already be installed for you.
 
 </div>
 
@@ -475,11 +476,11 @@ Here, we see positions within the read in which the boxes span a much wider rang
 Also, quality scores drop quite low into the "bad" range, particularly on the tail end of the reads.
 The FastQC tool produces several other diagnostic plots to assess sample quality, in addition to the one plotted above.
 
-## Running FastQC  
+### Running FastQC  
 
 We will now assess the quality of the reads that we downloaded. First, make sure you're still in the `untrimmed_fastq` directory:
 
-```
+```bash
 cd ~/genomics_tools_and_methods/data/untrimmed_fastq/
 ```
 
@@ -492,7 +493,7 @@ Hint: Look at the options for the `ls` command to see how to show file sizes.
 
 </div>
 
-```
+```bash
 ls -l -h
 ```
 
@@ -510,7 +511,7 @@ There are six FASTQ files ranging from 124M (124MB) to 545M.
 FastQC can accept multiple file names as input, and on both zipped and unzipped files,
 so we can use the `*.fastq*` wildcard to run FastQC on all of the FASTQ files in this directory.
 
-```
+```bash
 fastqc *.fastq*
 ```
 
@@ -540,7 +541,7 @@ $
 
 The FastQC program has created several new files within our `data/untrimmed_fastq/` directory.
 
-```
+```bash
 ls
 ```
 
@@ -561,7 +562,7 @@ The `.html` file is a stable webpage displaying the summary report for each of o
 We want to keep our data files and our results files separate,
 so we will move these output files into a new directory within our `results/` directory.
 
-```
+```bash
 mkdir -p ~/dc_workshop/results/fastqc_untrimmed_reads
 mv *.zip ~/dc_workshop/results/fastqc_untrimmed_reads/
 mv *.html ~/dc_workshop/results/fastqc_untrimmed_reads/
@@ -569,11 +570,11 @@ mv *.html ~/dc_workshop/results/fastqc_untrimmed_reads/
 
 Now we can navigate into this results directory and do some closer inspection of our output files.
 
-```
+```bash
 cd ~/dc_workshop/results/fastqc_untrimmed_reads/
 ```
 
-## Viewing the FastQC results
+### Viewing the FastQC results
 
 If we were working on our local computers, we would be able to look at each of these HTML files by opening them in a web browser.
 
@@ -594,7 +595,7 @@ First we will make a new directory on our computer to store the HTML files we ar
 Let’s put it on our desktop for now.
 Open a new tab in your terminal program (you can use the pull down menu at the top of your screen or the Cmd+t keyboard shortcut) and type:
 
-```
+```bash
 scp dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/dc_workshop/results/fastqc_untrimmed_reads/*.html ~/Desktop/fastqc_html
 ```
 
@@ -619,13 +620,13 @@ directory we just created `~/Desktop/fastqc_html`.
 If you are using zsh instead of bash (macOS for example changed the default recently to zsh), it is likely that a no matches found error will be displayed.
 The reason for this is that the wildcard ("*") is not correctly interpreted. To fix this problem the wildcard needs to be escaped with a "\":
 
-```
+```bash
 scp dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/dc_workshop/results/fastqc_untrimmed_reads/\*.html ~/Desktop/fastqc_html
 ```
 
 Alternatively, you can put the whole path into quotation marks:
 
-```
+```bash
 scp "dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/dc_workshop/results/fastqc_untrimmed_reads/*.html" ~/Desktop/fastqc_html
 ```
 
@@ -646,13 +647,19 @@ Now we can go to our new directory and open the 6 HTML files.
 
 Depending on your system, you should be able to select and open them all at once via a right click menu in your file browser.
 
-## Quiz
+### Quiz: FastQC
 
 Take a look at your samples. Which sample(s) looks the best in terms of per base sequence quality? Which sample(s) look the worst?
 
 [[describe sample quality]]
+<script>
+  let input = "@input".trim().toLowerCase();
+  input == ".*";
+</script>
 ***
 <div class = "answer">
+
+(Note that we can't automatically grade an open-ended question like this, so it will be marked "correct" no matter what you write.)
 
 All of the reads contain usable data, but the quality decreases toward the end of the reads.
 
@@ -681,7 +688,7 @@ For more information, please see the FastQC documentation [here](https://www.bio
 Now that we have looked at our HTML reports to get a feel for the data, let's look more closely at the other output files.
 Go back to the tab in your terminal program that is connected to your AWS instance (the tab label will start with `dcuser@ip`) and make sure you are in our results subdirectory.   
 
-```
+```bash
 cd ~/dc_workshop/results/fastqc_untrimmed_reads/
 ls
 ```
@@ -699,7 +706,7 @@ To view the contents of a `.zip` file, we can use the program `unzip` to decompr
 Let's try doing them all at once using a
 wildcard.
 
-```
+```bash
 unzip *.zip
 ```
 
@@ -729,7 +736,7 @@ For a refresher on how to write `for` loops, see the section on [writing for loo
 
 Let's see what that looks like and then we will  discuss what we are doing with each line of our loop.
 
-```
+```bash
 for filename in *.zip
 do
 unzip $filename
@@ -791,7 +798,7 @@ The `.html` files and the uncompressed `.zip` files are still present,
 but now we also have a new directory for each of our samples.
 We can see for sure that it is a directory if we use the `-F` flag for `ls`.
 
-```
+```bash
 ls -F
 ```
 
@@ -806,7 +813,7 @@ SRR2584863_2_fastqc.zip   SRR2584866_2_fastqc.zip   SRR2589044_2_fastqc.zip
 
 Let's see what files are present within one of these output directories.
 
-```
+```bash
 ls -F SRR2584863_1_fastqc/
 ```
 
@@ -816,7 +823,7 @@ fastqc_data.txt  fastqc.fo  fastqc_report.html	Icons/	Images/  summary.txt
 
 Use `less` to preview the `summary.txt` file for this sample.
 
-```
+```bash
 less SRR2584863_1_fastqc/summary.txt
 ```
 
@@ -849,7 +856,7 @@ Remember, to quit from `less` you must type `q`.
 We can make a record of the results we obtained for all our samples by concatenating all of our `summary.txt` files into a single file using the `cat` command.
 We will call this `fastqc_summaries.txt` and move it to `~/dc_workshop/docs`.
 
-```
+```bash
 cat */summary.txt > ~/dc_workshop/docs/fastqc_summaries.txt
 ```
 
@@ -880,14 +887,14 @@ For a review of `grep` and how to use it, see the section on [searching files in
 
 First, make sure you're in the correct directory:
 
-```
+```bash
 cd ~/dc_workshop/docs
 ```
 
 Then use `grep` to return every line that includes the phrase "FAIL" within the file `fastqc_summaries.txt`.
 This will be all the failing tests.
 
-```
+```bash
 grep FAIL fastqc_summaries.txt
 ```
 
