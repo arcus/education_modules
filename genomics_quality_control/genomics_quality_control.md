@@ -80,7 +80,7 @@ We are grateful to the team of authors and maintainers at [Data Carpentry](https
 
 Josh Herr, Ming Tang, Lex Nederbragt, Fotis Psomopoulos (eds): "Data Carpentry: Wrangling Genomics Lesson."
 Version 2017.11.0, November 2017,
-http://www.datacarpentry.org/wrangling-genomics/,
+[http://www.datacarpentry.org/wrangling-genomics/](http://www.datacarpentry.org/wrangling-genomics/),
 doi: 10.5281/zenodo.1064254
 
 </div>
@@ -97,7 +97,7 @@ We are going to use a long-term sequencing dataset from a population of *Escheri
 
 *E. coli* are rod-shaped bacteria that can survive under a wide variety of conditions including variable temperatures, nutrient availability, and oxygen levels. Most strains are harmless, but some are associated with food-poisoning.
 
-![Microscopic image of *E. coli* bacteria.](https://species.wikimedia.org/wiki/Escherichia_coli#/media/File:EscherichiaColi_NIAID.jpg)
+![Escherichia coli: Scanning electron micrograph of Escherichia coli, grown in culture and adhered to a cover slip.](media/EscherichiaColi_NIAID.jpg "Credit: Rocky Mountain Laboratories, NIAID, NIH. [Public domain](https://commons.wikimedia.org/wiki/File:EscherichiaColi_NIAID.jpg?uselang=en#Licensing).")<!-- style = "max-width:200px;" -->
 
 **Why is *E. coli* important?**
 
