@@ -12,9 +12,9 @@ mode: Textbook
 
 title: Genomics Tools and Methods: Quality Control
 
-comment:  Get started with genomics! This module walks you through how to analyze FASTQ files to assess read quality, the first step in a typical genomics workflow. 
+comment:  Get started with genomics! This module walks you through how to analyze FASTQ files to assess read quality, the first step in a common genomics workflow - identifying variants among sequencing samples taken from multiple individuals within a population. 
 
-long_description: This module uses command line tools to begin genomics analysis using cloud computing. We'll look at real sequencing data from an *E. coli* experiment and walk through how to assess the quality of sequence reads, an important first step in a genomics workflow. You'll learn about FASTQ files and how to analyze them. This module assumes some familiarity with bash. 
+long_description: This module uses command line tools to complete the first steps of genomics analysis using cloud computing. We'll look at real sequencing data from an *E. coli* experiment and walk through how to assess the quality of sequenced reads using FastQC. You'll learn about FASTQ files and how to analyze them. This module assumes some familiarity with bash. 
 
 estimated_time_in_minutes: 
 
@@ -86,11 +86,6 @@ doi: 10.5281/zenodo.1064254
 </div>
 
 ## Lesson preparation
-
-Before starting this lesson, you should have tried using the bash shell to interact with your computer through a command line interface.
-Now you will be applying this knowledge to carry out a common genomics workflow - identifying variants among sequencing samples taken from multiple individuals within a population.
-
-We will be starting with a set of sequenced reads (.fastq files), performing some quality control steps, aligning those reads to a reference genome, and ending by identifying and visualizing variations among these samples.
 
 @lesson_prep_ami
 
