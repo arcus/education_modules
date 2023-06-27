@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  0.0.0
+version:  1.0.0
 current_version_description: Initial version.
 module_type: standard
 docs_version: 1.1.0
@@ -12,9 +12,9 @@ mode: Textbook
 
 title: Genomics Tools and Methods: Quality Control
 
-comment:  This is a short, focused description of the module.
+comment:  Get started with genomics! This module walks you through how to analyze FASTQ files to assess read quality, the first step in a typical genomics workflow. 
 
-long_description: This is a longer description, which should be understandable for a lay audience.
+long_description: This module uses command line tools to begin genomics analysis using cloud computing. We'll look at real sequencing data from an *E. coli* experiment and walk through how to assess the quality of sequence reads, an important first step in a genomics workflow. You'll learn about FASTQ files and how to analyze them. This module assumes some familiarity with bash. 
 
 estimated_time_in_minutes: 
 
@@ -32,6 +32,31 @@ After completion of this module, learners will be able to:
 - Explain how a FASTQ file encodes per-base quality scores.
 - Interpret a FastQC plot summarizing per-base quality across all reads.
 - Use `for` loops to automate operations on multiple files.
+@end
+
+good_first_module: false
+data_domain: omics
+coding_required: true
+coding_level: intermediate
+coding_language: bash
+
+sequence_name: genomics_tools_and_methods
+
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+- bash_103_combining_commands
+- bash_command_line_101
+- bash_command_line_102
+- bash_conditionals_loops
+- data_storage_models
+- directories_and_file_paths
+- genomics_setup
+- omics_orientation
+
 @end
 
 @version_history 
