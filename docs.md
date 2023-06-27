@@ -180,6 +180,7 @@ Use the checklist below to help make sure you're including all the front matter 
 - [ ] is in a sequence (including the first module in the sequence)
 - [ ] follows other modules in a sequence (i.e. it's not the first in the sequence)
 - [ ] is parallel to one or more other modules (i.e. covers the same content but in a different coding langauge/operating system)
+- [ ] uses the Data Carpentry genomics AMI on AWS
 <script output="module_characteristics">"@input"</script>
 
 You'll need the following fields in your front matter (new fields added by checking boxes above will be followed by 💫): 
@@ -260,6 +261,7 @@ try {
 @add_item(0,import macros_r.md)
 @add_item(1,import macros_python.md)
 @add_item(2,import macros_sql.md)
+@add_item(10,import macros_genomics.md)
 
 ### `author`
 
@@ -794,6 +796,13 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md
 ```
 
+Genomics modules that make use of the [Data Carpentry](https://datacarpentry.org/genomics-workshop/) AMI on AWS will need to import the genomics macros as well:
+
+```
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_genomics.md
+```
+
 Modules using interactive R, Python, or SQL will need additional import files (see the sections on [interactive coding](#including-interactive-code) for details).
 
 ## DART macros
@@ -812,6 +821,7 @@ For example, the Overview and Feedback sections of each module are created by th
 
 - General use macros are in the [module macros file](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in **every module**. 
 - Macros to create the descriptions of external resources for wrapper modules are in the [wrapper macros file](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md).
+- Macros for genomics modules that use AWS are in the [genomics macros file](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_genomics.md). This includes a lesson prep macro reminding learners how to connect to their AWS instance and a reminder macro warning them that if they don't terminate their instance when they're done working they'll continue to be charged.
 - Macros for hands-on code in R, Python, and SQL modules are available in `macros_r.md`, `macros_python.md`, and `macros_sql.md`, respectively. SQL tables are loaded with additional files. For more details, see the sections on [including interactive code](#including-interactive-code) in this documentation.
 
 For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
@@ -1265,7 +1275,13 @@ Files uploaded to this account will be **publicly visible**. Be very careful not
 
 ## Including non-interactive code
 
-Include inline code with single backticks: `library(ggplot2)`. 
+Include inline code with single backticks:
+
+```
+Here's some inline code: `library(ggplot2)`. 
+```
+
+Here's some inline code: `library(ggplot2)`. 
 
 Make code blocks with at least three backticks:
 
@@ -1298,6 +1314,37 @@ print("This is python code")
 ```python
 print("This is python code")
 ```
+
+If you want to print code output, add a label to the code block to make that clear to learners: 
+
+````
+```bash
+ls -l -h
+```
+
+``` +output
+-rw-rw-r-- 1 dcuser dcuser 545M Jul  6 20:27 SRR2584863_1.fastq
+-rw-rw-r-- 1 dcuser dcuser 183M Jul  6 20:29 SRR2584863_2.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 309M Jul  6 20:34 SRR2584866_1.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 296M Jul  6 20:37 SRR2584866_2.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 124M Jul  6 20:22 SRR2589044_1.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 128M Jul  6 20:24 SRR2589044_2.fastq.gz
+```
+````
+
+```bash
+ls -l -h
+```
+
+``` +output
+-rw-rw-r-- 1 dcuser dcuser 545M Jul  6 20:27 SRR2584863_1.fastq
+-rw-rw-r-- 1 dcuser dcuser 183M Jul  6 20:29 SRR2584863_2.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 309M Jul  6 20:34 SRR2584866_1.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 296M Jul  6 20:37 SRR2584866_2.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 124M Jul  6 20:22 SRR2589044_1.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 128M Jul  6 20:24 SRR2589044_2.fastq.gz
+```
+
 
 ## Including interactive code
 
