@@ -155,8 +155,6 @@ We'll start out by describing the two most important elements of regex: describi
 
 Soon, the mysterious set of symbols that makes up a regular expression will make sense and not feel like random characters!
 
-![A cartoon dinosaur wearing a shirt and necktie points at their laptop screen under the caption "How to Regex.  Step 1: Open your favorite editor."  Then the dinosaur holds a cat toy while a purple cat perches on the keyboard of the laptop and types "`/^([A-Z0-9_\.-`". Above, the caption continues: "Step 2: Let your cat play on your keyboard."](https://pbs.twimg.com/media/D-svlGFWsAErN5b?format=jpg&name=small)<!-- style = "border: 1px solid rgb(var(--color-highlight)); margin: 0px auto;" -->
-
 
 ### Which Characters?
 
