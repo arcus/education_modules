@@ -242,7 +242,11 @@ The regular expression `WT\-d{5,6}` is almost right. It describes a pattern that
 ***
 
 
-The regular expression that gives the pattern for American Express credit card numbers is given as `3[47][0-9]{13}`.  Which of the following is true?  Select all that apply.
+The regular expression that gives the pattern for American Express credit card numbers is given as:
+
+`3[47][0-9]{13}`
+
+Which of the following is true?  Select all that apply.
 
 [[ ]] American Express credit card numbers start with `347`.
 [[X]] American Express credit card numbers start with `34` or `37`.
@@ -274,7 +278,7 @@ Let's dive in and learn about these very useful topics!
 
 ### Capturing Groups
 
-Let's consider the case where you have identifiers for some genomics data, in which there is a series of numbers that represents the trio (a proband and their genetic parents), a letter that indicates the member of the trio (`P` for proband, `M` for mother, and `F` for father), an alphanumeric series that indicates an individual id, and a final alphanumeric identifier that is an accession id that can be traced back to the sequencer used.  Each of these groups is separated by an underscore, and it is not clear if there are any rules around the length of any of these fields, save the P/M/F trio membership identifier.  All letters will be uppercase.
+Let's consider the case where you have identifiers for some genomics data, in which there is a series of numbers that represents the trio (a proband and their genetic parents), a letter that indicates the member of the trio (`P` for proband, `M` for mother, and `F` for father), an alphanumeric series that indicates an individual id, and a final numeric identifier that is an accession id that can be traced back to the sequencer used.  Each of these groups is separated by an underscore, and it is not clear if there are any rules around the length of any of these fields, save the P/M/F trio membership identifier.  All letters will be uppercase.
 
 For example, `002923_P_A56G199C2_030023472948651` indicates:
 
