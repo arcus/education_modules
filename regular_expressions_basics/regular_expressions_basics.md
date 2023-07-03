@@ -38,7 +38,7 @@ No previous versions.
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
-# Regular Expressions
+# Regular Expressions Basics
 
 @overview
 
