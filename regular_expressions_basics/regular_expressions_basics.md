@@ -327,11 +327,6 @@ If you want to check out regular expression checkers, here are a few we like:
 * [RegExr](https://regexr.com/) has helpful teaching aids, including a hover-over explainer that allows you to investigate matches, and a way to look at complex nested elements (for instance, a range of characters inside square brackets inside a capturing group) in a visual way.
 * [RegEx Testing](https://www.regextester.com/) has a clean, simple interface and a library of popular regular expressions to start with. 
 
-For learning more about regular expressions, consider:
-
-* [Regular-Expressions.info](https://www.regular-expressions.info/) is a compact and comprehensive handbook that includes much more information than we could convey in this module. It does seem to want readers to download or buy particular products, but if you ignore that aspect, the website is quite useful. Their [quick reference](https://www.regular-expressions.info/refquick.html), for example, is great to keep nearby while writing regex!
-* The [Wikipedia page for regular expressions](https://en.wikipedia.org/wiki/Regular_expression) is quite good and delves into the history of regular expressions as well as some of its mathematical qualities.
-
 Wondering about Unicode character ranges?  
 
 * Check out Wikipedia's [list of Unicode characters](https://en.wikipedia.org/wiki/List_of_Unicode_characters) to copy/paste characters you're not sure how to type (like ǔ or Ǣ or Ƣ) and to see the beginning and ending characters for ranges you'd like to include in patterns.
