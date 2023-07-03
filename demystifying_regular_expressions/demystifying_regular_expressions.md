@@ -263,7 +263,7 @@ Regular expressions are not used to make data visualizations or compute statisti
 
 Please go to our ["URL checking" regex example](https://regex101.com/r/QUok4D) to answer the next question.  You will want to type strings in to the "Test String" box to check.
 
-Which of these URLs is valid (the entire URL matches the pattern given)?  Select all the valid URLs.
+Which of these URLs is valid, according to our regular expression (the entire URL matches the pattern given)?  Select all the valid URLs.
 
 [[X]] https://www.example.com.com.com
 [[X]] https://www3.example.com
