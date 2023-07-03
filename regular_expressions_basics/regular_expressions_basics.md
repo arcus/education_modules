@@ -9,6 +9,7 @@ docs_version: 1.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
+previous_sequential_module: demystifying_regular_expressions
 
 title: Regular Expressions Basics
 
