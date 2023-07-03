@@ -9,6 +9,7 @@ docs_version: 1.0.0
 language: en
 narrator: US English Female
 mode: Textbook
+previous_sequential_module: regular_expressions_basics
 
 title: Regular Expressions: Intermediate Level
 
@@ -60,16 +61,18 @@ If this refresher doesn't seem familiar, you might want to consider reviewing [D
 
 ## Scope of This Module
 
-This module covers more advanced regular expressions topics, but without delving into using regular expressions within the context of code.  Specifically, we'll address these topics:
+We consider this module to be intermediate, because it assumes basic knowledge covers more advanced regular expressions topics, without delving into the advanced topic of using regular expressions within the context of code.  
+
+Specifically, we'll address these topics:
 
 * **Flags**, which alter how regular expressions parsers work
 * **Capturing groups**, which allow you to extract data from text, and **non-capturing groups**, which allow you to use more advanced syntax without data extraction 
 * **Anchors and boundaries**, which help you define patterns that belong in certain places within text
-* **Lookaheads** JOY
+* **Lookaheads**, which are useful for situations like overlapping data
 
 Once you've learned these skills, you'll be a regular expressions hero!
 
-![A note declares "Whenever I learn a new skill, I concoct elaborate fantasy scenarios where it lets me save the day."  A comic follows that shows one stick figure saying "Oh no! The killer must have followd her on vacation!  But to find them, we'd have to search through 200 MB of emails looking for something formatted like an address!", to which another stick figure replies, "It's hopeless!".  From afar, someone says, "Everybody stand back. I know regular expressions."  This hero then swings in on a rope, types some Perl code into the computer, and swings out on the same rope while the others cheer.](https://imgs.xkcd.com/comics/regular_expressions.png "[Regular Expressions](https://xkcd.com/208/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")
+![A note declares "Whenever I learn a new skill, I concoct elaborate fantasy scenarios where it lets me save the day."  A comic follows that shows one stick figure saying "Oh no! The killer must have followed her on vacation!  But to find them, we'd have to search through 200 MB of emails looking for something formatted like an address!", to which another stick figure replies, "It's hopeless!".  From afar, someone says, "Everybody stand back. I know regular expressions."  This hero then swings in on a rope, types some Perl code into the computer, and swings out on the same rope while the others cheer.](https://imgs.xkcd.com/comics/regular_expressions.png "[Regular Expressions](https://xkcd.com/208/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")
 
 
 ## Regular Expression Flags
@@ -225,11 +228,11 @@ That's not what we mean!  And we can't use a space to our regex to syntactically
 
 ### Quiz 3: Non-Capturing Groups and the Logical "Or"
 
-You're looking through lab notes written by a colleague who uses codes and abbreviations liberally.  She is known to write her lowercase initials ("sjp") and a single space followed by either "help" (always in lowercase) or "911" in her notes to highlight important potential pitfalls.  Using the logical "or" and using a non-capturing group (remember: the syntax is `(?:)`), write a regular expression that would allow you to capture any of her "sjp help" or "sjp 911" references.
+You're looking through lab notes written by a colleague who uses codes and abbreviations liberally.  This investigator is known to write their lowercase initials ("sjp") and a single space followed by either "help" (always in lowercase) or "911" in notes to highlight important potential pitfalls.  Using the logical "or" and using a non-capturing group (remember: the syntax is `(?:)`), write a regular expression that would allow you to capture any of the "sjp help" or "sjp 911" references.
 
 Put that regular expression in the box below:
 
-[[regular expression here]]
+[[sjp (?:help|911)]]
 <script>
   let input = "@input".trim();
   input == "sjp (?:help|911)" || input == "sjp (?:911|help)" ;
@@ -237,7 +240,7 @@ Put that regular expression in the box below:
 ***
 <div class = "answer">
 
-You'll begin by posing your two alternatives, either `help|911` or `911|help`, the order doesn't matter.  Then, you wrap that in the non-capturing group to give `(?:help|911)` or `(?:911|help)`.  But don't forget her initials and the space!  The final regex should read `sjp (?:help|911)` or `sjp (?:911|help)`.
+You'll begin by posing your two alternatives, either `help|911` or `911|help`, the order doesn't matter.  Then, you wrap that in the non-capturing group to give `(?:help|911)` or `(?:911|help)`.  But don't forget your collague's initials and the space!  The final regex should read `sjp (?:help|911)` or `sjp (?:911|help)`.
 
 </div>
 ***
@@ -358,7 +361,7 @@ In regular expressions, there are often many ways to accomplish the same goal!
 </div>
 
 
-### Words and Boundaries 
+## Boundaries 
 
 Boundaries are similar to anchors in that they allow you to think in advanced ways about where your pattern is positioned.  For example, let's consider **words** and **word boundary**.  
 
@@ -413,7 +416,7 @@ There are other defined boundaries, such as the "not a word" boundary (`\B`), wh
 
 </div>
 
-### Lookaheads
+## Lookaheads
 
 A regular expression engine (a program on a computer that parses and executes regular expressions) works by moving forward through text and analysing it.  You can imagine the computer as a finger tracing the text, always advancing, never moving backwards.  "Oh, a 3?  Great! I was told to expect a number, so that matches. Let me slide my finger to the next character.  It's a space, and that works, because there was an optional space in the next part of the pattern. I'll move once more. Oh, but the next character is a letter, which I wasn't expecting.  This isn't a match."
 
@@ -447,11 +450,11 @@ There are other types of "lookarounds", including **lookbehinds**, that you migh
 
 </div>
 
-### Quiz 4: A Bit More Advanced
+## Quiz 4: Anchors, Boundaries, and Lookaheads
 
 What's the anchor character that indicates the "start of a string"?
 
-[[just one character here]]
+[[^]]
 <script>
   let input = "@input".trim();
   input == "^";
@@ -466,7 +469,7 @@ The anchor for the start of a string is the caret, or `^`, symbol.
 
 What's the anchor character that indicates the "end of a string"?
 
-[[just one character here]]
+[[$]]
 <script>
   let input = "@input".trim();
   input == "$";
@@ -481,7 +484,7 @@ The anchor for the start of a string is the dollar sign, or `$`, symbol.
 
 What's the two character sequence that indicates the boundary between a word-type character (like a letter, number, or underscore) and a non-word-type character (like punctuation or spaces)?
 
-[[just two characters here]]
+[[\b]]
 <script>
   let input = "@input".trim();
   input == "\b";
@@ -499,7 +502,6 @@ Which of these is true about lookaheads in regular expressions?
 [( )] Lookaheads use the syntax ` \w`
 [( )] Lookaheads can be helpful when dealing with overlapping patterns
 [( )] Lookaheads describe special places in a string, like the very beginning or the very end.
-
 ***
 <div class = "answer">
 
