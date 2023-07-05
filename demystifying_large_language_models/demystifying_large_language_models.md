@@ -16,7 +16,7 @@ comment:  Learn about large language models (LLM) like ChatGPT.
 
 long_description: There's lots of talk these days about large language models in academia, research, and medical circles.  What is a large language model, what can it actually do, and how might LLMs impact your career?  Learn more here!
 
-estimated_time_in_minutes: 30
+estimated_time_in_minutes: 60
 
 @pre_reqs
 This module does not require any particular knowledge.  
@@ -52,7 +52,7 @@ Large language models (LLMs) like [ChatGPT](https://openai.com/chatgpt) or the [
 * **Language** related.  They take language as input and give language as output.
 * **Models**.  They attempt to predict, or model, desired behavior.  In this case that means they try to generate what would be a likely result in the real world if real people generated the text output for the given input.
 
-LLMs can generate language (human language and even computer language) that appears to be written by human intelligence.  In fact, we can even ask LLMs to explain themselves, and the resulting text is well-composed and realistic.  That's what we'll try on the next page!
+LLMs can generate language (human language and even computer language) that appears to be written by human intelligence.  In fact, we can even ask LLMs which are employed as conversational agents (chatbots) to explain themselves, and the resulting text is well-composed and realistic.  That's what we'll try on the next page!
 
 ### What Do They Say About Themselves?
 
@@ -60,23 +60,27 @@ When given the prompt, "briefly explain, in three to five sentences, what a larg
 
 > A large language model, such as GPT-3, is an advanced artificial intelligence model designed to understand and generate human-like text based on the patterns it learns from vast amounts of training data. In biomedical research, these models can be used to analyze and generate text related to medical literature, clinical trials, patient records, and scientific articles. They can assist researchers in tasks such as information extraction, summarization, literature review, and even generating hypotheses by synthesizing existing knowledge. By leveraging their language processing capabilities, large language models can accelerate research, improve data analysis, and aid in decision-making processes in the biomedical field.
 
+We'd disagree with some of the AI-generated explanation of large language models you just read.  For example, the use of the word "understand" seems to indicate cognition and subjectivity, which artificial intelligence lacks. Additionally, the use of the word "learns" can be misleading.  
+
+
 [Bing AI Chatbot](https://chat.bing.com) replied (and included footnotes!):
 
 > Large language models (LLMs) such as GPT-3 have the potential to revolutionize biomedical research by helping scientists quickly and accurately analyze vast amounts of data. One of the most promising applications is in natural language processing (NLP) of biomedical literature. LLMs can efficiently navigate through the scientific literature, assisting researchers in literature reviews and information synthesis^1^. They can also be used to understand biomedical text^2^.<br/><br/>Learn more: 1. blog.bionl.ai 2. labs.feinberg.northwestern.edu 3. link.springer.com
+
+Here, we again have concerns about the use of the word "understand", and we'd put an asterisk beside the word "accurately."
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 **In this module, we will always disclose when we're using an LLM to generate text**.  
 <br/><br/>
-The use of LLMs to generate text in science and education is a controversial issue. Some proponents of these tools point out that using LLMs can help equalize access to language.  For example, LLMs can provide sample language to people who need to write an abstract or proposal in a language that they lack native fluency in.  Others indicate that LLMs can speed up routine tasks that require just a quick review of accuracy, like summarizing a manuscript for a lit review. However, there are also critics who believe that using LLMs to generate text is essentially plagiarism or even scientific misconduct.
+The use of LLMs to generate text in science and education is a controversial issue. Some proponents of these tools point out that using LLMs can help equalize access to language.  For example, LLMs can provide sample language to people who need to write an abstract or proposal in a language that they lack native fluency in.  Others indicate that LLMs can speed up routine tasks that require just a quick review of accuracy, like summarizing a manuscript for a lit review. However, there are also critics who believe that using LLMs to generate text is a form of plagiarism or even scientific misconduct.
 <br/><br/>
 We're not here to advocate for a particular stance in the ethical disputes around LLMs, but we do think that it's only fair to let you know when the text you're reading has been generated by a sophisticated model.
 
 </div>
 
-We'd disagree with some of the AI-generated explanation of large language models you just read.  For example, the use of the word "understand" seems to indicate cognition and subjectivity, which artificial intelligence lacks. Additionally, the use of the word "learns" can be misleading.  
-
+While these definitions are helpful, there are some changes we will propose, especially in terms of "learning", "understanding", and "accuracy."  Our human-created definition is on the next page.
 
 ### A Human Definition
 
@@ -86,7 +90,7 @@ Can large language models "learn" and "understand"?  Not in the way humans do!
 
 Consider, for example, that a human (you, for example) can analyze geometric patterns and make good guesses as to what should appear next in a sequence, without attributing meaning to those symbols.  You could, with practice and some systems of tracking what you've seen so far, be able to predict what symbol would make sense in a pattern and what would be out of place.  Similarly, large language models can analyze the complex symbolic system of human language and make very good predictions of a realistic pattern, without any cognition or true understanding.
 
-ChatGPT and Bing AI can imitate, thanks to their exposure to many types of text, what kinds of words and what kinds of word patterns emerge in definitions and descriptions of technology. They also can predict what kinds of words are associated with the phrase "biomedical researchers".  They aren't mulling over meaning, however, they are pattern matching.  The importance of this distinction is crucial. **These powerful tools are not modeling reality or truth, they are modeling language**.  
+As seen on the previous page, ChatGPT and Bing AI were able to imitate, thanks to their exposure to many types of text, the kinds of words and patterns that appear in descriptions of technology. They also were able to predict what kinds of words are associated with the phrase "biomedical researchers".  These systems aren't mulling over meaning, however, they are pattern matching.  The importance of this distinction is crucial. **These powerful tools are not modeling reality or truth, they are modeling language**.  
 
 A Human-Generated Definition 
 ------
@@ -97,7 +101,7 @@ Large language models are predictive systems that, after having analyzed huge vo
 
 ## How Do LLMs Work?
 
-We know what an LLM is -- a system that mimics human language.  How did these LLMs come to be?  How did they become so good at imitating language, to the degree that they almost seem to have understanding and cognition?  To understand how LLMs came to be, we'll start by introducing just a bit of natural language processing (NLP).  We'll then move into neural networks and deep learning.
+We know what an LLM is -- a system that mimics human language.  But how did these LLMs come to be?  How did they become so good at imitating language, to the degree that they almost seem to have understanding and cognition?  To understand how LLMs came to be, we'll start by introducing just a bit of natural language processing (NLP).  We'll then move into neural networks and deep learning. 
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
@@ -126,12 +130,12 @@ In this module we'll talk only about **language models**, which are systems buil
 Heuristic Models
 ------
 
-Early language models were **heuristic**, or rules-based systems. For example, [ELIZA](https://dl.acm.org/doi/10.1145/365153.365168), an early model of therapeutic language, had a rule on how to respond to texts that lacked keywords that would ordinarily be used to guide the automated reply. "Please go on" was one potential response.
+Early language models were **heuristic**, or rules-based systems. For example, [ELIZA](https://dl.acm.org/doi/10.1145/365153.365168), an early model of therapeutic language, had a rule on how to respond to texts that lacked keywords that would ordinarily be used to guide the automated reply. "Please go on" was one potential response to such a situation.
 
 N-grams
 -----
 
-Later, language models relied on statistical probability, and aimed to predict the next word given a string of previous words, an **n-gram**. The letter **n** here, as in many places, is a number. A bigram, for example, is a sequence of two words, and a trigram a sequence of three words.  Larger numbers of words in a sequence are usually called by the number: 5-grams, 10-grams, and generically as n-grams.  N-grams proved very useful in language prediction, because the probability of selecting the next word in a series goes up as the number of lead-in words goes up.
+Later, language models relied on statistical probability, and aimed to predict the next word given a string of previous words, an **n-gram**. The letter **n** here, as in many places, is a number. A bigram, for example, is a sequence of two words, and a trigram a sequence of three words.  Larger numbers of words in a sequence are usually called by the number: 5-grams, 10-grams, and generically as n-grams.  N-grams prove very useful in language prediction, because the probability of selecting the next word in a series goes up as the number of lead-in words goes up.
 
 For example, can you predict the next word of a text if the preceding word is "and"?  It's very unlikely you'd guess correctly.  What about the word following "and they"?  You might guess (correctly) that the next word is a verb or part of a verb phrase, but which one? "And they are," "and they will," "and they thought," etc. are all reasonable guesses.  
 
@@ -142,19 +146,19 @@ Vectorizing Models
 
 Another way of predicting language relies on thinking of words as **vectors**.  
 
-Imagine a 3D space with three axes.  A vector would consist of an arrow beginning at the origin, the intersection of the axes, and ending at a specific point in three-dimensional space.  Vectors can be similar, because they end at points that are close together and the angle formed between the two vectors is small.  Or they can be very different because they are opposite one another, with a large angle between them. 
+Imagine a 3D space with three axes.  A vector consists of an arrow beginning at the origin, the intersection of the axes, and ending at a specific point in three-dimensional space.  Vectors can be similar, because they end at points that are close together and the angle formed between the two vectors is small.  Or they can be very different because they are opposite one another, with a large angle between them. 
 
-In the image below (thanks to [https://academo.org/demos/3d-vector-plotter/](https://academo.org/demos/3d-vector-plotter/)), there are two vectors that are quite similar, the red and the blue vectors.  The orange vector appears to be orthogonal to the others and is therefore less similar.
+In the image below (thanks to [academo's 3D Vector Plotter](https://academo.org/demos/3d-vector-plotter/)), there are two vectors that are quite similar, the red and the blue vectors.  The orange vector appears to be orthogonal to the others and is therefore less similar.
 
 ![A three-dimensional coordinate system with three vectors.  All originate at a common point, and the red and blue continue to points that are close to one another.  The orange vector goes in a direction that appears to be a right angle to the other vectors.](media/vectors.png)
 
-Words can be thought of as being vectors occupying n-dimensional space. These dimensions aren't attributes we could quickly summarize like "animal relatedness", or "degree of pleasant connotation" but consist of dimensions that are modeled computationally based on analyzing words that appear in similar contexts or are related in some way in training text. 
+Words can be thought of as being vectors occupying n-dimensional space. These dimensions aren't attributes we could quickly summarize like "animal relatedness", or "degree of pleasant connotation" but consist of aspects of language that are modeled computationally based on analyzing words that appear in similar contexts or are related in some way in training text. 
 
 For example, in our image of the three vectors above, maybe the blue vector is the word "insect", the red vector is the word "bug", and the orange is the word "elevator".  In reality, these vectors would be in a highly dimensional space, with the number of dimensions much greater than three!
 
-Words are modeled as multidimensional mathematical objects, which in turn enables language models to go beyond statistically predicting output text just based on how many times a particular n-gram appeared in training text.  Words have features that can be measured, and this allows for prediction that includes an understanding of word similarity.  
+Words are modeled as multidimensional mathematical objects, which in turn enables language models to go beyond statistically predicting output text based on n-gram frequency.  Words have features that can be measured and have math performed on them, and this allows for prediction that includes an understanding of the distance or similarity between words.
 
-At this point in language modeling, we're using fairly sophisticated systems called **neural networks** to model words as vectors.  Let's talk about those systems next.
+At this point in language modeling, researchers now have to rely on sophisticated systems called **neural networks** to model words as vectors.  Let's talk about those systems next.
 
 ### Neural networks
 
@@ -162,8 +166,8 @@ At this point in language modeling, we're using fairly sophisticated systems cal
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 As promised, here's the TL;DR of this page:
 
-* **Neural networks** are systems with lots of small calculations using **weights** that interact with one another to result in a final prediction.  A neural network (also known as a **deep learning** model) consists of an input layer, hidden layers, and an output layer.
-* **Transformers** revolutionized language neural networks because they allowed easier access to context clues from further back in text than an n-gram allows.  Today's LLMs rely on transformers.
+* **Neural networks** are systems that use lots of small calculations using **weights** that interact with one another to result in a final prediction.  A neural network (also known as a **deep learning** model) consists of an input layer, hidden layers, and an output layer.
+* **Transformers** revolutionized language neural networks because they allowed more efficient access to context clues from further back in text than other systems allowed.  Today's LLMs rely on transformers.
 
 </div>
 
@@ -172,68 +176,245 @@ Trial and Error
 
 To understand neural networks, it's important to know that in machine learning (whether that's in a neural network or in another type of algorithm), there's a lot of trial and error.  In machine learning, the speed of calculation that a computer can offer allows the computer to try thousands of different values for the coefficient of a predictor variable, for example.  This allows the computer to determine which value ends up being the best coefficient, and do that for many different predictor (input) variables.
 
-Neural networks take this power of trial and error and massively expand it. Neural networks are an attempt to in some way replicate the role of neurons in a brain. Various nodes (neurons) receive input, perform some mathematical transformation on that input, and either "fire" (pass some output on to a next step) or not depending on whether the result of the calculation passes a certain threshold.  Each node starts off with random weights that determine how to mathematically transform the data it receives, and the computer tries many combinations of different transformations of data to see which ones are the most accurate. 
+Neural networks take this power of trial and error and massively expand it. Neural networks are an attempt to in some way replicate the role of neurons in a brain. Various nodes (neurons) receive input, perform some mathematical transformation on that input, and either "fire" (pass some output on to a next step) or not, depending on whether the result of the calculation passes a certain threshold.  Each node starts off with random weights that determine how to mathematically transform the data it receives, and the computer tries many combinations of weights to see which ones are the most accurate. 
 
 An Example
 -----
 
 Let's consider a binary question.  Will a given person buy takeout for dinner?  Given seven input variables, you want a single outcome: 1 for "yes, they will get takeout" and 0 for "no, they will not get takeout."
 
-In this image (created thanks to [http://alexlenail.me/NN-SVG/index.html](http://alexlenail.me/NN-SVG/index.html)), the leftmost column of circles represent **inputs**.  Maybe one input is an individual's level of tiredness, another is the number of days they have had takeout in the last week, a third input could be the number of leftovers in the person's fridge.  These inputs are scaled and normalized.
+In this image (created thanks to [NN-SVG](http://alexlenail.me/NN-SVG/index.html)), the leftmost column of circles represent **inputs**.  Maybe one input is an individual's level of tiredness, another is the number of days they have had takeout in the last week, a third input could be the number of leftovers in the person's fridge.  These inputs are scaled and normalized.
 
 ![A depiction of a neural net, which consists of three columns of circles, the first of which has seven circles and is the input layer, the second of which has ten circles and is the hidden layer, and the last of which has one circle and is the output layer.  Lines connect the circles from the first column to circles in the second column, and circles in the second column to the circle in the third column.](media/example_nn.png)Lines of various intensity show the **weights** (think of them like coefficients in an equation) that each of these inputs contribute to ten nodes in the **hidden layer**, which is a set of nodes between input and output. The darker the line, the heavier that input is weighted for that node's calculation. Some nodes might heavily consider one's previous takeout habits, for example, while others disregard it entirely. Each hidden layer node calculates the sum of all its weighted inputs, and each one comes up with its own unique answer.<br/><br/>
 Then, each node in the hidden layer either fires (sends output) to the next layer, which is our output layer, or it doesn't (for example, one node in the hidden layer doesn't reach a threshold of activation, so it doesn't fire).  The output layer also uses weights to calculate how much each hidden layer node contributes to its calculation.  Then a sum is calculated, and the final prediction is made: "yes, they will order takeout," or "no, they will not."
 
-This prediction is checked for accuracy on a set of labeled data (maybe data on 500 people who either got takeout or did not).  Then, the weights are changed, and **that** set of weights is evaluated for accuracy.  Over time, after much repetition, the weights reach a point in which additional tweaking doesn't improve performance any more, and the final set of weights is set.  Now we have a model!
+This prediction is checked for accuracy on a set of labeled data (data on 500 people who either got takeout or did not).  Then, the weights are changed, and **that** set of weights is evaluated for accuracy.  Over time, after much repetition, the weights reach a point in which additional small changes don't improve performance any more, and the final set of weights is set.  Now we have a model that we can use for prediction.
 
 The model depicted above has only one hidden layer between input and output, but there can be an arbitrary number of hidden layers.  We can think of the number of hidden layers in a neural network as its "depth".  As neural networks gained more and more layers, the term **deep learning** emerged to describe these increasingly complex models.
 
 Transformers
 ---
 
-The way we think about language as humans doesn't just rely on the last few words we heard or read.  We don't have a simple four, five, or 100 word buffer or sliding window that we use to predict language.  We keep in mind the theme of the conversation or the literary genre we're reading or the overall reading level of a text.  We remember that the text is a question, an assertion, a shouted curse, or a song.  We hold context clues in mind, even long after these clues appeared. This can be referred to as "attention." 
+The way we think about language as humans doesn't just rely on the last few words we heard or read.  We don't have a simple four, five, or 100 word buffer or sliding window that we use to predict language.  We keep in mind the theme of the conversation or the literary genre we're reading or the overall reading level of a text.  We remember that the text is a novel, a political speech, a child's review of a movie, or a religious song.  We hold context clues in mind, even long after these clues appeared. This can be referred to as "attention." 
 
-The ability for language models to maintain attention to relatively distant context clues was necessary for language models to become more human-like.  After a few different attempts to make neural networks able to "look back" at prior context (such as recurrent neural networks or RNNs), a new, more efficient method to keep distant clues salient to prediction was developed.  This new algorithm was called a [transformer](https://arxiv.org/pdf/1706.03762.pdf), and from 2017 forward, language models became efficient enough to allow for many more parameters and became truly large.  There's some dispute about what could be called the first true LLM, but contenders include ELMo (Embeddings from Language Model) from 2017, GPT-1 (Generative Pre-trained Transformers-1) from 2018, and BERT (Bidirectional Encoder Representations from Transformers), also released in 2018.
+The ability for language models to maintain attention to relatively distant context clues was necessary for language models to become more human-like.  After a few different attempts to make neural networks able to "look back" at prior context (such as recurrent neural networks or RNNs), a new, more efficient method to keep distant clues salient to prediction was developed.  This new algorithm was called a [transformer](https://arxiv.org/pdf/1706.03762.pdf), and from 2017 forward, the use of transformers changed language models. Language models became efficient enough to allow for many more parameters and became truly large.  There's some dispute about what could be called the first true LLM, but contenders include ELMo (Embeddings from Language Model) from 2017, GPT-1 (Generative Pre-trained Transformers-1) from 2018, and BERT (Bidirectional Encoder Representations from Transformers), also released in 2018.
 
 ## LLM Costs and Risks
 
-Over time, with advances in the speed and size of computer processors (especially Graphical Processing Units, or GPUs), faster and more efficient data storage, and competition among cloud providers, computing has become less expensive.  That means that tasks can be performed today that would have been unrealistic (in terms of time and expense) to perform a few years ago.  That's true across computing, and it's certainly true in artificial intelligence.  But "less expensive" doesn't mean free.  Large language models are incredibly resource intensive, in terms of the amount of input required, the amount of computing required, and the energy consumed in building and running the models.
+Costs
+---
 
-We're going to borrow a framework from Weidinger et al.  In ["Ethical and social risks of harm from Language Models,"](https://arxiv.org/abs/2112.04359) Weidinger and her co-authors cite six domains of risks, harms, and costs associated with large language models.  We summarize these risks below (and note, we have avoided the temptation to ask a large language model to summarize the text for us):
+Over time, with advances in the speed and size of computer processors (especially Graphical Processing Units, or GPUs), faster and more efficient data storage, and competition among cloud providers, computing has become less expensive.  That means that tasks can be performed today that would have been unrealistic (in terms of time and expense) to perform a few years ago.  That's true across computing, and it's certainly true in artificial intelligence.  But "less expensive" doesn't mean free.  Large language models are incredibly resource intensive, in terms of the amount of input required, the amount of computing required, and the energy consumed in building and running the models. 
+
+Risks
+---
+
+Additionally, there are important risks to consider.  We're going to borrow a framework from Weidinger et al.  In their superb and approachable ["Ethical and social risks of harm from Language Models,"](https://arxiv.org/abs/2112.04359) Weidinger and her co-authors enumerate six domains of risks, harms, and costs associated with large language models.  We summarize these risks below (and note, we have avoided the temptation to ask a large language model to summarize the text for us):
 
 1. Discrimination, exclusion, and toxicity
 -----
 
-Where can one obtain huge amounts of text, generated by humans, for free?  The internet!  Language models and their abilities to predict text have grown in part because of better, faster, cheaper computers, but also in part because of the massive proliferation of human-generated text that can be analyzed.  Unfortunately, this set of language is biased in terms of who generates it and the opinions they share.  Toxic language and stereotypes abound, and these have already been documented in text generated by LLMs.
+Where can one obtain huge amounts of text, generated by humans, for free?  The internet!  Language models and their abilities to predict text have grown in part because of better, faster, and cheaper computers, but also in part because of the massive proliferation of human-generated text that can be analyzed.  Unfortunately, this set of language is biased in terms of who generates it and the opinions they share.  Toxic language, stereotypes, and bias abound, and these have already been documented in text generated by LLMs.  
 
 2. Information Hazards
 ------
 
-Because the training data given to LLMs is so vast, there are cases (some involving litigation) of private information such as home addresses being leaked by LLMs responding to probing prompts.  While the authors do not explicitly mention this, another information hazard we want to point out is the risk of disclosing private or regulated information to an LLM via prompts.  One of the ways that LLMs acquire additional language samples is by adding the prompts that users supply to their vast collection of language examples.  Supplying private information when asking LLMs to generate text could constitute an impermissible breach of privacy or violation of intellectual property law or other regulation.
+Because the training data given to LLMs is so vast, there are cases (some involving litigation) of private information such as home addresses being leaked by LLMs.  Additionally, LLMs might correctly infer and disclose sensitive information while amassing and summarizing data (for example, accurately disclosing a serious disease diagnosis to an unprepared user asking about their symptoms).
+
+While the authors do not explicitly mention this, another information hazard we want to point out is the risk related to input text.  Users can disclose private or regulated information to an LLM via prompts.  One of the ways that LLMs acquire additional language samples is by adding the prompts that users supply to their vast collection of language examples.  Supplying private information (about human subjects, about companies, and so on) when asking LLMs to generate text could constitute an impermissible breach of privacy or violation of intellectual property law or other regulation.
 
 3. Misinformation Harms
 ---
 
+As we stated earlier, LLMs are language models.  They are not intended to model truth, science, or the universe, but rather, to generate language that realistically mimics the language it was trained on. The data that LLMs are trained on includes jokes, sarcasm, disinformation, opinion, deception, mistakes that are later corrected, and other uses of language that do not transmit true information in the way an LLM user might be hoping for.  
+
+Misinformation is particularly pernicious when language is realistic in its form and tone, but includes false information.  In early 2023, a lawyer used ChatGPT to prepare a filing only to discover that [the LLM had cited non-existent case law](https://www.forbes.com/sites/mollybohannon/2023/06/08/lawyer-used-chatgpt-in-court-and-cited-fake-cases-a-judge-is-considering-sanctions/?sh=57d3675a7c7f).  The risks for science and medicine are non-trivial.
+
 4. Malicious Uses
 ---
+
+While we hope that biomedical researchers would never intentionally misuse technology, it is important to highlight that language is a powerful tool in the hands of malicious users.  LLMs can empower bad actors with convincing language that could be used for social engineering (convincing humans to click a link in an email, for example) or disinformation campaigns.  LLMs could also be used to condense information about political dissidents, for example, to make the role of a surveilling authority more efficient.  Finally, since LLMs can generate computer code, it may become much easier for unskilled bad actors to write malicious code.
 
 5. Human-Computer Interaction Harms
 ---
 
+Many of us already use digital assistants like Siri or Alexa.  These digital assistants tend to be depicted in female ways, which some argue promotes stereotypes about the role of women in society as subordinate helpers.  This kind of harm could potentially be amplified with widespread use of conversational LLMs.  Additionally, because the language generated by these systems is so convincing, users might overestimate the reliability of LLMs, thinking of them as though they were intelligent interlocutors with the ability to reason, empathize, and act morally.  Unmerited trust could lead to a user's unsafe reliance on a large language model as well as their unsafe sharing of private information to a "friendly" and "trustworthy" conversational agent.
+
 6. Automation, Access, and Environmental Harms
 ---
 
+LLMs require significant energy (with its associated carbon burden) as well as other resources, such as water for data center cooling needs and materials for computer chips.  The extraction and use of these resources can harm the environment and directly and indirectly harm people.  People are also potentially harmed by other aspects of LLMs, including employment related risks as jobs are automated or made less creative by the use of LLMs.  Artists and authors, for example, are already contending with threats to their livelihood and the use of their works as training data.  Finally, there is a risk of widening the digital divide and exacerbating differences in access to the benefits of technology.
 
+This risk framework reflects a point in time, and you may think of risk types or examples that aren't reflected here. 
 
+## Benefits of LLMs
 
+Any process that uses language can potentially benefit from LLM technology.  Consider some of these use cases, which we supplement with examples of prompts we supplied and replies we received from ChatGPT:
 
+Structure and Scaffolding
+---
 
+Use LLM's to create an outline for a manuscript, slide deck, CV, or other highly structured literary genre, given a topic.  This is an example of relying on what an LLM excels at (form) without undue reliance on what might fail (factual scientific content).
+
+Prompt: **"Make an outline for a peer-reviewed manuscript describing a clinical trial."**
+
+> I. Title:<br/>
+>    A descriptive title summarizing the main objective of the clinical trial.<br/>
+> <br/>
+> II. Abstract:<br/>
+>    A concise summary of the study, including the background, objectives, methods, results, and conclusion.<br/>
+> <br/>
+> III. Introduction:<br/>
+>    A brief introduction to the research problem, highlighting the significance and rationale for conducting the clinical trial.<br/>
+> <br/>
+> IV. Background:<br/>
+>    - Background information on the medical condition or disease being studied.<br/>
+>    - Review of existing literature and previous studies related to the topic.<br/>
+>    - Identification of research gaps or unanswered questions.<br/>
+> <br/>
+> V. Objectives:<br/>
+>    - Clear and specific research objectives or hypotheses.<br/>
+>    - Explanation of the primary and secondary endpoints of the clinical trial.<br/>
+> <br/>
+> VI. Methods:<br/>
+>    A detailed description of the study design, including:<br/>
+>    - Study setting and population: Description of the target population, inclusion and exclusion criteria.<br/>
+>    - Randomization and blinding: Explanation of the randomization process and blinding procedures, if applicable.<br/>
+>    - Intervention: Description of the experimental intervention(s) and control/comparator group(s).<br/>
+>    - Data collection: Explanation of the data collection methods, tools, and measurements.<br/>
+>    - Sample size calculation: Explanation of the statistical considerations and power analysis.<br/>
+>    - Ethical considerations: Description of ethical approval, informed consent process, and monitoring committees.<br/>
+> <br/>
+> VII. Statistical Analysis:<br/>
+>    - Description of the statistical methods used for data analysis.<br/>
+>    - Explanation of the primary and secondary outcome measures and their statistical significance.<br/>
+>    - Presentation of any interim analyses conducted during the trial.<br/>
+> <br/>
+> VIII. Results:<br/>
+>    - Presentation of the study findings, including demographic characteristics of participants.<br/>
+>    - Summary of primary and secondary outcomes and their statistical significance.<br/>
+>    - Description of any adverse events or safety concerns observed during the trial.<br/>
+>    - Discussion of the study limitations and potential sources of bias.<br/>
+> <br/>
+> IX. Discussion:<br/>
+>    - Interpretation of the study results in the context of existing literature.<br/>
+>    - Comparison of findings with previous studies.<br/>
+>    - Explanation of the clinical implications and relevance of the study outcomes.<br/>
+>    - Discussion of strengths and weaknesses of the study design and methodology.<br/>
+>    - Recommendations for further research or future directions.<br/>
+> <br/>
+> X. Conclusion:<br/>
+>    A concise summary of the key findings and their implications, along with any recommendations for clinical practice or further research.<br/>
+> <br/>
+> XI. Acknowledgments:<br/>
+>    - Recognition of individuals or organizations that contributed significantly to the study.<br/>
+>    - Declaration of any conflicts of interest.<br/>
+> <br/>
+> XII. References:<br/>
+>    A comprehensive list of cited references following a specified citation style (e.g., APA, AMA).<br/>
+> <br/>
+> XIII. Appendices:<br/>
+>    - Additional information, such as study protocols, informed consent forms, or supplementary tables/figures.<br/>
+>    - Detailed description of any statistical methods used.<br/>
+> <br/>
+> Note: The actual content and structure of the manuscript will depend on the specific details of the clinical trial, research area, and journal guidelines.<br/>
+Summarizing 
+-----
+
+Use LLMs to summarize texts, advance literature reviews, or get to key themes.
+
+Prompt: **"Summarize the main points of Strubell's 'Energy and Policy Considerations for Deep Learning in NLP'."**
+
+> "Energy and Policy Considerations for Deep Learning in NLP" is a research paper written by Emma Strubell that explores the environmental impact and policy implications of deep learning in Natural Language Processing (NLP). Here are the main points of Strubell's paper:
+> 
+> Growing energy consumption of NLP models: Strubell highlights the significant increase in energy consumption associated with large-scale deep learning models used in NLP tasks. She points out that these models consume a substantial amount of electricity during both training and inference phases.
+> 
+> Environmental impact: The author discusses the environmental implications of high energy consumption, including greenhouse gas emissions and the contribution to climate change. Strubell argues that the carbon footprint of training and deploying NLP models should be considered when assessing their overall impact.
+> 
+> Energy efficiency improvements: Strubell explores potential strategies to improve the energy efficiency of NLP models, such as model distillation, knowledge distillation, and model compression techniques. These methods aim to reduce the computational resources required for training and inference while maintaining performance.
+> 
+> Trade-offs between model size and performance: Strubell examines the trade-offs between model size and performance in NLP. She discusses how increasing model size can lead to better performance but at the cost of increased energy consumption. The paper emphasizes the need for careful consideration of these trade-offs in model design.
+> 
+> Policy implications and recommendations: Strubell discusses the policy implications of energy-intensive NLP models and provides recommendations for mitigating their environmental impact. She suggests the implementation of energy efficiency standards, carbon accounting frameworks, and promoting research into green AI.
+> 
+> Societal responsibility and awareness: The author emphasizes the responsibility of researchers, practitioners, and policymakers to be aware of the energy implications of NLP models. Strubell encourages transparency in reporting energy usage and fostering a culture of sustainable AI development.
+> 
+> Overall, Strubell's paper raises awareness about the energy consumption and environmental impact of deep learning in NLP. It highlights the need for energy-efficient approaches, policy interventions, and collective responsibility to address the energy challenges associated with large-scale NLP models.
+
+Draft text for use in research settings
+---
+
+Handle this use case with care.  With careful disclosure and accuracy checking, biomedical researchers may wish to use LLMs to create first drafts of certain texts.
+
+Prompt: **"Write a brief letter of recommendation for my research assistant Mary Saetang, who did a great job with human subjects in autism research."** 
+
+> [Your Name]<br/>
+> [Your Position/Title]<br/>
+> [Your Institution/Organization]<br/>
+> [City, State, ZIP Code]<br/>
+> [Email Address]<br/>
+> [Date]<br/>
+> <br/>
+> [Recipient's Name]<br/>
+> [Recipient's Position/Title]<br/>
+> [Recipient's Institution/Organization]<br/>
+> [City, State, ZIP Code]<br/>
+> <br/>
+> Dear [Recipient's Name],<br/>
+> <br/>
+> I am writing to highly recommend Mary Saetang for her outstanding work as a research assistant in our autism research project, particularly in the area of human subjects. Mary has been an invaluable member of our team, demonstrating exceptional skills, dedication, and professionalism throughout her time with us.<br/>
+> <br/>
+> During her tenure as a research assistant, Mary consistently displayed a strong commitment to the ethical conduct of research involving human subjects. Her meticulous attention to detail and adherence to research protocols have been instrumental in ensuring the integrity and reliability of our data collection process. Mary has demonstrated a thorough understanding of the ethical considerations and guidelines associated with working with individuals on the autism spectrum.<br/>
+> <br/>
+> Mary's interactions with participants have been exemplary. She possesses remarkable interpersonal skills, establishing a rapport and creating a comfortable environment for the individuals involved in our research. Her ability to engage with participants, adapt to their unique needs, and maintain their trust has greatly contributed to the quality of our data collection and the overall success of our project.<br/>
+> <br/>
+> Furthermore, Mary's organizational abilities and time management skills have been exceptional. She consistently met project deadlines and managed multiple tasks efficiently. Her ability to coordinate schedules, ensure participant compliance, and maintain accurate records has been instrumental in the smooth operation of our research activities.<br/>
+> <br/>
+> Beyond her technical expertise, Mary has exhibited exceptional teamwork and collaboration skills. She actively contributed to team meetings, offering valuable insights and suggestions. Her positive attitude, willingness to learn, and strong work ethic have made her an asset to our research team.<br/>
+> <br/>
+> In summary, I wholeheartedly recommend Mary Saetang for any research position involving human subjects. Her dedication, professionalism, and aptitude for working with individuals on the autism spectrum make her a standout candidate. I am confident that she will continue to excel in her future endeavors and contribute significantly to any research project she becomes a part of.<br/>
+> <br/>
+> Should you require any further information or have any questions, please do not hesitate to contact me. Thank you for considering Mary Saetang for this opportunity.<br/>
+> <br/>
+> Sincerely,<br/>
+> <br/>
+> [Your Name]<br/>
+> [Your Position/Title]<br/>
+> [Your Institution/Organization]<br/>
+
+Working With Code 
+---
+
+Again, this is an area in which users should exercise particular care.  Do not inadvertently disclose data, statistical descriptions of your data, findings, database schema or other potentially sensitive information.
+
+Prompt: **"Using tidyverse R code, write code that will take a dataframe column called 'id' and break it into two columns called 'subject\_id' and 'accession\_number'.  The data in the 'id' column has these two values stuck together with an underscore between them."**
+
+> Certainly! Here's an example of how you can use the tidyverse package in R to split the 'id' column into 'subject\_id' and 'accession\_number' columns based on the underscore delimiter:<br/><br/>
+> <div  style="background:black; color:white;"><pre>
+library(tidyverse)<br/>
+<br/>
+# Assuming your dataframe is named 'df'<br/><br/>
+df <- df %>%<br/>
+           separate(col = id, into = c("subject\_id", "accession\_number"), sep = "_", remove = FALSE)<br/>
+<br/>
+# Printing the updated dataframe<br/>
+print(df)<br/>
+</pre></div><br/>
+> In this code, we first load the tidyverse package using `library(tidyverse)`. Then, we use the `%>%` operator from the magrittr package to perform a series of operations on the dataframe 'df'.<br/>
+> <br/>
+> The `separate()` function is used to split the 'id' column into two columns, 'subject\_id' and 'accession\_number'. The `col` parameter specifies the column to be split, while the `into` parameter defines the names of the resulting columns. The `sep` parameter specifies the delimiter (underscore in this case) used to separate the values, and the `remove` parameter is set to `FALSE` to keep the original 'id' column in the dataframe.<br/>
+> <br/>
+> Finally, the updated dataframe 'df' is printed using the `print()` function. Make sure to replace 'df' with the actual name of your dataframe in the code.<br/>
+> <br/>
+> After running this code, the 'id' column will be split into 'subject\_id' and 'accession\_number', with the values separated by underscores.<br/>
+
+These are powerful examples, but keep in mind that anything you generate using an LLM has **no guarantee of accuracy**.
 
 ## An AI-Generated Quiz
 
 Large language models respond best to well crafted input texts, or prompts.  Consider this prompts, which we gave to ChatGPT: 
 
-"Create a quiz question about n-grams."
+Prompt: **"Create a quiz question about n-grams."**
 
 > Question: What is an n-gram in natural language processing?<br/><br/>
 >A) A single word or character in a text.<br/>
@@ -242,9 +423,11 @@ Large language models respond best to well crafted input texts, or prompts.  Con
 >D) A technique to analyze the grammatical structure of a sentence.<br/><br/>
 >Please select the correct option (A, B, C, or D).
 
-That's too easy!  Here's a better one, created by ChatGPT in response to the prompt "Create a multiple choice quiz question about n-grams and how they are used in predicting language."  Please do try and answer it!
+That's too easy!  Here's a better one, created by ChatGPT in response to the prompt **"Create a multiple choice quiz question about n-grams and how they are used in predicting language."**  Please do try and answer it!
 
-Which of the following statements best describes n-grams and their role in predicting language?
+------
+
+**Which of the following statements best describes n-grams and their role in predicting language?**
 
 [( )] N-grams are numerical values assigned to words in a language, used to predict their frequencies in a given text.
 [(X)] N-grams are sets of adjacent words or characters in a text, used to analyze patterns and predict the likelihood of specific words or phrases.
@@ -260,9 +443,13 @@ N-grams aren't numerical values, algorithms, or dictionaries. The correct answer
 </div>
 ***
 
-When prompted, "Create a multiple choice question with several correct answers that asks 'which of the following are true statements about large language models'", ChatGPT gave us the following, which we'd like you to answer:   
+-------
 
-Which of the following are true statements about large language models? (Select all that apply.)
+When prompted, **"Create a multiple choice question with several correct answers that asks 'which of the following are true statements about large language models'"**, ChatGPT gave us the following, which we'd like you to answer:   
+
+-----
+
+**Which of the following are true statements about large language models? (Select all that apply.)**
 
 [[X]] A) Large language models are trained on vast amounts of text data.
 [[X]] B) They utilize deep learning techniques, such as neural networks.
@@ -302,21 +489,101 @@ We checked the questions and answers for accuracy, and we think you'll agree tha
 </div>
 ***
 
+----
 
-We asked, 'Please create a multiple choice question that asks about the types of harms listed in Weidinger's article "Ethical and social risks of harm from Language Models."'.  The Bing AI Chatbot gave us this:
+We asked **'Give a multiple choice quiz question about the hidden layer in neural networks which would be appropriate for beginners'.**, the Bing AI Chatbot gave us this:
 
-What are the types of harms listed in Weidinger’s article “Ethical and social risks of harm from Language Models?”
+-----
 
-[( )] A. Harms to privacy 
-[( )] B. Harms to autonomy 
-[( )] C. Harms to democracy 
-[(X)] D. All of the above
+**What is the purpose of the hidden layer in a neural network?**
+
+[( )] A. To provide input to the network 
+[( )] B. To provide output from the network 
+[(X)] C. To perform computations on the input data 
+[( )] D. To store the output data
 ***
 <div class = "answer">
 
+**This explanation of the answer was created by a human, not by ChatGPT.**
+
+(A) is incorrect because the **input layer** is what holds input values and forwards that data to the hidden layer.  Similarly, (B) and (D) incorrect, because the **output layer** stores and forwards output from the system to the requestor.  The correct answer is (C).  The hidden layer performs computations on input data.
 
 </div>
 ***
 
+----
 
+For our next question, we tried several different prompts in different LLMs before we were satisfied with the question.  We finally got a good question with this prompt: **'Create a quiz question with seven potential answers to the prompt, "Which of these are risks or costs associated with using a large language model".  Make at least two of the potential answers correct.'**
 
+We disagree, however, with the answers to this quiz question, so we'll pose the question to you and explain what ChatGPT suggested the correct answers were and what we think the correct answers are!
+
+------
+
+**Which of these are risks or costs associated with using a large language model?**
+
+[[X]] A) Increased computational resources and energy consumption.
+[[X]] B) Potential biases and perpetuation of societal inequalities.
+[[X]] C) Limited interpretability and transparency of model outputs.
+[[X]] D) Higher risk of data breaches and security vulnerabilities.
+[[X]] E) Reduced creativity and originality in generated content.
+[[X]] F) Decreased accessibility for users with limited internet connectivity.
+[[X]] G) Difficulty in adapting to new language patterns and emerging slang.
+***
+<div class = "answer">
+
+This is what ChatGPT claims:
+
+> Correct answers: <br/>
+> A) Increased computational resources and energy consumption. <br/>
+> B) Potential biases and perpetuation of societal inequalities. <br/>
+
+We, however, see all of these as at least **potential** risks:
+
+* LLMS require enormous energy and computational resources (A)
+* LLMs are built on human language which reflect societal bias, and this will appear in their outputs (B)
+* LLMs are built on complex deep learning models and it is hard to grasp how an LLM generated particular content (C)
+* Because of the risks of anthroporphizing them and disclosing sensitive data when giving prompts, LLMs can introduce new data breach and security risks (D)
+* Perhaps controversially, we believe that human writers are capable of novel uses of language that language models cannot fully mimic (E)
+* It's possible that LLMs will exacerbate the digital divide, reduce employment for automatable jobs, and decrease access to technology for some (F)
+* LLMs are often trained on a static dataset, which, unless it is constantly updated, represents a point in time that will not capture novel language use (G)
+
+</div>
+***
+
+## Additional Resources
+
+LLMs:
+
+* [ChatGPT](https://openai.com/chatgpt) 
+* [Bing AI Chatbot](https://chat.bing.com)
+
+Popular Press / Blogs:
+
+* [Large language models: their history, capabilities and limitations](https://snorkel.ai/large-language-models-llms/) is an overview by the company Snorkel that is appropriate for people who aren't experts in the field.
+* [The Illustrated Word2vec](http://jalammar.github.io/illustrated-word2vec/) is a superb page that explains word vectorization with both simplicity and depth.  This is a long piece but worth reading and watching (there's an embedded YouTube video with the author walking you through the article), as it builds your intuition about the intersection of words and their mathematical representation.
+
+Peer-reviewed literature:
+
+* [Ethical and social risks of harm from Language Models](https://arxiv.org/abs/2112.04359): a superb overview of the risk landscape in LLMs
+* [Attention is All You Need](https://arxiv.org/pdf/1706.03762.pdf): Google's work on Transformer models
+
+History:
+
+* [The manuscript describing ELIZA](https://dl.acm.org/doi/10.1145/365153.365168)
+
+Drawing Things:
+
+* [academo's 3D Vector Plotter](https://academo.org/demos/3d-vector-plotter/)
+* [NN-SVG](http://alexlenail.me/NN-SVG/index.html)
+
+Other:
+
+* [ChatGPT cites non-existent case law](https://www.forbes.com/sites/mollybohannon/2023/06/08/lawyer-used-chatgpt-in-court-and-cited-fake-cases-a-judge-is-considering-sanctions/?sh=57d3675a7c7f)
+* [New ways to manage your data in ChatGPT](https://openai.com/blog/new-ways-to-manage-your-data-in-chatgpt).  OpenAI offers users a way to exempt their prompts from training data: "ChatGPT users can now turn off chat history, allowing you to choose which conversations can be used to train our models."
+
+Publication Standards:
+
+* [Editorial on AI and authorship policies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10140602/)
+* [Elsevier's take on AI in scientific writing](https://www.elsevier.com/about/policies/publishing-ethics#:~:text=The%20Use%20of%20Generative%20AI%20and%20AI%2Dassisted%20Technologies%20in%20Scientific%20Writing)
+* [Nature's take on AI-generated content](https://www.nature.com/nature-portfolio/editorial-policies/ai)
+* [Science's take on AI-generated text](https://www.science.org/content/page/science-journals-editorial-policies#:~:text=Artificial%20intelligence%20(AI)
