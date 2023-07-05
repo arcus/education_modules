@@ -408,6 +408,23 @@ print(df)<br/>
 > <br/>
 > After running this code, the 'id' column will be split into 'subject\_id' and 'accession\_number', with the values separated by underscores.<br/>
 
+Translate texts
+----
+
+Consider your institution's policies with regard to translation and whether regulation would impede your use of AI translation.  Translations should be considered draft texts that should be verified by professionals.
+
+Prompt: 
+
+**Translate the sentence, "You will be compensated for your time with a gift card worth $10 each time you appear at your scheduled laboratory visit and complete an EEG" to Spanish** 
+
+> Será compensado por su tiempo con una tarjeta de regalo por valor de $10 cada vez que aparezca en su visita programada al laboratorio y complete un EEG.
+
+**Translate the sentence, "You will be compensated for your time with a gift card worth $10 each time you appear at your scheduled laboratory visit and complete an EEG" to Kreyol**
+
+> W'ap resevwa yon konpansasyon pou tan ou ak yon kadò pou $10 chak fwa ou parèt nan vizit laboratwa ou ki planifye epi ou konplete yon EEG.
+
+-----
+
 These are powerful examples, but keep in mind that anything you generate using an LLM has **no guarantee of accuracy**.
 
 ## An AI-Generated Quiz
