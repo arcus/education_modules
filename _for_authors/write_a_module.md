@@ -52,6 +52,12 @@ We expect authors to design with a variety of ["edge" users](https://guide.inclu
 
 ## Use GitHub
 
+Our files reside on GitHub and we use GitHub for git version control as well as for issue management, change management (pull requests), public communication, and more.  You will need to have a GitHub account (free) and develop some GitHub skills to be able to contribute successfully.  We hope to have some custom step-by-step instructions with screenshots added here soon, but for now, please consider reading over [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow) and [Contributing to Projects](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).  
+
+One thing to keep in mind is that you will **not** be able to mess up our files -- you can clone and fork our repository and completely obliterate your copy and this will not affect our repository.  In fact, it will be hard, if not impossible, for you to do anything that will negatively affect our repository.  We have protections in place to make it easier for novice users of GitHub to feel reassured that they aren't going to break anything.
+
+Also, authoring a module is an iterative process, and we don't expect you to be approved on the first try.  It's absolutely a process of communication, editing, suggestions, tweaks, questions, and comments between the reviewer and author.  Try not to feel intimidated or that you need to be "perfect" to make a pull request (a request to bring your material into our repository main branch).
+
 You may wish to begin by forking our GitHub repository, so that you can have your own copy of our materials and can publish branches on your own, without working with our team directly at first.  Be aware, however, of the risk of your fork becoming out of date.  When you fork our project in order to propose a new module, you can configure Git to pull changes from our repository into the local clone of your fork.  Please read more in GitHub's [Fork a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo) how-to documentation.
 
 Alternatively, you can clone our GitHub repository, which is public, and stay current with our progress.  However, without prior discussion, you will not be able to publish new branches.  If you intend to be an ongoing contributor who works with multiple modules, adding you as a contributor to our repository may be suitable.  Reach out to us at dart@chop.edu to discuss how to become a contributor to our canonical (official) repository.
@@ -86,7 +92,7 @@ Technical instructions for how to write a module in LiaScript are available in t
 
 Importantly, consider starting to write your module by beginning with the description and learning objectives.  This will help you scope your topic.  Three to five learning objectives are plenty for a module of about one hour's duration.
 
-We know that this is a complex process, and you may have questions about how to use our [templates](../_module_templates/) or have other questions about any part of this process.  Please don't hesitate to reach out to ask questions or let us know if we haven't explained something fully.  This is how we improve!  If you send us an email at [dart@chop.edu](mailto:dart@chop.edu), we'll try to respond.  If we realize we need to improve the documentation, we may use your paraphrased email (stripped of all identifying information) to create an [issue](../issues) so that everyone using the repository knows we're working on a fix.
+We know that this is a complex process, and you may have questions about how to use our [templates](../_module_templates/) or have other questions about any part of this process.  Please don't hesitate to reach out to ask questions or let us know if we haven't explained something fully.  This is how we improve!  If you send us an email at [dart@chop.edu](mailto:dart@chop.edu), we'll try to respond.  If we realize we need to improve the documentation, we may use your paraphrased email (stripped of all identifying information) to create an [issue](../issues) so that everyone using the repository knows we're working on a fix.  In fact, if you feel comfortable, you, too, can [create an issue](/../issues/new)!
 
 ### Save Assets Well
 
