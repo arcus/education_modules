@@ -49,6 +49,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 Large language models (LLMs) like [ChatGPT](https://openai.com/chatgpt) or the [Bing AI Chatbot](https://chat.bing.com) are getting a lot of attention these days.  The three words tell us in broad strokes what LLMs are.  They are:
 
 * **Large**. Very large, in fact, with billions of parameters created from complex numerical representations of words, sentences, paragraphs and grammar (known as "vectors").
+* **Language** related.  They take language as input and give language as output. 
 * **Models**.  They attempt to predict, or model, desired behavior.  In this case that means they try to generate what would be a likely result in the real world if real people generated the text output for the given input.
 
 LLMs can generate language (human language and even computer language) that appears to be written by human intelligence.  In fact, we can even ask LLMs which are employed as conversational agents (chatbots) to explain themselves, and the resulting text is well-composed and realistic.  That's what we'll try on the next page!
