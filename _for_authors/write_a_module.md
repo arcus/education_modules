@@ -66,8 +66,7 @@ When you're ready to request approval, create a Pull Request (PR) in GitHub, ask
 
 Authoring a module is an iterative process, and we don't expect you to be approved on the first try.  It's absolutely a process of communication, editing, suggestions, tweaks, questions, and comments between the reviewer and author.  Try not to feel intimidated or that you need to be "perfect" to make a pull request (a request to bring your material into our repository main branch).  We try to be transparent so that our Quality Assurance (QA) process isn't a surprise.  You can view the [QA checklist](https://github.com/arcus/education_modules/blob/main/.github/ISSUE_TEMPLATE/qa-for-standard-modules.md) that will be used to check your module at any time. You can also see revisions and comments on [pull requests for other modules that have already been QAed](https://github.com/arcus/education_modules/pulls?q=is%3Apr+is%3Aclosed+label%3A%22Quality+Assurance%22) to see what kinds of adjustments were made.  For example, you can look at the changes and conversation that took place for our [Demystifying Machine Learning](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_machine_learning/demystifying_machine_learning.md#1) module by looking at [its pull request](https://github.com/arcus/education_modules/pulls?q=is%3Apr+is%3Aclosed+label%3A%22Quality+Assurance%22).
 
-
-Once any outstanding improvements are addressed, the administrator checking your module will approve the PR with a squash and merge and delete your branch.  Congratulations, your module is now part of the portfolio of educational modules for the project!
+Once any outstanding improvements are addressed and the author and reviewer are in agreement that the module is ready to go, the reviewer checking your module will approve the PR with a squash and merge and delete your branch.  Congratulations, your module is now part of the portfolio of educational modules for the project!
 
 ## Composition
 
@@ -111,3 +110,11 @@ Consider the following directory tree as a sample showing you how your lesson mi
         ├── python_sample.ipynb
         └── to_be_completed.R
 ```
+
+## Get Credit
+
+You've worked hard to write a module!  You can cite your module using the following format (APA style):
+
+Lastname, F. (2023). *How to Make a Neural Net from Uncooked Macaroni.* https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/macaroni_neural_nets/macaroni_neural_nets.md#1
+
+We encourage you to brag about your work and claim it.  Anyone using your module can see information about the author by clicking on the (i) icon (the letter 'i' enclosed in a small circle) in the upper right of the module.

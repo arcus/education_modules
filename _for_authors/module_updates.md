@@ -8,7 +8,7 @@ This need for updating and maintenance on an ongoing basis can prove problematic
 
 ## Updates You Initiate
 
-If at any point you wish to suggest a change to a module you wrote, please let us know! You can send us an email at dart@chop.edu, or [post an issue](https://github.com/arcus/education_modules/issues/new/choose) to let us know what should be changed. 
+If at any point you wish to suggest a change to a module you wrote, please let us know! You can send us an email at dart@chop.edu, or [post an issue](https://github.com/arcus/education_modules/issues/new/choose) to let us know what should be changed.  Or, if you want to undertake making the changes yourself, you are more than welcome to fork the repository, make your changes, and create a pull request (PR) to bring your updates in.
 
 We will take your suggestions into account and use them at our discretion.  If at any point the module diverges from your vision and you prefer that the attribution be changed, you can request us to change the attribution to be a co-authorship between you and DART staff or ask us to make this attribution a generic "DART contributor" attribution and remove your name from the module. 
 
