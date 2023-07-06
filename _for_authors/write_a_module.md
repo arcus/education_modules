@@ -20,10 +20,9 @@ In terms of topics, we hew closely to the [NIH Strategic Plan for Data Science](
 
 For example, a module that describes how to create publication-quality cohort characteristics tables for research papers in the R language may be more attractive to learners than a module that focuses on how to write functions in the R language, even if the modules end up teaching similar skills.  It's easy for a researcher to understand how table creation helps their research, but they may have no idea why writing a function is interesting or helpful to them.  When thinking about topics to write about, consider the research data life cycle and the process of conducting research.  If you're not familiar with biomedical research, but have expertise to offer, we're happy to talk to you about what the research process looks like and some of the data science pain points our learners experience.  
 
-Are you considering a topic and want to know what we think about your idea?  Please email us at [mailto:dart@chop.edu](dart@chop.edu).  We'd love to hear from you and we are enthusiastic about working with authors to hone their topic!
+Are you considering a topic and want to know what we think about your idea?  Please email us at [dart@chop.edu](mailto:dart@chop.edu).  We'd love to hear from you and we are enthusiastic about working with authors to hone their topic!
 
 ## Our Approach
-
 
 While each educator's voice is unique, this program has some core values that shape our approach.  Our values and the particular approach we take in this project affects how we write, what we write about, how we share our materials, and how we improve our materials.
 
@@ -77,15 +76,17 @@ Begin your file structure by creating a folder with an expressive name, using lo
 
 To start writing the main file that will make up your module, use one of our [templates](_module_templates).  We have three templates:
 
-* Our [standard template](_module_templates/template_standard.md) is for modules that teach a skill using mostly original material.
-* Our [wrapper template](_module_templates/template_wrapper.md) is for modules that teach a skill using mostly existing material that we point learners to.  For example, a module teaching learners how to install RStudio will likely depend on Posit materials.
-* Our [exercise template](_module_templates/template_exercise.md) is for modules that do not teach additional skills but offer a practical exercise / sample project.
+* Our [standard template](../_module_templates/template_standard.md) is for modules that teach a skill using mostly original material.
+* Our [wrapper template](../_module_templates/template_wrapper.md) is for modules that teach a skill using mostly existing material that we point learners to.  For example, a module teaching learners how to install RStudio will likely depend on Posit materials.
+* Our [exercise template](../_module_templates/template_exercise.md) is for modules that do not teach additional skills but offer a practical exercise / sample project.
 
 Make a copy of the appropriate template and save it within your new folder with an almost identical title to the folder, one that ends in `.md`, like `lasso_and_ridge_ml_in_r.md` or `bayesian_stats_in_python.md`.  
 
 Technical instructions for how to write a module in LiaScript are available in the [DART module docs](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md). The docs includes some boilerplate text to show you how to write in LiaScript flavored markdown (it's pretty similar to other markdown flavors, but with a few things added in), including lots of examples you can copy and paste. It also includes information about important elements needed to meet our requirements for a module, such as including formative assessments.
 
 Importantly, consider starting to write your module by beginning with the description and learning objectives.  This will help you scope your topic.  Three to five learning objectives are plenty for a module of about one hour's duration.
+
+We know that this is a complex process, and you may have questions about how to use our [templates](../_module_templates/) or have other questions about any part of this process.  Please don't hesitate to reach out to ask questions or let us know if we haven't explained something fully.  This is how we improve!  If you send us an email at [dart@chop.edu](mailto:dart@chop.edu), we'll try to respond.  If we realize we need to improve the documentation, we may use your paraphrased email (stripped of all identifying information) to create an [issue](../issues) so that everyone using the repository knows we're working on a fix.
 
 ### Save Assets Well
 
