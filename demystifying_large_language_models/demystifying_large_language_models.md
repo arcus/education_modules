@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
+version:  1.0.1
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
@@ -46,7 +46,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 ## Large Language Models: Definitions
 
-Large language models (LLMs) like [ChatGPT](https://openai.com/chatgpt) or the [Bing AI Chatbot](https://chat.bing.com) are getting a lot of attention these days.  The three words tell us in broad strokes what LLMs are.  They are:
+Large language models (LLMs) like [ChatGPT](https://openai.com/chatgpt) or [BERT](https://arxiv.org/abs/1810.04805) are getting a lot of attention these days.  The three words tell us in broad strokes what LLMs are.  They are:
 
 * **Large**. Very large, in fact, with billions of parameters created from complex numerical representations of words, sentences, paragraphs and grammar (known as "vectors").
 * **Language** related.  They take language as input and give language as output. 
