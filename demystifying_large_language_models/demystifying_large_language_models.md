@@ -26,7 +26,7 @@ This module does not require any particular knowledge.
 After completion of this module, learners will be able to:
 
 - Define "large language model" (LLM) 
-- Give a brief description of n-grams
+- Give a brief description of n-grams and word vectors
 - Give a brief description of a neural network
 - Give one example of a task that an LLM could do that could advance a biomedical project or career
 - Give one example of a caveat or pitfall to be aware of when using an LLM
@@ -48,8 +48,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 Large language models (LLMs) like [ChatGPT](https://openai.com/chatgpt) or the [Bing AI Chatbot](https://chat.bing.com) are getting a lot of attention these days.  The three words tell us in broad strokes what LLMs are.  They are:
 
-* **Large**. Very large, in fact, with billions of parameters (numerical values that act as knobs for tuning the math that takes place within the model)
-* **Language** related.  They take language as input and give language as output.
+* **Large**. Very large, in fact, with billions of parameters created from complex numerical representations of words, sentences, paragraphs and grammar (known as "vectors").
 * **Models**.  They attempt to predict, or model, desired behavior.  In this case that means they try to generate what would be a likely result in the real world if real people generated the text output for the given input.
 
 LLMs can generate language (human language and even computer language) that appears to be written by human intelligence.  In fact, we can even ask LLMs which are employed as conversational agents (chatbots) to explain themselves, and the resulting text is well-composed and realistic.  That's what we'll try on the next page!
@@ -119,6 +118,7 @@ As promised, here's the TL;DR of this page:
 
 * **N-grams** are strings consisting of n words. "Mary had a little" is a 4-gram, for instance.
 * Being exposed to lots of n-grams in language is useful for predicting an upcoming word (e.g. "lamb").
+* Words can be represented as vectors which are located in n-dimensional space in which each word has a numeric value for each dimension.
 * Advances in language modeling required the use of neural networks.
 
 </div>
@@ -166,7 +166,7 @@ At this point in language modeling, researchers now have to rely on sophisticate
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 As promised, here's the TL;DR of this page:
 
-* **Neural networks** are systems that use lots of small calculations using **weights** that interact with one another to result in a final prediction.  A neural network (also known as a **deep learning** model) consists of an input layer, hidden layers, and an output layer.
+* **Neural networks** are systems that use lots of small calculations using **weights** that interact with one another to result in a final prediction.  A neural network (also known as a **deep learning** model) consists of an input layer which transmits input values to, a hidden layer (or more than one) which analyzes inputs, and an output layer which collates results.
 * **Transformers** revolutionized language neural networks because they allowed more efficient access to context clues from further back in text than other systems allowed.  Today's LLMs rely on transformers.
 
 </div>
@@ -228,7 +228,7 @@ While the authors do not explicitly mention this, another information hazard we 
 
 As we stated earlier, LLMs are language models.  They are not intended to model truth, science, or the universe, but rather, to generate language that realistically mimics the language it was trained on. The data that LLMs are trained on includes jokes, sarcasm, disinformation, opinion, deception, mistakes that are later corrected, and other uses of language that do not transmit true information in the way an LLM user might be hoping for.  
 
-Misinformation is particularly pernicious when language is realistic in its form and tone, but includes false information.  In early 2023, a lawyer used ChatGPT to prepare a filing only to discover that [the LLM had cited non-existent case law](https://www.forbes.com/sites/mollybohannon/2023/06/08/lawyer-used-chatgpt-in-court-and-cited-fake-cases-a-judge-is-considering-sanctions/?sh=57d3675a7c7f).  The risks for science and medicine are non-trivial.
+Misinformation is particularly pernicious when language is realistic in its form and tone, but includes false information.  In early 2023, a lawyer used ChatGPT to prepare a filing only to discover that [the LLM had cited non-existent case law](https://www.forbes.com/sites/mollybohannon/2023/06/08/lawyer-used-chatgpt-in-court-and-cited-fake-cases-a-judge-is-considering-sanctions/?sh=57d3675a7c7f).  The risks for science and medicine are non-trivial.  Imagine using an LLM to create a methods section or literature review that turns out to be demonstrably false.  Worse still, imagine automating letters to patients about their radiology or lab results and sending erroneous suggestions that put their health in danger!
 
 4. Malicious Uses
 ---
@@ -425,7 +425,14 @@ Prompt:
 
 -----
 
-These are powerful examples, but keep in mind that anything you generate using an LLM has **no guarantee of accuracy**.
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+These are powerful examples, and you may generate many more in your investigation of the utility of LLMs. Keep in mind that anything you generate using an LLM has **no guarantee of accuracy** and that you have a responsibility to validate the correctness of AI-generated output.
+
+Also, be aware that the use of LLMs to contribute language to manuscripts is expressly forbidden by many major publications and may result in unpleasant career consequences.
+
+</div>
 
 ## An AI-Generated Quiz
 
@@ -629,3 +636,7 @@ Publication Standards:
 * [Elsevier's take on AI in scientific writing](https://www.elsevier.com/about/policies/publishing-ethics#:~:text=The%20Use%20of%20Generative%20AI%20and%20AI%2Dassisted%20Technologies%20in%20Scientific%20Writing)
 * [Nature's take on AI-generated content](https://www.nature.com/nature-portfolio/editorial-policies/ai)
 * [Science's take on AI-generated text](https://www.science.org/content/page/science-journals-editorial-policies#:~:text=Artificial%20intelligence%20(AI)
+
+## Feedback
+
+@feedback
