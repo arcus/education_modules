@@ -22,7 +22,7 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+link:  https://gist.githubusercontent.com/rosemm/54e802a4366677791477e24691606f49/raw/07cb5ec9b9cbbee826150b629702f0ee919452f0/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
 

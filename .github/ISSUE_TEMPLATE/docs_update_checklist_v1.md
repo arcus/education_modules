@@ -107,7 +107,7 @@ TIP: You can also use the "Your front matter checklist" section of docs.md to ge
 The following should **NOT** be included in module front matter: 
 
 - [ ] REMOVED: any macros defined in the shared macro files
-- [ ] REMOVED: `link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css`
+- [ ] REMOVED: `link:  https://gist.githubusercontent.com/rosemm/54e802a4366677791477e24691606f49/raw/07cb5ec9b9cbbee826150b629702f0ee919452f0/styles.css`
 - [ ] REMOVED: `script: https://kit.fontawesome.com/83b2343bd4.js`
 - [ ] REMOVED: `script:  https://code.jquery.com/jquery-3.6.0.slim.min.js`
 
