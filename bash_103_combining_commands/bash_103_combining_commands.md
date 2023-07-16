@@ -20,7 +20,7 @@ After completion of this module, learners will be able to:
 - Chain commands directly using the pipe `|`
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+link: https://gist.githubusercontent.com/andre-dietrich/b9f7bb03af64a4c6826c284e159aaa43/raw/d989e9a9abfc19c9d5c18fec436db6e66edede1f/arcus.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
 -->
