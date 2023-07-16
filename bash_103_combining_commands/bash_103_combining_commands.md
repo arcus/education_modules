@@ -20,7 +20,7 @@ After completion of this module, learners will be able to:
 - Chain commands directly using the pipe `|`
 @end
 
-link: https://gist.githubusercontent.com/andre-dietrich/b9f7bb03af64a4c6826c284e159aaa43/raw/d989e9a9abfc19c9d5c18fec436db6e66edede1f/arcus.css
+link: https://gist.githubusercontent.com/rosemm/54e802a4366677791477e24691606f49/raw/07cb5ec9b9cbbee826150b629702f0ee919452f0/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
 -->
