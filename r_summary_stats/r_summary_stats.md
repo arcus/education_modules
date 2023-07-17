@@ -323,10 +323,10 @@ summary(cytomegalovirus$diagnosis)
 Now we get counts for each type of diagnosis! Much better.
 
 There are also several other variables that are represented in the data
-as 0 or 1, but should really be considered as factors. We’ll clean those
+as 0 or 1, but should really be considered as factors. We'll clean those
 up now. We could do it with individual commands like
 `cytomegalovirus$sex <- as.factor(cytomegalovirus$sex)`, but instead
-we’ll take a look at another approach:
+we'll take a look at another approach:
 
 ``` r
 cytomegalovirus <- cytomegalovirus |> 
@@ -345,9 +345,9 @@ cytomegalovirus <- cytomegalovirus |>
          )
 ```
 
-Let’s break that down. 
-We’re using `mutate` to make changes to the columns in the dataframe. 
-You can use `mutate` to create new columns, but in this case we’re just overwriting existing columns. 
+Let's break that down. 
+We're using `mutate` to make changes to the columns in the dataframe. 
+You can use `mutate` to create new columns, but in this case we're just overwriting existing columns. 
 Within the mutate command, we have a different argument for each column we want to change. 
 They all take the form `column_name = factor(column_name, levels = c(), labels = c())` where the levels are the existing values in the colum already (e.g. 0 and 1) and labels are what we want them to show up as in the factor (e.g. “no” and “yes”). 
 Note that the order of levels and labels has to line up, so the first level will get the first label, and the second level will get the second label, etc. 
@@ -367,7 +367,7 @@ Remember: If you run `rm(cytomegalovirus)` to reset the data, you'll need to re-
 
 </div>
 
-Let’s run `summary` on the whole dataframe again to see the results now that we’ve cleaned up the column types.
+Let's run `summary` on the whole dataframe again to see the results now that we've cleaned up the column types.
 
 ``` r
 summary(cytomegalovirus)
@@ -418,7 +418,7 @@ min(cytomegalovirus$time.to.transplant)
     ## [1] NA
 ```
 
-Uh-oh! It returns `NA` for this because there is a missing observation for this column. If you look at `?min`, you’ll see the default for this function (and most statistics functions in R) is `na.rm = FALSE`, which basically means "don't remove (`rm`) any missing values (`na`)."  
+Uh-oh! It returns `NA` for this because there is a missing observation for this column. If you look at `?min`, you'll see the default for this function (and most statistics functions in R) is `na.rm = FALSE`, which basically means "don't remove (`rm`) any missing values (`na`)."  
 When doing arithmetic, R will only compute a value if there are no missing observations.  
 If you want to remove the missing values, so that you can get a numeric value, you'll need to indicate that.
 
@@ -528,9 +528,9 @@ table(cytomegalovirus$diagnosis.type)
     ##       28       30
 ```
 
-You can use `summary` to get counts for factors, but it won’t work on character vectors, whereas `table` works to get counts on factors or characters. 
+You can use `summary` to get counts for factors, but it won't work on character vectors, whereas `table` works to get counts on factors or characters. 
 
-Note that `table` doesn’t give you any information about missing values by default, though – it just gives counts for observations with data. 
+Note that `table` doesn't give you any information about missing values by default, though – it just gives counts for observations with data. 
 If you want to see missing values using `table`, add the argument `useNA = "always"`:
 
 ``` r
@@ -612,13 +612,13 @@ The `gtsummary` package is a great way to do that.
 
 ### Creating Table 1 with `gtsummary`
 
-We’ll recreate an approximation of the cytomegalovirus Table 1 using `gtsummary`.
+We'll recreate an approximation of the cytomegalovirus Table 1 using `gtsummary`.
 As a reminder, here's the published table:
 
 ![Table 1 from the published paper on the cytomegalovirus data. Columns are "1 to 4 aKIRs", "5 to 6 aKIRs" and "P value". There are rows for each of the following variables: age, sex, race, diagnosis category, months from diagnosis to treatment, prior radiation therapy, number of prior chemo regimens, prior transplants, recipient CMV seropositive, donor CMV seropositive, and recipient or donor CMV seropositive.](media/cytomegalovirus_table1.png)
 
 Note that the table breaks patients down by whether their aKIRs are 1-4 or 5-6. 
-In the data, aKIRs are just numeric scores 1-6, so first we’ll need to create a factor for those two groups.
+In the data, aKIRs are just numeric scores 1-6, so first we'll need to create a factor for those two groups.
 Similarly, the table groups all patients with at least 4 prior chemo treatments as one group.
 
 ``` r
