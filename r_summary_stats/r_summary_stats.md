@@ -194,7 +194,7 @@ Note that this is one of the example datasets that comes built-in when you insta
 
 To learn more about this dataset, type the following into the R console:
 
-```{r}
+```
 ?cytomegalovirus
 ```
 
