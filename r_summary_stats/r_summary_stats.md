@@ -194,7 +194,7 @@ Note that this is one of the example datasets that comes built-in when you insta
 
 To learn more about this dataset, type the following into the R console:
 
-```
+``` r
 ?cytomegalovirus
 ```
 
@@ -218,21 +218,22 @@ You can run it on an individual column, or on a whole dataframe.
 
 First try running `summary()` on just the `age` column:
 
-```
+``` r
 summary(cytomegalovirus$age)
 ```
 
-```
+``` +Output
     ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
     ##   29.00   46.00   55.00   52.44   61.00   67.00
 ```
 
 Now try running `summary` on the whole dataframe all at once:
 
-```
+``` r
 summary(cytomegalovirus)
 ```
-<pre>
+
+``` +Output
        ID             age             sex              race         diagnosis        
  Min.   : 1.00   Min.   :29.00   Min.   :0.0000   Min.   :0.0000   Length:64         
  1st Qu.:16.75   1st Qu.:46.00   1st Qu.:0.0000   1st Qu.:1.0000   Class :character  
@@ -280,7 +281,8 @@ summary(cytomegalovirus)
  Mean   :10.304  
  3rd Qu.:11.307  
  Max.   :65.120  
-</pre>
+```
+
 ![Output table of summary statistics for all variables in cytomegalovirus.](media/summary_1.png)
 
 You should see a summary of each of the 26 variables in the data, with a set of summary statistics printed under each. 
@@ -296,7 +298,7 @@ There is one column, diagnosis, that shows up as character.
 If you look at the help documentation for the data set (`?cytomegalovirus`), you'll see that should actually be a factor with 13 levels. 
 If it were a factor, we could get more useful summary statistics for it, too. 
 
-```
+``` r
 # convert diagnosis column from character to factor
 cytomegalovirus$diagnosis <- as.factor(cytomegalovirus$diagnosis)
 
@@ -304,7 +306,7 @@ cytomegalovirus$diagnosis <- as.factor(cytomegalovirus$diagnosis)
 summary(cytomegalovirus$diagnosis)
 ```
 
-```
+``` +Output
     ## acute lymphoblastic leukemia       acute myeloid leukemia 
     ##                            1                           12 
     ##              aplastic anemia chronic lymphocytic leukemia 
@@ -375,7 +377,8 @@ summary(cytomegalovirus)
 ```
 
 ![Output table of summary statistics again, but now all the variables we changed to factors are represented as the counts for each level of that factor.](media/summary_2.png)
-<pre>
+
+``` +Output
        ID             age            sex                   race     diagnosis          diagnosis.type time.to.transplant
  Min.   : 1.00   Min.   :29.00   Female:30   African-American: 6   Length:64          Lymphoid:28     Min.   :  1.84    
  1st Qu.:16.75   1st Qu.:46.00   Male  :34   White           :58   Class :character   Myeloid :30     1st Qu.:  8.15    
@@ -407,7 +410,8 @@ summary(cytomegalovirus)
  Mean   :15.605            Mean   :10.304  
  3rd Qu.:21.410            3rd Qu.:11.307  
  Max.   :85.190            Max.   :65.120  
- </pre>
+```
+
 ### Individual summary statistics
 
 What is the shortest time from diagnosis to transplant in the data? You can see in the help documentation for the data (`?cytomegalovirus`) that this variable is in months.
