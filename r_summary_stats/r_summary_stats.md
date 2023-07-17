@@ -283,8 +283,6 @@ summary(cytomegalovirus)
  Max.   :65.120  
 ```
 
-![Output table of summary statistics for all variables in cytomegalovirus.](media/summary_1.png)
-
 You should see a summary of each of the 26 variables in the data, with a set of summary statistics printed under each. 
 This is a great way to get a lot of information quickly. 
 The `summary` function is clever enough to print different summary statsitics for different variable types --- it won't try to calculate the mean or median of a categorical variable (called a factor in R), for example, since that wouldn't be meaningful.
@@ -375,8 +373,6 @@ Let's run `summary` on the whole dataframe again to see the results now that we'
 ``` r
 summary(cytomegalovirus)
 ```
-
-![Output table of summary statistics again, but now all the variables we changed to factors are represented as the counts for each level of that factor.](media/summary_2.png)
 
 ``` +Output
        ID             age            sex                   race     diagnosis          diagnosis.type time.to.transplant
