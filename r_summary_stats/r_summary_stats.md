@@ -297,18 +297,13 @@ cytomegalovirus <- cytomegalovirus |>
          )
 ```
 
-Let’s break that down. We’re using `mutate` to make changes to the
-columns in the dataframe. You can use `mutate` to create new columns,
-but in this case we’re just overwriting existing columns. Within the
-mutate command, we have a different argument for each column we want to
-change. They all take the form
-`column_name = factor(column_name, levels = c(), labels = c())` where
-the levels are the existing values in the colum already (e.g. 0 and 1)
-and labels are what we want them to show up as in the factor (e.g. “no”
-and “yes”). Note that the order of levels and labels has to line up, so
-the first level will get the first label, and the second level will get
-the second label, etc. To learn more about the `factor()` command, check
-out its help documentation with `?factor`.
+Let’s break that down. 
+We’re using `mutate` to make changes to the columns in the dataframe. 
+You can use `mutate` to create new columns, but in this case we’re just overwriting existing columns. 
+Within the mutate command, we have a different argument for each column we want to change. 
+They all take the form `column_name = factor(column_name, levels = c(), labels = c())` where the levels are the existing values in the colum already (e.g. 0 and 1) and labels are what we want them to show up as in the factor (e.g. “no” and “yes”). 
+Note that the order of levels and labels has to line up, so the first level will get the first label, and the second level will get the second label, etc. 
+To learn more about the `factor()` command, check out its help documentation with `?factor`.
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
@@ -324,8 +319,7 @@ Remember: If you run `rm(cytomegalovirus)` to reset the data, you'll need to re-
 
 </div>
 
-Let’s run `summary` on the whole dataframe again to see the results now
-that we’ve cleaned up the column types.
+Let’s run `summary` on the whole dataframe again to see the results now that we’ve cleaned up the column types.
 
 ``` r
 summary(cytomegalovirus)
@@ -335,9 +329,7 @@ summary(cytomegalovirus)
 
 ### Individual summary statistics
 
-What is the shortest time from diagnosis to transplant in the data? You
-can see in the help documentation for the data (`?cytomegalovirus`) that
-this variable is in months.
+What is the shortest time from diagnosis to transplant in the data? You can see in the help documentation for the data (`?cytomegalovirus`) that this variable is in months.
 
 ``` r
 min(cytomegalovirus$time.to.transplant)
@@ -346,14 +338,9 @@ min(cytomegalovirus$time.to.transplant)
     ## [1] NA
 ```
 
-Uh-oh! It returns `NA` for this because there is a missing observation
-for this column. If you look at `?min`, you’ll see the default for this
-function (and most statistics functions in R) is `na.rm = FALSE`, which
-basically means “only compute a value if there are no missing
-observations”.
+Uh-oh! It returns `NA` for this because there is a missing observation for this column. If you look at `?min`, you’ll see the default for this function (and most statistics functions in R) is `na.rm = FALSE`, which basically means “only compute a value if there are no missing observations”.
 
-To get the minimum for this column ignoring the missing value, change
-that to `na.rm = TRUE`.
+To get the minimum for this column ignoring the missing value, change that to `na.rm = TRUE`.
 
 ``` r
 min(cytomegalovirus$time.to.transplant, na.rm = TRUE)
@@ -403,9 +390,7 @@ sd(cytomegalovirus$time.to.transplant, na.rm = TRUE) # standard deviation
     ## [1] 40.47351
 ```
 
-The median is the 50th percentile, but you may want other values, like
-the 25th and 75th percentile. You can get any you want with the
-`quantile` function:
+The median is the 50th percentile, but you may want other values, like the 25th and 75th percentile. You can get any you want with the `quantile` function:
 
 ``` r
 # the default quantiles
@@ -461,15 +446,10 @@ table(cytomegalovirus$diagnosis.type)
     ##       28       30
 ```
 
-You can use `summary` to get counts for factors, but it won’t work on
-character vectors, whereas `table` works to get counts on factors or
-characters. 
+You can use `summary` to get counts for factors, but it won’t work on character vectors, whereas `table` works to get counts on factors or characters. 
 
-Note that `table` doesn’t give you any information about
-missing values by default, though – it just gives counts for
-observations with data. 
-If you want to see missing values using `table`,
-add the argument `useNA = "always"`:
+Note that `table` doesn’t give you any information about missing values by default, though – it just gives counts for observations with data. 
+If you want to see missing values using `table`, add the argument `useNA = "always"`:
 
 ``` r
 table(cytomegalovirus$diagnosis.type, useNA = "always")
@@ -480,9 +460,7 @@ table(cytomegalovirus$diagnosis.type, useNA = "always")
     ##       28       30        6
 ```    
 
-To get counts of two categorical variables together (e.g. what is the
-diagnosis type breakdown by recipient CMV status?), use
-[cross-tabulation](https://www.khanacademy.org/math/statistics-probability/analyzing-categorical-data/two-way-tables-for-categorical-data/a/two-way-tables-review), also called “crosstabs” or "two-way frequency tables".
+To get counts of two categorical variables together (e.g. what is the diagnosis type breakdown by recipient CMV status?), use [cross-tabulation](https://www.khanacademy.org/math/statistics-probability/analyzing-categorical-data/two-way-tables-for-categorical-data/a/two-way-tables-review), also called “crosstabs” or "two-way frequency tables".
 
 ``` r
 xtabs(~cmv + diagnosis.type, data = cytomegalovirus)
@@ -494,8 +472,7 @@ xtabs(~cmv + diagnosis.type, data = cytomegalovirus)
     ##   Yes       13      11
 ```
 
-To get the results of a chi-squared test on the crosstabs, you can apply
-the `summary` function to an xtabs object.
+To get the results of a chi-squared test on the crosstabs, you can apply the `summary` function to an xtabs object.
 There are two equivalent ways to do that:
 
 ``` r
@@ -545,11 +522,8 @@ For example, here is Table 1 from the paper this dataset is from:
 ![Table 1 summary statistics on the cytomegalovirus data.](media/cytomegalovirus_table1.png)
 
 
-One way to create a summary table would be to copy-paste all of your
-summary stats from R into whatever program you use to write your
-article. 
-That is both error-prone and tedious, and it also means if
-anything changes in your data you need to re-do all of that work.
+One way to create a summary table would be to copy-paste all of your summary stats from R into whatever program you use to write your article. 
+That is both error-prone and tedious, and it also means if anything changes in your data you need to re-do all of that work.
 
 Another approach is creating the whole table right in R! 
 The `gtsummary` package is a great way to do that.
@@ -561,10 +535,8 @@ As a reminder, here's the published table:
 
 ![Table 1 from the published paper on the cytomegalovirus data. Columns are "1 to 4 aKIRs", "5 to 6 aKIRs" and "P value". There are rows for each of the following variables: age, sex, race, diagnosis category, months from diagnosis to treatment, prior radiation therapy, number of prior chemo regimens, prior transplants, recipient CMV seropositive, donor CMV seropositive, and recipient or donor CMV seropositive.](media/cytomegalovirus_table1.png)
 
-Note that the table breaks patients down by whether their aKIRs are 1-4
-or 5-6. 
-In the data, aKIRs are just numeric scores 1-6, so first we’ll
-need to create a factor for those two groups.
+Note that the table breaks patients down by whether their aKIRs are 1-4 or 5-6. 
+In the data, aKIRs are just numeric scores 1-6, so first we’ll need to create a factor for those two groups.
 Similarly, the table groups all patients with at least 4 prior chemo treatments as one group.
 
 ``` r
@@ -589,7 +561,8 @@ The `if_else` function is what's called a ternary operator, and it has three par
  * a value to use if the test returns `TRUE`
  * a value to use if the test returns `FALSE`.
 
-In the aKIRs example, we first tested each value to see if it was > 4. If yes, we assigned it "5 to 6 aKIRs", and if no we assigned it to "1 to 4 aKIRs". Note that `if_else` preserves missing values, so anything that was NA in aKIRs will still be NA in aKIRs_groups. 
+In the aKIRs example, we first tested each value to see if it was > 4. If yes, we assigned it "5 to 6 aKIRs", and if no we assigned it to "1 to 4 aKIRs". 
+Note that `if_else` preserves missing values, so anything that was NA in aKIRs will still be NA in aKIRs_groups. 
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
@@ -688,9 +661,11 @@ The results of the significance testing here are now much closer to what we see 
 
 When you ran the above code, you may have noticed that R printed out several warnings with text like `Warning for variable 'race': simpleWarning in stats::chisq.test(x = structure(c(1L, 2L, 2L, 2L, 2L, 2L, 2L, : Chi-squared approximation may be incorrect`. 
 
-Like many warnings in R (and other programming languages), the text is unfortunately not super clear. But at least it does let you know what variable has a problem (race, in this case) and that it has something to do with the Chi-squared test we're running on it to get those p-values. 
+Like many warnings in R (and other programming languages), the text is unfortunately not super clear. 
+But at least it does let you know what variable has a problem (race, in this case) and that it has something to do with the Chi-squared test we're running on it to get those p-values. 
 
-It's beyond the scope of this module to get into the details, but the reason this warning comes up is because it's actually a bad idea statistically to run an uncorrected Chi-squared test on variables where the expected counts are too low, as is the situation for several of the variables in this table (including race). We're just trying to replicate the tests that were done to get the published version of the table, but R is right that we're not using the best choice of tests here. 
+It's beyond the scope of this module to get into the details, but the reason this warning comes up is because it's actually a bad idea statistically to run an uncorrected Chi-squared test on variables where the expected counts are too low, as is the situation for several of the variables in this table (including race). 
+We're just trying to replicate the tests that were done to get the published version of the table, but R is right that we're not using the best choice of tests here. 
 
 </div>
 
