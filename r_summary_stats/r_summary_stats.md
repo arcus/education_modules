@@ -338,7 +338,9 @@ min(cytomegalovirus$time.to.transplant)
     ## [1] NA
 ```
 
-Uh-oh! It returns `NA` for this because there is a missing observation for this column. If you look at `?min`, you’ll see the default for this function (and most statistics functions in R) is `na.rm = FALSE`, which basically means “only compute a value if there are no missing observations”.
+Uh-oh! It returns `NA` for this because there is a missing observation for this column. If you look at `?min`, you’ll see the default for this function (and most statistics functions in R) is `na.rm = FALSE`, which basically means "don't remove (`rm`) any missing values (`na`)."  
+When doing arithmetic, R will only compute a value if there are no missing observations.  
+If you want to remove the missing values, so that you can get a numeric value, you'll need to indicate that.
 
 To get the minimum for this column ignoring the missing value, change that to `na.rm = TRUE`.
 
