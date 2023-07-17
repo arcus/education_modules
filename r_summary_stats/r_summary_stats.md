@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  0.0.0
+version:  1.0.0
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
@@ -179,7 +179,7 @@ head(cytomegalovirus)
 ```
 
 You should see the first six rows of the cytomegalovirus data frame, which look like this:
-
+<!-- data-type="none" -->
 | ID| age|sex    |race             |diagnosis                    |diagnosis.type | time.to.transplant|prior.radiation | prior.chemo|prior.transplant | recipient.cmv|donor.cmv |donor.sex | TNC.dose| CD34.dose| CD3.dose| CD8.dose| TBI.dose|C1/C2        | aKIRs|cmv | time.to.cmv|agvhd | time.to.agvhd|cgvhd | time.to.cgvhd|aKIRs_groups |
 |--:|---:|:------|:----------------|:----------------------------|:--------------|------------------:|:---------------|-----------:|:----------------|-------------:|:---------|:---------|--------:|---------:|--------:|--------:|--------:|:------------|-----:|:---|-----------:|:-----|-------------:|:-----|-------------:|:------------|
 |  1|  61|Male   |African-American |acute myeloid leukemia       |Myeloid        |               5.16|No              |           2|No               |             1|Negative  |Male      |    18.31|      2.29|     3.21|     0.95|      200|Heterozygous |     1|Yes |        3.91|Yes   |          3.55|No    |          6.28|1 to 4 aKIRs |
@@ -191,7 +191,7 @@ You should see the first six rows of the cytomegalovirus data frame, which look 
 
 Note that this is one of the example datasets that comes built-in when you install the `medicaldata` package, so it's already available to you without you having to read it in or download anything.
 
-To learn more about this dataset:
+To learn more about this dataset, type the following into the R console:
 
 ```{r}
 ?cytomegalovirus
@@ -231,7 +231,55 @@ Now try running `summary` on the whole dataframe all at once:
 ```{r}
 summary(cytomegalovirus)
 ```
-
+<pre>
+       ID             age             sex              race         diagnosis        
+ Min.   : 1.00   Min.   :29.00   Min.   :0.0000   Min.   :0.0000   Length:64         
+ 1st Qu.:16.75   1st Qu.:46.00   1st Qu.:0.0000   1st Qu.:1.0000   Class :character  
+ Median :32.50   Median :55.00   Median :1.0000   Median :1.0000   Mode  :character  
+ Mean   :32.50   Mean   :52.44   Mean   :0.5312   Mean   :0.9062                     
+ 3rd Qu.:48.25   3rd Qu.:61.00   3rd Qu.:1.0000   3rd Qu.:1.0000                     
+ Max.   :64.00   Max.   :67.00   Max.   :1.0000   Max.   :1.0000                     
+                                                                                     
+ diagnosis.type   time.to.transplant prior.radiation   prior.chemo    prior.transplant
+ Min.   :0.0000   Min.   :  1.84     Min.   :0.0000   Min.   :0.000   Min.   :0.0000  
+ 1st Qu.:0.0000   1st Qu.:  8.15     1st Qu.:0.0000   1st Qu.:1.000   1st Qu.:0.0000  
+ Median :1.0000   Median : 13.70     Median :0.0000   Median :2.000   Median :0.0000  
+ Mean   :0.5172   Mean   : 30.85     Mean   :0.1719   Mean   :2.188   Mean   :0.1875  
+ 3rd Qu.:1.0000   3rd Qu.: 33.28     3rd Qu.:0.0000   3rd Qu.:3.000   3rd Qu.:0.0000  
+ Max.   :1.0000   Max.   :173.83     Max.   :1.0000   Max.   :8.000   Max.   :1.0000  
+ NA's   :6        NA's   :1                                                           
+ recipient.cmv     donor.cmv        donor.sex      TNC.dose       CD34.dose     
+ Min.   :0.000   Min.   :0.0000   Min.   :0.0   Min.   : 2.06   Min.   : 2.040  
+ 1st Qu.:0.000   1st Qu.:0.0000   1st Qu.:0.0   1st Qu.: 6.89   1st Qu.: 4.165  
+ Median :1.000   Median :1.0000   Median :0.5   Median :10.48   Median : 5.840  
+ Mean   :0.625   Mean   :0.5938   Mean   :0.5   Mean   :10.44   Mean   : 5.546  
+ 3rd Qu.:1.000   3rd Qu.:1.0000   3rd Qu.:1.0   3rd Qu.:13.42   3rd Qu.: 6.990  
+ Max.   :1.000   Max.   :1.0000   Max.   :1.0   Max.   :21.02   Max.   :12.510  
+                                                                                
+    CD3.dose       CD8.dose        TBI.dose         C1/C2            aKIRs      
+ Min.   :1.08   Min.   :0.160   Min.   :200.0   Min.   :0.0000   Min.   :1.000  
+ 1st Qu.:3.08   1st Qu.:0.805   1st Qu.:200.0   1st Qu.:0.0000   1st Qu.:1.000  
+ Median :3.98   Median :1.200   Median :200.0   Median :1.0000   Median :2.000  
+ Mean   :4.30   Mean   :1.323   Mean   :287.5   Mean   :0.5156   Mean   :2.844  
+ 3rd Qu.:5.48   3rd Qu.:1.663   3rd Qu.:400.0   3rd Qu.:1.0000   3rd Qu.:4.250  
+ Max.   :8.18   Max.   :3.190   Max.   :400.0   Max.   :1.0000   Max.   :6.000  
+ NA's   :3      NA's   :12                                                      
+      cmv          time.to.cmv         agvhd        time.to.agvhd        cgvhd       
+ Min.   :0.0000   Min.   : 0.430   Min.   :0.0000   Min.   : 0.660   Min.   :0.0000  
+ 1st Qu.:0.0000   1st Qu.: 2.712   1st Qu.:0.0000   1st Qu.: 2.623   1st Qu.:0.0000  
+ Median :0.0000   Median : 5.030   Median :0.0000   Median : 5.800   Median :0.0000  
+ Mean   :0.4062   Mean   :13.206   Mean   :0.4062   Mean   :15.605   Mean   :0.4375  
+ 3rd Qu.:1.0000   3rd Qu.:16.012   3rd Qu.:1.0000   3rd Qu.:21.410   3rd Qu.:1.0000  
+ Max.   :1.0000   Max.   :84.470   Max.   :1.0000   Max.   :85.190   Max.   :1.0000  
+                                                                                     
+ time.to.cgvhd   
+ Min.   : 0.820  
+ 1st Qu.: 3.848  
+ Median : 6.735  
+ Mean   :10.304  
+ 3rd Qu.:11.307  
+ Max.   :65.120  
+</pre>
 ![Output table of summary statistics for all variables in cytomegalovirus.](media/summary_1.png)
 
 You should see a summary of each of the 26 variables in the data, with a set of summary statistics printed under each. 
@@ -326,7 +374,39 @@ summary(cytomegalovirus)
 ```
 
 ![Output table of summary statistics again, but now all the variables we changed to factors are represented as the counts for each level of that factor.](media/summary_2.png)
-
+<pre>
+       ID             age            sex                   race     diagnosis          diagnosis.type time.to.transplant
+ Min.   : 1.00   Min.   :29.00   Female:30   African-American: 6   Length:64          Lymphoid:28     Min.   :  1.84    
+ 1st Qu.:16.75   1st Qu.:46.00   Male  :34   White           :58   Class :character   Myeloid :30     1st Qu.:  8.15    
+ Median :32.50   Median :55.00                                     Mode  :character   NA's    : 6     Median : 13.70    
+ Mean   :32.50   Mean   :52.44                                                                        Mean   : 30.85    
+ 3rd Qu.:48.25   3rd Qu.:61.00                                                                        3rd Qu.: 33.28    
+ Max.   :64.00   Max.   :67.00                                                                        Max.   :173.83    
+                                                                                                      NA's   :1         
+ prior.radiation  prior.chemo    prior.transplant  recipient.cmv    donor.cmv   donor.sex     TNC.dose       CD34.dose     
+ No :53          Min.   :0.000   No :52           Negative:24    Negative:26   Male  :32   Min.   : 2.06   Min.   : 2.040  
+ Yes:11          1st Qu.:1.000   Yes:12           Positive:40    Positive:38   Female:32   1st Qu.: 6.89   1st Qu.: 4.165  
+                 Median :2.000                                                             Median :10.48   Median : 5.840  
+                 Mean   :2.188                                                             Mean   :10.44   Mean   : 5.546  
+                 3rd Qu.:3.000                                                             3rd Qu.:13.42   3rd Qu.: 6.990  
+                 Max.   :8.000                                                             Max.   :21.02   Max.   :12.510  
+                                                                                                                           
+    CD3.dose       CD8.dose        TBI.dose              C1/C2        aKIRs        cmv      time.to.cmv     agvhd   
+ Min.   :1.08   Min.   :0.160   Min.   :200.0   Heterozygous:31   Min.   :1.000   No :38   Min.   : 0.430   No :38  
+ 1st Qu.:3.08   1st Qu.:0.805   1st Qu.:200.0   Homozygous  :33   1st Qu.:1.000   Yes:26   1st Qu.: 2.712   Yes:26  
+ Median :3.98   Median :1.200   Median :200.0                     Median :2.000            Median : 5.030           
+ Mean   :4.30   Mean   :1.323   Mean   :287.5                     Mean   :2.844            Mean   :13.206           
+ 3rd Qu.:5.48   3rd Qu.:1.663   3rd Qu.:400.0                     3rd Qu.:4.250            3rd Qu.:16.012           
+ Max.   :8.18   Max.   :3.190   Max.   :400.0                     Max.   :6.000            Max.   :84.470           
+ NA's   :3      NA's   :12                                                                                          
+ time.to.agvhd    cgvhd    time.to.cgvhd   
+ Min.   : 0.660   No :36   Min.   : 0.820  
+ 1st Qu.: 2.623   Yes:28   1st Qu.: 3.848  
+ Median : 5.800            Median : 6.735  
+ Mean   :15.605            Mean   :10.304  
+ 3rd Qu.:21.410            3rd Qu.:11.307  
+ Max.   :85.190            Max.   :65.120  
+ </pre>
 ### Individual summary statistics
 
 What is the shortest time from diagnosis to transplant in the data? You can see in the help documentation for the data (`?cytomegalovirus`) that this variable is in months.
@@ -416,7 +496,7 @@ quantile(cytomegalovirus$time.to.transplant, probs = c(.1, .2, .3, .4), na.rm = 
 
 **Your turn!**
 
-Look in the `summary_stats_exercises.rmd` file to find your first coding challenge. 
+Look in the `summary_stats_exercises.Rmd` file to find your first coding challenge. You'll see it clearly marked with a line that reads `## CODING CHALLENGE 1`.
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -513,7 +593,7 @@ For beautifully printed crosstabs, see [the `tbl_cross` function in the `gtsumma
  
  **Your turn!**
 
- For your next coding challenge, return to RStudio and work until you see the next message telling you to stop and return to the module.
+ For your next coding challenge, return to RStudio and work from the line that reads `## CODING CHALLENGE 2` until you see the next message telling you to stop and return to the module.
 
 
 ## Presenting Summary Statistics in R
@@ -713,7 +793,7 @@ You can export your table in many different formats! For a list, see [the `gtsum
 
 </div>
 
-To save a table as a Word file, add the following two lines to the end of your table commands (you can change "my_table.docx" to be whatever you want the filename to be):
+To save a table as a Word file, add the following two lines to the end of your table commands (you can change "my_table.docx" to be whatever you want the filename to be).  Don't forget to put a pipe (`|>`) at the end of what used to be the last line of your code, so that these two lines are read as a continuation of your work.
 
 ```r
   as_flex_table() |> 
@@ -762,7 +842,7 @@ For a review of how to specify a path, see the [explanation of absolute and rela
 
 ### Coding Challenge 3
 
-For your final coding challenge, return to RStudio and follow the instructions there to create a Table 1 for a brand new data set, the [laryngoscope data](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Dataset%20Introduction.pdf). 
+For your final coding challenge, return to RStudio, look for `## CODING CHALLENGE 3` and follow the instructions there to create a Table 1 for a brand new data set, the [laryngoscope data](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Dataset%20Introduction.pdf). 
 
 Here's the published table you'll be trying to recreate:
 
