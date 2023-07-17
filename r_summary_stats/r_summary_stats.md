@@ -218,7 +218,7 @@ You can run it on an individual column, or on a whole dataframe.
 
 First try running `summary()` on just the `age` column:
 
-```{r}
+```
 summary(cytomegalovirus$age)
 ```
 
@@ -229,7 +229,7 @@ summary(cytomegalovirus$age)
 
 Now try running `summary` on the whole dataframe all at once:
 
-```{r}
+```
 summary(cytomegalovirus)
 ```
 <pre>
@@ -296,7 +296,7 @@ There is one column, diagnosis, that shows up as character.
 If you look at the help documentation for the data set (`?cytomegalovirus`), you'll see that should actually be a factor with 13 levels. 
 If it were a factor, we could get more useful summary statistics for it, too. 
 
-```{r}
+```
 # convert diagnosis column from character to factor
 cytomegalovirus$diagnosis <- as.factor(cytomegalovirus$diagnosis)
 
