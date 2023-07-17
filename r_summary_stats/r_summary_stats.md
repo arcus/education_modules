@@ -179,6 +179,7 @@ head(cytomegalovirus)
 ```
 
 You should see the first six rows of the cytomegalovirus data frame, which look like this:
+
 <!-- data-type="none" -->
 | ID| age|sex    |race             |diagnosis                    |diagnosis.type | time.to.transplant|prior.radiation | prior.chemo|prior.transplant | recipient.cmv|donor.cmv |donor.sex | TNC.dose| CD34.dose| CD3.dose| CD8.dose| TBI.dose|C1/C2        | aKIRs|cmv | time.to.cmv|agvhd | time.to.agvhd|cgvhd | time.to.cgvhd|aKIRs_groups |
 |--:|---:|:------|:----------------|:----------------------------|:--------------|------------------:|:---------------|-----------:|:----------------|-------------:|:---------|:---------|--------:|---------:|--------:|--------:|--------:|:------------|-----:|:---|-----------:|:-----|-------------:|:-----|-------------:|:------------|
