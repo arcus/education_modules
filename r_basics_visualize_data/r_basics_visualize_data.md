@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.2.0
+version: 1.2.1
 current_version_description: Added two new highlight boxes with additional clarification, and technical updates that do not affect content. 
 module_type: standard
 docs_version: 1.0.0
@@ -49,7 +49,7 @@ coding_required: true
 coding_level: basic
 coding_language: r
 sequence_name: r_basics
-previous_sequential_module: r_basics_transform_data
+previous_sequential_module: r_basics_introduction
 
 @sets_you_up_for
 
@@ -60,7 +60,6 @@ previous_sequential_module: r_basics_transform_data
 @depends_on_knowledge_available_in
 
 -r_basics_introduction
--r_basics_transform_data
 
 @end
 
