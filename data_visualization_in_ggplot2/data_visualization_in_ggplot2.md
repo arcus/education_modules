@@ -110,20 +110,11 @@ To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "
 
 </div>
 
-## Working through interactive coding examples in binder
+## Working through interactive coding examples 
 
-If you chose [Option 1 in Lesson Preparation](#lesson-preparation) hopefully your binder instance is done loading now! If not, be patient --- it can take as long as 20 or 30 minutes some times if the files haven't been used recently.
-
-When it is ready, you should see the RStudio application running in your browser. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "@r_code", and open the .rmd file in that subfolder.
+When you've [completed your setup](#lesson-preparation), you should go to the RStudio application running in your browser or on your computer. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "@r_code", and open the .rmd file in that subfolder.
 
 All of the example code in this module is in that "@r_code .rmd" file. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-Note that binder instances aren't stable. When you close the window or if it idles too long, it may erase all of your work. If you want to save any code or output you come up with while working in binder, you need to copy-paste the code to a new file to save it on your computer.
-
-</div>
 
 ## Scatterplots
 
