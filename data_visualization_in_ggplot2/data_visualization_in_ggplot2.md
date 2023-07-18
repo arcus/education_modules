@@ -5,6 +5,7 @@ email:    hartmanr1@chop.edu
 version: 1.4.0
 current_version_description: Updated with new metadata and to remove references to Binderhub
 module_type: standard
+docs_version: 1.0.0
 language: en
 narrator: UK English Female
 title: Data Visualization in ggplot2
@@ -13,7 +14,7 @@ long_description: You can use the ggplot2 library in R to make many different ki
 estimated_time_in_minutes: 60
 mode: Textbook
 
-r_code: data\_visualization\_in\_ggplot2
+r_file: data\_visualization\_in\_ggplot2
 
 @learning_objectives  
 
@@ -36,6 +37,13 @@ coding_language: r
 
 @end
 
+@depends_on_knowledge_available_in
+
+- r_basics_introduction
+- data_visualization_in_open_source_software
+
+@end
+
 @pre_reqs
 
 This module assumes some familiarity with principles of data visualizations as applied in the ggplot2 library. If you've used ggplot2 (or python's seaborn) a little already and are just looking to extend your skills, this module should be right for you. If you are brand new to ggplot2 and seaborn, start with the overview of [data visualizations in open source software](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization.md) first, and then come back here.
@@ -50,8 +58,6 @@ This module also assumes some basic familiarity with R, including
 If you are brand new to R (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) first.
 
 @end
-
-r_file: data\_visualization\_in\_ggplot2
 
 @version_history
 
@@ -112,9 +118,9 @@ To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "
 
 ## Working through interactive coding examples 
 
-When you've [completed your setup](#lesson-preparation), you should go to the RStudio application running in your browser or on your computer. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "@r_code", and open the .rmd file in that subfolder.
+When you've [completed your setup](#lesson-preparation), you should go to the RStudio application running in your browser or on your computer. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "@r_file", and open the .rmd file in that subfolder.
 
-All of the example code in this module is in that "@r_code .rmd" file. While you read through this module, we recommend you keep returning back to RStudio to try running the code for yourself. Even better, try changing the code and see what happens.
+All of the example code in this module is in that "@r_file .rmd" file. While you read through this module, we recommend you keep returning back to RStudio to try running the code for yourself. Even better, try changing the code and see what happens.
 
 ## Scatterplots
 
@@ -167,7 +173,7 @@ breast_cancer_data <- read_csv("https://archive.ics.uci.edu/ml/machine-learning-
 
 Run the above code yourself in Posit.cloud or on your own computer (see [lesson preparation](#lesson-preparation)).
 
-In the @r_code rmd file, the code at the top of the file includes these library commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
+In the @r_file rmd file, the code at the top of the file includes these library commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
 
 </div>
 
