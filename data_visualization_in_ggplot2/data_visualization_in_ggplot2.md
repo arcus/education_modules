@@ -16,6 +16,21 @@ mode: Textbook
 
 r_file: data\_visualization\_in\_ggplot2
 
+@pre_reqs
+
+This module assumes some familiarity with principles of data visualizations as applied in the ggplot2 library. If you've used ggplot2 (or python's seaborn) a little already and are just looking to extend your skills, this module should be right for you. If you are brand new to ggplot2 and seaborn, start with the overview of [data visualizations in open source software](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization.md) first, and then come back here.
+
+This module also assumes some basic familiarity with R, including
+
+* [installing and loading packages](https://r4ds.had.co.nz/data-visualisation.html#prerequisites-1)
+* [reading in data](https://r4ds.had.co.nz/data-import.html)
+* manipulating data frames, including [calculating new columns](https://r4ds.had.co.nz/transform.html#add-new-variables-with-mutate), and [pivoting from wide format to long](https://r4ds.had.co.nz/tidy-data.html#longer)
+* some [statistical tests](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md), especially linear regression
+
+If you are brand new to R (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) first.
+
+@end
+
 @learning_objectives  
 
 After completion of this module, learners will be able to:
@@ -41,21 +56,6 @@ coding_language: r
 
 - r_basics_introduction
 - data_visualization_in_open_source_software
-
-@end
-
-@pre_reqs
-
-This module assumes some familiarity with principles of data visualizations as applied in the ggplot2 library. If you've used ggplot2 (or python's seaborn) a little already and are just looking to extend your skills, this module should be right for you. If you are brand new to ggplot2 and seaborn, start with the overview of [data visualizations in open source software](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization.md) first, and then come back here.
-
-This module also assumes some basic familiarity with R, including
-
-* [installing and loading packages](https://r4ds.had.co.nz/data-visualisation.html#prerequisites-1)
-* [reading in data](https://r4ds.had.co.nz/data-import.html)
-* manipulating data frames, including [calculating new columns](https://r4ds.had.co.nz/transform.html#add-new-variables-with-mutate), and [pivoting from wide format to long](https://r4ds.had.co.nz/tidy-data.html#longer)
-* some [statistical tests](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md), especially linear regression
-
-If you are brand new to R (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) first.
 
 @end
 
