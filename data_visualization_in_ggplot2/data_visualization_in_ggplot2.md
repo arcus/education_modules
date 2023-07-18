@@ -114,7 +114,7 @@ To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "
 
 When you've [completed your setup](#lesson-preparation), you should go to the RStudio application running in your browser or on your computer. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "@r_code", and open the .rmd file in that subfolder.
 
-All of the example code in this module is in that "@r_code .rmd" file. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
+All of the example code in this module is in that "@r_code .rmd" file. While you read through this module, we recommend you keep returning back to RStudio to try running the code for yourself. Even better, try changing the code and see what happens.
 
 ## Scatterplots
 
