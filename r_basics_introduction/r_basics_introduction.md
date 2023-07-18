@@ -714,9 +714,10 @@ RStudio's Data Import cheat sheet helps with importing data from file types simi
 
 <div style = "align-items: center; display: flex;">
 <div style = "margin: 1rem; max-width: 60%; float:left;">
-*R for Data Science* is a free text that provides lots of helpful explanation and examples.  The [section on data import](https://r4ds.had.co.nz/data-import.html) goes into much more detail than we were able to do in this brief module.
+*R for Data Science* is a free text that provides lots of helpful explanation and examples.  The [section on data import](https://r4ds.had.co.nz/data-import.html) goes into much more detail than we were able to do in this brief module. <br/><br/>
 
-The entire text is available [in English](https://r4ds.had.co.nz/) and [in Spanish](https://es.r4ds.hadley.nz/).
+The entire text is available [in English](https://r4ds.had.co.nz/) and [in Spanish](https://es.r4ds.hadley.nz/). <br/><br/>
+
 There's also an [unofficial solutions guide](https://jrnold.github.io/r4ds-exercise-solutions/index.html) (only available in English) to allow you to check your work.
 </div>
 <div style = "margin: 1rem; max-width: 20%; float:left;">
