@@ -41,6 +41,23 @@ coding_level: basic
 coding_language: r
 sequence_name: r_basics
 
+@sets_you_up_for
+- r_missing_values
+- r_practice
+- r_reshape_long_wide
+- r_summary_stats
+- data_visualization_in_ggplot2
+
+@end
+
+@depends_on_knowledge_available_in
+- r_basics_introduction
+- r_basics_visualize_data
+
+@end
+
+
+
 @version_history
 
 Previous versions: 
@@ -59,7 +76,12 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 @overview
 
+<div class = "gratitude">
+<b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
+
 Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data workshop materials](https://skadauke.github.io/intro-to-r-for-clinicians-chop/).  We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.
+
+</div>
 
 ## Lesson Preparation
 
@@ -385,9 +407,9 @@ Parentheses and boolean logic
 
 What happens if you don't use parentheses to create smaller units in your boolean logic?  As long as you're using all OR or all AND, you won't run into problems.
 
-For example, `filter(covid_testing, clinic_name == "clinical lab" & results == negative & last_name == "frey")` works as you might think... it gives you back rows of testing results (if there are any) which meet all three conditions.
+For example, `filter(covid_testing, clinic_name == "clinical lab" & results == "negative" & last_name == "frey")` works as you might think... it gives you back rows of testing results (if there are any) which meet all three conditions.
 
-Similarly, `filter(covid_testing, clinic_name == "clinical lab" | results == negative | last_name == "frey")` will give you back rows where at least one of the conditions were met.
+Similarly, `filter(covid_testing, clinic_name == "clinical lab" | results == "negative" | last_name == "frey")` will give you back rows where at least one of the conditions were met.
 
 But when you **mix** AND and OR, or need to add a NOT to a combination of conditions, mistakes can happen when **your** interpretation of the logic differs from the **computer's** interpretation of the logic, based on the order of operations in boolean logic.  And often, a mix of AND, OR, and NOT is exactly what we want to do.  
 
