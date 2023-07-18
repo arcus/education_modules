@@ -38,6 +38,20 @@ coding_required: true
 coding_level: basic
 coding_language: r
 sequence_name: r_basics
+@sets_you_up_for
+
+- r_basics_transform_data
+- r_basics_visualize_data
+- r_missing_values
+- r_practice
+- r_reshape_lonog_wide
+- r_summary_stats
+- data_visualization_in_ggplot2
+
+@end
+@depends_on_knowledge_available_in
+
+@end
 
 @version_history
 
