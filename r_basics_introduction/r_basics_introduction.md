@@ -70,7 +70,12 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 @overview
 
+<div class = "gratitude">
+<b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
+
 Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data workshop materials](https://skadauke.github.io/intro-to-r-for-clinicians-chop/).  We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.
+
+</div>
 
 ## Terminology: The Three "R"s of This Module
 
