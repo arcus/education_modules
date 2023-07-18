@@ -391,9 +391,9 @@ This is rough guess of how long it might take a learner to work through the modu
 r_file: r\_logistic\_regression
 ```
 
-If this module uses binder to host an interactive rmd file, include the bare name of that file here, for example: `this\_r\_module` 
+If this module uses refers to a specific directory and file within the `education_r_environment` directory structure, you can include that directory / file name, without file extension, here, for example: `this\_r\_module`.
 
-Note that rmds in the education_r_environment repo should be saved in a directory that matches the file name, like `this_r_module/this_r_module.rmd`. When you use the [r\_lesson\_prep macro](#interactive-r), it will fill in the text from `r_file` to use as both the directory name and file name for this lesson's notebook. Use backslashes to escape underscores (e.g. `this\_r\_module` rather than `this_r_module`). 
+Note that rmds in the `education_r_environment` repo should be saved in a directory that matches the file name, like `this_r_module/this_r_module.rmd`. When you use the [r\_lesson\_prep macro](#interactive-r), it will fill in the text from `r_file` to use as both the directory name and file name for this lesson's notebook. Use backslashes to escape underscores (e.g. `this\_r\_module` rather than `this_r_module`). 
 
 ### `pre_reqs` 
 
@@ -850,7 +850,7 @@ The table of contents automatically generated from the headers should give learn
 This section will appear in any module that requires the learner to prepare in some way. For example:
 - the learner needs to download software (like git or bash)
 - the learner needs an account with an external resource (like Google Colab or AWS)
-- the learner will need to interact with an external resource (like a binderhub environment) 
+- the learner will need to interact with an external resource (like a Posit.cloud environment) 
 - the function of the module requires explanation, such as how sagemath cells work 
 
 ### Additional Resources
