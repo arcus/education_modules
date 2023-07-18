@@ -59,7 +59,7 @@ previous_sequential_module: r_basics_transform_data
 
 @depends_on_knowledge_available_in
 
--r_basics_intrduction
+-r_basics_introduction
 -r_basics_transform_data
 
 @end
