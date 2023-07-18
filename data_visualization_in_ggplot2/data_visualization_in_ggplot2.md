@@ -2,91 +2,21 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.3.2
-module_template_version: 3.0.0
+version: 1.4.0
+current_version_description: Updated with new metadata and to remove references to Binderhub
+module_type: standard
+docs_version: 1.0.0
 language: en
 narrator: UK English Female
 title: Data Visualization in ggplot2
 comment:  This module includes code and explanations for several popular data visualizations, using R's ggplot2 package. It also includes examples of how to modify ggplot2 plots to customize them for different uses (e.g. adhering to journal requirements for visualizations).
 long_description: You can use the ggplot2 library in R to make many different kinds of data visualizations (also called plots, or charts), including scatterplots, histograms, line plots, and trend lines. This module provides an example of each of these kinds of plots, including R code to make them using the ggplot2 library. It may be hard to follow if you are brand new to R, but it is appropriate for beginners with at least a small amount of R experience.
-estimated_time: 60 min
+estimated_time_in_minutes: 60
+mode: Textbook
 
-r_code: data\_visualization\_in\_ggplot2
+r_file: data\_visualization\_in\_ggplot2
 
-@learning_objectives  
-
-After completion of this module, learners will be able to:
-
-- use ggplot2 to create several common data visualizations
-- customize some elements of a plot, and know where to look to learn how to customize others
-
-@end
-
-@gifPreload
-<script>
-(function($) {
-
-  // Get the .gif images from the "data-alt".
-	var getGif = function() {
-		var gif = [];
-		$('img').each(function() {
-			var data = $(this).data('alt');
-			gif.push(data);
-		});
-		return gif;
-	}
-
-	var gif = getGif();
-
-	// Preload all the gif images.
-	var image = [];
-
-	$.each(gif, function(index) {
-		image[index]     = new Image();
-		image[index].src = gif[index];
-	});
-
-	// Change the image to .gif when clicked and vice versa.
-	$('figure').on('click', function() {
-
-		var $this   = $(this),
-				$index  = $this.index(),
-
-				$img    = $this.children('img'),
-				$imgSrc = $img.attr('src'),
-				$imgAlt = $img.attr('data-alt'),
-				$imgExt = $imgAlt.split('.');
-
-		if($imgExt[1] === 'gif') {
-			$img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
-		} else {
-			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-		}
-
-		// Add play class to help with the styling.
-		$this.toggleClass('play');
-
-	});
-
-})(jQuery);
-</script>
-@end
-
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-script: https://kit.fontawesome.com/83b2343bd4.js
-script: https://code.jquery.com/jquery-3.6.0.slim.min.js
--->
-# Data Visualization in ggplot2
-
-<div class = "overview">
-# Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
+@pre_reqs
 
 This module assumes some familiarity with principles of data visualizations as applied in the ggplot2 library. If you've used ggplot2 (or python's seaborn) a little already and are just looking to extend your skills, this module should be right for you. If you are brand new to ggplot2 and seaborn, start with the overview of [data visualizations in open source software](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization.md) first, and then come back here.
 
@@ -99,109 +29,55 @@ This module also assumes some basic familiarity with R, including
 
 If you are brand new to R (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) first.
 
-**Learning Objectives**
+@end
 
-@learning_objectives
+@learning_objectives  
 
-</div>
+After completion of this module, learners will be able to:
+
+- use ggplot2 to create several common data visualizations
+- customize some elements of a plot, and know where to look to learn how to customize others
+
+@end
+
+good_first_module: false
+data_task: data_visualization
+coding_required: true
+coding_level: basic
+coding_language: r
+
+@sets_you_up_for
+
+- r_practice
+
+@end
+
+@depends_on_knowledge_available_in
+
+- r_basics_introduction
+- data_visualization_in_open_source_software
+
+@end
+
+@version_history
+
+Previous versions: 
+
+* [1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1):  Add Posit instructions, versioning info, update highlight boxes
+* [1.2.4](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/31d00133960b7ae4e1ec899eaade52ba7c9b4938/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1):  Typo fixes, change R file to .Rmd, restructuring/renaming, update metadata
+* [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/840fdda7e3b80fcbfe65a0a6fb3d31799367b42f/data_visualization_in_ggplot2/data_visualization_ggplot2.md#1): Initial commit, refer to Binder
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
+-->
+# Data Visualization in ggplot2
+
+@overview
 
 ## Lesson Preparation
 
-Please do this step now, because we're going to ask you to follow along throughout and try out code as you go.  
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-Please read over all the options before you start performing any actions, to make sure you pick the right option for you.
-
-</div>
-
-<h3>Option 1: Work Anonymously in the Cloud</h3>
-
-This might work well for you if you either can't or don't want to install R and RStudio on your computer.  The benefit is that you don't have to install anything or have any account set up with an online cloud provider.  This solution is completely anonymous.  However, there are some drawbacks.  One negative is that this option requires a bit of waiting for your environment to come online.  Another is that your changes aren't saved anywhere, and your environment will time out and disappear forever.  
-
-**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
-
-  <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"></a> **← Click the "launch binder" button!**
-
-<div class = "important" style = "align-items: center; display: flex;">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen.](media/binder_loading.gif)<!--
-style = "border: 1px solid rgb(var(--color-highlight));"-->
-</div>
-</div>
-
-**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "data\_visualization\_in\_ggplot2".  That's the code for this module!
-
-![RStudio as shown in the cloud platform Binder.](media/binder_rstudio.png)<!--
-style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
-
-<h3>Option 2: Use Posit Cloud</h3>
-
-Posit (the company formerly known as RStudio) provides a multi-tiered cloud environment for using RStudio.  Unlike option 1 above, this option does require you to have an account with Posit Cloud, their online RStudio server.  The good news is that the base level of Posit Cloud is free!
-
-First, you'll need to [create a (free!) Posit cloud account](https://posit.cloud/plans).  
-
-Then, once you're logged in at [https://posit.cloud](https://posit.cloud), open the "education\_r\_environment" project at [https://posit.cloud/content/5273350](https://posit.cloud/content/5273350).  That will give you a temporary copy so you can run our code, but not make any changes to it.
-
-In the file area to the lower right, you'll see, among multiple choices, the folder called "data\_visualization\_in\_ggplot2".  That's the code for this module!
-
-Click on "Save a Permanent Copy" if you want to save any changes to your version of this code.
-
-![Posit menu bar with "Make Permanent Copy"](media/make_copy.png)<!--
-style = "border: 1px solid rgb(var(--color-highlight)); clear:both;"-->
-
-Now you can not only work in the cloud, but also save your work.
-
-<h3>Option 3: Work on Your Computer</h3>
-
-If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
-
-* In RStudio, open a new project (File, New Project)
-* Select Version Control, then Git
-* Drop this link into the "Repository URL": https://github.com/arcus/education_r_environment
-* Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
-* Click to select the "Open in new session" checkbox
-* Click "Create Project"
-* In the file area to the lower right, you'll see, among multiple choices, the folder called "@r_code".  That's the code for this module!
-
-**Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
-
-<div style="display:none">
-
-@gifPreload
-
-</div>
-
-<figure>
-
-  <img src="https://github.com/arcus/education_modules/blob/main/data_visualization_in_ggplot2/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/main/data_visualization_in_ggplot2/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
-
-<figcaption style = "font-size: 1em;">
-
-Click on the image to play the demo of the above steps!
-
-</figcaption>
-
-</figure>
-
-If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime:
-
-* Open your project.
-* In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
-
-![Git button menu with choices to pull and push branches.](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->  
-![Tools menu with choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
-
-<div class = "warning">
-<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
-
-If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_example` exercise files, you might want to save your version of `example_exercises.Rmd` to `my_example_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `example_exercises.Rmd` while holding on to your changes in the new file.
-
-</div>
-
+@lesson_prep_r
 
 ## Making plots in ggplot2
 
@@ -210,7 +86,7 @@ This module is a practical, hands-on guide to making data visualizations in R's 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-If you are using the [binder instance we prepared](#lesson-preparation), then all of the R packages you need will already be installed and you're all set.
+If you are using [Posit.cloud](#lesson-preparation), then all of the R packages you need will already be installed and you're all set.
 
 If you are using R on your own machine, though, then you may need to run the following code in R before continuing with the code examples here:
 
@@ -240,20 +116,11 @@ To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "
 
 </div>
 
-## Working through interactive coding examples in binder
+## Working through interactive coding examples 
 
-If you chose [Option 1 in Lesson Preparation](#lesson-preparation) hopefully your binder instance is done loading now! If not, be patient --- it can take as long as 20 or 30 minutes some times if the files haven't been used recently.
+When you've [completed your setup](#lesson-preparation), you should go to the RStudio application running in your browser or on your computer. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "@r_file", and open the .rmd file in that subfolder.
 
-When it is ready, you should see the RStudio application running in your browser. In the Files pane in the lower right corner, there is a list of subfolders available. Open the one called "@r_code", and open the .rmd file in that subfolder.
-
-All of the example code in this module is in that "@r_code .rmd" file. While you read through this module, we recommend you keep returning back to the binder instance to try running the code for yourself. Even better, try changing the code and see what happens.
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-Note that binder instances aren't stable. When you close the window or if it idles too long, it may erase all of your work. If you want to save any code or output you come up with while working in binder, you need to copy-paste the code to a new file to save it on your computer.
-
-</div>
+All of the example code in this module is in that "@r_file .rmd" file. While you read through this module, we recommend you keep returning back to RStudio to try running the code for yourself. Even better, try changing the code and see what happens.
 
 ## Scatterplots
 
@@ -304,9 +171,9 @@ breast_cancer_data <- read_csv("https://archive.ics.uci.edu/ml/machine-learning-
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-Run the above code yourself in binder (see [lesson preparation](#lesson-preparation) for links to start the binder instance) or on your own computer.
+Run the above code yourself in Posit.cloud or on your own computer (see [lesson preparation](#lesson-preparation)).
 
-In the @r_code rmd file, the code at the top of the file includes these library commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
+In the @r_file rmd file, the code at the top of the file includes these library commands and the command to read the csv file for the data. Before you will be able to generate the plots in the rest of the module, you should run those lines of code.
 
 </div>
 
@@ -1061,16 +928,4 @@ To learn how to make plots in python using seaborn, see [data visualization in s
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Data+visualizations+in+ggplot2%22&version=1.3.2)!
+@feedback
