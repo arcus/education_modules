@@ -848,6 +848,7 @@ The table of contents automatically generated from the headers should give learn
 #### Lesson Preparation
 
 This section will appear in any module that requires the learner to prepare in some way. For example:
+
 - the learner needs to download software (like git or bash)
 - the learner needs an account with an external resource (like Google Colab or AWS)
 - the learner will need to interact with an external resource (like a Posit.cloud environment) 
