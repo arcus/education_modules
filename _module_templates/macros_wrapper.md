@@ -23,24 +23,24 @@ comment:  This is placeholder module to save macros used in other modules.
 
 @1 
 
-<ul class="fa-ul" id="id_@9"></ul>
-<script modify="false">
-  let checks = [@2, @4, @6];
-  let data = ['<b>Expert Authors / Well-Vetted: </b>'+`@3`, '<b>Maintained: </b>'+`@5`, '<b>Stable Support: </b>'+`@7`];
-  
-  let list = document.getElementById("id_@9");
-  var fragList = document.createDocumentFragment();
+<script run-once modify="false" style="display:block">
 
-  for (let i = 0; i < data.length; i++) {
-    var li = document.createElement('li');
-    if(checks[i]){
-      li.innerHTML = '<span class="fa-li"><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i></span>'+data[i]
+let checks = [@2, @4, @6];
+
+let list = ""
+
+const data = ['<b>Expert Authors / Well-Vetted: </b>'+`@3`, '<b>Maintained: </b>'+`@5`, '<b>Stable Support: </b>'+`@7`]
+
+for (let i = 0; i < data.length; i++) {
+  
+  if(checks[i]){
+      list += '<span class="fa-li"><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i></span>' + data[i] + '</li>'
     } else {
-      li.innerHTML = '<span class="fa-li"><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i></span>'+data[i]
+      list += '<span class="fa-li"><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i></span>' + data[i] + '</li>'
     }
-    fragList.appendChild(li);
-  }
-  list.appendChild(fragList);
+};
+
+"HTML: <ul>" + list + "</ul>"
 </script>
 <b>Known issues with accessibility and/or inclusion:</b> @8
 @end
@@ -55,7 +55,7 @@ print_resource3: @print_list(@resource3_name,@resource3_description,@resource3_w
 
 <h3>This module will direct you to external educational content.</h3>
 
-Many topics have great content alerady available online! For this module, here's what to expect:
+Many topics have great content already available online! For this module, here's what to expect:
 
 @module_structure
 
@@ -77,3 +77,4 @@ We also evaluate each resource based on how well it meets our criteria.
 @print_resource2
 
 @print_resource3
+
