@@ -14,7 +14,6 @@ Reviewer: {your name}
 qa_template_version: 2.0.0
 Name of Module: {take from the title of the main markdown in the PR}
 Current Liascript URL: {makes it easy for reviewers and authors to look at content as learners will}
-Current Version of Module (use the latest commit value):  {click on the PR and get the clickable short link to the latest commit -- see [quality_assurance_guide.md](quality_assurance_guide.md)}
 
 # Checklist Reports:
 
@@ -109,6 +108,5 @@ List here any internal references (stated or hyperlinked) that work now because 
 * [ ] {description or quote, line ___ in file ____}
 
 ## Just Before Approval
-* [ ] Once there are no more commits to be made, get the newest commit value for the PR and update the commit value ("Current Version of Module:") at the top of this document.
 
 Congratulations! You can now approve the PR, merge to main, and close (not delete) this issue.
