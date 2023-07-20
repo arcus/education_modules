@@ -23,7 +23,7 @@ Current Liascript URL: {makes it easy for reviewers and authors to look at conte
 * [ ] Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
 
 ## Module Organization
-* [ ] YAML is at the very top of the file
+* [ ] Front matter is at the very top of the file
   * [ ] author name
   * [ ] email
   * [ ] module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](versioning_guidelines.md)
@@ -36,7 +36,7 @@ Current Liascript URL: {makes it easy for reviewers and authors to look at conte
   * [ ] learning_objectives appropriately filled out
   * [ ] version_history contains 1-3 past versions with bulleted links to commit-specific documents, unless this is an initial version of a module, in which case version_history can be empty.
   * [ ] imports macros (currently this line should read `import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md`)
-* [ ] Title is the first line after the end of the YAML
+* [ ] Title is the first line after the end of the front matter
   * [ ] only level-1 header in the entire document.
 * [ ] Overview section immediately following Title, using the `@overview` macro
 * [ ] All sections following Overview have content (no pages with just header and no additional text / media material).
