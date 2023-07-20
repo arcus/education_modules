@@ -40,15 +40,15 @@ Previous versions:
 - [x.x.x](link): that version's current version description
 @end
 
-resource1_name: Thing
-resource1_description: Great stuff
-resource1_wellvetted: true
-resource1_wellvetted_text: So good
-resource1_maintained: false
-resource1_maintained_text: Iffy at best
-resource1_stablesupport: true
-resource1_stablesupport_text: Very solid
-resource1_a11y_issues: Doesn't exist, so heads up if that's a deal breaker for you.
+resource1_name: 
+resource1_description: 
+resource1_wellvetted: 
+resource1_wellvetted_text: 
+resource1_maintained: 
+resource1_maintained_text: 
+resource1_stablesupport: 
+resource1_stablesupport_text: 
+resource1_a11y_issues: 
 
 
 @module_structure
@@ -57,51 +57,26 @@ resource1_a11y_issues: Doesn't exist, so heads up if that's a deal breaker for y
 3. Part 3
 @end
 
-
-
-@print_list
-<h4>@0</h4> 
-
-@1 
-
-<ul class="fa-ul" id="id_@9"></ul>
-<script modify="false">
-  let checks = [@2, @4, @6];
-  let data = ['<b>Expert Authors / Well-Vetted: </b>'+`@3`, '<b>Maintained: </b>'+`@5`, '<b>Stable Support: </b>'+`@7`];
-  
-  let list = document.getElementById("id_@9");
-  var fragList = document.createDocumentFragment();
-
-  for (let i = 0; i < data.length; i++) {
-    var li = document.createElement('li');
-    if(checks[i]){
-      li.innerHTML = '<span class="fa-li"><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i></span>'+data[i]
-    } else {
-      li.innerHTML = '<span class="fa-li"><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i></span>'+data[i]
-    }
-    fragList.appendChild(li);
-  }
-  list.appendChild(fragList);
-</script>
-<b>Known issues with accessibility and/or inclusion:</b> @8
-@end
-
-print_resource1: @print_list(@resource1_name,@resource1_description,@resource1_wellvetted,@resource1_wellvetted_text,@resource1_maintained,@resource1_maintained_text,@resource1_stablesupport,@resource1_stablesupport_text,@resource1_a11y_issues,@uid)
-
-
-
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/wrapper_macro_fix/_module_templates/macros_wrapper.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md
 -->
 
 # Module Title
 
+@overview
+
 ## Lesson Preparation
 
+@lesson_prep_wrapper
 
 @print_resource1
 
+@print_resource2
+
+@print_resource3
 
 ## Additional Resources
 
+## Feedback
 
+@feedback
