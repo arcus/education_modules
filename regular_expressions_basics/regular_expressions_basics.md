@@ -45,7 +45,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 ## Regular Expression Refresher
 
-As a reminder, the word *regular* (like *regulate*) comes from the Latin root for "rule": *regula*.  A **regular expression** (also known as "regex") is a specific way to **express** a **rule** for a pattern, such as "three or more upper case letters followed by exactly two digits, the first of which cannot be a 0, followed by a decimal point and two more digits".  Regular expressions can look like an odd combination of characters.  
+As a reminder, the word *regular* (like *regulate*) comes from the Latin root for "rule": *regula*.  A **regular expression** (also known as "regex") is a specific way to **express** a **rule** for a pattern, such as "three or more upper case letters followed by exactly two digits, the first of which cannot be a 0, followed by a decimal point and two more digits."  Regular expressions can look like an odd combination of characters.  
 
 One example? `[A-Z]{3,}[1-9]\d\.\d{2}` represents the "three or more upper case letters" pattern described above.
 
@@ -94,7 +94,7 @@ The following **metacharacters** are symbols that have special meaning in regex.
 
 `. ^ $ * + ? { } [ ] \ | ( ) - /`
 
-If you want to refer to one of these special characters in regex (for example, if your pattern includes square brackets or parentheses or periods), you can add a backslash (` \ `) just before the symbol. The backslash in regex does a couple of different things, but here, the use of a backslash indicates "I mean this character literally, I'm not using this character's special powers", and this is called **escaping** or an **escape sequence**.
+If you want to refer to one of these special characters in regex (for example, if your pattern includes square brackets or parentheses or periods), you can add a backslash (` \ `) just before the symbol. The backslash in regex does a couple of different things, but here, the use of a backslash indicates "I mean this character literally, I'm not using this character's special powers." This is called **escaping** or an **escape sequence**.
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -116,7 +116,7 @@ In most uses of regex, if you're not sure if a (non-alphanumeric) character has 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-Importantly, don't try to use the backslash this way in front of letters or numbers. If you add `\d` to your pattern, for example, that doesn't mean "the literal letter d", it means "any digit 0-9".  If you add `\7` to your regular expression, you'll get an error -- `\7` is bad syntax for regular expressions. 
+Don't try to use the backslash this way in front of letters or numbers. If you add `\d` to your pattern, for example, that doesn't mean "the literal letter d", it means "any digit 0-9".  If you add `\7` to your regular expression, you'll get an error -- `\7` is bad syntax for regular expressions. 
 
 We'll talk about other uses of backslash in an upcoming section.
 
@@ -169,7 +169,7 @@ Digits and some other groups are so common they are predefined with special **me
 
 * Any single digit (0-9) is represented `\d`.  
 * Any whitespace character like space or tab? That's `\s`.
-* Any character at all (a wildcard)? `.`
+* Any character at all (called a **wildcard**)? `.`
 
 You can combine these metasquences with what we've already learned.  For example, if the pattern we're trying to define includes a single digit, the letter Z, some other character that could be anything, and the letter J, we could put that in a regular expression as `\dZ.J`.
 
