@@ -50,14 +50,14 @@ For example, one pattern rule might be for the URL of a root web page, like http
 
 Other rules might describe the pattern of a valid credit card number, or a national identity number, or a postal address.  
 
-As humans, we are very good at identifying patterns and realizing instantly that a certain text "looks like an email address" or "looks like a phone number".  Quantifying patterns and telling the computer what a pattern "looks like" is what regular expressions are all about.
+As humans, we are very good at identifying patterns and realizing instantly that a certain text "looks like an email address" or "looks like a phone number."  Quantifying patterns and telling the computer what a pattern "looks like" is what regular expressions are all about.
 
 <h3>Patterns in Biomedical Research</h3>
 
 In biomedical research, patterns emerge in a number of ways:
 
 * File names might follow a pattern that include a subject identifier and date stamp, which can be useful in filtering out only file names from a certain time period or for a certain subject.
-* Clinical notes in an electronic health record might contain text like " R/O ", " RO:", " r/o " which mean "rule out" or "ruled out", which are important to find in order to discover differential diagnosis clues.
+* Clinical notes in an electronic health record might represent the phrases "rule out" or "ruled out" as `R/O`, `RO:`,  or `r/o`. It is important to find all of these in order to discover differential diagnosis clues.
 * mRNA includes patterns like start and stop codons.
 * A lab notebook that you want to clean up before you publish it to a wide audience might contain protected health information, including:
 
@@ -76,12 +76,14 @@ You may think of many more patterns for your biomedical research.  Patterns can 
 There are two very common reasons you as a researcher might want to use regular expressions (also referred to as "regex", which you can pronounce either with "reg" rhyming with "beg" or "reg" rhyming with "wedge").
 
 **Reason 1: Searching for the needle in the haystack**
+---
 
 You're writing code or looking through data and want to find, or find and replace, something that matches a predictable pattern.  For example, maybe you have used hexidecimal color specifications such as `#ccc` or `#FF1451` in your data visualizations in R, and you want to find all of those, because you want to add comments in your code disclosing the color in English so that your code is more understandable. 
 
 This goes beyond the typical search you would use in Word or other programs, because you want to find multiple values that start with a hash mark (#) and are immediately followed by three or six digits ranging from 0-9 and A-F (or a-f).  
 
 **Reason 2: Extracting useful sub-strings**
+---
 
 You're analyzing some text values and need to change them, mine them for parts, or clean them up. For example, in your data, every time you see an identifier that looks like `[some numbers]_[more numbers]` you want to extract the first set of numbers, which represents a patient identifier, and the second set of numbers, which represents a sample number, and create new data columns with that information, which will allow you to work with just the patient identifier or just the sample number more easily.
 
