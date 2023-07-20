@@ -34,9 +34,9 @@ const data = ['<b>Expert Authors / Well-Vetted: </b>'+`@3`, '<b>Maintained: </b>
 for (let i = 0; i < data.length; i++) {
   
   if(checks[i]){
-      list += '<span class="fa-li"><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i></span>' + data[i] + '</li>'
+      list += '<li><span class="fa-li"><i class="fa-solid fa-circle-check" style="color: #158d0c;" title="Checked"></i></span>' + data[i] + '</li>'
     } else {
-      list += '<span class="fa-li"><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i></span>' + data[i] + '</li>'
+      list += '<li><span class="fa-li"><i class="fa-solid fa-circle-minus" style="color: #f0bc00;" title="Unchecked"></i></span>' + data[i] + '</li>'
     }
 };
 
