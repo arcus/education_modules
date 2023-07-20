@@ -40,7 +40,7 @@ for (let i = 0; i < data.length; i++) {
     }
 };
 
-"HTML: <ul>" + list + "</ul>"
+"HTML: <ul class='fa-ul'>" + list + "</ul>"
 </script>
 <b>Known issues with accessibility and/or inclusion:</b> @8
 @end
