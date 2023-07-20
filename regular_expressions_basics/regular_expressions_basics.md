@@ -47,7 +47,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 As a reminder, the word *regular* (like *regulate*) comes from the Latin root for "rule": *regula*.  A **regular expression** (also known as "regex") is a specific way to **express** a **rule** for a pattern, such as "three or more upper case letters followed by exactly two digits, the first of which cannot be a 0, followed by a decimal point and two more digits."  Regular expressions can look like an odd combination of characters.  
 
-One example? `[A-Z]{3,}[1-9]\d\.\d{2}` represents the "three or more upper case letters" pattern described above.
+By the end of this module you will be able to express this pattern as the regular expression `[A-Z]{3,}[1-9]\d\.\d{2}`.
 
 Regular expressions are useful to biomedical researchers because they can allow you to find, replace, or extract text that matches patterns you define.  These text patterns might appear in your data (for example, clinical notes), in metadata (such as column names), in your data analysis scripts (for example, where you define hexadecimal codes for color), and in file names.  
 
@@ -162,49 +162,90 @@ Often, we want to indicate that a group of characters are all equally valid in a
 
 There are several ways to indicate groups of possible characters, and we'll go over the most common ones below.
 
-Metasequences
-------  
+Lists
+-----
 
-Digits and some other groups are so common they are predefined with special **metasequences**.  
-
-* Any single digit (0-9) is represented `\d`.  
-* Any whitespace character like space or tab? That's `\s`.
-* Any character at all (called a **wildcard**)? `.`
-
-You can combine these metasquences with what we've already learned.  For example, if the pattern we're trying to define includes a single digit, the letter Z, some other character that could be anything, and the letter J, we could put that in a regular expression as `\dZ.J`.
-
-Custom Character Sets
-------
-
-Other groups of characters can be defined by square brackets.  You can type each member of the character set between square brackets.
+Groups of characters can be added to a custom **list**.  Each member of the custom character set is added to a list, with no separators, that appears between square brackets.
 
 * One of the letters `Y` or `N` could be written as `[YN]` (or `[NY]`)
 * Either the number 0 or the number 1? `[01]` (or `[10]`)
 
-As we've done before, you can combine these.  For example, if the pattern we're describing begins with a single digit, then a hyphen, then either a "Y" or "N", we would write that in regex as `\d\-[YN]`.
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Don't include separators in your list!  `[Y,N]` is not the same as `[YN]`.  The first is a token that represents "either `Y`, or a comma (`,`), or `N`", and the second is a token that represents "either `Y` or `N`".
+
+</div>
+
+You can combine list tokens with other tokens.  For example, if the pattern we're describing begins with a single "A", then a hyphen, then either a "Y" or "N", we would write that in regex as `A\-[YN]`.
+
+Metasequences
+------  
+
+The list of all digits and some other lists of characters are so commonly used they are predefined with special **metasequences**.  Writing `[0123456789]` is valid, but there's a shorter way to express it: `\d`.
+
+* Any single digit (0, 1, 2,... 8, 9) is represented `\d`.  
+* Any whitespace character like space or tab? That's `\s`.
+* Any character at all (called a **wildcard**)? `.`
+
+You can combine these metasquence tokens with what we've already learned.  For example, if the pattern we're trying to define includes a single digit, the letter Z, some other character that could be anything, and the letter J, we could put that in a regular expression as `\dZ.J`.
 
 Ranges
 -----
 
-You can also use square brackets to define a range of [Unicode characters](https://en.wikipedia.org/wiki/List_of_Unicode_characters), by giving the first character in the set, a hyphen, and the last character in the set.  For example, the lowercase letters appear in alphabetical order in Unicode, so we could indicate "the letter `c`, the letter `h`, and all the letters in between" by writing `[c-h]`.
+You can also use square brackets to define a **range** of characters, giving a beginning character followed by a dash and then an ending character.  Let's start with numbers, to give you an idea of how ranges work.
 
-You can even put two or more ranges in square brackets, right next to one another.
+* Any digit 0-7 can appear, but not other digits? `[0-7]` is the token that gives that range.  It's a lot shorter than typing `[01234567]`!
 
-* Any digit 0-7 can appear, but not other digits? `[0-7]`
-* Any digit 0-3 or 7-9? `[0-37-9]` represents the two ranges.  Don't put a space between the ranges, because the space will be interpreted as "or, a space might appear here, too"!
+You can add a range and also list individual characters, being careful not to add separators.
 
-You can combine listing out individual characters and ranges.  For example, let's say your subject identifiers, depending on where they originated from, could begin with "A" or "C" or any digit 1-4.  You could define the pattern for the first character of your subject identifier as `[AC1-4]` or `[CA1-4]` or `[1-4CA]`, etc.
+* Let's say your subject identifiers, depending on where they originated from, could begin with "A" or "C" or any digit 1-4.  You could define the pattern for the first character of your subject identifier as `[AC1-4]` or `[CA1-4]` or `[1-4CA]`, etc.
+* Maybe a character will either be 0, 2, 5, 6, 7, or 8.  You could include the two individual numbers 0 and 2 and the range 5-8 like this: `[025-8]`. 
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+Remember that a token represents a **single character**, so it might be helpful to read something like `[025-8]` aloud one character at a time: "zero or two or five through eight", instead of saying to yourself "twenty five through eight," which is confusing!
+
+</div>
+
+You can even put two or more ranges in square brackets, right next to one another.  Again, don't put a separator between your two ranges.
+
+* Any digit 0-3 or 7-9? The token `[0-37-9]` represents a single character that falls into one of the two possible ranges 0-3 or 7-9.
+
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+Characters, whether they are numbers, letters, other symbols, or whitespace, are represented in [Unicode](https://en.wikipedia.org/wiki/List_of_Unicode_characters). Unicode includes over 100,000 characters, each of which has a hexidecimal (base 16) code associated with it. When we give a range in a regular expression, we're actually giving the character range in the underlying Unicode.  For example, in the range `[1-4]`, we're actually referring to the Unicode characters U+0031 (`1`) through U+0034 (`4`) and saying that any Unicode character between (and including) U+0031 and U+0034 is acceptable.
+
+Unicode tends to keep sets of character "in order", abiding by previous conventions.  For example, the digits appear in order from `0` (U+0030) to `9` (U+0039).  Letters also appear in Unicode in their typical order.   `A` (U+0041) is followed by `B` (U+0042), and so on, until `Z` (U+005A).  
+
+The ordering of things that we don't have a specific order for, like punctuation, or sets themselves, can feel a little arbitrary, and it can be helpful to look up [Unicode characters](https://en.wikipedia.org/wiki/List_of_Unicode_characters) to see what order things are in.  For example, between the digit `9` and the letter `A`, the following characters appear in Unicode:
+
+| Symbol  | Unicode value |
+| :--------- | :--------- |
+| Colon (`:`)   | U+003A |
+| Semicolon (`;`)   | U+003B |
+| Less-than sign (`<`)   | U+003C |
+| Equal sign (`=`) | U+003D |
+| Greater-than sign (`>`)   | U+003E |
+| Question mark (`?`)  | U+003F |
+| At sign (`@`)  | U+0040 |
+
+
+</div>
 
 
 Letters
 ----
 
-Letters are tricky because they can have two cases and also have various diacritics, so let's take a closer look:
+Letters are tricky because they can have two cases and also have various diacritics.  Each of these sets appears in a different place in Unicode. Let's take a closer look:
 
-* Any uppercase (unaccented) letter could appear in the pattern?  `[A-Z]` indicates the Latin letters A to Z. 
-* Any lower case Latin letter? `[a-z]`.  
-* Upper and lower? You can do two ranges: `[A-Za-z]`.
-* `[A-Za-zÀ-ÿ]` will additionally give you [accented letters and letters with circumflex, umlaut, etc.](https://en.wikipedia.org/wiki/List_of_Unicode_characters#Latin_script:~:text=%23-,Latin%20Extended%2DA,-%5Bedit%5D) that belong to European languages.  However, this range also happens to span the unicode range that includes some math characters, namely `×` and `÷`.
+* Any uppercase (unaccented) letter could appear in the pattern?  `[A-Z]` indicates the Latin letters A to Z. `[A-F]` indicates just the first six letters.
+* Any lower case Latin letter? `[a-z]`.  Only a subset? `[c-h]` is the range that is a shorter way of writing `[cdefgh]`.
+* Upper and lower? You can do two ranges: `[A-Za-z]` or `[A-Fa-f]`.
+* `[A-Za-zÀ-ÿ]` will additionally give you [accented letters and letters with circumflex, umlaut, etc.](https://en.wikipedia.org/wiki/List_of_Unicode_characters#Latin_script:~:text=%23-,Latin%20Extended%2DA,-%5Bedit%5D) that belong to European languages.  However, this range also happens to span the Unicode range that includes some math characters, namely `×` and `÷`.
 * `[A-Za-zÀ-ÖØ-öø-ÿ]` gives you all the European letters and excludes `×`, and `÷`.
 * Need to add [Cyrillic](https://en.wikipedia.org/wiki/List_of_Unicode_characters#Cyrillic)? That's this range: `[Ѐ-ӿ]`
 * There are other language-specific ranges to consider, and you can find the starting and ending symbols to put as the range by looking at a [list of unicode characters](https://en.wikipedia.org/wiki/List_of_Unicode_characters).
@@ -213,11 +254,11 @@ Letters are tricky because they can have two cases and also have various diacrit
 
 <div class = "options">
 <b style="color: rgb(var(--color-highlight));">Another option</b><br>
-Another way to indicate a range of Unicode characters is to use the Unicode number of the symbol.  For example, the [Hebrew](https://en.wikipedia.org/wiki/List_of_Unicode_characters#:~:text=Unicode%20version%206.0-,Hebrew,-%5Bedit%5D) letter א (Aleph, the first l etter of the hebrew alphabet) appears in Unicode at the position 05D0.  The letter ת (Tav, the last letter) is at position 05EA.
+Another way to indicate a range of Unicode characters is to use the Unicode number of the symbol.  For example, the [Hebrew](https://en.wikipedia.org/wiki/List_of_Unicode_characters#:~:text=Unicode%20version%206.0-,Hebrew,-%5Bedit%5D) letter א (Aleph, the first letter of the hebrew alphabet) appears in Unicode as U+05D0.  The letter ת (Tav, the last letter) is at U+05EA.
 
 You might have an English-only keyboard and only know how to add Hebrew letters by copy-paste.  That's a pain, especially if you're going to refer to these letters a few times.  Also, you might not be sure what order to put the range in, using the actual letters.  After all, regex is typically written left to right, but Hebrew is written right to left. Is the correct form `[ת-א]` or `[א-ת]`?  Tricky! 
 
-In cases like this, where you can't easily type a symbol, you may instead want to indicate Unicode positions using `\x` followed by the four digit position (depending on the regex parser, you might add the number with or without enclosing curly braces).  Therefore, if you wanted the alphabet starting with א , you could use `[א-ת]`(because Hebrew is written right to left, this range is written in that direction) or `[\x{05D0}-\x{05EA}]`.  Unicode ranges are written left to right, regardless of the underlying symbols.
+In cases like this, where you can't easily type a symbol, you may instead want to indicate Unicode positions using `\x` followed by the four digit Unicode position (depending on the regex parser, you might add the number with or without enclosing curly braces).  Therefore, if you wanted the alphabet starting with א , you could use `[א-ת]`(because Hebrew is written right to left, this range is written in that direction) or `[\x{05D0}-\x{05EA}]`.  Unicode ranges are written left to right, regardless of the underlying symbols.
 
 Try the correct [right-to-left range notation of `[א-ת]`](https://regex101.com/r/9B6mzl), the incorrect [left-to-right range notation of `[ת-א]`](https://regex101.com/r/aODZog), and the correct [unicode range notation of `[\x{05D0}-\x{05EA}]`](https://regex101.com/r/z8Ygap/1) in Regex 101!
 
@@ -225,13 +266,13 @@ Try the correct [right-to-left range notation of `[א-ת]`](https://regex101.com
 
 
 
-### Quiz 2: Special Groups
+### Quiz 2: Metasequences, Lists, and Ranges
 
 This the regular expression that represents the valid characters that can appear in the first part of an email address (the part before the `@`):
 
 `[A-Za-z\d\-\._]`
 
-**According to this regular expression** (which for simplicity's sake isn't reflective of all of the rules for email addresses in reality), which of the following characters can appear in the first part of an email address?  Chek all that apply.
+**According to this regular expression** (which for simplicity's sake isn't reflective of all of the rules for email addresses in reality), which of the following characters can appear in the first part of an email address?  Check all that apply.
 
 [[ ]] `\ `
 [[X]] `9`
@@ -273,7 +314,7 @@ Regular expressions allow you to quantify characters in a pattern.  You do this 
 * An optional token, which might not appear at all or might appear at most once can be represented with a `?` quantifier.  For example, a phone number pattern that might begin with the number 1 or might omit it could begin with `1?`
 * An optional token that could repeat zero, one, or multiple times can be quantified with an asterisk (`*`).  For example, a phone number can have an optional extension that has one, two, or more digits.  That could be represented as `\d*`.
 * At least one character, maybe more? That's `+`. So, a first name has to have at least one letter, but could have more: `[A-Za-z]+`
-* A specific range, like one to three, but not less than one or more than three? That's `{1,3}`.  For example, maybe you know that in your health system, medical record numbers could have 6, 7, or 8 digits: `\d{6,8}`
+* A specific range, like one to three, but not less than one or more than three? That's `{1,3}`.  For example, maybe you know that in your health system, medical record numbers could have 9, 10, or 11 digits: `\d{9,11}`
 * An open ended range, such as "two or more" can be written by omitting the upper boundary: `{2,}`.
 
 <div class = "care">
