@@ -28,7 +28,6 @@ After completion of this module, learners will be able to:
 - Define and differentiate "long data" and "wide data"
 - Use tidyr and dplyr tools to reshape data effectively
 
-
 @end
 
 good_first_module: false
@@ -61,6 +60,7 @@ Previous versions:
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
 -->
+
 # Reshaping Data in R: Long and Wide Data
 
 @overview
@@ -352,7 +352,10 @@ Please read over the first 70 lines of code and execute that code in the R Markd
 * Looking at the final long data
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Please open your RStudio environment now and go through the first 70 lines of code of `reshape_data_exercises.Rmd`.  We're using that code to help instruct you, too -- it's not just an example, it has some useful information you don't want to miss!  There's also a solutions file at `reshape_data_solutions.Rmd` if you get stuck.
+
 </div>
 
 ## Using `pivot_wider`
@@ -388,7 +391,11 @@ Please read over lines 75-140 and run the code in that section.  This is what yo
 * Pivoting a dataset (fish encounters) that was originally in long format to a wide format
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Please open your RStudio environment now and go through lines 75-140 of `reshape_data_exercises.Rmd`.  We're using that code to help instruct you, too -- it's not just an example, it has some useful information you don't want to miss!  There's also a solutions file at `reshape_data_solutions.Rmd` if you get stuck.
+
+</div>
 
 ## Reshaping into a Tidy Format
 
@@ -469,7 +476,10 @@ Without having written any code, we've gotten an idea of what we want to accompl
 Let's jump into R and get started.  In `reshape_data_exercises.Rmd` in your RStudio environment, start by loading this data and taking a look at it (look at and run the code in lines 150-165).
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 You know what to do!  Check out lines 150-165 of `reshape_data_exercises.Rmd`.
+
 </div>
 
 
@@ -484,7 +494,10 @@ Read and execute the code in lines 170-225 to create `biosample_first` and `bios
 We'll use some commands that you already know, like `select`, as well as some that you might not be as familiar with, like `rename_with`.  Now that you've gotten some experience using help files, try using the `?` functionality and trying out `?rename_with` (or other function names) in the Console.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Please work through lines 170-225 of `reshape_data_exercises.Rmd`.  Don't forget that there's also a solutions file, should you get stuck: `reshape_data_solutions.Rmd`.
+
 </div>
 
 ### Pivoting Wide to Long
@@ -498,7 +511,10 @@ Go to lines 230 - 265 and read through the explanations and run the code in this
 By the end of this section, you should have a `biosample_data_long` object that has our data in long format.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Almost there!  Go through lines 230-265 of `reshape_data_exercises.Rmd`.  
+
 </div>
 
 ### Pivoting Long to Wide
@@ -517,7 +533,10 @@ Go to lines 270 - 290 to see what we mean!
 In the end, we have tidy data that meets our needs and will make computation simpler.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 This is the home stretch!  Work through lines 270 until the end of `reshape_data_exercises.Rmd`.  Don't forget that there's also a solutions file, should you get stuck: `reshape_data_solutions.Rmd`.
+
 </div>
 
 ## Quiz: `pivot_longer` and `pivot_wider`
