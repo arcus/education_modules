@@ -36,7 +36,7 @@ Current Liascript URL: {makes it easy for reviewers and authors to look at conte
 * [ ] Overview section immediately following Title, using the `@overview` macro
 * [ ] All sections following Overview have content (no pages with just header and no additional text / media material).
 * [ ] All quizzes start with a level 2 or 3 header. If there is only one quiz in the module, it is labelled "Quiz", or if there are multiple, each header is structured as "Quiz: label" where "label" is a short (~ 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
-* [ ] Educational content ends with a section of additional resources, both ours and outside sources
+* [ ] Educational content ends with a section of additional resources
 * [ ] Final section is Feedback, using the @feedback macro
 
 ## Module Content
