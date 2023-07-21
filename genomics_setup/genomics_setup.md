@@ -5,7 +5,7 @@ email:    hartmanr1@chop.edu
 version:  0.0.1
 current_version_description: Initial version
 module_type: wrapper
-docs_version: 1.1.0
+docs_version: 1.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
