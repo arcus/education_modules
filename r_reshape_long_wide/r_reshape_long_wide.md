@@ -541,8 +541,6 @@ This is the home stretch!  Work through lines 270 until the end of `reshape_data
 
 ## Quiz: `pivot_longer` and `pivot_wider`
 
-<div class = "question">
-
 What do you need to know in order to use `pivot_longer` to turn wide data into long data?
 
 [[X]] The name of the wide data frame
@@ -561,11 +559,6 @@ What do you need to know in order to use `pivot_longer` to turn wide data into l
 
 *******
 
-</div>
-
-
-
-<div class = "question">
 
 What are some potential snags in using `pivot_longer` and `pivot_wider`?
 
@@ -600,8 +593,6 @@ data_frame %>%
 </div>
 
 *******
-
-</div>
 
 ## Additional Resources
 
