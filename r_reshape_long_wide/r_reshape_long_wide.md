@@ -1,15 +1,25 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.3
-module_template_version: 2.0.0
+version: 1.2.0
+current_version_description: Update highlight boxes, update metadata, and replace text with macros.
+module_type: standard
+docs_version: 1.0.0
 language: en
 narrator: US English Female
 title: Reshaping Data in R: Long and Wide Data
 comment:  A module that teaches how to reshape tabular data in R, concentrating on some typical shapes known as "long" and "wide" data.
 long_description: Reshaping data is one of the essential skills in getting your data in a tidy format, ready to visualize, analyze, and model.  This module is appropriate for learners who feel comfortable with R basics and are ready to take on the challenges of real life data, which is often messy and requires considerable effort to tidy.
 
-estimated_time: 1 hour
+estimated_time_in_minutes: 60
+
+r_file: r\_reshape\_long\_wide
+
+@pre_reqs
+
+This module assumes familiarity with R basics, including ingesting .csv data and using dplyr tools to do basic transformation including choosing only certain columns or rows of a data frame.  If you need to learn these basics, we suggest our [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) module and our [R Basics: Transform Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md) module.
+
+@end
 
 @learning_objectives  
 
@@ -20,60 +30,36 @@ After completion of this module, learners will be able to:
 
 
 @end
-script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
-@gifPreload
-<script>
-(function($) {
+good_first_module: false
+data_task: data_wrangling
+coding_required: true
+coding_level: intermediate
+coding_language: r
 
-  // Get the .gif images from the "data-alt".
-	var getGif = function() {
-		var gif = [];
-		$('img').each(function() {
-			var data = $(this).data('alt');
-			gif.push(data);
-		});
-		return gif;
-	}
+@sets_you_up_for
 
-	var gif = getGif();
+- r_practice
 
-	// Preload all the gif images.
-	var image = [];
-
-	$.each(gif, function(index) {
-		image[index]     = new Image();
-		image[index].src = gif[index];
-	});
-
-	// Change the image to .gif when clicked and vice versa.
-	$('figure').on('click', function() {
-
-		var $this   = $(this),
-				$index  = $this.index(),
-
-				$img    = $this.children('img'),
-				$imgSrc = $img.attr('src'),
-				$imgAlt = $img.attr('data-alt'),
-				$imgExt = $imgAlt.split('.');
-
-		if($imgExt[1] === 'gif') {
-			$img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
-		} else {
-			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-		}
-
-		// Add play class to help with the styling.
-		$this.toggleClass('play');
-
-	});
-
-})(jQuery);
-</script>
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-script: https://kit.fontawesome.com/83b2343bd4.js
+@depends_on_knowledge_available_in
+
+- r_basics_introduction
+- r_basics_transform_data
+
+@end
+
+@version_history
+
+Previous versions: 
+
+- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/r_reshape_long_wide/r_reshape_long_wide.md#1): Initial version, then added Posit instructions.
+
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
 -->
 # Reshaping Data in R: Long and Wide Data
 
@@ -89,7 +75,6 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This module assumes familiarity with R basics, including ingesting .csv data and using dplyr tools to do basic transformation including choosing only certain columns or rows of a data frame.  If you need to learn these basics, we suggest our [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) module and our [R Basics: Transform Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md) module.
 
 **Learning Objectives**
 
