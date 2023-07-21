@@ -24,17 +24,11 @@ Current Liascript URL: {makes it easy for reviewers and authors to look at conte
 
 ## Module Organization
 * [ ] Front matter is at the very top of the file
-  * [ ] author name
-  * [ ] email
+  * [ ] Check included front matter fields against the [front matter checklist](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md#your-front-matter-checklist) to make sure all necessary fields are included. In addition, check the following details:
   * [ ] module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](versioning_guidelines.md)
   * [ ] current_version_description is a short, present-tense text fragment without bullets, and gives a learner-centric quick overview of version changes from the learner perspective
-  * [ ] module_type should be standard
-  * [ ] docs_version number replaces the former module_template_version number, and it is up to date with the current [docs.md](https://raw.githubusercontent.com/arcus/education_modules/main/docs.md) -- if not, the module should be brought in line with any changes that have occurred to the docs.md standard before continuing with QA
-  * [ ] language
-  * [ ] narrator
-  * [ ] comment appropriately filled out
-  * [ ] long_description appropriately filled out
-  * [ ] learning_objectives appropriately filled out
+  * [ ] module_type should be `standard`
+  * [ ] estimated_time_in_minutes should be a number 0-60
   * [ ] version_history contains 1-3 past versions with bulleted links to commit-specific documents, unless this is an initial version of a module, in which case version_history can be empty.
   * [ ] imports macros (currently this line should read `import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md`)
 * [ ] Title is the first line after the end of the front matter
@@ -42,8 +36,8 @@ Current Liascript URL: {makes it easy for reviewers and authors to look at conte
 * [ ] Overview section immediately following Title, using the `@overview` macro
 * [ ] All sections following Overview have content (no pages with just header and no additional text / media material).
 * [ ] All quizzes start with a level 2 or 3 header. If there is only one quiz in the module, it is labelled "Quiz", or if there are multiple, each header is structured as "Quiz: label" where "label" is a short (~ 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
-* [ ] Educational content ends with a section of additional resources, both ours and outside sources
-* [ ] Final section is Feedback, using the @feedback macro
+* [ ] Educational content ends with a section of additional resources
+* [ ] Final section is Feedback, using the `@feedback` macro
 
 ## Module Content
 
