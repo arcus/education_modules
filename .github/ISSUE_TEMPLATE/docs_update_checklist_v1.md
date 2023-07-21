@@ -40,14 +40,14 @@ The following should **NOT** be included in module front matter:
 
 ## Macros
 
-* [ ] For all modules:
+* For all modules:
     - [ ] Overview is created with the macro, not written
     - [ ] Feedback is created with the macro, not written
 
-* [ ] For modules with interactive R, Python, or SQL:
+* For modules with interactive R, Python, or SQL:
     - [ ] Lesson Preparation is created with the relevant macro, not written
 
-* [ ] For wrapper modules:
+* For wrapper modules:
     - [ ] Lesson Preparation is created with the relevant macro, not written
     - [ ] There is a `print_resource` macro for each external resource just after the `lesson_prep_wrapper` macro
 
