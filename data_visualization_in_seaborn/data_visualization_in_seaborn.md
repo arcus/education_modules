@@ -75,54 +75,11 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 # Data Visualization in seaborn
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Lesson Preparation
-@sage
 
-You will have opportunities for hands-on coding as you work your way through this module using interactive python cells.
-The interactive python cells are powered by [SageMathCell](https://sagecell.sagemath.org/).
-For the most part, these will appear with some code already in them, and you can run that code by clicking the **Run python** button.
-You can also edit the code in these cells and run your own code.
-
-
-**Give it a try:**
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-m = 3
-print(m+2)
-</script>
-</lia-keep>
-</div>
-
-
-You can change anything you want in the cell.
-You can always refresh the page to return the code (and the stored memory of the cell) to its initial state.
-
-Code will not persist from one cell to the next, so we'll end up repeating a lot of commands from one cell to the next.
-
-<div class = "important">
-These cells will compute everything you ask them to, but will only output what you explicitly request using the `print()` command.
-</div>
-
+@lesson_prep_python_sage
 
 ### Importing seaborn
 @sage
@@ -1346,16 +1303,4 @@ For resources about statistics in general, rather than data visualization specif
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Data+Visualizations+in+seaborn%22&version=1.0.3)!
+@feedback
