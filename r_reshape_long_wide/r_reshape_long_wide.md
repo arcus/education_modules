@@ -500,9 +500,27 @@ Please work through lines 170-225 of `reshape_data_exercises.Rmd`.  Don't forget
 
 </div>
 
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+If you read the line `rename_with(~str_remove(., '_1'))` and thought to yourself, "I would never have come up with that!" don't worry --- there are many, many different ways to approach a data cleaning task like this, and our solution is just one example. 
+Try googling something like "remove suffix from column names R", and I'm sure you'll find dozens of different solutions.
+
+The important thing to keep in mind is that **code that works is good code**. 
+If you would have done something else (maybe something more roundabout, or something less tidy) that's perfectly fine! 
+
+There is no one right approach to a data cleaning task like this. 
+We've given you an example (and it's code you can now go back and reuse if you find yourself needing to do something similar in your own analyses one day!), but it's just one example.
+As you build more and more experience in R, you'll find yourself gravitating toward particular strategies and functions, and you'll solve problems with the tools you know more often than not. 
+Maybe `str_remove` and other functions from the [stringr](https://stringr.tidyverse.org/) package will become favorites of yours that you use over and over, or maybe you'll never touch them again. 
+Either way is fine! 
+
+</div>
+
 ### Pivoting Wide to Long
 
 Do you now have two objects, called `biosample_first` and `biosample_second`?  Great!
+
 
 At this point, you might be thinking, "Hey!  If we just stack `biosample_first` and `biosample_second`, we'll be done, and have some tidy data!".  You're not wrong, and you might be tempted to do just that and not bother with transforming wide data to long data.  Just remember that once you get data into a long format, it's very versatile, and it's worth the effort to put your data into a long format first.
 
