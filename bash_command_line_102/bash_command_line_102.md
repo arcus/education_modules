@@ -2,14 +2,22 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
-version: 1.2.0
-module_template_version: 2.0.0
+version: 1.2.1
+module_type: standard
+docs_version: 1.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title:  Bash: Searching and Organizing Files
 comment:  This module will teach you how to use the bash shell to search and organize your files.
 long_description: This module is for people who have a bit of experience with bash scripting and want to learn to use its power to organize their file and folders.
-estimated_time: 30 minutes
+estimated_time_in_minutes: 30
+
+@pre_reqs
+
+Learners should be familiar with using a bash shell to navigate a directory system. Learners will get the most out of this lesson if they can also create directories and files, write text to files, and read files from their bash shell command line interface.
+
+@end
 
 @learning_objectives
 
@@ -20,38 +28,49 @@ After completion of this module, learners will be able to:
 - Move files to new locations in a directory system.
 - Copy files and directories.
 - Delete files and directories.
+
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+data_task: data_management
+
+coding_required: true
+
+coding_level: basic
+
+coding_language: bash
+
+sequence_name: bash_basics
+
+previous_sequential_module: bash_command_line_101
+
+@sets_you_up_for
+
+- bash_103_combining_commands
+- bash_conditionals_loops
+
+@end
+
+@depends_on_knowledge_available_in
+
+-bash_command_line_101
+
+@end
+
+current_version_description: Updated module metadata
+@version_history
+- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_command_line_102/bash_command_line_102.md#1) Improved Lesson Preparation instructions
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/738a57ce41189c219ae9288bed4fbde834bb46d4/bash_command_line_102/bash_command_line_102.md#1) Initial version
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+
 -->
 
 # Bash: Searching and Organizing Files
 
-<div class = "overview">
-
-## Overview
-
-@comment
-
-**Is this module right for me?**
-
-@long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-Learners should be familiar with using a bash shell to navigate a directory system. Learners will get the most out of this lesson if they can also create directories and files, write text to files, and read files from their bash shell command line interface.
-
-
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 
 ## Lesson Preparation
@@ -521,9 +540,9 @@ Which statements about the remove command `rm` are **TRUE**?
 
 ## Additional Resources
 
-You can always use the manual command `man` to read the documentation of any command. Give it a try with `man cp`!
+Check out the built-in manual or help function in your CLI. You can try it out by typing a command followed by `--help`. Unless you are using Git Bash, you can also try the manual command `man` to read even more of the documentation. Give it a try with `man cp` or `cp --help`!
 
-Reading the manual isn't always the easiest way to get more comfortable with a programming language, so here are some other resources:
+Reading a manual isn't always the easiest way to get more comfortable with a programming language, so here are some other resources:
 
 - Software Carpentries makes all the materials from their [Unix Shell lessons](https://swcarpentry.github.io/shell-novice/) available.
 
@@ -535,16 +554,4 @@ Reading the manual isn't always the easiest way to get more comfortable with a p
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash+Searching+and+Organizing+Files%22&version=1.1.1)!
+@feedback
