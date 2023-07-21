@@ -1,7 +1,7 @@
 ---
 name: Checklist for updating modules
 about: Checklist for updating a module to comply with docs.md v1
-title: Docs Update Checklist
+title: Docs v1 Update Checklist
 assignees: ''
 
 ---
