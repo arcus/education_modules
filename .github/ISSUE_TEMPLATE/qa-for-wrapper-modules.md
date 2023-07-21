@@ -61,7 +61,7 @@ Current Liascript URL: {makes it easy for reviewers and authors to look at conte
 
 ## Code availability
 If the module includes code that learners may want to run:
-* [ ] A link is provided to run the code in binder
+* [ ] A link is provided to run the code in the cloud
 * [ ] A link to the raw code and any other necessary materials (e.g., data) is provided for learners who prefer to work on their own machine
 
 ## Formative assessment
