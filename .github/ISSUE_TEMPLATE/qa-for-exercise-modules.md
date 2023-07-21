@@ -28,6 +28,7 @@ Current Liascript URL: {makes it easy for reviewers and authors to look at conte
   * [ ] email
   * [ ] module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](versioning_guidelines.md)
   * [ ] current_version_description is a short, present-tense text fragment without bullets, and gives a learner-centric quick overview of version changes from the learner perspective
+  * [ ] module_type should be exercise
   * [ ] docs_version number replaces the former module_template_version number, and it is up to date with the current [docs.md](https://raw.githubusercontent.com/arcus/education_modules/main/docs.md) -- if not, the module should be brought in line with any changes that have occurred to the docs.md standard before continuing with QA
   * [ ] language
   * [ ] narrator
