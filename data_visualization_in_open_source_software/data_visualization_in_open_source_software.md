@@ -59,28 +59,10 @@ Previous versions:
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
+
 # Data Visualization in Open Source Software
 
-<div class = "overview">
-## Overview
-
-@comment
-
-**Is this module right for me?**
-
-@long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Introduction to visualizing data
 
@@ -330,16 +312,4 @@ Also check out [the `seaborn` website](https://seaborn.pydata.org/), especially 
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Data+visualization+in+open+source+software%22&version=1.1.3)!
+@feedback
