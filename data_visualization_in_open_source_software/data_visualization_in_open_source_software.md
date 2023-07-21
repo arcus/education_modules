@@ -2,8 +2,10 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.1.3
-module_template_version: 2.0.0
+version: 1.2.0
+current_version_description: Update highlight boxes, update front matter, replace text with macros.
+module_type: standard
+docs_version: 1.0.0
 language: en
 narrator: UK English Female
 title: Data Visualization in Open Source Software
@@ -11,7 +13,18 @@ comment:   Introduction to principles of data vizualization and typical data viz
 
 long_description: This module introduces ggplot2 and seaborn, popular data visualization libraries in R and python, respectively. It lays the groundwork for using ggplot2 and seaborn by 1) highlighting common features of plots that can be manipulated in plot code, 2) discussing a typical data visualization workflow and best practices, and 3) discussing data preparation for plotting. This content will be most useful for people who have some experience creating data visualizations and/or reading plots presented in research articles or similar contexts. Some prior exposure to R and/or python is helpful but not required. This is appropriate for beginners.
 
-estimated_time: 20 minutes
+estimated_time_in_minutes: 20
+
+@pre_reqs
+
+This module assumes some familiarity with data and statistics, in particular
+
+* familiarity with some different kinds of plots, although deep understanding is not needed --- people who are used to seeing plots presented in research articles will be sufficiently prepared
+* the distinction between [continuous and categorical variables](https://education.arcus.chop.edu/variable-types/)
+
+This module also assumes some basic familiarity with either R or python, but is appropriate for beginners.
+
+@end
 
 @learning_objectives
 
@@ -24,9 +37,27 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-script:  https://kit.fontawesome.com/83b2343bd4.js
+good_first_module: false
+data_task: data_visualization
+sequence_name: data_visualization
 
+@sets_you_up_for
+- data_visualization_in_seaborn
+- data_visualization_in_ggplot2
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
+@version_history
+Previous versions: 
+
+- [1.1.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md#1): Clarified wording, add note about colorblind palettes, add note about where to find practical seaborn and ggplot2 practice.
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/914714acfb6b30980e011ab09e087d4d2c5c918e/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md#1): Initial version, add newlines to make divs display better.
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 # Data Visualization in Open Source Software
 
@@ -43,12 +74,7 @@ script:  https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This module assumes some familiarity with data and statistics, in particular
 
-* familiarity with some different kinds of plots, although deep understanding is not needed --- people who are used to seeing plots presented in research articles will be sufficiently prepared
-* the distinction between [continuous and categorical variables](https://education.arcus.chop.edu/variable-types/)
-
-This module also assumes some basic familiarity with either R or python, but is appropriate for beginners.
 
 **Learning Objectives**
 
