@@ -23,31 +23,14 @@ The following sections provide a complete (hopefully!) list of potential changes
 
 ## Front matter
 
-Make sure the front matter includes all required fields from the new templates. Some of these are new fields and some are not.
+* [ ] The front matter includes all required fields from the new templates. Some of these are new fields and some are not. Use the ["Your front matter checklist"](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md#your-front-matter-checklist) section of docs.md to get a customized list of the required front matter for a given module. 
 
-TIP: You can also use the "Your front matter checklist" section of docs.md to get a customized list of the required front matter for a given module. 
+Also watch specifically for the following:
 
-* [ ] For all modules
-    - [ ] author
-    - [ ] email
-    - [ ] version
-    - [ ] current\_version\_description
-    - [ ] module_type
-    - [ ] module\_template\_version (should this change to docs_version?)
-    - [ ] language
-    - [ ] narrator
-    - [ ] mode: Textbook
-    - [ ] title
-    - [ ] comment
-    - [ ] long_description
-    - [ ] estimated\_time\_in\_minutes
-    - [ ] pre_reqs 
-    - [ ] learning_objectives
-    - [ ] good\_first\_module
-    - [ ] sets\_you\_up\_for
-    - [ ] depends\_on\_knowledge\_available\_in
-    - [ ] version_history
-    - [ ] import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+* [ ] current_version_description is a short, present-tense text fragment without bullets, and gives a learner-centric quick overview of version changes from the learner perspective
+* [ ] version_history contains 1-3 past versions with bulleted links to commit-specific documents, unless this is an initial version of a module, in which case version_history can be empty. For detailed instructions on how to fill out the version fields, see the [docs descriptions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md#version_history).
+
+* [ ] import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 * [ ] If the learner will need to code to meet the learning objectives, the following are required:
 
