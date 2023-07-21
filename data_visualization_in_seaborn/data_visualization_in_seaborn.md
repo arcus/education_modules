@@ -2,17 +2,34 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.0.3
-module_template_version: 2.0.0
+version: 1.2.0
+current_version_description: Update highlight boxes, update front matter, and replace text with macros.
+docs_version: 1.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: Data Visualization in seaborn
 
 comment:  This module includes code and explanations for several popular data visualizations using python's seaborn library. It also includes examples of how to modify seaborn plots to customize them for different uses.  
 
 long_description: You can use the seaborn module in python to make many different kinds of data visualizations (also called plots or charts), including scatterplots, histograms, line plots, and trend lines. This module provides an example of each of these kinds of plots, including python code to make them using the seaborn module. It may be hard to follow if you are brand new to python, but it is appropriate for beginners with at least a small amount of python experience.
 
-estimated_time: 1 hour
+estimated_time_in_minutes: 60
+
+@pre_reqs
+
+This module assumes some familiarity with statistical concepts like distributions, outliers, and linear regression, but even if you don't understand those concepts well you should be able to learn and apply the data visualization content.
+When statistical concepts are referenced in the lesson, links to learn more are generally provided.
+
+This module also assumes some basic familiarity with python, including
+
+* installing and importing python modules
+* reading in data
+* manipulating data frames, including calculating new columns
+
+If you are brand new to python (or want a refresher) consider starting with [Demystifying Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md) first.
+
+@end
 
 @learning_objectives  
 
@@ -23,28 +40,37 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-script: https://kit.fontawesome.com/83b2343bd4.js
+good_first_module: false
+data_task: data_visualization
+coding_required: true
+coding_level: basic
+coding_language: python
+sequence_name: data_visualization
+previous_sequential_module: data_visualization_in_open_source_software
 
-script: https://sagecell.sagemath.org/static/embedded_sagecell.js
+@sets_you_up_for
 
-@sage
-<script input="hidden">
-// Make *any* div with class 'python' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python',
-                       evalButtonText: 'Run python',
-                       languages: ["python"],
-                       hide: ['fullScreen', 'permalink'],
-                       });
-// Make *any* div with class 'python_run' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_run',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'true'
-                      });                                    
-</script>
+- python_practice
+
 @end
+
+@depends_on_knowledge_available_in
+
+- data_visualization_in_open_source_software
+- demystifying_python
+
+@end
+
+is_parallel_to: data_visualization_in_ggplot2
+
+@version_history
+Previous versions: 
+
+- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Initial version, and fixed broken link to ggplot2 module. 
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
 -->
 
 # Data Visualization in seaborn
@@ -60,16 +86,7 @@ sagecell.makeSagecell({inputLocation: 'div.python_run',
 
 **Pre-requisites**
 
-This module assumes some familiarity with statistical concepts like distributions, outliers, and linear regression, but even if you don't understand those concepts well you should be able to learn and apply the data visualization content.
-When statistical concepts are referenced in the lesson, links to learn more are generally provided.
 
-This module also assumes some basic familiarity with python, including
-
-* installing and importing python modules
-* reading in data
-* manipulating data frames, including calculating new columns
-
-If you are brand new to python (or want a refresher) consider starting with [Demystifying Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md) first.
 
 **Learning Objectives**
 
