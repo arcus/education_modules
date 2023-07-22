@@ -45,6 +45,8 @@ data_task: data_visualization
 coding_required: true
 coding_level: basic
 coding_language: r
+sequence_name: data_visualization
+previous_sequential_module: data_visualization_in_open_source_software
 
 @sets_you_up_for
 

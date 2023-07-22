@@ -2,63 +2,21 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.0.3
-module_template_version: 2.0.0
+version: 1.2.0
+current_version_description: Update highlight boxes, update front matter, and replace text with macros.
+docs_version: 1.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: Data Visualization in seaborn
 
 comment:  This module includes code and explanations for several popular data visualizations using python's seaborn library. It also includes examples of how to modify seaborn plots to customize them for different uses.  
 
 long_description: You can use the seaborn module in python to make many different kinds of data visualizations (also called plots or charts), including scatterplots, histograms, line plots, and trend lines. This module provides an example of each of these kinds of plots, including python code to make them using the seaborn module. It may be hard to follow if you are brand new to python, but it is appropriate for beginners with at least a small amount of python experience.
 
-estimated_time: 1 hour
+estimated_time_in_minutes: 60
 
-@learning_objectives  
-
-After completion of this module, learners will be able to:
-
-- use seaborn to create several common data visualizations
-- customize some elements of a plot, and know where to look to learn how to customize others
-
-@end
-
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-script: https://kit.fontawesome.com/83b2343bd4.js
-
-script: https://sagecell.sagemath.org/static/embedded_sagecell.js
-
-@sage
-<script input="hidden">
-// Make *any* div with class 'python' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python',
-                       evalButtonText: 'Run python',
-                       languages: ["python"],
-                       hide: ['fullScreen', 'permalink'],
-                       });
-// Make *any* div with class 'python_run' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_run',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'true'
-                      });                                    
-</script>
-@end
--->
-
-# Data Visualization in seaborn
-
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
+@pre_reqs
 
 This module assumes some familiarity with statistical concepts like distributions, outliers, and linear regression, but even if you don't understand those concepts well you should be able to learn and apply the data visualization content.
 When statistical concepts are referenced in the lesson, links to learn more are generally provided.
@@ -71,41 +29,57 @@ This module also assumes some basic familiarity with python, including
 
 If you are brand new to python (or want a refresher) consider starting with [Demystifying Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md) first.
 
-**Learning Objectives**
+@end
 
-@learning_objectives
+@learning_objectives  
 
-</div>
+After completion of this module, learners will be able to:
+
+- use seaborn to create several common data visualizations
+- customize some elements of a plot, and know where to look to learn how to customize others
+
+@end
+
+good_first_module: false
+data_task: data_visualization
+coding_required: true
+coding_level: basic
+coding_language: python
+sequence_name: data_visualization
+previous_sequential_module: data_visualization_in_open_source_software
+
+@sets_you_up_for
+
+- python_practice
+
+@end
+
+@depends_on_knowledge_available_in
+
+- data_visualization_in_open_source_software
+- demystifying_python
+
+@end
+
+is_parallel_to: data_visualization_in_ggplot2
+
+@version_history
+Previous versions: 
+
+- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Initial version, and fixed broken link to ggplot2 module. 
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
+-->
+
+# Data Visualization in seaborn
+
+@overview
 
 ## Lesson Preparation
-@sage
 
-You will have opportunities for hands-on coding as you work your way through this module using interactive python cells.
-The interactive python cells are powered by [SageMathCell](https://sagecell.sagemath.org/).
-For the most part, these will appear with some code already in them, and you can run that code by clicking the **Run python** button.
-You can also edit the code in these cells and run your own code.
-
-
-**Give it a try:**
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-m = 3
-print(m+2)
-</script>
-</lia-keep>
-</div>
-
-
-You can change anything you want in the cell.
-You can always refresh the page to return the code (and the stored memory of the cell) to its initial state.
-
-Code will not persist from one cell to the next, so we'll end up repeating a lot of commands from one cell to the next.
-
-<div class = "important">
-These cells will compute everything you ask them to, but will only output what you explicitly request using the `print()` command.
-</div>
-
+@lesson_prep_python_sage
 
 ### Importing seaborn
 @sage
@@ -124,6 +98,12 @@ import seaborn as sns
 </lia-keep>
 </div>
 
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+Note that the code above won't produce any output. So if you ran it and nothing happened, that's expected behavior!
+
+</div>
 
 ### The data
 @sage
@@ -143,11 +123,14 @@ import seaborn as sns
 
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 The [`pandas` module](https://pandas.pydata.org/docs/getting_started/index.html)) is for working with data in python. It is conventional to import `pandas` as `pd`.
 
 The [`numpy` module](https://numpy.org/) has several useful functions for statistical calculations and other mathematical operations useful in scientific computing. It is conventional to import `numpy` as `np`.
 
 The `seaborn` module is the plotting module that is the focus of this lesson, and it requires some pieces of `matplotlib`, since it is built as an extension to it.
+
 </div>
 
 And then read in the data set (note that we have to repeat our commands to load the libraries here, since this is a new cell):
@@ -169,14 +152,20 @@ print(covid_data.shape) # gives the number of rows and columns
 These data are from a COVID-19 serological survey conducted in Yaounde, Cameroon (Nwosu, K., Fokam, J., Wanda, F. et al., 2021[^1](Kene David Nwosu, Joseph Fokam, Franck Wanda, Lucien Mama, Erol Orel, Nicolas Ray, Jeanine Meke, Armel Tassegning, Desire Takou, Eric Mimbe, Beat Stoll, Josselin Guillebert, Eric Comte, Olivia Keiser, & Laura Ciaffi. 2021. kendavidn/yaounde\_serocovpop\_shared: Initial release v1.0.0. Zenodo. https://doi.org/10.5281/zenodo.5218965)). The authors have made all of the code and data publicly available under a [creative commons 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode) to facilitate re-use.
 
 
-<div class="learn-more">
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 To learn more about the study, see the [zenodo page for this dataset](https://zenodo.org/record/5218965#.YeBq2RPMITW). You can also read the published article online: [SARS-CoV-2 antibody seroprevalence and associated risk factors in an urban district in Cameroon](https://www.nature.com/articles/s41467-021-25946-0).
+
 </div>
 
-<div class="important">
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 The code from this section will be at the top of each code block in this module.
 
 If you want to practice this code on your own computer, make sure to include the code to import the necessary modules and read in the data as the first lines, but you'll only have to do it once at the top of your script, not before each new command.
+
 </div>
 
 ## Scatterplots
@@ -217,7 +206,10 @@ If the code ran correctly, you should have generated a scatterplot like the one 
 ![Basic scatterplot, with age on the x-axis and height on the y-axis. Age runs from approximately 5 to 80. Height increases sharply from 100-120 cm at 5 years old to an average of approximately 160 cm at about 20 years old, and then holds to 80 years old. There are 1011 observations plotted, with most observations between 5 and roughly 50 years old. There are three notable outliers with much lower height values than the rest, at roughly 60-80 cm. ](media/seaborn_scatter_1.png)
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 You can also create scatterplots with a similar function: `regplot` (short for "regression plot"), which we'll take a closer look at in the [trend lines section](#trend-lines).
+
 </div>
 
 ### Using color for continuous variables
@@ -278,7 +270,10 @@ covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
 
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 For a refresher, see this tutorial on [recoding variables in a pandas dataframe](https://www.sfu.ca/~mjbrydon/tutorials/BAinPy/05_recode.html#replacing-values-from-a-list).
+
 </div>
 
 Then we can update our scatterplot to use `is_smoker` for color.
@@ -312,7 +307,10 @@ plt.show()
 </details>
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Tip: It's generally much easier to make any necessary changes to the dataframe, such as modifying variables, before sending it to the plotting command.
+
 </div>
 
 ### Distinguish groups more clearly with color and shape
@@ -321,7 +319,10 @@ Tip: It's generally much easier to make any necessary changes to the dataframe, 
 We'll improve this plot by using shape (controlled by the `style` argument) and color (controlled by `hue`) together to mark the smoking status groups.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Tip: Don't use color alone to convey important information in your plots because if your end users are unable to distinguish the colors, the plot loses its value. Instead, double-up color information with another element, such as marker shape, to make the different groups easier to distinguish.
+
 </div>
 
 <div class="python">
@@ -395,7 +396,10 @@ We'll add that to the code that runs automatically at the top of each page.
 Now all of our plots will use the `colorblind` palette, unless we specify otherwise.
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 The seaborn library has many different built-in color palettes to choose from. To learn more about setting custom colors in seaborn visualizations, see the [seaborn tutorial on color palettes](https://seaborn.pydata.org/tutorial/color_palettes.html).
+
 </div>
 
 ### Controlling figure aesthetics
@@ -408,7 +412,10 @@ The seaborn library handles the appearance of plots with two kinds of functions:
 Seaborn controls style and context separately so that you can get a plot that has all the style elements you want, and then you can present that same plot scaled appropriately in different contexts --- for example, if you want to include it in a slide deck presentation, you probably want the fonts much larger and the lines heavier than you would if you wanted to include it as a figure in a paper. In this case, you would leave all of the style settings the same, but change context to "talk" to scale it for the slide deck and "paper" to scale it for use in the paper.
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 We'll show a quick example of changing style and context here, but there are many more options available. To learn more about tweaking style and context, see the [seaborn tutorial on controlling figure aesthetics](https://seaborn.pydata.org/tutorial/aesthetics.html).
+
 </div>
 
 #### Setting plot style
@@ -449,6 +456,8 @@ plt.show()
 </details>
 
 <div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 Have you noticed we're using `style` to mean two completely different things in this code?
 
 In `seaborn`, `style` can refer to either marker type (circle, cross, square, etc.) in a scatterplot, or it can refer to the overall plot style (background color, gridlines, etc.).
@@ -456,8 +465,8 @@ It's unfortunate that the same word gets used for both, but you can still tell t
 
 - overall aesthetic style of the plot is changed in a general `sns` command, not within a plotting command like `relplot` (e.g. `sns.set_style("white")`)
 - marker style for scatterplots is changed within a plotting command like `relplot` (e.g. `style = "is_smoker"`)
-</div>
 
+</div>
 
 #### Setting plot context
 @sage
@@ -497,7 +506,6 @@ plt.show()
 ![Age and height scatterplot from the previous figure, with much larger font for axis scales and labels, and larger markers for the points in the plot.](media/seaborn_scatter_7.png "Context set to 'poster'")
 
 </details>
-
 
 To set the context back to `notebook` (the default), use `sns.set_context("notebook")`.
 
@@ -722,7 +730,10 @@ plt.show()
 </details>
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 You can also use this same `displot` function to create [density plots](https://seaborn.pydata.org/tutorial/distributions.html#kernel-density-estimation) instead of histograms.
+
 </div>
 
 ### Adding marginal histograms to other plots
@@ -762,7 +773,10 @@ plt.show()
 By default, it plots x and y as a scatterplot, adding a marginal histogram for each.
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 Learn more about a variety of ways to add marginal distribution information to plots in the [seaborn distributions tutorial](https://seaborn.pydata.org/tutorial/distributions.html#distribution-visualization-in-other-settings).
+
 </div>
 
 ### Quiz: Histograms
@@ -815,8 +829,11 @@ You can read more about this issue in the [seaborn distributions tutorial](https
 
 Line plots are especially useful when you want to show data points that are connected in a meaningful way. The most common application is repeated measures over time (also called time series data), such as when patients are measured on a given variable (plotted on the y-axis) at several times (plotted along the x-axis). Each line would represent one patient or a summary across a group of patients.
 
-<div class = "warning">
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 A word of caution: You may see line plots where the data points don't actually share a meaningful theoretical connection (e.g. all being from the same patient, or the same group). Although it's not uncommon, this is generally not considered good practice and you may receive pushback from reviewers or readers.
+
 </div>
 
 ### Data for line plots
@@ -922,7 +939,10 @@ plt.show()
 </details>
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 For many more examples of line plots, see the [seaborn relplot tutorial section on line plots](https://seaborn.pydata.org/tutorial/relational.html#emphasizing-continuity-with-line-plots).
+
 </div>
 
 ### Quiz: Line Plots
@@ -977,7 +997,9 @@ Trend lines look like line plots, but they are different in one key way: They sh
 Trend lines are used to show the overall trend in a scatterplot. Sometimes, the scatterplot points themselves are omitted and just the trend lines are shown to keep the visualization as clean as possible, but they're still implied.
 
 
-<div class = "help">
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 Note that the content in this section references statistics concepts more than in the previous sections.
 Polynomial regression and lowess regression in particular may be new to some learners.
 
@@ -987,6 +1009,7 @@ If you're unfamiliar with the statistics referenced, you have two good options:
 - You can click through to the links provided within the section and/or follow up with material referenced in the [Additional Resources](#additional-resources) section at the end to learn more
 
 Either way is fine! The best approach for you likely depends on your level of interest and how much time you have available to dig into extra content.
+
 </div>
 
 ### Linear regression trend lines
@@ -995,9 +1018,12 @@ Either way is fine! The best approach for you likely depends on your level of in
 Because trend lines are such a useful visual summary, `seaborn` provides several options to add trend lines to your plots quickly and easily.
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 There are two very similar functions available for drawing trend lines: `regplot` and `lmplot`. For many use cases, they are close to identical. For simplicity, we'll stick to `lmplot` in this lesson. Try subbing in `regplot` instead and make note of how the plots differ.
 
 For more background on `regplot` vs. `lmplot`, see [the seaborn regression tutorial](https://seaborn.pydata.org/tutorial/regression.html#controlling-the-size-and-shape-of-the-plot).
+
 </div>
 
 <div class="python">
@@ -1072,9 +1098,12 @@ If you try to run that code, you'll get an error.
 The problem is that we're using a single function to draw both the scatterplot and the trend line, so `seaborn` wouldn't know if we meant `alpha` to refer to the scatterplot, the trend line, or both.
 
 <div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 Note that even though adding `alpha = .1` to the `lmplot` command won't work, it does work in a plain scatterplot!
 
 Try adding `alpha = .1` (or any value you like between 0 and 1) to some of the `relplot` commands from the scatterplot section and see what happens.
+
 </div>
 
 So how do we adjust alpha for the scatterplot without affecting the line?
@@ -1083,7 +1112,10 @@ The solution is to pass additional arguments to the `matplotlib` functions on wh
 Although `seaborn` is great at making many complex data visualizations smoothly and with very few lines of code, it sometimes lacks control of little details within those plots. It is built on top of the extremely powerful and flexible `matplotlib` library, however, so if you ever find yourself wanting more control of your `seaborn` visualizations, the answer is often to leverage the underlying `matplotlib` functions.
 
 <div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 There is a much steeper learning curve for `matplotlib` compared to `seaborn`, however, and you may find you're happy with most `seaborn` plots without needing additional control --- don't bother with it if it feels too overwhelming. When you're ready to read more about `matplotlib`, start with their [introductory tutorials](https://matplotlib.org/stable/tutorials/index).
+
 </div>
 
 In this case, we can add an argument `scatter_kws` that passes additional "keyword arguments" to the `matplotlib` function drawing the scatterplot via a [python dictionary](https://www.w3schools.com/python/python_dictionaries.asp). There are [many possible keyword arguments](https://matplotlib.org/3.5.1/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D) you can use, but we'll just set `alpha` here.
@@ -1162,10 +1194,13 @@ plt.show()
 
 This appears to be a slight improvement on the linear regression model, especially at the youngest ages, but it is still systematically over-estimating height for young children and, because the quadratic trend follows a smooth arc shape, it predicts a drop in height at the older ages which is neither supported by the data nor sensible from a theoretical standpoint. A model that suggests height peaks around 40 years of age and then drops off dramatically does not make practical sense.
 
-<div class = "warning">
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 As you add higher order polynomials, your regression line is allowed to follow more subtle patterns in the data, but interpretation gets much messier. It can be tempting to add higher and higher order polynomials until you achieve excellent model fit, but it's generally not advisable.
 
 In general, polynomial models are a good choice when the polynomial relationship is **theoretically motivated**, which almost always means sticking to second or third order polynomials only.
+
 </div>
 
 ### Lowess curve trend lines
@@ -1174,9 +1209,12 @@ In general, polynomial models are a good choice when the polynomial relationship
 If you want a high level of flexibility in your trend line, you can achieve that with much less complexity by switching to a non-parametric approach like [local regression](https://en.wikipedia.org/wiki/Local_regression), one example of which is lowess ("locally weighted scatterplot smoothing") curves.
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 For a deeper understanding of what is meant by parametric vs. non-parametric models, see section 2.1.2 of the book [Statistical Learning](https://hastie.su.domains/ISLR2/ISLRv2_website.pdf).
 
 For a good conceptual explanation of lowess curves in particular, see the [StatsQuest video "Lowess and Loess, Clearly Explained"](https://www.youtube.com/watch?v=Vf7oJ6z2LCc).
+
 </div>
 
 <div class="python">
@@ -1212,7 +1250,10 @@ plt.show()
 </details>
 
 <div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
 There are several more options for kinds of trend lines to draw in `seaborn`, including [logistic regression trend lines and robust regression trend lines](https://seaborn.pydata.org/tutorial/regression.html#fitting-different-kinds-of-models).
+
 </div>
 
 ### Quiz: Trend Lines
@@ -1234,10 +1275,13 @@ Either `regplot` or `lmplot` can be used to draw scatterplots with trend lines.
 ****
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 For the following two questions, you'll be asked to modify code from the lesson.
 As you work on the code, test it out by editing the interactive code block so you can see what your code does.
 
 Note that your solution may not look exactly like the solution code provided --- if your code works and it generates a plot that meets your needs, then it's perfect!
+
 </div>
 
 <div class="python">
@@ -1323,22 +1367,8 @@ There are also many questions and answers about `seaborn` available on [stackove
 
 You may find the [pandas cheatsheet (pdf)](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) helpful.
 
-To learn how to make plots in R using ggplot2, see [data visualization in ggplot2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md).
-
-For resources about statistics in general, rather than data visualization specifically, see the [Additional Resources section of the module on statistical tests](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md#learning-statistics).
+For resources about statistics in general, rather than data visualization specifically, see [our list of recommendations for learning about stats](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md#learning-statistics).
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Data+Visualizations+in+seaborn%22&version=1.0.3)!
+@feedback
