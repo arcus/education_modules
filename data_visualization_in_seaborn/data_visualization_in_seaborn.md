@@ -98,6 +98,12 @@ import seaborn as sns
 </lia-keep>
 </div>
 
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+Note that the code above won't produce any output. So if you ran it and nothing happened, that's expected behavior!
+
+</div>
 
 ### The data
 @sage
