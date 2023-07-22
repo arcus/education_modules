@@ -97,17 +97,15 @@ Some regular expressions are short and simple, and some can be many lines of tex
 
 There are two very common reasons you as a researcher might want to use regular expressions (also referred to as "regex", which you can pronounce either with "reg" rhyming with "beg" or "reg" rhyming with "wedge").
 
-**Reason 1: Searching for the needle in the haystack**
----
----
+**Reason 1: Searching for the needle in the haystack
+-----
 
 You're writing code or looking through data and want to find, or find and replace, something that matches a predictable pattern.  For example, maybe you have used hexidecimal color specifications such as `#ccc` or `#FF1451` in your data visualizations in R, and you want to find all of those, because you want to add comments in your code disclosing the color in English so that your code is more understandable. 
 
 This goes beyond the typical search you would use in Word or other programs, because you want to find multiple values that start with a hash mark (#) and are immediately followed by three or six digits ranging from 0-9 and A-F (or a-f).  
 
 **Reason 2: Extracting useful sub-strings**
----
----
+-----
 
 You're analyzing some text values and need to change them, mine them for parts, or clean them up. For example, in your data, every time you see an identifier that looks like `[some numbers]_[more numbers]` you want to extract the first set of numbers, which represents a patient identifier, and the second set of numbers, which represents a sample number, and create new data columns with that information, which will allow you to work with just the patient identifier or just the sample number more easily.
 
