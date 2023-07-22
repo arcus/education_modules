@@ -32,14 +32,14 @@ Minimal experience of using the RStudio IDE and writing R code (specifically, wi
 
 @end
 
-r_file: r\_basics\_transform\_data
 
-good_first_module: true
+good_first_module: false
 data_task: data_wrangling
 coding_required: true
 coding_level: basic
 coding_language: r
 sequence_name: r_basics
+previous_sequential_module: r_basics_visualize_data
 
 @sets_you_up_for
 - r_missing_values
