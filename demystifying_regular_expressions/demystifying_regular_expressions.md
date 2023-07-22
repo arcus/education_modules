@@ -129,7 +129,36 @@ There are also some popular **command line tools** that use regular expressions,
 
 As we stated earlier, a **regular expression** is a specific way to **express** a **rule** for a pattern.  For example, one pattern rule might be for a valid URL of a root web page.
 
-Let's consider a somewhat oversimplified pattern that defines a URL.  For now we won't worry about pages and directories within a website like https://apache.org/licenses/LICENSE-2.0 or https://www.nytimes.com/es/, we're just going to capture the pattern for the main web page without any specification after the domain name.  So we're looking for simple URLs like https://www.nytimes.com or http://apache.org.  
+Our Use Case
+-----
+
+Let's consider a somewhat oversimplified pattern that defines a URL. 
+
+We know that these URLs are valid, and we want our regular expression pattern to match them.  Some of these may, at first glance, look identical, but the URLs below are all distinct, with a few subtle changes (like a trailing forward slash or "http" versus "https").
+
+* http://wikipedia.org
+* http://de.wikipedia.org
+* http://commons.wikipedia.org
+* https://wikipedia.org
+* https://de.wikipedia.org
+* https://commons.wikipedia.org
+* http://wikipedia.org/
+* http://de.wikipedia.org/
+* http://commons.wikipedia.org/
+* https://wikipedia.org/
+* https://de.wikipedia.org/
+* https://commons.wikipedia.org/
+
+And these are not valid URLs, so we want our pattern to not match these faulty URLs.
+
+* https:/wikipedia.org
+* https://wikipedia
+* https://wikipedia&.org
+
+For now we won't worry about pages and directories within a website like https://apache.org/licenses/LICENSE-2.0 or https://www.nytimes.com/es/, we're just going to capture the pattern for the main web page without any specification after the domain name.  So we're looking for simple URLs like https://www.nytimes.com or http://apache.org.  
+
+Describing Our Pattern
+-------
 
 This is one way to describe that pattern:
 
@@ -149,28 +178,6 @@ This is one way to describe that pattern:
 
 * Optionally, a closing slash (`/`)
 
-According to the pattern described above, these are valid URLs:
-
-* http://wikipedia.org
-* http://de.wikipedia.org
-* http://commons.wikipedia.org
-* https://wikipedia.org
-* https://de.wikipedia.org
-* https://commons.wikipedia.org
-* http://wikipedia.org/
-* http://de.wikipedia.org/
-* http://commons.wikipedia.org/
-* https://wikipedia.org/
-* https://de.wikipedia.org/
-* https://commons.wikipedia.org/
-
-And these are not valid URLs:
-
-* https:/wikipedia.org
-* https://wikipedia
-* https://wikipedia&.org
-
-
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
@@ -178,8 +185,12 @@ Note that our definition here is not complete.  There are actually more rules ab
 
 </div>
 
+A Coded Version
+-----
 
-How could you write an expression that expresses the rules we listed above?  This is the regular expression that captures the rules we listed above.
+There's a regular expression that does what we just did in words (describing the URL pattern), but in a much briefer, encoded format.  If you asked someone who knows regex to write down your pattern, this is what they would give you, and you can check that it works by using a regular expression checker.  We'll talk about a good regular expression checker on the next page.
+
+This is the regular expression that captures the rules we listed above.
 
 `https?:\/\/([A-Za-z0-9\-]+\.)?[A-Za-z0-9\-]+\.[A-Za-z0-9\-\.]+\/?`
 
@@ -227,17 +238,19 @@ This tool is useful, because sometimes you may not need to construct a regular e
 
 ## Quiz: Demystifying Regex
 
+Please check all of the true statements below:
 
-Fill in the blank below with a single lowercase word.
----
+[[ ]] Regular expressions are a way to detect statistical outliers in data.
+[[X]] Regular expressions are a way to define rules that describe a pattern in text.
+[[X]] Regular expressions can be used in multiple coding languages.
+[[ ]] The only way to check the accuracy of a regular expression someone gives you is by writing code. 
+[[X]] Regular expressions can be used to extract useful substrings.
 
-Regular expressions are a way to define rules that describe a 
 
-[[ pattern ]] in text. 
 ***
 <div class = "answer">
 
-The word we were looking for was "pattern".  Regular expressions are a way to define rules that describe a pattern in text!
+Regular expressions are used to express textual patterns, not statistical outliers in your data. Many programming languages support regular expressions, but you don't have to be a coder to check the accuracy of a regular expression. Online regular expression checkers are a great way to practice!  Regular expressions can indeed be used to extract useful substrings.
 
 </div>
 ***
