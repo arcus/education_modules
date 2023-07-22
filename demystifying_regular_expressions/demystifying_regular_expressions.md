@@ -30,7 +30,16 @@ After completion of this module, learners will be able to:
 - Use an online regular expressions checker that helps build and test regular expressions.
 
 @end
-
+good_first_module: false
+coding_required: true
+coding_level: getting_started
+sequence_name: regex
+previous_sequential_module: 
+@sets_you_up_for
+- regular_expressions_basics
+@end 
+@depends_on_knowledge_available_in
+@end
 @version_history 
 No previous versions.
 @end
@@ -90,12 +99,14 @@ There are two very common reasons you as a researcher might want to use regular 
 
 **Reason 1: Searching for the needle in the haystack**
 ---
+---
 
 You're writing code or looking through data and want to find, or find and replace, something that matches a predictable pattern.  For example, maybe you have used hexidecimal color specifications such as `#ccc` or `#FF1451` in your data visualizations in R, and you want to find all of those, because you want to add comments in your code disclosing the color in English so that your code is more understandable. 
 
 This goes beyond the typical search you would use in Word or other programs, because you want to find multiple values that start with a hash mark (#) and are immediately followed by three or six digits ranging from 0-9 and A-F (or a-f).  
 
 **Reason 2: Extracting useful sub-strings**
+---
 ---
 
 You're analyzing some text values and need to change them, mine them for parts, or clean them up. For example, in your data, every time you see an identifier that looks like `[some numbers]_[more numbers]` you want to extract the first set of numbers, which represents a patient identifier, and the second set of numbers, which represents a sample number, and create new data columns with that information, which will allow you to work with just the patient identifier or just the sample number more easily.
