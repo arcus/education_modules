@@ -51,7 +51,9 @@ By the end of this module you will be able to express this pattern as the regula
 
 Regular expressions are useful to biomedical researchers because they can allow you to find, replace, or extract text that matches patterns you define.  These text patterns might appear in your data (for example, clinical notes), in metadata (such as column names), in your data analysis scripts (for example, where you define hexadecimal codes for color), and in file names.  
 
-A good place to practice regular expressions is an online regex testing website.  We like "Regex 101", at https://www.regex101.com, but you can also search online for "regex checker" to find other, similar websites.  Regex 101 allows you to enter your regular expression as well as some sample text that you want to apply the regular expression to.  We will ask you to use this website to gain practice during this module!
+A good place to practice regular expressions is an online regex testing website.  We like **Regex 101** at https://www.regex101.com, but you can also search online for "regex checker" to find other, similar websites.  Regex 101 allows you to enter your regular expression as well as some sample text that you want to apply the regular expression to.  You can use this website to gain practice with any of the rules you learn in this module.
+
+The [Regex 101 section](link) in the Demystifying Regular Expressions module shows and example of how to use the website.
 
 ## Simple Regular Expressions
 
