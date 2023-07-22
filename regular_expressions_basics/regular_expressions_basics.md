@@ -20,7 +20,7 @@ long_description: Regular expressions, or regex, are a way to specify patterns (
 estimated_time_in_minutes: 60
 
 @pre_reqs
-Learners should have some knowledge about patterns in biomedical data and understand the utility of regular expressions (regex).  For an introduction to these concepts, consider the [Demystifying Regular Expressions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#1) module.
+Learners should have some knowledge about patterns in biomedical data and understand the utility of regular expressions (regex).  For an introduction to these concepts, consider the [Demystifying Regular Expressions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#1) module. Having previously encountered an online regular expression checker may also be useful.
 @end
 
 @learning_objectives  
@@ -35,7 +35,17 @@ After completion of this module, learners will be able to:
 @version_history 
 No previous versions.
 @end
+good_first_module: false
+coding_required: true
+coding_level: basic
+sequence_name: regex
+previous_sequential_module: demystifying_regular_expressions
+@sets_you_up_for
 
+@end 
+@depends_on_knowledge_available_in
+- demystifying_regular_expressions
+@end
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
@@ -59,7 +69,9 @@ The [Regex 101 section](link) in the Demystifying Regular Expressions module sho
 
 To describe a pattern, you need to indicate what characters you expect to see using **tokens**, and how many of them, using **quantifiers**.  Tokens can be very simple and intuitive (the token for expressing the letter "A" is just `A`) or can be more complex (the token for any digit 0-9 is `\d`).  Quantifiers can be symbols such as `*` or `+`, or can include a number (the quantifier for "exactly two" is `{2}`).
 
-We'll work with simple regular expressions in this module by describing two principal tasks you need to do in regex: indicating which characters are valid at a given point in a pattern with various kinds of tokens, and then quantifying how many of those characters you expect to find there using quantifiers.
+We'll work with simple regular expressions in this module by describing two principal tasks you need to do in regex: 
+1. Indicating which characters are valid at a given point in a pattern with various kinds of tokens. 
+2. Quantifying how many of those characters you expect to find there using quantifiers.
 
 Soon, the mysterious set of symbols that makes up a regular expression will make sense and not feel like random characters!
 
@@ -129,7 +141,7 @@ Combining letters, numbers, spaces, symbols, and escape sequences
 
 You can combine escaped characters and normal characters.  For example, if your pattern includes ".co.nz #5", you would express that as `\.co\.nz #5`.
 
-### Quiz 1: Specific Characters
+### Quiz: Specific Characters
 
 Which regular expression below will match the text "25% (20) claim:"?  Check all that apply.
 
@@ -160,9 +172,9 @@ This means that either `25\% \(20\) claim\:` or `25% \(20\) claim:` are regular 
 
 ### Tokens: Special Groups
 
-Often, we want to indicate that a group of characters are all equally valid in a location.  For example, a pattern might include any digit at all in a particular location, or any of the letters "A", "Q", or "Y" at another location.  This is very typical, and this is where regular "find" or "find and replace" tools in software fail, while regular expressions prove useful.
+Often, we want to indicate that a group of characters are all equally valid in a location.  For example, a pattern might include any digit at all in a particular location, or any of the letters A, Q, or Y at another location.  This is very typical, and this is where regular "find" or "find and replace" tools in software fail, while regular expressions prove useful.
 
-There are several ways to indicate groups of possible characters, and we'll go over the most common ones below.
+There are several ways to indicate groups of possible characters, and we'll go over the most common ones next.
 
 Lists
 -----
@@ -175,7 +187,7 @@ Groups of characters can be added to a custom **list**.  Each member of the cust
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-Don't include separators in your list!  `[Y,N]` is not the same as `[YN]`.  The first is a token that represents "either `Y`, or a comma (`,`), or `N`", and the second is a token that represents "either `Y` or `N`".
+Don't include separators in your list!  `[Y,N]` is not the same as `[YN]`.  The first is a token that represents "either `Y`, or a comma (`,`), or `N`," and the second is a token that represents "either `Y` or `N`."
 
 </div>
 
@@ -188,7 +200,7 @@ The list of all digits and some other lists of characters are so commonly used t
 
 * Any single digit (0, 1, 2,... 8, 9) is represented `\d`.  
 * Any whitespace character like space or tab? That's `\s`.
-* Any character at all (called a **wildcard**)? `.`
+* Any character at all (called a **wildcard**)? Type a single period `.`
 
 You can combine these metasquence tokens with what we've already learned.  For example, if the pattern we're trying to define includes a single digit, the letter Z, some other character that could be anything, and the letter J, we could put that in a regular expression as `\dZ.J`.
 
@@ -207,7 +219,7 @@ You can add a range and also list individual characters, being careful not to ad
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-Remember that a token represents a **single character**, so it might be helpful to read something like `[025-8]` aloud one character at a time: "zero or two or five through eight", instead of saying to yourself "twenty five through eight," which is confusing!
+Remember that a token represents a **single character**, so it might be helpful to read something like `[025-8]` aloud one character at a time: say "zero or two or five through eight" to yourself instead of "twenty five through eight," which is confusing!
 
 </div>
 
@@ -221,7 +233,7 @@ You can even put two or more ranges in square brackets, right next to one anothe
 
 Characters, whether they are numbers, letters, other symbols, or whitespace, are represented in [Unicode](https://en.wikipedia.org/wiki/List_of_Unicode_characters). Unicode includes over 100,000 characters, each of which has a hexidecimal (base 16) code associated with it. When we give a range in a regular expression, we're actually giving the character range in the underlying Unicode.  For example, in the range `[1-4]`, we're actually referring to the Unicode characters U+0031 (`1`) through U+0034 (`4`) and saying that any Unicode character between (and including) U+0031 and U+0034 is acceptable.
 
-Unicode tends to keep sets of character "in order", abiding by previous conventions.  For example, the digits appear in order from `0` (U+0030) to `9` (U+0039).  Letters also appear in Unicode in their typical order.   `A` (U+0041) is followed by `B` (U+0042), and so on, until `Z` (U+005A).  
+Unicode tends to keep sets of character in order, abiding by previous conventions.  For example, the digits appear in order from `0` (U+0030) to `9` (U+0039).  Letters also appear in Unicode in their typical order.   `A` (U+0041) is followed by `B` (U+0042), and so on, until `Z` (U+005A).  
 
 The ordering of things that we don't have a specific order for, like punctuation, or sets themselves, can feel a little arbitrary, and it can be helpful to look up [Unicode characters](https://en.wikipedia.org/wiki/List_of_Unicode_characters) to see what order things are in.  For example, between the digit `9` and the letter `A`, the following characters appear in Unicode:
 
@@ -268,7 +280,7 @@ Try the correct [right-to-left range notation of `[א-ת]`](https://regex101.com
 
 
 
-### Quiz 2: Metasequences, Lists, and Ranges
+### Quiz: Metasequences, Lists, and Ranges
 
 This the regular expression that represents the valid characters that can appear in the first part of an email address (the part before the `@`):
 
@@ -305,7 +317,7 @@ There is no mention of a literal backslash, exclamation point, or space, so thos
 
 ### Quantifiers: How Many Characters?
 
-So far, we've gone over single characters like `7`, metasequences like `\d`, and ranges like `[0-9]`, all to define what's valid for a single character in a pattern.  These ways to define what a character could be are collectively called **tokens**.  
+So far, we've gone over single characters like `7`, lists like `[YN]`, metasequences like `\d`, and ranges like `[0-9]`, all to define what's valid for a single character in a pattern.  These ways to define what a character could be are collectively called **tokens**.  
 
 However, there's more to patterns than defining tokens one character at a time.  Usually, patterns have a certain number of characters in a row that are all represented by the same token, like five digits or three letters.  It would be very annoying to have to put `\d\d\d\d\d` (five digits) or `[A-Za-z][A-Za-z][A-Za-z]` (three letters) to represent these patterns.  And what if there's a varying length?  Three to five digits, or four or more letters?  That's where **quantifiers** come in!
 
@@ -326,7 +338,7 @@ Regex rules can be confusing, and even after lots of practice using regular expr
 
 </div>
 
-### Quiz 3: Putting It All Together 
+### Quiz: Putting It All Together 
 
 The regular expression that gives the pattern for American Express credit card numbers is given as:
 
@@ -360,10 +372,10 @@ This means that American Express credit card numbers will start with `34` or `37
 
 We only scratched the surface of regular expressions.  Want to learn more?
 
-Here are some good "cheat sheets":
+Here are some good cheat sheets:
 
-* A fairly comprehensive cheat sheet is available [from Dave Child](https://cheatography.com/davechild/cheat-sheets/regular-expressions/).
-* There's another good cheat sheet for regex [from DataCamp](https://images.datacamp.com/image/upload/v1665049611/Marketing/Blog/Regular_Expressions_Cheat_Sheet.pdf.)
+* [Dave Child's cheat sheet](https://cheatography.com/davechild/cheat-sheets/regular-expressions/) is fairly comprehensive.
+* [DataCamp's cheat sheet for regex](https://images.datacamp.com/image/upload/v1665049611/Marketing/Blog/Regular_Expressions_Cheat_Sheet.pdf) is another good option.
 
 If you want to check out regular expression checkers, here are a few we like:
 
