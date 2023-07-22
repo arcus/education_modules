@@ -52,7 +52,8 @@ Other rules might describe the pattern of a valid credit card number, or a natio
 
 As humans, we are very good at identifying patterns and realizing instantly that a certain text "looks like an email address" or "looks like a phone number."  Quantifying patterns and telling the computer what a pattern "looks like" is what regular expressions are all about.
 
-<h3>Patterns in Biomedical Research</h3>
+Patterns in Biomedical Research
+------
 
 In biomedical research, patterns emerge in a number of ways:
 
@@ -64,12 +65,24 @@ In biomedical research, patterns emerge in a number of ways:
   - Medical Record Numbers (MRNs) that have a certain length and pattern of letters and numbers
   - Dates, which might look like several different kinds of patterns, depending on your region and who made the notes
 * Survey response patterns (for example, many identical answers in a row that might indicate that the survey taker was just clicking through without reading the questions).
-* Column names in your table might follow a pattern, such as including suffixes like `_pre` and `_post`.  Maybe you want to pair pre and post measures on many different measures, and do that easily and quickly! 
+* Column names in your table might follow a pattern, such as including suffixes like `_pre` and `_post`.  Maybe you want to pair pre and post values on many different measures, and do that easily and quickly! 
 * Blood pressure, pulse ox, body temperature, and other vital measurements are recognizable at a glance because they fit a pattern we expect.
 
 You may think of many more patterns for your biomedical research.  Patterns can exist in the data itself (such as language patterns or measurements with units), in the ways you store data (like file names or column names in a table), or in the way you work with data (for example, certain Python or R code you use repeatedly).
 
+Describing Patterns
+--------
 
+The goal of regular expressions is to describe patterns based in:
+
+* which kinds of characters occur, and 
+* if they are optional or mandatory,
+* how many of that kind of character to expect, and
+* in what order.  
+
+You can also put in a "capturing" element, to capture a specific part of the pattern (for example, extracting the patient identifier and/or the sample number from a file name).
+
+Some regular expressions are short and simple, and some can be many lines of text long.
 
 ## Why Use Regular Expressions?
 
@@ -96,17 +109,6 @@ If you work with strings (character data) frequently, whether that's from free-t
 
 </div>
 
-The goal of regular expressions is to describe patterns based in:
-
-* which kinds of characters occur, and 
-* if they are optional or mandatory,
-* how many of that kind of character to expect, and
-* in what order.  
-
-You can also put in a "capturing" element, to capture a specific part of the pattern (in our  example, extracting the patient identifier and/or the sample number).
-
-Some regular expressions are short and simple, and some can be many lines of text long.
-
 ## Where Can You Use Regular Expressions?
 
 Regex is often used in **code**.  
@@ -117,7 +119,7 @@ Or you could write R code that takes the file names from a directory full of vid
 
 Regular expressions can also be used in **text editors**.  
 
-For example, this module was written using a text editor called [Visual Studio Code](https://code.visualstudio.com/) (or VS Code).  This text editor allows the user to search for patterns using regular expressions.  For example, the author can look for every time a word appears between single asterisks (which will mean the text will appear in italics in the module when a learner reads **).  
+For example, this module was written using a text editor called [Visual Studio Code](https://code.visualstudio.com/) (or VS Code).  This text editor allows the user to search for patterns using regular expressions.  For example, the author can look for every time a word appears between single asterisks (which will mean the text will appear in italics), or every time a new line starts with a number, or every time a single or double quotation mark is followed by a period or comma.
 
 VS Code also supports search and replace.  For example, if there's a style rule that indicates that words in *italics* (like `*regular*`) should also be in bold, the author can ask the text editor to find all the places where there's a word enclosed in single asterisks and enclose that word instead in triple asterisks (like `***regular***`, which will make the word render in ***bold italic***).
 
