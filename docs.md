@@ -128,35 +128,47 @@ We store a lot of important information in the front matter section at the top o
 
 Which front matter items are required? It depends on the content of the module you're writing:
 
-|                                    | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                     |
-| :--------------------------------- | :---------: | :---: | :---------: | :---------------------------------------------------------------------------------------- |
-| `author`                           |      X      |   X   |      X      |                                                                                           |
-| `email`                            |      X      |   X   |      X      |                                                                                           |
-| `version`                          |      X      |   X   |      X      |                                                                                           |
-| `current_version_description`      |      X      |   X   |      X      |                                                                                           |
-| `module_type`                      |      X      |   X   |      X      |                                                                                           |
-| `module_template_version`          |      X      |   X   |      X      |                                                                                           |
-| `lanaguge`                         |      X      |   X   |      X      |                                                                                           |
-| `narrator`                         |      X      |   X   |      X      |                                                                                           |
-| `title`                            |      X      |   X   |      X      |                                                                                           |
-| `comment`                          |      X      |   X   |      X      |                                                                                           |
-| `long_description`                 |      X      |   X   |      X      |                                                                                           |
-| `estimated_time_in_minutes`        |      X      |   X   |      X      |                                                                                           |
-| `r_file`                           |             |   X   |             |                                                                                           |
-| `pre_reqs`                         |      X      |   X   |      X      |                                                                                           |
-| `learning_objectives`              |      X      |   X   |      X      |                                                                                           |
-| `module_structure`                 |             |       |      X      |                                                                                           |
-| `resource1_name`[^3]               |             |       |      X      |                                                                                           |
-| `resource1_description`[^3]        |             |       |      X      |                                                                                           |
-| `resource1_wellvetted`[^3]         |             |       |      X      |                                                                                           |
-| `resource1_wellvetted_text`[^3]    |             |       |      X      |                                                                                           |
-| `resource1_maintained`[^3]         |             |       |      X      |                                                                                           |
-| `resource1_maintained_text`[^3]    |             |       |      X      |                                                                                           |
-| `resource1_stablesupport`[^3]      |             |       |      X      |                                                                                           |
-| `resource1_stablesupport_text`[^3] |             |       |      X      |                                                                                           |
-| `resource1_a11y_issues`[^3]        |             |       |      X      |                                                                                           |
-| `version_history`                  |      X      |   X   |      X      |                                                                                           |
-| `import`                           |      X      |   X   |      X      | Importing `macros.md` is required for all modules. Additional import files may be needed. |
+|                                     | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                     |
+| :---------------------------------- | :---------: | :---: | :---------: | :---------------------------------------------------------------------------------------- |
+| `author`                            |      X      |   X   |      X      |                                                                                           |
+| `email`                             |      X      |   X   |      X      |                                                                                           |
+| `version`                           |      X      |   X   |      X      |                                                                                           |
+| `current_version_description`       |      X      |   X   |      X      |                                                                                           |
+| `module_type`                       |      X      |   X   |      X      |                                                                                           |
+| `docs_version`                      |      X      |   X   |      X      |                                                                                           |
+| `langauge`                          |      X      |   X   |      X      |                                                                                           |
+| `narrator`                          |      X      |   X   |      X      |                                                                                           |
+| `mode`                              |      X      |   X   |      X      |                                                                                           |
+| `title`                             |      X      |   X   |      X      |                                                                                           |
+| `comment`                           |      X      |   X   |      X      |                                                                                           |
+| `long_description`                  |      X      |   X   |      X      |                                                                                           |
+| `estimated_time_in_minutes`         |      X      |   X   |      X      |                                                                                           |
+| `r_file`                            |             |   X   |             |                                                                                           |
+| `pre_reqs`                          |      X      |   X   |      X      |                                                                                           |
+| `learning_objectives`               |      X      |   X   |      X      |                                                                                           |
+| `module_structure`                  |             |       |      X      |                                                                                           |
+| `resource1_name`[^3]                |             |       |      X      |                                                                                           |
+| `resource1_description`[^3]         |             |       |      X      |                                                                                           |
+| `resource1_wellvetted`[^3]          |             |       |      X      |                                                                                           |
+| `resource1_wellvetted_text`[^3]     |             |       |      X      |                                                                                           |
+| `resource1_maintained`[^3]          |             |       |      X      |                                                                                           |
+| `resource1_maintained_text`[^3]     |             |       |      X      |                                                                                           |
+| `resource1_stablesupport`[^3]       |             |       |      X      |                                                                                           |
+| `resource1_stablesupport_text`[^3]  |             |       |      X      |                                                                                           |
+| `resource1_a11y_issues`[^3]         |             |       |      X      |                                                                                           |
+| `good_first_module`                 |      X      |   X   |      X      |                                                                                           |
+| `data_domain`                       |             |       |             |                                                                                           |
+| `data_task`                         |             |       |             |                                                                                           |
+| `coding_required`                   |             |       |             |                                                                                           |
+| `coding_level`                      |             |   X   |             |                                                                                           |
+| `coding_language`                   |             |   X   |             |                                                                                           |
+| `sequence_name`                     |             |       |             |                                                                                           |
+| `previous_sequential_module`        |             |       |             |                                                                                           |
+| `sets_you_up_for`                   |      X      |   X   |      X      |                                                                                           |
+| `depends_on_knowledge_available_in` |      X      |   X   |      X      |                                                                                           |
+| `is_parallel_to`                    |             |       |             |                                                                                           |
+| `version_history`                   |      X      |   X   |      X      |                                                                                           |
+| `import`                            |      X      |   X   |      X      | Importing `macros.md` is required for all modules. Additional import files may be needed. |
 
 
 [^1]: Modules using [interactive R code](#interactive-r).
@@ -189,9 +201,10 @@ You'll need the following fields in your front matter (new fields added by check
 - version
 - current\_version\_description
 - module\_type
-- module\_template\_version
+- docs\_version
 - language
 - narrator
+- mode
 - title
 - comment
 - long\_description

@@ -1,7 +1,7 @@
 ---
 name: Checklist for updating modules
 about: Checklist for updating a module to comply with docs.md v1
-title: Docs Update Checklist
+title: Docs v1 Update Checklist
 assignees: ''
 
 ---
@@ -23,86 +23,12 @@ The following sections provide a complete (hopefully!) list of potential changes
 
 ## Front matter
 
-Make sure the front matter includes all required fields from the new templates. Some of these are new fields and some are not.
+* [ ] The front matter includes all required fields from the new templates. Some of these are new fields and some are not. Use the ["Your front matter checklist"](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md#your-front-matter-checklist) section of docs.md to get a customized list of the required front matter for a given module. 
 
-TIP: You can also use the "Your front matter checklist" section of docs.md to get a customized list of the required front matter for a given module. 
+Also watch specifically for the following:
 
-* [ ] For all modules
-    - [ ] author
-    - [ ] email
-    - [ ] version
-    - [ ] current\_version\_description
-    - [ ] module_type
-    - [ ] module\_template\_version (should this change to docs_version?)
-    - [ ] language
-    - [ ] narrator
-    - [ ] mode: Textbook
-    - [ ] title
-    - [ ] comment
-    - [ ] long_description
-    - [ ] estimated\_time\_in\_minutes
-    - [ ] pre_reqs 
-    - [ ] learning_objectives
-    - [ ] good\_first\_module
-    - [ ] sets\_you\_up\_for
-    - [ ] depends\_on\_knowledge\_available\_in
-    - [ ] version_history
-    - [ ] import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-
-* [ ] If the learner will need to code to meet the learning objectives, the following are required:
-
-    - [ ] coding_required: true
-    - [ ] coding_level
-    - [ ] coding_language
-
-* [ ] For modules using interactive R code (binder), the following are required:
-
-    - [ ] r_file
-    - [ ] coding_level
-    - [ ] coding_language
-    - [ ] import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
-    
-* [ ] For modules using interactive Python code (sagemath), the following are required:
-
-    - [ ] coding_level
-    - [ ] coding_language
-    - [ ] import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
-
-* [ ] For modules using interactive SQL (AlaSQL), the following are required:
-
-    - [ ] coding_level
-    - [ ] coding_language
-    - [ ] import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_sql.md
-    - [ ] import statements for any SQL tables needed
-
-* [ ] For modules about a particular kind of data, or teaching a particular data task/skill:
-
-    - [ ] data_domain
-    - [ ] data_task
-
-* [ ] For modules that are part of a sequence:
-
-    - [ ] sequence_name
-    - [ ] previous\_sequential\_module (only for modules that are not first in their sequence)
-
-* [ ] For modules that are parallel to another module:
-
-    - [ ] is\_parallel\_to
-
-* [ ] For wrapper modules:
-
-    - [ ] resource1_name
-    - [ ] resource1\_description
-    - [ ] resource1\_wellvetted
-    - [ ] resource1\_wellvetted\_text
-    - [ ] resource1\_maintained
-    - [ ] resource1\_maintained\_text
-    - [ ] resource1\_stablesupport
-    - [ ] resource1\_stablesupport\_text
-    - [ ] resource1\_a11y\_issues
-    - [ ] for wrapper modules with a second external resource, include all of the above for resource2 as well
-    - [ ] for wrapper modules with a third external resource, include all of the above for resource3 as well
-    - [ ] import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md
+* [ ] current_version_description is a short, present-tense text fragment without bullets, and gives a learner-centric quick overview of version changes from the learner perspective
+* [ ] version_history contains 1-3 past versions with bulleted links to commit-specific documents, unless this is an initial version of a module, in which case version_history can be empty. For detailed instructions on how to fill out the version fields, see the [docs descriptions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md#version_history).
 
 The following should **NOT** be included in module front matter: 
 
@@ -114,14 +40,14 @@ The following should **NOT** be included in module front matter:
 
 ## Macros
 
-* [ ] For all modules:
+* For all modules:
     - [ ] Overview is created with the macro, not written
     - [ ] Feedback is created with the macro, not written
 
-* [ ] For modules with interactive R, Python, or SQL:
+* For modules with interactive R, Python, or SQL:
     - [ ] Lesson Preparation is created with the relevant macro, not written
 
-* [ ] For wrapper modules:
+* For wrapper modules:
     - [ ] Lesson Preparation is created with the relevant macro, not written
     - [ ] There is a `print_resource` macro for each external resource just after the `lesson_prep_wrapper` macro
 
