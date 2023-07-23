@@ -7,7 +7,7 @@ current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
 language: en
-narrator: UK English Female
+narrator: US English Female
 mode: Textbook
 previous_sequential_module: demystifying_regular_expressions
 
@@ -29,7 +29,7 @@ After completion of this module, learners will be able to:
 - Define a simple alphanumeric pattern in regex notation
 - List common ranges and character groups in regex
 - Quantify characters appearing optionally, once, or multiple times in regex
-- Test regular expressions in a browser
+
 @end
 
 @version_history 
