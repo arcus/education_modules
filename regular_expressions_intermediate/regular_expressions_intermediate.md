@@ -11,7 +11,7 @@ narrator: US English Female
 mode: Textbook
 previous_sequential_module: regular_expressions_basics
 
-title: Regular Expressions: Intermediate Level
+title: Regular Expressions, Intermediate Level
 
 comment:  Grow in your ability to use regular expressions, or regex, for complex pattern matching.
 
@@ -28,12 +28,22 @@ After completion of this module, learners will be able to:
 
 - Explain what a regular expression flag does
 - Define a pattern in regex notation that uses a capturing group
-- Define a pattern in regex notation that uses the `|` symbol as a logical or 
+- Define a pattern in regex notation that uses the `|` symbol as a logical "Or" 
 - Use anchors and boundaries in regular expressions
 - Explain why a "lookahead" can be useful in a regular expression
 
 @end
-
+good_first_module: false
+coding_required: true
+coding_level: intermediate
+sequence_name: regex
+previous_sequential_module: regular_expressions_basics
+@sets_you_up_for
+@end 
+@depends_on_knowledge_available_in
+- regular_expressions_basics
+-demystifying_regular_expressions
+@end
 @version_history 
 No previous versions.
 @end
@@ -49,13 +59,13 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 A **regular expression** (also known as "regex") is a specific way to **express** a **rule** for a pattern.  Regular expressions are useful to biomedical researchers because they can allow you to find, replace, or extract text that matches patterns you define.  
 
-A good place to practice regular expressions is an online regex testing website.  We like "Regex 101", at https://www.regex101.com.
+A good place to practice regular expressions is an online regex testing website.  We like **Regex 101**, at https://www.regex101.com.
 
 Regex consists of **tokens** which represent characters that appear in a particular location, and **quantifiers**, which give the number of times a given token repeats.
 
-Examples of **tokens** include `\d`, `[A-Za-z]`, `A`, and `.`.  
+- **Tokens** include `\d`, `[A-Za-z]`, `A`, and `.`
 
-Examples of **quantifiers** include `*`, `{2,5}`, and `+`.
+- **Quantifiers** include `*`, `{2,5}`, and `+`
 
 If this refresher doesn't seem familiar, you might want to consider reviewing [Demystifying Regular Expressions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#1) or[Regular Expressions Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_basics/regular_expressions_basics.md#1).
 
@@ -100,7 +110,7 @@ If you do some internet searches or use a regular expression checker, you might 
 You don't need to worry about enclosing your regular expressions in forward slashes for this module.  In fact, depending on what kind of code you write, you may never have to enclose your regular expressions in forward slashes.  Still, it's somewhat customary to see regular expressions written this way.
 </div>
 
-### Quiz 1: Flags
+### Quiz: Flags
 
 Which of the following statements are true?  Check all that apply.
 
@@ -111,7 +121,11 @@ Which of the following statements are true?  Check all that apply.
 ***
 <div class = "answer">
 
-Flags can be important whether you're writing code or using a regular expressions checker, so it's not true that flags only matter for Perl code.  Flags are declared outside of the definition of a regular expression, so the second statement is also false.  The last two statements are true.  Flags alter the rules around regular expression parsing, and one common flag is "global", written with a "g", which allows for multiple matches.
+Flags can be important whether you're writing code or using a regular expressions checker, so it's not true that flags only matter for Perl code.  
+
+Flags are declared outside of the definition of a regular expression, so the second statement is also false.  The last two statements are true.  
+
+Flags alter the rules around regular expression parsing, and one common flag is "global," written with a `g`, which allows for multiple matches.
 
 </div>
 ***
@@ -165,7 +179,7 @@ We'll add the pattern `(\d+)_([PMF])_([A-Z\d]+)_(\d+)` to the small box labeled 
 
 We see four groups listed in the "Match Information" pane on the right side.  Above that pane, the "Explanation" pane goes into detail about each group.
 
-### Quiz 2: Capturing Groups
+### Quiz: Capturing Groups
 
 Consider a regular expression with capturing group that describes email addresses:
 
@@ -226,7 +240,7 @@ That's not what we mean!  And we can't use a space to our regex to syntactically
 
 [This will also work](https://regex101.com/r/ko7ySn/1) as a matching regular expression, but won't capture the group in question.
 
-### Quiz 3: Non-Capturing Groups and the Logical "Or"
+### Quiz: Non-Capturing Groups and the Logical "Or"
 
 You're looking through lab notes written by a colleague who uses codes and abbreviations liberally.  This investigator is known to write their lowercase initials ("sjp") and a single space followed by either "help" (always in lowercase) or "911" in notes to highlight important potential pitfalls.  Using the logical "or" and using a non-capturing group (remember: the syntax is `(?:)`), write a regular expression that would allow you to capture any of the "sjp help" or "sjp 911" references.
 
@@ -251,7 +265,7 @@ Sometimes, it's important that certain characters appear in a certain place in a
 
 Or maybe you are editing a text transcript and you want to find all the lines that **end** without one of the punctuation marks of `.`, `!`, or `?`.
 
-The caret symbol `^` (indicating the beginning of a string) and dollar sign `$` (indicating the end of a string) are special characters called "anchors", which can be used when it's important to find patterns in a specific location.  
+The caret symbol `^` (indicating the beginning of a string) and dollar sign `$` (indicating the end of a string) are special characters called **anchors**, which can be used when it's important to find patterns in a specific location.  
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -291,7 +305,7 @@ To correctly use `^` as the start-of-string token, you must not enclose it in sq
 
 Let's check that strings **end** with one of our preapproved punctuation options.  We'd like to match problematic strings, which are ones that don't end in either a period, question mark, or exclamation point.  
 
-There's a helpful bit of grammar in regex that means "except for", when it appears as the first symbol within square brackets.  Interestingly enough, we use `^` to do this.  That symbol does double duty, because we also use `^` to indicate the start of a line, when it's not inside square brackets!  Placement is everything.  
+There's a helpful bit of grammar in regex that means "except for," when it appears as the first symbol within square brackets.  Interestingly enough, we use `^` to do this.  That symbol does double duty, because we also use `^` to indicate the start of a line, when it's not inside square brackets!  Placement is everything.  
 
 For example, `[ABXYZ]` means "any of these: A, B, X, Y, or Z", while `[^ABXYZ]` means "anything that isn't one of these: A, B, X, Y, and Z."  
 
@@ -375,15 +389,15 @@ In the string `subject AB_123 has 10 lesions.`, there are five word boundaries. 
 * The point between "0" and the space following it, is also a word boundary.
 * Finally, between the "s" in "lesions" and the period following it is our final word boundary.
 
-Word boundaries are useful in case you're looking for patterns that match the start or end of a word.  For example, what if you're looking in a text for "ome" words -- mentions of "microbiome", "genome", "transcriptome", "exome", "proteome", "trisome", "microsome" and similar words?  [If you look just for the pattern `ome`](https://regex101.com/r/gk7BYK/1), you will also match "women", "foment", "moment", "omega" and so on.  
+Word boundaries are useful in case you're looking for patterns that match the start or end of a word.  For example, what if you're looking in a text for "ome" words -- mentions of "microbiome," "genome," "transcriptome," "exome," "proteome," "trisome," "microsome," and similar words?  [If you look just for the pattern `ome`](https://regex101.com/r/gk7BYK/1), you will also match "women," "foment," "moment," "omega," and so on.  
 
 ![The regex `ome` matches ten locations that contain "ome" in our silly sentence "The genome of women is home to some of the most comely parts of the human exome: the omega moment that foments the proteome.".](media/without_word_boundary.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
 
-How can you indicate words that end in "ome"?  [Append a word boundary](https://regex101.com/r/GnLvOU/1) at the end of the `ome` pattern: `ome\b`.
+How can you indicate words with "ome" and the end?  [Append a word boundary](https://regex101.com/r/GnLvOU/1) at the end of the `ome` pattern: `ome\b`.
 
 ![The regex `ome\b` matches five locations in words ending in "ome" in our silly sentence "The genome of women is home to some of the most comely parts of the human exome: the omega moment that foments the proteome.".](media/with_word_boundary.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
 
-We still have some "false" hits with "home" and "some".  How could we solve this and require at least two, and not just one, leading letter?  That way, "home", "some", "come", "dome", etc. would be excluded, but "exome" would still match.
+We still have some "false" hits with "home" and "some."  How could we solve this and require at least two, and not just one, leading letter?  That way, "home," "some," "come," "dome," etc. would be excluded, but "exome" would still match.
 
 Well, what if we started off our pattern with "two or more characters" followed immediately by "ome" and then the word boundary?  Let's try it on the next page.
 
@@ -407,7 +421,7 @@ But that's not what we meant!  Luckily we can fix this by being more specific.  
 * We could indicate that we want two or more letters, excluding other things like spaces, with [`[A-Za-z]{2,}ome\b`](https://regex101.com/r/TdF4kr/1)
 * We could use the special "word character" symbol of `\w` to indicate that letters, numbers, and underscores are what we mean: [`\w{2,}ome\b`](https://regex101.com/r/sh6CV5/1).
 
-In both of these cases, the matches we get back are the longer words that end in "ome" -- namely, "genome", "exome", and "proteome".
+In both of these cases, the matches we get back are the longer words that end in "ome" -- namely, "genome," "exome," and "proteome."
 
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
@@ -446,7 +460,7 @@ Go ahead and [try that in a regex checker](https://regex101.com/r/NvzPb0/1) and 
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
-There are other types of "lookarounds", including **lookbehinds**, that you might consider learning if you write a lot of regular expressions, but for now, the lookahead by itself will serve you well for more complex cases.
+There are other types of "lookarounds," including **lookbehinds**, that you might consider learning if you write a lot of regular expressions, but for now, the lookahead by itself will serve you well for more complex cases.
 
 </div>
 
@@ -500,7 +514,7 @@ The code for a word boundary is ` \b `.
 Which of these is true about lookaheads in regular expressions?
 
 [( )] Lookaheads use the syntax ` \w`
-[( )] Lookaheads can be helpful when dealing with overlapping patterns
+[(X)] Lookaheads can be helpful when dealing with overlapping patterns
 [( )] Lookaheads describe special places in a string, like the very beginning or the very end.
 ***
 <div class = "answer">
@@ -516,10 +530,10 @@ The word that describes special places in the string, like the very beginning or
 
 ## Additional Resources
 
-Here are some good "cheat sheets":
+Here are some good cheat sheets:
 
-* A fairly comprehensive cheat sheet is available [from Dave Child](https://cheatography.com/davechild/cheat-sheets/regular-expressions/).
-* There's another good cheat sheet for regex [from DataCamp](https://images.datacamp.com/image/upload/v1665049611/Marketing/Blog/Regular_Expressions_Cheat_Sheet.pdf.)
+* [Dave Child's cheat sheet](https://cheatography.com/davechild/cheat-sheets/regular-expressions/) is fairly comprehensive.
+* [DataCamp's cheat sheet for regex](https://images.datacamp.com/image/upload/v1665049611/Marketing/Blog/Regular_Expressions_Cheat_Sheet.pdf) is another good option.
 
 
 If you want to check out regular expression checkers, here are a few we like:
