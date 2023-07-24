@@ -1,14 +1,17 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.0
-module_template_version: 2.0.0
+version: 1.2.0
+current_version_description: Updated with new metadata and to remove references to Binderhub
+module_type: standard
+docs_version: 1.0.0
 language: en
 narrator: US English Female
 title: R Basics: Introduction
 comment:  Introduction to R and hands-on first steps for brand new beginners.
 long_description: Are you brand new to R, and ready to get started?  This module teaches concepts and vocabulary related to R, RStudio, and R Markdown.  It also includes some introductory-level hands-on work in RStudio.  This is a good course if you know that you want to use R but haven't ever used it, or you've barely used it and need a refresher on the basics.
-estimated_time: 1 hour
+r_file: r\_basics\_introduction
+estimated_time_in_minutes: 60
 
 @learning_objectives  
 
@@ -19,122 +22,82 @@ After completion of this module, learners will be able to:
 - Create a simple R Markdown file and its associated output document
 - Import a .csv file as a data frame
 
-
 @end
 
-@version_history
-1.0.1: small changes to environment setup alt text to be exactly mirrored across all 3 R basics modules.
-1.0.3: add information about name change, RStudio to Posit
-1.0.4: add information about Posit Cloud
-1.0.5: remove second attribution location
-
-@end
-
-script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
-
-@gifPreload
-<script>
-(function($) {
-
-  // Get the .gif images from the "data-alt".
-	var getGif = function() {
-		var gif = [];
-		$('img').each(function() {
-			var data = $(this).data('alt');
-			gif.push(data);
-		});
-		return gif;
-	}
-
-	var gif = getGif();
-
-	// Preload all the gif images.
-	var image = [];
-
-	$.each(gif, function(index) {
-		image[index]     = new Image();
-		image[index].src = gif[index];
-	});
-
-	// Change the image to .gif when clicked and vice versa.
-	$('figure').on('click', function() {
-
-		var $this   = $(this),
-				$index  = $this.index(),
-
-				$img    = $this.children('img'),
-				$imgSrc = $img.attr('src'),
-				$imgAlt = $img.attr('data-alt'),
-				$imgExt = $imgAlt.split('.');
-
-		if($imgExt[1] === 'gif') {
-			$img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
-		} else {
-			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-		}
-
-		// Add play class to help with the styling.
-		$this.toggleClass('play');
-
-	});
-
-})(jQuery);
-</script>
-@end
-
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-script: https://kit.fontawesome.com/83b2343bd4.js
--->
-# R Basics: Introduction
-
-<div class = "overview">
-
-## Overview
-
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
+@pre_reqs
 
 No prior experience of using R, RStudio, or R Markdown is required for this course.   
 
 This course is designed for brand new beginners with zero or minimal experience working with R.
 
-**Learning Objectives**
+@end
 
-@learning_objectives
+good_first_module: true
+data_task: data_analysis
+coding_required: true
+coding_level: basic
+coding_language: r
+sequence_name: r_basics
+@sets_you_up_for
 
-</div>
+- r_basics_transform_data
+- r_basics_visualize_data
+- r_missing_values
+- r_practice
+- r_reshape_lonog_wide
+- r_summary_stats
+- data_visualization_in_ggplot2
+
+@end
+@depends_on_knowledge_available_in
+
+@end
+
+@version_history
+
+Previous versions: 
+
+* [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/r_basics_introduction/r_basics_introduction.md): Update highlight boxes
+* [1.0.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/r_basics_introduction/r_basics_introduction.md#1): Add info about Posit, remove second attribution location, add versioning info
+
+@end
+
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
+-->
+# R Basics: Introduction
+
+@overview
+
+<div class = "gratitude">
+<b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
 
 Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data workshop materials](https://skadauke.github.io/intro-to-r-for-clinicians-chop/).  We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.
+
+</div>
 
 ## Terminology: The Three "R"s of This Module
 
 We begin by presenting three distinct but interrelated terms: R, RStudio, and R Markdown.  
-
+ 
 <div style = "align-items: center; display: flex;">
-
-<div style = "margin: 1rem; max-width: 25%; float:left; padding-right:4em;"> ![""](media/r_logo.png)
+<div style = "margin: 1rem; max-width: 25%; float:left; padding-right:4em;">![""](media/r_logo.png)
 </div>
-<div style = "margin: 1rem auto; max-width: 75%; float:left;">
-
+ <div style = "margin: 1rem auto; max-width: 75%; float:left;">
 <h3>R</h3>
+ 
+The first is **R**. R is a statistical programming language that's great for doing data analysis. There are a lot of features that make R great.  <br/><br/>
 
-The first is **R**. R is a statistical programming language that's great for doing data analysis. There are a lot of features that make R great:  
 
-* R is **open source**, which means that it is "free" in two ways -- in the meaning of having **no cost** and also in that can be used widely **without intellectual property concerns or licensing restrictions**.
-* R makes it possible to **wrangle** (arrange, reshape, and organize) complex data sets, and
-* R can produce publication-quality visualizations.
+R is **open source**, which means that it is "free" in two ways -- in the meaning of having **no cost** and also in that can be used widely **without intellectual property concerns or licensing restrictions**.  R makes it possible to **wrangle** (arrange, reshape, and organize) complex data sets.  Finally, R can produce publication-quality visualizations.<br/><br/>
 
-There is also an open and welcoming community of R users, which is just as important, if not more important, as the actual underlying details of the language.
-
+ 
+There is also an open and welcoming community of R users, which is just as important, if not more important, as the actual underlying details of the language.<br/>
 
 </div>
 </div>
-
+ 
 <div style = "align-items: center; display: flex;">
 
 <div style = "margin: 1rem; max-width: 25%; float:left; padding-right:4em;"> ![RStudio Logo](media/rstudio_logo.png)
@@ -149,7 +112,7 @@ You can think of RStudio (the software) as a fancy text editor for writing R cod
 
 </div>
 </div>
-
+ 
 <div style = "align-items: center; display: flex;">
 
 <div style = "margin: 1rem; max-width: 25%; float:left; padding-right:4em;"> ![R Markdown logo](media/r_markdown_logo.png)
@@ -168,7 +131,7 @@ So we have **R**, **RStudio**, and **R Markdown**. For the remainder of this mod
 ### RStudio
 
 As we mentioned on the previous page, there are two versions of RStudio:
-
+ 
 <div style = "align-items: center; display: flex;">
 
 <div style = "margin: 1rem; max-width: 25%; float:left; padding-right:4em;"> ![""](media/rstudio_cloud.png)
@@ -178,7 +141,7 @@ As we mentioned on the previous page, there are two versions of RStudio:
 **RStudio Server** – a version of the RStudio IDE that can be accessed from a web browser. It's hosted on a server that could be on premises or in the cloud. We'll offer a version of RStudio in the cloud for use, in case you can't or don't want to download R and RStudio to your computer just yet.
 </div>
 </div>
-
+ 
 <div style = "align-items: center; display: flex;">
 
 <div style = "margin: 1rem; max-width: 25%; float:left; padding-right:4em;"> ![""](media/rstudio_desktop.png)
@@ -230,121 +193,24 @@ R is a programming language that is free and open source.  It's a good idea to u
 
 ## Lesson Preparation: Our RStudio Environment
 
-Please do this step now, because we're going to ask you to follow along throughout and try out code as you go.  
-
-Please read over all the options before you start performing any actions, to make sure you pick the right option for you.
-
-<h3>Option 1: Work Anonymously in the Cloud</h3>
-
-This might work well for you if you either can't or don't want to install R and RStudio on your computer.  The benefit is that you don't have to install anything or have any account set up with an online cloud provider.  This solution is completely anonymous.  However, there are some drawbacks.  One negative is that this option requires a bit of waiting for your environment to come online.  Another is that your changes aren't saved anywhere, and your environment will time out and disappear forever.  
-
-**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
-
-  <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"></a> **← Click the "launch binder" button!**
-
-<div class = "hint" style = "align-items: center; display: flex;">
-
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen](media/binder_loading.gif)<!--
-style = "border: 1px solid rgb(var(--color-highlight));"-->
-</div>
-</div>
-
-**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_introduction".  That's the code for this module!
-
-![RStudio as shown in the cloud platform Binder. The left side of the screen displays the "Console" tab. On the right there is a split between an "upper" and "lower" section. The upper section is the "Environment", which is empty. The lower section, "files", shows one file (environment.yml) and three folders (r_basics_introduction, r_basics_transform_data, r_basics_visualize_data)](media/binder_rstudio.png)<!--
-style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
-
-<h3>Option 2: Use Posit Cloud</h3>
-
-Posit (the company formerly known as RStudio) provides a multi-tiered cloud environment for using RStudio.  Unlike option 1 above, this option does require you to have an account with Posit Cloud, their online RStudio server.  The good news is that the base level of Posit Cloud is free!
-
-First, you'll need to [create a (free!) Posit cloud account](https://posit.cloud/plans).  
-
-Then, once you're logged in at [https://posit.cloud](https://posit.cloud), open the "education\_r\_environment" project at [https://posit.cloud/content/5273350](https://posit.cloud/content/5273350).  That will give you a temporary copy so you can run our code, but not make any changes to it.
-
-In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_introduction".  That's the code for this module!
-
-Click on "Save a Permanent Copy" if you want to save any changes to your version of this code. 
-
-![Posit menu bar with "Make Permanent Copy"](media/make_copy.png)<!--
-style = "border: 1px solid rgb(var(--color-highlight)); clear:both;"-->
-
-Now you can not only work in the cloud, but also save your work.
-
-<h3>Option 3: Work on Your Computer</h3>
-
-If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
-
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
-
-Do you use Microsoft OneDrive?  
-
-Knitting files can sometimes be problematic with some versions of Microsoft OneDrive, so if you are working from your local computer and get strange errors when you try to knit, try to use a directory that's not within a OneDrive folder to see if that helps.  Newer versions of OneDrive seem to be less buggy, so you may also want to update your OneDrive software.
-
-</div>
-
-* In RStudio, open a new project (File, New Project)
-* Select Version Control, then Git
-* Drop this link into the "Repository URL": https://github.com/arcus/education_r_environment
-* Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
-* Click to select the "Open in new session" checkbox
-* Click "Create Project"
-* In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_introduction".  That's the code for this module!
-
-**Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
-
-<div style="display:none">
-
-@gifPreload
-
-</div>
-
-<figure>
-
-  <img src="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_introduction/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
-
-<figcaption style = "font-size: 1em;">
-
-Click on the image to play the demo of the above steps!
-
-</figcaption>
-
-</figure>
-
-If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime:
-
-* Open your project.
-* In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
-
-![Version control button in RStudio menu at top of window drops down with choices to pull and push branches.](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->  
-
-![Tools tab in the highest level menu bar drops down with with a Version Control option. Under version control, there are choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
-
-<div class = "warning">
-<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
-
-If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.
-
-</div>
+@lesson_prep_r
 
 ## Motivation: Reproducible Research
 
 <div style = "align-items: center; display: flex;">
 
 <div style = "margin: 1rem; max-width: 65%; float:left;">
-Now that you know a bit more about the vocabulary and computing environment we'll be using, we want to contextualize **why** you might want to use R, RStudio, and R Markdown, even though you may have worked with data before in other software.
+Now that you know a bit more about the vocabulary and computing environment we'll be using, we want to contextualize **why** you might want to use R, RStudio, and R Markdown, even though you may have worked with data before in other software.<br/><br/>
 
-One of the most important reasons to learn R is to improve the **reproducibility** of your research. One of the most powerful aspects of working in the R environment is that it makes it straightforward to produce **reproducible data analyses**, which will reduce risk and make "future you" much happier.
+One of the most important reasons to learn R is to improve the **reproducibility** of your research. One of the most powerful aspects of working in the R environment is that it makes it straightforward to produce **reproducible data analyses**, which will reduce risk and make "future you" much happier.<br/><br/>
 
-Consider the following case study, which highlights potential consequences of **irreproducibile** research.
+Consider the following case study, which highlights potential consequences of **irreproducibile** research.<br/><br/>
 
-In the mid-2000s, researchers at Duke University tried to use microarray gene expression data of tumor cells to predict sensitivity to chemotherapeutic agents. This approach generated a lot of excitement at the time, and the resulting work was published in high-profile journals.
+In the mid-2000s, researchers at Duke University tried to use microarray gene expression data of tumor cells to predict sensitivity to chemotherapeutic agents. This approach generated a lot of excitement at the time, and the resulting work was published in high-profile journals.<br/><br/>
 
-Unfortunately, there were a number of **serious errors** in the data analysis.
+Unfortunately, there were a number of **serious errors** in the data analysis.<br/><br/>
 
-Even more unfortunately, patients were enrolled in clinical trials and allocated based on **flawed models**. It's likely that some patients were actually treated with the chemo they are **least likely** to respond to rather than the chemo that's **most likely** to work.
+Even more unfortunately, patients were enrolled in clinical trials and allocated based on **flawed models**. It's likely that some patients were actually treated with the chemo they are **least likely** to respond to rather than the chemo that's **most likely** to work.<br/><br/>
 
 In the end, 18 papers were retracted, and Duke settled more than 10 lawsuits for an undisclosed amount of money.
 </div>
@@ -867,9 +733,10 @@ RStudio's Data Import cheat sheet helps with importing data from file types simi
 
 <div style = "align-items: center; display: flex;">
 <div style = "margin: 1rem; max-width: 60%; float:left;">
-*R for Data Science* is a free text that provides lots of helpful explanation and examples.  The [section on data import](https://r4ds.had.co.nz/data-import.html) goes into much more detail than we were able to do in this brief module.
+*R for Data Science* is a free text that provides lots of helpful explanation and examples.  The [section on data import](https://r4ds.had.co.nz/data-import.html) goes into much more detail than we were able to do in this brief module. <br/><br/>
 
-The entire text is available [in English](https://r4ds.had.co.nz/) and [in Spanish](https://es.r4ds.hadley.nz/).
+The entire text is available [in English](https://r4ds.had.co.nz/) and [in Spanish](https://es.r4ds.hadley.nz/). <br/><br/>
+
 There's also an [unofficial solutions guide](https://jrnold.github.io/r4ds-exercise-solutions/index.html) (only available in English) to allow you to check your work.
 </div>
 <div style = "margin: 1rem; max-width: 20%; float:left;">
@@ -879,16 +746,4 @@ There's also an [unofficial solutions guide](https://jrnold.github.io/r4ds-exerc
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Basics+Introduction%22&version=1.0.6)!
+@feedback

@@ -14,7 +14,6 @@ Reviewer: {your name}
 qa_template_version: 2.0.0
 Name of Module: {take from the title of the main markdown in the PR}
 Current Liascript URL: {makes it easy for reviewers and authors to look at content as learners will}
-Current Version of Module (use the latest commit value):  {click on the PR and get the clickable short link to the latest commit -- see [quality_assurance_guide.md](quality_assurance_guide.md)}
 
 # Checklist Reports:
 
@@ -24,25 +23,20 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
 * [ ] Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
 
 ## Module Organization
-* [ ] YAML is at the very top of the file
-  * [ ] author name
-  * [ ] email
+* [ ] Front matter is at the very top of the file
+  * [ ] Check included front matter fields against the [front matter checklist](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md#your-front-matter-checklist) to make sure all necessary fields are included. In addition, check the following details:
   * [ ] module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](versioning_guidelines.md)
   * [ ] current_version_description is a short, present-tense text fragment without bullets, and gives a learner-centric quick overview of version changes from the learner perspective
-  * [ ] docs_version number replaces the former module_template_version number, and it is up to date with the current [docs.md](https://raw.githubusercontent.com/arcus/education_modules/main/docs.md) -- if not, the module should be brought in line with any changes that have occurred to the docs.md standard before continuing with QA
-  * [ ] language
-  * [ ] narrator
-  * [ ] comment appropriately filled out
-  * [ ] long_description appropriately filled out
-  * [ ] learning_objectives appropriately filled out
+  * [ ] module_type should be `wrapper`
+  * [ ] estimated_time_in_minutes should be a number 0-60
   * [ ] version_history contains 1-3 past versions with bulleted links to commit-specific documents, unless this is an initial version of a module, in which case version_history can be empty.
   * [ ] imports macros (currently this line should read `import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md`)
-* [ ] Title is the first line after the end of the YAML
+* [ ] Title is the first line after the end of the front matter
   * [ ] only level-1 header in the entire document.
 * [ ] Overview section immediately following Title, using the `@overview` macro
 * [ ] All sections following Overview have content (no pages with just header and no additional text / media material).
 * [ ] All quizzes start with a level 2 or 3 header. If there is only one quiz in the module, it is labelled "Quiz", or if there are multiple, each header is structured as "Quiz: label" where "label" is a short (~ 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
-* [ ] Educational content ends with a section of additional resources, both ours and outside sources
+* [ ] Educational content ends with a section of additional resources
 * [ ] Final section is Feedback, using the @feedback macro
 
 ## Module Content
@@ -67,12 +61,12 @@ Current Version of Module (use the latest commit value):  {click on the PR and g
 
 ## Code availability
 If the module includes code that learners may want to run:
-* [ ] A link is provided to run the code in binder
+* [ ] A link is provided to run the code in the cloud
 * [ ] A link to the raw code and any other necessary materials (e.g., data) is provided for learners who prefer to work on their own machine
 
 ## Formative assessment
 
-* [ ] Sufficient [formative assessment](https://carpentries.github.io/instructor-training/02-practice-learning/#identifying-and-correcting-misconceptions) in the form of quizzes and/or hands-on exercises
+* [ ] Sufficient [formative assessment](https://carpentries.github.io/instructor-training/aio.html#using-formative-assessment-to-support-memory-consolidation) in the form of quizzes and/or hands-on exercises
 * [ ] Clear explanations available after questions unless the nature of the question itself or answer options makes it unnecessary (e.g. a T/F question may not always require follow-up explanation)
 * [ ] Quiz questions and hands-on exercises relate directly to learning objectives
 * [ ] Every learning objective has at least one associated question
@@ -109,6 +103,5 @@ List here any internal references (stated or hyperlinked) that work now because 
 * [ ] {description or quote, line ___ in file ____}
 
 ## Just Before Approval
-* [ ] Once there are no more commits to be made, get the newest commit value for the PR and update the commit value ("Current Version of Module:") at the top of this document.
 
 Congratulations! You can now approve the PR, merge to main, and close (not delete) this issue.

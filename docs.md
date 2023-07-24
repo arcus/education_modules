@@ -138,35 +138,47 @@ We store a lot of important information in the front matter section at the top o
 
 Which front matter items are required? It depends on the content of the module you're writing:
 
-|                                    | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                     |
-| :--------------------------------- | :---------: | :---: | :---------: | :---------------------------------------------------------------------------------------- |
-| `author`                           |      X      |   X   |      X      |                                                                                           |
-| `email`                            |      X      |   X   |      X      |                                                                                           |
-| `version`                          |      X      |   X   |      X      |                                                                                           |
-| `current_version_description`      |      X      |   X   |      X      |                                                                                           |
-| `module_type`                      |      X      |   X   |      X      |                                                                                           |
-| `module_template_version`          |      X      |   X   |      X      |                                                                                           |
-| `lanaguge`                         |      X      |   X   |      X      |                                                                                           |
-| `narrator`                         |      X      |   X   |      X      |                                                                                           |
-| `title`                            |      X      |   X   |      X      |                                                                                           |
-| `comment`                          |      X      |   X   |      X      |                                                                                           |
-| `long_description`                 |      X      |   X   |      X      |                                                                                           |
-| `estimated_time_in_minutes`        |      X      |   X   |      X      |                                                                                           |
-| `r_file`                           |             |   X   |             |                                                                                           |
-| `pre_reqs`                         |      X      |   X   |      X      |                                                                                           |
-| `learning_objectives`              |      X      |   X   |      X      |                                                                                           |
-| `module_structure`                 |             |       |      X      |                                                                                           |
-| `resource1_name`[^3]               |             |       |      X      |                                                                                           |
-| `resource1_description`[^3]        |             |       |      X      |                                                                                           |
-| `resource1_wellvetted`[^3]         |             |       |      X      |                                                                                           |
-| `resource1_wellvetted_text`[^3]    |             |       |      X      |                                                                                           |
-| `resource1_maintained`[^3]         |             |       |      X      |                                                                                           |
-| `resource1_maintained_text`[^3]    |             |       |      X      |                                                                                           |
-| `resource1_stablesupport`[^3]      |             |       |      X      |                                                                                           |
-| `resource1_stablesupport_text`[^3] |             |       |      X      |                                                                                           |
-| `resource1_a11y_issues`[^3]        |             |       |      X      |                                                                                           |
-| `version_history`                  |      X      |   X   |      X      |                                                                                           |
-| `import`                           |      X      |   X   |      X      | Importing `macros.md` is required for all modules. Additional import files may be needed. |
+|                                     | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                     |
+| :---------------------------------- | :---------: | :---: | :---------: | :---------------------------------------------------------------------------------------- |
+| `author`                            |      X      |   X   |      X      |                                                                                           |
+| `email`                             |      X      |   X   |      X      |                                                                                           |
+| `version`                           |      X      |   X   |      X      |                                                                                           |
+| `current_version_description`       |      X      |   X   |      X      |                                                                                           |
+| `module_type`                       |      X      |   X   |      X      |                                                                                           |
+| `docs_version`                      |      X      |   X   |      X      |                                                                                           |
+| `langauge`                          |      X      |   X   |      X      |                                                                                           |
+| `narrator`                          |      X      |   X   |      X      |                                                                                           |
+| `mode`                              |      X      |   X   |      X      |                                                                                           |
+| `title`                             |      X      |   X   |      X      |                                                                                           |
+| `comment`                           |      X      |   X   |      X      |                                                                                           |
+| `long_description`                  |      X      |   X   |      X      |                                                                                           |
+| `estimated_time_in_minutes`         |      X      |   X   |      X      |                                                                                           |
+| `r_file`                            |             |   X   |             |                                                                                           |
+| `pre_reqs`                          |      X      |   X   |      X      |                                                                                           |
+| `learning_objectives`               |      X      |   X   |      X      |                                                                                           |
+| `module_structure`                  |             |       |      X      |                                                                                           |
+| `resource1_name`[^3]                |             |       |      X      |                                                                                           |
+| `resource1_description`[^3]         |             |       |      X      |                                                                                           |
+| `resource1_wellvetted`[^3]          |             |       |      X      |                                                                                           |
+| `resource1_wellvetted_text`[^3]     |             |       |      X      |                                                                                           |
+| `resource1_maintained`[^3]          |             |       |      X      |                                                                                           |
+| `resource1_maintained_text`[^3]     |             |       |      X      |                                                                                           |
+| `resource1_stablesupport`[^3]       |             |       |      X      |                                                                                           |
+| `resource1_stablesupport_text`[^3]  |             |       |      X      |                                                                                           |
+| `resource1_a11y_issues`[^3]         |             |       |      X      |                                                                                           |
+| `good_first_module`                 |      X      |   X   |      X      |                                                                                           |
+| `data_domain`                       |             |       |             |                                                                                           |
+| `data_task`                         |             |       |             |                                                                                           |
+| `coding_required`                   |             |       |             |                                                                                           |
+| `coding_level`                      |             |   X   |             |                                                                                           |
+| `coding_language`                   |             |   X   |             |                                                                                           |
+| `sequence_name`                     |             |       |             |                                                                                           |
+| `previous_sequential_module`        |             |       |             |                                                                                           |
+| `sets_you_up_for`                   |      X      |   X   |      X      |                                                                                           |
+| `depends_on_knowledge_available_in` |      X      |   X   |      X      |                                                                                           |
+| `is_parallel_to`                    |             |       |             |                                                                                           |
+| `version_history`                   |      X      |   X   |      X      |                                                                                           |
+| `import`                            |      X      |   X   |      X      | Importing `macros.md` is required for all modules. Additional import files may be needed. |
 
 
 [^1]: Modules using [interactive R code](#interactive-r).
@@ -404,9 +416,9 @@ This is rough guess of how long it might take a learner to work through the modu
 r_file: r\_logistic\_regression
 ```
 
-If this module uses binder to host an interactive rmd file, include the bare name of that file here, for example: `this\_r\_module` 
+If this module uses refers to a specific directory and file within the `education_r_environment` directory structure, you can include that directory / file name, without file extension, here, for example: `this\_r\_module`.
 
-Note that rmds in the education_r_environment repo should be saved in a directory that matches the file name, like `this_r_module/this_r_module.rmd`. When you use the [r\_lesson\_prep macro](#interactive-r), it will fill in the text from `r_file` to use as both the directory name and file name for this lesson's notebook. Use backslashes to escape underscores (e.g. `this\_r\_module` rather than `this_r_module`). 
+Note that rmds in the `education_r_environment` repo should be saved in a directory that matches the file name, like `this_r_module/this_r_module.rmd`. When you use the [r\_lesson\_prep macro](#interactive-r), it will fill in the text from `r_file` to use as both the directory name and file name for this lesson's notebook. Use backslashes to escape underscores (e.g. `this\_r\_module` rather than `this_r_module`). 
 
 ### `pre_reqs` 
 
@@ -1361,7 +1373,7 @@ ls -l -h
 
 We use three main approaches for interactive coding exercises: 
 
-- We can link to interactive notebooks hosted on binder (see example notebooks in [our R notebook repository](https://github.com/arcus/education_r_environment)). This is our approach for most R modules, for example: [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) 
+- We can link to interactive notebooks hosted on Posit Cloud (see example notebooks in [our R notebook repository](https://github.com/arcus/education_r_environment)). This is our approach for most R modules, for example: [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) 
 - We can have interactive coding cells in modules themselves using sagemath. This is our approach for most python modules, for example: [Python Basics: Writing Code](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md)
 - We can also have interactive coding cells in modules using AlaSQL, which is our approach for SQL modules, for example: [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md)
 

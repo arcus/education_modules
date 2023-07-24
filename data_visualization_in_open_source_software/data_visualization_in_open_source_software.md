@@ -2,8 +2,10 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.1.3
-module_template_version: 2.0.0
+version: 1.2.0
+current_version_description: Update highlight boxes, update front matter, replace text with macros.
+module_type: standard
+docs_version: 1.0.0
 language: en
 narrator: UK English Female
 title: Data Visualization in Open Source Software
@@ -11,7 +13,18 @@ comment:   Introduction to principles of data vizualization and typical data viz
 
 long_description: This module introduces ggplot2 and seaborn, popular data visualization libraries in R and python, respectively. It lays the groundwork for using ggplot2 and seaborn by 1) highlighting common features of plots that can be manipulated in plot code, 2) discussing a typical data visualization workflow and best practices, and 3) discussing data preparation for plotting. This content will be most useful for people who have some experience creating data visualizations and/or reading plots presented in research articles or similar contexts. Some prior exposure to R and/or python is helpful but not required. This is appropriate for beginners.
 
-estimated_time: 20 minutes
+estimated_time_in_minutes: 20
+
+@pre_reqs
+
+This module assumes some familiarity with data and statistics, in particular
+
+* familiarity with some different kinds of plots, although deep understanding is not needed --- people who are used to seeing plots presented in research articles will be sufficiently prepared
+* the distinction between [continuous and categorical variables](https://education.arcus.chop.edu/variable-types/)
+
+This module also assumes some basic familiarity with either R or python, but is appropriate for beginners.
+
+@end
 
 @learning_objectives
 
@@ -24,37 +37,32 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-script:  https://kit.fontawesome.com/83b2343bd4.js
+good_first_module: false
+data_task: data_visualization
+sequence_name: data_visualization
 
+@sets_you_up_for
+- data_visualization_in_seaborn
+- data_visualization_in_ggplot2
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
+@version_history
+Previous versions: 
+
+- [1.1.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md#1): Clarified wording, add note about colorblind palettes, add note about where to find practical seaborn and ggplot2 practice.
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/914714acfb6b30980e011ab09e087d4d2c5c918e/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md#1): Initial version, add newlines to make divs display better.
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
+
 # Data Visualization in Open Source Software
 
-<div class = "overview">
-## Overview
-
-@comment
-
-**Is this module right for me?**
-
-@long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-This module assumes some familiarity with data and statistics, in particular
-
-* familiarity with some different kinds of plots, although deep understanding is not needed --- people who are used to seeing plots presented in research articles will be sufficiently prepared
-* the distinction between [continuous and categorical variables](https://education.arcus.chop.edu/variable-types/)
-
-This module also assumes some basic familiarity with either R or python, but is appropriate for beginners.
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Introduction to visualizing data
 
@@ -88,10 +96,11 @@ Before we dive into how plotting works in practice, though, we'll explore some p
 
 There are many options available for creating data visualizations in R and python. For this module, we'll focus on just one plotting library in each: `ggplot2` in R, and `seaborn` in python.
 
-<div class="important">
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 Note: This module provides an overview of the tools only, to orient learners to the options available.
-Practical exercises and example code for `ggplot2` and `seaborn` are provided in subsequent modules (see [Additional Resources](#additional-resources)).
+Practical exercises and example code for `ggplot2` and `seaborn` are provided in other modules.
 
 </div>
 
@@ -135,7 +144,10 @@ Because `seaborn` is built on top of matplotlib, it doesn't automatically show p
 Often, the best way to get the visualization you want is by finding an existing example that's similar to what you want and then copying that code and modifying it as needed.
 
 <div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
 Don't expect to become fully "fluent" in either `ggplot2` or `seaborn`! They are complex and powerful systems, with lots and lots of detail. Even experienced programmers frequently rely on google to get their plotting code just right.
+
 </div>
 
 ### Selecting the right plot for your data
@@ -167,10 +179,13 @@ For both step 2 and 4 in the data visualization workflow, browsing galleries of 
 
 There are many examples of `seaborn` visualizations with code online, including the large [example gallery on the `seaborn` website](https://seaborn.pydata.org/examples/index.html). Likewise, there are lots of great [example ggpolot2 plots with code](https://www.r-graph-gallery.com/ggplot2-package.html).
 
-<div class = "warning">
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
 When you look for example plotting code, pay careful attention to the format of the data being used. You may need to perform some transformations on your data before you can use the example code.
 
 In most cases, it is easier to plot with data that is in [long form](https://argoshare.is.ed.ac.uk/healthyr_book/reshaping-data-long-vs-wide-format.html), where each variable is represented in only one column. If you have repeated measures (e.g. several encounters for each patient), that means each subject may have several rows, one for each observation. This is different from how humans typically prefer to read data, so if you're used to examining your data in a speadsheet-like view, you probably don't keep it in long format --- you would need to first transform your data frame to long format (often called "pivoting") before using it in a plotting function.
+
 </div>
 
 ## Accessible design for data visualizations
@@ -182,7 +197,8 @@ There are some basic best practice guidelines you can use to make your visualiza
 - Avoid using color as the sole indicator for important information. Instead, double color up with a second indicator like shape or line type.
 - Keep visualizations clean and simple, avoiding unnecessary visual clutter. In other words, keep the [data-to-ink ratio](https://infovis-wiki.net/wiki/Data-Ink_Ratio) high.
 
-<div class="learn-more">
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
 **What about colorblind-friendly palettes?**
 
@@ -294,26 +310,10 @@ In general, review your work asking yourself "If the reader didn't have visual a
 
 ## Additional Resources
 
-If you are brand new to R or python (or want a refresher), check out [Intro to R](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md) to learn more about how to use each programming language. Before you can create visualizations of your own data, you'll need to be able to read data into R or python, and check and manipulate data frames.
+For more detail on `ggplot2`, see [the `ggplot2` website](https://ggplot2.tidyverse.org/), especially the [resources for learning `ggplot2`](https://ggplot2.tidyverse.org/#learning-ggplot2).
 
-For more detail on `ggplot2`, see [Data Visualization in ggplot2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md).
-Another valuable resource is [the `ggplot2` website](https://ggplot2.tidyverse.org/), especially the [resources for learning `ggplot2`](https://ggplot2.tidyverse.org/#learning-ggplot2).
-
-For more detail on `seaborn`, see [Data Visualization in seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md).
-Also check out [the `seaborn` website](https://seaborn.pydata.org/), especially the [excellent introduction to `seaborn` article](https://seaborn.pydata.org/introduction.html).
+For more detail on `seaborn`, see [the `seaborn` website](https://seaborn.pydata.org/), especially the [excellent introduction to `seaborn` article](https://seaborn.pydata.org/introduction.html).
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Data+visualization+in+open+source+software%22&version=1.1.3)!
+@feedback
