@@ -250,7 +250,7 @@ The population changed substantially during the course of the experiment, and we
 The data are paired-end, so we will download two files for each sample.
 We will use the [European Nucleotide Archive](https://www.ebi.ac.uk/ena) to get our data.
 The ENA “provides a comprehensive record of the world’s nucleotide sequencing information, covering raw sequencing data, sequence assembly information and functional annotation.”
-The ENA also provides sequencing data in the fastq format, an important format for sequencing reads that we will be learning about today.
+The ENA also provides sequencing data in the FASTQ format, an important format for sequencing reads that we will be learning about today.
 
 To download the data, run the commands below.
 
@@ -278,7 +278,7 @@ curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/006/SRR2584866/SRR2584866_2.fa
 
 The data comes in a compressed format, which is why there is a `.gz` at the end of the file names. 
 This makes it faster to transfer, and allows it to take up less space on our computer. 
-Let’s unzip one of the files so that we can look at the fastq format.
+Let’s unzip one of the files so that we can look at the FASTQ format.
 
 ```bash
 gunzip SRR2584863_1.fastq.gz
@@ -286,13 +286,13 @@ gunzip SRR2584863_1.fastq.gz
 
 ## Quality control
 
-We will now assess the quality of the sequence reads contained in our fastq files.
+We will now assess the quality of the sequence reads contained in our FASTQ files.
 
 ![Variant calling workflow from above, showing just the first two steps, which are quality control.](media/var_calling_workflow_qc.png)
 
 ## Details on the FASTQ format
 
-Although it looks complicated (and it is), we can understand the [fastq](https://en.wikipedia.org/wiki/FASTQ_format) format with a little decoding. Some rules about the format include...
+Although it looks complicated (and it is), we can understand the [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) format with a little decoding. Some rules about the format include...
 
 |Line|Description|
 |----|-----------|
