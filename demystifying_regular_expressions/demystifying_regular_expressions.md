@@ -39,6 +39,7 @@ previous_sequential_module:
 - regular_expressions_basics
 @end 
 @depends_on_knowledge_available_in
+
 @end
 
 @version_history
