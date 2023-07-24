@@ -61,8 +61,8 @@ If there are files on your instance that you don't want to lose, be sure to move
 
 -->
 
-# Python Module Macros
+# Genomics Module Macros
 
-@sage
+@lesson_prep_ami
 
-@lesson_prep_python_sage
+@aws_billing_reminder
