@@ -97,11 +97,11 @@ Flags aren't written within a regular expression, but are set **outside** of it,
 
 If you use different "flags" than we do (for example, if you're not using the default [Regex 101](https://www.regex101.com) as your regex checker), you might see an occasional difference in how the regular expression we show works in your environment.  In the regex checker you're using, try setting your flags to "global" and "multiline", and you should get identical results to what we show here in this module.  The flags usually are shown following a forward slash, appearing just after the regular expression ends:
 
-![](media/example1.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;" -->
+![A regular expression checker box labeled "regular expression" includes a forward slash, the phrase "insert your regular expression here", a forward slash, and the letters "g" and "m". ](media/example1.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;" --> Screenshot taken from [https://regex101.com/](https://regex101.com/)
 
-![](media/example2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 300px;" -->
+![A sample regular expression: `([A-Z])\w+` is enclosed within forward slashes.  After the closing forward slash, the letter "g" appears.](media/example2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 300px;" --> Screenshot taken from [https://regexr.com/](https://regexr.com/)
 
-![](media/example3.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;" -->
+![A regular expression checker box labeled "Regular Expression" that includes two forward slashes followed by the letter "g".](media/example3.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;" --> Screenshot taken from [https://www.regextester.com/](https://www.regextester.com/)
 
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
@@ -215,9 +215,20 @@ Sometimes you want to define two different pattern options at a certain point in
 
 Your wild type subjects are given identifiers that include `WT` (wild type), followed by a hyphen, and a subject identifier of usually five (but possibly 6) digits.  You additionally have PBMC humanized mice, in addition to wild type mice, and their identifiers begin with `PBMC`, followed by a hyphen, followed by 5-6 digits.
 
-There's a handy way to indicate a logical "or" in regex, using the vertical pipe (`|`).  Tokens on either side of a `|` character are alternative values for the given part of a pattern. 
+There's a handy way to indicate a logical "or" in regex, using the vertical pipe (`|`).  Text on either side of a `|` character are alternative values for the given part of a pattern. 
 
 For example, `8|5` indicates that either an 8 or a 5 appears at a given location. `banana|B` indicates that the word "banana" or the abbreviation "B" appears.  And `NA|\d{4}|unknown` indicates that one of "NA", a four digit number, or "unknown" should appear.
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+You might be wondering whether you could use a list, like `[85]` or `[58]`, instead of using the pipe to write `8|5` to indicate "either a five or an eight."  You absolutely can, and that's usually the best choice, when you're dealing with a single character in your pattern that has several alternatives.  For example, it's easier to write `[ABC123]` than it is to write `A|B|C|1|2|3`.
+
+However, when you are dealing with a string of **more than one character**, like "banana" being one alternative, or "B" being the other alternative, you can't use a list!  As a reminder, a list is a token that represents a single character.
+
+The vertical pipe (`|`) is the only way to provide two or more alternatives in which one of the possibilities has a length greater than 1.
+
+</div>
 
 So, `WT|PBMC` is a good start.  However, that's not the only thing in our pattern.  We have to add a hyphen (`\-`) and then 5-6 digits (`\d{5,6}`).  
 
@@ -242,11 +253,15 @@ That's not what we mean!  And we can't use a space to our regex to syntactically
 
 ### Quiz: Non-Capturing Groups and the Logical "Or"
 
-You're looking through lab notes written by a colleague who uses codes and abbreviations liberally.  This investigator is known to write their lowercase initials ("sjp") and a single space followed by either "help" (always in lowercase) or "911" in notes to highlight important potential pitfalls.  Using the logical "or" and using a non-capturing group (remember: the syntax is `(?:)`), write a regular expression that would allow you to capture any of the "sjp help" or "sjp 911" references.
+You're looking through lab notes written by a colleague who uses codes and abbreviations liberally.  
+
+This investigator is known to write their lowercase initials ("sjp") and a single space followed by either "help" (always in lowercase) or "911" in notes to highlight important potential pitfalls.  
+
+Using the logical "or" and using a non-capturing group (remember: the syntax is `(?:)`), write a regular expression that would allow you to capture any of the "sjp help" or "sjp 911" references.
 
 Put that regular expression in the box below:
 
-[[sjp (?:help|911)]]
+[[see answer box below for two alternatives]]
 <script>
   let input = "@input".trim();
   input == "sjp (?:help|911)" || input == "sjp (?:911|help)" ;
