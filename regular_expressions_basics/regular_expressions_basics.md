@@ -70,6 +70,7 @@ The [Regex 101 section](link) in the Demystifying Regular Expressions module sho
 To describe a pattern, you need to indicate what characters you expect to see using **tokens**, and how many of them, using **quantifiers**.  Tokens can be very simple and intuitive (the token for expressing the letter "A" is just `A`) or can be more complex (the token for any digit 0-9 is `\d`).  Quantifiers can be symbols such as `*` or `+`, or can include a number (the quantifier for "exactly two" is `{2}`).
 
 We'll work with simple regular expressions in this module by describing two principal tasks you need to do in regex: 
+
 1. Indicating which characters are valid at a given point in a pattern with various kinds of tokens. 
 2. Quantifying how many of those characters you expect to find there using quantifiers.
 
