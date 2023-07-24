@@ -63,6 +63,10 @@ If there are files on your instance that you don't want to lose, be sure to move
 
 # Genomics Module Macros
 
+## Lesson Preparation
+
 @lesson_prep_ami
+
+## Terminate your instance
 
 @aws_billing_reminder
