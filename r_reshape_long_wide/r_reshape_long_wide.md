@@ -1,15 +1,25 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.3
-module_template_version: 2.0.0
+version: 1.2.0
+current_version_description: Update highlight boxes, update metadata, and replace text with macros.
+module_type: standard
+docs_version: 1.0.0
 language: en
 narrator: US English Female
 title: Reshaping Data in R: Long and Wide Data
 comment:  A module that teaches how to reshape tabular data in R, concentrating on some typical shapes known as "long" and "wide" data.
 long_description: Reshaping data is one of the essential skills in getting your data in a tidy format, ready to visualize, analyze, and model.  This module is appropriate for learners who feel comfortable with R basics and are ready to take on the challenges of real life data, which is often messy and requires considerable effort to tidy.
 
-estimated_time: 1 hour
+estimated_time_in_minutes: 60
+
+r_file: r\_reshape\_long\_wide
+
+@pre_reqs
+
+This module assumes familiarity with R basics, including ingesting .csv data and using dplyr tools to do basic transformation including choosing only certain columns or rows of a data frame.  If you need to learn these basics, we suggest our [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) module and our [R Basics: Transform Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md) module.
+
+@end
 
 @learning_objectives  
 
@@ -18,84 +28,42 @@ After completion of this module, learners will be able to:
 - Define and differentiate "long data" and "wide data"
 - Use tidyr and dplyr tools to reshape data effectively
 
-
-@end
-script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
-
-@gifPreload
-<script>
-(function($) {
-
-  // Get the .gif images from the "data-alt".
-	var getGif = function() {
-		var gif = [];
-		$('img').each(function() {
-			var data = $(this).data('alt');
-			gif.push(data);
-		});
-		return gif;
-	}
-
-	var gif = getGif();
-
-	// Preload all the gif images.
-	var image = [];
-
-	$.each(gif, function(index) {
-		image[index]     = new Image();
-		image[index].src = gif[index];
-	});
-
-	// Change the image to .gif when clicked and vice versa.
-	$('figure').on('click', function() {
-
-		var $this   = $(this),
-				$index  = $this.index(),
-
-				$img    = $this.children('img'),
-				$imgSrc = $img.attr('src'),
-				$imgAlt = $img.attr('data-alt'),
-				$imgExt = $imgAlt.split('.');
-
-		if($imgExt[1] === 'gif') {
-			$img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
-		} else {
-			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-		}
-
-		// Add play class to help with the styling.
-		$this.toggleClass('play');
-
-	});
-
-})(jQuery);
-</script>
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-script: https://kit.fontawesome.com/83b2343bd4.js
+good_first_module: false
+data_task: data_wrangling
+coding_required: true
+coding_level: intermediate
+coding_language: r
+
+@sets_you_up_for
+
+- r_practice
+
+@end
+
+@depends_on_knowledge_available_in
+
+- r_basics_introduction
+- r_basics_transform_data
+
+@end
+
+@version_history
+
+Previous versions: 
+
+- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/r_reshape_long_wide/r_reshape_long_wide.md#1): Initial version, then added Posit instructions.
+
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
 -->
+
 # Reshaping Data in R: Long and Wide Data
 
-<div class = "overview">
-
-## Overview
-
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-This module assumes familiarity with R basics, including ingesting .csv data and using dplyr tools to do basic transformation including choosing only certain columns or rows of a data frame.  If you need to learn these basics, we suggest our [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) module and our [R Basics: Transform Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md) module.
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Data Shapes
 
@@ -224,102 +192,9 @@ Long data formats include data stored in key-value pairs, while wide data has mu
 
 *******
 
-
-
 ## Lesson Preparation: Our RStudio Environment
 
-Please do this step now, because we're going to ask you to follow along throughout and try out code as you go.  
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-Please read over all the options before you start performing any actions, to make sure you pick the right option for you.
-
-</div>
-
-<h3>Option 1: Work Anonymously in the Cloud</h3>
-
-This might work well for you if you either can't or don't want to install R and RStudio on your computer.  The benefit is that you don't have to install anything or have any account set up with an online cloud provider.  This solution is completely anonymous.  However, there are some drawbacks.  One negative is that this option requires a bit of waiting for your environment to come online.  Another is that your changes aren't saved anywhere, and your environment will time out and disappear forever.  
-
-**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
-
-  <a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"></a> **← Click the "launch binder" button!**
-
-<div class = "important" style = "align-items: center; display: flex;">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen.](media/binder_loading.gif)<!--
-style = "border: 1px solid rgb(var(--color-highlight));"-->
-</div>
-</div>
-
-**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_reshape\_long\_wide".  That's the code for this module!
-
-![RStudio as shown in the cloud platform Binder.](media/binder_rstudio.png)<!--
-style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
-
-<h3>Option 2: Use Posit Cloud</h3>
-
-Posit (the company formerly known as RStudio) provides a multi-tiered cloud environment for using RStudio.  Unlike option 1 above, this option does require you to have an account with Posit Cloud, their online RStudio server.  The good news is that the base level of Posit Cloud is free!
-
-First, you'll need to [create a (free!) Posit cloud account](https://posit.cloud/plans).  
-
-Then, once you're logged in at [https://posit.cloud](https://posit.cloud), open the "education\_r\_environment" project at [https://posit.cloud/content/5273350](https://posit.cloud/content/5273350).  That will give you a temporary copy so you can run our code, but not make any changes to it.
-
-In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_reshape\_long\_wide".  That's the code for this module!
-
-Click on "Save a Permanent Copy" if you want to save any changes to your version of this code.
-
-![Posit menu bar with "Make Permanent Copy"](media/make_copy.png)<!--
-style = "border: 1px solid rgb(var(--color-highlight)); clear:both;"-->
-
-Now you can not only work in the cloud, but also save your work.
-
-<h3>Option 3: Work on Your Computer</h3>
-
-If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
-
-* In RStudio, open a new project (File, New Project)
-* Select Version Control, then Git
-* Drop this link into the "Repository URL": https://github.com/arcus/education_r_environment
-* Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
-* Click to select the "Open in new session" checkbox
-* Click "Create Project"
-* In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_reshape\_long\_wide".  That's the code for this module!
-
-**Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
-
-<div style="display:none">
-
-@gifPreload
-
-</div>
-
-<figure>
-
-  <img src="https://github.com/arcus/education_modules/blob/main/r_reshape_long_wide/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/main/r_reshape_long_wide/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
-
-<figcaption style = "font-size: 1em;">
-
-Click on the image to play the demo of the above steps!
-
-</figcaption>
-
-</figure>
-
-If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime:
-
-* Open your project.
-* In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
-
-![Git button menu with choices to pull and push branches.](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->  
-![Tools menu with choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;" -->
-
-<div class = "warning">
-If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform_exercises.Rmd` while holding on to your changes in the new file.
-</div>
-
+@lesson_prep_r
 
 ## Pivots in `tidyr`
 
@@ -477,7 +352,10 @@ Please read over the first 70 lines of code and execute that code in the R Markd
 * Looking at the final long data
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Please open your RStudio environment now and go through the first 70 lines of code of `reshape_data_exercises.Rmd`.  We're using that code to help instruct you, too -- it's not just an example, it has some useful information you don't want to miss!  There's also a solutions file at `reshape_data_solutions.Rmd` if you get stuck.
+
 </div>
 
 ## Using `pivot_wider`
@@ -513,7 +391,11 @@ Please read over lines 75-140 and run the code in that section.  This is what yo
 * Pivoting a dataset (fish encounters) that was originally in long format to a wide format
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Please open your RStudio environment now and go through lines 75-140 of `reshape_data_exercises.Rmd`.  We're using that code to help instruct you, too -- it's not just an example, it has some useful information you don't want to miss!  There's also a solutions file at `reshape_data_solutions.Rmd` if you get stuck.
+
+</div>
 
 ## Reshaping into a Tidy Format
 
@@ -594,7 +476,10 @@ Without having written any code, we've gotten an idea of what we want to accompl
 Let's jump into R and get started.  In `reshape_data_exercises.Rmd` in your RStudio environment, start by loading this data and taking a look at it (look at and run the code in lines 150-165).
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 You know what to do!  Check out lines 150-165 of `reshape_data_exercises.Rmd`.
+
 </div>
 
 
@@ -609,12 +494,33 @@ Read and execute the code in lines 170-225 to create `biosample_first` and `bios
 We'll use some commands that you already know, like `select`, as well as some that you might not be as familiar with, like `rename_with`.  Now that you've gotten some experience using help files, try using the `?` functionality and trying out `?rename_with` (or other function names) in the Console.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Please work through lines 170-225 of `reshape_data_exercises.Rmd`.  Don't forget that there's also a solutions file, should you get stuck: `reshape_data_solutions.Rmd`.
+
+</div>
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+If you read the line `rename_with(~str_remove(., '_1'))` and thought to yourself, "I would never have come up with that!" don't worry --- there are many, many different ways to approach a data cleaning task like this, and our solution is just one example. 
+Try googling something like "remove suffix from column names R", and I'm sure you'll find dozens of different solutions.
+
+The important thing to keep in mind is that **code that works is good code**. 
+If you would have done something else (maybe something more roundabout, or something less tidy) that's perfectly fine! 
+
+There is no one right approach to a data cleaning task like this. 
+We've given you an example (and it's code you can now go back and reuse if you find yourself needing to do something similar in your own analyses one day!), but it's just one example.
+As you build more and more experience in R, you'll find yourself gravitating toward particular strategies and functions, and you'll solve problems with the tools you know more often than not. 
+Maybe `str_remove` and other functions from the [stringr](https://stringr.tidyverse.org/) package will become favorites of yours that you use over and over, or maybe you'll never touch them again. 
+Either way is fine! 
+
 </div>
 
 ### Pivoting Wide to Long
 
 Do you now have two objects, called `biosample_first` and `biosample_second`?  Great!
+
 
 At this point, you might be thinking, "Hey!  If we just stack `biosample_first` and `biosample_second`, we'll be done, and have some tidy data!".  You're not wrong, and you might be tempted to do just that and not bother with transforming wide data to long data.  Just remember that once you get data into a long format, it's very versatile, and it's worth the effort to put your data into a long format first.
 
@@ -623,7 +529,10 @@ Go to lines 230 - 265 and read through the explanations and run the code in this
 By the end of this section, you should have a `biosample_data_long` object that has our data in long format.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 Almost there!  Go through lines 230-265 of `reshape_data_exercises.Rmd`.  
+
 </div>
 
 ### Pivoting Long to Wide
@@ -642,12 +551,13 @@ Go to lines 270 - 290 to see what we mean!
 In the end, we have tidy data that meets our needs and will make computation simpler.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 This is the home stretch!  Work through lines 270 until the end of `reshape_data_exercises.Rmd`.  Don't forget that there's also a solutions file, should you get stuck: `reshape_data_solutions.Rmd`.
+
 </div>
 
 ## Quiz: `pivot_longer` and `pivot_wider`
-
-<div class = "question">
 
 What do you need to know in order to use `pivot_longer` to turn wide data into long data?
 
@@ -667,11 +577,6 @@ What do you need to know in order to use `pivot_longer` to turn wide data into l
 
 *******
 
-</div>
-
-
-
-<div class = "question">
 
 What are some potential snags in using `pivot_longer` and `pivot_wider`?
 
@@ -707,24 +612,10 @@ data_frame %>%
 
 *******
 
-</div>
-
 ## Additional Resources
 
 As usual, one of the best resources for pivoting can be found in [R for Data Science](https://r4ds.had.co.nz/tidy-data.html#pivoting).  There are also helpful and illustrative exercises to help you gain fluency!
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Reshaping+Data+in+R%3A+Long+and+Wide+Data%22&version=1.0.3)!
+@feedback

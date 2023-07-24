@@ -1,100 +1,25 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.0
+version: 1.2.1
+current_version_description: Added two new highlight boxes with additional clarification, and technical updates that do not affect content. 
+module_type: standard
+docs_version: 1.0.0
 language: en
-module_template_version: 2.0.0
 narrator: US English Female
+mode: Textbook
+
 title: R Basics: Visualizing Data With ggplot2
+
 comment:  Learn how to visualize data using R's `ggplot2` package.
+
 long_description: Do you want to learn how to make some basic data visualizations (graphs) in R?  In this module you'll learn about the "grammar of graphics" and the base code that you need to get started.  We'll use the basic ingredients of a tidy data frame, a geometric type, and some aesthetic mappings (we'll explain what all of those are).  This module teaches the use of the `ggplot2` package, which is part of the `tidyverse` suite of packages.
-estimated_time: 1 hour
 
-@learning_objectives  
+r_file: r\_basics\_visualize\_data
 
-After completion of this module, learners will be able to:
+estimated_time_in_minutes: 60
 
-- Write R code that creates basic data visualizations
-- Identify geometric plot types available in `ggplot2`
-- Map columns of data to visual elements like color or position
-
-@end
-
-@version_history
-1.0.1: revision to correct image links referring to wrong branch + small changes to environment setup language to be exactly mirrored across all 3 R basics modules.
-1.0.5: add information about Posit Cloud
-1.0.6: remove second attribution location
-
-@end
-
-script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
-
-@gifPreload
-<script>
-(function($) {
-
-  // Get the .gif images from the "data-alt".
-	var getGif = function() {
-		var gif = [];
-		$('img').each(function() {
-			var data = $(this).data('alt');
-			gif.push(data);
-		});
-		return gif;
-	}
-
-	var gif = getGif();
-
-	// Preload all the gif images.
-	var image = [];
-
-	$.each(gif, function(index) {
-		image[index]     = new Image();
-		image[index].src = gif[index];
-	});
-
-	// Change the image to .gif when clicked and vice versa.
-	$('figure').on('click', function() {
-
-		var $this   = $(this),
-				$index  = $this.index(),
-
-				$img    = $this.children('img'),
-				$imgSrc = $img.attr('src'),
-				$imgAlt = $img.attr('data-alt'),
-				$imgExt = $imgAlt.split('.');
-
-		if($imgExt[1] === 'gif') {
-			$img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
-		} else {
-			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-		}
-
-		// Add play class to help with the styling.
-		$this.toggleClass('play');
-
-	});
-
-})(jQuery);
-</script>
-@end
-
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-script: https://kit.fontawesome.com/83b2343bd4.js
--->
-# R Basics: Visualizing Data With `ggplot2`
-
-<div class = "overview">
-
-## Overview
-
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
+@pre_reqs
 
 Minimal experience of using the RStudio IDE and writing R code (specifically, within an R Markdown document) is necessary to understand and use this material.  If you can understand and do the following, you'll be able to complete this course:
 
@@ -106,14 +31,60 @@ One potential way to get these basic skills is to take our [R Basics: Introducti
 
 This course is designed for R beginners with minimal experience and it is not an advanced course in `ggplot2`.  If you have experience with `ggplot2` already, you may find our ["Data Visualization in ggplot2"](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md), which is more advanced, a better fit for your needs.
 
-**Learning Objectives**
+@end
 
-@learning_objectives
+@learning_objectives  
 
-</div>
+After completion of this module, learners will be able to:
+
+- Write R code that creates basic data visualizations
+- Identify geometric plot types available in `ggplot2`
+- Map columns of data to visual elements like color or position
+
+@end
+
+good_first_module: false
+data_task: data_visualization
+coding_required: true
+coding_level: basic
+coding_language: r
+sequence_name: r_basics
+previous_sequential_module: r_basics_introduction
+
+@sets_you_up_for
+
+- r_practice
+
+@end
+
+@depends_on_knowledge_available_in
+
+-r_basics_introduction
+
+@end
+
+@version_history
+
+Previous versions: 
+
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/dd92856bddc5de758ca19c53e94b181877f20143/r_basics_visualize_data/r_basics_visualize_data.md#1): Updating formatting for highlight boxes.
+- [1.0.7](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/r_basics_visualize_data/r_basics_visualize_data.md): remove second attribution location, add information about Posit Cloud, revision to correct image links referring to wrong branch + small changes to environment setup language to be exactly mirrored across all 3 R basics modules.
+
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
+-->
+# R Basics: Visualizing Data With `ggplot2`
+
+@overview
+
+<div class = "gratitude">
+<b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
 
 Material for this module was adapted, with permission, from [Stephan Kadauke's R for Clinical Data workshop materials](https://skadauke.github.io/intro-to-r-for-clinicians-chop/).  We owe special thanks to Dr. Kadauke as well as the R User Group at Children's Hospital of Philadelphia for their generosity in sharing these materials.
 
+</div>
 
 ## Lesson Preparation
 
@@ -130,108 +101,7 @@ On the next page, you'll learn how to get access to the sample code.
 
 ### Our RStudio Environment
 
-Please do this step now, because we're going to ask you to follow along throughout and try out code as you go.  
-
-Please read over all the options before you start performing any actions, to make sure you pick the right option for you.
-
-<h3>Option 1: Work Anonymously in the Cloud</h3>
-
-This might work well for you if you either can't or don't want to install R and RStudio on your computer.  The benefit is that you don't have to install anything or have any account set up with an online cloud provider.  This solution is completely anonymous.  However, there are some drawbacks.  One negative is that this option requires a bit of waiting for your environment to come online.  Another is that your changes aren't saved anywhere, and your environment will time out and disappear forever.  
-
-**First**, we need to create a small container in the cloud for you to work in just using your web browser.  **Click "Launch binder" below.**  It might take a while (5 minutes) to create, depending on how recently it was created (when it's being used more, it's quicker!).  We're looking for a faster way to get you off and running in RStudio without downloads and without creating accounts, but for now this is a great, free way for us to get you working with no extra work on your part.
-
-<a href = "https://mybinder.org/v2/gh/arcus/education_r_environment/main?urlpath=rstudio" target = "_blank"><img src="https://mybinder.org/static/images/badge_logo.svg"  alt="Launch Binder"></a> **← Click the "launch binder" button!**
-
-
-<div class = "hint" style = "align-items: center; display: flex;">
-
-<div style = "margin: 1rem; max-width: 45%; float:left;"> If you're the first person to fire up this environment in a while, you might see this loading screen for up to five minutes.  Be patient!</div>
-<div style = "margin: 1rem auto; max-width: 45%; float:left;"> ![Binder loading screen](media/binder_loading.gif)<!--
-style = "border: 1px solid rgb(var(--color-highlight));"-->
-</div>
-</div>
-
-**Then**, once you have access to RStudio and you see something like the image below, you'll need to open the sample data for this course.  In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_visualize\_data".  That's the code for this module!
-
-![RStudio as shown in the cloud platform Binder. The left side of the screen displays the "Console" tab. On the right there is a split between an "upper" and "lower" section. The upper section is the "Environment", which is empty. The lower section, "files", shows one file (environment.yml) and three folders (r_basics_introduction, r_basics_transform_data, r_basics_visualize_data)](media/binder_rstudio.png)<!--
-
-style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;"-->
-
-
-<h3>Option 2: Use Posit Cloud</h3>
-
-Posit (the company formerly known as RStudio) provides a multi-tiered cloud environment for using RStudio.  Unlike option 1 above, this option does require you to have an account with Posit Cloud, their online RStudio server.  The good news is that the base level of Posit Cloud is free!
-
-First, you'll need to [create a (free!) Posit cloud account](https://posit.cloud/plans).  
-
-Then, once you're logged in at [https://posit.cloud](https://posit.cloud), open the "education\_r\_environment" project at [https://posit.cloud/content/5273350](https://posit.cloud/content/5273350).  That will give you a temporary copy so you can run our code, but not make any changes to it.
-
-In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_visualize\_data".  That's the code for this module!
-
-Click on "Save a Permanent Copy" if you want to save any changes to your version of this code. 
-
-![Posit menu bar with "Make Permanent Copy"](media/make_copy.png)<!--
-style = "border: 1px solid rgb(var(--color-highlight)); clear:both;"-->
-
-Now you can not only work in the cloud, but also save your work.
-
-<h3>Option 3: Work on Your Computer</h3>
-
-If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note -- if you've already done this step in another module, you might have the material for this module already!
-
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
-
-Do you use Microsoft OneDrive?  
-
-Knitting files can sometimes be problematic with some versions of Microsoft OneDrive, so if you are working from your local computer and get strange errors when you try to knit, try to use a directory that's not within a OneDrive folder to see if that helps.  Newer versions of OneDrive seem to be less buggy, so you may also want to update your OneDrive software.
-
-</div>
-
-* In RStudio, open a new project (File, New Project)
-* Select Version Control, then Git
-* Drop this link into the "Repository URL": https://github.com/arcus/education_r_environment
-* Change the "Project directory name" and "Create project as a subdirectory of" boxes to suit your needs (where will this code be stored on your computer?).
-* Click to select the "Open in new session" checkbox
-* Click "Create Project"
-* In the file area to the lower right, you'll see, among multiple choices, the folder called "r\_basics\_visualize\_data".  That's the code for this module!
-
-**Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
-
-<div style="display:none">
-
-@gifPreload
-
-</div>
-
-<figure>
-
-  <img src="https://github.com/arcus/education_modules/blob/main/r_basics_visualize_data/media/rstudio_new_project.png?raw=true" height="384" width="512" alt="RStudio can create a new project that gets its contents from a git repository." data-alt="https://github.com/arcus/education_modules/blob/main/r_basics_visualize_data/media/rstudio_new_project.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
-
-<figcaption style = "font-size: 1em;">
-
-Click on the image to play the demo of the above steps!
-
-</figcaption>
-
-</figure>
-
-If you already completed this work for a previous module, and it's been a while since you downloaded this project to your computer, you may want to get any new and improved files that have been placed there in the meantime:
-
-* Open your project.
-* In the Version Control menu, choose "pull branches".  There are two places to do this, as shown below:
-
-![Version control button in RStudio menu at top of window drops down with choices to pull and push branches.](media/pull_branches.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
-
-![Tools tab in the highest level menu bar drops down with with a Version Control option. Under version control, there are choices to pull and push branches.](media/pull_branches_2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;"-->
-
-
-<div class = "warning">
-<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
-
-If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_transform_data` exercise files, you might want to save your version of `transform_exercises.Rmd` to `my_transform_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `transform.Rmd` while holding on to your changes in the new file.
-
-</div>
+@lesson_prep_r
 
 ### How to Follow Along
 
@@ -265,9 +135,13 @@ Here's another example of that kind of plot:
 
 ![A normally distributed or bell-shaped curve.  The x axis ranges from -3 to 3 while the y axis goes from 0 to 200](media/small_histogram.png)<!-- style = "max-width:800px;"-->
 
-In the box below, write what you think the name of this is (all lowercase, please).
+In the box below, write what you think the name of this is.
 
 [[histogram]]
+<script>
+  let input = "@input".trim().toLowerCase();
+  input == "histogram" || input == "a histogram";
+</script>
 [[?]] Hint: this word ends in "gram"
 ***
 <div class = "answer">
@@ -305,6 +179,17 @@ When you run this code, you get what looks like an error in the console but is a
 
 R lets you know that when you ask it to draw a histogram, you should probably tell it how wide each bin should be, because this affects the granularity of the data displayed.  You can either set the number of bins (say, 10 bins or 100 bins) or you can set the bin width (like 1 to make a bin 1 day wide, 7 to make a bin one week wide, etc.)
 
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+Want to make that binwidth message go away? 
+That's one of the first things you'll work through in the hands-on exercise notebook! 
+
+There is important instruction (including how to set `binwidth` for a histogram) that is in the exercise file and not in this module. 
+If you just read through the explanations here without [following along](#how-to-follow-along), you'll miss valuable content.
+
+</div>
+
 ### The Power of Data Visualizations
 
 ![Histogram of covid tests by day of pandemic from Day 0 to Day 125. In the first 30 days, the number of tests being run slowly ramps up to around 625 tests. After 30 days, the number of tests stays fairly high with some oscillation over time between about 375 and 825.](media/covid_histogram.png)<!-- style = "max-width: 800px;"  -->
@@ -333,6 +218,7 @@ The idea of the grammar of graphics is that you should be able to specify any ty
 Having a consistent grammar means that once you learn how to make a histogram that knowledge can be applied to make a scatter plot with little extra effort. This makes it easy to generate lots of different graphs quickly which helps you understand your data more quickly.
 
 Also, `ggplot2` graphs look great and the package can be used to generate publication-quality plots.
+
 </div>
 <div style = "margin: 1rem auto; max-width: 30%; float:left;">
 
@@ -518,6 +404,25 @@ Note that R automatically figures out reasonable axis limits and a color scale, 
 Here's a visual that might help:
 
 ![Small table of data with columns a, b, and c next to a blank x-y coordinate plane. An arrow is drawn from column a to the x-axis, and an arrow from column b to the y-axis. Rows that have a "M" in column C have blue dots, and rows that have an "F" get green dots.](media/abc_aesthetics.png)
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+To include multiple mappings in your `aes()` command, **separate them with commas**. 
+
+For example, if you have a scatterplot with the variable `a` on the x-axis and `b` on the y-axis, your initial aesthetic mapping would look like this:
+
+```
+aes(x = a, y= b)
+```
+
+If you want to modify your plot to color each of the points differently depending on the value of column `c`, then you would add that to your mapping like this:
+
+```
+aes(x = a, y = b, color = c)
+```
+
+</div>
 
 
 ### Quiz: Aesthetic Mappings
@@ -781,9 +686,10 @@ You can customize color scales.
 library(colorspace)
 
 cols <- c(
-  "invalid" = "grey80",
+  "grey80",
   qualitative_hcl(2, palette = "dark3")
 )
+names(cols) <- c("invalid", "negative", "positive")
 
 ggplot(covid_testing) +
   geom_histogram(
@@ -899,17 +805,4 @@ To find official cheat sheets, go to the Help menu and choose "Cheat Sheets".  T
 ![RStudio help menu, with Cheat Sheets selected and the submenu option "Data Visualization with ggplot2" selected](media/cheat_sheets.png)<!-- style = "max-width:700px;" -->
 
 ## Feedback
-
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Basics+Visualize+Data%22&version=1.0.7)!
+@feedback
