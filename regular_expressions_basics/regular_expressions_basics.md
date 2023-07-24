@@ -63,7 +63,7 @@ Regular expressions are useful to biomedical researchers because they can allow 
 
 A good place to practice regular expressions is an online regex testing website.  We like **Regex 101** at https://www.regex101.com, but you can also search online for "regex checker" to find other, similar websites.  Regex 101 allows you to enter your regular expression as well as some sample text that you want to apply the regular expression to.  You can use this website to gain practice with any of the rules you learn in this module.
 
-The [Regex 101 section](link) in the Demystifying Regular Expressions module shows and example of how to use the website.
+The [Regex 101 section](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#6) in the Demystifying Regular Expressions module shows and example of how to use the website.
 
 ## Simple Regular Expressions
 
