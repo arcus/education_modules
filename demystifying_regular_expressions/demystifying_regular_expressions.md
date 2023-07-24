@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.1
+version:  1.0.0
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
@@ -39,6 +39,7 @@ previous_sequential_module:
 - regular_expressions_basics
 @end 
 @depends_on_knowledge_available_in
+
 @end
 @version_history
 No previous versions. 
