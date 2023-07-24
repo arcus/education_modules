@@ -2,7 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.0.0
+version:  1.2.0
+current_version_description: Add genomics macros
 language: en
 narrator: UK English Female
 title: DART LiaScript docs
@@ -18,6 +19,15 @@ try {
   } else send.clear()
 } catch(e) { }
 </script>
+
+@end
+
+@version_history
+
+Previous versions: 
+
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/8f41dd25216329b785335e15f1824b13d6240778/docs.md): Update SQL macros instructions (note that version number wasn't correctly incremented here)
+- [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ad25398d0eef884402cff0f0c4fb4ca360d3b8f4/docs.md): Added versioning info, initial version.
 
 @end
 
@@ -192,6 +202,7 @@ Use the checklist below to help make sure you're including all the front matter 
 - [ ] is in a sequence (including the first module in the sequence)
 - [ ] follows other modules in a sequence (i.e. it's not the first in the sequence)
 - [ ] is parallel to one or more other modules (i.e. covers the same content but in a different coding langauge/operating system)
+- [ ] uses the Data Carpentry genomics AMI on AWS
 <script output="module_characteristics">"@input"</script>
 
 You'll need the following fields in your front matter (new fields added by checking boxes above will be followed by 💫): 
@@ -273,6 +284,7 @@ try {
 @add_item(0,import macros_r.md)
 @add_item(1,import macros_python.md)
 @add_item(2,import macros_sql.md)
+@add_item(10,import macros_genomics.md)
 
 ### `author`
 
@@ -699,6 +711,7 @@ Must be one of the following:
 - `r_basics`
 - `sql`
 - `python_basics`
+- `genomics_tools_and_methods`
 - (add more here)
 
 ### `previous_sequential_module`
@@ -806,6 +819,13 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md
 ```
 
+Genomics modules that make use of the [Data Carpentry](https://datacarpentry.org/genomics-workshop/) AMI on AWS will need to import the genomics macros as well:
+
+```
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_genomics.md
+```
+
 Modules using interactive R, Python, or SQL will need additional import files (see the sections on [interactive coding](#including-interactive-code) for details).
 
 ## DART macros
@@ -824,6 +844,7 @@ For example, the Overview and Feedback sections of each module are created by th
 
 - General use macros are in the [module macros file](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in **every module**. 
 - Macros to create the descriptions of external resources for wrapper modules are in the [wrapper macros file](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md).
+- Macros for genomics modules that use AWS are in the [genomics macros file](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_genomics.md). This includes a lesson prep macro reminding learners how to connect to their AWS instance and a reminder macro warning them that if they don't terminate their instance when they're done working they'll continue to be charged.
 - Macros for hands-on code in R, Python, and SQL modules are available in `macros_r.md`, `macros_python.md`, and `macros_sql.md`, respectively. SQL tables are loaded with additional files. For more details, see the sections on [including interactive code](#including-interactive-code) in this documentation.
 
 For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
@@ -847,6 +868,13 @@ The overview section comes immediately after the initial level-1 header, which w
 
 Many (but not all) modules include a Lesson Preparation section with any setup required to complete the module (see the section on [including interactive code](#including-interactive-code) for macros to create Lesson Preparation sections for R, Python, and SQL).
 
+This section will appear in any module that requires the learner to prepare in some way. For example:
+
+- the learner needs to download software (like git or bash)
+- the learner needs an account with an external resource (like Google Colab or AWS)
+- the learner will need to interact with an external resource (like a binderhub environment) 
+- the function of the module requires explanation, such as how sagemath cells work 
+
 Wrapper modules include a special section describing the external resource(s) linked to and outlining the structure of the module. 
 
 ### Content sections
@@ -857,15 +885,6 @@ Most modules include at least one quiz section (see [Quizzes](#quizzes-automatic
 
 As you write, keep in mind that the headers should be clear and informative. 
 The table of contents automatically generated from the headers should give learners a good overview of what to expect in the module content.
-
-#### Lesson Preparation
-
-This section will appear in any module that requires the learner to prepare in some way. For example:
-
-- the learner needs to download software (like git or bash)
-- the learner needs an account with an external resource (like Google Colab or AWS)
-- the learner will need to interact with an external resource (like a Posit.cloud environment) 
-- the function of the module requires explanation, such as how sagemath cells work 
 
 ### Additional Resources
 
@@ -1279,7 +1298,13 @@ Files uploaded to this account will be **publicly visible**. Be very careful not
 
 ## Including non-interactive code
 
-Include inline code with single backticks: `library(ggplot2)`. 
+Include inline code with single backticks:
+
+```
+Here's some inline code: `library(ggplot2)`. 
+```
+
+Here's some inline code: `library(ggplot2)`. 
 
 Make code blocks with at least three backticks:
 
@@ -1312,6 +1337,37 @@ print("This is python code")
 ```python
 print("This is python code")
 ```
+
+If you want to print code output, add a label to the code block to make that clear to learners: 
+
+````
+```bash
+ls -l -h
+```
+
+``` +output
+-rw-rw-r-- 1 dcuser dcuser 545M Jul  6 20:27 SRR2584863_1.fastq
+-rw-rw-r-- 1 dcuser dcuser 183M Jul  6 20:29 SRR2584863_2.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 309M Jul  6 20:34 SRR2584866_1.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 296M Jul  6 20:37 SRR2584866_2.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 124M Jul  6 20:22 SRR2589044_1.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 128M Jul  6 20:24 SRR2589044_2.fastq.gz
+```
+````
+
+```bash
+ls -l -h
+```
+
+``` +output
+-rw-rw-r-- 1 dcuser dcuser 545M Jul  6 20:27 SRR2584863_1.fastq
+-rw-rw-r-- 1 dcuser dcuser 183M Jul  6 20:29 SRR2584863_2.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 309M Jul  6 20:34 SRR2584866_1.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 296M Jul  6 20:37 SRR2584866_2.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 124M Jul  6 20:22 SRR2589044_1.fastq.gz
+-rw-rw-r-- 1 dcuser dcuser 128M Jul  6 20:24 SRR2589044_2.fastq.gz
+```
+
 
 ## Including interactive code
 
@@ -1724,6 +1780,46 @@ For more details, see [notes about quizzes in the LiaScript documentation](https
 
 </div>
 ***
+
+Sometimes you may wish to include a quiz question that would be impossible to automatically grade (i.e. one with an open-ended repsonse). 
+To mark all possible answers as correct, use a brief script to match everything with regex:
+
+```
+Take a look at your samples. Which sample(s) looks the best in terms of per base sequence quality? Which sample(s) look the worst?
+
+[[describe sample quality]]
+<script>
+  let input = "@input".trim();
+  /.*/i.test(input);
+</script>
+***
+<div class = "answer">
+
+(Note that we can't automatically grade an open-ended question like this, so it will be marked "correct" no matter what you write.)
+
+All of the reads contain usable data, but the quality decreases toward the end of the reads.
+
+</div>
+***
+```
+
+Take a look at your samples. Which sample(s) looks the best in terms of per base sequence quality? Which sample(s) look the worst?
+
+[[describe sample quality]]
+<script>
+  let input = "@input".trim();
+  /.*/i.test(input);
+</script>
+***
+<div class = "answer">
+
+(Note that we can't automatically grade an open-ended question like this, so it will be marked "correct" no matter what you write.)
+
+All of the reads contain usable data, but the quality decreases toward the end of the reads.
+
+</div>
+***
+
 
 There are many more options and examples of quiz questions in the LiaScript documentation. [Read more about quiz syntax here.](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#quizzes)
 
