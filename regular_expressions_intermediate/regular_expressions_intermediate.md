@@ -514,14 +514,10 @@ The anchor for the start of a string is the dollar sign, or `$`, symbol.
 What's the two character sequence that indicates the boundary between a word-type character (like a letter, number, or underscore) and a non-word-type character (like punctuation or spaces)?
 
 [[\b]]
-<script>
-  let input = "@input".trim();
-  input == "\b";
-</script>
 ***
 <div class = "answer">
 
-The code for a word boundary is ` \b `.
+The code for a word boundary is `\b`.
 
 </div>
 ***
