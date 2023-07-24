@@ -588,6 +588,14 @@ First we will make a new directory on our computer to store the HTML files we ar
 Let’s put it on our desktop for now.
 Open a new tab in your terminal program (you can use the pull down menu at the top of your screen or the Cmd+t keyboard shortcut) and type:
 
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+You'll need to put in your own instance number in this command (the content that occurs right after `dcuser@`).
+For a reminder of how to find your instance's address, see the Data Carpentry instructions for [connecting to your AMI](https://datacarpentry.org/genomics-workshop/AMI-setup/#connect-to-your-amazon-instance-macoslinux).
+
+</div>
+
 ```bash
 scp dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/genomics_tools_and_methods/results/fastqc_untrimmed_reads/*.html ~/Desktop/fastqc_html
 ```
