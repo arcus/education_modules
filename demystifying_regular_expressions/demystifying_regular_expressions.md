@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
+version:  1.0.1
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
@@ -40,8 +40,8 @@ previous_sequential_module:
 @end 
 @depends_on_knowledge_available_in
 @end
-@version_history 
-No previous versions.
+@version_history
+No previous versions. 
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
