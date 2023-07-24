@@ -103,13 +103,6 @@ We are going to use a long-term sequencing dataset from a population of *Escheri
 
 *E. coli* are one of the most well-studied model organisms in science. As a single-celled organism, *E. coli* reproduces rapidly, typically doubling its population every 20 minutes, which means it can be manipulated easily in experiments. In addition, most naturally occurring strains of *E. coli* are harmless. Most importantly, the genetics of *E. coli* are fairly well understood and can be manipulated to study adaptation and evolution.
 
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
-
-For more information on why this particular dataset was chosen, see the [Data Carpentry summary page on these data](https://datacarpentry.org/organization-genomics/data/).
-
-</div>
-
 ### This dataset
 
 The data we are going to use is part of a long-term evolution experiment led by [Richard Lenski](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment).
@@ -134,7 +127,7 @@ A timeline of the experiment from Wikipedia shows a history of major events (the
 We will be working with three sample events from the **Ara-3** strain of this experiment, one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations.
 The population changed substantially during the course of the experiment, and we will be exploring how (the evolution of a **Cit+** mutant and **hypermutability**) with our variant calling workflow.
 
-The metadata file associated with this lesson can be [downloaded directly here](files/Ecoli_metadata_composite.csv) or [viewed in Github](https://github.com/datacarpentry/wrangling-genomics/blob/main/episodes/files/Ecoli_metadata_composite.csv). 
+The metadata file associated with this lesson can be [downloaded directly here](data/Ecoli_metadata_composite.csv) or [viewed in Github](https://github.com/datacarpentry/wrangling-genomics/blob/main/episodes/files/Ecoli_metadata_composite.csv). 
 
 Open the metadata file and examine it now.
 
@@ -587,7 +580,7 @@ To transfer a file from a remote server to our own machines, we will use `scp`.
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-For a review of `scp`, see the section on [transferring data between your local machine and the cloud](https://datacarpentry.org/shell-genomics/05-writing-scripts/#transferring-data-between-your-local-machine-and-the-cloud) from the Data Carpentry Shell Genomics lesson.
+For a review of `scp`, see the section on [transferring data between your local machine and the cloud](https://datacarpentry.org/shell-genomics/05-writing-scripts.html#transferring-data-between-your-local-machine-and-the-cloud) from the Data Carpentry Shell Genomics lesson.
 
 </div>
 
@@ -730,7 +723,7 @@ A more efficient way is to use a `for` loop lesson to iterate through all of our
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-For a refresher on how to write `for` loops, see the section on [writing for loops in the Data Carpentry Shell Genomics lesson](https://datacarpentry.org/shell-genomics/04-redirection/index.html#writing-for-loops).
+For a refresher on how to write `for` loops, see the section on [writing for loops in the Data Carpentry Shell Genomics lesson](https://datacarpentry.org/shell-genomics/04-redirection.html#writing-for-loops).
 
 </div>
 
