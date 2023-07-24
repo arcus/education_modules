@@ -97,7 +97,7 @@ Some regular expressions are short and simple, and some can be many lines of tex
 
 There are two very common reasons you as a researcher might want to use regular expressions (also referred to as "regex", which you can pronounce either with "reg" rhyming with "beg" or "reg" rhyming with "wedge").
 
-**Reason 1: Searching for the needle in the haystack
+**Reason 1: Searching for the needle in the haystack**
 -----
 
 You're writing code or looking through data and want to find, or find and replace, something that matches a predictable pattern.  For example, maybe you have used hexidecimal color specifications such as `#ccc` or `#FF1451` in your data visualizations in R, and you want to find all of those, because you want to add comments in your code disclosing the color in English so that your code is more understandable. 
@@ -120,19 +120,24 @@ If you work with strings (character data) frequently, whether that's from free-t
 
 ## Where Can You Use Regular Expressions?
 
-Regex is often used in **code**.  
+Regex is often used in **code**.
+---
 
-For example, you might write Python code that searches for patterns that look like medical record numbers and redacts them, replacing them with "9999999".  
+For example, you might write Python code that searches for patterns that look like medical record numbers and redacts them, replacing them with 9999999.  
 
 Or you could write R code that takes the file names from a directory full of video files with specially formatted file names like `subj412834_20230412_ALC.mp4` and makes a table of the information those file names contain (like subject id, date, initials of who made the interview recording, etc.).
 
 Regular expressions can also be used in **text editors**.  
+---
 
 For example, this module was written using a text editor called [Visual Studio Code](https://code.visualstudio.com/) (or VS Code).  This text editor allows the user to search for patterns using regular expressions.  For example, the author can look for every time a word appears between single asterisks (which will mean the text will appear in italics), or every time a new line starts with a number, or every time a single or double quotation mark is followed by a period or comma.
 
 VS Code also supports search and replace.  For example, if there's a style rule that indicates that words in *italics* (like `*regular*`) should also be in bold, the author can ask the text editor to find all the places where there's a word enclosed in single asterisks and enclose that word instead in triple asterisks (like `***regular***`, which will make the word render in ***bold italic***).
 
-There are also some popular **command line tools** that use regular expressions, like `sed`, `grep`, and `awk`.
+There are also some popular **command line tools** that use regular expressions.
+---
+
+These include commands like `sed`, `grep`, and `awk`.
 
 ## An Example Regular Expression
 
@@ -235,7 +240,7 @@ In this module, we're not going to go into the rules for making a regular expres
 
 As a final step in demystifying regular expressions, it can be helpful to introduce the online regex checker as a great resource to learn and to check your regex before trying to learn how to make your own regular expressions or use regex in SQL, R, or Python code you're writing.
 
-We like "Regex 101", at https://www.regex101.com, but you can also search online for "regex checker" to find other, similar websites.  Regex 101 allows you to enter your regular expression as well as some sample text that you want to apply the regular expression to.  
+We like **Regex 101**, at https://www.regex101.com, but you can also search online for "regex checker" to find other, similar websites.  Regex 101 allows you to enter your regular expression as well as some sample text that you want to apply the regular expression to.  
 
 Below, or by [trying it out yourself](https://regex101.com/r/QUok4D), you can see that we put in our "valid URL" regular expression (at the top of the screen, in the appropriately labeled box) as well as the different varieties of URLs, some of which we think are valid and match our pattern, and some of which we think are invalid and should fail to match our pattern.
 
@@ -254,8 +259,6 @@ Please check all of the true statements below:
 [[X]] Regular expressions can be used in multiple coding languages.
 [[ ]] The only way to check the accuracy of a regular expression someone gives you is by writing code. 
 [[X]] Regular expressions can be used to extract useful substrings.
-
-
 ***
 <div class = "answer">
 
