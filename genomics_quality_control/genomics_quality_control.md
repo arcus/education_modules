@@ -923,6 +923,8 @@ FAIL    Adapter Content SRR2589044_2.fastq.gz
 
 ## Additional Resources
 
+For more information about variant calling in general, see [variant identification and analysis section](https://www.ebi.ac.uk/training/online/courses/human-genetic-variation-introduction/variant-identification-and-analysis/) in the Human Genetic Variation course by [EMBL-EBI](https://www.ebi.ac.uk/training/).
+
 ## Feedback
 
 @feedback
