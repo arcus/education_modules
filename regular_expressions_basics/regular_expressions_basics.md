@@ -175,10 +175,9 @@ This means that either `25\% \(20\) claim\:` or `25% \(20\) claim:` are regular 
 
 Often, we want to indicate that a group of characters are all equally valid in a location.  For example, a pattern might include any digit at all in a particular location, or any of the letters A, Q, or Y at another location.  This is very typical, and this is where regular "find" or "find and replace" tools in software fail, while regular expressions prove useful.
 
-There are several ways to indicate groups of possible characters, and we'll go over the most common ones next.
+There are several ways to indicate groups of possible characters, and we'll go over the most common ones in the next few pages.
 
-Lists
------
+#### Lists
 
 Groups of characters can be added to a custom **list**.  Each member of the custom character set is added to a list, with no separators, that appears between square brackets.
 
@@ -194,8 +193,7 @@ Don't include separators in your list!  `[Y,N]` is not the same as `[YN]`.  The 
 
 You can combine list tokens with other tokens.  For example, if the pattern we're describing begins with a single "A", then a hyphen, then either a "Y" or "N", we would write that in regex as `A\-[YN]`.
 
-Metasequences
-------  
+#### Metasequences 
 
 The list of all digits and some other lists of characters are so commonly used they are predefined with special **metasequences**.  Writing `[0123456789]` is valid, but there's a shorter way to express it: `\d`.
 
@@ -205,8 +203,7 @@ The list of all digits and some other lists of characters are so commonly used t
 
 You can combine these metasquence tokens with what we've already learned.  For example, if the pattern we're trying to define includes a single digit, the letter Z, some other character that could be anything, and the letter J, we could put that in a regular expression as `\dZ.J`.
 
-Ranges
------
+#### Ranges
 
 You can also use square brackets to define a **range** of characters, giving a beginning character followed by a dash and then an ending character.  Let's start with numbers, to give you an idea of how ranges work.
 
@@ -252,8 +249,7 @@ The ordering of things that we don't have a specific order for, like punctuation
 </div>
 
 
-Letters
-----
+#### Letters
 
 Letters are tricky because they can have two cases and also have various diacritics.  Each of these sets appears in a different place in Unicode. Let's take a closer look:
 
