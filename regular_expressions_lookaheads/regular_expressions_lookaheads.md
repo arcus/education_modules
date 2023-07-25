@@ -42,6 +42,7 @@ previous_sequential_module: regular_expressions_anchors_boundaries
 - demystifying_regular_expressions
 - regular_expressions_basics
 - regular_expressions_groups
+- regular_expressions_anchors_boundaries
 @end
 @version_history 
 No previous versions.
