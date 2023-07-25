@@ -48,6 +48,8 @@ https://education.arcus.chop.edu/null-hypothesis-testing/
 
 ## The null hypothesis
 
+![](https://imgs.xkcd.com/comics/null_hypothesis.png)
+
 ## Populations vs samples
 
 ## What is the standard deviation?
@@ -103,6 +105,13 @@ NHST is not the only way to test for statistical significance!
 Another popular approach is Bayesian inference, named for [Thomas Bayes](https://en.wikipedia.org/wiki/Thomas_Bayes), who forumulated the [theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) on which it is based. 
 Briefly, Bayes' theorem tells us how to update the probability of something given new evidence. 
 
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+For a much more thorough (but still approachable!) explanation of Bayes' theorem, see [the StatQuest video, "Bayes' Theorem, Clearly Explained"](https://statquest.org/bayes-theorem-clearly-explained/).
+
+</div>
+
 For example, without any more specific information, you would assume a given patient's probability of having beast cancer is about the same as the population probability of that cancer. 
 If you find out that she's had a mamogram that detected cancer (new evidence), how does that change your estimation of her probability of having breast cancer? 
 It still wouldn't be 100% (mamograms have false positives), but it would be higher than before you knew about the mamogram. 
@@ -113,7 +122,15 @@ Then you collect your data and estimate the strength of the evidence, for exampl
 
 **In other words, Bayesian inference allows to you directly test the questions you're actually curious about in a way that is much more intutive than NHST.**
 
-So why aren't we all just using Bayesian inference instead of NHST?
+Bayesian inference also provides a natural way to incoporate additional knowledge into your hypothesis test --- if you're testing a hypothesis that seems very unlikely, the evidence should need to be much stronger than if you're testing for something that's pretty common sense. 
+
+For example, there is a real, published study in a mainstream journal purporting to show evidence that research participants have some abililty to sense the future before it happens ([Bem, 2011](https://pubmed.ncbi.nlm.nih.gov/21280961/)). 
+That article triggered several responses from other scientists arguing about a number of details in the statistical methods employed in the original study, including the fact that a Bayesian analysis would have allowed the analyst to specify a prior probability for being able to correctly anticipate random images, and that prior probability should have been quite low given the very reasonable skepticsm around ESP (for example, see [Rouder & Morey, 2011](https://link.springer.com/article/10.3758/s13423-011-0088-7)). 
+NHST considers all hypotheses to be equally likely, whether you're replicating a well-established effect or testing something controversial. 
+
+![](https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png)
+
+<h3>So why aren't we all just using Bayesian inference instead of NHST?</h3>
 
 Well, some people are! 
 Bayesian methods are becoming more common, especially as more statistical software supports them.
@@ -124,12 +141,7 @@ But there are a few reasons we're opting to teach mostly NHST here instead of Ba
 - The available tools are still much more user friendly for NHST. 
 - In a practical sense, using NHST vs. Bayesian inference usually won't change your conclusions. If you analyze your data with Bayesian methods and then re-analyze it with NHST, you'll almost always see comprable results. And that makes sense --- it's the same data, after all! 
 
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-For a much more thorough (but still approachable!) explanation of Bayes' theorem, see [the StatQuest video, "Bayes' Theorem, Clearly Explained"](https://statquest.org/bayes-theorem-clearly-explained/).
-
-</div>
 
 ## The dangers of p-hacking
 
