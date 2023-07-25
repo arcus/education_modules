@@ -251,8 +251,12 @@ You'll begin by posing your two alternatives, either `help|911` or `911|help`, t
 
 ## Additional Resources
 
+Groups:
 
-Here are some good cheat sheets:
+* [Capture Group Numbering & Naming: The Gory Details](https://www.rexegg.com/regex-capture.html) goes into detail about how to add numbering to capture groups, which can be helpful in advanced search and replace functions.  This goes beyond the scope we were able to cover in this module.
+
+
+General regex cheat sheets:
 
 * [Dave Child's cheat sheet](https://cheatography.com/davechild/cheat-sheets/regular-expressions/) is fairly comprehensive.
 * [DataCamp's cheat sheet for regex](https://images.datacamp.com/image/upload/v1665049611/Marketing/Blog/Regular_Expressions_Cheat_Sheet.pdf) is another good option.
