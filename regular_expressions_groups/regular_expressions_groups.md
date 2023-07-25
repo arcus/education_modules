@@ -37,10 +37,11 @@ coding_level: intermediate
 sequence_name: regex
 previous_sequential_module: regular_expressions_basics
 @sets_you_up_for
+- regular_expressions_anchors_boundaries
 @end 
 @depends_on_knowledge_available_in
+- demystifying_regular_expressions
 - regular_expressions_basics
--demystifying_regular_expressions
 @end
 @version_history
 No previous versions.
@@ -113,17 +114,11 @@ If we wanted to add a capture group for the trio identifier, we'd just add paren
 
 `(\d+)_[PMF]_[A-Z\d]+_\d+`
 
-We can do multiple capturing groups, too.  In a programming language like R or Python, you'll be able to write code that will give you the results of these capture groups.  For example, if you have a data frame with a column called "id" that has the long identifiers, you could split out that data into four additional columns that you call "trio\_id", "trio\_role", "subject\_id", and "accession\_id".
+We can do multiple capturing groups, too.  In a programming language, you'll be able to write code that will give you the results of these capture groups.  For example, if you have a data frame with a column called "id" that has the long identifiers, you could split out that data into four additional columns that you call "trio\_id", "trio\_role", "subject\_id", and "accession\_id".  We won't go into how to integrate regular expressions into your R or Python code in this module, but on the next page we'll go over looking at capturing groups in a regex checker.
 
 ### Capturing Groups in a Regex Checker
 
-You can look at the capturing results for multiple groups and practice this skill in a regex checker, even if you don't code in a programming language like R or Python.  For example, let's say we wanted to extract all four components of our long id, `002923_P_A56G199C2_030023472948651`. 
-
-<div class = "care">
-<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
-
-This is not an R or Python coding module, and explaining how to implement regular expressions in R and Python are beyond our scope here.  However, we've added some helpful hints in our [Additional Resources](#additional-resources) at the end of this module!
-</div>
+You can look at the capturing results for multiple groups and practice this skill in a regex checker, regardless of whether you also use a programming language like R or Python.  For example, let's say we wanted to extract all four components of our long id, `002923_P_A56G199C2_030023472948651`. 
 
 We can put parentheses around each group and add this regular expression to a regex checker like [Regex 101](https://www.regex101.com) and check to make sure we're capturing what we intend to.
 
@@ -256,37 +251,6 @@ You'll begin by posing your two alternatives, either `help|911` or `911|help`, t
 
 ## Additional Resources
 
-Resources for R 
----
-
-Learn more about regular expressions in R via Hadley Wickham's great book [*R for Data Science* (second edition)](https://r4ds.hadley.nz/).  
-
-* [Chapter 15](https://r4ds.hadley.nz/strings.html) goes over strings, and is a good place to start.
-* [Chapter 16](https://r4ds.hadley.nz/regexps.html) is specifically focused on regular expressions in R.
-
-Resources for Python
----
-
-In Python, you may want to look through some of the [pandas documentation](https://pandas.pydata.org/docs/index.html). 
-
-* [str.extract](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.extract.html) allows you to extract capturing groups.
-
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-![A series of labeled backslashes.  A single backslash is labeled "Backslash."  Two backslashes is labeled "Real Backslash."  Three backslashes? "Real real backslash."  Four backslashes? "Actual Backslash, for real this time."  Five? "Elder Backslash."  Six? "Backslash which escapes the screen and enters your brain." Seven? "Backslash so real it transcends time and space."  Eight? "Backslash to end all other text."  Finally, there is a series of eleven backslashes with three dots indicating an unknown number of additional backslashes, labeled "The true name of Ba'al, the Soul Eater."](https://imgs.xkcd.com/comics/backslashes.png "[Backslashes](https://xkcd.com/1638/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")
-
-Many programming languages already use the backslash to be an "escape sequence", which means that, depending on context, you might have to add an **additional** backslash.  For example, if you ordinarily use `\d` to indicate a digit, you might have to use `\\d` instead, to indicate that you really want to use that backslash for **regex** reasons, not for **R code** reasons or **Python code** reasons.  If you forget, you might get an error message that says something like:
-
-```
-Error: '\d' is an unrecognized escape in character string 
-```
-
-</div>
-
-General Information
----
 
 Here are some good cheat sheets:
 
