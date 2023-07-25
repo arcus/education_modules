@@ -389,7 +389,12 @@ The code for a word boundary is `\b`.
 
 ## Additional Resources
 
-Here are some good cheat sheets:
+Anchors and Boundaries:
+
+* [Regex Anchors](https://www.rexegg.com/regex-anchors.html) is an article that provides information on other anchors, beyond the `^` and `$` we cover in this module.
+* [Regex Boundaries and Delimiters—Standard and Advanced](https://www.rexegg.com/regex-boundaries.html) explains the difference in nomenclature between boundaries and anchors, and gives advanced examples.  
+
+General regex cheat sheets:
 
 * [Dave Child's cheat sheet](https://cheatography.com/davechild/cheat-sheets/regular-expressions/) is fairly comprehensive.
 * [DataCamp's cheat sheet for regex](https://images.datacamp.com/image/upload/v1665049611/Marketing/Blog/Regular_Expressions_Cheat_Sheet.pdf) is another good option.
