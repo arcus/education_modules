@@ -375,7 +375,7 @@ You can do this privately, just for your own benefit, or you can publish your pr
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-To read more about the benefits of preregistration, the *PLOS Computational Biology* Methods paper [Ten simple rules for socially responsible science](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010954#sec004) (Zivony, Kardosh, Timmins & Reggev, 2023). 
+To read more about the benefits of preregistration, read the *PLOS Computational Biology* Methods paper [Ten simple rules for socially responsible science](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010954#sec004) (Zivony, Kardosh, Timmins & Reggev, 2023). 
 
 </div>
 
@@ -391,6 +391,23 @@ True or False: NHST is based on the assumption that your sample is drawn **rando
 Yes, NHST assumes you have a random sample from your population of interest. 
 It's often not feasible to obtain a true random sample from your population of interest, though, so part of interpreting your results is considering how your sample may differ from the population you want to generalize your results to.
 This is often an important part of the discussion section in a published paper.
+
+</div>
+***
+
+Consider a researher who has been developing a checklist to improve care for postpartum people. The researcher has the opportunity to conduct a randomized trial at their hospital, so they randomly assign one group of birthing patients to be treated with the checklist protocol and another to get care as usual. They hypothesize that outcomes will be better in the group that gets the checklist. What null hypothesis should they test? 
+
+[[ that there is no difference in outcomes for the group that gets the checklist vs. the group that gets care as usual]]
+<script>
+  let input = "@input".trim();
+  /.*/i.test(input);
+</script>
+***
+<div class = "answer">
+
+(Note that we can't automatically grade an open-ended question like this, so it will be marked "correct" no matter what you write.)
+
+The null hypothesis would be that there is no difference in outcomes for the group that gets the checklist vs. the group that gets care as usual.
 
 </div>
 ***
