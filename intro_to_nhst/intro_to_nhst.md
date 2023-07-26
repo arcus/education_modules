@@ -343,7 +343,7 @@ All of those practices (and others) dramatically increase the probability of a T
 
 Here's a great [StatQuest](https://statquest.org/) video explaining more about what p-hacking looks like in practice:
 
-?![StatQuest video "p-hacking: What it is and how to avoid it!"](https://youtu.be/HDCOUXE3HMM)
+!?[StatQuest video "p-hacking: What it is and how to avoid it!"](https://youtu.be/HDCOUXE3HMM)
 
 An incredibly influential paper, [False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant](https://pubmed.ncbi.nlm.nih.gov/22006061/) (Simmons, Nelson & Simonsohn, 2011), shows what p-hacking can look like in a real data analysis, and how it dramatically changes the results you get from your statistical testing. 
 Although the authors focus on psychology as an example, the article is broadly applicable to research in many domains. 
