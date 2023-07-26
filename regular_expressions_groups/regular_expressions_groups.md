@@ -20,7 +20,7 @@ long_description: Learn to compose advanced regular expressions using capturing 
 estimated_time_in_minutes: 30
 
 @pre_reqs
-Learners should have some experience composing and using simple regular expressions (regex).  For an introduction to regular expression concepts, consider the [Demystifying Regular Expressions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#1) module.  To learn how to compose and use simple regular expressions, consider the [Regular Expressions Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_basics/regular_expressions_basics.md#1) module.
+Learners should have some experience composing and using simple regular expressions (regex).  For an introduction to regular expression concepts and using regular expression checkers like [Regex101](https://www.regex101.com/), consider the [Demystifying Regular Expressions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#1) module.  To learn how to compose and use simple regular expressions, consider the [Regular Expressions Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_basics/regular_expressions_basics.md#1) module.
 @end
 
 @learning_objectives  
@@ -120,9 +120,9 @@ We can do multiple capturing groups, too.  In a programming language, you'll be 
 
 You can look at the capturing results for multiple groups and practice this skill in a regex checker, regardless of whether you also use a programming language like R or Python.  For example, let's say we wanted to extract all four components of our long id, `002923_P_A56G199C2_030023472948651`. 
 
-We can put parentheses around each group and add this regular expression to a regex checker like [Regex 101](https://www.regex101.com) and check to make sure we're capturing what we intend to.
+We can put parentheses around each group and add this regular expression to a regex checker like [Regex 101](https://www.regex101.com) and check to make sure we're capturing what we intend to. See this description of [how to use Regex 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#6) if you would like a refresher.
 
-We'll add the pattern `(\d+)_([PMF])_([A-Z\d]+)_(\d+)` to the small box labeled "regular expression", and our sample id, `002923_P_A56G199C2_030023472948651`, to the larger box labeled "test string".  [We can then see our captured groups on the right!](https://regex101.com/r/XmG4kp/1)
+We'll add the pattern `(\d+)_([PMF])_([A-Z\d]+)_(\d+)` to the small box labeled "Regular Expression," and our sample id, `002923_P_A56G199C2_030023472948651`, to the larger box labeled "Test String."  [We can then see our captured groups on the right!](https://regex101.com/r/XmG4kp/1)
 
 ![The regex101 website with the aforementioned pattern and test string added.  Four groups are indicated in colorful highlights, listed in the match information pane, and explained in depth in the explanation pane.](media/capturing_groups.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));" -->
 
@@ -154,7 +154,7 @@ This regex looks intimidating, but it's really only a few parts.  Let's break it
 * `\.` indicates a literal period
 * `[A-Za-z]{2,}` indicates two or more letters ("org").
 
-In our case, we had a capturing group around the last three of those bullet points.  That means that what is captured is "fastmail.org", the entire email domain.
+In our case, we had a capturing group around the last three of those bullet points.  That means that what is captured is the entire email domain ("fakemail.org").
 
 </div>
 ***
@@ -167,7 +167,7 @@ Your wild type subjects are given identifiers that include `WT` (wild type), fol
 
 There's a handy way to indicate a logical "or" in regex, using the vertical pipe (`|`).  Text on either side of a `|` character are alternative values for the given part of a pattern. 
 
-For example, `8|5` indicates that either an 8 or a 5 appears at a given location. `banana|B` indicates that the word "banana" or the abbreviation "B" appears.  
+For example, `8|5` indicates that either an 8 or a 5 appears at a given location.  Similarly,`banana|B` indicates that the word "banana" or the abbreviation "B" appears.  
 
 
 <div class = "important">
@@ -177,7 +177,7 @@ Could we use a **list**, like `[85]` or `[58]`, instead of using the pipe to wri
 
 However, when you are dealing with a string of **more than one character**, like the entire word "banana" being one alternative, or "B" being the other alternative, you can't use a list!  
 
-As a reminder, a list is a token that represents **a single character** (which might repeat some number of times).  You can't indicate a multi-character string in a list.  `[banana]`, for example, means "b, or a, or n, or a, or n, or a".  
+As a reminder, a list is a token that represents **a single character** (which might repeat some number of times).  You can't indicate a multi-character string in a list.  `[banana]`, for example, means "b, or a, or n, or a, or n, or a."  
 
 Well, what if you added the correct **quantifier** to indicate six letters?  `[banana]{6}` means any of the approved letters six times.  "banana" would match, but so would "aaabbb" or "bababa" or "nanaba."
 
@@ -232,7 +232,7 @@ You're looking through lab notes written by a colleague who uses codes and abbre
 
 This investigator is known to write their lowercase initials ("sjp") and a single space followed by either "help" (always in lowercase) or "911" in notes to highlight important potential pitfalls.  
 
-Using the logical "or" and using a non-capturing group (remember: the syntax is `(?:)`), write a regular expression that would allow you to capture any of the "sjp help" or "sjp 911" references.
+Using the logical "or" and using a non-capturing group (remember: the syntax is `(?:)`), write a regular expression that would match both the "sjp help" and "sjp 911" patterns.
 
 Put that regular expression in the box below:
 
