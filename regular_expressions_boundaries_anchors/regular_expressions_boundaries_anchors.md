@@ -82,7 +82,7 @@ Specifically, we'll address these topics:
 
 ## Regular Expression Flags
 
-The regular expression checker we refer to and use for this module, [Regex 101](https://www.regex101.com), has, by default, the "global" and "multiline" **flags** set, which you can see written as "gm" after the "Regular Expression" box.  Flags in regex are parameters which can change how regular expressions are interpreted.  
+**Flags** in regex are parameters which can change how regular expressions are interpreted.  The regular expression checker we refer to and use for this module, [Regex 101](https://www.regex101.com), has, by default, the "global" and "multiline" flags set, which you can see written as "gm" after the "Regular Expression" box.   
 
 Flags aren't written within a regular expression, but are set **outside** of it, either by clicking on something (it might be the word "flag" or an image of a flag) or by typing a letter (like "g" or "m") or letters into your code, separate from the definition of a regular expression. Three frequently used flags are:
 
@@ -90,13 +90,13 @@ Flags aren't written within a regular expression, but are set **outside** of it,
 * **Multiline (m)**.  This flag indicates that each line should be treated as its own string, instead of all the lines being considered one string.  This is important when working with start-of-string and end-of-string **anchors**, which we'll talk about later in this module.
 * **Ignore / Insensitive (i)**.  "Ignore" indicates that pattern matching should be case-insensitive, so that differences in capitalization are ignored.
 
-If you use different "flags" than we do (for example, if you're not using the default [Regex 101](https://www.regex101.com) as your regex checker), you might see an occasional difference in how the regular expression we show works in your environment.  In the regex checker you're using, try setting your flags to "global" and "multiline", and you should get identical results to what we show here in this module.  The flags usually are shown following a forward slash, appearing just after the regular expression ends:
+If you use different "flags" than we do (for example, if you're not using the default [Regex 101](https://www.regex101.com) as your regex checker), you might see an occasional difference in how the regular expression we show works in your environment.  In the regex checker you're using, try setting your flags to "global" and "multiline," and you should get identical results to what we show here in this module.  The flags usually are shown following a forward slash, appearing just after the regular expression ends:
 
-![A regular expression checker box labeled "regular expression" includes a forward slash, the phrase "insert your regular expression here", a forward slash, and the letters "g" and "m". ](media/example1.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;" --> Screenshot taken from [https://regex101.com/](https://regex101.com/)
+![A regular expression checker box labeled "regular expression" includes a forward slash, the phrase "insert your regular expression here," a forward slash, and the letters g and m. ](media/example1.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;" --> Screenshot taken from [https://regex101.com/](https://regex101.com/)
 
 ![A sample regular expression: `([A-Z])\w+` is enclosed within forward slashes.  After the closing forward slash, the letter "g" appears.](media/example2.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 300px;" --> Screenshot taken from [https://regexr.com/](https://regexr.com/)
 
-![A regular expression checker box labeled "Regular Expression" that includes two forward slashes followed by the letter "g".](media/example3.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;" --> Screenshot taken from [https://www.regextester.com/](https://www.regextester.com/)
+![A regular expression checker box labeled "Regular Expression" that includes two forward slashes followed by the letter g.](media/example3.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 400px;" --> Screenshot taken from [https://www.regextester.com/](https://www.regextester.com/)
 
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
@@ -114,7 +114,7 @@ Which of the following statements are true?  Check all that apply.
 [[ ]] Flags are only important if you're working in Perl.
 [[ ]] Flags are written as the last letter or letters of a regular expression.
 [[X]] Flags alter the rules around regular expression parsing.
-[[X]] One common flag is "global", written with a "g", which allows for multiple matches.
+[[X]] One common flag is "global," written with a `g`, which allows for multiple matches.
 ***
 <div class = "answer">
 
@@ -195,7 +195,7 @@ Except-for Caret
 
 We can also use the caret symbol in an "except for" clause in our regular expression.  For example, what if at a given position in a pattern, any character is possible except for a hash mark (#)?  We can say "except for" by using `^` as the first character within square brackets: `[^#]`.  
 
-We can add multiple characters that should not appear within the square brackets.  If any character except for  #, 5, ., and % are permitted at a given location in a string, we could express that with the regular expression list `[^#5\.%]`. For example, `[ABXYZ]` means "any of these: A, B, X, Y, or Z", while `[^ABXYZ]` means "anything that **isn't** one of these: A, B, X, Y, and Z."  
+We can add multiple characters that should not appear within the square brackets.  If any character except for  #, 5, ., and % are permitted at a given location in a string, we could express that with the regular expression list `[^#5\.%]`. For example, `[ABXYZ]` means "any of these: A, B, X, Y, or Z," while `[^ABXYZ]` means "anything that **isn't** one of these: A, B, X, Y, and Z."  
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
