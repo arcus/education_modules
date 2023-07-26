@@ -12,14 +12,14 @@ mode: Textbook
 
 title: Introduction to Null Hypothesis Significance Testing
 
-comment:  This is a short, focused description of the module.
+comment:  This is an introduction to NHST for biomedical researchers. 
 
-long_description: This is a longer description, which should be understandable for a lay audience.
+long_description: Null Hypothesis Significance Testing (NHST) is by far the most commonly used method of statistical inference in research --- regression, ANOVAs, and t-tests are all tests from the NHST framework. This module introduces the important concepts that underlie NHST and prepares you to learn how to use NHST responsibly in your research. It does not assume any prior knowledge of statstics. 
 
 estimated_time_in_minutes: 
 
 @pre_reqs
-List any skills or knowledge needed to complete this module here.
+None.
 @end
 
 @learning_objectives  
@@ -54,6 +54,16 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 # Module Title
 
 @overview
+
+## NHST
+
+Null hypothesis significance testing (NHST) is a system for infering information about a larger population by measuring a sample. 
+It is also called **frequentist** statistics. 
+
+Although it's not the only way to do statsitical inference, t's very widely used across many different research fields. 
+When you think of statistical tests, chances are you're thinking of NHST. 
+
+Unfortunately, NHST is also notoriously difficult to understand! 
 
 ## Populations vs samples
 
@@ -280,7 +290,7 @@ Briefly, Bayes' theorem tells us how to update the probability of something give
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-For a much more thorough (but still approachable!) explanation of Bayes' theorem, see [the StatQuest video, "Bayes' Theorem, Clearly Explained"](https://statquest.org/bayes-theorem-clearly-explained/).
+For a much more thorough (but approachable!) explanation of Bayes' theorem, see [the StatQuest video, "Bayes' Theorem, Clearly Explained"](https://statquest.org/bayes-theorem-clearly-explained/).
 
 </div>
 
@@ -300,7 +310,7 @@ For example, there is a real, published study in a mainstream journal purporting
 That article triggered several responses from other scientists arguing about a number of details in the statistical methods employed in the original study, including the fact that a Bayesian analysis would have allowed the analyst to specify a prior probability for being able to correctly anticipate random images, and that prior probability should have been quite low given the very reasonable skepticsm around ESP (for example, see [Rouder & Morey, 2011](https://link.springer.com/article/10.3758/s13423-011-0088-7)). 
 NHST considers all hypotheses to be equally likely, whether you're replicating a well-established effect or testing something controversial. 
 
-![](https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png)
+!['Above the first panel: "Did the sun just explode? (It's night so we're not sure)". Panel 1: Two stick figures with a machine in between them. The first says, "This neutrino detector measures whether the sun has gone nova." The second says, "Then, it rolls two dice. If they both come up six, it lies to us. Otherwise, it tells the truth." And the first says, "Let's try. Detector! Has the sun gone nova?" The machine makes a "roll" noise and then repsonds, "YES." Panel 2, titled "Frequestist Statistician": The first stick figure says, "The probability of this result happening by chance is 1/36 = 0.027. Since p < 0.05, I conclude that the sun has exploded." Panel 3, titled "Bayesian Statistician": The second stick figure says, "Bet you $50 it hasn't."'](https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png "[Frequentists vs. Bayesians](https://xkcd.com/1132/) by xkcd, shared under a [CC license](https://xkcd.com/license.html).")
 
 <h3>So why aren't we all just using Bayesian inference instead of NHST?</h3>
 
