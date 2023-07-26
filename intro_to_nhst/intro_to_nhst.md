@@ -51,11 +51,11 @@ No previous versions.
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
-# Module Title
+# Introduction to Null Hypothesis Significance Testing
 
 @overview
 
-## NHST
+## What is NHST?
 
 Null hypothesis significance testing (NHST) is a system for infering information about a larger population by measuring a sample. 
 It is also called **frequentist** statistics. 
@@ -326,7 +326,50 @@ But there are a few reasons we're opting to teach mostly NHST here instead of Ba
 
 ## The dangers of p-hacking
 
+
 https://youtu.be/HDCOUXE3HMM
+
+## Quiz
+
+True or False: NHST is based on the assumption that your sample is drawn **randomly** from your population of interest.
+
+[(X)] True
+[( )] False
+***
+<div class = "answer">
+
+Here is the answer box for this question.
+
+</div>
+***
+
+Which of the following are true statements about the null hypothesis? Select all that apply.
+
+[[ ]] If your results are not significant ($p ≥ .05$), you conclude that the null hypothesis is true.
+[[X]] If your results are significant ($p ≥ .05$), you conclude that the null hypothesis is false.
+[[X]] The null hypothesis is usually the opposite of your scientific hypothesis. 
+[[X]] All $p$ values are calculated based on the assumption that the null hypothesis is true. 
+***
+<div class = "answer">
+
+Here is the answer box for this question.
+
+</div>
+***
+
+Which of the following is the best definition of a $p$ value?
+
+[( )] The probability that your scientific hypothesis is true, given your observed effect
+[( )] The probability that the null hypothesis is true, given your observed effect
+[(X)] The probability of your observed effect being that big or bigger, given that the null hypothesis is true
+[( )] The probability of your observed effect being that big or bigger, given that the null hypothesis is false
+***
+<div class = "answer">
+
+Here is the answer box for this question.
+
+</div>
+***
 
 ## Additional Resources
 
