@@ -286,7 +286,7 @@ There are a few important characteristics of lists:
 
 * Lists are **changeable**; you can add, remove, and edit items in a list. There are a few ways to do this:
 
-    * `.pop()` removes a specific element by **index**).
+    * `.pop()` removes a specific element by **index**.
 
      @sage
      <div class="python_link">
@@ -404,7 +404,7 @@ The code cells above are linked, meaning that all of the cells "remember" the co
     ***
     <div class = "answer">
 
-    Lists are chanageable, can be stored in varibles for later use, can contain a mix of data types, and they are **ordered**, meaning that items remain in the position that they were put into the list, and you can access or edit list items by value **or** position (also called the **index**).
+    Lists are changeable, can be stored in variables for later use, can contain a mix of data types, and they are **ordered**, meaning that items remain in the position that they were put into the list. You can access or edit list items by value **or** position (also called the **index**).
 
     </div>
     ***
@@ -553,7 +553,7 @@ The loop in the code cell above is missing a `print()` statement to show us the 
 ***
 <div class = "answer">
 
-According to our code, we know that `j` is the square of `i`, so that's the number we need to print. If we put the `print()` statment **outside** of the loop, we only see the last number, 25, because that is the value that `j` had once the loop was completed. If we place the `print()` statement **inside** the loop, each value of `j` is printed before the next interation of the loop. Therefore, the second option is correct.
+According to our code, we know that `j` is the square of `i`, so that's the number we need to print. If we put the `print()` statement **outside** of the loop, we only see the last number, 25, because that is the value that `j` had once the loop was completed. If we place the `print()` statement **inside** the loop, each value of `j` is printed before the next iteration of the loop. Therefore, the second option is correct.
 
 </div>
 ***
@@ -564,7 +564,7 @@ Sometimes when you're working with Python, you might want your code to do differ
 
 Conditional statements often make use of **comparison operators**. Comparison operators compare values and return a `True` or `False`, depending on the outcome of the comparison. Some important comparison operators include:
 
-* `==`: In Python, this is used to test **equality** (be sure not to use  the single equals sign `=`, which is used for assigning values to variables). So `9 == 18` asks the questions "is 9 equal to 18?", which would evalulate to `False`.
+* `==`: In Python, this is used to test **equality** (be sure not to use  the single equals sign `=`, which is used for assigning values to variables). So `9 == 18` asks the questions "is 9 equal to 18?", which would evaluate to `False`.
 
 * `!=`: not equal to.
 
@@ -576,7 +576,7 @@ Conditional statements often make use of **comparison operators**. Comparison op
 
 * `>=`: greater than or equal to.
 
-Let's look at a simple example of some code that ultilizes conditionals.
+Let's look at a simple example of some code that utilizes conditionals.
 
 @sage
 <div class="python">
@@ -712,7 +712,7 @@ print(candy2)
     ***
     <div class = "answer">
 
-    Because we're checking for multiple conditions, we use the `elif` keyword. We use `if` for the first condition that we are testing; `else` is used at the end to catch anything that hasn't been explictly handled by our preceding conditions. And we know that `for` is the keyword to begin a loop!
+    Because we're checking for multiple conditions, we use the `elif` keyword. We use `if` for the first condition that we are testing; `else` is used at the end to catch anything that hasn't been explicitly handled by our preceding conditions. And we know that `for` is the keyword to begin a loop!
 
     </div>
     ***
