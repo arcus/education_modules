@@ -58,7 +58,7 @@ coding_language: python
 Previous versions: 
 
 - [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4d0209ff5d709676a3570bcb809eb5a8dbcf6c0c/python_basics_writing_python_code/python_basics_writing_python_code.md): update highlight boxes to improve clarity
-- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d15ea48439602de9550c909da4f6dd595d4b2bec/python_basics_writing_python_code/python_basics_writing_python_code.md): initial version
+- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d15ea48439602de9550c909da4f6dd595d4b2bec/python_basics_writing_python_code/python_basics_writing_python_code.md): Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -395,7 +395,7 @@ The code cells above are linked, meaning that all of the cells "remember" the co
 
 ### Quiz: Lists
 
-1. While of the following is FALSE about lists? Select all that apply.
+1. Which of the following is FALSE about lists? Select all that apply.
 
     [( )] Lists are changeable; items can be added, removed, or replaced after the list is created.
     [( )] Lists can be assigned to variables.
