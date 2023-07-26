@@ -2,14 +2,25 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.1.1
-module_template_version: 3.0.0
+version: 1.2.0
+current_version_description: clarify brackets syntax, clarify when to use methods
+module_type: standard
+docs_version: 1.2.0
 language: en
 narrator: UK English Female
+mode: Textbook
+
 title: Python Basics: Writing Python Code
+
 comment: Learn the foundations of writing Python code.
+
 long_description: Before using Python for data analysis, there are some basics to learn that will set the foundation for more advanced Python coding. This module will teach you about functions and methods, how to define and use variables, how to create and edit lists and dictionaries, and how use loops and conditional statements to perform tasks with these basic data structures.
-estimated_time: 1 hour
+
+estimated_time_in_minutes: 60
+
+@pre_reqs
+Learners should be familiar with [Python as a programming language](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md), but experience with writing Python code is not required.
+@end
 
 @learning_objectives
 
@@ -24,125 +35,46 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
+coding_required: true
+coding_level: basic
+coding_language: python
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
 
-script: https://sagecell.sagemath.org/static/embedded_sagecell.js
+- python_practice
 
-@sage
-<script input="hidden">
-// Make *any* div with class 'python' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python',
-                       evalButtonText: 'Run python',
-                       languages: ["python"],
-                       hide: ['fullScreen', 'permalink'],
-                       });
-// Make *any* div with class 'python_run' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_run',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'true'
-                      });
-// Make *any* div with class 'python_link' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_link',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'false',
-                      linked: 'true'
-                      });
-// Make *any* div with class 'python_data_init' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_data_init',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      editor: 'codemirror-readonly',
-                      hide: ['fullScreen', 'permalink','output','evalButton'],
-                      autoeval: 'true',
-                      linked: 'true',
-                      linkKey: "data"
-                      });       
-// Make *any* div with class 'python_data' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_data',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'false',
-                      linked: 'true',
-                      linkKey: "data"
-                      });                
-
-// Make *any* div with class 'r' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.r',
-                      evalButtonText: 'Run R',
-                      languages: ["r"],
-                      hide: ['fullScreen', 'permalink'],
-                      });
-// Make *any* div with class 'r_run' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.r_run',
-                      evalButtonText: 'Run R',
-                      languages: ["r"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'true'
-                      });
-</script>
 @end
+
+@depends_on_knowledge_available_in
+
+- demystifying_python
+
+@end
+
+
+@version_history
+
+Previous versions: 
+
+- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4d0209ff5d709676a3570bcb809eb5a8dbcf6c0c/python_basics_writing_python_code/python_basics_writing_python_code.md): update highlight boxes to improve clarity
+- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d15ea48439602de9550c909da4f6dd595d4b2bec/python_basics_writing_python_code/python_basics_writing_python_code.md): initial version
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
 
 -->
 
 # Python Basics: Writing Python Code
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?:** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites:** Learners should be familiar with [Python as a programming language](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md), but need not have any experience with actually writing Python code.
-
-**Learning Objectives**:
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Lesson Preparation
+
 @sage
 
-You will have opportunities for hands-on coding as you work your way through this module using interactive python cells.
-The interactive python cells are powered by [SageMathCell](https://sagecell.sagemath.org/). For the most part, these will appear with some code already in them, and you can run that code by clicking the **Run python** button. You can also edit the code in these cells and run your own code.
-
-
-**Give it a try:**
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-print(7+2)
-</script>
-</lia-keep>
-</div>
-
-Code will not persist from one page to the next, and you can always refresh the page to return the code (and the stored memory of the cell) to its initial state.
-
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
-
-These cells will compute everything you ask them to, but will only display what you explicitly request using the `print()` command.
-
-</div>
-
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
-
-**Navigating with arrow keys**
-
-You can navigate the pages of this course using left and right arrow keys. This means that you **cannot** use left and right arrow keys to navigate **within** a code cell.
-
-</div>
+@lesson_prep_python_sage
 
 ## Introduction to Python code
 
@@ -1088,16 +1020,4 @@ If this process seemed intimidating, that's understandable! Learning to code tak
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Python+Basics+:+Writing+Python+Code%22&version=1.1.1)!
+@feedback
