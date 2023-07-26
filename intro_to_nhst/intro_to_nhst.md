@@ -25,9 +25,10 @@ None.
 @learning_objectives  
 After completion of this module, learners will be able to:
 
-- identify the null hypothesis and alternate hypothesis given a research question
+- identify the null hypothesis given a research question
 - define a p-value
-- use best practices to report a statistical test, including effect size and confidence interval
+- define Type 1 error, Type 2 error, and statistical power
+- describe common pitfalls of NHST in research and how to avoid them
 
 @end
 
@@ -60,7 +61,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 Null hypothesis significance testing (NHST) is a system for infering information about a larger population by measuring a sample. 
 It is also called **frequentist** statistics. 
 
-Although it's not the only way to do statsitical inference, t's very widely used across many different research fields. 
+Although it's not the only way to do statsitical inference, it's very widely used across many different research fields. 
 When you think of statistical tests, chances are you're thinking of the NHST framework. 
 
 Unfortunately, NHST is also notoriously difficult to understand! 
@@ -326,8 +327,57 @@ But there are a few reasons we're opting to teach mostly NHST here instead of Ba
 
 ## The dangers of p-hacking
 
+As we mentioned earlier, the Type 1 error rate (the probability of incorrectly rejecting the null hypothesis when it is in fact true) is set by convention at 5%. 
+That suggests that, if you're scientififc hypothesis is wrong and you're testing for an effect that isn't really there (i.e. the null hypothesis is true), the chance of you getting a significant result is pretty small: 1 in 20. 
+In fact, though, the way many people routinely analyze data results in an actual Type 1 error rate that is much, much higher. 
 
-https://youtu.be/HDCOUXE3HMM
+Here are a few common practices that are actually p-hacking: 
+
+- Use NHST to run a test that didn't occur to you until you started looking at the data
+- Running several different statistical tests and then only reporting the significant ones
+- Making adjustments in the data cleaning steps (transforming variables, removing outliers, etc.) after checking the results of the hypothesis test
+- Running a statistical test on preliminary data and then deciding whether or not to collect more data based on whether the results are significant or not
+- Looking at exploratory data analysis (plots, group means, etc.) and then picking which hypothesis tests to run based on what looks promising
+
+All of those practices (and others) dramatically increase the probability of a Type 1 error and have contributed to large bodies of published findings that can't be replicated. 
+
+Here's a great [StatQuest](https://statquest.org/) video explaining more about what p-hacking looks like in practice:
+
+?![StatQuest video "p-hacking: What it is and how to avoid it!"](https://youtu.be/HDCOUXE3HMM)
+
+An incredibly influential paper, [False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant](https://pubmed.ncbi.nlm.nih.gov/22006061/) (Simmons, Nelson & Simonsohn, 2011), shows what p-hacking can look like in a real data analysis, and how it dramatically changes the results you get from your statistical testing. 
+Although the authors focus on psychology as an example, the article is broadly applicable to research in many domains. 
+
+One of the things the authors emphasize is that in practice p-hacking is very easy to do accidentally, even when you have the best intentions. 
+As [statistician Andrew Gelman puts it](https://statmodeling.stat.columbia.edu/2012/02/16/false-positive-psychology/):
+
+> A key part of the story is that, although such manipulations could be performed by a cheater, they could also seem like reasonable steps to a sincere researcher who thinks there’s an effect and wants to analyze the data a bit to understand it further.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+There are many excellent articles about the problems associated with p-hacking and how to avoid them. 
+Here are three of our favorites: 
+
+- [The garden of forking paths: Why multiple comparisons can be a problem, even when there is no “fishing expedition” or “p-hacking” and the research hypothesis was posited ahead of time](http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf) (Gelman & Loken, 2013)
+- [Practices: Definition, Detection, and Recommendations for Better Practices](https://replicationindex.com/2015/01/24/qrps/) (Replication Index, 2015)
+- [HARKing: hypothesizing after the results are known](https://pubmed.ncbi.nlm.nih.gov/15647155) (Kerr, 1998)
+
+</div>
+
+<h3>How to not p-hack</h3>
+
+There are some corrections you can apply, such as the [False Discovery Rate](https://www.publichealth.columbia.edu/research/population-health-methods/false-discovery-rate) correction mentioned in the StatQuest video, to fix $p$-values that are artificially low because of p-hacking. 
+However, by far the easiest way to not p-hack is to specify what hypotheses you intend to test and exactly how you'll test them (including the sample size you'll use) *before* you look at the data.
+This is called **preregistration**.
+You can do this privately, just for your own benefit, or you can publish your pregistration publicly on a repository like the [Open Science Foundation](https://help.osf.io/article/330-welcome-to-registrations).
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To read more about the benefits of preregistration, the *PLOS Computational Biology* Methods paper [Ten simple rules for socially responsible science](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010954#sec004) (Zivony, Kardosh, Timmins & Reggev, 2023). 
+
+</div>
 
 ## Quiz
 
@@ -338,7 +388,9 @@ True or False: NHST is based on the assumption that your sample is drawn **rando
 ***
 <div class = "answer">
 
-Here is the answer box for this question.
+Yes, NHST assumes you have a random sample from your population of interest. 
+It's often not feasible to obtain a true random sample from your population of interest, though, so part of interpreting your results is considering how your sample may differ from the population you want to generalize your results to.
+This is often an important part of the discussion section in a published paper.
 
 </div>
 ***
@@ -352,7 +404,8 @@ Which of the following are true statements about the null hypothesis? Select all
 ***
 <div class = "answer">
 
-Here is the answer box for this question.
+These statements are all true, except the first one. 
+When your results are not significant ($p ≥ .05$), you **cannot** conclude that the null hypothesis is true; rather, you can only fail to reject it. 
 
 </div>
 ***
@@ -366,16 +419,52 @@ Which of the following is the best definition of a $p$ value?
 ***
 <div class = "answer">
 
-Here is the answer box for this question.
+For a review of this tricky topic, see [the section on Interpreting results](#interpreting-results).
+
+</div>
+***
+
+True or False: P-hacking is a form of scientific misconduct, and although it's a serious problem, it rarely occurs.
+
+[( )] True
+[(X)] False
+***
+<div class = "answer">
+
+This is not true. 
+In many cases, p-hacking is done accidentally by researchers who are sincerely trying to analyze their data responsibly.
+And it is unfortunately very common! 
+
+The upside of that, though, is that there are a lot of researchers all working together to try to figure out better practices for more reproducible science. 
+Some have even [publicly shared their progress as they work on finding better ways to conduct research](https://sometimesimwrong.typepad.com/wrong/2015/02/this-is-what-p-hacking-looks-like.html). 
+
+</div>
+***
+
+Think about a study you ran in the past, or one you might run in the future. What is one thing you can do to avoid p-hacking in your own research? 
+
+[[preregistration]]
+<script>
+  let input = "@input".trim();
+  /.*/i.test(input);
+</script>
+***
+<div class = "answer">
+
+(Note that we can't automatically grade an open-ended question like this, so it will be marked "correct" no matter what you write.)
+
+There are a lot of potential steps you can take to reduce your own p-hacking! 
+You'll find lots of ideas and suggestions in the resources linked throughout this module. 
+One strategy we particularly like, though is [preregistration](https://help.osf.io/article/330-welcome-to-registrations).
 
 </div>
 ***
 
 ## Additional Resources
 
-http://www.biostathandbook.com/hypothesistesting.html
+The chapter on hypothesis testing from the [Handbook of Biological Statistics](http://www.biostathandbook.com/hypothesistesting.html). 
 
-https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample/more-significance-testing-videos/v/hypothesis-testing-and-p-values
+A great Khan Academy video on [Hypothesis testing and p-values](https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample/more-significance-testing-videos/v/hypothesis-testing-and-p-values).
 
 ## Feedback
 
