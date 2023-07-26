@@ -173,7 +173,7 @@ For example, `8|5` indicates that either an 8 or a 5 appears at a given location
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-Could we use a **list**, like `[85]` or `[58]`, instead of using the pipe to write `8|5` to indicate "either a five or an eight."  Yes, and that's usually the best choice, when you're dealing with a single character in a pattern that has several alternatives.  For example, it's easier to write `[ABC123]` than it is to write `A|B|C|1|2|3`.
+Could we indicate "either a five or an eight" using a **list**, like `[85]` or `[58]`, instead of using the pipe `8|5`?  Yes, and that's usually the best choice, when you're dealing with a single character in a pattern that has several alternatives.  For example, it's easier to write `[ABC123]` than it is to write `A|B|C|1|2|3`.
 
 However, when you are dealing with a string of **more than one character**, like the entire word "banana" being one alternative, or "B" being the other alternative, you can't use a list!  
 
@@ -251,11 +251,6 @@ You'll begin by posing your two alternatives, either `help|911` or `911|help`, t
 
 ## Additional Resources
 
-Groups:
-
-* [Capture Group Numbering & Naming: The Gory Details](https://www.rexegg.com/regex-capture.html) goes into detail about how to add numbering to capture groups, which can be helpful in advanced search and replace functions.  This goes beyond the scope we were able to cover in this module.
-
-
 General regex cheat sheets:
 
 * [Dave Child's cheat sheet](https://cheatography.com/davechild/cheat-sheets/regular-expressions/) is fairly comprehensive.
@@ -267,6 +262,10 @@ If you want to check out regular expression checkers, here are a few we like:
 * [Regex 101](https://regex101.com) is the regular expressions tester used in this module.  We use it regularly, even after working with regular expressions for many years.
 * [RegExr](https://regexr.com/) has helpful teaching aids, including a hover-over explainer that allows you to investigate matches, and a way to look at complex nested elements (for instance, a range of characters inside square brackets inside a capturing group) in a visual way.
 * [RegEx Testing](https://www.regextester.com/) has a clean, simple interface and a library of popular regular expressions to start with. 
+
+Groups:
+
+* [Capture Group Numbering & Naming: The Gory Details](https://www.rexegg.com/regex-capture.html) goes into detail about how to add numbering to capture groups, which can be helpful in advanced search and replace functions.  This goes beyond the scope we were able to cover in this module.
 
 For learning more about regular expressions, consider:
 
