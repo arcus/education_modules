@@ -61,9 +61,10 @@ Null hypothesis significance testing (NHST) is a system for infering information
 It is also called **frequentist** statistics. 
 
 Although it's not the only way to do statsitical inference, t's very widely used across many different research fields. 
-When you think of statistical tests, chances are you're thinking of NHST. 
+When you think of statistical tests, chances are you're thinking of the NHST framework. 
 
 Unfortunately, NHST is also notoriously difficult to understand! 
+In this module we'll step through the important concepts that underlie NHST and how to think about frequentist statistics in your research.
 
 ## Populations vs samples
 
