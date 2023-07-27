@@ -2,14 +2,25 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.0
-module_template_version: 2.0.1
+version: 1.1.1
+current_version_description: Update highlight box formattting.
+module_type: standard
+docs_version: 1.2.0
 language: en
 narrator: UK English Female
+mode: Textbook
+
 title: Demystifying Geospatial Data
+
 comment:  This module is a brief introduction to geospatial (location) data.
+
 long_description: This module will survey some of the benefits of using geospatial data for research purposes. No previous exposure to geospatial data is expected. If you have any interest in maps or are wondering if using geospatial data might be helpful for your work, this lesson is designed to help you decide whether learning more about geospatial techniques is right for you and your project.
-estimated_time:  15 minutes
+
+estimated_time_in_minutes:  15
+
+@pre_reqs
+No prior knowledge or experience of geospatial data is required.
+@end
 
 @learning_objectives  
 
@@ -21,30 +32,34 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
+data_domain: geospatial
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
+
+- geocode_lat_long
+
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
+@version_history
+
+Previous versions: 
+
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/demystifying_geospatial_data/demystifying_geospatial_data.md#1): Initial version.
+
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
 
 # Demystifying Geospatial Data
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**: No prior knowledge or experience of geospatial data is required.
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## What is Geospatial Data?
 
@@ -236,16 +251,4 @@ Another summary of uses of geospatial data appeared as [an article](https://traj
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Demystifying+Geospatial+Data%22&version=1.0.1)!
+@feedback
