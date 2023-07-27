@@ -2,14 +2,25 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.0.2
-module_template_version: 3.1.0
+version: 1.0.3
+current_version_description: Initial version.
+docs_version: 1.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
+
 title: Citizen Science
+
 comment:  This is an overview of citizen science for biomedical researchers.
+
 long_description: This module covers the what, who, why, and how of citizen science research: what citizen science is, who volunteers, why citizen science might be a good choice for your research, and options for how to get started. Throughout, it highlights several examples of real citizen science projects being used in biomedical research and related fields. No prior knowledge is assumed.
-estimated_time: 45 minutes
+
+estimated_time_in_minutes: 45
+
+@pre_reqs
+None.
+@end
+
 @learning_objectives  
 
 After completion of this module, learners will be able to:
@@ -21,32 +32,27 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
+@version_history
+No previous versions.
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
 
 # Citizen Science
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-None.
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## What is citizen science?
 
@@ -329,16 +335,4 @@ To read about more examples of citizen science in action, check out this [review
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Citizen+Science%22&version=1.0.1)!
+@feedback
