@@ -77,8 +77,10 @@ We consider this module to be intermediate, because it assumes basic knowledge c
 Specifically, we'll address these topics:
 
 * **Anchors**, which help you define patterns that belong in the beginning and end of a string as a whole
-* **Boundaries**, which help you define patterns that belong in certain places that appear within a string
 * **Exclusions**, which allow you to look for patterns that exclude certain characters
+* **Flags**, which are parameters that alter how regular expressions are interpreted
+* **Boundaries**, which help you define patterns that belong in certain places that appear within a string
+* **Greedy** default behavior in regex, which can cause unexpected pattern matches
 
 ## Regular Expression Flags
 
@@ -87,7 +89,7 @@ Specifically, we'll address these topics:
 Flags aren't written within a regular expression, but are set **outside** of it, either by clicking on something (it might be the word "flag" or an image of a flag) or by typing a letter (like "g" or "m") or letters into your code, separate from the definition of a regular expression. Three frequently used flags are:
 
 * **Global (g)**.  This indicates that the entire string given for matching against the pattern should be checked.  Without the "g" or "global" flag, only the first match to the pattern will be found, and the regex parser will stop looking for additional matches.
-* **Multiline (m)**.  This flag indicates that each line should be treated as its own string, instead of all the lines being considered one string.  This is important when working with start-of-string and end-of-string **anchors**, which we'll talk about later in this module.
+* **Multiline (m)**.  This flag indicates that each line should be treated as as if it were its own string.  This is important when working with start-of-string and end-of-string **anchors**, which we'll talk about later in this module.  When the multiline flag is turned on, it means that the anchors that typically only refer to the beginning and end of a string will also be used to the beginning and end of each line. 
 * **Ignore / Insensitive (i)**.  "Ignore" indicates that pattern matching should be case-insensitive, so that differences in capitalization are ignored.
 
 If you use different "flags" than we do (for example, if you're not using the default [Regex 101](https://www.regex101.com) as your regex checker), you might see an occasional difference in how the regular expression we show works in your environment.  In the regex checker you're using, try setting your flags to "global" and "multiline," and you should get identical results to what we show here in this module.  The flags usually are shown following a forward slash, appearing just after the regular expression ends:
@@ -200,7 +202,11 @@ We can add multiple characters that should not appear within the square brackets
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-To use `^` as "except for", it has to immediately follow an opening square bracket, and be followed by the characters it is indicating aren't acceptable.  You can't, for example, say "all the digits except for 7" by typing `\d^7` or `[\d^7]`.
+To use `^` as "except for", it has to immediately follow an opening square bracket, and be followed by the characters it is indicating aren't acceptable.  You can't, for example, say "all the digits except for 7" by typing `\d^7` or `[\d^7]`.  One way to do that would be `[012345689]`, and another would be `[0-689]`.  
+
+In some regular expression environments, you can do some advanced practices such as creating an **intersection** between two sets (such as the set of all digits and the set of all symbols except for 7), but the way to do this is different in different languages and regular expressions environments, so we won't go into detail about that here.
+
+Similarly, if you wanted to define a list with all uppercase letters except F and L, the most universal way to accomplish that is `[A-EG-KM-Z]`, but you'll sometimes see other, system-specific regular expressions that go beyond the scope of this module.
 
 </div>
 
@@ -230,7 +236,7 @@ The pattern we're looking for is "single or double quotation followed by a perio
 Let's combine start-of-string, except-for, and end-of-string, to match strings in our text which:
 
 * Have a start-of-string followed by a capital letter A-Z, then
-* Have twenty to thirty characters that cannot include digits and then
+* Have ten to thirty characters that cannot include digits and then
 * End in a final period (.) and end-of-string.
 
 We could do that with this expression: `^[A-Z][^\d]{10,30}\.$`. 
