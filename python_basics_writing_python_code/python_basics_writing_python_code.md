@@ -113,7 +113,7 @@ There are many [built-in functions in Python](https://docs.python.org/3/library/
 Methods
 ======
 
-**Methods** in Python are very similar to functions, but are not precisely the same. The exact differences are not important to us right now, except that the syntax is a little different. Methods cannot be called by themselves; they are always called on an object, with the syntax `object.method()`.
+**Methods** in Python are very similar to functions, but are not precisely the same. The exact differences are not important to us right now, except that the syntax is a little different. Methods cannot be called by themselves; they are always associated with an object, with the syntax `object.method()`.
 
 Let's look at an example and try applying the `lower()` method:
 
@@ -128,7 +128,7 @@ print("Hello World!".lower())
 </lia-keep>
 </div>
 
-As you might have suspected, the `.lower()` method made all of the letters of the phrase "Hello World!" lowercase. The `.lower()` method is a **string method**, or a method that must be called on a string, of which "Hello World!" is an example. (There is also a string method called `.upper()`, can you guess what it does?) The Python documentation has [more information about string methods](https://docs.python.org/2.5/lib/string-methods.html).
+As you might have suspected, the `.lower()` method made all of the letters of the phrase "Hello World!" lowercase. The `.lower()` method is a **string method**, or a method that *must* be called on a string object, of which "Hello World!" is an example. (There is also a string method called `.upper()`, can you guess what it does?) The Python documentation has [more information about string methods](https://docs.python.org/2.5/lib/string-methods.html). Other kinds of objects in Python (like lists and dictionaries, for example, which we'll discuss later in this module) have their own associated methods.
 
 Let's talk more about strings and other data types next.
 
@@ -156,6 +156,13 @@ Notice that in the above example, we have passed the `type("Hello World!")` func
 
 </div>
 
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+You may be wondering exactly when you should use functions vs. methods, and that can be a tricky question to answer! It depends on whether the thing you want to do was written as a function or a method, and even folks with a lot of Python experience can forget and need to look things up! A good approach is to use your favorite search engine to search for the task you want to do combined with "Python". For example, if you want to figure out how to make a string completely lower case, you might search "make string lower case in Python". That will lead you to the string method `.lower()`. 
+
+</div>
+
 ### Quiz: Functions and methods
 
 Which of the following are valid examples of Python code? Select all that apply.
@@ -167,7 +174,7 @@ Which of the following are valid examples of Python code? Select all that apply.
 ***
 <div class = "answer">
 
-These are all examples of valid Python code! `len("Python is awesome!")` returns the length of the argument `"Python is awesome!"` (which is 18-- spaces and punctuation count!) and prints that output to the screen. `"python".upper()` makes the string "python" all uppercase. `type("4.3")` might be a little tricky, since 4.3 is a decimal number (or **float**), but it's also in quotation marks, which means that "4.3" is a string in this case! `type(True)` might also be tricky, since at first it looks like a string that doesn't have the required quotation marks. However, `True` and `False` are special in Python, and have the type `boolean`.  
+These are all examples of valid Python code! `len("Python is awesome!")` uses the `len()` function to return the length of the argument `"Python is awesome!"` (which is 18-- spaces and punctuation count!) and print that output to the screen. `"python".upper()` uses the string method `.upper()` to make the string "python" all uppercase. `type("4.3")` might be a little tricky, since 4.3 is a decimal number (or **float**), but it's also in quotation marks, which means that "4.3" is a string in this case! `type(True)` might also be tricky, since at first it looks like a string that doesn't have the required quotation marks. However, `True` and `False` are special in Python, and have the type `boolean`.  
 
 </div>
 ***
@@ -184,6 +191,20 @@ print(x)
 </script>
 </lia-keep>
 </div>
+
+To check that the string "Python is awesome!" ends in an exclamation point, we can use the code ` "Python is awesome!".endswith("!")`. In this case, the boolean value `True` will be returned, since "Python is awesome!" does indeed end in an exclamation point. What is `.endswith()` an example of?
+
+[(X)] A method
+[( )] A function
+[( )] A string
+[( )] A float
+***
+<div class = "answer">
+
+You can tell `.endswith()` is a method because it has the syntax `object.method()`, with `"Python is awesome!"` being the object (a string, in this case) the `.endswith()` method is called on. A function would have the syntax `function(argument)`. A float (short for "floating point number") is a numeric data type containing a decimal point. 
+
+</div>
+***
 
 ## Variables
 
