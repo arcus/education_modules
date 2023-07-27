@@ -124,7 +124,7 @@ They also may be motivated by helping their community or themselves with the out
 
 
 Other times, the project includes more traditional incentives like money to attract participants, or is designed as a game.
-Using free smartphone games to collect research data can be quite effective, as this [article in PLOS]((https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0100662) shows.
+Using free smartphone games to collect research data can be quite effective, as this [article in PLOS]https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0100662) shows.
 Some platforms encourage engagement by letting users track their contributions, earn points, and even [form teams to compete against other volunteers](https://stats.foldingathome.org/).
 
 
