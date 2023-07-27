@@ -69,7 +69,7 @@ If you have ever look at a map, followed GPS directions, or even just used a cel
 
 We use [**latitude**](https://en.wikipedia.org/wiki/Latitude) and [**longitude**](https://en.wikipedia.org/wiki/Longitude) to describe locations on Earth. If you have any data that includes latitude and longitude, you have geospatial data!
 
-While geospatial data could be a specific **point**, give by a single set of latitude/longitude coordinates, it could also be a **line segment** connecting two locations, a series of line segments connecting a sequence of points, or a **polygon**, which is a region enclosed by points connected with line segments. These are the kinds of geospatial data that you will need to draw a map.
+While geospatial data could be a specific **point**, given by a single set of latitude/longitude coordinates, it could also be a **line segment** connecting two locations, a series of line segments connecting a sequence of points, or a **polygon**, which is a region enclosed by points connected with line segments. These are the kinds of geospatial data that you will need to draw a map.
 
 More than Maps
 -------------------
