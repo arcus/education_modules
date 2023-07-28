@@ -2,17 +2,26 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.0.5
-module_template_version: 3.0.0
+version: 1.1.0
+current_version_description: Updated with information about GitHub
+module_type: standard
+docs_version: 1.2.0
 language: en
 narrator: UK English Female
 title: Intro to Version Control
+mode: Textbook
 
 comment:  An introduction to what version control systems do and why you might want to use one.
 
 long_description: Version control systems allow you to keep track of the history of changes to a text document (e.g. writing, code, and more). Version control is an increasingly important tool for scientists and scientific writers of all disciplines; it has the potential to make your work more transparent, more reproducible, and more efficient. This module is appropriate for beginners with no previous exposure to version control.
 
-estimated_time: 10 min
+estimated_time_in_minutes:  15
+
+@pre_reqs
+
+None. This lesson is appropriate for beginners with no experience using version control. Experience using word processing software like Microsoft Word, Google Docs, or LibreOffice may be helpful but is not required.
+
+@end
 
 @learning_objectives
 
@@ -20,45 +29,35 @@ After completion of this module, learners will be able to:
 
 - Understand the benefits of an automated version control system
 - Understand the basics of how automated version control systems work
+- Explain how git and GitHub differ
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-script: https://kit.fontawesome.com/83b2343bd4.js
+good_first_module: true
+coding_required: false
+sequence_name: git
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
 
 @version_history
-1.0.3: Fix typos
+
+Previous versions:
+
+- [1.0.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9e3ed69c5c70e4b6e116e2799329029e9542ca98/git_intro/git_intro.md#1): Original version, and then fix typos, update highlight boxes, layout corrections
+
 @end
 -->
 
 # Intro to Version Control
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-None. This lesson is appropriate for beginners with no experience using version control. Experience using word processing software like Microsoft Word, Google Docs, or LibreOffice may be helpful but is not required.
-
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## How we keep track of changing documents
 
-We'll start by exploring how version control can be used
-to keep track of what one person did and when.
-Even if you aren't collaborating with other people,
-automated version control is much better than this situation:
+We'll start by exploring how version control can be used to keep track of what one person did and when.
+
+Even if you aren't collaborating with other people, automated version control is much better than this situation:
 
 ![Comic showing a student revising a paper called Final.doc on their computer. The student gives it to their advisor, who provides feedback for a new version, which is then called FINAL\_rev.2.doc. They go back and forth several times, adding more comments and renaming the file each time with increasingly more complex names: FINAL\_rev.6.COMMENTS.doc, FINAL\_rev.8.comments5.CORRECTIONS.doc, FINAL\_rev.18.comments7.corrections9.MORE.30.doc, FINAL\_rev22.comments49.corrections.10 why did i come to grad school????.doc.](media/phd101212s.png "'notFinal.doc' by Jorge Cham [www.phdcomics.com](https://phdcomics.com/comics/archive.php?comicid=1531)")
 
@@ -78,7 +77,7 @@ Most people already use aspects of a version control system already even if they
 
 ### Changes are saved sequentially
 
-Version control systems start with a base version of the document and then record changes you make each step of the way. You can think of it as a recording of your progress: you can rewind to start at the base document and play back each change you made, eventually arriving at your more recent version.
+Version control systems start with a base version of the document and then record changes you make each step of the way. You can think of it as a recording of your progress: you can rewind to start at the base document and play back changes you made, eventually arriving at your more recent version.
 
 ![Cartoon of a document as it changes. In the first stage, it has one full paragraph and a single line of the second paragraph. An arrow indicates the final line of the document is being edited, and in the next image that line is shown as orange instead of black to indicate that a change has been made. A second arrow shows that now a new paragraph is being added, and in the final image the document is shown with the edited line and the new paragraph in orange to indicate that they are marked as changes from the original version.](media/play-changes.svg)
 
@@ -116,6 +115,37 @@ These modern systems also include powerful merging tools that make it possible f
 
 </div>
 
+## Git and GitHub
+
+Because [Git](https://git-scm.com/) is by far the most frequently used version control system in use today, it's worth explaining it in a bit more detail, and also disambiguating two terms that can be confusing: **Git** and **GitHub**.
+
+git
+---
+
+[Git](https://git-scm.com/)is a command line tool, a program that uses a set of rules that governs how the git version control system works. You can use it by itself and do everything you need to, if you’re comfortable working on the command line. Lots of people do just that, and that's actually the method we teach in our modules.
+
+GitHub
+---
+
+[GitHub](https://github.com) is a website (and ancillary software like GitHub Desktop that can work with the website or independently from it) that uses the git version control system and makes it easier to use and adds some helpful tools, particularly for use in teams, where more than one person needs to use git on the same set of files.
+
+While git by itself is great at version control and keeping track of your changes, GitHub wraps all of the sometimes complex inner workings of git into a visually pleasing, easy to understand user interface.
+
+If you're new to coding, feel overwhelmed by the idea of working on the command line, or just prefer a more visual interface, GitHub can be very helpful.
+
+<div class = "history">
+<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
+
+Interestingly, despite the name, GitHub is independent from git, and is simply an organization that chose a name that was a portmanteau of "Git", the version control system it used, and "Hub", indicating a place where a lot of activity takes place.  They could do this because the word "git" was not trademarked.  Years after GitHub received **its** trademark, the originators of Git acted to keep this from happening again by finally trademarking the word "git".  They now protect that trademark and have acted to prevent similar portmanteaus.  There doesn't seem to be any ill will between the organizations, but it's certainly an interesting history!
+
+</div>
+
+Other Software
+----
+
+There are other big players in the market that use git (for example, git repository software like [Sourcetree](https://www.sourcetreeapp.com/), or [the Git functionality in RStudio](https://happygitwithr.com/index.html)), but GitHub is the most commonly used platform that people use with the git protocol.
+
+
 ## Quiz: Version control
 
 Imagine you drafted an excellent paragraph for a paper you are writing, but later ruin it. How would you retrieve the **excellent** version of your conclusion? Is it even possible? Take a moment to write your thoughts in the box below, then click the checkmark to see our solution.
@@ -152,6 +182,22 @@ Collaborative writing with traditional word processors is cumbersome. Either eve
 </div>
 ***
 
+Which of the following is a true statement?  Check all that apply!
+
+[[ ]] Git and GitHub are related products made by the same company
+[[X]] GitHub makes a visual interface that some Git users prefer over the command line
+[[ ]] GitHub is the only software that embeds Git functionality
+[[X]] GitHub adds tools that make using Git easier for teams
+***
+<div class = "answer">
+
+GitHub is a company with a website and software that use Git.  GitHub is well known and frequently used because it makes a visual interface that some Git users prefer, when compared to the command line, and because GitHub adds its own tools to the basic Git toolkit, especially tools that make using Git easier for teams.  
+
+However, GitHub isn't the only software that uses Git and aims to make it more useful for users, and it's a project that is independent of Git and owned and operated by a different company.  It chose its name carefully, to be as close to Git as possible, and that can lead to some confusion!
+
+</div>
+***
+
 ## Key points
 
 * Version control is like an unlimited ‘undo’.
@@ -170,17 +216,4 @@ There is an excellent book available for free online, [Happy Git with R](https:/
 For discussion of how version control can improve your scientific writing process, see our article [Version Control for Writing](https://education.arcus.chop.edu/version-control-writing/).
 
 ## Feedback
-
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Intro+to+Version+Control%22&version=1.0.5)!
+@feedback
