@@ -1,14 +1,24 @@
 <!--
-author:   Peter Camacho
+author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.0.3
-module_template_version: 2.0.0
+version: 1.1.0
+current_version_description: Update with improvements to regular expressions, highlight boxes, correct typos
+module_type: standard
+docs_version: 1.0.0
 language: en
 narrator: US English Male
 title: SQL, Intermediate Level
 comment:  Learn how to do intermediate SQL queries on single tables, by using code, hands-on.
 long_description: Do you want to learn intermediate Structured Query Language (SQL) for more precise and complex data querying on single tables?  This module will give you hands on experience with single-table queries using keywords including CASE, LIKE, REGEXP_LIKE, GROUP BY, HAVING, and WITH, along with a number of aggregate functions like COUNT and AVG.  This module is appropriate for people who are comfortable writing basic SQL queries and are ready to practice more advanced sklls.
-estimated_time: 1 hour
+mode: Textbook
+
+estimated_time_in_minutes: 60
+
+@pre_reqs
+
+Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this module.  If you would like a code-free overview to SQL we recommend our module [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md).  If you need to develop basic SQL fluency we recommend our module [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md).
+
+@end
 
 @learning_objectives  
 
@@ -21,9 +31,11 @@ After completion of this module, learners will be able to:
 
 @end
 
-
 @version_history
-1.0.2: Clarify group by aggregation troubleshooting
+
+Previous versions: 
+
+[1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9e3ed69c5c70e4b6e116e2799329029e9542ca98/sql_intermediate/sql_intermediate.md#1): Initial version, then typo fixes, clarify group by aggregation troubleshooting, and feedback form improvements
 
 @end
 
@@ -384,21 +396,7 @@ alasql("INSERT INTO patients VALUES ('fcc61454-1b07-4e49-a25b-29e5064e0063', '19
 <div class = "overview">
 
 ## Overview
-@comment
 
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this module.  If you would like a code-free overview to SQL we recommend our module [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md).  If you need to develop basic SQL fluency we recommend our module [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md).
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
 
 
 ## SQL: A Brief Refresher
