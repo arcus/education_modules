@@ -551,15 +551,20 @@ WHERE
 
 </div>
 
-<div class = "important">
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
 
-The `LIKE` operator (like many other things in **SQL**) is **case sensitive**!  This means an upper and lower case version of the same letter will be treated differently (i.e. `a` is not the same as `A`).
+Why are we using `LOWER` in the query above? This is a handy trick to make sure that the things we're comparing are in a single case.  You could do the same thing by setting everything to `UPPER`, if you prefer.
 
-For this reason we recommend that you always use either the `LOWER()` or `UPPER()` functions, as we did above, when dealing with text/string based data in your SQL queries.  This forces strings to be either all lower case or all upper case, so that you can make comparisons knowing that the text in question is all in that case.
+If we're not certain if texts are in upper, lower, or mixed case, we can set both sides of a comparison to the same case, assuming that case doesn't matter to us (e.g. *Apples*, *APPLES* and *apples* should be considered equal).  Otherwise, because SQL is **case-sensitive**, the same text in a different case will not be considered equal: *Apples*, *APPLES*, and *apples* are, according to SQL, three different things that are unequal to one another.
+
+But, you might point out, `nu` and `fi` are already in lower case!  Why are we adding an unneeded `LOWER` to the right side of our `LIKE` operator?
+
+Good eye!  You indeed **don't** need that second `LOWER`, but we want you to get in the habit of doing the same thing on both sides of a text comparison, so we overdid it and added `LOWER` to both sides even though only one side really needs it.
 
 </div>
 
-#### REGEXP_LIKE and Regular Expressions
+### REGEXP_LIKE and Regular Expressions
 
 **Regular expression functions** are a class of function that utilize [regular expressions](https://en.wikipedia.org/wiki/Regular_expression), including [metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended), to perform some kind of pattern matching on text data.  
 
@@ -605,7 +610,6 @@ The most common set of regular expression metacharacters are listed below.
 To experiment with regular expressions and learn more about them, we recommend using a regular expression tester or checker online, like [regular expressions 101](https://regex101.com).   A website like that will give you a lot of instant feedback and practice to help you understand regex.  We teach more about regular expression checkers in our [Demystifying Regular Expressions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#1) module.
 
 In the SQL `REGEXP_LIKE()` function, you have to give two arguments or parameters.  The first argument is the string SQL should look at (normally, a SQL column), and the second argument is the pattern it should look for, to see if there's a match (this is what's written in regex code). The example below uses the `REGEXP_LIKE()` function to filter on records where the `allergies.description` field contains either the string "nu" or "fi".  
-
 
 ```sql
 SELECT DISTINCT allergies.description
