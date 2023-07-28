@@ -75,6 +75,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 A relational database is a data storage solution that stores data tables, which are comprised of columns (also called 'fields') and rows.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 Sometimes we'll use the word "column" and sometimes we'll use the word "field".  These refer to the same thing!
 
@@ -108,6 +109,7 @@ LIMIT 10;
 </div>
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 Don't worry -- the data here, although it **looks** like human subject or patient data, is completely fabricated.  We used sample data from the open source project [Synthea](https://synthetichealth.github.io/synthea).  There are other clues that this data isn't real: for example, names include a numerical suffix, and SSN values are clearly fake.
 
@@ -153,6 +155,7 @@ It's important to note that the `CASE`, `ELSE`, and `END` components can only be
 However, you can list as many occurrences of the `WHEN` / `THEN` component as you would like.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 When multiple `WHEN` / `THEN` components are listed, SQL will walk through each of them in the order they are listed and will return output for the first `WHEN` condition to be evaluated as TRUE.  This is very important to remember, because sometimes multiple conditions might be true, if you don't write them carefully, but only **one** result will be returned -- the one corresponding to the first matching condition.
 
@@ -475,6 +478,8 @@ See the table below for a list of the most commonly used aggregate functions:
 |`AVG()`|Returns the numerical mean of all values from a column provided as input.|
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
 If you just want to count how many rows there are, use `COUNT(*)`.  You can use a specific column, instead, if you wish, like `COUNT(birthdate)`, but if you do that, a missing birthdate will mean the count is lower than the number of rows.
 </div>
 
@@ -546,6 +551,8 @@ GROUP BY
 <table id="dataTable9b" border="1"></table><br>
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
 While AlaSQL gives up and just gives you empty data for `race` in the example above, the SQL dialects you'll use in the real world will probably give you an error that is something like `Error: Column is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.`  Remember, when you're aggregating, you can **only** add things to your `SELECT` statement that are **guaranteed** to have **one and only one value** per group of rows.  That means (when using a `GROUP BY` in your query) you can only use items in your `SELECT` statement that are either: 1) columns that are also referenced in your `GROUP BY`, or 2) functions that are aggregate functions, like `COUNT()`.
 
 </div>
@@ -583,6 +590,7 @@ ORDER BY earliest_birthdate;
 </div>
 
 <div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
 SQL can be a bit tricky, because even though you've added an alias to `COUNT(*)` (you're calling it `pat_count` in the query above), that alias isn't available to SQL at the time it's parsing the `HAVING` clause.  To see what we mean, try replacing the `HAVING` clause above with `HAVING pat_count >= 5`.  
 
