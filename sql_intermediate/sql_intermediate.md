@@ -531,7 +531,7 @@ For the purpose of "pattern matching", the `LIKE` operator is able to utilize th
 | `%` | "Wildcard" for 0 or more characters. |
 | `_` | "Wildcard" for exactly 1 characters. |
 
-The code block shown below uses the `LIKE` operator, in the `WHERE` clause, to filter on records from the `allergies` table where the `allergies.description` contains the two letters "nu" (listed one right after the other).
+The code block shown below uses the `LIKE` operator, in the `WHERE` clause, to filter on records from the `allergies` table where the `allergies.description` contains the two letters "nu" or the two letters "fi" (listed one right after the other).
 
 ```sql
 SELECT DISTINCT allergies.description
