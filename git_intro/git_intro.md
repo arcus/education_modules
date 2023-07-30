@@ -53,6 +53,15 @@ Previous versions:
 
 @overview
 
+<div class = "gratitude">
+<b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
+
+Material for this module was adapted from [Software Carpentry's git basics lesson](https://swcarpentry.github.io/git-novice/01-basics.html), generously published under a [CC-BY 4.0](https://swcarpentry.github.io/git-novice/LICENSE.html) license. 
+The content has been lightly edited, as well as the formatting and presentation style. 
+We are tremendously grateful to [The Carpentries](https://carpentries.org/) for creating, maintaining, and sharing this valuable resource.
+
+</div>
+
 ## How we keep track of changing documents
 
 We'll start by exploring how version control can be used to keep track of what one person did and when.
