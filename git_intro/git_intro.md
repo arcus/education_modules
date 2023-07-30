@@ -218,7 +218,8 @@ However, GitHub isn't the only software that uses Git and aims to make it more u
 
 ## Additional Resources
 
-The material for this lesson is based closely on the [Automated Version Control lesson](https://swcarpentry.github.io/git-novice/01-basics/index.html) published by [Software Carpentry](https://software-carpentry.org/) under a creative commons license. Many thanks to Carpentries for developing and sharing this material!
+The material for this lesson is based closely on the [Automated Version Control lesson](https://swcarpentry.github.io/git-novice/01-basics.html) published by [Software Carpentry](https://software-carpentry.org/) under a [CC-BY 4.0 license](https://swcarpentry.github.io/git-novice/LICENSE.html). 
+Many thanks to Carpentries for developing and sharing this material!
 
 There is an article written for scientists about how and why to get started with version control: Blischak JD, Davenport ER, Wilson G. [A Quick Introduction to Version Control with Git and GitHub](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4718703/). PLoS Comput Biol. 2016;12(1):e1004668. Published 2016 Jan 19.
 
