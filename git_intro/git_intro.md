@@ -66,6 +66,8 @@ Microsoft Word's [Track Changes](https://support.office.com/en-us/article/Track-
 Google Docs' [version history](https://support.google.com/docs/answer/190843?hl=en), or
 LibreOffice's [Recording and Displaying Changes](https://help.libreoffice.org/Common/Recording_and_Displaying_Changes).
 
+A formal version control system like git extends and formalizes that functionality, giving you a lot more control over your editing history. 
+
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
