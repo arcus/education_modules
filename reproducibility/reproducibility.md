@@ -2,14 +2,23 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.4.0
-module_template_version: 3.0.0
+version: 1.4.1
+current_version_description: Updated quizzes, learner outcomes, highlight boxes
+module_type: standard
+docs_version: 1.2.0
 language: en
 narrator: US English Female
+mode: Textbook
 title: Reproducibility, Generalizability, and Reuse
 comment:  This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **data reuse**, and how technical approaches can help make these goals more attainable.
 long_description: **If you currently conduct research or expect to in the future**, the concepts we talk about here are important to grasp.  This material will help you understand much of the current literature and debate around how research should be conducted, and will provide you with a starting point for understanding why some practices (like writing code, even for researchers who have never programmed a computer) are gaining traction in the research field.  **If research doesn't form part of your future plans, but you want to *use* research** (for example, as a clinician or public health official), this material will help you form criteria for what research to consider the most rigorous and useful and help you understand why science can seem to vacillate or be self-contradictory.
-estimated_time: 1 hour
+
+estimated_time_in_minutes: 60
+
+@pre_reqs
+
+It is helpful if learners have conducted research, are familiar with -- by reading or writing -- peer-reviewed literature, and have experience using data and methods developed by other people.  There is no need to have any specific scientific or medical domain knowledge or technical background.    
+@end
 
 @learning_objectives  
 
@@ -21,92 +30,27 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
-script: https://kit.fontawesome.com/83b2343bd4.js
-
-
-script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
+good_first_module: true
+coding_required: false
 
 @version_history
-1.2.2: fix incorrect hyperlink
-1.3.0: apply latest template 
-1.4.0: update learner outcomes, quizzes, article link
 
-@end
+Previous versions: 
 
-@gifPreload
-<script>
-(function($) {
+- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/bfbada6fa70c3c9ef0d027eb2e450990b7c7fac7/reproducibility/reproducibility.md#1): Update template, remove some CHOP-specific references, 
+- [1.2.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5f90b59f30dc1f29416df61773d544cf15dce83a/reproducibility/reproducibility.md#1): fix incorrect hyperlink, correct layout and typos
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/6e6f8fa97cdceedfff4c251f1d345864a06cc8f1/reproducibility/reproducibility.md#1): Original version
 
-  // Get the .gif images from the "data-alt".
-	var getGif = function() {
-		var gif = [];
-		$('img').each(function() {
-			var data = $(this).data('alt');
-			gif.push(data);
-		});
-		return gif;
-	}
+@end 
 
-	var gif = getGif();
-
-	// Preload all the gif images.
-	var image = [];
-
-	$.each(gif, function(index) {
-		image[index]     = new Image();
-		image[index].src = gif[index];
-	});
-
-	// Change the image to .gif when clicked and vice versa.
-	$('figure').on('click', function() {
-
-		var $this   = $(this),
-				$index  = $this.index(),
-
-				$img    = $this.children('img'),
-				$imgSrc = $img.attr('src'),
-				$imgAlt = $img.attr('data-alt'),
-				$imgExt = $imgAlt.split('.');
-
-		if($imgExt[1] === 'gif') {
-			$img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
-		} else {
-			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-		}
-
-		// Add play class to help with the styling.
-		$this.toggleClass('play');
-
-	});
-
-})(jQuery);
-</script>
-@end
-
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
 -->
 
 # Reproducibility, Generalizability, and Reuse
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites** 
-
-It is helpful if learners have conducted research, are familiar with -- by reading or writing -- peer-reviewed literature, and have experience using data and methods developed by other people.  There is no need to have any specific scientific or medical domain knowledge or technical background.    
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Before We Get Started
 
@@ -494,11 +438,18 @@ Some institutions pay for an enterprise version of GitHub that may be accessible
 
 ### Dependency Management
 
-If you've ever created a slide show in one computer only to have it look terrible in another, you know the problem that **dependencies** can cause.  Dependencies are requirements such as (in our slide show example) having the same fonts installed, having a default group of settings turned on, having the same version of PowerPoint or other software running, and having access to particular image or sound files.  
+If you've ever created a slide show in one computer only to have it look terrible in another, you know the problem that **dependencies** can cause.  Dependencies are technical requirements that, if not met, can cause problems.
 
-Dependencies that are well-documented and understood will help make research more reproducible.  Dependencies that are undocumented or not known about will inevitably cause problems.  
+In our slide show example, dependencies could include:
 
-Sometimes it isn't clear whether something is a hard dependency (this value or program *must* be the same as what you used) or just a circumstance (you used a particular version of Python but there's no reason to think that previous or subsequent versions wouldn't work just as well).  For this reason, recording both known and possible dependencies is a helpful practice. Common dependencies in research and data analytics include:
+* Certain fonts
+* Display settings
+* PowerPoint version
+* Access to image or sound files needed in the slide show 
+
+Dependencies that are well-documented and understood will help make research more reproducible and help make problems more fixable.  Dependencies that are undocumented or not known about will inevitably cause problems that are frustrating to troubleshoot.
+
+Sometimes it isn't clear whether something is really a dependency (this value or program *must* be the same as what you used) or just a circumstance (you used a particular version of Python but there's no reason to think that previous or subsequent versions wouldn't work just as well).  For this reason, recording both known and possible dependencies is a helpful practice. Common dependencies in research and data analytics include:
 
 * Operating system: does your use of particular software require the use of Microsoft Windows 10 or later?
 * Regional data formatting: does your analysis assume that decimal values use a period, not a comma, to set off the decimal value?
@@ -566,15 +517,4 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 * [GitHub Desktop](https://desktop.github.com/)
 
 ## Feedback
-
-In the beginning, we stated some learning objectives:
-
-@learning_objectives
-
-Now that you've completed this module, we ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Reproducibility,+Generalizability,+and+Reuse:+How+Technology+Can+Help%22&version=1.3.1)!
+@feedback
