@@ -69,31 +69,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 -->
 
 # Bash: Conditionals and Loops
-
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-Only basic exposure to Bash is expected. The following is a list of actions and commands that will be used without explanation in this module. Each includes a link to help you brush up on the commands or learn them for the first time.
-
-* [Navigating](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) a filesystem from a command line interface
-* Reading the contents of files with [`cat`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#15)
-* Writing text to files with [`echo` and `>>`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#14)
-* Matching character strings with the [character wildcard `*`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_102/bash_command_line_102.md#4)
-
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Lesson Preparation
 
@@ -706,17 +682,4 @@ Software Carpentry has a series of lessons on the [Unix Shell](https://swcarpent
 
 
 ## Feedback
-
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash+Loops+and+Conditional+Statements%22&version=1.0.1)!
+@feedback
