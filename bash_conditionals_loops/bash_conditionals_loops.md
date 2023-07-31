@@ -551,8 +551,8 @@ This loop also looks at every `.txt` file in the current directory, but the `if`
 
 Double brackets are an extension of single square brackets, with more powerful tools, like the pattern matching we are doing in this example with the character wildcard `*`. Since they extend the uses of single brackets, sometimes double and single brackets do the same thing, and sometimes using one type or the other is required. There are strongly held opinions on [which is better](https://stackoverflow.com/questions/669452/are-double-square-brackets-preferable-over-single-square-brackets-in-b) when you have a choice, but day-to-day your best course of action is to copy bracket style when you look up how to code a particular action.
 
-<div class = "options">
-<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 You might sometimes see a double equals sign `==` inside a test statement instead of a single equals sign to test if two strings are equal. Depending on what shell you are using, the behavior of the double equals sign might change. This can be important to know if you are running code that someone else wrote on your computer. For example if you are using a Mac, your default shell may be zsh instead of bash and you may only be able to use `==` inside double brackets.
 
