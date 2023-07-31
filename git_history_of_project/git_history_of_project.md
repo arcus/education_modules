@@ -264,6 +264,8 @@ Unlike `HEAD`, the commit number doesn't change or move as you update your repos
 
 ### Quiz: finding a commit
 
+<div>
+
 The output from `git log -n 2` is:
 
 ```
@@ -282,6 +284,8 @@ Date:   Wed Apr 6 13:15:24 2022 -0400
 ```
 
 Which of the following commands would show you the **most recent** commit you made? Select all correct answers.
+
+</div>
 
 - [[X]] `git show HEAD`
 - [[ ]] `git show HEAD~1`
