@@ -2,15 +2,28 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.1
-module_template_version: 2.0.1
+version: 1.2.0
+current_version_description: Clarify `=` and `==` inside test functions
+module_type: standard
+docs_version: 1.2.1
 language: en
 narrator: UK English Female
+mode: Textbook
 title: Bash: Conditionals and Loops
 comment:  This module teaches you how to iterate through "for" loops and write conditional statements in Bash.
 long_description: This lesson teaches the basics of loops (for all x, do y) and conditional statements (if x is true, do y) in Bash. Since the grammar of Bash can be non-intuitive this module is appropriate both for learners who have experience with conditionals and loops in other languages, as well as learners who are learning about these kinds of commands for the first time.
 
-estimated_time: 1 hour
+estimated_time_in_minutes: 60
+
+@pre_reqs
+Only basic exposure to Bash is expected. The following is a list of actions and commands that will be used without explanation in this module. Each includes a link to help you brush up on the commands or learn them for the first time.
+
+* [Navigating](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) a filesystem from a command line interface
+* Reading the contents of files with [`cat`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#15)
+* Writing text to files with [`echo` and `>>`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#14)
+* Matching character strings with the [character wildcard `*`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_102/bash_command_line_102.md#4)
+@end
+
 @learning_objectives  
 
 After completion of this module, learners will be able to:
@@ -22,9 +35,36 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
+coding_required: true
+coding_level: intermediate
+coding_language: bash
+sequence_name: bash_basics
+previous_sequential_module: bash_103_combining_commands
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
+
+- bash_scripts
+
+@end
+
+@depends_on_knowledge_available_in
+
+- bash_command_line_101
+- bash_command_line_102
+
+@end
+
+@version_history 
+
+Previous versions: 
+
+- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4347cd14c9f5a3fd110910ec09c0560a46e390bd/bash_conditionals_loops/bash_conditionals_loops.md): Clarify instructions in the getting started section.
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_conditionals_loops/bash_conditionals_loops.md): Initial version
+
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
 
@@ -531,9 +571,16 @@ do
 done
 ```
 
-This loop also looks at every `.txt` file in the current directory, but the `if` statement is doing a few new things. You might have figured out from running the code that `[[ "$file" == *bear* ]]` is checking whether the file's **name** contains the string `bear`, possibly with other characters before or after. The double equals sign `==` is the test function for whether or not two strings are equal. But what are the double brackets doing?
+This loop also looks at every `.txt` file in the current directory, but the `if` statement is doing a few new things. You might have figured out from running the code that `[[ "$file" = *bear* ]]` is checking whether the file's **name** contains the string `bear`, possibly with other characters before or after. But what are the double brackets doing?
 
 Double brackets are an extension of single square brackets, with more powerful tools, like the pattern matching we are doing in this example with the character wildcard `*`. Since they extend the uses of single brackets, sometimes double and single brackets do the same thing, and sometimes using one type or the other is required. There are strongly held opinions on [which is better](https://stackoverflow.com/questions/669452/are-double-square-brackets-preferable-over-single-square-brackets-in-b) when you have a choice, but day-to-day your best course of action is to copy bracket style when you look up how to code a particular action.
+
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
+You might sometimes see a double equals sign `==` inside a test statement instead of a single equals sign to test if two strings are equal. Depending on what shell you are using, the behavior of the double equals sign might change. This can be important to know if you are running code that someone else wrote on your computer. For example if you are using a Mac, your default shell may be zsh instead of bash and you may only be able to use `==` inside double brackets.
+
+</div>
 
 **Checking if files contain a given string**
 ===================
