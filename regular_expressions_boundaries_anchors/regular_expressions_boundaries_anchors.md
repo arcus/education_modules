@@ -308,7 +308,7 @@ There are other defined boundaries, such as the "not a word" boundary (`\B`), wh
 
 ## Quiz: Anchors and Boundaries
 
-What's the anchor character that indicates the "start of a string"?
+What's the anchor character that indicates the **start of a string**?
 
 [[^]]
 <script>
@@ -323,7 +323,7 @@ The anchor for the start of a string is the caret, or `^`, symbol.
 </div>
 ***
 
-What's the anchor character that indicates the "end of a string"?
+What's the anchor character that indicates the **end of a string**?
 
 [[$]]
 <script>
