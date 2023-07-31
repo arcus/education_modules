@@ -534,7 +534,7 @@ You can conclude from this output that you must have committed, and then added t
 
 This module was based on examples from [Software Carpentry](https://software-carpentry.org)'s [lessons on using Git](https://swcarpentry.github.io/git-novice/). The story of Dracula and Wolfman's planned trip to Mars is borrowed from them, and more examples are available in the original lesson:
 
- - Lesson 5: [Exploring History](https://swcarpentry.github.io/git-novice/05-history/index.html)
+ - Lesson 5: [Exploring History](https://swcarpentry.github.io/git-novice/05-history.html)
 
 <div class = "options">
 <b style="color: rgb(var(--color-highlight));">Another option</b><br>
