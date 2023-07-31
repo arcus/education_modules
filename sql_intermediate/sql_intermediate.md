@@ -589,8 +589,8 @@ ORDER BY earliest_birthdate;
 
 </div>
 
-<div class = "warning">
-<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 SQL can be a bit tricky, because even though you've added an alias to `COUNT(*)` (you're calling it `pat_count` in the query above), that alias isn't available to SQL at the time it's parsing the `HAVING` clause.  To see what we mean, try replacing the `HAVING` clause above with `HAVING pat_count >= 5`.  
 
