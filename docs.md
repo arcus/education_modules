@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.2.0
-current_version_description: Add genomics macros
+version:  1.2.1
+current_version_description: Add genomics macros, add git_basics to the list of sequences.
 language: en
 narrator: UK English Female
 title: DART LiaScript docs
@@ -712,6 +712,7 @@ Must be one of the following:
 - `sql`
 - `python_basics`
 - `genomics_tools_and_methods`
+- `git_basics`
 - (add more here)
 
 ### `previous_sequential_module`
