@@ -167,44 +167,44 @@ You may be wondering exactly when you should use functions vs. methods, and that
 
 1. Which of the following are valid examples of Python code? Select all that apply.
 
-[[X]] `len("Python is awesome!")`
-[[X]] `"python".upper()`
-[[X]] `type("4.3")`
-[[X]] `type(True)`
-***
-<div class = "answer">
+    [[X]] `len("Python is awesome!")`
+    [[X]] `"python".upper()`
+    [[X]] `type("4.3")`
+    [[X]] `type(True)`
+    ***
+    <div class = "answer">
 
-These are all examples of valid Python code! `len("Python is awesome!")` uses the `len()` function to return the length of the argument `"Python is awesome!"` (which is 18-- spaces and punctuation count!) and print that output to the screen. `"python".upper()` uses the string method `.upper()` to make the string "python" all uppercase. `type("4.3")` might be a little tricky, since 4.3 is a decimal number (or **float**), but it's also in quotation marks, which means that "4.3" is a string in this case! `type(True)` might also be tricky, since at first it looks like a string that doesn't have the required quotation marks. However, `True` and `False` are special in Python, and have the type `boolean`.  
+    These are all examples of valid Python code! `len("Python is awesome!")` uses the `len()` function to return the length of the argument `"Python is awesome!"` (which is 18-- spaces and punctuation count!) and print that output to the screen. `"python".upper()` uses the string method `.upper()` to make the string "python" all uppercase. `type("4.3")` might be a little tricky, since 4.3 is a decimal number (or **float**), but it's also in quotation marks, which means that "4.3" is a string in this case! `type(True)` might also be tricky, since at first it looks like a string that doesn't have the required quotation marks. However, `True` and `False` are special in Python, and have the type `boolean`.  
 
-</div>
-***
+    </div>
+    ***
 
-**Hint:** If you get stuck, try replacing the `x` argument in the `print()` function below with the code examples above. Running code you're unsure about and seeing what output you get can be a useful troubleshooting tool!
+    **Hint:** If you get stuck, try replacing the `x` argument in the `print()` function below with the code examples above. Running code you're unsure about and seeing what output you get can be a useful troubleshooting tool!
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
+    @sage
+    <div class="python">
+    <lia-keep>
+    <script type="text/x-sage">
 
-print(x)
+    print(x)
 
-</script>
-</lia-keep>
-</div>
+    </script>
+    </lia-keep>
+    </div>
 
 2. To check that the string "Python is awesome!" ends in an exclamation point, we can use the code ` "Python is awesome!".endswith("!")`. In this case, the boolean value `True` will be returned, since "Python is awesome!" does indeed end in an exclamation point. What is `.endswith()` an example of?
 
-[(X)] A method
-[( )] A function
-[( )] A string
-[( )] A float
-***
-<div class = "answer">
+    [(X)] A method
+    [( )] A function
+    [( )] A string
+    [( )] A float
+    ***
+    <div class = "answer">
 
-You can tell `.endswith()` is a method because it has the syntax `object.method()`, with `"Python is awesome!"` being the object (a string, in this case) the `.endswith()` method is called on. A function would have the syntax `function(argument)`. A float (short for "floating point number") is a numeric data type containing a decimal point. 
+    You can tell `.endswith()` is a method because it has the syntax `object.method()`, with `"Python is awesome!"` being the object (a string, in this case) the `.endswith()` method is called on. A function would have the syntax `function(argument)`. A float (short for "floating point number") is a numeric data type containing a decimal point. 
 
-</div>
-***
+    </div>
+    ***
 
 ## Variables
 
@@ -887,28 +887,41 @@ You might have noticed by now that we have used square brackets in a few differe
 
 1. True or False: Duplicate key-value pairs are allowed in dictionaries.
 
-[( )] True
-[(X)] False
-***
-<div class = "answer">
+    [( )] True
+    [(X)] False
+    ***
+    <div class = "answer">
 
-While **values** can be repeated in a dictionary, each **key** must be unique. However, you can have multiple values for a key by putting those values in a list.
+    While **values** can be repeated in a dictionary, each **key** must be unique. However, you can have multiple values for a key by putting those values in a list.
 
-</div>
-***
+    </div>
+    ***
 
-2. How would you access the capital of Algeria in the dictionary below?
+2. How would you access all of the counties (the "keys") in the dictionary below? 
 
-`capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
+    `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
-[[capital_cities["Algeria"]]]
-***
-<div class = "answer">
+    [[capital_cities.keys()]]  
+    ***
+    <div class = "answer">
 
-To access an item in a collection like a dictionary, we use subsetting notation-- the square brackets. 
+    To return the keys of a dictionary, you use the `.keys()` dictionary method.  
 
-</div>
-***
+    </div>
+    ***
+
+3. How would you add the the country of Angola and its capital city of Luanda to the dictionary below?
+
+    `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
+
+    [[capital_cities["Angola"] = "Luanda" ]]
+    ***
+    <div class = "answer">
+
+    To add a new key-value pair to a dictionary, we use subsetting notation. 
+
+    </div>
+    ***
 
 ## Challenge Problem
 
