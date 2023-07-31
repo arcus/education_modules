@@ -677,7 +677,7 @@ For a purely theoretical explanation of how loops work, [this short video](https
 
 You can also use flow charts to visualize both [loops](https://www.zenflowchart.com/blog/for-loop-flowchart) and [conditionals](https://www.zenflowchart.com/guides/if-else-flowchart).
 
-Software Carpentry has a series of lessons on the [Unix Shell](https://swcarpentry.github.io/shell-novice/), including one specifically on [loops](https://swcarpentry.github.io/shell-novice/05-loop/index.html).
+Software Carpentry has a series of lessons on the [Unix Shell](https://swcarpentry.github.io/shell-novice/), including one specifically on [loops](https://swcarpentry.github.io/shell-novice/05-loop.html).
 
 
 
