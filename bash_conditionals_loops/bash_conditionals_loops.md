@@ -628,16 +628,16 @@ Select all true statements about the output of the above code:
 [[X]] The first line will be `1 is smaller than five`
 [[ ]] The second line will be `2 is smaller than five`
 [[X]] The third line will be `3 is smaller than five`
-[[X]] The fourth line will be `4 is smaller than 5`
-[[X]] The fifth line will be `5 is bigger than 4`
+[[X]] The fourth line will be `4 is smaller than five`
+[[X]] The fifth line will be `5 is bigger than four`
 [[ ]] The sixth line will be `6 is six`
-[[X]] The seventh line will be `7 is bigger than 4`
+[[X]] The seventh line will be `7 is bigger than four`
 ***
 <div class = "answer">
 
-When the code gets to `2`, it sees the test `[ $number -eq 2 ]` and stops there because it is true. The code never gets to checking whether 2 is less than 5.
+When the code gets to `2`, it sees the test `[ $number -eq 2 ]` and stops there because it is true, printing `2 is two`. The code never gets to checking whether 2 is less than 5.
 
-When the code gets to `6`, it first sees the test ` [ $number -gt 4 ]`. Since that is true, it never checks whether 6 is equal to 6.
+When the code gets to `6`, it first sees the test ` [ $number -gt 4 ]`. Since that is true, it prints `6 is bigger than four` and never checks whether 6 is equal to 6.
 
 </div>
 ***
