@@ -67,6 +67,15 @@ import:
 # Exploring the History of a Git Repository
 @overview
 
+<div class = "gratitude">
+<b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
+
+Material for this module was adapted from [Software Carpentry's git exploring history lesson](https://swcarpentry.github.io/git-novice/05-history.html), generously published under a [CC-BY 4.0](https://swcarpentry.github.io/git-novice/LICENSE.html) license. 
+The content has been lightly edited, as well as the formatting and presentation style. 
+We are tremendously grateful to [The Carpentries](https://carpentries.org/) for creating, maintaining, and sharing this valuable resource.
+
+</div>
+
 ## Lesson Preparation
 
 The purpose of this module is to learn how to explore the history of a Git repository that has already been created. We are going to download Dracula's repository in which he started documenting the pros and cons of moving with his friends to Mars.
