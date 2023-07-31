@@ -901,7 +901,7 @@ You might have noticed by now that we have used square brackets in a few differe
 
     `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
-    [[capital_cities.keys()]]  
+    [[capital_cities.keys() ]]
     ***
     <div class = "answer">
 
@@ -914,11 +914,11 @@ You might have noticed by now that we have used square brackets in a few differe
 
     `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
-    [[capital_cities["Angola"] = "Luanda" ]]
+    [[capital_cities["Angola"] = "Luanda"]]
     ***
     <div class = "answer">
 
-    To add a new key-value pair to a dictionary, we use subsetting notation. 
+    To add a new key-value pair to a dictionary, we use subsetting notation.
 
     </div>
     ***
