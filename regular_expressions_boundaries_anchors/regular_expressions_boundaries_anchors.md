@@ -76,9 +76,9 @@ We consider this module to be intermediate, because it assumes basic knowledge c
 
 Specifically, we'll address these topics:
 
+* **Flags**, which are parameters that alter how regular expressions are interpreted
 * **Anchors**, which help you define patterns that belong in the beginning and end of a string as a whole
 * **Exclusions**, which allow you to look for patterns that exclude certain characters
-* **Flags**, which are parameters that alter how regular expressions are interpreted
 * **Boundaries**, which help you define patterns that belong in certain places that appear within a string
 * **Greedy** default behavior in regex, which can cause unexpected pattern matches
 
@@ -248,53 +248,6 @@ We could do that with this expression: `^[A-Z][^\d]{10,30}\.$`.
 [See what that looks like on Regex 101](https://regex101.com/r/9tHqoi/1) and in the image below:
 
 ![A regular expression,`^[A-Z][^\d]{10,30}\.$`, is in the box labeled "Regular Expression," and there are five test strings typed in the "Test String" box. The test string that reads "This is a good string.", with a capital T at the beginning, is selected as a pattern match.  The second string, "this, not so good.", which begins with a lower case t, is not selected.  The third string reads "I'm an okay string." It is selected as a match.  The fourth string is "um, 3 things wrong here!", with a lower case starting letter, a numeral, and ending with an exclamation point. It is not selected. The final string says "I'm. A. Good. String."  Each word is capitalized and followed by a period.  It is marked as a match.](media/combining_it_all.png)<!-- style = "max-width: 300px; border: 1px solid rgb(var(--color-highlight));" -->
-
-### Scenario: Start- and End-of-String Anchors
-
-Consider these test strings, which are movie sequel titles:
-
-* Speed 2: Cruise Control
-* Teenage Mutant Ninja Turtles II: The Secret Of The Ooze
-* Tomb Raider: The Cradle Of Life
-
-You're helping a colleague who tried to write regex that would capture two groups for each movie: first, the part of the title before the colon, and second, the part of the title after the colon. 
-
-They used this regular expression, which uses capturing groups:  `([A-Za-z0-9\s]+):([A-Za-z0-9\s]+)`. [As we can see in Regex 101](https://regex101.com/r/3kyzIp/1), this did not segment the movie titles exactly right.  The regular expression matches the pattern twice, not three times.  It gets the first capturing group correct.  But for the second capturing group, the parser takes the second part of the first movie and keeps reading well into the second movie line, stopping only when it gets to a colon. 
-
-![Two matches are shown.  The first match  begins with "Speed 2" as the first capturing group and "Cruise Control Teenage Mutant Ninja Turtles II" as the second, then the second match begins with "The Secret Of The Ooze Tomb Raider" as the first capturing group and "The Cradle Of Life" as the second. ](media/two_movies.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));" -->
-
-This is what they **expected to see**:
-
-| Title  | Subtitle |
-| :--------- | :--------- |
-| Speed 2   | Cruise Control   |
-| Teenage Mutant Ninja Turtles II | The Secret Of The Ooze|
-| Tomb Raider | The Cradle Of Life |
-
-But this is what they got instead:
-
-| Title  | Subtitle |
-| :--------- | :--------- |
-| Speed 2   | Cruise Control Teenage Mutant Ninja Turtles II | 
-| The Secret Of The Ooze Tomb Raider | The Cradle Of Life |
-
-It seems like the regular expression parser isn't stopping at the end of a string and restarting at the beginning of a string.  You assist your collague by adding syntax to their regular expression such that the pattern must start at the beginning of a string and end at the end of a string.  This is what you write:  
-
-`^([A-Za-z0-9\s]+):([A-Za-z0-9\s]+)$`
-
-When you [try this in Regex 101](https://regex101.com/r/Ld3HWY/1) you get exactly what was intended:
-
-![Using a start of line anchor, capturing groups, and end of line anchor, we correctly segment the movie titles into their main and subtitles.](media/capturing_with_anchors.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width:600px;" -->
-
-<div class = "options">
-<b style="color: rgb(var(--color-highlight));">Another option</b><br>
-
-There are other ways to solve your colleague's problem.  You may have realized that the `\s` that allowed for spaces in titles and subtitles was too broad -- `\s` allows for spaces, tabs, carriage returns, and new lines.  You could also have rewritten their regex by changing the `\s` to just be a literal space, like this: `([A-Za-z0-9 ]+):([A-Za-z0-9 ]+)`
-
-In regular expressions, there are often many ways to accomplish the same goal!
-
-</div>
-
 
 ## Boundaries 
 
