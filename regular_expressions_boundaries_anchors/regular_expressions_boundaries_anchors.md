@@ -36,7 +36,6 @@ coding_level: intermediate
 sequence_name: regex
 previous_sequential_module: regular_expressions_groups
 @sets_you_up_for
-- regular_expressions_lookaheads
 @end 
 @depends_on_knowledge_available_in
 - demystifying_regular_expressions
