@@ -11,7 +11,7 @@ narrator: US English Female
 mode: Textbook
 previous_sequential_module: regular_expressions_basics
 
-title: Regular Expressions, Intermediate Level
+title: Regular Expressions: Lookaheads
 
 comment:  Use regular expressions, or regex, for complex pattern matching involving lookaheads.
 
@@ -20,7 +20,7 @@ long_description: Learn to compose intermediate regular expressions using lookah
 estimated_time_in_minutes: 30
 
 @pre_reqs
-Learners should have some experience composing and using simple regular expressions (regex).  For an introduction to regular expression concepts, consider the [Demystifying Regular Expressions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#1) module.  To learn how to compose and use simple regular expressions, consider the [Regular Expressions Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_basics/regular_expressions_basics.md#1) module.
+Learners should have some experience composing and using simple regular expressions (regex), including the use of capturing groups.  For an introduction to regular expression concepts, consider the [Demystifying Regular Expressions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#1) module.  To learn how to compose and use simple regular expressions, consider the [Regular Expressions Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_basics/regular_expressions_basics.md#1) module. The [Regular Expressions: Groups](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_groups/regular_expressions_groups.md#1) module will introduce you to capturing and non-capturing groups if those are new to you or you would like a refresher.
 @end
 
 @learning_objectives  
@@ -42,7 +42,6 @@ previous_sequential_module: regular_expressions_anchors_boundaries
 - demystifying_regular_expressions
 - regular_expressions_basics
 - regular_expressions_groups
-- regular_expressions_anchors_boundaries
 @end
 @version_history 
 No previous versions.
@@ -74,7 +73,7 @@ If this refresher doesn't seem familiar, you might want to consider reviewing [D
 
 ## Lookaheads
 
-We consider this module to be intermediate, because it assumes basic knowledge covers more advanced regular expressions topics, without delving into the advanced topic of using regular expressions within the context of code.  
+We consider this module to be intermediate, because it assumes basic knowledge and covers more advanced regular expressions topics, without delving into the advanced topic of using regular expressions within the context of code.  
 
 Specifically, we'll address the topic of **lookaheads**, which are useful for situations like overlapping data.
 
@@ -109,7 +108,7 @@ You start by writing this regular expression which uses capture groups to extrac
 
 ![The regular expression shows three matches, each of which has two captured groups.](media/moveahead.png) <!-- style = "border: 1px solid rgb(var(--color-highlight)); " -->
 
-See if you can figure this out before advancing to the next page.
+See if you can figure out why only three pairs, not all five, were found to be matches before advancing to the next page.
 
 ### Moving Ahead 
 
@@ -188,7 +187,6 @@ Go ahead and [try that in a regex checker](https://regex101.com/r/NvzPb0/1) and 
 
 In the image above, the overlapping color in the "Text String" box can make the visual interpretation of the image tricky.  Look over in the "Match Information" section to see all five matches!
 
-## 
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
@@ -196,7 +194,7 @@ There are other types of "lookarounds," including **lookbehinds**, that you migh
 
 </div>
 
-## Quiz 4: Anchors, Boundaries, and Lookaheads
+## Quiz: Lookaheads
 
 Which of these is true about lookaheads in regular expressions?  Select all that apply!
 
