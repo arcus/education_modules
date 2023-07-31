@@ -33,12 +33,11 @@ After completion of this module, learners will be able to:
 
 @end
 
-good_first_module: true
+good_first_module: false
 coding_required: false
 sequence_name: git
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
 
 @version_history
 
@@ -133,7 +132,7 @@ Because [Git](https://git-scm.com/) is by far the most frequently used version c
 git
 ---
 
-[Git](https://git-scm.com/)is a command line tool, a program that uses a set of rules that governs how the git version control system works. You can use it by itself and do everything you need to, if you’re comfortable working on the command line. Lots of people do just that, and that's actually the method we teach in our modules.
+[Git](https://git-scm.com/) is a command line tool, a program that uses a set of rules that governs how the git version control system works. You can use it by itself and do everything you need to, if you’re comfortable working on the command line. Lots of people do just that, and that's actually the method we teach in our modules.
 
 GitHub
 ---
@@ -196,15 +195,15 @@ Collaborative writing with traditional word processors is cumbersome. Either eve
 Which of the following is a true statement?  Check all that apply!
 
 [[ ]] Git and GitHub are related products made by the same company
-[[X]] GitHub makes a visual interface that some Git users prefer over the command line
-[[ ]] GitHub is the only software that embeds Git functionality
-[[X]] GitHub adds tools that make using Git easier for teams
+[[X]] GitHub makes a visual interface that some git users prefer over the command line
+[[ ]] GitHub is the only software that embeds git functionality
+[[X]] GitHub adds tools that make using git easier for teams
 ***
 <div class = "answer">
 
-GitHub is a company with a website and software that use Git.  GitHub is well known and frequently used because it makes a visual interface that some Git users prefer, when compared to the command line, and because GitHub adds its own tools to the basic Git toolkit, especially tools that make using Git easier for teams.  
+GitHub is a company with a website and software that use git.  GitHub is well known and frequently used because it makes a visual interface that some git users prefer, when compared to the command line, and because GitHub adds its own tools to the basic git toolkit, especially tools that make using git easier for teams.  
 
-However, GitHub isn't the only software that uses Git and aims to make it more useful for users, and it's a project that is independent of Git and owned and operated by a different company.  It chose its name carefully, to be as close to Git as possible, and that can lead to some confusion!
+However, GitHub isn't the only software that uses git and aims to make it more useful for users, and it's a project that is independent of git and owned and operated by a different company.  It chose its name carefully, to be as close to git as possible, and that can lead to some confusion!
 
 </div>
 ***
