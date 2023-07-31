@@ -217,20 +217,22 @@ If you're looking for the actual symbol `^` in your text, you'll have to **escap
 
 ### End-of-string Anchoring 
 
-As a reminder, the symbol for end-of-string in a regular expression is `$`.  We can use this symbol to look for specific patterns at the end of strings.  For example, we could look for specific typos that tend to appear at the end of strings: periods that follow single or double quotation marks instead of being enclosed within the quotation.  Here are some examples of acceptable grammar and typos:
+Ok, here is a proposed update that will satisfy my grammar prescriptivism for published materials (I try to be a descriptivist with language but punctuation is more of struggle).
+
+As a reminder, the symbol for end-of-string in a regular expression is `$`.  We can use this symbol to look for specific patterns at the end of strings.  For example, we could look for specific typos that tend to appear at the end of strings: periods that follow something other than a letter or number.  Here are some examples of acceptable grammar and typos:
 
 **Acceptable**
 
-* stated, "I want to withdraw from the study."
-* not clear on pre-registration next steps.'
+* This is with respect to record 117.
+* Participants were not clear on pre-registration next steps.
+
 
 **Typos**
 
-* reported she "did not receive the sample".
-* chi-square would not be robust'. 
+* Reported she "did not receive the sample".
+* A chi-squared test would not be robust . 
 
-The pattern we're looking for is "single or double quotation followed by a period and the end of the string," or `['"]\.$`.  If you want to see this in action, you can [try it on Regex 101](https://regex101.com/r/9eMUve/1).
-
+The pattern we're looking for is "anything that is not a letter or digit, followed by a period," or `[^\w]\.$`.  If you want to see this in action, you can [try it on Regex 101](https://regex101.com/r/4cZn0e/1).
 ### Combining It All
 
 Let's combine start-of-string, except-for, and end-of-string, to match strings in our text which:
