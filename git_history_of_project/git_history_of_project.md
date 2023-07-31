@@ -2,15 +2,30 @@
 
 author:  Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.3
-module_template_version: 3.0.0
+version: 1.1.0
+current_version_description: Correcting typos in quiz question answer.
+module_type: standard
+docs_version: 1.2.0
 language: en
 narrator: UK English Female
+mode: Textbook
+
 title: Exploring the History of your Git Repository
+
 comment:  This module will teach you how to look at past versions of your work on Git and compare your project with previous versions.
+
 long_description: You know that version control is important. You know how to save your work to your Git repository. Now you are ready to look at and compare different versions of your work. In this module you will you will learn how to navigate through the commits you have made to Git. You will also learn how to compare current code with past code.
 
-estimated_time: 30 minutes
+estimated_time_in_minutes: 30
+
+@pre_reqs
+To best learn from this module make sure that you:
+
+- have Git configured on your computer,
+- can view and edit `.txt` files, and
+- can make changes to a Git repository using `add` and `commit` from a command line interface (CLI).
+
+@end
 
 @learning_objectives  
 After completion of this module, learners will be able to:
@@ -21,39 +36,36 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
+coding_required: true
+coding_level: basic
+coding_language: git, bash
+sequence_name: git_basics
+previous_sequential_module: git_creation_and_tracking
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
 
+@end
+
+@depends_on_knowledge_available_in
+- git_intro
+- git_setup_windows
+- git_setup_mac_and_linux
+- bash_command_line_101
+- git_creation_and_tracking
+@end
+
+@version_history
+Previous versions: 
+
+- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/git_history_of_project/git_history_of_project.md#1): Initial version.
+@end
+
+import: 
 -->
 
 # Exploring the History of a Git Repository
-
-
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:**
-@estimated_time
-
-**Pre-requisites**
-
-To best learn from this module make sure that you:
-
-* have Git configured on your computer,
-* can view and edit `.txt` files, and
-* can make changes to a Git repository using `add` and `commit` from a command line interface (CLI).
-
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Lesson Preparation
 
@@ -531,17 +543,4 @@ and explore how it was created! One repository with particularly good documentat
 </div>
 
 ## Feedback
-
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Exploring+the+History+of+your+Git+Repository%22&version=1.0.3)!
+@feedback

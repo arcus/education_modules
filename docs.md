@@ -712,6 +712,7 @@ Must be one of the following:
 - `sql`
 - `python_basics`
 - `genomics_tools_and_methods`
+- `git_basics`
 - (add more here)
 
 ### `previous_sequential_module`
