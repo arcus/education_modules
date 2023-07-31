@@ -9,7 +9,6 @@ docs_version: 1.0.0
 language: en
 narrator: US English Female
 mode: Textbook
-previous_sequential_module: regular_expressions_basics
 
 title: Regular Expressions: Lookaheads
 
