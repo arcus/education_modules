@@ -165,7 +165,7 @@ You may be wondering exactly when you should use functions vs. methods, and that
 
 ### Quiz: Functions and methods
 
-Which of the following are valid examples of Python code? Select all that apply.
+1. Which of the following are valid examples of Python code? Select all that apply.
 
 [[X]] `len("Python is awesome!")`
 [[X]] `"python".upper()`
@@ -192,7 +192,7 @@ print(x)
 </lia-keep>
 </div>
 
-To check that the string "Python is awesome!" ends in an exclamation point, we can use the code ` "Python is awesome!".endswith("!")`. In this case, the boolean value `True` will be returned, since "Python is awesome!" does indeed end in an exclamation point. What is `.endswith()` an example of?
+2. To check that the string "Python is awesome!" ends in an exclamation point, we can use the code ` "Python is awesome!".endswith("!")`. In this case, the boolean value `True` will be returned, since "Python is awesome!" does indeed end in an exclamation point. What is `.endswith()` an example of?
 
 [(X)] A method
 [( )] A function
@@ -274,7 +274,7 @@ Changing the value of a variable is as simple as editing the value in the assign
 
 ## Lists
 
-**Lists** in Python are objects that contain a collection of multiple items. They are surrounded by square brackets [ ] and the items in the list are separated by commas:
+**Lists** in Python are objects that contain a collection of multiple items. They are surrounded by square brackets `[ ]` and the items in the list are separated by commas:
 
 @sage
 <div class="python_link">
@@ -761,7 +761,7 @@ Another kind of collection object in Python is a **dictionary**. Dictionaries ar
 
 * They do not allow duplicate key-value pairs.
 
-* Dictionaries use curly brackets { } (unlike lists, which use square brackets [ ]).
+* Dictionaries use curly brackets `{ }` (unlike lists, which use square brackets `[ ]`).
 
 Let's build an example dictionary:
 
@@ -885,7 +885,7 @@ You might have noticed by now that we have used square brackets in a few differe
 
 ### Quiz: Dictionaries
 
-True or False: Duplicate key-value pairs are allowed in dictionaries.
+1. True or False: Duplicate key-value pairs are allowed in dictionaries.
 
 [( )] True
 [(X)] False
@@ -897,12 +897,11 @@ While **values** can be repeated in a dictionary, each **key** must be unique. H
 </div>
 ***
 
-How would you access the capital of Algeria in the dictionary below?
+2. How would you access the capital of Algeria in the dictionary below?
 
 `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
 [[capital_cities["Algeria"]]]
-
 ***
 <div class = "answer">
 
