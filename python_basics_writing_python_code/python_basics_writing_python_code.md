@@ -208,7 +208,7 @@ You can tell `.endswith()` is a method because it has the syntax `object.method(
 
 ## Variables
 
-Rather than passing a value (like a string or a number) directly to a function, we can also **assign** values to variables and pass those to functions. **Variables** are ways to store values and objects for use later.
+Rather than using a method directly on a value (like a string or a number) or passing it directly to a function, we can also **assign** values to variables and use *those* with our functions and methods. **Variables** are ways to store values and objects for use later.
 
 @sage
 <div class="python">
@@ -222,12 +222,12 @@ print(my_num)
 </lia-keep>
 </div>
 
-While the above example may seem trivial, variables are extremely useful for re-using values and objects, for making your code easier to edit (if you store a value in a variable and then need to change it later, you only need to change the value in the variable definition, rather than every time in your code you've used that value), and making your code more readable.
+While the above example may seem trivial, variables are extremely useful for re-using values and objects. They make your code easier to edit (if you store a value in a variable and then need to change it later, you only need to change the value in the variable definition, rather than every time in your code you've used that value) and make it more readable.
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-It's a good idea to use descriptive names for your variables! Python won't care if you decide to assign a value to the variable `x`, but it's helpful to anyone reading your code (including yourself in 6 months!) to have your variable names describe the value that it holds.
+It's a good idea to use descriptive names for your variables! Python won't care if you decide to assign a value to the variable `x`, but it's helpful to anyone reading your code (including yourself in 6 months!) to have your variable names describe the values that they hold.
 
 </div>
 
@@ -253,7 +253,7 @@ While strings in Python need to be in quotation marks, variable names do not. Th
 
 Numbers and boolean values like `True` and `False` do not need quotation marks either, but you also cannot use numbers or boolean values by themselves as variable names (but naming a variable using a mix of letters and number is okay).
 
-If, for example, you typed `dogs` without defining it as a variable, you would get an error message that looks like this: `NameError: name 'dogs' is not defined`. Variables are defined (or declared) when you assign a value to them.  
+If, for example, you typed `dogs` without first defining it as a variable, you would get an error message that looks like this: `NameError: name 'dogs' is not defined`. Variables are defined (or declared) when you assign a value to them.  
 
 </div>
 
@@ -475,7 +475,7 @@ Did you notice the explanatory text in the above code cell that started with a p
 
 </div>
 
-This example loops through the list of numbers, adds 5 to each number one at a time, and adds the sum to a new list using the `append()` method for lists. Finally, we printed the new list to our screen. This kind of loop is sometimes called a **for loop**; there is another kind of loop called a **while loop**, which is often used when we don't know the number of times we'll have to iterate through a block of code before we start ([check out this page for more information about while loops](https://www.geeksforgeeks.org/python-while-loop/)).
+This example loops through the list of numbers, adds 5 to each number one at a time, and adds the sum to a new list using the `.append()` method for lists. Finally, we printed the new list to our screen. This kind of loop is sometimes called a **for loop**; there is another kind of loop called a **while loop**, which is often used when we don't know the number of times we'll have to iterate through a block of code before we start ([check out this page for more information about while loops](https://www.geeksforgeeks.org/python-while-loop/)).
 
 
 ### Indentation
@@ -761,7 +761,7 @@ Another kind of collection object in Python is a **dictionary**. Dictionaries ar
 
 * They do not allow duplicate key-value pairs.
 
-* Dictionaries use curly brackets { }.
+* Dictionaries use curly brackets { } (unlike lists, which use square brackets [ ]).
 
 Let's build an example dictionary:
 
@@ -828,7 +828,7 @@ Like lists, dictionaries have some useful methods you can use to access or alter
     <script type="text/x-sage">
 
     print(contact_info.pop("email"))
-print(contact_info)
+    print(contact_info)
 
     </script>
     </lia-keep>
@@ -845,9 +845,9 @@ print(contact_info)
     <script type="text/x-sage">
 
     contact_info_copy = contact_info.copy()
-contact_info_copy.pop("telephone")
-print(contact_info)
-print(contact_info_copy)
+    contact_info_copy.pop("telephone")
+    print(contact_info)
+    print(contact_info_copy)
 
     </script>
     </lia-keep>
@@ -856,7 +856,7 @@ print(contact_info_copy)
     In this example though, all you need to do to restore the dictionary to its original form is re-run the first code cell or refresh the page.
     </div>
 
-* There isn't a method to add items to a dictionary, but it can be done! You can give the dictionary a new key and assign a value to it (notice that we're using bracket notation again). This is another example of a permanent change to our dictionary.
+* There isn't a method to add items to a dictionary, but it can be done! You can give the dictionary a new key and assign a value to it (notice that we're using square bracket notation again, like we did for lists). This is another example of a permanent change to our dictionary.
 
     @sage
     <div class="python_link">
@@ -864,13 +864,24 @@ print(contact_info_copy)
     <script type="text/x-sage">
 
     contact_info["work_email"] = "myname@company.com"
-print(contact_info)
+    print(contact_info)
 
     </script>
     </lia-keep>
     </div>
 
   You can also use the same syntax with an existing key to assign a new value (note that the new value will **replace** the previous value).
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+You might have noticed by now that we have used square brackets in a few different contexts, and it can be difficult to keep straight! Here are the two uses you need to know for this module:
+
+1. Creating lists: You use square brackets to create a list object (either an empty list or one that has items in it).
+
+2. Accessing items in a collection: This is the subsetting notation that we talked about earlier, and it used to retrieve an item in a list or a dictionary. You do this by using the index in a list and by the key in a dictionary. 
+
+</div>
 
 ### Quiz: Dictionaries
 
@@ -882,6 +893,20 @@ True or False: Duplicate key-value pairs are allowed in dictionaries.
 <div class = "answer">
 
 While **values** can be repeated in a dictionary, each **key** must be unique. However, you can have multiple values for a key by putting those values in a list.
+
+</div>
+***
+
+How would you access the capital of Algeria in the dictionary below?
+
+`capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
+
+[[capital_cities["Algeria"]]]
+
+***
+<div class = "answer">
+
+To access an item in a collection like a dictionary, we use subsetting notation-- the square brackets. 
 
 </div>
 ***
@@ -922,8 +947,8 @@ If you do come up with a solution before looking at the answer, note that your c
 <lia-keep>
 <script type="text/x-sage">
 
-#Hint: You'll need the identifiers and the scores in your loop.
-#If you get stuck, try googling something like "Python looping through items in a dictionary".
+# Hint: You'll need the identifiers *and* the scores in your loop.
+# If you get stuck, try going back and looking at the dictionary methods we talked about in this module, or even googling something like "Python looping through items in a dictionary" to see some examples.
 
 </script>
 </lia-keep>
