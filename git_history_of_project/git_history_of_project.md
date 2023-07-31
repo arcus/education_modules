@@ -294,9 +294,9 @@ Which of the following commands would show you the **most recent** commit you ma
 ***
 <div class ="answer">
 
-As long as you didn't do anything fancy to move `HEAD`, the **most recent** commit is the current `HEAD`. Its commit number is `584977`. Since both refer to the same commit, you can use either.
+As long as you didn't do anything fancy to move `HEAD`, the **most recent** commit is the current `HEAD`. Its commit number is `024af1`. Since both refer to the same commit, you can use either.
 
-The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show 081cd9` will give you an error since `081cd9` it is not the **first** six digits of a known commit number.
+The command `git show HEAD~1` will show you one checkpoint earlier in your work, while `git show 2a29ed` will give you an error since `2a29ed` it is not the **first** six digits of a known commit number.
 
 </div>
 ***
