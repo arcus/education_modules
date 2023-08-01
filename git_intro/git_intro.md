@@ -35,7 +35,7 @@ After completion of this module, learners will be able to:
 
 good_first_module: false
 coding_required: false
-sequence_name: git
+sequence_name: git_basics
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
