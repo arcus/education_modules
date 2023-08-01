@@ -128,7 +128,20 @@ print("Hello World!".lower())
 </lia-keep>
 </div>
 
-As you might have suspected, the `.lower()` method made all of the letters of the phrase "Hello World!" lowercase. The `.lower()` method is a **string method**, or a method that *must* be called on a string object, of which "Hello World!" is an example. (There is also a string method called `.upper()`, can you guess what it does?) The Python documentation has [more information about string methods](https://docs.python.org/2.5/lib/string-methods.html). Other kinds of objects in Python (like lists and dictionaries, for example, which we'll discuss later in this module) have their own associated methods.
+As you might have suspected, the `.lower()` method made all of the letters of the phrase "Hello World!" lowercase. The `.lower()` method is a **string method**, or a method that *must* be called on a string object, of which "Hello World!" is an example. (There is also a string method called `.upper()`, can you guess what it does?) The Python documentation has [more information about string methods](https://docs.python.org/2.5/lib/string-methods.html). Other kinds of objects in Python (like lists and dictionaries, for example, which we'll discuss later in this module) have their own associated methods. 
+
+Additionally, some methods can have **parameters**, or additional input that gives Python more information about what you want to do. Not all methods have parameters (`.lower()` and `.upper()` are examples of methods that have no parameters), but some do. These parameters may be required or optional, and they go in the parentheses following the method name. 
+
+An example of a string method with both required and optional parameters is `.count()`, which counts the number of times a specified substring occurs within the string object it is used on. The `.count()` method requires that you include a *value* parameter, which is the substring you're searching for, but you can optionally add *start* and *end* parameters, which specify where in the string you want to start and stop looking. In this case, the syntax would look like this: `"string".count("value", start, end)`. You'll always need to add the *value* parameter, but you can leave out the *start* and *end* parameters if you want to search the whole string. 
+
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+It can be hard to remember what parameters are required or optional for a particular method. If you don't remember, looking up the documentation for that method is a great place to start! Finding that documentation is often as simple as searching "Python" and the method you're looking for. 
+
+</div>
+
 
 Let's talk more about strings and other data types next.
 
