@@ -761,7 +761,7 @@ Another kind of collection object in Python is a **dictionary**. Dictionaries ar
 
 * They do not allow duplicate key-value pairs.
 
-* Dictionaries use curly brackets `{ }` (unlike lists, which use square brackets `[ ]`).
+* Dictionaries use curly brackets `{ }` (unlike lists, which use square brackets `[ ]`). These curly brackets can also be called **braces**.
 
 Let's build an example dictionary:
 
@@ -828,7 +828,7 @@ Like lists, dictionaries have some useful methods you can use to access or alter
     <script type="text/x-sage">
 
     print(contact_info.pop("email"))
-    print(contact_info)
+print(contact_info)
 
     </script>
     </lia-keep>
@@ -845,9 +845,9 @@ Like lists, dictionaries have some useful methods you can use to access or alter
     <script type="text/x-sage">
 
     contact_info_copy = contact_info.copy()
-    contact_info_copy.pop("telephone")
-    print(contact_info)
-    print(contact_info_copy)
+contact_info_copy.pop("telephone")
+print(contact_info)
+print(contact_info_copy)
 
     </script>
     </lia-keep>
@@ -864,7 +864,7 @@ Like lists, dictionaries have some useful methods you can use to access or alter
     <script type="text/x-sage">
 
     contact_info["work_email"] = "myname@company.com"
-    print(contact_info)
+print(contact_info)
 
     </script>
     </lia-keep>
@@ -902,6 +902,10 @@ You might have noticed by now that we have used square brackets in a few differe
     `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
     [[capital_cities.keys() ]]
+    <script>
+  let input = "@input".trim();
+  input == "capital_cities.keys()";
+</script>
     ***
     <div class = "answer">
 
@@ -915,6 +919,10 @@ You might have noticed by now that we have used square brackets in a few differe
     `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
     [[capital_cities["Angola"] = "Luanda"]]
+    <script>
+  let input = "@input".replace(/\s+/g, '');
+  input == "capital_cities[\"Angola\"]=\"Luanda\"";
+</script>
     ***
     <div class = "answer">
 
