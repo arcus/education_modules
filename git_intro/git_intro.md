@@ -146,7 +146,7 @@ If you're new to coding, feel overwhelmed by the idea of working on the command 
 <div class = "history">
 <b style="color: rgb(var(--color-highlight));">Historical context</b><br>
 
-Interestingly, despite the name, GitHub is independent from git, and is simply an organization that chose a name that was a portmanteau of "Git", the version control system it used, and "Hub", indicating a place where a lot of activity takes place.  They could do this because the word "git" was not trademarked.  Years after GitHub received **its** trademark, the originators of Git acted to keep this from happening again by finally trademarking the word "git".  They now protect that trademark and have acted to prevent similar portmanteaus.  There doesn't seem to be any ill will between the organizations, but it's certainly an interesting history!
+Interestingly, despite the name, GitHub is independent from git, and is simply an organization that chose a name that was a portmanteau of "Git," the version control system it used, and "Hub," indicating a place where a lot of activity takes place.  They could do this because the word "git" was not trademarked.  Years after GitHub received **its** trademark, the originators of Git acted to keep this from happening again by finally trademarking the word "git."  They now protect that trademark and have acted to prevent similar portmanteaus.  There doesn't seem to be any ill will between the organizations, but it's certainly an interesting history!
 
 </div>
 
