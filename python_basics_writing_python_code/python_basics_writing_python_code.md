@@ -159,7 +159,7 @@ Notice that in the above example, we have passed the `type("Hello World!")` func
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-You may be wondering exactly when you should use functions vs. methods, and that can be a tricky question to answer! It depends on whether the thing you want to do was written as a function or a method, and even folks with a lot of Python experience can forget and need to look things up! A good approach is to use your favorite search engine to search for the task you want to do combined with "Python". For example, if you want to figure out how to make a string completely lower case, you might search "make string lower case in Python". That will lead you to the string method `.lower()`. 
+You may be wondering exactly when you should use functions vs. methods, and that can be a tricky question to answer! It depends on whether the thing you want to do was written as a function or a method, and even folks with a lot of Python experience can forget and need to look things up! A good approach is to use your favorite search engine to search for the task you want to do combined with "Python." For example, if you want to figure out how to make a string completely lower case, you might search "make string lower case in Python." That will lead you to the string method `.lower()`. 
 
 </div>
 
