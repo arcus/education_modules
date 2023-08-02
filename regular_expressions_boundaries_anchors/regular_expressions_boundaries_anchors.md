@@ -47,7 +47,7 @@ No previous versions.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://github.com/arcus/education_modules/blob/warning_regex101/_module_templates/macros_regex.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_regex.md
 -->
 
 # Regular Expressions: Flags, Anchors, and Boundaries
