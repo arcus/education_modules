@@ -46,6 +46,7 @@ No previous versions.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://github.com/arcus/education_modules/blob/warning_regex101/_module_templates/macros_regex.md
 -->
 
 # Demystifying Regular Expressions
@@ -243,6 +244,8 @@ As a final step in demystifying regular expressions, it can be helpful to introd
 
 We like **Regex 101**, at https://www.regex101.com, but you can also search online for "regex checker" to find other, similar websites.  Regex 101 allows you to enter your regular expression as well as some sample text that you want to apply the regular expression to.  
 
+@regular_expression_checker_warning
+
 Below, or by [trying it out yourself](https://regex101.com/r/QUok4D), you can see that we put in our "valid URL" regular expression (at the top of the screen, in the appropriately labeled box) as well as the different varieties of URLs, some of which we think are valid and match our pattern, and some of which we think are invalid and should fail to match our pattern.
 
 If our test strings match the pattern, they are highlighted, and if they do not match, they are not highlighted.
@@ -329,6 +332,7 @@ If you want to check out regular expression checkers, here are a few we like:
 * [RegExr](https://regexr.com/) has helpful teaching aids, including a hover-over explainer that allows you to investigate matches, and a way to look at complex nested elements (for instance, a range of characters inside square brackets inside a capturing group) in a visual way.
 * [RegEx Testing](https://www.regextester.com/) has a clean, simple interface and a library of popular regular expressions to start with. 
 
+@regular_expression_checker_warning
 
 ## Feedback
 
