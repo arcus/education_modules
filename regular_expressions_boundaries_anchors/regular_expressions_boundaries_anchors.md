@@ -47,6 +47,7 @@ No previous versions.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_regex.md
 -->
 
 # Regular Expressions: Flags, Anchors, and Boundaries
@@ -58,6 +59,8 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 A **regular expression** (also known as "regex") is a specific way to **express** a **rule** for a pattern.  Regular expressions are useful to biomedical researchers because they can allow you to find, replace, or extract text that matches patterns you define.  
 
 A good place to practice regular expressions is an online regex testing website.  We like **Regex 101**, at https://www.regex101.com.
+
+@regular_expression_checker_warning
 
 Regex consists of **tokens** which represent characters that appear in a particular location, and **quantifiers**, which give the number of times a given token repeats.
 
@@ -366,6 +369,8 @@ If you want to check out regular expression checkers, here are a few we like:
 * [Regex 101](https://regex101.com) is the regular expressions tester used in this module.  We use it regularly, even after working with regular expressions for many years.
 * [RegExr](https://regexr.com/) has helpful teaching aids, including a hover-over explainer that allows you to investigate matches, and a way to look at complex nested elements (for instance, a range of characters inside square brackets inside a capturing group) in a visual way.
 * [RegEx Testing](https://www.regextester.com/) has a clean, simple interface and a library of popular regular expressions to start with. 
+
+@regular_expression_checker_warning
 
 For learning more about regular expressions, consider:
 

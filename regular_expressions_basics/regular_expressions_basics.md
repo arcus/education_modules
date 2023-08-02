@@ -47,6 +47,7 @@ previous_sequential_module: demystifying_regular_expressions
 - demystifying_regular_expressions
 @end
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_regex.md
 -->
 
 # Regular Expressions Basics
@@ -64,6 +65,8 @@ Regular expressions are useful to biomedical researchers because they can allow 
 A good place to practice regular expressions is an online regex testing website.  We like **Regex 101** at https://www.regex101.com, but you can also search online for "regex checker" to find other, similar websites.  Regex 101 allows you to enter your regular expression as well as some sample text that you want to apply the regular expression to.  You can use this website to gain practice with any of the rules you learn in this module.
 
 The [Regex 101 section](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#6) in the Demystifying Regular Expressions module shows and example of how to use the website.
+
+@regular_expression_checker_warning
 
 ## Simple Regular Expressions
 
@@ -379,6 +382,8 @@ If you want to check out regular expression checkers, here are a few we like:
 * [Regex 101](https://regex101.com) is the regular expressions tester used in this module.  We use it regularly, even after working with regular expressions for many years.
 * [RegExr](https://regexr.com/) has helpful teaching aids, including a hover-over explainer that allows you to investigate matches, and a way to look at complex nested elements (for instance, a range of characters inside square brackets inside a capturing group) in a visual way.
 * [RegEx Testing](https://www.regextester.com/) has a clean, simple interface and a library of popular regular expressions to start with. 
+
+@regular_expression_checker_warning
 
 Wondering about Unicode character ranges?  
 
