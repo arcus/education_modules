@@ -17,7 +17,7 @@ comment:  This is placeholder module to save macros used in other modules.
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
-**Do not put private data into a regular expression checker!** 
+**Do not put private data into online regular expression checkers!** 
 <br><br>
 Online tools like this can be very useful, but are not authorized to see your protected data.
 
