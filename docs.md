@@ -739,6 +739,15 @@ Not a strict requirement or pre-requisite but notes how knowledge in this module
 
 Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
 
+If there are no modules to list here, leave it blank but do not omit it (modules may fail automatic checks if they don't have all required metadata). 
+For example:
+
+```
+@sets_you_up_for
+
+@end
+```
+
 ### `depends_on_knowledge_available_in`
 
 ```
@@ -753,6 +762,16 @@ Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need 
 Not a strict requirement or pre-requisite but notes where user can find useful knowledge in other modules.
 
 Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
+
+If there are no modules to list here, leave it blank but do not omit it (modules may fail automatic checks if they don't have all required metadata). 
+For example:
+
+```
+@depends_on_knowledge_available_in
+
+@end
+```
+
 ### `is_parallel_to`
 
 ```
@@ -764,6 +783,8 @@ Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need 
 ```
 
 The same instruction presented in a different coding language/environment/operating system. 
+
+This field is not required, so if there are no modules parallel to this one, just omit this field completely.
 
 ### `version_history`
 
