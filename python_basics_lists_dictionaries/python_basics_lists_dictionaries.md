@@ -16,7 +16,7 @@ comment: Learn about collection objects, specifically lists and dictionaries, in
 
 long_description: Before using Python for data analysis, there are some basics to learn that will set the foundation for more advanced Python coding. This module will teach you about lists and dictionaries, two types of collection objects in Python. 
 
-estimated_time_in_minutes: 20
+estimated_time_in_minutes: 15
 
 @pre_reqs
 Learners should be familiar with 
@@ -41,6 +41,7 @@ coding_language: python
 @sets_you_up_for
 
 - python_basics_loops_conditionals
+- python_basics_exercise
 - python_practice
 
 @end
@@ -74,6 +75,18 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 @lesson_prep_python_sage
 
+## Collection Objects in Python
+
+How information is stored and organized is an important part of programming. Python has specific data types called **collections** that store and organize information in different ways. This module will discuss two of the most common and useful types of collections: lists and dictionaries. 
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+There are a couple of other collections, called [tuples](https://www.geeksforgeeks.org/python-tuples/) and [sets](https://www.geeksforgeeks.org/sets-in-python/); you can read more about those on your own if you're interested. 
+
+</div>
+
+
 ## Lists
 
 **Lists** in Python are objects that contain a collection of multiple items. They are surrounded by square brackets `[ ]` and the items in the list are separated by commas:
@@ -98,16 +111,16 @@ There are a few important characteristics of lists:
 
 * Lists are **ordered**: List items remain in the position that they are entered into the list, and you can access any item by its position, or **index**.
 
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+    <div class = "important">
+    <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-  An **index** in Python refers to a value's position in a sequence. The sequence can be a collection object like a list or even a string (which you can think of as a sequence of characters). The important thing to remember is that in Python, **indices start at 0**. This means that the index of the first item in a sequence is `0`! This is not always the case in other programming languages.
+    An **index** in Python refers to a value's position in a sequence. The sequence can be a collection object like a list or even a string (which you can think of as a sequence of characters). The important thing to remember is that in Python, **indices start at 0**. This means that the index of the first item in a sequence is `0`! This is not always the case in other programming languages.
 
-  To access an item by its index, you use **subsetting notation**, `sequence[index]`. To get the first letter of the string "Hello", for example, you would use the code `"Hello"[0]`.
+    To access an item by its index, you use **subsetting notation**, `sequence[index]`. To get the first letter of the string "Hello" (strings can be thought of as a sequence of characters), for example, you would use the code `"Hello"[0]`. Notice that this is another use of square brackets!
 
-  </div>
+    </div>
 
-* Lists are **changeable**; you can add, remove, and edit items in a list. There are a few ways to do this:
+* Lists are **changeable**; you can add, remove, and edit items in a list. You can use list [methods](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#6) to do this: 
 
     * `.pop()` removes a specific element by **index**.
 
@@ -130,13 +143,13 @@ There are a few important characteristics of lists:
     <script type="text/x-sage">
 
     produce.remove("apple")
-print(produce)
+    print(produce)
 
     </script>
     </lia-keep>
     </div>
 
-  * `del` deletes objects, and can be used as another way to remove elements of a list by index. The syntax will be a little different, because it is a keyword, not a list method. It is useful because it allows you to delete list elements in a **slice**. Slicing uses subsetting notation to indicate where the slice begins and ends. The first index listed is **inclusive**, or included in the slice; this is followed by a colon; the second index listed is **exclusive**, or excluded from the slice; finally, these numbers are surrounded by square brackets.
+  * `del` deletes objects, and can be used as another way to remove elements of a list by index. The syntax will be a little different, because it is a [**keyword**](https://realpython.com/python-keywords/), not a list method. It is useful because it allows you to delete list elements in a **slice**. Slicing uses subsetting notation to indicate where the slice begins and ends. The first index listed is **inclusive**, or included in the slice; this is followed by a colon; the second index listed is **exclusive**, or excluded from the slice; finally, these numbers are surrounded by square brackets.
 
     @sage
     <div class="python_link">
@@ -302,7 +315,7 @@ Like lists, dictionaries have some useful methods you can use to access or alter
     </lia-keep>
     </div>
 
-* `.items()` returns a list of the dictionary's key-value pairs as tuples (an object that holds multiple values, similar to a list, except that they are unchangeable). This may seem not very useful at first glance, but since different collection objects have different properties, there could be circumstances in which it is more useful to have the data in a different kind of object.
+* `.items()` returns a list of the dictionary's key-value pairs as tuples (an object that holds multiple values, similar to a list, except that they are *unchangeable*). This may seem not very useful at first glance, but since different collection objects have different properties, there could be circumstances in which it is more useful to have the data in a different kind of object.
 
     @sage
     <div class="python_link">
@@ -370,11 +383,13 @@ print(contact_info)
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-You might have noticed by now that we have used square brackets in a few different contexts, and it can be difficult to keep straight! Here are the two uses you need to know for this module:
+You might have noticed by now that we have used square brackets in a few different contexts, and it can be difficult to keep straight! Here are the three uses you need to know for this module:
 
 1. Creating lists: You use square brackets to create a list object (either an empty list or one that has items in it).
 
 2. Accessing items in a collection: This is the subsetting notation that we talked about earlier, and it used to retrieve an item in a list or a dictionary. You do this by using the index in a list and by the key in a dictionary. 
+
+3. Adding items to a dictionary. 
 
 </div>
 
@@ -431,9 +446,7 @@ You might have noticed by now that we have used square brackets in a few differe
 
 * There are many helpful resources on [python.org](https://www.python.org/), including a [Beginner's Guide](https://wiki.python.org/moin/BeginnersGuide) and [FAQs](https://docs.python.org/3/faq/).
 
-* [W3 Schools has bite-sized explanations and examples of writing code in Python](https://www.w3schools.com/python/) if you want more clarity on how anything works.
-
-* Jupyter notebooks are a great option for doing data analysis with Python-- [check out this Jupyter notebook demo](https://jupyter.org/try-jupyter/lab/), then open "notebooks" and look at "Intro.ipynb" to see how they work.
+* Python docs also has [more detailed information about using lists, dictionaries, and other data structures](https://docs.python.org/3/tutorial/datastructures.html). 
 
 ## Feedback
 
