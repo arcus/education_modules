@@ -34,7 +34,7 @@ After completion of this module, learners will be able to:
 @end
 
 @version_history 
-No previous versions.
+ 
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
