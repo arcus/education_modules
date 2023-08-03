@@ -19,7 +19,7 @@ long_description: Before using Python for data analysis, there are some basics t
 estimated_time_in_minutes: 20
 
 @pre_reqs
-Learners should be familiar with using [functions and methods]() and [recognizing collection objects]() at a basic level. 
+Learners should be familiar with using [functions and methods](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#1) and [collections](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1) at a beginner level. 
 @end
 
 @learning_objectives
@@ -40,7 +40,8 @@ coding_language: python
 
 @sets_you_up_for
 
-- python_practice
+- python_basics_exercise
+- pandas_transform
 
 @end
 
@@ -74,9 +75,13 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 @lesson_prep_python_sage
 
+## Introduction
+
+In programming, we often need to perform a task repeatedly (or **iteratively**), or only if certain conditions are met. Iterating over an series of inputs and performing a specified task on each input is accomplished using **loops**. In some cases though, we only want to perform a task sometimes (either within a loop or not); for this, we use **conditional statements**. Loops and conditional statements are not unique to Python-- they appear in almost every language! This module will discuss how these concepts work in Python. 
+
 ## Loops
 
-A Python list is an **iterable** object, or an object whose members can be returned one at a time. This is important in **loops**, which repeat (or iterate) the same operation for each element in an iterable object like a list.
+In Python, [lists and dictionaries](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1) are examples of **iterable** objects, or objects whose members can be returned one at a time. This is important in **loops**, which repeat (or iterate) the same operation for each element in an iterable object like a list.
 
 For a sense of how loops work in Python, here is a simple example. Let's say there are five children at a party, and they each start with a certain number of pieces of candy. Next, let's say that we give each child 5 more pieces of candy. Using a simple loop, we can get a list of how many total pieces of candy each child has now using the `for` and `in` keywords.
 
@@ -209,9 +214,9 @@ According to our code, we know that `j` is the square of `i`, so that's the numb
 
 ## Conditional statements: If-else
 
-Sometimes when you're working with Python, you might want your code to do different things in different circumstances. You handle this with an `if else`, or **conditional**, statement.
+Sometimes when you're working with Python, you might want your code to do different things in different circumstances. You handle this with an `if-else`, or **conditional**, statement.
 
-Conditional statements often make use of **comparison operators**. Comparison operators compare values and return a `True` or `False`, depending on the outcome of the comparison. Some important comparison operators include:
+Conditional statements often make use of **comparison operators**. Comparison operators compare values and return a `True` or `False` (also known as a [**boolean value**](https://www.geeksforgeeks.org/boolean-data-type-in-python/)), depending on the outcome of the comparison. Some important comparison operators include:
 
 * `==`: In Python, this is used to test **equality** (be sure not to use  the single equals sign `=`, which is used for assigning values to variables). So `9 == 18` asks the questions "is 9 equal to 18?", which would evaluate to `False`.
 
@@ -385,9 +390,7 @@ print(candy2)
 
 * There are many helpful resources on [python.org](https://www.python.org/), including a [Beginner's Guide](https://wiki.python.org/moin/BeginnersGuide) and [FAQs](https://docs.python.org/3/faq/).
 
-* [W3 Schools has bite-sized explanations and examples of writing code in Python](https://www.w3schools.com/python/) if you want more clarity on how anything works.
-
-* Jupyter notebooks are a great option for doing data analysis with Python-- [check out this Jupyter notebook demo](https://jupyter.org/try-jupyter/lab/), then open "notebooks" and look at "Intro.ipynb" to see how they work.
+* The Python documentation also has [more details and examples about loops and conditional statements](https://docs.python.org/3/tutorial/controlflow.html). 
 
 ## Feedback
 
