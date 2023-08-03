@@ -2,10 +2,10 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  0.0.0
+version:  1.0.0
 current_version_description: Initial version
 module_type: standard
-docs_version: 1.0.0
+docs_version: 1.2.1
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -89,7 +89,7 @@ Typically, researchers make do with a non-random sample, or with a random sample
 
 In the height example, a researcher might decide to pick a city with a globally diverse population, like [Toronto, Ontario](https://en.wikipedia.org/wiki/Demographics_of_Toronto) and attempt to analyze a random sample from the city's population. 
 In that case, although their population of interest is all adults in the world, the population their test actually refers to is just all Toronto adults. 
-The researcher would then be making a logically leap to assume that the heights of people in Toronto are a good approximation of adult heights in general.
+The researcher would then be making a logical leap to assume that the heights of people in Toronto are a good approximation of adult heights in general.
 In the discussion section of this hypothetical paper, the researcher would need to discuss the limitations of the sample they tested and make a case for why their results are informative about the population of interest even though their sample was not ideal. 
 
 <h3>What counts as the population?</h3>
@@ -138,12 +138,12 @@ For a great discussion of the difference between scientific and statistical hypo
 
 </div>
 
-A statistically precise hypothesis would be something like "patients with exposure to X will have an average of 2.6 more asthma attacks per year than patients without exposure to X," but that's not really useful scientifically --- if you end up finding that they have an average of 3.5 more attacks per year instead of 2.6, does that mean your hypothesis was wrong?
+A statistically precise hypothesis would be something like "patients with exposure to X will have an average of 2.6 more asthma attacks per year than patients without exposure to X," but that's not really useful scientifically-- if you end up finding that they have an average of 3.5 more attacks per year instead of 2.6, does that mean your hypothesis was wrong?
 
 One way to get around this issue is to **not test your hypothesis of interest itself, but rather its opposite**. 
 This is called the **null hypothesis**.
 
-So you can test the hypothesis that "patients with exposure to X have exactly the same number of asthma attacks as patients without exposure to X" -- that is statistically precise (we're testing that the difference is equal to 0), but it's also still scientifically informative. 
+So you can test the hypothesis that "patients with exposure to X have exactly the same number of asthma attacks as patients without exposure to X"-- that is statistically precise (we're testing that the difference is equal to 0), but it's also still scientifically informative. 
 If you find evidence that that hypothesis is wrong, you can conclude that there *is* a difference in number of asthma attacks per year for patients who are exposed to toxin X compared to those who aren't.
 
 The general process for NHST is to articulate a scientific hypothesis, then identify a null hypothesis version of it and test that, and then apply the results to conclusions about your original scientific hypothesis. 
@@ -216,7 +216,7 @@ When they run their statistical test, they'll see one of two things:
 
 In NHST, there are two different kinds of errors you can have:
 
-- The first is that you might get a significant result even though actually in reality the null hypothesis is correct --- when we get a $p$-value < .05, the chance of those data happening when the null is true is small (less than 5%), but it's not zero! This is called a **Type 1 error**. You can also think of this as a false positive.
+- The first is that you might get a significant result even though actually in reality the null hypothesis is correct-- when we get a $p$-value < .05, the chance of those data happening when the null is true is small (less than 5%), but it's not zero! This is called a **Type 1 error**. You can also think of this as a false positive.
 - The second kind of error is that you may get non-significant results when actually the null hypothesis really was wrong. In other words, you might fail to detect a true effect. This is called a **Type 2 error**. You can also think of this as a false negative.
 
 We can think about these possibilities in terms of a 2x2 matrix, where your results are either significant (reject) or not (fail to reject), and the real underlying truth is that the null hypothesis is either true or false. 
@@ -247,8 +247,8 @@ It could just as easily be .01 or .1, or even .5 (although that would mean we'd 
 
 </div>
 
-The probability of a Type 2 error (failing to reject the null hypothesis when it's really false) is represented by the letter beta. 
-Because there are only two possible outcomes when the null is false (either correctly rejecting it or having a Type 2 error), the probability of correctly rejecting the null hypothesis (getting a significant result when the null is truly false) 1-beta, and it is called **power**.
+The probability of a Type 2 error (failing to reject the null hypothesis when it's really false) is represented by the letter **beta**. 
+Because there are only two possible outcomes when the null is false (either correctly rejecting it or having a Type 2 error), the probability of correctly rejecting the null hypothesis (getting a significant result when the null is truly false) is 1-beta, and it is called **power**.
 
 So if your test has statistical power of 80%, that means you have a 20% chance of incorrectly failing to reject the null hypothesis (a Type 2 error). 
 If you want to decrease your chance of a Type 2 error, you need to increase your power. 
@@ -278,7 +278,7 @@ If a study doesn't have "enough" power (often 80% is used as a cutoff), it is sa
 For a discussion of the prevalence and ramifications of underpowered studies in a particular field, see [Power failure: why small sample size undermines the reliability of neuroscience](https://www.nature.com/articles/nrn3475) (Button et al., 2013).
 
 Spoilers: They estimate the median power of studies in the neurosciences to be between 8% and 31%! 
-In other words, assuming that the effect they're testing for are real (the null hypotheses are false) most of these studies had less than a 50% chance of getting a significant result.
+In other words, assuming that the effects they're testing for are real (the null hypotheses are false) most of these studies had less than a 50% chance of getting a significant result.
 
 </div>
 
@@ -297,19 +297,19 @@ For a much more thorough (but approachable!) explanation of Bayes' theorem, see 
 </div>
 
 For example, without any more specific information, you would assume a given patient's probability of having beast cancer is about the same as the population probability of that cancer. 
-If you find out that she's had a mamogram that detected cancer (new evidence), how does that change your estimation of her probability of having breast cancer? 
-It still wouldn't be 100% (mamograms have false positives), but it would be higher than before you knew about the mamogram. 
-Bayes' theorem expresses precisely, in math, what the updated probability would be, given the prior probability and the strength of the evidence (how good of a test is a mamogram?). 
+If you find out that she's had a mammogram that detected cancer (new evidence), how does that change your estimation of her probability of having breast cancer? 
+It still wouldn't be 100% (mammograms have false positives), but it would be higher than before you knew about the mammogram. 
+Bayes' theorem expresses precisely, in math, what the updated probability would be, given the prior probability and the strength of the evidence (how good of a test is a mammogram?). 
 
 In a research context, you would specify a prior probability for your hypothesis (if you want to be conservative, you might set it to zero, like a null hypothesis). 
 Then you collect your data and estimate the strength of the evidence, for example as an effect size, and you can use Bayes' theorem to calculate what the probability of your hypothesis is now, given the evidence. 
 
 **In other words, Bayesian inference allows to you directly test the questions you're actually curious about in a way that is much more intutive than NHST.**
 
-Bayesian inference also provides a natural way to incoporate additional knowledge into your hypothesis test --- if you're testing a hypothesis that seems very unlikely, the evidence should need to be much stronger than if you're testing for something that's pretty common sense. 
+Bayesian inference also provides a natural way to incoporate additional knowledge into your hypothesis test-- if you're testing a hypothesis that seems very unlikely, the evidence should need to be much stronger than if you're testing for something that's pretty common sense. 
 
 For example, there is a real, published study in a mainstream journal purporting to show evidence that research participants have some abililty to sense the future before it happens ([Bem, 2011](https://pubmed.ncbi.nlm.nih.gov/21280961/)). 
-That article triggered several responses from other scientists arguing about a number of details in the statistical methods employed in the original study, including the fact that a Bayesian analysis would have allowed the analyst to specify a prior probability for being able to correctly anticipate random images, and that prior probability should have been quite low given the very reasonable skepticsm around ESP (for example, see [Rouder & Morey, 2011](https://link.springer.com/article/10.3758/s13423-011-0088-7)). 
+That article triggered several responses from other scientists arguing about a number of details in the statistical methods employed in the original study, including the fact that a Bayesian analysis would have allowed the analyst to specify a prior probability for being able to correctly anticipate random images, and that prior probability should have been quite low given the very reasonable skepticsm around extrasensory perception, or ESP (for example, see [Rouder & Morey, 2011](https://link.springer.com/article/10.3758/s13423-011-0088-7)). 
 NHST considers all hypotheses to be equally likely, whether you're replicating a well-established effect or testing something controversial. 
 
 !['Above the first panel: "Did the sun just explode? (It's night so we're not sure)". Panel 1: Two stick figures with a machine in between them. The first says, "This neutrino detector measures whether the sun has gone nova." The second says, "Then, it rolls two dice. If they both come up six, it lies to us. Otherwise, it tells the truth." And the first says, "Let's try. Detector! Has the sun gone nova?" The machine makes a "roll" noise and then repsonds, "YES." Panel 2, titled "Frequestist Statistician": The first stick figure says, "The probability of this result happening by chance is 1/36 = 0.027. Since p < 0.05, I conclude that the sun has exploded." Panel 3, titled "Bayesian Statistician": The second stick figure says, "Bet you $50 it hasn't."'](https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png "[Frequentists vs. Bayesians](https://xkcd.com/1132/) by xkcd, shared under a [CC license](https://xkcd.com/license.html).")
@@ -323,17 +323,17 @@ But there are a few reasons we're opting to teach mostly NHST here instead of Ba
 
 - There's a huge body of existing literature using NHST, so it's important you understand those methods even if you prefer Bayesian inference for your own analysis.
 - The available tools are still much more user friendly for NHST. 
-- In a practical sense, using NHST vs. Bayesian inference usually won't change your conclusions. If you analyze your data with Bayesian methods and then re-analyze it with NHST, you'll almost always see comprable results. And that makes sense --- it's the same data, after all! 
+- In a practical sense, using NHST vs. Bayesian inference usually won't change your conclusions. If you analyze your data with Bayesian methods and then re-analyze it with NHST, you'll almost always see comparable results. And that makes sense-- it's the same data, after all! 
 
 ## The dangers of p-hacking
 
 As we mentioned earlier, the Type 1 error rate (the probability of incorrectly rejecting the null hypothesis when it is in fact true) is set by convention at 5%. 
-That suggests that, if you're scientififc hypothesis is wrong and you're testing for an effect that isn't really there (i.e. the null hypothesis is true), the chance of you getting a significant result is pretty small: 1 in 20. 
+That suggests that, if your scientific hypothesis is wrong and you're testing for an effect that isn't really there (i.e. the null hypothesis is true), the chance of you getting a significant result is pretty small: 1 in 20. 
 In fact, though, the way many people routinely analyze data results in an actual Type 1 error rate that is much, much higher. 
 
-Here are a few common practices that are actually p-hacking: 
+Here are a few common practices that are actually **p-hacking**: 
 
-- Use NHST to run a test that didn't occur to you until you started looking at the data
+- Using NHST to run a test that didn't occur to you until you started looking at the data
 - Running several different statistical tests and then only reporting the significant ones
 - Making adjustments in the data cleaning steps (transforming variables, removing outliers, etc.) after checking the results of the hypothesis test
 - Running a statistical test on preliminary data and then deciding whether or not to collect more data based on whether the results are significant or not
@@ -395,7 +395,7 @@ This is often an important part of the discussion section in a published paper.
 </div>
 ***
 
-Consider a researher who has been developing a checklist to improve care for postpartum people. The researcher has the opportunity to conduct a randomized trial at their hospital, so they randomly assign one group of birthing patients to be treated with the checklist protocol and another to get care as usual. They hypothesize that outcomes will be better in the group that gets the checklist. What null hypothesis should they test? 
+Consider a researcher who has been developing a checklist to improve care for postpartum people. The researcher has the opportunity to conduct a randomized trial at their hospital, so they randomly assign one group of birthing patients to be treated with the checklist protocol and another to get care as usual. They hypothesize that outcomes will be better in the group that gets the checklist. What null hypothesis should they test? 
 
 [[ that there is no difference in outcomes for the group that gets the checklist vs. the group that gets care as usual]]
 <script>
@@ -415,7 +415,7 @@ The null hypothesis would be that there is no difference in outcomes for the gro
 Which of the following are true statements about the null hypothesis? Select all that apply.
 
 [[ ]] If your results are not significant ($p ≥ .05$), you conclude that the null hypothesis is true.
-[[X]] If your results are significant ($p ≥ .05$), you conclude that the null hypothesis is false.
+[[X]] If your results are significant ($p < .05$), you conclude that the null hypothesis is false.
 [[X]] The null hypothesis is usually the opposite of your scientific hypothesis. 
 [[X]] All $p$ values are calculated based on the assumption that the null hypothesis is true. 
 ***
