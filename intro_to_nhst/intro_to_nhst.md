@@ -16,7 +16,7 @@ comment:  This is an introduction to NHST for biomedical researchers.
 
 long_description: Null Hypothesis Significance Testing (NHST) is by far the most commonly used method of statistical inference in research --- regression, ANOVAs, and t-tests are all tests from the NHST framework. This module introduces the important concepts that underlie NHST and prepares you to learn how to use NHST responsibly in your research. It does not assume any prior knowledge of statstics. 
 
-estimated_time_in_minutes: 
+estimated_time_in_minutes: 40
 
 @pre_reqs
 None.
