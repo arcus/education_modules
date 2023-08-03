@@ -42,7 +42,7 @@ coding_language: python
 
 - python_basics_loops_conditionals
 - python_basics_exercise
-- python_practice
+- pandas_transform
 
 @end
 
