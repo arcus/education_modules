@@ -270,7 +270,7 @@ LLMs require significant energy (with its associated carbon burden) as well as o
 
 ## Benefits of LLMs
 
-Any process that uses language can potentially benefit from LLM technology.  Consider some of these use cases, which we supplement with examples of prompts we supplied and replies we received from ChatGPT:
+Any process that uses language can potentially benefit from LLM technology.  Consider some of these use cases, which we supplement with examples of prompts we supplied and replies we received from ChatGPT.  We've shortened the LLM-generated text and have added ellipses (...) to show where we've trimmed text in order to make this a quicker read.
 
 Structure and Scaffolding
 ---
@@ -288,49 +288,7 @@ Prompt: **"Make an outline for a peer-reviewed manuscript describing a clinical 
 > III. Introduction:<br/>
 >    A brief introduction to the research problem, highlighting the significance and rationale for conducting the clinical trial.<br/>
 > <br/>
-> IV. Background:<br/>
->    - Background information on the medical condition or disease being studied.<br/>
->    - Review of existing literature and previous studies related to the topic.<br/>
->    - Identification of research gaps or unanswered questions.<br/>
-> <br/>
-> V. Objectives:<br/>
->    - Clear and specific research objectives or hypotheses.<br/>
->    - Explanation of the primary and secondary endpoints of the clinical trial.<br/>
-> <br/>
-> VI. Methods:<br/>
->    A detailed description of the study design, including:<br/>
->    - Study setting and population: Description of the target population, inclusion and exclusion criteria.<br/>
->    - Randomization and blinding: Explanation of the randomization process and blinding procedures, if applicable.<br/>
->    - Intervention: Description of the experimental intervention(s) and control/comparator group(s).<br/>
->    - Data collection: Explanation of the data collection methods, tools, and measurements.<br/>
->    - Sample size calculation: Explanation of the statistical considerations and power analysis.<br/>
->    - Ethical considerations: Description of ethical approval, informed consent process, and monitoring committees.<br/>
-> <br/>
-> VII. Statistical Analysis:<br/>
->    - Description of the statistical methods used for data analysis.<br/>
->    - Explanation of the primary and secondary outcome measures and their statistical significance.<br/>
->    - Presentation of any interim analyses conducted during the trial.<br/>
-> <br/>
-> VIII. Results:<br/>
->    - Presentation of the study findings, including demographic characteristics of participants.<br/>
->    - Summary of primary and secondary outcomes and their statistical significance.<br/>
->    - Description of any adverse events or safety concerns observed during the trial.<br/>
->    - Discussion of the study limitations and potential sources of bias.<br/>
-> <br/>
-> IX. Discussion:<br/>
->    - Interpretation of the study results in the context of existing literature.<br/>
->    - Comparison of findings with previous studies.<br/>
->    - Explanation of the clinical implications and relevance of the study outcomes.<br/>
->    - Discussion of strengths and weaknesses of the study design and methodology.<br/>
->    - Recommendations for further research or future directions.<br/>
-> <br/>
-> X. Conclusion:<br/>
->    A concise summary of the key findings and their implications, along with any recommendations for clinical practice or further research.<br/>
-> <br/>
-> XI. Acknowledgments:<br/>
->    - Recognition of individuals or organizations that contributed significantly to the study.<br/>
->    - Declaration of any conflicts of interest.<br/>
-> <br/>
+> ...
 > XII. References:<br/>
 >    A comprehensive list of cited references following a specified citation style (e.g., APA, AMA).<br/>
 > <br/>
@@ -348,17 +306,7 @@ Prompt: **"Summarize the main points of Strubell's 'Energy and Policy Considerat
 
 > "Energy and Policy Considerations for Deep Learning in NLP" is a research paper written by Emma Strubell that explores the environmental impact and policy implications of deep learning in Natural Language Processing (NLP). Here are the main points of Strubell's paper:
 > 
-> Growing energy consumption of NLP models: Strubell highlights the significant increase in energy consumption associated with large-scale deep learning models used in NLP tasks. She points out that these models consume a substantial amount of electricity during both training and inference phases.
-> 
-> Environmental impact: The author discusses the environmental implications of high energy consumption, including greenhouse gas emissions and the contribution to climate change. Strubell argues that the carbon footprint of training and deploying NLP models should be considered when assessing their overall impact.
-> 
-> Energy efficiency improvements: Strubell explores potential strategies to improve the energy efficiency of NLP models, such as model distillation, knowledge distillation, and model compression techniques. These methods aim to reduce the computational resources required for training and inference while maintaining performance.
-> 
-> Trade-offs between model size and performance: Strubell examines the trade-offs between model size and performance in NLP. She discusses how increasing model size can lead to better performance but at the cost of increased energy consumption. The paper emphasizes the need for careful consideration of these trade-offs in model design.
-> 
-> Policy implications and recommendations: Strubell discusses the policy implications of energy-intensive NLP models and provides recommendations for mitigating their environmental impact. She suggests the implementation of energy efficiency standards, carbon accounting frameworks, and promoting research into green AI.
-> 
-> Societal responsibility and awareness: The author emphasizes the responsibility of researchers, practitioners, and policymakers to be aware of the energy implications of NLP models. Strubell encourages transparency in reporting energy usage and fostering a culture of sustainable AI development.
+>  ...
 > 
 > Overall, Strubell's paper raises awareness about the energy consumption and environmental impact of deep learning in NLP. It highlights the need for energy-efficient approaches, policy interventions, and collective responsibility to address the energy challenges associated with large-scale NLP models.
 
@@ -385,14 +333,7 @@ Prompt: **"Write a brief letter of recommendation for my research assistant Mary
 > <br/>
 > I am writing to highly recommend Mary Saetang for her outstanding work as a research assistant in our autism research project, particularly in the area of human subjects. Mary has been an invaluable member of our team, demonstrating exceptional skills, dedication, and professionalism throughout her time with us.<br/>
 > <br/>
-> During her tenure as a research assistant, Mary consistently displayed a strong commitment to the ethical conduct of research involving human subjects. Her meticulous attention to detail and adherence to research protocols have been instrumental in ensuring the integrity and reliability of our data collection process. Mary has demonstrated a thorough understanding of the ethical considerations and guidelines associated with working with individuals on the autism spectrum.<br/>
-> <br/>
-> Mary's interactions with participants have been exemplary. She possesses remarkable interpersonal skills, establishing a rapport and creating a comfortable environment for the individuals involved in our research. Her ability to engage with participants, adapt to their unique needs, and maintain their trust has greatly contributed to the quality of our data collection and the overall success of our project.<br/>
-> <br/>
-> Furthermore, Mary's organizational abilities and time management skills have been exceptional. She consistently met project deadlines and managed multiple tasks efficiently. Her ability to coordinate schedules, ensure participant compliance, and maintain accurate records has been instrumental in the smooth operation of our research activities.<br/>
-> <br/>
-> Beyond her technical expertise, Mary has exhibited exceptional teamwork and collaboration skills. She actively contributed to team meetings, offering valuable insights and suggestions. Her positive attitude, willingness to learn, and strong work ethic have made her an asset to our research team.<br/>
-> <br/>
+> ...
 > In summary, I wholeheartedly recommend Mary Saetang for any research position involving human subjects. Her dedication, professionalism, and aptitude for working with individuals on the autism spectrum make her a standout candidate. I am confident that she will continue to excel in her future endeavors and contribute significantly to any research project she becomes a part of.<br/>
 > <br/>
 > Should you require any further information or have any questions, please do not hesitate to contact me. Thank you for considering Mary Saetang for this opportunity.<br/>
@@ -425,11 +366,7 @@ df <- df %>%<br/>
 print(df)<br/>
 </pre></div><br/>
 > In this code, we first load the tidyverse package using `library(tidyverse)`. Then, we use the `%>%` operator from the magrittr package to perform a series of operations on the dataframe 'df'.<br/>
-> <br/>
-> The `separate()` function is used to split the 'id' column into two columns, 'subject\_id' and 'accession\_number'. The `col` parameter specifies the column to be split, while the `into` parameter defines the names of the resulting columns. The `sep` parameter specifies the delimiter (underscore in this case) used to separate the values, and the `remove` parameter is set to `FALSE` to keep the original 'id' column in the dataframe.<br/>
-> <br/>
-> Finally, the updated dataframe 'df' is printed using the `print()` function. Make sure to replace 'df' with the actual name of your dataframe in the code.<br/>
-> <br/>
+> ...
 > After running this code, the 'id' column will be split into 'subject\_id' and 'accession\_number', with the values separated by underscores.<br/>
 
 Translate texts
@@ -623,7 +560,7 @@ We, however, see all of these as at least **potential** risks:
 
 Finally, we're going to leave AI behind for one final question: 
 
-**Think about your own research, and write out how a large language model could improve or accelerate your work.**
+**Think about your own research, and write out how a large language model could improve or accelerate your work, and where it could introduce risk.**
 
 Clicking "submit" doesn't actually send this to us, and your answer isn't being evaluated in any way.
 
@@ -635,7 +572,7 @@ Clicking "submit" doesn't actually send this to us, and your answer isn't being 
 
 <div class = "answer">
 
-We don't know what your research entails, or what your intentions are for the use of AI in your career.  However, we encourage you to:
+We don't know what your research entails, or what your intentions are for the use of AI in your career.  Maybe you'll use it to help scaffold code or handle some of your unpublished writing tasks, such as drafting emails.  However, regardless of your use of large language models, we encourage you to:
 
 * Make no assumptions about the accuracy of any text generated by LLMs 
 * Disclose your use of LLMs
