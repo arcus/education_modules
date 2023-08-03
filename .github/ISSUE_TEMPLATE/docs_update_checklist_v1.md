@@ -11,9 +11,7 @@ assignees: ''
 Name of Module: {take from the title of the main markdown file for the module}
 PR for module update: #[PR number here]
 
-This is the checklist for bringing a module up to date with the [latest major version of docs.md: v1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ddc7d4a1a8659723c3f0db0a87fcc3b26a0ae071/docs.md#1) 
-Note that this link points to a specific commit and is therefore frozen in time. 
-If you want to update this checklist after pushing new changes to docs.md, be sure to update this link as well.
+This is the checklist for bringing a module up to date with the latest major version of docs.md: v1
 
 ## Summary of changes
 
@@ -28,7 +26,7 @@ The following sections provide a complete (hopefully!) list of potential changes
 Also watch specifically for the following:
 
 * [ ] current_version_description is a short, present-tense text fragment without bullets, and gives a learner-centric quick overview of version changes from the learner perspective
-* [ ] version_history contains 1-3 past versions with bulleted links to commit-specific documents, unless this is an initial version of a module, in which case version_history can be empty. For detailed instructions on how to fill out the version fields, see the [docs descriptions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md#version_history).
+* [ ] version_history contains 1-3 past versions with bulleted links to commit-specific documents, unless this is an initial version of a module, in which case version_history should say "No previous versions." For detailed instructions on how to fill out the version fields, see the [docs descriptions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md#version_history).
 
 The following should **NOT** be included in module front matter: 
 
