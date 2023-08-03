@@ -19,7 +19,7 @@ long_description: Before using Python for data analysis, there are some basics t
 estimated_time_in_minutes: 15
 
 @pre_reqs
-Learners should be familiar with 
+Learners should be able to recognize functions, methods, and variables in Python.
 @end
 
 @learning_objectives
@@ -143,7 +143,7 @@ There are a few important characteristics of lists:
     <script type="text/x-sage">
 
     produce.remove("apple")
-    print(produce)
+print(produce)
 
     </script>
     </lia-keep>
@@ -429,10 +429,7 @@ You might have noticed by now that we have used square brackets in a few differe
     `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
     [[capital_cities["Angola"] = "Luanda"]]
-    <script>
-  let input = "@input".replace(/\s+/g, '');
-  input == "capital_cities[\"Angola\"]=\"Luanda\"";
-</script>
+    [[?]] If you think the correct answer is being marked wrong, make sure you have one space on each side of the `=` sign. Python doesn't care, but this box does.
     ***
     <div class = "answer">
 
