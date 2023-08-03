@@ -240,7 +240,7 @@ The code cells above are linked, meaning that all of the cells "remember" the co
     ***
     <div class = "answer">
 
-    Lists are changeable, can be stored in variables for later use, can contain a mix of data types, and they are **ordered**, meaning that items remain in the position that they were put into the list. You can access or edit list items by value **or** position (also called the **index**).
+    Lists are changeable, can be stored in variables for later use (even though we didn't explicitly discuss it, the list on the previous page was assigned to the variable `produce`), can contain a mix of data types, and they are **ordered**, meaning that items remain in the position that they were put into the list. You can access or edit list items by value **or** position (also called the **index**).
 
     </div>
     ***
