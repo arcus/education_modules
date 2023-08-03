@@ -610,7 +610,7 @@ good_first_module: false
 
 If this was a learner's very first experience with DART, would you be happy with this module being their first impression?
 
-Required.
+Required for all modules.
 
 Must be one of `true` or `false`.
 
@@ -621,8 +621,6 @@ data_domain: EHR
 ```
 
 This module is primarily useful for or focused on this type of data.
-
-Not required.
 
 Must be one of the following:
 
@@ -639,8 +637,6 @@ data_task:
 ```
 
 What type of task/action/skill does this module teach?
-
-Not required.
 
 Must be one of the following:
 
@@ -659,8 +655,6 @@ coding_required: true
 
 True/False based on whether achieving the module's learning objectives requires coding. This includes a user running code locally or interacting with code in the module. 
 
-Required.
-
 Must be one of `true` or `false`.
 
 ### `coding_level`
@@ -670,8 +664,6 @@ coding_level: getting_started
 ```
 
 The coding level required for the module as a whole.
-
-Not required.
 
 Must be one of the following:
 
@@ -687,8 +679,6 @@ Must be one of the following:
 coding_language: r, python
 ```
 
-Not required.
-
 Must be one or more of the following:
 
 - r
@@ -702,8 +692,6 @@ Must be one or more of the following:
 ```
 sequence_name: bash_basics
 ```
-
-Not required. 
 
 Must be one of the following: 
 
@@ -735,7 +723,9 @@ Use the modules directory name (this should be the same as the name of its md fi
 @end
 ```
 
-Not a strict requirement or pre-requisite but notes how knowledge in this module will prepare the user for other concepts.
+Required for all modules. 
+
+Notes how knowledge in this module will prepare the user for other concepts.
 
 Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
 
@@ -759,7 +749,9 @@ For example:
 @end
 ```
 
-Not a strict requirement or pre-requisite but notes where user can find useful knowledge in other modules.
+Required for all modules.
+
+Notes where user can find useful knowledge in other modules.
 
 Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
 
@@ -798,6 +790,8 @@ Previous versions:
 - [x.x.x](link): that version's current version description
 @end
 ```
+
+Required for all modules.
 
 As modules are updated, every time we increment the version (major or minor only, ignore revisions) the description for the previous version (see [`current_version_description`](#current_version_description)) should be added to this `version_history` field up to a maximum of three most recent versions.
 
