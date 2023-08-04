@@ -5,7 +5,7 @@ email:    paytonk@chop.edu
 version:  1.0.0
 current_version_description: Initial version
 module_type: standard
-docs_version: 1.2.1
+docs_version: 1.3.0
 language: en
 narrator: US English Female
 mode: Textbook
@@ -34,7 +34,7 @@ After completion of this module, learners will be able to:
 @end
 
 @version_history 
- 
+ No previous versions.
 @end
 
 good_first_module: false 
