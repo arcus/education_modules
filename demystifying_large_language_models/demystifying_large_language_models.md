@@ -647,11 +647,6 @@ History:
 
 * [The manuscript describing ELIZA](https://dl.acm.org/doi/10.1145/365153.365168)
 
-Drawing Things:
-
-* [academo's 3D Vector Plotter](https://academo.org/demos/3d-vector-plotter/)
-* [NN-SVG](http://alexlenail.me/NN-SVG/index.html)
-
 Other:
 
 * [ChatGPT cites non-existent case law](https://www.forbes.com/sites/mollybohannon/2023/06/08/lawyer-used-chatgpt-in-court-and-cited-fake-cases-a-judge-is-considering-sanctions/?sh=57d3675a7c7f)
