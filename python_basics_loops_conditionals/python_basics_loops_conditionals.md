@@ -131,7 +131,7 @@ print(candy_day1)
 
 The code cell above is exactly the same as the one on the previous page. Notice that the two lines of code after the `for` statement are **indented**. This indentation is important in Python, and not just for readability! Indents indicate blocks of code, or lines of code that do a specific thing. In this case, the two lines after the `for` statement are in a different code block than the rest; they comprise the body of the loop. Indentation tells Python what statements to evaluate in what order. You also may have noticed a colon (:) at the end of the `for` statement. This tells Python that the following lines are a new code block and should be indented. All of the lines of a code block need to be indented the same number of spaces.
 
-Try changing the code cell above by removing the indentation in the line `candy_day1.append(j)`. How does the output change? Why do you think it changes the way that it does?
+Try changing the code cell above by removing the indentation before `candy_day1.append(j)` in line 5. How does the output change? Why do you think it changes the way that it does?
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
@@ -170,7 +170,7 @@ print(list(range(1, 20)))
 
 Notice that the last number listed is 19, not 20. Just like in subsetting, the first number passed to `range()` is **inclusive**, and the second is **exclusive**. And don't forget that the first position is index 0!
 
-**Your Turn**: Before running the code cell below, try to predict what number will be returned. Got a number in mind? Run the code and see if your hypothesis is correct! (**Hint**: the bracket notation below (`[ ]`) allows Python to access an element in a collection object, like a list; you saw it before when indexing and subsetting).
+**Your Turn**: Before running the code cell below, try to predict what number will be returned. Got a number in mind? Run the code and see if your hypothesis is correct! (**Hint**: the bracket notation below (`[ ]`) allows Python to access an element in a collection object, like a list; for a refresher take a look at this [introduction to lists in Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#4).)
 
 @sage
 <div class="python">
@@ -207,7 +207,7 @@ The loop in the code cell above is missing a `print()` statement to show us the 
 ***
 <div class = "answer">
 
-According to our code, we know that `j` is the square of `i`, so that's the number we need to print. If we put the `print()` statement **outside** of the loop, we only see the last number, 25, because that is the value that `j` had once the loop was completed. If we place the `print()` statement **inside** the loop, each value of `j` is printed before the next iteration of the loop. Therefore, the second option is correct.
+According to our code, we know that `j` is the square of `i`, so that's the number we need to print. If we put the `print(j)` statement **outside** of the loop, we only see the last number, 25, because that is the value that `j` had once the loop was completed. If we place the `print(j)` statement **inside** the loop, each value of `j` is printed before the next iteration of the loop. Therefore, the second option is correct.
 
 </div>
 ***
@@ -250,8 +250,8 @@ else:
 
 **Your Turn**: Try changing the value assigned to `name` from "Pythonista" to a number, and see what happens! What happens if you remove the quotation marks?
 
-Multiple conditions
-======
+### Multiple conditions
+
 
 You also aren't confined to a single "if-else" statement! You can have multiple conditions and define multiple results. The simplest way to do this is with the keyword `elif`. Run the following code cell, and then change the number assigned to `num` and see how the output changes.
 
