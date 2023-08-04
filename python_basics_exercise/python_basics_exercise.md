@@ -44,7 +44,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 ## Lesson Preparation
 
-For this module, you'll need access to Python, either on your own computer or in the cloud. For details about how to download Python or use Google Colab (a cloud-based notebook environment), you can take a look at the ["Accessing Python" section of our Demystifying Python module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md#9). 
+For this module, **you'll need access to Python, either on your own computer or in the cloud**. For details about how to download Python or use Google Colab (a cloud-based notebook environment), you can take a look at the ["Accessing Python" section of our Demystifying Python module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md#9). 
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
