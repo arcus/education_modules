@@ -29,7 +29,25 @@ After completion of this module, learners will be able to:
 - Loop through a dictionary and conditionally perform an iterative task based on the values in the dictionary. 
 
 @end
+good_first_module: false
+sequence_name: python_basics
+previous_sequential_module: python_basics_loops_conditionals
+coding_required: true
+coding_level: basic
+coding_language: python
 
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+- demystifying_python
+- python_basics_variables_functions_methods
+- python_basics_lists_dictionaries
+- python_basics_loops_conditionals
+
+@end
 @version_history 
 
 Previous versions: 
