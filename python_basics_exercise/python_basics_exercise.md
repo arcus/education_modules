@@ -25,6 +25,7 @@ Learners should be familiar with using functions, methods, variables, lists, dic
 @learning_objectives  
 After completion of this module, learners will be able to:
 
+- Run their own Python code, either on their own computer or in the cloud.
 - Loop through a dictionary and conditionally perform an iterative task based on the values in the dictionary. 
 
 @end
