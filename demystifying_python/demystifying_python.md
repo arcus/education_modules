@@ -335,7 +335,7 @@ You can download Python directly to your computer, use Anaconda to download Pyth
 
 * If you're interested in practicing more with Google Colab, check out [this notebook looking at statistics](https://colab.research.google.com/drive/1zkW5Y0SoV3gMU6sQtlgnZsfR2GIXi6F_?usp=sharing).
 
-* If you are ready to actually write some Python code, check out the [Python Basics: Functions, Methods, and Variables](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a29dbadbb4d51904d00bf4ba52b5d823b236f56d/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md) module.
+* If you are ready to actually write some Python code, check out the [Python Basics: Functions, Methods, and Variables](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md) module.
 
 ## Feedback
 
