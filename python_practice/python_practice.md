@@ -2,14 +2,21 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.1
-module_template_version: 3.0.0
+version: 1.0.2
+current_version_description: Initial version with updated links and metadata
+module_type: exercise
+docs_version: 1.2.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: Python Practice
 comment: Use the basics of Python coding, data transformation, and data visualization to work with real data. 
 long_description: When learning Python for data science, the ultimate goal is to be able to put all of the pieces together to analyze a dataset. This module aims to provide a data science task in order to help learners practice Python skills in a real-world context. 
-estimated_time: 1 hour
+estimated_time_in_minutes: 60
+
+@pre_reqs
+Learners should be familiar with the basics of Python coding, including [functions, methods, and variables](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md), [lists and dictionaries](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md), [loops and conditionals](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_loops_conditionals/python_basics_loops_conditionals.md), [data transformation with pandas](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md) and [data visualization with matplotlib and seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md). Learners should also have access to Python, either on their own computer or in the cloud. 
+@end
 
 @learning_objectives
 
@@ -21,30 +28,38 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
+coding_required: true
+coding_level: intermediate
+coding_language: python
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+- python_basics_variables_functions_methods
+- python_basics_lists_dictionaries
+- python_basics_loops_conditionals
+- pandas_transform
+- data_visualization_in_seaborn
+
+@end
+
+@version_history 
+
+Previous versions: 
+None.
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
 
 # Python Practice
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?:** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites:** Learners should be familiar with [the basics of Python coding](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md), including [data transformation with pandas](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md) and [data visualization with matplotlib and seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md). Learners should also have access to Python, either on their own computer or in the cloud. 
-
-**Learning Objectives**:
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Lesson Preparation
 
@@ -126,20 +141,7 @@ A great way to keep resources close at hand is to use cheat sheets:
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Python+Practice%22&version=1.0.1)!
-
+@feedback
 
 
 
