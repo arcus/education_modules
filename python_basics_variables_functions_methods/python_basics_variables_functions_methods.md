@@ -40,7 +40,9 @@ coding_language: python
 
 @sets_you_up_for
 
+- python_basics_dictionaries
 - python_basics_loops_conditionals
+- python_basics_exercise
 
 @end
 
@@ -62,7 +64,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 -->
 
-# Python Basics: Writing Python Code
+# Python Basics: Functions, Methods, and Variables
 
 @overview
 
