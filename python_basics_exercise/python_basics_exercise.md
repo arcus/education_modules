@@ -92,7 +92,7 @@ If this process seems intimidating, that's understandable! Learning to code take
 
 ### Stuck? 
 
-If this practice exercise was challenging, [here is a link to an example notebook]() where we go through one possible solution to the problem. If you would like to download the notebook to your own computer, you can also do that by selecting "File" and then "Download" in the Colab notebook.
+If this practice exercise was challenging, [here is a link to an example notebook](https://colab.research.google.com/github/arcus/education_modules/blob/python_basics_exercise/python_basics_exercise/python_basics_exercise.ipynb) where we go through one possible solution to the problem. If you would like to download the notebook to your own computer, you can also do that by selecting "File" and then "Download" in the Colab notebook.
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
