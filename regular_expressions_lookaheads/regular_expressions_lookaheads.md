@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
+version:  1.0.1
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
@@ -212,11 +212,11 @@ The syntax `(?:)` is used for **non-capturing groups**.  You can read more about
 
 Lookaheads use a syntax like `(?=regex)`, where the word regex is replaced by whatever regular expression you want to look ahead for.  So the second statement is correct.
 
-The syntax ` \w` actually indicates a **word character**, like a letter, number, or underscore.  You can read more about word characters and boundaries in [Regular Expressions: Anchors and Boundaries](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_anchors_boundaries/regular_expressions_anchors_boundaries.md#1).
+The syntax ` \w` actually indicates a **word character**, like a letter, number, or underscore.  You can read more about word characters and boundaries in [Regular Expressions: Anchors and Boundaries](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_boundaries_anchors/regular_expressions_boundaries_anchors.md#1).
 
 Lookaheads are ideal for overlapping patterns, and prevent missing matches when a pattern should be applied more than once to the same text.
 
-The word that describes special places in the string, like the very beginning or end, is **anchor**, not lookahead.  Again, if this is a new concept for you, check out [Regular Expressions: Anchors and Boundaries](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_anchors_boundaries/regular_expressions_anchors_boundaries.md#1).
+The word that describes special places in the string, like the very beginning or end, is **anchor**, not lookahead.  Again, if this is a new concept for you, check out [Regular Expressions: Anchors and Boundaries](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_boundaries_anchors/regular_expressions_boundaries_anchors.md).
 
 
 </div>
