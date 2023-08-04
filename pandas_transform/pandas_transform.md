@@ -38,6 +38,26 @@ After completion of this module, learners will be able to:
 
 @end
 
+good_first_module: false
+data_task: data_wrangling
+coding_required: true
+coding_level: intermediate
+coding_language: python
+
+@sets_you_up_for
+
+- python_practice
+
+@end
+
+@depends_on_knowledge_available_in 
+
+- python_basics_variables_functions_methods
+- python_basics_lists_dictionaries
+- python_basics_loops_conditionals
+
+@end
+
 @version_history 
 
 Previous versions: 
