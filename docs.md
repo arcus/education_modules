@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.3.0
+version:  1.3.1
 current_version_description: Clarified that version_history cannot be blank but sets_you_up_for and depends_on_knowledge_in can
 language: en
 narrator: UK English Female
@@ -1393,7 +1393,7 @@ ls -l -h
 We use three main approaches for interactive coding exercises: 
 
 - We can link to interactive notebooks hosted on Posit Cloud (see example notebooks in [our R notebook repository](https://github.com/arcus/education_r_environment)). This is our approach for most R modules, for example: [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) 
-- We can have interactive coding cells in modules themselves using sagemath. This is our approach for most python modules, for example: [Python Basics: Writing Code](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md)
+- We can have interactive coding cells in modules themselves using sagemath. This is our approach for most python modules, for example: [Python Basics: Functions, Methods, and Variables](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md)
 - We can also have interactive coding cells in modules using AlaSQL, which is our approach for SQL modules, for example: [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md)
 
 We don't have a way to include interactive code for git or bash. For those modules, we just instruct learners to work on their own machines.

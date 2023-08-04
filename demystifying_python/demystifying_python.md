@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.2.1
+version: 1.2.2
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
@@ -335,7 +335,7 @@ You can download Python directly to your computer, use Anaconda to download Pyth
 
 * If you're interested in practicing more with Google Colab, check out [this notebook looking at statistics](https://colab.research.google.com/drive/1zkW5Y0SoV3gMU6sQtlgnZsfR2GIXi6F_?usp=sharing).
 
-* If you are ready to actually write some Python code, check out the [Python Basics: Writing Python Code module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md#1).
+* If you are ready to actually write some Python code, check out the [Python Basics: Functions, Methods, and Variables](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md) module.
 
 ## Feedback
 
