@@ -2,14 +2,29 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.0
-module_template_version: 2.0.0
+version: 1.1.1
+current_version_description: Update highlight boxes for greater clarity, other minor changes
+module_type: standard
+docs_version: 1.2.0
 language: en
 narrator: UK English Female
+mode: Textbook
+
 title: Transform Data with pandas
+
 comment:  This is an introduction to transforming data using a Python library named pandas.
+
 long_description: This module is for learners who have some familiarity with Python, and want to learn how the pandas library can handle large tabular data sets. No previous experience with pandas is required, and only an introductory level understanding of Python is assumed.
-estimated_time: 1 hour
+
+estimated_time_in_minutes: 60
+
+@pre_reqs
+Before starting this module it is useful for you to:
+
+- have some familiarity with tabular data: data stored in an array of rows and columns.
+
+- have an introductory level exposure to coding in Python, which could be acquired in the Python Basics sequence of modules ([Functions, Methods, and Variables](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#1); [Lists and Dictionaries](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1); and [Loops and Conditional Statements](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_loops_conditionals/python_basics_loops_conditionals.md#1)).
+@end
 
 @learning_objectives  
 
@@ -23,134 +38,47 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
+data_task: data_wrangling
+coding_required: true
+coding_level: intermediate
+coding_language: python
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
 
-script: https://sagecell.sagemath.org/static/embedded_sagecell.js
+- python_practice
 
-@sage
-<script input="hidden">
-// Make *any* div with class 'python' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python',
-                       evalButtonText: 'Run python',
-                       languages: ["python"],
-                       hide: ['fullScreen', 'permalink'],
-                       });
-// Make *any* div with class 'python_run' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_run',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'true'
-                      });
-// Make *any* div with class 'python_link' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_link',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'false',
-                      linked: 'true'
-                      });
-// Make *any* div with class 'python_data_init' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_data_init',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      editor: 'codemirror-readonly',
-                      hide: ['fullScreen', 'permalink','output','evalButton'],
-                      autoeval: 'true',
-                      linked: 'true',
-                      linkKey: "data"
-                      });       
-// Make *any* div with class 'python_data' a Sage cell
-sagecell.makeSagecell({inputLocation: 'div.python_data',
-                      evalButtonText: 'Run python',
-                      languages: ["python"],
-                      hide: ['fullScreen', 'permalink'],
-                      autoeval: 'false',
-                      linked: 'true',
-                      linkKey: "data"
-                      });                
-</script>
 @end
-persistent: true
+
+@depends_on_knowledge_available_in 
+
+- python_basics_variables_functions_methods
+- python_basics_lists_dictionaries
+- python_basics_loops_conditionals
+
+@end
+
+@version_history 
+
+Previous versions: 
+
+- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4c378ba6d211f8ca852d4df9a550edb249cd3c68/pandas_transform/pandas_transform.md#1): Initial version
+
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
 -->
 
 # Transform Data with pandas
 
-<div class = "overview">
-## Overview
-
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-Before starting this module it is useful for you to:
-
-* have some familiarity with tabular data: data stored in an array of rows and columns.
-
-* have an introductory level exposure to coding in [Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_writing_python_code/python_basics_writing_python_code.md)
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Lesson Preparation
+
 @sage
 
-You will have opportunities for hands-on coding as you work your way through this module using interactive python cells.
-The interactive python cells are powered by [SageMathCell](https://sagecell.sagemath.org/). For the most part, these will appear with some code already in them, and you can run that code by clicking the **Run python** button. You can also edit the code in these cells and run your own code.
-
-
-**Give it a try:**
-<div class="python_link">
-<lia-keep>
-<script type="text/x-sage">
-m = 3
-print(m+2)
-</script>
-</lia-keep>
-</div>
-
-The cells in this module are linked, meaning if you run code in two cells on the same page, the second cell will remember anything you defined in the first.
-
-<div class="python_link">
-<lia-keep>
-<script type="text/x-sage">
-n = m**3 + m  # a double asterisk indicates 3 is the exponent of m
-print(n)
-</script>
-</lia-keep>
-</div>
-
-You can change anything you want in either cell. Once you run that code using the **Run python** button, both cells will remember it.
-
-Code will not persist from one page to the next, and you can always refresh the page to return the code (and the stored memory of the cell) to its initial state.
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-These cells will compute everything you ask them to, but will only output what you explicitly request using the `print()` command.
-
-Many cells in this lesson will initially have the `print()` line commented out with a `#`. To print the output, delete the `#` and run the cell.
-
-</div>
-
-<div class = "warning">
-<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
-
-**Navigating with arrow keys**
-
-You can navigate the pages of this course using left and right arrow keys. This means that you **cannot** use left and right arrow keys to navigate **within** a code cell.
-
-</div>
-
+@lesson_prep_python_sage
 
 ## The `pandas` Package
 
@@ -1040,16 +968,4 @@ The creators of the pandas package have [great tutorials](https://pandas.pydata.
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work. Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Transform+Data+with+pandas%22&version=1.0.2)!
+@feedback
