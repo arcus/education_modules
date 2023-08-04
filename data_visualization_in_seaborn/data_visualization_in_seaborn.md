@@ -105,6 +105,15 @@ Note that the code above won't produce any output. So if you ran it and nothing 
 
 </div>
 
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+Once you start programming with Python on your own computer, you might need to import packages that haven't been installed. Python's official package installer is called `pip`; you can read more about how to install Python packages with `pip` on the [python packaging user guide](https://packaging.python.org/en/latest/tutorials/installing-packages/). 
+
+Alternatively, if you have the [Anaconda distribution of Python](https://www.anaconda.com/), you can use `conda` to install packages. [Conda is a package management system](https://docs.conda.io/en/latest/); the Anaconda documentation has [instructions for installing packages with `conda`](https://docs.anaconda.com/free/anaconda/packages/install-packages/).
+
+</div>
+
 ### The data
 @sage
 
