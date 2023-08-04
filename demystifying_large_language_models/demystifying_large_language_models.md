@@ -304,6 +304,7 @@ Prompt: **"Make an outline for a peer-reviewed manuscript describing a clinical 
 >    A brief introduction to the research problem, highlighting the significance and rationale for conducting the clinical trial.<br/>
 > <br/>
 > ...
+> <br/>
 > XII. References:<br/>
 >    A comprehensive list of cited references following a specified citation style (e.g., APA, AMA).<br/>
 > <br/>
@@ -350,7 +351,6 @@ Prompt: **"Write a brief letter of recommendation for my research assistant Mary
 > I am writing to highly recommend Mary Saetang for her outstanding work as a research assistant in our autism research project, particularly in the area of human subjects. Mary has been an invaluable member of our team, demonstrating exceptional skills, dedication, and professionalism throughout her time with us.<br/>
 > <br/>
 > ...
-> In summary, I wholeheartedly recommend Mary Saetang for any research position involving human subjects. Her dedication, professionalism, and aptitude for working with individuals on the autism spectrum make her a standout candidate. I am confident that she will continue to excel in her future endeavors and contribute significantly to any research project she becomes a part of.<br/>
 > <br/>
 > Should you require any further information or have any questions, please do not hesitate to contact me. Thank you for considering Mary Saetang for this opportunity.<br/>
 > <br/>
@@ -383,6 +383,7 @@ print(df)<br/>
 </pre></div><br/>
 > In this code, we first load the tidyverse package using `library(tidyverse)`. Then, we use the `%>%` operator from the magrittr package to perform a series of operations on the dataframe 'df'.<br/>
 > ...
+> <br/>
 > After running this code, the 'id' column will be split into 'subject\_id' and 'accession\_number', with the values separated by underscores.<br/>
 
 Translate texts
@@ -413,7 +414,7 @@ Also, be aware that the use of LLMs to contribute language to manuscripts is exp
 
 ## Quiz
 
-Large language models respond best to well crafted input texts, or prompts.  Consider this prompts, which we gave to ChatGPT: 
+Large language models respond best to well crafted input texts, or prompts.  Consider this prompt, which we gave to ChatGPT: 
 
 Prompt: **"Create a quiz question about n-grams."**
 
@@ -445,6 +446,29 @@ N-grams aren't numerical values, algorithms, or dictionaries. The correct answer
 ***
 
 -------
+
+When prompted, **"Create a multiple choice quiz question that tests a learner's understanding of what a large language model is."**, ChatGPT gave us the following:
+
+-----
+
+Question: What is a large language model?
+
+[[ ]] A tool used for translating languages on the internet.
+[[ ]] A type of supercomputer used for complex data analysis.
+[[ ]] A neural network-based AI model capable of understanding and generating human-like text.
+[[ ]] A specialized software used by linguists to study ancient languages.
+***
+<div class = "answer">
+
+**This explanation of the answer was created by a human, not by ChatGPT.**
+
+A large language model does deal with language, but it's not (at least not primarily or exclusively) a tool used for translating language on the internet.  LLMs are models, not computers or software, so "a type of supercomputer..." is incorrect, as is "a specialized software...."  The correct answer is that a large language model is a neural network-based AI model capable of understanding and generating human-like text.  Keep in mind that the word "understanding" here does not refer to cognitive or subjective understanding, but functional predictive abilities.
+
+</div>
+***
+
+-------
+
 
 When prompted, **"Create a multiple choice question with several correct answers that asks 'which of the following are true statements about large language models'"**, ChatGPT gave us the following:
 
