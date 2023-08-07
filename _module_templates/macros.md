@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.1.0
-current_version_description: Add current_version_description and version_history metadata
+version:  2.1.0
+current_version_description: fix version piping into REDCap URL
 language: en
 narrator: UK English Female
 title: Module Macros
@@ -45,11 +45,11 @@ This version (@version): @current_version_description
 
 @make_survey_url
 <script modify="false">
-function makeURL(title, version_number, module_type) {
+function makeURL(title, version, module_type) {
   let url = new URL('https://redcap.chop.edu/surveys');
   url.searchParams.set('s', 'KHTXCXJJ93');
   url.searchParams.set('module_name', title);
-  url.searchParams.set('version_number', version_number);
+  url.searchParams.set('version', version);
   url.searchParams.set('module_type', module_type);
   return url;
 }
