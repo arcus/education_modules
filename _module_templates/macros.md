@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  2.1.0
+version:  1.2.0
 current_version_description: fix version piping into REDCap URL
 language: en
 narrator: UK English Female
