@@ -109,6 +109,13 @@ Remember that there are several ways to approach this task; there is no one righ
 
 If this practice problem was challenging, [here is a link to an example notebook](https://colab.research.google.com/github/arcus/education_modules/blob/main/python_practice/python_practice.ipynb) where we go through one possible solution to the practice problem. If you would like to download the notebook to your own computer, you can also do that by selecting "File" and then "Download" in Google Colab. 
 
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+If you are running this notebook in Google Colab, you may see a warning when you try to run the first code cell that begins "Warning: This notebook was not authored by Google." This is because the notebook is actually on GitHub, and authored by us! It's always a good idea to pause and reflect when you get warnings like this (especially when you are running code that you didn't write), but we assure you that it is safe to run the code in this notebook. 
+
+</div>
+
 We encourage you to spend some time playing around with the data before you look at the example! And remember, just because your solution doesn't look exactly like the example doesn't mean it's wrong-- there are a variety of ways you might have approached the task we gave you.  
 
 <div class = "care">
