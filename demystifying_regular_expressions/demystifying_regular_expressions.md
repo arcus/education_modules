@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
+version:  1.0.1
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
@@ -242,7 +242,7 @@ In this module, we're not going to go into the rules for making a regular expres
 
 As a final step in demystifying regular expressions, it can be helpful to introduce the online regex checker as a great resource to learn and to check your regex before trying to learn how to make your own regular expressions or use regex in SQL, R, or Python code you're writing.
 
-We like **Regex 101**, at https://www.regex101.com, but you can also search online for "regex checker" to find other, similar websites.  Regex 101 allows you to enter your regular expression as well as some sample text that you want to apply the regular expression to.  
+We like **Regex 101**, at [https://www.regex101.com](https://www.regex101.com), but you can also search online for "regex checker" to find other, similar websites.  Regex 101 allows you to enter your regular expression as well as some sample text that you want to apply the regular expression to.  
 
 @regular_expression_checker_warning
 
