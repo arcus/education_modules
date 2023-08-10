@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.2
+version: 1.0.3
 current_version_description: Initial version with updated links and metadata
 module_type: exercise
 docs_version: 1.2.0
@@ -88,14 +88,9 @@ Finding correlations and creating heat maps are not topics that you have learned
 
 ## The Data
 
-For this practice module we will be using real, publicly-available cervical cancer data from [UC Irvine's machine learning data repository](http://archive.ics.uci.edu/ml/index.php); you can download those data here: [cervical cancer risk factors data](http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv). If you have done the [R Practice Module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_practice/r_practice.md), this dataset might be familiar! 
+For this practice module we will be using real, publicly-available cervical cancer data from [UC Irvine's machine learning data repository](http://archive.ics.uci.edu/). To download the data file, [follow this link to the cervical cancer risk factors dataset](http://archive.ics.uci.edu/dataset/383/cervical+cancer+risk+factors) and click the "Download" button, which you should see on the right of the page. 
 
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
-
-The second link above will attempt to download a CSV file to your computer-- if you don't want to do that, or if your institution's permissions don't allow it, you can also access the dataset here: [https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29](https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29). If you want to download the CSV from there, just click the "Data Folder" link at the top of the page. 
-
-</div>
+If you have done the [R Practice Module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_practice/r_practice.md), this dataset might be familiar! 
 
 
 ## Practice Problem
@@ -105,7 +100,7 @@ According to the UCI Machine Learning database, the Cervical Cancer (Risk Factor
 Your Task
 =====
 
-1. Explore [the Cervical Cancer (Risk Factors) dataset](http://archive.ics.uci.edu/ml/machine-learning-databases/00383/risk_factors_cervical_cancer.csv) and 
+1. Explore [the Cervical Cancer (Risk Factors) dataset](http://archive.ics.uci.edu/dataset/383/cervical+cancer+risk+factors) and 
 2. Use the Python tools that you've learned so far to **develop a hypothesis about some likely risk factors** for a diagnosis of cervical cancer.  
 
 Remember that there are several ways to approach this task; there is no one right answer! So have fun, and good luck!
@@ -113,6 +108,13 @@ Remember that there are several ways to approach this task; there is no one righ
 ### Stuck? 
 
 If this practice problem was challenging, [here is a link to an example notebook](https://colab.research.google.com/github/arcus/education_modules/blob/main/python_practice/python_practice.ipynb) where we go through one possible solution to the practice problem. If you would like to download the notebook to your own computer, you can also do that by selecting "File" and then "Download" in Google Colab. 
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+If you are running this notebook in Google Colab, you may see a warning when you try to run the first code cell that begins "Warning: This notebook was not authored by Google." This is because the notebook is actually on GitHub, and authored by us! It's always a good idea to pause and reflect when you get warnings like this (especially when you are running code that you didn't write), but we assure you that it is safe to run the code in this notebook. 
+
+</div>
 
 We encourage you to spend some time playing around with the data before you look at the example! And remember, just because your solution doesn't look exactly like the example doesn't mean it's wrong-- there are a variety of ways you might have approached the task we gave you.  
 
