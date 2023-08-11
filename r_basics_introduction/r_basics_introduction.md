@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.2.0
+version: 1.2.1
 current_version_description: Updated with new metadata and to remove references to Binderhub
 module_type: standard
 docs_version: 1.0.0
@@ -165,7 +165,7 @@ On the bottom left is the **Console**. The console allows you to quickly run an 
 
 On the top right is the **Environment** tab set. The environment (first and most frequently used tab in the set of tabs in this pane) allows you to look at the data that's loaded into R's memory. Interacting with data in the environment tab can be a little bit like working in Excel, and we'll look at that in an upcoming exercise.
 
-Finally, on the bottom right is where you find your **Files** and related tabs. We'll be using an R Markdown files for coding exercises.
+Finally, on the bottom right is where you find your **Files** and related tabs. We'll be using R Markdown files for coding exercises.
 
 ### Quiz: The Three "R"s
 
