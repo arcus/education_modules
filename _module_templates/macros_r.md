@@ -46,7 +46,34 @@ Now you can not only work in the cloud, but also save your work.
 
 ### Option 2: Work on Your Computer
 
-If you have [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note: If you've already done this step in another module, you might have the material for this module already!
+If you have R and RStudio installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note: If you've already done this step in another module, you might have the material for this module already!
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+**Setting up RStudio the first time**
+
+If this is your first time using RStudio on your computer, you'll likely need to download and install some software, which may take a little time. 
+You'll only have to do this once, though. 
+
+First, you'll need to install both R and RStudio. 
+The [install page for RStudio](https://www.rstudio.com/products/rstudio/download/#download) includes up-to-date links for both R and RStudio and should default to the correct versions for your operating system; follow the instructions there.
+
+If you're working on a Windows computer, you'll also need Git installed. 
+If you don't already have Git on your computer, check out our instructions for how to [download Git for Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md#downloading-git).
+
+</div>
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br> 
+
+If you're running into problems with installation on your computer, the most thorough and helpful guide we know is in [Happy Git with R](https://happygitwithr.com/install-intro).
+Take a look at the detailed instructions there, and you may be able to figure out what's going wrong with your install.
+
+Installation problems can be tricky to solve, though, since so much depends on what the existing configuration of your computer is like.
+If you're stuck, reach out and ask for help! 
+
+</div>
 
 * In RStudio, open a new project (File, New Project)
 * Select Version Control, then Git
