@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.0
+version: 1.1.1
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
@@ -148,9 +148,9 @@ The next time you are trying to solve a coding problem, try using your first two
 
 For example, let's say you are new to using SQL and you have to get data out of two tables and combine them.  One table has the patient MRN and some demographic data, and the other table has patient MRN and some diagnosis information.  You want to combine the demographic data and diagnosis data into one set of results, such that you have all the information for a given patient MRN all in one row.  You might try searching for "combine information from two tables", "in SQL how can I get data out of two tables on the same individual", or "unite data from two tables in SQL".  
 
-Go ahead and search on those phrases or your own problem description.  
+Pause for a moment and go try this out for yourself. Search those phrases, or your own description of the problem. Can you identify any specific terms that might be related to this problem? Come back to this page when you're done. 
 
-Before too long, you should have figured out that the special word for that kind of work in SQL is "join".  That means that your next search question might be "how to join in SQL".  By tapping into novel jargon, your results will be much more useful and precise... which hopefully helps us not ask a question like "What year did Tom Hanks land on the moon".
+Before too long, you may have figured out that the special word for that kind of work in SQL is "join".  That means that your next search question might be "how to join in SQL".  By tapping into novel jargon, your results will be much more useful and precise... which hopefully helps us not ask a question like "What year did Tom Hanks land on the moon".
 
 ### The Right Source
 
