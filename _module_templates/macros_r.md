@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.1.0
-current_version_description: Add current_version_description and version_history metadata
+version:  1.2.0
+current_version_description: Add instructions for git install (windows users)
 language: en
 narrator: UK English Female
 title: R Module Macros
@@ -13,6 +13,7 @@ comment:  This is placeholder module to save macros used in other modules.
 
 Previous versions: 
 
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/81c8707b4fd08a93927f6a85e358ca3bca367420/_module_templates/macros_r.md#1): Add current_version_description and version_history metadata
 - [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/e983922162e6fbf971c03dc96052f68713cc72af/_module_templates/macros_r.md#1): Initial version
 @end
 
