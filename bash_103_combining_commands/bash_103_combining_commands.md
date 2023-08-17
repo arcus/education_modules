@@ -56,6 +56,8 @@ Previous versions:
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_bash.md
+
+import: https://raw.githubusercontent.com/arcus/education_modules/537-docs-v1-update-bash-combine-commands/_module_templates/macros_bash.md
 -->
 
 # Bash: Combining Commands
