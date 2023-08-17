@@ -436,6 +436,13 @@ Git and GitHub are distinct organizations with different products.  Git is a fre
 
 Some institutions pay for an enterprise version of GitHub that may be accessible only to institutional users on a secure network, and not available to the general public.  For science that can be more broadly shared, many researchers use the publicly available [GitHub.com](https://github.com), which is a website run by GitHub.  As an example of another GitHub resource, many git users find that the [GitHub Desktop](https://desktop.github.com/) software is useful for working with git on their local computers.
 
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To learn more about this topic, see our [Intro to Version Control module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_intro/git_intro.md#1).
+
+</div>
+
 ### Dependency Management
 
 If you've ever created a slide show in one computer only to have it look terrible in another, you know the problem that **dependencies** can cause.  Dependencies are technical requirements that, if not met, can cause problems.
