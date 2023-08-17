@@ -32,6 +32,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: 
+coding_required: 
 
 @sets_you_up_for
 
