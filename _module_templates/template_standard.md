@@ -31,7 +31,7 @@ After completion of this module, learners will be able to:
 - articulate the rationale for something
 @end
 
-good_first_module: false
+good_first_module: 
 
 @sets_you_up_for
 
