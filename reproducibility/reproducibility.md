@@ -497,23 +497,5 @@ To watch this (intermittently not safe for work (NSFW)) segment, [watch it direc
 * An educator [shares some harm reduction techniques for Excel users](https://education.arcus.chop.edu/excel-caveats/)
 * A former user of Excel [shares why he's moved on to using scripted code and gives helpful hints to those still using Excel](https://education.arcus.chop.edu/the-spreadsheet-betrayal/)
 
-### Mentioned in This Module
-
-* [How to Draw a Horse](https://oktop.tumblr.com/post/15352780846)
-* [Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners."](https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6)
-* [NIH Revitalization Act](https://www.ncbi.nlm.nih.gov/books/NBK236531/)
-* [NIH to balance sex in cell and animal studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5101948/)
-* [Sex as a Biological Variable: A 5-Year Progress Report and Call to Action](https://pubmed.ncbi.nlm.nih.gov/31971851/)
-* [NIH: Scientists Must Include Female Animals In Testing](https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals)
-* [Fitbits and other wearables may not accurately track heart rates in people of color](https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/)
-* [MIT Researcher: Artificial Intelligence Has a Race Problem, and We Need to Fix It](https://www.bostonmagazine.com/news/2018/02/23/artificial-intelligence-race-dark-skin-bias/)
-* [Data Sharing and Privacy: A Very Cursory Overview](https://education.arcus.chop.edu/privacy-overview/)
-* [A Data Management and Sharing Snafu](https://www.youtube.com/watch?v=66oNv_DJuPc?cc_load_policy=1)
-* [Here’s How We Made Our Study Reproducible](https://slate.com/technology/2017/07/how-to-make-a-study-reproducible.html)
-* [Arcus Resources](https://www.research.chop.edu/applications/arcus/resources)
-* [Git Commit](https://xkcd.com/1296)
-* [GitHub.com](https://github.com)
-* [GitHub Desktop](https://desktop.github.com/)
-
 ## Feedback
 @feedback
