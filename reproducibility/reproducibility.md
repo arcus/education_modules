@@ -201,16 +201,16 @@ Authors of meta-analyses benefit from reproducible practices like data and scrip
 
 Research is **generalizable** if findings can be applied to a broad population.  
 
-Historically, biomedical and social science research projects have struggled with generalizability due to unrepresentative data.  For example, the acronym **"WEIRD"** refers to the tendency of psychological studies to rely on subjects (often undergraduate students) who are disproportionately from **W**estern, **E**ducated, **I**ndustrialized, **R**ich, and **D**eveloped cultures -- cultures which, compared with the global population as a whole, are indeed weird.  
+Historically, biomedical and social science research projects have struggled with generalizability due to unrepresentative data.  For example, the acronym **"WEIRD"** refers to the tendency of psychological studies to rely on subjects (often undergraduate students) who are disproportionately from **W**estern, **E**ducated, **I**ndustrialized, **R**ich, and **D**emocratic cultures -- cultures which, compared with the global population as a whole, are indeed weird.  
 
-<div class = "history">
-<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
 
-Read more: in 2010 Joseph Henrich and others published a brief in *Nature* coining "WEIRD" to describe skewed participation in psychological studies.  The citation below includes a link to this article behind a paywall, which you may be able to access through your university or other library system.
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
+Read more: in 2010 Joseph Henrich and others published a brief in *Nature* coining "WEIRD" to describe skewed participation in psychological studies.
 <div style = "margin-left: 40px; text-indent: -40px; font-size:0.8em;">
 
-Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners." *Nature*, vol. 466, no. 7302, 2010, p. 29. *Gale In Context: Science*, https://link.gale.com/apps/doc/A230766048/SCIC?sid=summon&xid=b438bdf6.
+Henrich, J., Heine, S. & Norenzayan, A. Most people are not WEIRD. Nature 466, 29 (2010). https://doi.org/10.1038/466029a.
 
 </div>
 
