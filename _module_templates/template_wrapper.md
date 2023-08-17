@@ -31,6 +31,16 @@ After completion of this module, learners will be able to:
 - articulate the rationale for something
 @end
 
+good_first_module: 
+
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
 @version_history 
 
 Previous versions: 
