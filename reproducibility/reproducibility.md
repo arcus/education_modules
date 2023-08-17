@@ -490,7 +490,7 @@ Among many other quotable moments, Oliver drives home the point of how research 
 
 >"In science, you don't just get to cherry-pick the parts that justify what what you were going to do anyway! ... And look, this is dangerous... that is what leads people to think that manmade climate change isn't real or that vaccines cause autism...."
 
-To watch this (intermittently NSFW) segment, [watch it directly in YouTube](https://www.youtube.com/watch?v=0Rnq1NpHdmw).
+To watch this (intermittently not safe for work (NSFW)) segment, [watch it directly in YouTube](https://www.youtube.com/watch?v=0Rnq1NpHdmw).
 
 ### For Excel Users
 
