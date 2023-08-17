@@ -16,7 +16,7 @@ Previous versions:
 No Previous Versions
 @end
 
-@lesson_prep_bash
+@lesson_prep_bash_basics
 
 You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer. Please follow the instructions appropriate for the computer you are using.
 
@@ -74,7 +74,8 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 # Bash Module Macros
 
-@lesson_prep_bash
+## Lesson Preparation for Bash Basics Sequence
+@lesson_prep_bash_basics
 
 
 

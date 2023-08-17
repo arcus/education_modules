@@ -64,7 +64,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 ## Lesson Preparation
 
-@lesson_prep_bash
+@lesson_prep_bash_basics
 
 ## Inputs and Outputs
 
