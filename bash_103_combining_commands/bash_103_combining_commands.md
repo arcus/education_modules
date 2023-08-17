@@ -2,14 +2,22 @@
 
 author:   Elizabeth Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
-version: 1.3.0
-module_template_version: 2.0.1
+version: 1.3.1
+current_version_description: 
+module_type: standard
+docs_version: 1.3.1
 language: en
 narrator: UK English Female
 title:  Bash: Combining Commands
 comment:  This module will teach you how to combine two or more commands in bash to create more complicated pipelines in Bash.
 long_description: This module is for learners who can use some basic Bash commands and want to learn to how to use the output of one command as the input for another command.
-estimated_time: 30 minutes
+estimated_time_in_minutes: 30
+
+@pre_reqs
+Learners should be familiar with using a bash shell and [navigating a file system from the command line and look at the contents of a file](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md).
+
+The only commands that will be assumed are the navigation commands `cd`, `ls`, and `pwd` and `cat`, all of which are explained in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
+@end
 
 @learning_objectives
 
@@ -20,37 +28,37 @@ After completion of this module, learners will be able to:
 - Chain commands directly using the pipe `|`
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
+coding_required: true
+coding_level: intermediate
+coding_language: bash
+sequence_name: bash_basics
+previous_sequential_module: bash_command_line_102
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
+- bash_scripts
+@end
+
+@depends_on_knowledge_in
+- bash_command_line_101
+- bash_command_line_102
+@end
+
+@version_history 
+
+Previous versions: 
+
+- [x.x.x](link): that version's current version description
+- [x.x.x](link): that version's current version description
+- [x.x.x](link): that version's current version description
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
 # Bash: Combining Commands
 
-<div class = "overview">
-
-## Overview
-
-@comment
-
-**Is this module right for me?**
-
-@long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-Learners should be familiar with using a bash shell and [navigating a file system from the command line and look at the contents of a file](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md).
-
-The only commands that will be assumed are the navigation commands `cd`, `ls`, and `pwd` and `cat`, all of which are explained in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
-
+@overview
 
 ## Lesson Preparation
 
@@ -501,16 +509,4 @@ These webinars, recorded by Jacob Levernier are a great walk through the command
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash+Combining+Commands%22&version=1.0.1)!
+@feedback
