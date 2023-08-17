@@ -656,7 +656,7 @@ As we write additional modules, we may add new data tasks to this list!
 coding_required: true
 ```
 
-This field is mandatory for all modules.
+Required for all modules.
 
 True/False based on whether achieving the module's learning objectives requires coding. This includes a user running code locally or interacting with code in the module. 
 
