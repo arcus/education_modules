@@ -62,6 +62,11 @@ The [install page for RStudio](https://www.rstudio.com/products/rstudio/download
 If you're working on a Windows computer, you'll also need Git installed. 
 If you don't already have Git on your computer, check out our instructions for how to [download Git for Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md#downloading-git).
 
+Not sure if you already have Git installed or not? 
+If you know how to use [the command line](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) on your computer, try running the command `git --version`. 
+If you have Git installed, it will tell you the version number. 
+If you don't yet have Git installed, you'll get an error. 
+
 </div>
 
 <div class = "help">
