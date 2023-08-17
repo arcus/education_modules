@@ -3,7 +3,7 @@
 author:   Elizabeth Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
 version: 1.3.1
-current_version_description: Restructure Learning Objectives
+current_version_description: Restructured Learning Objectives
 module_type: standard
 docs_version: 1.3.1
 language: en
@@ -48,8 +48,8 @@ previous_sequential_module: bash_command_line_102
 
 Previous versions: 
 
-- [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/8e01732bc52d86e63c28ee8ef7abaed2c003cb3f/bash_103_combining_commands/bash_103_combining_commands.md): Correct quiz answer
-- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ed49367f50018e9c32c206d30047cee5d4e24a92/bash_103_combining_commands/bash_103_combining_commands.md: Update highlight boxes and clarify instructions
+- [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/8e01732bc52d86e63c28ee8ef7abaed2c003cb3f/bash_103_combining_commands/bash_103_combining_commands.md): Corrected quiz answer
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ed49367f50018e9c32c206d30047cee5d4e24a92/bash_103_combining_commands/bash_103_combining_commands.md: Updated highlight boxes and clarified instructions
 - [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_103_combining_commands/bash_103_combining_commands.md): Initial Version 
 @end
 
