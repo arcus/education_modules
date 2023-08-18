@@ -467,22 +467,16 @@ Sometimes it isn't clear whether something is really a dependency (this value or
 
 Dependency management is an approach that makes it easier to determine the precise set of tools and inputs required by your data collection and analysis.  Every research effort should document which tools were used and which version of each was employed.  This can be as simple as a text file, or could include installation instructions or even a file that includes the exact versions of software used in the original research, in order to create a computer environment that can perform the analysis under the original conditions.
 
-## Additional Materials
+## Additional Resources
 
 Enjoy some supplemental materials that you might find useful, and feel free to suggest additions!  
 
+<h3>Center for Open Science</h3>
+[The Center for Open Science (COS)](https://www.cos.io/services/training) is one of the foremost thought leaders in reproducible science. 
+COS has built out a collection of materials on a variety of subjects including data management, how to write reproducible methods, and sharing your research which can be accessed on the [COS Training](https://www.cos.io/services/training) page.
 
-### Center for Open Science
-
-The Center for Open Science is one of the foremost thought leaders in reproducible science.  Their materials provide rich reading material and practical support for researchers and explore topics that are beyond the scope of this training, including how incentivization is contributing to ineffective science.  
-
->The mission of the Center for Open Science (COS) is to increase openness, integrity, and reproducibility of research. We envision a future scholarly community in which the process, content, and outcomes of research are openly accessible by default. All scholarly content is preserved and connected and transparency is an aspirational good for scholarly services. All stakeholders are included and respected in the research lifecycle and share pursuit of truth as the primary incentive and motivation for scholarship. Achieving the mission requires culture change in the incentives that drive researchers’ behavior, the infrastructure that supports research, and the business models that dominate scholarly communication. This Strategic Plan is the result of collective effort by the COS team, board, and community stakeholders.
-
-<a href = "https://www.cos.io/" target="blank">COS Website</a>
-
-### John Oliver
-
-A 20-minute long clip from John Oliver's infotainment show "Last Week Tonight" includes off-color language and adult references but is a great introduction to topics including:
+<h3>John Oliver on Reproducibility</h3>
+[A 20-minute long (intermittently not safe for work) clip from John Oliver](https://www.youtube.com/watch?v=0Rnq1NpHdmw)'s infotainment show "Last Week Tonight" includes off-color language and adult references but is a great introduction to topics including:
 
 * p-hacking
 * non-publication of null findings (the "file drawer" problem)
@@ -493,13 +487,7 @@ A 20-minute long clip from John Oliver's infotainment show "Last Week Tonight" i
 * public support of science
 * industry funding
 
-Among many other quotable moments, Oliver drives home the point of how research methods have important public funding and public policy implications.  
-
->"In science, you don't just get to cherry-pick the parts that justify what what you were going to do anyway! ... And look, this is dangerous... that is what leads people to think that manmade climate change isn't real or that vaccines cause autism...."
-
-To watch this (intermittently not safe for work (NSFW)) segment, [watch it directly in YouTube](https://www.youtube.com/watch?v=0Rnq1NpHdmw).
-
-### For Excel Users
+<h3>For Excel Users</h3>
 
 * An educator [shares some harm reduction techniques for Excel users](https://education.arcus.chop.edu/excel-caveats/)
 * A former user of Excel [shares why he's moved on to using scripted code and gives helpful hints to those still using Excel](https://education.arcus.chop.edu/the-spreadsheet-betrayal/)
