@@ -2,8 +2,8 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.4.1
-current_version_description: Updated quizzes, learner outcomes, highlight boxes
+version: 1.5.0
+current_version_description: Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure
 module_type: standard
 docs_version: 1.2.0
 language: en
@@ -38,9 +38,9 @@ coding_required: false
 
 Previous versions: 
 
+- [1.4.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/2ba39cddbbe6436e18b04ff62f7dfff4406c5880/reproducibility/reproducibility.md#1): Updated quizzes, learner outcomes, highlight boxes
 - [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/bfbada6fa70c3c9ef0d027eb2e450990b7c7fac7/reproducibility/reproducibility.md#1): Update template, remove some CHOP-specific references, 
 - [1.2.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5f90b59f30dc1f29416df61773d544cf15dce83a/reproducibility/reproducibility.md#1): fix incorrect hyperlink, correct layout and typos
-- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/6e6f8fa97cdceedfff4c251f1d345864a06cc8f1/reproducibility/reproducibility.md#1): Original version
 
 @end 
 
