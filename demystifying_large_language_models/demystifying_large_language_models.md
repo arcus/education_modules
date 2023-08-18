@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
+version:  1.0.1
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.3.0
@@ -657,7 +657,7 @@ Publication Standards:
 * [Editorial on AI and authorship policies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10140602/)
 * [Elsevier's take on AI in scientific writing](https://www.elsevier.com/about/policies/publishing-ethics#:~:text=The%20Use%20of%20Generative%20AI%20and%20AI%2Dassisted%20Technologies%20in%20Scientific%20Writing)
 * [Nature's take on AI-generated content](https://www.nature.com/nature-portfolio/editorial-policies/ai)
-* [Science's take on AI-generated text](https://www.science.org/content/page/science-journals-editorial-policies#:~:text=Artificial%20intelligence%20(AI)
+* <a href = "https://www.science.org/content/page/science-journals-editorial-policies#:~:text=Artificial%20intelligence%20(AI)." target="blank">Science's take on AI-generated text</a> 
 
 ## Feedback
 
