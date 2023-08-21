@@ -2,8 +2,8 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.4.1
-current_version_description: Updated quizzes, learner outcomes, highlight boxes
+version: 1.5.0
+current_version_description: Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure
 module_type: standard
 docs_version: 1.2.0
 language: en
@@ -38,9 +38,9 @@ coding_required: false
 
 Previous versions: 
 
+- [1.4.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/2ba39cddbbe6436e18b04ff62f7dfff4406c5880/reproducibility/reproducibility.md#1): Updated quizzes, learner outcomes, highlight boxes
 - [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/bfbada6fa70c3c9ef0d027eb2e450990b7c7fac7/reproducibility/reproducibility.md#1): Update template, remove some CHOP-specific references, 
 - [1.2.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5f90b59f30dc1f29416df61773d544cf15dce83a/reproducibility/reproducibility.md#1): fix incorrect hyperlink, correct layout and typos
-- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/6e6f8fa97cdceedfff4c251f1d345864a06cc8f1/reproducibility/reproducibility.md#1): Original version
 
 @end 
 
@@ -201,16 +201,16 @@ Authors of meta-analyses benefit from reproducible practices like data and scrip
 
 Research is **generalizable** if findings can be applied to a broad population.  
 
-Historically, biomedical and social science research projects have struggled with generalizability due to unrepresentative data.  For example, the acronym **"WEIRD"** refers to the tendency of psychological studies to rely on subjects (often undergraduate students) who are disproportionately from **W**estern, **E**ducated, **I**ndustrialized, **R**ich, and **D**eveloped cultures -- cultures which, compared with the global population as a whole, are indeed weird.  
+Historically, biomedical and social science research projects have struggled with generalizability due to unrepresentative data.  For example, the acronym **"WEIRD"** refers to the tendency of psychological studies to rely on subjects (often undergraduate students) who are disproportionately from **W**estern, **E**ducated, **I**ndustrialized, **R**ich, and **D**emocratic cultures -- cultures which, compared with the global population as a whole, are indeed weird.  
 
-<div class = "history">
-<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
 
-Read more: in 2010 Joseph Henrich and others published a brief in *Nature* coining "WEIRD" to describe skewed participation in psychological studies.  The citation below includes a link to this article behind a paywall, which you may be able to access through your university or other library system.
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
+Read more: in 2010 Joseph Henrich and others published a brief in *Nature* coining "WEIRD" to describe skewed participation in psychological studies.
 <div style = "margin-left: 40px; text-indent: -40px; font-size:0.8em;">
 
-Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners." *Nature*, vol. 466, no. 7302, 2010, p. 29. *Gale In Context: Science*, https://link.gale.com/apps/doc/A230766048/SCIC?sid=summon&xid=b438bdf6.
+Henrich, J., Heine, S. & Norenzayan, A. Most people are not WEIRD. Nature 466, 29 (2010). https://doi.org/10.1038/466029a.
 
 </div>
 
@@ -436,6 +436,13 @@ Git and GitHub are distinct organizations with different products.  Git is a fre
 
 Some institutions pay for an enterprise version of GitHub that may be accessible only to institutional users on a secure network, and not available to the general public.  For science that can be more broadly shared, many researchers use the publicly available [GitHub.com](https://github.com), which is a website run by GitHub.  As an example of another GitHub resource, many git users find that the [GitHub Desktop](https://desktop.github.com/) software is useful for working with git on their local computers.
 
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To learn more about this topic, see our [Intro to Version Control module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_intro/git_intro.md#1).
+
+</div>
+
 ### Dependency Management
 
 If you've ever created a slide show in one computer only to have it look terrible in another, you know the problem that **dependencies** can cause.  Dependencies are technical requirements that, if not met, can cause problems.
@@ -460,22 +467,16 @@ Sometimes it isn't clear whether something is really a dependency (this value or
 
 Dependency management is an approach that makes it easier to determine the precise set of tools and inputs required by your data collection and analysis.  Every research effort should document which tools were used and which version of each was employed.  This can be as simple as a text file, or could include installation instructions or even a file that includes the exact versions of software used in the original research, in order to create a computer environment that can perform the analysis under the original conditions.
 
-## Additional Materials
+## Additional Resources
 
 Enjoy some supplemental materials that you might find useful, and feel free to suggest additions!  
 
+<h3>Center for Open Science</h3>
+[The Center for Open Science (COS)](https://www.cos.io/services/training) is one of the foremost thought leaders in reproducible science. 
+COS has built out a collection of materials on a variety of subjects including data management, how to write reproducible methods, and sharing your research which can be accessed on the [COS Training](https://www.cos.io/services/training) page.
 
-### Center for Open Science
-
-The Center for Open Science is one of the foremost thought leaders in reproducible science.  Their materials provide rich reading material and practical support for researchers and explore topics that are beyond the scope of this training, including how incentivization is contributing to ineffective science.  
-
->The mission of the Center for Open Science (COS) is to increase openness, integrity, and reproducibility of research. We envision a future scholarly community in which the process, content, and outcomes of research are openly accessible by default. All scholarly content is preserved and connected and transparency is an aspirational good for scholarly services. All stakeholders are included and respected in the research lifecycle and share pursuit of truth as the primary incentive and motivation for scholarship. Achieving the mission requires culture change in the incentives that drive researchers’ behavior, the infrastructure that supports research, and the business models that dominate scholarly communication. This Strategic Plan is the result of collective effort by the COS team, board, and community stakeholders.
-
-<a href = "https://www.cos.io/" target="blank">COS Website</a>
-
-### John Oliver
-
-A 20-minute long clip from John Oliver's infotainment show "Last Week Tonight" includes off-color language and adult references but is a great introduction to topics including:
+<h3>John Oliver on Reproducibility</h3>
+[A 20-minute long (intermittently not safe for work) clip from John Oliver](https://www.youtube.com/watch?v=0Rnq1NpHdmw)'s infotainment show "Last Week Tonight" includes off-color language and adult references but is a great introduction to topics including:
 
 * p-hacking
 * non-publication of null findings (the "file drawer" problem)
@@ -486,35 +487,10 @@ A 20-minute long clip from John Oliver's infotainment show "Last Week Tonight" i
 * public support of science
 * industry funding
 
-Among many other quotable moments, Oliver drives home the point of how research methods have important public funding and public policy implications.  
-
->"In science, you don't just get to cherry-pick the parts that justify what what you were going to do anyway! ... And look, this is dangerous... that is what leads people to think that manmade climate change isn't real or that vaccines cause autism...."
-
-To watch this (intermittently NSFW) segment, [watch it directly in YouTube](https://www.youtube.com/watch?v=0Rnq1NpHdmw).
-
-### For Excel Users
+<h3>For Excel Users</h3>
 
 * An educator [shares some harm reduction techniques for Excel users](https://education.arcus.chop.edu/excel-caveats/)
 * A former user of Excel [shares why he's moved on to using scripted code and gives helpful hints to those still using Excel](https://education.arcus.chop.edu/the-spreadsheet-betrayal/)
-
-### Mentioned in This Module
-
-* [How to Draw a Horse](https://oktop.tumblr.com/post/15352780846)
-* [Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners."](https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6)
-* [NIH Revitalization Act](https://www.ncbi.nlm.nih.gov/books/NBK236531/)
-* [NIH to balance sex in cell and animal studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5101948/)
-* [Sex as a Biological Variable: A 5-Year Progress Report and Call to Action](https://pubmed.ncbi.nlm.nih.gov/31971851/)
-* [NIH: Scientists Must Include Female Animals In Testing](https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals)
-* [Fitbits and other wearables may not accurately track heart rates in people of color](https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/)
-* [MIT Researcher: Artificial Intelligence Has a Race Problem, and We Need to Fix It](https://www.bostonmagazine.com/news/2018/02/23/artificial-intelligence-race-dark-skin-bias/)
-* [Data Sharing and Privacy: A Very Cursory Overview](https://education.arcus.chop.edu/privacy-overview/)
-* [A Data Management and Sharing Snafu](https://www.youtube.com/watch?v=66oNv_DJuPc?cc_load_policy=1)
-* [Here’s How We Made Our Study Reproducible](https://slate.com/technology/2017/07/how-to-make-a-study-reproducible.html)
-* [Arcus Resources](https://www.research.chop.edu/applications/arcus/resources)
-* [Git Commit](https://xkcd.com/1296)
-* [Enterprise GitHub](https://github.research.chop.edu)
-* [GitHub.com](https://github.com)
-* [GitHub Desktop](https://desktop.github.com/)
 
 ## Feedback
 @feedback
