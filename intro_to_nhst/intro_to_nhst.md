@@ -14,7 +14,7 @@ title: Introduction to Null Hypothesis Significance Testing
 
 comment:  This is an introduction to NHST for biomedical researchers. 
 
-long_description: Null Hypothesis Significance Testing (NHST) is by far the most commonly used method of statistical inference in research --- regression, ANOVAs, and t-tests are all tests from the NHST framework. This module introduces the important concepts that underlie NHST and prepares you to learn how to use NHST responsibly in your research. It does not assume any prior knowledge of statstics. 
+long_description: Null Hypothesis Significance Testing (NHST) is by far the most commonly used method of statistical inference in research --- regression, ANOVAs, and t-tests are all tests from the NHST framework. This module introduces the important concepts that underlie NHST and prepares you to learn how to use NHST responsibly in your research. It does not assume any prior knowledge of statistics. 
 
 estimated_time_in_minutes: 40
 
@@ -58,10 +58,10 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 ## What is NHST?
 
-Null hypothesis significance testing (NHST) is a system for infering information about a larger population by measuring a sample. 
+Null hypothesis significance testing (NHST) is a system for inferring information about a larger population by measuring a sample. 
 It is also called **frequentist** statistics. 
 
-Although it's not the only way to do statsitical inference, it's very widely used across many different research fields. 
+Although it's not the only way to do statistical inference, it's very widely used across many different research fields. 
 When you think of statistical tests, chances are you're thinking of the NHST framework. 
 
 Unfortunately, NHST is also notoriously difficult to understand! 
@@ -127,7 +127,7 @@ It's still an important intellectual exercise to identify what your theoretical 
 
 Often, researchers are curious about an effect, but they usually have only a general scientific hypothesis rather than a precise statistical hypothesis. 
 
-For example, let's say a reseacher is interested in predictors of asthma attacks and has identified an environmental toxin that may be associated with more attacks. 
+For example, let's say a researcher is interested in predictors of asthma attacks and has identified an environmental toxin that may be associated with more attacks. 
 The researcher's scientific hypothesis would be something like "patients with exposure to X will have more asthma attacks than patients without exposure to X." 
 Although that's a perfectly good scientific hypothesis, it's not precise enough to test statistically because "more" could mean any of a range of effects (a slight increase, a huge increase, or anything in between).
 
@@ -209,8 +209,8 @@ Their null hypothesis is that there is no difference in the number of asthma att
 Let's say they see an average of 5 attacks in the exposure group and 3 in the non-exposure group. 
 When they run their statistical test, they'll see one of two things: 
 
-- They get a $p$-value < .05, meaning the observed difference in number of asthma attacks would be very unlikely to occur if there was really no underlying difference between groups based on exposure. In other words, the difference between groups is statistically significant. 
-- Or, they get a $p$-value ≥ .05, meaning that if there really is no underlying difference between the groups the observed difference in number of asthma attacks is something that might reasonably have occured just by chance. In other words, the difference between groups is not statistically significant, and we cannot reject the null hypothesis. 
+- They get a $p$-value < .05, meaning the observed difference in number of asthma attacks would be very unlikely to occur if there was really no underlying difference between groups based on exposure. In other words, the difference between groups is **statistically significant**. 
+- They get a $p$-value ≥ .05, meaning that if there really is no underlying difference between the groups, the observed difference in number of asthma attacks is something that might reasonably have occurred just by chance. In other words, the difference between groups is **not statistically significant**, and we cannot reject the null hypothesis. 
 
 ### Type 1 and Type 2 errors
 
@@ -231,7 +231,7 @@ If they found a non-significant difference between groups ($p ≥ .05$), then th
 
 ### Confidence and power
 
-The probability of a Type 1 error (getting a significant result when the null hypothesis is in fact true) is called **confidence**, and it's actually the alpha critierion we set. 
+The probability of a Type 1 error (getting a significant result when the null hypothesis is in fact true) is called **confidence**, and it's actually the alpha criterion we set. 
 
 As a reminder, a $p$-value is the probability of the effect observed in the data (or larger effect) if the null hypothesis were indeed true. 
 And Type 1 error is when the null is true but you reject the null hypothesis, which we do whenever $p$ is less than alpha (typically .05). 
@@ -286,7 +286,7 @@ In other words, assuming that the effects they're testing for are real (the null
 
 NHST is not the only way to infer information about a population from a sample!
 
-Another popular approach is Bayesian inference, named for [Thomas Bayes](https://en.wikipedia.org/wiki/Thomas_Bayes), who forumulated the [theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) on which it is based. 
+Another popular approach is Bayesian inference, named for [Thomas Bayes](https://en.wikipedia.org/wiki/Thomas_Bayes), who formulated the [theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) on which it is based. 
 Briefly, Bayes' theorem tells us how to update the probability of something given new evidence. 
 
 <div class = "learn-more">
@@ -296,7 +296,7 @@ For a much more thorough (but approachable!) explanation of Bayes' theorem, see 
 
 </div>
 
-For example, without any more specific information, you would assume a given patient's probability of having beast cancer is about the same as the population probability of that cancer. 
+For example, without any more specific information, you would assume a given patient's probability of having breast cancer is about the same as the population probability of that cancer. 
 If you find out that she's had a mammogram that detected cancer (new evidence), how does that change your estimation of her probability of having breast cancer? 
 It still wouldn't be 100% (mammograms have false positives), but it would be higher than before you knew about the mammogram. 
 Bayes' theorem expresses precisely, in math, what the updated probability would be, given the prior probability and the strength of the evidence (how good of a test is a mammogram?). 
@@ -306,13 +306,13 @@ Then you collect your data and estimate the strength of the evidence, for exampl
 
 **In other words, Bayesian inference allows to you directly test the questions you're actually curious about in a way that is much more intutive than NHST.**
 
-Bayesian inference also provides a natural way to incoporate additional knowledge into your hypothesis test-- if you're testing a hypothesis that seems very unlikely, the evidence should need to be much stronger than if you're testing for something that's pretty common sense. 
+Bayesian inference also provides a natural way to incorporate additional knowledge into your hypothesis test-- if you're testing a hypothesis that seems very unlikely, the evidence should need to be much stronger than if you're testing for something that's pretty common sense. 
 
-For example, there is a real, published study in a mainstream journal purporting to show evidence that research participants have some abililty to sense the future before it happens ([Bem, 2011](https://pubmed.ncbi.nlm.nih.gov/21280961/)). 
-That article triggered several responses from other scientists arguing about a number of details in the statistical methods employed in the original study, including the fact that a Bayesian analysis would have allowed the analyst to specify a prior probability for being able to correctly anticipate random images, and that prior probability should have been quite low given the very reasonable skepticsm around extrasensory perception, or ESP (for example, see [Rouder & Morey, 2011](https://link.springer.com/article/10.3758/s13423-011-0088-7)). 
+For example, there is a real, published study in a mainstream journal purporting to show evidence that research participants have some ability to sense the future before it happens ([Bem, 2011](https://pubmed.ncbi.nlm.nih.gov/21280961/)). 
+That article triggered several responses from other scientists arguing about a number of details in the statistical methods employed in the original study, including the fact that a Bayesian analysis would have allowed the analyst to specify a prior probability for being able to correctly anticipate random images, and that prior probability should have been quite low given the very reasonable skepticism around extrasensory perception, or ESP (for example, see [Rouder & Morey, 2011](https://link.springer.com/article/10.3758/s13423-011-0088-7)). 
 NHST considers all hypotheses to be equally likely, whether you're replicating a well-established effect or testing something controversial. 
 
-!['Above the first panel: "Did the sun just explode? (It's night so we're not sure)". Panel 1: Two stick figures with a machine in between them. The first says, "This neutrino detector measures whether the sun has gone nova." The second says, "Then, it rolls two dice. If they both come up six, it lies to us. Otherwise, it tells the truth." And the first says, "Let's try. Detector! Has the sun gone nova?" The machine makes a "roll" noise and then repsonds, "YES." Panel 2, titled "Frequestist Statistician": The first stick figure says, "The probability of this result happening by chance is 1/36 = 0.027. Since p < 0.05, I conclude that the sun has exploded." Panel 3, titled "Bayesian Statistician": The second stick figure says, "Bet you $50 it hasn't."'](https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png "[Frequentists vs. Bayesians](https://xkcd.com/1132/) by xkcd, shared under a [CC license](https://xkcd.com/license.html).")
+!['Above the first panel: "Did the sun just explode? (It's night so we're not sure)". Panel 1: Two stick figures with a machine in between them. The first says, "This neutrino detector measures whether the sun has gone nova." The second says, "Then, it rolls two dice. If they both come up six, it lies to us. Otherwise, it tells the truth." And the first says, "Let's try. Detector! Has the sun gone nova?" The machine makes a "roll" noise and then responds, "YES." Panel 2, titled "Frequestist Statistician": The first stick figure says, "The probability of this result happening by chance is 1/36 = 0.027. Since p < 0.05, I conclude that the sun has exploded." Panel 3, titled "Bayesian Statistician": The second stick figure says, "Bet you $50 it hasn't."'](https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png "[Frequentists vs. Bayesians](https://xkcd.com/1132/) by xkcd, shared under a [CC license](https://xkcd.com/license.html).")
 
 <h3>So why aren't we all just using Bayesian inference instead of NHST?</h3>
 
@@ -360,7 +360,7 @@ There are many excellent articles about the problems associated with p-hacking a
 Here are three of our favorites: 
 
 - [The garden of forking paths: Why multiple comparisons can be a problem, even when there is no “fishing expedition” or “p-hacking” and the research hypothesis was posited ahead of time](http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf) (Gelman & Loken, 2013)
-- [Practices: Definition, Detection, and Recommendations for Better Practices](https://replicationindex.com/2015/01/24/qrps/) (Replication Index, 2015)
+- [Questionable Research Practices: Definition, Detection, and Recommendations for Better Practices](https://replicationindex.com/2015/01/24/qrps/) (Replication Index, 2015)
 - [HARKing: hypothesizing after the results are known](https://pubmed.ncbi.nlm.nih.gov/15647155) (Kerr, 1998)
 
 </div>
@@ -370,7 +370,7 @@ Here are three of our favorites:
 There are some corrections you can apply, such as the [False Discovery Rate](https://www.publichealth.columbia.edu/research/population-health-methods/false-discovery-rate) correction mentioned in the StatQuest video, to fix $p$-values that are artificially low because of p-hacking. 
 However, by far the easiest way to not p-hack is to specify what hypotheses you intend to test and exactly how you'll test them (including the sample size you'll use) *before* you look at the data.
 This is called **preregistration**.
-You can do this privately, just for your own benefit, or you can publish your pregistration publicly on a repository like the [Open Science Foundation](https://help.osf.io/article/330-welcome-to-registrations).
+You can do this privately, just for your own benefit, or you can publish your preregistration publicly on a repository like the [Open Science Foundation](https://help.osf.io/article/330-welcome-to-registrations).
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
