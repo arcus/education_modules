@@ -171,7 +171,7 @@ Which front matter items are required? It depends on the content of the module y
 | `good_first_module`                 |      X      |   X   |      X      |                                                                                           |
 | `data_domain`                       |             |       |             |                                                                                           |
 | `data_task`                         |             |       |             |                                                                                           |
-| `coding_required`                   |      X      |       |             |                                                                                           |
+| `coding_required`                   |      X      |   X   |      X      |                                                                                           |
 | `coding_level`                      |             |   X   |             |                                                                                           |
 | `coding_language`                   |             |   X   |             |                                                                                           |
 | `sequence_name`                     |             |       |             |                                                                                           |
