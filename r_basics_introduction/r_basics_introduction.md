@@ -667,6 +667,8 @@ Important: this doesn't actually change the data in the `covid_testing` data fra
 
 The `result` column holds that information. We can apply a filter to that column to only show us rows where the value in the `result` column is "positive". Click on Filter and enter "positive" in the text field that appears below the `result` header. You will now see that the bottom line of the data viewer reads "Showing 1 to [some number] of 865 entries, 17 total columns (filtered from 15,524 total entries)". So there were 865 positive tests, out of 15,524 total.
 
+To see just the number of positive tests from the first 30 days of the pandemic, you can add a second filter, this time on the `pan_day` column. Leaving the "positive" filter on `result`, click on the field below the `pan_day` column. A small histogram appears, and the range is displayed at the bottom, 0-110. Click the range and edit it to say 0-30 to filter to just the first 30 days of the pandemic. At the bottom of the data viewer, you will now see a message that reads "Showing 1 to [some number] of 137 entries, 17 total columns (filtered from 15,524 total entries)." So there were 137 positive tests in the first 30 days of the pandemic.
+
 ### More Data Types
 
 <h3>File Formats</h3>
