@@ -31,7 +31,7 @@ do
 
         #### pull the block macros. To speed up the process because not all of these are necessarily present, there is an IF statement.
 
-        for BLOCK_MACRO in "@pre_reqs" "@learning_objectives" "sets_you_up_for" "depends_on_knowledge_in" "is_parallel_to" "version_history"
+        for BLOCK_MACRO in "pre_reqs" "learning_objectives" "sets_you_up_for" "depends_on_knowledge_in" "is_parallel_to" "version_history"
         do
             if grep $BLOCK_MACRO -q $FOLDER/$FOLDER.md
             then
@@ -72,9 +72,10 @@ do
   fi
 done
 
-### Debugging code, modify as needed:
+### add a line so running the file also writes the dataframe to a csv
 
-#echo "print(df.loc[:,[\"coding_required\", \"coding_language\", \"coding_level\", \"sequence_name\", \"next_sequential_module\"]])">>$metadata_df
-#
-#
-#python assets/module_discovery_app/module_data.py
+echo "df.to_csv('assets/metadata/module_data.csv')" >> $metadata_df
+
+### run this newly created file
+
+python assets/metadata/module_data.py
