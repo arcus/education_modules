@@ -46,7 +46,7 @@ jobs:
  
           git fetch
 
-          git add *
+          git add assets/metdata/module_data.py
 
           git commit -am "update metadata records" 
  
