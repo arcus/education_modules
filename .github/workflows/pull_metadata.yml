@@ -12,7 +12,7 @@ on:
       - 'assets/**'
       - '_for_authors/**'
       - '_module_templates/**'
-      - '.github/**'
+
     
     
   #pull_request:
