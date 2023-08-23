@@ -50,6 +50,6 @@ jobs:
 
           git commit -am "update metadata records" 
  
-          git push -f origin/metadata_workflow
+          git push origin metadata_workflow
 
           
