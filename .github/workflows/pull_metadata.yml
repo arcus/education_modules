@@ -6,9 +6,9 @@ name: pull_metadata
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  merge:
+  push:
     branches: [ "main" ]
-    paths: ['Prompts/**', 'Weekly_Emails/Email_Text/**', 'scripts/**']
+    #paths: ['Prompts/**', 'Weekly_Emails/Email_Text/**', 'scripts/**']
     
   #pull_request:
   #  branches: [ "main" ]
