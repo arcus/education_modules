@@ -1,0 +1,48 @@
+# This is a workflow to pull all of the metadata from all of the modules into a single file
+# each time something is merged to main, this workflow will run and rebuild the metadata file.
+
+name: pull_metadata
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  merge:
+    branches: [ "main" ]
+    paths: ['Prompts/**', 'Weekly_Emails/Email_Text/**', 'scripts/**']
+    
+  #pull_request:
+  #  branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a set of commands using the runners shell
+      - name: Run all scripts
+        run: |
+          bash .github/scripts/process_metadata.sh
+          
+      - name: Commit newly updated files
+        run:
+          git config --local user.name actions-user
+
+          git config --local user.email "actions@github.com" 
+ 
+          git fetch
+
+          git add *
+
+          git commit -am "update metadata records" 
+ 
+          git push -f origin main
