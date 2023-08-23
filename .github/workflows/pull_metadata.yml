@@ -36,7 +36,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Check if workflow flows
         run: |
-          echo "did this work?" >> assets/metadata/module_data.py
+          bash .github/scripts/process_metadata.sh
           
       - name: Commit newly updated files
         run:
