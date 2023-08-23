@@ -44,6 +44,8 @@ jobs:
 
           git config --local user.email "actions@github.com" 
  
+          git checkout metadata_workflow
+
           git fetch
 
           git add assets/metdata/module_data.py
