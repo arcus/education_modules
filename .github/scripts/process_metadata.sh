@@ -1,7 +1,7 @@
 ### This script will create the file knowledge_graph.py containing all of the possible data for visualizing connections between modules.
 ### Run this script from the main education_modules directory
 
-metadata_df=assets/media/module_data.py
+metadata_df=assets/metadata/module_data.py
 
 ### Set up the basics of creating a pandas dataframe
 echo "import pandas as pd
@@ -14,7 +14,7 @@ echo >> $metadata_df
 
 for FOLDER in *
 do
-  if [[ -s $FOLDER/$FOLDER.md && "$FOLDER" != "a_sample_module_template" ]]      ## Only do this for folders that have a course .md file inside an identically named folder in education_modules
+  if [[ -s $FOLDER/$FOLDER.md && "$FOLDER" ]]      ## Only do this for folders that have a course .md file inside an identically named folder in education_modules
     then
       ### pull the one-line macros
       for CATEGORY in "title" "author" "estimated_time_in_minutes"
