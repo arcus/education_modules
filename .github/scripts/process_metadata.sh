@@ -75,7 +75,3 @@ done
 ### add a line so running the file also writes the dataframe to a csv
 
 echo "df.to_csv('assets/metadata/module_data.csv')" >> $metadata_df
-
-### run this newly created file
-
-python assets/metadata/module_data.py
