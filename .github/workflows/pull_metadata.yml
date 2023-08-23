@@ -43,9 +43,10 @@ jobs:
         with:
           # Semantic version range syntax or exact version of a Python version
           python-version: '3.x'
-        run:
-          python assets/metadata/module_data.py
 
+      - name: Create csv from python file
+        run: |
+          python assets/metadata/module_data.py
 
       - name: Commit newly updated files
         run:
