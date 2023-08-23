@@ -6,38 +6,18 @@ metadata_df=assets/metadata/module_data.py
 ### Set up the basics of creating a pandas dataframe
 echo "import pandas as pd
 df=pd.DataFrame()" > $metadata_df
-
-
-### Make every module a graph node
-
 echo >> $metadata_df
+
 
 for FOLDER in *
 do
   if [[ -s $FOLDER/$FOLDER.md && "$FOLDER" ]]      ## Only do this for folders that have a course .md file inside an identically named folder in education_modules
     then
-      ### pull the one-line macros
-      for CATEGORY in "title" "author" "estimated_time_in_minutes"
+      ### pull the one-line macros, process "comment" and "long_description" separately due to possible double quotes
+      for CATEGORY in  "author" "email" "version" "current_version_description" "module_type" "docs_version" "language" "narrator" "mode" "title" "estimated_time_in_minutes" "module_type" "good_first_module" "data_domain" "data_task" "coding_required" "coding_level" "coding_language" "sequence_name" "previous_sequential_module" #"comment" "long_description"
       do
         category_metadata="`grep -m 1 "$CATEGORY": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
         echo "df.loc[\"$FOLDER\", \"$CATEGORY\"] = \"$category_metadata\"" >> $metadata_df
-      done
-
-      ### good_first_module is not yet everywhere, but will be a required field 
-      if grep "good_first_module" -q $FOLDER/$FOLDER.md
-      then
-        good_first_module="`grep -m 1 good_first_module: $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
-      echo "df.loc[\"$FOLDER\", \"good_first_module\"] = \"$good_first_module\" " >> $metadata_df
-      fi
-      
-      ### Coding metadata and sequence metadata will always be in some modules but not others
-      for CATEGORY in "coding_required" "coding_language" "coding_level" "sequence_name" "next_sequential_module" "data_task" "data_domain"
-      do
-        if grep "$CATEGORY" -q $FOLDER/$FOLDER.md
-        then
-          category_metadata="`grep -m 1 "$CATEGORY": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
-        echo "df.loc[\"$FOLDER\", \"$CATEGORY\"] = \"$category_metadata\"" >> $metadata_df
-        fi
       done
 
       #### TODO Some comments and long descriptions contain double quotes... this is a problem. For the moment they have been replaced with the character +
