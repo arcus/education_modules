@@ -205,6 +205,7 @@ Use the checklist below to help make sure you're including all the front matter 
 - [ ] follows other modules in a sequence (i.e. it's not the first in the sequence)
 - [ ] is parallel to one or more other modules (i.e. covers the same content but in a different coding langauge/operating system)
 - [ ] uses the Data Carpentry genomics AMI on AWS
+- [ ] uses the learning_bash repo
 <script output="module_characteristics">"@input"</script>
 
 You'll need the following fields in your front matter (new fields added by checking boxes above will be followed by 💫): 
@@ -288,6 +289,7 @@ try {
 @add_item(1,import macros_python.md)
 @add_item(2,import macros_sql.md)
 @add_item(10,import macros_genomics.md)
+@add_item(10,import macros_bash.md)
 
 ### `author`
 
@@ -849,6 +851,13 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_genomics.md
 ```
 
+Bash modules that make use of the [learning_bash repo](https://github.com/arcus/learning_bash) will need to import the bash macros as well: 
+
+```
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_bash.md
+```
+
 Modules using interactive R, Python, or SQL will need additional import files (see the sections on [interactive coding](#including-interactive-code) for details).
 
 ## DART macros
@@ -868,6 +877,7 @@ For example, the Overview and Feedback sections of each module are created by th
 - General use macros are in the [module macros file](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md). This includes macros to generate the overview and feedback sections, as well as general-purpose javascript such as the gifPreload macro. It also loads our icon kit and style sheet. This macro file should be imported in **every module**. 
 - Macros to create the descriptions of external resources for wrapper modules are in the [wrapper macros file](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md).
 - Macros for genomics modules that use AWS are in the [genomics macros file](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_genomics.md). This includes a lesson prep macro reminding learners how to connect to their AWS instance and a reminder macro warning them that if they don't terminate their instance when they're done working they'll continue to be charged.
+- A macro providing instructions on how to download the [learning_bash repo](https://github.com/arcus/learning_bash) contents (as well as links to instructions to set up the shell in Mac and Windows) is available in the [bash macros file](https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_bash.md).
 - Macros for hands-on code in R, Python, and SQL modules are available in `macros_r.md`, `macros_python.md`, and `macros_sql.md`, respectively. SQL tables are loaded with additional files. For more details, see the sections on [including interactive code](#including-interactive-code) in this documentation.
 
 For more information about our macros and instructions for writing new ones, see the [macros instructions](https://github.com/arcus/education_modules/blob/main/macros_instructions.md).
