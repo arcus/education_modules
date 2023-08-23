@@ -7,8 +7,13 @@ name: pull_metadata
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
-    #paths: ['Prompts/**', 'Weekly_Emails/Email_Text/**', 'scripts/**']
+    branches: ["metadata_workflow"]
+    paths-ignore:
+      - 'assets/**'
+      - '_for_authors/**'
+      - '_module_templates/**'
+      - '.github/**'
+    
     
   #pull_request:
   #  branches: [ "main" ]
@@ -45,4 +50,4 @@ jobs:
 
           git commit -am "update metadata records" 
  
-          git push -f origin main
+          git push -f origin metadata_workflow
