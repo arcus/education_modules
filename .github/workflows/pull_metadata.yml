@@ -35,8 +35,9 @@ jobs:
           bash .github/scripts/process_metadata.sh
           
           # Check if any changes were made to the python file
-          any_changes=$(git diff assets/metadata/module_data.py | wc -l)
-          any_changes=$(test $any_changes -gt 0)
+
+          changes=$(git diff assets/metadata/module_data.py | wc -l)
+          any_changes=$(test $changes -gt 0)
           echo "any_changes=$any_changes" >> $GITHUB_OUTPUT
 
   # If the processed metadata has changed at all, then we update the files:
