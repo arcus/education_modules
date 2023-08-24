@@ -50,7 +50,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:  
       - env:
-        any_changes: ${{needs.process_metadata.outputs.any_changes}}
+          any_changes: ${{needs.process_metadata.outputs.any_changes}}
         run: echo $any_changes
 
 
