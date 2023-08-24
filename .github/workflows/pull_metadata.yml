@@ -38,6 +38,7 @@ jobs:
 
           changes=$(git diff assets/metadata/module_data.py | wc -l)
           any_changes=$(test $changes -gt 0)
+          echo $any_changes
           echo "any_changes=$any_changes" >> $GITHUB_OUTPUT
 
   # If the processed metadata has changed at all, then we update the files:
