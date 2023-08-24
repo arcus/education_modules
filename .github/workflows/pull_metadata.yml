@@ -40,7 +40,9 @@ jobs:
           #echo $changes
           any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
           echo the any_changes variable is now $any_changes
-          echo "any_change=$any_changes" >> "$GITHUB_OUTPUT"
+          # echo "any_change=$any_changes" >> "$GITHUB_OUTPUT"
+          # Set the output named "docs_changed"
+          Write-Host "::set-output name=any_change::$any_changes"
  
   # debugging the output relationship
   debugging:
