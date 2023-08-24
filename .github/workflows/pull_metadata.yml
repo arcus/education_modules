@@ -34,9 +34,8 @@ jobs:
         run: |
           bash .github/scripts/process_metadata.sh
           
-        # Check if any changes were made to the python file
+          # Check if any changes were made to the python file
 
-          echo "you got this far"
           changes=$(git diff assets/metadata/module_data.py | wc -l)
           echo $changes
           any_changes=$(test $changes -gt 0)
