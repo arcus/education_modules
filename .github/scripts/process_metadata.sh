@@ -1,4 +1,4 @@
-### This script will create the file knowledge_graph.py containing all of the possible data for visualizing connections between modules.
+### This script will create the file module_data.py
 ### Run this script from the main education_modules directory
 
 metadata_df=assets/metadata/module_data.py
