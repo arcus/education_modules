@@ -33,16 +33,15 @@ jobs:
       - name: Process_Metadata
         run: |
           bash .github/scripts/process_metadata.sh
+      
+      - name: check_if_changed
           
-          # Check if any changes were made to the python file
-
+          run: |
           changes=$(git diff assets/metadata/module_data.py | wc -l)
           #echo $changes
           any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
           echo the any_changes variable is now $any_changes
-          # echo "any_change=$any_changes" >> "$GITHUB_OUTPUT"
-          # Set the output named "docs_changed"
-          Write-Host "::set-output name=any_change::$any_changes"
+          echo "any_change=$any_changes" >> "$GITHUB_OUTPUT"
  
   # debugging the output relationship
   debugging:
