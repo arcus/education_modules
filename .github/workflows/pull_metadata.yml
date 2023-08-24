@@ -52,7 +52,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: check if output is found
         run: 
-          echo process_metadata.outputs.any_changes
+          echo ${{ process_metadata.outputs.any_changes }}
       - name: Set up Python 3.x
         uses: actions/setup-python@v4
         with:
