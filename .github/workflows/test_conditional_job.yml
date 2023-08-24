@@ -32,7 +32,7 @@ jobs:
   conditional_job:
     runs-on: 'ubuntu-20.04'
     needs: [ conditional_job_check_files ]
-    if: needs.conditional_job_check_files.outputs.docs_changed == 'True'
+    if: needs.conditional_job_check_files.outputs.docs_changed == 'False'
     steps:
     - shell: pwsh
-      run: echo publish docs
+      run: echo do not publish docs
