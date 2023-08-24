@@ -60,6 +60,7 @@ jobs:
     steps:
       - env:
           OUTPUT3: ${{needs.run_script.outputs.any_changes}}
+        run: echo "The any_changes variable is $OUTPUT3"
       
       - uses: actions/checkout@v3
 
