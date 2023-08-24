@@ -1,0 +1,38 @@
+name: sample
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  conditional_job_check_files:
+    runs-on: 'ubuntu-20.04'
+    # Declare outputs for next jobs
+    outputs:
+      docs_changed: ${{ steps.check_file_changed.outputs.docs_changed }}
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        # Checkout as many commits as needed for the diff
+        fetch-depth: 2
+    - shell: pwsh
+      id: check_file_changed
+      run: |
+        # Diff HEAD with the previous commit
+        $diff = git diff --name-only HEAD^ HEAD
+
+        # Check if a file under docs/ or with the .md extension has changed (added, modified, deleted)
+        $SourceDiff = $diff | Where-Object { $_ -match '^docs/' -or $_ -match '.md$' }
+        $HasDiff = $SourceDiff.Length -gt 0
+
+        # Set the output named "docs_changed"
+        Write-Host "::set-output name=docs_changed::$HasDiff"
+
+  # Run the job only with "docs_changed" equals "True"
+  conditional_job:
+    runs-on: 'ubuntu-20.04'
+    needs: [ conditional_job_check_files ]
+    if: needs.conditional_job_check_files.outputs.docs_changed == 'True'
+    steps:
+    - shell: pwsh
+      run: echo publish docs
