@@ -40,7 +40,7 @@ jobs:
           #echo $changes
           any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
           echo the any_changes variable is now $any_changes
-          echo "any_change=$any_changes" >> $GITHUB_OUTPUT
+          echo "any_change=$any_changes" >> "$GITHUB_OUTPUT"
  
   # debugging the output relationship
   debugging:
@@ -52,8 +52,9 @@ jobs:
       - env:
           any_changes: ${{needs.process_metadata.outputs.any_change}}
           my_var: testing_variable
-        run: echo the any_changes variable is $any_changes
-          echo the my_var varialbe is $my_var
+        run: 
+          echo the any_changes variable is $any_changes
+          echo the my_var variable is $my_var
 
 
   # If the processed metadata has changed at all, then we update the files:
