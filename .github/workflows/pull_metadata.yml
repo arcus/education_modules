@@ -38,7 +38,7 @@ jobs:
 
           changes=$(git diff assets/metadata/module_data.py | wc -l)
           echo $changes
-          any_changes=$(test $changes -gt 0)
+          any_changes=$[ $changes -gt 0 ]
           echo $any_changes
           echo "any_changes=$any_changes" >> $GITHUB_OUTPUT
 
