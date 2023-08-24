@@ -58,6 +58,11 @@ jobs:
         run: echo "The any_changes variable is $OUTPUT3"
       
       - uses: actions/checkout@v3
+      # Re-Process all the metadata using the script for that
+      # TODO: figure out the artifact stuff so that this script doesn't have to run twice.
+      - id: Re-Process_Metadata
+        run: |
+          bash .github/scripts/process_metadata.sh
 
       - name: Set up Python 3.x
         uses: actions/setup-python@v4
@@ -78,7 +83,7 @@ jobs:
 
           git config --local user.email "actions@github.com" 
  
-          git checkout metadata_workflow
+          #git checkout metadata_workflow
 
           git fetch
 
