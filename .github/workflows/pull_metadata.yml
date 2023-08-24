@@ -33,7 +33,7 @@ jobs:
       # Check if processing the data has changed the python file at all
       - id: check_if_changed  
         run: |
-          changes=$(git diff assets/metadata/timestamp.txt | wc -l)
+          changes=$(git diff assets/metadata/module_data.py | wc -l)
           echo  there is $changes new line
           any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
           echo the any_changes variable is now $any_changes
