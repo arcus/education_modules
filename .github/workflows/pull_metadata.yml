@@ -32,6 +32,8 @@ jobs:
       - name: Process Metadata
         run: |
           bash .github/scripts/process_metadata.sh
+          $any_changes=${ git diff assets/metadata/module_data.py | wc -l }
+          echo $any_changes
       
       - name: Set up Python 3.x
         uses: actions/setup-python@v4
@@ -64,6 +66,6 @@ jobs:
  
           git push origin metadata_workflow
 
-          
+
 
           
