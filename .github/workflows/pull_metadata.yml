@@ -51,7 +51,9 @@ jobs:
     steps:  
       - env:
           any_changes: ${{needs.process_metadata.outputs.any_change}}
+          my_var: testing_variable
         run: echo the any_changes variable is $any_changes
+          echo the my_var varialbe is $my_var
 
 
   # If the processed metadata has changed at all, then we update the files:
