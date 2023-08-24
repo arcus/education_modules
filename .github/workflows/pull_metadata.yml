@@ -34,9 +34,8 @@ jobs:
         run: |
           bash .github/scripts/process_metadata.sh
       
-      - name: check_if_changed
-          
-          run: |
+      - name: check_if_changed  
+        run: |
           changes=$(git diff assets/metadata/module_data.py | wc -l)
           #echo $changes
           any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
