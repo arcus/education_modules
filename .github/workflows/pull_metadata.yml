@@ -43,7 +43,7 @@ jobs:
           echo "any_changes=$any_changes" >> $GITHUB_OUTPUT
  
   # debugging the output relationship
-  update_data_files:
+  debugging:
     runs-on: ubuntu-latest
     needs: [ process_metadata ]
     #if: needs.process_metadata.outputs.any_changes == true
@@ -52,14 +52,7 @@ jobs:
       - env:
         any_changes: ${{needs.process_metadata.outputs.any_changes}}
         run: echo $any_changes
-        
-      - uses: actions/checkout@v3
 
-      - name: Set up Python 3.x
-        uses: actions/setup-python@v4
-        with:
-          # Semantic version range syntax or exact version of a Python version
-          python-version: '3.x'
 
   # If the processed metadata has changed at all, then we update the files:
   update_data_files:
