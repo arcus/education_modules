@@ -18,52 +18,56 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow starts with a job called "process_metadata"
-  process_metadata:
-    # The type of runner that the job will run on
+
+  run_script:
     runs-on: ubuntu-latest
-    outputs: 
-      any_change: ${{ steps.Process_Metadata.outputs.any_changes }}
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    # Map a step output to a job output
+    outputs:
+      output1: ${{ steps.step1.outputs.test }}
+      output2: ${{ steps.step2.outputs.test }}
+      output3: ${{ steps.check_if_changed.outputs.any_change }}
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a set of commands using the runners shell
-      - name: Process_Metadata
+      - id: step1
+        run: |
+          echo "test=hello" >> "$GITHUB_OUTPUT"
+      - id: step2
+        run: echo "test=world" >> "$GITHUB_OUTPUT"
+      
+      - id: Process_Metadata
         run: |
           bash .github/scripts/process_metadata.sh
       
-      - name: check_if_changed  
+      - id: check_if_changed  
         run: |
-          changes=$(git diff assets/metadata/module_data.py | wc -l)
-          #echo $changes
+          changes=$(git diff assets/metadata/timestamp.txt | wc -l)
+          echo  there is $changes new line
           any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
           echo the any_changes variable is now $any_changes
           echo "any_change=$any_changes" >> "$GITHUB_OUTPUT"
- 
-  # debugging the output relationship
-  debugging:
+  job2:
     runs-on: ubuntu-latest
-    needs: [ process_metadata ]
-    #if: needs.process_metadata.outputs.any_changes == true
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:  
+    needs: run_script
+    if: needs.run_script.outputs.output3 == 'true'  
+    steps:
       - env:
-          any_changes: ${{needs.process_metadata.outputs.any_change}}
-          my_var: testing_variable
-        run: 
-          echo the any_changes variable is $any_changes
-          echo the my_var variable is $my_var
+          OUTPUT1: ${{needs.run_script.outputs.output1}}
+          OUTPUT2: ${{needs.run_script.outputs.output2}}
+          OUTPUT3: ${{needs.run_script.outputs.output3}}
+        run: echo "Nothing was committed because the any_change variable was $OUTPUT3"
 
-
-  # If the processed metadata has changed at all, then we update the files:
-  update_data_files:
+  commit_changes:
     runs-on: ubuntu-latest
-    needs: [ process_metadata ]
-    if: needs.process_metadata.outputs.any_changes == true
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:  
+    needs: run_script
+    if: needs.run_script.outputs.output3 != 'true'  
+    steps:
+      - env:
+          OUTPUT1: ${{needs.run_script.outputs.output1}}
+          OUTPUT2: ${{needs.run_script.outputs.output2}}
+          OUTPUT3: ${{needs.run_script.outputs.output3}}
+        run: echo "$OUTPUT1 $OUTPUT2 $OUTPUT3"
+      
       - uses: actions/checkout@v3
 
       - name: Set up Python 3.x
