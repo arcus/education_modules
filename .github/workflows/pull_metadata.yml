@@ -59,8 +59,8 @@ jobs:
       
       - uses: actions/checkout@v3
 
-      - name: rerun scripts
-        run: bash .github/scripts/process_metadata.sh
+      #- name: rerun scripts
+      #  run: bash .github/scripts/process_metadata.sh
 
       - name: Set up Python 3.x
         uses: actions/setup-python@v4
