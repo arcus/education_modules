@@ -23,7 +23,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     outputs: 
-      any_changes: ${{ steps.Process_Metadata.outputs.any_changes }}
+      any_change: ${{ steps.Process_Metadata.outputs.any_changes }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -40,7 +40,7 @@ jobs:
           #echo $changes
           any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
           echo the any_changes variable is now $any_changes
-          echo "any_changes=$any_changes" >> $GITHUB_OUTPUT
+          echo "any_change=$any_changes" >> $GITHUB_OUTPUT
  
   # debugging the output relationship
   debugging:
@@ -50,8 +50,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:  
       - env:
-          any_changes: ${{needs.process_metadata.outputs.any_changes}}
-        run: echo $any_changes
+          any_changes: ${{needs.process_metadata.outputs.any_change}}
+        run: echo the any_changes variable is $any_changes
 
 
   # If the processed metadata has changed at all, then we update the files:
