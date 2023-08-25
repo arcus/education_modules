@@ -55,13 +55,13 @@ jobs:
         with:
           name: metadata_artifact
       
-      - uses: suisei-cn/actions-download-file@v1.4.0
-        id: downloadfile  # Remember to give an ID if you need the output
-        name: Download the file
-        with:
-          url: https://raw.githubusercontent.com/arcus/education_modules/metadata_workflow/assets/metadata/module_data.py
-          target: public/
-          auto-match: true
+      # - uses: suisei-cn/actions-download-file@v1.4.0
+      #   id: downloadfile  # Remember to give an ID if you need the output
+      #   name: Download the file
+      #   with:
+      #     url: https://raw.githubusercontent.com/arcus/education_modules/metadata_workflow/assets/metadata/module_data.py
+      #     target: public/
+      #     auto-match: true
 
     - id: check_if_changed  
         run: |
