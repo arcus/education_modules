@@ -45,11 +45,10 @@ jobs:
   # Check if processing the data has changed the python file at all
   check_for_changes:
     runs-on: ubuntu-latest
+    needs: run_script
         # Map a step output to a job output
     outputs:
       any_changes: ${{ steps.check_if_changed.outputs.any_change }}
-    
-    needs: run_script
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v3
