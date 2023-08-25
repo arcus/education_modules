@@ -7,7 +7,7 @@ name: pull_metadata
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: "metadata_workflow"
+    branches: "main"
     paths-ignore:
       - 'assets/**'
       - '_for_authors/**'
