@@ -33,7 +33,7 @@ jobs:
       # Check if processing the data has changed the python file at all
       - id: check_if_changed  
         run: |
-          changes=$(git diff assets/metadata/module_data.py | wc -l)
+          changes=$(git diff module_data.py assets/metadata/module_data.py | wc -l)
           echo  there is $changes new line
           any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
           echo the any_changes variable is now $any_changes
@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: metadata_artifact
-          path: assets/metadata/module_data.py
+          path: module_data.py
 
   # This message is for me to check that things ran correctly even if nothing actually updated
   nothing_to_update_message:
@@ -81,11 +81,7 @@ jobs:
 
       - name: Create csv from python file
         run: |
-          python assets/metadata/module_data.py
-      - name: Move files to temp locations
-        run: |
-          mv assets/metadata/module_data.py module_data.py
-          mv assets/metadata/module_data.csv module_data.csv
+          python module_data.py
 
       - name: Commit newly updated files
         run:

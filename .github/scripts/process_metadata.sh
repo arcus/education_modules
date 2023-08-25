@@ -1,7 +1,7 @@
 ### This script will create the file module_data.py
 ### Run this script from the main education_modules directory
 
-metadata_df=assets/metadata/module_data.py
+metadata_df=module_data.py
 
 ### Set up the basics of creating a pandas dataframe
 echo "import pandas as pd
