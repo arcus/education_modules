@@ -31,18 +31,12 @@ jobs:
         run: |
           bash .github/scripts/process_metadata.sh
       # Check if processing the data has changed the python file at all
-      - uses: suisei-cn/actions-download-file@v1.3.0
-        id: downloadfile  # Remember to give an ID if you need the output filename
-        name: Download the file
-        with:
-          url: "https://raw.githubusercontent.com/arcus/education_modules/metadata_workflow/assets/metadata/module_data.py"
-          target: public/
-      - name: did download file download?
-        run: echo `wc $${{ steps.downloadfile.body }}`
 
       - id: check_if_changed  
         run: |
-          changes=$(diff module_data.py assets/metadata/module_data.py | wc -l)
+          wget https://raw.githubusercontent.com/arcus/education_modules/metadata_workflow/assets/metadata/module_data.py -O current_data_file.txt
+          wc current_data_file.txt
+          changes=$(diff module_data.py current_data_file.txt | wc -l)
           echo  there is $changes new line
           any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
           echo the any_changes variable is now $any_changes
