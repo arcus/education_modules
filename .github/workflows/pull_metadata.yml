@@ -38,6 +38,12 @@ jobs:
           any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
           echo the any_changes variable is now $any_changes
           echo "any_change=$any_changes" >> "$GITHUB_OUTPUT"
+      - name: Upload python file as an artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: metadata_artifact
+          path: assets/metadata/module_data.py
+
   # This message is for me to check that things ran correctly even if nothing actually updated
   nothing_to_update_message:
     runs-on: ubuntu-latest
@@ -57,6 +63,11 @@ jobs:
           OUTPUT3: ${{needs.run_script.outputs.any_changes}}
         run: echo "The any_changes variable is $OUTPUT3"
       
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: metadata_artifact
+
       - uses: actions/checkout@v3
 
       - name: Set up Python 3.x
@@ -70,9 +81,11 @@ jobs:
 
       - name: Create csv from python file
         run: |
-          bash .github/scripts/process_metadata.sh
-          
           python assets/metadata/module_data.py
+      - name: Move files to temp locations
+        run: |
+          mv assets/metadata/module_data.py temp.py
+          mv assets/metadata/module_data.csv temp.csv
 
       - name: Commit newly updated files
         run:
@@ -80,9 +93,12 @@ jobs:
 
           git config --local user.email "actions@github.com" 
  
+          git fetch
+
           git checkout metadata_workflow
 
-          git fetch
+          mv temp.py assets/metadata/module_data.py
+          mv temp.csv assets/metadata/module_data.csv
 
           git add assets/metadata/module_data.py
 
