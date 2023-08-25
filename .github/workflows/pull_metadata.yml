@@ -33,7 +33,7 @@ jobs:
       
       # Check if processing the data has changed the python file at all
 
-      - id: check_if_changed  
+      - name: check_if_changed  
         run: |
           wget https://raw.githubusercontent.com/arcus/education_modules/metadata_workflow/assets/metadata/module_data.py -O current_data_file.txt
           # wc current_data_file.txt
