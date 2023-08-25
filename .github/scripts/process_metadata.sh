@@ -74,4 +74,4 @@ done
 
 ### add a line so running the file also writes the dataframe to a csv
 
-echo "df.to_csv('assets/metadata/module_data.csv')" >> $metadata_df
+echo "df.to_csv('module_data.csv')" >> $metadata_df
