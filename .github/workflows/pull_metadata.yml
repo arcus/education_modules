@@ -21,70 +21,44 @@ jobs:
 
   run_script:
     runs-on: ubuntu-latest
-
+    # Map a step output to a job output
+    outputs:
+      any_changes: ${{ steps.check_if_changed.outputs.any_change }}
     steps:
       - uses: actions/checkout@v3
       # Process all the metadata using the script for that
       - id: Process_Metadata
         run: |
           bash .github/scripts/process_metadata.sh
-      # # Check if processing the data has changed the python file at all
-      # - id: check_if_changed  
-      #   run: |
-      #     changes=$(diff module_data.py assets/metadata/module_data.py | wc -l)
-      #     echo  there is $changes new line
-      #     any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
-      #     echo the any_changes variable is now $any_changes
-      #     echo "any_change=$any_changes" >> "$GITHUB_OUTPUT"
+      # Check if processing the data has changed the python file at all
+      - id: check_if_changed  
+        run: |
+          changes=$(diff module_data.py assets/metadata/module_data.py | wc -l)
+          echo  there is $changes new line
+          any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
+          echo the any_changes variable is now $any_changes
+          echo "any_change=$any_changes" >> "$GITHUB_OUTPUT"
       - name: Upload python file as an artifact
         uses: actions/upload-artifact@v3
         with:
           name: metadata_artifact
           path: module_data.py
 
-  # Check if processing the data has changed the python file at all
-  check_for_changes:
-    runs-on: ubuntu-latest
-    needs: run_script
-        # Map a step output to a job output
-    outputs:
-      any_changes: ${{ steps.check_if_changed.outputs.any_change }}
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: metadata_artifact
-      
-      # - uses: suisei-cn/actions-download-file@v1.4.0
-      #   id: downloadfile  # Remember to give an ID if you need the output
-      #   name: Download the file
-      #   with:
-      #     url: https://raw.githubusercontent.com/arcus/education_modules/metadata_workflow/assets/metadata/module_data.py
-      #     target: public/
-      #     auto-match: true
-
-    - id: check_if_changed  
-        run: |
-          changes=$(diff module_data.py downloadfile | wc -l)
-          echo  there is $changes new line
-          any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
-          echo the any_changes variable is now $any_changes
-          echo "any_change=$any_changes" >> "$GITHUB_OUTPUT"
-  
   # This message is for me to check that things ran correctly even if nothing actually updated
   nothing_to_update_message:
     runs-on: ubuntu-latest
-    needs: check_for_changes
-    if: needs.check_for_changes.outputs.any_changes != 'true'  
+    needs: run_script
+    if: needs.run_script.outputs.any_changes != 'true'  
     steps:
       - env:
           OUTPUT3: ${{needs.run_script.outputs.any_changes}}
         run: echo "Nothing was committed because the any_change variable was $OUTPUT3"
-  # If changes were made to the python file, then we want to push those changes
+  
+  # If changes were made to the python file, then we want to push those changes and make a new csv
   commit_changes:
     runs-on: ubuntu-latest
-    needs: check_for_changes
-    if: needs.check_for_changes.outputs.any_changes == 'true'  
+    needs: run_script
+    if: needs.run_script.outputs.any_changes == 'true'  
     steps:
       - env:
           OUTPUT3: ${{needs.run_script.outputs.any_changes}}
