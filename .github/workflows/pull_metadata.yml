@@ -69,7 +69,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: metadata_artifact
-          path: module_data.py
 
       - name: check that artifact downloaded
         run: |
