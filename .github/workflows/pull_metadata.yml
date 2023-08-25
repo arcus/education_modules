@@ -84,8 +84,8 @@ jobs:
           python assets/metadata/module_data.py
       - name: Move files to temp locations
         run: |
-          mv assets/metadata/module_data.py temp.py
-          mv assets/metadata/module_data.csv temp.csv
+          mv assets/metadata/module_data.py module_data.py
+          mv assets/metadata/module_data.csv module_data.csv
 
       - name: Commit newly updated files
         run:
@@ -97,9 +97,8 @@ jobs:
 
           git checkout metadata_workflow
 
-          mv -f temp.py temp.csv assets/metadata/
+          mv -f module_data.py module_data.csv assets/metadata/
           
-
           git add assets/metadata/module_data.py
 
           git add assets/metadata/module_data.csv
