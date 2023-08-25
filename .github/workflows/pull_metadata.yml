@@ -97,8 +97,8 @@ jobs:
 
           git checkout metadata_workflow
 
-          mv temp.py assets/metadata/module_data.py
-          mv temp.csv assets/metadata/module_data.csv
+          mv -f temp.py assets/metadata/module_data.py
+          mv -f temp.csv assets/metadata/module_data.csv
 
           git add assets/metadata/module_data.py
 
