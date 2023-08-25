@@ -38,8 +38,8 @@ jobs:
           url: "https://cdn.jsdelivr.net/npm/workbox-sw@5.1.3/build/workbox-sw.min.js"
           target: public/
       - name: did download file download?
-        run: wc downloadfile
-        
+        run: echo $${{ steps.downloadfile.outputs.filename }}
+
       - id: check_if_changed  
         run: |
           changes=$(diff module_data.py assets/metadata/module_data.py | wc -l)
