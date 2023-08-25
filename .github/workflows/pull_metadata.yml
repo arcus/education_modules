@@ -67,6 +67,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: metadata_artifact
+          path: module_data.py
 
       - uses: actions/checkout@v3
 
