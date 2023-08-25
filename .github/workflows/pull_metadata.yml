@@ -35,7 +35,7 @@ jobs:
         id: downloadfile  # Remember to give an ID if you need the output filename
         name: Download the file
         with:
-          url: "https://cdn.jsdelivr.net/npm/workbox-sw@5.1.3/build/workbox-sw.min.js"
+          url: "https://raw.githubusercontent.com/arcus/education_modules/metadata_workflow/assets/metadata/module_data.py"
           target: public/
       - name: did download file download?
         run: echo $${{ steps.downloadfile.outputs.filename }}
