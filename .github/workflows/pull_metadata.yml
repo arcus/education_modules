@@ -50,6 +50,7 @@ jobs:
       any_changes: ${{ steps.check_if_changed.outputs.any_change }}
     
     needs: run_script
+    steps:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
