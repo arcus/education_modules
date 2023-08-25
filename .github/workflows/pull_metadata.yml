@@ -38,7 +38,7 @@ jobs:
           url: "https://raw.githubusercontent.com/arcus/education_modules/metadata_workflow/assets/metadata/module_data.py"
           target: public/
       - name: did download file download?
-        run: echo `wc $${{ steps.downloadfile }}`
+        run: echo `wc $${{ steps.downloadfile.body }}`
 
       - id: check_if_changed  
         run: |
