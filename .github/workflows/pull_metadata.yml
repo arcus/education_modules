@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       # Process all the metadata using the script for that
-      - id: Process_Metadata
+      - name: Process Metadata
         run: |
           bash .github/scripts/process_metadata.sh
       
@@ -56,6 +56,7 @@ jobs:
     steps:
       - env:
           OUTPUT3: ${{needs.run_script.outputs.any_changes}}
+        name: Nothing was committed
         run: echo "Nothing was committed because the any_change variable was $OUTPUT3"
   
   # If changes were made to the python file, then we want to push those changes and make a new csv
