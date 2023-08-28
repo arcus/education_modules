@@ -47,6 +47,13 @@ jobs:
         with:
           name: metadata_artifact
           path: module_data.py
+  debugging:
+    runs-on: ubuntu-latest
+    needs: run_script
+    steps:
+      - env:
+          OUTPUT3: ${{needs.run_script.outputs.any_changes}}
+        run: echo "The output of the previous step was $OUTPUT3"
 
   # This message is for me to check that things ran correctly even if nothing actually updated
   nothing_to_update_message:
