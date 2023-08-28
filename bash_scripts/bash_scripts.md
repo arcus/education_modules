@@ -59,9 +59,8 @@ previous_sequential_module: bash_conditionals_loops
 
 Previous versions: 
 
-- [x.x.x](link): that version's current version description
-- [x.x.x](link): that version's current version description
-- [x.x.x](link): that version's current version description
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/bash_scripts/bash_scripts.md): Improved instructions for downloading learning_bash repository.
+- [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/): Initial version.
 @end
 
 
