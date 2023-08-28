@@ -1,0 +1,115 @@
+# This is a workflow to pull all of the metadata from all of the modules into a single file
+# each time something is merged to main, this workflow will run and rebuild the metadata file.
+
+name: pull_metadata
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: "main"
+    paths-ignore:
+      - 'assets/**'
+      - '_for_authors/**'
+      - '_module_templates/**'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  run_script:
+    runs-on: ubuntu-latest
+    # Map a step output to a job output
+    outputs:
+      any_changes: ${{ steps.check_if_changed.outputs.any_change }}
+    steps:
+      - uses: actions/checkout@v3
+      # Process all the metadata using the script for that
+      - name: Process Metadata
+        run: |
+          bash .github/scripts/process_metadata.sh
+      
+      # Check if processing the data has changed the python file at all
+
+      - name: check_if_changed  
+        run: |
+          wget https://raw.githubusercontent.com/arcus/education_modules/metadata_workflow/assets/metadata/module_data.py -O current_data_file.txt
+          # wc current_data_file.txt
+          changes=$(diff module_data.py current_data_file.txt | wc -l)
+          # echo  there is $changes new line
+          any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
+          # echo the any_changes variable is now $any_changes
+          echo "any_change=$any_changes" >> "$GITHUB_OUTPUT"
+      - name: Upload python file as an artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: metadata_artifact
+          path: module_data.py
+
+  # This message is for me to check that things ran correctly even if nothing actually updated
+  nothing_to_update_message:
+    runs-on: ubuntu-latest
+    needs: run_script
+    if: needs.run_script.outputs.any_changes != 'true'  
+    steps:
+      - env:
+          OUTPUT3: ${{needs.run_script.outputs.any_changes}}
+        name: Nothing was committed
+        run: echo "Nothing was committed because the any_change variable was $OUTPUT3"
+  
+  # If changes were made to the python file, then we want to push those changes and make a new csv
+  commit_changes:
+    runs-on: ubuntu-latest
+    needs: run_script
+    if: needs.run_script.outputs.any_changes == 'true'  
+    steps:
+      - env:
+          OUTPUT3: ${{needs.run_script.outputs.any_changes}}
+        run: echo "The any_changes variable is $OUTPUT3"
+      
+      - uses: actions/checkout@v3
+      
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: metadata_artifact
+
+      - name: check that artifact downloaded
+        run: |
+          wc module_data.py
+
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v4
+        with:
+          # Semantic version range syntax or exact version of a Python version
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip pandas
+
+      - name: Create csv from python file
+        run: |
+          python module_data.py
+
+      - name: Commit newly updated files
+        run:
+          git config --local user.name actions-user
+
+          git config --local user.email "actions@github.com" 
+ 
+          git fetch
+
+          git checkout metadata_workflow
+
+          mv -f module_data.py module_data.csv assets/metadata/
+          
+          git add assets/metadata/module_data.py
+
+          git add assets/metadata/module_data.csv
+
+          git commit -am "update metadata records" 
+ 
+          git push origin metadata_workflow
+
