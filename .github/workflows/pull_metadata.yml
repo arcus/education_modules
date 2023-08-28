@@ -36,11 +36,11 @@ jobs:
       - name: check_if_changed  
         run: |
           wget https://raw.githubusercontent.com/arcus/education_modules/metadata_workflow/assets/metadata/module_data.py -O current_data_file.txt
-          # wc current_data_file.txt
+          wc current_data_file.txt
           changes=$(diff module_data.py current_data_file.txt | wc -l)
-          # echo  there is $changes new line
+          echo  there is $changes new line
           any_changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
-          # echo the any_changes variable is now $any_changes
+          echo the any_changes variable is now $any_changes
           echo "any_change=$any_changes" >> "$GITHUB_OUTPUT"
       - name: Upload python file as an artifact
         uses: actions/upload-artifact@v3
