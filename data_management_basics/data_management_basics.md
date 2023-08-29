@@ -1,14 +1,18 @@
 <!--
 author:   Ene Belleh
 email:    bellehe@chop.edu
-version: 1.0.1
-module_template_version: 3.0.0
+version: 1.1.0
+current_version_description: Fixed mermaidchart error that was causing diagram to not render; updated metadata
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: US English Female
+mode: Textbook
 title: Research Data Management Basics
 comment: Learn the basics about research data management.
 long_description:  If you conduct research or work with research data or researchers, it's likely that research data management topics affect you.  Learn what research data management is, how to think about it in a structured way, and understand its scientific importance.
-estimated_time: 40 minutes
+estimated_time_in_minutes: 40
+pre_reqs:  The only pre-requisite suggested for this module is experience working in research in any capacity.
 
 @learning_objectives  
 
@@ -20,36 +24,30 @@ After completion of this module, learners will be able to:
 - Give examples of research data management tasks within various stages of the research lifecycle
 
 @end
+good_first_module: true
+coding_required: false
+@sets_you_up_for
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+@end
+@depends_on_knowledge_available_in
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@end
 
+@version_history
+
+Previous versions: 
+
+* [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/data_management_basics/data_management_basics.md):  First version with improved feedback survey
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 script: https://cdn.jsdelivr.net/npm/mermaid@9.4.3/dist/mermaid.min.js
 
 -->
 
 # Research Data Management Basics
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-The only pre-requisite suggested for this module is experience working in research in any capacity.
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
-
+@overview
 
 ## Research Data Management
 
@@ -284,21 +282,5 @@ The [data sharing policies and helpful information](https://sharing.nih.gov/data
 
 We also recommend the NIH's [guidance around writing a Data Management and Sharing Plan](https://sharing.nih.gov/data-management-and-sharing-policy/planning-and-budgeting-for-data-management-and-sharing/writing-a-data-management-and-sharing-plan), which they now require for all grants planning to generate scientific data.
 
-
-
-
 ## Feedback
-
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Research+Data+Management+Basics%22&version=1.0.1)!
+@feedback
