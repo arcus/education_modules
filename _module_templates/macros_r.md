@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.2.0
-current_version_description: Add instructions for git install (windows users)
+version:  1.3.0
+current_version_description: Add instructions for avoiding the use of git if desired
 language: en
 narrator: UK English Female
 title: R Module Macros
@@ -13,6 +13,7 @@ comment:  This is placeholder module to save macros used in other modules.
 
 Previous versions: 
 
+- [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/_module_templates/macros_r.md): Add instructions for git install (windows users)
 - [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/81c8707b4fd08a93927f6a85e358ca3bca367420/_module_templates/macros_r.md#1): Add current_version_description and version_history metadata
 - [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/e983922162e6fbf971c03dc96052f68713cc72af/_module_templates/macros_r.md#1): Initial version
 @end
@@ -44,9 +45,16 @@ Click on "Save a Permanent Copy" if you want to save any changes to your version
 
 Now you can not only work in the cloud, but also save your work.
 
-### Option 2: Work on Your Computer
+### Option 2: Work on Your Computer, Using Git
 
-If you have R and RStudio installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how.  Note: If you've already done this step in another module, you might have the material for this module already!
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
+If you use Git or would like to, or you want to keep up to date with improvements we make to our R instructions, you will want to use this option.  There's a third option for those who are not interested in getting access to updates and just want to download the current version of our R instruction.
+
+</div>
+
+If you have R and RStudio installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how, using Git.  Note: If you've already done this step in another module, you might have the material for this module already!
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -123,6 +131,51 @@ If you already completed this work for a previous module, and it's been a while 
 If you're pulling branches after having worked in other R modules, you might have made local changes (for example, when you filled in exercise code) that will be overwritten by pulling the latest version.  If you want to save your changes, consider making a copy of any exercise files and naming them something new.  For example, if you have already worked in the `r_basics_example` exercise files, you might want to save your version of `example_exercises.Rmd` to `my_example_exercises.Rmd`.  That way, you can pull down the latest version of code, overwriting `example_exercises.Rmd` while holding on to your changes in the new file.
 
 </div>
+
+### Option 3: Work on Your Computer, Avoiding Git
+
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
+If you use Git or would like to, or you want to keep up to date with improvements we make to our R instructions, you will want to use Option 2, not this option.  This option exists for those who are not interested in getting access to updates and just want to download the current version of our R instruction.
+
+</div>
+
+If you have R and RStudio installed already on your local computer, you might be interested in simply downloading our sample code to your computer. Here's how to do that, avoiding the use of Git.  Note: If you've already done this step in another module, you might have the material for this module already!
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+**Setting up RStudio the first time**
+
+If this is your first time using RStudio on your computer, you'll likely need to download and install some software, which may take a little time. 
+You'll only have to do this once, though. 
+
+</div>
+
+First, you'll need to install both R and RStudio. 
+The [install page for RStudio](https://www.rstudio.com/products/rstudio/download/#download) includes up-to-date links for both R and RStudio and should default to the correct versions for your operating system; follow the instructions there.
+
+Second, you'll want to download our R instructional files.  To do that:
+
+* Go to https://github.com/arcus/education_r_environment and click on the green "Code" button (see below). 
+* A menu will appear below.  Choose "Download ZIP" (see below).
+
+<img src="https://github.com/arcus/education_r_environment/blob/main/media/download_zip.png?raw=true" alt="Git button menu with choices to pull and push branches." style = "border: 1px solid rgb(var(--color-highlight)); max-width:400px;">
+
+A compressed (zip) file will be saved wherever your browser is set up to save (for example, many people have their browser use a folder called Downloads).
+
+Find this file, which should have a title like `education_r_environment-main.zip` and move it to wherever you want in your file system.  Once you have it where you want it, you can "unzip" that file by double-clicking it.  You'll now have a folder/directory that's titled something like `education_r_environment-main`, and if you want, you can change the title of that folder/directory.
+
+Now, open RStudio.  
+
+* In RStudio, open a new project (File, New Project)
+* Choose "Existing Directory"
+* Use the File Browser to browse to the location of your directory (the one you created by unzipping the zipped file).
+* Click to select the "Open in new session" checkbox
+* Click "Create Project"
+* In the file area to the lower right, you'll see, among multiple choices, the folder called "@r_file".  That's the code for this module!
+
 
 @end
 -->
