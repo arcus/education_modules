@@ -3,7 +3,7 @@ author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
 version: 1.2.0
 current_version_description: Update authorship, correct typo, add metadata
-docs_version: 1.0.0
+docs_version: 2.0.0
 module_type: standard
 language: en
 narrator: US English Male
