@@ -25,7 +25,7 @@ link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/sty
 
 script: https://kit.fontawesome.com/83b2343bd4.js
 
-script: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+script: https://cdn.jsdelivr.net/npm/mermaid@9.4.3/dist/mermaid.min.js
 
 -->
 
