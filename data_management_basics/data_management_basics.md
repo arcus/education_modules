@@ -12,7 +12,9 @@ title: Research Data Management Basics
 comment: Learn the basics about research data management.
 long_description:  If you conduct research or work with research data or researchers, it's likely that research data management topics affect you.  Learn what research data management is, how to think about it in a structured way, and understand its scientific importance.
 estimated_time_in_minutes: 40
-pre_reqs:  The only pre-requisite suggested for this module is experience working in research in any capacity.
+@pre_reqs
+The only pre-requisite suggested for this module is experience working in research in any capacity.
+@end
 
 @learning_objectives  
 
