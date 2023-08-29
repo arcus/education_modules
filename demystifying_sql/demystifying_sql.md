@@ -46,7 +46,7 @@ sequence_name: sql
 
 Previous versions: 
 
-* [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/demystifying_sql/demystifying_sql.md:  Update highlight boxes
+* [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/demystifying_sql/demystifying_sql.md):  Update highlight boxes
 * [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/demystifying_sql/demystifying_sql.md): Original version with minor formatting updates and improved feedback form link 
 @end
 
@@ -65,7 +65,7 @@ That definition above itself introduces a new term.  So, what's a **relational d
 
 Let's start with the word "**database**".  A database is a data storage solution that stores data in objects called tables.  Tables are objects comprised of columns (sometimes called 'fields') and rows (similar to data in an Excel spreadsheet or .csv file).
 
-When we add "**relational**" as a modifier, we mean that tables within the database are **related** to one another by columns they have in common (like a customer or patient id column that appears in several different tables).  
+When we add "**relational**" as a modifier, we mean that tables within the database are **related** to one another by columns they have in common (like a customer or patient id column that appears in several different tables). Usually, with a relational database, you will use several tables to answer a question, and use information from one table to look up information in the next, like a series of clues.
 
 Consider, for example, these three sample tables.  They are rectangular (or tabular) in shape and organize data in rows and columns.  Can you identify the column in common?  How could you figure out how many times Prairie Dawn had an encounter with `ed_ind` equal to 1?
 
@@ -100,6 +100,15 @@ Consider, for example, these three sample tables.  They are rectangular (or tabu
 | ABC123     | 491272    | 8000412   | 2021-05-15 |  
 | ABC123     | 491272  | 7960004   | 2022-02-01 |
 | SMLE321    | 223618    | 8000412 | 2020-08-19 |
+
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+If the idea of relational databases with tables that refer to one another feels confusing, you're not alone.  In our example above, we discover the patient Prairie Dawn in our `demographics` table, and note that this patient has a patient_id of SMLE321.  We can then use this patient ID to find **related** data in other tables.  For example, in the `encounters` table and in the `medication_order` table, we never see the patient name "Prairie Dawn", but we **do** find her ID, SMLE321.  
+
+Relational databases work by using data fields like IDs to allow us to find out data about a patient, or customer, or purchase order, or other thing we're interested in, by following the matching ID into other, **related** tables.
+
+</div>
 
 The primary benefit of the **relational database** model is the ability to use columns containing the same data (things like patient IDs) to create complex reports combining information from multiple tables.  This enables users of the data to derive specific information from the data in highly customizable ways.
 
