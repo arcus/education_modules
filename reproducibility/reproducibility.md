@@ -5,7 +5,7 @@ email:    paytonk@chop.edu
 version: 1.5.0
 current_version_description: Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure
 module_type: standard
-docs_version: 1.2.0
+docs_version: 2.0.0
 language: en
 narrator: US English Female
 mode: Textbook
@@ -210,7 +210,7 @@ Historically, biomedical and social science research projects have struggled wit
 Read more: in 2010 Joseph Henrich and others published a brief in *Nature* coining "WEIRD" to describe skewed participation in psychological studies.
 <div style = "margin-left: 40px; text-indent: -40px; font-size:0.8em;">
 
-Henrich, J., Heine, S. & Norenzayan, A. Most people are not WEIRD. Nature 466, 29 (2010). https://doi.org/10.1038/466029a.
+Henrich, J., Heine, S. & Norenzayan, A. Most people are not WEIRD. Nature 466, 29 (2010). [https://doi.org/10.1038/466029a](https://doi.org/10.1038/466029a).
 
 </div>
 
