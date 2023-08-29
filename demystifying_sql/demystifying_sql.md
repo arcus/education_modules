@@ -1,14 +1,22 @@
 <!--
-author:   Peter Camacho
+author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.1.0
-module_template_version: 2.0.0
+version: 1.2.0
+current_version_description: Update authorship, correct typo, add metadata
+docs_version: 1.0.0
+module_type: standard
 language: en
 narrator: US English Male
+mode: Textbook
 title: Demystifying SQL
 comment:  SQL is a relational database solution that has been around for decades.  Learn more about this technology at a high level, without having to write code.
 long_description: Do you have colleagues who use SQL or refer to "databases" or "the data warehouse" and you're not sure what it all means?  This module will give you some very high level explanations to help you understand what SQL is and some basic concepts for working with it.  There is no code or hands-on application in this module, so it's appropriate for people who have zero experience and want an overview of SQL.
-estimated_time: 40 minutes
+estimated_time_in_minutes: 40
+@pre_reqs
+
+Experience working with rectangular data (data in rows and columns) will be helpful.  For example, experience working in Excel, Google Sheets, or other software that helps organize data into rows and columns is sufficient expertise to take this module.
+
+@end
 
 @learning_objectives  
 
@@ -21,33 +29,33 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: true
+coding_required: false
+@sets_you_up_for
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+- database_normalization
+- sql_basics
 
+@end
+sequence_name: sql
+
+@depends_on_knowledge_available_in
+
+@end
+@version_history
+
+Previous versions: 
+
+* [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/demystifying_sql/demystifying_sql.md:  Update highlight boxes
+* [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/demystifying_sql/demystifying_sql.md): Original version with minor formatting updates and improved feedback form link 
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
 # Demystifying SQL
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-Experience working with rectangular data (data in rows and columns) will be helpful.  For example, experience working in Excel, Google Sheets, or other software that helps organize data into rows and columns is sufficient expertise to take this module.
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
-
+@overview
 
 ## SQL: A Definition
 
@@ -330,16 +338,4 @@ Finally, you learned about the structure of relational databases: data stored in
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Demystifying+SQL%22&version=1.0.2)!
+@feedback
