@@ -1,14 +1,31 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.1
-module_template_version: 3.0.0
+version: 1.1.0
+current_version_description: Typo fix; update metadata
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: US English Female
+mode: Textbook
 title: SQL Joins
 comment: Learn about SQL joins: what they accomplish, and how to write them.
 long_description: Usually, data in a SQL database is organized into multiple interrelated tables.  This means you will often have to bring data together from two or more tables into a single dataset to answer your research questions.  This "join" action is accomplished using `JOIN` commands.  This module teaches types of joins, join criteria, and how to write `JOIN` code.
-estimated_time: 1 hour
+estimated_time_in_minutes: 60
+good_first_module: false
+coding_required: true 
+coding_language: SQL
+coding_level: intermediate
+sequence_name: sql
+@sets_you_up_for
+
+@end
+@depends_on_knowledge_available_in
+
+- sql_intermediate
+- database_normalization
+
+@end
 
 @learning_objectives  
 After completion of this module, learners will be able to:
@@ -19,8 +36,23 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-script: https://kit.fontawesome.com/83b2343bd4.js
+@pre_reqs
+
+Learners should have experience writing SQL code on single tables.  If you have successfully used a "SELECT... FROM... WHERE" SQL statement on a single table, and have at least seen "GROUP BY" commands in action, even if you would need help writing the GROUP BY code, you have enough code ability.  We also highly recommend that you understand the concepts of one-to-many data relationships and database normalization to get the most out of this module. 
+
+If you need to develop basic SQL fluency we recommend our module [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md).  For more intermediate topics, we suggest our module [SQL Intermediate](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_intermediate/sql_intermediate.md).  Finally, to learn about one-to-many data relationships and database normalization, consider our [Database Normalization](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/database_normalization/database_normalization.md) module.
+
+@end
+
+@version_history
+
+Previous Versions:
+
+* [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/sql_joins/sql_joins.md#1): Original version, with improved feedback link
+
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 script: https://cdn.jsdelivr.net/npm/alasql@0.6.5/dist/alasql.min.js
 attribute: [AlaSQL](https://alasql.org)
@@ -143,25 +175,7 @@ try {
 
 # SQL Joins
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**   
-Learners should have experience writing SQL code on single tables.  If you have successfully used a "SELECT... FROM... WHERE" SQL statement on a single table, and have at least seen "GROUP BY" commands in action, even if you would need help writing the GROUP BY code, you have enough code ability.  We also highly recommend that you understand the concepts of one-to-many data relationships and database normalization to get the most out of this module. 
-
-If you need to develop basic SQL fluency we recommend our module [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md).  For more intermediate topics, we suggest our module [SQL Intermediate](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_intermediate/sql_intermediate.md).  Finally, to learn about one-to-many data relationships and database normalization, consider our [Database Normalization](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/database_normalization/database_normalization.md) module.
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Overview of Joins
 
@@ -690,7 +704,7 @@ Sometimes the data that appears in the two tables has the same field name, as we
 | 11 | C | Sep-Dec 2022 |
 | 14 | B | Jan-May 2023 |
 
-Here, "semester" is used in math\_grades and term is used in "language\_grades".  So you might also see something like:
+Here, "semester" is used in math\_grades and "term" is used in language\_grades.  So you might also see something like:
 
 ```sql
 ...
@@ -729,7 +743,7 @@ Of course, in the example of the depression inventory, we'd also want to make su
 ```sql
 ...
 ON depression_scale.subj_id = subject_address.subj_id AND
-   depression.date BETWEEN 
+   depression_scale.date BETWEEN 
       subject_address.date_start AND 
       subject_address.date_end
 ```
@@ -742,16 +756,16 @@ You can create arbitrarily complex **boolean logic** (or **boolean algebra**), u
 
 ```sql
 ...
-ON depression.subj_id = subject_address.subj_id AND 
+ON depression_scale.subj_id = subject_address.subj_id AND 
 -- subject ID must match... AND...
 
 -- either:
-   ((depression.date BETWEEN          
+   ((depression_scale.date BETWEEN          
       subject_address.date_start AND 
       subject_address.date_end) OR
 -- the depression date is between a start and end, OR...
 
-   (depression.date > subject_address.date_start AND 
+   (depression_scale.date > subject_address.date_start AND 
    subject_address.date_end IS NULL))                 
 -- the depression date is after the start date,
 -- and there's no end date.
@@ -1211,16 +1225,4 @@ When there's no matching data from the one of the tables to join to the data you
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22SQL+Joins+Demystified%22&version=1.0.1)!
+@feedback
