@@ -405,7 +405,7 @@ WHERE patients.birthdate LIKE "197%"
 
 You're doing research involving patients who live in multi-tenant housing like apartment buildings or long term hotels.  You know that sometimes people use "apartment", other times "apt", sometimes "unit", or "suite", or "room", so to search for all of these might be tough.  What you want to try is looking for addresses where there's some number listed **after** the part of the string that's composed only of letters and spaces.  So, "123 Apple Street" wouldn't match, but "123 Apple Street, Apt. 10" would.
 
-In regex, "one or more lower case letters or spaces, in any combination" is written `[a-z\s]+`, and "one or more digits" is written `\d+`.  Use that information to complete the following code, to pull out patient information you might be interested in.  
+In regex, "one or more lower case letters or spaces, in any combination" is written `[a-z\s]+` and the symbol `\d+` indicates "one or more digits."  Use that information to complete the following code, to pull out patient information you might be interested in.  
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
