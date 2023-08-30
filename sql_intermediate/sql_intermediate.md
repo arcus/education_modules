@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.1.0
+version: 1.1.1
 current_version_description: Update with improvements to regular expressions, highlight boxes, correct typos
 module_type: standard
 docs_version: 1.0.0
@@ -303,7 +303,7 @@ As you can see from even just this simple example, regular expression functions 
 
 In this quiz, we have some scenarios for you to consider as a researcher.  If you create the correct SQL query, you'll get the corresponding quiz answer (which appears below the code box) easily!  There is one question each for `CASE`, `LIKE`, and `REGEXP_LIKE`.
 
-You're studying attitudes about smoking and will issue a survey in phases.  Phase 1 will go out to residents of Plymouth County, Phase 2 will go out to residents of Essex County and Phase 3 will go out to Barnstable County.  Finish the following query such that you get the patient name, county, and a new column called `phase`.  Then scroll down to answer a simple question.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button after the question, you'll see the code that we used to answer the question.
+You're studying attitudes about smoking and will issue a survey in phases.  Phase 1 will go out to residents of Plymouth County, Phase 2 will go out to residents of Essex County and Phase 3 will go out to Barnstable County.  Finish the following query such that you get the patient name, county, and a new column called `phase`.  Then scroll down to answer a simple question.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i>  after the question, you'll see the code that we used to answer the question.
 
 ```sql
 SELECT
@@ -361,7 +361,7 @@ FROM alasql.patients;
 
 *********
 
-You'd like to research patients born in the 1970s (so any year starting 197_ would work).  Use a `LIKE` statement to enrich the query below and find the patient set you care about.  Below the code box, there's a question.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button after the question, you'll see the code that we used to answer the question.
+You'd like to research patients born in the 1970s (so any year starting 197_ would work).  Use a `LIKE` statement to enrich the query below and find the patient set you care about.  Below the code box, there's a question.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i> after the question, you'll see the code that we used to answer the question.
 
 ```sql
 SELECT
@@ -405,14 +405,15 @@ WHERE patients.birthdate LIKE "197%"
 
 You're doing research involving patients who live in multi-tenant housing like apartment buildings or long term hotels.  You know that sometimes people use "apartment", other times "apt", sometimes "unit", or "suite", or "room", so to search for all of these might be tough.  What you want to try is looking for addresses where there's some number listed **after** the part of the string that's composed only of letters and spaces.  So, "123 Apple Street" wouldn't match, but "123 Apple Street, Apt. 10" would.
 
-In regex, "one or more lower case letters or spaces, in any combination" is written `[a-z\s]+`, and "one or more digits" is written `\d+`.  Use that information to complete the following code, to pull out patient information you might be interested in.  
+In regex, "one or more lower case letters or spaces, in any combination" is written `[a-z\s]+` and the symbol `\d+` indicates "one or more digits."  Use that information to complete the following code, to pull out patient information you might be interested in.  
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-We know this is a tricky question, because regular expressions are hard.  Click on the light bulb after the answer choices to ask for a hint if you need it!
+We know this is a tricky question, because regular expressions are hard.  Click on the light bulb <i aria-hidden="true" class="icon icon-hint lia-btn__icon"></i> after the answer choices to ask for a hint if you need it!
 
-As in the previous cases, if you get stuck, just scroll down and hit the "check mark" button after the question.
+As in the previous cases, if you get stuck, just scroll down and hit the check mark 
+button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i>  after the question.
 
 </div>
 
@@ -619,7 +620,7 @@ HAVING COUNT(*) > 1;
 
 In this quiz, we're going to challenge you to create a query from scratch using aggregate functions, and then quiz you about the results of that query.
 
-Please create a query below that queries `alasql.patients` and gives the patient population of each city (`patients.city`) which has more than one patient living there.  Give the results in an alphabetized list.  Your results should start like the table below.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button after the question, you'll see the code that we used to answer the question.
+Please create a query below that queries `alasql.patients` and gives the patient population of each city (`patients.city`) which has more than one patient living there.  Give the results in an alphabetized list.  Your results should start like the table below.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i>  after the question, you'll see the code that we used to answer the question.
 
 <!-- data-type="none" -->
 | city | patient_population |
@@ -757,7 +758,7 @@ This approach, using `WITH` to move the sub query to before the main query, is o
 
 ### Quiz: Sub Queries
 
-There are three problems with the SQL code below.  Correct all three and run the code successfully and you should be able to answer the quiz question.  Below the code box, there's a question.  If you can't find all the errors, scroll ahead to where the question appears, and if you click the "check mark" button after the question, you'll see the code that we used!
+There are three problems with the SQL code below.  Correct all three and run the code successfully and you should be able to answer the quiz question.  Below the code box, there's a question.  If you can't find all the errors, scroll ahead to where the question appears, and if you click the "check mark" button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i> after the question, you'll see the code that we used!
 
 ```sql
 WITH generations (
