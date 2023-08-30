@@ -104,7 +104,7 @@ Consider, for example, these three sample tables.  They are rectangular (or tabu
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
-If the idea of relational databases with tables that refer to one another feels confusing, you're not alone.  In our example above, we discover the patient Prairie Dawn in our `demographics` table, and note that this patient has a patient_id of SMLE321.  We can then use this patient ID to find **related** data in other tables.  For example, in the `encounters` table and in the `medication_order` table, we never see the patient name "Prairie Dawn", but we **do** find her ID, SMLE321.  
+If the idea of relational databases with tables that refer to one another feels confusing, you're not alone.  In our example above, we discover the patient Prairie Dawn in our `demographics` table, and note that this patient has a patient_id of SMLE321.  We can then use this patient ID to find **related** data in other tables.  For example, in the `encounters` table and in the `medication_order` table, we never see the patient name "Prairie Dawn," but we **do** find her ID, SMLE321.  
 
 Relational databases work by using data fields like IDs to allow us to find out data about a patient, or customer, or purchase order, or other thing we're interested in, by following the matching ID into other, **related** tables.
 
