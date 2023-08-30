@@ -2,10 +2,10 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.1
+version: 1.1.2
 current_version_description: Update highlight boxes for greater clarity, other minor changes
 module_type: standard
-docs_version: 1.2.0
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
