@@ -1,8 +1,8 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.2.1
-current_version_description: Updated with new metadata and to remove references to Binderhub
+version: 1.3.0
+current_version_description: Added additional info for one exercise example (it was in the solutions file but not copied here)
 module_type: standard
 docs_version: 1.0.0
 language: en
@@ -57,6 +57,7 @@ sequence_name: r_basics
 
 Previous versions: 
 
+* [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3840108d202de535377009db54232b7897635a2c/r_basics_introduction/r_basics_introduction.md#1): Updated with new metadata and to remove references to Binderhub
 * [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/r_basics_introduction/r_basics_introduction.md): Update highlight boxes
 * [1.0.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/r_basics_introduction/r_basics_introduction.md#1): Add info about Posit, remove second attribution location, add versioning info
 
@@ -666,6 +667,8 @@ Important: this doesn't actually change the data in the `covid_testing` data fra
 4. How many tests overall were positive? How many positive tests were there in the first 30 days of the pandemic? (Hint: look at the Filter button)
 
 The `result` column holds that information. We can apply a filter to that column to only show us rows where the value in the `result` column is "positive". Click on Filter and enter "positive" in the text field that appears below the `result` header. You will now see that the bottom line of the data viewer reads "Showing 1 to [some number] of 865 entries, 17 total columns (filtered from 15,524 total entries)". So there were 865 positive tests, out of 15,524 total.
+
+To see just the number of positive tests from the first 30 days of the pandemic, you can add a second filter, this time on the `pan_day` column. Leaving the "positive" filter on `result`, click on the field below the `pan_day` column. A small histogram appears, and the range is displayed at the bottom, 0-110. Click the range and edit it to say 0-30 to filter to just the first 30 days of the pandemic. At the bottom of the data viewer, you will now see a message that reads "Showing 1 to [some number] of 137 entries, 17 total columns (filtered from 15,524 total entries)." So there were 137 positive tests in the first 30 days of the pandemic.
 
 ### More Data Types
 
