@@ -2,45 +2,19 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.0
-module_template_version: 3.0.0
+version: 1.2.0
+current_version_description: Updated metadata and macros
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title:  Bash: Reusable Scripts
 comment:  This module will teach you how to create and use simple Bash scripts to make repetitive tasks as simple as possible. 
 long_description: If you have some experience with Bash and want to learn how to save and reuse Bash processes, this lesson will teach you how to write your own Bash scripts and understand and use simple scripts written by others.
-estimated_time: 1 hour
+estimated_time_in_minutes: 60
 
-@learning_objectives
-
-After completion of this module, learners will be able to:
-
-- Identify the structure of a Bash script
-- Run existing Bash scripts
-- Write simple Bash scripts
-@end
-
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-
-script: https://kit.fontawesome.com/83b2343bd4.js
--->
-
-# Bash: Reusable Scripts
-
-<div class = "overview">
-
-## Overview
-
-@comment
-
-**Is this module right for me?**
-
-@long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
+@pre_reqs
 Learners should be familiar with using a Bash shell to navigate a directory system. Learners will get the most out of this lesson if they can also create directories and files, write text to files, and read files from their Bash shell command line interface.
 
 Bash commands that will be used without explanation include:
@@ -51,52 +25,57 @@ Bash commands that will be used without explanation include:
 - `echo`
 - `grep`
 - `wc`
-
-
-**Learning Objectives**
+@end
 
 @learning_objectives
 
-</div>
+After completion of this module, learners will be able to:
 
+- Identify the structure of a Bash script
+- Run existing Bash scripts
+- Write simple Bash scripts
+@end
+
+good_first_module: false
+coding_required: true
+coding_level: intermediate
+coding_language: bash
+sequence_name: bash_basics
+previous_sequential_module: bash_conditionals_loops
+
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+- bash_command_line_102
+- bash_103_combining_commands
+- bash_conditionals_loops
+
+@end
+
+@version_history 
+
+Previous versions: 
+
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/bash_scripts/bash_scripts.md): Improved instructions for downloading learning_bash repository.
+- [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/): Initial version.
+@end
+
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_bash.md
+
+-->
+
+# Bash: Reusable Scripts
+
+@overview
 
 ## Lesson Preparation
 
-You will get the most out of this lesson if you follow along with the examples and try out the commands.
-
-**Open a Bash shell.**
-
-If you are using a computer running macOS (i.e. an Apple computer) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
-
-
-<div class = "care">
-<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
-
-It can be stressful to interact with files directly from the command line. Throughout this module we will make sure you know what each command does before asking you to do it.  Like any other computational skill, you'll get more comfortable with it the more you practice!
-
-</div>
-
-To ensure that we aren't touching any of the important files on your computer, you will be downloading a small directory to experiment with.  You can download a fresh copy to start over at any point. 
-
-<div class = "warning">
-<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
-
-Please download a fresh copy of these files. If you have downloaded them for a previous module, you have likely moved and changed some of them while working through that module and the examples in this module assume that no changes have already been made to the directory.
-
-</div>
-
-**Download the files.**
-
-We will be using a directory called `learning_bash` that is publicly available on GitHub. If you have already downloaded this directory for use in another Bash module, you do not need to download a fresh copy.
-
-Navigate in your browser to the [`learning_bash` directory](https://github.com/arcus/learning_bash) on GitHub. Once you follow the link:
-
-1. Click on the green **Code** drop-down button towards the right-hand side of the screen. 
-
-2. Select **Download ZIP** from the options that appear.
-
-3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`.
-4. Place this new folder `learning_bash-main` somewhere you can easily find it. In the examples we will assume that `learning_bash-main` is in the Downloads directory, but you are welcome to move it somewhere else that is convenient for you to navigate to in your command line interface.
+@lesson_prep_bash_basics
 
 ## What is a script?
 
@@ -668,16 +647,4 @@ The variable `$string` is called in the last two lines of the script, so the use
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash:+Reusable+Scripts%22&version=1.0.1)!
+@feedback
