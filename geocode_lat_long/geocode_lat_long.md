@@ -2,14 +2,21 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.2
-module_template_version: 3.0.0
+version: 1.0.3
+current_version_description: Initial Version
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: Encoding Geospatial Data: Latitude and Longitude
 comment:  This is an introduction to latitude and longitude and the importance of geocoding - encoding geospatial data in the coordinate system.
 long_description: If you use any geospatial data, such as patient or participant addresses, it is important that that location data be in a usable form. This means using the same coordinate system that Global Positioning Systems use: latitude and longitude. This module is appropriate, as either an introduction or review, for anyone considering using geospatial data in their analysis. 
-estimated_time: 15 minutes
+estimated_time_in_minutes: 15
+
+@pre_reqs
+None
+@end
 
 @learning_objectives  
 
@@ -21,31 +28,30 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
+data_domain: geospatial
+data_task: data_visualization
+coding_required: false
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
+- elements_of_maps
+@end
+@depends_one_knowledge_available_in
+
+@end
+
+@version_history 
+No previous versions.
+@end
+
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
 
 # Encoding Geospatial Data: Latitude and Longitude
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-None
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Where is it Located?
 
@@ -261,16 +267,4 @@ For addresses in the United States of America, the US Census has an excellent [g
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Encoding+Geospatial+Data:+Latitude+and+Longitude%22&version=1.0.1)!
+@feedback
