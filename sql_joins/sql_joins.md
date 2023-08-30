@@ -17,6 +17,7 @@ coding_required: true
 coding_language: SQL
 coding_level: intermediate
 sequence_name: sql
+previous_sequential_module: sql_intermediate
 @sets_you_up_for
 
 @end
