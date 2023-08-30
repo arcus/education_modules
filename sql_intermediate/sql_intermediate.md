@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.1.0
+version: 1.1.1
 current_version_description: Update with improvements to regular expressions, highlight boxes, correct typos
 module_type: standard
 docs_version: 1.0.0
