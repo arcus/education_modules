@@ -2,19 +2,25 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version: 1.4.1
-module_template_version: 3.0.0
+version: 1.5.0
+current_version_description: Updated metadata and macros
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: Bash / Command Line 101
 comment:  This course teaches learners to navigate their computer, as well as view and edit files, from the command line using Bash.
 
 long_description: This course is designed to be both an introduction to bash / command line for those who are total newbies as well as refresher for those some with experience running code who want a more solid command of the basics.
 
-estimated_time: 40 minutes
+estimated_time_in_minutes: 40
+
+@pre_reqs
+Learners should be familiar with locating files and folders stored in a directory system.  Our [Directories and File Paths](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#1) module can provide some help with gaining these skills.
+@end
 
 @learning_objectives
-
 After completion of this module, learners will be able to:
 
 - Describe what bash scripting is and why they might want to learn it for data management and research
@@ -22,37 +28,36 @@ After completion of this module, learners will be able to:
 - View and edit the contents of a file from the bash shell
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
+coding_required: true
+coding_level: basic
+coding_language: bash
+sequence_name: bash_basics
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
+- bash_command_line_102
+@end
+
+@depends_on_knowledge_available_in
+- directories_and_file_paths
+@end
+
+@version_history
+
+Previous versions: 
+
+- [1.4.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/bash_command_line_101/bash_command_line_101.md): Added less command and expanded on man and --help
+- [1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ba1dba7a4c1d4393ae8b42346fe5c69d587b8ee6/bash_command_line_101/bash_command_line_101.md): Removed references to sunsetted text editor Atom
+- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/466799a081d2cb74d155dc0a26951d3492b81f8c/bash_command_line_101/bash_command_line_101.md): Fixed quiz answer boxes
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+
 -->
 
 # Bash / Command Line 101
 
-<div class = "overview">
-
-## Overview
-
-@comment
-
-**Is this module right for me?**
-
-@long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-Learners should be familiar with locating files and folders stored in a directory system.  Our [Directories and File Paths](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#1) module can provide some help with gaining these skills.
-
-
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
-
+@overview
 
 ## Lesson Preparation
 
@@ -607,16 +612,4 @@ Entering `command_name --help` will give a summary of the options for the comman
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work. Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Bash+Command+Line+101%22&version=1.3.2)!
+@feedback
