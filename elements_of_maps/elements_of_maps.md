@@ -2,14 +2,22 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.3
-module_template_version: 3.0.0
+version: 1.0.4
+current_version_description: Initial version.
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: The Elements of Maps
 comment:  This is a general overview of ways that geospatial data can be communicated visually using maps.
 long_description: Raw geospatial data can be particularly tricky for humans to read. However the shapes, colors, sizes, symbols, and language that make up a good map can effectively communicate a variety of detailed data even to readers looking at the map with only minimum specialized background knowledge. This module will demystify how raw data becomes a map and explain common components of maps. It is appropriate for anyone considering making maps from geospatial data.
-estimated_time: 45 minutes
+
+estimated_time_in_minutes: 45
+
+@pre_reqs
+Some familiarity with latitude and longitude is required to get the most out of this module as all location data will be presented in that coordinate system.
+@end
 
 @learning_objectives  
 
@@ -20,31 +28,30 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
+data_domain: geospatial
+data_task: data_visualization
+coding_required: false
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+- geocode_lat_long
+@end
+
+@version_history 
+No previous versions.
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
 
 # The Elements of Maps
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-Some familiarity with latitude and longitude is required to get the most out of this module as all location data will be presented in that coordinate system.
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Creating a Map
 
@@ -397,16 +404,4 @@ For more on the distinctions between different kinds of maps, check out these re
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Elements+of+Maps%22&version=1.0.1)!
+@feedback
