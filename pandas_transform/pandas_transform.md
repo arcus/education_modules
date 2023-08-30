@@ -850,6 +850,8 @@ is_male = covid_testing.loc[:, "gender"] == "male"
 
 covid_testing.loc[is_male, "gender"] = "M"
 
+#print(covid_testing.loc[:,["first_name", "last_name", "gender"]])
+
 </script>
 </lia-keep>
 </div>
