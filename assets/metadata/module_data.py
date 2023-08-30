@@ -108,27 +108,30 @@ df.loc["bash_conditionals_loops", "sets_you_up_for"] = "&- bash_scripts&&"
 df.loc["bash_conditionals_loops", "version_history"] = "&Previous versions: &&- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4347cd14c9f5a3fd110910ec09c0560a46e390bd/bash_conditionals_loops/bash_conditionals_loops.md): Clarify instructions in the getting started section.&- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_conditionals_loops/bash_conditionals_loops.md): Initial version&&" 
 df.loc["bash_scripts", "author"] = "Elizabeth Drellich"
 df.loc["bash_scripts", "email"] = "drelliche@chop.edu"
-df.loc["bash_scripts", "version"] = "1.1.0"
-df.loc["bash_scripts", "current_version_description"] = ""
-df.loc["bash_scripts", "module_type"] = ""
-df.loc["bash_scripts", "docs_version"] = ""
+df.loc["bash_scripts", "version"] = "1.2.0"
+df.loc["bash_scripts", "current_version_description"] = "Updated metadata and macros"
+df.loc["bash_scripts", "module_type"] = "standard"
+df.loc["bash_scripts", "docs_version"] = "2.0.0"
 df.loc["bash_scripts", "language"] = "en"
 df.loc["bash_scripts", "narrator"] = "UK English Female"
-df.loc["bash_scripts", "mode"] = ""
+df.loc["bash_scripts", "mode"] = "Textbook"
 df.loc["bash_scripts", "title"] = "Bash: Reusable Scripts"
-df.loc["bash_scripts", "estimated_time_in_minutes"] = ""
-df.loc["bash_scripts", "module_type"] = ""
-df.loc["bash_scripts", "good_first_module"] = ""
+df.loc["bash_scripts", "estimated_time_in_minutes"] = "60"
+df.loc["bash_scripts", "module_type"] = "standard"
+df.loc["bash_scripts", "good_first_module"] = "false"
 df.loc["bash_scripts", "data_domain"] = ""
 df.loc["bash_scripts", "data_task"] = ""
-df.loc["bash_scripts", "coding_required"] = ""
-df.loc["bash_scripts", "coding_level"] = ""
-df.loc["bash_scripts", "coding_language"] = ""
-df.loc["bash_scripts", "sequence_name"] = ""
-df.loc["bash_scripts", "previous_sequential_module"] = ""
+df.loc["bash_scripts", "coding_required"] = "true"
+df.loc["bash_scripts", "coding_level"] = "intermediate"
+df.loc["bash_scripts", "coding_language"] = "bash"
+df.loc["bash_scripts", "sequence_name"] = "bash_basics"
+df.loc["bash_scripts", "previous_sequential_module"] = "bash_conditionals_loops"
 df.loc["bash_scripts", "comment"] = "This module will teach you how to create and use simple Bash scripts to make repetitive tasks as simple as possible. " 
 df.loc["bash_scripts", "long_description"] = "If you have some experience with Bash and want to learn how to save and reuse Bash processes, this lesson will teach you how to write your own Bash scripts and understand and use simple scripts written by others." 
+df.loc["bash_scripts", "pre_reqs"] = "Learners should be familiar with using a Bash shell to navigate a directory system. Learners will get the most out of this lesson if they can also create directories and files, write text to files, and read files from their Bash shell command line interface.&&Bash commands that will be used without explanation include:&&- `ls`&- `cat`&- `>` and `>>`&- `echo`&- `grep`&- `wc`&" 
 df.loc["bash_scripts", "learning_objectives"] = "&After completion of this module, learners will be able to:&&- Identify the structure of a Bash script&- Run existing Bash scripts&- Write simple Bash scripts&" 
+df.loc["bash_scripts", "sets_you_up_for"] = "&" 
+df.loc["bash_scripts", "version_history"] = "&Previous versions: &&- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/bash_scripts/bash_scripts.md): Improved instructions for downloading learning_bash repository.&- [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/): Initial version.&" 
 df.loc["bias_variance_tradeoff", "author"] = "Rose Hartman"
 df.loc["bias_variance_tradeoff", "email"] = "hartmanr1@chop.edu"
 df.loc["bias_variance_tradeoff", "version"] = "1.0.0"
@@ -1508,7 +1511,9 @@ a.append("bash_scripts")
 a.append("directories_and_file_paths")
 df.at["bash_conditionals_loops", "Linked Courses"] = list(a)
 a = df.loc["bash_scripts", "Linked Courses"]
-a.append("bash_command_line_101")
+a.append("bash_103_combining_commands")
+a.append("bash_command_line_102")
+a.append("bash_conditionals_loops")
 a.append("reproducibility")
 df.at["bash_scripts", "Linked Courses"] = list(a)
 a = df.loc["bias_variance_tradeoff", "Linked Courses"]
