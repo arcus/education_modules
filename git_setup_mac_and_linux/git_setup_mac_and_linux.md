@@ -2,8 +2,8 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.1.2
-current_version_description: 
+version: 1.2.0
+current_version_description: Updated metadata to latest standards
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -57,9 +57,8 @@ previous_sequential_module: git_intro
 
 Previous versions: 
 
-- [x.x.x](link): that version's current version description
-- [x.x.x](link): that version's current version description
-- [x.x.x](link): that version's current version description
+- [1.1.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/7c27af1128f6e8d3d9bd842a3df7308adb0cc364/git_setup_mac_and_linux/git_setup_mac_and_linux.md): Removed references to Atom (now sunsetted) and updated highlight box visuals
+- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/466799a081d2cb74d155dc0a26951d3492b81f8c/git_setup_mac_and_linux/git_setup_mac_and_linux.md): Initial version. 
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
