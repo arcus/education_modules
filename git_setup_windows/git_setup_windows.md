@@ -2,8 +2,10 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.2
-module_template_version: 3.0.0
+version: 1.2.0
+current_version_description: Updated metadata to latest standards
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Setting Up Git on Windows
@@ -12,7 +14,13 @@ comment: This module provides recommendations and examples to help new users con
 
 long_description: If you're ready to start using the Git version control system, this lesson will walk you through how to get set up. This lesson should be a good fit for people who already have an idea of what version control is but may not have any experience using it yet. No previous experience with Git is expected. This lesson is specific to Windows machines, If you are using Mac or Linux, please follow along with the [set-up guide for those computers](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md).
 
-estimated_time: 25 min
+estimated_time_in_minutes: 25
+
+@pre_reqs
+
+- Have an account on github.com (you can [sign up now](https://github.com/signup) if you haven't yet --- it's free)
+
+@end
 
 @learning_objectives  
 
@@ -23,33 +31,44 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
+data_task: data_management
+coding_required: true
+coding_level: getting_started
+coding_language: git
+sequence_name: git_basics
+previous_sequential_module: git_intro
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
+- git_creation_and_tracking
+- git_history_of_project
+@end
+
+@depends_on_knowledge_available_in
+- git_intro
+@end
+
+@is_parallel_to
+- git_setup_mac_and_linux
+@end
+
+@version_history 
+
+Previous versions: 
+
+- [x.x.x](link): that version's current version description
+- [x.x.x](link): that version's current version description
+- [x.x.x](link): that version's current version description
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
 
 # Setting Up Git on Windows
 
-<div class = "overview">
+@overview
 
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-- Have an account on github.com (you can [sign up now](https://github.com/signup) if you haven't yet --- it's free)
-
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
 ## Lesson Preparation
 
 <div class = "important">
@@ -356,16 +375,4 @@ Although the content here focuses on command line Git, you may prefer to use the
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Setting+up+Git+on+Windows%22&version=1.1.2)!
+@feedback
