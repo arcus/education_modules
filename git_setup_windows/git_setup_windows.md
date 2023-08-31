@@ -35,7 +35,7 @@ good_first_module: false
 data_task: data_management
 coding_required: true
 coding_level: getting_started
-coding_language: git
+coding_language: git, bash
 sequence_name: git_basics
 previous_sequential_module: git_intro
 
