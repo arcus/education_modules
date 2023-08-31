@@ -3,7 +3,9 @@
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version: 1.1.2
-module_template_version: 3.0.0
+current_version_description: 
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Setting Up Git on Mac and Linux
@@ -12,7 +14,13 @@ comment: This module provides recommendations and examples to help new users con
 
 long_description: If you're ready to start using the Git version control system, this lesson will walk you through how to get set up. This lesson should be a good fit for people who already have an idea of what version control is (although may not have any experience using it yet), and know how to open the command line interface (CLI) on their computer. No previous experience with Git is expected.
 
-estimated_time: 15 min
+estimated_time_in_minutes: 15
+
+@pre_reqs
+- Have used the command line interface (CLI) on your computer before
+- Have Git installed on your computer (note that it is probably installed already even if you've never used it)
+- Have an account on github.com (you can [sign up now](https://github.com/signup) if you haven't yet --- it's free)
+@end
 
 @learning_objectives  
 
@@ -23,35 +31,44 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+data_task: data_management
+coding_required: true
+coding_level: getting_started
+coding_language: git
+sequence_name: git_basics
+previous_sequential_module: git_intro
+
+@sets_you_up_for
+- git_creation_and_tracking
+- git_history_of_project
+@end
+
+@depends_on_knowledge_available_in
+- git_intro
+@end
+
+@is_parallel_to
+- git_setup_windows
+@end
+
+@version_history
+
+Previous versions: 
+
+- [x.x.x](link): that version's current version description
+- [x.x.x](link): that version's current version description
+- [x.x.x](link): that version's current version description
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
 
 # Setting Up Git on Mac and Linux
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-- Have used the command line interface (CLI) on your computer before
-- Have Git installed on your computer (note that it is probably installed already even if you've never used it)
-- Have an account on github.com (you can [sign up now](https://github.com/signup) if you haven't yet --- it's free)
-
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Lesson Preparation
 
@@ -315,16 +332,4 @@ Although the content here focuses on command line Git, you may prefer to use the
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Setting+up+Git+for+Mac+and+Linux%22&version=1.1.2)!
+@feedback
