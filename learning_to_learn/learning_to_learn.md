@@ -110,7 +110,7 @@ You may still Google things just as frequently as you do now, but you'll have be
 
 As mentioned above, a lot of your learning is likely to be derived from hands-on code writing, troubleshooting, and problem solving.
 
-However, although self-teaching is a useful skill, it’s equally crucial to be prepared to recognize when you’ve spent too much time trying to trouble shoot an error on your own.
+However, although self-teaching is a useful skill, it’s equally crucial to be prepared to recognize when you’ve spent too much time trying to troubleshoot an error on your own.
 
 Unfortunately, because everyone has a different tolerance for ambiguity and frustration, there are no good hard and fast rules on when to ask for help rather than continuing to power through on your own.
 
@@ -167,8 +167,17 @@ This is true! Instead of letting perfect be the enemy of good, taking small step
 Finish the line:
 In terms of deciding when to seek out assistance to help you figure something out, when in doubt...
 
-[[reach out]]
-[[?]] Hint: use all lower case letters and no punctuation. If you're still stuck, see the last point in [Balancing Problem Solving and Asking for Help](#Balancing-Problem-Solving-and-Asking-for-Help).
+[( )] stick it out
+[( )] twist and shout
+[(X)] reach out
+[[?]] Hint: If you're stuck, see the last point in [Balancing Problem Solving and Asking for Help](#Balancing-Problem-Solving-and-Asking-for-Help).
+***
+<div class = "answer">
+
+For more guideance on when to ask for help, see the last part of [Balancing Problem Solving and Asking for Help](#Balancing-Problem-Solving-and-Asking-for-Help).
+
+</div>
+***
 
 ## Additional Resources
 
