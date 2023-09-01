@@ -3,27 +3,42 @@
 author:   Rose Franzen
 email:    franzenr@chop.edu
 version: 1.0.3
-module_template_version: 2.0.0
+current_version_description: Initial version.
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: Learning to Learn Data Science
 comment:  Discover how learning data science is different than learning other subjects.
 long_description: The process of learning data science can be different from that of learning other subjects. This module goes over some of those differences and provides advice for navigating this potentially unfamiliar territory.
-estimated_time: 20 minutes
+estimated_time_in_minutes: 20
+
+@pre_reqs
+This module is appropriate for anyone who is interested in continuing to learn data science, regardless of their level of expertise. While some of the content may be written in a way that assumes the learner is totally unfamiliar with the field, it is written with the goal of being useful for all, whether it's as a first exposure to these ideas or a nice refresher.
+@end
 
 @learning_objectives  
-
 After completion of this module, learners will be able to:
 
 - recognize ways in which learning data science and coding may be different than other educational experiences
 - identify ways to extend their learning beyond module content
 - recognize how to understand when to ask for help
-
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-script: https://kit.fontawesome.com/83b2343bd4.js
+good_first_module: false
+coding_required: false
+@sets_you_up_for
 
+@end
+@depends_on_knowledge_available_in
+
+@end
+@version_history
+No previous versions.
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
 # Learning How to Learn Data Science
@@ -38,7 +53,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**
 
-This module is appropriate for anyone who is interested in continuing to learn data science, regardless of their level of expertise. While some of the content may be written in a way that assumes the learner is totally unfamiliar with the field, it is written with the goal of being useful for all, whether it's as a first exposure to these ideas or a nice refresher.
+
 
 **Learning Objectives**
 
