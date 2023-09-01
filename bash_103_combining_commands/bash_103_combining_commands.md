@@ -40,7 +40,7 @@ previous_sequential_module: bash_command_line_102
 - bash_scripts
 @end
 
-@depends_on_knowledge_in
+@depends_on_knowledge_available_in
 - bash_command_line_101
 - bash_command_line_102
 @end
