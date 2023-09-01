@@ -429,7 +429,10 @@ You might have noticed by now that we have used square brackets in a few differe
     `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
     [[capital_cities["Angola"] = "Luanda"]]
-    [[?]] If you think the correct answer is being marked wrong, make sure you have one space on each side of the `=` sign. Python doesn't care, but this box does.
+    <script>
+    let input = "@input".trim().replace(/\s/g, "");
+    input == 'capital_cities["Angola"]="Luanda"' || input == "capital_cities['Angola']='Luanda'";
+    </script>
     ***
     <div class = "answer">
 
