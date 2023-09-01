@@ -2,8 +2,8 @@
 
 author:   Rose Franzen
 email:    franzenr@chop.edu
-version: 1.0.3
-current_version_description: Initial version.
+version: 1.1.0
+current_version_description: Updated metadata, removed linked cartoon that was behind a paywall, changed quiz question from open text to multiple choice.
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -35,7 +35,9 @@ coding_required: false
 
 @end
 @version_history
-No previous versions.
+Previous versions:
+
+- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/learning_to_learn/learning_to_learn.md): Initial version.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
