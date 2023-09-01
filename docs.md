@@ -26,7 +26,7 @@ try {
 
 Previous versions: 
 
-- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b453a05b5ac756fb5c7b183deae9d4fc91b3a617/docs.md): Clarified that version_history cannot be blank but sets_you_up_for and depends_on_knowledge_in can
+- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b453a05b5ac756fb5c7b183deae9d4fc91b3a617/docs.md): Clarified that version_history cannot be blank but sets_you_up_for and depends_on_knowledge_available_in can
 - [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4347cd14c9f5a3fd110910ec09c0560a46e390bd/docs.md): Add genomics macros, add git_basics to the list of sequences.
 - [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/8f41dd25216329b785335e15f1824b13d6240778/docs.md): Update SQL macros instructions (note that version number wasn't correctly incremented here)
 - [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ad25398d0eef884402cff0f0c4fb4ca360d3b8f4/docs.md): Added versioning info, initial version.

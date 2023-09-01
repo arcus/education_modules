@@ -31,7 +31,7 @@ do
 
         #### pull the block macros. To speed up the process because not all of these are necessarily present, there is an IF statement.
 
-        for BLOCK_MACRO in "pre_reqs" "learning_objectives" "sets_you_up_for" "depends_on_knowledge_in" "is_parallel_to" "version_history"
+        for BLOCK_MACRO in "pre_reqs" "learning_objectives" "sets_you_up_for" "depends_on_knowledge_available_in" "is_parallel_to" "version_history"
         do
             if grep $BLOCK_MACRO -q $FOLDER/$FOLDER.md
             then
