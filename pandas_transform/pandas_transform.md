@@ -2,10 +2,10 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.1
+version: 1.1.2
 current_version_description: Update highlight boxes for greater clarity, other minor changes
 module_type: standard
-docs_version: 1.2.0
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -849,6 +849,8 @@ One way to approach this is to define a condition testing each row for whether t
 is_male = covid_testing.loc[:, "gender"] == "male"
 
 covid_testing.loc[is_male, "gender"] = "M"
+
+#print(covid_testing.loc[:,["first_name", "last_name", "gender"]])
 
 </script>
 </lia-keep>
