@@ -407,7 +407,7 @@ You might have noticed by now that we have used square brackets in a few differe
     </div>
     ***
 
-2. How would you access all of the counties (the "keys") in the dictionary below? 
+2. How would you access all of the countries (the "keys") in the dictionary below? 
 
     `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
