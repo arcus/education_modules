@@ -430,7 +430,7 @@ You might have noticed by now that we have used square brackets in a few differe
 
     [[capital_cities["Angola"] = "Luanda"]]
     <script>
-    let input = "@input".trim().replace(/\s/g, "");
+    let input = "@input".replace(/\s/g, "");
     input == 'capital_cities["Angola"]="Luanda"' || input == "capital_cities['Angola']='Luanda'";
     </script>
     ***
