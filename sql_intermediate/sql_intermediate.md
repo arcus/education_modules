@@ -1,15 +1,15 @@
 <!--
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.1.1
-current_version_description: Update with improvements to regular expressions, highlight boxes, correct typos
+version: 1.2.0
+current_version_description: Correct typo, update metadata version
 module_type: standard
-docs_version: 1.0.0
+docs_version: 2.0.0
 language: en
 narrator: US English Male
 title: SQL, Intermediate Level
 comment:  Learn how to do intermediate SQL queries on single tables, by using code, hands-on.
-long_description: Do you want to learn intermediate Structured Query Language (SQL) for more precise and complex data querying on single tables?  This module will give you hands on experience with single-table queries using keywords including CASE, LIKE, REGEXP_LIKE, GROUP BY, HAVING, and WITH, along with a number of aggregate functions like COUNT and AVG.  This module is appropriate for people who are comfortable writing basic SQL queries and are ready to practice more advanced sklls.
+long_description: Do you want to learn intermediate Structured Query Language (SQL) for more precise and complex data querying on single tables?  This module will give you hands on experience with single-table queries using keywords including CASE, LIKE, REGEXP_LIKE, GROUP BY, HAVING, and WITH, along with a number of aggregate functions like COUNT and AVG.  This module is appropriate for people who are comfortable writing basic SQL queries and are ready to practice more advanced skills.
 mode: Textbook
 
 estimated_time_in_minutes: 60
@@ -35,7 +35,8 @@ After completion of this module, learners will be able to:
 
 Previous versions: 
 
-[1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9e3ed69c5c70e4b6e116e2799329029e9542ca98/sql_intermediate/sql_intermediate.md#1): Initial version, then typo fixes, clarify group by aggregation troubleshooting, and feedback form improvements
+* [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9c77106b2074e1d51ce41ebaf0d849429b146c2b/sql_intermediate/sql_intermediate.md#1): Update with improvements to regular expressions, highlight boxes, correct typos
+* [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9e3ed69c5c70e4b6e116e2799329029e9542ca98/sql_intermediate/sql_intermediate.md#1): Initial version, then typo fixes, clarify group by aggregation troubleshooting, and feedback form improvements
 
 @end
 
