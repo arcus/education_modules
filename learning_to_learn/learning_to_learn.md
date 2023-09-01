@@ -181,8 +181,6 @@ For more guideance on when to ask for help, see the last part of [Balancing Prob
 
 ## Additional Resources
 
-Check out this wonderful (and entertaining) [cartoon guide to bioinformatics](https://www.nature.com/articles/d41586-021-01485-y) by a biologist who later learned to code.
-
 For more inspiration on embracing failure, check out [Fail Fest](https://failfest.us/) and this great [blog post from a 2014 Fail Fest attendee](https://www.codeguru.com/blog/learning-from-failure/).
 
 ## Feedback
