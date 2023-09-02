@@ -5,7 +5,7 @@ email:    leemc@chop.edu
 version: 1.0.0
 current_version_description: Initial version
 module_type: standard
-docs_version: 1.2.0
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -407,7 +407,7 @@ You might have noticed by now that we have used square brackets in a few differe
     </div>
     ***
 
-2. How would you access all of the counties (the "keys") in the dictionary below? 
+2. How would you access all of the countries (the "keys") in the dictionary below? 
 
     `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
@@ -429,7 +429,10 @@ You might have noticed by now that we have used square brackets in a few differe
     `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
     [[capital_cities["Angola"] = "Luanda"]]
-    [[?]] If you think the correct answer is being marked wrong, make sure you have one space on each side of the `=` sign. Python doesn't care, but this box does.
+    <script>
+    let input = "@input".replace(/\s/g, "");
+    input == 'capital_cities["Angola"]="Luanda"' || input == "capital_cities['Angola']='Luanda'";
+    </script>
     ***
     <div class = "answer">
 
