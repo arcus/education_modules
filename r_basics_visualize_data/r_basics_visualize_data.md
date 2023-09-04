@@ -1,8 +1,8 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.2.1
-current_version_description: Added two new highlight boxes with additional clarification, and technical updates that do not affect content. 
+version: 1.3.0
+current_version_description: Added help boxes for color vs fill aesthetic mapping and how to get plots to show in the plot pane.
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -67,6 +67,7 @@ previous_sequential_module: r_basics_introduction
 
 Previous versions: 
 
+- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3da1555f9e6e33cccf456d088ece3f0596896f38/r_basics_visualize_data/r_basics_visualize_data.md#1): Added two new highlight boxes with additional clarification, and technical updates that do not affect content. 
 - [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/dd92856bddc5de758ca19c53e94b181877f20143/r_basics_visualize_data/r_basics_visualize_data.md#1): Updating formatting for highlight boxes.
 - [1.0.7](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/r_basics_visualize_data/r_basics_visualize_data.md): remove second attribution location, add information about Posit Cloud, revision to correct image links referring to wrong branch + small changes to environment setup language to be exactly mirrored across all 3 R basics modules.
 
