@@ -641,7 +641,18 @@ To save a plot you've created by running some code inside an R Markdown file, yo
 
 ![""](media/saving_images.png)<!-- style = "max-width:700px;" -->
 
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
+Are your plots not showing up in the **Plots** pane in RStudio?
+
+By default, RStudio displays your plots inline when you run your code from the editor. That means your plots will show up in the same window as your code and other output (the Editor pane) rather than in the Plots pane.
+To get a plot to show up in the Plots pane, you need to run the code for that plot **in the console** instead of in the editor. 
+Copy-paste the code for your plot into the console, then hit Enter to run it.
+
+If you'd like your plots to always show up in the Plots pane instead of inline without you having to copy-paste your code each time, you can [change the settings in RStudio to make plots show in the Plots pane by default](https://community.rstudio.com/t/plots-not-showing-up-in-the-plots-pane-in-rstudio-with-r-markdown-notebook/3981/5).
+
+</div>
 
 ## More Visualization Options
 
