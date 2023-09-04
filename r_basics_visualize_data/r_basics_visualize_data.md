@@ -343,7 +343,7 @@ As a reminder, we put forth three steps in our `ggplot` template:
 
 Let's take on the second step: selecting a **geom function**.
 
-We'll go into more detail about what geom functions are, but for now, just know that you need to tell ggplot what type of graph you want, and you do that by picking the right `geom_` function.  RStudio makes code completion suggestions, son when you start typing `geom_`, you'll see a long list of possible ways to finish that term:
+We'll go into more detail about what geom functions are, but for now, just know that you need to tell ggplot what type of graph you want, and you do that by picking the right `geom_` function.  RStudio makes code completion suggestions, so when you start typing `geom_`, you'll see a long list of possible ways to finish that term:
 
 
 ![`RStudio autocomplete suggestions for geom_  include possibilities like geom_abline, geom_area, geom_bar, and so forth.  Hovering over one of the choices provides a contextual help window that describes how to use the geom.`](media/geom_autocomplete.png)
