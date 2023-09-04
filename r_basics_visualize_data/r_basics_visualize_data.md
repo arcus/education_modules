@@ -1,10 +1,10 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.2.1
-current_version_description: Added two new highlight boxes with additional clarification, and technical updates that do not affect content. 
+version: 1.3.0
+current_version_description: Added help boxes for color vs fill aesthetic mapping and how to get plots to show in the plot pane.
 module_type: standard
-docs_version: 1.0.0
+docs_version: 2.0.0
 language: en
 narrator: US English Female
 mode: Textbook
@@ -27,9 +27,9 @@ Minimal experience of using the RStudio IDE and writing R code (specifically, wi
 * Use the Environment tab to find a data frame and learn more about it
 * Insert a new code chunk in an R Markdown document
 
-One potential way to get these basic skills is to take our [R Basics: Introduction](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) course.
+One potential way to get these basic skills is to take our [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) course.
 
-This course is designed for R beginners with minimal experience and it is not an advanced course in `ggplot2`.  If you have experience with `ggplot2` already, you may find our ["Data Visualization in ggplot2"](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md), which is more advanced, a better fit for your needs.
+This course is designed for R beginners with minimal experience and it is not an advanced course in `ggplot2`.  If you have experience with `ggplot2` already, you may find our ["Data Visualization in ggplot2"](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md), which is more advanced, a better fit for your needs.
 
 @end
 
@@ -67,6 +67,7 @@ previous_sequential_module: r_basics_introduction
 
 Previous versions: 
 
+- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3da1555f9e6e33cccf456d088ece3f0596896f38/r_basics_visualize_data/r_basics_visualize_data.md#1): Added two new highlight boxes with additional clarification, and technical updates that do not affect content. 
 - [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/dd92856bddc5de758ca19c53e94b181877f20143/r_basics_visualize_data/r_basics_visualize_data.md#1): Updating formatting for highlight boxes.
 - [1.0.7](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/r_basics_visualize_data/r_basics_visualize_data.md): remove second attribution location, add information about Posit Cloud, revision to correct image links referring to wrong branch + small changes to environment setup language to be exactly mirrored across all 3 R basics modules.
 
@@ -343,7 +344,7 @@ As a reminder, we put forth three steps in our `ggplot` template:
 
 Let's take on the second step: selecting a **geom function**.
 
-We'll go into more detail about what geom functions are, but for now, just know that you need to tell ggplot what type of graph you want, and you do that by picking the right `geom_` function.  RStudio makes code completion suggestions, son when you start typing `geom_`, you'll see a long list of possible ways to finish that term:
+We'll go into more detail about what geom functions are, but for now, just know that you need to tell ggplot what type of graph you want, and you do that by picking the right `geom_` function.  RStudio makes code completion suggestions, so when you start typing `geom_`, you'll see a long list of possible ways to finish that term:
 
 
 ![`RStudio autocomplete suggestions for geom_  include possibilities like geom_abline, geom_area, geom_bar, and so forth.  Hovering over one of the choices provides a contextual help window that describes how to use the geom.`](media/geom_autocomplete.png)
@@ -455,7 +456,9 @@ Which of the following elements of a graph could reasonably form part of an aest
 ***
 <div class = "answer">
 
-Elements that don't get their value from data don't form part of an aesthetic **mapping**.  For example, the size of the font I want for the title of a plot is based on what looks good, what is readable, and what my publisher asks for.  I can set that without looking at any of the actual data.  The same thing is true of the location of a caption.  I might left-justify it, or center it, or put it above or below the graph, but that's an aesthetic choice that doesn't have any relationship (or mapping) to the data I want to display.
+Only elements that get their value from data will form part of an aesthetic **mapping**. 
+
+For example, the size of the font I want for the title of a plot is based on what looks good, what is readable, and what my publisher asks for.  I can set that without looking at any of the actual data.  The same thing is true of the location of a caption.  I might left-justify it, or center it, or put it above or below the graph, but that's an aesthetic choice that doesn't have any relationship (or mapping) to the data I want to display.
 
 Out of the list above, these are the visual elements that could be reasonably mapped back to the data I want to display:
 
@@ -528,6 +531,20 @@ And here's the solution:
 ggplot(data = covid_testing) +
   geom_histogram(mapping = aes(x = pan_day, fill = result), binwidth = 1)
 ```
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+Is it `fill` or `color`?
+
+Many people new to ggplot2 try using `color` instead of `fill` in their mappings and end up with surprising results.
+Confusingly, in ggplot2, `fill` and `color` refer to two different aesthetic mappings. 
+Use `fill` for shapes that have area, like bars or polygons, and use `color` for points and lines (including outlines of shapes).
+
+So you would map the color of points in a scatterplot with `color`, but for bars in a histogram, you would use `fill`. 
+Some plots include both shapes and lines/points, like [boxplots](https://r-graph-gallery.com/264-control-ggplot2-boxplot-colors.html), and you can control mappings for each separately with `fill` and `color`.
+
+</div>
 
 ### Setting vs. Mapping Aesthetics
 
@@ -641,7 +658,18 @@ To save a plot you've created by running some code inside an R Markdown file, yo
 
 ![""](media/saving_images.png)<!-- style = "max-width:700px;" -->
 
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
+Are your plots not showing up in the **Plots** pane in RStudio?
+
+By default, RStudio displays your plots inline when you run your code from the editor. That means your plots will show up in the same window as your code and other output (the Editor pane) rather than in the Plots pane.
+To get a plot to show up in the Plots pane, you need to run the code for that plot **in the console** instead of in the editor. 
+Copy-paste the code for your plot into the console, then hit Enter to run it.
+
+If you'd like your plots to always show up in the Plots pane instead of inline without you having to copy-paste your code each time, you can [change the settings in RStudio to make plots show in the Plots pane by default](https://community.rstudio.com/t/plots-not-showing-up-in-the-plots-pane-in-rstudio-with-r-markdown-notebook/3981/5).
+
+</div>
 
 ## More Visualization Options
 
