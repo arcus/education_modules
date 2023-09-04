@@ -455,7 +455,9 @@ Which of the following elements of a graph could reasonably form part of an aest
 ***
 <div class = "answer">
 
-Elements that don't get their value from data don't form part of an aesthetic **mapping**.  For example, the size of the font I want for the title of a plot is based on what looks good, what is readable, and what my publisher asks for.  I can set that without looking at any of the actual data.  The same thing is true of the location of a caption.  I might left-justify it, or center it, or put it above or below the graph, but that's an aesthetic choice that doesn't have any relationship (or mapping) to the data I want to display.
+Only elements that get their value from data will form part of an aesthetic **mapping**. 
+
+For example, the size of the font I want for the title of a plot is based on what looks good, what is readable, and what my publisher asks for.  I can set that without looking at any of the actual data.  The same thing is true of the location of a caption.  I might left-justify it, or center it, or put it above or below the graph, but that's an aesthetic choice that doesn't have any relationship (or mapping) to the data I want to display.
 
 Out of the list above, these are the visual elements that could be reasonably mapped back to the data I want to display:
 
