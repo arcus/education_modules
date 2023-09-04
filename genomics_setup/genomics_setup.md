@@ -71,6 +71,7 @@ Previous versions:
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_genomics.md
 -->
 
 # Genomics Tools and Methods: Computing Setup
