@@ -508,5 +508,9 @@ COS has built out a collection of materials on a variety of subjects including d
 * An educator [shares some harm reduction techniques for Excel users](https://education.arcus.chop.edu/excel-caveats/)
 * A former user of Excel [shares why he's moved on to using scripted code and gives helpful hints to those still using Excel](https://education.arcus.chop.edu/the-spreadsheet-betrayal/)
 
+<h3>Academic resources</h3>
+
+For a list of excellent readings on reproducibility in psychology, see the [mock syllabus for a class called "PSY 607: Everything is F*cked"](https://thehardestscience.com/2016/08/11/everything-is-fucked-the-syllabus/) posted by Prof. Sanjay Srivastava (note that the syllabus was posted as a joke and includes off-color language, but the readings listed are very real and provide a great introduction to reproducibility in science). 
+
 ## Feedback
 @feedback
