@@ -332,9 +332,25 @@ Areas we won't cover here, but are critical to the consistent production of repr
 
 Scripts may be written in free, open source tools like R, Python, Julia, and Octave, or, with care, can be extracted from commercial tools (for instance, by using a syntax file).  It's important to realize that good scripts are complete and don't rely on human memory of steps that aren't recorded in the script.  For example, using a point-and-click solution like Excel to clean data prior to analyzing it using code relies on human memory of what was done in Excel.
 
-We can contrast scripts with tools that don't record every step explicitly.  Excel is one example we've already touched on.  You may also have been exposed to SAS, SPSS, and Stata, all of which have a point-and-click element as well as the possibility of scripted analysis.  
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
-However, many users of these tools depend on un-scripted actions such as cleaning data beforehand in a separate program and the use of point-and-click, menu driven selections.  For this reason, we suggest the use of R and Python for most research purposes, along with knowledge of how to use the data querying language SQL (pronounced "sequel").  
+**What about scripting options in Excel, SAS, SPSS, and Stata?**
+
+Excel (and some other primarily point-and-click software) *can* support scripted analysis.
+Tools like PowerQuery and PowerBI make it possible for you to write out data cleaning steps as a script in Excel, which is a huge advantage over doing those steps interactively by clicking menus and typing in cells. 
+
+You may also have been exposed to SAS, SPSS, and Stata, all of which have a point-and-click element as well as the possibility of scripted analysis. 
+
+If you can switch from relying on point-and-click procedures to exclusively using the scripting options in your analysis software, that will make your work much more reproducible.
+Keep in mind, though, that if **any** steps at all in your process rely on something done outside of the script, that greatly undermines the reproducibility of your analysis.
+
+</div>
+
+Although tools like Excel *can* use scripts, many users of these tools depend on un-scripted actions such as cleaning data beforehand in a separate program and the use of point-and-click, menu driven selections.  
+We can contrast that with tools like R and Python that are built for scripting first, where every step is explicitly recorded. 
+
+For this reason, we suggest the use of R and Python for most research purposes, along with knowledge of how to use the data querying language SQL (pronounced "sequel").  
 
 Advantages of these tools include:
 
