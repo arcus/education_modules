@@ -569,6 +569,20 @@ Notice **where** the `fill =` appears and what it it set equal to!
 
 Importantly, R knows a lot of different colors by their English names.  To see them, you can use a [great cheat sheet](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf) that shows the color and the color name, or perhaps [this one](http://derekogle.com/NCGraphing/resources/colors).  For "hex" colors, there are a number of "color pickers" out there, like [Google's](https://g.co/kgs/hv1JrX).
 
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+Is it `fill` or `color`?
+
+Many people new to ggplot2 try using `color` instead of `fill` in their mappings and end up with surprising results.
+Confusingly, in ggplot2, `fill` and `color` refer to two different aesthetic mappings. 
+Use `fill` for shapes that have area, like bars or polygons, and use `color` for points and lines (including outlines of shapes).
+
+So you would map the color of points in a scatterplot with `color`, but for bars in a histogram, you would use `fill`. 
+Some plots include both shapes and lines/points, like [boxplots](https://r-graph-gallery.com/264-control-ggplot2-boxplot-colors.html), and you can control mappings for each separately with `fill` and `color`.
+
+</div>
+
 ## Working With Geoms
 
 Consider: how are these two plots similar?  How are they different?
