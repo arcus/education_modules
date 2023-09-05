@@ -2,10 +2,10 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.0
-current_version_description: Initial version
+version:  1.1.0
+current_version_description: Add explanation for why we use AWS for genomics modules. 
 module_type: wrapper
-docs_version: 1.0.0
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -64,11 +64,14 @@ coding_language: bash
 @end
 
 @version_history 
-No previous versions.
+Previous versions: 
+
+- [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/e5ee3852f80245798baa280f195b806a39122849/genomics_setup/genomics_setup.md#1): Initial version.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_wrapper.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_genomics.md
 -->
 
 # Genomics Tools and Methods: Computing Setup
@@ -83,6 +86,8 @@ We are grateful to the team of authors and maintainers at [Data Carpentry](https
 Erin Alison Becker, Tracy Teal, François Michonneau, Maneesha Sane, Taylor Reiter, Jason Williams, et al. (2019, June). datacarpentry/genomics-workshop: Data Carpentry: Genomics Workshop Overview, June 2019 (Version v2019.06.1). Zenodo. http://doi.org/10.5281/zenodo.3260309
 
 </div>
+
+@aws_explanation
 
 ## Lesson Preparation
 

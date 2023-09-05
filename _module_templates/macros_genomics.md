@@ -2,15 +2,51 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.0.0
-current_version_description: Initial version.
+version:  2.0.0
+current_version_description: Added macro aws_explanation to provide context for learners about why we're requiring them to set up an AWS account.
 language: en
 narrator: UK English Female
 title: Genomics Module Macros
 comment:  This is placeholder module to save macros used in other modules.
 
 @version_history 
-No previous versions.
+Previous versions: 
+
+- [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a588227c04699c46112b01bea136679f8d6f7dc0/_module_templates/macros_genomics.md#1): Initial version
+
+@end
+
+@aws_explanation
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+This module includes hands-on genomics analysis examples that are too demanding to run on most personal computers. 
+In order to follow along, you'll need to use Amazon's cloud computing (AWS), which will require you to have an AWS account with a credit card.
+
+</div>
+
+We regret having to rely on a paid service for our learners to practice this code, but unfortunately we have been unable to find a free service that can support the computing power needed for genomics. 
+If you have a suggestion for a free platform we could direct learners to instead of AWS, please [let us know](#feedback)!
+
+We'll continue to look for a better solution, but in the meantime we wanted to make these training materials available in the best way we know how.
+
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
+**What other options do you have?**
+
+You can try to download all of the relevant files and install the necessary software on your computer (there are instructions for doing so in the [Data Carpentry genomics setup instructions](https://datacarpentry.org/genomics-workshop/setup.html)).
+Please note that even for very small genomics analysis examples, the files required are large and it may take hours for you to download them. 
+Even after downloading everything, your computer might not be powerful enough to run the necessary commands without hanging. 
+
+You may have access to powerful cloud computing via your institution. 
+If so, that can be a great option for practicing genomics analysis without having to set up an AWS account. 
+Reach out to your IT team for help accessing and using computing resources at your institution. 
+It may be helpful to share the [Data Carpentry genomics setup instructions](https://datacarpentry.org/genomics-workshop/setup.html) with them to let them know what software you'll need.
+
+</div>
+
 @end
 
 @lesson_prep_ami
@@ -62,6 +98,8 @@ If there are files on your instance that you don't want to lose, be sure to move
 -->
 
 # Genomics Module Macros
+
+@aws_explanation
 
 ## Lesson Preparation
 

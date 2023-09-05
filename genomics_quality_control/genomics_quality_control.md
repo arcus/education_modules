@@ -2,10 +2,10 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.0
-current_version_description: Initial version.
+version:  1.1.0
+current_version_description: Add explanation about why we use AWS for genomics modules.
 module_type: standard
-docs_version: 1.1.0
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -62,11 +62,12 @@ sequence_name: genomics_tools_and_methods
 @version_history 
 
 Previous versions: 
-No previous versions.
+
+- [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a588227c04699c46112b01bea136679f8d6f7dc0/genomics_quality_control/genomics_quality_control.md#1): Initial version.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/omics_tools_and_methods/_module_templates/macros_genomics.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_genomics.md
 -->
 
 # Genomics Tools and Methods: Quality Control
@@ -84,6 +85,8 @@ Version 2017.11.0, November 2017,
 doi: 10.5281/zenodo.1064254
 
 </div>
+
+@aws_explanation
 
 ## Lesson preparation
 
