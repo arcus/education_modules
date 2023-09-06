@@ -82,7 +82,7 @@ jobs:
         name: Metadata has changed
         run: echo "The any_change variable was $OUTPUT3 so now the changes need to be propogated"
   
-  # If changes were made to the python file, then we want to push those changes and make a new csv
+  # If changes were made to the python file, then we want to push those changes to the metadata_workflow branch and make a new csv
   update_metadata_workflow_branch:
     name: Update metadata_workflow branch
     runs-on: ubuntu-latest
@@ -136,4 +136,41 @@ jobs:
           git commit -am "update metadata records" 
  
           git push origin atomize_metadata_workflows #CHANGE BACK TO METADATA_WORKFLOW BEFORE MERGING
+
+  # If changes were made to the python file, then we want to push those changes to the metadata_workflow branch and make a new csv
+  update_module_discovery_repository:
+    name: Update module_discovery repository
+    runs-on: ubuntu-latest
+    needs: metadata_changed_message 
+    steps:
+      - env:
+          OUTPUT3: ${{needs.run_script.outputs.changes}}
+        run: echo "The changes variable is $OUTPUT3"
+      
+      - uses: actions/checkout@v3
+      
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: metadata_artifact
+
+      - name: check that artifact downloaded
+        run: |
+          wc module_data.py
+
+      - name: Commit new module_data.py
+        run: |
+          git config --local user.name actions-user
+
+          git config --local user.email "actions@github.com" 
+ 
+          gh repo clone arcus/module_discovery
+
+          git fetch
+          
+          git add module_data.py
+
+          git commit -am "update metadata records" 
+ 
+          git push origin main 
 
