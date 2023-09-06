@@ -1,7 +1,8 @@
 # This is a workflow to pull all of the metadata from all of the modules into a single file
 # each time something is merged to main, this workflow will run and rebuild the metadata file.
 
-name: pull_metadata
+name: Process Module Metadata
+
 
 # Controls when the workflow will run
 on:
