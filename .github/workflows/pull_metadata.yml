@@ -147,7 +147,11 @@ jobs:
           OUTPUT3: ${{needs.run_script.outputs.changes}}
         run: echo "The changes variable is $OUTPUT3"
       
-      - uses: actions/checkout@v3
+      - name: Checkout module_discovery
+        uses: actions/checkout@v3
+        with:
+          repository: arcus/module_discovery
+          path: module_discovery
       
       - name: Download artifact
         uses: actions/download-artifact@v3
@@ -164,8 +168,6 @@ jobs:
 
           git config --local user.email "actions@github.com" 
  
-          git clone https://github.com/arcus/module_discovery.git
-
           git fetch
           
           git add module_data.py

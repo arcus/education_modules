@@ -1,6 +1,6 @@
 <!--
 
-author:   Elizabeth J Drellich and Nicole Feldman
+author:   Elizabeth J. Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
 version: 1.3.2
 current_version_description: Restructured Learning Objectives
