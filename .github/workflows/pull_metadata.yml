@@ -21,6 +21,7 @@ on:
 jobs:
 
   run_script:
+    name: Pull metadata from all modules into .py file
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
