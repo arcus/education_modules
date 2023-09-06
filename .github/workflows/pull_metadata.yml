@@ -21,7 +21,7 @@ on:
 jobs:
 
   run_script:
-    name: Pull metadata from all modules into .py file
+    name: Create module_data.py
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
@@ -60,6 +60,7 @@ jobs:
 
   # This message is for me to check that things ran correctly even if nothing actually updated
   nothing_to_update_message:
+    name: No changes to metadata
     runs-on: ubuntu-latest
     needs: run_script
     if: needs.run_script.outputs.changes != 'true'  
@@ -70,7 +71,8 @@ jobs:
         run: echo "Nothing was committed because the any_change variable was $OUTPUT3"
   
   # If changes were made to the python file, then we want to push those changes and make a new csv
-  commit_changes:
+  update_metadata_workflow_branch:
+    name: Update metadata_workflow branch
     runs-on: ubuntu-latest
     needs: run_script
     if: needs.run_script.outputs.changes == 'true'  
