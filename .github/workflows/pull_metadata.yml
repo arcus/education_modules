@@ -7,7 +7,7 @@ name: pull_metadata
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: "main"
+    branches: "atomize_metadata_workflows" #CHANGE TO MAIN BEFORE MERGING
     paths-ignore:
       - 'assets/**'
       - '_for_authors/**'
@@ -109,7 +109,7 @@ jobs:
  
           git fetch
 
-          git checkout metadata_workflow
+          git checkout atomize_metadata_workflows #CHANGE BACK TO METADATA_WORKFLOW BEFORE MERGING
 
           mv -f module_data.py module_data.csv assets/metadata/
           
@@ -119,5 +119,5 @@ jobs:
 
           git commit -am "update metadata records" 
  
-          git push origin metadata_workflow
+          git push origin atomize_metadata_workflows #CHANGE BACK TO METADATA_WORKFLOW BEFORE MERGING
 
