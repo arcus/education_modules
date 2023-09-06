@@ -114,7 +114,7 @@ jobs:
 
       - name: Create csv from python file
         run: |
-          python module_data.py
+          python df.to_csv('module_data.csv')
 
       - name: Commit newly updated files
         run: |
