@@ -69,13 +69,24 @@ jobs:
           OUTPUT3: ${{needs.run_script.outputs.changes}}
         name: Nothing was committed
         run: echo "Nothing was committed because the any_change variable was $OUTPUT3"
+
+  # This message is for me to check that things ran correctly even if nothing actually updated
+  metadata_changed_message:
+    name: Metadata has changed
+    runs-on: ubuntu-latest
+    needs: run_script
+    if: needs.run_script.outputs.changes == 'true'  
+    steps:
+      - env:
+          OUTPUT3: ${{needs.run_script.outputs.changes}}
+        name: Metadata has changed
+        run: echo "The any_change variable was $OUTPUT3 so now the changes need to be propogated"
   
   # If changes were made to the python file, then we want to push those changes and make a new csv
   update_metadata_workflow_branch:
     name: Update metadata_workflow branch
     runs-on: ubuntu-latest
-    needs: run_script
-    if: needs.run_script.outputs.changes == 'true'  
+    needs: metadata_changed_message 
     steps:
       - env:
           OUTPUT3: ${{needs.run_script.outputs.changes}}
