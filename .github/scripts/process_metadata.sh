@@ -71,7 +71,3 @@ do
     echo "df.at[\"$FOLDER\", \"Linked Courses\"] = list(a)" >> $metadata_df
   fi
 done
-
-### add a line so running the file also writes the dataframe to a csv
-
-echo "df.to_csv('module_data.csv')" >> $metadata_df
