@@ -670,7 +670,17 @@ Now we can use the new `aKIRs_groups` and `prior.chemo_groups` variables in our 
 
 ``` r
 cytomegalovirus |>  
-  select(aKIRs_groups, age, sex, race, diagnosis.type, time.to.transplant, prior.chemo, prior.transplant, cmv, donor.cmv) |> 
+  select(aKIRs_groups, 
+         age, 
+         sex, 
+         race, 
+         diagnosis.type, 
+         time.to.transplant, 
+         prior.radiation, 
+         prior.chemo_groups, 
+         prior.transplant, 
+         recipient.cmv, 
+         donor.cmv) |> 
   tbl_summary(by = aKIRs_groups) 
 ```
 
@@ -687,8 +697,18 @@ We'll look at a few options now.
 
 ```r
 # to save re-typing code and highlight just what's new, save the first part
-table_data <- cytomegalovirus |>  
-  select(aKIRs_groups, age, sex, race, diagnosis.type, time.to.transplant, prior.radiation, prior.chemo_groups, prior.transplant, recipient.cmv, donor.cmv)
+table_data <- cytomegalovirus  |>  
+  select(aKIRs_groups, 
+         age, 
+         sex, 
+         race, 
+         diagnosis.type, 
+         time.to.transplant, 
+         prior.radiation, 
+         prior.chemo_groups, 
+         prior.transplant, 
+         recipient.cmv, 
+         donor.cmv) 
 ```
 
 ```r
@@ -711,7 +731,8 @@ We can control which tests `gtsummary` uses by adding a `test` argument to the `
 We'll also have it round to two digits instead of one by modifying the `pvalue_fun` command.
 
 ```r
-# make the p values round to 2 digits instead of 1, and use t.test instead of wilcoxon rank sum test
+# make the p values round to 2 digits instead of 1, 
+# and use t.test instead of wilcoxon rank sum test
 table_data |> 
   tbl_summary(by = aKIRs_groups) |> 
   add_p(test = list(all_continuous() ~ "t.test",
