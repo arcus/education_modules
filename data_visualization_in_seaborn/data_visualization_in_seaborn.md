@@ -2,9 +2,10 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.0
+version: 1.2.1
 current_version_description: Update highlight boxes, update front matter, and replace text with macros.
-docs_version: 1.0.0
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
