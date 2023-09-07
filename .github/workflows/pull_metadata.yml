@@ -114,10 +114,8 @@ jobs:
 
       - name: Create csv from python file
         run: |
-          echo "import module_data.py" > create_csv.py
-          echo "df.to_csv('module_data.csv')" >> create_csv.py
-          cat create_csv.py
-          python create_csv.py
+          echo "df.to_csv('module_data.csv')" > create_csv.py
+          python $(cat module_date.py create_csv.py)
 
       - name: Commit newly updated files
         run: |
@@ -141,7 +139,7 @@ jobs:
 
   # If changes were made to the python file, then we want to push those changes to the metadata_workflow branch and make a new csv
   update_module_discovery_repository:
-    name: Update module_discovery repository
+    name: Manually update module_discovery repository
     runs-on: ubuntu-latest
     needs: metadata_changed_message 
     steps:
@@ -149,32 +147,7 @@ jobs:
           OUTPUT3: ${{needs.run_script.outputs.changes}}
         run: echo "The changes variable is $OUTPUT3"
       
-      - name: Checkout module_discovery
-        uses: actions/checkout@v3
-        with:
-          repository: arcus/module_discovery
-          path: module_discovery
-      
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: metadata_artifact
-
-      - name: check that artifact downloaded
+      - name: Print module_discovery instructions
         run: |
-          wc module_data.py
-
-      - name: Commit new module_data.py
-        run: |
-          git config --local user.name actions-user
-
-          git config --local user.email "actions@github.com" 
- 
-          git fetch
-          
-          git add module_data.py
-
-          git commit -am "update metadata records" 
- 
-          git push origin main 
+          echo "The module_discovery repository will automatically update on Sunday morning. If you have changed metadata that needs to be updated there immediately, please manually activate that workflow at https://github.com/arcus/module_discovery/actions/workflows/update_module_data.yml"
 
