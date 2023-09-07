@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.0
+version:  1.0.1
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
@@ -285,7 +285,7 @@ summary(cytomegalovirus)
 
 You should see a summary of each of the 26 variables in the data, with a set of summary statistics printed under each. 
 This is a great way to get a lot of information quickly. 
-The `summary` function is clever enough to print different summary statsitics for different variable types --- it won't try to calculate the mean or median of a categorical variable (called a factor in R), for example, since that wouldn't be meaningful.
+The `summary` function is clever enough to print different summary statistics for different variable types --- it won't try to calculate the mean or median of a categorical variable (called a factor in R), for example, since that wouldn't be meaningful.
 
 The `summary` function checks what type of variable (numeric, categorical/factor, etc.) is in each column and returns sensible summary statistics for each. 
 For a factor, you get the count for each level, and also a count of how many observations are missing. 
@@ -670,7 +670,17 @@ Now we can use the new `aKIRs_groups` and `prior.chemo_groups` variables in our 
 
 ``` r
 cytomegalovirus |>  
-  select(aKIRs_groups, age, sex, race, diagnosis.type, time.to.transplant, prior.chemo, prior.transplant, cmv, donor.cmv) |> 
+  select(aKIRs_groups, 
+         age, 
+         sex, 
+         race, 
+         diagnosis.type, 
+         time.to.transplant, 
+         prior.radiation, 
+         prior.chemo_groups, 
+         prior.transplant, 
+         recipient.cmv, 
+         donor.cmv) |> 
   tbl_summary(by = aKIRs_groups) 
 ```
 
@@ -687,8 +697,18 @@ We'll look at a few options now.
 
 ```r
 # to save re-typing code and highlight just what's new, save the first part
-table_data <- cytomegalovirus |>  
-  select(aKIRs_groups, age, sex, race, diagnosis.type, time.to.transplant, prior.radiation, prior.chemo_groups, prior.transplant, recipient.cmv, donor.cmv)
+table_data <- cytomegalovirus  |>  
+  select(aKIRs_groups, 
+         age, 
+         sex, 
+         race, 
+         diagnosis.type, 
+         time.to.transplant, 
+         prior.radiation, 
+         prior.chemo_groups, 
+         prior.transplant, 
+         recipient.cmv, 
+         donor.cmv) 
 ```
 
 ```r
@@ -700,7 +720,7 @@ table_data |>
 
 ![Table 1 again, but with a column added for p values.](media/table1_2.png)
 
-This is an improvement, but the p values here don't match the published table, and the footnote explains why --- says it's using Wilcoxon rank sum test, Pearson's chi-squared, and Fisher's exact test to get the p vlaues. 
+This is an improvement, but the p values here don't match the published table, and the footnote explains why --- says it's using Wilcoxon rank sum test, Pearson's chi-squared, and Fisher's exact test to get the p values. 
 The help documentation (`?add_p.tbl_summary`) explains a little more thoroughly:
 
 >Tests default to "kruskal.test" for continuous variables ("wilcox.test" when "by" variable has two levels), "chisq.test.no.correct" for categorical variables with all expected cell counts >=5, and "fisher.test" for categorical variables with any expected cell count <5.
@@ -711,7 +731,8 @@ We can control which tests `gtsummary` uses by adding a `test` argument to the `
 We'll also have it round to two digits instead of one by modifying the `pvalue_fun` command.
 
 ```r
-# make the p values round to 2 digits instead of 1, and use t.test instead of wilcoxon rank sum test
+# make the p values round to 2 digits instead of 1, 
+# and use t.test instead of wilcoxon rank sum test
 table_data |> 
   tbl_summary(by = aKIRs_groups) |> 
   add_p(test = list(all_continuous() ~ "t.test",
