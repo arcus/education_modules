@@ -80,7 +80,7 @@ jobs:
       - env:
           OUTPUT3: ${{needs.run_script.outputs.changes}}
         name: Metadata has changed
-        run: echo "The any_change variable was $OUTPUT3 so now the changes need to be propogated"
+        run: echo "The any_change variable was $OUTPUT3 so now the changes need to be propagated"
   
   # If changes were made to the python file, then we want to push those changes to the metadata_workflow branch and make a new csv
   update_metadata_workflow_branch:
@@ -99,7 +99,7 @@ jobs:
         with:
           name: metadata_artifact
 
-      - name: check that artifact downloaded
+      - name: Check that artifact downloaded
         run: |
           wc module_data.py
 
@@ -114,8 +114,10 @@ jobs:
 
       - name: Create csv from python file
         run: |
-          echo "df.to_csv('module_data.csv')" >> module_data.py
-          python module_data.py
+          echo "import module_data.py" > create_csv.py
+          echo "df.to_csv('module_data.csv')" >> create_csv.py
+          cat create_csv.py
+          python create_csv.py
 
       - name: Commit newly updated files
         run: |
