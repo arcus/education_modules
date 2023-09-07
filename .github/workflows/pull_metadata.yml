@@ -83,6 +83,47 @@ jobs:
         run: echo "The any_change variable was $OUTPUT3 so now the changes need to be propagated"
   
   # If changes were made to the python file, then we want to push those changes to the metadata_workflow branch and make a new csv
+  create_csv:
+    name: Create module_data.csv
+    runs-on: ubuntu-latest
+    needs: metadata_changed_message 
+    steps:
+      - env:
+          OUTPUT3: ${{needs.run_script.outputs.changes}}
+        run: echo "The changes variable is $OUTPUT3"
+      
+      - uses: actions/checkout@v3
+      
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: metadata_artifact
+
+      - name: Check that artifact downloaded
+        run: |
+          wc module_data.py
+
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v4
+        with:
+          # Semantic version range syntax or exact version of a Python version
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip pandas
+
+      - name: Create csv from python file
+        run: |
+          cp module_data.py create_csv.py
+          echo "df.to_csv('module_data.csv')" >> create_csv.py
+          python create_csv.py
+      
+      - name: Upload csv file as an artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: metadata_csv
+          path: module_data.csv
+
   update_metadata_workflow_branch:
     name: Update metadata_workflow branch
     runs-on: ubuntu-latest
@@ -140,7 +181,7 @@ jobs:
 
   # The module_discovery repository automatically checks weekly to see if the module data has changed, but a message here informs users how to manually run that workflow.
   update_module_discovery_repository:
-    name: Manually update module_discovery repository
+    name: Optional--Manually update module_discovery repository
     runs-on: ubuntu-latest
     needs: metadata_changed_message 
     steps:
@@ -155,7 +196,7 @@ jobs:
 
   # It is possible for the metadata to change without any of the things displayed on the public facing website actually needing to be updated.
   check_list_of_modules_for_changes:
-    name: Check the public list for changes
+    name: TODO Check the public list for changes
     runs-on: ubuntu-latest
     needs: metadata_changed_message
     steps:
@@ -165,7 +206,7 @@ jobs:
 
   # The public facing website also has to be updated. 
   update_gh-pages:
-    name: Update list of modules on public site
+    name: TODO Update list of modules on public site
     runs-on: ubuntu-latest
     needs: check_list_of_modules_for_changes
     steps:
