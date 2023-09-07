@@ -285,7 +285,7 @@ summary(cytomegalovirus)
 
 You should see a summary of each of the 26 variables in the data, with a set of summary statistics printed under each. 
 This is a great way to get a lot of information quickly. 
-The `summary` function is clever enough to print different summary statsitics for different variable types --- it won't try to calculate the mean or median of a categorical variable (called a factor in R), for example, since that wouldn't be meaningful.
+The `summary` function is clever enough to print different summary statistics for different variable types --- it won't try to calculate the mean or median of a categorical variable (called a factor in R), for example, since that wouldn't be meaningful.
 
 The `summary` function checks what type of variable (numeric, categorical/factor, etc.) is in each column and returns sensible summary statistics for each. 
 For a factor, you get the count for each level, and also a count of how many observations are missing. 
@@ -700,7 +700,7 @@ table_data |>
 
 ![Table 1 again, but with a column added for p values.](media/table1_2.png)
 
-This is an improvement, but the p values here don't match the published table, and the footnote explains why --- says it's using Wilcoxon rank sum test, Pearson's chi-squared, and Fisher's exact test to get the p vlaues. 
+This is an improvement, but the p values here don't match the published table, and the footnote explains why --- says it's using Wilcoxon rank sum test, Pearson's chi-squared, and Fisher's exact test to get the p values. 
 The help documentation (`?add_p.tbl_summary`) explains a little more thoroughly:
 
 >Tests default to "kruskal.test" for continuous variables ("wilcox.test" when "by" variable has two levels), "chisq.test.no.correct" for categorical variables with all expected cell counts >=5, and "fisher.test" for categorical variables with any expected cell count <5.
