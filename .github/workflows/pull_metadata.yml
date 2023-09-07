@@ -158,7 +158,7 @@ jobs:
  
           git fetch
 
-          git checkout atomize_metadata_workflows #CHANGE BACK TO METADATA_WORKFLOW BEFORE MERGING
+          git checkout metadata_workflow 
 
           mv -f module_data.py module_data.csv assets/metadata/
           
@@ -168,7 +168,7 @@ jobs:
 
           git commit -am "update metadata records" 
  
-          #git push origin atomize_metadata_workflows #CHANGE BACK TO METADATA_WORKFLOW BEFORE MERGING
+          git push origin metadata_workflow 
 
   # The module_discovery repository automatically checks weekly to see if the module data has changed, but a message here informs users how to manually run that workflow.
   update_module_discovery_repository:
