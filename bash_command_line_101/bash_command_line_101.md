@@ -288,7 +288,7 @@ A [**plain text**](https://en.wikipedia.org/wiki/Plain_text) file is a file that
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
-Even though the words "plain text" in the previous paragraph have some non-text attributes, they are all recorded as plain text in the Markdown (`.md`) file of this lesson. If you open the [Markdown file](link/to/git/of/this/file), you will see only characters that can be typed by a keyboard:
+Even though the words "plain text" in the previous paragraph have some non-text attributes, they are all recorded as plain text in the Markdown (`.md`) file of this lesson. If you open the [Markdown file](https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md), you will see only characters that can be typed by a keyboard:
 
 ```
 [**plain text**](https://en.wikipedia.org/wiki/Plain_text)
