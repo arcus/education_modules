@@ -226,15 +226,18 @@ jobs:
     runs-on: ubuntu-latest
     needs: metadata_changed_message
     steps:
+      - uses: actions/checkout@v3
+
       - name: Build webpage markdown file
         run: |
           bash .github/scripts/public_list_of_modules.sh
+      
       - name: Upload webpage file as an artifact
         uses: actions/upload-artifact@v3
         with:
           name: webpage_artifact
           path: list_of_modules.md
-          
+
   # Maybe the public facing website doesn't need updates
   no_update_to_gh-pages:
     name: Website - No changes
