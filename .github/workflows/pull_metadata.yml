@@ -119,7 +119,7 @@ jobs:
   
   # If changes were made to the python file, then we want to push those changes to the metadata_workflow branch and make a new csv
   create_csv:
-    name: Create a csv of metadata
+    name: Module repo - Create a csv of metadata
     runs-on: ubuntu-latest
     needs: metadata_changed_message 
     steps:
@@ -160,7 +160,7 @@ jobs:
           path: module_data.csv
 
   update_metadata_workflow_branch:
-    name: Push metadata files to metadata_workflow branch
+    name: Module repo - Push to metadata_workflow branch
     runs-on: ubuntu-latest
     needs: create_csv 
     steps:
@@ -207,7 +207,7 @@ jobs:
 
   # The module_discovery repository automatically checks weekly to see if the module data has changed, but a message here informs users how to manually run that workflow.
   update_module_discovery_repository:
-    name: Optional-Manually update module_discovery repository
+    name: App - Optional-Manually update module_discovery repository
     runs-on: ubuntu-latest
     needs: metadata_changed_message 
     steps:
@@ -222,7 +222,7 @@ jobs:
 
   # It is possible for the metadata to change without any of the things displayed on the public facing website actually needing to be updated.
   check_list_of_modules_for_changes:
-    name: TODO Check the public list for changes
+    name: Website - TODO Check the public list for changes
     runs-on: ubuntu-latest
     needs: metadata_changed_message
     steps:
@@ -232,7 +232,7 @@ jobs:
 
   # The public facing website also has to be updated. 
   update_gh-pages:
-    name: TODO Update list of modules on public site
+    name: Website - TODO Update list of modules on public site
     runs-on: ubuntu-latest
     needs: check_list_of_modules_for_changes
     steps:
