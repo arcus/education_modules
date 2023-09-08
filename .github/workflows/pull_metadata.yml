@@ -119,7 +119,7 @@ jobs:
   
   # If changes were made to the python file, then we want to push those changes to the metadata_workflow branch and make a new csv
   create_csv:
-    name: Module repo - Create a csv of metadata
+    name: Module repo - Create csv
     runs-on: ubuntu-latest
     needs: metadata_changed_message 
     steps:
@@ -226,10 +226,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: metadata_changed_message
     steps:
-      - name: Check if data on public site has changed
+      - name: Build webpage markdown file
         run: |
-          echo "Check if data on public site has changed"
-
+          bash .github/scripts/public_list_of_modules.sh
+      - name: Upload webpage file as an artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: webpage_artifact
+          path: list_of_modules.md
+          
   # Maybe the public facing website doesn't need updates
   no_update_to_gh-pages:
     name: Website - No changes
