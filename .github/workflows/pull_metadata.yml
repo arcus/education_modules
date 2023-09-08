@@ -53,6 +53,7 @@ jobs:
   check_for_changes:
     name: Has metadata changed?
     runs-on: ubuntu-latest
+    needs: run_script
     # Map a step output to a job output
     outputs:
       changes: ${{ steps.check_if_changed.outputs.changes }}
