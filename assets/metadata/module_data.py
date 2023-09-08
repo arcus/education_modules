@@ -1,7 +1,7 @@
 import pandas as pd
 df=pd.DataFrame()
 
-df.loc["bash_103_combining_commands", "author"] = "Elizabeth Drellich and Nicole Feldman"
+df.loc["bash_103_combining_commands", "author"] = "Elizabeth J Drellich and Nicole Feldman"
 df.loc["bash_103_combining_commands", "email"] = "drelliche@chop.edu and feldmanna@chop.edu"
 df.loc["bash_103_combining_commands", "version"] = "1.3.2"
 df.loc["bash_103_combining_commands", "current_version_description"] = "Restructured Learning Objectives"
