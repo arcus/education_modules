@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version: 1.5.0
+version: 1.5.1
 current_version_description: Updated metadata and macros
 module_type: standard
 docs_version: 2.0.0
@@ -141,7 +141,7 @@ A **Command Line Interface** or **CLI** allows a user to pass a series of text (
 
 ### Why would I use it?
 
-If you have ever spent time painstakingly changing files to prepare them for processing one at a time (say, renaming files, or removing identifying information in the first few lines of each file, or replacing curly quotes with straight quotes via search and replace across many files), then you know how difficult it can be to manipulate multiple files using point and click methods. Bash scripting can can make this kind of task easier, faster, and more accurate.
+If you have ever spent time painstakingly changing files to prepare them for processing one at a time (say, renaming files, or removing identifying information in the first few lines of each file, or replacing curly quotes with straight quotes via search and replace across many files), then you know how difficult it can be to manipulate multiple files using point and click methods. Bash scripting can make this kind of task easier, faster, and more accurate.
 
 Shell scripting can be useful to researchers and others working with data:
 
@@ -288,7 +288,7 @@ A [**plain text**](https://en.wikipedia.org/wiki/Plain_text) file is a file that
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
-Even though the words "plain text" in the previous paragraph have some non-text attributes, they are all recorded as plain text in the Markdown (`.md`) file of this lesson. If you open the [Markdown file](link/to/git/of/this/file), you will see only characters that can be typed by a keyboard:
+Even though the words "plain text" in the previous paragraph have some non-text attributes, they are all recorded as plain text in the Markdown (`.md`) file of this lesson. If you open the [Markdown file](https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md), you will see only characters that can be typed by a keyboard:
 
 ```
 [**plain text**](https://en.wikipedia.org/wiki/Plain_text)
