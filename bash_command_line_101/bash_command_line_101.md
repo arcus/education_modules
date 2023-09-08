@@ -141,7 +141,7 @@ A **Command Line Interface** or **CLI** allows a user to pass a series of text (
 
 ### Why would I use it?
 
-If you have ever spent time painstakingly changing files to prepare them for processing one at a time (say, renaming files, or removing identifying information in the first few lines of each file, or replacing curly quotes with straight quotes via search and replace across many files), then you know how difficult it can be to manipulate multiple files using point and click methods. Bash scripting can can make this kind of task easier, faster, and more accurate.
+If you have ever spent time painstakingly changing files to prepare them for processing one at a time (say, renaming files, or removing identifying information in the first few lines of each file, or replacing curly quotes with straight quotes via search and replace across many files), then you know how difficult it can be to manipulate multiple files using point and click methods. Bash scripting can make this kind of task easier, faster, and more accurate.
 
 Shell scripting can be useful to researchers and others working with data:
 
