@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version: 1.5.0
+version: 1.5.1
 current_version_description: Updated metadata and macros
 module_type: standard
 docs_version: 2.0.0
