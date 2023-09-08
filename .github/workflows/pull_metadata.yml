@@ -107,13 +107,13 @@ jobs:
 
   # This message is for me to check that things ran correctly even if nothing actually updated
   metadata_changed_message:
-    name: Update in all locations - metadata has changed
+    name: Yes - update in all locations
     runs-on: ubuntu-latest
-    needs: run_script
-    if: needs.run_script.outputs.changes == 'true'  
+    needs: check_for_changes
+    if: needs.check_for_changes.outputs.changes == 'true'  
     steps:
       - env:
-          OUTPUT3: ${{needs.run_script.outputs.changes}}
+          OUTPUT3: ${{needs.check_for_changes.outputs.changes}}
         name: Metadata has changed
         run: echo "The any_change variable was $OUTPUT3 so now the changes need to be propagated"
   
