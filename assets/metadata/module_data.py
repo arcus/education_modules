@@ -1,7 +1,7 @@
 import pandas as pd
 df=pd.DataFrame()
 
-df.loc["bash_103_combining_commands", "author"] = "Elizabeth Drellich and Nicole Feldman"
+df.loc["bash_103_combining_commands", "author"] = "Elizabeth J. Drellich and Nicole Feldman"
 df.loc["bash_103_combining_commands", "email"] = "drelliche@chop.edu and feldmanna@chop.edu"
 df.loc["bash_103_combining_commands", "version"] = "1.3.2"
 df.loc["bash_103_combining_commands", "current_version_description"] = "Restructured Learning Objectives"
@@ -296,16 +296,16 @@ df.loc["data_visualization_in_open_source_software", "depends_on_knowledge_avail
 df.loc["data_visualization_in_open_source_software", "version_history"] = "Previous versions: &&- [1.1.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md#1): Clarified wording, add note about colorblind palettes, add note about where to find practical seaborn and ggplot2 practice.&- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/914714acfb6b30980e011ab09e087d4d2c5c918e/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md#1): Initial version, add newlines to make divs display better.&" 
 df.loc["data_visualization_in_seaborn", "author"] = "Rose Hartman"
 df.loc["data_visualization_in_seaborn", "email"] = "hartmanr1@chop.edu"
-df.loc["data_visualization_in_seaborn", "version"] = "1.2.1"
+df.loc["data_visualization_in_seaborn", "version"] = "1.2.0"
 df.loc["data_visualization_in_seaborn", "current_version_description"] = "Update highlight boxes, update front matter, and replace text with macros."
-df.loc["data_visualization_in_seaborn", "module_type"] = "standard"
-df.loc["data_visualization_in_seaborn", "docs_version"] = "2.0.0"
+df.loc["data_visualization_in_seaborn", "module_type"] = ""
+df.loc["data_visualization_in_seaborn", "docs_version"] = "1.0.0"
 df.loc["data_visualization_in_seaborn", "language"] = "en"
 df.loc["data_visualization_in_seaborn", "narrator"] = "UK English Female"
 df.loc["data_visualization_in_seaborn", "mode"] = "Textbook"
 df.loc["data_visualization_in_seaborn", "title"] = "Data Visualization in seaborn"
 df.loc["data_visualization_in_seaborn", "estimated_time_in_minutes"] = "60"
-df.loc["data_visualization_in_seaborn", "module_type"] = "standard"
+df.loc["data_visualization_in_seaborn", "module_type"] = ""
 df.loc["data_visualization_in_seaborn", "good_first_module"] = "false"
 df.loc["data_visualization_in_seaborn", "data_domain"] = ""
 df.loc["data_visualization_in_seaborn", "data_task"] = "data_visualization"
@@ -1241,7 +1241,7 @@ df.loc["r_reshape_long_wide", "depends_on_knowledge_available_in"] = "&- r_basic
 df.loc["r_reshape_long_wide", "version_history"] = "&Previous versions: &&- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/r_reshape_long_wide/r_reshape_long_wide.md#1): Initial version, then added Posit instructions.&&" 
 df.loc["r_summary_stats", "author"] = "Rose Hartman"
 df.loc["r_summary_stats", "email"] = "hartmanr1@chop.edu"
-df.loc["r_summary_stats", "version"] = "1.0.1"
+df.loc["r_summary_stats", "version"] = "1.0.0"
 df.loc["r_summary_stats", "current_version_description"] = "Initial version"
 df.loc["r_summary_stats", "module_type"] = "standard"
 df.loc["r_summary_stats", "docs_version"] = "1.0.0"
@@ -1824,4 +1824,3 @@ a.append("bash_command_line_101")
 a.append("git_creation_and_tracking")
 a.append("reproducibility")
 df.at["using_redcap_api", "Linked Courses"] = list(a)
-df.to_csv('module_data.csv')
