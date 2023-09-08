@@ -207,7 +207,7 @@ jobs:
 
   # The module_discovery repository automatically checks weekly to see if the module data has changed, but a message here informs users how to manually run that workflow.
   update_module_discovery_repository:
-    name: App - Sunday cron job or manual update
+    name: App - Sun. cron job or manual update
     runs-on: ubuntu-latest
     needs: metadata_changed_message 
     steps:
@@ -222,7 +222,7 @@ jobs:
 
   # It is possible for the metadata to change without any of the things displayed on the public facing website actually needing to be updated.
   check_list_of_modules_for_changes:
-    name: Website - TODO Did website metadata change?
+    name: Website - TODO Did it change?
     runs-on: ubuntu-latest
     needs: metadata_changed_message
     steps:
@@ -242,7 +242,7 @@ jobs:
 
   # The public facing website does need updates. 
   update_gh-pages:
-    name: Website - TODO Update list of modules on public site
+    name: Website - TODO Update website
     runs-on: ubuntu-latest
     needs: check_list_of_modules_for_changes
     steps:
