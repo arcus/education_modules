@@ -230,8 +230,8 @@ jobs:
         run: |
           echo "Check if data on public site has changed"
 
-  # The public facing website also has to be updated. 
-  update_gh-pages:
+  # Maybe the public facing website doesn't need updates
+  no_update_to_gh-pages:
     name: Website - No changes
     runs-on: ubuntu-latest
     needs: check_list_of_modules_for_changes
@@ -240,7 +240,7 @@ jobs:
         run: |
           echo "No changes to public website"
 
-  # The public facing website also has to be updated. 
+  # The public facing website does need updates. 
   update_gh-pages:
     name: Website - TODO Update list of modules on public site
     runs-on: ubuntu-latest
