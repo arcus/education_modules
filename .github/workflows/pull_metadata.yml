@@ -8,7 +8,7 @@ name: Process Module Metadata
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: "atomize_metadata_workflows" #CHANGE TO MAIN BEFORE MERGING
+    branches: "main" #CHANGE TO MAIN BEFORE MERGING
     paths-ignore:
       - 'assets/**'
       - '_for_authors/**'
@@ -32,24 +32,13 @@ jobs:
       - name: Process Metadata
         run: |
           bash .github/scripts/process_metadata.sh
-      
-      # # Check if processing the data has changed the python file at all
 
-      # - name: Check if anything changed
-      #   id: check_if_changed 
-      #   run: |
-      #     wget https://raw.githubusercontent.com/arcus/education_modules/metadata_workflow/assets/metadata/module_data.py -O current_data_file.txt
-      #     wc current_data_file.txt
-      #     changes=$(diff module_data.py current_data_file.txt | wc -l)
-      #     echo  there is $changes new line
-      #     changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
-      #     echo the changes variable is now $changes
-      #     echo "changes=$changes" >> "$GITHUB_OUTPUT"
       - name: Upload python file as an artifact
         uses: actions/upload-artifact@v3
         with:
-          name: metadata_artifact
+          name: python_artifact
           path: module_data.py
+        
   check_for_changes:
     name: Has metadata changed?
     runs-on: ubuntu-latest
@@ -58,16 +47,10 @@ jobs:
     outputs:
       changes: ${{ steps.check_if_changed.outputs.changes }}
     steps:
-      # - uses: actions/checkout@v3
-      # # Process all the metadata using the script for that
-      # - name: Process Metadata
-      #   run: |
-      #     bash .github/scripts/process_metadata.sh
-      
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: metadata_artifact
+          name: python_artifact
       # Check if processing the data has changed the python file at all
 
       - name: Check if anything changed
@@ -80,18 +63,6 @@ jobs:
           changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
           echo the changes variable is now $changes
           echo "changes=$changes" >> "$GITHUB_OUTPUT"
-      # - name: Upload python file as an artifact
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: metadata_artifact
-      #     path: module_data.py
-  # debugging:
-  #   runs-on: ubuntu-latest
-  #   needs: run_script
-  #   steps:
-  #     - env:
-  #         OUTPUT3: ${{needs.run_script.outputs.changes}}
-  #       run: echo "The output of the previous step was $OUTPUT3"
 
   # This message is for me to check that things ran correctly even if nothing actually updated
   nothing_to_update_message:
@@ -132,7 +103,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: metadata_artifact
+          name: python_artifact
 
       - name: Check that artifact downloaded
         run: |
@@ -156,7 +127,7 @@ jobs:
       - name: Upload csv file as an artifact
         uses: actions/upload-artifact@v3
         with:
-          name: metadata_csv
+          name: csv_artifact
           path: module_data.csv
 
   update_metadata_workflow_branch:
@@ -173,16 +144,15 @@ jobs:
       - name: Download python artifact
         uses: actions/download-artifact@v3
         with:
-          name: metadata_artifact
+          name: python_artifact
       
       - name: Download csv artifact
         uses: actions/download-artifact@v3
         with:
-          name: metadata_csv
+          name: csv_artifact
 
       - name: Check that artifacts downloaded
         run: |
-          wc module_data.py
           wc module_data.py
 
       - name: Commit newly updated files
