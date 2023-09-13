@@ -62,16 +62,33 @@ coding_language: python
 
 Previous versions: 
 
-- [1.1.1] (https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/255170ae36834565696b5d7e6e3e6621172a5666/pandas_transform/pandas_transform.md#1): Update highlight boxes for greater clarity, other minor changes
+- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/255170ae36834565696b5d7e6e3e6621172a5666/pandas_transform/pandas_transform.md#1): Updated highlight boxes for greater clarity, other minor changes
 
 - [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4c378ba6d211f8ca852d4df9a550edb249cd3c68/pandas_transform/pandas_transform.md#1): Initial version
 
 @end
 
+@re_import_pandas
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+If you have refreshed this page in your browser or are starting on this page, remember to import the `pandas` package by running:
+
+```python
+import pandas as pd
+```
+@Pyodide.eval
+
+</div>
+
+@end
+
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
 
 import: https://raw.githubusercontent.com/arcus/education_modules/pyodide_testing/_module_templates/macros_python.md
+
+import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 -->
 
 # Transform Data with pandas
@@ -105,32 +122,32 @@ The code `import pandas` tells python that you want all of the commands and tool
 
 To make it easier to type out these commands, you can give the `pandas` package a different name when you import it using `as new_name`. While you could in theory pick any name you want, the standard abbreviation is `pd`.
 
-@sage
-<div class="python_link">
-<lia-keep>
-<script type="text/x-sage">
+```python
 import pandas as pd
-</script>
-</lia-keep>
+```
+@Pyodide.eval
+
+If you click the **Execute** button <i aria-hidden="true" class="icon icon-compile-circle lia-btn__icon"></i>, you can watch as the `pandas` package, which is also called a **module**, is downloaded. This line of code is giving us access to all of the `pandas` tools.
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+If you work through this module in one sitting, you will not need to import the `pandas` package again. However if you refresh your browser or come back to this module later, you may need to import the package again.
+
+There will be box at the top of each page reminding you how to do that.
+
 </div>
-
-If you click the **Run python** button, the `pandas` package will be imported. There isn't any output from this line of code, but we will be able to see on future pages that is is giving us access to all of the `pandas` tools.
-
-This code, without a "Run python" button, will be at the top of each page in this module. We will run it automatically when you open each page. If you want to run this code on your own computer, make sure to include the line `import pandas as pd` as the first line.
 
 ### DataFrames and Series
-@sage
 
-The `pandas` package lets you handle two types of data structures that python alone can't: **DataFrames** and **Series**. Before we can start exploring them, let's make sure we have `pandas` imported. You don't have to click anything, this code ran automatically when you opened this page:
+The `pandas` package lets you handle two types of data structures that python alone can't: **DataFrames** and **Series**. Before we can start exploring them, let's make sure we have `pandas` imported. 
 
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
+```python
 import pandas as pd
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
+If you just ran this same code importing `pandas` on the previous page, you shouldn't see any output because the package was already available to you. But if you are starting on this page, or didn't run the code on the last page, you will get a message that the module is being downloaded.
 
 DataFrames
 ---
@@ -141,15 +158,12 @@ Let's take a look at a basic DataFrame. This one is being built from scratch, bu
 
 **Run this code** to print out the DataFrame `df`. Don't forget to remove the `#` in the last line!
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
 df = pd.DataFrame(data=d);
-#print(df)
-</script>
-</lia-keep>
-</div>
+df
+```
+@Pyodide.eval
 
 Series
 ---
