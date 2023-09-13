@@ -20,7 +20,7 @@ import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 
 @lesson_prep_python_pyodide
 You will have opportunities for hands-on coding as you work your way through this module using interactive python cells.
-The interactive python cells are powered by [Pyodide](https://github.com/pyodide/pyodide#what-is-pyodide). For the most part, these will appear with some code already in them, and you can run that code by clicking the **Excecute** button <i aria-hidden="true" class="icon icon-compile-circle lia-btn__icon"></i> below and to the left of the cell.
+The interactive python cells are powered by [Pyodide](https://github.com/pyodide/pyodide#what-is-pyodide). For the most part, these will appear with some code already in them, and you can run that code by clicking the **Execute** button <i aria-hidden="true" class="icon icon-compile-circle lia-btn__icon"></i> below and to the left of the cell.
 
 
 **Give it a try:**

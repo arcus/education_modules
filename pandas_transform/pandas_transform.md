@@ -2,10 +2,10 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.1
-current_version_description: Update highlight boxes for greater clarity, other minor changes
+version: 2.0.0
+current_version_description: Replaced SageMathCells with Pyodide cells for better usability
 module_type: standard
-docs_version: 1.2.0
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -62,12 +62,16 @@ coding_language: python
 
 Previous versions: 
 
+- [1.1.1] (https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/255170ae36834565696b5d7e6e3e6621172a5666/pandas_transform/pandas_transform.md#1): Update highlight boxes for greater clarity, other minor changes
+
 - [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4c378ba6d211f8ca852d4df9a550edb249cd3c68/pandas_transform/pandas_transform.md#1): Initial version
 
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
+
+import: https://raw.githubusercontent.com/arcus/education_modules/pyodide_testing/_module_templates/macros_python.md
 -->
 
 # Transform Data with pandas
@@ -76,9 +80,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 ## Lesson Preparation
 
-@sage
-
-@lesson_prep_python_sage
+@lesson_prep_python_pyodide
 
 ## The `pandas` Package
 
