@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.1
+version: 1.1.2
 module_template_version: 3.0.0
 language: en
 narrator: US English Female
@@ -147,7 +147,7 @@ It's impossible to tease out individual grades from an average, but if you have 
 
 </div>
 
-Another mistake that commonly occurs in human subjects research is the collection of race data with an assumption that a single value adequately captures race, such as "Asian", "Black", and so forth.  If a subject identifies with multiple races, "multiracial" could be added, for example.  But what if you want to study a genetic variant that occurs disproportionately in people of sub-sarahan African descent, and you're interested in all subjects with Black racial heritage, regardless of whether they identify with other races as well?  "Multiracial" does not answer your question about race, and unless you can track down your subject, there's no way to disentangle the wealth of information in the word "multiracial".
+Another mistake that commonly occurs in human subjects research is the collection of race data with an assumption that a single value adequately captures race, such as "Asian", "Black", and so forth.  If a subject identifies with multiple races, "multiracial" could be added, for example.  But what if you want to study a genetic variant that occurs disproportionately in people of sub-Saharan African descent, and you're interested in all subjects with Black racial heritage, regardless of whether they identify with other races as well?  "Multiracial" does not answer your question about race, and unless you can track down your subject, there's no way to disentangle the wealth of information in the word "multiracial".
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>

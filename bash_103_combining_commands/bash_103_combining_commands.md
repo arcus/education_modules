@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
-version: 1.3.3
+version: 1.3.4
 current_version_description: Restructured Learning Objectives
 module_type: standard
 docs_version: 2.0.0
@@ -230,7 +230,7 @@ Again there is no output shown because it was redirected into the file `animals.
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-In the Bash language, right arrows `>` redirect output, and left arrows `<` redirect input. We won't cover redirecting output in this module, however, if you end up writing more complicated pipelines in the future it may be useful to [learn more about redirecting input](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
+In the Bash language, right arrows `>` redirect output, and left arrows `<` redirect input. We won't cover redirecting input in this module, however, if you end up writing more complicated pipelines in the future it may be useful to [learn more about redirecting input](https://www.gnu.org/software/bash/manual/html_node/Redirections.html#Redirecting-Input).
 
 </div>
 

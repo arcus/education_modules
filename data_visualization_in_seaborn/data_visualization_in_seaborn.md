@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Update highlight boxes, update front matter, and replace text with macros.
 module_type: standard
 docs_version: 2.0.0
@@ -182,7 +182,7 @@ If you want to practice this code on your own computer, make sure to include the
 
 Scatterplots show the relationship between two continuous variables, one on the x-axis and one on the y-axis. Because they show each individual data point as a marker, they also provide a handy way to check visually for outliers.
 
-For more background on scatterplots, watch [this Kahn Academy series](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-data/cc-8th-scatter-plots/v/constructing-scatter-plot).
+For more background on scatterplots, watch [this Khan Academy series](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-data/cc-8th-scatter-plots/v/constructing-scatter-plot).
 
 
 ### Basic scatterplot

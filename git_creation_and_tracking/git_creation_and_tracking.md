@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.4
+version: 1.0.5
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
@@ -140,7 +140,7 @@ hint: 	git branch -m <name>
 ```
 These instructions on how to change the name of your initial branch are part of GitHub's effort, as part of the larger programming community, to [replace programming terms associated with slavery](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/).
 
-We will following this hint and changing the default name in the [next section](#Creating-the-`main`-branch)
+We will follow this hint and change the default name in the [next section](#Creating-the-`main`-branch).
 
 </details>
 
@@ -219,7 +219,7 @@ You will see that the primary branch of some projects, particularly older projec
 
 ### Quiz: `git init`
 
-What command Dracula enter in the blank in order to create a new Git repository?
+What command should Dracula enter in the blank in order to create a new Git repository?
 
 ```console
 $ cd ~/Desktop      # return to the Desktop directory

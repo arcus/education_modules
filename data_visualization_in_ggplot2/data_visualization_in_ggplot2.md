@@ -2,10 +2,10 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.4.1
+version: 1.4.2
 current_version_description: Updated with new metadata and to remove references to Binderhub
 module_type: standard
-docs_version: 1.0.0
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Data Visualization in ggplot2
@@ -126,7 +126,7 @@ All of the example code in this module is in that "@r_file .rmd" file. While you
 
 ## Scatterplots
 
-Scatterplots show the relationship between two continuous variables, one on the x-axis and one on the y-axis. Because they show each individual data point as a marker, they also provide a handy way to check visually for outliers. For more background on scatterplots, watch [this Kahn Academy series](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-data/cc-8th-scatter-plots/v/constructing-scatter-plot).
+Scatterplots show the relationship between two continuous variables, one on the x-axis and one on the y-axis. Because they show each individual data point as a marker, they also provide a handy way to check visually for outliers. For more background on scatterplots, watch [this Khan Academy series](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-data/cc-8th-scatter-plots/v/constructing-scatter-plot).
 
 ### The data
 

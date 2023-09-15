@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.0
+version: 1.1.1
 current_version_description: Typo fix; update metadata
 module_type: standard
 docs_version: 2.0.0
@@ -567,7 +567,7 @@ This kind of join is important if you want to create a grade book that shows stu
 **Results**
 -----
 
-The result of a right join will be a table that has:
+The result of a full join will be a table that has:
 
 * Rows of data for students who appear in the left table only
 * Rows of data for students who appear in both tables
