@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.3.1
+version: 1.3.2
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -62,7 +62,7 @@ In the examples in this module, you'll notice there isn't always python code ava
 When deciding what statistical test to run, there are a couple key considerations:
 
 1. Do you have distinct outcome variables vs. predictor variables, or are you just measuring relationships?
-2. Are your variables continuous or categorical? (For more on this distinction, see [this Kahn Academy video](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/discrete-and-continuous-random-variables))
+2. Are your variables continuous or categorical? (For more on this distinction, see [this Khan Academy video](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/discrete-and-continuous-random-variables))
 3. If you have outcome variables, is it just one variable or do you have multiple outcomes?
 4. Can you make [the assumptions of the General Linear Model (GLM)](https://www.theanalysisfactor.com/assumptions-of-linear-models/)?  
 
@@ -298,7 +298,7 @@ We also have material on [data visualization in R and python](https://liascript.
 
 There are a number of high quality resources available for learning more about statistical theory and applied data analysis techniques. Here are a few:
 
-* There are many excellent [videos on statistics from Kahn Academy](https://www.khanacademy.org/math/statistics-probability), great for building better understanding of statistical theory and probability.
+* There are many excellent [videos on statistics from Khan Academy](https://www.khanacademy.org/math/statistics-probability), great for building better understanding of statistical theory and probability.
 * [Stanford's free statistical learning course](https://online.stanford.edu/courses/sohs-ystatslearning-statistical-learning) starts with a great introduction to the basics of linear regression models and builds to more complicated machine learning techniques. Depending on your needs, you may want to do the whole course or just use the first few weeks of it.
 * [Applied Multiple Regression](https://books.google.co.in/books?id=gkalyqTMXNEC) by Cohen, Cohen, West and Aiken is very thorough without getting too mathematical (and in case you're wondering, yes, the first author is [Jacob Cohen](https://en.wikipedia.org/wiki/Jacob_Cohen_(statistician), of Cohen's d fame).
 * If you expect to use tests for categorical outcomes often, [Categorical Data Analysis](https://www.google.com/books/edition/Categorical_Data_Analysis/6PHHE1Cr44AC) by Alan Agresti is an excellent guide.

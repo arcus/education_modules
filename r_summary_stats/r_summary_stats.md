@@ -2,10 +2,10 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.1
+version:  1.0.2
 current_version_description: Initial version
 module_type: standard
-docs_version: 1.0.0
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -882,7 +882,7 @@ For inspiration (and lots of examples of things to try), check out [the `tbl_sum
 For general background on statistics: 
 
 - [StatsQuest videos on Statistics Fundamentals](https://www.youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9)
-- [Videos on statistics from Kahn Academy](https://www.khanacademy.org/math/statistics-probability)
+- [Videos on statistics from Khan Academy](https://www.khanacademy.org/math/statistics-probability)
 
 For more on the `gtsummary` package, see their website, especially the [FAQ and gallery of example tables](https://www.danieldsjoberg.com/gtsummary/articles/gallery.html)
 
