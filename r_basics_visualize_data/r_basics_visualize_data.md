@@ -431,7 +431,7 @@ aes(x = a, y = b, color = c)
 
 Let's do a quick check of your understanding of aesthetic mappings.  As a reminder:
 
-* Data visualization elements that **don't change** according to the data are **set** , not mapped.  (for example, the color of the background of the graph, which doesn't vary based on the data).
+* Data visualization elements that **don't change** according to the data are **set**, not mapped.  (For example, the color of the background of the graph doesn't vary based on the data.)
 * Data visualization elements that **do change** with the data are **mapped** (for example, the height of a bar changes depending on the data, and the x and y position of a point on a scatter plot changes depending on the data).
 
 Here are some aesthetic mappings to consider:
