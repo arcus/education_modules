@@ -2,10 +2,10 @@
 
 author:   Elizabeth Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
-version: 1.3.2
+version: 1.3.3
 current_version_description: Restructured Learning Objectives
 module_type: standard
-docs_version: 1.3.1
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -456,12 +456,6 @@ Since we don't want to overwrite the text already in `Animals.csv` we have to us
 ## Additional Resources
 
 The [Software Carpentries](https://software-carpentry.org) has a series of lessons on the [Unix Shell](https://swcarpentry.github.io/shell-novice/).
-
-These webinars, recorded by Jacob Levernier are a great walk through the command line.
-
-- [Unix Command Line I Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/3/)
-- [Unix Command Line II Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/2/)
-- [Intermediate Bash Scripting Arcus Education Webinar](https://digitalrepository.chop.edu/commandline_computingtools/1/)
 
 ## Feedback
 
