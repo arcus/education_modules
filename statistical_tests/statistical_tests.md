@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.3.2
+version: 1.3.3
 module_template_version: 2.0.0
 language: en
 narrator: UK English Female
@@ -256,7 +256,7 @@ This sounds like a case with [no clear outcome variables](#no-distinct-outcome).
 ****
 
 
-Di has run an experiment where patients were randomly assigned to one or two treatment conditions or a control. Now she wants to examine how three different biomarkers (continuous variables) differ based on experimental group. What kind of test would you recommend?
+Di has run an experiment where patients were randomly assigned to one of two treatment conditions or a control. Now she wants to examine how three different biomarkers (continuous variables) differ based on experimental group. What kind of test would you recommend?
 
 [[MANOVA]]
 <script>
