@@ -230,7 +230,7 @@ Again there is no output shown because it was redirected into the file `animals.
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-In the Bash language, right arrows `>` redirect output, and left arrows `<` redirect input. We won't cover redirecting input in this module, however, if you end up writing more complicated pipelines in the future it may be useful to [learn more about redirecting input](https://www.gnu.org/software/bash/manual/html_node/Redirections.html).
+In the Bash language, right arrows `>` redirect output, and left arrows `<` redirect input. We won't cover redirecting input in this module, however, if you end up writing more complicated pipelines in the future it may be useful to [learn more about redirecting input](https://www.gnu.org/software/bash/manual/html_node/Redirections.html#Redirecting-Input).
 
 </div>
 
