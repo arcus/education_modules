@@ -1,13 +1,14 @@
 # This is a workflow to pull all of the metadata from all of the modules into a single file
 # each time something is merged to main, this workflow will run and rebuild the metadata file.
 
-name: pull_metadata
+name: Process Module Metadata
+
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: "main"
+    branches: "main" #CHANGE TO MAIN BEFORE MERGING
     paths-ignore:
       - 'assets/**'
       - '_for_authors/**'
@@ -20,17 +21,36 @@ on:
 jobs:
 
   run_script:
+    name: Pull module metadata
     runs-on: ubuntu-latest
     # Map a step output to a job output
-    outputs:
-      changes: ${{ steps.check_if_changed.outputs.changes }}
+    # outputs:
+    #   changes: ${{ steps.check_if_changed.outputs.changes }}
     steps:
       - uses: actions/checkout@v3
       # Process all the metadata using the script for that
       - name: Process Metadata
         run: |
           bash .github/scripts/process_metadata.sh
-      
+
+      - name: Upload python file as an artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: python_artifact
+          path: module_data.py
+        
+  check_for_changes:
+    name: Has metadata changed?
+    runs-on: ubuntu-latest
+    needs: run_script
+    # Map a step output to a job output
+    outputs:
+      changes: ${{ steps.check_if_changed.outputs.changes }}
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: python_artifact
       # Check if processing the data has changed the python file at all
 
       - name: Check if anything changed
@@ -43,35 +63,36 @@ jobs:
           changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
           echo the changes variable is now $changes
           echo "changes=$changes" >> "$GITHUB_OUTPUT"
-      - name: Upload python file as an artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: metadata_artifact
-          path: module_data.py
-  # debugging:
-  #   runs-on: ubuntu-latest
-  #   needs: run_script
-  #   steps:
-  #     - env:
-  #         OUTPUT3: ${{needs.run_script.outputs.changes}}
-  #       run: echo "The output of the previous step was $OUTPUT3"
 
   # This message is for me to check that things ran correctly even if nothing actually updated
   nothing_to_update_message:
+    name: No - nothing to update
     runs-on: ubuntu-latest
-    needs: run_script
-    if: needs.run_script.outputs.changes != 'true'  
+    needs: check_for_changes
+    if: needs.check_for_changes.outputs.changes != 'true'  
     steps:
       - env:
-          OUTPUT3: ${{needs.run_script.outputs.changes}}
+          OUTPUT3: ${{needs.check_for_changes.outputs.changes}}
         name: Nothing was committed
         run: echo "Nothing was committed because the any_change variable was $OUTPUT3"
-  
-  # If changes were made to the python file, then we want to push those changes and make a new csv
-  commit_changes:
+
+  # This message is for me to check that things ran correctly even if nothing actually updated
+  metadata_changed_message:
+    name: Yes - updates needed
     runs-on: ubuntu-latest
-    needs: run_script
-    if: needs.run_script.outputs.changes == 'true'  
+    needs: check_for_changes
+    if: needs.check_for_changes.outputs.changes == 'true'  
+    steps:
+      - env:
+          OUTPUT3: ${{needs.check_for_changes.outputs.changes}}
+        name: Metadata has changed
+        run: echo "The any_change variable was $OUTPUT3 so now the changes need to be propagated"
+  
+  # If changes were made to the python file, then we want to push those changes to the metadata_workflow branch and make a new csv
+  create_csv:
+    name: Module repo - Create csv
+    runs-on: ubuntu-latest
+    needs: metadata_changed_message 
     steps:
       - env:
           OUTPUT3: ${{needs.run_script.outputs.changes}}
@@ -82,9 +103,9 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: metadata_artifact
+          name: python_artifact
 
-      - name: check that artifact downloaded
+      - name: Check that artifact downloaded
         run: |
           wc module_data.py
 
@@ -99,17 +120,50 @@ jobs:
 
       - name: Create csv from python file
         run: |
-          python module_data.py
+          cp module_data.py create_csv.py
+          echo "df.to_csv('module_data.csv')" >> create_csv.py
+          python create_csv.py
+      
+      - name: Upload csv file as an artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: csv_artifact
+          path: module_data.csv
+
+  update_metadata_workflow_branch:
+    name: Module repo - Push to branch metadata_workflow 
+    runs-on: ubuntu-latest
+    needs: create_csv 
+    steps:
+      - env:
+          OUTPUT3: ${{needs.run_script.outputs.changes}}
+        run: echo "The changes variable is $OUTPUT3"
+      
+      - uses: actions/checkout@v3
+      
+      - name: Download python artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: python_artifact
+      
+      - name: Download csv artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: csv_artifact
+
+      - name: Check that artifacts downloaded
+        run: |
+          wc module_data.py
 
       - name: Commit newly updated files
-        run:
+        run: |
           git config --local user.name actions-user
 
           git config --local user.email "actions@github.com" 
  
           git fetch
 
-          git checkout metadata_workflow
+          git checkout metadata_workflow 
 
           mv -f module_data.py module_data.csv assets/metadata/
           
@@ -119,5 +173,58 @@ jobs:
 
           git commit -am "update metadata records" 
  
-          git push origin metadata_workflow
+          git push origin metadata_workflow 
+
+  # The module_discovery repository automatically checks weekly to see if the module data has changed, but a message here informs users how to manually run that workflow.
+  update_module_discovery_repository:
+    name: App - Sun. cron job or manual update
+    runs-on: ubuntu-latest
+    needs: metadata_changed_message 
+    steps:
+      - env:
+          OUTPUT3: ${{needs.run_script.outputs.changes}}
+        run: echo "The changes variable is $OUTPUT3"
+      
+      - name: Print module_discovery instructions
+        run: |
+          echo "The module_discovery repository will automatically update on Sunday morning. If you have changed metadata that needs to be updated there immediately, please manually activate that workflow at https://github.com/arcus/module_discovery/actions/workflows/update_module_data.yml"
+
+
+  # It is possible for the metadata to change without any of the things displayed on the public facing website actually needing to be updated.
+  check_list_of_modules_for_changes:
+    name: Website - TODO Did it change?
+    runs-on: ubuntu-latest
+    needs: metadata_changed_message
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build webpage markdown file
+        run: |
+          bash .github/scripts/public_list_of_modules.sh
+      
+      - name: Upload webpage file as an artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: webpage_artifact
+          path: list_of_modules.md
+
+  # Maybe the public facing website doesn't need updates
+  no_update_to_gh-pages:
+    name: Website - No changes
+    runs-on: ubuntu-latest
+    needs: check_list_of_modules_for_changes
+    steps:
+      - name: No changes message
+        run: |
+          echo "No changes to public website"
+
+  # The public facing website does need updates. 
+  update_gh-pages:
+    name: Website - TODO Update website
+    runs-on: ubuntu-latest
+    needs: check_list_of_modules_for_changes
+    steps:
+      - name: Push changes to public website
+        run: |
+          echo "Push changes to public website"
 
