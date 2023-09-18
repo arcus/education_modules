@@ -6,14 +6,14 @@ Thank you for your interest in our project!
 If you prefer to submit feedback about our modules anonymously, use the survey link in the Feedback section at the end of the affected module. 
 In some cases, we will use suggestions we get from the anonymous feedback form to create new publicly-visible GitHub issues, but we paraphrase everything and take care not to include any potentially identifying information about the person who reported it. 
 
-If you notice something incorrect, misleading, or incomplete in one of our modules, including things like typos, problems with code, wrong quiz answers, broken links, or errors, please submit a [bug report](https://github.com/arcus/education_modules/issues/new?assignees=&labels=bug&template=issue.md) describing the problem. 
+If you notice content that is factually incorrect, misleading, incomplete, or out of date in one of our modules, please submit an [incorrect info issue report](https://github.com/arcus/education_modules/issues/new?assignees=&labels=incorrect+info&template=issue.md).
+
+If you notice something not working correctly in one of our modules, including things like content not rendering, problems with code, wrong quiz answers, or broken links, please submit a [bug report](https://github.com/arcus/education_modules/issues/new?assignees=&labels=bug&template=issue.md) describing the problem. 
 
 If you encounter racist, sexist, ableist, or otherwise offensive material in our modules, or if you find anything about our content or technology to be disabling, please let us know by submitting an [accessibility and inclusion issue report](https://github.com/arcus/education_modules/issues/new?assignees=&labels=a11y&template=issue.md) (which is not anonymous) or by using the link to the feedback form at the end of the affected module (which is anonymous).
 Accessibility and inclusion are important to us; thank you for taking the time to help us improve.
 
-If you notice content that is factually incorrect or out of date in one of our modules, please submit an [incorrect info issue report](https://github.com/arcus/education_modules/issues/new?assignees=&labels=incorrect+info&template=issue.md).
-
-If you have an idea for a way we could improve an existing module by adding new content, please submit a [feature request](https://github.com/arcus/education_modules/issues/new?assignees=&labels=feature+request&template=issue.md) describing your idea.
+If you have an idea for a way we could improve an existing module by adding new content, please submit a [new content request](https://github.com/arcus/education_modules/issues/new?assignees=&labels=new+content&template=issue.md) describing your idea.
 
 ## Proposing a new module
 
