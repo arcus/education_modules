@@ -8,7 +8,7 @@ In some cases, we will use suggestions we get from the anonymous feedback form t
 
 If you notice content that is factually incorrect, misleading, incomplete, or out of date in one of our modules, please submit an [incorrect info issue report](https://github.com/arcus/education_modules/issues/new?assignees=&labels=incorrect+info&template=issue.md).
 
-If you notice something not working correctly in one of our modules, including things like content not rendering, problems with code, wrong quiz answers, or broken links, please submit a [bug report](https://github.com/arcus/education_modules/issues/new?assignees=&labels=bug&template=issue.md) describing the problem. 
+If you notice something not working correctly in one of our modules, including things like content not rendering, problems with code, wrong quiz answers, or broken links, please submit a [bug report](https://github.com/arcus/education_modules/issues/new?assignees=&labels=bug&template=bug.md) describing the problem. 
 
 If you encounter racist, sexist, ableist, or otherwise offensive material in our modules, or if you find anything about our content or technology to be disabling, please let us know by submitting an [accessibility and inclusion issue report](https://github.com/arcus/education_modules/issues/new?assignees=&labels=a11y&template=issue.md) (which is not anonymous) or by using the link to the feedback form at the end of the affected module (which is anonymous).
 Accessibility and inclusion are important to us; thank you for taking the time to help us improve.
