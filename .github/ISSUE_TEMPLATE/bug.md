@@ -17,5 +17,5 @@ Description of problem:
 **Some things to try first!** 
 
 - If pyodide cells aren't working as expected in Python modules, we may need to update pyodide. 
-- If LiaScript macros aren't rendering properly, especially `@overview`, check for blank macros defined in the front matter (e.g.`version_history` is a common culprit). You may need to add load bearing white space. 
+- If LiaScript macros aren't rendering properly, especially `overview`, check for blank macros defined in the front matter (e.g.`version_history` is a common culprit). You may need to add load bearing white space. 
 - If the `feedback` macro isn't working, check that no front matter fields used in the generated REDCap link are missing (e.g. `module_type`).
