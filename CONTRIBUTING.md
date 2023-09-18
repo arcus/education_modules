@@ -20,14 +20,14 @@ If you have an idea for a way we could improve an existing module by adding new 
 If have an idea for a new module we should write, or if you are interested in writing a module for us, we'd love to hear from you! 
 Please get in touch with us at dart@chop.edu, and review our [instructions on how to create an educational module](https://github.com/arcus/education_modules/blob/main/_for_authors/write_a_module.md). 
 
-## Translating an exisiting module
+## Translating an existing module
 
 If you are interested in helping to translate one or more of our modules into a language other than English, please get in touch with us at dart@chop.edu, and thank you!
 
 ## Adapting or reusing our modules for your own project
 
 All of our content is published under a [creative commons license](#LICENSE).
-We belive in open science, open scholarship, and open education.
+We believe in open science, open scholarship, and open education.
 To make your own copy of all of our modules at once, [fork our repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
 
 If you are using our modules, we'd love to hear about it!
