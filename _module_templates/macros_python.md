@@ -26,7 +26,7 @@ The interactive python cells are powered by [Pyodide](https://github.com/pyodide
 **Give it a try:**
 
 ```python
-7+2
+print(7+2)
 ```
 @Pyodide.eval
 
@@ -40,8 +40,17 @@ n
 ```
 @Pyodide.eval
 
+These cells will compute everything you ask them to, but will only display what you explicitly request using the `print()` command.
+
 ```python
-n*5
+print(n*5)
+```
+@Pyodide.eval
+
+If the cell can't compute the code you entered, you will get an error message which may be helpful in determining where your code went wrong:
+
+```python
+print(m+7)
 ```
 @Pyodide.eval
 
