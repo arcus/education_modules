@@ -631,7 +631,7 @@ Upon executing the code, `mutate()` creates the new column and fills each row wi
 
 ![On the left, two columns of the `covid_testing` data frame are shown: mrn and `col_rec_tat`.  The first few rows are given.  This data frame is followed by an arrow pointing to a new data frame on the right, which is the same as the one on the left with the exception of a new column, titled `col_rec_tat_mins`, which has appropriate values filled in.](media/mutate_covid_example.png)<!-- style = "max-width: 800px;" -->
 
-If, on the other hand, you wanted to change an **existing** column using `mutate()`, you could do it like this.  This command takes the column ct_value, which currently holds decimal values, rounds it to the nearest whole number, and then uses that as the new set of values for ct_value.
+If, on the other hand, you wanted to change an **existing** column using `mutate()`, you could do it like this.  This command takes the column ct\_value, which currently holds decimal values, rounds it to the nearest whole number, and then uses that as the new set of values for ct\_value.
 
 ```
 mutate(covid_testing,
