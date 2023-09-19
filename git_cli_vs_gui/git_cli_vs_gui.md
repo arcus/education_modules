@@ -177,7 +177,7 @@ Of course, it makes sense to check what a command actually does before typing it
 
 ## Graphical User Interface
 
-A graphical user interface, or GUI (pronounced "gooey") is meant to make things easier for a human user -- that's why the word *user* is in the name.  While some interfaces are meant to allow for interactions between two computer programs (that's what an API, or application programming interface is for), a GUI is intended for users, not programs.  A GUI is an interface that is highly visual and relies on graphics (shapes, images, and other kinds of visual displays), which for many users is helpful.  
+A graphical user interface, or GUI (pronounced "gooey") is meant to make things easier for a human user -- that's why the word *user* is in the name.  While some interfaces are meant to allow for interactions between two computer programs (that's what an API, or application programming interface, is for), a GUI is intended for human users, not programs.  A GUI is an interface that is highly visual and relies on graphics (shapes, images, icons, windows, and other kinds of visual cues), which for many users is helpful.  
 
 The operating system of your Windows or Mac computer has a highly complex graphical user interface, and so do most of the programs you might purchase as a consumer (things like Microsoft Word or Adobe Photoshop).  You use a mouse, not a keyboard, to click on pictures that represent programs in order to open them.  You use a mouse to click on words like "File" or "Window" to show a menu of options.  You might use a mouse to click and drag to select a portion of an image or a selection of words, and then delete or move your selection.
 
@@ -194,6 +194,40 @@ In some cases, a graphical user interface is only one way to interact with a sys
 
 Some of these are free, some are free and open source, and some have a cost (either for everyone, or with a "freemium" model that has a free tier).  Which is the best?  We'd argue that the best Git GUI is the one that your team uses and you'll have friendly support around.  
 
+## Comparing and Contrasting
+
+Let's compare and contrast some things you might need to do in Git, and see how they look different in the two interfaces.  Don't worry if you're not sure what these tasks mean, but just take a look at how the two interfaces look.  Do you prefer one over the other?
+
+Adding a new repository
+-----
+
+First, let's create a new repository in an existing directory.  What this means is that we have a directory (folder) of files on our computer, and we realize that we'd like to add version control to this folder.  In our example case, we have a directory called `my_important_directory`, and it is located within the `Documents` folder in a local laptop.
+
+In a command line, you'd need to navigate to that directory (in the image below, in a MacOS Terminal, this is done using `cd`, which means "change directory"), and type `git init`.
+
+![Terminal window which shows the command `cd my_important_directory` followed by the command `git init`.  The output of the second command reads "Initialized empty Git repository in /Users/paytonk/Documents/my_important_directory/.git/".](media/git_init.png)
+
+In a GUI (here, GitHub Desktop), we have to put in the name of the repository, which is the name of the folder, as well as the name of the parent directory (`Documents`).
+
+**Want to watch this process?  Click on the image below to play an animated gif.  It will continue to loop and you can re-start it by clicking again.**
+
+<div style="display:none">
+
+@gifPreload
+
+</div>
+
+<figure>
+
+  <img src="https://github.com/arcus/education_modules/blob/git_cli_vs_gui/git_cli_vs_gui/media/git_init_gui.png?raw=true" height="756" width="540" alt="Adding a new repository using the GitHub Desktop graphical user interface" data-alt="https://github.com/arcus/education_modules/blob/git_cli_vs_gui/git_cli_vs_gui/media/git_init_gui.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+
+<figcaption style = "font-size: 1em;">
+
+Click on the image to play the demo of the above steps!
+
+</figcaption>
+
+</figure>
 
 ## Additional Resources
 
