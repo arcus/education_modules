@@ -7,8 +7,10 @@ assignees: ''
 
 ---
 <!--
-Note: If this bug was reported via the Quick Module Feedback form, remember to include `record number:` at the top so we can link it back to the original comment if needed, and add the `user-reported` label.
+Note: If this bug was reported via the Quick Module Feedback form, remember to fill in `record number:` at the top so we can link it back to the original comment if needed, and add the `user-reported` label.
+If this was NOT reported via the Quick Module Feedback form, then feel free to delete the `record number:` line or leave it blank.
 -->
+record number:
 
 Description of problem: 
 
