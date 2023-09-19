@@ -75,10 +75,12 @@ Previous versions:
 
 If you have refreshed this page in your browser or are starting on this page, remember to import the `pandas` package by running:
 
+
 ```python
 import pandas as pd
 ```
 @Pyodide.eval
+
 
 </div>
 
@@ -161,7 +163,7 @@ Let's take a look at a basic DataFrame. This one is being built from scratch, bu
 ```python
 d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
 df = pd.DataFrame(data=d);
-df
+print(df)
 ```
 @Pyodide.eval
 
@@ -172,49 +174,43 @@ You might have noticed that in the above example, everything in the first column
 
 **Run this code** to print out `col1` from the DataFrame `df`.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(df['col1'])
-</script>
-</lia-keep>
-</div>
+```python
+print(df['col1'])
+```
+@Pyodide.eval
 
 Did you notice the `Name` and `dtype` at the bottom? Those tell you the name of the series and its data type. Try changing `col1` to `col2` or `col3` to see what type of data those series contain.
 
 
 ### Quiz: `pandas` package
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
+```python
 d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
 df = pd.DataFrame(data=d);
 print(df)
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 
 Your friend's code (above) isn't running, which is extremely frustrating because they copied and pasted it from the previous page of this module. What line must they add to make it work?
 
 [[import pandas as pd]]
-[[?]] Hint: Run the code. What does the error message say is wrong?
+[[?]] Hint: Run the code. Did you get an error message? If you didn't try refreshing the page and trying to run it again.
 [[?]] Hint: What do we need to include at the top in order to make `pandas` commands available to us?
 ***
 <div class = "answer">
 
 `NameError: name 'pd' is not defined` is a helpful error message because it tells you exactly what you friend forgot: they never defined `pd`!
 
-When you add the line `import pandas as pd` to the top of their code, it runs as it did before.
+When you add the line `import pandas as pd` to the top of their code, it runs as it did before, even if you refreshed the page since you last loaded the `pandas` package
 
-```
+```python
 import pandas as pd
 d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
 df = pd.DataFrame(data=d);
 print(df)
 ```
+@Pyodide.eval
 
 </div>
 ***
@@ -240,13 +236,19 @@ This data is saved as a [csv file hosted on GitHub](https://raw.githubuserconten
 </div>
 
 ### Loading data
-@sage
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+If you have refreshed this page in your browser or are starting on this page, remember to import the `pandas` package by running:
+
+
+```python
 import pandas as pd
-</script>
-</lia-keep>
+```
+@Pyodide.eval
+
+
 </div>
 
 The `pandas` package can read most tabular data files and convert them into DataFrames. As long as your data is in a place that the program can locate (either on your computer if you are running code on your computer, or in the cloud) all `pandas` needs to know is what type of file it is reading, and where to find that file.
@@ -255,35 +257,27 @@ The fake Covid-19 testing data we will use for the rest of this lesson is saved 
 
 The `read_csv` function from the `pandas` library takes the location of the file as its argument. The path to the file, in this case a url, must be in quotes. Let's create a new DataFrame called `covid_testing` that will contain all of our fake Covid-19 testing data.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
-</script>
-</lia-keep>
-</div>
+```python
+covid_testing = pd.read_csv('covid_testing.csv')
+#covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
+```
+@Pyodide.eval
 
 That code didn't have any output because we didn't ask it to print anything, but it did create the `covid_testing` DataFrame. We can take a look at with `print(covid_testing)`:
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(covid_testing)
-</script>
-</lia-keep>
-</div>
+```python
+print(covid_testing)
+```
+@Pyodide.eval
 
 Unless you have an extremely wide browser window, the output above is broken into as many columns as it can fit at a time. Some interfaces will output the DataFrame and let you scroll right to see more columns, but this interface just prints as many columns as it can fit and then starts again with the next columns. Good thing it didn't print all 15524 rows!
 
 When you print a DataFrame or Series you will see the first five rows and the last five rows of a DataFrame. If, like this one, it has more than 10 rows, the hidden rows will be indicated by ellipses. You can also ask for the first or last 5 rows of data using the methods `.head()` and `.tail()`. Try putting a number in the parentheses to get different numbers of rows.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(covid_testing.head())
-</script>
-</lia-keep>
-</div>
+```python
+print(covid_testing.head(4))
+```
+@Pyodide.eval
 
 
 Loading your own data
