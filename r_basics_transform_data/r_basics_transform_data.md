@@ -303,7 +303,7 @@ Use `!=` if you want to select rows in which a value is **not** equal to another
 
 ### Quiz: `filter()`
 
-In the box below, write a `filter()` statement that returns a data frame containing only the rows from `covid_testing` in which the `last_name column` is NOT equal to "stark". Don't capture the returned data frame to assign it to an object.
+In the box below, write a `filter()` statement that returns a data frame containing only the rows from `covid_testing` in which the `last_name` column is NOT equal to "stark". Don't capture the returned data frame to assign it to an object.
 
 [[filter(covid_testing, last_name != "stark")]]
 [[?]] Hint: We include a space after any comma and on either side of the comparison operator `!=`.  We also aren't assigning the results of this `filter` to a new object.
