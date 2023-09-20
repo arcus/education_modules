@@ -77,7 +77,7 @@ In the following sections, you will find tables of links to example code for a r
 
 Whenever possible, we've linked to tutorials that include explanation of what the code does line by line and at least some background on the rationale for the statistical test in question. There are many cases where full tutorials are not yet available, though, in which case bare example code may be all there is.
 
-Even when a rich tutorial is available, the information linked here will generally **not** be enough for you to effectively use a statistical technique you're not already familiar with. Before applying a test you don't fully understand, seek out advice from someone experienced in the technique you want to use. We also have [recommendations for further statistical education](#learning-statistics) at the end of this module.
+Even when a rich tutorial is available, the information linked here will generally **not** be enough for you to effectively use a statistical technique you're not already familiar with. Before applying a test you don't fully understand, seek out advice from someone experienced in the technique you want to use. We also have [recommendations for further statistical education](#additional-resources) at the end of this module.
 
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
@@ -135,7 +135,7 @@ General Linear Models with multiple outcomes are usually called "multivariate" m
 | MANOVA (one-way) | [R code](http://www.sthda.com/english/wiki/manova-test-in-r-multivariate-analysis-of-variance) | [python code](https://www.statsmodels.org/stable/generated/statsmodels.multivariate.manova.MANOVA.html) |
 | MANOVA (factorial)| [R code](https://www.statmethods.net/stats/anova.html) | [python code](https://www.statsmodels.org/stable/generated/statsmodels.multivariate.manova.MANOVA.html) |
 
-There are many more multivariate tests available, these are just a few of the most common. To learn more, see our [recommendations for learning statistics](#learning-statistics) at the end of this module.
+There are many more multivariate tests available, these are just a few of the most common. To learn more, see our [recommendations for learning statistics](#additional-resources) at the end of this module.
 
 ### Nonparametric Tests
 
@@ -293,7 +293,7 @@ Prof. Chatti was planning to run a regression model, but they're working with da
 
 For another excellent resource on the same topic, see [Choosing a Statistical Test, from the Biostatistics Handbook](http://www.biostathandbook.com/testchoice.html).
 
-### Learning statistics
+<h3>Learning statistics</h3>
 
 There are a number of high quality resources available for learning more about statistical theory and applied data analysis techniques. Here are a few:
 
@@ -305,7 +305,7 @@ There are a number of high quality resources available for learning more about s
 
 Note that the recommendations above all focus on statistics specifically rather than on data science more broadly. There are also many excellent courses and textbooks available about data science, most of which include a brief and superficial introduction to statistics. If you have already worked through some data science education materials but find you want to understand the statistical tests more deeply, then these recommendations may help you find what you need.
 
-### Resources for Other Software
+<h3>Resources for Other Software</h3>
 
 We recommend sticking to open source software whenever possible (to read about why check out [this Nature article on the importance of open source software for science](https://www.nature.com/articles/nature10836)).
 
