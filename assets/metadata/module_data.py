@@ -1202,27 +1202,31 @@ df.loc["r_missing_values", "depends_on_knowledge_available_in"] = "&-r_basics_in
 df.loc["r_missing_values", "version_history"] = "&Previous versions: &&- [1.1.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3da1555f9e6e33cccf456d088ece3f0596896f38/r_missing_values/r_missing_values.md#1): Versioning, Posit.cloud information, highlight boxes, layout changes&- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a3210c32bf1b3e563170a2d9084e5da152dc091c/r_missing_values/r_missing_values.md#1): Initial version, animated .gif, spacing changes&&" 
 df.loc["r_practice", "author"] = "Meredith Lee"
 df.loc["r_practice", "email"] = "leemc@chop.edu"
-df.loc["r_practice", "version"] = "1.0.3"
-df.loc["r_practice", "current_version_description"] = ""
-df.loc["r_practice", "module_type"] = ""
-df.loc["r_practice", "docs_version"] = ""
+df.loc["r_practice", "version"] = "1.0.4"
+df.loc["r_practice", "current_version_description"] = "Initial version, updated front matter."
+df.loc["r_practice", "module_type"] = "exercise"
+df.loc["r_practice", "docs_version"] = "2.0.0"
 df.loc["r_practice", "language"] = "en"
 df.loc["r_practice", "narrator"] = "UK English Female"
-df.loc["r_practice", "mode"] = ""
+df.loc["r_practice", "mode"] = "Textbook"
 df.loc["r_practice", "title"] = "R Practice"
-df.loc["r_practice", "estimated_time_in_minutes"] = ""
-df.loc["r_practice", "module_type"] = ""
-df.loc["r_practice", "good_first_module"] = ""
+df.loc["r_practice", "estimated_time_in_minutes"] = "60"
+df.loc["r_practice", "module_type"] = "exercise"
+df.loc["r_practice", "good_first_module"] = "false"
 df.loc["r_practice", "data_domain"] = ""
 df.loc["r_practice", "data_task"] = ""
-df.loc["r_practice", "coding_required"] = ""
-df.loc["r_practice", "coding_level"] = ""
-df.loc["r_practice", "coding_language"] = ""
+df.loc["r_practice", "coding_required"] = "true"
+df.loc["r_practice", "coding_level"] = "intermediate"
+df.loc["r_practice", "coding_language"] = "r"
 df.loc["r_practice", "sequence_name"] = ""
 df.loc["r_practice", "previous_sequential_module"] = ""
 df.loc["r_practice", "comment"] = "Use the basics of R coding, data transformation, and data visualization to work with real data." 
 df.loc["r_practice", "long_description"] = "When learning R for data science, the ultimate goal is to be able to put all of the pieces together to analyze a dataset. This module aims to provide a data science task in order to help learners practice R skills in a real-world context." 
-df.loc["r_practice", "learning_objectives"] = "&After completion of this module, learners will be able to:&&- Import a dataset from an online database&- Recode data and change variable types in a dataframe&- Use exploratory data visualization to identify trends in data and generate hypotheses&&" 
+df.loc["r_practice", "pre_reqs"] = "Learners should be familiar with [the basics of R coding](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#1), including [data transformation with dplyr](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#1) and [data visualization with ggplot2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1). Learners should also have access to R, either on their own computer or in the cloud.&" 
+df.loc["r_practice", "learning_objectives"] = "After completion of this module, learners will be able to:&&- Import a dataset from an online database&- Recode data and change variable types in a dataframe&- Use exploratory data visualization to identify trends in data and generate hypotheses&" 
+df.loc["r_practice", "sets_you_up_for"] = "&" 
+df.loc["r_practice", "depends_on_knowledge_available_in"] = "- r_basics_transform_data&- r_basics_visualize_data&- r_reshape_long_wide&- r_summary_stats&- data_visualization_in_ggplot2&" 
+df.loc["r_practice", "version_history"] = "No previous versions.&" 
 df.loc["r_reshape_long_wide", "author"] = "Joy Payton"
 df.loc["r_reshape_long_wide", "email"] = "paytonk@chop.edu"
 df.loc["r_reshape_long_wide", "version"] = "1.2.1"
@@ -1775,6 +1779,9 @@ a.append("data_visualization_in_ggplot2")
 a.append("python_practice")
 a.append("r_basics_introduction")
 a.append("r_basics_transform_data")
+a.append("r_basics_visualize_data")
+a.append("r_reshape_long_wide")
+a.append("r_summary_stats")
 df.at["r_practice", "Linked Courses"] = list(a)
 a = df.loc["r_reshape_long_wide", "Linked Courses"]
 a.append("data_visualization_in_ggplot2")
