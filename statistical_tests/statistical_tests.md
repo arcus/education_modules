@@ -29,7 +29,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
-data_task: analysis
+data_task: data_analysis
 coding_required: false
 coding_level: advanced
 coding_language: r, python
