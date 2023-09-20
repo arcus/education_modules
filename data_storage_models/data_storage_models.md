@@ -12,7 +12,7 @@ mode: Textbook
 title: Types of Data Storage Models
 comment:  This course will focus on different data storage solutions available to an end user and the unique characteristics of each type. This course will also cover how each storage type impacts one's access to data and computing capabilities.
 long_description: This module is for people interested in understanding the types of data storage solutions available to them at their institution and why they might want to store their files or perform certain computational tasks in each.
-@estimated_time_in_minutes: 30
+estimated_time_in_minutes: 30
 
 @pre_reqs
 None, this module is intended for all end users regardless of their technical skill set and computing set up. This module is the first in a series on data storage topics. It can be paired with a more technical and advanced module on security, privacy, and backup considerations for the data storage types discussed herein.
