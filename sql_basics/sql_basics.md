@@ -358,9 +358,13 @@ In the code block below, write a query that will return the unique combinations 
 <table id="dataTable8a" border="1"></table>
 
 
-How many rows do you have in your results?  Type the number with no spaces or extra characters.
+How many rows do you have in your results? 
 
 [[9]]
+<script>
+  let input = "@input".trim().toLowerCase();
+  input == "9" || input == "nine";
+</script>
 ***************
 
 <div class = "answer">
