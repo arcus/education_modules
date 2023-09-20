@@ -2,14 +2,22 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.2.2
-module_template_version: 3.0.0
+version: 1.2.3
+current_version_description: Updated highlight boxes and metadata
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: Demystifying Python
 comment:  This module introduces the Python programming language, explores why Python is useful in research, and describes how to download Python and Jupyter.
 long_description: Python is a versatile programming language that is frequently used for data analysis, machine learning, web development, and more. If you are interested in using Python (or even just trying it out), and are looking for how to get set up, this module is a good place to start. This is appropriate for someone at the beginner level, including those with no prior knowledge of or experience with Python.
-estimated_time: 20m
+estimated_time_in_minutes: 20
+
+@pre_reqs
+Learners should be familiar with tabular data (data stored in a rectangular format, like an Excel spreadsheet or a comma separated file). It is helpful to have some familiarity with [navigating to specific directories](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) and running programs in the Command Line/Terminal. Learners do not need to have access to Python or Jupyter notebooks on their own computers.
+@end
+
 @learning_objectives  
 
 After completion of this module, learners will be able to:
@@ -21,88 +29,35 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
+coding_required: false
+coding_language: python
 
-script:  https://kit.fontawesome.com/83b2343bd4.js
-
-script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
-
-@gifPreload
-<script>
-
-(function($) {
-
-  // Get the .gif images from the "data-alt".
-	var getGif = function() {
-		var gif = [];
-		$('img').each(function() {
-			var data = $(this).data('alt');
-			gif.push(data);
-		});
-		return gif;
-	}
-
-	var gif = getGif();
-
-	// Preload all the gif images.
-	var image = [];
-
-	$.each(gif, function(index) {
-		image[index]     = new Image();
-		image[index].src = gif[index];
-	});
-
-	// Change the image to .gif when clicked and vice versa.
-	$('figure').on('click', function() {
-
-		var $this   = $(this),
-				$index  = $this.index(),
-
-				$img    = $this.children('img'),
-				$imgSrc = $img.attr('src'),
-				$imgAlt = $img.attr('data-alt'),
-				$imgExt = $imgAlt.split('.');
-
-		if($imgExt[1] === 'gif') {
-			$img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
-		} else {
-			$img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-		}
-
-		// Add play class to help with the styling.
-		$this.toggleClass('play');
-
-	});
-
-})(jQuery);
-
-</script>
+@sets_you_up_for
+- python_basics_variables_functions
 @end
+
+@depends_on_knowledge_available_in
+- bash_command_line_101
+@end
+
+@version_history 
+
+Previous versions: 
+
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/6f4ca2c54c2fc72a33e5319b20a2ac50562b9ea6/demystifying_python/demystifying_python.md): Removed references to Atom, now sunsetted.
+- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/466799a081d2cb74d155dc0a26951d3492b81f8c/demystifying_python/demystifying_python.md): Initial Version.
+
+
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+
 -->
 
 # Demystifying Python
 
-<div class = "overview">
-
-## Overview
-
-@comment
-
-### Is this module right for me?
-
-@long_description
-
-### Details
-
-**Estimated time to completion**: @estimated_time
-
-**Pre-requisites**: Learners should be familiar with tabular data (data stored in a rectangular format, like an Excel spreadsheet or a comma separated file). It is helpful to have some familiarity with [navigating to specific directories](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) and running programs in the Command Line/Terminal. Learners do not need to have access to Python or Jupyter notebooks on their own computers.
-
-**Learning Objectives**:
-
-@learning_objectives
-
-</div>
+@overview
 
 
 ## The Python Programming Language
@@ -181,7 +136,7 @@ Scripts are often written using special text editors that are designed for writi
 
 Here is a short script written in the Spyder IDE:
 <div style = "margin: 1rem; width: 750;">
-![Simple Python code demonstrating the visual features of the Spyder IDE.](media/python_in_spyder.png?raw=true)
+![Simple Python code demonstrating the visual features of the Spyder IDE.](media/python_in_spyder.png)
 </div>
 
 In the above example, our script asks for input of a user's name using the `input()` function, stores that input in a variable we've called `name`, and prints out a welcome message to the screen that includes the name the user entered using the code `print("Welcome to Intro to Python, "+name+"!")`.
@@ -266,7 +221,7 @@ Your computer most likely will **not** have Python already installed. To check, 
 
   Once you've downloaded Anaconda, you can open the Anaconda Navigator. When you do, you'll see the the window below. Now you have access to lots of tools for working with Python!
   <div style = "margin: 1rem; width: 750;">
-  ![Anaconda Navigator interface showing the base apps: Datalore, IBM Watson Studio Cloud, JupyterLab, Jupyter Notebook, Qt Console, Spyder, VS Code, Glueviz, Orange 3, PyCharm Professional, & RStudio.](media/anaconda.png?raw=true)
+  ![Anaconda Navigator interface showing the base apps: Datalore, IBM Watson Studio Cloud, JupyterLab, Jupyter Notebook, Qt Console, Spyder, VS Code, Glueviz, Orange 3, PyCharm Professional, & RStudio.](media/anaconda.png)
   </div>
 
 * You can also download [just the latest version of Python directly at python.org](https://www.python.org/downloads/). If you also want Jupyter or any IDEs, you will need to download those separately as well. [You can install Jupyter here](https://jupyter.org/install) and [here is a list of IDEs where you can write Python code](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments).
@@ -339,16 +294,4 @@ You can download Python directly to your computer, use Anaconda to download Pyth
 
 ## Feedback
 
-*5 minute survey*
-
-At the beginning of this module we described the following goals:
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Demystifying+Python%22&version=1.2.1)!
+@feedback
