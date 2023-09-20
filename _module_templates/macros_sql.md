@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.1.0
-current_version_description: Add current_version_description and version_history metadata, remove @overview
+version:  1.1.1
+current_version_description: Add current_version_description and version_history metadata, remove @overview, update highlight boxes
 language: en
 narrator: UK English Female
 title: Module Macros for SQL
@@ -23,6 +23,7 @@ Previous versions:
 A relational database is a data storage solution that stores data tables, which are comprised of columns (also called 'fields') and rows.
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 Sometimes we'll use the word "column" and sometimes we'll use the word "field".  These refer to the same thing!
 
@@ -54,6 +55,7 @@ LIMIT 10;
 </div>
 
 <div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
 Don't worry -- the data here, although it **looks** like human subject or patient data, is completely fabricated.  We used sample data from the open source project [Synthea](https://synthetichealth.github.io/synthea).  There are other clues that this data isn't real: for example, names include a numerical suffix, and SSN values are clearly fake.
 
