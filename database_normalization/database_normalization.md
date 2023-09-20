@@ -1,14 +1,21 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.3
-module_template_version: 3.0.0
+version: 1.0.4
+current_version_description: Initial Version.
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: US English Female
+mode: Textbook
 title: Database Normalization
 comment: Learn about the concept of normalization and why it's important for organizing complicated data in relational databases.
 long_description: Usually, data in a relational database like SQL is organized into multiple interrelated tables with as little data repetition as possible. This concept can be useful to apply in other areas as well, such as organizing data in .csvs or in data frames in R or Python.  This module teaches underlying data considerations and explains how data can be efficiently organized by introducing the concepts of one-to-many data relationships and normalization.
-estimated_time: 40 minutes
+estimated_time_in_minutes: 40
+
+@pre_reqs
+Learners should have experience working with data in tables.  This could included working with .csv files, SQL databases, R data frames, REDCap instruments, or other ways that data can be collected in tables. 
+@end
 
 @learning_objectives  
 After completion of this module, learners will be able to:
@@ -19,35 +26,29 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+data_task: data_management
+coding_required: false
 
-@version_history
+@sets_you_up_for
+- sql_joins
+@end
 
-1.0.2 -- fix typo in quiz
+@depends_on_knowledge_available_in
 
 @end
+
+@version_history 
+No previous versions.
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
 # Database Normalization
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**  Learners should have experience working with data in tables.  This could included working with .csv files, SQL databases, R data frames, REDCap instruments, or other ways that data can be collected in tables. 
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Multiple Tables
 
@@ -383,16 +384,4 @@ A foreign key is an identifier that originates in another table.  It certainly s
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Database+Normalization%22&version=1.0.1)!
+@feedback
