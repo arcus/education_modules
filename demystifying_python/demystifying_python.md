@@ -186,7 +186,7 @@ Scripts are often written using special text editors that are designed for writi
 
 Here is a short script written in the Spyder IDE:
 <div style = "margin: 1rem; width: 750;">
-![Simple Python code demonstrating the visual features of the Spyder IDE.](media/python_in_spyder.png?raw=true)
+![Simple Python code demonstrating the visual features of the Spyder IDE.](media/python_in_spyder.png)
 </div>
 
 In the above example, our script asks for input of a user's name using the `input()` function, stores that input in a variable we've called `name`, and prints out a welcome message to the screen that includes the name the user entered using the code `print("Welcome to Intro to Python, "+name+"!")`.
@@ -271,7 +271,7 @@ Your computer most likely will **not** have Python already installed. To check, 
 
   Once you've downloaded Anaconda, you can open the Anaconda Navigator. When you do, you'll see the the window below. Now you have access to lots of tools for working with Python!
   <div style = "margin: 1rem; width: 750;">
-  ![Anaconda Navigator interface showing the base apps: Datalore, IBM Watson Studio Cloud, JupyterLab, Jupyter Notebook, Qt Console, Spyder, VS Code, Glueviz, Orange 3, PyCharm Professional, & RStudio.](media/anaconda.png?raw=true)
+  ![Anaconda Navigator interface showing the base apps: Datalore, IBM Watson Studio Cloud, JupyterLab, Jupyter Notebook, Qt Console, Spyder, VS Code, Glueviz, Orange 3, PyCharm Professional, & RStudio.](media/anaconda.png)
   </div>
 
 * You can also download [just the latest version of Python directly at python.org](https://www.python.org/downloads/). If you also want Jupyter or any IDEs, you will need to download those separately as well. [You can install Jupyter here](https://jupyter.org/install) and [here is a list of IDEs where you can write Python code](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments).
