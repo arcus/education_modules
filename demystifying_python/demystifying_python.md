@@ -2,14 +2,21 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.2.2
-module_template_version: 3.0.0
+version: 1.2.3
+current_version_description:
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
 title: Demystifying Python
 comment:  This module introduces the Python programming language, explores why Python is useful in research, and describes how to download Python and Jupyter.
 long_description: Python is a versatile programming language that is frequently used for data analysis, machine learning, web development, and more. If you are interested in using Python (or even just trying it out), and are looking for how to get set up, this module is a good place to start. This is appropriate for someone at the beginner level, including those with no prior knowledge of or experience with Python.
-estimated_time: 20m
+estimated_time_in_minutes: 20
+
+@pre_reqs
+Learners should be familiar with tabular data (data stored in a rectangular format, like an Excel spreadsheet or a comma separated file). It is helpful to have some familiarity with [navigating to specific directories](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) and running programs in the Command Line/Terminal. Learners do not need to have access to Python or Jupyter notebooks on their own computers.
+@end
+
 @learning_objectives  
 
 After completion of this module, learners will be able to:
@@ -21,11 +28,29 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: 
+coding_required: 
+coding_language: python
 
-script:  https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
+- python_basics_variables_functions
+@end
 
-script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
+@depends_on_knowledge_available_in
+- bash_command_line_101
+@end
+
+@version_history 
+
+Previous versions: 
+
+- [x.x.x](link): that version's current version description
+- [x.x.x](link): that version's current version description
+- [x.x.x](link): that version's current version description
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+
 
 @gifPreload
 <script>
@@ -82,27 +107,7 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 # Demystifying Python
 
-<div class = "overview">
-
-## Overview
-
-@comment
-
-### Is this module right for me?
-
-@long_description
-
-### Details
-
-**Estimated time to completion**: @estimated_time
-
-**Pre-requisites**: Learners should be familiar with tabular data (data stored in a rectangular format, like an Excel spreadsheet or a comma separated file). It is helpful to have some familiarity with [navigating to specific directories](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) and running programs in the Command Line/Terminal. Learners do not need to have access to Python or Jupyter notebooks on their own computers.
-
-**Learning Objectives**:
-
-@learning_objectives
-
-</div>
+@overview
 
 
 ## The Python Programming Language
@@ -339,16 +344,4 @@ You can download Python directly to your computer, use Anaconda to download Pyth
 
 ## Feedback
 
-*5 minute survey*
-
-At the beginning of this module we described the following goals:
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for [filling out our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Demystifying+Python%22&version=1.2.1)!
+@feedback
