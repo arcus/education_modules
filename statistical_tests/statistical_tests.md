@@ -293,10 +293,6 @@ Prof. Chatti was planning to run a regression model, but they're working with da
 
 For another excellent resource on the same topic, see [Choosing a Statistical Test, from the Biostatistics Handbook](http://www.biostathandbook.com/testchoice.html).
 
-If you want to learn more about basics of programming in R or python, you may like our [R Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md) series.
-
-We also have material on [data visualization in R and python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md)
-
 ### Learning statistics
 
 There are a number of high quality resources available for learning more about statistical theory and applied data analysis techniques. Here are a few:
