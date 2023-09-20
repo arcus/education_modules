@@ -678,7 +678,7 @@ WITH
 [[ ]] The semicolon should be omitted
 [[X]] The `M` in the last line should have quotes around it
 [[X]] The hash marks (`#`) on the first two lines should be replaced with `--`
-[[X]] `WITH` should be replaced by `where`
+[[X]] `WITH` should be replaced by `WHERE`
 ***************
 
 <div class = "answer">
