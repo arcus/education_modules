@@ -2,7 +2,7 @@
 author: Rose Hartman
 email: hartmanr1@chop.edu
 version: 1.3.2
-current_version_description: 
+current_version_description: Highlight box update, fix typos, front matter update.
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -45,7 +45,11 @@ coding_language: r, python
 @end
 
 @version_history
+Previous versions: 
 
+- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/statistical_tests/statistical_tests.md#1): Add biostats handbook as additional resource.
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cde920bb122d9ad69dd5c547725d303541f171eb/statistical_tests/statistical_tests.md#1): Add emphasis on need to study statistical theory (in response to module feedback).
+- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cde69494c598cbec920221560564eb3d7c26c79c/statistical_tests/statistical_tests.md#1): Initial version, fix broken links.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
