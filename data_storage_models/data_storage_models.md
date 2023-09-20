@@ -52,8 +52,6 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 # Types of Data Storage Models
 
-<div class = "overview">
-
 @overview
 
 ## Why should I care about how and where I store my data?
