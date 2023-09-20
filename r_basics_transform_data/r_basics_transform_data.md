@@ -1,26 +1,18 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.0
+version: 1.3.1
 current_version_description: Updated with new metadata and to remove references to Binderhub
 module_type: standard
-docs_version: 1.0.0
+docs_version: 2.0.0
 language: en
 narrator: US English Female
 title: R Basics: Transforming Data With dplyr
 comment:  Learn how to transform (or wrangle) data using R's `dplyr` package.
 long_description: Do you want to learn how to work with tabular (table-shaped, with rows and columns) data in R?  In this module you'll learn in particular how to select just the rows and columns you want to work with, how to create new columns, and how to create multi-step transformations to get your data ready for visualization or statistical analysis.  This module teaches the use of the `dplyr` package, which is part of the `tidyverse` suite of packages.
-r_file: r\_basics\_transform\_data
+
 estimated_time_in_minutes: 60
-@learning_objectives  
-
-After completion of this module, learners will be able to:
-
-- Write R code that uses the `dplyr` package to select only desired columns from a data frame
-- Write R code that uses the `dplyr` package to filter only rows that meet a certain condition from a data frame
-- Write R code that uses the `dplyr` package to create a new column in a data frame
-
-@end
+r_file: r\_basics\_transform\_data
 
 @pre_reqs
 
@@ -32,6 +24,15 @@ Minimal experience of using the RStudio IDE and writing R code (specifically, wi
 
 @end
 
+@learning_objectives  
+
+After completion of this module, learners will be able to:
+
+- Write R code that uses the `dplyr` package to select only desired columns from a data frame
+- Write R code that uses the `dplyr` package to filter only rows that meet a certain condition from a data frame
+- Write R code that uses the `dplyr` package to create a new column in a data frame
+
+@end
 
 good_first_module: false
 data_task: data_wrangling
@@ -56,8 +57,6 @@ previous_sequential_module: r_basics_visualize_data
 
 @end
 
-
-
 @version_history
 
 Previous versions: 
@@ -67,7 +66,6 @@ Previous versions:
 * [1.0.4](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/1679451008d162fe2c15850f5dd5494665cc3d00/r_basics_transform_data/r_basics_transform_data.md#1): Initial commit, typo changes, animated gif
 
 @end
-
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
@@ -303,7 +301,7 @@ Use `!=` if you want to select rows in which a value is **not** equal to another
 
 ### Quiz: `filter()`
 
-In the box below, write a `filter()` statement that returns a data frame containing only the rows from `covid_testing` in which the `last_name column` is NOT equal to "stark". Don't capture the returned data frame to assign it to an object.
+In the box below, write a `filter()` statement that returns a data frame containing only the rows from `covid_testing` in which the `last_name` column is NOT equal to "stark". Don't capture the returned data frame to assign it to an object.
 
 [[filter(covid_testing, last_name != "stark")]]
 [[?]] Hint: We include a space after any comma and on either side of the comparison operator `!=`.  We also aren't assigning the results of this `filter` to a new object.
@@ -633,7 +631,7 @@ Upon executing the code, `mutate()` creates the new column and fills each row wi
 
 ![On the left, two columns of the `covid_testing` data frame are shown: mrn and `col_rec_tat`.  The first few rows are given.  This data frame is followed by an arrow pointing to a new data frame on the right, which is the same as the one on the left with the exception of a new column, titled `col_rec_tat_mins`, which has appropriate values filled in.](media/mutate_covid_example.png)<!-- style = "max-width: 800px;" -->
 
-If, on the other hand, you wanted to change an **existing** column using `mutate()`, you could do it like this.  This command takes the column ct_value, which currently holds decimal values, rounds it to the nearest whole number, and then uses that as the new set of values for ct_value.
+If, on the other hand, you wanted to change an **existing** column using `mutate()`, you could do it like this.  This command takes the column ct\_value, which currently holds decimal values, rounds it to the nearest whole number, and then uses that as the new set of values for ct\_value.
 
 ```
 mutate(covid_testing,
@@ -775,16 +773,4 @@ Beyond dplyr, there are a number of other [`tidyverse`](https://www.tidyverse.or
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Basics+Transform+Data%22&version=1.1.3)!
+@feedback
