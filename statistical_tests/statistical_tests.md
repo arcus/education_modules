@@ -1,31 +1,54 @@
 <!--
-
-author:   Rose Hartman
-email:    hartmanr1@chop.edu
+author: Rose Hartman
+email: hartmanr1@chop.edu
 version: 1.3.2
-module_template_version: 2.0.0
+current_version_description: 
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: Statistical Tests in Open Source Software
 comment:  This module provides an overview of the most commonly used kinds of statistical tests and links to code for running many of them in both R and python.
-
 long_description: This module contains a curated list of links to tutorials and examples of many common statistical tests in both R and python. If you want to use R or python for data analysis but aren't sure how to write code for the statistical tests you want to run, this is a great place to start. This will be an especially valuable resource for people who have experience conducting analysis in other software (e.g. SAS, SPSS, MPlus, Matlab) and are looking to move to R and/or python. If you are new to data analysis, this module provides some structure to help you think about which statistical tests to run, and examples of code to execute them. It doesn't cover the statistical theory itself, though, so you'll need to do some additional reading before applying the code for any tests you don't already understand (there are recommended resources for learning statistical techniques at the end of the module).
-estimated_time: 20 minutes (although reading through the linked tutorials may take much longer, depending on which tests you choose to read about)
+estimated_time_in_minutes: 20
+
+@pre_reqs
+
+* Learners should already be familiar with the purpose and assumptions of any test they intend to run --- this module covers the "how" only, not the "why".
+* This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with our [R Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md) series first and then coming back here.
+
+@end
 
 @learning_objectives  
-
 After completion of this module, learners will be able to:
 
 - Use four key questions to help determine which statistical tests will be most appropriate in a given situation
 - Discuss general differences between running statistical tests in R vs. python
 - Quickly find the code they need to be able to run most common statistical tests in R or python
+@end
+
+good_first_module: false
+data_task: analysis
+coding_required: false
+coding_level: advanced
+coding_language: r, python
+
+@sets_you_up_for
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+@depends_on_knowledge_available_in
+- r_basics_introduction
+- python_basics_variables_functions_methods
+- intro_to_nhst
+@end
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@version_history
 
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
 # Statistical Tests in Open Source Software
@@ -41,8 +64,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 **Pre-requisites**:
 
-* Learners should already be familiar with the purpose and assumptions of any test they intend to run --- this module covers the "how" only, not the "why".
-* This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with our [R Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md) series first and then coming back here.
+
 
 **Learning Objectives**:  
 
