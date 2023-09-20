@@ -52,26 +52,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 -->
 
 # Statistical Tests in Open Source Software
-
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion**: @estimated_time
-
-**Pre-requisites**:
-
-
-
-**Learning Objectives**:  
-
-@learning_objectives
-
-</div>
-
+@overview
 
 ## R vs python
 
@@ -335,17 +316,4 @@ We recommend sticking to open source software whenever possible (to read about w
 That said, if you're used to working in non-open source statistical software, like SPSS or Stata, you may find it helpful to see the commands and output from those environments to compare to approaches in R and/or python. UCLA's Institute for Digital Research and Education has an excellent set of posts of [annotated output for most common statistical tests in Stata, SAS, SPSS, and Mplus](https://stats.idre.ucla.edu/other/annotatedoutput/) as well as several [data analysis examples](https://stats.idre.ucla.edu/other/dae/), which include a little more background on the techniques used.
 
 ## Feedback
-
-In the beginning, we stated some goals.
-
-**Learning Objectives:**  
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Statistical+Tests+in+Open+Source+Software%22&version=1.2.1)!
+@feedback
