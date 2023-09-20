@@ -2,8 +2,8 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.3
-current_version_description: Initial version
+version: 1.0.4
+current_version_description: Initial version, updated front matter.
 module_type: exercise
 docs_version: 2.0.0
 language: en
