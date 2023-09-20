@@ -2,49 +2,56 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.3
-module_template_version: 3.0.0
+version: 1.0.4
+current_version_description: Initial version, updated front matter.
+module_type: exercise
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: R Practice
 comment: Use the basics of R coding, data transformation, and data visualization to work with real data.
 long_description: When learning R for data science, the ultimate goal is to be able to put all of the pieces together to analyze a dataset. This module aims to provide a data science task in order to help learners practice R skills in a real-world context.
-estimated_time: 1 hour
+estimated_time_in_minutes: 60
+
+@pre_reqs
+Learners should be familiar with [the basics of R coding](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#1), including [data transformation with dplyr](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#1) and [data visualization with ggplot2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1). Learners should also have access to R, either on their own computer or in the cloud.
+@end
 
 @learning_objectives
-
 After completion of this module, learners will be able to:
 
 - Import a dataset from an online database
 - Recode data and change variable types in a dataframe
 - Use exploratory data visualization to identify trends in data and generate hypotheses
+@end
+
+good_first_module: false
+coding_required: true
+coding_level: intermediate
+coding_language: r
+
+@sets_you_up_for
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+@depends_on_knowledge_available_in
+- r_basics_transform_data
+- r_basics_visualize_data
+- r_reshape_long_wide
+- r_summary_stats
+- data_visualization_in_ggplot2
+@end
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@version_history
+No previous versions.
+@end
 
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
 # R Practice
-
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?:** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites:** Learners should be familiar with [the basics of R coding](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#1), including [data transformation with dplyr](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#1) and [data visualization with ggplot2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1). Learners should also have access to R, either on their own computer or in the cloud.
-
-**Learning Objectives**:
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Lesson Preparation
 
@@ -149,17 +156,4 @@ A great way to keep resources close at hand is to use cheat sheets:
 And as always, [R for Data Science](https://r4ds.had.co.nz/) is always a great resource!
 
 ## Feedback
-
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22R+Practice%22&version=1.0.1)!
+@feedback
