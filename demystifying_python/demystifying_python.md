@@ -3,7 +3,7 @@
 author:   Meredith Lee
 email:    leemc@chop.edu
 version: 1.2.3
-current_version_description:
+current_version_description: Updated highlight boxes and metadata
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -44,9 +44,10 @@ coding_language: python
 
 Previous versions: 
 
-- [x.x.x](link): that version's current version description
-- [x.x.x](link): that version's current version description
-- [x.x.x](link): that version's current version description
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/6f4ca2c54c2fc72a33e5319b20a2ac50562b9ea6/demystifying_python/demystifying_python.md): Removed references to Atom, now sunsetted.
+- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/466799a081d2cb74d155dc0a26951d3492b81f8c/demystifying_python/demystifying_python.md): Initial Version.
+
+
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
