@@ -2,14 +2,21 @@
 
 author:   Nicole Feldman
 email:    feldmanna@chop.edu
-version: 1.1.2
-module_template_version: 3.0.0
+version: 1.1.3
+current_version_description: Initial Version.
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
-title: Types of Data Storage Solutions
+mode: Textbook
+title: Types of Data Storage Models
 comment:  This course will focus on different data storage solutions available to an end user and the unique characteristics of each type. This course will also cover how each storage type impacts one's access to data and computing capabilities.
 long_description: This module is for people interested in understanding the types of data storage solutions available to them at their institution and why they might want to store their files or perform certain computational tasks in each.
-@estimated_time: 30 minutes
+@estimated_time_in_minutes: 30
+
+@pre_reqs
+None, this module is intended for all end users regardless of their technical skill set and computing set up. This module is the first in a series on data storage topics. It can be paired with a more technical and advanced module on security, privacy, and backup considerations for the data storage types discussed herein.
+@end
 
 @learning_objectives
 
@@ -22,9 +29,24 @@ After completion of this module, learners will be able to:
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+good_first_module: false
+data_task: data_management
+coding_required: false
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
+@version_history 
+No previous versions.
+@end
+
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
 
@@ -32,23 +54,7 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 <div class = "overview">
 
-## Overview
-
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-None, this module is intended for all end users regardless of their technical skill set and computing set up. This module is the first in a series on data storage topics. It can be paired with a more technical and advanced module on security, privacy, and backup considerations for the data storage types discussed herein.
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 ## Why should I care about how and where I store my data?
 
@@ -220,16 +226,4 @@ This is certainly a moving target and something you can take time to find a reso
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-- If we achieved the learning objectives
-- If the module difficulty was appropriate
-- If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work. Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Types+of+Data+Storage+Solutions%22&version=1.1.2)!
+@feedback
