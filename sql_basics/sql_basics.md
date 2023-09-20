@@ -2,16 +2,22 @@
 author:   Peter Camacho
 email:    camachop@chop.edu
 version: 1.1.0
-module_template_version: 3.0.0
+current_version_description: 
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: US English Male
+mode: Textbook
 title: SQL Basics
 comment:  Structured Query Language, or SQL, is a relational database solution that has been around for decades.  Learn how to do basic SQL queries on single tables, by using code, hands-on.
 long_description: Do you want to learn basic Structured Query Language (SQL) either to understand concepts or prepare for access to a relational database?  This module will give you hands on experience with simple queries using keywords including SELECT, WHERE, FROM, DISTINCT, and AS.  We'll also briefly cover working with empty (NULL) values using IS NULL and IS NOT NULL.  This module is appropriate for people who have little or no experience in SQL and are ready to practice with real queries.
-estimated_time: 1 hour
+estimated_time_in_minutes: 60
+
+@pre_reqs
+Experience working with rectangular data (data in rows and columns) is required, as is some exposure to the idea of SQL and its use of tables with rows and columns.  No experience writing SQL code is expected or required for this module.  If you would like a code-free overview to SQL we recommend our module [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md).
+@end
 
 @learning_objectives  
-
 After completion of this module, learners will be able to:
 
 - Use SELECT, FROM, and WHERE to do a basic query on a SQL table
@@ -19,8 +25,27 @@ After completion of this module, learners will be able to:
 - Explain the use of DISTINCT and how it can be useful
 - Use AS and ORDER BY to change how query results appear
 - Explain why the LIMIT keyword can be useful
+@end
 
+good_first_module: false
+data_task: data_wrangling
+coding_required: true
+coding_level: basic
+coding_language: sql
+sequence_name: sql
 
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
+@version_history
+Previous versions: 
+
+- [](): Initial version.
 @end
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
@@ -336,7 +361,6 @@ alasql("INSERT INTO patients VALUES ('fcc61454-1b07-4e49-a25b-29e5064e0063', '19
 
 **Pre-requisites**
 
-Experience working with rectangular data (data in rows and columns) is required, as is some exposure to the idea of SQL and its use of tables with rows and columns.  No experience writing SQL code is expected or required for this module.  If you would like a code-free overview to SQL we recommend our module [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md).
 
 **Learning Objectives**
 
