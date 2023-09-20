@@ -3,52 +3,52 @@
 author:   Meredith Lee
 email:    leemc@chop.edu
 version: 1.1.2
-module_template_version: 3.0.0
+current_version_description: Update formatting for highlight boxes, fix typos.
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: Omics Orientation
 comment: This module provides a brief introduction to omics and its associated fields.
 long_description: Omics is a wide-reaching field, with many different subfields. This module aims to disambiguate several omics-related terms and topics, discuss some of the most popular omics research fields, and examine the challenges of and caveats for omics research.
-estimated_time: 15m
+estimated_time_in_minutes: 15
+
+@pre_reqs
+None.
+@end
 
 @learning_objectives
-
 After completion of this module, learners will be able to:
 
 - Define what omics is and explain why a researcher might choose an omics approach
 - Identify several popular omics domains
 - Describe some challenges and caveats of omics research
+@end
 
+good_first_module: false
+coding_required: false
+
+@sets_you_up_for
+- genomics_setup
+- genomics_quality_control
+@end
+
+@depends_on_knowledge_available_in
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+@version_history
+Previous versions:
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/914714acfb6b30980e011ab09e087d4d2c5c918e/omics_orientation/omics_orientation.md#1): Initial version.
+@end
 
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
 # Omics Orientation
-
-
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites:** None
-
-**Learning Objectives**
-
-@learning_objectives
-
-
-</div>
-
+@overview
 
 ## What is Omics?
 
@@ -103,7 +103,7 @@ What about bioinformatics? Is that the same thing?
 
 Bioinformatics is another word that is often used interchangeably with genomics, but they are also not the same thing! The National Human Genome Research Institute [defines](https://www.genome.gov/genetics-glossary/Bioinformatics) Bioinformatics as "using computer technology to collect, store, analyze and disseminate biological data and information, such as DNA and amino acid sequences or annotations about those sequences."  Bioinformatics makes the study of genomics and other omics disciplines possible.
 
-### Transciptomics
+### Transcriptomics
 
 An organism's **transcriptome** is all of the RNA that is transcribed from that organism's DNA, and **transcriptomics** is the qualitative (which transcripts are present) and quantitative (how much of each transcript is present) study of these RNA transcripts. While some RNA transcripts are templates to be translated into proteins, it is becoming increasingly recognized that many RNA molecules have important biological roles beyond encoding proteins, including gene regulation and translation.
 
@@ -179,7 +179,7 @@ While a well-designed omics study might offer some insight into factors that cou
 
 The website [genome.gov](https://www.genome.gov) has a variety of educational resources and infographics for reading more about various omics topics:
 
-* The [About Genomics](https://www.genome.gov/about-genomics) has overviews on genomes, genomics, and even a useful glossery of genomics-related terms.
+* The [About Genomics](https://www.genome.gov/about-genomics) has overviews on genomes, genomics, and even a useful glossary of genomics-related terms.
 
 * They also have [a brief overview of transcriptomics](https://www.genome.gov/about-genomics/fact-sheets/Transcriptome-Fact-Sheet)
 
@@ -189,17 +189,4 @@ The website [genome.gov](https://www.genome.gov) has a variety of educational re
 Hasin, Y., Seldin, M. & Lusis, A. Multi-omics approaches to disease. Genome Biol 18, 83 (2017). https://doi.org/10.1186/s13059-017-1215-1
 
 ## Feedback
-
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Omics+Orientation%22&version=1.1.2)!
+@feedback
