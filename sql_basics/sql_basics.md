@@ -2,7 +2,7 @@
 author: Peter Camacho
 email: camachop@chop.edu
 version: 1.1.1
-current_version_description: Add solutions, add definitions, move challenge solutions after code blocks, update highlight boxes.
+current_version_description: Add solutions, add definitions, move challenge solutions,  after code blocks, update highlight boxes, fix typos, update front matter fields.
 module_type: standard
 docs_version: 2.0.0
 language: en
