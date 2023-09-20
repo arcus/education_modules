@@ -58,9 +58,11 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 ## What is Git?
 
-You may already know what Git is and use it at work, but let's review.
+You may already know what Git is and even use it for version control, but let's review.  We'll take on some of the text that Git uses to describe itself in its official website:
 
-Git is a **distributed**, **open source** **version control** system. Let's talk about each of those terms:
+[![Screenshot of the official git website at https://git-scm.com.  It includes an image of interlinked documents as well as text that states the following: "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows."](media/git_scm_com.png)](https://git-scm.com)
+
+Git describes itself as a **distributed**, **open source** **version control** system. Let's talk about each of those terms:
 
 * Version Control 
 * Distributed
@@ -91,7 +93,7 @@ In fact, you can have multiple different copies of the same repository, if that'
 Open Source
 -----
 
-Git is **FOSS**, or **free and ppen source**.  This means that git is "free" in two ways -- in the meaning of having **no cost** and also in that can be used widely **without intellectual property concerns or licensing restrictions**. 
+Git is **FOSS**, or **free and open source**.  This means that git is "free" in two ways -- in the meaning of having **no cost** and also in that can be used widely **without intellectual property concerns or licensing restrictions**. 
 
 This is important because it means that people around the world use Git.  Students use it, individuals use it, large companies use it, people in highly-resourced projects use it, and people on a shoestring budget use it. 
 
@@ -100,17 +102,21 @@ This is important because it means that people around the world use Git.  Studen
 You can use git in two main ways:
 
 * Using a **command line interface**, or **CLI**
-* Using **graphical user interface**, or **GUI**.
+* Using **graphical user interface**, or **GUI**
 
-First, let's talk about the word **interface**.  An interface is a way of interacting with a system.  A panel of buttons in an elevator is an interface.  You use this interface by pushing the button that has the number of the floor you want to go to.  The dashboard of your car is an interface.  It displays information you will find helpful, like how much fuel you have and how fast the car is going.  Interfaces can provide controls, ways for the user to do something (like change gears, turn on the radio, or close elevator doors), and they can provide information (like the current floor, the engine temperature, and the current velocity).  Many interfaces do both -- they provide information and they provide controls.  
+First, let's talk about the word **interface**.  An interface is a way of interacting with a system.  
+
+A panel of buttons in an elevator is an interface.  You use this interface by pushing the button that has the number of the floor you want to go to.  The dashboard of your car is an interface.  It displays information you will find helpful, like how much fuel you have and how fast the car is going.  
+
+Interfaces can provide **controls**, ways for the user to do something (like change gears, turn on the radio, or close elevator doors), and they can provide **information** (like the current floor, the engine temperature, and the current velocity).  Many interfaces do both -- they provide information and they provide controls.  
 
 Sometimes the same system will have a couple of different kinds of interfaces.  For example, an elevator will usually have a simple, easy interface for users of the elevator, in the form of buttons inside.  But in an office building, the security desk will have another interface, often using software, that shows where each elevator is, if elevators are going up or down, if they're stuck because someone is holding the doors open, and so forth.  This interface is often a bit more complex and requires a bit of learning what the different symbols and codes mean.  Probably, the security desk has a way to control all the elevators at once, such as in the case of a fire alarm.  This is a level of control that the elevator passenger interface (the buttons inside the elevator car) does not have.
 
 Let's talk about two types of interfaces for working with Git.
 
-## Intro to the Command Line Interface
+### Intro to the Command Line Interface
 
-If you've ever watched a Hollywood film in which the protagonist saves the day by typing commands into the computer (often with tense music in the background and very loud and fast typing), you've seen a depiction of a command line interface, or CLI.  These dramatic depictions often suggest a few false things about using a CLI: 
+If you've ever watched a Hollywood film in which the protagonist saves the day by typing commands into the computer (often with tense music in the background and very loud and fast typing), you've seen a depiction of a **command line interface**, or **CLI**.  These dramatic depictions often suggest a few false things about using a CLI: 
 
 * You have to be a computer genius to use the command line, 
 * The consequences of getting a command wrong are severe, and 
@@ -129,15 +135,28 @@ Here's a screenshot of a very common thing you might want to do: list files in a
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-You may have never used a CLI, and that's perfectly fine.  It doesn't mean you're less skilled or intelligent than people who do use the command line.  This is important to remember because sometimes in tech there are gatekeepers, people who think their way to do something is the only or best way.  You might run across people who use the command line frequently and act suprised or aghast that you don't.  Please don't let gatekeepers change your understanding of your own competence!  
+You may have never used a CLI, and that's perfectly fine.  It doesn't mean you're less skilled or intelligent than people who do use the command line.  
+
+This is important to remember because sometimes in tech there are **gatekeepers**, people who think their way to do something is the only or best way, and that if you don't do things their way, you're wrong or undeserving.  For example, you might run across people who use the command line frequently and consider people who don't use the command line to be less professional or less intelligent.  That can be a form of gatekeeping!
+
+**Please don't let gatekeepers change your understanding of your own competence!** 
 
 </div>
 
 While most things you want to accomplish on your computer can be done using multiple interfaces, some of which may be more user-friendly and graphical, there **are some things that can only be done by command line**.  Things that people need to do frequently, like look at a list of files in each directory, may be able to be accomplished through many interfaces -- a file browser that is point-and-click, for example, as well as a command typed into the CLI to list files using `dir` or `ls`.  But very specific or customized tasks that are done more rarely may only be able to be accomplished by command line.  
 
-Git has lots of commands and actions, and some of them can only be done by using the command line, because they're so niche and specific to certain circumstances that graphical software simply hasn't included that command.  There's a good chance that you might end up using Git for years before you run across a situation that requires the command line, but it's important to know that you can do more things in Git using the command line.
+Git has lots of commands and actions, and some of them can only be done by using the command line, because they're so niche and specific to certain circumstances that graphical software simply hasn't included that task.  There's a good chance that you might end up using Git for **years** before you run across a situation that requires the command line, but it's important to know that it's possible you'll need to use the command line interface at some point.
 
-## Command Line Interface Common Questions
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+If you have to do something very specific in Git that isn't an everyday activity, you might **have** to use a command line interface to accomplish this.  That's a good reason to get at least a little bit comfortable with using Git on the command line.
+
+However, for most people, your day-to-day work in Git can be done in **either** the command line interface or a graphical interface.
+
+</div>
+
+### Command Line Interface Common Questions
 
 If you've never used a command line, you might have a few common questions, like:
 
@@ -155,7 +174,11 @@ What Do I Type?
 
 When it comes to knowing what to do in a computer, the command line interface can feel daunting.  There's no help menu to click on, just a blank space that you're supposed to type into.  But what do you type?  How do you know what to do?  
 
-There are lots of places to learn commands, and learning how to search the internet for someone who has already had the same challenge as you and learned how to do it might help.  For example, if you're not sure how to list the files in a directory, you might search using terms like "command line what files are in my directory" or "CLI show files Windows" or something similar.  It takes practice to learn the vocabulary to create good search terms, but keep in mind that even pros who use the command line many times a day will often search for things rather than rely on their memory!  Another place to learn the basics of working in the command line is in our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.  This is a good place to get some basic practice in so you feel more confident.
+There are lots of places to learn commands, and learning how to search the internet for someone who has already had the same challenge as you and learned how to do it might help.  For example, if you're not sure how to list the files in a directory, you might search using terms like "command line what files are in my directory" or "CLI show files Windows" or something similar.  It takes practice to learn the vocabulary to create good search terms, but keep in mind that even pros who use the command line many times a day will often search for things rather than rely on their memory!  
+
+![A four-panel cartoon. People standing over a bomb with an attached keyboard yell "Rob! You use Unix! Come Quick!".  The bomb display reads "To disarm the bomb, simply enter a valid `tar` command on your first try.  No googling.  You have ten seconds."  The group looks on in silence, until one person says, "Rob?".  Rob replies, "I'm so sorry."](https://imgs.xkcd.com/comics/tar.png "[Tar](https://xkcd.com/1168/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")
+
+One place to learn the basics of working in the command line is in our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.  This is a good place to do some safe, easy command line practice so you feel more confident.
 
 There are also `man` (short for *manual*) and `help` documentation pages that you can view within the command line.  For example, in a Linux-like CLI such as the Mac Terminal or Git Bash on Windows, typing `man ls` will give lots of instructions on how to use the `ls` command.
 
@@ -172,18 +195,17 @@ There's a text editor that some people use from the command line called `vim` wh
 
 And finally, let's talk about getting things wrong.  What will happen if you type the wrong thing?  Probably, literally **nothing** will happen.  The computer will give the equivalent of a shrug and say "I don't understand."  If you type a command that doesn't exist, or do something wrong, like put some words in the wrong order, you'll get an error message that might feel difficult to parse, but doesn't itself mean that anything got harmed.  
 
-Of course, it makes sense to check what a command actually does before typing it.  For example, the command `rm` removes something -- a file, or even a directory and everything in it.  If someone wanted to do a very mean prank they might suggest that you use a command including `rm`.  So after you search online but **before** you type a command in, do a bit of searching about what the command does.  If the command does something like list, show, display, report, or similar terms, it's probably very safe to use.  If the command does something like move, delete, change, remove, truncate, or other similar terms, you might want to understand exactly what the command does, including its **arguments** (other terms you type, which might be things like a text string in quotes or a file name) and its **flags** (options that look like one or two dashes followed by a letter or word, like `-all` or `-a`).
+Of course, it makes sense to check what a command actually does before typing it.  For example, the command `rm` removes something -- a file, or even a directory and everything in it.  If someone wanted to do a very mean prank they might suggest that you use a command including `rm`.  So after you search online but **before** you type a command in, do a bit of searching about what the command does.  
 
+### Graphical User Interface
 
-## Graphical User Interface
-
-A graphical user interface, or GUI (pronounced "gooey") is meant to make things easier for a human user -- that's why the word *user* is in the name.  While some interfaces are meant to allow for interactions between two computer programs (that's what an API, or application programming interface, is for), a GUI is intended for human users, not programs.  A GUI is an interface that is highly visual and relies on graphics (shapes, images, icons, windows, and other kinds of visual cues), which for many users is helpful.  
+A **graphical user interface**, or **GUI** (pronounced "gooey") is meant to make things easier for a human user -- that's why the word *user* is in the name.  While some interfaces are meant to allow for interactions between two computer programs (that's what an API, or application programming interface, is for), a GUI is intended for human users, not programs.  A GUI is an interface that is highly visual and relies on graphics (shapes, images, icons, windows, and other kinds of visual cues), which for many users is helpful.  
 
 The operating system of your Windows or Mac computer has a highly complex graphical user interface, and so do most of the programs you might purchase as a consumer (things like Microsoft Word or Adobe Photoshop).  You use a mouse, not a keyboard, to click on pictures that represent programs in order to open them.  You use a mouse to click on words like "File" or "Window" to show a menu of options.  You might use a mouse to click and drag to select a portion of an image or a selection of words, and then delete or move your selection.
 
-If you're like many people, all of your computer interactions take place in a GUI.  The benefits of a graphical user interface are clear: it's easier to use.  You don't have to remember a keyboard command for changing an image from color to black and white, you can use a visual menu that you select from.  You don't have to remember the command for renaming a file, you just need to know what to click on to select the "rename" option.  This means you can accomplish a lot without having to memorize a long list of commands.  Often, the people who make graphical user interfaces spend a lot of time figuring out what the most frequent tasks are and they work to make those as easy as possible to do.  
+If you're like many people, almost all of your computer interactions take place in a GUI.  The benefits of a graphical user interface are clear: it's easier to use.  You don't have to remember a typed command, you can use a visual menu that you select from.  This means you can accomplish a lot without having to memorize a long list of commands.  Often, the people who make graphical user interfaces spend a lot of time figuring out the most frequent tasks people want to do, and they design the GUI to make those as easy as possible to do.  
 
-In some cases, a graphical user interface is only one way to interact with a system, and you have a choice of which interface you want to use.  Git is an example.  With Git, there are many graphical user interfaces available, made by various different companies.  While you might choose to use Git by typing commands into the command line, you might also interact with Git with one of these GUIs (which are also called Git **clients** or **client software**):
+In some cases, you have a choice of which interface you want to use to interact with a system.  Git is an example.  With Git, there are many graphical user interfaces available, made by various different companies.  While you might choose to use Git by typing commands into the command line, you might also interact with Git with one of these GUIs (which are also called Git **clients** or **client software**):
 
 * The Git GUI that's included in RStudio
 * GitKraken
@@ -194,12 +216,13 @@ In some cases, a graphical user interface is only one way to interact with a sys
 
 Some of these are free, some are free and open source, and some have a cost (either for everyone, or with a "freemium" model that has a free tier).  Which is the best?  We'd argue that the best Git GUI is the one that your team uses and you'll have friendly support around.  
 
-## Comparing and Contrasting
+## Comparing and Contrasting Interfaces
 
 Let's compare and contrast some things you might need to do in Git, and see how they look different in the two interfaces.  Don't worry if you're not sure what these tasks mean, but just take a look at how the two interfaces look.  Do you prefer one over the other?
 
-Adding a new repository
------
+We'll look at three different tasks: adding a new repository, looking at the history of a repository, and looking at a specific change more closely.
+
+### Adding a new repository
 
 First, let's create a new repository in an existing directory.  What this means is that we have a directory (folder) of files on our computer, and we realize that we'd like to add version control to this folder.  In our example case, we have a directory called `my_important_directory`, and it is located within the `Documents` folder in a local laptop.
 
@@ -229,9 +252,23 @@ Click on the image to play the demo of the above steps!
 
 </figure>
 
+### Looking at the History of a Project 
+
+Git provides a way to look at a history of changes.  Each time you decide to make a save of the files as a moment in time you'd like to memorialize, you make a **commit**.  The commit history shows who made a change, when they made it, and a message they write to describe the change.
+
+In the command line, you can use `git log` to show the commit history.  This is a real commit history on a Git repository that holds materials for a workshop on the R language.  
+
+![Terminal window with the command "git log".  The output includes six commit records.  Each record has a commit code made up of letters and numbers, an author name and email address, a date and time stamp, and a short message such as "add presenter and TA pics".](media/git_log_cli.png)
+
+You can use the **history** function of a Git GUI to look at the same information.  Here, we're looking at the same repository, using GitHub Desktop.
+
+![GitHub Desktop window shows, in the left side of the window, a history of six commits, each of which has a user name, date, small icon of the user, and short message such as "add presenter and TA pics."  Additionaly, the actual changes made during one of the commits are shown on the right of the window. ](media/git_history_gui.png)
+
+
 ## Additional Resources
 
-* The [Pro Git Book](https://git-scm.com/book/en/v2) is incredibly useful and detailed.  We particularly suggest:
+* The [Pro Git Book](https://git-scm.com/book/en/v2) is incredibly useful and detailed.  It is centered on using the command line interface to use Git.  We particularly suggest:
+
   - [Getting Started: About Version Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control), which talks about distributed versus centralized version control, and
   - [Appendix A: Git in Other Environments -- Graphical Interfaces](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Graphical-Interfaces), which talks about point-and-click graphical software to help you use Git.
 
