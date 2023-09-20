@@ -471,13 +471,13 @@ Check out the code block below for an example of a where clause that includes mu
 ```sql
 SELECT *
 FROM alasql.patients
-WHERE
-	(
+WHERE 
+	( -- looking just in Suffolk or Barnstable counties
 		patients.county = "Suffolk County"
 		OR patients.county = "Barnstable County"
 	)
 	AND
-	(
+	( -- patients who are hispanic or non-white
 	  patients.ethnicity = "hispanic"
 	  OR patients.race != "white"
 	);
