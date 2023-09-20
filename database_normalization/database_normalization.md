@@ -4,6 +4,7 @@ email:    paytonk@chop.edu
 version: 1.0.4
 current_version_description: Initial Version.
 module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: US English Female
 mode: Textbook
