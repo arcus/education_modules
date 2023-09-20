@@ -184,7 +184,7 @@ The website [genome.gov](https://www.genome.gov) has a variety of educational re
 * They also have [a brief overview of transcriptomics](https://www.genome.gov/about-genomics/fact-sheets/Transcriptome-Fact-Sheet)
 
 
-## References
+<h3>References</h3>
 
 Hasin, Y., Seldin, M. & Lusis, A. Multi-omics approaches to disease. Genome Biol 18, 83 (2017). https://doi.org/10.1186/s13059-017-1215-1
 
