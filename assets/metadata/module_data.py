@@ -1214,13 +1214,13 @@ df.loc["r_practice", "long_description"] = "When learning R for data science, th
 df.loc["r_practice", "learning_objectives"] = "&After completion of this module, learners will be able to:&&- Import a dataset from an online database&- Recode data and change variable types in a dataframe&- Use exploratory data visualization to identify trends in data and generate hypotheses&&" 
 df.loc["r_reshape_long_wide", "author"] = "Joy Payton"
 df.loc["r_reshape_long_wide", "email"] = "paytonk@chop.edu"
-df.loc["r_reshape_long_wide", "version"] = "1.2.0"
+df.loc["r_reshape_long_wide", "version"] = "1.2.1"
 df.loc["r_reshape_long_wide", "current_version_description"] = "Update highlight boxes, update metadata, and replace text with macros."
 df.loc["r_reshape_long_wide", "module_type"] = "standard"
-df.loc["r_reshape_long_wide", "docs_version"] = "1.0.0"
+df.loc["r_reshape_long_wide", "docs_version"] = "2.0.0"
 df.loc["r_reshape_long_wide", "language"] = "en"
 df.loc["r_reshape_long_wide", "narrator"] = "US English Female"
-df.loc["r_reshape_long_wide", "mode"] = ""
+df.loc["r_reshape_long_wide", "mode"] = "Textbook"
 df.loc["r_reshape_long_wide", "title"] = "Reshaping Data in R: Long and Wide Data"
 df.loc["r_reshape_long_wide", "estimated_time_in_minutes"] = "60"
 df.loc["r_reshape_long_wide", "module_type"] = "standard"
@@ -1236,7 +1236,7 @@ df.loc["r_reshape_long_wide", "comment"] = "A module that teaches how to reshape
 df.loc["r_reshape_long_wide", "long_description"] = "Reshaping data is one of the essential skills in getting your data in a tidy format, ready to visualize, analyze, and model.  This module is appropriate for learners who feel comfortable with R basics and are ready to take on the challenges of real life data, which is often messy and requires considerable effort to tidy." 
 df.loc["r_reshape_long_wide", "pre_reqs"] = "&This module assumes familiarity with R basics, including ingesting .csv data and using dplyr tools to do basic transformation including choosing only certain columns or rows of a data frame.  If you need to learn these basics, we suggest our [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) module and our [R Basics: Transform Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md) module.&&" 
 df.loc["r_reshape_long_wide", "learning_objectives"] = "&After completion of this module, learners will be able to:&&- Define and differentiate +long data+ and +wide data+&- Use tidyr and dplyr tools to reshape data effectively&&" 
-df.loc["r_reshape_long_wide", "sets_you_up_for"] = "&- r_practice&&" 
+df.loc["r_reshape_long_wide", "sets_you_up_for"] = "&- r_practice&- data_visualization_in_ggplot2&&" 
 df.loc["r_reshape_long_wide", "depends_on_knowledge_available_in"] = "&- r_basics_introduction&- r_basics_transform_data&&" 
 df.loc["r_reshape_long_wide", "version_history"] = "&Previous versions: &&- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/r_reshape_long_wide/r_reshape_long_wide.md#1): Initial version, then added Posit instructions.&&" 
 df.loc["r_summary_stats", "author"] = "Rose Hartman"
@@ -1765,6 +1765,7 @@ a.append("r_basics_introduction")
 a.append("r_basics_transform_data")
 df.at["r_practice", "Linked Courses"] = list(a)
 a = df.loc["r_reshape_long_wide", "Linked Courses"]
+a.append("data_visualization_in_ggplot2")
 a.append("r_basics_introduction")
 a.append("r_basics_transform_data")
 a.append("r_practice")
