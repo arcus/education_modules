@@ -202,7 +202,7 @@ The basic components of a select statement are the `SELECT` and `FROM` keywords.
 
 **Select All Columns**
 
-If you would like to return **all** of the fields from the table(s) specified in your SQL query, you can use the `*` wild card character as shown in the example below.  You'll notice that we put a line break between the asterisk and the `FROM` keyword.  Spaces and line breaks (together, called **whitespace**) don't really matter for SQL.  You can run your code together on a single line, or (as we strongly suggest) use styled whitepsace such as predictable line breaks and indentation.
+If you would like to return **all** of the fields from the table(s) specified in your SQL query, you can use the `*` wild card character as shown in the example below.  You'll notice that we put a line break between the asterisk and the `FROM` keyword.  Spaces and line breaks (together, called **whitespace**) don't really matter for SQL.  You can run your code together on a single line, or (as we strongly suggest) use styled whitespace such as predictable line breaks and indentation.
 
 Notice that the `FROM` line of this query is followed by 2 words separated by a period. This format is known as "**dot notation**".  Dot notation is usually something like `dataset_name.table_name.column_name`.  Some dialects of SQL might require some special notation, like backticks (`\``) around part of the dot notation, but we don't need that for your hands on work here.
 
@@ -286,7 +286,7 @@ The `DISTINCT` clause in **SQL** can be placed directly after the `SELECT` key w
 
 This can be especially useful when exploring a dataset for the first time and trying to become familiar with the data in each column of a given table.  For example, perhaps you want to see all the possible values for `sex` or `race` in the `patients` table, to understand a bit more about the data collection options.  If you were to use `SELECT` by itself to get just the `race` field from the `patients` table, you'd get the race of every patient, with lots of repeats.  If you used `SELECT DISTINCT` instead, you'd get a much shorter list of every possible value for `race`, each listed just once.  
 
-You can also explore using `SELECT DISTINCT` on more than one field.  The code block below provides an example of using this syntax to invesitgate the unique combinations of values from the `sex` and `ethnicity` columns from the `patient` table.  As you can see, the `DISTINCT` clause will work on any number of columns.  Go ahead and execute this code to see the results.  
+You can also explore using `SELECT DISTINCT` on more than one field.  The code block below provides an example of using this syntax to investigate the unique combinations of values from the `sex` and `ethnicity` columns from the `patient` table.  As you can see, the `DISTINCT` clause will work on any number of columns.  Go ahead and execute this code to see the results.  
 
 Then, if you're up for a challenge, change the code to find out what unique combinations there are of race and ethnicity!
 
@@ -533,7 +533,7 @@ WHERE
 
 ### Dealing with Null Values
 
-Like many programing languages, **SQL** deals with "blank" values in a very specific way.
+Like many programming languages, **SQL** deals with "blank" values in a very specific way.
 
 **SQL** uses the concept of **null** to represent "blank" row values.
 
@@ -695,9 +695,9 @@ While you **could** omit `alasql`, it certainly isn't hurting things, and it's o
 
 ### ORDER BY Statement
 
-Another useful piece of SQL syntax for exporing datasets is the `ORDER BY` statement, which (as its name suggests) is used to order your result set by a given set of one or more columns.
+Another useful piece of SQL syntax for exploring datasets is the `ORDER BY` statement, which (as its name suggests) is used to order your result set by a given set of one or more columns.
 
-When listing columns in the `ORDER BY` statment you can specify that they be sorted in either ascending (`ASC`) or descending (`DESC`) order. If you list more than one column in `ORDER BY`, items will be sorted first by the first column you provide, and then, within "ties", by the second, then third, etc., column.  For instance, the code below first sorts by `county`, and then within each possible value of `county` sorts by `ethnicity`.  Run it to see the results!
+When listing columns in the `ORDER BY` statement you can specify that they be sorted in either ascending (`ASC`) or descending (`DESC`) order. If you list more than one column in `ORDER BY`, items will be sorted first by the first column you provide, and then, within "ties", by the second, then third, etc., column.  For instance, the code below first sorts by `county`, and then within each possible value of `county` sorts by `ethnicity`.  Run it to see the results!
 
 ```sql
 SELECT DISTINCT
