@@ -297,10 +297,13 @@ Prof. Chatti was planning to run a regression model, but they're working with da
 
 For another excellent resource on the same topic, see [Choosing a Statistical Test, from the Biostatistics Handbook](http://www.biostathandbook.com/testchoice.html).
 
+The [data methods discourse board](https://discourse.datamethods.org/) is an online forum where people analyzing health data ask and answer each other's questions. It's a great place to look for specifics of how to apply statistical techniques to biomedical or health data!
+
 <h3>Learning statistics</h3>
 
 There are a number of high quality resources available for learning more about statistical theory and applied data analysis techniques. Here are a few:
 
+* Prof. Frank Harrell of Vanderbilt has posted all of the [lecture videos for the course Biostatistics for Biomedical Research](https://www.youtube.com/@bbrcourse6203/about) on youtube. Also check out the [free online book Biostatistics for Biomedical Research](https://hbiostat.org/bbr/)!
 * There are many excellent [videos on statistics from Khan Academy](https://www.khanacademy.org/math/statistics-probability), great for building better understanding of statistical theory and probability.
 * [Stanford's free statistical learning course](https://online.stanford.edu/courses/sohs-ystatslearning-statistical-learning) starts with a great introduction to the basics of linear regression models and builds to more complicated machine learning techniques. Depending on your needs, you may want to do the whole course or just use the first few weeks of it.
 * [Applied Multiple Regression](https://books.google.co.in/books?id=gkalyqTMXNEC) by Cohen, Cohen, West and Aiken is very thorough without getting too mathematical (and in case you're wondering, yes, the first author is [Jacob Cohen](https://en.wikipedia.org/wiki/Jacob_Cohen_(statistician), of Cohen's d fame).
