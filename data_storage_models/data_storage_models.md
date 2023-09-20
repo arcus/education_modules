@@ -3,7 +3,7 @@
 author:   Nicole Feldman
 email:    feldmanna@chop.edu
 version: 1.1.3
-current_version_description: Initial Version.
+current_version_description: Updated quiz questions and metadata.
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -42,7 +42,7 @@ coding_required: false
 @end
 
 @version_history 
-No previous versions.
+[1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/7bbdf70c88a08b47a3740d2facf84b5ecdea57c6/data_storage_models/data_storage_models.md): Initial Version.
 @end
 
 
