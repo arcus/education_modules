@@ -1497,27 +1497,31 @@ df.loc["sql_joins", "depends_on_knowledge_available_in"] = "&- sql_intermediate&
 df.loc["sql_joins", "version_history"] = "&Previous Versions:&&* [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/sql_joins/sql_joins.md#1): Original version, with improved feedback link&&" 
 df.loc["statistical_tests", "author"] = "Rose Hartman"
 df.loc["statistical_tests", "email"] = "hartmanr1@chop.edu"
-df.loc["statistical_tests", "version"] = "1.3.2"
-df.loc["statistical_tests", "current_version_description"] = ""
-df.loc["statistical_tests", "module_type"] = ""
-df.loc["statistical_tests", "docs_version"] = ""
+df.loc["statistical_tests", "version"] = "1.3.3"
+df.loc["statistical_tests", "current_version_description"] = "Highlight box update, fix typos, front matter update, add some additional resources."
+df.loc["statistical_tests", "module_type"] = "standard"
+df.loc["statistical_tests", "docs_version"] = "2.0.0"
 df.loc["statistical_tests", "language"] = "en"
 df.loc["statistical_tests", "narrator"] = "UK English Female"
-df.loc["statistical_tests", "mode"] = ""
+df.loc["statistical_tests", "mode"] = "Textbook"
 df.loc["statistical_tests", "title"] = "Statistical Tests in Open Source Software"
-df.loc["statistical_tests", "estimated_time_in_minutes"] = ""
-df.loc["statistical_tests", "module_type"] = ""
-df.loc["statistical_tests", "good_first_module"] = ""
+df.loc["statistical_tests", "estimated_time_in_minutes"] = "20"
+df.loc["statistical_tests", "module_type"] = "standard"
+df.loc["statistical_tests", "good_first_module"] = "false"
 df.loc["statistical_tests", "data_domain"] = ""
-df.loc["statistical_tests", "data_task"] = ""
-df.loc["statistical_tests", "coding_required"] = ""
-df.loc["statistical_tests", "coding_level"] = ""
-df.loc["statistical_tests", "coding_language"] = ""
+df.loc["statistical_tests", "data_task"] = "data_analysis"
+df.loc["statistical_tests", "coding_required"] = "false"
+df.loc["statistical_tests", "coding_level"] = "advanced"
+df.loc["statistical_tests", "coding_language"] = "r, python"
 df.loc["statistical_tests", "sequence_name"] = ""
 df.loc["statistical_tests", "previous_sequential_module"] = ""
 df.loc["statistical_tests", "comment"] = "This module provides an overview of the most commonly used kinds of statistical tests and links to code for running many of them in both R and python." 
 df.loc["statistical_tests", "long_description"] = "This module contains a curated list of links to tutorials and examples of many common statistical tests in both R and python. If you want to use R or python for data analysis but aren't sure how to write code for the statistical tests you want to run, this is a great place to start. This will be an especially valuable resource for people who have experience conducting analysis in other software (e.g. SAS, SPSS, MPlus, Matlab) and are looking to move to R and/or python. If you are new to data analysis, this module provides some structure to help you think about which statistical tests to run, and examples of code to execute them. It doesn't cover the statistical theory itself, though, so you'll need to do some additional reading before applying the code for any tests you don't already understand (there are recommended resources for learning statistical techniques at the end of the module)." 
-df.loc["statistical_tests", "learning_objectives"] = "&After completion of this module, learners will be able to:&&- Use four key questions to help determine which statistical tests will be most appropriate in a given situation&- Discuss general differences between running statistical tests in R vs. python&- Quickly find the code they need to be able to run most common statistical tests in R or python&&" 
+df.loc["statistical_tests", "pre_reqs"] = "&* Learners should already be familiar with the purpose and assumptions of any test they intend to run --- this module covers the +how+ only, not the +why+.&* This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with our [R Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md) series first and then coming back here.&&" 
+df.loc["statistical_tests", "learning_objectives"] = "After completion of this module, learners will be able to:&&- Use four key questions to help determine which statistical tests will be most appropriate in a given situation&- Discuss general differences between running statistical tests in R vs. python&- Quickly find the code they need to be able to run most common statistical tests in R or python&" 
+df.loc["statistical_tests", "sets_you_up_for"] = "&" 
+df.loc["statistical_tests", "depends_on_knowledge_available_in"] = "- r_basics_introduction&- python_basics_variables_functions_methods&- intro_to_nhst&" 
+df.loc["statistical_tests", "version_history"] = "Previous versions: &&- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/statistical_tests/statistical_tests.md#1): Add biostats handbook as additional resource.&- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cde920bb122d9ad69dd5c547725d303541f171eb/statistical_tests/statistical_tests.md#1): Add emphasis on need to study statistical theory (in response to module feedback).&- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cde69494c598cbec920221560564eb3d7c26c79c/statistical_tests/statistical_tests.md#1): Initial version, fix broken links.&" 
 df.loc["tidy_data", "author"] = "Joy Payton"
 df.loc["tidy_data", "email"] = "paytonk@chop.edu"
 df.loc["tidy_data", "version"] = "1.1.2"
@@ -1838,7 +1842,7 @@ a.append("sql_basics")
 a.append("sql_intermediate")
 df.at["sql_joins", "Linked Courses"] = list(a)
 a = df.loc["statistical_tests", "Linked Courses"]
-a.append("data_visualization_in_open_source_software")
+a.append("intro_to_nhst")
 a.append("python_basics_variables_functions_methods")
 a.append("r_basics_introduction")
 df.at["statistical_tests", "Linked Courses"] = list(a)
