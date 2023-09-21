@@ -41,7 +41,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 This is the technical documentation for DART modules written with [LiaScript](https://liascript.github.io/). 
 LiaScript is a [markdown](https://en.wikipedia.org/wiki/Markdown) dialect, so writing a DART module is a lot like writing any other plain text document, with a few exceptions for special formatting. 
 
-**This is verison @version of this document.**
+**This is version @version of this document.**
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -148,7 +148,7 @@ Which front matter items are required? It depends on the content of the module y
 | `current_version_description`       |      X      |   X   |      X      |                                                                                           |
 | `module_type`                       |      X      |   X   |      X      |                                                                                           |
 | `docs_version`                      |      X      |   X   |      X      |                                                                                           |
-| `langauge`                          |      X      |   X   |      X      |                                                                                           |
+| `language`                          |      X      |   X   |      X      |                                                                                           |
 | `narrator`                          |      X      |   X   |      X      |                                                                                           |
 | `mode`                              |      X      |   X   |      X      |                                                                                           |
 | `title`                             |      X      |   X   |      X      |                                                                                           |
@@ -171,6 +171,7 @@ Which front matter items are required? It depends on the content of the module y
 | `good_first_module`                 |      X      |   X   |      X      |                                                                                           |
 | `data_domain`                       |             |       |             |                                                                                           |
 | `data_task`                         |             |       |             |                                                                                           |
+| `collection`                        |             |       |             |                                                                                           |
 | `coding_required`                   |      X      |   X   |      X      |                                                                                           |
 | `coding_level`                      |             |   X   |             |                                                                                           |
 | `coding_language`                   |             |   X   |             |                                                                                           |
@@ -199,11 +200,12 @@ Use the checklist below to help make sure you're including all the front matter 
 - [ ] includes interactive SQL
 - [ ] learner will need to code to meet the learning objectives
 - [ ] is about a particular kind of data (EHR, omics data, geospatial data, etc.)
-- [ ] teaches a particular data skill or task (visualization, anlaysis, cleaning, etc.)
+- [ ] teaches a particular data skill or task (visualization, analysis, cleaning, etc.)
+- [ ] belongs to a [collection](#collection)
 - [ ] is a [wrapper module](#which-module-template-to-use)
 - [ ] is in a sequence (including the first module in the sequence)
 - [ ] follows other modules in a sequence (i.e. it's not the first in the sequence)
-- [ ] is parallel to one or more other modules (i.e. covers the same content but in a different coding langauge/operating system)
+- [ ] is parallel to one or more other modules (i.e. covers the same content but in a different coding language/operating system)
 - [ ] uses the Data Carpentry genomics AMI on AWS
 - [ ] uses the learning_bash repo
 <script output="module_characteristics">"@input"</script>
@@ -229,20 +231,21 @@ You'll need the following fields in your front matter (new fields added by check
 * pre\_reqs
 * learning\_objectives
 
-@add_item(6,resource1\_name)
-@add_item(6,resource1\_description)
-@add_item(6,resource1\_wellvetted)
-@add_item(6,resource1\_wellvetted\_text)
-@add_item(6,resource1\_maintained)
-@add_item(6,resource1\_maintained\_text)
-@add_item(6,resource1\_stablesupport)
-@add_item(6,resource1\_stablesupport\_text)
-@add_item(6,resource1\_a11y\_issues)
+@add_item(7,resource1\_name)
+@add_item(7,resource1\_description)
+@add_item(7,resource1\_wellvetted)
+@add_item(7,resource1\_wellvetted\_text)
+@add_item(7,resource1\_maintained)
+@add_item(7,resource1\_maintained\_text)
+@add_item(7,resource1\_stablesupport)
+@add_item(7,resource1\_stablesupport\_text)
+@add_item(7,resource1\_a11y\_issues)
 
 * good\_first\_module
 
 @add_item(4,data\_domain)
 @add_item(5,data\_task)
+@add_item(6,collection)
 
 * coding\_required
 
@@ -268,28 +271,28 @@ try {
 try {
   let module_characteristics = @input(`module_characteristics`)
 
-  if(module_characteristics[7] || module_characteristics[8]) {
+  if(module_characteristics[8] || module_characteristics[9]) {
     send.liascript(`- sequence\_name 💫`)
   } else send.clear()
 } catch(e) { }
 </script>
 
-@add_item(8,previous\_sequential\_module)
+@add_item(9,previous\_sequential\_module)
 
 * sets\_you\_up\_for
 * depends\_on\_knowledge\_available\_in
 
-@add_item(9,is\_parallel\_to)
+@add_item(10,is\_parallel\_to)
 
 * version\_history
 * import macros.md
 
-@add_item(6,import macros_wrapper.md)
+@add_item(7,import macros_wrapper.md)
 @add_item(0,import macros_r.md)
 @add_item(1,import macros_python.md)
 @add_item(2,import macros_sql.md)
-@add_item(10,import macros_genomics.md)
-@add_item(10,import macros_bash.md)
+@add_item(11,import macros_genomics.md)
+@add_item(12,import macros_bash.md)
 
 ### `author`
 
@@ -627,7 +630,9 @@ data_domain: ehr
 
 This module is primarily useful for or focused on this type of data.
 
-Must be one of the following:
+This field can be left blank, but every module **must** have something in at least one of `data_domain`, `data_task`, or `collection`.
+
+Must be one or more of the following:
 
 - `ehr`
 - `omics`
@@ -644,7 +649,9 @@ data_task:
 
 What type of task/action/skill does this module teach?
 
-Must be one of the following:
+This field can be left blank, but every module **must** have something in at least one of `data_domain`, `data_task`, or `collection`.
+
+Must be one or more of the following:
 
 - `data_visualization`: Creating representations of data such as plots, graphs, maps, etc.
 - `data_management`: Organizing and storing data, including database structures, data sharing, cloud vs. local storage, and metadata.
@@ -652,6 +659,29 @@ Must be one of the following:
 - `data_analysis`: Identifying and quantifying patterns in the data, including exploratory analysis, descriptive statistics, and more formal modeling
 
 As we write additional modules, we may add new data tasks to this list!
+
+### `collection`
+
+```
+collection: learn_to_code, machine_learning
+```
+
+The collection(s) this module belongs to.
+This captures topics or themes not covered by other metadata (especially `data_domain` and `data_task`).
+You can list more than one collection, separated by commas. 
+
+This field can be left blank, but every module **must** have something in at least one of `data_domain`, `data_task`, or `collection`.
+
+Must be one or more of the following: 
+
+- `demystifying`: Few or no prerequisites, approachable for beginners, doesn't teach hands-on skills but rather focuses on giving an overview of a topic. Often has a special focus on reducing anxiety about a potentially daunting topic or tool, and cutting through the hype to helping novices to determine whether or not this is something they should learn to do. Note that a module does not need to have "demystifying" in its title to be in this collection.
+- `infrastructure_and_technology`: Focused on software or tools, especially setup and systems. Things like how to install software, or understanding what software and/or languages to use for what tasks. Also includes basic computer skills like navigating file directories.  
+- `intro_to_data_science`: Skills for learners new to data science, including how to troubleshoot, reproducible methods, etc.
+- `learn_to_code`: Modules that is primarily focused on teaching coding. Note that a module might require coding without belonging to this collection, especially more advanced modules that use a coding language to achieve some task (modeling, genomics, etc.) but without the pedagogical focus being on the coding language itself. 
+- `machine_learning`: Modules about machine learning and AI.
+- `statistics`: Modules about statistics, including both applied data analysis (e.g. here's how to do this test in R) and a more theoretical understanding of statistics and the underlying math (e.g. learn the matrix algebra underlying the general linear module).
+
+As we write additional modules, we may add new collections to this list! 
 
 ### `coding_required`
 
@@ -735,7 +765,7 @@ Required for all modules.
 
 Notes how knowledge in this module will prepare the user for other concepts.
 
-Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
+Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge available in `module_a`.
 
 If there are no modules to list here, leave it blank but do not omit it (modules may fail automatic checks if they don't have all required metadata). 
 For example:
@@ -761,7 +791,7 @@ Required for all modules.
 
 Notes where user can find useful knowledge in other modules.
 
-Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
+Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge available in `module_a`.
 
 If there are no modules to list here, leave it blank but do not omit it (modules may fail automatic checks if they don't have all required metadata). 
 For example:
@@ -1815,7 +1845,7 @@ For more details, see [notes about quizzes in the LiaScript documentation](https
 </div>
 ***
 
-Sometimes you may wish to include a quiz question that would be impossible to automatically grade (i.e. one with an open-ended repsonse). 
+Sometimes you may wish to include a quiz question that would be impossible to automatically grade (i.e. one with an open-ended response). 
 To mark all possible answers as correct, use a brief script to match everything with regex:
 
 ```
@@ -2042,7 +2072,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
 
 ## Updating this document
 
-**This is verison @version of this document.**
+**This is version @version of this document.**
 
 When you update docs.md, be sure to [increment its version](https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md) in the front matter.
 
