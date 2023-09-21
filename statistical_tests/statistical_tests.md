@@ -1,55 +1,62 @@
 <!--
-
-author:   Rose Hartman
-email:    hartmanr1@chop.edu
-version: 1.3.2
-module_template_version: 2.0.0
+author: Rose Hartman
+email: hartmanr1@chop.edu
+version: 1.3.3
+current_version_description: Highlight box update, fix typos, front matter update, add some additional resources.
+module_type: standard
+docs_version: 2.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: Statistical Tests in Open Source Software
 comment:  This module provides an overview of the most commonly used kinds of statistical tests and links to code for running many of them in both R and python.
-
 long_description: This module contains a curated list of links to tutorials and examples of many common statistical tests in both R and python. If you want to use R or python for data analysis but aren't sure how to write code for the statistical tests you want to run, this is a great place to start. This will be an especially valuable resource for people who have experience conducting analysis in other software (e.g. SAS, SPSS, MPlus, Matlab) and are looking to move to R and/or python. If you are new to data analysis, this module provides some structure to help you think about which statistical tests to run, and examples of code to execute them. It doesn't cover the statistical theory itself, though, so you'll need to do some additional reading before applying the code for any tests you don't already understand (there are recommended resources for learning statistical techniques at the end of the module).
-estimated_time: 20 minutes (although reading through the linked tutorials may take much longer, depending on which tests you choose to read about)
+estimated_time_in_minutes: 20
+
+@pre_reqs
+
+* Learners should already be familiar with the purpose and assumptions of any test they intend to run --- this module covers the "how" only, not the "why".
+* This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with our [R Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md) series first and then coming back here.
+
+@end
 
 @learning_objectives  
-
 After completion of this module, learners will be able to:
 
 - Use four key questions to help determine which statistical tests will be most appropriate in a given situation
 - Discuss general differences between running statistical tests in R vs. python
 - Quickly find the code they need to be able to run most common statistical tests in R or python
+@end
+
+good_first_module: false
+data_task: data_analysis
+coding_required: false
+coding_level: advanced
+coding_language: r, python
+
+@sets_you_up_for
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+@depends_on_knowledge_available_in
+- r_basics_introduction
+- python_basics_variables_functions_methods
+- intro_to_nhst
+@end
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@version_history
+Previous versions: 
 
+- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/statistical_tests/statistical_tests.md#1): Add biostats handbook as additional resource.
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cde920bb122d9ad69dd5c547725d303541f171eb/statistical_tests/statistical_tests.md#1): Add emphasis on need to study statistical theory (in response to module feedback).
+- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cde69494c598cbec920221560564eb3d7c26c79c/statistical_tests/statistical_tests.md#1): Initial version, fix broken links.
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
 # Statistical Tests in Open Source Software
-
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion**: @estimated_time
-
-**Pre-requisites**:
-
-* Learners should already be familiar with the purpose and assumptions of any test they intend to run --- this module covers the "how" only, not the "why".
-* This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with our [R Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md) series first and then coming back here.
-
-**Learning Objectives**:  
-
-@learning_objectives
-
-</div>
-
+@overview
 
 ## R vs python
 
@@ -74,7 +81,7 @@ In the following sections, you will find tables of links to example code for a r
 
 Whenever possible, we've linked to tutorials that include explanation of what the code does line by line and at least some background on the rationale for the statistical test in question. There are many cases where full tutorials are not yet available, though, in which case bare example code may be all there is.
 
-Even when a rich tutorial is available, the information linked here will generally **not** be enough for you to effectively use a statistical technique you're not already familiar with. Before applying a test you don't fully understand, seek out advice from someone experienced in the technique you want to use. We also have [recommendations for further statistical education](#learning-statistics) at the end of this module.
+Even when a rich tutorial is available, the information linked here will generally **not** be enough for you to effectively use a statistical technique you're not already familiar with. Before applying a test you don't fully understand, seek out advice from someone experienced in the technique you want to use. We also have [recommendations for further statistical education](#additional-resources) at the end of this module.
 
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
@@ -132,7 +139,7 @@ General Linear Models with multiple outcomes are usually called "multivariate" m
 | MANOVA (one-way) | [R code](http://www.sthda.com/english/wiki/manova-test-in-r-multivariate-analysis-of-variance) | [python code](https://www.statsmodels.org/stable/generated/statsmodels.multivariate.manova.MANOVA.html) |
 | MANOVA (factorial)| [R code](https://www.statmethods.net/stats/anova.html) | [python code](https://www.statsmodels.org/stable/generated/statsmodels.multivariate.manova.MANOVA.html) |
 
-There are many more multivariate tests available, these are just a few of the most common. To learn more, see our [recommendations for learning statistics](#learning-statistics) at the end of this module.
+There are many more multivariate tests available, these are just a few of the most common. To learn more, see our [recommendations for learning statistics](#additional-resources) at the end of this module.
 
 ### Nonparametric Tests
 
@@ -290,14 +297,13 @@ Prof. Chatti was planning to run a regression model, but they're working with da
 
 For another excellent resource on the same topic, see [Choosing a Statistical Test, from the Biostatistics Handbook](http://www.biostathandbook.com/testchoice.html).
 
-If you want to learn more about basics of programming in R or python, you may like our [R Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md) series.
+The [data methods discourse board](https://discourse.datamethods.org/) is an online forum where people analyzing health data ask and answer each other's questions. It's a great place to look for specifics of how to apply statistical techniques to biomedical or health data!
 
-We also have material on [data visualization in R and python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md)
-
-### Learning statistics
+<h3>Learning statistics</h3>
 
 There are a number of high quality resources available for learning more about statistical theory and applied data analysis techniques. Here are a few:
 
+* Prof. Frank Harrell of Vanderbilt has posted all of the [lecture videos for the course Biostatistics for Biomedical Research](https://www.youtube.com/@bbrcourse6203/about) on youtube. Also check out the [free online book Biostatistics for Biomedical Research](https://hbiostat.org/bbr/)!
 * There are many excellent [videos on statistics from Khan Academy](https://www.khanacademy.org/math/statistics-probability), great for building better understanding of statistical theory and probability.
 * [Stanford's free statistical learning course](https://online.stanford.edu/courses/sohs-ystatslearning-statistical-learning) starts with a great introduction to the basics of linear regression models and builds to more complicated machine learning techniques. Depending on your needs, you may want to do the whole course or just use the first few weeks of it.
 * [Applied Multiple Regression](https://books.google.co.in/books?id=gkalyqTMXNEC) by Cohen, Cohen, West and Aiken is very thorough without getting too mathematical (and in case you're wondering, yes, the first author is [Jacob Cohen](https://en.wikipedia.org/wiki/Jacob_Cohen_(statistician), of Cohen's d fame).
@@ -306,24 +312,11 @@ There are a number of high quality resources available for learning more about s
 
 Note that the recommendations above all focus on statistics specifically rather than on data science more broadly. There are also many excellent courses and textbooks available about data science, most of which include a brief and superficial introduction to statistics. If you have already worked through some data science education materials but find you want to understand the statistical tests more deeply, then these recommendations may help you find what you need.
 
-### Resources for Other Software
+<h3>Resources for Other Software</h3>
 
 We recommend sticking to open source software whenever possible (to read about why check out [this Nature article on the importance of open source software for science](https://www.nature.com/articles/nature10836)).
 
 That said, if you're used to working in non-open source statistical software, like SPSS or Stata, you may find it helpful to see the commands and output from those environments to compare to approaches in R and/or python. UCLA's Institute for Digital Research and Education has an excellent set of posts of [annotated output for most common statistical tests in Stata, SAS, SPSS, and Mplus](https://stats.idre.ucla.edu/other/annotatedoutput/) as well as several [data analysis examples](https://stats.idre.ucla.edu/other/dae/), which include a little more background on the techniques used.
 
 ## Feedback
-
-In the beginning, we stated some goals.
-
-**Learning Objectives:**  
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Statistical+Tests+in+Open+Source+Software%22&version=1.2.1)!
+@feedback

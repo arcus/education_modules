@@ -1377,7 +1377,7 @@ There are also many questions and answers about `seaborn` available on [stackove
 
 You may find the [pandas cheatsheet (pdf)](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) helpful.
 
-For resources about statistics in general, rather than data visualization specifically, see [our list of recommendations for learning about stats](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md#learning-statistics).
+For resources about statistics in general, rather than data visualization specifically, see [our list of recommendations for learning about statistics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md#additional-resources).
 
 ## Feedback
 
