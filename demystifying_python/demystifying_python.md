@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.2.3
+version: 1.2.4
 current_version_description: Updated highlight boxes and metadata
 module_type: standard
 docs_version: 2.0.0
@@ -30,6 +30,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
+collection: demystifying
 coding_required: false
 coding_language: python
 

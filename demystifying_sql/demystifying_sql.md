@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.2.0
+version: 1.2.1
 current_version_description: Update authorship, correct typo, add metadata
 docs_version: 2.0.0
 module_type: standard
@@ -30,6 +30,8 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: true
+data_domain: ehr
+collection: demystifying
 coding_required: false
 @sets_you_up_for
 
