@@ -1,12 +1,13 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.1
+version: 1.3.2
 current_version_description: Updated with new metadata and to remove references to Binderhub
 module_type: standard
 docs_version: 2.0.0
 language: en
 narrator: US English Female
+mode: Textbook
 title: R Basics: Transforming Data With dplyr
 comment:  Learn how to transform (or wrangle) data using R's `dplyr` package.
 long_description: Do you want to learn how to work with tabular (table-shaped, with rows and columns) data in R?  In this module you'll learn in particular how to select just the rows and columns you want to work with, how to create new columns, and how to create multi-step transformations to get your data ready for visualization or statistical analysis.  This module teaches the use of the `dplyr` package, which is part of the `tidyverse` suite of packages.
@@ -36,6 +37,7 @@ After completion of this module, learners will be able to:
 
 good_first_module: false
 data_task: data_wrangling
+collection: learn_to_code
 coding_required: true
 coding_level: basic
 coding_language: r

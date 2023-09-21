@@ -1,11 +1,12 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.0
+version: 1.3.1
 current_version_description: Added additional info for one exercise example (it was in the solutions file but not copied here)
 module_type: standard
 docs_version: 1.0.0
 language: en
+mode: Textbook
 narrator: US English Female
 title: R Basics: Introduction
 comment:  Introduction to R and hands-on first steps for brand new beginners.
@@ -33,7 +34,7 @@ This course is designed for brand new beginners with zero or minimal experience 
 @end
 
 good_first_module: true
-data_task: data_analysis
+collection: infrastructure_and_technology, learn_to_code, intro_to_data_science
 coding_required: true
 coding_level: basic
 coding_language: r

@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Update highlight boxes, update metadata, and replace text with macros.
 module_type: standard
 docs_version: 2.0.0
@@ -33,6 +33,7 @@ After completion of this module, learners will be able to:
 
 good_first_module: false
 data_task: data_wrangling
+collection: learn_to_code
 coding_required: true
 coding_level: intermediate
 coding_language: r

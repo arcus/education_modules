@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.0
+version: 1.0.1
 current_version_description: Initial version
 module_type: standard
 docs_version: 2.0.0
@@ -32,6 +32,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
+collection: learn_to_code
 sequence_name: python_basics
 previous_sequential_module: python_basics_variables_functions_methods
 coding_required: true
