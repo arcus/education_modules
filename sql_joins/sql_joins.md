@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.1
+version: 1.1.2
 current_version_description: Typo fix; update metadata
 module_type: standard
 docs_version: 2.0.0
@@ -12,7 +12,11 @@ title: SQL Joins
 comment: Learn about SQL joins: what they accomplish, and how to write them.
 long_description: Usually, data in a SQL database is organized into multiple interrelated tables.  This means you will often have to bring data together from two or more tables into a single dataset to answer your research questions.  This "join" action is accomplished using `JOIN` commands.  This module teaches types of joins, join criteria, and how to write `JOIN` code.
 estimated_time_in_minutes: 60
+
 good_first_module: false
+data_domain: ehr
+data_task: data_wrangling
+collection: learn_to_code
 coding_required: true 
 coding_language: SQL
 coding_level: intermediate

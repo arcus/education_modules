@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.2.0
+version: 1.2.1
 current_version_description: Correct typo, update metadata version
 module_type: standard
 docs_version: 2.0.0
@@ -41,9 +41,11 @@ Previous versions:
 @end
 
 good_first_module: false
+data_domain: ehr
 data_task: data_wrangling
+collection: learn_to_code
 coding_required: true
-coding_level: basic
+coding_level: intermediate
 coding_language: sql
 sequence_name: sql
 previous_sequential_module: sql_basics

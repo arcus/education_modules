@@ -1,14 +1,19 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.2
+version: 1.1.3
 module_template_version: 3.0.0
 language: en
 narrator: US English Female
+mode: Textbook
 title: Tidy Data
 comment:  Tidy is a technical term in data analysis and describes an optimal way for organizing data that will be analyzed computationally.
 long_description: Are you concerned about how to organize your data so that it's easier to work with in a computational solution like R, Python, or other statistical software?  This module will explain the concept of "tidy data", which will help make analysis and data reuse a bit simpler.
-estimated_time: 45 minutes
+estimated_time_in_minutes: 45
+
+good_first_module: false
+collection: intro_to_data_science, demystifying
+coding required: false
 
 @learning_objectives  
 

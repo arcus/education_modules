@@ -1,7 +1,7 @@
 <!--
 author: Rose Hartman
 email: hartmanr1@chop.edu
-version: 1.3.3
+version: 1.3.4
 current_version_description: Highlight box update, fix typos, front matter update, add some additional resources.
 module_type: standard
 docs_version: 2.0.0
@@ -30,6 +30,7 @@ After completion of this module, learners will be able to:
 
 good_first_module: false
 data_task: data_analysis
+collection: statistics
 coding_required: false
 coding_level: advanced
 coding_language: r, python

@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 2.0.0
+version: 2.0.1
 module_template_version: 3.0.0
 language: en
 narrator: US English Female
@@ -27,6 +27,9 @@ After completion of this module, learners will be able to:
 2.0.0: add section on using environment variables to avoid accidentally sharing your API tokens, and bring highlight boxes up to date with current module template
 
 @end
+
+good_first_module: false
+collection: infrastructure_and_technology
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
