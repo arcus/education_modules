@@ -622,16 +622,17 @@ Must be one of `true` or `false`.
 ### `data_domain`
 
 ```
-data_domain: EHR
+data_domain: ehr
 ```
 
 This module is primarily useful for or focused on this type of data.
 
 Must be one of the following:
 
-- `EHR`
+- `ehr`
 - `omics`
 - `geospatial`
+- `text`
 
 As we write additional modules, we may add new data domains to this list!
 
@@ -646,7 +647,7 @@ What type of task/action/skill does this module teach?
 Must be one of the following:
 
 - `data_visualization`: Creating representations of data such as plots, graphs, maps, etc.
-- `data_management`: Organizing and storing data, including database structures, data sharing, cloud vs. local storage, and metadata
+- `data_management`: Organizing and storing data, including database structures, data sharing, cloud vs. local storage, and metadata.
 - `data_wrangling`: Data processing steps in preparation for analysis and visualization, including cleaning, transforming, and reshaping data
 - `data_analysis`: Identifying and quantifying patterns in the data, including exploratory analysis, descriptive statistics, and more formal modeling
 
