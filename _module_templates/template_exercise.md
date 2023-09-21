@@ -5,7 +5,7 @@ email:    email@chop.edu
 version:  0.0.0
 current_version_description: Brief description of why this version exists
 module_type: exercise
-docs_version: 1.1.0
+docs_version: 3.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
