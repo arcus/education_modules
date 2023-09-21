@@ -655,7 +655,7 @@ This field can be left blank, but every module **must** have something in at lea
 Must be one or more of the following:
 
 - `data_visualization`: Creating representations of data such as plots, graphs, maps, etc.
-- `data_management`: Organizing and storing data, including database structures, data sharing, cloud vs. local storage, and metadata.
+- `data_management`: Organizing and storing data, including database structures, data sharing, cloud vs. local storage, and metadata
 - `data_wrangling`: Data processing steps in preparation for analysis and visualization, including cleaning, transforming, and reshaping data
 - `data_analysis`: Identifying and quantifying patterns in the data, including exploratory analysis, descriptive statistics, and more formal modeling
 
