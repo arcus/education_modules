@@ -1,10 +1,11 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.1
+version: 1.1.2
 module_template_version: 2.0.0
 language: en
 narrator: US English Female
+mode: Textbook
 title: How to Troubleshoot
 comment:  Learning to use technical methods like coding and version control in your research inevitably means running into problems.  Learn practical methods for troubleshooting and moving past error codes and other difficulties.
 long_description: When technical methods, such as writing code, using version control, and creating data visualizations are used, there will moments when a cryptic error message appears or the code simply doesn't do what it was intended to do.  This module will help people at various levels of technical expertise learn how to troubleshoot in tech more effectively.
@@ -20,6 +21,10 @@ After completion of this module, learners will be able to:
 
 
 @end
+
+good_first_module: false
+collection: learn_to_code
+coding_required: false
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 

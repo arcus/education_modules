@@ -2,15 +2,16 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.5
+version: 1.0.6
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: Creating a Git Repository
 comment:  Create a new Git repository and get started with version control.
 long_description: If you have Git set up on your computer and are ready to start tracking your files, then this module is for you. This module will teach you how to create a Git repository, add files to it, update files in it, and keep track of those changes in a clear and organized manner.
 
-@estimated_time: 1 hour
+@estimated_time_in_minutes: 60
 
 @learning_objectives
 
@@ -24,6 +25,10 @@ After completion of this module, learners will be able to:
 
 
 @end
+
+good_first_module: false
+collection: learn_to_code
+coding_required: true
 
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 

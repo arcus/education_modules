@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.1
+version:  1.0.2
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.2.1
@@ -34,6 +34,7 @@ After completion of this module, learners will be able to:
 
 good_first_module: false
 data_task: data_analysis
+collection: statistics
 
 @sets_you_up_for
 
