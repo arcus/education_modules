@@ -30,14 +30,16 @@ After completion of this module, learners will be able to:
 
 @end
 
-good_first_module: 
-coding_required: 
+good_first_module: false
+coding_required: false
 
 @sets_you_up_for
 
 @end
 
 @depends_on_knowledge_available_in
+
+- intro_to_version_control
 
 @end
 
@@ -262,8 +264,97 @@ In the command line, you can use `git log` to show the commit history.  This is 
 
 You can use the **history** function of a Git GUI to look at the same information.  Here, we're looking at the same repository, using GitHub Desktop.
 
-![GitHub Desktop window shows, in the left side of the window, a history of six commits, each of which has a user name, date, small icon of the user, and short message such as "add presenter and TA pics."  Additionaly, the actual changes made during one of the commits are shown on the right of the window. ](media/git_history_gui.png)
+![GitHub Desktop window shows, in the left side of the window, a history of six commits, each of which has a user name, date, small icon of the user, and short message such as "add presenter and TA pics."  Additionally, the actual changes made during one of the commits are shown on the right of the window. ](media/git_history_gui.png)
 
+### Looking at What Actually Changed in a Given Commit
+
+Git allows you to focus in on one commit in particular and get greater detail.  What changed between the last time the files had a commit and this time?  Were new files added?  Were lines changed in a text file?  Were images swapped out?  Was anything deleted?  Simply knowing that a change happened isn't enough, usually -- we want to know **what** changed.  In the case of the R workshop, a few lines in a presentation slide changed as part of the most recent commit (the one with the long code that starts with `636b27af`).  Let's look at that commit more closely using `git show`:
+
+![Terminal window with the command `git show 636b27af`.  The output includes information about the commit, such as the author and the commit message.  It also includes the file name that was changed in this commit, quarto_slides/index.qmd, and shows the actual changes made to the file.  Four lines displayed in red and preceded by minus signs indicate lines that were deleted, and four lines displayed in green and preceded by plus signs indicate lines that were added.](media/git_show_cli.png)
+
+In the GUI, on the other hand, we can see both the history of commits **and** the specific changes associated with a given commit in the same window.  Here is the same image we saw when we looked at the history.  Notice how we have selected one commit in particular in the history on the left, and the changes made in that commit are shown to the right.
+
+![GitHub Desktop window shows, in the left side of the window, a history of six commits.  On the right, the actual changes made during the most recent commit are shown. The file name quarto_slides/index.qmd is shown, and to the right of that, four lines displayed in red and preceded by minus signs indicate lines that were deleted, and four lines displayed in green and preceded by plus signs indicate lines that were added.](media/git_history_gui.png)
+
+## How to Decide
+
+You now know what a command line interface (CLI) is, and what it looks like to work with the CLI to type Git commands.  You also know more about graphical user interfaces (GUIs) and you've seen what one particular GUI, GitHub Desktop, looks like when you need to do the same Git tasks.
+
+How should you proceed?  How can you decide what to use? 
+
+We think that **the best way to use Git is the way that you'll actually be willing to do**! 
+
+There is nothing wrong with using Git using a GUI, and rarely if ever using the command line.  Note that this is not an uncontroversial opinion.  Some Git users and instructors suggest that everyone should learn the command line way of using Git first, because it is the most powerful way to use Git.  The Git website itself includes [online documentation that says, in part](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line):
+
+> For this book, we will be using Git on the command line. For one, the command line is the only place you can run all Git commands — most of the GUIs implement only a partial subset of Git functionality for simplicity. If you know how to run the command-line version, you can probably also figure out how to run the GUI version, while the opposite is not necessarily true.... So we will expect you to know how to open Terminal in macOS or Command Prompt or PowerShell in Windows. 
+
+We think that a CLI-first approach works for **some** people.  After all, if you can drive a car with a manual transmission, it's easy to switch to an automatic transmission, but it's hard to do the reverse.  If you like having lots of control and seeing how things work behind the scenes, you'll enjoy working in the command line.  And then you'll know the commands by name and be able to search online easily for how to do complex things in Git.
+
+We also think there's a very large contingent of users who would be so frustrated or intimidated by using the CLI that a CLI-first approach won't work for them.  If you're not first and foremost a computer programmer, you don't have the habit of working in the command line.  It's absolutely acceptable to decide that you don't want to have to learn two skills -- Git and the command line -- at the same time.  Learning to use Git in a GUI is plenty of effort on its own, without the added complexity of getting comfortable using the command line.
+
+In the end, the important thing is **that** you use version control.  The details of **how** you do it, what interface you choose, is a matter of personal taste.
+
+## Quiz: Git Interfaces
+
+Which of the following is true about graphical user interfaces (GUIs)?  Check all that apply!
+
+[[ ]] GUIs offer the same level of control of a system as command line interfaces (CLIs).
+[[X]] Pointing-and-clicking is a frequently used way of interacting with GUIs.
+[[X]] GUIs depend principally on visual cues like windows, words, and shapes on a screen.
+[[ ]] GUIs depend principally on typing text commands.
+[[X]] GUIs are designed with human users in mind.
+[[ ]] GUIs are a second-best alternative for people who aren't smart enough to use the command line.
+
+[[?]] Hint: There are several correct answers!
+***
+<div class = "answer">
+
+Graphical user interfaces don't always offer the same level of control of a system as command line interfaces.  This is why some people strongly advocate that everyone learn to use the command line tools for a system, if possible.
+
+It's true that GUIs depend principally on visual cues like windows, words, and shapes on a screen, and that's why pointing-and-clicking is a frequently used way of interacting with GUIs.
+
+GUIs are designed with **human users** (as opposed to other computer applications) in mind, and there is an entire area of tech devoted to user interface (UI) and user experience (UX) design to make systems and GUIs better.
+
+GUIs do **not** principally rely on typing text commands -- you're thinking of a command line interface!
+
+Finally, and this is important... GUIs are **not** a second best alternative, and using a GUI instead of the command line says nothing about your skills, intelligence, or experience. 
+
+</div>
+***
+
+Which of the following is true about the command line interface (CLI)?  Check all that apply!
+
+[[ ]] CLIs are best used by people with great memorization skills.
+[[ ]] CLIs are inherently more dangerous and can do more harm than GUIs, so novice users should avoid using them.
+[[X]] CLIs can feel intimidating to people who are just starting out.
+[[ ]] CLIs depend principally on visual cues like windows, words, and shapes on a screen.
+[[X]] CLIs depend principally on typing text commands.
+[[X]] CLIs can provide greater power and control than GUIs in some systems, like Git.
+
+[[?]] Hint: There are several correct answers!
+***
+<div class = "answer">
+
+Command line interfaces can indeed feel intimidating to people who are just starting out, in part because some misconceptions about CLIs.  It's not true that CLIs are best used by people with great memorization skills -- many seasoned users of CLIs have to search online for the right command.  It's also not true CLIs are inherently more dangerous and worth avoiding by novice users.  While you can inadvertently do damage with a CLI, you can also inadvertently do damage with any computer interface!  
+
+CLIs depend principally on typing text commands, not on visual cues like windows, words, and shapes on a screen.  And in many cases, CLIs can provide greater power and control than GUIs in some systems.  This is true in the case of Git!
+
+</div>
+***
+
+Which of the following is a Git GUI (or Git client) that you've seen used in this module?
+
+[( )] GitDesk 
+[( )] DesktopGit
+[(X)] GitHub Desktop
+[( )] GitToIt
+***
+<div class = "answer">
+
+That's right!  There are many Git GUIs available, and we showed GitHub Desktop, a popular Git graphical user interface, in our screenshots comparing GUI to CLI use in Git.
+
+</div>
+***
 
 ## Additional Resources
 
