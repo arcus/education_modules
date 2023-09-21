@@ -4,7 +4,7 @@ email: camachop@chop.edu
 version: 1.1.1
 current_version_description: Add solutions, add definitions, move challenge solutions,  after code blocks, update highlight boxes, fix typos, update front matter fields.
 module_type: standard
-docs_version: 2.0.0
+docs_version: 3.0.0
 language: en
 narrator: US English Male
 mode: Textbook
@@ -28,7 +28,9 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
+data_domain: ehr
 data_task: data_wrangling
+collection: learn_to_code
 coding_required: true
 coding_level: basic
 coding_language: sql
