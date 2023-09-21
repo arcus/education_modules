@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Updated metadata and macros
 module_type: standard
 docs_version: 2.0.0
@@ -37,6 +37,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
+collection: learn_to_code
 coding_required: true
 coding_level: intermediate
 coding_language: bash

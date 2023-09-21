@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version: 1.5.1
+version: 1.5.2
 current_version_description: Updated metadata and macros
 module_type: standard
 docs_version: 2.0.0
@@ -29,6 +29,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
+collection: learn_to_code
 coding_required: true
 coding_level: basic
 coding_language: bash

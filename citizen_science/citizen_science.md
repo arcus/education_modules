@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.0.3
+version: 1.0.4
 current_version_description: Initial version.
 module_type: standard
 docs_version: 1.0.0
@@ -34,6 +34,8 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
+collection: intro_to_data_science
+coding_required: false
 
 @sets_you_up_for
 

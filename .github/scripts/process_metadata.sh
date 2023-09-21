@@ -14,7 +14,7 @@ do
     if [[ -s $FOLDER/$FOLDER.md && "$FOLDER" ]]      ## Only do this for folders that have a course .md file inside an identically named folder in education_modules
     then
         ### pull the one-line macros, process "comment" and "long_description" separately due to possible double quotes
-        for CATEGORY in  "author" "email" "version" "current_version_description" "module_type" "docs_version" "language" "narrator" "mode" "title" "estimated_time_in_minutes" "module_type" "good_first_module" "data_domain" "data_task" "coding_required" "coding_level" "coding_language" "sequence_name" "previous_sequential_module" #"comment" "long_description"
+        for CATEGORY in  "author" "email" "version" "current_version_description" "module_type" "docs_version" "language" "narrator" "mode" "title" "estimated_time_in_minutes" "module_type" "good_first_module" "data_domain" "data_task" "collection" "coding_required" "coding_level" "coding_language" "sequence_name" "previous_sequential_module" #"comment" "long_description"
         do
             category_metadata="`grep -m 1 "$CATEGORY": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
             echo "df.loc[\"$FOLDER\", \"$CATEGORY\"] = \"$category_metadata\"" >> $metadata_df

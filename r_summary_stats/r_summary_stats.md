@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.2
+version:  1.0.3
 current_version_description: Initial version
 module_type: standard
 docs_version: 2.0.0
@@ -47,6 +47,7 @@ After completion of this module, learners will be able to:
 
 good_first_module: false
 data_task: data_analysis
+collection: learn_to_code, statistics
 coding_required: true
 coding_level: intermediate
 coding_language: r

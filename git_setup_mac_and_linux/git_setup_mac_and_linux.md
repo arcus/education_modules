@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.0
+version: 1.2.1
 current_version_description: Updated metadata to latest standards
 module_type: standard
 docs_version: 2.0.0
@@ -34,6 +34,7 @@ After completion of this module, learners will be able to:
 good_first_module: false
 
 data_task: data_management
+collection: infrastructure_and_technology
 coding_required: true
 coding_level: getting_started
 coding_language: git

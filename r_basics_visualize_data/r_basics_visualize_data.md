@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.1
+version: 1.3.2
 current_version_description: Added help boxes for color vs fill aesthetic mapping and how to get plots to show in the plot pane.
 module_type: standard
 docs_version: 2.0.0
@@ -45,6 +45,7 @@ After completion of this module, learners will be able to:
 
 good_first_module: false
 data_task: data_visualization
+collection: learn_to_code
 coding_required: true
 coding_level: basic
 coding_language: r

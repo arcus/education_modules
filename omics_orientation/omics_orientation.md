@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.1.3
+version: 1.1.4
 current_version_description: Update formatting for highlight boxes, fix typos, update front matter.
 module_type: standard
 docs_version: 2.0.0
@@ -26,7 +26,9 @@ After completion of this module, learners will be able to:
 - Describe some challenges and caveats of omics research
 @end
 
-good_first_module: false
+good_first_module: true
+data_domain: omics
+collection: demystifying
 coding_required: false
 
 @sets_you_up_for

@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.4
+version: 1.0.5
 current_version_description: Initial version, updated front matter.
 module_type: exercise
 docs_version: 2.0.0
@@ -27,6 +27,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
+collection: learn_to_code
 coding_required: true
 coding_level: intermediate
 coding_language: r

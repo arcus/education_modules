@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.0
+version: 1.2.1
 current_version_description: Clarify `=` and `==` inside test functions
 module_type: standard
 docs_version: 1.2.1
@@ -36,6 +36,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
+collection: learn_to_code
 coding_required: true
 coding_level: intermediate
 coding_language: bash

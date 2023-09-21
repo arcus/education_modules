@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.2
+version: 1.1.3
 current_version_description: Update highlight boxes for greater clarity, other minor changes
 module_type: standard
 docs_version: 2.0.0
@@ -40,6 +40,7 @@ After completion of this module, learners will be able to:
 
 good_first_module: false
 data_task: data_wrangling
+collection: learn_to_code
 coding_required: true
 coding_level: intermediate
 coding_language: python

@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.3
+version: 1.0.4
 current_version_description: Initial version with updated links and metadata
 module_type: exercise
 docs_version: 1.2.0
@@ -29,6 +29,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
+collection: learn_to_code
 coding_required: true
 coding_level: intermediate
 coding_language: python

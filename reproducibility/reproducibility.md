@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.5.0
+version: 1.5.1
 current_version_description: Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure
 module_type: standard
 docs_version: 2.0.0
@@ -32,6 +32,7 @@ After completion of this module, learners will be able to:
 
 
 good_first_module: true
+collection: intro_to_data_science
 coding_required: false
 
 @version_history

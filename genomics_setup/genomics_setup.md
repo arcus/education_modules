@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.0
+version:  1.1.1
 current_version_description: Add explanation for why we use AWS for genomics modules. 
 module_type: wrapper
 docs_version: 2.0.0
@@ -51,6 +51,7 @@ resource1_a11y_issues: No known issues with accessibility, but we may have misse
 
 good_first_module: false
 data_domain: omics
+collection: infrastructure_and_technology
 coding_required: true
 coding_level: intermediate
 coding_language: bash

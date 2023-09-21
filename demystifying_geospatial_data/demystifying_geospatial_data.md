@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.1
+version: 1.1.2
 current_version_description: Update highlight box formattting.
 module_type: standard
 docs_version: 1.2.0
@@ -34,6 +34,8 @@ After completion of this module, learners will be able to:
 
 good_first_module: false
 data_domain: geospatial
+collection: demystifying
+coding_required: false
 
 @sets_you_up_for
 

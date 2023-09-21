@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.0
+version:  1.0.1
 current_version_description: Initial version
 module_type: wrapper
 docs_version: 1.0.0
@@ -61,6 +61,7 @@ resource2_a11y_issues: No known issues with accessibility, but we may have misse
 @end
 
 good_first_module: false
+collection: infrastructure_and_technology
 coding_required: true
 coding_level: intermediate
 coding_language: bash

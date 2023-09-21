@@ -2,11 +2,12 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.0
+version: 1.2.1
 current_version_description: Update highlight boxes, update front matter, replace text with macros.
 module_type: standard
 docs_version: 1.0.0
 language: en
+mode: Textbook
 narrator: UK English Female
 title: Data Visualization in Open Source Software
 comment:   Introduction to principles of data vizualization and typical data vizualization workflows using two common open source libraries: ggplot2 and seaborn.

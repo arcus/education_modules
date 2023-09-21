@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
+version:  1.0.1
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
@@ -31,6 +31,8 @@ After completion of this module, learners will be able to:
 
 @end
 good_first_module: false
+data_domain: text
+collection: learn_to_code
 coding_required: true
 coding_level: intermediate
 sequence_name: regex

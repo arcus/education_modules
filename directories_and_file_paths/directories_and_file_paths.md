@@ -2,14 +2,14 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.3.2
+version: 1.3.3
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
 title: Directories and File Paths
 comment: In this module, learners will explore what a directory is and how to describe the location of a file using its file path.   
 long_description: When doing data analysis in a programming language like R or Python, figuring out how to point the program to the file you need can be confusing. This module will help you learn about how files and folders are organized on your computer, how to describe the location of your file in a couple of different ways, and name files and folders in a descriptive and systematic way.
-estimated_time: 15m
+estimated_time_in_minutes: 15
 
 @learning_objectives  
 
@@ -21,6 +21,11 @@ After completion of this module, learners will be able to:
 - Describe a few best practices and conventions of naming files and folders
 
 @end
+
+good_first_module: false
+collection: infrastructure_and_technology
+coding_required: false
+
 link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js

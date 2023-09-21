@@ -2,7 +2,7 @@
 
 author:   Rose Franzen
 email:    franzenr@chop.edu
-version: 1.1.0
+version: 1.1.1
 current_version_description: Updated metadata, removed linked cartoon that was behind a paywall, changed quiz question from open text to multiple choice.
 module_type: standard
 docs_version: 2.0.0
@@ -26,7 +26,8 @@ After completion of this module, learners will be able to:
 - recognize how to understand when to ask for help
 @end
 
-good_first_module: false
+good_first_module: true
+collection: intro_to_data_science
 coding_required: false
 @sets_you_up_for
 

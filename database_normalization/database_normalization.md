@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.4
+version: 1.0.5
 current_version_description: Initial Version.
 module_type: standard
 docs_version: 2.0.0
@@ -29,6 +29,7 @@ After completion of this module, learners will be able to:
 good_first_module: false
 
 data_task: data_management
+data_domain: ehr
 coding_required: false
 
 @sets_you_up_for
