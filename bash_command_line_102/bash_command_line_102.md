@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
-version: 1.2.1
+version: 1.2.2
 module_type: standard
 docs_version: 1.0.0
 language: en
@@ -34,6 +34,8 @@ After completion of this module, learners will be able to:
 good_first_module: false
 
 data_task: data_management
+
+collection: learn_to_code
 
 coding_required: true
 
