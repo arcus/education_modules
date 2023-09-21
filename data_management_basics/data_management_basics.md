@@ -28,6 +28,7 @@ After completion of this module, learners will be able to:
 @end
 good_first_module: true
 collection: intro_to_data_science
+data_task: data_management
 coding_required: false
 @sets_you_up_for
 

@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman
 email:    feldmanna@chop.edu
-version: 1.1.3
+version: 1.1.4
 current_version_description: Updated quiz questions and metadata.
 module_type: standard
 docs_version: 2.0.0
@@ -30,6 +30,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
+collection: infrastructure_and_technology
 data_task: data_management
 coding_required: false
 
