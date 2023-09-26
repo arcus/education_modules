@@ -318,7 +318,7 @@ When you're ready to submit your module for QA, it should have a module version 
 It's a good idea to keep your version set to `0.0.0` while you're still drafting as it will help prevent your browser from caching the module, making it easier for you to review changes as they render online. 
 For more details, see the [LiaScript documentation about state](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#state).
 
-### current_version_description
+### current\_version\_description
 
 ```
 current_version_description: Initial version
@@ -411,7 +411,7 @@ comment:  This is a short, focused description of the module.
 long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
 ```
 
-### estimated_time_in_minutes
+### estimated\_time\_in\_minutes
 
 ```
 estimated_time_in_minutes: 45
@@ -550,7 +550,7 @@ Must be one of `true` or `false`.
 If true, this item will show up with a green checkmark circle in the criteria list. 
 If false, then it will show as a yellow circle with a horizontal line. 
 
-### resource1_wellvetted_text
+### resource1\_wellvetted\_text
 
 ```
 resource1_wellvetted_text: The Docker 101 tutorial is an [open source project](https://github.com/docker/getting-started), so it has many authors, but it is sponsored and hosted by Docker Inc, the company that produces the docker software. The open source nature of the tutorial also helps ensure that any errors or problems can be caught and addressed quickly. 
@@ -571,7 +571,7 @@ Must be one of `true` or `false`.
 If true, this item will show up with a green checkmark circle in the criteria list. 
 If false, then it will show as a yellow circle with a horizontal line. 
 
-### resource1_maintained_text
+### resource1\_maintained\_text
 
 ```
 resource1_maintained_text: This tutorial is maintained by Docker Inc, so we expect that it will remain up to date whenever changes are implemented in docker.
@@ -592,7 +592,7 @@ Must be one of `true` or `false`.
 If true, this item will show up with a green checkmark circle in the criteria list. 
 If false, then it will show as a yellow circle with a horizontal line. 
 
-### resource1_stablesupport_text
+### resource1\_stablesupport\_text
 
 ```
 resource1_stablesupport_text: This is hosted on the Docker website, and it is a popular and widely-shared tutorial. We expect it will continue to be available for the foreseeable future.
@@ -600,7 +600,7 @@ resource1_stablesupport_text: This is hosted on the Docker website, and it is a 
 
 This is a short explanation justifying the `true` or `false` decision recorded for `resource1_stablesupport`. If this is a resource that we expect to have stable support, then explain. If it is not, mention the shortcoming, and explain why you think it's worth linking to in a module anyway.
 
-### resource1_a11y_issues
+### resource1\_a11y\_issues
 
 ```
 resource1_a11y_issues: No known issues with accessibility, but we may have missed something. If you encounter an issue, please [let us know](#feedback)!
@@ -611,7 +611,7 @@ If you are aware of any issues with this resource related to inclusion or access
 Note that this text will print just beneath the criteria checklist, but it isn't part of the checklist and won't have a green or yellow check icon. 
 We don't include accessibility and inclusion as a criterion intentionally because it isn't reasonable or helpful to assert that something is generally "accessible" or "inclusive" to all learners. 
 
-### good_first_module
+### good\_first\_module
 
 ```
 good_first_module: false
@@ -743,7 +743,7 @@ Must be one of the following:
 
 As we write additional modules, we may add new sequences to this list!
 
-### previous_sequential_module
+### previous\_sequential\_module
 
 ```
 previous_sequential_module: sql_basics
@@ -752,7 +752,7 @@ previous_sequential_module: sql_basics
 If it's in a sequence and there is another module before it (i.e. it's not the first module in its sequence), list the previous module here. 
 Use the modules directory name (this should be the same as the name of its md file).
 
-### sets_you_up_for
+### sets\_you\_up\_for
 
 ```
 @sets_you_up_for
@@ -778,7 +778,7 @@ For example:
 @end
 ```
 
-### depends_on_knowledge_available_in
+### depends\_on\_knowledge\_available\_in
 
 ```
 @depends_on_knowledge_available_in
@@ -804,7 +804,7 @@ For example:
 @end
 ```
 
-### is_parallel_to
+### is\_parallel\_to
 
 ```
 @is_parallel_to
@@ -1619,27 +1619,13 @@ Note that sometimes it won't make sense to include quiz questions in a module. E
 
 Quizzes should always be navigable from the sidebar, meaning they should be labeled with a level 2 or 3 header. If there is only one quiz in the module, it should be labelled as "Quiz". If there is more than one each header should be structured as "Quiz: label" where "label" is a short (ideally 1-2 words) description of the content covered in the question(s). E.g., "Quiz: Scatterplots"
 
-```
-Here is the first question. It's multiple choice.
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-[(X)] This answer is right
-[( )] This is wrong
-[( )] Also wrong
-[[?]] Hint: Provide a hint here if you like. Hints are marked with the ?
-[[?]] Hint: You can include as many hints as you want.
-***
-<div class = "answer">
-
-Nearly every quiz question should have an  `answer` box after it to explain why the correct answer is correct. 
-This text will show up after the learner answers the question correctly or clicks to have the right answer revealed. It can be as long as you like, and allows any markdown formatting (you can embed pictures or videos, links, etc.).
-
-Use `<div class = "answer">` to mark these sections with special styling, so that they're visually distinct from the rest of the quiz. The style for `"answer"` is defined in the css file.
-
-For this context to show up automatically when the learner answers the question correctly or clicks to have the right answer revealed, it needs to be surrounded by `***` (at least three, but you can use more if you want a more visually distinct horizontal marker in your md file).
+There are many more options and examples of quiz questions in the LiaScript documentation. 
+[Read more about quiz syntax here.](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#quizzes)
 
 </div>
-***
-```
 
 ### Multiple choice
 
@@ -1725,8 +1711,14 @@ Here is the answer box for this question.
 
 ### Short answer/text response 
 
-Note that, without any additional script, to get it marked "correct" the learner has to enter it exactly as you do.
-We can allow some flexibility in what we accept as correct answers for text by adding a little script after the answer, though. For the following, either "right answer" or "correct answer" (not case sensitive) will be accepted:
+Note that, without any additional script, to get a short answer question marked "correct" the learner has to enter the answer **exactly** as you do.
+
+We can allow some flexibility in what we accept as correct answers for text by adding a little script after the answer, though. 
+There are two ways to add a script for text response questions: With simple string matching, or with more powerful regex.
+
+#### Not using regex
+
+For the following, either "right answer" or "correct answer" (not case sensitive) will be accepted:
 
 ```
 What is the right answer?
@@ -1759,6 +1751,8 @@ For this question, either "right answer" or "correct answer" (not case sensitive
 
 </div>
 ***
+
+#### Using regex
 
 This question accepts any of several items from a list of possible correct answers. It is not case sensitive (that's the little `i` at the end of the regex).
 
@@ -1799,6 +1793,57 @@ Reiterate what the correct answer or answers should be, and try to anticipate li
 
 </div>
 ***
+
+#### An example where the answer is code
+
+A few things to note in this example: 
+
+- The question itself is more than a single markdown paragraph, so it's surrounded by `<div>` tags to improve accessibility for people using screen readers (see [when the question is more than one line](#when-the-question-itself-is-more-than-one-line))
+- The "right" answer that will show up if the learner clicks the check mark to reveal the answer (not the button with the word "Check") is `capital_cities["Angola"] = "Luanda"`, but that's not actually the string we'll test against
+- The script removes all whitespace in whatever the user submits (`.replace(/\s/g, "")`), and then tests against two versions of the correct answer, one with single quotes (`'`) and one with double quotes (`"`)
+- Removing all the whitespace allows answers to be correct whether or not they put spaces around the `=`, which is optional in python, but note that it also leaves open the possibility that an incorrect answer could be marked correct if it has breaking spaces inserted (e.g. `capital_cities ["Angola"] = "Luanda"`). We could fix this with a more complex regex statement, but we're trying to strike a balance between completeness and complexity.
+
+```
+<div>
+How would you add the the country of Angola and its capital city of Luanda to the dictionary below?
+
+`capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
+</div>
+
+[[capital_cities["Angola"] = "Luanda"]]
+<script>
+let input = "@input".replace(/\s/g, "");
+input == 'capital_cities["Angola"]="Luanda"' || input == "capital_cities['Angola']='Luanda'";
+</script>
+***
+<div class = "answer">
+
+To add a new key-value pair to a dictionary, we use subsetting notation.
+
+</div>
+***
+```
+
+<div>
+How would you add the the country of Angola and its capital city of Luanda to the dictionary below?
+
+`capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
+</div>
+
+[[capital_cities["Angola"] = "Luanda"]]
+<script>
+let input = "@input".replace(/\s/g, "");
+input == 'capital_cities["Angola"]="Luanda"' || input == "capital_cities['Angola']='Luanda'";
+</script>
+***
+<div class = "answer">
+
+To add a new key-value pair to a dictionary, we use subsetting notation.
+
+</div>
+***
+
+### When the question itself is more than one line
 
 Note that you can use any markdown formatting you want in quizzes, including bold, links, math, lists, embedded media, code blocks, etc. 
 For accessibility for learners using screenreaders, if your question is more than a single markdown paragraph, you must enclose it in `<div>` tags. For example:
@@ -1847,6 +1892,8 @@ For more details, see [notes about quizzes in the LiaScript documentation](https
 </div>
 ***
 
+### Questions with no right answer
+
 Sometimes you may wish to include a quiz question that would be impossible to automatically grade (i.e. one with an open-ended response). 
 To mark all possible answers as correct, use a brief script to match everything with regex:
 
@@ -1885,10 +1932,6 @@ All of the reads contain usable data, but the quality decreases toward the end o
 
 </div>
 ***
-
-
-There are many more options and examples of quiz questions in the LiaScript documentation. [Read more about quiz syntax here.](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#quizzes)
-
 
 ## Ungraded quiz questions
 
