@@ -325,16 +325,16 @@ current_version_description: Initial version
 ```
 
 This is a 1-3 line description of the current version of the module. Start with `Initial version` for 1.0.0.
-Then whenever the module gets a major (first number change) or minor update (second number change), this field should be updated to describe **from the learner's point of view** what meaningful changes have occured since the last version. If the most recent commit creates a revision (third number change), please keep the existing `current_version_description` and do not update it.  
+Then whenever the module gets a major (first number change) or minor update (second number change), this field should be updated to describe **from the learner's point of view** what meaningful changes have occurred since the last version. If the most recent commit creates a revision (third number change), please keep the existing `current_version_description` and do not update it.  
 
-The content of `current_version_description` should be simple text without bullet points. Use present tense for verbs, such as "add material on..." instead of "added material on...".  You can use fragments and no terminating punctuation is required.  
+The content of `current_version_description` should be simple text without bullet points. Use past tense for verbs, such as "added material on..." instead of "adds material on...".  You can use fragments and no terminating punctuation is required.  
 
 Focus on changes in module content rather than technical updates that might be invisible to learners (e.g. standardized text being replaced with a macro).
 
 For example, for a module that has undergone at least one new version (major or minor), this field might look something like this:
 
 ```
-current_version_description: add less command, update man section, improve quiz and appearance
+current_version_description: Added less command, updated man section, improved quiz and appearance
 ```
 
 ### module_type
@@ -840,7 +840,7 @@ Include a link to the module rendered in LiaScript from that point in time.  Not
 For example:
 
 ```
-[1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ba1dba7a4c1d4393ae8b42346fe5c69d587b8ee6/bash_command_line_101/bash_command_line_101.md#1): Remove Atom references
+[1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ba1dba7a4c1d4393ae8b42346fe5c69d587b8ee6/bash_command_line_101/bash_command_line_101.md#1): Removed Atom references
 ```
 
 Note: `version_history` should have **max** 3 previous versions recorded. 
