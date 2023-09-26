@@ -740,7 +740,8 @@ Must be one of the following:
 - `python_basics`
 - `genomics_tools_and_methods`
 - `git_basics`
-- (add more here)
+
+As we write additional modules, we may add new sequences to this list!
 
 ### previous_sequential_module
 
