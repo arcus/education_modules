@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  2.0.0
-current_version_description: Made coding_required a mandatory front matter field for all modules
+version:  3.0.0
+current_version_description: Added collection as a front matter field, added text as a data_domain, fixed typos
 language: en
 narrator: UK English Female
 title: DART LiaScript docs
@@ -23,14 +23,13 @@ try {
 @end
 
 @version_history
-
 Previous versions: 
 
+- [2.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/89cadafc6f1f9c83e4de93e7d55cd9427866f9f2/docs.md#1): Made coding_required a mandatory front matter field for all modules
 - [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b453a05b5ac756fb5c7b183deae9d4fc91b3a617/docs.md): Clarified that version_history cannot be blank but sets_you_up_for and depends_on_knowledge_available_in can
 - [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4347cd14c9f5a3fd110910ec09c0560a46e390bd/docs.md): Add genomics macros, add git_basics to the list of sequences.
 - [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/8f41dd25216329b785335e15f1824b13d6240778/docs.md): Update SQL macros instructions (note that version number wasn't correctly incremented here)
 - [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ad25398d0eef884402cff0f0c4fb4ca360d3b8f4/docs.md): Added versioning info, initial version.
-
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -41,7 +40,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 This is the technical documentation for DART modules written with [LiaScript](https://liascript.github.io/). 
 LiaScript is a [markdown](https://en.wikipedia.org/wiki/Markdown) dialect, so writing a DART module is a lot like writing any other plain text document, with a few exceptions for special formatting. 
 
-**This is verison @version of this document.**
+**This is version @version of this document.**
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -51,6 +50,8 @@ To see this document as an interactive LiaScript rendered version, click on the 
 [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md)
 
 </div>
+
+@version_history
 
 ## Important resources for writing DART modules
 
@@ -148,7 +149,7 @@ Which front matter items are required? It depends on the content of the module y
 | `current_version_description`       |      X      |   X   |      X      |                                                                                           |
 | `module_type`                       |      X      |   X   |      X      |                                                                                           |
 | `docs_version`                      |      X      |   X   |      X      |                                                                                           |
-| `langauge`                          |      X      |   X   |      X      |                                                                                           |
+| `language`                          |      X      |   X   |      X      |                                                                                           |
 | `narrator`                          |      X      |   X   |      X      |                                                                                           |
 | `mode`                              |      X      |   X   |      X      |                                                                                           |
 | `title`                             |      X      |   X   |      X      |                                                                                           |
@@ -171,6 +172,7 @@ Which front matter items are required? It depends on the content of the module y
 | `good_first_module`                 |      X      |   X   |      X      |                                                                                           |
 | `data_domain`                       |             |       |             |                                                                                           |
 | `data_task`                         |             |       |             |                                                                                           |
+| `collection`                        |             |       |             |                                                                                           |
 | `coding_required`                   |      X      |   X   |      X      |                                                                                           |
 | `coding_level`                      |             |   X   |             |                                                                                           |
 | `coding_language`                   |             |   X   |             |                                                                                           |
@@ -199,11 +201,12 @@ Use the checklist below to help make sure you're including all the front matter 
 - [ ] includes interactive SQL
 - [ ] learner will need to code to meet the learning objectives
 - [ ] is about a particular kind of data (EHR, omics data, geospatial data, etc.)
-- [ ] teaches a particular data skill or task (visualization, anlaysis, cleaning, etc.)
+- [ ] teaches a particular data skill or task (visualization, analysis, cleaning, etc.)
+- [ ] belongs to a [collection](#collection)
 - [ ] is a [wrapper module](#which-module-template-to-use)
 - [ ] is in a sequence (including the first module in the sequence)
 - [ ] follows other modules in a sequence (i.e. it's not the first in the sequence)
-- [ ] is parallel to one or more other modules (i.e. covers the same content but in a different coding langauge/operating system)
+- [ ] is parallel to one or more other modules (i.e. covers the same content but in a different coding language/operating system)
 - [ ] uses the Data Carpentry genomics AMI on AWS
 - [ ] uses the learning_bash repo
 <script output="module_characteristics">"@input"</script>
@@ -229,20 +232,21 @@ You'll need the following fields in your front matter (new fields added by check
 * pre\_reqs
 * learning\_objectives
 
-@add_item(6,resource1\_name)
-@add_item(6,resource1\_description)
-@add_item(6,resource1\_wellvetted)
-@add_item(6,resource1\_wellvetted\_text)
-@add_item(6,resource1\_maintained)
-@add_item(6,resource1\_maintained\_text)
-@add_item(6,resource1\_stablesupport)
-@add_item(6,resource1\_stablesupport\_text)
-@add_item(6,resource1\_a11y\_issues)
+@add_item(7,resource1\_name)
+@add_item(7,resource1\_description)
+@add_item(7,resource1\_wellvetted)
+@add_item(7,resource1\_wellvetted\_text)
+@add_item(7,resource1\_maintained)
+@add_item(7,resource1\_maintained\_text)
+@add_item(7,resource1\_stablesupport)
+@add_item(7,resource1\_stablesupport\_text)
+@add_item(7,resource1\_a11y\_issues)
 
 * good\_first\_module
 
 @add_item(4,data\_domain)
 @add_item(5,data\_task)
+@add_item(6,collection)
 
 * coding\_required
 
@@ -268,42 +272,42 @@ try {
 try {
   let module_characteristics = @input(`module_characteristics`)
 
-  if(module_characteristics[7] || module_characteristics[8]) {
+  if(module_characteristics[8] || module_characteristics[9]) {
     send.liascript(`- sequence\_name 💫`)
   } else send.clear()
 } catch(e) { }
 </script>
 
-@add_item(8,previous\_sequential\_module)
+@add_item(9,previous\_sequential\_module)
 
 * sets\_you\_up\_for
 * depends\_on\_knowledge\_available\_in
 
-@add_item(9,is\_parallel\_to)
+@add_item(10,is\_parallel\_to)
 
 * version\_history
 * import macros.md
 
-@add_item(6,import macros_wrapper.md)
+@add_item(7,import macros_wrapper.md)
 @add_item(0,import macros_r.md)
 @add_item(1,import macros_python.md)
 @add_item(2,import macros_sql.md)
-@add_item(10,import macros_genomics.md)
-@add_item(10,import macros_bash.md)
+@add_item(11,import macros_genomics.md)
+@add_item(12,import macros_bash.md)
 
-### `author`
+### author
 
 ```
 author:   Your Name
 ```
 
-### `email`
+### email
 
 ```
 email:    email@example.edu
 ```
 
-### `version`
+### version
 
 ```
 version:  0.0.0
@@ -314,26 +318,26 @@ When you're ready to submit your module for QA, it should have a module version 
 It's a good idea to keep your version set to `0.0.0` while you're still drafting as it will help prevent your browser from caching the module, making it easier for you to review changes as they render online. 
 For more details, see the [LiaScript documentation about state](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#state).
 
-### `current_version_description`
+### current_version_description
 
 ```
 current_version_description: Initial version
 ```
 
 This is a 1-3 line description of the current version of the module. Start with `Initial version` for 1.0.0.
-Then whenever the module gets a major (first number change) or minor update (second number change), this field should be updated to describe **from the learner's point of view** what meaningful changes have occured since the last version. If the most recent commit creates a revision (third number change), please keep the existing `current_version_description` and do not update it.  
+Then whenever the module gets a major (first number change) or minor update (second number change), this field should be updated to describe **from the learner's point of view** what meaningful changes have occurred since the last version. If the most recent commit creates a revision (third number change), please keep the existing `current_version_description` and do not update it.  
 
-The content of `current_version_description` should be simple text without bullet points. Use present tense for verbs, such as "add material on..." instead of "added material on...".  You can use fragments and no terminating punctuation is required.  
+The content of `current_version_description` should be simple text without bullet points. Use past tense for verbs, such as "added material on..." instead of "adds material on...".  You can use fragments and no terminating punctuation is required.  
 
 Focus on changes in module content rather than technical updates that might be invisible to learners (e.g. standardized text being replaced with a macro).
 
 For example, for a module that has undergone at least one new version (major or minor), this field might look something like this:
 
 ```
-current_version_description: add less command, update man section, improve quiz and appearance
+current_version_description: Added less command, updated man section, improved quiz and appearance
 ```
 
-### `module_type`
+### module_type
 
 ```
 module_type: standard
@@ -341,7 +345,7 @@ module_type: standard
 
 Should be one of `standard`, `wrapper`, or `exercise` (see [which module template to use](#which-module-template-to-use)).
 
-### `docs_version` 
+### docs_version
 
 ```
 docs_version: 1.0.0
@@ -353,7 +357,7 @@ When you're ready to submit your module for QA, it should have a docs version nu
 
 If you wrote a module using a previous version of docs.md, look for a [checklist issue template](#updating-this-document) help you bring your module up to date. 
 
-### `language`
+### language
 
 ```
 language: en
@@ -362,7 +366,7 @@ language: en
 This defines the language for the file (default is English, `en`). 
 See the [LiaScript documentation on `language`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#language) for more details. 
 
-### `narrator`
+### narrator
 
 ```
 narrator: UK English Female
@@ -371,7 +375,7 @@ narrator: UK English Female
 This defines the voice to be used for text to voice, if the learner chooses to use that.
 See the [LiaScript documentation on `narrator`](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#narrator) for more details. 
 
-### `mode`
+### mode
 
 ```
 mode: Textbook
@@ -381,7 +385,7 @@ This sets the [default mode of display for LiaScript](https://liascript.github.i
 
 It should be `Textbook`.
 
-### `title` 
+### title
 
 ```
 title: Module Title
@@ -395,19 +399,19 @@ Avoid making changes to the title after publication.
 
 </div>
 
-### `comment` 
+### comment
 
 ```
 comment:  This is a short, focused description of the module.
 ```
 
-### `long_description` 
+### long_description
 
 ```
 long_description: This is a longer description, which should be understandable for a lay audience. It will print under "Is this module right for me?" in the overview.
 ```
 
-### `estimated_time_in_minutes`
+### estimated_time_in_minutes
 
 ```
 estimated_time_in_minutes: 45
@@ -415,7 +419,7 @@ estimated_time_in_minutes: 45
 
 This is rough guess of how long it might take a learner to work through the module. It will print under "Estimated time to completion" in the overview. Valid values are any integer 1-60. 
 
-### `r_file`
+### r_file
 
 ```
 r_file: r\_logistic\_regression
@@ -425,7 +429,7 @@ If this module uses refers to a specific directory and file within the `educatio
 
 Note that rmds in the `education_r_environment` repo should be saved in a directory that matches the file name, like `this_r_module/this_r_module.rmd`. When you use the [r\_lesson\_prep macro](#interactive-r), it will fill in the text from `r_file` to use as both the directory name and file name for this lesson's notebook. Use backslashes to escape underscores (e.g. `this\_r\_module` rather than `this_r_module`). 
 
-### `pre_reqs` 
+### pre_reqs
 
 ```
 @pre_reqs
@@ -443,7 +447,7 @@ List any skills and knowledge needed to do this module here. When available, inc
 
 Note that `@pre_reqs` is a [block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#blocks) in LiaScript, which means it has `@end` after the last line.
 
-### `learning_objectives` 
+### learning_objectives
 
 ```
 @learning_objectives  
@@ -467,7 +471,7 @@ Note that `@learning_objectives` is a [block macro](https://liascript.github.io/
 
 The learning objectives will be automatically printed twice in each module: Once in the [Overview](#overview) and then again in the [Feedback](#feedback) section.
 
-### `module_structure`
+### module_structure
 
 ```
 @module_structure
@@ -513,9 +517,9 @@ Example Structure 3:
 ```
 
 Note that `@module_structure` is a [block macro](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#blocks) in LiaScript, which means it has `@end` after the last line.
-It will automcatically be printed in the Lesson Preparation section of wrapper modules. 
+It will automatically be printed in the Lesson Preparation section of wrapper modules. 
 
-### `resource1_name`
+### resource1_name
 
 ```
 resource1_name: Docker 101 Tutorial
@@ -524,7 +528,7 @@ resource1_name: Docker 101 Tutorial
 This is the title of the external resource you'll be linking to. 
 Don't make it a hyperlink (we want to wait to link to the resource until the right point in the module).
 
-### `resource1_description`
+### resource1_description
 
 ```
 resource1_description: In this self-paced, hands-on tutorial, you will learn how to build images, run containers, use volumes to persist data and mount in source code, and define your application using Docker Compose. You’ll even learn about a few advanced topics, such as networking and image building best practices.
@@ -533,7 +537,7 @@ resource1_description: In this self-paced, hands-on tutorial, you will learn how
 A brief description of the external resource. 
 This will print underneath the name of the resource and just above the criteria checklist.
 
-### `resource1_wellvetted` 
+### resource1_wellvetted
 
 ```
 resource1_wellvetted: true
@@ -546,7 +550,7 @@ Must be one of `true` or `false`.
 If true, this item will show up with a green checkmark circle in the criteria list. 
 If false, then it will show as a yellow circle with a horizontal line. 
 
-### `resource1_wellvetted_text` 
+### resource1_wellvetted_text
 
 ```
 resource1_wellvetted_text: The Docker 101 tutorial is an [open source project](https://github.com/docker/getting-started), so it has many authors, but it is sponsored and hosted by Docker Inc, the company that produces the docker software. The open source nature of the tutorial also helps ensure that any errors or problems can be caught and addressed quickly. 
@@ -554,7 +558,7 @@ resource1_wellvetted_text: The Docker 101 tutorial is an [open source project](h
 
 This is a short explanation justifying the `true` or `false` decision recorded for `resource1_wellvetted`. If this is a resource by expert authors and/or well-vetted, then explain. If it is not, mention the shortcoming, and explain why you think it's worth linking to in a module anyway.
  
-### `resource1_maintained` 
+### resource1_maintained
 
 ```
 resource1_maintained: true
@@ -567,7 +571,7 @@ Must be one of `true` or `false`.
 If true, this item will show up with a green checkmark circle in the criteria list. 
 If false, then it will show as a yellow circle with a horizontal line. 
 
-### `resource1_maintained_text` 
+### resource1_maintained_text
 
 ```
 resource1_maintained_text: This tutorial is maintained by Docker Inc, so we expect that it will remain up to date whenever changes are implemented in docker.
@@ -575,7 +579,7 @@ resource1_maintained_text: This tutorial is maintained by Docker Inc, so we expe
 
 This is a short explanation justifying the `true` or `false` decision recorded for `resource1_maintained`. If this is a resource that is well maintained, then explain. If it is not, mention the shortcoming, and explain why you think it's worth linking to in a module anyway.
 
-### `resource1_stablesupport`
+### resource1_stablesupport
 
 ```
 resource1_stablesupport: true
@@ -588,7 +592,7 @@ Must be one of `true` or `false`.
 If true, this item will show up with a green checkmark circle in the criteria list. 
 If false, then it will show as a yellow circle with a horizontal line. 
 
-### `resource1_stablesupport_text`
+### resource1_stablesupport_text
 
 ```
 resource1_stablesupport_text: This is hosted on the Docker website, and it is a popular and widely-shared tutorial. We expect it will continue to be available for the foreseeable future.
@@ -596,7 +600,7 @@ resource1_stablesupport_text: This is hosted on the Docker website, and it is a 
 
 This is a short explanation justifying the `true` or `false` decision recorded for `resource1_stablesupport`. If this is a resource that we expect to have stable support, then explain. If it is not, mention the shortcoming, and explain why you think it's worth linking to in a module anyway.
 
-### `resource1_a11y_issues`
+### resource1_a11y_issues
 
 ```
 resource1_a11y_issues: No known issues with accessibility, but we may have missed something. If you encounter an issue, please [let us know](#feedback)!
@@ -607,7 +611,7 @@ If you are aware of any issues with this resource related to inclusion or access
 Note that this text will print just beneath the criteria checklist, but it isn't part of the checklist and won't have a green or yellow check icon. 
 We don't include accessibility and inclusion as a criterion intentionally because it isn't reasonable or helpful to assert that something is generally "accessible" or "inclusive" to all learners. 
 
-### `good_first_module`
+### good_first_module
 
 ```
 good_first_module: false
@@ -619,23 +623,26 @@ Required for all modules.
 
 Must be one of `true` or `false`.
 
-### `data_domain`
+### data_domain
 
 ```
-data_domain: EHR
+data_domain: ehr
 ```
 
 This module is primarily useful for or focused on this type of data.
 
-Must be one of the following:
+This field can be left blank, but every module **must** have something in at least one of `data_domain`, `data_task`, or `collection`.
 
-- `EHR`
+Must be one or more of the following:
+
+- `ehr`
 - `omics`
 - `geospatial`
+- `text`
 
 As we write additional modules, we may add new data domains to this list!
 
-### `data_task`
+### data_task
 
 ```
 data_task: 
@@ -643,7 +650,9 @@ data_task:
 
 What type of task/action/skill does this module teach?
 
-Must be one of the following:
+This field can be left blank, but every module **must** have something in at least one of `data_domain`, `data_task`, or `collection`.
+
+Must be one or more of the following:
 
 - `data_visualization`: Creating representations of data such as plots, graphs, maps, etc.
 - `data_management`: Organizing and storing data, including database structures, data sharing, cloud vs. local storage, and metadata
@@ -652,7 +661,30 @@ Must be one of the following:
 
 As we write additional modules, we may add new data tasks to this list!
 
-### `coding_required`
+### collection
+
+```
+collection: learn_to_code, machine_learning
+```
+
+The collection(s) this module belongs to.
+This captures topics or themes not covered by other metadata (especially `data_domain` and `data_task`).
+You can list more than one collection, separated by commas. 
+
+This field can be left blank, but every module **must** have something in at least one of `data_domain`, `data_task`, or `collection`.
+
+Must be one or more of the following: 
+
+- `demystifying`: Few or no prerequisites, approachable for beginners, doesn't teach hands-on skills but rather focuses on giving an overview of a topic. Often has a special focus on reducing anxiety about a potentially daunting topic or tool, and cutting through the hype to helping novices to determine whether or not this is something they should learn to do. Note that a module does not need to have "demystifying" in its title to be in this collection.
+- `infrastructure_and_technology`: Focused on software or tools, especially setup and systems. Things like how to install software, or understanding what software and/or languages to use for what tasks. Also includes basic computer skills like navigating file directories.  
+- `intro_to_data_science`: Skills for learners new to data science, including how to troubleshoot, reproducible methods, etc.
+- `learn_to_code`: Modules that is primarily focused on teaching coding. Note that a module might require coding without belonging to this collection, especially more advanced modules that use a coding language to achieve some task (modeling, genomics, etc.) but without the pedagogical focus being on the coding language itself. 
+- `machine_learning`: Modules about machine learning and AI.
+- `statistics`: Modules about statistics, including both applied data analysis (e.g. here's how to do this test in R) and a more theoretical understanding of statistics and the underlying math (e.g. learn the matrix algebra underlying the general linear model).
+
+As we write additional modules, we may add new collections to this list! 
+
+### coding_required
 
 ```
 coding_required: true
@@ -664,7 +696,7 @@ True/False based on whether achieving the module's learning objectives requires 
 
 Must be one of `true` or `false`.
 
-### `coding_level`
+### coding_level
 
 ```
 coding_level: getting_started
@@ -680,7 +712,7 @@ Must be one of the following:
 - `advanced`: These modules focus on particularly difficult or specialized tasks.
 - `practice_exercise`: These modules do not introduce new content.
 
-### `coding_language`
+### coding_language
 
 ```
 coding_language: r, python
@@ -694,7 +726,7 @@ Must be one or more of the following:
 - SQL
 - git
 
-### `sequence_name`
+### sequence_name
 
 ```
 sequence_name: bash_basics
@@ -708,9 +740,10 @@ Must be one of the following:
 - `python_basics`
 - `genomics_tools_and_methods`
 - `git_basics`
-- (add more here)
 
-### `previous_sequential_module`
+As we write additional modules, we may add new sequences to this list!
+
+### previous_sequential_module
 
 ```
 previous_sequential_module: sql_basics
@@ -719,7 +752,7 @@ previous_sequential_module: sql_basics
 If it's in a sequence and there is another module before it (i.e. it's not the first module in its sequence), list the previous module here. 
 Use the modules directory name (this should be the same as the name of its md file).
 
-### `sets_you_up_for`
+### sets_you_up_for
 
 ```
 @sets_you_up_for
@@ -734,7 +767,7 @@ Required for all modules.
 
 Notes how knowledge in this module will prepare the user for other concepts.
 
-Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
+Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge available in `module_a`.
 
 If there are no modules to list here, leave it blank but do not omit it (modules may fail automatic checks if they don't have all required metadata). 
 For example:
@@ -745,7 +778,7 @@ For example:
 @end
 ```
 
-### `depends_on_knowledge_available_in`
+### depends_on_knowledge_available_in
 
 ```
 @depends_on_knowledge_available_in
@@ -760,7 +793,7 @@ Required for all modules.
 
 Notes where user can find useful knowledge in other modules.
 
-Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge availabe in `module_a`.
+Note that `sets_you_up_for` and `depends_on_knowledge_available_in` do not need to be symmetric, i.e. it's fine for `module_a` to list that it sets you up for `module_b` without `module_b` also saying it depends on knowledge available in `module_a`.
 
 If there are no modules to list here, leave it blank but do not omit it (modules may fail automatic checks if they don't have all required metadata). 
 For example:
@@ -771,7 +804,7 @@ For example:
 @end
 ```
 
-### `is_parallel_to`
+### is_parallel_to
 
 ```
 @is_parallel_to
@@ -785,11 +818,10 @@ The same instruction presented in a different coding language/environment/operat
 
 This field is not required, so if there are no modules parallel to this one, just omit this field completely.
 
-### `version_history`
+### version_history
 
 ```
 @version_history 
-
 Previous versions: 
 
 - [x.x.x](link): that version's current version description
@@ -809,7 +841,7 @@ Include a link to the module rendered in LiaScript from that point in time.  Not
 For example:
 
 ```
-[1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ba1dba7a4c1d4393ae8b42346fe5c69d587b8ee6/bash_command_line_101/bash_command_line_101.md#1): Remove Atom references
+[1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ba1dba7a4c1d4393ae8b42346fe5c69d587b8ee6/bash_command_line_101/bash_command_line_101.md#1): Removed Atom references
 ```
 
 Note: `version_history` should have **max** 3 previous versions recorded. 
@@ -827,7 +859,8 @@ For example:
 No previous versions.
 @end
 ```
-### `import`
+
+### import
 
 ```
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -1814,7 +1847,7 @@ For more details, see [notes about quizzes in the LiaScript documentation](https
 </div>
 ***
 
-Sometimes you may wish to include a quiz question that would be impossible to automatically grade (i.e. one with an open-ended repsonse). 
+Sometimes you may wish to include a quiz question that would be impossible to automatically grade (i.e. one with an open-ended response). 
 To mark all possible answers as correct, use a brief script to match everything with regex:
 
 ```
@@ -2041,7 +2074,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
 
 ## Updating this document
 
-**This is verison @version of this document.**
+**This is version @version of this document.**
 
 When you update docs.md, be sure to [increment its version](https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md) in the front matter.
 
