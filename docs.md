@@ -955,7 +955,13 @@ The table of contents automatically generated from the headers should give learn
 ### Additional Resources
 
 The final section of module content must be Additional Resources, and should be a list of additional resources to learn more about this topic.
-Avoid linking to other modules we've written here.
+This will be the last level-2 header before Feedback. 
+
+Some guidelines: 
+
+- No new content should be taught in this section; it's just intended as a collection of resources for folks wanting to learn more on this topic. 
+- This is not a complete "references" or "works cited" list for the module. You may link here to a resource referenced earlier in the module, but only if you think it merits being mentioned again as an additional resource. 
+- Avoid linking to other modules we've written here. This is a list of external resources.
 
 ### Feedback
 
