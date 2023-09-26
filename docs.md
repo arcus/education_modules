@@ -680,7 +680,7 @@ Must be one or more of the following:
 - `intro_to_data_science`: Skills for learners new to data science, including how to troubleshoot, reproducible methods, etc.
 - `learn_to_code`: Modules that is primarily focused on teaching coding. Note that a module might require coding without belonging to this collection, especially more advanced modules that use a coding language to achieve some task (modeling, genomics, etc.) but without the pedagogical focus being on the coding language itself. 
 - `machine_learning`: Modules about machine learning and AI.
-- `statistics`: Modules about statistics, including both applied data analysis (e.g. here's how to do this test in R) and a more theoretical understanding of statistics and the underlying math (e.g. learn the matrix algebra underlying the general linear module).
+- `statistics`: Modules about statistics, including both applied data analysis (e.g. here's how to do this test in R) and a more theoretical understanding of statistics and the underlying math (e.g. learn the matrix algebra underlying the general linear model).
 
 As we write additional modules, we may add new collections to this list! 
 
