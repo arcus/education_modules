@@ -13,7 +13,7 @@ estimated_time_in_minutes: 45
 
 good_first_module: false
 collection: intro_to_data_science, demystifying
-coding required: false
+coding_required: false
 
 @learning_objectives  
 
