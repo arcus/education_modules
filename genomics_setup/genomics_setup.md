@@ -2,8 +2,8 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.1
-current_version_description: Add explanation for why we use AWS for genomics modules. 
+version:  1.2.0
+current_version_description: Updated link to the Data Carpentries instructions, which changed after an update to their website. 
 module_type: wrapper
 docs_version: 2.0.0
 language: en
@@ -67,6 +67,7 @@ coding_language: bash
 @version_history 
 Previous versions: 
 
+- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/genomics_setup/genomics_setup.md#1): Add explanation for why we use AWS for genomics modules.
 - [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/e5ee3852f80245798baa280f195b806a39122849/genomics_setup/genomics_setup.md#1): Initial version.
 @end
 
@@ -149,7 +150,7 @@ If you like, you can use a Visa prepaid debit card (instead of a credit card) fo
 <b style="color: rgb(var(--color-highlight));">External Content</b><br>
 
 Now it's time to complete the AMI Setup instructions! 
-Go to the [Data Carpentry AMI Setup instructions](https://datacarpentry.org/genomics-workshop/AMI-setup/) and complete all the steps listed. 
+Go to the [Data Carpentry AMI Setup instructions](https://datacarpentry.org/genomics-workshop/AMI-setup) and complete all the steps listed. 
 
 When you're done, return to this page to finish the module.
 
