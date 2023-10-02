@@ -149,7 +149,7 @@ If you like, you can use a Visa prepaid debit card (instead of a credit card) fo
 <b style="color: rgb(var(--color-highlight));">External Content</b><br>
 
 Now it's time to complete the AMI Setup instructions! 
-Go to the [Data Carpentry AMI Setup instructions](https://datacarpentry.org/genomics-workshop/AMI-setup/) and complete all the steps listed. 
+Go to the [Data Carpentry AMI Setup instructions](https://datacarpentry.org/genomics-workshop/AMI-setup) and complete all the steps listed. 
 
 When you're done, return to this page to finish the module.
 
