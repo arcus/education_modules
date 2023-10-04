@@ -337,7 +337,7 @@ What's the anchor character that indicates the **end of a string**?
 ***
 <div class = "answer">
 
-The anchor for the start of a string is the dollar sign, or `$`, symbol.
+The anchor for the end of a string is the dollar sign, or `$`, symbol.
 
 </div>
 ***
