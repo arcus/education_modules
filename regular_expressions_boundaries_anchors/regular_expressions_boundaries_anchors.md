@@ -221,8 +221,6 @@ If you're looking for the actual symbol `^` in your text, you'll have to **escap
 
 ### End-of-string Anchoring 
 
-Ok, here is a proposed update that will satisfy my grammar prescriptivism for published materials (I try to be a descriptivist with language but punctuation is more of struggle).
-
 As a reminder, the symbol for end-of-string in a regular expression is `$`.  We can use this symbol to look for specific patterns at the end of strings.  For example, we could look for specific typos that tend to appear at the end of strings: periods that follow something other than a letter or number.  Here are some examples of acceptable grammar and typos:
 
 **Acceptable**
