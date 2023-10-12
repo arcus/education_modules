@@ -4,17 +4,13 @@ email:    paytonk@chop.edu
 version:  1.0.0
 current_version_description: Initial version
 module_type: standard
-docs_version: 2.0.0
+docs_version: 3.0.0
 language: en
 narrator: US English Female
 mode: Textbook
-
 title: Git Command Line Interface versus Graphical User Interface
-
 comment:  Compare the two ways of interacting with Git to decide which is best for you.
-
 long_description: You can use Git using a command line interface (CLI) and typing commands, and you can also use Git using graphical user interface software which is optimized for point-and-click.  This module will compare and contrast these two options to help you decide how to use Git in your work.
-
 estimated_time_in_minutes: 45
 
 @pre_reqs
@@ -26,7 +22,7 @@ After completion of this module, learners will be able to:
 
 - Explain what a **graphical user interface** is and the advantages and limitations of a GUI
 - Explain what a **command line interface** is and the advantages and limitations of a CLI
-- Name one major Git graphical user interface and explain where to obtain it
+- Name one major Git graphical user interface 
 
 @end
 
@@ -34,6 +30,10 @@ good_first_module: false
 coding_required: false
 
 @sets_you_up_for
+
+- git_setup_mac_and_linux
+- git_setup_windows
+
 
 @end
 
