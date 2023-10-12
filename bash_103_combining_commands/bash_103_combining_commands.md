@@ -458,6 +458,12 @@ Since we don't want to overwrite the text already in `Animals.csv` we have to us
 
 The [Software Carpentries](https://software-carpentry.org) has a series of lessons on the [Unix Shell](https://swcarpentry.github.io/shell-novice/).
 
+These webinars are a great walk through the command line:
+
+- [Unix Command Line I Arcus Education Webinar](https://www.youtube.com/watch?v=2BKwvSyeZis)
+- [Unix Command Line II Arcus Education Webinar](https://www.youtube.com/watch?v=msgeSVHl8ZA)
+- [Intermediate Bash Scripting Arcus Education Webinar](https://www.youtube.com/watch?v=Ops9Bo6yVn0)
+
 ## Feedback
 
 @feedback
