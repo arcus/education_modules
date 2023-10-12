@@ -68,23 +68,7 @@ Previous versions:
 
 @end
 
-@re_import_pandas
 
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
-
-If you have refreshed this page in your browser or are starting on this page, remember to import the `pandas` package by running:
-
-
-```python
-import pandas as pd
-```
-@Pyodide.eval
-
-
-</div>
-
-@end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
@@ -158,7 +142,7 @@ DataFrames
 
 Let's take a look at a basic DataFrame. This one is being built from scratch, but we aren't going to spend any time learning how to do that in this module because you will usually be using `pandas` to analyze data that you import from somewhere else.
 
-**Run this code** to print out the DataFrame `df`. Don't forget to remove the `#` in the last line!
+**Run this code** to print out the DataFrame `df`. 
 
 ```python
 d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
@@ -182,7 +166,7 @@ print(df['col1'])
 Did you notice the `Name` and `dtype` at the bottom? Those tell you the name of the series and its data type. Try changing `col1` to `col2` or `col3` to see what type of data those series contain.
 
 
-### Quiz: `pandas` package
+### Quiz: `pandas` package [UPDATE]
 
 ```python
 d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};

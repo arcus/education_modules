@@ -65,6 +65,22 @@ If you reload the webpage, however, all of the cells will reset to their origina
 
 @end
 
+@re_import_pandas
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+If you have refreshed this page in your browser or are starting on this page, remember to import the `pandas` package by running:
+
+
+```python
+import pandas as pd
+```
+@Pyodide.eval
+
+
+</div>
+@end
+
 @lesson_prep_python_sage
 @sage
 
