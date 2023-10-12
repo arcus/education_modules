@@ -99,9 +99,9 @@ Git is **FOSS**, or **free and open source**.  This means that git is "free" in 
 
 This is important because it means that people around the world use Git.  Students use it, individuals use it, large companies use it, people in highly-resourced projects use it, and people on a shoestring budget use it. 
 
-## How Does One Use Git?
+## Interfaces
 
-You can use git in two main ways:
+You can use Git in two main ways:
 
 * Using a **command line interface**, or **CLI**
 * Using **graphical user interface**, or **GUI**
@@ -128,7 +128,7 @@ This means that many people who are new to the command line interface might find
 
 Let's start by going over what the command line interface is.
 
-Before slick graphical interfaces, before there was such a thing as a computer mouse, the usual way to interact with a computer was by typing commands through a keyboard.  The command line was usually at the bottom of the screen, with a prompt (maybe `C:>` or something like that) and a blinking cursor that was waiting for the user to type a command.  The user could type a command, in a special kind of code that the computer could understand, and the computer would do that thing.  For example, in a UNIX or Linux computer (and later in Macs), the user might type `ls` to list the files in a particular location.  In MS-DOS (and later in Windows), a user might type `dir` to do the same thing.
+Before slick graphical interfaces, before there was such a thing as a computer mouse, the usual way to interact with a computer was by typing commands through a keyboard.  The command line was usually at the bottom of the screen, with a prompt (perhaps `C:>`) and a blinking cursor that was waiting for the user to type a command.  The user could type a command, in a special kind of code that the computer could understand, and the computer would do that thing.  For example, in a UNIX or Linux computer (and later in Macs), the user might type `ls` to list the files in a particular location.  In MS-DOS (and later in Windows), a user might type `dir` to do the same thing.
 
 Here's a screenshot of a very common thing you might want to do: list files in a particular directory.  In the image, the user is working in a directory called `bias_variance_tradeoff` and asks the computer to list the files in that directory using the command `ls`.  Three things are listed: two files, and a directory called `media`.  The user then asks for a list of the files in the `media` directory by typing `ls media`, and six file names are shown.
 
@@ -139,22 +139,9 @@ Here's a screenshot of a very common thing you might want to do: list files in a
 
 You may have never used a CLI, and that's perfectly fine.  It doesn't mean you're less skilled or intelligent than people who do use the command line.  
 
-This is important to remember because sometimes in tech there are **gatekeepers**, people who think their way to do something is the only or best way, and that if you don't do things their way, you're wrong or undeserving.  For example, you might run across people who use the command line frequently and consider people who don't use the command line to be less professional or less intelligent.  That can be a form of gatekeeping!
+This is important to remember because sometimes in tech there are **gatekeepers**, people who think their way to do something is the only or best way, and that if you don't do things their way, you're wrong or undeserving.  For example, you might run across people who use the command line frequently and consider people who don't use the command line to be less talented.  That can be a form of gatekeeping!
 
 **Please don't let gatekeepers change your understanding of your own competence!** 
-
-</div>
-
-While most things you want to accomplish on your computer can be done using multiple interfaces, some of which may be more user-friendly and graphical, there **are some things that can only be done by command line**.  Things that people need to do frequently, like look at a list of files in each directory, may be able to be accomplished through many interfaces -- a file browser that is point-and-click, for example, as well as a command typed into the CLI to list files using `dir` or `ls`.  But very specific or customized tasks that are done more rarely may only be able to be accomplished by command line.  
-
-Git has lots of commands and actions, and some of them can only be done by using the command line, because they're so niche and specific to certain circumstances that graphical software simply hasn't included that task.  There's a good chance that you might end up using Git for **years** before you run across a situation that requires the command line, but it's important to know that it's possible you'll need to use the command line interface at some point.
-
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-If you have to do something very specific in Git that isn't an everyday activity, you might **have** to use a command line interface to accomplish this.  That's a good reason to get at least a little bit comfortable with using Git on the command line.
-
-However, for most people, your day-to-day work in Git can be done in **either** the command line interface or a graphical interface.
 
 </div>
 
@@ -176,9 +163,9 @@ What Do I Type?
 
 When it comes to knowing what to do in a computer, the command line interface can feel daunting.  There's no help menu to click on, just a blank space that you're supposed to type into.  But what do you type?  How do you know what to do?  
 
-There are lots of places to learn commands, and learning how to search the internet for someone who has already had the same challenge as you and learned how to do it might help.  For example, if you're not sure how to list the files in a directory, you might search using terms like "command line what files are in my directory" or "CLI show files Windows" or something similar.  It takes practice to learn the vocabulary to create good search terms, but keep in mind that even pros who use the command line many times a day will often search for things rather than rely on their memory!  
+There are lots of places to learn commands.  One skill that will help is learning to effectively search the internet for a good description of the thing you're trying to do.  Chances are that you'll find someone who has already had the same challenge as you and learned how to solve it.  For example, if you're not sure how to list the files in a directory, you might search using terms like "command line what files are in my directory" or "CLI show files Windows" or something similar.  It takes practice to learn the vocabulary to create good search terms, but keep in mind that even pros who use the command line many times a day will often search for things rather than rely on their memory!  
 
-![A four-panel cartoon. People standing over a bomb with an attached keyboard yell "Rob! You use Unix! Come Quick!".  The bomb display reads "To disarm the bomb, simply enter a valid `tar` command on your first try.  No googling.  You have ten seconds."  The group looks on in silence, until one person says, "Rob?".  Rob replies, "I'm so sorry."](https://imgs.xkcd.com/comics/tar.png "[Tar](https://xkcd.com/1168/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")
+![A four-panel cartoon. People standing over a bomb with an attached keyboard yell "Rob! You use Unix! Come quick!".  The bomb display reads "To disarm the bomb, simply enter a valid `tar` command on your first try.  No googling.  You have ten seconds."  The group looks on in silence, until one person says, "Rob?".  Rob replies, "I'm so sorry."](https://imgs.xkcd.com/comics/tar.png "[Tar](https://xkcd.com/1168/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")
 
 One place to learn the basics of working in the command line is in our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.  This is a good place to do some safe, easy command line practice so you feel more confident.
 
@@ -195,13 +182,13 @@ There's a text editor that some people use from the command line called `vim` wh
 
 </div>
 
-And finally, let's talk about getting things wrong.  What will happen if you type the wrong thing?  Probably, literally **nothing** will happen.  The computer will give the equivalent of a shrug and say "I don't understand."  If you type a command that doesn't exist, or do something wrong, like put some words in the wrong order, you'll get an error message that might feel difficult to parse, but doesn't itself mean that anything got harmed.  
+And finally, let's talk about getting things wrong.  What will happen if you type the wrong thing?  Probably, **nothing** will happen.  The computer will give the equivalent of a shrug and say "I don't understand."  If you type a command that doesn't exist, or do something wrong, like put some words in the wrong order, you'll get an error message that might feel difficult to parse, but doesn't itself mean that anything got harmed.  
 
 Of course, it makes sense to check what a command actually does before typing it.  For example, the command `rm` removes something -- a file, or even a directory and everything in it.  If someone wanted to do a very mean prank they might suggest that you use a command including `rm`.  So after you search online but **before** you type a command in, do a bit of searching about what the command does.  
 
 ### Graphical User Interface
 
-A **graphical user interface**, or **GUI** (pronounced "gooey") is meant to make things easier for a human user -- that's why the word *user* is in the name.  While some interfaces are meant to allow for interactions between two computer programs (that's what an API, or application programming interface, is for), a GUI is intended for human users, not programs.  A GUI is an interface that is highly visual and relies on graphics (shapes, images, icons, windows, and other kinds of visual cues), which for many users is helpful.  
+A **graphical user interface**, or **GUI** (pronounced "gooey") is meant to make things easier for a human user -- that's why the word *user* is in the name.  While some interfaces are meant to allow for interactions between two computer programs (that's what an **API**, or **application programming interface**, is for), a GUI is intended for human users, not programs.  A GUI is an interface that is highly visual and relies on graphics (shapes, images, icons, windows, and other kinds of visual cues), which for many users is helpful.  
 
 The operating system of your Windows or Mac computer has a highly complex graphical user interface, and so do most of the programs you might purchase as a consumer (things like Microsoft Word or Adobe Photoshop).  You use a mouse, not a keyboard, to click on pictures that represent programs in order to open them.  You use a mouse to click on words like "File" or "Window" to show a menu of options.  You might use a mouse to click and drag to select a portion of an image or a selection of words, and then delete or move your selection.
 
@@ -220,9 +207,23 @@ Some of these are free, some are free and open source, and some have a cost (eit
 
 ## Comparing and Contrasting Interfaces
 
-Let's compare and contrast some things you might need to do in Git, and see how they look different in the two interfaces.  Don't worry if you're not sure what these tasks mean, but just take a look at how the two interfaces look.  Do you prefer one over the other?
+Let's compare and contrast some things you might need to do in Git, and see how they look different in the two interfaces.  Don't worry if you're not sure what these tasks mean, but just take a look at how the two interfaces look.  Do you prefer one over the other?  We'll look at three different tasks: adding a new repository, looking at the history of a repository, and looking at a specific change more closely.
 
-We'll look at three different tasks: adding a new repository, looking at the history of a repository, and looking at a specific change more closely.
+We'll present both the command line interface as well as a graphical user interface to allow you to see both, but it's important to note that whichever interface you choose for daily work, you might end up having to use a command line interface for complex, out of the ordinary work in Git.  Let's talk a bit about why this is the case.
+
+While most things you want to accomplish on your computer can be done using multiple interfaces, some of which may be more user-friendly and graphical, there **are some things that can only be done by command line**.  Things that people need to do frequently, like look at a list of files in each directory, may be able to be accomplished through many interfaces -- a file browser that is point-and-click, for example, as well as a command typed into the CLI to list files using `dir` or `ls`.  But very specific or customized tasks that are done more rarely may only be able to be accomplished by command line.  
+
+Git has lots of commands and actions, and some of them can only be done by using the command line, because they're so niche and specific to certain circumstances that graphical software simply hasn't included that task.  There's a good chance that you might end up using Git for **years** before you run across a situation that requires the command line, but it's important to know that it's possible you'll need to use the command line interface at some point.
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+If you have to do something very specific in Git that isn't an everyday activity, you might **have** to use a command line interface to accomplish this.  That's a good reason to get at least a little bit comfortable with using Git on the command line.
+
+However, for most people, your day-to-day work in Git can be done in **either** the command line interface or a graphical interface.
+
+</div>
+
 
 ### Adding a new repository
 
@@ -258,23 +259,23 @@ Click on the image to play the demo of the above steps!
 
 Git provides a way to look at a history of changes.  Each time you decide to make a save of the files as a moment in time you'd like to memorialize, you make a **commit**.  The commit history shows who made a change, when they made it, and a message they write to describe the change.
 
-In the command line, you can use `git log` to show the commit history.  This is a real commit history on a Git repository that holds materials for a workshop on the R language.  
+In the command line, you can use `git log` to show the commit history.  This is a real commit history on a Git repository that holds materials for a workshop on the R language.  Below, you can see that there are six commits, and each commit has some information about who made the commit and a message describing the change made in that commit.
 
 ![Terminal window with the command "git log".  The output includes six commit records.  Each record has a commit code made up of letters and numbers, an author name and email address, a date and time stamp, and a short message such as "add presenter and TA pics".](media/git_log_cli.png)
 
-You can use the **history** function of a Git GUI to look at the same information.  Here, we're looking at the same repository, using GitHub Desktop.
+You can use the **history** function of a Git GUI to look at the same information.  Here, we're looking at the same repository, using GitHub Desktop.  On the left side of the window, you can see the same six commits we saw above, but in a prettier format.  There's additional information here on the right side of the screen, too, which we'll explain in a bit.
 
 ![GitHub Desktop window shows, in the left side of the window, a history of six commits, each of which has a user name, date, small icon of the user, and short message such as "add presenter and TA pics."  Additionally, the actual changes made during one of the commits are shown on the right of the window. ](media/git_history_gui.png)
 
 ### Looking at What Actually Changed in a Given Commit
 
-Git allows you to focus in on one commit in particular and get greater detail.  What changed between the last time the files had a commit and this time?  Were new files added?  Were lines changed in a text file?  Were images swapped out?  Was anything deleted?  Simply knowing that a change happened isn't enough, usually -- we want to know **what** changed.  In the case of the R workshop, a few lines in a presentation slide changed as part of the most recent commit (the one with the long code that starts with `636b27af`).  Let's look at that commit more closely using `git show`:
+Git allows you to focus in on one commit in particular and get greater detail.  What changed between the last time the files had a commit and this time?  Were new files added?  Were lines changed in a text file?  Were images swapped out?  Was anything deleted?  Simply knowing that a change happened isn't enough, usually -- we want to know **what** changed.  In the case of the R workshop, a few lines in a presentation slide changed as part of the most recent commit (the one with the long code that starts with `636b27af`).  Let's look at that commit more closely using `git show`.  We can see that a few lines were deleted (they're shown in red) and that those lines were replaced by new lines (shown in green).  There's also information about which file was changed, who committed the change, and when the commit was made.
 
-![Terminal window with the command `git show 636b27af`.  The output includes information about the commit, such as the author and the commit message.  It also includes the file name that was changed in this commit, quarto_slides/index.qmd, and shows the actual changes made to the file.  Four lines displayed in red and preceded by minus signs indicate lines that were deleted, and four lines displayed in green and preceded by plus signs indicate lines that were added.](media/git_show_cli.png)
+![Terminal window with the command git show 636b27af.  The output includes information about the commit, such as the author and the commit message.  It also includes the file name that was changed in this commit, `quarto_slides/index.qmd`, and shows the actual changes made to the file.  Four lines displayed in red and preceded by minus signs indicate lines that were deleted, and four lines displayed in green and preceded by plus signs indicate lines that were added.](media/git_show_cli.png)
 
-In the GUI, on the other hand, we can see both the history of commits **and** the specific changes associated with a given commit in the same window.  Here is the same image we saw when we looked at the history.  Notice how we have selected one commit in particular in the history on the left, and the changes made in that commit are shown to the right.
+In the GUI, on the other hand, we can see both the history of commits **and** the specific changes associated with a given commit in the same window.  Here is the same image we saw when we looked at the history.  Notice how we have selected one commit in particular in the history on the left, and the changes made in that commit are shown to the right.  The same idiom is used of red meaning deleted content and green meaning added content, but for most people, this display is a bit easier to look at than the printout above.
 
-![GitHub Desktop window shows, in the left side of the window, a history of six commits.  On the right, the actual changes made during the most recent commit are shown. The file name quarto_slides/index.qmd is shown, and to the right of that, four lines displayed in red and preceded by minus signs indicate lines that were deleted, and four lines displayed in green and preceded by plus signs indicate lines that were added.](media/git_history_gui.png)
+![GitHub Desktop window shows, in the left side of the window, a history of six commits.  On the right, the actual changes made during the most recent commit are shown. The file name `quarto_slides/index.qmd` is shown, and to the right of that, four lines displayed in red and preceded by minus signs indicate lines that were deleted, and four lines displayed in green and preceded by plus signs indicate lines that were added.](media/git_history_gui.png)
 
 ## How to Decide
 
@@ -304,9 +305,9 @@ Which of the following is true about graphical user interfaces (GUIs)?  Check al
 [[ ]] GUIs depend principally on typing text commands.
 [[X]] GUIs are designed with human users in mind.
 [[ ]] GUIs are a second-best alternative for people who aren't smart enough to use the command line.
-
 [[?]] Hint: There are several correct answers!
 ***
+
 <div class = "answer">
 
 Graphical user interfaces don't always offer the same level of control of a system as command line interfaces.  This is why some people strongly advocate that everyone learn to use the command line tools for a system, if possible.
@@ -322,6 +323,8 @@ Finally, and this is important... GUIs are **not** a second best alternative, an
 </div>
 ***
 
+------
+
 Which of the following is true about the command line interface (CLI)?  Check all that apply!
 
 [[ ]] CLIs are best used by people with great memorization skills.
@@ -330,7 +333,6 @@ Which of the following is true about the command line interface (CLI)?  Check al
 [[ ]] CLIs depend principally on visual cues like windows, words, and shapes on a screen.
 [[X]] CLIs depend principally on typing text commands.
 [[X]] CLIs can provide greater power and control than GUIs in some systems, like Git.
-
 [[?]] Hint: There are several correct answers!
 ***
 <div class = "answer">
@@ -341,6 +343,8 @@ CLIs depend principally on typing text commands, not on visual cues like windows
 
 </div>
 ***
+
+------
 
 Which of the following is a Git GUI (or Git client) that you've seen used in this module?
 
