@@ -68,8 +68,6 @@ Previous versions:
 
 @end
 
-
-
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 import: https://raw.githubusercontent.com/arcus/education_modules/pyodide_testing/_module_templates/macros_python.md
@@ -221,19 +219,7 @@ This data is saved as a [csv file hosted on GitHub](https://raw.githubuserconten
 
 ### Loading data
 
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
-
-If you have refreshed this page in your browser or are starting on this page, remember to import the `pandas` package by running:
-
-
-```python
-import pandas as pd
-```
-@Pyodide.eval
-
-
-</div>
+@re_import_pandas
 
 The `pandas` package can read most tabular data files and convert them into DataFrames. As long as your data is in a place that the program can locate (either on your computer if you are running code on your computer, or in the cloud) all `pandas` needs to know is what type of file it is reading, and where to find that file.
 
@@ -242,19 +228,49 @@ The fake Covid-19 testing data we will use for the rest of this lesson is saved 
 The `read_csv` function from the `pandas` library takes the location of the file as its argument. The path to the file, in this case a url, must be in quotes. Let's create a new DataFrame called `covid_testing` that will contain all of our fake Covid-19 testing data.
 
 ```python
-covid_testing = pd.read_csv('covid_testing.csv')
-#covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
+covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 ```
-@Pyodide.eval
 
-That code didn't have any output because we didn't ask it to print anything, but it did create the `covid_testing` DataFrame. We can take a look at with `print(covid_testing)`:
+``` python   @Pyodide.exec
+import pandas as pd
+import io
+from pyodide.http import open_url
+
+url = "https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv"
+
+url_contents = open_url(url)
+text = url_contents.read()
+file = io.StringIO(text)
+
+covid_testing = pd.read_csv(file);
+
+"HTML: <a href='" + url + "'>covid_testing</a> has been loaded"
+```
+
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
+**Why is the code including `pd.read_csv()` not executable?**
+
+We're running Python in the browser for this module using [pyodide](https://pyodide.org/en/stable/index.html).
+For the most part, the commands we would use to run Python with pyodide are exactly the same as the commands you would use when running Python on your own computer, but the one major exception is reading in data files. 
+
+So, we do something a little sneaky with the code here -- we run a set of pyodide-specific commands to read in the data without displaying that code on the page, and then we include a non-executable code box showing the code you would actually want to run to do this on your own computer. 
+
+If you're curious about pyodide, you can [view this module in its raw format](https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md) to see the extra code. 
+But there's no reason to bother with this unless you're curious! 
+That's why we hid that extra code in the first place. 
+
+</div>
+
+If you're running this code on your computer, you didn't have any output after the last command because we didn't ask it to print anything. But it did create the `covid_testing` DataFrame. We can take a look at with `print(covid_testing)`:
 
 ```python
 print(covid_testing)
 ```
 @Pyodide.eval
 
-Unless you have an extremely wide browser window, the output above is broken into as many columns as it can fit at a time. Some interfaces will output the DataFrame and let you scroll right to see more columns, but this interface just prints as many columns as it can fit and then starts again with the next columns. Good thing it didn't print all 15524 rows!
+Unless you have an extremely wide browser window, the output above will only show as many columns as it can fit at a time. Some interfaces will output the DataFrame and let you scroll right to see more columns, but this interface just prints as many columns as it can fit and then shows you the real dimensions at the bottom. Good thing it didn't print all 15524 rows!
 
 When you print a DataFrame or Series you will see the first five rows and the last five rows of a DataFrame. If, like this one, it has more than 10 rows, the hidden rows will be indicated by ellipses. You can also ask for the first or last 5 rows of data using the methods `.head()` and `.tail()`. Try putting a number in the parentheses to get different numbers of rows.
 
@@ -276,8 +292,6 @@ To create a DataFrame of your data, make sure you use the right command for your
 | .json| pd.read_json('location')|
 | .html| pd.read_html('location')|
 | .sql | pd.read_sql('location')|
-
-
 
 ### Column names and row indices
 @sage
