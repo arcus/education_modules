@@ -33,7 +33,7 @@ print(7+2)
 You can also edit the code in these cells and run your own code. 
 **Try changing the expression in the cell above and re-running the code.**
 
-When you edit code in a cell, you can "undo" the edits by clicking the **step back** button <i aria-hidden="true" class="icon icon-chevron-left lia-btn__icon"></i> at the bottom right of the code block to return the code to its original state.
+When you edit code in a cell, you can "undo" the edits by clicking the **step back** button <i aria-hidden="true" class="icon icon-chevron-left lia-btn__icon"></i> at the bottom right of the code cell to return the code to its original state.
 **Try stepping back through the code by clicking <i aria-hidden="true" class="icon icon-chevron-left lia-btn__icon"></i>.**
 
 Variables will remain from one cell to the next on the same page:
