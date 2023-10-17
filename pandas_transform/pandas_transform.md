@@ -112,17 +112,6 @@ import pandas as pd
 
 If you click the **Execute** button <i aria-hidden="true" class="icon icon-compile-circle lia-btn__icon"></i>, you can watch as the `pandas` package, which is also called a **module**, is downloaded. This line of code is giving us access to all of the `pandas` tools.
 
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-[UPDATE]
-
-If you work through this module in one sitting, you will not need to import the `pandas` package again. However if you refresh your browser or come back to this module later, you may need to import the package again.
-
-There will be box at the top of each page reminding you how to do that.
-
-</div>
-
 ### DataFrames and Series
 
 The `pandas` package lets you handle two types of data structures that python alone can't: **DataFrames** and **Series**. Before we can start exploring them, let's make sure we have `pandas` imported. 
@@ -285,6 +274,10 @@ To create a DataFrame of your data, make sure you use the right command for your
 
 ### Column names and row indices
 
+``` python   @Pyodide.exec
+import pandas as pd
+```
+
 When a DataFrame is displayed it has a row of column names along the top, and a column of indices along the left side. In some environments, like Jupyter notebooks, these names and indices may be bolded.
 
 The methods `.columns` and `.index` will show you all of the column and row names, respectively. **Give it a try:**
@@ -316,6 +309,10 @@ For example `range(0,4)` contains 4 elements. Those elements are 0,1,2, and 3.
 </div>
 
 ### Locating data with `.loc`
+
+``` python   @Pyodide.exec
+import pandas as pd
+```
 
 The `.loc` method lets you select a subset of your DataFrame to display.
 
@@ -424,6 +421,10 @@ print(covid_testing.loc[11942, ["first_name","last_name"]])
 
 ## Conditional statements
 
+``` python   @Pyodide.exec
+import pandas as pd
+```
+
 Let's say we only care about the positive Covid tests. We could make a new DataFrame consisting only of those tests that came back positive using a **conditional** argument. A condition is a statement that evaluates to either `True` or `False`.
 
 If, for example, we only want to look at instances where the covid test came back positive, we need to use the condition `covid_testing.loc[:,"result"] == "positive"`. This statement checks every row in the `covid_testing` and will be `True` for a given row if the entry in column `result` is equal to the string `positive` and `False` otherwise.
@@ -461,6 +462,10 @@ In addition to using `==` to check if two values are the same, we can use other 
 
 ### Filtering by a condition
 
+``` python   @Pyodide.exec
+import pandas as pd
+```
+
 When we used a column name or list of names as our argument in the row spot of the `.loc` method, we got back all rows in that list. When we put a condition  like `covid_testing.loc[:,"result"] == "positive"` in the row spot, it will return all rows for which that condition is `True`.
 
 If this is a subset of the data that you are likely to want to use again, it is a good practice to create a new DataFrame consisting only of the rows and columns that you want.
@@ -495,6 +500,10 @@ The method `.copy()` at the very end of line one creates a new DataFrame separat
 </div>
 
 ### Combining conditions
+
+``` python   @Pyodide.exec
+import pandas as pd
+```
 
 We can also combine conditions using `&` for **and**, and the vertical "pipe" `|` **or**. The `|` can be found above the forward slash \ on your keyboard. The code below shows us only the rows for patients age 18 or older who tested positive.
 
@@ -532,6 +541,10 @@ is true for all results where a patient was older than 10 and tested positive, a
 
 
 ### Missing Data
+
+``` python   @Pyodide.exec
+import pandas as pd
+```
 
 So far we have been treating the `covid_testing` DataFrame as if it has a value in every row of every column, but like most real data sets, some data is missing!
 
@@ -584,6 +597,10 @@ print(known_payor_tests.loc[:, ["first_name", "last_name", "payor_group"]])
 
 ### Quiz: Conditional statements
 
+``` python   @Pyodide.exec
+import pandas as pd
+```
+
 You come across the following code in which several conditions are defined but not given descriptive names:
 
 
@@ -629,6 +646,10 @@ THEREFORE:
 
 ## Transforming data in a DataFrame
 
+``` python   @Pyodide.exec
+import pandas as pd
+```
+
 Sometimes the data in a DataFrame isn't in the best form for us to use. Maybe it is a string that is too long or unclear, or maybe the units aren't the unit we will ultimately want to use to analyze the data.
 
 There are two things we can do to make our data more useful.
@@ -655,6 +676,10 @@ If your original data is not already in a separate file you can use `.to_csv(dat
 </div>
 
 ### Create new columns
+
+``` python   @Pyodide.exec
+import pandas as pd
+```
 
 In `pandas` you can create a new column by calling your new column with the `.loc[:,"new_column"]` method and using a single equals sign `=` to define its contents.
 
@@ -690,6 +715,9 @@ print(covid_testing.loc[:,["first_name", "last_name", "full_name"]])
 
 ### Edit existing columns
 
+``` python   @Pyodide.exec
+import pandas as pd
+```
 
 You can make changes to existing entries using the same method and simply using the key that already exists for that column.
 
@@ -761,6 +789,10 @@ The order and length of these lists matter! Each element in the first list will 
 </div>
 
 ### Quiz: Transforming DataFrames
+
+``` python   @Pyodide.exec
+import pandas as pd
+```
 
 You can change the all of the entries in a column to uppercase using the method `.str.upper()`. The code below **prints** the `last_name` column  of `covid_testing` in uppercase:
 
