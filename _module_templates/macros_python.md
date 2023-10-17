@@ -22,7 +22,6 @@ import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 You will have opportunities for hands-on coding as you work your way through this module using interactive python cells.
 The interactive python cells are powered by [Pyodide](https://github.com/pyodide/pyodide#what-is-pyodide). For the most part, these will appear with some code already in them, and you can run that code by clicking the **Execute** button <i aria-hidden="true" class="icon icon-compile-circle lia-btn__icon"></i> below and to the left of the cell.
 
-
 **Give it a try:**
 
 ```python
@@ -36,7 +35,7 @@ You can also edit the code in these cells and run your own code.
 When you edit code in a cell, you can "undo" the edits by clicking the **step back** button <i aria-hidden="true" class="icon icon-chevron-left lia-btn__icon"></i> at the bottom right of the code cell to return the code to its original state.
 **Try stepping back through the code by clicking <i aria-hidden="true" class="icon icon-chevron-left lia-btn__icon"></i>.**
 
-Variables will remain from one cell to the next on the same page:
+Variables will remain from one cell to the next:
 
 ```python
 n = 3
@@ -81,6 +80,24 @@ import pandas as pd
 ```
 @Pyodide.eval
 
+
+</div>
+@end
+
+@pyodide_readcsv_explainer
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
+**Why is the code including `pd.read_csv()` not executable?**
+
+We're running Python in the browser for this module using [pyodide](https://pyodide.org/en/stable/index.html).
+For the most part, the commands we would use to run Python with pyodide are exactly the same as the commands you would use when running Python on your own computer, but the one major exception is reading in data files. 
+
+So, we do something a little sneaky with the code here -- we run a set of pyodide-specific commands to read in the data without displaying that code on the page, and then we include a non-executable code box showing the code you would actually want to run to do this on your own computer. 
+
+If you're curious about pyodide, you can [view this module in its raw format](https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md) to see the extra code. 
+But there's no reason to bother with this unless you're curious! 
+That's why we hid that extra code in the first place. 
 
 </div>
 @end
@@ -184,8 +201,6 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-
-
 -->
 
 # Python Module Macros
@@ -193,6 +208,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 @lesson_prep_python_pyodide
 
+@pyodide_readcsv_explainer
 
 ## Sage Math Cells
 @sage
