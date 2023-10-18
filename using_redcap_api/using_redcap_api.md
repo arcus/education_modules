@@ -2,7 +2,7 @@
 author:   Joy Payton
 email:    paytonk@chop.edu
 version: 2.0.2
-current_version_description: Added instructions for avoiding pushing API token to GitHub, added information about environment variables, updated highlight boxes, and clarified text editors
+current_version_description: Adds instructions for avoiding pushing API token to GitHub, adds information about environment variables, updates highlight boxes, and clarifies text editors
 module_type: standard 
 docs_version: 3.0.0
 language: en
