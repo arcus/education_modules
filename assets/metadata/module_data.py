@@ -1585,16 +1585,16 @@ df.loc["statistical_tests", "depends_on_knowledge_available_in"] = "- r_basics_i
 df.loc["statistical_tests", "version_history"] = "Previous versions: &&- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/statistical_tests/statistical_tests.md#1): Add biostats handbook as additional resource.&- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cde920bb122d9ad69dd5c547725d303541f171eb/statistical_tests/statistical_tests.md#1): Add emphasis on need to study statistical theory (in response to module feedback).&- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cde69494c598cbec920221560564eb3d7c26c79c/statistical_tests/statistical_tests.md#1): Initial version, fix broken links.&" 
 df.loc["tidy_data", "author"] = "Joy Payton"
 df.loc["tidy_data", "email"] = "paytonk@chop.edu"
-df.loc["tidy_data", "version"] = "1.1.3"
-df.loc["tidy_data", "current_version_description"] = ""
-df.loc["tidy_data", "module_type"] = ""
-df.loc["tidy_data", "docs_version"] = ""
+df.loc["tidy_data", "version"] = "1.1.4"
+df.loc["tidy_data", "current_version_description"] = "Updated highlight boxes"
+df.loc["tidy_data", "module_type"] = "standard"
+df.loc["tidy_data", "docs_version"] = "3.0.0"
 df.loc["tidy_data", "language"] = "en"
 df.loc["tidy_data", "narrator"] = "US English Female"
 df.loc["tidy_data", "mode"] = "Textbook"
 df.loc["tidy_data", "title"] = "Tidy Data"
 df.loc["tidy_data", "estimated_time_in_minutes"] = "45"
-df.loc["tidy_data", "module_type"] = ""
+df.loc["tidy_data", "module_type"] = "standard"
 df.loc["tidy_data", "good_first_module"] = "false"
 df.loc["tidy_data", "data_domain"] = ""
 df.loc["tidy_data", "data_task"] = ""
@@ -1606,7 +1606,11 @@ df.loc["tidy_data", "sequence_name"] = ""
 df.loc["tidy_data", "previous_sequential_module"] = ""
 df.loc["tidy_data", "comment"] = "Tidy is a technical term in data analysis and describes an optimal way for organizing data that will be analyzed computationally." 
 df.loc["tidy_data", "long_description"] = "Are you concerned about how to organize your data so that it's easier to work with in a computational solution like R, Python, or other statistical software?  This module will explain the concept of +tidy data+, which will help make analysis and data reuse a bit simpler." 
-df.loc["tidy_data", "learning_objectives"] = "&After completion of this module, learners will be able to:&&- Describe the three characteristics of tidy data&- Describe how messy data could be transformed into tidy data&- Describe the three tenets of tidy analysis&&&" 
+df.loc["tidy_data", "pre_reqs"] = "&Experience working with rectangular data (data in rows and columns) will be helpful.  For example, experience working in Excel, Google Sheets, or other software that helps organize data into rows and columns is sufficient expertise to take this module.&&" 
+df.loc["tidy_data", "learning_objectives"] = "&After completion of this module, learners will be able to:&&- Describe the three characteristics of tidy data&- Describe how messy data could be transformed into tidy data&- Describe the three tenets of tidy analysis&&" 
+df.loc["tidy_data", "sets_you_up_for"] = "&- r_basics_transform_data&- r_reshape_long_wide&- pandas_transform&&" 
+df.loc["tidy_data", "depends_on_knowledge_available_in"] = "&" 
+df.loc["tidy_data", "version_history"] = "Previous versions: &&- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/271fad92d4642d026584f83125ecc3c439aa5b44/tidy_data/tidy_data.md#1): Initial version&&" 
 df.loc["using_redcap_api", "author"] = "Joy Payton"
 df.loc["using_redcap_api", "email"] = "paytonk@chop.edu"
 df.loc["using_redcap_api", "version"] = "2.0.1"
@@ -1910,6 +1914,9 @@ a.append("python_basics_variables_functions_methods")
 a.append("r_basics_introduction")
 df.at["statistical_tests", "Linked Courses"] = list(a)
 a = df.loc["tidy_data", "Linked Courses"]
+a.append("pandas_transform")
+a.append("r_basics_transform_data")
+a.append("r_reshape_long_wide")
 a.append("reproducibility")
 df.at["tidy_data", "Linked Courses"] = list(a)
 a = df.loc["using_redcap_api", "Linked Courses"]
