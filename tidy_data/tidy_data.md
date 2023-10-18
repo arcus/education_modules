@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.3
+version: 1.1.4
 current_version_description: Updated highlight boxes
 module_type: standard
 docs_version: 2.0.0
