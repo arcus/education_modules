@@ -34,9 +34,9 @@ coding_required: false
 
 @sets_you_up_for
 
-- [R Basics: Transforming Data With dplyr](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#1)
-- [Reshaping Data in R: Long and Wide Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_reshape_long_wide/r_reshape_long_wide.md#1)
-- [Transform Data with pandas](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md#1)
+- r_basics_transform_data
+- r_reshape_long_wide
+- pandas_transform
 
 @end
 
