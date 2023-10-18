@@ -306,7 +306,13 @@ Use `!=` if you want to select rows in which a value is **not** equal to another
 In the box below, write a `filter()` statement that returns a data frame containing only the rows from `covid_testing` in which the `last_name` column is NOT equal to "stark". Don't capture the returned data frame to assign it to an object.
 
 [[filter(covid_testing, last_name != "stark")]]
-[[?]] Hint: We include a space after any comma and on either side of the comparison operator `!=`.  We also aren't assigning the results of this `filter` to a new object.
+[[?]] Hint: We aren't assigning the results of this `filter` to a new object.
+[[?]] Hint: Remember, R is case sensitive.
+<script>
+let input = "@input".replace(/\s/g, "");
+input == 'filter(covid_testing,last_name!="stark")' || input == "filter(covid_testing,last_name!='stark')";
+/filter\(\s*covid_testing\s*,\s*last_name\s*!=\s*(['"])stark\1\s*\)/.test(input);
+</script>
 ********
 
 <div class = "answer">
@@ -574,12 +580,19 @@ This approach to coding is powerful because it makes it much easier for someone 
 
 ### Quiz: `%>%`
 
+<div>
 In the box below, rewrite the following statement with a pipe, using the `%>%` version:
 
 `select(mydata, first_name, last_name)`
+</div>
 
 [[mydata %>% select(first_name, last_name)]]
-[[?]] Hint: We include a space after any comma and on either side of the pipe `%>%`.  We also aren't assigning the results of this `select` to a new object.
+[[?]] Hint: We aren't assigning the results of this `select` to a new object.
+[[?]] Hint: Remember, R is case sensitive.
+<script>
+  let input = "@input".trim();
+  /mydata\s*%>%\s*select\(\s*first_name\s*,\s*last_name\s*\)/.test(input);
+</script>
 ********
 
 <div class = "answer">
