@@ -1,8 +1,10 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.3
-module_template_version: 3.0.0
+version: 1.1.4
+current_version_description: Updated highlight boxes
+module_type: standard
+docs_version: 3.0.0
 language: en
 narrator: US English Female
 mode: Textbook
@@ -10,10 +12,11 @@ title: Tidy Data
 comment:  Tidy is a technical term in data analysis and describes an optimal way for organizing data that will be analyzed computationally.
 long_description: Are you concerned about how to organize your data so that it's easier to work with in a computational solution like R, Python, or other statistical software?  This module will explain the concept of "tidy data", which will help make analysis and data reuse a bit simpler.
 estimated_time_in_minutes: 45
+@pre_reqs
 
-good_first_module: false
-collection: intro_to_data_science, demystifying
-coding_required: false
+Experience working with rectangular data (data in rows and columns) will be helpful.  For example, experience working in Excel, Google Sheets, or other software that helps organize data into rows and columns is sufficient expertise to take this module.
+
+@end
 
 @learning_objectives  
 
@@ -23,35 +26,38 @@ After completion of this module, learners will be able to:
 - Describe how messy data could be transformed into tidy data
 - Describe the three tenets of tidy analysis
 
+@end
+
+good_first_module: false
+collection: intro_to_data_science, demystifying
+coding_required: false
+
+@sets_you_up_for
+
+- r_basics_transform_data
+- r_reshape_long_wide
+- pandas_transform
 
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+@depends_on_knowledge_available_in
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@end
+
+@version_history 
+Previous versions: 
+
+- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/271fad92d4642d026584f83125ecc3c439aa5b44/tidy_data/tidy_data.md#1): Initial version
+
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
 
 # Tidy Data
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-Experience working with rectangular data (data in rows and columns) will be helpful.  For example, experience working in Excel, Google Sheets, or other software that helps organize data into rows and columns is sufficient expertise to take this module.
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 
 ## Data Shape
@@ -752,16 +758,4 @@ Data analysis should be concise.  For example, if you're doing a lot of cut-and-
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Tidy+Data%22&version=1.1.1)!
+@feedback
