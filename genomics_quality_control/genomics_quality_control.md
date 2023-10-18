@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.0
+version:  1.1.1
 current_version_description: Add explanation about why we use AWS for genomics modules.
 module_type: standard
 docs_version: 2.0.0
@@ -501,6 +501,16 @@ ls -l -h
 -rw-rw-r-- 1 dcuser dcuser 124M Jul  6 20:22 SRR2589044_1.fastq.gz
 -rw-rw-r-- 1 dcuser dcuser 128M Jul  6 20:24 SRR2589044_2.fastq.gz
 ```
+
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
+You can combine flags in bash!
+
+If you prefer, you can write the above command `ls -lh`. 
+Either way works the same.
+
+</div>
 
 There are six FASTQ files ranging from 124M (124MB) to 545M.
 
