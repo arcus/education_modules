@@ -1,14 +1,23 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 2.0.1
-module_template_version: 3.0.0
+version: 2.0.2
+current_version_description: Added instructions for avoiding pushing API token to GitHub, added information about environment variables, updated highlight boxes, and clarified text editors
+module_type: standard 
+docs_version: 3.0.0
 language: en
 narrator: US English Female
+mode: textbook
 title: Using the REDCap API
 comment:  REDCap is a research data capture tool used by many researchers in basic, translational, and clinical research efforts.  Learn how to use the REDCap API in this module.
 long_description: If your institution provides access to REDCap, this module is right for you.  REDCap is a convenient and powerful way to collect and store research data.  This module will teach you how to interact with the REDCap API, or "Application Programming Interface," which can help you automate your data analysis. This will also help you understand APIs in general and what makes their use so appealing for reproducible research efforts.
-estimated_time_in_minutes: 1 hour
+estimated_time_in_minutes: 60
+
+@pre_reqs
+
+This module assumes that learners already have access to the REDCap application at their institution. Learners will benefit from having used REDCap in the past, although new users of REDCap may find this module useful if they watch an overview video about REDCap (included in this module).  This module requires that learners have either R (preferably with RStudio) or Python (preferably the Anaconda distribution with Jupyter) installed in order to work with the API.  Therefore, some experience with either R or Python is necessary, but template code will be provided within the module.  
+
+@end
 
 @learning_objectives  
 
@@ -18,46 +27,35 @@ After completion of this module, learners will be able to:
 - Enable API usage on REDCap projects
 - Use the REDCap API to pull data into an R or Python data analysis
 
+@end
+
+good_first_module: false
+collection: infrastructure_and_technology
+coding_required: true
+coding_level: intermediate
+coding_language: r, python
+
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
 
 @end
 
 
 @version_history
 1.0.2: make it clear that you need to have R or Python installed
-2.0.0: add section on using environment variables to avoid accidentally sharing your API tokens, and bring highlight boxes up to date with current module template
-
 @end
 
-good_first_module: false
-collection: infrastructure_and_technology
-coding_required: true
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
-
-script: https://kit.fontawesome.com/83b2343bd4.js
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
 
 # Using the REDCap API
 
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-This module assumes that learners already have access to the REDCap application at their institution. Learners will benefit from having used REDCap in the past, although new users of REDCap may find this module useful if they watch an overview video about REDCap (included in this module).  This module requires that learners have either R (preferably with RStudio) or Python (preferably the Anaconda distribution with Jupyter) installed in order to work with the API.  Therefore, some experience with either R or Python is necessary, but template code will be provided within the module.  
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 
 ## REDCap Overview
@@ -779,16 +777,4 @@ We've barely scratched the surface of what you can do with the REDCap API.  Here
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Using+the+REDCap+API%22&version=1.0.3)!
+@feedback
