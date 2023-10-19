@@ -48,7 +48,7 @@ Want to learn more about DART, offer us feedback, or find out how to use our mat
 
 ## Older Updates
 
-### [June 2023 Newsletter](.newsletters/2023_06.md)
+### [June 2023 Newsletter](./newsletters/2023_06.md)
 
 ### [March 2023 Newsletter](./newsletters/2023_03.md)
 
