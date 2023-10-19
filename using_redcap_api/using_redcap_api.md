@@ -45,7 +45,7 @@ coding_language: r, python
 
 
 @version_history
-1.0.2: make it clear that you need to have R or Python installed
+[1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/using_redcap_api/using_redcap_api.md#1): make it clear that you need to have R or Python installed
 @end
 
 
