@@ -5,39 +5,39 @@ layout: default
 
 # News about the DART Program
 
-## **June 2023 Newsletter**
+## **October 2023 Newsletter**
 
-### **Wave 1 Complete, Wave 2 to Begin August 7**
+### **Snapshot of Wave 2, Currently in Progress**
 
-Our first wave of research closed in May, with nearly 100 researchers from various institutions across the United States.  We've learned a lot from this first wave, especially when it comes to our Communities of Practice. We look forward to making interaction between participants simpler and more rewarding in this second wave.  Speaking of Communities of Practice, here are some of what two of our participants shared in their communities as takeaways from their participation:
+The roughly 400 participants in the second wave of the DART are now more than half-way through the program!  
 
-> "My favorite modules were Python and Data Management basics. These have changed the way I think about coding as well as how I am organizing my own data ... I look back over all the work I've done over the years and how silly annotation and storage mishaps have caused me to lose data, waste hours trying to locate files, and even repeating long time-course experiments all because I wasn't as organized as I could be. As a result of this program, I have seriously shifted my thoughts, attitude, and practices!"
-
-> "The program did change my mind on Open Source data; I was skeptical and felt like in a lot of cases it doesn't make sense to share data, but now it makes more sense to me why we actually should have more datasets and codes readily available.
-Thank you for this opportunity!"
-
-**Our next wave of research begins on August 7, 2023, and we'll be sending reminders in July** so that interested biomedical researchers can fill out our screening form and begin the participation process. 
+A plurality of participants (150) are affiliated with Children’s Hospital of Philadelphia, but 5 other institutions have significant participation. We have 65 participants from Baylor College of Medicine, with the next largest cohorts from Duke University (36) and University of Pennsylvania (35). University of Arizona and Harvard also have notable participation numbers with 12 and 10, respectively.
+  
+Wave 2 has a global reach, with participants from institutions including Kilimanjaro Christian Medical University College in Tanzania, Botho University in Botswana, University of Ruhuna in Sri Lanka, and National Cheng Kung University in Taiwan. 
 
 ---
 
-### **University of Botswana uses DART Modules in [Workshops](https://www.research.chop.edu/data-science-workshop-with-university-of-botswana)**
+### **Outcomes from Wave 1 – Significantly Improved Data Science Skills**
 
-We intend for our modules to be used in many ways and encourage anyone to reuse our materials freely.  In April and May 2023, faculty at the University of Botswana used our modules to create a series of data science workshops for healthcare personnel, including clinicians, data and information science professionals, and Botswana Ministry of Health officials. Below, learners concentrate on self-guided modules in the workshop given in the northern town of Maun.
+The first wave of research subjects in the DART program finished in May and our preliminary analyses show participants had striking improvement in data science skills, including: constructing plots and tables to explore data, recording useful metadata, and overcoming challenges when they get stuck!  
 
-![Learners work on their laptop computers in a conference room.](./media/maun.jpg)
+Overall, DART participants in our first wave reported a significant improvement in data science skills from pretest to posttest,t(47) = 10.18, p < .001.
+The graph below shows their answers to three of the pre/post test questions. 
 
----
-
-### **A Glimpse Into Our Process**
-
-In a recent progress report to NIH, we shared information about progress on our research aims. An important part of our work is ongoing improvement of our materials.  From the report:
-
->\[W\]e continue to monitor module feedback data and have noted [24 user-reported suggestions with regard to modules](https://github.com/arcus/education_modules/issues?q=is%3Aissue+label%3Auser-reported+).  Some of these user-reported improvements have related to typos or mistakes, others have indicated accessibility concerns (such as a link to a resource located behind a paywall), and others are related to pedagogical needs, such as the desire to get more explicit quiz and exercise feedback within a module. 
-
-
-If you've made a suggestion or error report in our feedback form, we take that seriously.  The number listed above, 24, is out of date – we are grateful for so many users suggesting improvements. We have now documented over forty [user-reported issues](https://github.com/arcus/education_modules/issues?q=is%3Aissue+is%3Aopen+label%3Auser-reported), more than twenty of which we have resolved.  **Thank you for your collaboration and feedback!**
+![Chart showing that participant answers improved between the pre and post surveys along the scale 1 I wouldn't know where to start, 2 I could struggle through but not confident I could do it, 3 I could probably do it with some trial and error, 4 I am confident in my ability to do it.](./media/wave1_pre_post_graph.png)
 
 ---
+
+### **Expanding and Improving DART’s Offerings**
+
+We continue to add new modules to our offerings. Some of our newest module topics include Regular Expressions, Omics, Docker, Null Hypothesis Significance Testing, and Machine Learning. See the DART website for a [complete list of all modules](https://arcus.github.io/education_modules/list_of_modules). 
+
+We are also constantly improving existing modules. You can follow our progress through the [Issues in our public GitHub repository](https://github.com/arcus/education_modules/issues). Issues tagged as “user-reported” are based on responses from the feedback forms at the end of each module. If you submitted a suggestion in one of the over 1600 responses we have received so far, you can follow along and see how we are addressing it. 
+
+---
+### **Turning DART into a Permanent Resource**
+
+We have been encouraged by our results so far and are now working to shape the program into a long-term resource for biomedical researchers to use and improve for years to come. Look for updates in the future about what this will look like! 
 
 ### **Questions?**
 
@@ -47,6 +47,8 @@ Want to learn more about DART, offer us feedback, or find out how to use our mat
 ---
 
 ## Older Updates
+
+### [June 2023 Newsletter](.newsletters/2023_06.md)
 
 ### [March 2023 Newsletter](./newsletters/2023_03.md)
 
