@@ -2,7 +2,8 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.3.3
+version: 1.3.4
+current_version_description: make CSS come from GCS
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
@@ -26,7 +27,7 @@ good_first_module: false
 collection: infrastructure_and_technology
 coding_required: false
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+link:  https://storage.googleapis.com/chop-dbhi-arcus-education-website-assets/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
 

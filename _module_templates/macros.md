@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.2.0
-current_version_description: fix version piping into REDCap URL
+version:  1.2.1
+current_version_description: make CSS come from GCS
 language: en
 narrator: UK English Female
 title: Module Macros
@@ -128,7 +128,7 @@ We gather this information in order to iteratively improve our work.  Thank you 
 </script>
 @end
 
-link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/styles.css
+link:  https://storage.googleapis.com/chop-dbhi-arcus-education-website-assets/css/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
