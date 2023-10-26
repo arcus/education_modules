@@ -3,7 +3,7 @@ df=pd.DataFrame()
 
 df.loc["bash_103_combining_commands", "author"] = "Elizabeth Drellich and Nicole Feldman"
 df.loc["bash_103_combining_commands", "email"] = "drelliche@chop.edu and feldmanna@chop.edu"
-df.loc["bash_103_combining_commands", "version"] = "1.4.0"
+df.loc["bash_103_combining_commands", "version"] = "1.4.1"
 df.loc["bash_103_combining_commands", "current_version_description"] = "Added webinar links to additional resources"
 df.loc["bash_103_combining_commands", "module_type"] = "standard"
 df.loc["bash_103_combining_commands", "docs_version"] = "2.0.0"
@@ -28,7 +28,7 @@ df.loc["bash_103_combining_commands", "pre_reqs"] = "Learners should be familiar
 df.loc["bash_103_combining_commands", "learning_objectives"] = "&After completion of this module, learners will be able to:&&- Use the commands `wc`, `head`, `tail`,`sort`, and `uniq`&- Redirect output to a file using `>` and `>>`&- Chain commands directly using the pipe `|`&" 
 df.loc["bash_103_combining_commands", "sets_you_up_for"] = "- bash_scripts&" 
 df.loc["bash_103_combining_commands", "depends_on_knowledge_available_in"] = "- bash_command_line_101&- bash_command_line_102&" 
-df.loc["bash_103_combining_commands", "version_history"] = "&Previous versions: &&- [1.3.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/bash_103_combining_commands/bash_103_combining_commands.md#1): Restructured learning objectives.&- [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/8e01732bc52d86e63c28ee8ef7abaed2c003cb3f/bash_103_combining_commands/bash_103_combining_commands.md): Corrected quiz answer&- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ed49367f50018e9c32c206d30047cee5d4e24a92/bash_103_combining_commands/bash_103_combining_commands.md: Updated highlight boxes and clarified instructions&- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_103_combining_commands/bash_103_combining_commands.md): Initial Version &" 
+df.loc["bash_103_combining_commands", "version_history"] = "&Previous versions: &&- [1.3.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/bash_103_combining_commands/bash_103_combining_commands.md#1): Restructured learning objectives.&- [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/8e01732bc52d86e63c28ee8ef7abaed2c003cb3f/bash_103_combining_commands/bash_103_combining_commands.md): Corrected quiz answer&- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ed49367f50018e9c32c206d30047cee5d4e24a92/bash_103_combining_commands/bash_103_combining_commands.md): Updated highlight boxes and clarified instructions&- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_103_combining_commands/bash_103_combining_commands.md): Initial Version &" 
 df.loc["bash_command_line_101", "author"] = "Nicole Feldman and Elizabeth Drellich"
 df.loc["bash_command_line_101", "email"] = "feldmanna@chop.edu drelliche@chop.edu"
 df.loc["bash_command_line_101", "version"] = "1.5.2"
