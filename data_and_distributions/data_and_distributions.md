@@ -96,4 +96,21 @@ That cutoff is -1.96 below the mean and 1.96 above the mean.
 So in our example above, where the patient scores 2 standard deviations above the mean on a risk scale for pancreatitis, that would be a Z-score of 2, and it would be considered significant. 
 In other words, that score is high enough that it's implausible he might truly have only average risk but just happened to score higher because of some random variability in the measurements. 
 
+## What is the standard error?
+
 ## t-test
+
+## Communicating your results
+
+Many plots focus on the precision of the estimate -- in other words, the size of the standard error. 
+You may be familiar with box plots or bar plots that show group estimates (usually means) and then an error bar with the standard error. 
+
+There are drawbacks to focusing on the precision of the estimate, though. 
+Crucially, many people (including experts!) confuse a precise estimate with a large or meaningful effect. 
+When we see a plot that shows, for example, means for a new treatment vs. standard care and error bars for each that don't overlap, we are likely to conclude that the new treatment is much better than standard care. 
+
+https://www.pnas.org/doi/10.1073/pnas.2302491120
+
+Significance testing (and estimate precision) is important but it's usually effect size we're thinking about when we start to consider the practical implications of a finding. 
+If you're thinking about whether or not to start recommending a new treatment program to your patients, you need to know **how much** better the new program is over standard care if you want to effectively help your patients weigh the pros and cons. 
+
