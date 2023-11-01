@@ -1,0 +1,50 @@
+---
+title: "Analyze GH issues"
+author: "Rose Hartman"
+date: '2023-09-06'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(gh)
+library(purrr)
+```
+
+```{r}
+issues <- gh("/repos/arcus/education_modules/issues", .limit = Inf)
+```
+
+```{r}
+iss_df <-
+  tibble::tibble(
+    issue_id = issues |>  purrr::map_int("id"),
+    issue = issues |>  purrr::map_chr("title"),
+    state = issues |>  purrr::map_chr("state"),
+    issue_number = issues |>  purrr::map_int("number"),
+    labels = issues |> purrr::map("labels"),
+    pr = issues |> purrr::map(\(x) pluck_exists(x, "pull_request"))
+    ) |> 
+  # exclude pull requests
+  dplyr::filter(pr == FALSE) |>  
+  # get info about each label
+  tidyr::unnest_longer(labels) |> 
+  tidyr::hoist(labels, 
+               label = "name",
+               color = "color") |> 
+  dplyr::mutate(label_type = ifelse(color == "44AA99", "module", "other")) |> 
+  # drop unneeded columns
+  dplyr::select(-pr, -labels, -color) 
+```
+
+How many open issues per module?
+
+```{r}
+iss_df |> 
+  dplyr::filter(label_type == "module") |> 
+  dplyr::count(label) |> 
+  dplyr::arrange(desc(n))
+```
+
+
