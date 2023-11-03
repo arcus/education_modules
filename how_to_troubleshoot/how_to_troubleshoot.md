@@ -4,12 +4,12 @@ email:    paytonk@chop.edu
 version: 1.1.3
 current_version_description: update highlight boxes and clarify instructions
 module_type: standard
-docs_version: 2.0.0
+docs_version: 3.0.0
 language: en
 narrator: US English Female
 mode: Textbook
 title: How to Troubleshoot
-comment:  Learning to use technical methods like coding and version control in your research inevitably means running into problems.  Learn practical methods for troubleshooting and moving past error codes and other difficulties.
+comment:  Learning to use technical methods  like coding and version control in your research inevitably means running into problems.  Learn practical methods for troubleshooting and moving past error codes and other difficulties.
 long_description: When technical methods, such as writing code, using version control, and creating data visualizations are used, there will moments when a cryptic error message appears or the code simply doesn't do what it was intended to do.  This module will help people at various levels of technical expertise learn how to troubleshoot in tech more effectively.
 estimated_time_in_minutes: 30
 
@@ -28,7 +28,7 @@ This module assumes that learners have started using technical methods such as w
 @end
 
 good_first_module: false
-collection: learn_to_code
+collection: intro_to_data_science
 coding_required: false
 @sets_you_up_for
 
