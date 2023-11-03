@@ -4,7 +4,7 @@ email:    paytonk@chop.edu
 version: 1.1.3
 current_version_description: update highlight boxes and clarify instructions
 module_type: standard
-docs_version: 1.3.1
+docs_version: 2.0.0
 language: en
 narrator: US English Female
 mode: Textbook
