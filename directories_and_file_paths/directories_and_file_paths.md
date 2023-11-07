@@ -2,15 +2,21 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.3.4
-current_version_description: make CSS come from GCS
-module_template_version: 3.0.0
+version: 1.3.5
+current_version_description: update to new highlight box styles
+module_type: standard
+docs_version: 3.0.0
 language: en
 narrator: UK English Female
+mode: Textbook
 title: Directories and File Paths
 comment: In this module, learners will explore what a directory is and how to describe the location of a file using its file path.   
 long_description: When doing data analysis in a programming language like R or Python, figuring out how to point the program to the file you need can be confusing. This module will help you learn about how files and folders are organized on your computer, how to describe the location of your file in a couple of different ways, and name files and folders in a descriptive and systematic way.
 estimated_time_in_minutes: 15
+
+@pre_reqs
+None. 
+@end
 
 @learning_objectives  
 
@@ -26,35 +32,29 @@ After completion of this module, learners will be able to:
 good_first_module: false
 collection: infrastructure_and_technology
 coding_required: false
+@sets_you_up_for
 
-link:  https://storage.googleapis.com/chop-dbhi-arcus-education-website-assets/css/styles.css
+- bash_command_line_101
+- bash_command_line_102
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@end
+
+@depends_on_knowledge_available_in: 
+
+@end
+@version_history 
+Previous versions: 
+
+- [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/fa5f0b0df5a901d188e8c36bc303a1d39b771b72/directories_and_file_paths/directories_and_file_paths.md): add instructions for finding absolute file paths
+- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/914714acfb6b30980e011ab09e087d4d2c5c918e/directories_and_file_paths/directories_and_file_paths.md#1): Fix "writing a file path" quiz answer and add definition of "directory" 
+- [1.0.0](https://raw.githubusercontent.com/arcus/education_modules/99375ea5b5b20c9ece7fc69e1fb14776b412e0ad/directories_and_file_paths/directories_and_file_paths.md): Initial version
+@end
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
 
 # Directories and File Paths
-
-<div class = "overview">
-
-## Overview
-
-@comment
-
-**Is this module right for me?**
-
-@long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**: None.
-
-**Learning Objectives**:
-
-@learning_objectives
-
-</div>
-
+@overview
 
 ## Files and folders
 
@@ -301,16 +301,4 @@ Can you think of a few alternative names for the file above that would be more d
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Directories+and+File+Paths%22&version=1.3.2)!
+@feedback
