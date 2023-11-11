@@ -58,7 +58,8 @@ Previous versions:
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
+import: https://raw.githubusercontent.com/arcus/education_modules/pyodide_testing/_module_templates/macros_python.md
+import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 -->
 
 # Python Lesson on Clustering for Machine Learning
@@ -189,32 +190,87 @@ The goal of the K-Means clustering algorithm is to group similar data points tog
 ### Python Implementation of K-Means Clustering
     
 
+To implement k-means clustering in Python using Scikit-learn, we can follow these steps:
+
+1.  Import the necessary libraries:
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.cluster import KMeans
+from scipy.spatial import distance
 ```
-import numpy as np # Library for math manipulation, loading data
-import matplotlib.pyplot as plt # Library for plotting
-from sklearn.cluster import KMeans # Library for KMeans clustering
+@Pyodide.eval
 
-# Load the data
-data = np.loadtxt("data.csv", delimiter=",")
 
-# Choose the number of clusters
-n_clusters = 3
+2.  Load the data:
+```python @Pyodide.exec
 
-# Initialize the KMeans model
-kmeans = KMeans(n_clusters=n_clusters)
+import pandas as pd
+import io
+from pyodide.http import open_url
 
-# Fit the model to the data
-kmeans.fit(data)
+url = "https://raw.githubusercontent.com/arcus/education_modules/python_clustering/python_clustering/data/heart.csv"
 
-# Predict the cluster labels for each data point
-cluster_labels = kmeans.predict(data)
+url_contents = open_url(url)
+text = url_contents.read()
+file = io.StringIO(text)
 
-plt.scatter(data[:, 0], data[:, 1], c=cluster_labels)
-plt.xlabel("Feature 1")
-plt.ylabel("Feature 2")
-plt.title("K-Means Clustering")
+data = pd.read_csv(file)
+
+
+# Analyze data and features
+data.info()
+```
+
+
+3.  Visualize data
+```python
+# Create the scatter plot
+data.plot.scatter(x='chol', y='trtbps', c='output', colormap='viridis')
+plt.xlabel("Cholesterol")
+plt.ylabel("Resting Blood Pressure")
+plt.title("Scatter Plot of Cholesterol vs. Blood Pressure")
 plt.show()
 ```
+@Pyodide.eval
+
+3.  Split the data into training and testing sets:
+```python
+# Normalize dataframe
+def normalize(df, features):
+    result = df.copy()
+    for feature_name in features:
+        max_value = df[feature_name].max()
+        min_value = df[feature_name].min()
+        result[feature_name] = (df[feature_name] - min_value) / (max_value - min_value)
+    return result
+
+normalized_data = normalize(data, data.columns)
+```
+@Pyodide.eval
+
+4.  Train the clustering model and visualize:
+```python
+# Run KMeans
+kmeans = KMeans(n_clusters = 2, max_iter = 500, n_init = 40, random_state = 2)
+
+# Predict clusters
+identified_clusters = kmeans.fit_predict(normalized_data.values)
+results = normalized_data.copy()
+results['cluster'] = identified_clusters
+
+# Compute distance from cluster
+distance_from_centroid = [distance.euclidean(val[:-1],kmeans.cluster_centers_[int(val[-1])]) for val in results.values]
+results['dist'] = distance_from_centroid
+results.plot.scatter(x='chol', y='trtbps', c='cluster', colormap='viridis', s='dist')
+plt.xlabel("Cholesterol")
+plt.ylabel("Resting Blood Pressure")
+plt.show()
+```
+@Pyodide.eval
+
     
 
 ### Applying K-Means Clustering to a Real-World Dataset
