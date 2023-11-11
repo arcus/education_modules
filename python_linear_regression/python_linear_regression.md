@@ -58,7 +58,8 @@ Previous versions:
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
+import: https://raw.githubusercontent.com/arcus/education_modules/pyodide_testing/_module_templates/macros_python.md
+import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 -->
 
 # Python Lesson on Regression for Machine Learning
@@ -144,41 +145,89 @@ The variance of the target variable is not a component of the linear regression 
 
 To implement linear regression in Python using Scikit-learn, we can follow these steps:
 
+
+
 1.  Import the necessary libraries:
-```
+```python
 import numpy as np
+import pandas as pd
+
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
 ```
+@Pyodide.eval
+
 
 2.  Load the data:
-```
-# Load the data as a NumPy array
-data = np.loadtxt("data.csv", delimiter=",")
+```python @Pyodide.exec
 
-# Split the data into features and target variable
-X = data[:, :-1]
-y = data[:, -1]
+import pandas as pd
+import io
+from pyodide.http import open_url
+
+url = "https://raw.githubusercontent.com/arcus/education_modules/linear_regression/python_linear_regression/data/healthcare_investments_and_hospital_stay.csv"
+
+url_contents = open_url(url)
+text = url_contents.read()
+file = io.StringIO(text)
+
+data = pd.read_csv(file)
+
+# Analyze data and features
+data.info()
 ```
 
 3.  Split the data into training and testing sets:
-```
-from sklearn.model_selection import train_test_split
+```python
 
-# Split the data into 80% training and 20% testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Encode categorical data into numbers
+def onehot_encode(df, column):
+    df = df.copy()
+    dummies = pd.get_dummies(df[column])
+    df = pd.concat([df, dummies], axis=1)
+    df = df.drop(column, axis=1)
+    return df
+
+def preprocess_inputs(df):
+    df = df.copy()
+    
+    # One-hot encode Location column
+    df = onehot_encode(df, column='Location')
+    
+    # Split df into X and y
+    y = df['Hospital_Stay'].copy()
+    X = df.drop('Hospital_Stay', axis=1).copy()
+    
+    # Train-test split
+    X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.7, random_state=123)
+    
+    # Scale X with a standard scaler
+    scaler = StandardScaler()
+    scaler.fit(X_train)
+    
+    X_train = pd.DataFrame(scaler.transform(X_train), columns=X.columns)
+    X_test = pd.DataFrame(scaler.transform(X_test), columns=X.columns)
+    
+    return X_train, X_test, y_train, y_test
+
+X_train, X_test, y_train, y_test = preprocess_inputs(data)
+
 ```
+@Pyodide.eval
 
 4.  Train the linear regression model:
-```
+```python
 # Create a linear regression model
 model = LinearRegression()
 
 # Fit the model to the training data
 model.fit(X_train, y_train)
 ```
+@Pyodide.eval
 
 5.  Evaluate the model on the testing set:
-```
+```python
 # Make predictions on the testing set
 y_pred = model.predict(X_test)
 
@@ -187,20 +236,12 @@ mse = np.mean((y_pred - y_test)**2)
 
 # Print the MSE
 print("MSE:", mse)
+
+# Evaluate R^2 Score
+print(" R^2 Score: {:.5f}".format(model.score(X_test, y_test)))
 ```
+@Pyodide.eval
 
-6.  Make predictions on new data:
-```
-# New data point
-new_data = np.array([[1000, 3, 2]])
-
-# Make a prediction on the new data point
-y_pred = model.predict(new_data)
-
-# Print the prediction
-print("Prediction:", y_pred[0])
-
-```
 
 This is a basic example of how to implement linear regression in Python using Scikit-learn. There are many other ways to implement linear regression in Python, but this is a good starting point.
 
