@@ -2,8 +2,8 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.1
-current_version_description: Initial version
+version:  1.1.0
+current_version_description: Updated description and prerequisites to make it clearer that this is not a module for beginners. 
 module_type: wrapper
 docs_version: 1.0.0
 language: en
@@ -14,12 +14,19 @@ title: Getting Started with Docker for Research
 
 comment: This tutorial combines a hands-on interactive Docker tutorial published by Docker Inc with an academic article outlining best practices for using Docker for research. 
 
-long_description: If you've been curious about how to use Docker for your research, this module is a great place to start. The Docker 101 tutorial is a popular, hands-on approach to learning Docker that will get you using containers right away, so you can learn by doing. To help you bridge the gap between basic Docker use and best practices for using Docker in research, we also link to an article outlining 10 rules to help you create great containers for research, and lists of ready-to-use Docker images for a variety of analysis workflows. This module includes running and editing commands in the terminal, so you'll need some basic familiarity with bash, but it is otherwise appropriate for beginners. No prior experience with Docker or containers is assumed. 
+long_description: If you've been curious about how to use Docker for your research, this module is a great place to start. The Docker 101 tutorial is a popular, hands-on approach to learning Docker that will get you using containers right away, so you can learn by doing. To help you bridge the gap between basic Docker use and best practices for using Docker in research, we also link to an article outlining 10 rules to help you create great containers for research, and lists of ready-to-use Docker images for a variety of analysis workflows. This module includes running and editing commands in the terminal, so you'll need some familiarity with bash. No prior experience with Docker or containers is assumed. 
 
 estimated_time_in_minutes: 60
 
 @pre_reqs
-This module assumes no prior experience with containers, and no particular coding other than some familiarity with the command line, such as being able to change directories and run bash commands that will be supplied for you to copy and paste. You will need to create and edit text files in a text editor like VSCode. 
+This module assumes no prior experience using containers or Docker, but you should know what a container is.
+
+You will also need some familiarity with working on the command line (bash). In particular, you should be comfortable with doing the following at the command line: 
+
+- changing directories
+- running bash commands that will be supplied for you to copy and paste, including using flags
+
+You will need to create and edit text files using the command line or in a text editor like VSCode. 
 
 You'll also need to create an account on [Docker Hub](https://hub.docker.com/) (it's free), if you don't have one already, and you'll need to be able to install the Docker Desktop software on your machine (also free). 
 @end
@@ -75,7 +82,9 @@ coding_language: bash
 @end
 
 @version_history
-No previous versions.
+Previous versions: 
+
+* [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/docker_101/docker_101.md):  Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
