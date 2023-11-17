@@ -588,8 +588,8 @@ df.loc["directories_and_file_paths", "long_description"] = "When doing data anal
 df.loc["directories_and_file_paths", "learning_objectives"] = "&After completion of this module, learners will be able to:&&- Describe what a directory is&- Distinguish between a relative file path and an absolute file path&- Describe the location of a file using its file path&- Describe a few best practices and conventions of naming files and folders&&" 
 df.loc["docker_101", "author"] = "Rose Hartman"
 df.loc["docker_101", "email"] = "hartmanr1@chop.edu"
-df.loc["docker_101", "version"] = "1.0.1"
-df.loc["docker_101", "current_version_description"] = "Initial version"
+df.loc["docker_101", "version"] = "1.1.0"
+df.loc["docker_101", "current_version_description"] = "Updated description and prerequisites to make it clearer that this is not a module for beginners; added troubleshooting box about creating a file with no extension. "
 df.loc["docker_101", "module_type"] = "wrapper"
 df.loc["docker_101", "docs_version"] = "1.0.0"
 df.loc["docker_101", "language"] = "en"
@@ -608,12 +608,12 @@ df.loc["docker_101", "coding_language"] = "bash"
 df.loc["docker_101", "sequence_name"] = ""
 df.loc["docker_101", "previous_sequential_module"] = ""
 df.loc["docker_101", "comment"] = "This tutorial combines a hands-on interactive Docker tutorial published by Docker Inc with an academic article outlining best practices for using Docker for research. " 
-df.loc["docker_101", "long_description"] = "If you've been curious about how to use Docker for your research, this module is a great place to start. The Docker 101 tutorial is a popular, hands-on approach to learning Docker that will get you using containers right away, so you can learn by doing. To help you bridge the gap between basic Docker use and best practices for using Docker in research, we also link to an article outlining 10 rules to help you create great containers for research, and lists of ready-to-use Docker images for a variety of analysis workflows. This module includes running and editing commands in the terminal, so you'll need some basic familiarity with bash, but it is otherwise appropriate for beginners. No prior experience with Docker or containers is assumed. " 
-df.loc["docker_101", "pre_reqs"] = "This module assumes no prior experience with containers, and no particular coding other than some familiarity with the command line, such as being able to change directories and run bash commands that will be supplied for you to copy and paste. You will need to create and edit text files in a text editor like VSCode. &&You'll also need to create an account on [Docker Hub](https://hub.docker.com/) (it's free), if you don't have one already, and you'll need to be able to install the Docker Desktop software on your machine (also free). &" 
+df.loc["docker_101", "long_description"] = "If you've been curious about how to use Docker for your research, this module is a great place to start. The Docker 101 tutorial is a popular, hands-on approach to learning Docker that will get you using containers right away, so you can learn by doing. To help you bridge the gap between basic Docker use and best practices for using Docker in research, we also link to an article outlining 10 rules to help you create great containers for research, and lists of ready-to-use Docker images for a variety of analysis workflows. This module includes running and editing commands in the terminal, so you'll need some familiarity with bash. No prior experience with Docker or containers is assumed. " 
+df.loc["docker_101", "pre_reqs"] = "This module assumes no prior experience *using* containers or Docker, but you should know what a container is.&&You will also need some familiarity with working on the command line (bash). In particular, you should be comfortable with doing the following at the command line: &&- [changing directories](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#navigating-in-bash)&- running bash commands that will be supplied for you to copy and paste, including using flags&&You will also need some general-purpose programming and computer skills, like the following:&&- [navigate your computer's file system](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#1)&- create and edit text files in a text editor like VSCode&- [troubleshoot errors in code](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/how_to_troubleshoot/how_to_troubleshoot.md#1) by searching online&&You'll also need to create an account on [Docker Hub](https://hub.docker.com/) (it's free), if you don't have one already, and you'll need to be able to install the Docker Desktop software on your machine (also free). &" 
 df.loc["docker_101", "learning_objectives"] = "After completion of this module, learners will be able to:&&- Use the command line to create and run a container from a Dockerfile&- Share containers &- Understand both technical requirements and best practices for writing Dockerfiles for use in research&" 
 df.loc["docker_101", "sets_you_up_for"] = "&" 
 df.loc["docker_101", "depends_on_knowledge_available_in"] = "- demystifying_containers&" 
-df.loc["docker_101", "version_history"] = "No previous versions.&" 
+df.loc["docker_101", "version_history"] = "Previous versions: &&* [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/docker_101/docker_101.md):  Initial version&" 
 df.loc["elements_of_maps", "author"] = "Elizabeth Drellich"
 df.loc["elements_of_maps", "email"] = "drelliche@chop.edu"
 df.loc["elements_of_maps", "version"] = "1.0.4"
@@ -1727,7 +1727,10 @@ df.at["demystifying_sql", "Linked Courses"] = list(a)
 a = df.loc["directories_and_file_paths", "Linked Courses"]
 df.at["directories_and_file_paths", "Linked Courses"] = list(a)
 a = df.loc["docker_101", "Linked Courses"]
+a.append("bash_command_line_101")
 a.append("demystifying_containers")
+a.append("directories_and_file_paths")
+a.append("how_to_troubleshoot")
 df.at["docker_101", "Linked Courses"] = list(a)
 a = df.loc["elements_of_maps", "Linked Courses"]
 a.append("geocode_lat_long")
