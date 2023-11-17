@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.3.0
+version: 1.3.1
 current_version_description: Added webinar links to additional resources
 module_type: standard
 docs_version: 2.0.0
@@ -544,14 +544,16 @@ The `^` symbol next to each of the option at the bottom of the nano screen refer
 
 </div>
 
-Now it is time to put some commands into this script. Here is an example you can copy and experiment with by changing some of the lines to other commands you know.
+Now it is time to put some commands into this script. When you think your script is ready, test that it does what you think it should by saving your work, exiting nano, and then running your script.
+
+Here is an example you can copy and experiment with by changing some of the lines to other commands you know. 
 
 ```
 echo What is your name?
 read name
 echo What is your favorite number $name?
 read number
-echo Why do you prefer $number to $(($number + 1)?
+echo Why do you prefer $number to $(($number + 1))?
 read answer
 echo That is an interesting answer $name. My favorite number is $(($number * 2 + 1)).
 ```
