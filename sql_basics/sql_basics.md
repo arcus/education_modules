@@ -1,6 +1,6 @@
 <!--
-author: Peter Camacho
-email: camachop@chop.edu
+author: Peter Camacho; Joy Payton
+email: camachop@chop.edu, paytonk@chop.edu
 version: 1.1.1
 current_version_description: Add solutions, add definitions, move challenge solutions,  after code blocks, update highlight boxes, fix typos, update front matter fields.
 module_type: standard
@@ -210,7 +210,7 @@ Notice that the `FROM` line of this query is followed by 2 words separated by a 
 
 So the first word in the dot notation below is "alasql", which is the name of the **schema** or **catalog** or **dataset** that your data is stored in (terms differ according to the dialect of SQL that you're using), and the second word, "patients", is the name of the specific table you would like to reference as the base of your query.
 
-Ready to try this?  Hit the execute button below the SQL code to run this query and you'll see the results appear!
+Ready to try this?  Hit the execute button below the SQL code to run this query.  Because the results here are large on the screen, we've put the results in a collapsible section that you can close when you're finished looking at them!
 
 ```sql
 SELECT *
@@ -218,10 +218,19 @@ FROM alasql.patients;
 ```
 @AlaSQL.eval("#dataTable6a")
 
+<details open>
+
+<summary>**Results of Query (click to collapse or expand this section)**</summary>
+
 <table id="dataTable6a" border="1"></table>
 
+</details><br/><br/>
 
-Now, complete the code below.  How would you get all the fields from the table `alasql.allergies`?  When you think you have it, add the code in the box below and try running the code to see if you get it right.
+Now, complete the code below.  How would you get all the fields from the table `alasql.allergies`?  
+
+It might help to hide the query results from the query above, by clicking beside "Results of Query."  That way you can see the SQL query we used, and model your code on the query above!
+
+When you think you have it, add the code in the box below and try running the query to see if you get it right.
 
 
 ```sql
@@ -230,9 +239,14 @@ FROM  ;
 ```
 @AlaSQL.eval("#dataTable6b")
 
+
+<details open>
+
+<summary>**Results of Query (click to collapse or expand this section)**</summary>
+
 <table id="dataTable6b" border="1"></table>
 
-
+</details><br/><br/>
 <div style = "display:none;">
 
 @AlaSQL.buildTable_patients
@@ -241,7 +255,7 @@ FROM  ;
 </div>
 
 <details>
-<summary style = "margin-bottom: 1rem;">*If you have given it a good try and are stuck... click here to show/hide an answer!*</summary>
+<summary style = "margin-bottom: 1rem;">*If you have given it a good try and are stuck trying to show all of the `allergies` table ... click here to show/hide an answer!*</summary>
 
 Try:
 
@@ -273,7 +287,14 @@ FROM alasql.patients;
 ```
 @AlaSQL.eval("#dataTable6c")
 
+
+<details open>
+
+<summary>**Results of Query (click to collapse or expand this section)**</summary>
+
 <table id="dataTable6c" border="1"></table>
+
+</details><br/><br/>
 
 
 <div style = "display:none;">
@@ -354,7 +375,7 @@ Which of the following is **not** true about DISTINCT?  Select all that apply!
 In the code block below, write a query that will return the unique combinations of `county` and `state` from the `patients` table.  Then we'll ask you a question about your findings!
 
 ```sql
-
+SELECT ... 
 ```
 @AlaSQL.eval("#dataTable8a")
 <table id="dataTable8a" border="1"></table>
@@ -469,7 +490,7 @@ WHERE
 
 <table id="dataTable10a" border="1"></table>
 
-
+<br/><br/>
 Although the above example lists only one constraint for the dataset, the WHERE clause can contain any number of filtering arguments needed.
 
 Check out the code block below for an example of a where clause that includes multiple constraints, and makes use of both **comparison** operators like `=` and `<=` and **logical** operators including `AND` and `OR`.  Also take a look at the useful comments!  The queries are getting a bit more complex, so it's worth trying to describe this query to yourself in plain English (or another natural language).
@@ -547,6 +568,8 @@ If you ever find yourself in a situation where you need to filter on null values
 
 Here, we're asking to see rows from the `allergies` table where the `stop` value (the date at which the presumed allergy was considered no longer applicable, resolved, a mistake, or not an allergy) isn't missing.  In other words, the allergy has a date at which it was ruled to not exist.
 
+Because the results here are large on the screen, we've put the results in a collapsible section that you can close when you're finished looking at them!
+
 ```sql
 SELECT *
 FROM alasql.allergies
@@ -555,8 +578,13 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable11a")
 
+<details open>
+
+<summary>**Results of Query (click to collapse or expand this section)**</summary>
+
 <table id="dataTable11a" border="1"></table>
 
+</details><br/><br/>
 
 It's also worth noting that null values are treated very differently from actual data.  Note that you cannot use operators like `=` to ask if something is null, because null values are inherently unknowable, so we can't know what a null value is equal to.  You can't do math with a null value and you can't compare to a null value.  To illustrate this point, we can look at an example below.  
 
@@ -577,8 +605,17 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable11b")
 
+
+<details open>
+
+<summary>**Results of Query (click to collapse or expand this section)**</summary>
+
 <table id="dataTable11b" border="1"></table>
 
+</details>
+
+<br/>
+<br/>
 
 Why is this interesting?  Because sometimes we want to return a mix of null and non-null values.  For example, maybe you're aware that allergies with a `stop` date prior to March 1, 2020 have data quality issues and need to be checked -- these could be real allergies that should not have a `stop` date.  And to that group of possible allergies you want to add the cases where there is no `stop` date at all, where we can presume that the allergy wasn't ruled out.  In order to make sure that records where the `stop` date is null are also included in our output we will need to add another line to  the select statement to explicitly include them, as shown below.  
 
@@ -593,8 +630,14 @@ WHERE
 ```
 @AlaSQL.eval("#dataTable11c")
 
+
+<details open>
+
+<summary>**Results of Query (click to collapse or expand this section)**</summary>
+
 <table id="dataTable11c" border="1"></table>
 
+</details><br/><br/>
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
@@ -606,7 +649,7 @@ The fact that nulls aren't included in comparisons is a very subtle distinction 
 Sometimes you want to evaluate missing data patterns.  For example, maybe there's a discernible pattern in patients who are missing sex or race data.  Write and run a query in the code box below that will give you all the fields for rows in `patients` where either the sex or race data is missing.   (Hint: there might not be any rows that have missing data in those two fields).
 
 ```sql
-
+SELECT ...
 ```
 @AlaSQL.eval("#dataTable11b")
 
@@ -644,9 +687,9 @@ WHERE
   patients.race = NULL OR
   patients.sex = NULL.
 ```
-@AlaSQL.eval("#dataTable0d")
+@AlaSQL.eval("#dataTable13a")
 
-<table id="dataTable0d" border="1"></table>
+<table id="dataTable13a" border="1"></table>
 
 
 [[X]] ` = NULL ` should be changed to ` IS NULL `
@@ -674,9 +717,9 @@ FROM alasql.patients # note that this uses dot notation
 WITH
   sex = M;
 ```
-@AlaSQL.eval("#dataTable12a")
+@AlaSQL.eval("#dataTable13b")
 
-<table id="dataTable12a" border="1"></table>
+<table id="dataTable13b" border="1"></table>
 
 
 
@@ -699,6 +742,14 @@ While you **could** omit `alasql`, it certainly isn't hurting things, and it's o
 
 ***************
 
+
+<div style = "display:none;">
+
+@AlaSQL.buildTable_patients
+
+</div>
+
+
 ### ORDER BY Statement
 
 Another useful piece of SQL syntax for exploring datasets is the `ORDER BY` statement, which (as its name suggests) is used to order your result set by a given set of one or more columns.
@@ -714,9 +765,9 @@ ORDER BY
   patients.county ASC
   ,patients.ethnicity DESC;
 ```
-@AlaSQL.eval("#dataTable13a")
+@AlaSQL.eval("#dataTable14a")
 
-<table id="dataTable13a" border="1"></table>
+<table id="dataTable14a" border="1"></table>
 
 
 Some things to think about:
@@ -767,9 +818,9 @@ SELECT *
 FROM alasql.patients
 LIMIT 3;
 ```
-@AlaSQL.eval("#dataTable14a")
+@AlaSQL.eval("#dataTable15a")
 
-<table id="dataTable14a" border="1"></table>
+<table id="dataTable15a" border="1"></table>
 
 
 <div style = "display:none;">
@@ -800,9 +851,9 @@ SELECT
   ,p.state AS state_name
 FROM alasql.patients AS p;
 ```
-@AlaSQL.eval("#dataTable15a")
+@AlaSQL.eval("#dataTable16a")
 
-<table id="dataTable15a" border="1"></table>
+<table id="dataTable16a" border="1"></table>
 
 
 In the SQL code block below, try writing a query that accomplishes the following.  Because there are several constraints, try starting with a simple query (something like a `SELECT * ...`) and gradually changing it so that you knock out one bullet point at a time.
