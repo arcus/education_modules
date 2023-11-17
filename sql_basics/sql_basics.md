@@ -744,7 +744,7 @@ While you **could** omit `alasql`, it certainly isn't hurting things, and it's o
 ***************
 
 
-<div style = "display:none;">
+<div>
 
 @AlaSQL.buildTable_patients
 
