@@ -2,7 +2,7 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version: 1.5.2
+version: 1.5.3
 current_version_description: Updated metadata and macros
 module_type: standard
 docs_version: 2.0.0
@@ -85,7 +85,7 @@ It should be noted that Macs with the Catalina Operating System or later are run
 
 ### Windows Computers
 
-Check in your start menu if you have either **WLS** (the Windows Subsystem for Linux) or **Git Bash** already installed on your computer. If you have either one of those programs and can open a command line interface using it, you are all ready to get started!
+Check in your start menu if you have either **WSL** (the Windows Subsystem for Linux) or **Git Bash** already installed on your computer. If you have either one of those programs and can open a command line interface using it, you are all ready to get started!
 
 If you do not have either of those programs available, please follow the instructions below. **Do not use the PowerShell** program for this lesson, it utilizes a different scripting language.
 
