@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.4.3
+version: 1.4.4
 current_version_description: Updated with new metadata and to remove references to Binderhub
 module_type: standard
 docs_version: 2.0.0
@@ -237,7 +237,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor)
 
 ### Distinguish groups more clearly with custom colors and shape
 
-So far, we've been sticking to ggplot's default color scheme, but you can control what colors are used in your plots. There are a number of excellent tutorials available about how to control the colors in your ggplot visualizations (here is one [color in ggplot tutorial]((https://blogs.uoregon.edu/rclub/2015/02/17/picking-pretty-plot-palates/)), and [another color in ggplot tutorial](https://www.r-graph-gallery.com/ggplot2-color.html)). Here we'll just show one approach, using colors you specify by hand.
+So far, we've been sticking to ggplot's default color scheme, but you can control what colors are used in your plots. There are a number of excellent tutorials available about how to control the colors in your ggplot visualizations (here is one [color in ggplot tutorial](https://blogs.uoregon.edu/rclub/2015/02/17/picking-pretty-plot-palates/), and [another color in ggplot tutorial](https://www.r-graph-gallery.com/ggplot2-color.html)). Here we'll just show one approach, using colors you specify by hand.
 
 ```r
 # save the colors you want to use as a vector
