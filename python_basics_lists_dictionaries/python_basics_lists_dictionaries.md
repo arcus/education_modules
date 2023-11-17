@@ -2,10 +2,10 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.1
-current_version_description: Initial version
+version: 1.1.1
+current_version_description: Added clarifying language about `.pop()` method, added more thorough explanation of the correct answer to the second dictionary quiz question, explained that there is no requirement to memorize methods, and added hint to the third dictionary quiz question about the use of quotation marks.
 module_type: standard
-docs_version: 2.0.0
+docs_version: 3.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -56,9 +56,9 @@ coding_language: python
 
 
 @version_history
-
 Previous versions: 
-None.
+
+[1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/279f48bab219dd4622888a6301b7ca5b48880370/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1): Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -97,7 +97,7 @@ There are a couple of other collections, called [tuples](https://www.geeksforgee
 <lia-keep>
 <script type="text/x-sage">
 
-produce = ["tomato", "squash", "apple", "cucumber", "peach", "spinach"]
+produce = ['tomato', 'squash', 'apple', 'cucumber', 'peach', 'spinach']
 print(produce)
 
 </script>
@@ -108,7 +108,7 @@ There are a few important characteristics of lists:
 
 * Lists can have duplicate values. An example might be the list `[3, 1, 4, 1, 5, 9]`, where the number 1 appears twice.
 
-* List items don't all have to be of the same type (you can have a mix of strings and numbers, for example, or even a list of lists). `[3.14, "pi", False, ["number", "string", "boolean"]]` is an example of a list that contains a float, a string, a boolean value, and a list as its elements.
+* List items don't all have to be of the same type (you can have a mix of strings and numbers, for example, or even a list of lists). `[3.14, 'pi', False, ['number', 'string', 'boolean']]` is an example of a list that contains a float, a string, a boolean value, and a list as its elements.
 
 * Lists are **ordered**: List items remain in the position that they are entered into the list, and you can access any item by its position, or **index**.
 
@@ -123,7 +123,7 @@ There are a few important characteristics of lists:
 
 * Lists are **changeable**; you can add, remove, and edit items in a list. You can use list [methods](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#6) to do this: 
 
-    * `.pop()` removes a specific element by **index**.
+    * **`.pop()`** removes a specific element by **index** and *returns that element*. Run the code below to see the output of `produce.pop(0)`.
 
      @sage
      <div class="python_link">
@@ -136,21 +136,36 @@ There are a few important characteristics of lists:
      </lia-keep>
      </div>
 
-   * `.remove()` removes a specific element by **value**.
+     The element at index `0` (the first position in the list) has now been removed from `produce`:
+
+     @sage
+     <div class="python_link">
+     <lia-keep>
+     <script type="text/x-sage">
+
+     print(produce)
+
+     </script>
+     </lia-keep>
+     </div>
+
+   * **`.remove()`** removes a specific element by **value**.
 
     @sage
     <div class="python_link">
     <lia-keep>
     <script type="text/x-sage">
 
-    produce.remove("apple")
+    produce.remove('apple')
 print(produce)
 
     </script>
     </lia-keep>
     </div>
 
-  * `del` deletes objects, and can be used as another way to remove elements of a list by index. The syntax will be a little different, because it is a [**keyword**](https://realpython.com/python-keywords/), not a list method. It is useful because it allows you to delete list elements in a **slice**. Slicing uses subsetting notation to indicate where the slice begins and ends. The first index listed is **inclusive**, or included in the slice; this is followed by a colon; the second index listed is **exclusive**, or excluded from the slice; finally, these numbers are surrounded by square brackets.
+    Note that the `.remove()` method, unlike `.pop()`, does not itself return any output. If you want to see what happens if you run `print(produce.remove('apple'))`, try changing the code block above (be sure to re-run all of the code blocks above it!).
+
+  * **`del`** deletes objects, and can be used as another way to remove elements of a list by index. The syntax will be a little different, because it is a [**keyword**](https://realpython.com/python-keywords/), not a list method. It is useful because it allows you to delete list elements in a **slice**. Slicing uses subsetting notation to indicate where the slice begins and ends. The first index listed is **inclusive**, or included in the slice; this is followed by a colon; the second index listed is **exclusive**, or excluded from the slice; finally, these numbers are surrounded by square brackets.
 
     @sage
     <div class="python_link">
@@ -164,7 +179,7 @@ print(produce)
     </lia-keep>
     </div>
 
-  * `.clear()` removes everything from the list.
+  * **`.clear()`** removes everything from the list.
 
     @sage
     <div class="python_link">
@@ -178,41 +193,41 @@ print(produce)
     </lia-keep>
     </div>
 
-  * `.append()` adds an element to the end of a list.
+  * **`.append()`** adds an element to the end of a list.
 
     @sage
     <div class="python_link">
     <lia-keep>
     <script type="text/x-sage">
 
-    produce.append("pear")
+    produce.append('pear')
 print(produce)
 
     </script>
     </lia-keep>
     </div>
 
-  * `.insert()` adds an element to a specific position.
+  * **`.insert()`** adds an element to a specific position.
 
     @sage
     <div class="python_link">
     <lia-keep>
     <script type="text/x-sage">
 
-    produce.insert(0, "kale")
+    produce.insert(0, 'kale')
 print(produce)
 
     </script>
     </lia-keep>
     </div>
 
-  * `.extend()` adds another list to your list (or another iterable object, but don't worry about that for now).
+  * **`.extend()`** adds another list to your list (or another iterable object, but don't worry about that for now).
 
     @sage
     <div class="python_link">
     <lia-keep>
     <script type="text/x-sage">
-    berries= ["strawberry", "blueberry", "raspberries"]
+    berries= ['strawberry', 'blueberry', 'raspberries']
 produce.extend(berries)
 print(produce)
 
@@ -279,9 +294,9 @@ Let's build an example dictionary:
 <lia-keep>
 <script type="text/x-sage">
 
-contact_info = {"address" : "123 Puppydog Lane",
-                "telephone" : "987-654-3210",
-                "email" : "myname@email.com"}
+contact_info = {'address' : '123 Puppydog Lane',
+                'telephone' : '987-654-3210',
+                'email' : 'myname@email.com'}
 print(contact_info)
 
 </script>
@@ -290,7 +305,7 @@ print(contact_info)
 
 Like lists, dictionaries have some useful methods you can use to access or alter their data:
 
-* `.keys()` returns a list of the dictionary's keys.
+* **`.keys()`** returns a list of the dictionary's keys.
 
     @sage
     <div class="python_link">
@@ -303,7 +318,7 @@ Like lists, dictionaries have some useful methods you can use to access or alter
     </lia-keep>
     </div>
 
-* `.values()` returns a list of the dictionary's values.
+* **`.values()`** returns a list of the dictionary's values.
 
     @sage
     <div class="python_link">
@@ -316,7 +331,7 @@ Like lists, dictionaries have some useful methods you can use to access or alter
     </lia-keep>
     </div>
 
-* `.items()` returns a list of the dictionary's key-value pairs as tuples (an object that holds multiple values, similar to a list, except that they are *unchangeable*). This may seem not very useful at first glance, but since different collection objects have different properties, there could be circumstances in which it is more useful to have the data in a different kind of object.
+* **`.items()`** returns a list of the dictionary's key-value pairs as tuples (an object that holds multiple values, similar to a list, except that they are *unchangeable*). This may seem not very useful at first glance, but since different collection objects have different properties, there could be circumstances in which it is more useful to have the data in a different kind of object.
 
     @sage
     <div class="python_link">
@@ -329,14 +344,14 @@ Like lists, dictionaries have some useful methods you can use to access or alter
     </lia-keep>
     </div>
 
-* `.pop()` works similarly for dictionaries as it does for lists, except that it removes an element by its key.
+* **`.pop()`** works similarly for dictionaries as it does for lists, except that it removes an element by its key.
 
     @sage
     <div class="python_link">
     <lia-keep>
     <script type="text/x-sage">
 
-    print(contact_info.pop("email"))
+    print(contact_info.pop('email'))
 print(contact_info)
 
     </script>
@@ -354,7 +369,7 @@ print(contact_info)
     <script type="text/x-sage">
 
     contact_info_copy = contact_info.copy()
-contact_info_copy.pop("telephone")
+contact_info_copy.pop('telephone')
 print(contact_info)
 print(contact_info_copy)
 
@@ -372,7 +387,7 @@ print(contact_info_copy)
     <lia-keep>
     <script type="text/x-sage">
 
-    contact_info["work_email"] = "myname@company.com"
+    contact_info['work_email'] = 'myname@company.com'
 print(contact_info)
 
     </script>
@@ -394,6 +409,14 @@ You might have noticed by now that we have used square brackets in a few differe
 
 </div>
 
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+We've just gone through quite a few useful list and dictionary methods, and you might be concerned about remembering them all! There's no need to memorize them all right now-- it's likely that you'll start to remember them as you use them more, but in the meantime, feel free to refer back to this module whenever you need to. 
+
+</div>
+
+
 ### Quiz: Dictionaries
 
 1. True or False: Duplicate key-value pairs are allowed in dictionaries.
@@ -410,7 +433,7 @@ You might have noticed by now that we have used square brackets in a few differe
 
 2. How would you access all of the countries (the "keys") in the dictionary below? 
 
-    `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
+     `capital_cities = {'Afghanistan' : 'Kabul', 'Albania' : 'Tirana', 'Algeria' : 'Algiers', 'Andorra' : 'Andorra la Vella'}`
 
     [[capital_cities.keys() ]]
     <script>
@@ -420,14 +443,22 @@ You might have noticed by now that we have used square brackets in a few differe
     ***
     <div class = "answer">
 
-    To return the keys of a dictionary, you use the `.keys()` dictionary method.  
+    To return the keys of a dictionary, you use the `.keys()` dictionary method on the `capital_cities` dictionary. So the correct answer is `capital_cities.keys()`.
 
     </div>
     ***
 
 3. How would you add the the country of Angola and its capital city of Luanda to the dictionary below?
 
-    `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
+    `capital_cities = {'Afghanistan' : 'Kabul', 'Albania' : 'Tirana', 'Algeria' : 'Algiers', 'Andorra' : 'Andorra la Vella'}`
+
+    <div class = "help">
+    <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+    While Python doesn't care whether you use single or double quotes, this quiz does! We are working on a fix for that, but in the meantime, be sure to use single quotes in your answer. 
+
+    </div>
+
 
     [[capital_cities["Angola"] = "Luanda"]]
     <script>
