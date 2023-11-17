@@ -1,8 +1,8 @@
 <!--
 author: Peter Camacho; Joy Payton
-email: camachop@chop.edu, paytonk@chop.edu
+email: camachop@chop.edu; paytonk@chop.edu
 version: 1.2.0
-current_version_description: Improve large table display with collapsible sections.
+current_version_description: Improve large table display with collapsible sections
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -679,7 +679,7 @@ WHERE
 
 ### Quiz: Comments, WHERE, Null Values
 
-What has to change to make this code work?  Select all that apply.  You will be able to check your own work by making the corrections and seeing if the code runs!
+What has to change to make this code work?  Select all that apply. 
 
 ```sql
 SELECT
@@ -688,10 +688,6 @@ WHERE
   patients.race = NULL OR
   patients.sex = NULL.
 ```
-@AlaSQL.eval("#dataTable13a")
-
-<table id="dataTable13a" border="1"></table>
-
 
 [[X]] ` = NULL ` should be changed to ` IS NULL `
 [[ ]] `OR` should be in lowercase
@@ -710,7 +706,7 @@ First things first, what are you `SELECT`ing?  Also, you do need to replace the 
 
 ***************
 
-What has to change to make this code work?  Select all that apply. You will be able to check your own work by making the corrections and seeing if the code runs!
+What has to change to make this code work?  Select all that apply. 
 
 ```sql
 SELECT *             # we want all the fields/columns
@@ -718,9 +714,6 @@ FROM alasql.patients # note that this uses dot notation
 WITH
   sex = M;
 ```
-@AlaSQL.eval("#dataTable13b")
-
-<table id="dataTable13b" border="1"></table>
 
 [[ ]] `alasql.patients` should be changed to just `patients`
 [[ ]] The semicolon should be omitted
@@ -741,9 +734,7 @@ While you **could** omit `alasql`, it certainly isn't hurting things, and it's o
 
 **************
 
-<div style = "display:none;">
-@AlaSQL.buildTable_patients
-</div>
+
 
 ### ORDER BY Statement
 
