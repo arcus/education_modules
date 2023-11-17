@@ -217,13 +217,13 @@ Ready to try this?  Hit the execute button below the SQL code to run this query.
 SELECT *
 FROM alasql.patients;
 ```
-@AlaSQL.eval("#dataTable6a")
+@AlaSQL.eval("#dataTable7a")
 
 <details open>
 
 <summary>**Results of Query (click to collapse or expand this section)**</summary>
 
-<table id="dataTable6a" border="1"></table>
+<table id="dataTable7a" border="1"></table>
 
 </details><br/><br/>
 
@@ -238,14 +238,14 @@ When you think you have it, add the code in the box below and try running the qu
 SELECT
 FROM  ;
 ```
-@AlaSQL.eval("#dataTable6b")
+@AlaSQL.eval("#dataTable7b")
 
 
 <details open>
 
 <summary>**Results of Query (click to collapse or expand this section)**</summary>
 
-<table id="dataTable6b" border="1"></table>
+<table id="dataTable7b" border="1"></table>
 
 </details><br/><br/>
 <div style = "display:none;">
@@ -286,14 +286,14 @@ SELECT
   ,patients.state
 FROM alasql.patients;
 ```
-@AlaSQL.eval("#dataTable6c")
+@AlaSQL.eval("#dataTable7c")
 
 
 <details open>
 
 <summary>**Results of Query (click to collapse or expand this section)**</summary>
 
-<table id="dataTable6c" border="1"></table>
+<table id="dataTable7c" border="1"></table>
 
 </details><br/><br/>
 
@@ -321,9 +321,9 @@ SELECT DISTINCT
   ,patients.ethnicity
 FROM alasql.patients;
 ```
-@AlaSQL.eval("#dataTable7a")
+@AlaSQL.eval("#dataTable8a")
 
-<table id="dataTable7a" border="1"></table>
+<table id="dataTable8a" border="1"></table>
 
 
 <div class = "important">
@@ -378,8 +378,8 @@ In the code block below, write a query that will return the unique combinations 
 ```sql
 SELECT ... 
 ```
-@AlaSQL.eval("#dataTable8a")
-<table id="dataTable8a" border="1"></table>
+@AlaSQL.eval("#dataTable9a")
+<table id="dataTable9a" border="1"></table>
 
 
 How many rows do you have in your results? 
@@ -420,8 +420,8 @@ SELECT DISTINCT
 	,state
 FROM alasql.patients;
 ```
-@AlaSQL.eval("#dataTable8b")
-<table id="dataTable8b" border="1"></table>
+@AlaSQL.eval("#dataTable9b")
+<table id="dataTable9b" border="1"></table>
 
 
 
@@ -464,9 +464,9 @@ FROM alasql.patients;
     Aren't Comments Great!
 */
 ```
-@AlaSQL.eval("#dataTable9a")
+@AlaSQL.eval("#dataTable10a")
 
-<table id="dataTable9a" border="1"></table>
+<table id="dataTable10a" border="1"></table>
 
 
 <div style = "display:none;">
@@ -487,9 +487,9 @@ FROM alasql.patients
 WHERE
 	patients.county = "Suffolk County";
 ```
-@AlaSQL.eval("#dataTable10a")
+@AlaSQL.eval("#dataTable11a")
 
-<table id="dataTable10a" border="1"></table>
+<table id="dataTable11a" border="1"></table>
 
 <br/><br/>
 Although the above example lists only one constraint for the dataset, the WHERE clause can contain any number of filtering arguments needed.
@@ -510,9 +510,9 @@ WHERE
 	  OR patients.race != "white"
 	);
 ```
-@AlaSQL.eval("#dataTable10b")
+@AlaSQL.eval("#dataTable11b")
 
-<table id="dataTable10b" border="1"></table>
+<table id="dataTable11b" border="1"></table>
 
 
 <div class = "help">
@@ -533,9 +533,9 @@ FROM
 WHERE
 
 ```
-@AlaSQL.eval("#dataTable10c")
+@AlaSQL.eval("#dataTable11c")
 
-<table id="dataTable10c" border="1"></table>
+<table id="dataTable11c" border="1"></table>
 
 
 <div style = "display:none;">
@@ -577,13 +577,13 @@ FROM alasql.allergies
 WHERE
     allergies.stop IS NOT NULL; -- there is some value here, it's not empty
 ```
-@AlaSQL.eval("#dataTable11a")
+@AlaSQL.eval("#dataTable12a")
 
 <details open>
 
 <summary>**Results of Query (click to collapse or expand this section)**</summary>
 
-<table id="dataTable11a" border="1"></table>
+<table id="dataTable12a" border="1"></table>
 
 </details><br/><br/>
 
@@ -604,14 +604,14 @@ FROM alasql.allergies
 WHERE
     allergies.stop < '2020-03-01';
 ```
-@AlaSQL.eval("#dataTable11b")
+@AlaSQL.eval("#dataTable12b")
 
 
 <details open>
 
 <summary>**Results of Query (click to collapse or expand this section)**</summary>
 
-<table id="dataTable11b" border="1"></table>
+<table id="dataTable12b" border="1"></table>
 
 </details>
 
@@ -629,14 +629,14 @@ WHERE
         OR allergies.stop IS NULL
     );
 ```
-@AlaSQL.eval("#dataTable11c")
+@AlaSQL.eval("#dataTable12c")
 
 
 <details open>
 
 <summary>**Results of Query (click to collapse or expand this section)**</summary>
 
-<table id="dataTable11c" border="1"></table>
+<table id="dataTable12c" border="1"></table>
 
 </details><br/><br/>
 
@@ -652,9 +652,9 @@ Sometimes you want to evaluate missing data patterns.  For example, maybe there'
 ```sql
 SELECT ...
 ```
-@AlaSQL.eval("#dataTable11b")
+@AlaSQL.eval("#dataTable12d")
 
-<table id="dataTable11d" border="1"></table>
+<table id="dataTable12d" border="1"></table>
 
 
 <div style = "display:none;">
@@ -722,8 +722,6 @@ WITH
 
 <table id="dataTable13b" border="1"></table>
 
-
-
 [[ ]] `alasql.patients` should be changed to just `patients`
 [[ ]] The semicolon should be omitted
 [[X]] The `M` in the last line should have quotes around it
@@ -741,15 +739,11 @@ While you **could** omit `alasql`, it certainly isn't hurting things, and it's o
 
 </div>
 
-***************
+**************
 
-
-<div>
-
+<div style = "display:none;">
 @AlaSQL.buildTable_patients
-
 </div>
-
 
 ### ORDER BY Statement
 
@@ -869,9 +863,9 @@ In the SQL code block below, try writing a query that accomplishes the following
 
 
 ```
-@AlaSQL.eval("#dataTable15b")
+@AlaSQL.eval("#dataTable16b")
 
-<table id="dataTable15b" border="1"></table>
+<table id="dataTable16b" border="1"></table>
 
 
 <div style = "display:none;">
