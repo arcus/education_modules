@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Clarify `=` and `==` inside test functions
 module_type: standard
 docs_version: 1.2.1
@@ -488,7 +488,7 @@ Variables in Bash are assigned values using the equals symbol `=` with **no spac
 
 </div>
 
-You can have as many `elif` and `then` pairs as you want, but as soon as one is statement is true, the code will do that action **and then stop**. It will not continue to check the remaining statements! Try to think about what this code will output, then run it and check if you were right:
+You can have as many `elif` and `then` pairs as you want, but as soon as one statement is true, the code will do that action **and then stop**. It will not continue to check the remaining statements! Try to think about what this code will output, then run it and check if you were right:
 
 ```
 c=100

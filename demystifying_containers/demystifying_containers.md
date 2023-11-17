@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.0.1
+version:  1.0.2
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
@@ -187,7 +187,7 @@ For individuals and small groups of collaborators who are only working with smal
 
 - Docker has its own orchestration tool called [Docker Swarm](https://docs.docker.com/engine/swarm/). Docker Swarm is more light-weight than Kubernetes but also more limited in its capabilities. 
 
-- [Nomad by HashiCorp](https://www.nomadproject.io/) is a flexible option that can be an alternative to or supplement Kubernetes, and can orchestration containerized and non-containerized workloads.
+- [Nomad by HashiCorp](https://www.nomadproject.io/) is a flexible option that can be an alternative to or supplement Kubernetes, and can orchestrate containerized and non-containerized workloads.
 
 Containers in the Cloud 
 =======
