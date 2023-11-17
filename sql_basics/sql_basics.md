@@ -1,8 +1,8 @@
 <!--
 author: Peter Camacho; Joy Payton
 email: camachop@chop.edu, paytonk@chop.edu
-version: 1.1.1
-current_version_description: Add solutions, add definitions, move challenge solutions,  after code blocks, update highlight boxes, fix typos, update front matter fields.
+version: 1.2.0
+current_version_description: Improve large table display with collapsible sections.
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -47,6 +47,7 @@ sequence_name: sql
 @version_history
 Previous versions: 
 
+- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/1181e69889461e8a1cb887c9e7887c77c61d5a9d/sql_basics/sql_basics.md#1): Add solutions and definitions; update challenge solutions, after code blocks, highlight boxes, and metadata; fix typos.
 - [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/sql_basics/sql_basics.md#1): Initial version.
 @end
 
