@@ -753,7 +753,7 @@ Data analysis should be concise.  For example, if you're doing a lot of cut-and-
 * [Chapter 12 of *R for Data Science*](https://r4ds.had.co.nz/tidy-data.html) is specific to the R language, but does a good job of presenting the topic.  Feel free to gloss over the code-heavy parts if they don't serve you.
 * [Tidy Data and How to Get It](https://www.measureevaluation.org/news/tidy-data-and-how-to-get-it.html) briefly discusses tidy data in the context of global health.
 * [Introduction to Tidy Data in R](https://stat2labs.sites.grinnell.edu/Handouts/rtutorials/IntroTidyData.html) is mostly a code tutorial that gets very detailed in code.  What makes it interesting as a supplemental resource is that it presents five, not three, rules for tidy data -- and I agree with these tidy data rules!
-* Karl Broman gives a great overview of [Data Organization in Spreadsheets](https://peerj.com/preprints/3183.pdf).  If Excel is part of your toolkit, please read this article.
+* Karl Broman and Kara Woo give a great overview of [Data Organization in Spreadsheets](https://kbroman.org/Paper_DataOrg/manuscript.pdf).  If Excel is part of your toolkit, please read this article. ([HTML version of Data Organization in Spreadsheets](https://kbroman.org/Paper_DataOrg/manuscript.html))
 
 
 ## Feedback
