@@ -23,10 +23,14 @@ This module assumes no prior experience *using* containers or Docker, but you sh
 
 You will also need some familiarity with working on the command line (bash). In particular, you should be comfortable with doing the following at the command line: 
 
-- changing directories
+- [changing directories](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#navigating-in-bash)
 - running bash commands that will be supplied for you to copy and paste, including using flags
 
-You will need to create and edit text files in a text editor like VSCode. 
+You will also need some general-purpose programming and computer skills, like the following:
+
+- [navigate your computer's file system](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#1)
+- create and edit text files in a text editor like VSCode
+- [troubleshoot errors in code](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/how_to_troubleshoot/how_to_troubleshoot.md#1) by searching online
 
 You'll also need to create an account on [Docker Hub](https://hub.docker.com/) (it's free), if you don't have one already, and you'll need to be able to install the Docker Desktop software on your machine (also free). 
 @end
