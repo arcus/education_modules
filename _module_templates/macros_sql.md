@@ -42,7 +42,7 @@ LIMIT 10;
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-Don't worry -- the data here, although it **looks** like human subject or patient data, is completely fabricated.  We used sample data from the open source project [Synthea](https://synthetichealth.github.io/synthea).  There are other clues that this data isn't real: for example, names include a numerical suffix, and SSN values are clearly fake.
+Don't worry -- the data here, although it **looks** like human subject or patient data, is completely fabricated.  We used sample data from the open source project [Synthea](https://synthetichealth.github.io/synthea).  There are clues elsewhere in the data that this data isn't real.  For example, when we examine more fields of this data, you'll notice that names include a numerical suffix, and Social Security Number values are clearly fake.
 
 </div>
 @end
