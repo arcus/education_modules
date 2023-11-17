@@ -3,7 +3,7 @@
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version:  1.1.0
-current_version_description: Updated description and prerequisites to make it clearer that this is not a module for beginners. 
+current_version_description: Updated description and prerequisites to make it clearer that this is not a module for beginners; added troubleshooting box about creating a file with no extension. 
 module_type: wrapper
 docs_version: 1.0.0
 language: en
@@ -19,14 +19,14 @@ long_description: If you've been curious about how to use Docker for your resear
 estimated_time_in_minutes: 60
 
 @pre_reqs
-This module assumes no prior experience using containers or Docker, but you should know what a container is.
+This module assumes no prior experience *using* containers or Docker, but you should know what a container is.
 
 You will also need some familiarity with working on the command line (bash). In particular, you should be comfortable with doing the following at the command line: 
 
 - changing directories
 - running bash commands that will be supplied for you to copy and paste, including using flags
 
-You will need to create and edit text files using the command line or in a text editor like VSCode. 
+You will need to create and edit text files in a text editor like VSCode. 
 
 You'll also need to create an account on [Docker Hub](https://hub.docker.com/) (it's free), if you don't have one already, and you'll need to be able to install the Docker Desktop software on your machine (also free). 
 @end
@@ -179,6 +179,25 @@ If you get an error message like `ERROR [2/5] RUN apk add --no-cache python g++ 
 If so, try deleting that line from your Dockerfile (it should be the second line in the file), save the file, and then run the `docker build` command again.
 
 See [this post on stackoverflow](https://stackoverflow.com/questions/71200635/can-i-remove-run-apk-add-no-cache-python2-g-make-from-my-dockerfile) for some additional context.
+
+</div>
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+**How do I save a file with no extension?**
+
+One of the first steps in the tutorial is saving the file `Dockerfile`. 
+The tutorial warns that you need to make sure you save it without a [file extension](https://en.wikipedia.org/wiki/Filename_extension) (like `.txt`); how do you do that?
+
+If you're using the popular editor [VSCode](https://code.visualstudio.com/), all you need to do is **not** add an extension when you save. 
+So, go to File > New File, copy in the contents for the file, and then File > Save and enter only `Dockerfile` as the name. 
+
+Some other programs may automatically add a file extension on to the end of the file name, though. 
+
+To check to make sure your file didn't get an extension added on by mistake, use the command line to navigate to the directory you saved it in and then run `ls -al`. 
+This will show a complete list of all the files and subdirectories in that folder, including the full name of each file. 
+If you see `Dockerfile` there with no extension on it, you know you're all set!
 
 </div>
 
