@@ -93,7 +93,13 @@ st1: 88, st2: 78, st3: 34, st4: 97, st5: 64, st6: 89, st7: 56, st8: 83, st9: 92
 
 Using a `for` loop and conditional (`if-else`) statements, can you write some code that returns a **dictionary** with the student identifiers as the **keys** and the letter grades that the students should be awarded as the **values**?
 
-**Hint:** To loop through the items (the keys and values) of a dictionary that we'll call `my_dict`, you can use the code `for k,v in my_dict.items()`.
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+While we have looped through lists in a previous module, in this exercise we'll need to loop through a dictionary, which is similar but not exactly the same. To loop through the items (the keys and values) of a dictionary that we'll call `my_dict`, you can use the code `for k,v in my_dict.items()`.
+
+</div>
+
 
 To help get you started, here are the basic steps required to solve the problem:
 
