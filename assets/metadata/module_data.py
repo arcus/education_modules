@@ -564,16 +564,16 @@ df.loc["demystifying_sql", "depends_on_knowledge_available_in"] = "&"
 df.loc["demystifying_sql", "version_history"] = "&Previous versions: &&* [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/demystifying_sql/demystifying_sql.md):  Update highlight boxes&* [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/demystifying_sql/demystifying_sql.md): Original version with minor formatting updates and improved feedback form link &" 
 df.loc["directories_and_file_paths", "author"] = "Meredith Lee"
 df.loc["directories_and_file_paths", "email"] = "leemc@chop.edu"
-df.loc["directories_and_file_paths", "version"] = "1.3.4"
-df.loc["directories_and_file_paths", "current_version_description"] = "make CSS come from GCS"
-df.loc["directories_and_file_paths", "module_type"] = ""
-df.loc["directories_and_file_paths", "docs_version"] = ""
+df.loc["directories_and_file_paths", "version"] = "1.3.5"
+df.loc["directories_and_file_paths", "current_version_description"] = "update to new highlight box styles"
+df.loc["directories_and_file_paths", "module_type"] = "standard"
+df.loc["directories_and_file_paths", "docs_version"] = "3.0.0"
 df.loc["directories_and_file_paths", "language"] = "en"
 df.loc["directories_and_file_paths", "narrator"] = "UK English Female"
-df.loc["directories_and_file_paths", "mode"] = ""
+df.loc["directories_and_file_paths", "mode"] = "Textbook"
 df.loc["directories_and_file_paths", "title"] = "Directories and File Paths"
 df.loc["directories_and_file_paths", "estimated_time_in_minutes"] = "15"
-df.loc["directories_and_file_paths", "module_type"] = ""
+df.loc["directories_and_file_paths", "module_type"] = "standard"
 df.loc["directories_and_file_paths", "good_first_module"] = "false"
 df.loc["directories_and_file_paths", "data_domain"] = ""
 df.loc["directories_and_file_paths", "data_task"] = ""
@@ -585,7 +585,11 @@ df.loc["directories_and_file_paths", "sequence_name"] = ""
 df.loc["directories_and_file_paths", "previous_sequential_module"] = ""
 df.loc["directories_and_file_paths", "comment"] = "In this module, learners will explore what a directory is and how to describe the location of a file using its file path.   " 
 df.loc["directories_and_file_paths", "long_description"] = "When doing data analysis in a programming language like R or Python, figuring out how to point the program to the file you need can be confusing. This module will help you learn about how files and folders are organized on your computer, how to describe the location of your file in a couple of different ways, and name files and folders in a descriptive and systematic way." 
+df.loc["directories_and_file_paths", "pre_reqs"] = "None. &" 
 df.loc["directories_and_file_paths", "learning_objectives"] = "&After completion of this module, learners will be able to:&&- Describe what a directory is&- Distinguish between a relative file path and an absolute file path&- Describe the location of a file using its file path&- Describe a few best practices and conventions of naming files and folders&&" 
+df.loc["directories_and_file_paths", "sets_you_up_for"] = "&- bash_command_line_101&- bash_command_line_102&&" 
+df.loc["directories_and_file_paths", "depends_on_knowledge_available_in"] = "&" 
+df.loc["directories_and_file_paths", "version_history"] = "Previous versions: &&- [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/fa5f0b0df5a901d188e8c36bc303a1d39b771b72/directories_and_file_paths/directories_and_file_paths.md): add instructions for finding absolute file paths&- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/914714acfb6b30980e011ab09e087d4d2c5c918e/directories_and_file_paths/directories_and_file_paths.md#1): Fix +writing a file path+ quiz answer and add definition of +directory+ &- [1.0.0](https://raw.githubusercontent.com/arcus/education_modules/99375ea5b5b20c9ece7fc69e1fb14776b412e0ad/directories_and_file_paths/directories_and_file_paths.md): Initial version&" 
 df.loc["docker_101", "author"] = "Rose Hartman"
 df.loc["docker_101", "email"] = "hartmanr1@chop.edu"
 df.loc["docker_101", "version"] = "1.1.0"
@@ -1725,6 +1729,8 @@ a.append("reproducibility")
 a.append("sql_basics")
 df.at["demystifying_sql", "Linked Courses"] = list(a)
 a = df.loc["directories_and_file_paths", "Linked Courses"]
+a.append("bash_command_line_101")
+a.append("bash_command_line_102")
 df.at["directories_and_file_paths", "Linked Courses"] = list(a)
 a = df.loc["docker_101", "Linked Courses"]
 a.append("bash_command_line_101")
