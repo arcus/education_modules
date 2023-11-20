@@ -39,7 +39,7 @@ coding_required: false
 
 @end
 
-@depends_on_knowledge_available_in: 
+@depends_on_knowledge_available_in 
 
 @end
 @version_history 
