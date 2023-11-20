@@ -3,7 +3,7 @@
 author:   Meredith Lee
 email:    leemc@chop.edu
 version: 1.1.1
-current_version_description: Added clarifying language about `.pop()` method, added more thorough explanation of the correct answer to the second dictionary quiz question, explained that there is no requirement to memorize methods, and added hint to the third dictionary quiz question about the use of quotation marks.
+current_version_description: Added clarifying language about `.pop()` method, added more thorough explanation of the correct answer to the second dictionary quiz question, explained that there is no requirement to memorize methods, and fixed quiz answer checking that was throwing an error for double quotes.
 module_type: standard
 docs_version: 3.0.0
 language: en
