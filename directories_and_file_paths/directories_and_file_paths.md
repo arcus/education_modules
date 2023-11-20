@@ -104,7 +104,7 @@ Which of the following is a synonym for "directory"?
 ********************************
 <div class = "answer">
 
-Directories are often called folders, because the file system on your computer is similar to a physical filing systems, where files are contained in folders. A drive is a physical device where information is stored, and a volume is where the user interacts with the stored information (this is where the directory system is located).
+Directories are often called folders, because the file system on your computer is similar to a physical filing system, where files are contained in folders. A drive is a physical device where information is stored, and a volume is where the user interacts with the stored information (this is where the directory system is located).
 
 </div>
 ********************************
