@@ -367,7 +367,7 @@ Let's create a file called `mars.txt` that contains some notes
 about the Red Planet's suitability as a base.
 We'll use `nano` to edit the file;
 you can use whatever editor you like.
-In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). For a refresher on text editors, check out ["Which Editor?"](https://swcarpentry.github.io/shell-novice/03-create/) in [The Unix Shell lesson](https://swcarpentry.github.io/shell-novice/) by Software Carpentry.
+In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). For a refresher on text editors, check out ["Which Editor?"](https://swcarpentry.github.io/shell-novice/03-create.html#which-editor) in [The Unix Shell lesson](https://swcarpentry.github.io/shell-novice/) by Software Carpentry.
 
 ```console
 $ nano mars.txt
@@ -505,8 +505,8 @@ nothing to commit, working directory clean
 
 Even, and perhaps especially, those who use Git a lot can have trouble writing good commit messages. We are all just doing our best to document our work!
 
-![XKCD Cartoon, the text of which reads "As a project drags on my Git commit messages get less and less informative."  The first message shown reads "Created main loop & timing control." By the 5th message it reads "more code" followed by messages including "Here have code," "AAAAAAAAA," "my hands are typing words" and finally "haaaaaaaaands."](media/git_commit_2x.png)
-(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1296.)
+![XKCD Cartoon, the text of which reads "As a project drags on my Git commit messages get less and less informative."  The first message shown reads "Created main loop & timing control." By the 5th message it reads "more code" followed by messages including "Here have code," "AAAAAAAAA," "my hands are typing words" and finally "haaaaaaaaands."](media/git_commit_2x.png "Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1296")
+
 </div>
 
 ### Keeping track of your changes
