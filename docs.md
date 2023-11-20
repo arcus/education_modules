@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  3.0.0
-current_version_description: Added collection as a front matter field, added text as a data_domain, fixed typos
+version:  3.1.0
+current_version_description: update definition of learn_to_code collection
 language: en
 narrator: UK English Female
 title: DART LiaScript docs
@@ -25,11 +25,9 @@ try {
 @version_history
 Previous versions: 
 
+-[3.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cd0da90a30910c22d5502f509125892a761c3145/docs.md#1): Added collection as a front matter field, added text as a data_domain, fixed typos
 - [2.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/89cadafc6f1f9c83e4de93e7d55cd9427866f9f2/docs.md#1): Made coding_required a mandatory front matter field for all modules
 - [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b453a05b5ac756fb5c7b183deae9d4fc91b3a617/docs.md): Clarified that version_history cannot be blank but sets_you_up_for and depends_on_knowledge_available_in can
-- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4347cd14c9f5a3fd110910ec09c0560a46e390bd/docs.md): Add genomics macros, add git_basics to the list of sequences.
-- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/8f41dd25216329b785335e15f1824b13d6240778/docs.md): Update SQL macros instructions (note that version number wasn't correctly incremented here)
-- [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ad25398d0eef884402cff0f0c4fb4ca360d3b8f4/docs.md): Added versioning info, initial version.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -678,7 +676,7 @@ Must be one or more of the following:
 - `demystifying`: Few or no prerequisites, approachable for beginners, doesn't teach hands-on skills but rather focuses on giving an overview of a topic. Often has a special focus on reducing anxiety about a potentially daunting topic or tool, and cutting through the hype to helping novices to determine whether or not this is something they should learn to do. Note that a module does not need to have "demystifying" in its title to be in this collection.
 - `infrastructure_and_technology`: Focused on software or tools, especially setup and systems. Things like how to install software, or understanding what software and/or languages to use for what tasks. Also includes basic computer skills like navigating file directories.  
 - `intro_to_data_science`: Skills for learners new to data science, including how to troubleshoot, reproducible methods, etc.
-- `learn_to_code`: Modules that is primarily focused on teaching coding. Note that a module might require coding without belonging to this collection, especially more advanced modules that use a coding language to achieve some task (modeling, genomics, etc.) but without the pedagogical focus being on the coding language itself. 
+- `learn_to_code`: Modules that are primarily focused on teaching coding skills, either in general or in a specific coding language. Note that a module might require coding without belonging to this collection, especially more advanced modules that use a coding language to achieve some task (modeling, genomics, etc.) but without the pedagogical focus being on the coding language itself. Similarly a module in this collection might not require the learner to do any hands on coding even though it is teaching coding skills (e.g. troubleshooting).
 - `machine_learning`: Modules about machine learning and AI.
 - `statistics`: Modules about statistics, including both applied data analysis (e.g. here's how to do this test in R) and a more theoretical understanding of statistics and the underlying math (e.g. learn the matrix algebra underlying the general linear model).
 
