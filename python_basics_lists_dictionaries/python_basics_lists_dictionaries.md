@@ -108,7 +108,7 @@ There are a few important characteristics of lists:
 
 * Lists can have duplicate values. An example might be the list `[3, 1, 4, 1, 5, 9]`, where the number 1 appears twice.
 
-* List items don't all have to be of the same type (you can have a mix of strings and numbers, for example, or even a list of lists). `[3.14, 'pi', False, ['number', 'string', 'boolean']]` is an example of a list that contains a float, a string, a boolean value, and a list as its elements.
+* List items don't all have to be of the same type (you can have a mix of strings and numbers, for example, or even a list of lists). `[3.14, "pi", False, ["number", "string", "boolean"]]` is an example of a list that contains a float, a string, a boolean value, and a list as its elements.
 
 * Lists are **ordered**: List items remain in the position that they are entered into the list, and you can access any item by its position, or **index**.
 
