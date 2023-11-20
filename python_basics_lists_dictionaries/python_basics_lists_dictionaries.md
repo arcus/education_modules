@@ -435,9 +435,9 @@ We've just gone through quite a few useful list and dictionary methods, and you 
 
      `capital_cities = {'Afghanistan' : 'Kabul', 'Albania' : 'Tirana', 'Algeria' : 'Algiers', 'Andorra' : 'Andorra la Vella'}`
 
-    [[capital_cities.keys() ]]
+    [[capital_cities.keys()]]
     <script>
-  let input = "@input".trim();
+  let input = "@'input".trim();
   input == "capital_cities.keys()";
 </script>
     ***
@@ -452,17 +452,9 @@ We've just gone through quite a few useful list and dictionary methods, and you 
 
     `capital_cities = {'Afghanistan' : 'Kabul', 'Albania' : 'Tirana', 'Algeria' : 'Algiers', 'Andorra' : 'Andorra la Vella'}`
 
-    <div class = "help">
-    <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
-
-    While Python doesn't care whether you use single or double quotes, this quiz does! We are working on a fix for that, but in the meantime, be sure to use single quotes in your answer. 
-
-    </div>
-
-
     [[capital_cities["Angola"] = "Luanda"]]
     <script>
-    let input = "@input".replace(/\s/g, "");
+    let input = "@'input".replace(/\s/g, "");
     input == 'capital_cities["Angola"]="Luanda"' || input == "capital_cities['Angola']='Luanda'";
     </script>
     ***
