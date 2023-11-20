@@ -2,8 +2,8 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.1
-current_version_description: Initial version
+version:  1.1.0
+current_version_description: Updated description and prerequisites to make it clearer that this is not a module for beginners; added troubleshooting box about creating a file with no extension. 
 module_type: wrapper
 docs_version: 1.0.0
 language: en
@@ -14,12 +14,23 @@ title: Getting Started with Docker for Research
 
 comment: This tutorial combines a hands-on interactive Docker tutorial published by Docker Inc with an academic article outlining best practices for using Docker for research. 
 
-long_description: If you've been curious about how to use Docker for your research, this module is a great place to start. The Docker 101 tutorial is a popular, hands-on approach to learning Docker that will get you using containers right away, so you can learn by doing. To help you bridge the gap between basic Docker use and best practices for using Docker in research, we also link to an article outlining 10 rules to help you create great containers for research, and lists of ready-to-use Docker images for a variety of analysis workflows. This module includes running and editing commands in the terminal, so you'll need some basic familiarity with bash, but it is otherwise appropriate for beginners. No prior experience with Docker or containers is assumed. 
+long_description: If you've been curious about how to use Docker for your research, this module is a great place to start. The Docker 101 tutorial is a popular, hands-on approach to learning Docker that will get you using containers right away, so you can learn by doing. To help you bridge the gap between basic Docker use and best practices for using Docker in research, we also link to an article outlining 10 rules to help you create great containers for research, and lists of ready-to-use Docker images for a variety of analysis workflows. This module includes running and editing commands in the terminal, so you'll need some familiarity with bash. No prior experience with Docker or containers is assumed. 
 
 estimated_time_in_minutes: 60
 
 @pre_reqs
-This module assumes no prior experience with containers, and no particular coding other than some familiarity with the command line, such as being able to change directories and run bash commands that will be supplied for you to copy and paste. You will need to create and edit text files in a text editor like VSCode. 
+This module assumes no prior experience *using* containers or Docker, but you should know what a container is.
+
+You will also need some familiarity with working on the command line (bash). In particular, you should be comfortable with doing the following at the command line: 
+
+- [changing directories](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#navigating-in-bash)
+- running bash commands that will be supplied for you to copy and paste, including using flags
+
+You will also need some general-purpose programming and computer skills, like the following:
+
+- [navigate your computer's file system](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#1)
+- create and edit text files in a text editor like VSCode
+- [troubleshoot errors in code](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/how_to_troubleshoot/how_to_troubleshoot.md#1) by searching online
 
 You'll also need to create an account on [Docker Hub](https://hub.docker.com/) (it's free), if you don't have one already, and you'll need to be able to install the Docker Desktop software on your machine (also free). 
 @end
@@ -75,7 +86,9 @@ coding_language: bash
 @end
 
 @version_history
-No previous versions.
+Previous versions: 
+
+* [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/docker_101/docker_101.md):  Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -170,6 +183,25 @@ If you get an error message like `ERROR [2/5] RUN apk add --no-cache python g++ 
 If so, try deleting that line from your Dockerfile (it should be the second line in the file), save the file, and then run the `docker build` command again.
 
 See [this post on stackoverflow](https://stackoverflow.com/questions/71200635/can-i-remove-run-apk-add-no-cache-python2-g-make-from-my-dockerfile) for some additional context.
+
+</div>
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+**How do I save a file with no extension?**
+
+One of the first steps in the tutorial is saving the file `Dockerfile`. 
+The tutorial warns that you need to make sure you save it without a [file extension](https://en.wikipedia.org/wiki/Filename_extension) (like `.txt`); how do you do that?
+
+If you're using the popular editor [VSCode](https://code.visualstudio.com/), all you need to do is **not** add an extension when you save. 
+So, go to File > New File, copy in the contents for the file, and then File > Save and enter only `Dockerfile` as the name. 
+
+Some other programs may automatically add a file extension on to the end of the file name, though. 
+
+To check to make sure your file didn't get an extension added on by mistake, use the command line to navigate to the directory you saved it in and then run `ls -al`. 
+This will show a complete list of all the files and subdirectories in that folder, including the full name of each file. 
+If you see `Dockerfile` there with no extension on it, you know you're all set!
 
 </div>
 
