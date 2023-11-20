@@ -156,7 +156,7 @@ There are a few important characteristics of lists:
     <lia-keep>
     <script type="text/x-sage">
 
-    produce.remove('apple')
+    produce.remove("apple")
 print(produce)
 
     </script>
