@@ -731,28 +731,32 @@ df.loc["geocode_lat_long", "sets_you_up_for"] = "- elements_of_maps&"
 df.loc["geocode_lat_long", "version_history"] = "No previous versions.&" 
 df.loc["git_creation_and_tracking", "author"] = "Elizabeth Drellich"
 df.loc["git_creation_and_tracking", "email"] = "drelliche@chop.edu"
-df.loc["git_creation_and_tracking", "version"] = "1.0.7"
-df.loc["git_creation_and_tracking", "current_version_description"] = "make CSS come from GCS"
-df.loc["git_creation_and_tracking", "module_type"] = ""
-df.loc["git_creation_and_tracking", "docs_version"] = ""
+df.loc["git_creation_and_tracking", "version"] = "1.0.8 "
+df.loc["git_creation_and_tracking", "current_version_description"] = "Initial version"
+df.loc["git_creation_and_tracking", "module_type"] = "standard"
+df.loc["git_creation_and_tracking", "docs_version"] = "3.0.0"
 df.loc["git_creation_and_tracking", "language"] = "en"
 df.loc["git_creation_and_tracking", "narrator"] = "UK English Female"
 df.loc["git_creation_and_tracking", "mode"] = "Textbook"
 df.loc["git_creation_and_tracking", "title"] = "Creating a Git Repository"
 df.loc["git_creation_and_tracking", "estimated_time_in_minutes"] = "60"
-df.loc["git_creation_and_tracking", "module_type"] = ""
+df.loc["git_creation_and_tracking", "module_type"] = "standard"
 df.loc["git_creation_and_tracking", "good_first_module"] = "false"
 df.loc["git_creation_and_tracking", "data_domain"] = ""
 df.loc["git_creation_and_tracking", "data_task"] = ""
 df.loc["git_creation_and_tracking", "collection"] = "learn_to_code"
 df.loc["git_creation_and_tracking", "coding_required"] = "true"
-df.loc["git_creation_and_tracking", "coding_level"] = ""
-df.loc["git_creation_and_tracking", "coding_language"] = ""
-df.loc["git_creation_and_tracking", "sequence_name"] = ""
-df.loc["git_creation_and_tracking", "previous_sequential_module"] = ""
+df.loc["git_creation_and_tracking", "coding_level"] = "basic"
+df.loc["git_creation_and_tracking", "coding_language"] = "git, bash"
+df.loc["git_creation_and_tracking", "sequence_name"] = "git_basics"
+df.loc["git_creation_and_tracking", "previous_sequential_module"] = "git_setup_mac_and_linux, git_setup_windows"
 df.loc["git_creation_and_tracking", "comment"] = "Create a new Git repository and get started with version control." 
 df.loc["git_creation_and_tracking", "long_description"] = "If you have Git set up on your computer and are ready to start tracking your files, then this module is for you. This module will teach you how to create a Git repository, add files to it, update files in it, and keep track of those changes in a clear and organized manner." 
+df.loc["git_creation_and_tracking", "pre_reqs"] = "Before you start this module, make sure you&&* Know how to access a command line interface (CLI) on your computer.&* Have Git configured on your computer. If Git is not yet configured, see the module on setting up Git on a [Mac, Linux](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md), or [Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md) machine.&* Can edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file), one of many text editors that you can access directly from the command line interface (CLI).&" 
 df.loc["git_creation_and_tracking", "learning_objectives"] = "&After completion of this module, learners will be able to:&&- Create a Git repository&- Add and make changes to files in the repository&- Write short helpful descriptions, called +commit messages+ to track the changes&- Use `.gitignore`&- Understand the `add` and `commit` workflow.&&&" 
+df.loc["git_creation_and_tracking", "sets_you_up_for"] = "- git_history_of_project&" 
+df.loc["git_creation_and_tracking", "depends_on_knowledge_available_in"] = "- git_intro&- git_setup_windows&- git_setup_mac_and_linux&- bash_command_line_101&" 
+df.loc["git_creation_and_tracking", "version_history"] = "No previous versions.&" 
 df.loc["git_history_of_project", "author"] = "Elizabeth Drellich"
 df.loc["git_history_of_project", "email"] = "drelliche@chop.edu"
 df.loc["git_history_of_project", "version"] = "1.1.0"
@@ -1758,6 +1762,9 @@ a = df.loc["geocode_lat_long", "Linked Courses"]
 a.append("elements_of_maps")
 df.at["geocode_lat_long", "Linked Courses"] = list(a)
 a = df.loc["git_creation_and_tracking", "Linked Courses"]
+a.append("bash_command_line_101")
+a.append("git_history_of_project")
+a.append("git_intro")
 a.append("git_setup_mac_and_linux")
 a.append("git_setup_windows")
 df.at["git_creation_and_tracking", "Linked Courses"] = list(a)
