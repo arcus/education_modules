@@ -874,9 +874,8 @@ All of these are good reasons to include a file in `.gitignore`, but especially 
 ***
 
 ## Understanding the Git workflow
-![XKCD Cartoon. Person A: "This is Git. It tracks collaborative work on projects through a beautiful distributed graph theory tree model." Person B: "Cool. How do we use it?" Person A: "No idea. Just memorize these shell commands and type them to sync up. If you get errors, save your work elsewhere, delete the project, and download a fresh copy."](media/git_2x.png)
 
-(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1597.)
+![XKCD Cartoon. Person A: "This is Git. It tracks collaborative work on projects through a beautiful distributed graph theory tree model." Person B: "Cool. How do we use it?" Person A: "No idea. Just memorize these shell commands and type them to sync up. If you get errors, save your work elsewhere, delete the project, and download a fresh copy."](media/git_2x.png "Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1597 ")
 
 There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, and that is what many people do. However you might remember them better if you understand what each is doing.
 
@@ -930,10 +929,9 @@ There are options you can use to automatically stage all files. Entering `git co
 
 This module was based on examples from three of [Software Carpentry](https://software-carpentry.org)'s [lessons on using Git](https://swcarpentry.github.io/git-novice/). The story of Dracula and Wolfman's planned trip to Mars is borrowed from them, and more examples are available in the original lessons:
 
- - Lesson 3: [Creating a Repository](https://swcarpentry.github.io/git-novice/03-create/index.html)
- - Lesson 4: [Tracking Changes](https://swcarpentry.github.io/git-novice/04-changes/index.html)
- - Lesson 6: [Ignoring Things](https://swcarpentry.github.io/git-novice/06-ignore/index.html)
-
+ - Lesson 3: [Creating a Repository](https://swcarpentry.github.io/git-novice/03-create.html)
+ - Lesson 4: [Tracking Changes](https://swcarpentry.github.io/git-novice/04-changes.html)
+ - Lesson 6: [Ignoring Things](https://swcarpentry.github.io/git-novice/06-ignore.html)
 
 ## Feedback
 @feedback
