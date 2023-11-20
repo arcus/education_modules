@@ -97,7 +97,7 @@ There are a couple of other collections, called [tuples](https://www.geeksforgee
 <lia-keep>
 <script type="text/x-sage">
 
-produce = ['tomato', 'squash', 'apple', 'cucumber', 'peach', 'spinach']
+produce = ["tomato", "squash", "apple", "cucumber", "peach", "spinach"]
 print(produce)
 
 </script>
