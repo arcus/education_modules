@@ -2,15 +2,6 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.0.0
-current_version_description: Initial version
-narrator: UK English Female
-title: Regex Module Macros
-comment:  This is placeholder module to save macros used in other modules.
-
-@version_history 
-
-@end
 
 @regular_expression_checker_warning
 

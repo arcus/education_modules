@@ -2,19 +2,6 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  2.0.0
-current_version_description: Added macro aws_explanation to provide context for learners about why we're requiring them to set up an AWS account.
-language: en
-narrator: UK English Female
-title: Genomics Module Macros
-comment:  This is placeholder module to save macros used in other modules.
-
-@version_history 
-Previous versions: 
-
-- [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a588227c04699c46112b01bea136679f8d6f7dc0/_module_templates/macros_genomics.md#1): Initial version
-
-@end
 
 @aws_explanation
 

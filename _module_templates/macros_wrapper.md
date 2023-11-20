@@ -2,15 +2,6 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.0.0
-current_version_description: Add current_version_description and version_history metadata
-language: en
-narrator: UK English Female
-title: Wrapper Module Macros
-comment:  This is placeholder module to save macros used in other modules.
-
-@version_history  
-@end
 
 @module_structure
 1. Part 1

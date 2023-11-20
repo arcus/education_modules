@@ -2,19 +2,6 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.0.0
-current_version_description: Initial Version
-language: en
-narrator: UK English Female
-title: Bash Module Macros
-comment:  This is placeholder module to save macros used in other modules.
-
-@version_history 
-
-Previous versions: 
-
-No Previous Versions
-@end
 
 @lesson_prep_bash_basics
 
