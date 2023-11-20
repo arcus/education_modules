@@ -412,7 +412,7 @@ You might have noticed by now that we have used square brackets in a few differe
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
-We've just gone through quite a few useful list and dictionary methods, and you might be concerned about remembering them all! There's no need to memorize them all right now-- it's likely that you'll start to remember them as you use them more, but in the meantime, feel free to refer back to this module whenever you need to. 
+We've just gone through quite a few useful list and dictionary methods, and you might be concerned about remembering them all! There's no need to memorize them all right now-- it's likely that you'll start to remember them as you use them more, but in the meantime, refer back to this module whenever you need to. 
 
 </div>
 
