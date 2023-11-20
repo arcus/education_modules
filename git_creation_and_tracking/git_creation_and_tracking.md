@@ -694,7 +694,8 @@ These are our recommendations for how often to commit, but that doesn't mean we 
 
 ### Quiz: `add` and `commit`
 
-1. What sequence of commands would track the changes you made to `myFile.txt`?
+<div>
+What sequence of commands would track the changes you made to `myFile.txt`?
 
   a. `$ git add myFile.txt`
 
@@ -703,6 +704,8 @@ These are our recommendations for how often to commit, but that doesn't mean we 
   c. `$ git add -m "my short, descriptive message"`
 
   d. `$ git commit -m "my short, descriptive message"`
+
+</div>
 
 [( )] First run a, then b
 [(X)] First run a, then d
@@ -716,7 +719,7 @@ You must run the `git add` to tell Git to stage `myFile.txt`, then you can commi
 </div>
 ***
 
-2. With each commit, we want to leave a short, descriptive, message describing the changes we make. Which of these would be the **best** commit message?
+With each commit, we want to leave a short, descriptive, message describing the changes we make. Which of these would be the **best** commit message?
 
 [( )] "updates"
 [( )] "The Martian atmosphere is only 1% oxygen."
