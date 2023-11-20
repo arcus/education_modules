@@ -2,7 +2,7 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.1.1
+version: 1.1.0
 current_version_description: Added clarifying language about `.pop()` method, added more thorough explanation of the correct answer to the second dictionary quiz question, explained that there is no requirement to memorize methods, and fixed quiz answer checking that was throwing an error for double quotes.
 module_type: standard
 docs_version: 3.0.0
@@ -214,7 +214,7 @@ print(produce)
     <lia-keep>
     <script type="text/x-sage">
 
-    produce.insert(0, 'kale')
+    produce.insert(0, "kale")
 print(produce)
 
     </script>
@@ -227,7 +227,7 @@ print(produce)
     <div class="python_link">
     <lia-keep>
     <script type="text/x-sage">
-    berries= ['strawberry', 'blueberry', 'raspberries']
+    berries= ["strawberry", "blueberry", "raspberries"]
 produce.extend(berries)
 print(produce)
 
@@ -294,9 +294,9 @@ Let's build an example dictionary:
 <lia-keep>
 <script type="text/x-sage">
 
-contact_info = {'address' : '123 Puppydog Lane',
-                'telephone' : '987-654-3210',
-                'email' : 'myname@email.com'}
+contact_info = {"address" : "123 Puppydog Lane",
+                "telephone" : "987-654-3210",
+                "email" : "myname@email.com"}
 print(contact_info)
 
 </script>
@@ -351,7 +351,7 @@ Like lists, dictionaries have some useful methods you can use to access or alter
     <lia-keep>
     <script type="text/x-sage">
 
-    print(contact_info.pop('email'))
+    print(contact_info.pop("email"))
 print(contact_info)
 
     </script>
@@ -369,7 +369,7 @@ print(contact_info)
     <script type="text/x-sage">
 
     contact_info_copy = contact_info.copy()
-contact_info_copy.pop('telephone')
+contact_info_copy.pop("telephone")
 print(contact_info)
 print(contact_info_copy)
 
@@ -387,7 +387,7 @@ print(contact_info_copy)
     <lia-keep>
     <script type="text/x-sage">
 
-    contact_info['work_email'] = 'myname@company.com'
+    contact_info["work_email"] = "myname@company.com"
 print(contact_info)
 
     </script>
@@ -433,7 +433,7 @@ We've just gone through quite a few useful list and dictionary methods, and you 
 
 2. How would you access all of the countries (the "keys") in the dictionary below? 
 
-     `capital_cities = {'Afghanistan' : 'Kabul', 'Albania' : 'Tirana', 'Algeria' : 'Algiers', 'Andorra' : 'Andorra la Vella'}`
+     `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
     [[capital_cities.keys()]]
     <script>
@@ -450,7 +450,7 @@ We've just gone through quite a few useful list and dictionary methods, and you 
 
 3. How would you add the the country of Angola and its capital city of Luanda to the dictionary below?
 
-    `capital_cities = {'Afghanistan' : 'Kabul', 'Albania' : 'Tirana', 'Algeria' : 'Algiers', 'Andorra' : 'Andorra la Vella'}`
+    `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
     [[capital_cities["Angola"] = "Luanda"]]
     <script>
