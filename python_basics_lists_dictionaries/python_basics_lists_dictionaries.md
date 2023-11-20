@@ -200,7 +200,7 @@ print(produce)
     <lia-keep>
     <script type="text/x-sage">
 
-    produce.append('pear')
+    produce.append("pear")
 print(produce)
 
     </script>
