@@ -1,10 +1,10 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.1
-current_version_description: Added additional info for one exercise example (it was in the solutions file but not copied here)
+version: 1.4.0
+current_version_description: Added subsection explaining how to add new code chunks
 module_type: standard
-docs_version: 1.0.0
+docs_version: 3.0.0
 language: en
 mode: Textbook
 narrator: US English Female
@@ -45,7 +45,7 @@ sequence_name: r_basics
 - r_basics_visualize_data
 - r_missing_values
 - r_practice
-- r_reshape_lonog_wide
+- r_reshape_long_wide
 - r_summary_stats
 - data_visualization_in_ggplot2
 
@@ -58,9 +58,9 @@ sequence_name: r_basics
 
 Previous versions: 
 
+* [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/r_basics_introduction/r_basics_introduction.md#1): Added additional info for one exercise example (it was in the solutions file but not copied here)
 * [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3840108d202de535377009db54232b7897635a2c/r_basics_introduction/r_basics_introduction.md#1): Updated with new metadata and to remove references to Binderhub
 * [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/r_basics_introduction/r_basics_introduction.md): Update highlight boxes
-* [1.0.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/r_basics_introduction/r_basics_introduction.md#1): Add info about Posit, remove second attribution location, add versioning info
 
 @end
 
@@ -325,6 +325,8 @@ The second type of building block is **text**. Text can include special kinds of
 
 The third is **code chunks**.  Code chunks contain R code that can be executed to output results.
 
+### Code Chunks
+
 So how do you execute the code in the code chunks?  There are a couple of ways.
 
 The first is to run the code in a single code chunk. And you do this by clicking the green right-pointing triangle on the top right of the chunk. This symbol looks like a "play" button.  There are other symbols, too, including one that means "run all the code chunks that came before this one".
@@ -347,6 +349,32 @@ To **knit** a document, click the button that says "Knit" next to a blue ball of
 </div>
 </div>
 
+Adding New Code Chunks
+----
+
+You can have as many code chunks in your document as you want!
+
+There are a few different ways to add a new code chunk, and they all work equally well: 
+
+- Click the green "+C" button at the top of the editor window (near the "Knit" button)
+- Use the keyboard shortcut: Ctrl+Alt+I (Windows) or Command+Option+I (Mac)
+- Copy-paste an existing code chunk from somewhere else in your document and then edit or delete the code inside it
+
+Each of these will insert some new lines into your document that look like this: 
+
+````
+```{r}
+
+```
+````
+
+That's an empty code chunk.
+Code chunks are enclosed by three "backticks" (not single quotes), and the letter "r" enclosed in curly braces. 
+Check out your keyboard now to see if you can find the backtick.  
+It's likely in a corner of your keyboard, and in many layouts it travels alongside the tilde (~) symbol.  
+The letter "r" enclosed in curly braces tells RStudio what language is being used, in our case, the R language.
+You can write R code on the line(s) between the opening backticks and the closing backticks. 
+
 ### R Markdown in Detail
 
 Let's look at this R Markdown document in a little more detail.  Below is an R Markdown document and the resulting output in HTML that was created when this R Markdown document was knitted.
@@ -367,7 +395,7 @@ Again, the first block is the **header** section. The line that starts with `tit
 
 Here we also have some narrative **text** with marks such as hash marks and asterisks. Having a hash mark at the beginning of a line makes that line a header, and the more hash marks you write, the smaller the header. Depending on where you write it, asterisks serve different functions. If you use just one asterisk at the start of a line, it makes an item in a bulleted list. If you surround text on both sides by either one or two asterisks, the text renders as either italicized or bolded, respectively. This system of using special marks to indicate how text should look is called **Markdown**.
 
-Then we get to the code chunks. Don't worry about the contents of the code for now - in brief, the first code chunk asks R to generate 100 random values and then print out some summary statistics. The knitted document shows us our code in a gray box to make it visually distinct from the text; and then immediately after, the results of that code after it was executed.  Code chunks are enclosed by three "backticks" (not single quotes), and the letter "r" enclosed in curly braces. Check out your keyboard now to see if you can find the backtick.  It's likely in a corner of your keyboard, and in many layouts it travels alongside the tilde (~) symbol.  The letter "r" enclosed in curly braces tells RStudio what language is being used, in our case, the R language.  
+Then we get to the code chunks. Don't worry about the contents of the code for now - in brief, the first code chunk asks R to generate 100 random values and then print out some summary statistics. The knitted document shows us our code in a gray box to make it visually distinct from the text; and then immediately after, the results of that code after it was executed.    
 
 The second code chunk demonstrates that (1) in addition to text output, you can also make R create graphical plots, and (2) you can tweak the behavior of a code chunk – note that this code chunk has a chunk option of `echo=FALSE` within the curly braces. This tells R that you don't want it to repeat, or "echo", the code in the rendered document.  Notice that while the code itself is suppressed in the rendered output document, the results of the code (that is, the graph), does appear.
 
