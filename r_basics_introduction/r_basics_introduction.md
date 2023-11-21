@@ -369,6 +369,10 @@ Each of these will insert some new lines into your document that look like this:
 ````
 
 That's an empty code chunk.
+Code chunks are enclosed by three "backticks" (not single quotes), and the letter "r" enclosed in curly braces. 
+Check out your keyboard now to see if you can find the backtick.  
+It's likely in a corner of your keyboard, and in many layouts it travels alongside the tilde (~) symbol.  
+The letter "r" enclosed in curly braces tells RStudio what language is being used, in our case, the R language.
 You can write R code on the line(s) between the opening backticks and the closing backticks. 
 
 ### R Markdown in Detail
@@ -391,7 +395,7 @@ Again, the first block is the **header** section. The line that starts with `tit
 
 Here we also have some narrative **text** with marks such as hash marks and asterisks. Having a hash mark at the beginning of a line makes that line a header, and the more hash marks you write, the smaller the header. Depending on where you write it, asterisks serve different functions. If you use just one asterisk at the start of a line, it makes an item in a bulleted list. If you surround text on both sides by either one or two asterisks, the text renders as either italicized or bolded, respectively. This system of using special marks to indicate how text should look is called **Markdown**.
 
-Then we get to the code chunks. Don't worry about the contents of the code for now - in brief, the first code chunk asks R to generate 100 random values and then print out some summary statistics. The knitted document shows us our code in a gray box to make it visually distinct from the text; and then immediately after, the results of that code after it was executed.  Code chunks are enclosed by three "backticks" (not single quotes), and the letter "r" enclosed in curly braces. Check out your keyboard now to see if you can find the backtick.  It's likely in a corner of your keyboard, and in many layouts it travels alongside the tilde (~) symbol.  The letter "r" enclosed in curly braces tells RStudio what language is being used, in our case, the R language.  
+Then we get to the code chunks. Don't worry about the contents of the code for now - in brief, the first code chunk asks R to generate 100 random values and then print out some summary statistics. The knitted document shows us our code in a gray box to make it visually distinct from the text; and then immediately after, the results of that code after it was executed.    
 
 The second code chunk demonstrates that (1) in addition to text output, you can also make R create graphical plots, and (2) you can tweak the behavior of a code chunk – note that this code chunk has a chunk option of `echo=FALSE` within the curly braces. This tells R that you don't want it to repeat, or "echo", the code in the rendered document.  Notice that while the code itself is suppressed in the rendered output document, the results of the code (that is, the graph), does appear.
 
