@@ -1151,10 +1151,10 @@ df.loc["python_practice", "depends_on_knowledge_available_in"] = "&- python_basi
 df.loc["python_practice", "version_history"] = "&No previous versions.&" 
 df.loc["r_basics_introduction", "author"] = "Joy Payton"
 df.loc["r_basics_introduction", "email"] = "paytonk@chop.edu"
-df.loc["r_basics_introduction", "version"] = "1.3.1"
-df.loc["r_basics_introduction", "current_version_description"] = "Added additional info for one exercise example (it was in the solutions file but not copied here)"
+df.loc["r_basics_introduction", "version"] = "1.4.0"
+df.loc["r_basics_introduction", "current_version_description"] = "Added subsection explaining how to add new code chunks"
 df.loc["r_basics_introduction", "module_type"] = "standard"
-df.loc["r_basics_introduction", "docs_version"] = "1.0.0"
+df.loc["r_basics_introduction", "docs_version"] = "3.0.0"
 df.loc["r_basics_introduction", "language"] = "en"
 df.loc["r_basics_introduction", "narrator"] = "US English Female"
 df.loc["r_basics_introduction", "mode"] = "Textbook"
@@ -1174,9 +1174,9 @@ df.loc["r_basics_introduction", "comment"] = "Introduction to R and hands-on fir
 df.loc["r_basics_introduction", "long_description"] = "Are you brand new to R, and ready to get started?  This module teaches concepts and vocabulary related to R, RStudio, and R Markdown.  It also includes some introductory-level hands-on work in RStudio.  This is a good course if you know that you want to use R but haven't ever used it, or you've barely used it and need a refresher on the basics." 
 df.loc["r_basics_introduction", "pre_reqs"] = "&No prior experience of using R, RStudio, or R Markdown is required for this course.   &&This course is designed for brand new beginners with zero or minimal experience working with R.&&" 
 df.loc["r_basics_introduction", "learning_objectives"] = "&After completion of this module, learners will be able to:&&- Define and differentiate +R+, +RStudio+, and +R Markdown+&- Install and load packages in R&- Create a simple R Markdown file and its associated output document&- Import a .csv file as a data frame&&" 
-df.loc["r_basics_introduction", "sets_you_up_for"] = "&- r_basics_transform_data&- r_basics_visualize_data&- r_missing_values&- r_practice&- r_reshape_lonog_wide&- r_summary_stats&- data_visualization_in_ggplot2&&" 
+df.loc["r_basics_introduction", "sets_you_up_for"] = "&- r_basics_transform_data&- r_basics_visualize_data&- r_missing_values&- r_practice&- r_reshape_long_wide&- r_summary_stats&- data_visualization_in_ggplot2&&" 
 df.loc["r_basics_introduction", "depends_on_knowledge_available_in"] = "&" 
-df.loc["r_basics_introduction", "version_history"] = "&Previous versions: &&* [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3840108d202de535377009db54232b7897635a2c/r_basics_introduction/r_basics_introduction.md#1): Updated with new metadata and to remove references to Binderhub&* [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/r_basics_introduction/r_basics_introduction.md): Update highlight boxes&* [1.0.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/r_basics_introduction/r_basics_introduction.md#1): Add info about Posit, remove second attribution location, add versioning info&&" 
+df.loc["r_basics_introduction", "version_history"] = "&Previous versions: &&* [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/r_basics_introduction/r_basics_introduction.md#1): Added additional info for one exercise example (it was in the solutions file but not copied here)&* [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3840108d202de535377009db54232b7897635a2c/r_basics_introduction/r_basics_introduction.md#1): Updated with new metadata and to remove references to Binderhub&* [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/r_basics_introduction/r_basics_introduction.md): Update highlight boxes&&" 
 df.loc["r_basics_practice", "author"] = "Rose Hartman"
 df.loc["r_basics_practice", "email"] = "hartmanr1@chop.edu"
 df.loc["r_basics_practice", "version"] = "1.0.0"
@@ -1879,6 +1879,7 @@ a.append("r_basics_transform_data")
 a.append("r_basics_visualize_data")
 a.append("r_missing_values")
 a.append("r_practice")
+a.append("r_reshape_long_wide")
 a.append("r_summary_stats")
 a.append("reproducibility")
 df.at["r_basics_introduction", "Linked Courses"] = list(a)
