@@ -131,7 +131,8 @@ In particular, the files for `r_basics_introduction`, `r_basics_visualize_data`,
 
 ### Stuck?
 
-If this practice problem was challenging, [here is a link to a solutions file](https://github.com/arcus/education_r_environment/blob/main/r_basics_practice/basics_practice_solutions.Rmd) where we go through example code for the practice problems.
+If this practice problem was challenging, open up the `r_basics_practice_solutions.Rmd` file in the directory you're already working in (if you'd like a direct link, here is [the solutions file online](https://github.com/arcus/education_r_environment/blob/main/r_basics_practice/basics_practice_solutions.Rmd)). 
+In that solutions file, we go through example code for the practice problems.
 
 We encourage you to spend some time playing around with the data before you look at the solutions file! 
 And remember, just because your solution doesn't look exactly like the example doesn't mean it's wrong-- there are a variety of ways you might have approached the tasks we gave you.  
