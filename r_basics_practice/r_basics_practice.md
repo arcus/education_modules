@@ -4,7 +4,7 @@ author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version: 1.0.0
 current_version_description: Initial version
-module_type: practice
+module_type: exercise
 docs_version: 2.0.0
 language: en
 narrator: UK English Female
