@@ -1,10 +1,10 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.1
-current_version_description: Added additional info for one exercise example (it was in the solutions file but not copied here)
+version: 1.4.0
+current_version_description: Added subsection explaining how to add new code chunks
 module_type: standard
-docs_version: 1.0.0
+docs_version: 3.0.0
 language: en
 mode: Textbook
 narrator: US English Female
@@ -45,7 +45,7 @@ sequence_name: r_basics
 - r_basics_visualize_data
 - r_missing_values
 - r_practice
-- r_reshape_lonog_wide
+- r_reshape_long_wide
 - r_summary_stats
 - data_visualization_in_ggplot2
 
@@ -58,9 +58,9 @@ sequence_name: r_basics
 
 Previous versions: 
 
+* [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/r_basics_introduction/r_basics_introduction.md#1): Added additional info for one exercise example (it was in the solutions file but not copied here)
 * [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3840108d202de535377009db54232b7897635a2c/r_basics_introduction/r_basics_introduction.md#1): Updated with new metadata and to remove references to Binderhub
 * [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/r_basics_introduction/r_basics_introduction.md): Update highlight boxes
-* [1.0.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/r_basics_introduction/r_basics_introduction.md#1): Add info about Posit, remove second attribution location, add versioning info
 
 @end
 
@@ -325,6 +325,8 @@ The second type of building block is **text**. Text can include special kinds of
 
 The third is **code chunks**.  Code chunks contain R code that can be executed to output results.
 
+### Code Chunks
+
 So how do you execute the code in the code chunks?  There are a couple of ways.
 
 The first is to run the code in a single code chunk. And you do this by clicking the green right-pointing triangle on the top right of the chunk. This symbol looks like a "play" button.  There are other symbols, too, including one that means "run all the code chunks that came before this one".
@@ -346,6 +348,28 @@ To **knit** a document, click the button that says "Knit" next to a blue ball of
 ![Result of knitting, the start of an html document with headers and code](media/rendered_markdown.png)<!-- style = "max-width:90%;"-->
 </div>
 </div>
+
+Adding New Code Chunks
+----
+
+You can have as many code chunks in your document as you want!
+
+There are a few different ways to add a new code chunk, and they all work equally well: 
+
+- Click the green "+C" button at the top of the editor window (near the "Knit" button)
+- Use the keyboard shortcut: Ctrl+Alt+I (Windows) or Command+Option+I (Mac)
+- Copy-paste an existing code chunk from somewhere else in your document and then edit or delete the code inside it
+
+Each of these will insert some new lines into your document that look like this: 
+
+````
+```{r}
+
+```
+````
+
+That's an empty code chunk.
+You can write R code on the line(s) between the opening backticks and the closing backticks. 
 
 ### R Markdown in Detail
 
