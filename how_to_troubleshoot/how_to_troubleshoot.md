@@ -1,15 +1,17 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.2
-module_template_version: 2.0.0
+version: 1.1.3
+current_version_description: update highlight boxes and clarify instructions
+module_type: standard
+docs_version: 3.1.0
 language: en
 narrator: US English Female
 mode: Textbook
 title: How to Troubleshoot
 comment:  Learning to use technical methods like coding and version control in your research inevitably means running into problems.  Learn practical methods for troubleshooting and moving past error codes and other difficulties.
 long_description: When technical methods, such as writing code, using version control, and creating data visualizations are used, there will moments when a cryptic error message appears or the code simply doesn't do what it was intended to do.  This module will help people at various levels of technical expertise learn how to troubleshoot in tech more effectively.
-estimated_time: 30 minutes
+estimated_time_in_minutes: 30
 
 @learning_objectives  
 
@@ -21,37 +23,37 @@ After completion of this module, learners will be able to:
 
 
 @end
+@pre_reqs
+This module assumes that learners have started using technical methods such as writing code.  However, this module is useful for learners at any stage of their technical journey, and is not specific to any particular methods or programming languages. 
+@end
 
 good_first_module: false
-collection: learn_to_code
+collection: intro_to_data_science
 coding_required: false
+@sets_you_up_for
 
-link:  https://cdn.jsdelivr.net/gh/arcus/education_modules@main/assets/styles.css
+@end
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+
+@depends_on_knowledge_available_in
+
+@end
+
+
+@version_history 
+
+Previous versions: 
+
+- [1.0.0](https://raw.githubusercontent.com/arcus/education_modules/b3f308648906379648df742bd4d7349ca369cfaa/how_to_troubleshoot/how_to_troubleshoot.md): Initial version
+@end
+
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
 -->
 
 # How to Troubleshoot
-
-<div class = "overview">
-
-## Overview
-@comment
-
-**Is this module right for me?** @long_description
-
-**Estimated time to completion:** @estimated_time
-
-**Pre-requisites**
-
-This module assumes that learners have started using technical methods such as writing code.  However, this module is useful for learners at any stage of their technical journey, and is not specific to any particular methods or programming languages. 
-
-**Learning Objectives**
-
-@learning_objectives
-
-</div>
+@overview
 
 
 ## First, Don't Panic
@@ -302,16 +304,4 @@ Matthew Rocklin has some great Python examples (but they're understandable even 
 
 ## Feedback
 
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22How+to+Troubleshoot%22&version=1.0.1)!
+@feedback
