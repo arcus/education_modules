@@ -2,9 +2,10 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.7
-current_version_description: make CSS come from GCS
-module_template_version: 3.0.0
+version: 1.0.8 
+current_version_description: Initial version
+module_type: standard
+docs_version: 3.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -12,7 +13,15 @@ title: Creating a Git Repository
 comment:  Create a new Git repository and get started with version control.
 long_description: If you have Git set up on your computer and are ready to start tracking your files, then this module is for you. This module will teach you how to create a Git repository, add files to it, update files in it, and keep track of those changes in a clear and organized manner.
 
-@estimated_time_in_minutes: 60
+estimated_time_in_minutes: 60
+
+@pre_reqs
+Before you start this module, make sure you
+
+* Know how to access a command line interface (CLI) on your computer.
+* Have Git configured on your computer. If Git is not yet configured, see the module on setting up Git on a [Mac, Linux](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md), or [Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md) machine.
+* Can edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file), one of many text editors that you can access directly from the command line interface (CLI).
+@end
 
 @learning_objectives
 
@@ -30,39 +39,39 @@ After completion of this module, learners will be able to:
 good_first_module: false
 collection: learn_to_code
 coding_required: true
+coding_level: basic
+coding_language: git, bash
+sequence_name: git_basics
+previous_sequential_module: git_setup_mac_and_linux, git_setup_windows
 
-link:  https://storage.googleapis.com/chop-dbhi-arcus-education-website-assets/css/styles.css
+@sets_you_up_for 
+- git_history_of_project
+@end 
 
-script: https://kit.fontawesome.com/83b2343bd4.js
+@depends_on_knowledge_available_in
+- git_intro
+- git_setup_windows
+- git_setup_mac_and_linux
+- bash_command_line_101
+@end
 
+@version_history 
+No previous versions.
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
 # Creating a Git Repository
+@overview
 
-<div class = "overview">
+<div class = "gratitude">
+<b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
 
-## Overview
-@comment
+Material for this module was adapted from [Software Carpentry's git exploring history lesson](https://swcarpentry.github.io/git-novice/05-history.html), generously published under a [CC-BY 4.0](https://swcarpentry.github.io/git-novice/LICENSE.html) license. 
+The content has been lightly edited, as well as the formatting and presentation style. 
+We are tremendously grateful to [The Carpentries](https://carpentries.org/) for creating, maintaining, and sharing this valuable resource.
 
-**Is this module right for me?**
-
-@long_description
-
-**Estimated time to completion:**
-
-@estimated_time
-
-**Pre-requisites**
-
-Before you start this module, make sure you
-
-* Know how to access a command line interface (CLI) on your computer.
-* Have Git configured on your computer. If Git is not yet configured, see the module on setting up Git on a [Mac, Linux](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md), or [Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md) machine.
-* Can edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file), one of many text editors that you can access directly from the command line interface (CLI).
-
-**Learning Objectives**
-
-@learning_objectives
 </div>
 
 ## Lesson Preparation
@@ -358,7 +367,7 @@ Let's create a file called `mars.txt` that contains some notes
 about the Red Planet's suitability as a base.
 We'll use `nano` to edit the file;
 you can use whatever editor you like.
-In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). For a refresher on text editors, check out ["Which Editor?"](https://swcarpentry.github.io/shell-novice/03-create/) in [The Unix Shell lesson](https://swcarpentry.github.io/shell-novice/) by Software Carpentry.
+In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). For a refresher on text editors, check out ["Which Editor?"](https://swcarpentry.github.io/shell-novice/03-create.html#which-editor) in [The Unix Shell lesson](https://swcarpentry.github.io/shell-novice/) by Software Carpentry.
 
 ```console
 $ nano mars.txt
@@ -496,8 +505,8 @@ nothing to commit, working directory clean
 
 Even, and perhaps especially, those who use Git a lot can have trouble writing good commit messages. We are all just doing our best to document our work!
 
-![XKCD Cartoon, the text of which reads "As a project drags on my Git commit messages get less and less informative."  The first message shown reads "Created main loop & timing control." By the 5th message it reads "more code" followed by messages including "Here have code," "AAAAAAAAA," "my hands are typing words" and finally "haaaaaaaaands."](media/git_commit_2x.png)
-(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1296.)
+![XKCD Cartoon, the text of which reads "As a project drags on my Git commit messages get less and less informative."  The first message shown reads "Created main loop & timing control." By the 5th message it reads "more code" followed by messages including "Here have code," "AAAAAAAAA," "my hands are typing words" and finally "haaaaaaaaands."](media/git_commit_2x.png "Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1296")
+
 </div>
 
 ### Keeping track of your changes
@@ -685,7 +694,8 @@ These are our recommendations for how often to commit, but that doesn't mean we 
 
 ### Quiz: `add` and `commit`
 
-1. What sequence of commands would track the changes you made to `myFile.txt`?
+<div>
+What sequence of commands would track the changes you made to `myFile.txt`?
 
   a. `$ git add myFile.txt`
 
@@ -694,6 +704,8 @@ These are our recommendations for how often to commit, but that doesn't mean we 
   c. `$ git add -m "my short, descriptive message"`
 
   d. `$ git commit -m "my short, descriptive message"`
+
+</div>
 
 [( )] First run a, then b
 [(X)] First run a, then d
@@ -707,7 +719,7 @@ You must run the `git add` to tell Git to stage `myFile.txt`, then you can commi
 </div>
 ***
 
-2. With each commit, we want to leave a short, descriptive, message describing the changes we make. Which of these would be the **best** commit message?
+With each commit, we want to leave a short, descriptive, message describing the changes we make. Which of these would be the **best** commit message?
 
 [( )] "updates"
 [( )] "The Martian atmosphere is only 1% oxygen."
@@ -862,9 +874,8 @@ All of these are good reasons to include a file in `.gitignore`, but especially 
 ***
 
 ## Understanding the Git workflow
-![XKCD Cartoon. Person A: "This is Git. It tracks collaborative work on projects through a beautiful distributed graph theory tree model." Person B: "Cool. How do we use it?" Person A: "No idea. Just memorize these shell commands and type them to sync up. If you get errors, save your work elsewhere, delete the project, and download a fresh copy."](media/git_2x.png)
 
-(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1597.)
+![XKCD Cartoon. Person A: "This is Git. It tracks collaborative work on projects through a beautiful distributed graph theory tree model." Person B: "Cool. How do we use it?" Person A: "No idea. Just memorize these shell commands and type them to sync up. If you get errors, save your work elsewhere, delete the project, and download a fresh copy."](media/git_2x.png "Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1597 ")
 
 There were a lot of steps to getting our changes saved in Git! You could memorize that sequence of steps, and that is what many people do. However you might remember them better if you understand what each is doing.
 
@@ -918,23 +929,9 @@ There are options you can use to automatically stage all files. Entering `git co
 
 This module was based on examples from three of [Software Carpentry](https://software-carpentry.org)'s [lessons on using Git](https://swcarpentry.github.io/git-novice/). The story of Dracula and Wolfman's planned trip to Mars is borrowed from them, and more examples are available in the original lessons:
 
- - Lesson 3: [Creating a Repository](https://swcarpentry.github.io/git-novice/03-create/index.html)
- - Lesson 4: [Tracking Changes](https://swcarpentry.github.io/git-novice/04-changes/index.html)
- - Lesson 6: [Ignoring Things](https://swcarpentry.github.io/git-novice/06-ignore/index.html)
-
+ - Lesson 3: [Creating a Repository](https://swcarpentry.github.io/git-novice/03-create.html)
+ - Lesson 4: [Tracking Changes](https://swcarpentry.github.io/git-novice/04-changes.html)
+ - Lesson 6: [Ignoring Things](https://swcarpentry.github.io/git-novice/06-ignore.html)
 
 ## Feedback
-
-In the beginning, we stated some goals.
-
-**Learning Objectives:**
-
-@learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out [our brief survey](https://redcap.chop.edu/surveys/?s=KHTXCXJJ93&module_name=%22Creating+your+Git+Repository%22&version=1.0.4)!
+@feedback

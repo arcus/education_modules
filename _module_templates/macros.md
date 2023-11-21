@@ -128,7 +128,7 @@ We gather this information in order to iteratively improve our work.  Thank you 
 </script>
 @end
 
-link:  https://storage.googleapis.com/chop-dbhi-arcus-education-website-assets/css/styles.css
+link:  https://cdn.jsdelivr.net/gh/arcus/education_modules@main/assets/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js

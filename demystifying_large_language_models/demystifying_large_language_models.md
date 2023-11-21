@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.3
+version:  1.0.4
 current_version_description: Initial version
 module_type: standard
 docs_version: 2.0.0
@@ -541,8 +541,7 @@ We asked **'Give a multiple choice quiz question about the hidden layer in neura
 
 ----
 
-We asked ChatGPT for a question on word vectorization.  Our prompt: **
-Write a quiz question that checks for understanding of the term "vector" as it applies to word vectorization in NLP.**
+We asked ChatGPT for a question on word vectorization.  Our prompt: **Write a quiz question that checks for understanding of the term "vector" as it applies to word vectorization in NLP.**
 
 ---
 
