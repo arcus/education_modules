@@ -1177,6 +1177,34 @@ df.loc["r_basics_introduction", "learning_objectives"] = "&After completion of t
 df.loc["r_basics_introduction", "sets_you_up_for"] = "&- r_basics_transform_data&- r_basics_visualize_data&- r_missing_values&- r_practice&- r_reshape_lonog_wide&- r_summary_stats&- data_visualization_in_ggplot2&&" 
 df.loc["r_basics_introduction", "depends_on_knowledge_available_in"] = "&" 
 df.loc["r_basics_introduction", "version_history"] = "&Previous versions: &&* [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3840108d202de535377009db54232b7897635a2c/r_basics_introduction/r_basics_introduction.md#1): Updated with new metadata and to remove references to Binderhub&* [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/r_basics_introduction/r_basics_introduction.md): Update highlight boxes&* [1.0.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/r_basics_introduction/r_basics_introduction.md#1): Add info about Posit, remove second attribution location, add versioning info&&" 
+df.loc["r_basics_practice", "author"] = "Rose Hartman"
+df.loc["r_basics_practice", "email"] = "hartmanr1@chop.edu"
+df.loc["r_basics_practice", "version"] = "1.0.0"
+df.loc["r_basics_practice", "current_version_description"] = "Initial version"
+df.loc["r_basics_practice", "module_type"] = "exercise"
+df.loc["r_basics_practice", "docs_version"] = "3.0.0"
+df.loc["r_basics_practice", "language"] = "en"
+df.loc["r_basics_practice", "narrator"] = "UK English Female"
+df.loc["r_basics_practice", "mode"] = "Textbook"
+df.loc["r_basics_practice", "title"] = "R Basics Practice"
+df.loc["r_basics_practice", "estimated_time_in_minutes"] = "60"
+df.loc["r_basics_practice", "module_type"] = "exercise"
+df.loc["r_basics_practice", "good_first_module"] = "false"
+df.loc["r_basics_practice", "data_domain"] = ""
+df.loc["r_basics_practice", "data_task"] = "data_visualization, data_wrangling"
+df.loc["r_basics_practice", "collection"] = ""
+df.loc["r_basics_practice", "coding_required"] = "true"
+df.loc["r_basics_practice", "coding_level"] = "intermediate"
+df.loc["r_basics_practice", "coding_language"] = "r"
+df.loc["r_basics_practice", "sequence_name"] = "r_basics"
+df.loc["r_basics_practice", "previous_sequential_module"] = "r_basics_transform_data"
+df.loc["r_basics_practice", "comment"] = "Use the basics of R coding, data transformation, and data visualization to work with real data." 
+df.loc["r_basics_practice", "long_description"] = "The best way to learn R is by using it! This module provides an opportunity to practice basic R skills on real data. " 
+df.loc["r_basics_practice", "pre_reqs"] = "This is a practice module, which means you'll be expected to use commands without them being explained first. You should be familiar with the following before starting: &&- the RStudio IDE, including how to look at data in the Data Viewer&- the following `dplyr` commands: `filter`, `select`, `mutate`&- logical tests for equality in R (`==`)&- the following `ggplot2` commands: `geom_histogram`, `geom_boxplot`, `ggtitle`, `xlab`, and `facet_wrap`&&If you aren't familiar with the above, going through the first three modules in our R Basics sequence should give you the background you need: [Intro](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#1), [Data Visualization](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_visualize_data/r_basics_visualize_data.md#1), and [Data Transformation](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#1). &&Learners should also have access to R, either on their own computer or in the cloud.&" 
+df.loc["r_basics_practice", "learning_objectives"] = "&After completion of this module, learners will be able to:&&- Import a csv dataset into R&- Examine data in the Data Viewer&- Use `dplyr` to filter data and select columns, as well as to create new columns&- Use `ggplot2` to create data visualizations exploring the data&&" 
+df.loc["r_basics_practice", "sets_you_up_for"] = "&" 
+df.loc["r_basics_practice", "depends_on_knowledge_available_in"] = "-r_basics_introduction&-r_basics_visualize_data&-r_basics_transform_data&" 
+df.loc["r_basics_practice", "version_history"] = "No previous versions.&" 
 df.loc["r_basics_transform_data", "author"] = "Joy Payton"
 df.loc["r_basics_transform_data", "email"] = "paytonk@chop.edu"
 df.loc["r_basics_transform_data", "version"] = "1.3.2"
@@ -1854,6 +1882,12 @@ a.append("r_practice")
 a.append("r_summary_stats")
 a.append("reproducibility")
 df.at["r_basics_introduction", "Linked Courses"] = list(a)
+a = df.loc["r_basics_practice", "Linked Courses"]
+a.append("learning_to_learn")
+a.append("r_basics_introduction")
+a.append("r_basics_transform_data")
+a.append("r_basics_visualize_data")
+df.at["r_basics_practice", "Linked Courses"] = list(a)
 a = df.loc["r_basics_transform_data", "Linked Courses"]
 a.append("data_visualization_in_ggplot2")
 a.append("r_basics_introduction")
