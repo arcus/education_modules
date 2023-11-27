@@ -2,8 +2,8 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.2
-current_version_description: Update highlight box formattting.
+version: 1.2.0
+current_version_description: Improve hyperlink accessibility
 module_type: standard
 docs_version: 1.2.0
 language: en
@@ -51,6 +51,7 @@ coding_required: false
 
 Previous versions: 
 
+- [1.1.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/demystifying_geospatial_data/demystifying_geospatial_data.md#1): Update highlight box formatting
 - [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/demystifying_geospatial_data/demystifying_geospatial_data.md#1): Initial version.
 
 @end
@@ -91,17 +92,17 @@ Ultimately it was determined that cholera is an infection caused by a waterborne
 
 In 1854, the city of London experienced an outbreak of cholera, with a particularly high number of cases among people who lived in near Broad Street in the Soho district. London kept good records of deaths so doctors, including one named John Snow, were able to put all of the cholera deaths on to a neighborhood map, shown below:
 
-![Map of part of London which includes the Soho district, with black bars at some addresses.](media/snow_map_1.png "Doctor John Snow's map of the 1854 cholera outbreak. Public domain, available from [wikimedia](https://commons.wikimedia.org/wiki/File:Snow-cholera-map-1.jpg).")
+![Map of part of London which includes the Soho district, with black bars at some addresses.](media/snow_map_1.png "[Doctor John Snow's map of the 1854 cholera outbreak](https://commons.wikimedia.org/wiki/File:Snow-cholera-map-1.jpg). Public domain, available from wikimedia.")
 
 This map marks each cholera death as a dark bar at the deceased's address. If an address has multiple deaths from cholera, the bars stack to form a version of a bar graph.
 
-One ([fictional](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/)) version of this story says that Dr. Snow created this map and had a "eureka" moment! On seeing the map he knew that the center of this area was a particular water pump, and heroically removed the handle of the pump preventing any more people from accessing the infected water and halting the spread of disease.
+One ([fictional version of the Dr. Snow story](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/)) says that he created this map and had a "eureka" moment! On seeing the map he knew that the center of this area was a particular water pump, and heroically removed the handle of the pump preventing any more people from accessing the infected water and halting the spread of disease.
 
 In reality, while he did identify the water pump as a possible source of the outbreak, Dr. Snow informed the local authorities who removed the pump about a month after the outbreak started. The map wasn't created until later when Dr. Snow was trying to prove his hypothesis about the pump.
 
 He also created a second map, which added a dotted line showing which addresses were closer to that water pump than any other pump. This map shows that almost all of the cholera deaths were of people who not just lived near that pump, but likely used that pump to get their water.
 
-![Enlarged map of the Soho district with a dotted curve enclosing most, but not all, of the black bars.](media/snow_map_2.jpeg "John Snow's updated map with a dotted line marking which locations are closer to the infected water pump than any other pump. On the Mode of Communication of Cholera by John Snow, 1855. Public domain, available through [ESRI](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/).")
+![Enlarged map of the Soho district with a dotted curve enclosing most, but not all, of the black bars.](media/snow_map_2.jpeg "[John Snow's updated map](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/something-in-the-water-the-mythology-of-snows-map-of-cholera/) with a dotted line marking which locations are closer to the infected water pump than any other pump. On the Mode of Communication of Cholera by John Snow, 1855. Public domain, available through ESRI.")
 
 
 ## The Power of Geospatial Data
@@ -113,12 +114,12 @@ Geospatial data lets you make all sorts of connections that might not otherwise 
 Social Determinants of Health
 ----------------------------
 
-A research subject or patient cannot possibly be expected to share every aspect of their lived experience with an interviewer, but looking at a person's neighborhood, place of work, or school can provide a lot of information about their environmental exposures without asking intrusive questions. Are they in an area with high rates of violence or low access to fresh produce? Are they close to a park with lots of shade and a playground? Do the have to cross a busy highway on their way to school? The answers to these questions may be crucial to understanding an individual or group's social determinants of health.
+A research subject or patient cannot possibly be expected to share every aspect of their lived experience with an interviewer, but looking at a person's neighborhood, place of work, or school can provide a lot of information about their environmental exposures without asking intrusive questions. Are they in an area with high rates of violence or low access to fresh produce? Are they close to a park with lots of shade and a playground? Do the have to cross a busy highway on their way to school? The answers to these questions may be crucial to understanding an individual or group's social determinants of health (SDH).
 
 
-According to the [World Health Organization](https://www.who.int/health-topics/social-determinants-of-health#tab=tab_1):
+According to the [World Health Organization, Social Determinants of Health](https://www.who.int/health-topics/social-determinants-of-health#tab=tab_1) are:
 
-> The social determinants of health (SDH) are the non-medical factors that influence health outcomes. They are the conditions in which people are born, grow, work, live, and age, and the wider set of forces and systems shaping the conditions of daily life. These forces and systems include economic policies and systems, development agendas, social norms, social policies and political systems.
+> ...the non-medical factors that influence health outcomes. They are the conditions in which people are born, grow, work, live, and age, and the wider set of forces and systems shaping the conditions of daily life. These forces and systems include economic policies and systems, development agendas, social norms, social policies and political systems.
 
 
 Much modern research focuses on similar social determinants of health. Whether researchers are using aggregated data to learn more about an individual's circumstances, or individuals' location data to learn more about a place, figuring out **where** phenomena are occurring can be an important first step in making changes that greatly improve public health!
@@ -147,7 +148,7 @@ Data Quality
 
 Two hundred years ago, maps were drawn by hand and even the most accurate surveyor using the most accurate tools could not match the accuracy of modern Global Positioning Systems (GPS).
 
-While GPS has greatly improved the quality of geospatial data, it is still not perfect and can have the same sorts of missing and nonsensical fields as any data set. For example, Philadelphia records of police stops, available via [OpenDataPhilly](https://www.opendataphilly.org/dataset/vehicle-pedestrian-investigations), record some small portion of stops as occurring in Cape Canaveral, Florida, approximately a thousand miles away, which is clearly not accurate.
+While GPS has greatly improved the quality of geospatial data, it is still not perfect and can have the same sorts of missing and nonsensical fields as any data set. For example, [Philadelphia records of police stops](https://www.opendataphilly.org/dataset/vehicle-pedestrian-investigations), available via [OpenDataPhilly](https://www.opendataphilly.org), record some small portion of stops as occurring in Cape Canaveral, Florida, approximately a thousand miles away, which is clearly not accurate.
 
 Treat location data as you would any other raw data: with a questioning attitude and the expectation that some data cleaning will be required.
 
@@ -171,7 +172,7 @@ As with all data, privacy and ownership of people's geospatial data is an import
 
 The maps of cholera deaths from 1854 might not contain the names of the individuals who died, but they do contain enough information to reconstruct a pretty good picture of which individuals are represented simply by looking at who lives, or lived at each address. As a researcher using geospatial data, you have additional responsibility to keep data private.
 
-Depending on where and how you obtain your geospatial data, it might have precise locations or it may have already been processed in order to protect privacy. For example if you are working with 2020 US Census Data, the data you are looking at has been processed using a method called [differential privacy](https://www.census.gov/programs-surveys/decennial-census/decade/2020/planning-management/process/disclosure-avoidance.html). That might mean that you need to aggregate data in order to get accurate results.
+Depending on where and how you obtain your geospatial data, it might have precise locations or it may have already been processed in order to protect privacy. [Differential privacy](https://en.wikipedia.org/wiki/Differential_privacy) is a mathematical approach to protecting the privacy of individuals when sharing aggregate data. For example differential privacy is a cornerstone of the [2020 US Census Disclosure Avoidance System](https://www.census.gov/programs-surveys/decennial-census/decade/2020/planning-management/process/disclosure-avoidance.html). That might mean that you need to aggregate data in order to get accurate results.
 
 Even if you have approval to **use** fully identified location data in your analyses, you need to make sure that the data you ultimately **publish** does not violate the privacy of any research subjects.
 
@@ -247,9 +248,9 @@ Geospatial data is very rich and while not all of it is publicly available, ther
 
 ## Additional Resources
 
-If you need more convincing of how important thinking geospatially can be, here are a few [videos](https://thepossibilityofwhere.economist.com/) produced by the GIS company ESRI illustrating importance of geospatial analyses in a variety of fields including healthcare.
+If you need more convincing of how important thinking geospatially can be, the GIS company ESRI produced several [videos illustrating importance of geospatial analyses](https://www.esriuk.com/en-gb/geospatial-thinking/overview) in a variety of fields including healthcare.
 
-Another summary of uses of geospatial data appeared as [an article](https://trajectorymagazine.com/past-present-future-geospatial-data-use/) in Trajectory Magazine, a publication of the United States Geospatial Intelligence Foundation (USGIF).
+Another [summary of uses of geospatial data appeared](https://trajectorymagazine.com/past-present-future-geospatial-data-use/) as an article in Trajectory Magazine, a publication of the United States Geospatial Intelligence Foundation (USGIF).
 
 ## Feedback
 
