@@ -182,7 +182,7 @@ head(cytomegalovirus)
 You should see the first six rows of the cytomegalovirus data frame, which look like this:
 
 <!-- data-type="none" -->
-| ID| age|sex    |race             |diagnosis                    |diagnosis.type | time.to.transplant|prior.radiation | prior.chemo|prior.transplant | recipient.cmv|donor.cmv |donor.sex | TNC.dose| CD34.dose| CD3.dose| CD8.dose| TBI.dose|C1/C2        | aKIRs|cmv | time.to.cmv|agvhd | time.to.agvhd|cgvhd | time.to.cgvhd|aKIRs_groups |
+| ID| age|sex    |race             |diagnosis                    |diagnosis.type | time.to.transplant|prior.radiation | prior.chemo|prior.transplant | recipient.cmv|donor.cmv |donor.sex | TNC.dose| CD34.dose| CD3.dose| CD8.dose| TBI.dose|C1/C2        | aKIRs|cmv | time.to.cmv|agvhd | time.to.agvhd|cgvhd | time.to.cgvhd|aKIRs\_groups |
 |--:|---:|:------|:----------------|:----------------------------|:--------------|------------------:|:---------------|-----------:|:----------------|-------------:|:---------|:---------|--------:|---------:|--------:|--------:|--------:|:------------|-----:|:---|-----------:|:-----|-------------:|:-----|-------------:|:------------|
 |  1|  61|Male   |African-American |acute myeloid leukemia       |Myeloid        |               5.16|No              |           2|No               |             1|Negative  |Male      |    18.31|      2.29|     3.21|     0.95|      200|Heterozygous |     1|Yes |        3.91|Yes   |          3.55|No    |          6.28|1 to 4 aKIRs |
 |  2|  62|Male   |White            |non-Hodgkin lymphoma         |Lymphoid       |              79.05|Yes             |           3|No               |             0|Negative  |Female    |     4.26|      2.04|       NA|       NA|      200|Homozygous   |     5|No  |       65.12|No    |         65.12|No    |         65.12|5 to 6 aKIRs |
@@ -646,7 +646,7 @@ The `if_else` function is what's called a ternary operator, and it has three par
  * a value to use if the test returns `FALSE`.
 
 In the aKIRs example, we first tested each value to see if it was > 4. If yes, we assigned it "5 to 6 aKIRs", and if no we assigned it to "1 to 4 aKIRs". 
-Note that `if_else` preserves missing values, so anything that was NA in aKIRs will still be NA in aKIRs_groups. 
+Note that `if_else` preserves missing values, so anything that was NA in aKIRs will still be NA in aKIRs\_groups. 
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
@@ -775,7 +775,7 @@ We're just trying to replicate the tests that were done to get the published ver
 
 </div>
 
-One glaring issue that remains is the row labels. We don't want labels like "prior.chemo_groups" in our final table! 
+One glaring issue that remains is the row labels. We don't want labels like "prior.chemo\_groups" in our final table! 
 We can clean those up with the `label` argument in the `tbl_summary` command:
 
 ```r
@@ -817,7 +817,7 @@ You can export your table in many different formats! For a list, see [the `gtsum
 
 </div>
 
-To save a table as a Word file, add the following two lines to the end of your table commands (you can change "my_table.docx" to be whatever you want the filename to be).  Don't forget to put a pipe (`|>`) at the end of what used to be the last line of your code, so that these two lines are read as a continuation of your work.
+To save a table as a Word file, add the following two lines to the end of your table commands (you can change "my\_table.docx" to be whatever you want the filename to be).  Don't forget to put a pipe (`|>`) at the end of what used to be the last line of your code, so that these two lines are read as a continuation of your work.
 
 ```r
   as_flex_table() |> 

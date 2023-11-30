@@ -237,7 +237,7 @@ Good eye!  You indeed **don't** need that second `LOWER`, but we want you to get
 
 </div>
 
-### REGEXP_LIKE and Regular Expressions
+### REGEXP\_LIKE and Regular Expressions
 
 **Regular expression functions** are a class of function that utilize [regular expressions](https://en.wikipedia.org/wiki/Regular_expression), including [metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended), to perform some kind of pattern matching on text data.  
 
@@ -264,7 +264,7 @@ In a regular expression, we could write that like this:
 
 Regular expressions can look intimidating, but learning regex can be a powerful way to find text needles in a haystack, helping you pull out useful text from clinical notes, Python code you've written, a pile of social media posts compiled for research, or other text.  If you'd like to learn regex, we suggest checking out our modules [Demystifying Regular Expressions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#1) or [Regular Expressions Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_basics/regular_expressions_basics.md#1) to get started!
 
-You don't need to memorize the information we share here about regular exprssions.  In our regex quiz question, we provide you with the regular expression you need!  Our goal is to let you see and work with these powerful tools in a supported way, so they're less scary when you run across them later.
+You don't need to memorize the information we share here about regular expressions.  In our regex quiz question, we provide you with the regular expression you need!  Our goal is to let you see and work with these powerful tools in a supported way, so they're less scary when you run across them later.
 
 </div>
 
@@ -302,7 +302,7 @@ WHERE
 
 As you can see from even just this simple example, regular expression functions can be much more useful & dynamic than the `LIKE` operator for filtering on complex text based data.
 
-### Quiz: CASE, LIKE, and REGEXP_LIKE
+### Quiz: CASE, LIKE, and REGEXP\_LIKE
 
 In this quiz, we have some scenarios for you to consider as a researcher.  If you create the correct SQL query, you'll get the corresponding quiz answer (which appears below the code box) easily!  There is one question each for `CASE`, `LIKE`, and `REGEXP_LIKE`.
 
@@ -364,7 +364,7 @@ FROM alasql.patients;
 
 *********
 
-You'd like to research patients born in the 1970s (so any year starting 197_ would work).  Use a `LIKE` statement to enrich the query below and find the patient set you care about.  Below the code box, there's a question.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i> after the question, you'll see the code that we used to answer the question.
+You'd like to research patients born in the 1970s (so any year starting 197\_ would work).  Use a `LIKE` statement to enrich the query below and find the patient set you care about.  Below the code box, there's a question.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i> after the question, you'll see the code that we used to answer the question.
 
 ```sql
 SELECT
@@ -626,7 +626,7 @@ In this quiz, we're going to challenge you to create a query from scratch using 
 Please create a query below that queries `alasql.patients` and gives the patient population of each city (`patients.city`) which has more than one patient living there.  Give the results in an alphabetized list.  Your results should start like the table below.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i>  after the question, you'll see the code that we used to answer the question.
 
 <!-- data-type="none" -->
-| city | patient_population |
+| city | patient\_population |
 | ---- | ---- |
 | Boston | 2 |
 | ...    | ... |

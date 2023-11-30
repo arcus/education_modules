@@ -113,7 +113,7 @@ For most practical purposes, you don't need to know anything about these differe
 Here's an example of what some data with missing values might look like when printed in R:
 
 <!-- data-type="none" -->
-| sensor_id | PM2.5 | PM10 | O3 | NO2 |
+| sensor\_id | PM2.5 | PM10 | O3 | NO2 |
 | ---- | --- | --- | --- | --- |
 | 0001 | 10 | 25 | 0.0 | 67 |
 | 0002 | 13 | 21 |  NA | 71 |

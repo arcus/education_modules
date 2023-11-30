@@ -146,9 +146,9 @@ The metadata describes information on the *Ara-3* clones, and the columns repres
 | mutator          | hypermutability mutant status |
 | facility         | facility samples were sequenced at |
 | run              | Sequence read archive sample ID		|
-| read_type        | library type of reads |
-| read_length      | length of reads in sample |
-| sequencing_depth | depth of sequencing |
+| read\_type        | library type of reads |
+| read\_length      | length of reads in sample |
+| sequencing\_depth | depth of sequencing |
 | cit              | citrate-using mutant status		|
 
 <div class = "learn-more">
@@ -684,7 +684,7 @@ All of the reads contain usable data, but the quality decreases toward the end o
 
 We have now looked at quite a few "Per base sequence quality" FastQC graphs, but there are nine other graphs that we have not talked about!
 Below we have provided a brief overview of interpretations for each of these plots.
-For more information, please see the FastQC documentation [here](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/).
+For more information, please see [the FastQC documentation](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/).
 
 - [**Per tile sequence quality**](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/12%20Per%20Tile%20Sequence%20Quality.html): the machines that perform sequencing are divided into tiles. This plot displays patterns in base quality along these tiles. Consistently low scores are often found around the edges, but hot spots can also occur in the middle if an air bubble was introduced at some point during the run.
 - [**Per sequence quality scores**](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/3%20Per%20Sequence%20Quality%20Scores.html): a density plot of quality for all reads at all positions. This plot shows what quality scores are most common.

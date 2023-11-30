@@ -118,7 +118,7 @@ The simplest file paths might just be the name of the file you're trying to acce
 
 ### Relative paths
 
-As the name suggests, a **relative file path** is one that points to a location relative to a reference point. An example of a relative file path might be "data/age_data.csv". The important thing to remember when using relative paths is that, for them to work, the language you're programming in needs to have a frame of reference to start from.
+As the name suggests, a **relative file path** is one that points to a location relative to a reference point. An example of a relative file path might be "data/age\_data.csv". The important thing to remember when using relative paths is that, for them to work, the language you're programming in needs to have a frame of reference to start from.
 
 It's a bit like giving directions to a brand new coworker about where to find your stapler. You might tell them that it is in the bottom drawer of your desk in your office. This works well if your coworker is in the same building and on the same floor as you are, since they can see that there is an office with your name on it, a desk in that office, and drawers in that desk. If your coworker is in another building, however, these directions aren't very helpful! You'd have to include the name of the building and the floor where your office is.
 
@@ -185,7 +185,7 @@ To turn on this feature, go to the **View** menu which is at the top left of you
 
 **Copy File Path from Path Bar**
 
-Once you have the Path Bar displayed, you can copy the directory or file's path by right clicking on its name in the path bar and selecting **Copy "file_name" as Pathname** and then pasting that pathname wherever you want.
+Once you have the Path Bar displayed, you can copy the directory or file's path by right clicking on its name in the path bar and selecting **Copy "file\_name" as Pathname** and then pasting that pathname wherever you want.
 
 ![Copy filename as Pathname.](media/Copy_Pathname.png)
 

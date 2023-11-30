@@ -64,7 +64,7 @@ Maybe your source tables look something like the tables below:
 **Table 1: depression\_scale**
 
 <!-- data-type="none" class="tight-table" style="font-size:80%"-->
-| subj_id  | date  | dep_q1  | dep_q2   | dep_q3  | dep_q4  | dep_total   |
+| subj\_id  | date  | dep\_q1  | dep\_q2   | dep\_q3  | dep\_q4  | dep\_total   |
 | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
 | 11234   | 2021-05-15   | 3    | 3  | 2    | 4    | 12    |
 | 86234   | 2021-06-01   | 4    | 4  | 3    | 4    | 15    |
@@ -75,7 +75,7 @@ Maybe your source tables look something like the tables below:
 **Table 2: subject\_address**
 
 <!-- data-type="none" class="tight-table" style="font-size:80%"-->
-| subj_id  | street_address  | city  | state   | zip  | date_start  | date_end   |
+| subj\_id  | street\_address  | city  | state   | zip  | date\_start  | date\_end   |
 | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
 | 11234   | 123 Main Street   | Smithtown    | PA  | 19000    | 2022-01-01   | `NULL`    |
 | 11234   | 123 Oak Lane   | Old Towne    | PA  | 18000   | 2000-01-01    | 2021-12-31    |
@@ -134,7 +134,7 @@ Let's consider again the data from our fictional multi-site research study on me
 **Table 1: depression\_scale**
 
 <!-- data-type="none" class="tight-table" style="font-size:80%"-->
-| subj_id  | date  | dep_q1  | dep_q2   | dep_q3  | dep_q4  | dep_total   |
+| subj\_id  | date  | dep\_q1  | dep\_q2   | dep\_q3  | dep\_q4  | dep\_total   |
 | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
 | 11234   | 2021-05-15   | 3    | 3  | 2    | 4    | 12    |
 | 86234   | 2021-06-01   | 4    | 4  | 3    | 4    | 15    |
@@ -145,13 +145,13 @@ Let's consider again the data from our fictional multi-site research study on me
 **Table 2: subject\_address**
 
 <!-- data-type="none" class="tight-table" style="font-size:80%" -->
-| subj_id  | street_address  | city  | state   | zip  | date_start  | date_end   |
+| subj\_id  | street\_address  | city  | state   | zip  | date\_start  | date\_end   |
 | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
 | 11234   | 123 Main Street   | Smithtown    | PA  | 19000    | 2022-01-01   | `NULL`    |
 | 11234   | 123 Oak Lane   | Old Towne    | PA  | 18000   | 2000-01-01    | 2021-12-31    |
 | 93452   | 123 Green Blvd  | Kirby    | TN  | 37000    | 2020-05-01    | `NULL`   |
 
-Notice the one-to-many aspects of this data.  The subject with subj_id 86234 has two different administrations of the depression inventory, on different dates.  The subject with subj_id 11234 has two different addresses for two different date ranges.
+Notice the one-to-many aspects of this data.  The subject with subj\_id 86234 has two different administrations of the depression inventory, on different dates.  The subject with subj\_id 11234 has two different addresses for two different date ranges.
 
 **Column Conundrums**
 -----
@@ -208,7 +208,7 @@ Consider the following example of a typo in a database. Is it easier to correct 
 **orders**
 
 <!-- data-type="none" class="tight-table" -->
-| order_num   | item_1   | item_2  | ...  | item_50  |
+| order\_num   | item\_1   | item\_2  | ...  | item\_50  |
 | :--------- | :--------- | :--------- | :--------- | :--------- |
 | 23125    | orane juice     | pistachios     | ...    | `NULL`    |
 | 41320    | peanut butter    | plain bagels     | ...    | orane juice    |
@@ -229,7 +229,7 @@ In the **order\_items** table we want to allow the "order\_id" to repeat as many
 **items**
 
 <!-- data-type="none" class="tight-table" -->
-| item_id (PK)  | item_name  |
+| item\_id (PK)  | item\_name  |
 | :--------- | :--------- |
 | 15 | distilled water |
 | 178 | napkins |
@@ -238,10 +238,10 @@ In the **order\_items** table we want to allow the "order\_id" to repeat as many
 | 108 | pistachios  |
 | 233 | plain bagels  |
 
-**order_items**
+**order\_items**
 
 <!-- data-type="none" class="tight-table" -->
-| order_id | item_id |
+| order\_id | item\_id |
 | :--------- | :--------- |
 | 23125 | 210 |
 | 23125 | 108 |
@@ -298,7 +298,7 @@ A **primary key**, you'll recall, is a column (occasionally a set of columns) th
 **items**
 
 <!-- data-type="none" class="tight-table" -->
-| item_id (PK)  | item_name  |
+| item\_id (PK)  | item\_name  |
 | :--------- | :--------- |
 | 15 | distilled water |
 | 178 | napkins |
@@ -310,12 +310,12 @@ A **primary key**, you'll recall, is a column (occasionally a set of columns) th
 
 A **foreign key** is a column in a table that make reference to a primary key in some other table.  For example, in our "order\_items" table earlier, we had a column called "item\_id", which contained numbers that corresponded to the "item\_id" column in the "items" table.  If we saw a row in the "order\_items" table that had "order\_id" of 34219 and "item\_id" of 15, the "item\_id" is a foreign key (*foreign* in this case meaning "not from here, originated elsewhere") that originated in the "items" table.  We could look up in that table to discover that "item\_id" 15 indicates that the order included the item "distilled water".
 
-**order_items**
+**order\_items**
 
 *The second column here is a foreign key.  Sometimes (but not always!) you will see this noted in database diagrams as (FK) or a symbol like <span class="fa-solid fa-key"></span>.*
 
 <!-- data-type="none" class="tight-table" -->
-| order_id | item_id (FK) |
+| order\_id | item\_id (FK) |
 | :--------- | :--------- |
 | 23125 | 210 |
 | 23125 | 108 |
@@ -370,7 +370,7 @@ Which of the fields in this table is likely to be a foreign key?  Select all tha
 
 <div class = "answer">
 
-A foreign key is an identifier that originates in another table.  It certainly seems likely that there is a "patient" table and a "provider" table that the "patient\_id" and "provider\_id", respectively, originated in.  These are the two foreign keys.  The "med\_ord\_id" seems to originate here, in the "medication_order" table, so it's not a foreign key, and the "date" just seems like, well, a date, not an identifier at all!
+A foreign key is an identifier that originates in another table.  It certainly seems likely that there is a "patient" table and a "provider" table that the "patient\_id" and "provider\_id", respectively, originated in.  These are the two foreign keys.  The "med\_ord\_id" seems to originate here, in the "medication\_order" table, so it's not a foreign key, and the "date" just seems like, well, a date, not an identifier at all!
 
 </div>
 

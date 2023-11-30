@@ -391,7 +391,7 @@ Below these images, we'll explain what each part of the R Markdown includes in a
 </div>
 </div>
 
-Again, the first block is the **header** section. The line that starts with `title:` tells R Markdown that the title should be "My Markdown Document". The line starting with `output:` communicates that when the document is rendered, we want to output to be an "html_document". That's the default. In the resulting HTML document there's the title "My Markdown Document" in large type letters.  The header is enclosed on both sides with three dashes, and the data inside is in a format called "YAML" (rhymes with Hammill).  YAML, according to most people, stands for "Yet Another Markup Language", and it consists of a named field, a colon, and the value for that field.  
+Again, the first block is the **header** section. The line that starts with `title:` tells R Markdown that the title should be "My Markdown Document". The line starting with `output:` communicates that when the document is rendered, we want to output to be an "html\_document". That's the default. In the resulting HTML document there's the title "My Markdown Document" in large type letters.  The header is enclosed on both sides with three dashes, and the data inside is in a format called "YAML" (rhymes with Hammill).  YAML, according to most people, stands for "Yet Another Markup Language", and it consists of a named field, a colon, and the value for that field.  
 
 Here we also have some narrative **text** with marks such as hash marks and asterisks. Having a hash mark at the beginning of a line makes that line a header, and the more hash marks you write, the smaller the header. Depending on where you write it, asterisks serve different functions. If you use just one asterisk at the start of a line, it makes an item in a bulleted list. If you surround text on both sides by either one or two asterisks, the text renders as either italicized or bolded, respectively. This system of using special marks to indicate how text should look is called **Markdown**.
 
@@ -543,7 +543,7 @@ data_frame <- read_csv(file_name)
 ```
 ![""](media/csv_import.png)<!-- style = "max-width:500px;" -->
 
-You start with the name of the object you want to hold the data, then you type a leftward arrow symbol using the less than symbol followed by a dash symbol, then "read_csv" and then the file name in parentheses.
+You start with the name of the object you want to hold the data, then you type a leftward arrow symbol using the less than symbol followed by a dash symbol, then "read\_csv" and then the file name in parentheses.
 
 This code construct is exceedingly common in R, and it's a good moment to explain **functions**.
 
