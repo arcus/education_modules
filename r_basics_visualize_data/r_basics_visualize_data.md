@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.2
+version: 1.3.3
 current_version_description: Added help boxes for color vs fill aesthetic mapping and how to get plots to show in the plot pane.
 module_type: standard
 docs_version: 2.0.0

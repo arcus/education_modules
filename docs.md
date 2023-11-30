@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  3.1.0
+version:  3.1.1
 current_version_description: update definition of learn_to_code collection
 language: en
 narrator: UK English Female

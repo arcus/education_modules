@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.5.1
+version: 1.5.2
 current_version_description: Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure
 module_type: standard
 docs_version: 2.0.0

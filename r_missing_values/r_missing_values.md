@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Update with metadata, macros.  Remove reference to Binderhub.
 module_type: standard
 docs_version: 1.0.0

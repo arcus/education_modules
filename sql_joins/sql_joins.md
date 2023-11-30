@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.2
+version: 1.1.3
 current_version_description: Typo fix; update metadata
 module_type: standard
 docs_version: 2.0.0

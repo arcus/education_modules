@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Correct typo, update metadata version
 module_type: standard
 docs_version: 2.0.0
