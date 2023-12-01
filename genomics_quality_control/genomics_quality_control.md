@@ -297,12 +297,12 @@ We will now assess the quality of the sequence reads contained in our FASTQ file
 
 Although it looks complicated (and it is), we can understand the [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) format with a little decoding. Some rules about the format include...
 
-|Line|Description|
-|----|-----------|
-|1|Always begins with '@' and then information about the read|
-|2|The actual DNA sequence|
-|3|Always begins with a '+' and sometimes the same info in line 1|
-|4|Has a string of characters which represent the quality scores; must have same number of characters as line 2|
+| Line | Description                                                                                                  |
+| ---- | ------------------------------------------------------------------------------------------------------------ |
+| 1    | Always begins with `@` and then information about the read                                                   |
+| 2    | The actual DNA sequence                                                                                      |
+| 3    | Always begins with a `+` and sometimes the same info in line 1                                               |
+| 4    | Has a string of characters which represent the quality scores; must have same number of characters as line 2 |
 
 ## Quality scores
 
