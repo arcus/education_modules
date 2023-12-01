@@ -167,9 +167,7 @@ jobs:
 
           git checkout workflow_improvement 
 
-          mv -f module_data.py module_data.csv assets/metadata/
-          
-          #git add assets/metadata/module_data.py
+          mv -f module_data.csv assets/metadata/
 
           git add assets/metadata/module_data.csv
 
