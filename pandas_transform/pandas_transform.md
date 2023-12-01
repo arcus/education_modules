@@ -275,14 +275,15 @@ Loading your own data
 ---
 
 To create a DataFrame of your data, make sure you use the right command for your file type, and make sure the location of the file is in quotes.
-| File type | Read command |
-| - | - |
-| .csv | pd.read\_csv('location')|
-| .xlsx | pd.read\_excel('location')|
-| .ods | pd.read\_excel('location')|
-| .json| pd.read\_json('location')|
-| .html| pd.read\_html('location')|
-| .sql | pd.read\_sql('location')|
+
+| File type | Read command               |
+| --------- | -------------------------- |
+| .csv      | pd.read\_csv('location')   |
+| .xlsx     | pd.read\_excel('location') |
+| .ods      | pd.read\_excel('location') |
+| .json     | pd.read\_json('location')  |
+| .html     | pd.read\_html('location')  |
+| .sql      | pd.read\_sql('location')   |
 
 
 
