@@ -272,13 +272,13 @@ Regex can be thought of as a supercharged version of the the `LIKE` operator's "
 
 The most common set of regular expression metacharacters are listed below.
 
-|Metacharacter|Description|
-|:---|:---|
-|^|Matches the starting position within the string.|
-|\$|Matches the ending position within the string.|
-|.|Matches any single character (similar to the `_` wildcard in a `LIKE` statement).|
-|*|Matches 0 or more occurrences of the preceding character.|
-|\||This character (known as the "choice operator") can be used to delimit multiple match patterns, and will provide a match on either the expression before or the expression after it is listed in your search string.|
+| Metacharacter | Description                                                                                                                                                                                                          |
+| :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `^`             | Matches the starting position within the string.                                                                                                                                                                     |
+| `$`            | Matches the ending position within the string.                                                                                                                                                                       |
+| `.`             | Matches any single character (similar to the `_` wildcard in a `LIKE` statement).                                                                                                                                    |
+| `*`             | Matches 0 or more occurrences of the preceding character.                                                                                                                                                            |
+| `|`            | This character (known as the "choice operator") can be used to delimit multiple match patterns, and will provide a match on either the expression before or the expression after it is listed in your search string. |
 
 To experiment with regular expressions and learn more about them, we recommend using a regular expression tester or checker online, like [regular expressions 101](https://regex101.com).   A website like that will give you a lot of instant feedback and practice to help you understand regex.  We teach more about regular expression checkers in our [Demystifying Regular Expressions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#1) module.
 
