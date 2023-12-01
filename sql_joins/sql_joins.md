@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.2
+version: 1.1.4
 current_version_description: Typo fix; update metadata
 module_type: standard
 docs_version: 2.0.0
@@ -53,7 +53,7 @@ If you need to develop basic SQL fluency we recommend our module [SQL Basics](ht
 
 Previous Versions:
 
-* [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/sql_joins/sql_joins.md#1): Original version, with improved feedback link
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/sql_joins/sql_joins.md#1): Original version, with improved feedback link
 
 @end
 

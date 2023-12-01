@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.4.4
+version: 1.4.5
 current_version_description: Updated with new metadata and to remove references to Binderhub
 module_type: standard
 docs_version: 2.0.0
@@ -66,9 +66,9 @@ previous_sequential_module: data_visualization_in_open_source_software
 
 Previous versions: 
 
-* [1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1):  Add Posit instructions, versioning info, update highlight boxes
-* [1.2.4](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/31d00133960b7ae4e1ec899eaade52ba7c9b4938/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1):  Typo fixes, change R file to .Rmd, restructuring/renaming, update metadata
-* [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/840fdda7e3b80fcbfe65a0a6fb3d31799367b42f/data_visualization_in_ggplot2/data_visualization_ggplot2.md#1): Initial commit, refer to Binder
+- [1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1):  Add Posit instructions, versioning info, update highlight boxes
+- [1.2.4](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/31d00133960b7ae4e1ec899eaade52ba7c9b4938/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1):  Typo fixes, change R file to .Rmd, restructuring/renaming, update metadata
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/840fdda7e3b80fcbfe65a0a6fb3d31799367b42f/data_visualization_in_ggplot2/data_visualization_ggplot2.md#1): Initial commit, refer to Binder
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md

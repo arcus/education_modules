@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Update authorship, correct typo, add metadata
 docs_version: 2.0.0
 module_type: standard
@@ -48,8 +48,8 @@ sequence_name: sql
 
 Previous versions: 
 
-* [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/demystifying_sql/demystifying_sql.md):  Update highlight boxes
-* [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/demystifying_sql/demystifying_sql.md): Original version with minor formatting updates and improved feedback form link 
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/demystifying_sql/demystifying_sql.md):  Update highlight boxes
+- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/demystifying_sql/demystifying_sql.md): Original version with minor formatting updates and improved feedback form link 
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md

@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Correct typo, update metadata version
 module_type: standard
 docs_version: 2.0.0
@@ -24,10 +24,10 @@ Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this
 
 After completion of this module, learners will be able to:
 
-* Create new data classifications using `CASE` statements
-* Find text that matches a given pattern using `LIKE` and `REGEXP_LIKE` statements
-* Use `GROUP BY` and `HAVING` statements along with aggregate functions to understand group characteristics
-* Use `WITH` to create sub queries
+- Create new data classifications using `CASE` statements
+- Find text that matches a given pattern using `LIKE` and `REGEXP_LIKE` statements
+- Use `GROUP BY` and `HAVING` statements along with aggregate functions to understand group characteristics
+- Use `WITH` to create sub queries
 
 @end
 
@@ -35,8 +35,8 @@ After completion of this module, learners will be able to:
 
 Previous versions: 
 
-* [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9c77106b2074e1d51ce41ebaf0d849429b146c2b/sql_intermediate/sql_intermediate.md#1): Update with improvements to regular expressions, highlight boxes, correct typos
-* [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9e3ed69c5c70e4b6e116e2799329029e9542ca98/sql_intermediate/sql_intermediate.md#1): Initial version, then typo fixes, clarify group by aggregation troubleshooting, and feedback form improvements
+- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9c77106b2074e1d51ce41ebaf0d849429b146c2b/sql_intermediate/sql_intermediate.md#1): Update with improvements to regular expressions, highlight boxes, correct typos
+- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9e3ed69c5c70e4b6e116e2799329029e9542ca98/sql_intermediate/sql_intermediate.md#1): Initial version, then typo fixes, clarify group by aggregation troubleshooting, and feedback form improvements
 
 @end
 

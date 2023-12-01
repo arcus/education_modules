@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.5.1
+version: 1.5.2
 current_version_description: Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure
 module_type: standard
 docs_version: 2.0.0
@@ -24,9 +24,9 @@ It is helpful if learners have conducted research, are familiar with -- by readi
 
 After completion of this module, learners will be able to:
 
-* Explain the benefits of conducting research that is **reproducible** (can be re-done by a different, unaffiliated scientist)
-* Describe how technological approaches can help research be more reproducible
-* Argue in support of practices that organize and describe documents, datasets, and other files as a way to make research more reproducible
+- Explain the benefits of conducting research that is **reproducible** (can be re-done by a different, unaffiliated scientist)
+- Describe how technological approaches can help research be more reproducible
+- Argue in support of practices that organize and describe documents, datasets, and other files as a way to make research more reproducible
 
 @end
 

@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.3
+version: 1.2.4
 current_version_description: Update highlight boxes, update front matter, and replace text with macros.
 module_type: standard
 docs_version: 2.0.0
@@ -63,7 +63,9 @@ previous_sequential_module: data_visualization_in_open_source_software
 
 @end
 
-is_parallel_to: data_visualization_in_ggplot2
+@is_parallel_to
+data_visualization_in_ggplot2
+@end
 
 @version_history
 Previous versions: 
