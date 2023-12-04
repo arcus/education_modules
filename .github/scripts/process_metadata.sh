@@ -51,7 +51,7 @@ do
             else 
               macro_contents="" # maintain the tabular format when a module doesn't have a particular block macro
             fi
-            module_metadata=$module_metadata", \"""$macro_contents""\""
+            module_metadata=$module_metadata", \""$macro_contents"\"" ### QUESTION: does the additional quotes around macro_contents here create the problem if there is a * is the block macro? Or is it a different problem? 
         done
       
       ## add a final column with all of the linked courses
