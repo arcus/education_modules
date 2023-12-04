@@ -4,19 +4,19 @@
 metadata_df=module_data.csv
 
 #Use ; as the separators for this csv since many metadata categories themselves contain commas.
-echo "SEP=;" > $metadata_df
+#echo "SEP=;" > $metadata_df
 
 #Create the headers for the csv
 headers="module_id"
 for CATEGORY in  "author" "email" "version" "current_version_description" "module_type" "docs_version" "language" "narrator" "mode" "title" "estimated_time_in_minutes" "good_first_module" "data_domain" "data_task" "collection" "coding_required" "coding_level" "coding_language" "sequence_name" "previous_sequential_module" "comment" "long_description"
   do
-    headers+="; $CATEGORY"
+    headers+=", $CATEGORY"
   done
 for BLOCK_MACRO in "pre_reqs" "learning_objectives" "sets_you_up_for" "depends_on_knowledge_available_in" "is_parallel_to" "version_history"
   do 
-    headers+="; $BLOCK_MACRO"
+    headers+=", $BLOCK_MACRO"
   done
-echo $headers >> $metadata_df
+echo $headers > $metadata_df
 
 
 for FOLDER in *
@@ -29,8 +29,9 @@ do
         for CATEGORY in  "author" "email" "version" "current_version_description" "module_type" "docs_version" "language" "narrator" "mode" "title" "estimated_time_in_minutes" "good_first_module" "data_domain" "data_task" "collection" "coding_required" "coding_level" "coding_language" "sequence_name" "previous_sequential_module" "comment" "long_description"
         do
             category_metadata="`grep -m 1 "$CATEGORY": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
+            category_metadata=${category_metadata//"\""/"&#0022"} #replace quotes with the unicode for quotes
             #Add the category metadata to the line, being sure to replace any semicolons with commas (apologies to the library scientists who used them in their grammatically correcly)
-            module_metadata=$module_metadata"; "${category_metadata//;/,}
+            module_metadata=$module_metadata"; \""${category_metadata//;/,}"\""
         done
 
         #### pull the block macros
@@ -43,16 +44,17 @@ do
 
                 end=$(( $(tail -n +$start $FOLDER/$FOLDER.md | grep -n -m 1 "@end" | cut -f1 -d:) - 1 ))
                 #### TODO figure out a better solution to line breaks instead of just replacing them with & symbols! For the moment the cat -e command replaces line breaks with $
-                macro_contents=$(tail -n +$start $FOLDER/$FOLDER.md | head -n $end | cat -e)
-                macro_contents=${macro_contents//"$"/"\\n"}
+                macro_contents=$(tail -n +$start $FOLDER/$FOLDER.md | head -n $end | cat -e) #print that section with $ for line breaks
+                macro_contents=${macro_contents//"$"/"\\n"} #replace $ for line breaks with \n for easier use later
+                macro_contents=${macro_contents//"\""/"&#0022"} #replace quotes with the unicode for quotes
             else 
               macro_contents=""
             fi
-            module_metadata=$module_metadata"; ""${macro_contents//;/,}"
+            module_metadata=$module_metadata"; \"""${macro_contents//;/,}""\""
 
         done
     ### the csv won't render nicely in github with regular double quotes inside of cells
-    echo ${module_metadata//"\""/"&#0022"} >> $metadata_df
+    echo $module_metadata >> $metadata_df
     fi
 done
 
