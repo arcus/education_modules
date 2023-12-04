@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.2
+version: 1.3.3
 current_version_description: Added help boxes for color vs fill aesthetic mapping and how to get plots to show in the plot pane.
 module_type: standard
 docs_version: 2.0.0
@@ -23,9 +23,9 @@ estimated_time_in_minutes: 60
 
 Minimal experience of using the RStudio IDE and writing R code (specifically, within an R Markdown document) is necessary to understand and use this material.  If you can understand and do the following, you'll be able to complete this course:
 
-* Run a command that's provided to you in the console
-* Use the Environment tab to find a data frame and learn more about it
-* Insert a new code chunk in an R Markdown document
+- Run a command that's provided to you in the console
+- Use the Environment tab to find a data frame and learn more about it
+- Insert a new code chunk in an R Markdown document
 
 One potential way to get these basic skills is to take our [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) course.
 

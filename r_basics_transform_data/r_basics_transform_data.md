@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.3
+version: 1.3.4
 current_version_description: Updated with new metadata and to remove references to Binderhub
 module_type: standard
 docs_version: 2.0.0
@@ -19,9 +19,9 @@ r_file: r\_basics\_transform\_data
 
 Minimal experience of using the RStudio IDE and writing R code (specifically, within an R Markdown document) is necessary to understand and use this material.  If you can understand and do the following, you'll be able to complete this course:
 
-* Run a command that's provided to you in the console
-* Use the Environment tab to find a data frame and learn more about it
-* Insert a new code chunk in an R Markdown document
+- Run a command that's provided to you in the console
+- Use the Environment tab to find a data frame and learn more about it
+- Insert a new code chunk in an R Markdown document
 
 @end
 

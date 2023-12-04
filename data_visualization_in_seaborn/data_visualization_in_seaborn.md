@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.4
+version: 1.2.5
 current_version_description: Update highlight boxes, update front matter, and replace text with macros.
 module_type: standard
 docs_version: 2.0.0
@@ -24,9 +24,9 @@ When statistical concepts are referenced in the lesson, links to learn more are 
 
 This module also assumes some basic familiarity with python, including
 
-* installing and importing python modules
-* reading in data
-* manipulating data frames, including calculating new columns
+- installing and importing python modules
+- reading in data
+- manipulating data frames, including calculating new columns
 
 If you are brand new to python (or want a refresher) consider starting with [Demystifying Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md) first.
 
