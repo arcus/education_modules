@@ -24,9 +24,9 @@ The only commands that will be assumed are the navigation commands `cd`, `ls`, a
 
 After completion of this module, learners will be able to:
 
-* Use the commands `wc`, `head`, `tail`,`sort`, and `uniq`
-* Redirect output to a file using `>` and `>>`
-* Chain commands directly using the pipe `|`
+- Use the commands `wc`, `head`, `tail`,`sort`, and `uniq`
+- Redirect output to a file using `>` and `>>`
+- Chain commands directly using the pipe `|`
 @end
 
 good_first_module: false
