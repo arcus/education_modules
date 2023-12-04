@@ -16,6 +16,7 @@ for BLOCK_MACRO in "pre_reqs" "learning_objectives" "sets_you_up_for" "depends_o
   do 
     headers+=", $BLOCK_MACRO"
   done
+headers+=", Linked Courses"
 echo $headers > $metadata_df
 
 
@@ -51,22 +52,37 @@ do
               macro_contents="" # maintain the tabular format when a module doesn't have a particular block macro
             fi
             module_metadata=$module_metadata", \"""$macro_contents""\""
-
         done
-    ### the csv won't render nicely in github with regular double quotes inside of cells
+      
+      ## add a final column with all of the linked courses
+      links=""
+      for LINKED_COURSE in *
+        do
+          if [[ -s $LINKED_COURSE/$LINKED_COURSE.md && "$LINKED_COURSE" != "a_sample_module_template" && "$LINKED_COURSE" != "$FOLDER" ]] 
+          then
+            if [ "$(grep -c $LINKED_COURSE $FOLDER/$FOLDER.md)" -ge 1 ]
+              then 
+                links+="$LINKIED_COURSE "
+            fi
+          fi 
+        done
+      module_metadata=$module_metadata", "$links
+        
+
     echo $module_metadata >> $metadata_df
     fi
 done
 
 ### Find all links to other modules:
 
-#echo  "df[\"Linked Courses\"] = [list() for x in range(len(df.index))]" >> $metadata_df
+# links=""
+# #echo  "df[\"Linked Courses\"] = [list() for x in range(len(df.index))]" >> $metadata_df
 
 # for FOLDER in *
 # do
 #   if [[ -s $FOLDER/$FOLDER.md && "$FOLDER" != "a_sample_module_template" ]] 
 #   then
-#     echo "a = df.loc[\"$FOLDER\", \"Linked Courses\"]" >> $metadata_df
+#     #echo "a = df.loc[\"$FOLDER\", \"Linked Courses\"]" >> $metadata_df
 #     for LINKED_COURSE in *
 #     do
 #       if [[ -s $LINKED_COURSE/$LINKED_COURSE.md && "$LINKED_COURSE" != "a_sample_module_template" && "$LINKED_COURSE" != "$FOLDER" ]] 
