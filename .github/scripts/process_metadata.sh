@@ -44,6 +44,7 @@ do
                 end=$(( $(tail -n +$start $FOLDER/$FOLDER.md | grep -n -m 1 "@end" | cut -f1 -d:) - 1 ))
                 #### TODO figure out a better solution to line breaks instead of just replacing them with & symbols! For the moment the cat -e command replaces line breaks with $
                 macro_contents=$(tail -n +$start $FOLDER/$FOLDER.md | head -n $end | cat -e)
+                macro_contents=${macro_contents//"$"/"\\n"}
             else 
               macro_contents=""
             fi
