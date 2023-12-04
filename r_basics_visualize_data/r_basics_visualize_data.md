@@ -107,7 +107,7 @@ On the next page, you'll learn how to get access to the sample code.
 
 ### How to Follow Along
 
-Open the "r\_basics\_visualize\_data" directory in whichever RStudio environment you're working in. Then, open the "visualize_exercises.Rmd" which we'll use for our first hands-on activity in just a bit!
+Open the "r\_basics\_visualize\_data" directory in whichever RStudio environment you're working in. Then, open the "visualize\_exercises.Rmd" which we'll use for our first hands-on activity in just a bit!
 
 
 ![`RStudio showing the visualize_exercises.Rmd file`](media/visualize_exercises.png)<!-- style = "border: 1px solid rgb(var(--color-highlight)); max-width: 800px;" -->
@@ -355,12 +355,12 @@ Here are a few useful geom functions for visualizing clinical data, but there ar
 
 | Visual depiction | ggplot geom function |
 | --- | --- |
-| ![unlabeled histogram](media/geom_histogram_mini.png)<!-- style = "max-width:100px;" --> | geom_histogram() |
-| ![unlabeled bar chart](media/geom_bar_mini.png)<!-- style = "max-width:100px;" --> | geom_bar() |
-| ![unlabeled scatter plot with points](media/geom_point_mini.png)<!-- style = "max-width:100px;" --> | geom_point() |
-| ![unlabeled dot plot](media/geom_dotplot_mini.png)<!-- style = "max-width:100px;" --> | geom_dotplot() |
-| ![unlabeled box plot](media/geom_boxplot_mini.png)<!-- style = "max-width:100px;" --> | geom_boxplot() |
-| ![unlabeled line graph](media/geom_line_mini.png)<!-- style = "max-width:100px;" --> | geom_line() |
+| ![unlabeled histogram](media/geom_histogram_mini.png)<!-- style = "max-width:100px;" --> | geom\_histogram() |
+| ![unlabeled bar chart](media/geom_bar_mini.png)<!-- style = "max-width:100px;" --> | geom\_bar() |
+| ![unlabeled scatter plot with points](media/geom_point_mini.png)<!-- style = "max-width:100px;" --> | geom\_point() |
+| ![unlabeled dot plot](media/geom_dotplot_mini.png)<!-- style = "max-width:100px;" --> | geom\_dotplot() |
+| ![unlabeled box plot](media/geom_boxplot_mini.png)<!-- style = "max-width:100px;" --> | geom\_boxplot() |
+| ![unlabeled line graph](media/geom_line_mini.png)<!-- style = "max-width:100px;" --> | geom\_line() |
 
 ### Step 3: Aesthetic Mappings
 

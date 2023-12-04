@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Update with metadata, macros.  Remove reference to Binderhub.
 module_type: standard
 docs_version: 1.0.0
@@ -113,7 +113,7 @@ For most practical purposes, you don't need to know anything about these differe
 Here's an example of what some data with missing values might look like when printed in R:
 
 <!-- data-type="none" -->
-| sensor_id | PM2.5 | PM10 | O3 | NO2 |
+| sensor\_id | PM2.5 | PM10 | O3 | NO2 |
 | ---- | --- | --- | --- | --- |
 | 0001 | 10 | 25 | 0.0 | 67 |
 | 0002 | 13 | 21 |  NA | 71 |
