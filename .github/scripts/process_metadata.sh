@@ -52,7 +52,7 @@ do
 
         done
     ### the csv won't render nicely in github with regular double quotes inside of cells
-    echo ${module_metadata//"\""/"\\\""} >> $metadata_df
+    echo ${module_metadata//"\""/"\&\#0022"} >> $metadata_df
     fi
 done
 
