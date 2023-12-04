@@ -4,8 +4,7 @@
 metadata_df=module_data.csv
 
 #Use ; as the separators for this csv since many metadata categories themselves contain commas.
-#echo "" > $metadata_df
-#echo "SEP=;" > $metadata_df
+echo "SEP=;" > $metadata_df
 
 #Create the headers for the csv
 headers="module_id"
@@ -17,7 +16,7 @@ for BLOCK_MACRO in "pre_reqs" "learning_objectives" "sets_you_up_for" "depends_o
   do 
     headers+="; $BLOCK_MACRO"
   done
-echo $headers > $metadata_df
+echo $headers >> $metadata_df
 
 
 for FOLDER in *
@@ -53,7 +52,7 @@ do
 
         done
     ### the csv won't render nicely in github with regular double quotes inside of cells
-    echo ${module_metadata//"\""/"\&\#0022"} >> $metadata_df
+    echo ${module_metadata//"\""/"&#0022"} >> $metadata_df
     fi
 done
 
