@@ -58,9 +58,9 @@ sequence_name: r_basics
 
 Previous versions: 
 
-* [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/r_basics_introduction/r_basics_introduction.md#1): Added additional info for one exercise example (it was in the solutions file but not copied here)
-* [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3840108d202de535377009db54232b7897635a2c/r_basics_introduction/r_basics_introduction.md#1): Updated with new metadata and to remove references to Binderhub
-* [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/r_basics_introduction/r_basics_introduction.md): Update highlight boxes
+- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/r_basics_introduction/r_basics_introduction.md#1): Added additional info for one exercise example (it was in the solutions file but not copied here)
+- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3840108d202de535377009db54232b7897635a2c/r_basics_introduction/r_basics_introduction.md#1): Updated with new metadata and to remove references to Binderhub
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/r_basics_introduction/r_basics_introduction.md): Update highlight boxes
 
 @end
 

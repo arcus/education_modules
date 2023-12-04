@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Update highlight boxes, update front matter, replace text with macros.
 module_type: standard
 docs_version: 1.0.0
@@ -20,8 +20,8 @@ estimated_time_in_minutes: 20
 
 This module assumes some familiarity with data and statistics, in particular
 
-* familiarity with some different kinds of plots, although deep understanding is not needed --- people who are used to seeing plots presented in research articles will be sufficiently prepared
-* the distinction between [continuous and categorical variables](https://education.arcus.chop.edu/variable-types/)
+- familiarity with some different kinds of plots, although deep understanding is not needed --- people who are used to seeing plots presented in research articles will be sufficiently prepared
+- the distinction between [continuous and categorical variables](https://education.arcus.chop.edu/variable-types/)
 
 This module also assumes some basic familiarity with either R or python, but is appropriate for beginners.
 
@@ -31,10 +31,10 @@ This module also assumes some basic familiarity with either R or python, but is 
 
 After completion of this module, learners will be able to:
 
-* identify key elements in a plot that communicate information about the data
-* describe the role ggplot2 and seaborn play in the R and python programming languages, respectively
-* describe a typical data vizualization workflow
-* list some best practices for creating accessible vizualizations
+- identify key elements in a plot that communicate information about the data
+- describe the role ggplot2 and seaborn play in the R and python programming languages, respectively
+- describe a typical data vizualization workflow
+- list some best practices for creating accessible vizualizations
 
 @end
 

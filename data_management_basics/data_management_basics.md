@@ -1,7 +1,7 @@
 <!--
 author:   Ene Belleh
 email:    bellehe@chop.edu
-version: 1.1.1
+version: 1.1.2
 current_version_description: Fixed mermaidchart error that was causing diagram to not render; updated metadata
 module_type: standard
 docs_version: 2.0.0
@@ -41,7 +41,7 @@ coding_required: false
 
 Previous versions: 
 
-* [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/data_management_basics/data_management_basics.md):  First version with improved feedback survey
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/data_management_basics/data_management_basics.md):  First version with improved feedback survey
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md

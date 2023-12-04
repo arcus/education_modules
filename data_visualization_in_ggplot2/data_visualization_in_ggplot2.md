@@ -2,7 +2,7 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.4.4
+version: 1.4.6
 current_version_description: Updated with new metadata and to remove references to Binderhub
 module_type: standard
 docs_version: 2.0.0
@@ -22,10 +22,10 @@ This module assumes some familiarity with principles of data visualizations as a
 
 This module also assumes some basic familiarity with R, including
 
-* [installing and loading packages](https://r4ds.had.co.nz/data-visualisation.html#prerequisites-1)
-* [reading in data](https://r4ds.had.co.nz/data-import.html)
-* manipulating data frames, including [calculating new columns](https://r4ds.had.co.nz/transform.html#add-new-variables-with-mutate), and [pivoting from wide format to long](https://r4ds.had.co.nz/tidy-data.html#longer)
-* some [statistical tests](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md), especially linear regression
+- [installing and loading packages](https://r4ds.had.co.nz/data-visualisation.html#prerequisites-1)
+- [reading in data](https://r4ds.had.co.nz/data-import.html)
+- manipulating data frames, including [calculating new columns](https://r4ds.had.co.nz/transform.html#add-new-variables-with-mutate), and [pivoting from wide format to long](https://r4ds.had.co.nz/tidy-data.html#longer)
+- some [statistical tests](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md), especially linear regression
 
 If you are brand new to R (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) first.
 
@@ -66,9 +66,9 @@ previous_sequential_module: data_visualization_in_open_source_software
 
 Previous versions: 
 
-* [1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1):  Add Posit instructions, versioning info, update highlight boxes
-* [1.2.4](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/31d00133960b7ae4e1ec899eaade52ba7c9b4938/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1):  Typo fixes, change R file to .Rmd, restructuring/renaming, update metadata
-* [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/840fdda7e3b80fcbfe65a0a6fb3d31799367b42f/data_visualization_in_ggplot2/data_visualization_ggplot2.md#1): Initial commit, refer to Binder
+- [1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d04514a368d4a0aaa75a6f2d345e5d978cad9721/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1):  Add Posit instructions, versioning info, update highlight boxes
+- [1.2.4](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/31d00133960b7ae4e1ec899eaade52ba7c9b4938/data_visualization_in_ggplot2/data_visualization_in_ggplot2.md#1):  Typo fixes, change R file to .Rmd, restructuring/renaming, update metadata
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/840fdda7e3b80fcbfe65a0a6fb3d31799367b42f/data_visualization_in_ggplot2/data_visualization_ggplot2.md#1): Initial commit, refer to Binder
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md

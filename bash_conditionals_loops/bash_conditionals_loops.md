@@ -2,7 +2,7 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.2
+version: 1.2.3
 current_version_description: Clarify `=` and `==` inside test functions
 module_type: standard
 docs_version: 1.2.1
@@ -18,10 +18,10 @@ estimated_time_in_minutes: 60
 @pre_reqs
 Only basic exposure to Bash is expected. The following is a list of actions and commands that will be used without explanation in this module. Each includes a link to help you brush up on the commands or learn them for the first time.
 
-* [Navigating](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) a filesystem from a command line interface
-* Reading the contents of files with [`cat`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#15)
-* Writing text to files with [`echo` and `>>`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#14)
-* Matching character strings with the [character wildcard `*`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_102/bash_command_line_102.md#4)
+- [Navigating](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) a filesystem from a command line interface
+- Reading the contents of files with [`cat`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#15)
+- Writing text to files with [`echo` and `>>`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#14)
+- Matching character strings with the [character wildcard `*`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_102/bash_command_line_102.md#4)
 @end
 
 @learning_objectives  
