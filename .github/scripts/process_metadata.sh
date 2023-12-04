@@ -4,7 +4,8 @@
 metadata_df=module_data.csv
 
 #Use ; as the separators for this csv since many metadata categories themselves contain commas.
-echo "SEP=;" > $metadata_df
+echo "" > $metadata_df
+#echo "SEP=;" > $metadata_df
 
 #Create the headers for the csv
 headers="module_id"
