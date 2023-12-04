@@ -2,7 +2,7 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.5.1
+version: 1.5.2
 current_version_description: Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure
 module_type: standard
 docs_version: 2.0.0
@@ -395,7 +395,7 @@ Importantly, NIH has begun requiring more rigorous data sharing & management pla
 * What are the expected values?
 * Are there any codes for specific cases (e.g. missing vs. unwilling to answer vs. does not apply)?
 
-Metadata can be found in many places. Sometimes it's implicit, as when it appears in variable names.  The variable "weight_kg", for example, discloses both the measure and the units. Often metadata is found more fully explained in **data dictionaries** or **codebooks**, where variables in a dataset are described more completely. Sometimes metadata can be found almost in passing, mentioned in an abstract or in the methods section of a paper, or in some descriptive text that accompanies a data download or a figure.
+Metadata can be found in many places. Sometimes it's implicit, as when it appears in variable names.  The variable "weight\_kg", for example, discloses both the measure and the units. Often metadata is found more fully explained in **data dictionaries** or **codebooks**, where variables in a dataset are described more completely. Sometimes metadata can be found almost in passing, mentioned in an abstract or in the methods section of a paper, or in some descriptive text that accompanies a data download or a figure.
 
 Creating useful metadata is a crucial step in reproducible science.  It's essential in helping run an efficient project involving multiple people, since helpful metadata can help reduce incorrect data collection, recording, and storage.  Metadata can help explain or contextualize some findings (e.g. when the time of day of a blood draw affects lab results).  It can also support the use, discovery, and access of data over time.
 

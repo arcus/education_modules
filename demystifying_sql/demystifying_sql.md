@@ -1,7 +1,7 @@
 <!--
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Update authorship, correct typo, add metadata
 docs_version: 2.0.0
 module_type: standard
@@ -74,7 +74,7 @@ Consider, for example, these three sample tables.  They are rectangular (or tabu
 <h4>A Sample `demographics` table</h4>
 
 <!-- data-type="none" -->
-| patient_id | date\_of\_birth | sex | last_name | first_name |
+| patient\_id | date\_of\_birth | sex | last\_name | first\_name |
 | -------    | -----------   | -   | ------    | ----- |
 | ABC123     | 1970-03-15    | M   | Bird      | Big |
 | TRSH789    | 1985-08-20    | M   | the Grouch | Oscar |
@@ -83,7 +83,7 @@ Consider, for example, these three sample tables.  They are rectangular (or tabu
 <h4>A Sample `encounters` table</h4>
 
 <!-- data-type="none" -->
-| patient_id | encounter_id | encounter_date | ed_ind |
+| patient\_id | encounter\_id | encounter\_date | ed\_ind |
 | ---------- | ------------ | -------------- | ------ |
 | SMLE321    | 8827371048   |  2020-03-10    | 1      |
 | SMLE321    | 8829502289   |  2020-09-05    | 0      |
@@ -97,7 +97,7 @@ Consider, for example, these three sample tables.  They are rectangular (or tabu
 <h4>A Sample `medication_order` table</h4>
 
 <!-- data-type="none" -->
-| patient_id | provider_id | med_id | order_date |
+| patient\_id | provider\_id | med\_id | order\_date |
 | -------    | -----------   | --- | ------    | ----- |
 | ABC123     | 491272    | 8000412   | 2021-05-15 |  
 | ABC123     | 491272  | 7960004   | 2022-02-01 |
@@ -106,7 +106,8 @@ Consider, for example, these three sample tables.  They are rectangular (or tabu
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
-If the idea of relational databases with tables that refer to one another feels confusing, you're not alone.  In our example above, we discover the patient Prairie Dawn in our `demographics` table, and note that this patient has a patient_id of SMLE321.  We can then use this patient ID to find **related** data in other tables.  For example, in the `encounters` table and in the `medication_order` table, we never see the patient name "Prairie Dawn," but we **do** find her ID, SMLE321.  
+
+If the idea of relational databases with tables that refer to one another feels confusing, you're not alone.  In our example above, we discover the patient Prairie Dawn in our `demographics` table, and note that this patient has a patient\_id of SMLE321.  We can then use this patient ID to find **related** data in other tables.  For example, in the `encounters` table and in the `medication_order` table, we never see the patient name "Prairie Dawn," but we **do** find her ID, SMLE321.  
 
 Relational databases work by using data fields like IDs to allow us to find out data about a patient, or customer, or purchase order, or other thing we're interested in, by following the matching ID into other, **related** tables.
 
@@ -264,7 +265,7 @@ Many people choose to write SQL keywords in all capital letters, but that's so t
 
 **Select All Columns**
 
-If you would like to return **all** of the columns from the table(s) specified in your SQL query, you can use the `*` wild card character as shown in the example below.  You'll notice that we put a line break between the asterisk and the `FROM` keyword.  Spaces and line breaks, or **whitespace**, don't really matter for SQL.  You can run your code together on a single line, or (preferably) add intendation and spaces that help human readers understand your code more easily.
+If you would like to return **all** of the columns from the table(s) specified in your SQL query, you can use the `*` wild card character as shown in the example below.  You'll notice that we put a line break between the asterisk and the `FROM` keyword.  Spaces and line breaks, or **whitespace**, don't really matter for SQL.  You can run your code together on a single line, or (preferably) add indentation and spaces that help human readers understand your code more easily.
 
 ```sql
 SELECT *
@@ -337,7 +338,7 @@ We also introduced you to two important elements of the language:
 
 We also discussed what SQL doesn't provide, like robust language and statistical processing and data visualization.  SQL is a tool that ordinarily is used in concert with other tools, each one used in its area of greater strength.
 
-Finally, you learned about the structure of relational databases: data stored in tables, which are comprised of rows and columns.  Columns may contain identifers that allow data from different tables to be related to one another, and that's why the word "relational" appears.
+Finally, you learned about the structure of relational databases: data stored in tables, which are comprised of rows and columns.  Columns may contain identifiers that allow data from different tables to be related to one another, and that's why the word "relational" appears.
 
 ## Additional Resources
 

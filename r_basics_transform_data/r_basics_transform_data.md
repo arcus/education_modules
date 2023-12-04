@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.2
+version: 1.3.3
 current_version_description: Updated with new metadata and to remove references to Binderhub
 module_type: standard
 docs_version: 2.0.0
@@ -212,7 +212,7 @@ Answer (B) is correct: it uses the assignment arrow to create a new object calle
 
 Answer (C) is not correct, because it does not create a new object, but instead tries to include the name of a new object within the `select` statement.  That won't work!
 
-Answer (D) is a bit of a trick.  It's incorrect because in R, capitalization matters.  It's a "case sensitive" language, and there is no column named "First_Name" with capital letters!
+Answer (D) is a bit of a trick.  It's incorrect because in R, capitalization matters.  It's a "case sensitive" language, and there is no column named "First\_Name" with capital letters!
 
 Answer (E) is not correct, because we know (D) is incorrect.
 
@@ -316,7 +316,7 @@ In the box below, write a `filter()` statement that returns a data frame contain
 * it uses the `filter()` command
 * it puts the name of the data frame that will be filtered as the first argument, and follows that with a comma
 * after the comma, there is a logical condition that can be evaluated to be either true or false.
-* within the logical condition, we check whether it's true that the last_name value is not equal to the exact string "stark".
+* within the logical condition, we check whether it's true that the last\_name value is not equal to the exact string "stark".
 
 </div>
 
@@ -654,7 +654,7 @@ Which of the following can you accomplish with `mutate()`?
 
 <div class = "answer">
 
-`mutate()` works well as a method for altering existing columns (for instance, changing the case of a string field to all lower case or all upper case, or rounding numbers).  It's also useful for creating new columns.  You can use existing columns to create a new column, based on some calculation (say, if you want to add two columns to create the new column) or entirely new data (such as adding a new column, "hospital_name" that says "city general" for every row).
+`mutate()` works well as a method for altering existing columns (for instance, changing the case of a string field to all lower case or all upper case, or rounding numbers).  It's also useful for creating new columns.  You can use existing columns to create a new column, based on some calculation (say, if you want to add two columns to create the new column) or entirely new data (such as adding a new column, "hospital\_name" that says "city general" for every row).
 
 </div>
 

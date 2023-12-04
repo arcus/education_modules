@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.2
+version: 1.1.3
 current_version_description: Typo fix; update metadata
 module_type: standard
 docs_version: 2.0.0
@@ -213,7 +213,7 @@ Maybe your source tables look something like the tables below:
 **Table 1: depression\_scale**
 
 <!-- data-type="none" class="tight-table" style="font-size:80%"-->
-| subj_id  | date  | dep_q1  | dep_q2   | dep_q3  | dep_q4  | dep_total   |
+| subj\_id  | date  | dep\_q1  | dep\_q2   | dep\_q3  | dep\_q4  | dep\_total   |
 | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
 | 11234   | 2021-05-15   | 3    | 3  | 2    | 4    | 12    |
 | 86234   | 2021-06-01   | 4    | 4  | 3    | 4    | 15    |
@@ -224,7 +224,7 @@ Maybe your source tables look something like the tables below:
 **Table 2: subject\_address**
 
 <!-- data-type="none" class="tight-table" style="font-size:80%"-->
-| subj_id  | street_address  | city  | state   | zip  | date_start  | date_end   |
+| subj\_id  | street\_address  | city  | state   | zip  | date\_start  | date\_end   |
 | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
 | 11234   | 123 Main Street   | Smithtown    | PA  | 19000    | 2022-01-01   | `NULL`    |
 | 11234   | 123 Oak Lane   | Old Towne    | PA  | 18000   | 2000-01-01    | 2021-12-31    |
@@ -261,7 +261,7 @@ OR
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-It can be surprisingly tricky to figure out what makes data "match" or "go together" in your join criteria.  For example, go back to the previous page and see if you can decide what data should be considered "matching" between the "depression\_scale" table and the "subject\_address" table.  Is it as simple as just matching on the subject id ("subj_id")?  Why or why not?
+It can be surprisingly tricky to figure out what makes data "match" or "go together" in your join criteria.  For example, go back to the previous page and see if you can decide what data should be considered "matching" between the "depression\_scale" table and the "subject\_address" table.  Is it as simple as just matching on the subject id ("subj\_id")?  Why or why not?
 
 </div>
 
@@ -718,7 +718,7 @@ ON math_grades.semester = language_grades.term
 
 In this example:
 
-* The A grade for Jan-May 2023 from math\_grades **matches** with the B grade for Jan-May 2023 in language\_grades (whoops, even though the student_id doesn't match!)
+* The A grade for Jan-May 2023 from math\_grades **matches** with the B grade for Jan-May 2023 in language\_grades (whoops, even though the student\_id doesn't match!)
 * The C grade for Sep-Dec 2022 in language\_grades **does not match** with any row in math\_grades 
 
 <div class = "help">
@@ -781,7 +781,7 @@ Let's take this more comprehensive example and look at the example tables from t
 **depression\_scale**
 
 <!-- data-type="none" class="tight-table" style="font-size:80%"-->
-| subj_id  | date  | dep_q1  | dep_q2   | dep_q3  | dep_q4  | dep_total   |
+| subj\_id  | date  | dep\_q1  | dep\_q2   | dep\_q3  | dep\_q4  | dep\_total   |
 | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
 | 11234   | 2021-05-15   | 3    | 3  | 2    | 4    | 12    |
 | 86234   | 2021-06-01   | 4    | 4  | 3    | 4    | 15    |
@@ -792,7 +792,7 @@ Let's take this more comprehensive example and look at the example tables from t
 **subject\_address**
 
 <!-- data-type="none" class="tight-table" style="font-size:80%"-->
-| subj_id  | street_address  | city  | state   | zip  | date_start  | date_end   |
+| subj\_id  | street\_address  | city  | state   | zip  | date\_start  | date\_end   |
 | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
 | 11234   | 123 Main Street   | Smithtown    | PA  | 19000    | 2022-01-01   | `NULL`    |
 | 11234   | 123 Oak Lane   | Old Towne    | PA  | 18000   | 2000-01-01    | 2021-12-31    |
@@ -1013,6 +1013,7 @@ ON ...
 
 <div class = "options">
 <b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
 Once you've got that code working, you might want to try `USING`.  The SQL dialect we're using here, AlaSQL, uses the word `USING` without parentheses.  So, while in many SQL dialects you would type `USING(subject_id)`, in this module, try `USING subject_id`.  Put `USING subject_id` in place of the `ON` statement to see if there are any changes in your result set!
 
 </div>

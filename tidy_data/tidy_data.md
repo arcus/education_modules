@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.5
+version: 1.1.6
 current_version_description: Updated highlight boxes
 module_type: standard
 docs_version: 3.0.0
@@ -385,16 +385,16 @@ This division of data so that the minimum amount of data is reiterated in multip
 <h4>A Sample demographics table</h4>
 
 <!-- data-type="none" -->
-| patient_id | date\_of\_birth | sex | last_name | first_name |
+| patient\_id | date\_of\_birth | sex | last\_name | first\_name |
 | -------    | -----------   | -   | ------    | ----- |
 | ABC123     | 1970-03-15    | M   | Bird      | Big |
 | TRSH789    | 1985-08-20    | M   | the Grouch | Oscar |
 | SMLE321    | 1990-12-12    | F   | Dawn      | Prairie |
 
-<h4>A Sample medication_order table</h4>
+<h4>A Sample medication\_order table</h4>
 
 <!-- data-type="none" -->
-| patient_id | provider_id | med_id | order_date |
+| patient\_id | provider\_id | med\_id | order\_date |
 | -------    | -----------   | --- | ------    | ----- |
 | ABC123     | 491272    | 8000412   | 2021-05-15 |  
 | ABC123     | 491272  | 7960004   | 2022-02-01 |
@@ -456,7 +456,7 @@ Occasionally we also have data that treat the same topic but are stored in separ
 <h4>Clinic A</h4>
 
 <!-- data-type="none" -->
-| subject_id | dob | abc_score | xyz_score |
+| subject\_id | dob | abc\_score | xyz\_score |
 | ---------- | --- | --------- | --------- |
 | 4123691    | 2009-08-12 | 87 | 4 |
 | 4296120    | 2005-10-04 | 82 | 5 |
@@ -466,7 +466,7 @@ Occasionally we also have data that treat the same topic but are stored in separ
 <h4>Clinic B</h4>
 
 <!-- data-type="none" -->
-| subject_id | dob | abc_score | xyz_score |
+| subject\_id | dob | abc\_score | xyz\_score |
 | ---------- | --- | --------- | --------- |
 | 3396811    | 2010-12-29 | 78 | 4 |
 | 0129681    | 2010-01-02 | 80 | 3 |
@@ -476,7 +476,7 @@ Occasionally we also have data that treat the same topic but are stored in separ
 <h4>Combined Data</h4>
 
 <!-- data-type="none" -->
-| subject_id | dob | abc_score | xyz_score | collection_site |
+| subject\_id | dob | abc\_score | xyz\_score | collection\_site |
 | ---------- | --- | --------- | --------- | -- |
 | 4123691    | 2009-08-12 | 87 | 4 | A |
 | 4296120    | 2005-10-04 | 82 | 5 | A |
@@ -709,7 +709,7 @@ Tidy data organization includes everything we've covered so far in this module! 
 
 <h4>Programming code that acts on the data should be consistent, concise, with predictable inputs and outputs, and sound like human language as much as possible.</h4>
 
-This is a dense topic that we won't explain in detail here, as the best way to demonstrate tidy code is through code examples, which we're intentionally avoiding here.  But it's helpful to point out that the shortest code isn't always the best code!  Some people like to play "code golf" - solving a problem in clever, obscure ways with as few lines of code as possible.  We urge you to consider that concise code doesn't mean "as short as possible", but rather "as long as needed to explain things well".  After all, data analysis code is intended for two audiences: the computer running the code and the people reading the code.  That's different than, say, the code that runs your operating system, which isn't designed to be read by people.  Consistency is also helpful for humans.  Naming data columns with the same case convention (such as camelCase or snake_case) is one way to be consistent and reduce the cognitive load on your reader.
+This is a dense topic that we won't explain in detail here, as the best way to demonstrate tidy code is through code examples, which we're intentionally avoiding here.  But it's helpful to point out that the shortest code isn't always the best code!  Some people like to play "code golf" - solving a problem in clever, obscure ways with as few lines of code as possible.  We urge you to consider that concise code doesn't mean "as short as possible", but rather "as long as needed to explain things well".  After all, data analysis code is intended for two audiences: the computer running the code and the people reading the code.  That's different than, say, the code that runs your operating system, which isn't designed to be read by people.  Consistency is also helpful for humans.  Naming data columns with the same case convention (such as camelCase or snake\_case) is one way to be consistent and reduce the cognitive load on your reader.
 
 <h4>Each data analysis can be broken down into a series of atomic steps, such as "select this column" or "arrange the data by the values in that column". An arbitrarily complex data analysis can be broken down as a pipeline of atomic steps.</h4>
 
@@ -722,7 +722,7 @@ Again, here it's important to highlight that clever, brief code that accomplishe
   * find the median abc\_score
   * count the number of observations that fall outside the interquartile range for xyz\_score
   * divide that count by the total number of observations for the group to find the proportion of extreme xyz scores
-  * store the group name (intervention_1, etc.), median abc\_score, and proportion of extreme xyz\_score as a row in our aggregated results table
+  * store the group name (intervention\_1, etc.), median abc\_score, and proportion of extreme xyz\_score as a row in our aggregated results table
 * with the new table, calculate the correlation between median abc\_score and proportion of extreme\_xyz score.
 
 ### Quiz: Tidy Data analysis
