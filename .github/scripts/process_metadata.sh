@@ -51,8 +51,8 @@ do
             module_metadata=$module_metadata"; ""${macro_contents//;/,}"
 
         done
-    
-    echo $module_metadata >> $metadata_df
+    ### the csv won't render nicely in github with regular double quotes inside of cells
+    echo ${module_metadata//"\""/"\\\""} >> $metadata_df
     fi
 done
 
