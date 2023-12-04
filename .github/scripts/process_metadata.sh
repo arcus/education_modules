@@ -62,13 +62,13 @@ do
           then
             if [ "$(grep -c $LINKED_COURSE $FOLDER/$FOLDER.md)" -ge 1 ]
               then 
-                links+="$LINKIED_COURSE "
+                links=$links$LINKED_COURSE" "
             fi
           fi 
         done
-      module_metadata=$module_metadata", "$links
-        
+      module_metadata=$module_metadata", "$links        
 
+    ## write the entire row to the csv:
     echo $module_metadata >> $metadata_df
     fi
 done
