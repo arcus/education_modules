@@ -31,7 +31,7 @@ do
             category_metadata="`grep -m 1 "$CATEGORY": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
             category_metadata=${category_metadata//"\""/"&#0022"} #replace quotes with the unicode for quotes
             #Add the category metadata to the line, being sure to replace any semicolons with commas (apologies to the library scientists who used them in their grammatically correcly)
-            module_metadata=$module_metadata"; \""${category_metadata//;/,}"\""
+            module_metadata=$module_metadata", \""${category_metadata//;/,}"\""
         done
 
         #### pull the block macros
@@ -50,7 +50,7 @@ do
             else 
               macro_contents=""
             fi
-            module_metadata=$module_metadata"; \"""${macro_contents//;/,}""\""
+            module_metadata=$module_metadata", \"""${macro_contents//;/,}""\""
 
         done
     ### the csv won't render nicely in github with regular double quotes inside of cells
