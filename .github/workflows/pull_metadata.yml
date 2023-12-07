@@ -33,11 +33,12 @@ jobs:
         run: |
           bash .github/scripts/process_metadata.sh
 
-      - name: Upload csv file as an artifact
+      - name: Upload json file as an artifact
         uses: actions/upload-artifact@v3
         with:
-          name: csv_artifact
-          path: module_data.csv
+          name: json_artifact
+          path: module_data.json
+
         
   check_for_changes:
     name: Has metadata changed?
@@ -50,15 +51,18 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: csv_artifact
+          name: json_artifact
+
       # Check if processing the data has changed the python file at all
 
       - name: Check if anything changed
         id: check_if_changed 
         run: |
-          wget https://raw.githubusercontent.com/arcus/education_modules/metadata_workflow/assets/metadata/module_data.csv -O current_data_file.txt
+          wget https://raw.githubusercontent.com/arcus/education_modules/metadata_workflow/assets/metadata/module_data.json -O current_data_file.txt
           wc current_data_file.txt
-          changes=$(diff module_data.csv current_data_file.txt | wc -l)
+
+          changes=$(diff module_data.json current_data_file.txt | wc -l)
+
           echo  there are $changes changed lines
           changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
           echo the changes variable is now $changes
@@ -88,7 +92,9 @@ jobs:
         name: Metadata has changed
         run: echo "The any_change variable was $OUTPUT3 so now the changes need to be propagated"
   
-  #### Since the csv is now created directly, this entire step is unnecessary
+
+  #### Since the json is now created directly, this entire step is unnecessary
+
   # # If changes were made to the python file, then we want to push those changes to the metadata_workflow branch and make a new csv
   # create_csv:
   #   name: Module repo - Create csv
@@ -151,11 +157,12 @@ jobs:
       - name: Download csv artifact
         uses: actions/download-artifact@v3
         with:
-          name: csv_artifact
+          name: json_artifact
 
       - name: Check that artifacts downloaded
         run: |
-          wc module_data.csv
+          wc module_data.json
+
 
       - name: Commit newly updated files
         run: |
@@ -165,15 +172,15 @@ jobs:
  
           git fetch
 
-          git checkout metadata_workflow 
+          git checkout metadata_workflow
 
-          mv -f module_data.csv assets/metadata/
+          mv -f module_data.json assets/metadata/
 
-          git add assets/metadata/module_data.csv
+          git add assets/metadata/module_data.json
 
           git commit -am "update metadata records" 
  
-          git push origin metadata_workflow 
+          git push origin metadata_workflow
 
   # The module_discovery repository automatically checks weekly to see if the module data has changed, but a message here informs users how to manually run that workflow.
   update_module_discovery_repository:
