@@ -50,7 +50,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: csv_artifact
+          name: json_artifact
       # Check if processing the data has changed the python file at all
 
       - name: Check if anything changed
@@ -151,7 +151,7 @@ jobs:
       - name: Download csv artifact
         uses: actions/download-artifact@v3
         with:
-          name: csv_artifact
+          name: json_artifact
 
       - name: Check that artifacts downloaded
         run: |
