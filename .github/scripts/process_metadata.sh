@@ -31,6 +31,7 @@ do
         do
             category_metadata="`grep -m 1 "$CATEGORY": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
             category_metadata=${category_metadata//"\""/"&#0022"} #replace quotes with the unicode for quotes
+            category_metadata=${category_metadata//";"/"&#003B"} #replace semicolons with the unicode for semicolons
             #Add the category metadata to the line
             module_metadata=$module_metadata", \""$category_metadata"\""
         done
@@ -48,6 +49,7 @@ do
                 macro_contents=$(tail -n +$start $FOLDER/$FOLDER.md | head -n $end | cat -e) #print that section with $ for line breaks
                 macro_contents=${macro_contents//"$"/"\\n"} #replace $ for line breaks with \n for easier use later
                 macro_contents=${macro_contents//"\""/"&#0022"} #replace quotes with the unicode for quotes
+                macro_contents=${macro_contents//";"/"&#003B"} #replace semicolons with the unicode for semicolons
             else 
               macro_contents="" # maintain the tabular format when a module doesn't have a particular block macro
             fi
