@@ -1,16 +1,16 @@
 <!--
 
-author:   Your Name
-email:    email@chop.edu
+author:   Rose Hartman
+email:    hartmanr1@chop.edu
 version:  0.0.0
-current_version_description: Brief description of why this version exists
+current_version_description: Initial version
 module_type: standard
-docs_version: 1.1.0
+docs_version: 3.1.1
 language: en
 narrator: UK English Female
 mode: Textbook
 
-title: Module Title
+title: Generalized Linear Regression
 
 comment:  This is a short, focused description of the module.
 
@@ -19,7 +19,9 @@ long_description: This is a longer description, which should be understandable f
 estimated_time_in_minutes: 
 
 @pre_reqs
-List any skills or knowledge needed to complete this module here.
+Learners should already be familiar with 
+
+- linear regression (also called "ordinary least squares (OLS) linear regression")
 @end
 
 @learning_objectives  
@@ -31,21 +33,66 @@ After completion of this module, learners will be able to:
 - articulate the rationale for something
 @end
 
+good_first_module: false
+collection: statistics
+coding_required: false
+
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+- intro_to_nhst
+@end
+
 @version_history 
-
-Previous versions: 
-
-- [x.x.x](link): that version's current version description
-- [x.x.x](link): that version's current version description
-- [x.x.x](link): that version's current version description
+No previous versions.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 -->
 
-# Module Title
+# Generalized Linear Regression
 
 @overview
+
+## Linear models: A quick review
+
+Many of the most common statistical tests are applications of one big overarching statistical approach, called the **General Linear Model**. 
+Correlation, t-tests, ANOVAs, and linear regression are all examples of linear models. 
+
+A linear model is anything that can be expressed as an equation for a line: 
+
+$$
+y = b_0 + b_1 * x_1 + b_2 * x_2 ... b_n * x_n + e 
+$$
+
+For example, we could express a model [predicting fetal weight from sonographic measurements of femur length](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6077071/) as the equation:
+
+$$
+fetal_weight = b_0 + b_{femoral_length} * femoral_length + e
+$$ 
+
+If we wanted to look at differences in fetal weigh by sex (a categorical predictor) instead, the equation would actually look quite similar (assuming that the sex variable was coded 0 and 1 in the data): 
+
+$$
+fetal_weight = b_0 + b_{sex} * sex + e
+$$ 
+
+What if you want to model sex and femur length together at the same time? No problem, you can add as many predictors as you like: 
+
+$$
+fetal_weight = b_0 + b_{femoral_length} * femoral_length + b_{sex} * sex + e
+$$ 
+
+And you can allow quite a lot of complexity and nuance in a linear model as well, by including things like [interaction terms](https://education.arcus.chop.edu/understanding-interactions/). 
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf).
+
+</div>
 
 ## Why do we need generalized linear models?
 
@@ -54,10 +101,12 @@ If you want to model a categorical outcome, or one that's bounded (like a propor
 
 <h3>What counts and continuous and unbounded?</h3>
 
-A variable is **continuous** if it can take any value on a scale, not just discrete options. For example, age is generally continuous because you can be 11 years old, or 11.5, or 11.476 years old, etc.
+A variable is **continuous** if it can take any value on a scale, not just discrete options. 
+For example, age is generally continuous because you can be 11 years old, or 11.5, or 11.476 years old, etc.
 In contrast, experimental group (treatment vs. control) is not continuous; there's no way to be halfway between treatment and control, you're in one or the other. 
 Something like medication dose could be continuous or categorical depending on how it's used. 
-If patients are restricted to categorical levels of dose (e.g. high, med, or low dose groups) then it would be categorical. But if it's something where their dose might theoretically be anywhere on the scale, then it's continuous.
+If patients are restricted to categorical levels of dose (e.g. high, med, or low dose groups) then it would be categorical. 
+But if it's something where their dose might theoretically be anywhere on the scale, then it's continuous.
 
 A variable is **unbounded** if it can theoretically extend from negative infinity at the low end to positive infinity at the high end. 
 We often have variables that aren't truly unbounded, but they're close enough for all practical purposes -- for example, IQ can't technically be negative, but in practice no measured IQs are close to 0 so the data stop naturally before they hit a the scale boundary at 0. 
