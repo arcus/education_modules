@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  3.1.1
+version:  3.1.2
 current_version_description: update definition of learn_to_code collection
 language: en
 narrator: UK English Female
@@ -198,11 +198,11 @@ Use the checklist below to help make sure you're including all the front matter 
 - [ ] includes interactive Python
 - [ ] includes interactive SQL
 - [ ] learner will need to code to meet the learning objectives
-- [ ] is about a particular kind of data (EHR, omics data, geospatial data, etc.)
-- [ ] teaches a particular data skill or task (visualization, analysis, cleaning, etc.)
+- [ ] is about a particular [kind of data](#data_domain) (EHR, omics data, geospatial data, etc.)
+- [ ] teaches a particular [data skill or task](#data_task) (visualization, analysis, cleaning, etc.)
 - [ ] belongs to a [collection](#collection)
 - [ ] is a [wrapper module](#which-module-template-to-use)
-- [ ] is in a sequence (including the first module in the sequence)
+- [ ] is in a [sequence](#sequence_name) (including the first module in the sequence)
 - [ ] follows other modules in a sequence (i.e. it's not the first in the sequence)
 - [ ] is parallel to one or more other modules (i.e. covers the same content but in a different coding language/operating system)
 - [ ] uses the Data Carpentry genomics AMI on AWS
