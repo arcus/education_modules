@@ -18,21 +18,26 @@ echo '[' > $metadata_df
 # #echo $headers > $metadata_df
 
 
+
 for FOLDER in *
 do
     if [[ -s $FOLDER/$FOLDER.md && "$FOLDER" ]]      ## Only do this for folders that have a course .md file inside an identically named folder in education_modules
     then
       ### start building the line for that folder that will be written to the csv
+
       echo '{' >> $metadata_df
       echo "\"module_id\": \"$FOLDER\"," >>$metadata_df
+      
         ### pull the one-line macros
         for CATEGORY in  "author" "email" "version" "current_version_description" "module_type" "docs_version" "language" "narrator" "mode" "title" "estimated_time_in_minutes" "good_first_module" "data_domain" "data_task" "collection" "coding_required" "coding_level" "coding_language" "sequence_name" "previous_sequential_module" "comment" "long_description"
         do
             category_metadata="`grep -m 1 "$CATEGORY": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
+
             category_metadata=${category_metadata//"\""/"\\\""} #add escape characters to quotes
             #category_metadata=${category_metadata//";"/"\[semicolon\]"} #replace semicolons with commas
             #Add the category metadata to the line
             echo "\"$CATEGORY\": \"$category_metadata\"," >> $metadata_df
+
         done
 
         #### pull the block macros
@@ -72,6 +77,7 @@ do
 
     ## close the json entry
     echo "}," >> $metadata_df
+
     fi
 done
 echo "{}" >>$metadata_df
