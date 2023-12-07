@@ -244,7 +244,15 @@ You'll need the following fields in your front matter (new fields added by check
 
 @add_item(4,data\_domain)
 @add_item(5,data\_task)
-@add_item(6,collection)
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(module_characteristics[6] || (!module_characteristics[4] & !module_characteristics[5])) {
+    send.liascript(`- collection 💫`)
+  } else send.clear()
+} catch(e) { }
+</script>
 
 * coding\_required
 
