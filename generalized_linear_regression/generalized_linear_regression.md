@@ -19,9 +19,10 @@ long_description: This is a longer description, which should be understandable f
 estimated_time_in_minutes: 
 
 @pre_reqs
-Learners should already be familiar with 
+Learners should already be familiar with the following concepts in statistics and math:
 
 - linear regression (also called "ordinary least squares (OLS) linear regression")
+- the equation of a line (intercept and slope)
 @end
 
 @learning_objectives  
@@ -64,35 +65,50 @@ Correlation, t-tests, ANOVAs, and linear regression are all examples of linear m
 A linear model is anything that can be expressed as an equation for a line: 
 
 $$
-y = b_0 + b_1 * x_1 + b_2 * x_2 ... b_n * x_n + e 
+Y = \beta_0 + \beta_1 * X_1 + \beta_2 * X_2 ... \beta_n * X_n + e 
 $$
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+Even if you're used to running regression models in your own analyses, you may feel like your grasp of the math behind linear models is not strong. 
+You're not alone!
+
+For an approachable review of linear regression models, including a review of the equation behind them, check out this [article explaining linear regression](https://education.arcus.chop.edu/ordinary_linear_regression/).
+
+</div>
 
 For example, we could express a model [predicting fetal weight from sonographic measurements of femur length](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6077071/) as the equation:
 
 $$
-fetal_weight = b_0 + b_{femoral_length} * femoral_length + e
+fetal\_weight = \beta_0 + \beta_{femoral_length} * femoral_length + e
 $$ 
 
 If we wanted to look at differences in fetal weigh by sex (a categorical predictor) instead, the equation would actually look quite similar (assuming that the sex variable was coded 0 and 1 in the data): 
 
 $$
-fetal_weight = b_0 + b_{sex} * sex + e
+fetal\_weight = \beta_0 + \beta_{sex} * sex + e
 $$ 
 
-What if you want to model sex and femur length together at the same time? No problem, you can add as many predictors as you like: 
+What if you want to model sex and femur length together at the same time? No problem, you can add as many predictors to a linear model as you like: 
 
 $$
-fetal_weight = b_0 + b_{femoral_length} * femoral_length + b_{sex} * sex + e
+fetal\_weight = \beta_0 + \beta_{femoral_length} * femoral_length + \beta_{sex} * sex + e
 $$ 
 
-And you can allow quite a lot of complexity and nuance in a linear model as well, by including things like [interaction terms](https://education.arcus.chop.edu/understanding-interactions/). 
+And you can allow quite a lot of complexity and nuance in a linear model as well, by including things like interaction terms or polynomial terms. 
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "A Layered Grammar of Graphics"](http://vita.had.co.nz/papers/layered-grammar.pdf).
+To learn more about interaction terms in linear models, checkout this [article about how to interpret interactions in a regression model](https://education.arcus.chop.edu/understanding-interactions/).
 
 </div>
+
+Linear models are so popular in statistics because equations for lines are computationally simple (even if they're not simple to understand!) but still allow us to model pretty complex relationships.
+
+It would be handy if linear models covered all possible research questions, but unfortunately they don't!
+**Generalized linear models are a way to extend the functionality of linear models to cover situations when they normally wouldn't work.**
 
 ## Why do we need generalized linear models?
 
@@ -135,6 +151,14 @@ If it's count data, then a log is the right transformation, etc.
 Generalized linear models are just linear models on data that's been transformed with a link function.
 
 </div>
+
+## Quiz: Linear models
+
+True or False: Both linear models and generalized linear models are based on the equation for a line. 
+
+[(X)] TRUE
+[( )] FALSE
+
 
 ## Special considerations for generalized linear models
 
