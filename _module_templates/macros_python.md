@@ -87,6 +87,13 @@ That's why we hid that extra code in the first place.
 </div>
 @end
 
+@pip_install
+```python   @Pyodide.exec
+import micropip
+micropip.install('@0')
+```
+@end
+
 @lesson_prep_python_sage
 @sage
 

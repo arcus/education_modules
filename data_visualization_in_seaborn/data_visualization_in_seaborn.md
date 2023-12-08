@@ -75,13 +75,15 @@ Previous versions:
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
+import: https://raw.githubusercontent.com/arcus/education_modules/pyodide/_module_templates/macros_python.md
 import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 -->
 
 # Data Visualization in seaborn
 
 @overview
+
+@pip_install(seaborn)
 
 ## Lesson Preparation
 
@@ -95,7 +97,7 @@ By convention, you import it with the shorthand `sns`.
 This is optional, but we recommend you do that because when you look at seaborn code online, you'll nearly always see it with that same abbreviation.
 Following that convention will make your code more comparable to examples you see online.
 
-``` python
+```python
 import seaborn as sns
 ```
 @Pyodide.eval
@@ -120,7 +122,7 @@ Alternatively, if you have the [Anaconda distribution of Python](https://www.ana
 
 First, we need to load the rest of the python modules we'll be using (we already loaded `seaborn` on the previous page, but it's run to run that code again):
 
-``` python
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -142,11 +144,11 @@ The `seaborn` module is the plotting module that is the focus of this lesson, an
 
 And then read in the data set:
 
-``` python
+```python
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
 ```
 
-``` python   @Pyodide.exec
+```python   @Pyodide.exec
 import pandas as pd
 import io
 from pyodide.http import open_url
@@ -164,7 +166,7 @@ covid_data = pd.read_csv(file);
 
 @pyodide_readcsv_explainer
 
-``` python
+```python
 print(covid_data.shape) # gives the number of rows and columns
 ```
 @Pyodide.eval
@@ -192,7 +194,7 @@ The seaborn library includes a powerful function called `relplot`, short for "re
 
 If you provide `relplot` with two continuous variables, it will default to making a scatterplot. Here we'll plot age and height.
 
-``` python
+```python
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm")
 plt.show()
@@ -217,7 +219,7 @@ You can also create scatterplots with a similar function: `regplot` (short for "
 
 Let's try adding information about a third variable, weight, by using color.
 
-``` python
+```python
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm", hue="val_weight_kg")
 plt.show()
@@ -240,7 +242,7 @@ Now let's look at using color for a categorical variable (`is_smoker`, with opti
 
 The values entered for `is_smoker` in the data are actually much longer than we need them to be --- they include the text of the option after the shorthand for it (e.g. former smokers are indicated by `ex_fumeur__j_ai_fum__mais_ne_fume_plus`). We don't want that additional text in the plot, so we'll recode that variable now.
 
-``` python
+```python
 # recode is_smoker to make the variable labels shorter
 orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
 new_codes = ["ex-smoker", "smoker", "non-smoker"]
@@ -296,7 +298,7 @@ Tip: Don't use color alone to convey important information in your plots because
 
 </div>
 
-``` python
+```python
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker", style = "is_smoker")
@@ -469,7 +471,7 @@ We'll continue using the same data we explored to make scatterplots.
 
 Because histograms show just one variable, the only aesthetic they require is x. The y-axis of the plot will just show the counts of observations in each bin on the x-axis. (Note that it is possible to provide `sns.displot` with y instead of x, in which case it will generate a sideways histogram.)
 
-``` python
+```python
 sns.displot(covid_data, x="val_age")
 plt.show()
 ```
@@ -487,7 +489,7 @@ plt.show()
 
 The appearance of a histogram can change a lot depending on the number of bins you use along the x-axis. It's a good idea to try a few different sets of bins to see what works well for communicating this distribution.
 
-``` python
+```python
 sns.displot(covid_data, x="val_age", binwidth=1)
 plt.show()
 ```
@@ -500,7 +502,7 @@ plt.show()
 
 </details>
 
-``` python
+```python
 sns.displot(covid_data, x="val_age", binwidth=10)
 plt.show()
 ```
