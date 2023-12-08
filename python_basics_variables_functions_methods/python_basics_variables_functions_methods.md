@@ -2,8 +2,8 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.1
-current_version_description: Initial version
+version: 1.1.0
+current_version_description: Implemented code blocks in pyodide
 module_type: standard
 docs_version: 1.2.0
 language: en
@@ -55,14 +55,15 @@ coding_language: python
 
 
 @version_history
-
+https://github.com/arcus/education_modules/blame/5e1bbae6792dc5adc7cfcc99860b0f9e1447daa6/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#L5
 Previous versions: 
-None. 
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5e1bbae6792dc5adc7cfcc99860b0f9e1447daa6/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#1) Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
-
+import: https://raw.githubusercontent.com/arcus/education_modules/pyodide_testing/_module_templates/macros_python.md
+import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 -->
 
 # Python Basics: Functions, Methods, and Variables
@@ -71,9 +72,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 ## Lesson Preparation
 
-@sage
-
-@lesson_prep_python_sage
+@lesson_prep_python_pyodide
 
 ## Introduction to Python code
 
@@ -89,15 +88,10 @@ In Python, there are two basic ways of taking something (such as text, a number,
 
 A simple (but very useful) example of this is the `print()` function:
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 print("Hello World!")
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 The `print()` function takes an object (in this case the phrase "Hello World!") and displays it as output. The object that you want to display is the "required" argument, meaning that you must provide this value in the parentheses for the function to work; however, the `print()` function has several other "optional" arguments that can modify how the function behaves. If you're curious about what these other arguments are, [take a look at this very brief tutorial about the `print() function`](https://www.w3schools.com/python/ref_func_print.asp). 
 
@@ -116,16 +110,10 @@ There are many [built-in functions in Python](https://docs.python.org/3/library/
 
 Let's look at an example and try applying the `.lower()` method:
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 print("Hello World!".lower())
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 As you might have suspected, the `.lower()` method made all of the letters of the phrase "Hello World!" lowercase. The `.lower()` method is a **string method**, or a method that *must* be called on a string object, of which "Hello World!" is an example. (There is also a string method called `.upper()`, can you guess what it does?) The Python documentation has [more information about string methods](https://docs.python.org/2.5/lib/string-methods.html). Other kinds of objects in Python (like lists and dictionaries, for example, which we'll discuss later in this module) have their own associated methods. 
 
@@ -142,16 +130,10 @@ An example of a string method with both required and optional parameters is `.co
 
 Let's look at an example of the `.count()` method in action:
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 print("Mississippi".count("is"))
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 In the code cell above, we are searching the whole string "Mississippi" for number of times the substring "is" occurs (the answer is 2).
 
@@ -174,16 +156,10 @@ At this point, you may be wondering exactly when you should use functions vs. me
 
 So we've talked quite a bit about strings, but what are they? A **string** is an example of a **data type** in Python. Knowing what data type you're working with is very important, because certain functions and methods will only work on certain data types, or will behave differently depending on the data type. The built-in function `type()` will return as output the data type of its argument.
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 print(type("Hello World!"))
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 When we pass the phrase "Hello World!" to the `type()` function, we get the output `<class 'str'>`, "str" being short for "string". A **string** is a sequence of characters; you tell Python that a sequence is a string by surrounding it in quotation marks. You can use either single or double quotes, but it's a good idea to be consistent. 
 
@@ -214,16 +190,10 @@ Notice that in the above example, we have passed the `type("Hello World!")` func
 
     **Hint:** If you get stuck, try replacing the `x` argument in the `print()` function below with the code examples above. Running code you're unsure about and seeing what output you get can be a useful troubleshooting tool!
 
-    @sage
-    <div class="python">
-    <lia-keep>
-    <script type="text/x-sage">
-
-    print(x)
-
-    </script>
-    </lia-keep>
-    </div>
+```python
+print(x)
+```
+@Pyodide.eval
 
 2. To check that the string "Python is awesome!" ends in an exclamation point, we can use the code ` "Python is awesome!".endswith("!")`. In this case, the boolean value `True` will be returned, since "Python is awesome!" does indeed end in an exclamation point. What is `.endswith()` an example of?
 
@@ -243,17 +213,11 @@ Notice that in the above example, we have passed the `type("Hello World!")` func
 
 Rather than using a method directly on a value (like a string or a number) or passing that value directly to a function, we can also **assign** values to variables and use *those* with our functions and methods. **Variables** are ways to store values and objects for use later.
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 my_num = 17
 print(my_num)
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 While the above example may seem trivial, variables are extremely useful for re-using values and objects. They make your code easier to edit (if you store a value in a variable and then need to change it later, you only need to change the value in the variable definition, rather than every time in your code you've used that value). Variables also make your code more **readable**, or easier for humans to understand.
 
@@ -264,19 +228,13 @@ It's a good idea to use descriptive names for your variables! Python won't care 
 
 </div>
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 dogs = 3
 cats = 5
 all_pets = dogs + cats
 print(all_pets)
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 In the above example, we have defined variables to contain the number of dogs and the number of cats, and then used these variables in a calculation to get the total number of pets, which is itself assigned to a variable. The `all_pets` variable can then be used repeatedly later (maybe we want to calculate costs associated with feeding and housing all of these pets, for example, or how many collars we'll need). Now, if the number of dogs or cats changes, we can just change the value in the variable statement and re-run our code!
 
