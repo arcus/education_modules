@@ -166,18 +166,32 @@ print(df)
 ```
 @Pyodide.eval
 
+You show this code to a friend. They try to run it in a Jupyter notebook on their computer, but it doesn't run, despite being exactly what ran for you on the previous page! 
 
-Your friend's code (above) isn't running, which is extremely frustrating because they copied and pasted it from the previous page of this module. What line must they add to make it work?
+This is an extremely common and frustrating experience, what are some possible reasons why it isn't working for them?
+
+[[ ]] The code shouldn't have worked for either of you.
+[[X]] You had imported a package that they don't yet have.
+[[X]] They have defined a variable or module differently than you did.
+[[ ]] Their computer doesn't like them.
+***
+<div class="answer">
+
+When working code is copied to another location and then fails to work, it is usually because of a missing package or a differently defined variable.
+
+</div>
+***
+
+
+Your friend shows you the error message they got when running the code: `NameError: name 'pd' is not defined`. What command should they enter before the first line of code?
 
 [[import pandas as pd]]
-[[?]] Hint: Run the code. Did you get an error message? If you didn't try refreshing the page and trying to run it again.
-[[?]] Hint: What do we need to include at the top in order to make `pandas` commands available to us?
 ***
 <div class = "answer">
 
 `NameError: name 'pd' is not defined` is a helpful error message because it tells you exactly what you friend forgot: they never defined `pd`!
 
-When you add the line `import pandas as pd` to the top of their code, it runs as it did before, even if you refreshed the page since you last loaded the `pandas` package
+You have already told python to import then pandas module and that whenever you enter `pd` you mean `pandas`. But your friend's computer doesn't know that yet. Adding the line `import pandas as pd` to the top of their code, will almost certainly make this run in their notebook.
 
 ```python
 import pandas as pd
@@ -262,7 +276,8 @@ print(covid_testing.head(4))
 Loading your own data
 ---
 
-To create a DataFrame of your data, make sure you use the right command for your file type, and make sure the location of the file is in quotes.
+If you are trying out this code on your own computer, you can make a DataFrame out of any tabular data you have access to! To create a DataFrame of your data, make sure you use the right command for your file type, and make sure the location of the file is in quotes.
+
 | File type | Read command |
 | - | - |
 | .csv | pd.read_csv('location')|
@@ -732,6 +747,8 @@ One way to approach this is to define a condition testing each row for whether t
 is_male = covid_testing.loc[:, "gender"] == "male"
 
 covid_testing.loc[is_male, "gender"] = "M"
+
+print(covid_testing.loc[:,["first_name", "last_name", "gender"]])
 
 ```
 @Pyodide.eval
