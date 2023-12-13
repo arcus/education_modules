@@ -84,6 +84,7 @@ import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 @overview
 
 @pip_install(seaborn)
+@pip_install(statsmodels)
 
 ## Lesson Preparation
 
@@ -230,13 +231,14 @@ plt.show()
 <summary>Click to see the plot with alt text available</summary>
 
 ![Age and height scatterplot from the previous figure, but with weight represented by a color scale ranging from a very light pink (25 kg) to a dark purple (150 kg). Weight appears to correlate with both age and height, such that taller and older participants are also heavier. The three outliers with very small heights also have very high weights, suggesting they may represent typos during data entry.](media/seaborn_scatter_2.png)
+
 </details>
 
 <br>
 
 Note that adding hue to the command automatically adds a legend to your plot as well.
 
-### Using color to show groups\
+### Using color to show groups
 
 Now let's look at using color for a categorical variable (`is_smoker`, with options `ex_fumeur`, `fumeur`, and `non_fumeur`, referring to former smokers, current smokers, and non-smokers, respectively).
 
@@ -261,11 +263,6 @@ For a refresher, see this tutorial on [recoding variables in a pandas dataframe]
 Then we can update our scatterplot to use `is_smoker` for color.
 
 ```python
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker")
@@ -407,11 +404,6 @@ It's unfortunate that the same word gets used for both, but you can still tell t
 There are 4 different contexts available: notebook (default), paper, talk, and poster.
 
 ```python
-# color palette
-sns.set_theme(palette="colorblind")
-# style
-sns.set_style("white")
-
 sns.set_context("poster")
 
 sns.relplot(data = covid_data,
@@ -472,6 +464,10 @@ We'll continue using the same data we explored to make scatterplots.
 Because histograms show just one variable, the only aesthetic they require is x. The y-axis of the plot will just show the counts of observations in each bin on the x-axis. (Note that it is possible to provide `sns.displot` with y instead of x, in which case it will generate a sideways histogram.)
 
 ```python
+# if your context is still set to poster from the last code block,
+# you may want to set it to notebook again
+sns.set_context("notebook")
+
 sns.displot(covid_data, x="val_age")
 plt.show()
 ```
@@ -663,7 +659,25 @@ The data we've been using for the other examples so far doesn't lend itself well
 
 This dataset is a special example dataset for `seaborn`, so you don't need to download it separately. You can call it with the `load_dataset` function (although you will need an internet connection for that to work).
 
-We'll modify the code that runs automatically at the top of each page to load the `fmri` dataset instead of the Covid-19 data we've been working with the command: `fmri = sns.load_dataset("fmri")`
+```python
+fmri = sns.load_dataset("fmri")
+```
+
+```python   @Pyodide.exec
+import pandas as pd
+import io
+from pyodide.http import open_url
+
+url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/fmri.csv"
+
+url_contents = open_url(url)
+text = url_contents.read()
+file = io.StringIO(text)
+
+fmri = pd.read_csv(file);
+
+"HTML: <a href='" + url + "'>fmri</a> has been loaded"
+```
 
 ### Basic line plot
 
@@ -977,7 +991,9 @@ Either `regplot` or `lmplot` can be used to draw scatterplots with trend lines.
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-For the following two questions, you'll be asked to modify code from the lesson.
+### Quiz: Facets
+
+For the following question, you'll be asked to modify code from the lesson.
 As you work on the code, test it out by editing the interactive code block so you can see what your code does.
 
 Note that your solution may not look exactly like the solution code provided --- if your code works and it generates a plot that meets your needs, then it's perfect!
@@ -1005,6 +1021,13 @@ sns.lmplot(data = covid_data,
 # Note that row = "is_smoker" would also work.
 # If you used col, try switching to row now to see how the plot changes!
 ```
+
+### Quiz: Color
+
+For the following question, you'll be asked to modify code from the lesson.
+As you work on the code, test it out by editing the interactive code block so you can see what your code does.
+
+Note that your solution may not look exactly like the solution code provided --- if your code works and it generates a plot that meets your needs, then it's perfect!
 
 ```python
 sns.lmplot(data = covid_data,
