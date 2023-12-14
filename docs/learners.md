@@ -5,14 +5,17 @@ layout: default
 
 # DART: Information for Learners
 
-Do you want to learn more about how data science can help your research? Or learn how to get started programming in R or Python? This research study may be for you!
+Do you want to learn more about how data science can help your research? Or learn how to get started programming in R or Python? 
 
-## Joining a Cohort
+## DART Research Study
 
-If you are interested in getting a guided curriculum and a community of fellow learners, we are conducting research to measure the effectiveness of our data science training materials in accordance with the NIH R25 grant funding this project.
+DART ran a research study in 2023 to measure the effectiveness of our data science training materials in accordance with the NIH R25 grant funding this project, but we are no longer recruiting participants. 
 
-The first wave of learners launched on January 30, 2023. Our next cohort is scheduled for August 7, 2023.  Please fill out the [DART interest form](https://redcap.chop.edu/surveys/?s=FPHWFNEA9KN3HERF) if you are interested in learning more about our research, would like to collaborate with us, or have suggestions for our work.  If you know you'd like to participate as a learner and research subject, you may also wish to go directly to our [research screening form](https://redcap.link/DART-survey).
+If you'd like to learn more about DART, please fill out the [DART interest form](https://redcap.link/dart-interest). 
 
 ## Independent Exploration
 
-We understand that waiting for a cohort and guided curriculum might be too long to wait. You are welcome to explore [these materials](list_of_modules) on your own, but you will not get the full experience of the DART Program, including a customized curriculum of materials and the peership and support of a community of learners like you, unless you participate as a research subject.
+All of [our learning modules](list_of_modules) are freely available online! 
+
+We're building a self-service tool to help you find the modules most relevant to you. 
+Test out our [prototype module discovery application](https://learn.arcus.chop.edu/), and please leave feedback to help us improve!

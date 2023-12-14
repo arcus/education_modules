@@ -2,9 +2,11 @@
 title: Educational Modules
 ---
 
-We understand that waiting for a cohort and guided curriculum might be too long to wait, so you are welcome to explore these materials on your own. The benefits of waiting and participating in our research include receiving a customized curriculum of materials and the peership and support of a community of learners like you. To express interest in participating in research, please fill out the [DART interest form](https://redcap.chop.edu/surveys/?s=FPHWFNEA9KN3HERF) or go directly to our [research screening form](https://redcap.link/DART-survey).
+This page includes a complete list of our published modules. 
 
-If you do access any of these modules, please fill out the module feedback survey at the end to let us know what you think.
+We're also building a self-service tool to help you find the modules most relevant to you. 
+Test out our [prototype module discovery application](https://learn.arcus.chop.edu/), and please leave feedback to help us improve!
+
 
 | Training Course | Description | Estimated Time | Subject Category | Coding Language |
 | -- | -- | -- | -- | -- |
