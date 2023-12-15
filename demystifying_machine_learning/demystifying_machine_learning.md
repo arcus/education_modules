@@ -2,10 +2,10 @@
 
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.1
-current_version_description: Initial version
+version:  1.1.0
+current_version_description: Added some new linked resources in learn-more boxes
 module_type: standard
-docs_version: 1.0.0
+docs_version: 3.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -50,7 +50,10 @@ coding_required: false
 @end
 
 @version_history
-No previous versions.
+Previous versions: 
+
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/demystifying_machine_learning/demystifying_machine_learning.md): Initial version
+
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
