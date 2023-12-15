@@ -500,10 +500,10 @@
 "module_id": "demystifying_machine_learning",
 "author": "Rose Hartman",
 "email": "hartmanr1@chop.edu",
-"version": "1.0.1",
-"current_version_description": "Initial version",
+"version": "1.1.0",
+"current_version_description": "Added some new linked resources in learn-more boxes",
 "module_type": "standard",
-"docs_version": "1.0.0",
+"docs_version": "3.0.0",
 "language": "en",
 "narrator": "UK English Female",
 "mode": "Textbook",
@@ -524,7 +524,7 @@
 "learning_objectives": "\nAfter completion of this module, learners will be able to:\n\n- list at least three potential applications of machine learning in biomedical science\n- describe three different statistical problems models can address and how they differ (e.g. prediction, anomaly detection, clustering, dimension reduction)\n- describe some potential pitfalls of machine learning and big data\n\n",
 "sets_you_up_for": "\n- bias_variance_tradeoff\n\n",
 "depends_on_knowledge_available_in": "\n",
-"version_history": "No previous versions.\n",
+"version_history": "Previous versions: \n\n- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/demystifying_machine_learning/demystifying_machine_learning.md): Initial version\n\n",
 "Linked Course":"bias_variance_tradeoff "
 },
 {
