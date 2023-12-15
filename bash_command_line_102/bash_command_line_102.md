@@ -67,13 +67,11 @@ current_version_description: Updated module metadata
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-
 -->
 
 # Bash: Searching and Organizing Files
 
 @overview
-
 
 ## Lesson Preparation
 
@@ -103,7 +101,6 @@ Download the [`learning_bash` directory](https://github.com/arcus/learning_bash)
 
 4. [Find out the file path](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#6) (location on your computer) of the new folder `learning_bash-main` and navigate there in your command line interface.
 
-
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
@@ -120,6 +117,7 @@ If you can see the icon for your `learning_bash-main` folder (maybe in a downloa
 This will open a command line interface at the correct location. Once there, you can use the command `pwd` to see the path to your present working directory.
 
 </div>
+
 ## Searching files
 
 Before we start searching for specific things in this directory, let's navigate into it and explore a little bit of what it contains.
@@ -171,10 +169,8 @@ It looks like these might have some length and weight data in them.
 
 We could continue to individually look at the contents of each file, but that is a lot of work even with this small folder. Next we are going to learn how to search these files and folders.
 
-
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
-
 
 Files that start with a `.` (period) are hidden when you enter `ls`. These are usually operational files that help navigate the file system or keep track of metadata. To see all of these files, enter `ls -a`. The `-a` flag tells bash to show you all files and folders.
 
@@ -206,9 +202,6 @@ You can use more than one `*` at a time:
 
 - `*bear*` matches `polar_bear.txt` and `grizzly_bear.dat`
 
-
-
-
 </div>
 
 The `find` function will return a list of **all** files and folders in your current directory that match the criteria you have asked for. **Give it a try!** Follow along with these three examples:
@@ -218,9 +211,6 @@ The `find` function will return a list of **all** files and folders in your curr
 2. Search for all files and folders that start with a certain sequence of characters: `find blue*` will return all six files that start with the four characters `blue` as well as the folder that starts with `blue` and the file `blue_morpho` inside that folder.
 
 3. Search for all file names containing a particular sequence: `find *_*` will return all of the files and folders that contain an underscore `_` anywhere in their names. In this folder, the files with underscores correspond to the animals whose common names are more than one word long.
-
-
-
 
 ### Search contents with `grep`
 
@@ -274,8 +264,8 @@ polar_bear.txt:Ursus maritimus
 The [origin of "grep"](https://en.wikipedia.org/wiki/Grep) is that it is **g**lobally searching for a **r**egular **e**xpression and **p**rinting the matching lines. In the text editor `ed` that was part part of the original Unix operating system from 1969, you could do these action with the command `g/re/p` and the name has stuck.
 </div>
 
-
 ### Quiz: Searching files
+
 1. What command will return all of the files with a `.dat` ending?
 
 [[find *.dat]]
@@ -286,7 +276,6 @@ The `find` function searches the names of all folders and files in the current d
 
 </div>
 ***
-
 
 2. What command will return all files with a `.dat` ending that contain the word `Weight`?
 
@@ -302,7 +291,6 @@ The `grep` function searches the contents of the files, in this case all of the 
 
 </div>
 ***
-
 
 ## Organizing files
 
@@ -371,6 +359,7 @@ Similarly we could move all of the files and folders that start with the word bl
 ```
 mv blue* blue_animals
 ```
+
 You will get an output warning you that one of the things you asked for cannot be done:
 
 ```
@@ -522,7 +511,7 @@ rm -r red_animals
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
 Remember, deleting files with the `rm` command is **permanent**. 
-When you use `rm -r my_folder`, you will permanently lose my_folder, and all of its contents, including any subfolders and files within it.
+When you use `rm -r my_folder`, you will permanently lose my_folder, and all of its contents, *including any subfolders* and files within it.
 
 Be sure there's nothing you need within that directory or any of its subdirectories before running `rm -r`. 
 You will not be able to undo it.
@@ -551,7 +540,6 @@ Which statements about the remove command `rm` are **TRUE**?
 </div>
 ***
 
-
 ## Additional Resources
 
 Check out the built-in manual or help function in your CLI. You can try it out by typing a command followed by `--help`. Unless you are using Git Bash, you can also try the manual command `man` to read even more of the documentation. Give it a try with `man cp` or `cp --help`!
@@ -563,8 +551,6 @@ Reading a manual isn't always the easiest way to get more comfortable with a pro
 - The Earth Lab at University of Colorado, Boulder has a nice [bash tutorial](https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/bash/bash-commands-to-manage-directories-files/) that can supplement and reenforce the learning you have done here.
 
 - MDN Web Docs, a project that documents a number of Web platform technologies has [a detailed crash course in bash](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line).
-
-
 
 ## Feedback
 
