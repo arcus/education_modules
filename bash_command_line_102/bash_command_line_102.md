@@ -3,8 +3,9 @@
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
 version: 1.2.2
+current_version_description: Updated module metadata
 module_type: standard
-docs_version: 1.0.0
+docs_version: 3.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -14,13 +15,10 @@ long_description: This module is for people who have a bit of experience with ba
 estimated_time_in_minutes: 30
 
 @pre_reqs
-
 Learners should be familiar with using a bash shell to navigate a directory system. Learners will get the most out of this lesson if they can also create directories and files, write text to files, and read files from their bash shell command line interface.
-
 @end
 
 @learning_objectives
-
 After completion of this module, learners will be able to:
 
 - Search existing files for particular character strings.
@@ -28,7 +26,6 @@ After completion of this module, learners will be able to:
 - Move files to new locations in a directory system.
 - Copy files and directories.
 - Delete files and directories.
-
 @end
 
 good_first_module: false
@@ -48,19 +45,14 @@ sequence_name: bash_basics
 previous_sequential_module: bash_command_line_101
 
 @sets_you_up_for
-
 - bash_103_combining_commands
 - bash_conditionals_loops
-
 @end
 
 @depends_on_knowledge_available_in
-
 -bash_command_line_101
-
 @end
 
-current_version_description: Updated module metadata
 @version_history
 - [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_command_line_102/bash_command_line_102.md#1) Improved Lesson Preparation instructions
 - [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/738a57ce41189c219ae9288bed4fbde834bb46d4/bash_command_line_102/bash_command_line_102.md#1) Initial version
