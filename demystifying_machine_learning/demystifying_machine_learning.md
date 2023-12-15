@@ -148,8 +148,8 @@ As the authors in this [article in Nature Methods](https://www.nature.com/articl
 
 </div>
 
-<div class = "behind-the-scenes">
-<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
 For a deeper dive into this distinction, see 
 
@@ -164,7 +164,7 @@ Of course, not every research question is a good fit for machine learning, and w
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-For a more in-depth discussion of how to select a machine learning model, work through [Google's free course on how to identify and frame machine learning problems](https://developers.google.com/machine-learning/problem-framing).
+For a more in-depth discussion of how to select a machine learning model, work through [Google's free course on how to identify and frame machine learning problems](https://developers.google.com/machine-learning/problem-framing), and/or read the Arcus Education article on how to choose appropriate models for different use cases in biomedical research: [What type of machine learning should I use?](https://education.arcus.chop.edu/types-of-ml/).
 
 </div>
 
@@ -516,8 +516,6 @@ For a fun and detailed introduction to machine learning, check out [Google's com
 It follows the story of an engineer, Martha, as she learns about machine learning from a cat and a friendly flying robot.
 
 ![A flying robot, a cat, and a human software engineer discussing three signs saying "Supervised Learning", "Unsupervised Learning", and "Reinforcement Learning". The robot says, "These categories don’t account for ALL of machine learning, but they cover a lot of ground." The engineer says, "So self-playing arcade games are cool and all —— but I want to hear more about practical applications. What can this stuff be used for in the real world?"](https://cloud.google.com/static/products/ai/ml-comic-1/assets/panel_71_2x.png)
-
-For a more detailed (but still very approachable) discussion of how to choose appropriate models for different use cases in biomedical research, read [What type of machine learning should I use?](https://education.arcus.chop.edu/types-of-ml/)
 
 More examples!
 ---
