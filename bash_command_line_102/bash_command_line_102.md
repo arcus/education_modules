@@ -2,9 +2,10 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
-version: 1.2.2
+version: 1.3.0
+current_version_description: Add emphasis about he permanence of `rm`
 module_type: standard
-docs_version: 1.0.0
+docs_version: 3.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -14,13 +15,10 @@ long_description: This module is for people who have a bit of experience with ba
 estimated_time_in_minutes: 30
 
 @pre_reqs
-
 Learners should be familiar with using a bash shell to navigate a directory system. Learners will get the most out of this lesson if they can also create directories and files, write text to files, and read files from their bash shell command line interface.
-
 @end
 
 @learning_objectives
-
 After completion of this module, learners will be able to:
 
 - Search existing files for particular character strings.
@@ -28,7 +26,6 @@ After completion of this module, learners will be able to:
 - Move files to new locations in a directory system.
 - Copy files and directories.
 - Delete files and directories.
-
 @end
 
 good_first_module: false
@@ -48,78 +45,32 @@ sequence_name: bash_basics
 previous_sequential_module: bash_command_line_101
 
 @sets_you_up_for
-
 - bash_103_combining_commands
 - bash_conditionals_loops
-
 @end
 
 @depends_on_knowledge_available_in
-
 -bash_command_line_101
-
 @end
 
-current_version_description: Updated module metadata
 @version_history
-- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_command_line_102/bash_command_line_102.md#1) Improved Lesson Preparation instructions
-- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/738a57ce41189c219ae9288bed4fbde834bb46d4/bash_command_line_102/bash_command_line_102.md#1) Initial version
+- [1.2.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/bash_command_line_102/bash_command_line_102.md): Updated module metadata
+- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_command_line_102/bash_command_line_102.md) Improved Lesson Preparation instructions
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/738a57ce41189c219ae9288bed4fbde834bb46d4/bash_command_line_102/bash_command_line_102.md) Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_bash.md
 -->
 
 # Bash: Searching and Organizing Files
 
 @overview
 
-
 ## Lesson Preparation
 
-You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer. Please follow the instructions appropriate for the computer you are using.
+@lesson_prep_bash_basics
 
-**Open a bash shell.**
-If you are using a computer with running macOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
-
-<div class = "care">
-<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
-
-It can be stressful to interact with files directly from the command line. Throughout this module we will make sure you know what each command does before asking you to do it.  Like any other computational skill, you'll get more comfortable with it the more you practice!
-
-</div>
-
-To ensure that we aren't touching any of the important files on your computer, you will be downloading a small directory to experiment with.  You can download a fresh copy to start over at any point. 
-
-**Download the files.**
-
-Download the [`learning_bash` directory](https://github.com/arcus/learning_bash) from GitHub. Once you go to the link:
-
-1. Click on the green **Code** drop-down button towards the right-hand side of the screen. 
-
-2. Select **Download ZIP** from the options that appear.
-
-3. Once the Zip file has downloaded, un-zipping it will create a folder titled `learning_bash-main`. Depending on your computer's operating system, you may be able to un-zip the folder by double clicking on it, or may need to right click on it a select "Extract All." This may create an identically named folder inside `learning_bash-main` that contains all of the individual files.
-
-4. [Find out the file path](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#6) (location on your computer) of the new folder `learning_bash-main` and navigate there in your command line interface.
-
-
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
-
-**Where is my folder?**
-
-If you can see the icon for your `learning_bash-main` folder (maybe in a downloads screen) you can open your command line interface directly into the folder by right clicking on the folder and selecting the appropriate option:
-
-| Command Line Interface | Right-click menu option |
-| :- | :- |
-| Terminal (Mac or Linux) | New Terminal at Folder |
-| Git Bash (Windows) | Git Bash Here |
-| WLS (Windows Linux Subsystem) | Open Linux shell here |
-
-This will open a command line interface at the correct location. Once there, you can use the command `pwd` to see the path to your present working directory.
-
-</div>
 ## Searching files
 
 Before we start searching for specific things in this directory, let's navigate into it and explore a little bit of what it contains.
@@ -171,10 +122,8 @@ It looks like these might have some length and weight data in them.
 
 We could continue to individually look at the contents of each file, but that is a lot of work even with this small folder. Next we are going to learn how to search these files and folders.
 
-
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
-
 
 Files that start with a `.` (period) are hidden when you enter `ls`. These are usually operational files that help navigate the file system or keep track of metadata. To see all of these files, enter `ls -a`. The `-a` flag tells bash to show you all files and folders.
 
@@ -206,9 +155,6 @@ You can use more than one `*` at a time:
 
 - `*bear*` matches `polar_bear.txt` and `grizzly_bear.dat`
 
-
-
-
 </div>
 
 The `find` function will return a list of **all** files and folders in your current directory that match the criteria you have asked for. **Give it a try!** Follow along with these three examples:
@@ -218,9 +164,6 @@ The `find` function will return a list of **all** files and folders in your curr
 2. Search for all files and folders that start with a certain sequence of characters: `find blue*` will return all six files that start with the four characters `blue` as well as the folder that starts with `blue` and the file `blue_morpho` inside that folder.
 
 3. Search for all file names containing a particular sequence: `find *_*` will return all of the files and folders that contain an underscore `_` anywhere in their names. In this folder, the files with underscores correspond to the animals whose common names are more than one word long.
-
-
-
 
 ### Search contents with `grep`
 
@@ -274,8 +217,8 @@ polar_bear.txt:Ursus maritimus
 The [origin of "grep"](https://en.wikipedia.org/wiki/Grep) is that it is **g**lobally searching for a **r**egular **e**xpression and **p**rinting the matching lines. In the text editor `ed` that was part part of the original Unix operating system from 1969, you could do these action with the command `g/re/p` and the name has stuck.
 </div>
 
-
 ### Quiz: Searching files
+
 1. What command will return all of the files with a `.dat` ending?
 
 [[find *.dat]]
@@ -286,7 +229,6 @@ The `find` function searches the names of all folders and files in the current d
 
 </div>
 ***
-
 
 2. What command will return all files with a `.dat` ending that contain the word `Weight`?
 
@@ -302,7 +244,6 @@ The `grep` function searches the contents of the files, in this case all of the 
 
 </div>
 ***
-
 
 ## Organizing files
 
@@ -371,6 +312,7 @@ Similarly we could move all of the files and folders that start with the word bl
 ```
 mv blue* blue_animals
 ```
+
 You will get an output warning you that one of the things you asked for cannot be done:
 
 ```
@@ -507,6 +449,7 @@ rm brown_bear.txt
 Removing files via your command line interface with the `rm` command **permanently removes** them from your computer. It does not move them to your "Trash" folder.
 
 Be completely sure that you no longer need a file before using the `rm` command as YOU WILL NOT BE ABLE TO GET REMOVED FILES BACK unless you have another copy backed up somewhere else.  
+
 </div>
 
 If you are sure you want to delete a directory, the recursive flag `-r` will recursively delete a folder and all of its contents, and the contents of any subfolders, and on and on until everything is gone.
@@ -516,6 +459,17 @@ Maybe you no longer want a `red_animals` folder since all of its contents are av
 ```
 rm -r red_animals
 ```
+
+<div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
+Remember, deleting files with the `rm` command is **permanent**. 
+When you use `rm -r my_folder`, you will permanently lose my_folder, and all of its contents, *including any subfolders* and files within it.
+
+Be sure there's nothing you need within that directory or any of its subdirectories before running `rm -r`. 
+You will not be able to undo it.
+
+</div>
 
 ### Quiz: Deleting files
 
@@ -539,7 +493,6 @@ Which statements about the remove command `rm` are **TRUE**?
 </div>
 ***
 
-
 ## Additional Resources
 
 Check out the built-in manual or help function in your CLI. You can try it out by typing a command followed by `--help`. Unless you are using Git Bash, you can also try the manual command `man` to read even more of the documentation. Give it a try with `man cp` or `cp --help`!
@@ -551,8 +504,6 @@ Reading a manual isn't always the easiest way to get more comfortable with a pro
 - The Earth Lab at University of Colorado, Boulder has a nice [bash tutorial](https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/bash/bash-commands-to-manage-directories-files/) that can supplement and reenforce the learning you have done here.
 
 - MDN Web Docs, a project that documents a number of Web platform technologies has [a detailed crash course in bash](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line).
-
-
 
 ## Feedback
 
