@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  3.1.1
+version:  3.1.2
 current_version_description: update definition of learn_to_code collection
 language: en
 narrator: UK English Female
@@ -25,7 +25,7 @@ try {
 @version_history
 Previous versions: 
 
--[3.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cd0da90a30910c22d5502f509125892a761c3145/docs.md#1): Added collection as a front matter field, added text as a data_domain, fixed typos
+- [3.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cd0da90a30910c22d5502f509125892a761c3145/docs.md#1): Added collection as a front matter field, added text as a data_domain, fixed typos
 - [2.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/89cadafc6f1f9c83e4de93e7d55cd9427866f9f2/docs.md#1): Made coding_required a mandatory front matter field for all modules
 - [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b453a05b5ac756fb5c7b183deae9d4fc91b3a617/docs.md): Clarified that version_history cannot be blank but sets_you_up_for and depends_on_knowledge_available_in can
 @end
@@ -198,11 +198,11 @@ Use the checklist below to help make sure you're including all the front matter 
 - [ ] includes interactive Python
 - [ ] includes interactive SQL
 - [ ] learner will need to code to meet the learning objectives
-- [ ] is about a particular kind of data (EHR, omics data, geospatial data, etc.)
-- [ ] teaches a particular data skill or task (visualization, analysis, cleaning, etc.)
+- [ ] is about a particular [kind of data](#data_domain) (EHR, omics data, geospatial data, etc.)
+- [ ] teaches a particular [data skill or task](#data_task) (visualization, analysis, cleaning, etc.)
 - [ ] belongs to a [collection](#collection)
 - [ ] is a [wrapper module](#which-module-template-to-use)
-- [ ] is in a sequence (including the first module in the sequence)
+- [ ] is in a [sequence](#sequence_name) (including the first module in the sequence)
 - [ ] follows other modules in a sequence (i.e. it's not the first in the sequence)
 - [ ] is parallel to one or more other modules (i.e. covers the same content but in a different coding language/operating system)
 - [ ] uses the Data Carpentry genomics AMI on AWS
@@ -244,7 +244,17 @@ You'll need the following fields in your front matter (new fields added by check
 
 @add_item(4,data\_domain)
 @add_item(5,data\_task)
-@add_item(6,collection)
+@add_item(6, collection)
+
+<script modify="false">
+try {
+  let module_characteristics = @input(`module_characteristics`)
+
+  if(!module_characteristics[6] & !module_characteristics[4] & !module_characteristics[5]) {
+    send.liascript(`- at least one of: collection, data\\_task, or data\\_domain`)
+  } else send.clear()
+} catch(e) { }
+</script>
 
 * coding\_required
 
