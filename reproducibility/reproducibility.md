@@ -2,8 +2,8 @@
 
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.5.2
-current_version_description: Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure
+version: 1.6.0
+current_version_description: Added new learn-more box linking to Demystifying Containers module and corrected some metadata issues
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -46,9 +46,9 @@ coding_required: false
 @version_history
 Previous versions: 
 
+- [1.5.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/16a4a852199689a42f04555cb581cf2dcb90fb0f/reproducibility/reproducibility.md): Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure
 - [1.4.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/2ba39cddbbe6436e18b04ff62f7dfff4406c5880/reproducibility/reproducibility.md#1): Updated quizzes, learner outcomes, highlight boxes
 - [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/bfbada6fa70c3c9ef0d027eb2e450990b7c7fac7/reproducibility/reproducibility.md#1): Update template, remove some CHOP-specific references, 
-- [1.2.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5f90b59f30dc1f29416df61773d544cf15dce83a/reproducibility/reproducibility.md#1): fix incorrect hyperlink, correct layout and typos
 
 @end 
 
@@ -489,6 +489,14 @@ Sometimes it isn't clear whether something is really a dependency (this value or
 * Hardware requirements: does your research paradigm require a particular kind of hardware for generating stimuli or recording response?
 
 Dependency management is an approach that makes it easier to determine the precise set of tools and inputs required by your data collection and analysis.  Every research effort should document which tools were used and which version of each was employed.  This can be as simple as a text file, or could include installation instructions or even a file that includes the exact versions of software used in the original research, in order to create a computer environment that can perform the analysis under the original conditions.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+The most complete way to manage dependencies is by using **containers**. 
+To get started, check out [Demystifying Containers](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_containers/demystifying_containers.md).
+
+</div>
 
 ## Additional Resources
 
