@@ -507,6 +507,7 @@ rm brown_bear.txt
 Removing files via your command line interface with the `rm` command **permanently removes** them from your computer. It does not move them to your "Trash" folder.
 
 Be completely sure that you no longer need a file before using the `rm` command as YOU WILL NOT BE ABLE TO GET REMOVED FILES BACK unless you have another copy backed up somewhere else.  
+
 </div>
 
 If you are sure you want to delete a directory, the recursive flag `-r` will recursively delete a folder and all of its contents, and the contents of any subfolders, and on and on until everything is gone.
@@ -516,6 +517,17 @@ Maybe you no longer want a `red_animals` folder since all of its contents are av
 ```
 rm -r red_animals
 ```
+
+<div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
+Remember, deleting files with the `rm` command is **permanent**. 
+When you use `rm -r my_folder`, you will permanently lose my_folder, and all of its contents, including any subfolders and files within it.
+
+Be sure there's nothing you need within that directory or any of its subdirectories before running `rm -r`. 
+You will not be able to undo it.
+
+</div>
 
 ### Quiz: Deleting files
 
