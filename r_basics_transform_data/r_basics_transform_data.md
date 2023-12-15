@@ -574,19 +574,24 @@ This approach to coding is powerful because it makes it much easier for someone 
 
 ### Quiz: `%>%`
 
-In the box below, rewrite the following statement with a pipe, using the `%>%` version:
+In the box below, rewrite the following statement with either pipe:
 
 `select(mydata, first_name, last_name)`
 
 [[mydata %>% select(first_name, last_name)]]
-[[?]] Hint: We include a space after any comma and on either side of the pipe `%>%`.  We also aren't assigning the results of this `select` to a new object.
+[[?]] Hint: Remember that capitalization matters! We also aren't assigning the results of this `select` to a new object.
+<script>
+  let input = "@input".trim();
+  /mydata\s*(%>%|\|>)\s*select\(first_name,\s*last_name\)/.test(input);
+</script>
 ********
 
 <div class = "answer">
 
-`mydata %>% select(first_name, last_name)` is correct because:
+`mydata %>% select(first_name, last_name)` or 
+`mydata |> select(first_name, last_name)` is correct because:
 
-* It uses the pipe operator `%>%`
+* It uses a pipe operator, either `%>%` or `|>`
 * To the left of the pipe, there is the name of a data frame, in this case `mydata`.
 * To the right of the pipe, there is a `select()` function that includes additional arguments giving the names of the columns we want to keep.
 
