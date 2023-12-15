@@ -87,13 +87,14 @@ In programming, we often need to perform a task repeatedly (or **iteratively**),
 In Python, [lists and dictionaries](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1) are examples of **iterable** objects, or objects whose members can be returned one at a time. This is important in **loops**, which repeat (or iterate) the same operation for each element in an iterable object like a list.
 
 For a sense of how loops work in Python, here is a simple example. Let's say there are five children at a party, and they each start with a certain number of pieces of candy. Next, let's say that we give each child 5 more pieces of candy. Using a simple loop, we can get a list of how many total pieces of candy each child has now using the `for` and `in` keywords.
+    
 
 ```python
 starting_candy = [3, 10, 11, 6, 7]
 candy_day1 = [] #Here we are initiating an empty list, so that we can add elements to it later
 for i in starting_candy: #In the loop, i will take on the value of each list element in turn
-  j = i + 5
-  candy_day1.append(j)
+	j = i + 5
+	candy_day1.append(j)
 print(candy_day1)
 ```
 @Pyodide.eval
@@ -114,8 +115,8 @@ This example loops through the list of numbers, adds 5 to each number one at a t
 starting_candy = [3, 10, 11, 6, 7]
 candy_day1 = [] #Here we are initiating an empty list, so that we can add elements to it later
 for i in starting_candy: #In the loop, i will take on the value of each list element in turn
-  j = i + 5
-  candy_day1.append(j)
+	j = i + 5
+	candy_day1.append(j)
 print(candy_day1)
 ```
 @Pyodide.eval
@@ -162,7 +163,7 @@ print(list(range(1, 20))[7])
 
 ```python
 for i in range(0, 6):
-  j = i*i
+	j = i*i
 ```
 @Pyodide.eval
 
@@ -202,11 +203,12 @@ Let's look at a simple example of some code that utilizes conditionals.
 
 ```python
 name = "Pythonista"
-if type(name) == str: # We're testing here to see if the value of name is a string.
-                                    # This will either evaluate to True or False.
-    print("Welcome, "+ name+"!")
+# We're testing below to see if the value of name is a string.
+# This will either evaluate to True or False.
+if type(name) == str: 
+	print("Welcome, "+ name+"!")
 else:
-    print("Please enter a name.")
+	print("Please enter a name.")
 ```
 @Pyodide.eval
 
@@ -220,13 +222,13 @@ You also aren't confined to a single "if-else" statement! You can have multiple 
 ```python
 num = 1
 if num < 10:
-    print("This number is less than 10")
+	print("This number is less than 10")
 elif 10 < num < 100:
-    print("This number is more than 10 but less than 100")
+	print("This number is more than 10 but less than 100")
 elif num >= 100:
-    print("This number is greater than or equal to 100")
+	print("This number is greater than or equal to 100")
 else:
-    print("This number equals 10")
+	print("This number equals 10")
 ```
 @Pyodide.eval
 
@@ -242,13 +244,13 @@ When coding in Python, it is important to remember that lines and blocks of code
 ```python
 num = 1
 if num < 100:
-    print("This number is less than 100")
+	print("This number is less than 100")
 elif num < 10:
-    print("This number is less than 10")
+	print("This number is less than 10")
 elif num >= 100:
-    print("This number is greater than or equal to 100.")
+	print("This number is greater than or equal to 100.")
 else:
-    print("This number equals 10")
+	print("This number equals 10")
 ```
 @Pyodide.eval
 
@@ -266,11 +268,11 @@ Remember when we looped through a list of pieces of candy that some children sta
 candy1 = [8, 15, 16, 11, 12]
 candy2 = []
 for i in candy1:
-    if i < 10: #tests to see if each student has fewer than 10 pieces of candy
-        j = i + 1
-    else:
-        j = i
-    candy2.append(j)
+	if i < 10: #tests to see if each student has fewer than 10 pieces of candy
+		j = i + 1
+	else:
+		j = i
+	candy2.append(j)
 print(candy2)
 ```
 @Pyodide.eval
@@ -285,12 +287,12 @@ The following quiz questions are about the following code:
 candy1 = [8, 15, 16, 11, 12]
 candy2 = []
 for i in candy1:
-    if i < 10: #tests to see if each student has fewer than 10 pieces of candy
-        j = i + 2
-    #Missing code here
-    else:
-        j = i
-    candy2.append(j)
+	if i < 10: #tests to see if each student has fewer than 10 pieces of candy
+		j = i + 2
+	#Missing code here
+	else:
+		j = i
+	candy2.append(j)
 print(candy2)
 ```
 @Pyodide.eval
