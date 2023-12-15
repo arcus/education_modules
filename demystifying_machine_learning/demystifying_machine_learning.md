@@ -148,7 +148,14 @@ As the authors in this [article in Nature Methods](https://www.nature.com/articl
 
 </div>
 
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
+For a deeper dive into this distinction, see 
+
+Leo Breiman. "[Statistical Modeling: The Two Cultures (with comments and a rejoinder by the author)](https://doi.org/10.1214/ss/1009213726)." Statist. Sci. 16 (3) 199 - 231, August 2001. https://doi.org/10.1214/ss/1009213726
+
+</div>
 
 ## Different questions need different kinds of models
 
