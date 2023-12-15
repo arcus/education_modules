@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.3
+version: 1.3.4
 current_version_description: Added help boxes for color vs fill aesthetic mapping and how to get plots to show in the plot pane.
 module_type: standard
 docs_version: 2.0.0
@@ -140,11 +140,11 @@ Here's another example of that kind of plot:
 In the box below, write what you think the name of this is.
 
 [[histogram]]
+[[?]] Hint: this word ends in "gram"
 <script>
   let input = "@input".trim().toLowerCase();
   input == "histogram" || input == "a histogram";
 </script>
-[[?]] Hint: this word ends in "gram"
 ***
 <div class = "answer">
 
