@@ -1,10 +1,10 @@
 <!--
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.4
-current_version_description: Updated with new metadata and to remove references to Binderhub
+version: 1.4.0
+current_version_description: Improved boolean logic, pipe, and filter materials
 module_type: standard
-docs_version: 2.0.0
+docs_version: 3.1.2
 language: en
 narrator: US English Female
 mode: Textbook
@@ -63,14 +63,15 @@ previous_sequential_module: r_basics_visualize_data
 
 Previous versions: 
 
+- [1.3.6](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ef625f5201a0acff602ce75803d67b076abc388d/r_basics_transform_data/r_basics_transform_data.md#1): Updated with new metadata and to remove references to Binderhub
 - [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/81c8707b4fd08a93927f6a85e358ca3bca367420/r_basics_transform_data/r_basics_transform_data.md#1): Update highlight boxes
 - [1.1.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/r_basics_transform_data/r_basics_transform_data.md#1): Update versioning, attribution, Posit.cloud
-- [1.0.4](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/1679451008d162fe2c15850f5dd5494665cc3d00/r_basics_transform_data/r_basics_transform_data.md#1): Initial commit, typo changes, animated gif
 
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
+import: https://raw.githubusercontent.com/LiaTemplates/mermaid_template/0.1.4/README.md
 -->
 # R Basics: Transforming Data With dplyr
 
@@ -237,6 +238,14 @@ To extract rows that meet logical criteria, we write code that looks like this, 
 For example, we'll take a look at this code in the next section:
 `filter(covid_testing, mrn == 5000083)`
 
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+You might be wondering about the double equals sign: `==`. We'll talk about this next, but for now, know that we're being **intentional**. We mean to type `==`. It's not a mistake that we're doubling the equals!
+
+</div>
+
+
 ### `filter()` Example
 
 Let's think over:
@@ -253,13 +262,21 @@ The difference between `=` and `==`
 
 One common issue to be aware of is the difference between the single equals (=) and the double equals (==) operators.
 
-In R, using a single equals sign assigns a value.  It asserts "these things **are** equal."
+In R, using a single equals sign **assigns a value**.  It asserts "these things **are** equal."  
 
-The double equals sign does not assign, but compares.  It asks "**are** these things equal?".
+* For example, `data = my_data` means "please set `data` equal to `my_data`."  
 
-That's why we use double equals in the context of a logical test that compares the left hand side, e.g. `mrn`, with the right hand side, e.g. 5000083, to check whether or not they are the same.
+The double equals sign does not assign, but **compares**.  It asks "**are** these things equal?".  That's why we use double equals in the context of a logical test that **compares** the left hand side, e.g. `mrn`, with the right hand side, e.g. 5000083, to check whether or not they are the same.
 
-If you use the wrong kind of equals, you’ll get an error.  This is a very common mistake, and one you're almost guaranteed to accidentally commit at one point or another!  This is what some of those scary errors look like:
+* For example, `name == "Joan"` means "is `name` equal to 'Joan'?"  
+
+When you use the double equals, that expression will usually evaluate to either TRUE or FALSE.  Sometimes an expression will evaluate to `NA`, which means missing or NULL data.  That could happen in the case above if the `name` object is itself `NA` -- lacking any value at all.
+
+
+Mixing up `=` and `==`
+---
+
+If you use the wrong kind of equals, you’ll get an error.  This is a **very common mistake**, and one you're almost guaranteed to accidentally commit at one point or another!  This is what some of those scary errors look like:
 
 <code style = "color:darkred;">
 Error: Problem with `filter()` input `..1`.
@@ -280,11 +297,26 @@ invalid (do_set) left-hand side to assignment
 </code>
 
 
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+The double equals sign ( `==` ) is used for comparing two values, and when you use it, you'll get a truth value like TRUE, FALSE, or perhaps `NA`.
+
+The single equals sign ( `=` ) is used for assigning a value to something.
+
+If you get these confused (and most of us do at least occasionally), you might get an error.  Don't panic!  If you read the error message closely it usually will tell you exactly what's wrong: the wrong number of equals signs.
+
+</div>
+
 ### Logical Operators
 
 Here are some important logical operators to know about. They will all come in handy when you’re filtering rows of a data frame. `x` and `y` each represent expressions, which could be column names or constant values or a combination thereof.
 
-| logical expression | means | example |
+When you use logical conditions, you're trying to get a truth value, like TRUE, FALSE, or occasionally `NA`.  These truth values are also known as **boolean values** or **logical values**.  
+
+If a logical condition you add as a filtering condition evaluates as TRUE for a row, that row is added to the output.  
+
+| logical condition | means | example |
 | :---: | --- | --- |
 | `x < y` | less than | `pan_day < 10` |
 | `x > y`| greater than | `mrn > 5001000` |
@@ -295,7 +327,9 @@ Here are some important logical operators to know about. They will all come in h
 | `is.na(x)` | a missing value | `is.na(clinic_name)` |
 | `!is.na(x)` | not a missing value | `!is.na(pan_day)` |
 
-We've already seen the double equals `==`. Note the less than or and greater than operators. These operators also come as "or equal to" versions.
+We've already seen the double equals `==`. 
+
+Note that you can also use the less than or and greater than operators. These operators also come as "or equal to" versions.
 
 Use `!=` if you want to select rows in which a value is **not** equal to another value.   
 
@@ -358,24 +392,46 @@ D is not correct because it flips the positions of the comparison; the column na
 
 ### Filtering a Complex Condition
 
-Often, we want to filter data based on a combination of conditions.  For example, what if you want to preserve rows that meet one or both of the following conditions:
+Often, we want to filter data based on a **combination** of conditions.  For example, what if you want to preserve rows that meet one or both of the following conditions:
 
 * a male patient seen in the PICU
 * a patient seen in "oncology day hosp" in the first 20 days of the pandemic
 
 When we have complex conditions like this, we need to consider how to phrase these conditions using **boolean logic** (also known as **boolean algebra**), which is the system of symbols and rules for interpreting the True/False value of a condition.  Boolean operators include AND (represented as `&` in R), OR (in R, `|`), and NOT (`!`, as we've already seen).  OR here means "at least one of", not "exactly one of".  
 
-Here's a "truth table" to help you understand these operators:
+Here's a table to help you understand these operators when they combine two conditions (like "age > 65" combined with "sex == female" )
 
-| Operator | Rule | Example |
-| --- | --- | --- |
-| AND (`&` in R) | True if and only if both sides are True | "Rabbits are mammals AND rabbits are quadrupeds" is True |
-| AND (`&` in R) | False if one or both sides are False | "Rabbits are mammals AND rabbits are bipeds" is False |
-| OR (`|` in R) | True if at least one side is True | "Rabbits are reptiles OR rabbits are quadrupeds" is True |
-| OR (`|` in R) | False if and only if both sides are False | "Rabbits are reptiles OR rabbits are bipeds" is False |
-| NOT (`!` in R) | Turns True into False and False into True | ! "Rabbits are reptiles" is True, ! "Rabbits are mammals" is False |
+| Operator | Rule | 
+| --- | --- | --- | 
+| AND (`&` in R) | TRUE if and only if both conditions are TRUE | 
+| AND (`&` in R) | FALSE if one or both conditions are FALSE | 
+| OR (`|` in R) | TRUE if at least one condition is TRUE | 
+| OR (`|` in R) | FALSE if and only if both conditions are FALSE | 
+| NOT (`!` in R) | Turns True into False and False into True |
 
-We also have to consider using parenthesis to ensure the proper order of operations.  The order of operations for boolean algebra, from highest to lowest priority is NOT, then AND, then OR.  Forgetting to account for order of operations is a common mistake by novice users of boolean logic.
+And here is a silly set of examples.  Keep in mind for this that rabbits are quadrupeds (four legged), not bipeds (two legged) and mammals, not reptiles!
+
+
+| Example in Words | Example in Symbols | Evaluates To? |
+| --- |  ----------- | --- |
+| Rabbits are mammals AND rabbits are quadrupeds | `rabbit == mammal & rabbit == quadruped` | TRUE |
+| Rabbits are mammals AND rabbits are bipeds | `rabbit == mammal & rabbit == biped` | FALSE |
+| Rabbits are reptiles OR rabbits are quadrupeds | `rabbit == reptile | rabbit == quadruped` | TRUE|
+| Rabbits are reptiles OR rabbits are bipeds| `rabbit == reptile | rabbit == biped` | FALSE |
+| NOT "Rabbits are reptiles" | `!(rabbit == reptile)` | TRUE |
+| NOT "Rabbits are mammals" | `!(rabbit == mammal)` | FALSE |
+
+
+### Order of Operations
+
+We also have to consider using parenthesis to ensure the proper order of operations when we have more than two conditions we're considering.  Just like you need to think about parentheses in math, you might have to do the same thing with logical conditions!
+
+The order of operations for boolean algebra, from highest to lowest priority, is NOT, then AND, then OR.  Forgetting to account for order of operations is a common mistake by novice users of boolean logic.
+
+On the previous page, we suggested a complex condition we want to filter for.  We wanted to preserve rows that meet one or both of the following conditions:
+
+* a male patient seen in the PICU
+* a patient seen in "oncology day hosp" in the first 20 days of the pandemic
 
 Let's go step by step.  First, let's convert each of our two conditions to code:
 
@@ -384,10 +440,10 @@ Let's go step by step.  First, let's convert each of our two conditions to code:
 
 Since each of our bullet points above contain internal boolean logic, let's encapsulate them in parentheses.  
 
-* `(gender == "male" & clinic_name == "picu")`  Now this is treated as a single unit which can be True, False, or NA.
-* `(clinic_name == "oncology day hosp" & pan_day <= 20)` Now this is treated as a single unit which can be  True, False, or NA.
+* `(gender == "male" & clinic_name == "picu")`  Now this is treated as a single unit which can be TRUE, FALSE, or `NA`.
+* `(clinic_name == "oncology day hosp" & pan_day <= 20)` Now this is treated as a single unit which can be  TRUE, FALSE, or `NA`.
 
-Since we need either one but not both of the bulleted conditions to be true, we'll conjoin them using OR:
+Since we need **either one** but **not necessarily both** of the above conditions to be true, we'll conjoin them using OR:
 
 `(gender == "male" & clinic_name == "picu") | (clinic_name == "oncology day hosp" & pan_day <= 20)`
 
@@ -413,11 +469,11 @@ Similarly, `filter(covid_testing, clinic_name == "clinical lab" | results == "ne
 
 But when you **mix** AND and OR, or need to add a NOT to a combination of conditions, mistakes can happen when **your** interpretation of the logic differs from the **computer's** interpretation of the logic, based on the order of operations in boolean logic.  And often, a mix of AND, OR, and NOT is exactly what we want to do.  
 
-Let's consider the case where you're interested in test results for males from the PICU or ED.
+Let's consider the case where you're interested in test results for males who were seen in the PICU or the ED.
 
-We could write this in pseudocode (not true code, but a way of sketching out code ideas briefly) as "gender:male AND clinic:PICU OR clinic:ED".
+We could write this in pseudocode (not true code, but a way of sketching out code ideas briefly) as "gender:male AND clinic:PICU OR clinic:ED".  Sometimes it's just easier to jot things down on a piece of paper this way with abbreviations and shortcuts, even though that's not the way we'd write it in R.
 
-But we aren't done yet!  We need to consider whether we need to add parentheses.  Without parenthesis, we follow the order of operations standard in boolean logic: AND is evaluated before OR.
+But we aren't done yet!  We need to consider whether we need to add parentheses.  Without parentheses, we follow the order of operations standard in boolean logic: AND is evaluated before OR.
 
 That means that without any added parentheses, we would **really** be asking for "(gender:male AND clinic:PICU) OR clinic:ED".  In other words, I want rows that are either "males seen in the PICU" or "anyone seen in the ED".  Is that actually what I want to ask for?  No!  We need to add a set of parentheses around the "this OR that" clause, giving us "gender:male AND (clinic:PICU OR clinic:ED)".  
 
@@ -531,13 +587,28 @@ The new "native" pipe (`|>`) is better when:
 
 ### Why Use the "Pipe" (`%>%` or `|>`)
 
-Here's why the pipe (`%>%` or `|>`) is so useful.
+Here's why the pipe (`%>%` or `|>`) is so useful: it simplifies multi-step processes.
 
-"Tidy" functions like `select()`, `filter()`, and others we'll see later always have as first argument a data frame, and they always return a data frame as well.  Data frame in, data frame out.
+Often, you need to do several things to your data to get it ready for analysis: retain only certain columns, limit the data to just the rows you care about, maybe make a new column, and so on.  You can do that easily because of the way many `dplyr` and other `tidyverse` functions work.
 
-This makes it possible to create a pipeline in which a data frame object is handed from one `dplyr` function to the next.  The data frame result of step 1 becomes the data frame starting point for step 2, then the result of step 2 becomes the starting point for step 3, and so on.
+Functions like `select()`, `filter()`, and others we'll see later always have as first argument a data frame, and they always return a data frame as well.  Data frame in, data frame out.
 
-For example, here we start with `covid_testing`, then `select` the `last_name` and `result` columns, then `filter` to get rows where `result` is equal to "positive".
+@mermaid(flowchart LR
+    A[Data Frame] -->|dplyr function| B[Updated Data Frame])
+
+Because we know that the output of one of these functions will always be a legitimate input for the next function, it's possible to create a multi-step process in which a data frame object is handed from one `dplyr` function to the next.  The data frame result of step 1 becomes the data frame starting point for step 2, then the result of step 2 becomes the starting point for step 3, and so on.
+
+@mermaid(flowchart LR
+    A[Data Frame] -->|dplyr step 1| B[Updated Data Frame] -->|dplyr step 2| C[More Updated Data Frame] -->|dplyr step 3| D[Even More Updated Data Frame])
+
+But let's say you don't want to store and come up with names for the interim data frames between the beginning and the end of your multi-step process.  You'd rather have something like this:
+
+@mermaid(flowchart LR
+    A[Data Frame] -->|dplyr step 1 - step 2 - step 3| D[Even More Updated Data Frame])
+
+This is where the pipe comes in!  It means you can chain your steps together without saving the output as a named object that you then turn into an input for the next step.
+
+For example, here we start with `covid_testing`, then `select` the `last_name` and `result` columns as our first step. Then we `filter` to get rows where `result` is equal to "positive", as a second step in our multi-step data preparation.
 
 ```
 covid_testing %>%
@@ -570,7 +641,7 @@ How you use whitespace is totally up to you, but we suggest that in a pipeline (
 
 By connecting logical steps, you can get a **pipeline** of data analysis steps which are concise and also fairly human readable.  You can think of the `%>%` or `|>` symbol as "then...", describing the steps in order.
 
-This approach to coding is powerful because it makes it much easier for someone who doesn't know R well to read and understand your code as a series of instructions.   
+This approach to coding is powerful because it makes it much easier for someone who doesn't know R well to read and understand your code as a series of instructions.  Even if they don't code, seeing words like "select" and "filter", appearing in the order you want things to happen, can make it a bit more obvious what you're doing to the data.
 
 ### Quiz: `%>%`
 
