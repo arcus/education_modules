@@ -25,7 +25,7 @@ try {
 @version_history
 Previous versions: 
 
--[3.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cd0da90a30910c22d5502f509125892a761c3145/docs.md#1): Added collection as a front matter field, added text as a data_domain, fixed typos
+- [3.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cd0da90a30910c22d5502f509125892a761c3145/docs.md#1): Added collection as a front matter field, added text as a data_domain, fixed typos
 - [2.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/89cadafc6f1f9c83e4de93e7d55cd9427866f9f2/docs.md#1): Made coding_required a mandatory front matter field for all modules
 - [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b453a05b5ac756fb5c7b183deae9d4fc91b3a617/docs.md): Clarified that version_history cannot be blank but sets_you_up_for and depends_on_knowledge_available_in can
 @end
