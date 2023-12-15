@@ -1646,10 +1646,10 @@
 "module_id": "reproducibility",
 "author": "Joy Payton",
 "email": "paytonk@chop.edu",
-"version": "1.5.2",
-"current_version_description": "Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure",
+"version": "1.6.0",
+"current_version_description": "Added new learn-more box linking to Demystifying Containers module and corrected some metadata issues",
 "module_type": "standard",
-"docs_version": "2.0.0",
+"docs_version": "3.0.0",
 "language": "en",
 "narrator": "US English Female",
 "mode": "Textbook",
@@ -1668,8 +1668,10 @@
 "long_description": "**If you currently conduct research or expect to in the future**, the concepts we talk about here are important to grasp.  This material will help you understand much of the current literature and debate around how research should be conducted, and will provide you with a starting point for understanding why some practices (like writing code, even for researchers who have never programmed a computer) are gaining traction in the research field.  **If research doesn't form part of your future plans, but you want to *use* research** (for example, as a clinician or public health official), this material will help you form criteria for what research to consider the most rigorous and useful and help you understand why science can seem to vacillate or be self-contradictory.",
 "pre_reqs": "\nIt is helpful if learners have conducted research, are familiar with -- by reading or writing -- peer-reviewed literature, and have experience using data and methods developed by other people.  There is no need to have any specific scientific or medical domain knowledge or technical background.    \n",
 "learning_objectives": "\nAfter completion of this module, learners will be able to:\n\n- Explain the benefits of conducting research that is **reproducible** (can be re-done by a different, unaffiliated scientist)\n- Describe how technological approaches can help research be more reproducible\n- Argue in support of practices that organize and describe documents, datasets, and other files as a way to make research more reproducible\n\n",
-"version_history": "\nPrevious versions: \n\n- [1.4.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/2ba39cddbbe6436e18b04ff62f7dfff4406c5880/reproducibility/reproducibility.md#1): Updated quizzes, learner outcomes, highlight boxes\n- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/bfbada6fa70c3c9ef0d027eb2e450990b7c7fac7/reproducibility/reproducibility.md#1): Update template, remove some CHOP-specific references, \n- [1.2.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5f90b59f30dc1f29416df61773d544cf15dce83a/reproducibility/reproducibility.md#1): fix incorrect hyperlink, correct layout and typos\n\n",
-"Linked Course":"git_intro "
+"sets_you_up_for": "\n",
+"depends_on_knowledge_available_in": "\n",
+"version_history": "Previous versions: \n\n- [1.5.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/16a4a852199689a42f04555cb581cf2dcb90fb0f/reproducibility/reproducibility.md): Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure\n- [1.4.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/2ba39cddbbe6436e18b04ff62f7dfff4406c5880/reproducibility/reproducibility.md#1): Updated quizzes, learner outcomes, highlight boxes\n- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/bfbada6fa70c3c9ef0d027eb2e450990b7c7fac7/reproducibility/reproducibility.md#1): Update template, remove some CHOP-specific references, \n\n",
+"Linked Course":"demystifying_containers git_intro "
 },
 {
 "module_id": "sql_basics",
