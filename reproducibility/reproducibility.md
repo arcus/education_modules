@@ -5,7 +5,7 @@ email:    paytonk@chop.edu
 version: 1.5.2
 current_version_description: Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure
 module_type: standard
-docs_version: 2.0.0
+docs_version: 3.0.0
 language: en
 narrator: US English Female
 mode: Textbook
@@ -35,8 +35,15 @@ good_first_module: true
 collection: intro_to_data_science
 coding_required: false
 
-@version_history
+@sets_you_up_for
 
+@end
+
+@depends_on_knowledge_available_in
+
+@end
+
+@version_history
 Previous versions: 
 
 - [1.4.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/2ba39cddbbe6436e18b04ff62f7dfff4406c5880/reproducibility/reproducibility.md#1): Updated quizzes, learner outcomes, highlight boxes
@@ -46,7 +53,6 @@ Previous versions:
 @end 
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_r.md
 -->
 
 # Reproducibility, Generalizability, and Reuse
