@@ -31,6 +31,7 @@ do
         estimated_time_in_minutes="`grep -m 1 "estimated_time_in_minutes": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
         
         collection="`grep -m 1 "collection": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
+        collection=${collection//"_"/" "} #replace _ with spaces
 
         coding_language="`grep -m 1 "coding_language": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
                 
