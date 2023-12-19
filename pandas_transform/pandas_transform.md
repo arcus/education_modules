@@ -156,7 +156,7 @@ print(df['col1'])
 Did you notice the `Name` and `dtype` at the bottom? Those tell you the name of the series and its data type. Try changing `col1` to `col2` or `col3` to see what type of data those series contain.
 
 
-### Quiz: `pandas` package [UPDATE]
+### Quiz: `pandas` package
 
 ```python
 d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
