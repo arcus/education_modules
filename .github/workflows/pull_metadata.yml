@@ -141,7 +141,7 @@ jobs:
     name: Module repo - Push to branch metadata_workflow 
     runs-on: ubuntu-latest
     needs: check_for_changes
-    if: needs.check_for_changes.outputs.changes == 'true'  
+    if: metadata_changed_message
     steps:
       - env:
           OUTPUT3: ${{needs.run_script.outputs.changes}}
