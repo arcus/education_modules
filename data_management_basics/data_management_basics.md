@@ -1,10 +1,10 @@
 <!--
 author:   Ene Belleh
 email:    bellehe@chop.edu
-version: 1.1.2
+version: 1.1.3
 current_version_description: Fixed mermaidchart error that was causing diagram to not render; updated metadata
 module_type: standard
-docs_version: 2.0.0
+docs_version: 3.0.0
 language: en
 narrator: US English Female
 mode: Textbook
@@ -275,7 +275,7 @@ Research data management is important for multiple reasons, among which we highl
 * Research data management supports the long-term preservation of data for future use.
 * Funding agencies supporting the research require research data management.
 
-It's false that publishers don't apply their own standards. Publishers have an important role to play in setting high standards for researchers who submit manuscripts for consideration. It's also false that research data management is a new practice. While it's true that RDM has gotten much more attention lately, research data management has been taking place since the first researchers developed the scientific method, and it's changed over time to adapt to new circumstances and requirements.
+It's false that publishers don't apply their own standards. While some publishers were earlier adopters of the most up-to-date data management policies, all publishers have an important role to play in setting high standards for researchers who submit manuscripts for consideration. It's also false that research data management is a new practice. While it's true that RDM has gotten much more attention lately, research data management has been taking place since the first researchers developed the scientific method, and it's changed over time to adapt to new circumstances and requirements.
 
 </div>
 ***
