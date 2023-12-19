@@ -73,7 +73,9 @@ import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 
 Python is a flexible, multi-purpose programming language that has applications in web development, software engineering, and data analysis. Part of its power and much of its popularity comes from the fact that it is **human-readable**, with a relatively simple syntax compared to many other programming languages. 
 
-However, just like any language, there are some grammar rules (**syntax**) to learn in order to use Python. In this module, we'll go through a few of the basics of Python that will build a foundation for your learning and practice. We'll introduce **functions** and **methods**, the way that things happen in python, and about **variables**, ways of storing information for later use. 
+However, just like any language, there are some grammar rules (**syntax**) to learn in order to use Python. In this module, we'll go through a few of the basics of Python that will build a foundation for your learning and practice. 
+
+We'll introduce **functions** and **methods**, the way that things happen in python, about **variables**, ways of storing information for later use. 
 
 ## Functions and methods: Getting stuff done
 
