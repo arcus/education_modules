@@ -23,7 +23,6 @@ Learners should be familiar with [Python as a programming language](https://lias
 @end
 
 @learning_objectives
-
 After completion of this module, learners will be able to:
 
 - Assign values to variables
@@ -40,24 +39,20 @@ coding_level: basic
 coding_language: python
 
 @sets_you_up_for
-
 - python_basics_dictionaries
 - python_basics_loops_conditionals
 - python_basics_exercise
-
 @end
 
 @depends_on_knowledge_available_in
-
 - demystifying_python
-
 @end
 
 
 @version_history
-https://github.com/arcus/education_modules/blame/5e1bbae6792dc5adc7cfcc99860b0f9e1447daa6/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#L5
 Previous versions: 
-- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5e1bbae6792dc5adc7cfcc99860b0f9e1447daa6/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#1) Initial version
+
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5e1bbae6792dc5adc7cfcc99860b0f9e1447daa6/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#1): Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -76,7 +71,9 @@ import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 
 ## Introduction to Python code
 
-Python is a flexible, multi-purpose programming language that has applications in web development, software engineering, and data analysis. Part of its power and much of its popularity comes from the fact that it is **human-readable**, with a relatively simple syntax compared to many other programming languages. However, just like any language, there are some grammar rules (**syntax**) to learn in order to use Python. In this module, we'll go through a few of the basics of Python that will build a foundation for your learning and practice. We'll introduce **functions** and **methods**, the way that things happen in python, and about **variables**, ways of storing information for later use. 
+Python is a flexible, multi-purpose programming language that has applications in web development, software engineering, and data analysis. Part of its power and much of its popularity comes from the fact that it is **human-readable**, with a relatively simple syntax compared to many other programming languages. 
+
+However, just like any language, there are some grammar rules (**syntax**) to learn in order to use Python. In this module, we'll go through a few of the basics of Python that will build a foundation for your learning and practice. We'll introduce **functions** and **methods**, the way that things happen in python, and about **variables**, ways of storing information for later use. 
 
 ## Functions and methods: Getting stuff done
 
