@@ -325,9 +325,6 @@ For example `range(0,4)` contains 4 elements. Those elements are 0,1,2, and 3.
 
 ### Locating data with `.loc`
 
-``` python   @Pyodide.exec
-import pandas as pd
-```
 
 The `.loc` method lets you select a subset of your DataFrame to display.
 
@@ -388,21 +385,7 @@ If you look at other people's code, you may see columns referred to with `data_f
 
 ### Quiz: DataFrames
 
-``` python   @Pyodide.exec
-import pandas as pd
-import io
-from pyodide.http import open_url
 
-url = "https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv"
-
-url_contents = open_url(url)
-text = url_contents.read()
-file = io.StringIO(text)
-
-covid_testing = pd.read_csv(file);
-
-"HTML: <a href='" + url + "'>covid_testing</a> has been loaded"
-```
 
 Complete the following code by replacing the `__?__` with your own code to find out the first and last name of the patient in row 11942.
 Assume that the `covid_testing` DataFrame has already been created and the pandas package has been loaded.
@@ -436,9 +419,6 @@ print(covid_testing.loc[11942, ["first_name","last_name"]])
 
 ## Conditional statements
 
-``` python   @Pyodide.exec
-import pandas as pd
-```
 
 Let's say we only care about the positive Covid tests. We could make a new DataFrame consisting only of those tests that came back positive using a **conditional** argument. A condition is a statement that evaluates to either `True` or `False`.
 
@@ -477,9 +457,6 @@ In addition to using `==` to check if two values are the same, we can use other 
 
 ### Filtering by a condition
 
-``` python   @Pyodide.exec
-import pandas as pd
-```
 
 When we used a column name or list of names as our argument in the row spot of the `.loc` method, we got back all rows in that list. When we put a condition  like `covid_testing.loc[:,"result"] == "positive"` in the row spot, it will return all rows for which that condition is `True`.
 
@@ -516,9 +493,6 @@ The method `.copy()` at the very end of line one creates a new DataFrame separat
 
 ### Combining conditions
 
-``` python   @Pyodide.exec
-import pandas as pd
-```
 
 We can also combine conditions using `&` for **and**, and the vertical "pipe" `|` **or**. The `|` can be found above the forward slash \ on your keyboard. The code below shows us only the rows for patients age 18 or older who tested positive.
 
@@ -557,9 +531,6 @@ is true for all results where a patient was older than 10 and tested positive, a
 
 ### Missing Data
 
-``` python   @Pyodide.exec
-import pandas as pd
-```
 
 So far we have been treating the `covid_testing` DataFrame as if it has a value in every row of every column, but like most real data sets, some data is missing!
 
@@ -612,9 +583,6 @@ print(known_payor_tests.loc[:, ["first_name", "last_name", "payor_group"]])
 
 ### Quiz: Conditional statements
 
-``` python   @Pyodide.exec
-import pandas as pd
-```
 
 You come across the following code in which several conditions are defined but not given descriptive names:
 
@@ -661,9 +629,6 @@ THEREFORE:
 
 ## Transforming data in a DataFrame
 
-``` python   @Pyodide.exec
-import pandas as pd
-```
 
 Sometimes the data in a DataFrame isn't in the best form for us to use. Maybe it is a string that is too long or unclear, or maybe the units aren't the unit we will ultimately want to use to analyze the data.
 
@@ -692,9 +657,6 @@ If your original data is not already in a separate file you can use `.to_csv(dat
 
 ### Create new columns
 
-``` python   @Pyodide.exec
-import pandas as pd
-```
 
 In `pandas` you can create a new column by calling your new column with the `.loc[:,"new_column"]` method and using a single equals sign `=` to define its contents.
 
@@ -730,9 +692,6 @@ print(covid_testing.loc[:,["first_name", "last_name", "full_name"]])
 
 ### Edit existing columns
 
-``` python   @Pyodide.exec
-import pandas as pd
-```
 
 You can make changes to existing entries using the same method and simply using the key that already exists for that column.
 
@@ -807,9 +766,6 @@ The order and length of these lists matter! Each element in the first list will 
 
 ### Quiz: Transforming DataFrames
 
-``` python   @Pyodide.exec
-import pandas as pd
-```
 
 You can change the all of the entries in a column to uppercase using the method `.str.upper()`. The code below **prints** the `last_name` column  of `covid_testing` in uppercase:
 
