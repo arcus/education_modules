@@ -8,7 +8,7 @@ name: Process Module Metadata
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: "main" #CHANGE TO MAIN BEFORE MERGING
+    branches: "list_of_modules_automation" #CHANGE TO MAIN BEFORE MERGING
     paths-ignore:
       - 'assets/**'
       - '_for_authors/**'
@@ -154,7 +154,7 @@ jobs:
       #   with:
       #     name: python_artifact
       
-      - name: Download csv artifact
+      - name: Download json artifact
         uses: actions/download-artifact@v3
         with:
           name: json_artifact
@@ -172,7 +172,7 @@ jobs:
  
           git fetch
 
-          git checkout metadata_workflow
+          git checkout list_of_modules_automation
 
           mv -f module_data.json assets/metadata/
 
@@ -180,7 +180,7 @@ jobs:
 
           git commit -am "update metadata records" 
  
-          git push origin metadata_workflow
+          git push origin list_of_modules_automation 
 
   # The module_discovery repository automatically checks weekly to see if the module data has changed, but a message here informs users how to manually run that workflow.
   update_module_discovery_repository:
@@ -197,9 +197,9 @@ jobs:
           echo "The module_discovery repository will automatically update on Sunday morning. If you have changed metadata that needs to be updated there immediately, please manually activate that workflow at https://github.com/arcus/module_discovery/actions/workflows/update_module_data.yml"
 
 
-  # It is possible for the metadata to change without any of the things displayed on the public facing website actually needing to be updated.
-  check_list_of_modules_for_changes:
-    name: Website - TODO Did it change?
+  # If the metadata changed, generate the list of modules for arcus.github.io/education_modules
+  generate_webpage_markdown:
+    name: Website - Generate page
     runs-on: ubuntu-latest
     needs: metadata_changed_message
     steps:
@@ -213,23 +213,61 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: webpage_artifact
-          path: list_of_modules.md
+          path: automated_list_of_modules.md
+
+  # It is possible for the metadata to change without any of the things displayed on the public facing website actually needing to be updated.
+  check_list_of_modules_for_changes:
+    name: Website - Did it change?
+    runs-on: ubuntu-latest
+    needs: run_script
+    # Map a step output to a job output
+    outputs:
+      changes: ${{ steps.check_if_website_changed.outputs.changes }}
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: webpage_artifact
+
+      # Check if processing the data has changed the python file at all
+
+      - name: Check if anything changed
+        id: check_if_website_changed 
+        run: |
+          wget https://raw.githubusercontent.com/arcus/education_modules/gh-pages/docs/list_of_modules.md -O current_webpage.txt
+          wc current_webpage.txt
+
+          changes=$(diff automated_list_of_modules.md current_webpage.txt | wc -l)
+
+          echo  there are $changes changed lines
+          changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
+          echo the changes variable is now $changes
+          echo "changes=$changes" >> "$GITHUB_OUTPUT"
 
   # Maybe the public facing website doesn't need updates
   no_update_to_gh-pages:
     name: Website - No changes
+    # runs-on: ubuntu-latest
+    # needs: check_list_of_modules_for_changes
+    # steps:
+    #   - name: No changes message
+    #     run: |
+    #       echo "No changes to public website"
     runs-on: ubuntu-latest
     needs: check_list_of_modules_for_changes
+    if: needs.check_list_of_modules_for_changes.outputs.changes != 'true'  
     steps:
-      - name: No changes message
-        run: |
-          echo "No changes to public website"
+      - env:
+          OUTPUT3: ${{needs.check_list_of_modules_for_changes.outputs.changes}}
+        name: Nothing was committed
+        run: echo "Nothing was committed because the any_change variable was $OUTPUT3"
 
   # The public facing website does need updates. 
   update_gh-pages:
     name: Website - TODO Update website
     runs-on: ubuntu-latest
     needs: check_list_of_modules_for_changes
+    if: needs.check_list_of_modules_for_changes.outputs.changes == 'true'  
     steps:
       - name: Push changes to public website
         run: |
