@@ -8,7 +8,7 @@ We're also building a self-service tool to help you find the modules most releva
 Test out our [prototype module discovery application](https://learn.arcus.chop.edu/), and please leave feedback to help us improve!
 
 
-| Training Course | Description  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Estimated Time | Collection | Coding Language | Task | Domain |
+| Training Course | Description | Estimated Time | Collection | Coding Language | Task | Domain |
 | -- | -- | -- | -- | -- | -- | -- |
 | [Bash: Combining Commands](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_103_combining_commands/bash_103_combining_commands.md) | This module will teach you how to combine two or more commands in bash to create more complicated pipelines in Bash. | 30 min| learn_to_code | bash |  |  |
 | [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) | This course teaches learners to navigate their computer, as well as view and edit files, from the command line using Bash. | 40 min| learn_to_code | bash |  |  |
