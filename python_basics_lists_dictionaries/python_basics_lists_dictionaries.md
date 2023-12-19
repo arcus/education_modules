@@ -23,7 +23,6 @@ Learners should be able to recognize functions, methods, and variables in Python
 @end
 
 @learning_objectives
-
 After completion of this module, learners will be able to:
 
 - Create and edit lists
@@ -40,18 +39,14 @@ coding_level: basic
 coding_language: python
 
 @sets_you_up_for
-
 - python_basics_loops_conditionals
 - python_basics_exercise
 - pandas_transform
-
 @end
 
 @depends_on_knowledge_available_in
-
 - demystifying_python
 - python_basics_variables_functions_methods
-
 @end
 
 @version_history
