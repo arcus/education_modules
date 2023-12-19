@@ -289,10 +289,6 @@ If you are trying out this code on your own computer, you can make a DataFrame o
 
 ### Column names and row indices
 
-``` python   @Pyodide.exec
-import pandas as pd
-```
-
 When a DataFrame is displayed it has a row of column names along the top, and a column of indices along the left side. In some environments, like Jupyter notebooks, these names and indices may be bolded.
 
 The methods `.columns` and `.index` will show you all of the column and row names, respectively. **Give it a try:**
