@@ -15,7 +15,7 @@ Test out our [prototype module discovery application](https://learn.arcus.chop.e
 " > $page
 
 # Start the table
-echo "| Training Course | Description | Estimated Time | Collection | Coding Language | Task | Domain |
+echo "| <div style="width:290px">Training Course</div> | Description | Estimated Time | Collection | Coding Language | Task | Domain |
 | -- | -- | -- | -- | -- | -- | -- |" >> $page
 
 for FOLDER in *
