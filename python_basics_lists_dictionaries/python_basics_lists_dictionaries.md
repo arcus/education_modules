@@ -54,12 +54,11 @@ coding_language: python
 
 @end
 
-
 @version_history
 Previous versions: 
 
-[1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5e1bbae6792dc5adc7cfcc99860b0f9e1447daa6/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1): Added clarifying language about `.pop()` method, added more thorough explanation of the correct answer to the second dictionary quiz question, explained that there is no requirement to memorize methods, and fixed quiz answer checking that was throwing an error for double quotes.
-[1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/279f48bab219dd4622888a6301b7ca5b48880370/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1): Initial version
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5e1bbae6792dc5adc7cfcc99860b0f9e1447daa6/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1): Added clarifying language about `.pop()` method, added more thorough explanation of the correct answer to the second dictionary quiz question, explained that there is no requirement to memorize methods, and fixed quiz answer checking that was throwing an error for double quotes.
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/279f48bab219dd4622888a6301b7ca5b48880370/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1): Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
