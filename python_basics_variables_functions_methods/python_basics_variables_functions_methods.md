@@ -179,15 +179,20 @@ Notice that in the above example, we have passed the `type("Hello World!")` func
     [[X]] `"python".upper()`
     [[X]] `type("4.3")`
     [[X]] `type(True)`
-    ***
-    <div class = "answer">
+***
+<div class = "answer">
 
-    These are all examples of valid Python code! `len("Python is awesome!")` uses the `len()` function to return the length of the argument `"Python is awesome!"` (which is 18-- spaces and punctuation count!) and print that output to the screen. `"python".upper()` uses the string method `.upper()` to make the string "python" all uppercase. `type("4.3")` might be a little tricky, since 4.3 is a decimal number (or **float**), but it's also in quotation marks, which means that "4.3" is a string in this case! `type(True)` might also be tricky, since at first it looks like a string that doesn't have the required quotation marks. However, `True` and `False` are special in Python, and have the type `boolean`.  
+These are all examples of valid Python code! 
 
-    </div>
-    ***
+- `len("Python is awesome!")` uses the `len()` function to return the length of the argument `"Python is awesome!"` (which is 18-- spaces and punctuation count!) and print that output to the screen. 
+- `"python".upper()` uses the string method `.upper()` to make the string "python" all uppercase. 
+- `type("4.3")` might be a little tricky, since 4.3 is a decimal number (or **float**), but it's also in quotation marks, which means that "4.3" is a string in this case! 
+- `type(True)` might also be tricky, since at first it looks like a string that doesn't have the required quotation marks. However, `True` and `False` are special in Python, and have the type `boolean`.  
 
-    **Hint:** If you get stuck, try replacing the `x` argument in the `print()` function below with the code examples above. Running code you're unsure about and seeing what output you get can be a useful troubleshooting tool!
+</div>
+***
+
+**Hint:** If you get stuck, try replacing the `x` argument in the `print()` function below with the code examples above. Running code you're unsure about and seeing what output you get can be a useful troubleshooting tool!
 
 ```python
 print(x)
@@ -200,13 +205,15 @@ print(x)
     [( )] A function
     [( )] A string
     [( )] A float
-    ***
-    <div class = "answer">
+***
+<div class = "answer">
 
-    You can tell `.endswith()` is a method because it has the syntax `object.method()`, with `"Python is awesome!"` being the object (a string, in this case) the `.endswith()` method is called on. A function would have the syntax `function(argument)`. A float (short for "floating point number") is a numeric data type containing a decimal point. 
+You can tell `.endswith()` is a method because it has the syntax `object.method()`, with `"Python is awesome!"` being the object (a string, in this case) the `.endswith()` method is called on. 
 
-    </div>
-    ***
+A function would have the syntax `function(argument)`. A float (short for "floating point number") is a numeric data type containing a decimal point. 
+
+</div>
+***
 
 ## Variables
 
