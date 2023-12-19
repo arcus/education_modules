@@ -9,8 +9,6 @@ narrator: UK English Female
 title: Python Module Macros
 comment:  This is placeholder module to save macros used in other modules.
 
-@onload: window.py_packages = ["pandas"]
-
 @version_history 
 
 Previous versions: 
