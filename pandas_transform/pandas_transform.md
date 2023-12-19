@@ -224,7 +224,7 @@ This data is saved as a [csv file hosted on GitHub](https://raw.githubuserconten
 
 </div>
 
-### Loading data <span class="fa-table"></span>
+### <span class="fa-regular fa-table"></span> Loading data
 
 The `pandas` package can read most tabular data files and convert them into DataFrames. As long as your data is in a place that the program can locate (either on your computer if you are running code on your computer, or in the cloud) all `pandas` needs to know is what type of file it is reading, and where to find that file.
 

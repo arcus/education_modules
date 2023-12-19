@@ -119,7 +119,7 @@ Alternatively, if you have the [Anaconda distribution of Python](https://www.ana
 
 </div>
 
-### The data <span class="fa-table"></span>
+### <span class="fa-regular fa-table"></span> The data 
 
 First, we need to load the rest of the python modules we'll be using (we already loaded `seaborn` on the previous page, but it's run to run that code again):
 
