@@ -1,6 +1,6 @@
 <!--
 
-author:   Elizabeth A Drellich and Nicole Feldman
+author:   Elizabeth J Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
 version: 1.4.1
 current_version_description: Added webinar links to additional resources
