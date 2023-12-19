@@ -267,8 +267,34 @@ jobs:
     runs-on: ubuntu-latest
     needs: check_list_of_modules_for_changes
     if: needs.check_list_of_modules_for_changes.outputs.changes == 'true'  
-    steps:
-      - name: Push changes to public website
+    steps:      
+      - uses: actions/checkout@v3
+      
+      - name: Download webpage artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: webpage_artifact
+
+      - name: Check that artifacts downloaded
         run: |
-          echo "Push changes to public website"
+          wc automated_list_of_modules.md
+
+
+      - name: Commit newly updated file
+        run: |
+          git config --local user.name actions-user
+
+          git config --local user.email "actions@github.com" 
+ 
+          git fetch
+
+          git checkout gh-pages
+
+          mv -f automated_list_of_modules.md docs/
+
+          git add docs/automated_list_of_modules.md
+
+          git commit -am "update webpage records" 
+ 
+          git push origin gh-pages
 
