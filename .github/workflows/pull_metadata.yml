@@ -219,7 +219,7 @@ jobs:
   check_list_of_modules_for_changes:
     name: Website - Did it change?
     runs-on: ubuntu-latest
-    needs: run_script
+    needs: generate_webpage_markdown
     # Map a step output to a job output
     outputs:
       changes: ${{ steps.check_if_website_changed.outputs.changes }}
