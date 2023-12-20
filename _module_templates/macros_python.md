@@ -104,6 +104,13 @@ But there's no reason to bother with this unless you're curious!
 That's why we hid that extra code in the first place. 
 
 </div>
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+If you refresh your browser at some point while working on this module, you will need to come back to this page to reload the data. 
+
+</div>
 @end
 
 @pip_install
