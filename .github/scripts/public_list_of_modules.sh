@@ -1,6 +1,6 @@
 ## This is a script to create the page with the list of modules.
 
-page=list_of_modules.md
+page=new_list_of_modules.md
 
 # Create front matter for the page
 echo "---
