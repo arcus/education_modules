@@ -121,7 +121,7 @@ Alternatively, if you have the [Anaconda distribution of Python](https://www.ana
 
 ### <span class="fa-regular fa-table"></span> The data 
 
-First, we need to load the rest of the python modules we'll be using (we already loaded `seaborn` on the previous page, but it's run to run that code again):
+First, we need to load the rest of the python modules we'll be using (we already loaded `seaborn` on the previous page, but it's fine to run that code again):
 
 ```python
 import pandas as pd
