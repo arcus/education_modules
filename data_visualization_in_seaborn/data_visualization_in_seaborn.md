@@ -92,6 +92,9 @@ import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 
 ### Importing seaborn
 
+@pip_install(seaborn)
+@pip_install(statsmodels)
+
 To use the seaborn library to make visualizations, you need to import it.
 
 By convention, you import it with the shorthand `sns`.
@@ -120,6 +123,9 @@ Alternatively, if you have the [Anaconda distribution of Python](https://www.ana
 </div>
 
 ### <span class="fa-regular fa-table"></span> The data 
+
+@pip_install(seaborn)
+@pip_install(statsmodels)
 
 First, we need to load the rest of the python modules we'll be using (we already loaded `seaborn` on the previous page, but it's fine to run that code again):
 
