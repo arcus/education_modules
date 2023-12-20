@@ -1,6 +1,6 @@
 <!--
 
-author:   Elizabeth Drellich, Nicole Feldman
+author:   Elizabeth Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
 version: 1.4.1
 current_version_description: Added webinar links to additional resources
@@ -10,7 +10,7 @@ language: en
 narrator: UK English Female
 mode: Textbook
 title:  Bash: Combining Commands
-comment:  This module will teach you how to combine two or more commands in bash to create more complicated pipelines in Bash.
+comment:  This module will teach you how to combine two or more commands in Bash to create more complicated pipelines in Bash.
 long_description: This module is for learners who can use some basic Bash commands and want to learn to how to use the output of one command as the input for another command.
 estimated_time_in_minutes: 30
 
