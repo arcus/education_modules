@@ -8,7 +8,7 @@ name: Process Module Metadata
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: "list_of_modules_automation" #CHANGE TO MAIN BEFORE MERGING
+    branches: "main" #CHANGE TO MAIN BEFORE MERGING
     paths-ignore:
       - 'assets/**'
       - '_for_authors/**'
@@ -93,49 +93,7 @@ jobs:
         run: echo "The any_change variable was $OUTPUT3 so now the changes need to be propagated"
   
 
-  #### Since the json is now created directly, this entire step is unnecessary
-
-  # # If changes were made to the python file, then we want to push those changes to the metadata_workflow branch and make a new csv
-  # create_csv:
-  #   name: Module repo - Create csv
-  #   runs-on: ubuntu-latest
-  #   needs: metadata_changed_message 
-  #   steps:
-  #     - env:
-  #         OUTPUT3: ${{needs.run_script.outputs.changes}}
-  #       run: echo "The changes variable is $OUTPUT3"
-      
-  #     - uses: actions/checkout@v3
-      
-  #     - name: Download artifact
-  #       uses: actions/download-artifact@v3
-  #       with:
-  #         name: python_artifact
-
-  #     - name: Check that artifact downloaded
-  #       run: |
-  #         wc module_data.py
-
-  #     - name: Set up Python 3.x
-  #       uses: actions/setup-python@v4
-  #       with:
-  #         # Semantic version range syntax or exact version of a Python version
-  #         python-version: '3.x'
-
-  #     - name: Install Python dependencies
-  #       run: python -m pip install --upgrade pip pandas
-
-  #     - name: Create csv from python file
-  #       run: |
-  #         cp module_data.py create_csv.py
-  #         echo "df.to_csv('module_data.csv')" >> create_csv.py
-  #         python create_csv.py
-      
-  #     - name: Upload csv file as an artifact
-  #       uses: actions/upload-artifact@v3
-  #       with:
-  #         name: csv_artifact
-  #         path: module_data.csv
+  # If changes were made to the json file, push those changes to the metadata_workflow branch
 
   update_metadata_workflow_branch:
     name: Module repo - Push to branch metadata_workflow 
@@ -148,11 +106,6 @@ jobs:
       
       - uses: actions/checkout@v3
       
-      # - name: Download python artifact
-      #   uses: actions/download-artifact@v3
-      #   with:
-      #     name: python_artifact
-      
       - name: Download json artifact
         uses: actions/download-artifact@v3
         with:
@@ -162,7 +115,6 @@ jobs:
         run: |
           wc module_data.json
 
-
       - name: Commit newly updated files
         run: |
           git config --local user.name actions-user
@@ -171,7 +123,7 @@ jobs:
  
           git fetch
 
-          git checkout list_of_modules_automation
+          git checkout metadata_workflow
 
           mv -f module_data.json assets/metadata/
 
@@ -179,7 +131,7 @@ jobs:
 
           git commit -am "update metadata records" 
  
-          git push origin list_of_modules_automation 
+          git push origin metadata_workflow 
 
   # The module_discovery repository automatically checks weekly to see if the module data has changed, but a message here informs users how to manually run that workflow.
   update_module_discovery_repository:
@@ -212,7 +164,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: webpage_artifact
-          path: automated_list_of_modules.md
+          path: list_of_modules.md
 
   # It is possible for the metadata to change without any of the things displayed on the public facing website actually needing to be updated.
   check_list_of_modules_for_changes:
@@ -228,7 +180,7 @@ jobs:
         with:
           name: webpage_artifact
 
-      # Check if processing the data has changed the python file at all
+      # Check if processing the data has changed the webpage file at all
 
       - name: Check if anything changed
         id: check_if_website_changed 
@@ -236,7 +188,7 @@ jobs:
           wget https://raw.githubusercontent.com/arcus/education_modules/gh-pages/docs/list_of_modules.md -O current_webpage.txt
           wc current_webpage.txt
 
-          changes=$(diff automated_list_of_modules.md current_webpage.txt | wc -l)
+          changes=$(diff list_of_modules.md current_webpage.txt | wc -l)
 
           echo  there are $changes changed lines
           changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
@@ -246,12 +198,6 @@ jobs:
   # Maybe the public facing website doesn't need updates
   no_update_to_gh-pages:
     name: Website - No changes
-    # runs-on: ubuntu-latest
-    # needs: check_list_of_modules_for_changes
-    # steps:
-    #   - name: No changes message
-    #     run: |
-    #       echo "No changes to public website"
     runs-on: ubuntu-latest
     needs: check_list_of_modules_for_changes
     if: needs.check_list_of_modules_for_changes.outputs.changes != 'true'  
@@ -263,7 +209,7 @@ jobs:
 
   # The public facing website does need updates. 
   update_gh-pages:
-    name: Website - TODO Update website
+    name: Update website
     runs-on: ubuntu-latest
     needs: check_list_of_modules_for_changes
     if: needs.check_list_of_modules_for_changes.outputs.changes == 'true'  
@@ -277,7 +223,7 @@ jobs:
 
       - name: Check that artifacts downloaded
         run: |
-          wc automated_list_of_modules.md
+          wc list_of_modules.md
 
 
       - name: Commit newly updated file
@@ -290,9 +236,9 @@ jobs:
 
           git checkout gh-pages
 
-          mv -f automated_list_of_modules.md docs/
+          mv -f list_of_modules.md docs/
 
-          git add docs/automated_list_of_modules.md
+          git add docs/list_of_modules.md
 
           git commit -am "update webpage records" 
  
