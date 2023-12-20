@@ -189,7 +189,7 @@ Your friend shows you the error message they got when running the code: `NameErr
 ***
 <div class = "answer">
 
-`NameError: name 'pd' is not defined` is a helpful error message because it tells you exactly what you friend forgot: they never defined `pd`!
+`NameError: name 'pd' is not defined` is a helpful error message because it tells you exactly what your friend forgot: they never defined `pd`!
 
 You have already told python to import then pandas module and that whenever you enter `pd` you mean `pandas`. But your friend's computer doesn't know that yet. Adding the line `import pandas as pd` to the top of their code, will almost certainly make this run in their notebook.
 
