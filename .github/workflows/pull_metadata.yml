@@ -164,7 +164,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: webpage_artifact
-          path: list_of_modules.md
+          path: new_list_of_modules.md
 
   # It is possible for the metadata to change without any of the things displayed on the public facing website actually needing to be updated.
   check_list_of_modules_for_changes:
@@ -188,7 +188,7 @@ jobs:
           wget https://raw.githubusercontent.com/arcus/education_modules/gh-pages/docs/list_of_modules.md -O current_webpage.txt
           wc current_webpage.txt
 
-          changes=$(diff list_of_modules.md current_webpage.txt | wc -l)
+          changes=$(diff new_list_of_modules.md current_webpage.txt | wc -l)
 
           echo  there are $changes changed lines
           changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
@@ -223,7 +223,7 @@ jobs:
 
       - name: Check that artifacts downloaded
         run: |
-          wc list_of_modules.md
+          wc new_list_of_modules.md
 
 
       - name: Commit newly updated file
@@ -236,7 +236,7 @@ jobs:
 
           git checkout gh-pages
 
-          mv -f list_of_modules.md docs/
+          mv -f new_list_of_modules.md docs/list_of_modules.md
 
           git add docs/list_of_modules.md
 
