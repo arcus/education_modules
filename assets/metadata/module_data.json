@@ -1,7 +1,7 @@
 [
 {
 "module_id": "bash_103_combining_commands",
-"author": "Elizabeth Drellich, Nicole Feldman",
+"author": "Elizabeth Drellich and Nicole Feldman",
 "email": "drelliche@chop.edu and feldmanna@chop.edu",
 "version": "1.4.1",
 "current_version_description": "Added webinar links to additional resources",
@@ -21,7 +21,7 @@
 "coding_language": "bash",
 "sequence_name": "bash_basics",
 "previous_sequential_module": "bash_command_line_102",
-"comment": "This module will teach you how to combine two or more commands in bash to create more complicated pipelines in Bash.",
+"comment": "This module will teach you how to combine two or more commands in Bash to create more complicated pipelines in Bash.",
 "long_description": "This module is for learners who can use some basic Bash commands and want to learn to how to use the output of one command as the input for another command.",
 "pre_reqs": "Learners should be familiar with using a bash shell and [navigating a file system from the command line and look at the contents of a file](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md).\n\nThe only commands that will be assumed are the navigation commands `cd`, `ls`, and `pwd` and `cat`, all of which are explained in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.\n",
 "learning_objectives": "\nAfter completion of this module, learners will be able to:\n\n- Use the commands `wc`, `head`, `tail`,`sort`, and `uniq`\n- Redirect output to a file using `>` and `>>`\n- Chain commands directly using the pipe `|`\n",
