@@ -195,35 +195,6 @@ jobs:
           echo the changes variable is now $changes
           echo "changes=$changes" >> "$GITHUB_OUTPUT"
 
-  # It is possible for the metadata to change without any of the things displayed on the public facing website actually needing to be updated.
-  check_list_of_modules_for_changes:
-    name: Website - Did it change?
-    runs-on: ubuntu-latest
-    needs: generate_webpage_markdown
-    # Map a step output to a job output
-    outputs:
-      changes: ${{ steps.check_if_website_changed.outputs.changes }}
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: webpage_artifact
-
-      # Check if processing the data has changed the webpage file at all
-
-      - name: Check if anything changed
-        id: check_if_website_changed 
-        run: |
-          wget https://raw.githubusercontent.com/arcus/education_modules/gh-pages/docs/list_of_modules.md -O current_webpage.txt
-          wc current_webpage.txt
-
-          changes=$(diff list_of_modules.md current_webpage.txt | wc -l)
-
-          echo  there are $changes changed lines
-          changes=$([ $changes -gt 0 ] && echo "true" || echo "false")
-          echo the changes variable is now $changes
-          echo "changes=$changes" >> "$GITHUB_OUTPUT"
-
   # Maybe the public facing website doesn't need updates
   no_update_to_gh-pages:
     name: Website - No changes
