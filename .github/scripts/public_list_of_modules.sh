@@ -32,12 +32,32 @@ do
         
         collection="`grep -m 1 "collection": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
         collection=${collection//"_"/" "} #replace _ with spaces
+        ## Clunky way to make these look nice
+        collection=${collection//"demystifying"/"Demystifying"}
+        collection=${collection//"infrastructure"/"Infrastructure"}
+        collection=${collection//"statistics"/"Statistics"}
+        collection=${collection//"learn"/"Learn"}
+        collection=${collection//"machine"/"Machine"}
+        collection=${collection//"intro"/"Intro"}
 
         coding_language="`grep -m 1 "coding_language": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
+        coding_language=${coding_language//"bash"/"Bash"}
+        coding_language=${coding_language//"sql"/"SQL"}
+        coding_language=${coding_language//"python"/"Python"}
+        coding_language=${coding_language//"r"/"R"}
+        coding_language=${coding_language//"git"/"Git"}
+        
                 
         task="`grep -m 1 "data_task": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
-                
+        task=${task//"_"/" "} #replace _ with spaces
+        task=${task//"data"/"Data"}
+
         domain="`grep -m 1 "data_domain": $FOLDER/$FOLDER.md | sed "s/^[^ ]* //" | sed "s/^[ ]* //" | tr -dc '[:print:]'`"
+        domain=${domain//"ehr"/"EHR data"}
+        domain=${domain//"geospatial"/"Geospatial data"}
+        domain=${domain//"omics"/"Omics data"}
+        domain=${domain//"text"/"Text data"}
+        echo $domain
 
         
         echo "| [$title](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/$FOLDER/$FOLDER.md) | $comment | $estimated_time_in_minutes min| $collection | $coding_language | $task | $domain |" >> $page
