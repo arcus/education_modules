@@ -2,8 +2,8 @@
 
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.4
-current_version_description: Update highlight boxes for greater clarity, other minor changes
+version: 2.0.0
+current_version_description: Replaced SageMathCells with Pyodide cells for better usability
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -40,7 +40,6 @@ After completion of this module, learners will be able to:
 
 good_first_module: false
 data_task: data_wrangling
-collection: learn_to_code
 coding_required: true
 coding_level: intermediate
 coding_language: python
@@ -63,12 +62,16 @@ coding_language: python
 
 Previous versions: 
 
+- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/255170ae36834565696b5d7e6e3e6621172a5666/pandas_transform/pandas_transform.md#1): Updated highlight boxes for greater clarity, other minor changes
+
 - [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4c378ba6d211f8ca852d4df9a550edb249cd3c68/pandas_transform/pandas_transform.md#1): Initial version
 
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
+import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
+
 -->
 
 # Transform Data with pandas
@@ -77,9 +80,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 ## Lesson Preparation
 
-@sage
-
-@lesson_prep_python_sage
+@lesson_prep_python_pyodide
 
 ## The `pandas` Package
 
@@ -104,32 +105,23 @@ The code `import pandas` tells python that you want all of the commands and tool
 
 To make it easier to type out these commands, you can give the `pandas` package a different name when you import it using `as new_name`. While you could in theory pick any name you want, the standard abbreviation is `pd`.
 
-@sage
-<div class="python_link">
-<lia-keep>
-<script type="text/x-sage">
+```python
 import pandas as pd
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
-If you click the **Run python** button, the `pandas` package will be imported. There isn't any output from this line of code, but we will be able to see on future pages that is is giving us access to all of the `pandas` tools.
-
-This code, without a "Run python" button, will be at the top of each page in this module. We will run it automatically when you open each page. If you want to run this code on your own computer, make sure to include the line `import pandas as pd` as the first line.
+If you click the **Execute** button <i aria-hidden="true" class="icon icon-compile-circle lia-btn__icon"></i>, you can watch as the `pandas` package, which is also called a **module**, is downloaded. This line of code is giving us access to all of the `pandas` tools.
 
 ### DataFrames and Series
-@sage
 
-The `pandas` package lets you handle two types of data structures that python alone can't: **DataFrames** and **Series**. Before we can start exploring them, let's make sure we have `pandas` imported. You don't have to click anything, this code ran automatically when you opened this page:
+The `pandas` package lets you handle two types of data structures that python alone can't: **DataFrames** and **Series**. Before we can start exploring them, let's make sure we have `pandas` imported. 
 
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
+```python
 import pandas as pd
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
+If you just ran this same code importing `pandas` on the previous page, you shouldn't see any output because the package was already available to you. But if you are starting on this page, or didn't run the code on the last page, you will get a message that the module is being downloaded.
 
 DataFrames
 ---
@@ -138,17 +130,15 @@ DataFrames
 
 Let's take a look at a basic DataFrame. This one is being built from scratch, but we aren't going to spend any time learning how to do that in this module because you will usually be using `pandas` to analyze data that you import from somewhere else.
 
-**Run this code** to print out the DataFrame `df`. Don't forget to remove the `#` in the last line!
+**Run this code** to print out the DataFrame `df`. 
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
 df = pd.DataFrame(data=d);
-#print(df)
-</script>
-</lia-keep>
-</div>
+print(df)
+
+```
+@Pyodide.eval
 
 Series
 ---
@@ -157,53 +147,63 @@ You might have noticed that in the above example, everything in the first column
 
 **Run this code** to print out `col1` from the DataFrame `df`.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(df['col1'])
-</script>
-</lia-keep>
-</div>
+```python
+print(df['col1'])
+
+```
+@Pyodide.eval
 
 Did you notice the `Name` and `dtype` at the bottom? Those tell you the name of the series and its data type. Try changing `col1` to `col2` or `col3` to see what type of data those series contain.
 
 
 ### Quiz: `pandas` package
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
+```python
 d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
 df = pd.DataFrame(data=d);
 print(df)
-</script>
-</lia-keep>
+
+```
+@Pyodide.eval
+
+You show this code to a friend. They try to run it in a Jupyter notebook on their computer, but it doesn't run, despite being exactly what ran for you on the previous page! 
+
+This is an extremely common and frustrating experience, what are some possible reasons why it isn't working for them?
+
+[[ ]] The code shouldn't have worked for either of you.
+[[X]] You had imported a package that they don't yet have.
+[[X]] They have defined a variable or module differently than you did.
+[[ ]] Their computer doesn't like them.
+***
+<div class="answer">
+
+When working code is copied to another location and then fails to work, it is usually because of a missing package or a differently defined variable.
+
 </div>
+***
 
 
-Your friend's code (above) isn't running, which is extremely frustrating because they copied and pasted it from the previous page of this module. What line must they add to make it work?
+Your friend shows you the error message they got when running the code: `NameError: name 'pd' is not defined`. What command should they enter before the first line of code?
 
 [[import pandas as pd]]
-[[?]] Hint: Run the code. What does the error message say is wrong?
-[[?]] Hint: What do we need to include at the top in order to make `pandas` commands available to us?
 ***
 <div class = "answer">
 
-`NameError: name 'pd' is not defined` is a helpful error message because it tells you exactly what you friend forgot: they never defined `pd`!
+`NameError: name 'pd' is not defined` is a helpful error message because it tells you exactly what your friend forgot: they never defined `pd`!
 
-When you add the line `import pandas as pd` to the top of their code, it runs as it did before.
+You have already told python to import then pandas module and that whenever you enter `pd` you mean `pandas`. But your friend's computer doesn't know that yet. Adding the line `import pandas as pd` to the top of their code, will almost certainly make this run in their notebook.
 
-```
+```python
 import pandas as pd
 d = {'col1': [1, 5, 7], 'col2': [3, .4, -2], 'col3':["yes", "no","blue"]};
 df = pd.DataFrame(data=d);
 print(df)
+
 ```
+@Pyodide.eval
 
 </div>
 ***
-
 
 ## Tabular Data in `pandas` DataFrames
 
@@ -224,15 +224,7 @@ This data is saved as a [csv file hosted on GitHub](https://raw.githubuserconten
 
 </div>
 
-### Loading data
-@sage
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-</script>
-</lia-keep>
-</div>
+### <span class="fa-regular fa-table"></span> The data
 
 The `pandas` package can read most tabular data files and convert them into DataFrames. As long as your data is in a place that the program can locate (either on your computer if you are running code on your computer, or in the cloud) all `pandas` needs to know is what type of file it is reading, and where to find that file.
 
@@ -240,77 +232,59 @@ The fake Covid-19 testing data we will use for the rest of this lesson is saved 
 
 The `read_csv` function from the `pandas` library takes the location of the file as its argument. The path to the file, in this case a url, must be in quotes. Let's create a new DataFrame called `covid_testing` that will contain all of our fake Covid-19 testing data.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
-</script>
-</lia-keep>
-</div>
+```
 
-That code didn't have any output because we didn't ask it to print anything, but it did create the `covid_testing` DataFrame. We can take a look at with `print(covid_testing)`:
+@pyodide_readcsv(covid_testing, "https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv")
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(covid_testing)
-</script>
-</lia-keep>
-</div>
+@pyodide_readcsv_explainer
 
-Unless you have an extremely wide browser window, the output above is broken into as many columns as it can fit at a time. Some interfaces will output the DataFrame and let you scroll right to see more columns, but this interface just prints as many columns as it can fit and then starts again with the next columns. Good thing it didn't print all 15524 rows!
+If you're running this code on your computer, you didn't have any output after the last command because we didn't ask it to print anything. But it did create the `covid_testing` DataFrame. We can take a look at with `print(covid_testing)`:
+
+```python
+print(covid_testing)
+
+```
+@Pyodide.eval
+
+Unless you have an extremely wide browser window, the output above will only show as many columns as it can fit at a time. Some interfaces will output the DataFrame and let you scroll right to see more columns, but this interface just prints as many columns as it can fit and then shows you the real dimensions at the bottom. Good thing it didn't print all 15524 rows!
 
 When you print a DataFrame or Series you will see the first five rows and the last five rows of a DataFrame. If, like this one, it has more than 10 rows, the hidden rows will be indicated by ellipses. You can also ask for the first or last 5 rows of data using the methods `.head()` and `.tail()`. Try putting a number in the parentheses to get different numbers of rows.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(covid_testing.head())
-</script>
-</lia-keep>
-</div>
+```python
+print(covid_testing.head(4))
+
+```
+@Pyodide.eval
 
 
 Loading your own data
 ---
 
-To create a DataFrame of your data, make sure you use the right command for your file type, and make sure the location of the file is in quotes.
+If you are trying out this code on your own computer, you can make a DataFrame out of any tabular data you have access to! To create a DataFrame of your data, make sure you use the right command for your file type, and make sure the location of the file is in quotes.
 
-| File type | Read command               |
-| --------- | -------------------------- |
-| .csv      | pd.read\_csv('location')   |
-| .xlsx     | pd.read\_excel('location') |
-| .ods      | pd.read\_excel('location') |
-| .json     | pd.read\_json('location')  |
-| .html     | pd.read\_html('location')  |
-| .sql      | pd.read\_sql('location')   |
-
-
+| File type | Read command |
+| - | - |
+| .csv | pd.read\_csv('location')|
+| .xlsx | pd.read\_excel('location')|
+| .ods | pd.read\_excel('location')|
+| .json| pd.read\_json('location')|
+| .html| pd.read\_html('location')|
+| .sql | pd.read\_sql('location')|
 
 ### Column names and row indices
-@sage
-From now on we will add the definition of our DataFrame `covid_testing` to the set-up of each page. There is nothing for you to click here, this code ran automatically when you loaded the page:
-
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
-</script>
-</lia-keep>
-</div>
 
 When a DataFrame is displayed it has a row of column names along the top, and a column of indices along the left side. In some environments, like Jupyter notebooks, these names and indices may be bolded.
 
 The methods `.columns` and `.index` will show you all of the column and row names, respectively. **Give it a try:**
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(covid_testing.columns)
-</script>
-</lia-keep>
-</div>
+```python
+print(covid_testing.columns)
+# also try with .index instead of .columns
+
+```
+@Pyodide.eval
 
 The column names were imported with the `.csv` file. Since the original file didn't have labels for the rows, `pandas` automatically labeled them numerically 0 through 15523. If you imported tabular data that didn't have column headers, the column names would be numeric, the way the row indices are in our `covid_testing` DataFrame.
 
@@ -333,17 +307,6 @@ For example `range(0,4)` contains 4 elements. Those elements are 0,1,2, and 3.
 
 ### Locating data with `.loc`
 
-@sage
-
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
-</script>
-</lia-keep>
-</div>
-
 
 The `.loc` method lets you select a subset of your DataFrame to display.
 
@@ -352,13 +315,11 @@ Selecting a single entry
 
 The grammar of the `.loc` method is `dataframe.loc[row(s), column(s)]`. To see the age of the of the very first person to be tested, i.e. extract the data from row `0` (python starts counting with 0) and column `"age"` enter `covid_testing.loc[0,"age"]`.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(covid_testing.loc[0,"age"])
-</script>
-</lia-keep>
-</div>
+```python
+print(covid_testing.loc[0,"age"])
+
+```
+@Pyodide.eval
 
 You need the `"` surrounding `age` because that column header is a string. No quotes are needed around the row index `0` because it is recognized as a known value.
 
@@ -367,27 +328,22 @@ Selecting multiple rows or columns
 
 If you want to see the ages of the first 3 patients tested, change the `0` to the list `[0,1,2]`. This indicates that you want to see the data in rows indexed 0,1, and 2. Similarly you can change the single column to be a list of columns.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(covid_testing.loc[[0,1,2],[ "age", "gender"]])
-</script>
-</lia-keep>
-</div>
+```python
+print(covid_testing.loc[[0,1,2],[ "age", "gender"]])
+
+```
+@Pyodide.eval
 
 Viewing full rows and columns
 ---
 
 If you want to show all of the data in a row or column, instead of a list you can use a colon `:` to indicate that you want to include everything.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(covid_testing.loc[:,["mrn","first_name","last_name"]])
-</script>
-</lia-keep>
-</div>
+```python
+print(covid_testing.loc[:,["mrn","first_name","last_name"]])
 
+```
+@Pyodide.eval
 
 A colon before the comma will show you all rows of the columns you selected and a colon after the comma will return all columns of the given rows.
 
@@ -396,14 +352,11 @@ Your turn:
 
 What do you think will happen if you put colons both before and after the comma? Change the code below to check if you were correct.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(covid_testing.loc[[2,3,4],:])
-</script>
-</lia-keep>
-</div>
+```python
+print(covid_testing.loc[[2,3,4],:])
 
+```
+@Pyodide.eval
 
 <div class = "options">
 <b style="color: rgb(var(--color-highlight));">Another option</b><br>
@@ -414,21 +367,16 @@ If you look at other people's code, you may see columns referred to with `data_f
 
 ### Quiz: DataFrames
 
-@sage
 
-Complete the following code by replacing the two `__?__`s with your own code to find out the first and last name of the patient in row 11942.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-covid_testing = pd.__?__('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
+Complete the following code by replacing the `__?__` with your own code to find out the first and last name of the patient in row 11942.
+Assume that the `covid_testing` DataFrame has already been created and the pandas package has been loaded.
 
+```python 
 print(covid_testing.__?__[11942, ["first_name","last_name"]])
-</script>
-</lia-keep>
-</div>
 
+```
+@Pyodide.eval
 
 Enter their name below to check your answer:
 
@@ -440,18 +388,12 @@ Enter their name below to check your answer:
 ***
 <div class = "answer">
 
-On line 2, the command `read_csv` will convert the csv file's data into a DataFrame.
-
-On line 4, the `.loc` method will request the data from row 11942 and columns `"first_name"` and `"last_name"`.
+The `.loc` method will request the data from row 11942 and columns `"first_name"` and `"last_name"`.
 
 The completed code should look like this:
 
 ```
-import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
-
 print(covid_testing.loc[11942, ["first_name","last_name"]])
-
 ```
 
 </div>
@@ -459,32 +401,22 @@ print(covid_testing.loc[11942, ["first_name","last_name"]])
 
 ## Conditional statements
 
-@sage
-
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
-</script>
-</lia-keep>
-</div>
-
 
 Let's say we only care about the positive Covid tests. We could make a new DataFrame consisting only of those tests that came back positive using a **conditional** argument. A condition is a statement that evaluates to either `True` or `False`.
 
 If, for example, we only want to look at instances where the covid test came back positive, we need to use the condition `covid_testing.loc[:,"result"] == "positive"`. This statement checks every row in the `covid_testing` and will be `True` for a given row if the entry in column `result` is equal to the string `positive` and `False` otherwise.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(covid_testing.loc[:,"result"] == "positive")
-</script>
-</lia-keep>
-</div>
+Run the following code to see the results of this conditional test for each row in `covid_testing` (note that we're not yet filtering the DataFrame, just looking at the results of the condition).
 
+```python
+print(covid_testing.loc[:,"result"] == "positive")
 
-In the example above we used the double equals sign `==` to check whether two objects were the same. This is different from the single equals sign we use at the top of the page to define `covid_testing`.
+```
+@Pyodide.eval
+
+`False` means the value for `result` for that row is NOT `"positive"` and `True` means it is `"positive"`.
+
+In the example above we used the double equals sign `==` to check whether two objects were the same. This is different from the single equals sign we use to define objects, such as when we created the `covid_testing` DataFrame.
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -507,17 +439,6 @@ In addition to using `==` to check if two values are the same, we can use other 
 
 ### Filtering by a condition
 
-@sage
-
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
-</script>
-</lia-keep>
-</div>
-
 
 When we used a column name or list of names as our argument in the row spot of the `.loc` method, we got back all rows in that list. When we put a condition  like `covid_testing.loc[:,"result"] == "positive"` in the row spot, it will return all rows for which that condition is `True`.
 
@@ -528,18 +449,16 @@ Your turn:
 
 Create a new DataFrame titled `positive_tests`. How many rows have positive test results?
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 positive_tests = covid_testing.loc[covid_testing.loc[:,"result"] == "positive",:].copy()
-#print(positive_tests)
-</script>
-</lia-keep>
-</div>
+print(positive_tests)
 
+```
+@Pyodide.eval
 
-That is a whole lot of output when we see every column! You can ask to see fewer columns so that the output doesn't need to wrap. Try replacing `print(positive_tests)` with  `print(positive_tests.loc[:,["first_name","last_name"]])` and see if that output is easier to understand.
-
+There are more columns here than will fit on the page. 
+You can ask to see just the columns you want to make the output more useful. 
+Try replacing `print(positive_tests)` with  `print(positive_tests.loc[:,["first_name","last_name"]])` and see if that output is easier to understand.
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -554,30 +473,17 @@ The method `.copy()` at the very end of line one creates a new DataFrame separat
 
 </div>
 
-
-
 ### Combining conditions
-@sage
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
-</script>
-</lia-keep>
-</div>
+
 
 We can also combine conditions using `&` for **and**, and the vertical "pipe" `|` **or**. The `|` can be found above the forward slash \ on your keyboard. The code below shows us only the rows for patients age 18 or older who tested positive.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 adult_positive = covid_testing.loc[(covid_testing.loc[:,"result"] == "positive") & (covid_testing.loc[:,"age"] >= 18), :]
-#print(adult_positive.loc[:,["first_name","last_name", "age"]])
-</script>
-</lia-keep>
-</div>
+print(adult_positive.loc[:,["first_name","last_name", "age"]])
 
+```
+@Pyodide.eval
 
 Our code is starting to look quite messy. Giving each condition a name is a good way to keep your code from becoming an unreadable tangle of conditional statements.
 
@@ -586,17 +492,14 @@ Name your conditions
 
 When working with more complicated conditions it is extremely helpful to define your condition by giving it a name, and then refer to that name, rather than the chain of conditions, inside the `.loc` method. By carefully naming the compound condition, you can also make your code more human-readable. Take a moment to see what this code below is doing:
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 is_positive_infant = (covid_testing.loc[:,"age"]<1) & (covid_testing.loc[:,"result"] == "positive")
 
 infant_positive = covid_testing.loc[is_positive_infant,:].copy()
-#print(infant_positive.loc[:,["first_name","last_name","age"]])
-</script>
-</lia-keep>
-</div>
+print(infant_positive.loc[:,["first_name","last_name","age"]])
 
+```
+@Pyodide.eval
 
 Use parentheses
 ---
@@ -609,28 +512,17 @@ is true for all results where a patient was older than 10 and tested positive, a
 
 
 ### Missing Data
-@sage
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
-</script>
-</lia-keep>
-</div>
+
 
 So far we have been treating the `covid_testing` DataFrame as if it has a value in every row of every column, but like most real data sets, some data is missing!
 
 Wherever the original csv file didn't have an entry, you will see `NaN` or `nan`, meaning "Not a Number." For which columns is the patient in row 2 missing data?
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(covid_testing.loc[2, :])
-</script>
-</lia-keep>
-</div>
+```python
+print(covid_testing.loc[2, :])
 
+```
+@Pyodide.eval
 
 `NaN`s are special in a couple of ways.
 
@@ -639,66 +531,45 @@ Wherever the original csv file didn't have an entry, you will see `NaN` or `nan`
 
 For example we know that patient 2 has no data, i.e. `NaN` in both the column `payor_group` and the column `patient_class`. The double equals sign `==` will tell us if those two entries are the same:
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 are_NaNs_equal = (covid_testing.loc[2,"payor_group"] == covid_testing.loc[2, "patient_class"])
 
-#print(are_NaNs_equal)
-</script>
-</lia-keep>
-</div>
+print(are_NaNs_equal)
 
+```
+@Pyodide.eval
 
 Notice that the above cell uses both of the techniques we learned for combining conditions: there are parentheses surrounding the condition `a == b` and the condition has a short, readable name.
 
 Since using `==` to check if a cell is empty won't work, we have the methods `.isna()` and `.isnull()`. These do exactly the same thing: they return `True` if the cell is empty, and `False` if the cell contains information. You can run these methods on a DataFrame or a series (a column of a DataFrame) but not on a single cell:
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(covid_testing.loc[:,"payor_group"].isna())
-</script>
-</lia-keep>
-</div>
+```python
+print(covid_testing.loc[:,"payor_group"].isna())
 
+```
+@Pyodide.eval
 
 The opposite of `.isna()` is the method `.notna()`.
 
 For example you might want to create a new DataFrame of only patients whose `payor_group` is known:
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 known_payor = covid_testing.loc[:,"payor_group"].notna()
 
 known_payor_tests = covid_testing.loc[known_payor, :].copy()
 
-#print(known_payor_tests.loc[:, ["first_name", "last_name"]])
-</script>
-</lia-keep>
-</div>
+print(known_payor_tests.loc[:, ["first_name", "last_name", "payor_group"]])
 
+```
+@Pyodide.eval
 
 ### Quiz: Conditional statements
-
-@sage
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
-</script>
-</lia-keep>
-</div>
 
 
 You come across the following code in which several conditions are defined but not given descriptive names:
 
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
 
+```python
 condition_1 = covid_testing.loc[:,"first_name"].isna()
 
 condition_2 = covid_testing.loc[:,"last_name"].isna()
@@ -706,19 +577,13 @@ condition_2 = covid_testing.loc[:,"last_name"].isna()
 condition_3 = covid_testing.loc[:,"age"]<=18
 
 my_condition = (condition_1 | condition_2) & condition_3
-</script>
-</lia-keep>
-</div>
+```
 
+```python
+# test things here
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-
-</script>
-</lia-keep>
-</div>
-
+```
+@Pyodide.eval
 
 What does `my_condition` test for? You can use the interactive cell above to test the conditions however you want.
 
@@ -746,6 +611,7 @@ THEREFORE:
 
 ## Transforming data in a DataFrame
 
+
 Sometimes the data in a DataFrame isn't in the best form for us to use. Maybe it is a string that is too long or unclear, or maybe the units aren't the unit we will ultimately want to use to analyze the data.
 
 There are two things we can do to make our data more useful.
@@ -763,7 +629,7 @@ Reproducibility must always been a priority when doing research, so whenever you
 
 There are many environments from which you can save Python code. One of the most user-friendly platforms is [Jupyter notebooks](https://jupyter.org/). These notebooks let you write linked cells of code as well as cells of non-code text, so they are a great way to preserve and annotate every step of your data manipulation.
 
-**Preserving orignal data**
+**Preserving original data**
 
 If you imported data from another source using `.read_csv()` or another such method, the original file still exists untouched! The best practice is to store your original data in a file that your code reads but does not change.
 
@@ -773,68 +639,41 @@ If your original data is not already in a separate file you can use `.to_csv(dat
 
 ### Create new columns
 
-@sage
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
-</script>
-</lia-keep>
-</div>
-
 
 In `pandas` you can create a new column by calling your new column with the `.loc[:,"new_column"]` method and using a single equals sign `=` to define its contents.
 
 The next bit of code creates a new column named `new_column` in the DataFrame `covid_testing` in which every entry is the number 1:
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 covid_testing.loc[:,"new_column"] = 1
-#print(covid_testing.loc[:,"new_column"])
-</script>
-</lia-keep>
-</div>
+print(covid_testing.loc[:,["first_name", "last_name", "new_column"]])
 
+```
+@Pyodide.eval
 
 Your new column can also depend on data in columns that already exist. Remember that each column, or series, needs to be called using the format `dataframe.loc[:,"column_name"]`.
 
 For example maybe you need to have patient ages recorded in months instead of years:
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 covid_testing.loc[:,"age_months"] = covid_testing.loc[:,"age"]*12
-#print(covid_testing.loc[:,["age","age_months"]])
-</script>
-</lia-keep>
-</div>
+print(covid_testing.loc[:,["age","age_months"]])
 
+```
+@Pyodide.eval
 
 Or maybe you want a new column that displays the full name of each patient, rather than separate columns for first and last names.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 covid_testing.loc[:,"full_name"] = covid_testing.loc[:,"first_name"]+" "+covid_testing.loc[:,"last_name"]
-#print(covid_testing.loc[:,["first_name", "last_name", "full_name"]])
-</script>
-</lia-keep>
-</div>
+print(covid_testing.loc[:,["first_name", "last_name", "full_name"]])
 
+```
+@Pyodide.eval
 
 
 ### Edit existing columns
-@sage
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
-</script>
-</lia-keep>
-</div>
+
 
 You can make changes to existing entries using the same method and simply using the key that already exists for that column.
 
@@ -845,19 +684,15 @@ Using `=` to assign values
 
 One way to approach this is to define a condition testing each row for whether the entry in the `gender` column is `male`. Then we can use that condition to change the entry to `M` if the condition is met.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 is_male = covid_testing.loc[:, "gender"] == "male"
 
 covid_testing.loc[is_male, "gender"] = "M"
 
-#print(covid_testing.loc[:,["first_name", "last_name", "gender"]])
+print(covid_testing.loc[:,["first_name", "last_name", "gender"]])
 
-</script>
-</lia-keep>
-</div>
-
+```
+@Pyodide.eval
 
 Using `.replace`
 ---
@@ -866,17 +701,13 @@ You can also use the `.replace` method to change entries in a column. The gramma
 
 Let's take a look a using this method to change the gender `female` to `F`. After the code block we will go through what each part of the code is doing.
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 covid_testing.loc[:, "gender"] = covid_testing.loc[:, "gender"].replace("female","F")
 
-#print(covid_testing.loc[:,["first_name", "last_name", "gender"]])
+print(covid_testing.loc[:,["first_name", "last_name", "gender"]])
 
-</script>
-</lia-keep>
-</div>
-
+```
+@Pyodide.eval
 
 * The `.replace()` method takes two arguments: the entry you want to find, and what you want to replace it with.
 
@@ -900,16 +731,13 @@ The `.replace` method lets you replace multiple kinds of entries simultaneously.
 If we want to replace `positive` and `negative` with `1` and `0` respectively, we can ask for the list `["positive", "negative"]` to be replaced with the list `[1,0]`:
 
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
+```python
 covid_testing = covid_testing.replace(["positive","negative"],[1,0])
 
-#print(covid_testing.loc[:,["first_name", "last_name", "result"]])
+print(covid_testing.loc[:,["first_name", "last_name", "result"]])
 
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <div class= "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
@@ -920,26 +748,14 @@ The order and length of these lists matter! Each element in the first list will 
 
 ### Quiz: Transforming DataFrames
 
-@sage
-<div class="python_data_init">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
-</script>
-</lia-keep>
-</div>
 
-You can change the all of the entries in a column to uppercase using the method `.str.upper()`. The code below **prints** the `last_name` column  of `covid_testing`  in uppercase:
+You can change the all of the entries in a column to uppercase using the method `.str.upper()`. The code below **prints** the `last_name` column  of `covid_testing` in uppercase:
 
-<div class="python_data">
-<lia-keep>
-<script type="text/x-sage">
-#print(covid_testing.loc[:, "last_name"].str.upper())
-</script>
-</lia-keep>
-</div>
+```python
+print(covid_testing.loc[:, "last_name"].str.upper())
 
+```
+@Pyodide.eval
 
 How would you **change** the `last_name` column of `covid_testing` to be uppercase?
 
@@ -968,7 +784,6 @@ The method `.str.lower()` will make every entry in a column lower case. There ar
 ## Additional Resources
 
 The creators of the pandas package have [great tutorials](https://pandas.pydata.org/docs/getting_started/index.html#tutorials) with very thorough examples.
-
 
 ## Feedback
 

@@ -2,8 +2,8 @@
 
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.1
-current_version_description: Initial version
+version: 1.2.0
+current_version_description: Replaced SageMathCells with Pyodide cells for better usability
 module_type: standard
 docs_version: 1.2.0
 language: en
@@ -58,12 +58,13 @@ coding_language: python
 @version_history
 
 Previous versions: 
-None.
+
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5e1bbae6792dc5adc7cfcc99860b0f9e1447daa6/python_basics_loops_conditionals/python_basics_loops_conditionals.md#) Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
-
+import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 -->
 
 # Python Basics: Loops and Conditional Statements
@@ -74,7 +75,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 @sage
 
-@lesson_prep_python_sage
+@lesson_prep_python_pyodide
 
 ## Introduction
 
@@ -85,22 +86,17 @@ In programming, we often need to perform a task repeatedly (or **iteratively**),
 In Python, [lists and dictionaries](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1) are examples of **iterable** objects, or objects whose members can be returned one at a time. This is important in **loops**, which repeat (or iterate) the same operation for each element in an iterable object like a list.
 
 For a sense of how loops work in Python, here is a simple example. Let's say there are five children at a party, and they each start with a certain number of pieces of candy. Next, let's say that we give each child 5 more pieces of candy. Using a simple loop, we can get a list of how many total pieces of candy each child has now using the `for` and `in` keywords.
+    
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 starting_candy = [3, 10, 11, 6, 7]
 candy_day1 = [] #Here we are initiating an empty list, so that we can add elements to it later
 for i in starting_candy: #In the loop, i will take on the value of each list element in turn
-  j = i + 5
-  candy_day1.append(j)
+	j = i + 5
+	candy_day1.append(j)
 print(candy_day1)
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -114,21 +110,15 @@ This example loops through the list of numbers, adds 5 to each number one at a t
 
 ### Indentation
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 starting_candy = [3, 10, 11, 6, 7]
 candy_day1 = [] #Here we are initiating an empty list, so that we can add elements to it later
 for i in starting_candy: #In the loop, i will take on the value of each list element in turn
-  j = i + 5
-  candy_day1.append(j)
+	j = i + 5
+	candy_day1.append(j)
 print(candy_day1)
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 The code cell above is exactly the same as the one on the previous page. Notice that the two lines of code after the `for` statement are **indented**. This indentation is important in Python, and not just for readability! Indents indicate blocks of code, or lines of code that do a specific thing. In this case, the two lines after the `for` statement are in a different code block than the rest; they comprise the body of the loop. Indentation tells Python what statements to evaluate in what order. You also may have noticed a colon (:) at the end of the `for` statement. This tells Python that the following lines are a new code block and should be indented. All of the lines of a code block need to be indented the same number of spaces.
 
@@ -145,59 +135,36 @@ Indentation is tricky, especially for complex nested loops; experienced Python p
 ### Range
 The built-in function `range()` is frequently used in loops. The `range()` function returns a range object.
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 print(range(1, 20))
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 This is not terribly interesting on its own, but is very useful if you want to loop through a sequence of numbers, such as 1 to 20, without having to manually build a list of all of those numbers. If you create a list from the range object and then print that list, you'll see what's going on behind the scenes. What do you think this code will do? Run the code cell below and find out.
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 print(list(range(1, 20)))
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 Notice that the last number listed is 19, not 20. Just like in subsetting, the first number passed to `range()` is **inclusive**, and the second is **exclusive**. And don't forget that the first position is index 0!
 
 **Your Turn**: Before running the code cell below, try to predict what number will be returned. Got a number in mind? Run the code and see if your hypothesis is correct! (**Hint**: the bracket notation below (`[ ]`) allows Python to access an element in a collection object, like a list; for a refresher take a look at this [introduction to lists in Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#4).)
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 print(list(range(1, 20))[7])
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 
 ### Quiz: Loops
 
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 for i in range(0, 6):
-  j = i*i
-</script>
-</lia-keep>
-</div>
+	j = i*i
+```
+@Pyodide.eval
 
 The loop in the code cell above is missing a `print()` statement to show us the output. How would you include a `print()` statement such that all of the squares of `i` in `range(0,6)` are displayed? Feel free to edit the code cell above and experiment to find the answer.
 
@@ -233,21 +200,16 @@ Conditional statements often make use of **comparison operators**. Comparison op
 
 Let's look at a simple example of some code that utilizes conditionals.
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 name = "Pythonista"
-if type(name) == str: # We're testing here to see if the value of name is a string.
-                                    # This will either evaluate to True or False.
-    print("Welcome, "+ name+"!")
+# We're testing below to see if the value of name is a string.
+# This will either evaluate to True or False.
+if type(name) == str: 
+	print("Welcome, "+ name+"!")
 else:
-    print("Please enter a name.")
-
-</script>
-</lia-keep>
-</div>
+	print("Please enter a name.")
+```
+@Pyodide.eval
 
 **Your Turn**: Try changing the value assigned to `name` from "Pythonista" to a number, and see what happens! What happens if you remove the quotation marks?
 
@@ -256,24 +218,18 @@ else:
 
 You also aren't confined to a single "if-else" statement! You can have multiple conditions and define multiple results. The simplest way to do this is with the keyword `elif`. Run the following code cell, and then change the number assigned to `num` and see how the output changes.
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 num = 1
 if num < 10:
-    print("This number is less than 10")
+	print("This number is less than 10")
 elif 10 < num < 100:
-    print("This number is more than 10 but less than 100")
+	print("This number is more than 10 but less than 100")
 elif num >= 100:
-    print("This number is greater than or equal to 100")
+	print("This number is greater than or equal to 100")
 else:
-    print("This number equals 10")
-
-</script>
-</lia-keep>
-</div>
+	print("This number equals 10")
+```
+@Pyodide.eval
 
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
@@ -284,24 +240,18 @@ When coding in Python, it is important to remember that lines and blocks of code
 
 **Your Turn**: Before you run the following code cell, predict what the outcome will be.
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 num = 1
 if num < 100:
-    print("This number is less than 100")
+	print("This number is less than 100")
 elif num < 10:
-    print("This number is less than 10")
+	print("This number is less than 10")
 elif num >= 100:
-    print("This number is greater than or equal to 100.")
+	print("This number is greater than or equal to 100.")
 else:
-    print("This number equals 10")
-
-</script>
-</lia-keep>
-</div>
+	print("This number equals 10")
+```
+@Pyodide.eval
 
 Was your prediction correct?
 
@@ -313,24 +263,18 @@ Python becomes very powerful when you start combining conditionals and loops.
 
 Remember when we looped through a list of pieces of candy that some children started with and calculated the number they would have if we gave each child 5 more pieces? Let's suppose that the next day instead of giving all of the children more candy, only the children who have fewer than 10 pieces of candy get another piece. We can still calculate how many pieces of candy each child has now (even though we're making the very unlikely assumption that none of the children have eaten any of their candy from before!).
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 candy1 = [8, 15, 16, 11, 12]
 candy2 = []
 for i in candy1:
-    if i < 10: #tests to see if each student has fewer than 10 pieces of candy
-        j = i + 1
-    else:
-        j = i
-    candy2.append(j)
+	if i < 10: #tests to see if each student has fewer than 10 pieces of candy
+		j = i + 1
+	else:
+		j = i
+	candy2.append(j)
 print(candy2)
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 In the case above, we've used an if-else statement within our `for` loop! These loops can actually get quite complex for some tasks, but breaking down the loop and testing out the various pieces is often a good strategy.
 
@@ -338,25 +282,19 @@ In the case above, we've used an if-else statement within our `for` loop! These 
 
 The following quiz questions are about the following code:
 
-@sage
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 candy1 = [8, 15, 16, 11, 12]
 candy2 = []
 for i in candy1:
-    if i < 10: #tests to see if each student has fewer than 10 pieces of candy
-        j = i + 2
-    #Missing code here
-    else:
-        j = i
-    candy2.append(j)
+	if i < 10: #tests to see if each student has fewer than 10 pieces of candy
+		j = i + 2
+	#Missing code here
+	else:
+		j = i
+	candy2.append(j)
 print(candy2)
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 1. If we wanted to add another conditional statement at line 6 of the code cell above that would give 1 piece of candy to children who start with between 10 to 15 pieces (inclusive), what keyword would we use to start that line?
 
