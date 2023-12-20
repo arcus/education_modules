@@ -266,12 +266,12 @@ If you are trying out this code on your own computer, you can make a DataFrame o
 
 | File type | Read command |
 | - | - |
-| .csv | pd.read_csv('location')|
-| .xlsx | pd.read_excel('location')|
-| .ods | pd.read_excel('location')|
-| .json| pd.read_json('location')|
-| .html| pd.read_html('location')|
-| .sql | pd.read_sql('location')|
+| .csv | pd.read\_csv('location')|
+| .xlsx | pd.read\_excel('location')|
+| .ods | pd.read\_excel('location')|
+| .json| pd.read\_json('location')|
+| .html| pd.read\_html('location')|
+| .sql | pd.read\_sql('location')|
 
 ### Column names and row indices
 
