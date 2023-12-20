@@ -122,7 +122,7 @@ Alternatively, if you have the [Anaconda distribution of Python](https://www.ana
 
 </div>
 
-### <span class="fa-regular fa-table"></span> The data 
+### <i class="fa-solid fa-table"></i> The data 
 
 @pip_install(seaborn)
 @pip_install(statsmodels)
@@ -645,7 +645,7 @@ A word of caution: You may see line plots where the data points don't actually s
 
 </div>
 
-### <span class="fa-regular fa-table"></span> The data
+### <i class="fa-solid fa-table"></i> The data
 
 The data we've been using for the other examples so far doesn't lend itself well to line plots. Instead, for this example we'll use [one of the datasets included with the seaborn module](http://seaborn.pydata.org/generated/seaborn.load_dataset.html#seaborn.load_dataset), called `fmri`. It contains the hemodynamic response (`signal`) at several time points for a number of subjects in response to two different events (`stim` and `cue`) in two brain regions (`parietal` and `frontal`).
 
