@@ -8,7 +8,7 @@ name: Process Module Metadata
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: "main" #CHANGE TO MAIN BEFORE MERGING
+    branches: "list_of_modules_automation" #CHANGE TO MAIN BEFORE MERGING
     paths-ignore:
       - 'assets/**'
       - '_for_authors/**'
