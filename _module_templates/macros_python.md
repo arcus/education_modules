@@ -89,6 +89,13 @@ file = io.StringIO(text)
 
 
 @pyodide_readcsv_explainer
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+If you refresh your browser at some point while working on this module, you will need to come back to this page to reload the data. 
+
+</div>
+
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
 
@@ -102,13 +109,6 @@ So, we do something a little sneaky with the code here -- we run a set of pyodid
 If you're curious about pyodide, you can [view our modules, including this one, in their raw format](https://github.com/arcus/education_modules) to see the extra code. 
 But there's no reason to bother with this unless you're curious! 
 That's why we hid that extra code in the first place. 
-
-</div>
-
-<div class = "help">
-<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
-
-If you refresh your browser at some point while working on this module, you will need to come back to this page to reload the data. 
 
 </div>
 @end
