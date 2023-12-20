@@ -69,7 +69,7 @@ Previous versions:
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/pyodide_testing/_module_templates/macros_python.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
 import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 
 -->
