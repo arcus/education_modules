@@ -236,21 +236,7 @@ The `read_csv` function from the `pandas` library takes the location of the file
 covid_testing = pd.read_csv('https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv')
 ```
 
-``` python   @Pyodide.exec
-import pandas as pd
-import io
-from pyodide.http import open_url
-
-url = "https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv"
-
-url_contents = open_url(url)
-text = url_contents.read()
-file = io.StringIO(text)
-
-covid_testing = pd.read_csv(file);
-
-"HTML: <a href='" + url + "'>covid_testing</a> has been loaded"
-```
+@pyodide_readcsv(covid_testing, "https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/data/covid_testing.csv")
 
 @pyodide_readcsv_explainer
 

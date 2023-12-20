@@ -69,6 +69,25 @@ If you reload the webpage, however, all of the cells will reset to their origina
 @end
 
 
+@pyodide_readcsv
+```python   @Pyodide.exec
+import pandas as pd
+import io
+from pyodide.http import open_url
+
+url = @1
+
+url_contents = open_url(url)
+text = url_contents.read()
+file = io.StringIO(text)
+
+@0 = pd.read_csv(file);
+
+"HTML: <a href='" + url + "'>@0</a> has been loaded"
+```
+@end
+
+
 @pyodide_readcsv_explainer
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>

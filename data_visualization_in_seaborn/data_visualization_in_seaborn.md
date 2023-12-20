@@ -149,21 +149,7 @@ And then read in the data set:
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
 ```
 
-```python   @Pyodide.exec
-import pandas as pd
-import io
-from pyodide.http import open_url
-
-url = "https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv"
-
-url_contents = open_url(url)
-text = url_contents.read()
-file = io.StringIO(text)
-
-covid_data = pd.read_csv(file);
-
-"HTML: <a href='" + url + "'>covid_data</a> has been loaded"
-```
+@pyodide_readcsv(covid_data, "https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
 
 @pyodide_readcsv_explainer
 
@@ -653,7 +639,7 @@ A word of caution: You may see line plots where the data points don't actually s
 
 </div>
 
-### Data for line plots
+### <span class="fa-regular fa-table"></span> The data
 
 The data we've been using for the other examples so far doesn't lend itself well to line plots. Instead, for this example we'll use [one of the datasets included with the seaborn module](http://seaborn.pydata.org/generated/seaborn.load_dataset.html#seaborn.load_dataset), called `fmri`. It contains the hemodynamic response (`signal`) at several time points for a number of subjects in response to two different events (`stim` and `cue`) in two brain regions (`parietal` and `frontal`).
 
@@ -663,21 +649,7 @@ This dataset is a special example dataset for `seaborn`, so you don't need to do
 fmri = sns.load_dataset("fmri")
 ```
 
-```python   @Pyodide.exec
-import pandas as pd
-import io
-from pyodide.http import open_url
-
-url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/fmri.csv"
-
-url_contents = open_url(url)
-text = url_contents.read()
-file = io.StringIO(text)
-
-fmri = pd.read_csv(file);
-
-"HTML: <a href='" + url + "'>fmri</a> has been loaded"
-```
+@pyodide_readcsv(fmri, "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/fmri.csv")
 
 ### Basic line plot
 
