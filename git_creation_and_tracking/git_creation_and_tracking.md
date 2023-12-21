@@ -1,8 +1,8 @@
 <!--
-
+module_id: git_creation_and_tracking
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.9
+version: 1.0.10
 current_version_description: Initial version
 module_type: standard
 docs_version: 3.0.0

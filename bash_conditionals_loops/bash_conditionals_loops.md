@@ -1,8 +1,8 @@
 <!--
-
+module_id: bash_conditionals_loops
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.3
+version: 1.2.4
 current_version_description: Clarify `=` and `==` inside test functions
 module_type: standard
 docs_version: 1.2.1

@@ -1,8 +1,8 @@
 <!--
-
+module_id: genomics_setup
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.2.0
+version:  1.2.1
 current_version_description: Updated link to the Data Carpentries instructions, which changed after an update to their website. 
 module_type: wrapper
 docs_version: 2.0.0

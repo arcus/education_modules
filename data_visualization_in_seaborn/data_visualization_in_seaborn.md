@@ -1,8 +1,8 @@
 <!--
-
+module_id: data_visualization_in_seaborn
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.3.0
+version: 1.3.1
 current_version_description: Change executable code blocks from sagemath to pyodide.
 module_type: standard
 docs_version: 3.0.0

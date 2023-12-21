@@ -1,8 +1,8 @@
 <!--
-
+module_id: data_visualization_in_ggplot2
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.4.6
+version: 1.4.7
 current_version_description: Updated with new metadata and to remove references to Binderhub
 module_type: standard
 docs_version: 2.0.0
