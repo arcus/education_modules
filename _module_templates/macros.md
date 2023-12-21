@@ -47,15 +47,16 @@ This version (@version): @current_version_description
 
 @make_survey_url
 <script modify="false">
-function makeURL(title, version, module_type) {
+function makeURL(title, version, module_type, module_id) {
   let url = new URL('https://redcap.chop.edu/surveys');
   url.searchParams.set('s', 'KHTXCXJJ93');
   url.searchParams.set('module_name', title);
   url.searchParams.set('version', version);
   url.searchParams.set('module_type', module_type);
+  url.searchParams.set('module_id', module_id);
   return url;
 }
-var surveyURL = makeURL(@0, @1, @2);
+var surveyURL = makeURL(@0, @1, @2, @3);
 
 send.html(`<a href="${surveyURL}")">our brief survey</a>`)
 </script>
@@ -74,7 +75,7 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out @make_survey_url('@title', '@version', '@module_type')!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out @make_survey_url('@title', '@version', '@module_type', '@module_id')!
 @end
 
 
