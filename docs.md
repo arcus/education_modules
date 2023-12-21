@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  3.1.2
-current_version_description: update definition of learn_to_code collection
+version:  4.0.0
+current_version_description: Added module\_id as required frontmatter field for all modules
 language: en
 narrator: UK English Female
 title: DART LiaScript docs
@@ -25,9 +25,10 @@ try {
 @version_history
 Previous versions: 
 
-- [3.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cd0da90a30910c22d5502f509125892a761c3145/docs.md#1): Added collection as a front matter field, added text as a data_domain, fixed typos
-- [2.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/89cadafc6f1f9c83e4de93e7d55cd9427866f9f2/docs.md#1): Made coding_required a mandatory front matter field for all modules
-- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b453a05b5ac756fb5c7b183deae9d4fc91b3a617/docs.md): Clarified that version_history cannot be blank but sets_you_up_for and depends_on_knowledge_available_in can
+- [3.1.2](): Updated definition of learn\_to\_code collection
+- [3.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cd0da90a30910c22d5502f509125892a761c3145/docs.md#1): Added collection as a front matter field, added text as a data\_domain, fixed typos
+- [2.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/89cadafc6f1f9c83e4de93e7d55cd9427866f9f2/docs.md#1): Made coding\_required a mandatory front matter field for all modules
+- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b453a05b5ac756fb5c7b183deae9d4fc91b3a617/docs.md): Clarified that version\_history cannot be blank but sets\_you\_up\_for and depends\_on\_knowledge\_available\_in can
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -92,7 +93,7 @@ You can also see revisions and comments on [pull requests for other modules that
 - We have a standardized naming convention and directory structure:
 
   * Folder and file names use lowercase and underscores (no dashes)
-  * Main module directory folder name is identical to the name of the module content markdown file.
+  * Main module directory folder name is identical to the name of the module content markdown file (this name is called the [module\_id](#module_id)).
   * Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
   * Code files (including scripts, notebooks, etc.) are saved within a `src` folder within the module directory
 
@@ -141,6 +142,7 @@ Which front matter items are required? It depends on the content of the module y
 
 |                                     | All Modules | R[^1] | Wrapper[^2] | Notes                                                                                     |
 | :---------------------------------- | :---------: | :---: | :---------: | :---------------------------------------------------------------------------------------- |
+| `module_id`                         |      X      |   X   |      X      |                                                                                           |
 | `author`                            |      X      |   X   |      X      |                                                                                           |
 | `email`                             |      X      |   X   |      X      |                                                                                           |
 | `version`                           |      X      |   X   |      X      |                                                                                           |
@@ -211,6 +213,7 @@ Use the checklist below to help make sure you're including all the front matter 
 
 You'll need the following fields in your front matter (new fields added by checking boxes above will be followed by 💫): 
 
+- module\_id
 - author
 - email
 - version
@@ -302,6 +305,15 @@ try {
 @add_item(2,import macros_sql.md)
 @add_item(11,import macros_genomics.md)
 @add_item(12,import macros_bash.md)
+
+### module\_id
+
+```
+module_id: my_module_name
+```
+
+The `module_id` is a unique ID for each module.
+It should exactly match the directory name and file name for your module (e.g. the module at `r_logistic_regression/r_logistic_regression.md` would have `module_id: r_logistic_regression`).
 
 ### author
 
