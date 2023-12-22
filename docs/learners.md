@@ -15,7 +15,8 @@ If you'd like to learn more about DART, please fill out the [DART interest form]
 
 ## Independent Exploration
 
-All of [our learning modules](list_of_modules) are freely available online! 
+All of our learning modules are freely available online! 
+Browse through the [full list of modules](list_of_modules) yourself, or start with one of our [suggested pathways](example_pathways).
 
-We're building a self-service tool to help you find the modules most relevant to you. 
+We're also building a self-service tool to help you find the modules most relevant to you. 
 Test out our [prototype module discovery application](https://learn.arcus.chop.edu/), and please leave feedback to help us improve!
