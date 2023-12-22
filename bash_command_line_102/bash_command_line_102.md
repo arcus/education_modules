@@ -1,8 +1,8 @@
 <!--
-
+module_id: bash_command_line_102
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
-version: 1.3.0
+version: 1.3.1
 current_version_description: Add emphasis about he permanence of `rm`
 module_type: standard
 docs_version: 3.0.0

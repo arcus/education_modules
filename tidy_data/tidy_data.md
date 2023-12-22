@@ -1,7 +1,8 @@
 <!--
+module_id: tidy_data
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.6
+version: 1.1.7
 current_version_description: Updated highlight boxes
 module_type: standard
 docs_version: 3.0.0

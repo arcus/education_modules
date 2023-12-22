@@ -1,8 +1,8 @@
 <!--
-
+module_id: python_basics_variables_functions_methods
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.1.0
+version: 1.1.1
 current_version_description: Implemented code blocks in pyodide
 module_type: standard
 docs_version: 1.2.0

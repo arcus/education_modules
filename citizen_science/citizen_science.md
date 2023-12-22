@@ -1,8 +1,8 @@
 <!--
-
+module_id: citizen_science
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.0.4
+version: 1.0.5
 current_version_description: Initial version.
 module_type: standard
 docs_version: 1.0.0

@@ -1,7 +1,8 @@
 <!--
+module_id: r_basics_transform_data
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.6
+version: 1.3.7
 current_version_description: Updated with new metadata and to remove references to Binderhub
 module_type: standard
 docs_version: 2.0.0

@@ -1,11 +1,11 @@
 <!--
-
+module_id: 
 author:   Your Name
 email:    email@chop.edu
 version:  0.0.0
 current_version_description: Brief description of why this version exists
 module_type: wrapper
-docs_version: 3.0.0
+docs_version: 4.0.0
 language: en
 narrator: UK English Female
 mode: Textbook

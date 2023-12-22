@@ -1,8 +1,8 @@
 <!--
-
+module_id: python_practice
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.4
+version: 1.0.5
 current_version_description: Initial version with updated links and metadata
 module_type: exercise
 docs_version: 1.2.0
