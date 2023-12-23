@@ -363,6 +363,11 @@ This is designed to be welcoming to folks with no coding experience, so if R wil
 <td>60 min</td>
 </tr>
 <tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/how_to_troubleshoot/how_to_troubleshoot.md">How to Troubleshoot</a></td>
+<td>Learning to use technical methods like coding and version control in your research inevitably means running into problems.  Learn practical methods for troubleshooting and moving past error codes and other difficulties.</td>
+<td>30 min</td>
+</tr>
+<tr>
 <td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md">R Basics: Introduction</a></td>
 <td>Introduction to R and hands-on first steps for brand new beginners.</td>
 <td>60 min</td>
@@ -381,6 +386,11 @@ This is designed to be welcoming to folks with no coding experience, so if R wil
 <td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/tidy_data/tidy_data.md">Tidy Data</a></td>
 <td>Tidy is a technical term in data analysis and describes an optimal way for organizing data that will be analyzed computationally.</td>
 <td>45 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md">Directories and File Paths</a></td>
+<td>In this module, learners will explore what a directory is and how to describe the location of a file using its file path.</td>
+<td>15 min</td>
 </tr>
 <tr>
 <td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_practice/r_basics_practice.md">R Basics Practice</a></td>
@@ -425,6 +435,121 @@ This is designed to be welcoming to folks with no coding experience, so if R wil
 <tr>
 <td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_practice/r_practice.md">R Practice</a></td>
 <td>Use the basics of R coding, data transformation, and data visualization to work with real data.</td>
+<td>60 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_machine_learning/demystifying_machine_learning.md">Demystifying Machine Learning</a></td>
+<td>An approachable and practical introduction to machine learning for biomedical researchers.</td>
+<td>60 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bias_variance_tradeoff/bias_variance_tradeoff.md">Understanding the Bias-Variance Tradeoff</a></td>
+<td>The bias-variance tradeoff is a central issue in nearly all machine learning analyses. This module explains what the tradeoff is, why it matters for machine learning, and what you can do to manage it in your own analyses.</td>
+<td>20 min</td>
+</tr>
+</tbody>
+</table>
+
+</details>
+
+## Pathway 5: Analysis in Python
+
+Python is a powerful open source programming language with tons of great tools for data science. 
+If you're looking to learn Python to do things like clean and analyze data, and create data visualizations, this pathway is for you. 
+We'll start from zero and walk you through everything you need to start analyzing data in Python, including lots of opportunities for hands-on practice. 
+
+This is designed to be welcoming to folks with no coding experience, so if Python will be your first programming language you'll fit right in!
+
+<details>
+<summary><strong>Analysis in Python: Modules</strong></summary>
+
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Description</th>
+<th>Estimated Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/reproducibility/reproducibility.md">Reproducibility, Generalizability, and Reuse</a></td>
+<td>This module provides learners with an approachable introduction to the concepts and impact of <strong>research reproducibility</strong>, <strong>generalizability</strong>, and <strong>data reuse</strong>, and how technical approaches can help make these goals more attainable.</td>
+<td>60 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/how_to_troubleshoot/how_to_troubleshoot.md">How to Troubleshoot</a></td>
+<td>Learning to use technical methods like coding and version control in your research inevitably means running into problems.  Learn practical methods for troubleshooting and moving past error codes and other difficulties.</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/learning_to_learn/learning_to_learn.md">Learning to Learn Data Science</a></td>
+<td>Discover how learning data science is different than learning other subjects.</td>
+<td>20 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md">Demystifying Python</a></td>
+<td>This module introduces the Python programming language, explores why Python is useful in research, and describes how to download Python and Jupyter.</td>
+<td>20 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md">Directories and File Paths</a></td>
+<td>In this module, learners will explore what a directory is and how to describe the location of a file using its file path.</td>
+<td>15 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md">Python Basics: Functions, Methods, and Variables</a></td>
+<td>Learn the foundations of writing Python code, including the use of functions, methods, and variables.</td>
+<td>20 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md">Python Basics: Lists and Dictionaries</a></td>
+<td>Learn about collection objects, specifically lists and dictionaries, in Python.</td>
+<td>15 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_loops_conditionals/python_basics_loops_conditionals.md">Python Basics: Loops and Conditionals</a></td>
+<td>Learn how to use loops and conditional statements in Python.</td>
+<td>20 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_exercise/python_basics_exercise.md">Python Basics: Exercise</a></td>
+<td>Practice the skills acquired in the Python Basics sequence by working through an exercise.</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md">Transform Data with pandas</a></td>
+<td>This is an introduction to transforming data using a Python library named pandas.</td>
+<td>60 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/tidy_data/tidy_data.md">Tidy Data</a></td>
+<td>Tidy is a technical term in data analysis and describes an optimal way for organizing data that will be analyzed computationally.</td>
+<td>45 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md">Data Visualization in Open Source Software</a></td>
+<td>Introduction to principles of data vizualization and typical data vizualization workflows using two common open source libraries: ggplot2 and seaborn.</td>
+<td>20 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md">Data Visualization in seaborn</a></td>
+<td>This module includes code and explanations for several popular data visualizations using python&#39;s seaborn library. It also includes examples of how to modify seaborn plots to customize them for different uses.</td>
+<td>60 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_nhst/intro_to_nhst.md">Introduction to Null Hypothesis Significance Testing</a></td>
+<td>This is an introduction to NHST for biomedical researchers.</td>
+<td>40 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md">Statistical Tests in Open Source Software</a></td>
+<td>This module provides an overview of the most commonly used kinds of statistical tests and links to code for running many of them in both R and python.</td>
+<td>20 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_practice/python_practice.md">Python Practice</a></td>
+<td>Use the basics of Python coding, data transformation, and data visualization to work with real data.</td>
 <td>60 min</td>
 </tr>
 <tr>
