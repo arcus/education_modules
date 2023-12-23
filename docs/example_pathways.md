@@ -232,8 +232,8 @@ Note that if you're already actively working on genomics analysis, this material
 ## Pathway 3: Big data, big questions
 
 This pathway is for people primarily interested in analysis of the rich, complex data in the electronic health record (EHR) and other big databases. 
-If you're interested in social determinants of health, retrospective analysis of clinical data, and connecting data from multiple sources, this is the pathway for you! 
-This pathway includes a gentle but thorough introduction to SQL, the programming language you'll need to be able to work with databases, as well as information about geospatial data, text data, and more.
+If you're interested in social determinants of health, retrospective analysis of clinical data, or connecting data from multiple sources, this is the pathway for you! 
+This pathway includes a gentle but thorough introduction to SQL, the programming language you'll need to be able to work with databases, as well as information about working with geospatial data, text data, and more.
 
 <details>
 <summary><strong>Big data, big questions: Modules</strong></summary>
@@ -303,14 +303,14 @@ This pathway includes a gentle but thorough introduction to SQL, the programming
 <td>60 min</td>
 </tr>
 <tr>
-<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_boundaries_anchors/regular_expressions_boundaries_anchors.md">Regular Expressions: Flags, Anchors, and Boundaries</a></td>
-<td>Use flags, anchors, and boundaries in regular expressions, or regex, for complex pattern matching.</td>
-<td>45 min</td>
-</tr>
-<tr>
 <td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_groups/regular_expressions_groups.md">Regular Expressions: Groups</a></td>
 <td>Use regular expressions, or regex, for complex pattern matching involving capturing and non-capturing groups.</td>
 <td>30 min</td>
+</tr>
+<tr>
+<td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_boundaries_anchors/regular_expressions_boundaries_anchors.md">Regular Expressions: Flags, Anchors, and Boundaries</a></td>
+<td>Use flags, anchors, and boundaries in regular expressions, or regex, for complex pattern matching.</td>
+<td>45 min</td>
 </tr>
 <tr>
 <td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_lookaheads/regular_expressions_lookaheads.md">Regular Expressions: Lookaheads</a></td>
@@ -389,7 +389,7 @@ This is designed to be welcoming to folks with no coding experience, so if R wil
 </tr>
 <tr>
 <td><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_reshape_long_wide/r_reshape_long_wide.md">Reshaping Data in R: Long and Wide Data</a></td>
-<td>A module that teaches how to reshape tabular data in R, concentrating on some typical shapes known as \&quot;long\&quot; and \&quot;wide\&quot; data.</td>
+<td>A module that teaches how to reshape tabular data in R, concentrating on some typical shapes known as "long" and "wide" data.</td>
 <td>60 min</td>
 </tr>
 <tr>
