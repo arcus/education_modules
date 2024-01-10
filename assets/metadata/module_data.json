@@ -809,8 +809,8 @@
 "module_id": "git_creation_and_tracking",
 "author": "Elizabeth Drellich",
 "email": "drelliche@chop.edu",
-"version": "1.0.10",
-"current_version_description": "Initial version",
+"version": "1.1.0",
+"current_version_description": "Add formal definition of repository and commit ",
 "module_type": "standard",
 "docs_version": "3.0.0",
 "language": "en",
@@ -833,7 +833,7 @@
 "learning_objectives": "\nAfter completion of this module, learners will be able to:\n\n- Create a Git repository\n- Add and make changes to files in the repository\n- Write short helpful descriptions, called \"commit messages\" to track the changes\n- Use `.gitignore`\n- Understand the `add` and `commit` workflow.\n\n\n",
 "sets_you_up_for": "- git_history_of_project\n",
 "depends_on_knowledge_available_in": "- git_intro\n- git_setup_windows\n- git_setup_mac_and_linux\n- bash_command_line_101\n",
-"version_history": "No previous versions.\n",
+"version_history": "- [1.0.10](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/16a4a852199689a42f04555cb581cf2dcb90fb0f/git_creation_and_tracking/git_creation_and_tracking.md#1): Initial version\n",
 "Linked Course":"bash_command_line_101 git_history_of_project git_intro git_setup_mac_and_linux git_setup_windows "
 },
 {
