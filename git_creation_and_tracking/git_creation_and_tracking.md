@@ -56,7 +56,7 @@ previous_sequential_module: git_setup_mac_and_linux, git_setup_windows
 @end
 
 @version_history 
-- [1.0.9](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/16a4a852199689a42f04555cb581cf2dcb90fb0f/git_creation_and_tracking/git_creation_and_tracking.md#1): Initial version
+- [1.0.10](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/16a4a852199689a42f04555cb581cf2dcb90fb0f/git_creation_and_tracking/git_creation_and_tracking.md#1): Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
