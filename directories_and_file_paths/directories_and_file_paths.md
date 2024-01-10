@@ -1,8 +1,8 @@
 <!--
-
+module_id: directories_and_file_paths
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.3.6
+version: 1.3.7
 current_version_description: update to new highlight box styles
 module_type: standard
 docs_version: 3.0.0

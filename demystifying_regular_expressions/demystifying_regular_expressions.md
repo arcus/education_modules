@@ -1,8 +1,8 @@
 <!--
-
+module_id: demystifying_regular_expressions
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.2
+version:  1.0.3
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0

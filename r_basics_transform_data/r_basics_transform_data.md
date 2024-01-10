@@ -1,7 +1,8 @@
 <!--
+module_id: r_basics_transform_data
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.4
+version: 1.3.7
 current_version_description: Updated with new metadata and to remove references to Binderhub
 module_type: standard
 docs_version: 2.0.0
@@ -306,7 +307,11 @@ Use `!=` if you want to select rows in which a value is **not** equal to another
 In the box below, write a `filter()` statement that returns a data frame containing only the rows from `covid_testing` in which the `last_name` column is NOT equal to "stark". Don't capture the returned data frame to assign it to an object.
 
 [[filter(covid_testing, last_name != "stark")]]
-[[?]] Hint: We include a space after any comma and on either side of the comparison operator `!=`.  We also aren't assigning the results of this `filter` to a new object.
+[[?]] Hint: Make sure you are filtering to rows in which the last_name is **NOT** "stark".  We also aren't assigning the results of this `filter` to a new object.
+<script>
+  let input = "@'input".trim();
+  /(filter\(covid_testing,\s*last_name\s*!=\s*\"stark\"\s*\))|(filter\(covid_testing,\s*last_name\s*!=\s*\'stark\'\s*\))/.test(input);
+</script>
 ********
 
 <div class = "answer">
@@ -574,19 +579,24 @@ This approach to coding is powerful because it makes it much easier for someone 
 
 ### Quiz: `%>%`
 
-In the box below, rewrite the following statement with a pipe, using the `%>%` version:
+In the box below, rewrite the following statement with either pipe:
 
 `select(mydata, first_name, last_name)`
 
 [[mydata %>% select(first_name, last_name)]]
-[[?]] Hint: We include a space after any comma and on either side of the pipe `%>%`.  We also aren't assigning the results of this `select` to a new object.
+[[?]] Hint: Remember that capitalization matters! We also aren't assigning the results of this `select` to a new object.
+<script>
+  let input = "@input".trim();
+  /mydata\s*(%>%|\|>)\s*select\(first_name,\s*last_name\)/.test(input);
+</script>
 ********
 
 <div class = "answer">
 
-`mydata %>% select(first_name, last_name)` is correct because:
+`mydata %>% select(first_name, last_name)` or 
+`mydata |> select(first_name, last_name)` is correct because:
 
-* It uses the pipe operator `%>%`
+* It uses a pipe operator, either `%>%` or `|>`
 * To the left of the pipe, there is the name of a data frame, in this case `mydata`.
 * To the right of the pipe, there is a `select()` function that includes additional arguments giving the names of the columns we want to keep.
 

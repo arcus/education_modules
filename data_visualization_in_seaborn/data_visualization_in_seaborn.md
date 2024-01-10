@@ -1,11 +1,11 @@
 <!--
-
+module_id: data_visualization_in_seaborn
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.5
-current_version_description: Update highlight boxes, update front matter, and replace text with macros.
+version: 1.3.1
+current_version_description: Change executable code blocks from sagemath to pyodide.
 module_type: standard
-docs_version: 2.0.0
+docs_version: 3.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -70,23 +70,30 @@ data_visualization_in_ggplot2
 @version_history
 Previous versions: 
 
+- [1.2.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/16a4a852199689a42f04555cb581cf2dcb90fb0f/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Update highlight boxes, update front matter, and replace text with macros.
 - [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Initial version, and fixed broken link to ggplot2 module. 
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
+import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 -->
 
 # Data Visualization in seaborn
 
 @overview
 
+@pip_install(seaborn)
+@pip_install(statsmodels)
+
 ## Lesson Preparation
 
-@lesson_prep_python_sage
+@lesson_prep_python_pyodide
 
 ### Importing seaborn
-@sage
+
+@pip_install(seaborn)
+@pip_install(statsmodels)
 
 To use the seaborn library to make visualizations, you need to import it.
 
@@ -94,13 +101,10 @@ By convention, you import it with the shorthand `sns`.
 This is optional, but we recommend you do that because when you look at seaborn code online, you'll nearly always see it with that same abbreviation.
 Following that convention will make your code more comparable to examples you see online.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
+```python
 import seaborn as sns
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
@@ -118,27 +122,26 @@ Alternatively, if you have the [Anaconda distribution of Python](https://www.ana
 
 </div>
 
-### The data
-@sage
+### <i class="fa-solid fa-table"></i> The data 
 
-First, we need to load the python modules we'll be using:
+@pip_install(seaborn)
+@pip_install(statsmodels)
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
+First, we need to load the rest of the python modules we'll be using (we already loaded `seaborn` on the previous page, but it's fine to run that code again):
+
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-The [`pandas` module](https://pandas.pydata.org/docs/getting_started/index.html)) is for working with data in python. It is conventional to import `pandas` as `pd`.
+The [`pandas` module](https://pandas.pydata.org/docs/getting_started/index.html) is for working with data in python. It is conventional to import `pandas` as `pd`.
 
 The [`numpy` module](https://numpy.org/) has several useful functions for statistical calculations and other mathematical operations useful in scientific computing. It is conventional to import `numpy` as `np`.
 
@@ -146,21 +149,20 @@ The `seaborn` module is the plotting module that is the focus of this lesson, an
 
 </div>
 
-And then read in the data set (note that we have to repeat our commands to load the libraries here, since this is a new cell):
+And then read in the data set:
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-
+```python
 covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+```
+
+@pyodide_readcsv(covid_data, "https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
+
+@pyodide_readcsv_explainer
+
+```python
 print(covid_data.shape) # gives the number of rows and columns
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 These data are from a COVID-19 serological survey conducted in Yaounde, Cameroon (Nwosu, K., Fokam, J., Wanda, F. et al., 2021[^1](Kene David Nwosu, Joseph Fokam, Franck Wanda, Lucien Mama, Erol Orel, Nicolas Ray, Jeanine Meke, Armel Tassegning, Desire Takou, Eric Mimbe, Beat Stoll, Josselin Guillebert, Eric Comte, Olivia Keiser, & Laura Ciaffi. 2021. kendavidn/yaounde\_serocovpop\_shared: Initial release v1.0.0. Zenodo. https://doi.org/10.5281/zenodo.5218965)). The authors have made all of the code and data publicly available under a [creative commons 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode) to facilitate re-use.
 
@@ -172,15 +174,6 @@ To learn more about the study, see the [zenodo page for this dataset](https://ze
 
 </div>
 
-<div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
-
-The code from this section will be at the top of each code block in this module.
-
-If you want to practice this code on your own computer, make sure to include the code to import the necessary modules and read in the data as the first lines, but you'll only have to do it once at the top of your script, not before each new command.
-
-</div>
-
 ## Scatterplots
 
 Scatterplots show the relationship between two continuous variables, one on the x-axis and one on the y-axis. Because they show each individual data point as a marker, they also provide a handy way to check visually for outliers.
@@ -189,27 +182,17 @@ For more background on scatterplots, watch [this Khan Academy series](https://ww
 
 
 ### Basic scatterplot
-@sage
 
 The seaborn library includes a powerful function called `relplot`, short for "relationships plot" because it's designed to highlight relationships among variables in the data.
 
 If you provide `relplot` with two continuous variables, it will default to making a scatterplot. Here we'll plot age and height.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
+```python
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm")
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 Note that in the above code, the `sns.relplot()` command is the one that actually creates the plot, but by default python won't show you the plot unless you ask to print it.
 The `plt.show()` command (imported from the `matplotlib` module) tells it to print out the plot it just made.
@@ -226,30 +209,21 @@ You can also create scatterplots with a similar function: `regplot` (short for "
 </div>
 
 ### Using color for continuous variables
-@sage
 
 Let's try adding information about a third variable, weight, by using color.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
+```python
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm", hue="val_weight_kg")
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
 
 ![Age and height scatterplot from the previous figure, but with weight represented by a color scale ranging from a very light pink (25 kg) to a dark purple (150 kg). Weight appears to correlate with both age and height, such that taller and older participants are also heavier. The three outliers with very small heights also have very high weights, suggesting they may represent typos during data entry.](media/seaborn_scatter_2.png)
+
 </details>
 
 <br>
@@ -257,30 +231,19 @@ plt.show()
 Note that adding hue to the command automatically adds a legend to your plot as well.
 
 ### Using color to show groups
-@sage
 
 Now let's look at using color for a categorical variable (`is_smoker`, with options `ex_fumeur`, `fumeur`, and `non_fumeur`, referring to former smokers, current smokers, and non-smokers, respectively).
 
 The values entered for `is_smoker` in the data are actually much longer than we need them to be --- they include the text of the option after the shorthand for it (e.g. former smokers are indicated by `ex_fumeur__j_ai_fum__mais_ne_fume_plus`). We don't want that additional text in the plot, so we'll recode that variable now.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-
+```python
 # recode is_smoker to make the variable labels shorter
 orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
 new_codes = ["ex-smoker", "smoker", "non-smoker"]
 
 covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-</script>
-</lia-keep>
-</div>
-
+```
+@Pyodide.eval
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
@@ -291,26 +254,13 @@ For a refresher, see this tutorial on [recoding variables in a pandas dataframe]
 
 Then we can update our scatterplot to use `is_smoker` for color.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-
+```python
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker")
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -327,7 +277,6 @@ Tip: It's generally much easier to make any necessary changes to the dataframe, 
 </div>
 
 ### Distinguish groups more clearly with color and shape
-@sage
 
 We'll improve this plot by using shape (controlled by the `style` argument) and color (controlled by `hue`) together to mark the smoking status groups.
 
@@ -338,26 +287,13 @@ Tip: Don't use color alone to convey important information in your plots because
 
 </div>
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-
+```python
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker", style = "is_smoker")
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -367,33 +303,20 @@ plt.show()
 </details>
 
 ### Custom colors
-@sage
 
 The seaborn library includes many color palettes to choose from, or you can specify colors manually.
 
 Here we'll try switching from the default color palette to a version that is easier to distinguish for people with some types of colorblindness (although remember that even when using a palette that is supposedly colorblind friendly, you should still avoid using color on its own to display important information).
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
 
+```python
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker", style = "is_smoker",
            palette = "colorblind")
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -432,22 +355,10 @@ We'll show a quick example of changing style and context here, but there are man
 </div>
 
 #### Setting plot style
-@sage
 
 There are 5 preset seaborn themes: darkgrid, whitegrid, dark, white, and ticks.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
+```python
 # color palette
 sns.set_theme(palette="colorblind")
 
@@ -457,14 +368,13 @@ sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker", style = "is_smoker")
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
 
-![Age and height scatterplot from the previous figure, now with a blank white background and no gridlines.](media/seaborn_scatter_6.png)
+![Age and height scatterplot from the previous figure, now with a blank white background and no grid lines.](media/seaborn_scatter_6.png)
 
 </details>
 
@@ -473,7 +383,7 @@ plt.show()
 
 Have you noticed we're using `style` to mean two completely different things in this code?
 
-In `seaborn`, `style` can refer to either marker type (circle, cross, square, etc.) in a scatterplot, or it can refer to the overall plot style (background color, gridlines, etc.).
+In `seaborn`, `style` can refer to either marker type (circle, cross, square, etc.) in a scatterplot, or it can refer to the overall plot style (background color, grid lines, etc.).
 It's unfortunate that the same word gets used for both, but you can still tell them apart by how they're used in the code:
 
 - overall aesthetic style of the plot is changed in a general `sns` command, not within a plotting command like `relplot` (e.g. `sns.set_style("white")`)
@@ -482,36 +392,18 @@ It's unfortunate that the same word gets used for both, but you can still tell t
 </div>
 
 #### Setting plot context
-@sage
 
 There are 4 different contexts available: notebook (default), paper, talk, and poster.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette
-sns.set_theme(palette="colorblind")
-# style
-sns.set_style("white")
-
+```python
 sns.set_context("poster")
 
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker", style = "is_smoker")
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -560,31 +452,18 @@ Histograms show the distribution of a continuous variable. The values of the var
 We'll continue using the same data we explored to make scatterplots.
 
 ### Basic histogram
-@sage
 
 Because histograms show just one variable, the only aesthetic they require is x. The y-axis of the plot will just show the counts of observations in each bin on the x-axis. (Note that it is possible to provide `sns.displot` with y instead of x, in which case it will generate a sideways histogram.)
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette and style
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
+```python
+# if your context is still set to poster from the last code block,
+# you may want to set it to notebook again
+sns.set_context("notebook")
 
 sns.displot(covid_data, x="val_age")
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -595,31 +474,14 @@ plt.show()
 
 
 ### Change the number of bins
-@sage
 
 The appearance of a histogram can change a lot depending on the number of bins you use along the x-axis. It's a good idea to try a few different sets of bins to see what works well for communicating this distribution.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette and style
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-
+```python
 sns.displot(covid_data, x="val_age", binwidth=1)
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -628,28 +490,11 @@ plt.show()
 
 </details>
 
-
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette and style
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-
+```python
 sns.displot(covid_data, x="val_age", binwidth=10)
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -660,45 +505,28 @@ plt.show()
 
 In the examples above, the take-away message from the histogram changes a fair amount depending on the binwidth used.
 
-In the first histogram, using the default binwidths, there apppears to be a drop in late teens --- the counts of patients roughly 5-15 and 20-30 is similar, but there are about half as many in the bin in between.
+In the first histogram, using the default binwidths, there appears to be a drop in late teens --- the counts of patients roughly 5-15 and 20-30 is similar, but there are about half as many in the bin in between.
 
 With binwidths of just 1 year, every dip and spike is visible, so it no longer appears that the counts of children under 15 is uniform.
 There are a number of spikes and dips there, as there are through most of the rest of the age range.
 The dip in the late teens is most extreme at about 18 or 19, so the drop in counts from middle childhood to late teens appears more gradual.
 
 In the final histogram, where each bin covers an entire decade, much of the nuance available in the earlier plots is not visible.
-Instead, the more general overall trend is more apparent: There are higher counts of younger people (children, folks in their 20's and folks in their 30's), then a steady dropoff for each of the older decades.  
+Instead, the more general overall trend is more apparent: There are higher counts of younger people (children, folks in their 20's and folks in their 30's), then a steady drop off for each of the older decades.  
 
 The best binwidth to choose depends on what you want your histogram to convey.
 
 ### Using color to show groups
-@sage
 
 As with scatterplots, we can add information about an additional variable by using color. Let's put in the variable `is_smoker` for hue so we can see how the distribution of ages differs by smoking status.
 
 Note that seaborn is continuing to use the color palette we set when we were making scatterplots (see [custom colors](#custom-colors)). If you want to change the color palette, you can do so at any time.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette and style
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-
+```python
 sns.displot(covid_data, x="val_age", hue="is_smoker")
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -713,27 +541,12 @@ That's often the most useful way to plot multiple histograms, but in this case, 
 
 You can control how `seaborn` plots the distributions with the `multiple` argument. To show stacked groups instead, use `multiple = "stack"`. This will put the three distributions one on top of the other, so the height of all three colors together in each bin corresponds to the total count across groups; the silhouette of this histogram will be identical to the original histogram without coloring by group.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette and style
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
 
+```python
 sns.displot(covid_data, x="val_age", hue="is_smoker", multiple="stack")
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -750,31 +563,14 @@ You can also use this same `displot` function to create [density plots](https://
 </div>
 
 ### Adding marginal histograms to other plots
-@sage
 
 Sometimes you may wish to show a distribution as context for another plot, such as a scatterplot. You can add marginal histograms to a bivariate plot with the `jointplot` function.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette and style
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-
+```python
 sns.jointplot(data=covid_data, x="val_age", y="val_height_cm")
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -849,33 +645,25 @@ A word of caution: You may see line plots where the data points don't actually s
 
 </div>
 
-### Data for line plots
+### <i class="fa-solid fa-table"></i> The data
 
-The data we've been using for the other examples so far doesn't lend itself well to line plots. Instead, for this example we'll use [one of the datasets included with the seaborn module](http://seaborn.pydata.org/generated/seaborn.load_dataset.html#seaborn.load_dataset), called `fmri`. It contains the hemodynamic response (`signal`) at several timepoints for a number of subjects in response to two different events (`stim` and `cue`) in two brain regions (`parietal` and `frontal`).
+The data we've been using for the other examples so far doesn't lend itself well to line plots. Instead, for this example we'll use [one of the datasets included with the seaborn module](http://seaborn.pydata.org/generated/seaborn.load_dataset.html#seaborn.load_dataset), called `fmri`. It contains the hemodynamic response (`signal`) at several time points for a number of subjects in response to two different events (`stim` and `cue`) in two brain regions (`parietal` and `frontal`).
 
 This dataset is a special example dataset for `seaborn`, so you don't need to download it separately. You can call it with the `load_dataset` function (although you will need an internet connection for that to work).
 
-We'll modify the code that runs automatically at the top of each page to load the `fmri` dataset instead of the Covid-19 data we've been working with the command: `fmri = sns.load_dataset("fmri")`
+```python
+fmri = sns.load_dataset("fmri")
+```
+
+@pyodide_readcsv(fmri, "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/fmri.csv")
 
 ### Basic line plot
-@sage
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-fmri = sns.load_dataset("fmri")
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-
+```python
 sns.relplot(x="timepoint", y="signal", kind="line", data=fmri)
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -886,29 +674,17 @@ plt.show()
 
 Note that by default `seaborn` aggregates across multiple observations at each time point, with a line at the mean and a 95% confidence interval shaded around it.
 
-In this case, we have several different subjects, and from each we have readings from two brain regions and in response to two events, so there are many observations at each timepoint. If there were only a single observation for each timepoint (more typical of standard time series data), then `relplot` would show a line connecting those observations and no confidence interval.
+In this case, we have several different subjects, and from each we have readings from two brain regions and in response to two events, so there are many observations at each time point. If there were only a single observation for each timepoint (more typical of standard time series data), then `relplot` would show a line connecting those observations and no confidence interval.
 
 ### Using color and line type to show groups
-@sage
 
 If you want to show multiple lines on a single plot, you can achieve that by adding arguments for `hue` (controls color) and `style` (controls line type, like solid or dashed), as we did for scatterplots and histograms.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-fmri = sns.load_dataset("fmri")
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-
+```python
 sns.relplot(x="timepoint", y="signal", hue="event", style="event", kind="line", data=fmri)
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -918,7 +694,6 @@ plt.show()
 </details>
 
 ### Using facets to compare plots
-@sage
 
 If you want to make more than one version of a similar plot, consider using facets.
 Facets let you split one complicated plot into a number of comparable mini plots, usually by separating the data out by levels of a categorical variable.
@@ -927,22 +702,11 @@ In the current example, let's say we wanted to create two versions of the signal
 
 You can add facets to a `seaborn` plot by adding an argument for either `col` (for columns) or `row` (for rows) --- or both, if you want to show several different facets.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-fmri = sns.load_dataset("fmri")
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-
+```python
 sns.relplot(x="timepoint", y="signal", hue="event", style="event", col = "region", kind="line", data=fmri)
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -1026,7 +790,6 @@ Either way is fine! The best approach for you likely depends on your level of in
 </div>
 
 ### Linear regression trend lines
-@sage
 
 Because trend lines are such a useful visual summary, `seaborn` provides several options to add trend lines to your plots quickly and easily.
 
@@ -1039,28 +802,12 @@ For more background on `regplot` vs. `lmplot`, see [the seaborn regression tutor
 
 </div>
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette and style
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-
+```python
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm")
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -1077,35 +824,18 @@ A couple things about this plot are not ideal:
 We can address the first issue by adjusting alpha for the scatterplot to make the markers more transparent. Alpha ranges between 0 (totally transparent) and 1 (totally opaque).
 
 ### Using alpha to fix overplotting
-@sage
 
 One reasonable guess for how to adjust `alpha` in our plot would be to add an `alpha` argument to the command, as we did previously for `hue` and `style`.
 For example, you might try to set alpha to .1 by doing something like this:
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette and style
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-
+```python
 # this won't work
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            alpha = .1)
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 If you try to run that code, you'll get an error.
 The problem is that we're using a single function to draw both the scatterplot and the trend line, so `seaborn` wouldn't know if we meant `alpha` to refer to the scatterplot, the trend line, or both.
@@ -1133,29 +863,13 @@ There is a much steeper learning curve for `matplotlib` compared to `seaborn`, h
 
 In this case, we can add an argument `scatter_kws` that passes additional "keyword arguments" to the `matplotlib` function drawing the scatterplot via a [python dictionary](https://www.w3schools.com/python/python_dictionaries.asp). There are [many possible keyword arguments](https://matplotlib.org/3.5.1/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D) you can use, but we'll just set `alpha` here.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette and style
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-
+```python
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            scatter_kws={"alpha": .1})
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -1167,36 +881,19 @@ plt.show()
 This solves the overplotting issue, but we still have the problem of the linear trend line not being a good fit for the data.
 
 ### Polynomial regression trend lines
-@sage
 
 One way to add more flexibility to a linear trend line is by adding [polynomial terms](https://www.theanalysisfactor.com/regression-modelshow-do-you-know-you-need-a-polynomial/) to the model. A second order polynomial model includes linear and quadratic terms, a third order polynomial model includes linear, quadratic, and cubic terms, and so on.
 
 We'll try adding a quadratic term here, to see if it looks like a second order polynomial linear regression is a better description of the data.
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette and style
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-
+```python
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            scatter_kws={"alpha": .1},
            order = 2)
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -1217,7 +914,6 @@ In general, polynomial models are a good choice when the polynomial relationship
 </div>
 
 ### Lowess curve trend lines
-@sage
 
 If you want a high level of flexibility in your trend line, you can achieve that with much less complexity by switching to a non-parametric approach like [local regression](https://en.wikipedia.org/wiki/Local_regression), one example of which is lowess ("locally weighted scatterplot smoothing") curves.
 
@@ -1230,30 +926,14 @@ For a good conceptual explanation of lowess curves in particular, see the [Stats
 
 </div>
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette and style
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-
+```python
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            scatter_kws={"alpha": .1},
            lowess=True)
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 <details>
 <summary>Click to see the plot with alt text available</summary>
@@ -1270,7 +950,6 @@ There are several more options for kinds of trend lines to draw in `seaborn`, in
 </div>
 
 ### Quiz: Trend Lines
-@sage
 
 What function can you use to draw a scatterplot with trend line?
 
@@ -1290,37 +969,23 @@ Either `regplot` or `lmplot` can be used to draw scatterplots with trend lines.
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-For the following two questions, you'll be asked to modify code from the lesson.
+### Quiz: Facets
+
+For the following question, you'll be asked to modify code from the lesson.
 As you work on the code, test it out by editing the interactive code block so you can see what your code does.
 
 Note that your solution may not look exactly like the solution code provided --- if your code works and it generates a plot that meets your needs, then it's perfect!
 
 </div>
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette and style
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
-
+```python
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            scatter_kws={"alpha": .1},
            lowess=True)
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 Modify the code from the final example, the [lowess curve trend line](#lowess-curve-trend-lines) (copied above), to separate out respondents by smoking status (`is_smoker`) with a separate facet for each.
 
@@ -1335,30 +1000,21 @@ sns.lmplot(data = covid_data,
 # If you used col, try switching to row now to see how the plot changes!
 ```
 
-<div class="python">
-<lia-keep>
-<script type="text/x-sage">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-covid_data = pd.read_csv("https://raw.githubusercontent.com/kendavidn/yaounde_serocovpop_shared/v1.0.0/data/yaounde_covid_seroprev_dataset.csv")
-# recode is_smoker to make the variable labels shorter
-orig_codes = ["ex_fumeur__j_ai_fum__mais_ne_fume_plus", "fumeur__je_fume_actuellement", "non_fumeur__je_n_ai_jamais_fum"]
-new_codes = ["ex-smoker", "smoker", "non-smoker"]
-covid_data['is_smoker'] = covid_data['is_smoker'].replace(orig_codes, new_codes)
-# color palette and style
-sns.set_theme(palette="colorblind")
-sns.set_style("white")
+### Quiz: Color
 
+For the following question, you'll be asked to modify code from the lesson.
+As you work on the code, test it out by editing the interactive code block so you can see what your code does.
+
+Note that your solution may not look exactly like the solution code provided --- if your code works and it generates a plot that meets your needs, then it's perfect!
+
+```python
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            scatter_kws={"alpha": .1},
            lowess=True)
 plt.show()
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 Modify the above code again. This time change it to get separate trend lines for each smoking status (`is_smoker`), but all shown together on single plot. (Hint: Use color to distinguish the groups.)
 

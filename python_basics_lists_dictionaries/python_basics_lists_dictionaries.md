@@ -1,9 +1,9 @@
 <!--
-
+module_id: python_basics_lists_dictionaries
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.1.0
-current_version_description: Added clarifying language about `.pop()` method, added more thorough explanation of the correct answer to the second dictionary quiz question, explained that there is no requirement to memorize methods, and fixed quiz answer checking that was throwing an error for double quotes.
+version: 1.2.1
+current_version_description: Replaced SageMathCells with Pyodide cells for better usability.
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -23,7 +23,6 @@ Learners should be able to recognize functions, methods, and variables in Python
 @end
 
 @learning_objectives
-
 After completion of this module, learners will be able to:
 
 - Create and edit lists
@@ -40,29 +39,26 @@ coding_level: basic
 coding_language: python
 
 @sets_you_up_for
-
 - python_basics_loops_conditionals
 - python_basics_exercise
 - pandas_transform
-
 @end
 
 @depends_on_knowledge_available_in
-
 - demystifying_python
 - python_basics_variables_functions_methods
-
 @end
-
 
 @version_history
 Previous versions: 
 
-[1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/279f48bab219dd4622888a6301b7ca5b48880370/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1): Initial version
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5e1bbae6792dc5adc7cfcc99860b0f9e1447daa6/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1): Added clarifying language about `.pop()` method, added more thorough explanation of the correct answer to the second dictionary quiz question, explained that there is no requirement to memorize methods, and fixed quiz answer checking that was throwing an error for double quotes.
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/279f48bab219dd4622888a6301b7ca5b48880370/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1): Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_python.md
+import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 
 -->
 
@@ -72,9 +68,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 ## Lesson Preparation
 
-@sage
-
-@lesson_prep_python_sage
+@lesson_prep_python_pyodide
 
 ## Collection Objects in Python
 
@@ -92,17 +86,12 @@ There are a couple of other collections, called [tuples](https://www.geeksforgee
 
 **Lists** in Python are objects that contain a collection of multiple items. They are surrounded by square brackets `[ ]` and the items in the list are separated by commas:
 
-@sage
-<div class="python_link">
-<lia-keep>
-<script type="text/x-sage">
 
+```python
 produce = ["tomato", "squash", "apple", "cucumber", "peach", "spinach"]
 print(produce)
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 There are a few important characteristics of lists:
 
@@ -127,139 +116,107 @@ There are a few important characteristics of lists:
 
 Because Python lists are changeable, you'll need to know a few ways to change them! First, let's build our `produce` list again. 
 
-@sage
-<div class="python_link">
-<lia-keep>
-<script type="text/x-sage">
 
+```python
 produce = ["tomato", "squash", "apple", "cucumber", "peach", "spinach"]
 print(produce)
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 Below are a few of the most commonly-used list methods, but not the only ones; you can read more about list methods in the [Python documentation about lists](https://docs.python.org/3/tutorial/datastructures.html).
- 
-* **`.pop()`** removes a specific element by **index** and *returns that element*. Run the code below to see the output of `produce.pop(0)`.
 
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
 
-    print(produce.pop(0))
+`pop()`
+---
 
-    </script>
-    </lia-keep>
-    </div>
+**`.pop()`** removes a specific element by **index** and *returns that element*. Run the code below to see the output of `produce.pop(0)`.
 
-    The element at index `0` (the first position in the list) has now been removed from `produce`:
+```python
+produce.pop(0)
+```
+@Pyodide.eval
+    
 
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
+The element at index `0` (the first position in the list) has now been removed from `produce`:
 
-    print(produce)
-
-    </script>
-    </lia-keep>
-    </div>
-
-* **`.remove()`** removes a specific element by **value**.
-
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
-
-    produce.remove("apple")
+```python
 print(produce)
+```
+@Pyodide.eval
 
-    </script>
-    </lia-keep>
-    </div>
 
-    Note that the `.remove()` method, unlike `.pop()`, does not itself return any output. If you want to see what happens if you run `print(produce.remove('apple'))`, try changing the code block above (be sure to re-run all of the code blocks above it!).
+`remove()`
+---
+
+**`.remove()`** removes a specific element by **value**.
+
+
+```python
+produce.remove("apple")
+print(produce)
+```
+@Pyodide.eval
+
+Note that the `.remove()` method, unlike `.pop()`, does not itself return any output. If you want to see what happens if you run `print(produce.remove('apple'))`, try changing the code block above (be sure to re-run all of the code blocks above it!).
 
   
-    <div class = "options">
-    <b style="color: rgb(var(--color-highlight));">Another option</b><br>
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
 
-    Another option for removing an element from a list by its index is **`del`**. The syntax for using `del` will be a little different, because it is a [**keyword**](https://realpython.com/python-keywords/), not a list method. It is useful because it allows you to delete list elements in a **slice**. Slicing uses subsetting notation to indicate where the slice begins and ends. The first index listed is **inclusive**, or included in the slice; this is followed by a colon; the second index listed is **exclusive**, or excluded from the slice; finally, these numbers are surrounded by square brackets.
+Another option for removing an element from a list by its index is **`del`**. The syntax for using `del` will be a little different, because it is a [**keyword**](https://realpython.com/python-keywords/), not a list method. It is useful because it allows you to delete list elements in a **slice**. Slicing uses subsetting notation to indicate where the slice begins and ends. The first index listed is **inclusive**, or included in the slice; this is followed by a colon; the second index listed is **exclusive**, or excluded from the slice; finally, these numbers are surrounded by square brackets.
 
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
-
-    del produce[1:3]
+```python
+del produce[1:3]
 print(produce)
+```
+@Pyodide.eval
 
-    </script>
-    </lia-keep>
-    </div>
+ </div>
 
-    </div>
+`clear()`
+---
 
+**`.clear()`** removes everything from the list.
 
-* **`.clear()`** removes everything from the list.
-
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
-
-    produce.clear()
+```python
+produce.clear()
 print(produce)
+```
+@Pyodide.eval
 
-    </script>
-    </lia-keep>
-    </div>
+`append()`
+---
 
-* **`.append()`** adds an element to the end of a list.
+**`.append()`** adds an element to the end of a list.
 
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
-
-    produce.append("pear")
+```python
+produce.append("pear")
 print(produce)
+```
+@Pyodide.eval
 
-    </script>
-    </lia-keep>
-    </div>
+`insert()`
+---
 
-* **`.insert()`** adds an element to a specific position.
+**`.insert()`** adds an element to a specific position.
 
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
-
-    produce.insert(0, "kale")
+```python
+produce.insert(0, "kale")
 print(produce)
+```
+@Pyodide.eval
 
-    </script>
-    </lia-keep>
-    </div>
+`extend()`
+---
 
-* **`.extend()`** adds another list to your list (or another iterable object, but don't worry about that for now).
+**`.extend()`** adds another list to your list (or another iterable object, but don't worry about that for now).
 
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
-    berries= ["strawberry", "blueberry", "raspberries"]
+```python
+berries= ["strawberry", "blueberry", "raspberries"]
 produce.extend(berries)
 print(produce)
-
-    </script>
-    </lia-keep>
-    </div>
-
+```
+@Pyodide.eval
 
 You'll notice that with each step, our list `produce` has been permanently changed-- in order to "start over" with the original list, we simply need to re-run the first code chunk.
 
@@ -314,128 +271,96 @@ Another kind of collection object in Python is a **dictionary**. Dictionaries ar
 
 Let's build an example dictionary:
 
-@sage
-<div class="python_link">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 contact_info = {"address" : "123 Puppydog Lane",
                 "telephone" : "987-654-3210",
                 "email" : "myname@email.com"}
 print(contact_info)
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 ### Dictionary methods
 
-@sage
-<div class="python_link">
-<lia-keep>
-<script type="text/x-sage">
-
+```python
 contact_info = {"address" : "123 Puppydog Lane",
                 "telephone" : "987-654-3210",
                 "email" : "myname@email.com"}
 print(contact_info)
-
-</script>
-</lia-keep>
-</div>
+```
+@Pyodide.eval
 
 Like lists, dictionaries have some useful methods you can use to access or alter their data:
 
-* **`.keys()`** returns a list of the dictionary's keys.
+`keys()`
+---
 
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
+**`.keys()`** returns a list of the dictionary's keys.
 
-    print(contact_info.keys())
+```python
+print(contact_info.keys())
+```
+@Pyodide.eval
 
-    </script>
-    </lia-keep>
-    </div>
+`values()`
+---
 
-* **`.values()`** returns a list of the dictionary's values.
+**`.values()`** returns a list of the dictionary's values.
 
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
+```python
+print(contact_info.values())
+```
+@Pyodide.eval
 
-    print(contact_info.values())
+`items()`
+---
 
-    </script>
-    </lia-keep>
-    </div>
+**`.items()`** returns a list of the dictionary's key-value pairs as tuples (an object that holds multiple values, similar to a list, except that they are *unchangeable*). This may seem not very useful at first glance, but since different collection objects have different properties, there could be circumstances in which it is more useful to have the data in a different kind of object.
 
-* **`.items()`** returns a list of the dictionary's key-value pairs as tuples (an object that holds multiple values, similar to a list, except that they are *unchangeable*). This may seem not very useful at first glance, but since different collection objects have different properties, there could be circumstances in which it is more useful to have the data in a different kind of object.
+```python
+print(contact_info.items())
+```
+@Pyodide.eval
 
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
+`pop()`
+---
 
-    print(contact_info.items())
+**`.pop()`** works similarly for dictionaries as it does for lists, except that it removes an element by its key.
 
-    </script>
-    </lia-keep>
-    </div>
-
-* **`.pop()`** works similarly for dictionaries as it does for lists, except that it removes an element by its key.
-
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
-
-    print(contact_info.pop("email"))
+```python
+print(contact_info.pop("email"))
 print(contact_info)
+```
+@Pyodide.eval
 
-    </script>
-    </lia-keep>
-    </div>
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-    <div class = "help">
-    <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+Note that this change is permanent! If you want to keep the original dictionary as-is, you should make a copy of the dictionary (using the `.copy()` method and assigning the copy to a new variable), and then using `.pop()` on the copy (in this example though, all you need to do to restore the dictionary to its original form is re-run the first code cell or refresh the page):
 
-    Note that this change is permanent! If you want to keep the original dictionary as-is, you should make a copy of the dictionary (using the `.copy()` method and assigning the copy to a new variable), and then using `.pop()` on the copy:
-
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
-
-    contact_info_copy = contact_info.copy()
+```python
+contact_info_copy = contact_info.copy()
 contact_info_copy.pop("telephone")
 print(contact_info)
 print(contact_info_copy)
+```
+@Pyodide.eval
 
-    </script>
-    </lia-keep>
-    </div>
+</div>
 
-    In this example though, all you need to do to restore the dictionary to its original form is re-run the first code cell or refresh the page.
-    </div>
 
-* There isn't a method to add items to a dictionary, but it can be done! You can give the dictionary a new key and assign a value to it (notice that we're using square bracket notation again, like we did for lists). This is another example of a permanent change to our dictionary.
 
-    @sage
-    <div class="python_link">
-    <lia-keep>
-    <script type="text/x-sage">
+Adding items to a dictionary
+---
 
-    contact_info["work_email"] = "myname@company.com"
+There isn't a method to add items to a dictionary, but it can be done! You can give the dictionary a new key and assign a value to it (notice that we're using square bracket notation again, like we did for lists). This is another example of a permanent change to our dictionary.
+
+```python
+contact_info["work_email"] = "myname@company.com"
 print(contact_info)
+```
+@Pyodide.eval
 
-    </script>
-    </lia-keep>
-    </div>
-
-  You can also use the same syntax with an existing key to assign a new value (note that the new value will **replace** the previous value).
+You can also use the same syntax with an *existing* key to assign a new value (note that the new value will **replace** the previous value).
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
