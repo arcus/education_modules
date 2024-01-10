@@ -93,7 +93,7 @@ If you need to get Git configured on your computer there is a module to help you
 
 ## Creating a Repository
 
-Usually you will use Git to track the progress of a project. Each project is made up of a [**repository**](https://swcarpentry.github.io/git-novice/reference.html#repository) (sometimes also referred to as a "repo"), which is a location that stores all of the files for the project, as well as all of the records of their changes (otherwise known as [**commits**](https://swcarpentry.github.io/git-novice/reference.html#commit)). 
+Usually you will use Git to track the progress of a project. Each project is made up of a [**repository**](https://swcarpentry.github.io/git-novice/reference.html#repository) (sometimes also referred to as a "repo"), which is a directory that stores all of the files for the project, as well as all of the records of their changes (otherwise known as [**commits**](https://swcarpentry.github.io/git-novice/reference.html#commit)). 
 
 As we learn about Git, we will use the story of Wolfman and Dracula who are investigating if it
 is possible to send a planetary lander to Mars.
