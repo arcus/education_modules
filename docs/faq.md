@@ -13,7 +13,7 @@ The DART program provides free, open source educational materials to help workin
 
 <details>
 <summary><strong>Can I enroll in DART?</strong></summary>
-There is no enrollment process for DART. You can get started learning with DART right now by exploring our <a href="">full list of educational modules</a>, <a href="">finding a pathway you like</a>, or by using our <a href="https://learn.arcus.chop.edu">prototype module discovery application</a> to build your own pathway.
+There is no enrollment process for DART. You can get started learning with DART right now by exploring our <a href="https://arcus.github.io/education_modules/list_of_modules">full list of educational modules</a>, <a href="https://arcus.github.io/education_modules/example_pathways">finding a pathway you like</a>, or by using our <a href="https://learn.arcus.chop.edu">prototype module discovery application</a> to build your own pathway.
 </details>
 
 <details>
@@ -38,22 +38,22 @@ We do not anticipate offering another 16 week training program. Instead we are w
 <summary><strong>Can DART teach me ____?</strong></summary>
 DART teaches data science skills with a strong emphasis on free, open source software. The principles of data cleaning and preparation we teach are useful regardless of what software you use, but we only provide specific coding instruction in open source languages. 
 
-The best way to find out if we teach a particular topic is to take a look at our offerings in the category you are interested in. You can explore all modules DART offers through the <a href="">list of DART modules on this website</a> or the <a href="https://learn.arcus.chop.edu">prototype module discovery application</a>.
+The best way to find out if we teach a particular topic is to take a look at our offerings in the category you are interested in. You can explore all modules DART offers through the <a href="https://arcus.github.io/education_modules/list_of_modules">list of DART modules on this website</a> or the <a href="https://learn.arcus.chop.edu">prototype module discovery application</a>.
 </details>
 
 <details>
 <summary><strong>I'm a complete novice, is DART for me?</strong></summary>
-Yes! We have materials that are designed to get you started even if you have never even thought of giving data science or coding a try. Take a look at the <a href="">Suggested Learning Pathways</a> and pick one that meets your needs.
+Yes! We have materials that are designed to get you started even if you have never even thought of giving data science or coding a try. Take a look at the <a href="https://arcus.github.io/education_modules/example_pathways">Suggested Learning Pathways</a> and pick one that meets your needs.
 </details>
 
 <details>
 <summary><strong>I already have some experience with data science or coding, can DART help me improve my skills?</strong></summary>
-The best way to find out is to take a look at our offerings in the category you are interested in. You can explore all modules DART offers through the <a href="">list of DART modules on this website</a> or the <a href="https://learn.arcus.chop.edu">prototype module discovery application</a>.
+The best way to find out is to take a look at our offerings in the category you are interested in. You can explore all modules DART offers through the <a href="https://arcus.github.io/education_modules/list_of_modules">list of DART modules on this website</a> or the <a href="https://learn.arcus.chop.edu">prototype module discovery application</a>.
 </details>
 
 <details>
 <summary><strong>Why don't you teach ____?</strong></summary>
-If we don't have materials on a topic you want to learn, there are a couple of possibilities. It may be that the topic is outside the scope of the DART project, for example Excel and Stata are proprietary programs. Another possibility is that we plan to offer materials on that topic, but haven't yet developed them. You can see <a href="">which modules are actively under development on our GitHub project page</a>. A third possibility is that we have not yet found a subject matter expert to contribute materials on that topic. Please reach out if you would be willing to share your expertise by contributing to DART!
+If we don't have materials on a topic you want to learn, there are a couple of possibilities. It may be that the topic is outside the scope of the DART project, for example Excel and Stata are proprietary programs. Another possibility is that we plan to offer materials on that topic, but haven't yet developed them. You can see <a href="https://github.com/orgs/arcus/projects/25">which modules are actively under development on our GitHub project page</a>. A third possibility is that we have not yet found a subject matter expert to contribute materials on that topic. Please reach out if you would be willing to share your expertise by contributing to DART!
 </details>
 
 ## Can I use DART in my lab or classroom?
@@ -75,7 +75,7 @@ The core DART team consists of five data educators at Children's Hospital of Phi
 
 <details>
 <summary><strong>How can I get involved?</strong></summary>
-There are many ways to get involved with DART! Filling out the feedback form at the end of each module is one way to help shape and improve the program, but you can also <a href="">create issues in our repository on GitHub</a>, <a href="">contribute your own module</a>, or <a href="">translate an existing module</a>. Please <a href="">fill out the DART Interest Form</a> and we will be in touch!
+There are many ways to get involved with DART! Filling out the feedback form at the end of each module is one way to help shape and improve the program, but you can also <a href="https://github.com/arcus/education_modules/issues/new/choose">create issues in our repository on GitHub</a> or <a href="https://github.com/arcus/education_modules/blob/main/_for_authors/write_a_module.md#how-to-create-an-educational-module">contribute your own module</a>. Please <a href="https://redcap.chop.edu/surveys/?s=FPHWFNEA9KN3HERF">fill out the DART Interest Form</a> and we will be in touch!
 </details>
 
 
