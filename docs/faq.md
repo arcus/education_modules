@@ -57,7 +57,8 @@ If we don't have materials on a topic you want to learn, there are a couple of p
 </details>
 
 ## Can I use DART in my lab or classroom?
-Yes! Under our CC.SA license you can freely take any part of the DART program and use it directly or adapt it to your needs as long as you give us proper acknowledgement. If you adapt our materials, you must use a similar license allowing others to continue to freely use and adapt.
+Yes! Under our <a href="https://github.com/arcus/education_modules/blob/main/LICENSE">Creative Commons Attribution-ShareAlike</a> license you can freely take any part of the DART program and use it directly or adapt it to your needs as long as you give us proper acknowledgement. If you adapt our materials, you must use the same license allowing others to continue to freely use and adapt any derivative materials. For more details, see the Creative Commons <a href="https://creativecommons.org/licenses/by-sa/4.0/">summary of the license</a> or <a href="https://github.com/arcus/education_modules/blob/main/LICENSE">read the full license</a>.
+
 
 <details><summary><strong>Do I have to tell you if I use the DART materials?</strong></summary>
 You do not have to tell us, but we hope that you will. We love to hear how DART materials are being used and adapted to different groups' needs!
