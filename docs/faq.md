@@ -52,6 +52,11 @@ The best way to find out is to take a look at our offerings in the category you 
 </details>
 
 <details>
+<summary><strong>Will you have a module on ____ in the future?</strong></summary>
+We are always adding new modules to the DART collection! To see if a particular topic is currently in the works, check out the <a href="https://github.com/orgs/arcus/projects/25">GitHub project board</a>. If there is a topic that you think would be a benefit to the DART program, and it doesn't appear to be in the works yet, let us know by either emailing us at <a href="mailto:dart@chop.edu">dart@chop.edu</a>.
+</details>
+
+<details>
 <summary><strong>Why don't you teach ____?</strong></summary>
 If we don't have materials on a topic you want to learn, there are a couple of possibilities. It may be that the topic is outside the scope of the DART project, for example Excel and Stata are proprietary programs. Another possibility is that we plan to offer materials on that topic, but haven't yet developed them. You can see <a href="https://github.com/orgs/arcus/projects/25">which modules are actively under development on our GitHub project page</a>. A third possibility is that we have not yet found a subject matter expert to contribute materials on that topic. Please reach out if you would be willing to share your expertise by contributing to DART!
 </details>
@@ -65,7 +70,7 @@ You do not have to tell us, but we hope that you will. We love to hear how DART 
 </details>
 
 <details><summary><strong>If I create new materials when adapting DART to my needs, can I contribute them back?</strong></summary>
-Absolutely, we are always looking for collaborators to contribute material in their areas of expertise. If you contribute material back to the DART program, it will go through our rigorous quality assurance process before it is added to our offerings.</details>
+Absolutely, we are always looking for collaborators to contribute material in their areas of expertise, and you will receive authorship credit for everything you write. If you contribute material back to the DART program, it will go through our rigorous quality assurance process before it is added to our offerings.</details>
 
 ## Who is the DART team? 
 
