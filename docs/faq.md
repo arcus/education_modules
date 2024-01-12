@@ -35,13 +35,6 @@ We do not anticipate offering another 16 week training program. Instead we are w
 ## Is DART for me?
 
 <details>
-<summary><strong>Can DART teach me ____?</strong></summary>
-DART teaches data science skills with a strong emphasis on free, open source software. The principles of data cleaning and preparation we teach are useful regardless of what software you use, but we only provide specific coding instruction in open source languages. 
-
-The best way to find out if we teach a particular topic is to take a look at our offerings in the category you are interested in. You can explore all modules DART offers through the <a href="https://arcus.github.io/education_modules/list_of_modules">list of DART modules on this website</a> or the <a href="https://learn.arcus.chop.edu">prototype module discovery application</a>.
-</details>
-
-<details>
 <summary><strong>I'm a complete novice, is DART for me?</strong></summary>
 Yes! We have materials that are designed to get you started even if you have never even thought of giving data science or coding a try. Take a look at the <a href="https://arcus.github.io/education_modules/example_pathways">Suggested Learning Pathways</a> and pick one that meets your needs.
 </details>
@@ -52,8 +45,15 @@ The best way to find out is to take a look at our offerings in the category you 
 </details>
 
 <details>
+<summary><strong>Can DART teach me ____?</strong></summary>
+DART teaches data science skills with a strong emphasis on free, open source software. The principles of data cleaning and preparation we teach are useful regardless of what software you use, but we only provide specific coding instruction in open source languages. 
+
+The best way to find out if we teach a particular topic is to take a look at our offerings in the category you are interested in. You can explore all modules DART offers through the <a href="https://arcus.github.io/education_modules/list_of_modules">list of DART modules on this website</a> or the <a href="https://learn.arcus.chop.edu">prototype module discovery application</a>.
+</details>
+
+<details>
 <summary><strong>Will you have a module on ____ in the future?</strong></summary>
-We are always adding new modules to the DART collection! To see if a particular topic is currently in the works, check out the <a href="https://github.com/orgs/arcus/projects/25">GitHub project board</a>. If there is a topic that you think would be a benefit to the DART program, and it doesn't appear to be in the works yet, let us know by either emailing us at <a href="mailto:dart@chop.edu">dart@chop.edu</a>.
+We are always adding new modules to the DART collection! To see if a particular topic is currently in the works, check out the <a href="https://github.com/orgs/arcus/projects/25">GitHub project board</a>. If there is a topic that you think would be a benefit to the DART program, and it doesn't appear to be in the works yet, let us know by either emailing us at <a href="mailto:dart@chop.edu">dart@chop.edu</a> or <a href="https://github.com/arcus/education_modules/issues/new/choose">creating a new issue for your proposed module(s)</a>.
 </details>
 
 <details>
