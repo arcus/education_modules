@@ -174,6 +174,25 @@ Most things you want to accomplish on your computer can be done using multiple i
 
 ## Quiz: Interfaces
 
+Which of the following could be defined as an interface?
+
+[[X]] A method for two computer systems to interact
+[[X]] A series of switches and dials used to control a physical device
+[[X]] A point-and-click set of menus in a computer program
+[[X]] A set of on-screen information about your progress in a video game
+[[X]] A car dashboard
+[[?]] Hint: There are several correct answers!
+***
+
+<div class = "answer">
+
+All of these are examples of interfaces!  An interface is a way to interact with a system -- to get information from it (as in the displays on a car or video game) or to give information to it (as in a clickable menu, switches and dials, or typed commands).  Some interfaces are for humans (like a car dashboard) and some are intended for use by an automated system (like an API -- a method for two computer systems to interact). 
+
+</div>
+***
+
+------
+
 Which of the following is true about graphical user interfaces (GUIs)?  Check all that apply!
 
 [[ ]] GUIs offer the same level of control of a system as command line interfaces (CLIs).
