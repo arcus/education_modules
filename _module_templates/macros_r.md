@@ -84,7 +84,8 @@ If you're running into problems with installation on your computer, the most tho
 Take a look at the detailed instructions there, and you may be able to figure out what's going wrong with your install.
 
 Installation problems can be tricky to solve, though, since so much depends on what the existing configuration of your computer is like.
-If you're stuck, reach out and ask for help! 
+
+If you're stuck, reach out and ask for help! While the authors of these modules can't provide support for software installations, you may find assistance through [StackOverflow](https://stackoverflow.com/), a local user group (for instance, if your university or employer has an R User Group), or the IT department at your institution. Learning how to ask for help effectively is its own challenge: may we suggest our module [How to Troubleshoot](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/how_to_troubleshoot/how_to_troubleshoot.md#1) for tips?
 
 </div>
 
