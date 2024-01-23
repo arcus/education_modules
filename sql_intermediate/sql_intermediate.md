@@ -2,7 +2,7 @@
 module_id: sql_intermediate
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.2.3
+version: 1.2.4
 current_version_description: Correct typo, update metadata version
 module_type: standard
 docs_version: 2.0.0
@@ -89,7 +89,7 @@ SQL is great at working with rectangular data, data that is stored in tables wit
 
 If you want to review SQL at a high level, consider our [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md) module.
 
-Most users of SQL do a lot of their work in one of many SQL **clients**.  A SQL client is a piece of software that has lots of functions, like allowing you to connect to various databases you have access to, giving you a place to type queries and submit them, and diagramming capability to help you understand the relationships in your database.  Here's a screenshot from a popular SQL client, DBeaver.  This screenshot is one they share [on their website](https://dbeaver.io/screenshots/).
+Most users of SQL do a lot of their work in one of many SQL **clients**.  A SQL client is a piece of software that has lots of functions, like allowing you to connect to various databases you have access to, giving you a place to type queries and submit them, and diagramming capability to help you understand the relationships in your database.  Here's a screenshot from a popular SQL client, DBeaver, found on [DBeaver's Screenshots Page](https://dbeaver.io/screenshots/).
 
 ![Complex application screen with a long SQL query, connection information for a PostgreSQL database, and more](media/dbeaver_screenshot.png)<!-- style = "max-width: 800px; border: 1px solid rgb(var(--color-highlight));" -->
 
@@ -838,7 +838,7 @@ FROM generations;
 
 * [regular expressions 101](https://regex101.com/) is extremely helpful in practicing regex skills, whether that's for use in SQL or elsewhere.
 
-* To read more about the basic types of **operators** available for use in a SQL query, check out [tutorialspoint.com](https://www.tutorialspoint.com/sql/sql-operators.htm) for some helpful documentation.
+* Tutorials Point has some helpful documentation you may want to check out [about the basic types of operators available for use in a SQL query](https://www.tutorialspoint.com/sql/sql-operators.htm).
 
 
 ## Feedback
