@@ -262,11 +262,11 @@ The difference between `=` and `==`
 
 One common issue to be aware of is the difference between the single equals (=) and the double equals (==) operators.
 
-In R, using a single equals sign **assigns a value**.  It asserts "these things **are** equal."  
+In R, using a single equals sign **assigns a value**.  It **asserts** "these things are equal."  
 
 * For example, `data = my_data` means "please set `data` equal to `my_data`."  
 
-The double equals sign does not assign, but **compares**.  It asks "**are** these things equal?".  That's why we use double equals in the context of a logical test that **compares** the left hand side, e.g. `mrn`, with the right hand side, e.g. 5000083, to check whether or not they are the same.
+The double equals sign does not assign, but **compares**.  It **asks** "are these things equal?".  That's why we use double equals in the context of a logical test that **compares** the left hand side, e.g. `mrn`, with the right hand side, e.g. 5000083, to check whether or not they are the same.
 
 * For example, `name == "Joan"` means "is `name` equal to 'Joan'?"  
 
@@ -430,7 +430,7 @@ And here is a silly set of examples.  Keep in mind for this that rabbits are qua
 
 We also have to consider using parenthesis to ensure the proper order of operations when we have more than two conditions we're considering.  Just like you need to think about parentheses in math, you might have to do the same thing with logical conditions!
 
-The order of operations for boolean algebra, from highest to lowest priority, is NOT, then AND, then OR.  Forgetting to account for order of operations is a common mistake by novice users of boolean logic.
+The order of operations for boolean algebra, from highest to lowest priority, is **NOT**, then **AND**, then **OR**.  Forgetting to account for order of operations is a common mistake by novice users of boolean logic.
 
 On the previous page, we suggested a complex condition we want to filter for.  We wanted to preserve rows that meet one or both of the following conditions:
 
