@@ -1,8 +1,8 @@
 <!--
-
+module_id: genomics_quality_control
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.2
+version:  1.1.3
 current_version_description: Add explanation about why we use AWS for genomics modules.
 module_type: standard
 docs_version: 2.0.0

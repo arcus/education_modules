@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.2.1
-current_version_description: make CSS come from GCS
+version:  1.3.0
+current_version_description: Add module\_id to macros for creating the REDCap survey link
 language: en
 narrator: UK English Female
 title: Module Macros
@@ -13,7 +13,8 @@ comment:  This is placeholder module to save macros used in other modules.
 
 Previous versions: 
 
-- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ad25398d0eef884402cff0f0c4fb4ca360d3b8f4/_module_templates/macros.md#1): Add current_version_description and version_history metadata.
+- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a9aa1b38fc51db4252c9547654d9e36dba7864e5/_module_templates/macros.md#1): make CSS come from GCS
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ad25398d0eef884402cff0f0c4fb4ca360d3b8f4/_module_templates/macros.md#1): Add current\_version\_description and version\_history metadata.
 - [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/e983922162e6fbf971c03dc96052f68713cc72af/_module_templates/macros.md#1): Initial version 
 
 @end
@@ -47,15 +48,16 @@ This version (@version): @current_version_description
 
 @make_survey_url
 <script modify="false">
-function makeURL(title, version, module_type) {
+function makeURL(title, version, module_type, module_id) {
   let url = new URL('https://redcap.chop.edu/surveys');
   url.searchParams.set('s', 'KHTXCXJJ93');
   url.searchParams.set('module_name', title);
   url.searchParams.set('version', version);
   url.searchParams.set('module_type', module_type);
+  url.searchParams.set('module_id', module_id);
   return url;
 }
-var surveyURL = makeURL(@0, @1, @2);
+var surveyURL = makeURL(@0, @1, @2, @3);
 
 send.html(`<a href="${surveyURL}")">our brief survey</a>`)
 </script>
@@ -74,7 +76,7 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If the module difficulty was appropriate
 * If we gave you the experience you expected
 
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out @make_survey_url('@title', '@version', '@module_type')!
+We gather this information in order to iteratively improve our work.  Thank you in advance for filling out @make_survey_url('@title', '@version', '@module_type', '@module_id')!
 @end
 
 

@@ -1,7 +1,8 @@
 <!--
+module_id: sql_joins
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.4
+version: 1.1.6
 current_version_description: Typo fix; update metadata
 module_type: standard
 docs_version: 2.0.0
@@ -1224,10 +1225,10 @@ When there's no matching data from the one of the tables to join to the data you
 
 ## Additional Resources
 
-* Want to understand the basics of boolean algebra?  Check out a good tutorial at https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra.php
-* The second part of that tutorial covers some of the rules (like commutativity) of boolean algebra: https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra-laws.php 
-* Finally, to understand the order of operations in boolean algebra a bit more intuitively, we recommend the third part of the same tutorial: https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra-expressions.php 
-* A great page to practice joins and visualize them in the form of Venn diagrams is at https://www.w3schools.com/sql/sql_join.asp
+* A good tutorial to help you understand [the basics of boolean algebra](https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra.php)
+* The second part of this tutorial covers [some of the rules (like commutativity) of boolean algebra](https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra-laws.php)
+* The third part of the same tutorial may help you understand [the order of operations in boolean algebra](https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra-expressions.php) a bit more intuitively.
+* W3 Schools has a great page to [practice joins and visualize them in the form of Venn diagrams](https://www.w3schools.com/sql/sql_join.asp).
 
 ## Feedback
 

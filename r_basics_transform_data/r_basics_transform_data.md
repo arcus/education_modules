@@ -1,4 +1,5 @@
 <!--
+module_id: r_basics_transform_data
 author:   Joy Payton
 email:    paytonk@chop.edu
 version: 1.4.0
@@ -63,7 +64,7 @@ previous_sequential_module: r_basics_visualize_data
 
 Previous versions: 
 
-- [1.3.6](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ef625f5201a0acff602ce75803d67b076abc388d/r_basics_transform_data/r_basics_transform_data.md#1): Updated with new metadata and to remove references to Binderhub
+- [1.3.7](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d769533e4158ab653efaf46fa08a40a92a2a7ca0/r_basics_transform_data/r_basics_transform_data.md#1): Updated with new metadata and to remove references to Binderhub
 - [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/81c8707b4fd08a93927f6a85e358ca3bca367420/r_basics_transform_data/r_basics_transform_data.md#1): Update highlight boxes
 - [1.1.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/r_basics_transform_data/r_basics_transform_data.md#1): Update versioning, attribution, Posit.cloud
 

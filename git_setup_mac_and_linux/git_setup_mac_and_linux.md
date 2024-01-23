@@ -1,8 +1,8 @@
 <!--
-
+module_id: git_setup_mac_and_linux
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Updated metadata to latest standards
 module_type: standard
 docs_version: 2.0.0

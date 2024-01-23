@@ -1,8 +1,8 @@
 <!--
-
+module_id: omics_orientation
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.1.4
+version: 1.1.5
 current_version_description: Update formatting for highlight boxes, fix typos, update front matter.
 module_type: standard
 docs_version: 2.0.0

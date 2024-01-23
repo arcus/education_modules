@@ -1,8 +1,8 @@
 <!--
-
+module_id: demystifying_python
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.2.4
+version: 1.2.5
 current_version_description: Updated highlight boxes and metadata
 module_type: standard
 docs_version: 2.0.0
