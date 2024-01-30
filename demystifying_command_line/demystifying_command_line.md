@@ -1,10 +1,11 @@
 <!--
+module_id: demystifying_command_line
 author:   Joy Payton
 email:    paytonk@chop.edu
 version:  1.0.0
 current_version_description: Initial version
 module_type: standard
-docs_version: 3.1.2
+docs_version: 4.0.0
 language: en
 narrator: US English Female
 mode: Textbook
@@ -21,7 +22,7 @@ No particular skills or experience are required for this module.
 After completion of this module, learners will be able to:
 
 - Define the term *interface*
-- Explain how a computer user interacts command line interface 
+- Explain how a computer user interacts with a command line interface 
 - Explain how a computer user interacts with a graphical user interface
 
 
@@ -29,6 +30,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: true
+collection: demystifying, infrastructure_and_technology
 coding_required: false
 
 @sets_you_up_for
@@ -36,7 +38,6 @@ coding_required: false
 @end
 
 @depends_on_knowledge_available_in
-
 
 @end
 
@@ -97,20 +98,14 @@ If you've ever watched a Hollywood film in which the protagonist saves the day b
 
 This means that many people who are new to the command line interface might find the idea of working in the CLI intimidating.  We hope we can explain the pros and cons of the command line so you can make a decision based on what's most useful to you, instead of on misconceptions about how difficult or dangerous working in the command line is.
 
-![A three-panel cartoon. A computer user, with username robm, types the command `sudo su` into the computer.  The computer responds with the warning "robm is not in the sudoers file.  This incident will be reported."  The  user asks another person, "Hey - who does sudo report these 'incidents' to?"  The other person replies, "You know, I've never checked." In the last panel, Santa Claus is seen adding a name to his "naughty" list.](https://imgs.xkcd.com/comics/incident.png"[Incident](https://xkcd.com/838/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")
 
 
-## What Is a CLI (Command Line Interfaceb?)
+## What Is a CLI (Command Line Interface?)
 
 Let's start by going over what the command line interface is.
 
 Before slick graphical interfaces, before there was such a thing as a computer mouse, the usual way to interact with a computer was by typing commands through a keyboard.  The command line was usually at the bottom of the screen, with a prompt (perhaps `C:>`) and a blinking cursor that was waiting for the user to type a command.  The user could type a command, in a special kind of code that the computer could understand, and the computer would do that thing.  
 
-For example, in a UNIX or Linux computer (and later in Macs), the user might type `ls` to list the files in a particular location.  In MS-DOS (and later in Windows), a user might type `dir` to do the same thing.
-
-Here's a screenshot of a very common thing you might want to do: list files in a particular directory.  In the image, the user is working in a directory called `bias_variance_tradeoff` and asks the computer to list the files in that directory using the command `ls`.  Three things are listed: two files, and a directory called `media`.  The user then asks for a list of the files in the `media` directory by typing `ls media`, and six file names are shown.
-
-![A terminal window in which the user is working in a directory called `bias_variance_tradeoff`.  The command `ls` is followed by a file listing of two files, and a directory called `media`.  The next command is `ls media`, and six file names are shown.](media/ls.png)
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
@@ -169,10 +164,9 @@ Of course, it makes sense to check what a command actually does before typing it
 
 Most things you want to accomplish on your computer can be done using multiple interfaces, allowing you to choose which you prefer -- graphical or command line. However, as you get into very specific or customized tasks that are done more rarely, there **are some things that can only be done by command line**.  It might be helpful to get a little comfortable with the command line interface on your computer now, before you discover that you have to use it for a specialized task.  If that's something that interests you, our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module might be helpful!
 
-![A one-panel cartoon. A person with a ponytail is typing on a computer and says "Whoa, this is running MS-DOS!  It's weird how new technology takes forever to reach some industries".  Someone standing nearby replies, "Yeah.  Like how we still use gunpowder for fireworks, even though we've had nuclear weapons for over 70 years."](https://imgs.xkcd.com/comics/obsolete_technology.png "[Obsolete Technology](https://xkcd.com/1891/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")
 
 
-## Quiz: Interfaces
+## Quiz
 
 Which of the following could be defined as an interface?
 
