@@ -4,13 +4,13 @@ email:    paytonk@chop.edu
 version:  1.0.0
 current_version_description: Initial version
 module_type: standard
-docs_version: 3.0.0
+docs_version: 4.0.0
 language: en
 narrator: US English Female
 mode: Textbook
 title: Demystifying Application Programming Interfaces (APIs) 
 comment:  Understand what an application programming interface (API) is and why APIs are useful!
-long_description: An application programming interface (API) can allow you to work more easily with data sources and technical tools.  Learn more about what an API is, how to find out more about your API, and use cases for when using an API makes sense.  It's appropriate for brand new beginners.
+long_description: An application programming interface (API) can allow you to work more easily with data sources and technical tools.  Learn more about what an API is, read about use cases, and understand how interaction with APIs can take place.  It's appropriate for brand new beginners.
 estimated_time_in_minutes: 30
 
 @pre_reqs
@@ -59,30 +59,34 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 An **application** is a computer system -- such as the system that holds the list of New York Times bestsellers, or the REDCap system of electronic research data capture, or the PubMed system of searchable academic articles related to medicine.
 
-**Programming** is the use of special methods -- usually written compute code -- to control what an application does.  When you write Python or R, you're programming.  Some people like to distinguish between "scripting" and "programming", but we think this is a false dichotomy.  
+**Programming** is the use of special methods -- usually written computer code -- to control what an application does.  When you write code in Java, Python, javascript, Go, R, or other languages, you're programming.
 
 Finally, an **interface** is a way to interact with a system.  The dashboard of your car is an interface, and the menu in your word processing software is an interface.  Interfaces allow you to give instruction to a system, get information from a system, or both.
 
 If we put these together, we can describe an API as a way for people or machines to:
+
 * interact with (that's the **interface** part)
 * software (that's the **application** part)
 * in a very specific and prescribed way (often, but not always, by **programming**). 
 
 That feels very vague -- what about some examples?  We'll consider some on the next page.
 
-## API Examples 
+## API Use Cases 
 
 What kinds of APIs might you, a biomedical researcher, encounter?  Well, let's consider some practical use cases.
 
-* Instead of manually doing a literature review where you copy/paste the results from a hand-typed search result page into a Word document, you might want to use the PubMed API to give you a count or list of results instead, and try plugging different values of year, search terms, or other data elements to quickly measure the effectiveness of your search terms.
-* You might use the REDCap API to download today's latest recruitment numbers into a pre-made dashboard to share with your lab and encourage them to step up recruitment efforts in your weekly meeting.
-* Perhaps you'd like to study newspaper coverage of a public health topic, and use the New York Times API to give the the counts and references to articles written about your topic of interest, so you can visualize the change over time of public awareness and interest.
-* As someone interested in the social determinants of health, you want to use the U.S. Census API to obtain economic data from the American Community Survey about the census tracts in Philadelphia.
+* Instead of manually doing a literature review where you copy/paste the results from a hand-typed search result page into a Word document, you might want to use [a PubMed API](https://www.ncbi.nlm.nih.gov/pmc/tools/developers/) to give you a count or list of results instead, and try plugging different values of year, search terms, or other data elements to quickly measure the effectiveness of your search terms.
+* You might use the [REDCap API](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/using_redcap_api/using_redcap_api.md) to download today's latest recruitment numbers into a pre-made dashboard to share with your lab and encourage them to step up recruitment efforts in your weekly meeting.
+* Perhaps you'd like to study newspaper coverage of a public health topic, and use a [New York Times API](https://developer.nytimes.com/apis) to give the the counts and references to articles written about your topic of interest, so you can visualize the change over time of public awareness and interest.
+* As someone interested in the social determinants of health, you want to use an [API from the U.S. Census Bureau](https://www.census.gov/data/developers/data-sets.html) to obtain economic data from the American Community Survey about the census tracts in Philadelphia.
 * Because you educate the public about infectious disease, you want to get the latest data about the popularity of posts and pages on your website, and analyze that data to see what kinds of articles get the most traction.
-* The sensor data you use to study air quality across the Commonwealth require you to use an API to download data and give you historical information you need to understand the risk factors that might explain increased asthma acuity among your patients.
+* The sensor data you use to study air quality across a particular region is only available via API, so you use an API to download data and give you historical information you need to understand the risk factors that might explain increased asthma acuity among your patients.
 * Because you're building an automated system that your animal models will interact with, you want to use these systems to trigger data being written to REDCap or another data capture system.  That means interacting with an API!
+* As someone interested in the spread of vaccine misinformation, you want to use social media APIs to gather information about messages that share common conspiracy theories about the measles vaccine.
 
-Many systems may have manual ways to interact with them.  For example, in our use cases above, you could just go to PubMed and search, then copy-paste your results, or go to the Census.gov website and find the ACS data to download.  Why, then, create an automated way to work with systems?
+Many systems may have manual, point-and-click ways to interact with them, in addition to APIs.  For example, in our use cases above, you could just go to [PubMed and search](https://pubmed.ncbi.nlm.nih.gov/), then copy-paste your results, or go to the [data portal of the census website](https://data.census.gov/) and find the ACS data to download.  
+
+Why, then, create an automated way (these APIs we're describing) to work with systems? That's what we'll talk about next.
 
 ## Why Use APIs?
 
@@ -92,9 +96,11 @@ Two important advantages to using an API are **data freshness** and **reproducib
 
 **Data Freshness**
 
-Let's say you have to run some analysis on data you're collecting in REDCap, and you want to re-run this analysis every couple of weeks to see the latest figures. One way to do that is to manually export data from REDCap to a .csv and save it to a file that you analyze.  REDCap likes to download files with a date stamp as part of the file name, so you have to keep track of various file names and make sure you are analyzing the right data. You may, after all, end up collecting multiple .csvs, each of which has a particular version of the data in REDCap. This can easily become overwhelming and cause confusion or mistakes.
+Let's say you have to run some analysis on data you're collecting in REDCap, and you want to re-run this analysis every couple of weeks to see the latest figures. One way to do that is to use a point-and-click method in which you manually export data from REDCap to a .csv and save it to a file that you analyze. 
 
-What's a better approach? Reach into the REDCap database directly each time you run your analysis script, so that you know you're using the most up-to-date data.
+REDCap likes to download files with a date stamp as part of the file name, so you have to keep track of various file names and make sure you are analyzing the right data, pointing your script to the right data, or changing the file name to match what your script expects. You may, after all, end up collecting multiple .csvs, each of which has a particular version of the data in REDCap. This can easily become overwhelming and cause confusion or mistakes.  Plus, it adds extra steps of downloading and renaming data files.
+
+What's a better approach? Reach into the REDCap database directly each time you run your analysis script, using an API.  That way, you know you're using the most up-to-date data, because you're extracting it anew every time you run your analysis, and it's included in your code -- no extra download steps you have to do on your own.
 
 **Reproducibility**
 
@@ -102,35 +108,125 @@ Another problem with using manually methods to obtain your data (whether that's 
 
 A better approach is to use a script that uses an API call. First of all, it's scripted, which means no manual steps to write up in a Word document or add to a GitHub repo or jot down on a sticky note. Also, the typical API has a standard interface that will change very little. API access may improve over time, adding new features, but it's very infrequent that an API will radically change and remove options, rendering your script unusable. The same half-dozen lines of code you use to access your data will almost always be stable for months or years, and if you do need to change it, you're only changing that small chunk of code, instead of a step-by-step document with words and images that describe a manual effort.
 
-## But How Do You Use It?
+## Interacting with an API 
 
-APIs that you'll be likely to work with -- APIs that are available through the Internet -- are "listening" for requests in the same way the application is "listening" for requests for web pages.  
+How do you interact with an Application Programming Interface?  Well, first, someone (like the IT department at the New York Times or the developers who work behind the scenes at REDCap) needs to have written an API, a set of rules that allows you, or your computer system, to interrogate their server, which is always listening for HTTP messages. 
 
+You'll use your computer to send a message to the server asking for whatever you need from the API.  Then the server will send back some combination of a return code (such as 200, good, or 404, not found) and, if things went well, the data you requested in your message.
 
-## What Do You Supply?
+But how?  How do you send this message to a server?  What goes inside this message?
 
-Different APIs require different things.
+There are several ways to assemble a message, and it depends a bit on the complexity of what your API interaction is. You won't have to guess what to do, because most APIs have lots of documentation to help you learn how to use them. The API you're using will usually have very specific examples showing you exactly how the API works.
 
-Generally, most well-crafted APIs will accept query parameters that include things like:
+Still, it might be helpful to get an overview of the main methods most APIs you'll come across will use:
 
-What kind of data is being requested (e.g. what fields from a database)
-Which data items are being requested (e.g. by an identifier or resource name)
-The format requested (e.g. CSV or JSON)
-Any key and/or password required (e.g. IBM Watson or other for-pay or freemium APIs need to track how much of their services you’ve used)
-A data payload, if data is being uploaded
-Search terms, if applicable
-Ranges (like date ranges), if applicable
-The API will either return the desired data in the desired format to the requesting (client) program, send a return code that means success (in the case, say, of adding data), or provide a descriptive and helpful error message. For an example of how an API works, a good resource is the “API playground” in REDCap. If you own a REDCap database, you can give yourself (or others) API access to both request or alter data, and play with the API by using menus in the browser to see the various options.
+* Using a URL (a web address) that contains instructions for the API to give you specific data back.  You can use a URL:
 
-png
+  - in your web browser or 
+  - in a program you're writing (say, an R script)
+* Using a programming language like Python to construct the message and send it on your behalf and then work with the data that gets returned.  You can write code either:
 
-You’ll get output that shows the payload of the data you’d get back from that request. There’s a helpful section below the menus that shows how various API calls would be rendered in different kinds of code (like R, Python, or PHP).
+  - using a manual method or 
+  - using a specialty package designed for the specific API you're dealing with
 
-png
+Let's talk about each one in turn! 
 
-This is how many APIs (like IBM Watson, ProPublica, Twitter) train users in how to use them – they provide a user friendly interface that doesn’t require much or any code up front while you learn them.
+### Using a URL in Your Browser
 
-Why use APIs? They provide a structured, consistent way to carry out a process so that it can be automated and standardized. An API provides consistency around a process. Imagine two different people doing the exact same data download task using a manual approach. They will most definitely have a different process for doing the task and likely a different result as well. An API defines and requires a specific structure for input and provides a specific structure for the output.
+Some very simple API calls that don't require authentication or lots of information exchange can be handled just in a URL (the web address you can type into a browser window).  
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Not every API can use this method!  Generally, the use of a URL is restricted to requests that are approved for anonymous users (so, things the application is fine sharing with the general public without a login), and for simple requests with only a few parameters.  
+
+</div>
+
+Let's look at an example!
+
+NCBI, the National Center for Biotechnology Information, has an API called "Entrez" that you can use for a number of purposes, including to get PubMed article IDs that meet your conditions.  They provide the following example on [their website](https://www.ncbi.nlm.nih.gov/books/NBK25500/):
+
+> Example: Get the PubMed IDs (PMIDs) for articles about breast cancer published in Science in 2008
+>
+> `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science[journal]+AND+breast+cancer+AND+2008[pdat]`
+
+Note that there are some terms added in the URL, parameters like `db` and `term`.  There are clearly some rules about how `term` is structured, and if we wanted to learn more about this API we could read their documentation to learn what parameters we could include in the URL.
+
+Try opening that URL (https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science\[journal\]+AND+breast+cancer+AND+2008\[pdat\]) in your browser and you'll get some text that's clearly formatted for computers, not for humans!  It will look something like this:
+
+![A screen full of XML encoded text that includes tags like "IdList", "eSearchResult", "QueryTranslation", and more.](media/entrez_screenshot.png)
+
+Sometimes you don't need to fully automate something, you're happy just to look at the results in your browser.  Maybe you're just doing a one-off search that you don't need to repeat, or you're testing things out.  Often, when you're learning how to use a new API, it can be helpful to do a browser test like this to make sure you understand the syntax of how to use the API and are getting the results you expect. 
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+Entrez, like many APIs, has a limit to what you can do anonymously.  If you try to run this a few times in a row, you'll get an error message that starts with `{"error":"API rate limit exceeded"`...
+
+</div>
+
+### Using a URL in A Script or Program
+
+If you're truly trying to automate something, you might want to ingest the data that you just looked at in a web browser in a different way.  For example, maybe you want to count the number of search results from that search of Science journal articles about breast cancer (by looking at the XML data labeled "Count"). Instead of copying that down, you'd like to have a table or graph generated for you automatically, in a dashboard or report.
+
+To accomplish this, you can often just provide a URL to a function that will go and get that data for you, so you can do something with it later on in your script.
+
+For example, let's consider this R code that looks at the count of articles about breast cancer published in Science in 2008 - 2010.  It creates a data frame (table) of data that you can then use to analyze trends, and you didn't have to copy-paste anything!  
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+Don't worry if you don't know R -- the important thing we want you to see is that we're using the URLs, but this time, we're not dropping those URLS into the browser address bar, we're using them in code.
+
+</div>
+
+![R code making three API requests, using URLs to get data, and then creating a table from the results of that data request.](media/breast_cancer_r_code.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));" -->
+
+<div class = "options">
+<b style="color: rgb(var(--color-highlight));">Another option</b><br>
+
+Note that if this were a real project, we'd probably write some functions to loop over the year instead of having lines of nearly identical code. For this example, however, we didn't want to get too complicated, to make it a bit simpler for people who aren't used to looking at R code.
+
+</div>
+
+### Constructing an API Call in a Programming Language: Manual Method
+
+Many times, you may be using an API that isn't quite as simple as using a URL but requires you to construct a "message body" that goes beyond what you can express in just a URL. When you can't just use a URL, you'll use a programming language to construct and send the message to the API.
+
+Sometimes, specific APIs are very popular, and people write software (like a special library or package) to streamline using them.  But that doesn't always happen!  
+
+When there's not a specific library that is meant for your exact API, no need to worry.  There are ways to construct and send a message that are manual and generic -- they work across different APIs.  What you **include** in your message, of course, is very specific to each API, but the way you package and send that message, and receive the result, uses common libraries used to send messages across the Internet.
+
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+You're about to see some Python code, which may not make much sense to you.  Don't worry if that's the case! The important thing we want you to see is that the code is provided for you by REDCap -- it's given alongside lots of other sample code in other languages like PHP, Perl, R, and more.  We also want you to notice that the code uses `requests`, which is a multi-purpose, generic library that isn't specific to REDCap.
+
+</div>
+
+Most APIs will have sample code available for you in various common programming languages so you can copy/paste example code to get you started.  
+
+Let's consider REDCap as an example.  REDCap is a system for storing research data, and has a very useful API.  Let's say we wanted to use the API to get all the records stored in a given database. In the REDCap app, there's a helpful "API playground", which provides code for given scenarios, like "please give me all the records."  
+
+The API Playground suggests the following code for Python, which uses the `requests` library, which can be used for all kinds of message exchange over the Internet.
+
+![Python code from the REDCap API playground.](media/python_code.png)<!-- style = "border: 1px solid rgb(var(--color-highlight));" -->
+
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+Note that here, we obscured the authentication token here.  While the data in this REDCap database is public data, it's still not a good idea to share authentication details!
+
+</div>
+
+### Constructing an API Call in a Programming Language: API-Specific Packages
+
+We said on the last page that sometimes, specific APIs are very popular, and people write software (like a special library or package) to streamline using them.  This is true of APIs like those belonging to PubMed, the US Census Bureau, REDCap, and many more.  People write libraries to streamline the use of these popular APIs so you don't have to write quite as many lines of code as you saw on the previous page.
+
+For example, `PyCap` is a Python library written to streamline access to the REDCap API.  Because "get all the records from a given database" is such a frequently used API request, it got its own functionality in `PyCap`.  Compare the code below with the code on the previous page.  It's much shorter and less intimidating!
+
+![Six lines of Python code which get all of the records from a REDCap database ](media/pycap.png)
+
 
 
 
