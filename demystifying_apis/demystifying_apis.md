@@ -1,4 +1,5 @@
 <!--
+module_id: demystifying_api
 author:   Joy Payton
 email:    paytonk@chop.edu
 version:  1.0.0
@@ -27,6 +28,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: true
+collection: demystifying, infrastructure_and_technology
 coding_required: false
 
 @sets_you_up_for
@@ -59,15 +61,15 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 An **application** is a computer system -- such as the system that holds the list of New York Times bestsellers, or the REDCap system of electronic research data capture, or the PubMed system of searchable academic articles related to medicine.
 
-**Programming** is the use of special methods -- usually written computer code -- to control what an application does.  When you write code in Java, Python, javascript, Go, R, or other languages, you're programming.
+**Programming** is the use of special methods -- usually written computer code -- to control what an application does.  When you write code in Java, Python, javascript, Go, R, or other languages, you're programming.  The people who create applications have to use programming to create the set of rules for working with that application.
 
 Finally, an **interface** is a way to interact with a system.  The dashboard of your car is an interface, and the menu in your word processing software is an interface.  Interfaces allow you to give instruction to a system, get information from a system, or both.
 
-If we put these together, we can describe an API as a way for people or machines to:
+If we put these together, we can describe an API as a set of rules for message exchange that allows people or machines to:
 
 * interact with (that's the **interface** part)
 * software (that's the **application** part)
-* in a very specific and prescribed way (often, but not always, by **programming**). 
+* in a very specific and prescribed way (thanks to the rules set up by the people **programming** the application). 
 
 That feels very vague -- what about some examples?  We'll consider some on the next page.
 
@@ -90,7 +92,7 @@ Why, then, create an automated way (these APIs we're describing) to work with sy
 
 ## Why Use APIs?
 
-We've written about the "whys" behind API usage as well in our module Using the REDCap API, so we're going to borrow some language from that module.
+We've written about the "whys" behind API usage as well in our module [Using the REDCap API](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/using_redcap_api/using_redcap_api.md), so we're going to borrow some language from that module.
 
 Two important advantages to using an API are **data freshness** and **reproducibility**.
 
@@ -118,7 +120,19 @@ But how?  How do you send this message to a server?  What goes inside this messa
 
 There are several ways to assemble a message, and it depends a bit on the complexity of what your API interaction is. You won't have to guess what to do, because most APIs have lots of documentation to help you learn how to use them. The API you're using will usually have very specific examples showing you exactly how the API works.
 
-Still, it might be helpful to get an overview of the main methods most APIs you'll come across will use:
+For example, here's a help page that gives information about how to use the World Health Organization API:
+
+![Website that gives nine links to use cases for things you might want to do with WHO data.](media/who_api.png)
+
+
+How can you find more information about your API?  By searching online!  Often the best first step is to do a search that includes the name of the application, website, or organization and the phrase "API".  
+
+* Want to understand how to extract data from your Wordpress site?  Try "Wordpress API".
+* Need to use World Health Organization data? "WHO API".
+
+API documentation is often quite useful and detailed, with very specific examples to help non-programmer types get the information they need.  
+
+While your best source of information about any given API is the documentation for that specific API, it might be helpful to get an overview of the main methods most APIs you'll come across will use.  This is just to give you a quick overview of some of the methods you might come across.  These include:
 
 * Using a URL (a web address) that contains instructions for the API to give you specific data back.  You can use a URL:
 
@@ -152,7 +166,7 @@ NCBI, the National Center for Biotechnology Information, has an API called "Entr
 
 Note that there are some terms added in the URL, parameters like `db` and `term`.  There are clearly some rules about how `term` is structured, and if we wanted to learn more about this API we could read their documentation to learn what parameters we could include in the URL.
 
-Try opening that URL (https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science\[journal\]+AND+breast+cancer+AND+2008\[pdat\]) in your browser and you'll get some text that's clearly formatted for computers, not for humans!  It will look something like this:
+Try opening that URL (<lia-keep><a href=https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science%5Bjournal%5D+AND+breast+cancer+AND+2008%5Bpdat%5D, target="blank">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science[journal]+AND+breast+cancer+AND+2008[pdat]</a></lia-keep>) in your browser and you'll get some text that's clearly formatted for computers, not for humans!  It will look something like this:
 
 ![A screen full of XML encoded text that includes tags like "IdList", "eSearchResult", "QueryTranslation", and more.](media/entrez_screenshot.png)
 
@@ -167,11 +181,11 @@ Entrez, like many APIs, has a limit to what you can do anonymously.  If you try 
 
 ### Using a URL in A Script or Program
 
-If you're truly trying to automate something, you might want to ingest the data that you just looked at in a web browser in a different way.  For example, maybe you want to count the number of search results from that search of Science journal articles about breast cancer (by looking at the XML data labeled "Count"). Instead of copying that down, you'd like to have a table or graph generated for you automatically, in a dashboard or report.
+If you're truly trying to automate something, you might want to ingest the data that you just looked at in a web browser in a different way.  For example, maybe you want to count the number of search results from that search of *Science* journal articles about breast cancer (by looking at the XML data labeled "Count"). Instead of copying that down, you'd like to have a table or graph generated for you automatically, in a dashboard or report.
 
 To accomplish this, you can often just provide a URL to a function that will go and get that data for you, so you can do something with it later on in your script.
 
-For example, let's consider this R code that looks at the count of articles about breast cancer published in Science in 2008 - 2010.  It creates a data frame (table) of data that you can then use to analyze trends, and you didn't have to copy-paste anything!  
+For example, let's consider this screenshot of some R code that looks at the count of articles about breast cancer published in Science in 2008 - 2010.  It creates a data frame (table) of data that you can then use to analyze trends, and you didn't have to copy-paste anything!  
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
@@ -227,10 +241,75 @@ For example, `PyCap` is a Python library written to streamline access to the RED
 
 ![Six lines of Python code which get all of the records from a REDCap database ](media/pycap.png)
 
+## Quiz 
 
 
+What does "API" stand for?
+
+[( )] Automated Programming Interaction
+[( )] Applied Programmatic Intercommunication
+[(X)] Application Programming Interface
+[( )] Automation Providing Interaction
+[( )] Automatic Processing Interaction
+***
+<div class = "answer">
+
+API stands for "Application Programming Interface."  An interface is a system for interaction between two entities.  In this case, one of the entities is an **application**.
+
+</div>
+***
+
+
+Why might a researcher need to work with an API?  Check all that apply!
+
+[[ ]] They need a more secure way to obtain information from a service, with additional encryption
+[[X]] They want to record how they obtained their data in a highly reproducible way other people can easily replicate
+[[X]] APIs can help researchers automate their work
+[[ ]] APIs are the only way to get data from federal agencies like the Census Bureau
+[[X]] APIs are a great way to get the most up-to-date information from an application
+***
+<div class = "answer">
+
+API messages are transmitted over the Internet and have the same kind of encryption that regular web page traffic to that application has.  Almost all modern web pages and APIs use secure, encrypted http.  You don't get "extra" encryption by using an API.
+
+APIs are great for reproducibility, for obtaining data in a way that can be easily recorded and replicated.  They're also great for automating things that are repetitive, like creating a weekly dashboard.
+
+While APIs are a great way to get data, they aren't the only way.  You can still obtain data manually from most sources, by using a web page to navigate to some resource (like a search function or a downloadable document).  This includes federal agencies.  Most have APIs as well as manual download portals where you can find materials or data to download by hand.
+
+Finally, APIs are great for ensuring data freshness, and getting the latest information in real time from an application.
+
+</div>
+***
+
+Which of the following are ways that you might interact with an API?
+
+[[X]] Visiting a URL that you typed into the address bar of a web browser
+[[X]] Automating a script to go to a URL and get the information from there
+[[X]] Using common, generic methods to pack up and send a message using a programming language
+[[X]] Using custom software written specifically for your API that makes it easier to send a message, from within a programming language
+***
+<div class = "answer">
+
+All of the above are ways you can interact with APIs!  Almost always, your API will give you detailed examples that you can copy and paste as you learn how to use the API.  So, rather than learn how to use APIs in general, you're better off searching for how to use the New York Times API or the Census Bureau API or the Open Data Philly API.
+
+</div>
+***
 
 ## Additional Resources
+
+A number of libraries have lists of APIs that are useful for researchers, along with links to how to get started with each API.  The lists below have a number of overlaps, but we're including them all because there are also differences from institution to institution!
+
+* [Temple University](https://guides.temple.edu/APIs)
+* [University of California, Berkeley](https://guides.lib.berkeley.edu/information-studies/apis)
+* [University of Virginia](https://guides.lib.virginia.edu/c.php?g=515084&p=10046079)
+* [University of California, San Diego](https://ucsd.libguides.com/data-statistics/apis)
+
+Some APIs (particularly those linked to social media applications) have changing rules relating to their use, due to monetization of data and data privacy.  Read more in [Shifting landscapes of social media data for research](https://www.timeshighereducation.com/campus/shifting-landscapes-social-media-data-research).
+
+The United States Office of the National Coordinator for Health Information Technology (ONC) is driving an effort to develop and standardize APIs related to electronic health information.  Read more about [their project](https://www.healthit.gov/topic/scientific-initiatives/accelerating-apis-scientific-discovery)!
+
+If you're a REDCap user, you might enjoy our (award-winning, at REDCapCon!) module on [Using the REDCap API](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/using_redcap_api/using_redcap_api.md).
+
 
 ## Feedback
 
