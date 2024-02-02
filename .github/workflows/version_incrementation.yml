@@ -18,4 +18,4 @@ jobs:
       - name: check git diff
         run: cat git_diff.txt
       - name: Check version numbers
-        run: bash assets/check_versions.sh git_diff.txt
+        run: bash .github/scripts/check_versions.sh git_diff.txt
