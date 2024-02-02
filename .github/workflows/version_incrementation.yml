@@ -1,0 +1,22 @@
+name: Check modules in PR for version incrementation
+on:
+  pull_request:
+    branches: [ "main" ]
+    types: [opened, synchronize]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with: 
+          fetch-depth: 2
+      - name: Get git diff to feed to script
+        run: |
+          git fetch origin main
+          git diff origin/main HEAD > git_diff.txt
+      - name: check git diff
+        run: cat git_diff.txt
+      - name: Check version numbers
+        run: bash assets/check_versions.sh git_diff.txt
