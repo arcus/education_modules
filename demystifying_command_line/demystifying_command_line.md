@@ -144,17 +144,6 @@ One place to learn the basics of working in the command line is in our [Bash / C
 
 There are also `man` (short for *manual*) and `help` documentation pages that you can view within the command line.  For example, in a Linux-like CLI such as the Mac Terminal or Git Bash on Windows, typing `man ls` will give lots of instructions on how to use the `ls` command.
 
-<div class = "history">
-<b style="color: rgb(var(--color-highlight));">Historical context</b><br>
-
-If you try typing a `man` command, like `man ls`, chances are that there is a great deal of text, and you will need to keep hitting enter or scrolling to see all of it.  And then, you might run into the problem of not knowing how to exit the page viewer!  If you see a colon as a prompt, that's a good sign that you can type `q` to quit.  
-
-Learning how to quit out of things that are happening in the command line is a very common issue for brand new users, and it's something of a rite of passage.  
-
-There's a text editor that some people use from the command line called `vim` which is notoriously tricky to learn (we don't recommend it, we prefer `nano`).  So many people ask for help getting out of `vim` that ["How do I exit Vim?"](https://stackoverflow.com/questions/11828270/how-do-i-exit-vim) is one of [Stack Overflow's](https://www.stackoverflow.com) most frequently viewed posts! It's a question so popular that it [has its own memes](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/).  
-
-</div>
-
 And finally, let's talk about getting things wrong.  What will happen if you type the wrong thing?  Probably, **nothing** will happen.  The computer will give the equivalent of a shrug and say "I don't understand."  If you type a command that doesn't exist, or do something wrong, like put some words in the wrong order, you'll get an error message that might feel difficult to parse, but doesn't itself mean that anything got harmed.  
 
 Of course, it makes sense to check what a command actually does before typing it.  For example, the command `rm` removes something -- a file, or even a directory and everything in it.  If someone wanted to do a very mean prank they might suggest that you use a command including `rm`.  So after you search online but **before** you type a command in, do a bit of searching about what the command does.  
