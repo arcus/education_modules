@@ -129,7 +129,7 @@ If you've never used a command line, you might have a few common questions, like
 Where is the Command Line Interface?
 ----
 
-Most people use a Mac or a Windows operating system on their computer.  To get to the command line, you'll use **Terminal** in macOS or **Command Prompt** or **PowerShell** or **Git Bash** in Windows.  Using the command line can be a little different based on the computer system you use and which program you use. Terminal is a Linux-like environment that uses the bash language, while Command Prompt on Windows is limited to MS-DOS commands without scripting abilities.  PowerShell is an automation engine designed for Microsoft products that you can also run commands from, but we generally don't recommend it for working with Git.  And Git Bash is a Windows add-on that allows Windows users to have the same powerful and industry-standard Linux-like interface that Mac users get by default.
+Most people use a Mac or a Windows operating system on their computer.  To get to the command line, you'll use **Terminal** in macOS or **Command Prompt** or **PowerShell** or **Git Bash** in Windows.  Using the command line can be a little different based on the computer system you use and which program you use. 
 
 What Do I Type?
 ---
