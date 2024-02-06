@@ -125,6 +125,7 @@ If you've never used a command line, you might have a few common questions, like
 * How do I get to the command line?  What program do I open in my computer to be able to type in commands?
 * What do I type into the command line to do things?  How will I know what to type?
 * What will happen if I get things wrong?
+* Do I really need to learn this?
 
 Where is the Command Line Interface?
 ----
@@ -151,8 +152,8 @@ What will happen if you type the wrong thing?  Probably, **nothing** will happen
 
 Of course, it makes sense to check what a command actually does before typing it.  For example, the command `rm` removes something -- a file, or even a directory and everything in it.  If someone wanted to do a very mean prank they might suggest that you use a command including `rm`.  So after you search online but **before** you type a command in, do a bit of searching about what the command does.  
 
-
-## The Practical Use of GUIs and CLIs 
+Do I Really Need to Learn This?
+---
 
 Most things you want to accomplish on your computer can be done using multiple interfaces, allowing you to choose which you prefer -- graphical or command line. However, as you get into very specific or customized tasks that are done more rarely, there **are some things that can only be done by command line**.  It might be helpful to get a little comfortable with the command line interface on your computer now, before you discover that you have to use it for a specialized task.  If that's something that interests you, our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module might be helpful!
 
