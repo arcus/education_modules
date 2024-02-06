@@ -88,7 +88,11 @@ If you're like many people, almost all of your computer interactions take place 
 
 What makes a GUI different than a CLI?  A CLI is completely text based and requires typed commands.  Let's learn more in the next few pages!
 
-## Mythology about the Command Line Interface
+## What Is a CLI (Command Line Interface?)
+
+Let's start by going over what the command line interface is.
+
+Before slick graphical interfaces, before there was such a thing as a computer mouse, the usual way to interact with a computer was by typing commands through a keyboard.  The command line was usually at the bottom of the screen, with a prompt (perhaps `C:>`) and a blinking cursor that was waiting for the user to type a command.  The user could type a command, in a special kind of code that the computer could understand, and the computer would do that thing.  
 
 If you've ever watched a Hollywood film in which the protagonist saves the day by typing cryptic commands into the computer (often with tense music in the background and very loud and fast typing), you've seen a depiction of a **command line interface**, or **CLI**.  These dramatic depictions often suggest a few false things about using a CLI: 
 
@@ -97,15 +101,6 @@ If you've ever watched a Hollywood film in which the protagonist saves the day b
 * People who use the command line have all the things they need to type memorized (see also: they are geniuses).
 
 This means that many people who are new to the command line interface might find the idea of working in the CLI intimidating.  We hope we can explain the pros and cons of the command line so you can make a decision based on what's most useful to you, instead of on misconceptions about how difficult or dangerous working in the command line is.
-
-
-
-## What Is a CLI (Command Line Interface?)
-
-Let's start by going over what the command line interface is.
-
-Before slick graphical interfaces, before there was such a thing as a computer mouse, the usual way to interact with a computer was by typing commands through a keyboard.  The command line was usually at the bottom of the screen, with a prompt (perhaps `C:>`) and a blinking cursor that was waiting for the user to type a command.  The user could type a command, in a special kind of code that the computer could understand, and the computer would do that thing.  
-
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
