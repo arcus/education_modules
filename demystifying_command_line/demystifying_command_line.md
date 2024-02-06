@@ -229,6 +229,16 @@ CLIs depend principally on typing text commands, not on visual cues like windows
 
 * If you'd like to learn more about working in a command line interface, our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module might be helpful!
 
+* The [Intro to Command Line](https://tutorial.djangogirls.org/en/intro_to_command_line/) tutorial by Django Girls walks you through opening the command line in Windows, Mac, and Linux, and shows you a few first commands.  While this tutorial is part of a series related to web development, and not data analytics or research, we like their simple, easy-to-understand approach.
+
+* Windows user?  The article ["How to run the command prompt (cmd) in Windows"](https://support.kaspersky.com/common/windows/14637#block0) has screenshots for various versions of Windows, all the way back to Windows 7!
+
+* Because Windows has several different ways to use a CLI, the article [Difference Between CMD Vs Powershell Vs Bash](https://www.servertribe.com/difference-between-cmd-vs-powershell-vs-bash) might be a great start for comparing/contrasting these three tools available in Microsoft Windows.
+
+* Apple has a great [Terminal User Guide](https://support.apple.com/guide/terminal/welcome/mac) for those who use Macs.
+
+
+
 ## Feedback
 
 @feedback
