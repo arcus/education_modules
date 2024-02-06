@@ -12,7 +12,7 @@ mode: Textbook
 title: Demystifying the Command Line Interface 
 comment:  Understand what the command line interface is and why it's useful!
 long_description: The command line interface (CLI) of your computer allows you to type commands to do tasks. This module explains what the command line interface is, how to get to it, and how to learn more about using it.  It's appropriate for brand new beginners.
-estimated_time_in_minutes: 30
+estimated_time_in_minutes: 15
 
 @pre_reqs
 No particular skills or experience are required for this module.  
@@ -129,7 +129,7 @@ If you've never used a command line, you might have a few common questions, like
 Where is the Command Line Interface?
 ----
 
-Most people use a Mac or a Windows operating system on their computer.  To get to the command line, you'll use **Terminal** in macOS or **Command Prompt** or **PowerShell** or **Git Bash** in Windows.  Using the command line can be a little different based on the computer system you use and which program you use. 
+Most people use a Mac or a Windows operating system on their computer.  To get to the command line, you'll use **Terminal** in macOS. In Windows, you'll use **Command Prompt** or **PowerShell** or **Git Bash**.  Using the command line can be a little different based on the computer system you use and which program you use. 
 
 What Do I Type?
 ---
@@ -138,13 +138,16 @@ When it comes to knowing what to do in a computer, the command line interface ca
 
 There are lots of places to learn commands.  One skill that will help is learning to effectively search the internet for a good description of the thing you're trying to do.  Chances are that you'll find someone who has already had the same challenge as you and learned how to solve it.  For example, if you're not sure how to list the files in a directory, you might search using terms like "command line what files are in my directory" or "CLI show files Windows" or something similar.  It takes practice to learn the vocabulary to create good search terms, but keep in mind that even pros who use the command line many times a day will often search for things rather than rely on their memory! Below, see a comic that shows the distress of someone asked to accurately use the command line using the `tar` file compression utility. While this is something that a Unix or Linux user might do with some frequency, most people can't remember it spontaneously.
 
-![A four-panel cartoon. People standing over a bomb with an attached keyboard yell "Rob! You use Unix! Come quick!".  The bomb display reads "To disarm the bomb, simply enter a valid `tar` command on your first try.  No googling.  You have ten seconds."  The group looks on in silence, until one person says, "Rob?".  Rob replies, "I'm so sorry."](https://imgs.xkcd.com/comics/tar.png "[Tar](https://xkcd.com/1168/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")
+![A four-panel cartoon. People standing over a bomb with an attached keyboard yell "Rob! You use Unix! Come quick!".  The bomb display reads "To disarm the bomb, simply enter a valid `tar` command on your first try.  No googling.  You have ten seconds."  The group looks on in silence, until one person says, "Rob?".  Rob replies, "I'm so sorry."](https://imgs.xkcd.com/comics/tar.png "[Tar comic by xkcd](https://xkcd.com/1168/), [CC BY-NC 2.5](https://xkcd.com/license.html).")
 
 One place to learn the basics of working in the command line is in our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.  This is a good place to do some safe, easy command line practice so you feel more confident.
 
 There are also `man` (short for *manual*) and `help` documentation pages that you can view within the command line.  For example, in a Linux-like CLI such as the Mac Terminal or Git Bash on Windows, typing `man ls` will give lots of instructions on how to use the `ls` command.
 
-And finally, let's talk about getting things wrong.  What will happen if you type the wrong thing?  Probably, **nothing** will happen.  The computer will give the equivalent of a shrug and say "I don't understand."  If you type a command that doesn't exist, or do something wrong, like put some words in the wrong order, you'll get an error message that might feel difficult to parse, but doesn't itself mean that anything got harmed.  
+What If I Get Things Wrong?
+---
+
+What will happen if you type the wrong thing?  Probably, **nothing** will happen.  The computer will give the equivalent of a shrug and say "I don't understand."  If you type a command that doesn't exist, or do something wrong, like put some words in the wrong order, you'll get an error message that might feel difficult to parse, but doesn't itself mean that anything got harmed.  This is often true even if the error message says something really scary sounding, like **FATAL**. 
 
 Of course, it makes sense to check what a command actually does before typing it.  For example, the command `rm` removes something -- a file, or even a directory and everything in it.  If someone wanted to do a very mean prank they might suggest that you use a command including `rm`.  So after you search online but **before** you type a command in, do a bit of searching about what the command does.  
 
@@ -157,7 +160,7 @@ Most things you want to accomplish on your computer can be done using multiple i
 
 ## Quiz
 
-Which of the following could be defined as an interface?
+Which of the following could be described as an interface?
 
 [[X]] A method for two computer systems to interact
 [[X]] A series of switches and dials used to control a physical device
