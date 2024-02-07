@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.3.0
+version:  1.3.0 
 current_version_description: Make numeric and null entries the correct data type.
 language: en
 narrator: UK English Female
