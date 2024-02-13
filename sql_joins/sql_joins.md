@@ -3,7 +3,7 @@ module_id: sql_joins
 author:   Joy Payton
 email:    paytonk@chop.edu
 version: 1.1.7
-current_version_description: Update data types in SQL tables
+current_version_description: Typo fix; update metadata
 module_type: standard
 docs_version: 2.0.0
 language: en
