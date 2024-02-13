@@ -161,9 +161,9 @@ try {
 <script>
     alasql("DROP TABLE IF EXISTS disease;");
     alasql("create table disease (subject_id integer, lung_cancer boolean);");
-    alasql("INSERT INTO disease VALUES (3,'TRUE');");
-    alasql("INSERT INTO disease VALUES (5,'FALSE');");
-    alasql("INSERT INTO disease VALUES (8,'FALSE');");
+    alasql("INSERT INTO disease VALUES ('3','TRUE');");
+    alasql("INSERT INTO disease VALUES ('5','FALSE');");
+    alasql("INSERT INTO disease VALUES ('8','FALSE');");
 </script>
 @end
 
@@ -171,9 +171,9 @@ try {
 <script>
     alasql("DROP TABLE IF EXISTS smoking;");
     alasql("create table smoking (subject_id integer, smoking_pack_years integer);");
-    alasql("INSERT INTO smoking VALUES (2,10);");
-    alasql("INSERT INTO smoking VALUES (3,10);");
-    alasql("INSERT INTO smoking VALUES (4,0);");
+    alasql("INSERT INTO smoking VALUES ('2','10');");
+    alasql("INSERT INTO smoking VALUES ('3','10');");
+    alasql("INSERT INTO smoking VALUES ('4','0');");
 </script>
 @end
 
