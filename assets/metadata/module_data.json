@@ -1801,7 +1801,7 @@
 "module_id": "statistical_tests",
 "author": "Rose Hartman",
 "email": "hartmanr1@chop.edu",
-"version": "1.3.6",
+"version": "1.3.7",
 "current_version_description": "Highlight box update, fix typos, front matter update, add some additional resources.",
 "module_type": "standard",
 "docs_version": "2.0.0",
@@ -1824,7 +1824,7 @@
 "pre_reqs": "\n- Learners should already be familiar with the purpose and assumptions of any test they intend to run --- this module covers the \"how\" only, not the \"why\".\n- This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with our [R Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md) series first and then coming back here.\n\n",
 "learning_objectives": "After completion of this module, learners will be able to:\n\n- Use four key questions to help determine which statistical tests will be most appropriate in a given situation\n- Discuss general differences between running statistical tests in R vs. python\n- Quickly find the code they need to be able to run most common statistical tests in R or python\n",
 "sets_you_up_for": "\n",
-"depends_on_knowledge_available_in": "- r_basics_introduction\n- python_basics_variables_functions_methods\n- intro_to_nhst\n",
+"depends_on_knowledge_available_in": "- intro_to_nhst\n",
 "version_history": "Previous versions: \n\n- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/statistical_tests/statistical_tests.md#1): Add biostats handbook as additional resource.\n- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cde920bb122d9ad69dd5c547725d303541f171eb/statistical_tests/statistical_tests.md#1): Add emphasis on need to study statistical theory (in response to module feedback).\n- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cde69494c598cbec920221560564eb3d7c26c79c/statistical_tests/statistical_tests.md#1): Initial version, fix broken links.\n",
 "Linked Course":"intro_to_nhst python_basics_variables_functions_methods r_basics_introduction "
 },
