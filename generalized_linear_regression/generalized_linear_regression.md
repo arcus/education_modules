@@ -1,5 +1,6 @@
 <!--
 
+module_id: generalized_linear_regression
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version:  0.0.0
@@ -16,7 +17,7 @@ comment:  What is generalized linear regression (including logistic regression) 
 
 long_description: This lesson walks you through what generalized linear models are, and how they are similar to and different from ordinary linear regression. It uses logistic regression as a specific example, but touches on other generalized linear models as well. This is a theoretical overview, not hands-on coding practice, so no experience with any particular software is expected. If you want to understand generalized linear models better, regardless of what statistical software you use, this is for you!
 
-estimated_time_in_minutes: 
+estimated_time_in_minutes: 60
 
 @pre_reqs
 Learners should already be familiar with the following concepts in statistics and math:
@@ -34,6 +35,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
+data_task: data_analysis
 collection: statistics
 coding_required: false
 
