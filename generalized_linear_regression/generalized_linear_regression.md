@@ -159,15 +159,18 @@ True or False: Both linear models and generalized linear models are based on the
 [(X)] TRUE
 [( )] FALSE
 
-
 ## Special considerations for generalized linear models
 
-- Unlike linear models, there is not a single analytic solution to glms
-- The computer uses brute force to find a solution, iterating over tons of combinations of parameter estimates and seeing which gives the best model fit
-- This means the results are not exact --- they depend on the sampling algorithm being used --- so you might see very small changes if you run the model again, or if you run it on other software
-- There's a risk that your model won't converge if it's too complicated and you don't have enough data
+When you run generalized linear models, it feels very similar in many ways to running a regular linear model. 
+Your output will look largely similar (coefficient tests, measurement of overall model fit, etc.). 
+Under the hood, though, your statistical software is doing something very different.
 
-## Example: Logistic regression
+Unlike linear models, there is not a single analytic solution to generalized linear models -- that means you couldn't (even if you wanted to) figure out the solution by solving the equation by hand. 
+Instead, the computer uses brute force to find a solution, iterating over tons of combinations of parameter estimates and seeing which gives the best model fit.
+
+This means the results are not exact --- they depend on the sampling algorithm being used --- so you might see very small changes if you run the model again, or if you run it on other software. There's also a risk that your model won't converge if it's too complicated and you don't have enough data.
+
+## Logistic regression
 
 One of the most common kinds of generalized linear model is logistic regression. 
 That's a linear model using a [logit](https://en.wikipedia.org/wiki/Logit) transformation to convert the outcome that's binary (or continuous but bounded at 0 to 1, like a proportion).
@@ -183,179 +186,74 @@ Data bounded at 0 and 1, like probabilities or binary outcomes, can be converted
 1. Probabilities can be converted to odds by dividing the probability by 1-(the probability). So a probability of .5 becomes $0.5/(1-0.5) = 1$.
 2. Odds are unbounded at the upper end (they can theoretically go to positive infinity), but they're still bounded at the lower end, at 0. We can fix that by taking the natural log of the odds. The natural log of the odds is called a logit. For a probability of .5, the logit would be $Ln(0.5/1-0.5) = 0$.
 
-To build your intution of probability, odds, and log-odds, it may be helpful to consider what counts as "likely" or "unlikely" for each. 
+To build your intuition of probability, odds, and log-odds, it may be helpful to consider what counts as "likely" or "unlikely" for each. 
 If an event is unlikely to happen, it would have a probability less than .5. 
 That corresponds to an odds of less than 1, and a log-odds of less than 0. 
 If an event is likely to happen, then the probability would be greater than .5, the odds would be greater than 1, and the log-odds would be greater than 0. 
 
 </div>
 
-### The data
+### Example
 
-https://www.nejm.org/doi/full/10.1056/NEJMoa1111103
+Let's return to the linear model example we were considering, predicting fetal weight from femoral length measured during an ultrasound. 
+As a reminder, here's the linear equation for that model: 
 
-From the help documentation:
+$$
+fetal\_weight = \beta_0 + \beta_{femoral_length} * femoral_length + e
+$$ 
 
-> ERCP, or endoscopic retrograde cholangio-pancreatogram, is a procedure performed by threading an endoscope through the mouth to the opening in the duodenum where bile and pancreatic digestive juices are released into the intestine. ERCP is helpful for treating blockages of flow of bile (gallstones, cancer), or diagnosing cancers of the pancreas, but has a high rate of complications (15-25%).
-> The occurrence of post-ERCP pancreatitis is a common and feared complication, as pancreatitis can result in multisystem organ failure and death, and can occur in ~ 16% of ERCP procedures.
-> The inflammatory cytokine storm that can result from this procedural complication can be quite severe. Several small randomized trials suggested that anti-inflammatory NSAID therapies at the time of ERCP could reduce the rate of this complication, but all were rather small single-center studies, and were not sufficiently convincing to change practice.
+But what if you're interested in predicting not weight, but whether or not the fetus has trisomy 21, a binary outcome?
+In this case the predictor would be something like femur length (FL) relative to head size (biparietal diameter, BPD), so the variable captures whether the femur is relatively long or short for the fetus's overall size.
+(Note that [although relative femur length has historically been used as a way to try to identify pregnancies affected by trisomy 21, its value as a predictor has been called into question]((https://pubmed.ncbi.nlm.nih.gov/11117083/)), especially for early in pregnancy. 
+It's still a useful example of a model with a binary outcome, though!) 
 
+$$
+trisomy\_21\_dx = \beta_0 + \beta_{BPD/FL} * BPD/FL + e
+$$ 
 
-alternate data: 
+<div class = "cool-fact">
+<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
 
+Trisomy 21 is the most common chromosomal condition!
+Learn more about trisomy 21 at the [National Down Syndrome Society website](https://ndss.org/about). 
 
-article: https://peerj.com/articles/175/
+</div>
 
-available on GH: https://github.com/hpiwowar/citation11k/tree/master/analysis/data
+Assume that `trisomy_21_dx` is coded as 0 (no) or 1 (yes) in the data.
+**What would happen if you just tried to estimate this as a regular linear model?**
 
-Learn more about how open science practices impact researchers' careers: https://elifesciences.org/articles/16800#bib105
+#### Trying a linear model 
 
-### Writing the formula
+![](media/linear_prediction.png)
 
-### Link functions
+``` -See the R code to generate the fake data
+library(tidyverse)
+# set the random seed so results replicate exactly with the random number generators
+set.seed(24601)
 
-### Summarize the results
+# sample size
+n <- 100
 
-Note that R prints the results such that the first level of the outcome variable is a failure, so these results articulate the probability of the second level of statement.included happening. 
-To see the order of the levels in the data frame, use levels()
-
-```r
-model.sum <- summary(logit.model1)
-pander(model.sum)
+# random sampling of 0 and 1 for trisomy_21_dx
+# sample from a normal distribution for BPD/FL, but use a higher mean if trisomy_21_dx == 1
+data <- data.frame(trisomy_21_dx = sample(x = c(0,0,0,1), 
+                                          size = n, 
+                                          replace = TRUE)) |> 
+  mutate(`BPD/FL` = ifelse(trisomy_21_dx == 1, 
+                           rnorm(n, mean = 1.6, sd = .2),
+                           rnorm(n, mean = 1.5, sd = .2)))
 ```
 
-\seealso{the stargazer package, which makes lovely model tables and works for knitting to pdf but not Word}
-\seealso{knitr has a function for making tables, kable(), but it doesn't work for model summaries}
+This model shows the probability of trisomy 21 diagnosis on the y-axis (0 = no, 1 = yes), and ratio of BPD to femur length on the x-axis. 
+As we might expect, the probability of trisomy 21 diagnosis goes up as BPD/FL increases.
+But there are also a couple serious problems with the above plot: 
 
-### Testing a series of models
+ - First, you can see from the line of best fit that the probability of trisomy 21 diagnosis never gets above .5 for the observed values of BPD/FL. If we used 50% probability as a cutoff, that means we would never predict that any fetus had trisomy 21 based on these data --- not a very useful model.
+ - Secondly, at very low values of BPD/FL, the predicted value for trisomy 21 diagnosis actually goes below 0. What does it mean to have a negative probability of trisomy 21? That value doesn't make any sense.
 
-It's typical to test a series of glms, beginning with a null model (no predictors).
-
-```r
-logit.model0 <- glm(statement.included ~ 1, data=osf.lgt,
-                    family=binomial(link="logit"),
-                    na.action=na.exclude)
-```
-
-Use anova() to test for a significant improvement in model fit from the null model to our test model:
-
-```r
-anova(logit.model0, logit.model1, test="Chisq") 
-```
-
-Since we want to test for a significant change in model fit (deviance), we'll used a chi-squared test.
-
-### Classification tables
-
-For logistic regression, it's nice to have a classification table showing your model's predicted outcomes compared to the actual outcome.
-
-```r
-osf.lgt$pred1 <- predict(logit.model1, 
-                                osf.lgt, 
-                                type="response") 
-
-osf.lgt$pred0 <- predict(logit.model0, 
-                                 osf.lgt, 
-                                 type="response") 
-```
-
-Note that if you leave out the type="response" argument, or enter type="link" instead, it will give you predicted logits instead of predicted probabilities.
+#### Transform with a link function
 
 
-Set a probability cutoff (let's use .5). Probabilities above this will be classified as "yes", and below will be classified as "no".
-
-```r
-osf.lgt$clas0 <- ifelse(osf.lgt$pred0 >= .5, 1,
-                                ifelse(osf.lgt$pred0 < .5, 0, 
-                                       NA))
-osf.lgt$clas1 <- ifelse(osf.lgt$pred1 >= .5, 1,
-                                ifelse(osf.lgt$pred1 < .5, 0, 
-                                       NA))
-```
-
-Convert the new classification variables to factors, for cleaner output in the crosstabs.
-
-```r
-osf.lgt$clas0 <- factor(osf.lgt$clas0,
-                                levels=c(1,0),
-                                labels=c("yes", "no"))
-osf.lgt$clas1 <- factor(osf.lgt$clas1,
-                                levels=c(1,0),
-                                labels=c("yes", "no"))
-```
-
-```r
-xtabs(~ statement.included + clas0, data=osf.lgt)
-
-xtabs(~ statement.included + clas1, data=osf.lgt)
-```
-
-\seealso{gmodels::CrossTable(), which makes fancier crosstabs}
-
-### Plotting your logistic regression
-
-The relationship between publication date and whether there was a data statement available
-
-```r
-ggplot(osf.lgt, aes(x=date, y=statement.included)) + 
-  geom_point(alpha=.3)
-```
-
-Note that R counts factor levels starting at 1, so "no" and "yes" are plotted at 1 and 2 respectively. To line them up with the predicted values from the model, we need to subtract 1.
-
-
-```r
-ggplot(osf.lgt, aes(x=date, y=as.numeric(statement.included)-1)) + 
-  geom_point( alpha=.3 ) + 
-  geom_line( aes(y=pred, x=date) ) +
-  labs(y="Probability of providing a data statement")
-```
-
-learnmore ggplot2
-
-- Read Jenny Bryan's ggplot tutorials --- tons of great examples and code! Click on the files that have the file extension .md (those will be the easiest to read) \\ \url{https://github.com/jennybc/ggplot2-tutorial}
-- All of the geoms, with pictures \\ \url{http://docs.ggplot2.org/current/}
-- For more in-depth material on ggplot2, see the resources at \\ \url{http://ggplot2.org/}
-
-### Adding more predictors
-
-What question would this model test?
-
-```r
-logit.model2 <- glm(statement.included ~ date*Journal, data=osf.lgt,
-                   family=binomial(link="logit"),
-                   na.action=na.exclude)
-```
-
-Test against simpler models
-
-```r
-anova(logit.model0, logit.model1, logit.model2, test="Chisq") 
-```
-
-Getting predicted values
-
-```r
-osf.lgt$pred2 <- predict(logit.model2, 
-                                osf.lgt, 
-                                type="response") 
-osf.lgt$clas2 <- ifelse(osf.lgt$pred2 >= .5, 1,
-                                ifelse(osf.lgt$pred2 < .5, 0, 
-                                       NA))
-osf.lgt$clas2 <- factor(osf.lgt$clas2,
-                                levels=c(1,0),
-                                labels=c("yes", "no"))
-
-xtabs(~ statement.included + clas2, data=osf.lgt)
-```
-
-```r
-ggplot(osf.lgt, aes(x=date, y=as.numeric(statement.included)-1, 
-                    color=Journal)) + 
-  geom_point( alpha=.3 ) + 
-  geom_line( aes(y=pred2, x=date) ) +
-  labs(y="Probability of providing a data statement")
-```
 
 ## Other kinds of GLMs
 
