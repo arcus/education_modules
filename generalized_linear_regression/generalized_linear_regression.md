@@ -5,16 +5,16 @@ email:    hartmanr1@chop.edu
 version:  0.0.0
 current_version_description: Initial version
 module_type: standard
-docs_version: 3.1.1
+docs_version: 4.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
 
 title: Generalized Linear Regression
 
-comment:  This is a short, focused description of the module.
+comment:  What is generalized linear regression (including logistic regression) and when might you need it? 
 
-long_description: This is a longer description, which should be understandable for a lay audience.
+long_description: This lesson walks you through what generalized linear models are, and how they are similar to and different from ordinary linear regression. It uses logistic regression as a specific example, but touches on other generalized linear models as well. This is a theoretical overview, not hands-on coding practice, so no experience with any particular software is expected. If you want to understand generalized linear models better, regardless of what statistical software you use, this is for you!
 
 estimated_time_in_minutes: 
 
@@ -28,10 +28,9 @@ Learners should already be familiar with the following concepts in statistics an
 @learning_objectives  
 After completion of this module, learners will be able to:
 
-- identify key elements
-- create a product
-- do a task
-- articulate the rationale for something
+- describe how generalized linear models are similar to and different from linear models
+- define a "link function"
+- identify when a logistic regression model is appropriate
 @end
 
 good_first_module: false
@@ -357,19 +356,41 @@ We can only use ordinary linear regression when the outcome variable is continuo
 </div>
 ***
 
-True or False: The logit transformation is an appropriate way to convert a variable that is binary to a continuous variable that isn't bounded.
+Which of the following best describes what a "link function" is?
 
-[(X)] TRUE
-[( )] FALSE
+[( )] A link function expresses the relationship between predictors and an outcome, such as $b_0 + b_x * x$
+[(X)] A link function is a transformation to convert an outcome variable to a form that is appropriate for linear regression
 ***
 <div class = "answer">
 
-True! 
-We can only use linear regression when the outcome variable is continuous and unbounded, so if you have, for example, a binary outcome, then a regression model won't work unless you first transform the outcome to be continuous and unbounded -- that's what generalized linear models do! 
+A link function is a transformation to convert an outcome variable to a form that is appropriate for linear regression.
+($b_0 + b_x * x$ is an example of a linear model, not a link function.)
 
-The transformation that will work (also called a "link" function) depends on the shape of the outcome variable to start with. 
+The transformation that will work depends on the shape of the outcome variable to start with. 
 For binary outcomes, a logit transformation works well. 
 A generalized linear model with a logit link function is often called "logistic regression" for short.
+
+</div>
+***
+
+What is an appropriate link function to transform a binary outcome variable?
+
+[(X)] Logit
+[( )] Poisson
+[( )] Gamma
+[( )] Gaussian
+[( )] Inverse-Gaussian
+***
+<div class = "answer">
+
+A **logit** (log odds) link function is usually the best choice for a binary outcome variable. 
+
+Poisson regression works well for outcomes that are count data. 
+Gamma regression and inverse-Gaussian regression work well for outcomes that are positively skewed and bounded at 0. 
+
+Gaussian regression is actually just regular linear regression! 
+A Gaussian distribution, also called a [normal distribution](https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data/normal-distributions-library/a/normal-distributions-review), is the [default assumption for linear regression models](https://www.theanalysisfactor.com/assumptions-of-linear-models/). 
+So it's actually no transformation at all!
 
 </div>
 ***
