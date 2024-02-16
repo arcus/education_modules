@@ -152,13 +152,6 @@ Generalized linear models are just linear models on data that's been transformed
 
 </div>
 
-## Quiz: Linear models
-
-True or False: Both linear models and generalized linear models are based on the equation for a line. 
-
-[(X)] TRUE
-[( )] FALSE
-
 ## Special considerations for generalized linear models
 
 When you run generalized linear models, it feels very similar in many ways to running a regular linear model. 
@@ -185,6 +178,22 @@ Data bounded at 0 and 1, like probabilities or binary outcomes, can be converted
 
 1. Probabilities can be converted to odds by dividing the probability by 1-(the probability). So a probability of .5 becomes $0.5/(1-0.5) = 1$.
 2. Odds are unbounded at the upper end (they can theoretically go to positive infinity), but they're still bounded at the lower end, at 0. We can fix that by taking the natural log of the odds. The natural log of the odds is called a logit. For a probability of .5, the logit would be $Ln(0.5/1-0.5) = 0$.
+
+| Logit|    Odds| Probability|
+|-----:|-------:|-----------:|
+|  -Inf|   0.000|       0.000|
+|    -5|   0.007|       0.007|
+|    -4|   0.018|       0.018|
+|    -3|   0.050|       0.047|
+|    -2|   0.135|       0.119|
+|    -1|   0.368|       0.269|
+|     0|   1.000|       0.500|
+|     1|   2.718|       0.731|
+|     2|   7.389|       0.881|
+|     3|  20.086|       0.953|
+|     4|  54.598|       0.982|
+|     5| 148.413|       0.993|
+|   Inf|     Inf|       1.000|
 
 To build your intuition of probability, odds, and log-odds, it may be helpful to consider what counts as "likely" or "unlikely" for each. 
 If an event is unlikely to happen, it would have a probability less than .5. 
@@ -224,9 +233,7 @@ Assume that `trisomy_21_dx` is coded as 0 (no) or 1 (yes) in the data.
 
 #### Trying a linear model 
 
-![](media/linear_prediction.png)
-
-``` -See the R code to generate the fake data
+``` -See the R code to generate some fake data
 library(tidyverse)
 # set the random seed so results replicate exactly with the random number generators
 set.seed(24601)
@@ -244,60 +251,96 @@ data <- data.frame(trisomy_21_dx = sample(x = c(0,0,0,1),
                            rnorm(n, mean = 1.5, sd = .2)))
 ```
 
+![Scatterplot showing BPD/FL on the x-axis (ranging from roughly 1 to 2) and `trisomy_21_dx` (0 or 1) on the y-axis. There are a range of BPD/FL values for both `trisomy_21_dx` = 1 and `trisomy_21_dx` = 0, but there appear to be more lower values of BPD/FL for `trisomy_21_dx` = 0. A straight line of best fit is overlaid on the data. It has a positive slope, starting at approximately `trisomy_21_dx` = -0.01 for BPD/FL values close to 1, and reaching `trisomy_21_dx` = 0.5 at a BPD/FL of approximately 1.9.](media/linear_prediction.png)
+
+``` -R code for the above plot
+ggplot(data, aes(y=trisomy_21_dx, x=`BPD/FL`)) + 
+  geom_point() + 
+  theme_bw() + 
+  labs(y = "Trisomy 21 Dx") + 
+  stat_smooth(method = "lm")
+```
+
 This model shows the probability of trisomy 21 diagnosis on the y-axis (0 = no, 1 = yes), and ratio of BPD to femur length on the x-axis. 
 As we might expect, the probability of trisomy 21 diagnosis goes up as BPD/FL increases.
-But there are also a couple serious problems with the above plot: 
 
- - First, you can see from the line of best fit that the probability of trisomy 21 diagnosis never gets above .5 for the observed values of BPD/FL. If we used 50% probability as a cutoff, that means we would never predict that any fetus had trisomy 21 based on these data --- not a very useful model.
- - Secondly, at very low values of BPD/FL, the predicted value for trisomy 21 diagnosis actually goes below 0. What does it mean to have a negative probability of trisomy 21? That value doesn't make any sense.
+But there's one very serious problem with the above plot: 
+At very low values of BPD/FL, the predicted value for trisomy 21 diagnosis actually goes below 0. 
+What does it mean to have a negative probability of trisomy 21? 
+That value doesn't make any sense.
 
 #### Transform with a link function
 
+In order for our model to generate sensible predictions, we need to transform it with a link function. 
 
+If we take the logit of the binary outcome variable, that will give us a variable that is **unbounded**.
+It runs from negative infinity to positive infinity --
+negative values indicate that the outcome is unlikely, and positive values indicate that the outcome is likely. 
+
+$$
+logit(trisomy\_21\_dx) = \beta_0 + \beta_{BPD/FL} * BPD/FL + e
+$$ 
+
+Now we can estimate a linear model on the transformed outcome.
+Then, after we get the estimates for the coefficients $\beta_0$ and $\beta_{BPD/FL}$, we can covert the equation back to the original scale to get predictions that will be probabilities (0-1).
+
+If we were to actually try to calculate this for our fake data by hand, though, we would quickly run into a problem. 
+The data are observed cases where the pregnancy either was or wasn't affected by trisomy 21, so they're all 0 or 1 exactly in the data. 
+The log odds of 0 and 1 will be negative infinity and positive infinity, respectively. 
+We can't actually work with those numbers. 
+But the computer can!
+
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
+
+You certainly don't need to understand how your statistical software arrives at its solution in order to run and interpret generalized linear models.
+But if you're curious, one of the most common methods is called [maximum likelihood estimation](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation).
+
+</div>
+
+If we estimate the model with the logit link function, and then convert the predictions back to a 0-1 scale, we get something like this:
+
+![The same scatterplot showing `BPD/FL` on the x-axis and `trisomy_21_dx` (0 or 1) on the y-axis, but the line of best fit is now a sigmoidal curve, approaching but never reaching 0 for low values of `BPD/FL`, and then curving up gently as `BPD/FL` increases.](media/linear_prediction.png)
+
+``` -R code for the above plot
+ggplot(data, aes(y=trisomy_21_dx, x=`BPD/FL`)) + 
+  geom_point() + 
+  theme_bw() + 
+  labs(y = "Trisomy 21 Dx") + 
+  stat_smooth(method = "glm", method.args = list(family = "binomial"))
+```
+
+That looks much better!
+The predicted values now respect the boundaries on our outcome variable -- they can never go below 0 or above 1. 
 
 ## Other kinds of GLMs
 
-Let's say you wanted to see if the number of experiments reported in each article varies by journal. 
+Logistic regression (regression using a logit link function) works well for binary outcomes.
+But what about other kinds of outcome variables?
 
-```r
-summary(osf$Number.of.experiments)
+If your outcome is counts of something, you can use a **Poisson** or **Negative Binomial** link function. 
+For example, perhaps your outcome is the number of [Adverse Childhood Experiences (ACEs)](https://www.cdc.gov/violenceprevention/aces/fastfact.html) per patient. 
+It's not possible for someone to have fewer than 0 ACEs, so that variable is bound at 0. 
+It's also measured as a count (how many total ACEs experienced), so no one will have 1.2 ACEs, for example. 
 
-hist(osf$Number.of.experiments)
-```
+For outcomes bounded at 0 and 1 (like a probability or proportion), you can use logistic regression, but a **beta** link function may be more appropriate.
 
-There are a couple reasonable options for a link function here. Let's go with Poisson.
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-```r
-osf.pois <- osf %>% 
-  select(Number.of.experiments, Journal) %>% 
-  filter(Journal != "Infant behavior & development") %>% 
-  na.omit()
-```
+For more details on beta regression and when to use it, see [Analysing continuous proportions in ecology and evolution: A practical introduction to beta and Dirichlet regression](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13234) by Douma and Weedon (2019).
 
-\hwydt{Write the glm call to model number of experiments by journal, using a Poisson link.}
+</div>
 
-```r
-pois.model <- glm(Number.of.experiments ~ Journal, data=osf.pois,
-                   family=poisson(link = "log"),
-                   na.action=na.exclude)  
-```
+If your outcome is positively skewed, especially something bound at 0, then you can use a **Gamma** or **Inverse-Gaussian** link function. 
+These are especially useful for outcomes like cost, income, or length of stay -- continuous variables bound at 0 and usually positively skewed.
 
-```r
-ggplot(osf.pois, aes(x=Number.of.experiments)) + 
-  geom_histogram() 
-```
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-Show Journal info as well
+To learn more about how to talk about the shape of a variable, such as identifying positive and negative skew, see the [Khan Academy lesson on shapes of distributions](https://www.khanacademy.org/kmap/measurement-and-data-j/md231-data-distributions/md231-displays-of-distributions/v/shapes-of-distributions).
 
-```r
-ggplot(osf.pois, aes(x=Number.of.experiments, fill=Journal)) + 
-  geom_histogram()
-
-ggplot(osf.pois, aes(x=Number.of.experiments, fill=Journal)) + 
-  geom_density(alpha=.3, adjust=2) 
-```
-
-Try adding facet wrap by Journal as well, to put each density plot in its own facet.
+</div>
 
 ## Quiz
 
@@ -314,7 +357,7 @@ We can only use ordinary linear regression when the outcome variable is continuo
 </div>
 ***
 
-True or False: The logit transformation is an appropriate way to convert a variable that is binary or bounded at 0 and 1 (like a probability or proportion) to a continuous variable that isn't bounded.
+True or False: The logit transformation is an appropriate way to convert a variable that is binary to a continuous variable that isn't bounded.
 
 [(X)] TRUE
 [( )] FALSE
@@ -324,12 +367,12 @@ True or False: The logit transformation is an appropriate way to convert a varia
 True! 
 We can only use linear regression when the outcome variable is continuous and unbounded, so if you have, for example, a binary outcome, then a regression model won't work unless you first transform the outcome to be continuous and unbounded -- that's what generalized linear models do! 
 
-</div>
-***
-
 The transformation that will work (also called a "link" function) depends on the shape of the outcome variable to start with. 
 For binary outcomes, a logit transformation works well. 
 A generalized linear model with a logit link function is often called "logistic regression" for short.
+
+</div>
+***
 
 ## Additional Resources
 
