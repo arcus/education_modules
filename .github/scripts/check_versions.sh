@@ -1,7 +1,7 @@
 #!/bin/bash
 awk 'BEGIN { RS = "diff --git" }   # splits diff file such that each file represented in the diff is treated as an individual record. each record is processed individually with the below statements
 {
-    if (system( "bash .github/scripts/is_module.sh " $1 ) == 0 ) 
+    if (system("bash .github/scripts/is_module.sh " $1 " || bash .github/scripts/is_docs_or_macros.sh " $1 )  == 0)
         { 
             if ( $0 ~ /\/dev\/null/ ) # is this a module file being uploaded for the first time? 
                 { 
