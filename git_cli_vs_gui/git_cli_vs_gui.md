@@ -10,7 +10,7 @@ narrator: US English Female
 mode: Textbook
 title: Git Command Line Interface versus Graphical User Interface
 comment:  Compare the two ways of interacting with Git to decide which is best for you.
-long_description: You can use Git using a command line interface (CLI) and typing commands, and you can also use Git using graphical user interface software which is optimized for point-and-click.  This module will compare and contrast these two options to help you decide how to use Git in your work.
+long_description: There are two ways of using Git: (1) typing commands on a command line interface (CLI) or (2) clicking through options on a graphical user interface (GUI) software. This module will compare and contrast these two options to help you decide how to use Git in your work.
 estimated_time_in_minutes: 45
 
 @pre_reqs
@@ -27,6 +27,7 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
+collection: infrastructure_and_technology
 coding_required: false
 
 @sets_you_up_for
@@ -45,8 +46,6 @@ coding_required: false
 
 @version_history 
 
-Previous versions: 
-
 No previous versions.
 
 @end
@@ -62,7 +61,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 You may already know what Git is and even use it for version control, but let's review.  We'll take on some of the text that Git uses to describe itself in its official website:
 
-[![Screenshot of the official git website at https://git-scm.com.  It includes an image of interlinked documents as well as text that states the following: "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows."](media/git_scm_com.png)](https://git-scm.com)
+[![Screenshot of the official git website, which states: "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows."](media/git_scm_com.png)](https://git-scm.com)
 
 Git describes itself as a **distributed**, **open source** **version control** system. Let's talk about each of those terms:
 
@@ -95,7 +94,7 @@ In fact, you can have multiple different copies of the same repository, if that'
 Open Source
 -----
 
-Git is **FOSS**, or **free and open source**.  This means that git is "free" in two ways -- in the meaning of having **no cost** and also in that can be used widely **without intellectual property concerns or licensing restrictions**. 
+Git is **FOSS**, or **free and open source software**.  This means that git is "free" in two ways -- in the meaning of having **no cost** and also in that can be used widely **without intellectual property concerns or licensing restrictions**. 
 
 This is important because it means that people around the world use Git.  Students use it, individuals use it, large companies use it, people in highly-resourced projects use it, and people on a shoestring budget use it. 
 
