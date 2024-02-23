@@ -50,7 +50,7 @@ previous_sequential_module: git_intro
 
 @depends_on_knowledge_available_in
 
-- intro_to_version_control
+- git_intro
 - demystifying_command_line
 
 @end
