@@ -50,6 +50,7 @@ previous_sequential_module: git_setup_mac_and_linux, git_setup_windows
 
 @depends_on_knowledge_available_in
 - git_intro
+- demystifying_command_line
 - git_cli_vs_gui
 - git_setup_windows
 - git_setup_mac_and_linux
