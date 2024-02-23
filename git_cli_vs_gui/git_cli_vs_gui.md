@@ -294,7 +294,7 @@ We also think there's a very large contingent of users who would be so frustrate
 
 In the end, the important thing is **that** you use version control.  The details of **how** you do it, what interface you choose, is a matter of personal taste.
 
-## Quiz: Git Interfaces
+## Quiz
 
 Which of the following is true about graphical user interfaces (GUIs)?  Check all that apply!
 
