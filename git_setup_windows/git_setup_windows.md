@@ -38,7 +38,7 @@ coding_required: true
 coding_level: getting_started
 coding_language: git, bash
 sequence_name: git_basics
-previous_sequential_module: git_intro
+previous_sequential_module: git_cli_vs_gui
 
 @sets_you_up_for
 - git_creation_and_tracking
