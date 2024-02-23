@@ -2,10 +2,10 @@
 module_id: git_creation_and_tracking
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.0
+version: 1.1.1
 current_version_description: Add formal definition of repository and commit 
 module_type: standard
-docs_version: 3.0.0
+docs_version: 4.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -50,6 +50,7 @@ previous_sequential_module: git_setup_mac_and_linux, git_setup_windows
 
 @depends_on_knowledge_available_in
 - git_intro
+- git_cli_vs_gui
 - git_setup_windows
 - git_setup_mac_and_linux
 - bash_command_line_101
