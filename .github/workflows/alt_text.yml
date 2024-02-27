@@ -8,6 +8,6 @@ jobs:
   check-alt-text:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Check markdown for alt text presence 
         run: bash .github/scripts/alt-text.sh
