@@ -1,4 +1,4 @@
-name: Check for incomplete alt text 
+name: Check for incomplete alt text
 on:
   workflow_dispatch:
   pull_request:
