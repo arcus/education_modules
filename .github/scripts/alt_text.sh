@@ -1,4 +1,4 @@
-grep -rn --include=\*.md "\!\[\]"  | # search for lines with "![]" empty alt tag, only in markdown files
+grep -rn --include=\*.md "\!\[\s*\]"  | # search for lines with "![]" empty alt tag, only in markdown files
 grep  -v "ISSUE_TEMPLATE" > issues #return only lines in files that are NOT in the issue template folder
  #bc QA issue templates include example code block showing empty tag for illustration
 
