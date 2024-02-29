@@ -2,8 +2,8 @@
 module_id: data_visualization_in_seaborn
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.3.1
-current_version_description: Change executable code blocks from sagemath to pyodide.
+version: 1.4.0
+current_version_description: Add Python Basics series and Transform data with pandas as additional prerequisites
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -24,9 +24,11 @@ When statistical concepts are referenced in the lesson, links to learn more are 
 
 This module also assumes some basic familiarity with python, including
 
-- installing and importing python modules
-- reading in data
-- manipulating data frames, including calculating new columns
+- an introductory level exposure to coding in Python, which could be acquired in the Python Basics sequence of modules ([Functions, Methods, and Variables](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#1); [Lists and Dictionaries](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1); and [Loops and Conditional Statements](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_loops_conditionals/python_basics_loops_conditionals.md#1)).
+@end
+- installing and importing python modules (you can learn about importing packages in our [Transform data with pandas module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md#4)).
+- [reading in data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md#8)
+- [manipulating data frames, including calculating new columns](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md#17)
 
 If you are brand new to python (or want a refresher) consider starting with [Demystifying Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md) first.
 
@@ -58,7 +60,11 @@ previous_sequential_module: data_visualization_in_open_source_software
 
 @depends_on_knowledge_available_in
 
+- pandas_transform
 - data_visualization_in_open_source_software
+- python_basics_variables_functions_methods
+- python_basics_lists_dictionaries
+- python_basics_loops_conditionals
 - demystifying_python
 
 @end
@@ -69,6 +75,8 @@ data_visualization_in_ggplot2
 
 @version_history
 Previous versions: 
+
+- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b9257316d82e99f51e1c1cb9819dc8c053aa1ed9/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Change executable code blocks from sagemath to pyodide.
 
 - [1.2.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/16a4a852199689a42f04555cb581cf2dcb90fb0f/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Update highlight boxes, update front matter, and replace text with macros.
 - [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Initial version, and fixed broken link to ggplot2 module. 
