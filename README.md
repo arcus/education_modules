@@ -1,5 +1,8 @@
 # Education Modules
 
+[Here is a link that doesn't exist](https://arcus.github.io/link)
+
+[Here is something formatted to be a link, but isn't actually a link](this-isn't-a-link).
 ## Easier Interface
 
 If you're a learner or educator and you don't want to read the technical details, but want to jump right into training materials, please visit our [learner and educator facing site](https://arcus.github.io/education_modules).  Otherwise, read on to get more details about this repository.

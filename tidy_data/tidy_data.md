@@ -52,7 +52,7 @@ Previous versions:
 
 @end
 
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.m
 
 -->
 
@@ -85,7 +85,7 @@ You can probably come up with many examples of rectangular data in your own rese
 
 A rectangular data set can take on a lot of different rectangular shapes with different styles of organizing data. Some disciplines have specific types of summary tables, for example, that customarily appear in published manuscripts.  The one method or shape that is best suited for data analysis is known as "tidy".
 
-A data set is tidy, [according to Hadley Wickham and Garrett Grolemund](https://r4ds.had.co.nz/tidy-data.html#tidy-data-1), if:
+A data set is tidy, [according to Hadley Wickham and Garrett Grolemund](https://r4ds.had.co.nz/tidy-dat.html#tidy-data-1), if:
 
 * Each variable is in its own column
 * Each observation is in its own row, and
