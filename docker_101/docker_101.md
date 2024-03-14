@@ -2,7 +2,7 @@
 module_id: docker_101
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.2
+version:  1.1.3
 current_version_description: Updated description and prerequisites to make it clearer that this is not a module for beginners; added troubleshooting box about creating a file with no extension. 
 module_type: wrapper
 docs_version: 1.0.0
@@ -82,7 +82,10 @@ coding_language: bash
 @end
 
 @depends_on_knowledge_available_in
+- directories_and_file_paths
 - demystifying_containers
+- demystifying_command_line
+- bash_command_line_101
 @end
 
 @version_history
