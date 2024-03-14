@@ -3,7 +3,7 @@ module_id: bash_command_line_102
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
 version: 1.3.1
-current_version_description: Add emphasis about he permanence of `rm`
+current_version_description: Add emphasis about the permanence of `rm`
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -47,10 +47,13 @@ previous_sequential_module: bash_command_line_101
 @sets_you_up_for
 - bash_103_combining_commands
 - bash_conditionals_loops
+- bash_scripts
 @end
 
 @depends_on_knowledge_available_in
--bash_command_line_101
+- directories_and_file_paths
+- demystifying_command_line
+- bash_command_line_101
 @end
 
 @version_history
