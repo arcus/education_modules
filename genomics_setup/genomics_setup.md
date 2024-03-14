@@ -61,6 +61,8 @@ coding_language: bash
 @end
 
 @depends_on_knowledge_available_in
+
+- directories_and_file_paths
 - demystifying_command_line
 - bash_command_line_101
 
