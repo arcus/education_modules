@@ -2,7 +2,7 @@
 module_id: git_history_of_project
 author:  Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.1
+version: 1.1.2
 current_version_description: Correcting typos in quiz question answer.
 module_type: standard
 docs_version: 1.2.0
@@ -48,6 +48,7 @@ previous_sequential_module: git_creation_and_tracking
 @end
 
 @depends_on_knowledge_available_in
+- demystifying_command_line
 - git_intro
 - git_setup_windows
 - git_setup_mac_and_linux
