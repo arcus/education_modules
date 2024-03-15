@@ -2,7 +2,7 @@
 module_id: demystifying_python
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.2.5
+version: 1.2.6
 current_version_description: Updated highlight boxes and metadata
 module_type: standard
 docs_version: 2.0.0
@@ -15,7 +15,7 @@ long_description: Python is a versatile programming language that is frequently 
 estimated_time_in_minutes: 20
 
 @pre_reqs
-Learners should be familiar with tabular data (data stored in a rectangular format, like an Excel spreadsheet or a comma separated file). It is helpful to have some familiarity with [navigating to specific directories](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) and running programs in the Command Line/Terminal. Learners do not need to have access to Python or Jupyter notebooks on their own computers.
+Learners should be familiar with tabular data (data stored in a rectangular format, like an Excel spreadsheet or a comma separated file). It is helpful (but not essential) to have some familiarity with the [command line interface](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md#1), [navigating to specific directories](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1), and [running scripts in the Command Line/Terminal](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_scripts/bash_scripts.md#1). Learners do not need to have access to Python or Jupyter notebooks on their own computers.
 @end
 
 @learning_objectives  
@@ -39,7 +39,7 @@ coding_language: python
 @end
 
 @depends_on_knowledge_available_in
-- bash_command_line_101
+- demystifying_command_line
 @end
 
 @version_history 

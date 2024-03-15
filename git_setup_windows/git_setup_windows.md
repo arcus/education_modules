@@ -2,7 +2,7 @@
 module_id: git_setup_windows
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.2
+version: 1.2.3
 current_version_description: Updated metadata to latest standards
 module_type: standard
 docs_version: 2.0.0
@@ -18,6 +18,7 @@ estimated_time_in_minutes: 25
 
 @pre_reqs
 
+- Have used a [command line interface (CLI)](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md#1) on your computer before
 - Have an account on github.com (you can [sign up now](https://github.com/signup) if you haven't yet --- it's free)
 
 @end
@@ -46,6 +47,7 @@ previous_sequential_module: git_intro
 @end
 
 @depends_on_knowledge_available_in
+- demystifying_command_line
 - git_intro
 @end
 

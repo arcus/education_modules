@@ -2,7 +2,7 @@
 module_id: git_creation_and_tracking
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.0
+version: 1.1.1
 current_version_description: Add formal definition of repository and commit 
 module_type: standard
 docs_version: 3.0.0
@@ -18,7 +18,7 @@ estimated_time_in_minutes: 60
 @pre_reqs
 Before you start this module, make sure you
 
-- Know how to access a command line interface (CLI) on your computer.
+- Know how to [access a command line interface (CLI) on your computer](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md).
 - Have Git configured on your computer. If Git is not yet configured, see the module on setting up Git on a [Mac, Linux](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md), or [Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md) machine.
 - Can edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file), one of many text editors that you can access directly from the command line interface (CLI).
 @end
@@ -49,6 +49,7 @@ previous_sequential_module: git_setup_mac_and_linux, git_setup_windows
 @end 
 
 @depends_on_knowledge_available_in
+- demystifying_command_line
 - git_intro
 - git_setup_windows
 - git_setup_mac_and_linux

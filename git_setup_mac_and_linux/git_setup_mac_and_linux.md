@@ -2,7 +2,7 @@
 module_id: git_setup_mac_and_linux
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.2
+version: 1.2.3
 current_version_description: Updated metadata to latest standards
 module_type: standard
 docs_version: 2.0.0
@@ -17,7 +17,7 @@ long_description: If you're ready to start using the Git version control system,
 estimated_time_in_minutes: 15
 
 @pre_reqs
-- Have used the command line interface (CLI) on your computer before
+- Have used the [command line interface (CLI)](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md#1) on your computer before
 - Have Git installed on your computer (note that it is probably installed already even if you've never used it)
 - Have an account on github.com (you can [sign up now](https://github.com/signup) if you haven't yet --- it's free)
 @end
@@ -47,6 +47,7 @@ previous_sequential_module: git_intro
 @end
 
 @depends_on_knowledge_available_in
+- demystifying_command_line
 - git_intro
 @end
 

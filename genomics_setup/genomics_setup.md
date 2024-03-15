@@ -2,7 +2,7 @@
 module_id: genomics_setup
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.2.1
+version:  1.2.2
 current_version_description: Updated link to the Data Carpentries instructions, which changed after an update to their website. 
 module_type: wrapper
 docs_version: 2.0.0
@@ -20,7 +20,7 @@ estimated_time_in_minutes: 30
 
 @pre_reqs
 This lesson assumes a working understanding of the bash shell.
-If you aren’t familiar with the bash shell, please review our [Command Line 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) and/or the [Shell Genomics lesson by Data Carpentry](http://www.datacarpentry.org/shell-genomics/) before starting this lesson.
+If you aren’t familiar with the bash shell, please review our [Demystifying the Command Line Interface](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md#1) and [Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) modules and/or the [Shell Genomics lesson by Data Carpentry](http://www.datacarpentry.org/shell-genomics/) before starting this lesson.
 
 @end
 
@@ -28,12 +28,12 @@ If you aren’t familiar with the bash shell, please review our [Command Line 10
 After completion of this module, learners will be able to:
 
 - Launch and terminate instances on AWS
-- Use the Data Carpentry Community AMI to set up an AMI set up for genomics anlaysis
+- Use the Data Carpentry Community AMI to set up an AMI set up for genomics analysis
 
 @end
 
 resource1_name: Data Carpentry AMI Setup Instructions
-resource1_description: Instructions published along with the Data Carpenry Genomics Workshop to launch the AMI for genomics analysis.
+resource1_description: Instructions published along with the Data Carpentry Genomics Workshop to launch the AMI for genomics analysis.
 resource1_wellvetted: true
 resource1_wellvetted_text: Data Carpentries is a well-established organization with a great reputation and high standards for accuracy. The open source nature of the tutorial also helps ensure that any errors or problems can be caught and addressed quickly.
 resource1_maintained: true
@@ -57,10 +57,14 @@ coding_level: intermediate
 coding_language: bash
 
 @sets_you_up_for
-
+- genomics_quality_control
 @end
 
 @depends_on_knowledge_available_in
+
+- directories_and_file_paths
+- demystifying_command_line
+- bash_command_line_101
 
 @end
 
