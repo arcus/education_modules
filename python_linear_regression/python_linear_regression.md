@@ -304,7 +304,7 @@ This question is designed to test the test-taker's understanding of the concept 
 
 ### Real World Code Example
 
-The Streptomycin for Tuberculosis dataset originates from a groundbreaking clinical trial published in 1948, often recognized as the first modern randomized clinical trial. It comprises data from a prospective, randomized, placebo-controlled study investigating the efficacy of streptomycin treatment for pulmonary tuberculosis. The dataset includes variables such as participant ID, study arm (Streptomycin or Control), doses of Streptomycin and Para-Amino-Salicylate in grams, gender, baseline conditions (categorized as good, fair, or poor), oral temperature at baseline, erythrocyte sedimentation rate at baseline, presence of lung cavitation on chest X-ray at baseline, streptomycin resistance at 6 months, radiologic outcomes at 6 months, numeric rating of chest X-ray at month 6, and a dichotomous outcome indicating improvement. These variables provide comprehensive information for analyzing the effectiveness of streptomycin treatment for tuberculosis, allowing for various statistical analyses such as logistic regression modeling.
+The dataset comprises information on 442 diabetes patients, including their age, sex, body mass index (BMI), average blood pressure, and six blood serum measurements. Each patient's data includes ten baseline variables, with the first ten columns representing numeric predictive values. The eleventh column contains a quantitative measure of disease progression one year after baseline, serving as the target variable. Attributes include age in years, sex, BMI, average blood pressure, and measurements such as total serum cholesterol, low-density lipoproteins, high-density lipoproteins, total cholesterol/HDL ratio, possibly log of serum triglycerides level, and blood sugar level. Notably, each feature variable has been mean-centered and scaled by the standard deviation times the square root of the number of samples. This dataset is commonly used for predictive modeling and statistical analysis in the field of diabetes research. For more details, reference can be made to the original paper by Bradley Efron, Trevor Hastie, Iain Johnstone, and Robert Tibshirani titled "Least Angle Regression," published in the Annals of Statistics in 2004.
 
 
 
@@ -312,63 +312,34 @@ The Streptomycin for Tuberculosis dataset originates from a groundbreaking clini
 ```python @Pyodide.exec
 
 import pandas as pd
-import io
-from pyodide.http import open_url
-from sklearn.preprocessing import LabelEncoder
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import datasets
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score, mean_squared_error
-
-
-
-
-
+from sklearn.metrics import mean_squared_error, r2_score
 ```
 
 2.  Load the data:
 ```python
 # Load dataset and read to pandas dataframe
-url = "https://raw.githubusercontent.com/arcus/education_modules/linear_regression/python_linear_regression/data/strep_tb.csv"
+diabetes = datasets.load_diabetes()
 
-url_contents = open_url(url)
-text = url_contents.read()
-file = io.StringIO(text)
-df = pd.read_csv(file)
 
 # Analyze data and features
-df.info()
+print(diabetes)
+print(diabetes.DESCR)
 
-# Encode Categorical Features
-categorical_cols = [
-    'arm', 'gender', 'baseline_condition', 'baseline_temp',
-    'baseline_esr', 'baseline_cavitation', 'strep_resistance', 'radiologic_6m'
-]
- # Create a LabelEncoder for transforming columns
-le = LabelEncoder() 
-
-# Apply label encoding to each categorical column
-for col in categorical_cols:
-    df[col] = le.fit_transform(df[col])
+# Now we will split the data into the independent and independent variable
+X = diabetes.data
+Y = diabetes.target
 ```
 @Pyodide.eval
 
 
 3.  Compute Regression:
 ```python
-# Feature Selection and Target Definition
-features = [
-    'patient_id', 'arm', 'dose_strep_g', 'dose_PAS_g', 'gender',
-    'baseline_condition', 'baseline_temp', 'baseline_esr',
-    'baseline_cavitation', 'strep_resistance', 'radiologic_6m', 'rad_num'
-]
-target = 'improved'
-
-# Separate inputs (features) and output (target variable)
-inputs = df[features]
-output = df[target]
-
-# SECTION 4: Linear Regression Modeling
 model = LinearRegression()  # Create the regression model
-model.fit(inputs, output)   # Train the model 
+model.fit(X, Y)   # Train the model 
 ```
 @Pyodide.eval
 
@@ -376,15 +347,19 @@ model.fit(inputs, output)   # Train the model
 4.  Evaluate Model:
 ```python
 # Predict data
-predictions = model.predict(inputs) 
+predictions = model.predict(X) 
+
+# Check equation
+print('Coefficient', model.coef_)
+print('Intercept', model.intercept_)
 
 # Analyze predictions
-print('R-squared:', r2_score(output, predictions))  
-print('Mean Squared Error:', mean_squared_error(output, predictions))  
+print('R-squared:', r2_score(Y, predictions))  
+print('Mean Squared Error:', mean_squared_error(Y, predictions))  
 ```
 @Pyodide.eval
 
-The results obtained from the Streptomycin for Tuberculosis dataset reveal promising findings regarding the efficacy of streptomycin treatment for pulmonary tuberculosis. Originating from a groundbreaking clinical trial in 1948, widely acknowledged as the first modern randomized clinical trial, this dataset offers a rich array of variables encompassing participant demographics, treatment dosages, baseline conditions, and clinical outcomes. The R-squared value of 0.834306790075451 indicates that the linear regression model explains approximately 83.4% of the variance in the outcome variable, showcasing a strong fit of the model to the data. Additionally, the low Mean Squared Error of 0.04139073983616123 suggests that the model's predictions are relatively accurate. However, it's essential to recognize that linear regression serves as an initial step in analyzing this dataset. While these results provide valuable insights, further analyses employing advanced statistical techniques such as logistic regression modeling are warranted to fully comprehend the effectiveness of streptomycin treatment for tuberculosis management.
+While linear regression provides valuable insights into the relationship between the predictor variables and the target variable, it represents just the initial step in data analysis, particularly in the context of this diabetes dataset. The R-squared value of 0.518 indicates that approximately 51.8% of the variance in the response variable (disease progression) can be explained by the linear relationship with the predictor variables. Additionally, the mean squared error of 2859.70 suggests that the model's predictions deviate from the actual values by this amount, on average. However, it's essential to recognize that linear regression assumes a linear relationship between the predictors and the response, which may not always hold true. Further analysis is warranted to explore potential nonlinear relationships, assess the model's assumptions and limitations, evaluate the significance of each predictor variable, and possibly employ more sophisticated techniques such as feature selection, regularization, or non-linear regression methods to improve predictive accuracy and better understand the underlying patterns in the data. Additionally, validation techniques such as cross-validation should be employed to assess the model's generalizability and robustness. Therefore, while linear regression provides a foundational understanding, it is crucial to conduct comprehensive analyses to ensure robust and accurate modeling in the context of diabetes progression prediction.
 
 
 
