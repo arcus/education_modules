@@ -66,6 +66,12 @@ import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 
 @overview
 
+
+
+
+
+
+
 ### What is clustering?
 - Clustering is an unsupervised machine learning technique that groups unlabeled data points into clusters based on their similarity. The goal of clustering is to identify groups of data points that are similar to each other and dissimilar to data points in other groups. Clustering algorithms work by measuring the similarity between data points and then grouping similar data points together. There are many different clustering algorithms, each with its own strengths and weaknesses. Some of the most common clustering algorithms include K-Means clustering, hierarchical clustering, and Gaussian Mixture Models (GMMs). 
 
@@ -190,6 +196,8 @@ The goal of the K-Means clustering algorithm is to group similar data points tog
 ### Python Implementation of K-Means Clustering
     
 
+This dataset contains various clinical attributes of patients, including their age, sex, chest pain type (cp), resting blood pressure (trtbps), serum cholesterol level (chol), fasting blood sugar (fbs) level, resting electrocardiographic results (restecg), maximum heart rate achieved (thalachh), exercise-induced angina (exng), ST depression induced by exercise relative to rest (oldpeak), slope of the peak exercise ST segment (slp), number of major vessels (caa) colored by fluoroscopy, thalassemia (thall) type, and the presence of heart disease (output). The data seems to be related to the diagnosis of heart disease, with the output variable indicating whether a patient has heart disease (1) or not (0). Each row represents a different patient, with their respective clinical characteristics recorded.
+
 To implement k-means clustering in Python using Scikit-learn, we can follow these steps:
 
 1.  Import the necessary libraries:
@@ -308,6 +316,94 @@ All of the above techniques can be used to mitigate the sensitivity of clusterin
 
 </div>
 ***
+
+
+
+### Real World Code Example
+
+This dataset, derived and refined from a landmark study published in the New England Journal of Medicine in 1993, investigates the effectiveness of sulindac treatment in individuals with familial adenomatous polyposis (FAP), a hereditary condition characterized by the development of numerous adenomatous polyps in the colon and rectum. Enhanced from the original datasets "polyps" and "polyps3" in the {HSAUR} package, this dataset includes crucial variables such as participant ID, sex, age, baseline polyp count, assigned treatment (sulindac or placebo), and polyp counts at 3 and 12 months post-treatment. These enhancements involved meticulous referencing of the original paper and offer improved granularity and completeness for analyzing the impact of sulindac treatment on polyp progression in FAP patients. This dataset serves as a valuable resource for further research and analysis in the field of gastrointestinal medicine and pharmacology.
+
+1.  Install Packages:
+```python @Pyodide.exec
+
+import pandas as pd
+import io
+from pyodide.http import open_url
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+```
+
+2.  Load the data:
+```python
+# Load dataset and read to pandas dataframe
+url = "https://raw.githubusercontent.com/arcus/education_modules/python_clustering/python_clustering/data/polyps.csv"
+url_contents = open_url(url)
+text = url_contents.read()
+file = io.StringIO(text)
+df = pd.read_csv(file)
+
+# Analyze data and features
+df.info()
+
+# Select features for clustering
+features = ['age', 'baseline', 'number3m', 'number12m']
+X = df[features]
+
+# Fill missing values with the mean of each column
+X.fillna(X.mean(), inplace=True)
+
+# Standardize the feature values
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+```
+@Pyodide.eval
+
+
+3.  Cluster Data:
+```python
+# Define the number of clusters
+num_clusters = 3
+
+# Apply KMeans clustering
+kmeans = KMeans(n_clusters=num_clusters, random_state=42)
+kmeans.fit(X_scaled)
+
+# Assign cluster labels to the original dataframe
+df['cluster'] = kmeans.labels_
+```
+@Pyodide.eval
+
+
+4.  Visualize Clusters:
+```python
+# Visualize clusters for 'number3m' vs 'number12m'
+plt.figure(figsize=(10, 8))
+colors = ['red', 'blue', 'green']  # Change colors as needed for more clusters
+
+for i in range(num_clusters):
+    cluster_data = df[df['cluster'] == i]
+    plt.scatter(cluster_data['number3m'], cluster_data['number12m'], 
+                color=colors[i], label=f'Cluster {i}')
+
+plt.xlabel('Number of Polyps at 3 Months')
+plt.ylabel('Number of Polyps at 12 Months')
+plt.title('K-Means Clustering of Polyp Data: Number of Polyps at 3 Months vs Number of Polyps at 12 Months')
+plt.legend()
+plt.show()
+```
+@Pyodide.eval
+
+If the K-Means algorithm identified distinct clusters with minimal overlap, it suggests there might be three underlying patient groups regarding polyp count progression:
+
+- **Cluster 1 (Low Progression):** This cluster might represent participants who have a relatively low number of polyps at 3 months and a stable or slightly increased number at 12 months. This could be associated with effective treatment or naturally slow polyp growth.
+- **Cluster 2 (Moderate Progression):** This cluster could include participants with a moderate number of polyps at 3 months and a somewhat steeper increase by 12 months. This might indicate a less effective treatment or a faster natural growth rate for polyps.
+- **Cluster 3 (High Progression):** This cluster might contain participants with a high number of polyps at 3 months and a substantial increase by 12 months. This could be linked to factors like a particularly aggressive polyp type or treatment resistance.
+
+**While clustering provides valuable insights into potential patient subgroups, further analysis of treatment effects and other relevant features is necessary to fully understand the underlying factors influencing polyp count progression.**
+
+    
+
 
 
 ## Conclusion
