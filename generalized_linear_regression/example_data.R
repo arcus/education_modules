@@ -11,20 +11,23 @@ set.seed(24601)
 # sample size
 n <- 100
 
-# random sampling of 0 and 1 for trisomy_21_dx
-# sample from a normal distribution for BPD/FL, but use a higher mean if trisomy_21_dx == 1
-data <- data.frame(trisomy_21_dx = sample(x = c(0,0,0,1), 
+# random sampling of 0 and 1 for sepsis
+# sample from a normal distribution for heart_rate and temp, but use a higher mean if sepsis == 1
+data <- data.frame(sepsis = sample(x = c(0,0,0,1), 
                                           size = n, 
                                           replace = TRUE)) |> 
-  mutate(`BPD/FL` = ifelse(trisomy_21_dx == 1, 
-                           rnorm(n, mean = 1.6, sd = .2),
-                           rnorm(n, mean = 1.5, sd = .2)))
+  mutate(heart_rate = ifelse(sepsis == 1, 
+                           rnorm(n, mean = 100, sd = 10),
+                           rnorm(n, mean = 95, sd = 10)),
+         temp = ifelse(sepsis == 1, 
+                           rnorm(n, mean = 102, sd = 1),
+                           rnorm(n, mean = 101, sd = 1)))                           
 
 
-base_plot <- ggplot(data, aes(y=trisomy_21_dx, x=`BPD/FL`)) + 
+base_plot <- ggplot(data, aes(y=sepsis, x=heart_rate)) + 
   geom_point() + 
   theme_bw() + 
-  labs(y = "Trisomy 21 Dx")
+  labs(y = "Sepsis", x="Heart Rate")
 
 # try plotting the data with just a linear model
 base_plot + 
@@ -34,6 +37,3 @@ ggsave("linear_prediction.png", width = 5, height = 5, units = "in")
 base_plot + 
   stat_smooth(method = "glm", method.args = list(family = "binomial"))
 ggsave("logit_prediction.png", width = 5, height = 5, units = "in")
-
-
-
