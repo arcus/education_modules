@@ -299,6 +299,96 @@ This question is designed to test the test-taker's understanding of the concept 
 </div>
 ***
 
+
+
+
+### Real World Code Example
+
+The Streptomycin for Tuberculosis dataset originates from a groundbreaking clinical trial published in 1948, often recognized as the first modern randomized clinical trial. It comprises data from a prospective, randomized, placebo-controlled study investigating the efficacy of streptomycin treatment for pulmonary tuberculosis. The dataset includes variables such as participant ID, study arm (Streptomycin or Control), doses of Streptomycin and Para-Amino-Salicylate in grams, gender, baseline conditions (categorized as good, fair, or poor), oral temperature at baseline, erythrocyte sedimentation rate at baseline, presence of lung cavitation on chest X-ray at baseline, streptomycin resistance at 6 months, radiologic outcomes at 6 months, numeric rating of chest X-ray at month 6, and a dichotomous outcome indicating improvement. These variables provide comprehensive information for analyzing the effectiveness of streptomycin treatment for tuberculosis, allowing for various statistical analyses such as logistic regression modeling.
+
+
+
+1.  Install Packages:
+```python @Pyodide.exec
+
+import pandas as pd
+import io
+from pyodide.http import open_url
+from sklearn.preprocessing import LabelEncoder
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score, mean_squared_error
+
+
+
+
+
+```
+
+2.  Load the data:
+```python
+# Load dataset and read to pandas dataframe
+url = "https://raw.githubusercontent.com/arcus/education_modules/linear_regression/python_linear_regression/data/strep_tb.csv"
+
+url_contents = open_url(url)
+text = url_contents.read()
+file = io.StringIO(text)
+df = pd.read_csv(file)
+
+# Analyze data and features
+df.info()
+
+# Encode Categorical Features
+categorical_cols = [
+    'arm', 'gender', 'baseline_condition', 'baseline_temp',
+    'baseline_esr', 'baseline_cavitation', 'strep_resistance', 'radiologic_6m'
+]
+ # Create a LabelEncoder for transforming columns
+le = LabelEncoder() 
+
+# Apply label encoding to each categorical column
+for col in categorical_cols:
+    df[col] = le.fit_transform(df[col])
+```
+@Pyodide.eval
+
+
+3.  Compute Regression:
+```python
+# Feature Selection and Target Definition
+features = [
+    'patient_id', 'arm', 'dose_strep_g', 'dose_PAS_g', 'gender',
+    'baseline_condition', 'baseline_temp', 'baseline_esr',
+    'baseline_cavitation', 'strep_resistance', 'radiologic_6m', 'rad_num'
+]
+target = 'improved'
+
+# Separate inputs (features) and output (target variable)
+inputs = df[features]
+output = df[target]
+
+# SECTION 4: Linear Regression Modeling
+model = LinearRegression()  # Create the regression model
+model.fit(inputs, output)   # Train the model 
+```
+@Pyodide.eval
+
+
+4.  Evaluate Model:
+```python
+# Predict data
+predictions = model.predict(inputs) 
+
+# Analyze predictions
+print('R-squared:', r2_score(output, predictions))  
+print('Mean Squared Error:', mean_squared_error(output, predictions))  
+```
+@Pyodide.eval
+
+The results obtained from the Streptomycin for Tuberculosis dataset reveal promising findings regarding the efficacy of streptomycin treatment for pulmonary tuberculosis. Originating from a groundbreaking clinical trial in 1948, widely acknowledged as the first modern randomized clinical trial, this dataset offers a rich array of variables encompassing participant demographics, treatment dosages, baseline conditions, and clinical outcomes. The R-squared value of 0.834306790075451 indicates that the linear regression model explains approximately 83.4% of the variance in the outcome variable, showcasing a strong fit of the model to the data. Additionally, the low Mean Squared Error of 0.04139073983616123 suggests that the model's predictions are relatively accurate. However, it's essential to recognize that linear regression serves as an initial step in analyzing this dataset. While these results provide valuable insights, further analyses employing advanced statistical techniques such as logistic regression modeling are warranted to fully comprehend the effectiveness of streptomycin treatment for tuberculosis management.
+
+
+
+
 ## Conclusion
 
 At the end of the lesson, students should have a good understanding of the concept of linear regression and how to implement the linear regression algorithm in Python. They should also be able to apply linear regression to real-world datasets to make predictions and insights.
