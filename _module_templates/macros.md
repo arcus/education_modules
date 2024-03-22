@@ -44,6 +44,9 @@ This version (@version): @current_version_description
 @version_history
 
 </div>
+
+Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
+
 @end
 
 @make_survey_url
@@ -143,3 +146,5 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 
 ## Feedback
 @feedback
+
+Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
