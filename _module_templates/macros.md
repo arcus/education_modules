@@ -45,7 +45,7 @@ This version (@version): @current_version_description
 
 </div>
 
-Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
+Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules/list_of_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
 
 @end
 
@@ -81,7 +81,7 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out @make_survey_url('@title', '@version', '@module_type', '@module_id')!
 
-Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
+Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules/list_of_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
 
 @end
 
