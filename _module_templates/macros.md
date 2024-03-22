@@ -80,6 +80,9 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If we gave you the experience you expected
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out @make_survey_url('@title', '@version', '@module_type', '@module_id')!
+
+Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
+
 @end
 
 
@@ -145,6 +148,5 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 @overview
 
 ## Feedback
-@feedback
 
-Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
+@feedback
