@@ -79,22 +79,22 @@ For an approachable review of linear regression models, including a review of th
 
 </div>
 
-For example, we could express a model [predicting fetal weight from sonographic measurements of femur length](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6077071/) as the equation:
+For example, we could express a model [predicting heart rate from temperature in febrile children](https://www.frontiersin.org/articles/10.3389/fped.2020.548154/full) as the equation:
 
 $$
-fetal\_weight = \beta_0 + \beta_{femoral_length} * femoral_length + e
+\text{heart} \textunderscore \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
 $$ 
 
-If we wanted to look at differences in fetal weigh by sex (a categorical predictor) instead, the equation would actually look quite similar (assuming that the sex variable was coded 0 and 1 in the data): 
+If we wanted to look at differences in heart rate by sex (a categorical predictor) instead, the equation would actually look quite similar (assuming that the sex variable was coded 0 and 1 in the data): 
 
 $$
-fetal\_weight = \beta_0 + \beta_{sex} * sex + e
+\text{heart} \textunderscore \text{rate} = \beta_0 + \beta_{\text{sex}} * \text{sex} + e
 $$ 
 
-What if you want to model sex and femur length together at the same time? No problem, you can add as many predictors to a linear model as you like: 
+What if you want to model sex and temperature together at the same time? No problem, you can add as many predictors to a linear model as you like: 
 
 $$
-fetal\_weight = \beta_0 + \beta_{femoral_length} * femoral_length + \beta_{sex} * sex + e
+\text{heart} \textunderscore \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + \beta_{\text{sex}} * \text{sex} + e
 $$ 
 
 And you can allow quite a lot of complexity and nuance in a linear model as well, by including things like interaction terms or polynomial terms. 
@@ -126,7 +126,7 @@ If patients are restricted to categorical levels of dose (e.g. high, med, or low
 But if it's something where their dose might theoretically be anywhere on the scale, then it's continuous.
 
 A variable is **unbounded** if it can theoretically extend from negative infinity at the low end to positive infinity at the high end. 
-We often have variables that aren't truly unbounded, but they're close enough for all practical purposes -- for example, IQ can't technically be negative, but in practice no measured IQs are close to 0 so the data stop naturally before they hit a the scale boundary at 0. 
+We often have variables that aren't truly unbounded, but they're close enough for all practical purposes -- for example, IQ can't technically be negative, but in practice no measured IQs are close to 0 so the data stop naturally before they hit the scale boundary at 0. 
 IQ is generally treated as unbounded statistically.
 
 Something like a probability or proportion is bounded at 0 and 1; it's not possible to have a negative probability, or one over 1. 
@@ -205,31 +205,32 @@ If an event is likely to happen, then the probability would be greater than .5, 
 
 ### Example
 
-Let's return to the linear model example we were considering, predicting fetal weight from femoral length measured during an ultrasound. 
+Let's return to the linear model example we were considering, predicting heart rate from temperature in febrile children. 
 As a reminder, here's the linear equation for that model: 
 
 $$
-fetal\_weight = \beta_0 + \beta_{femoral_length} * femoral_length + e
+\text{heart} \textunderscore \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
 $$ 
 
-But what if you're interested in predicting not weight, but whether or not the fetus has trisomy 21, a binary outcome?
-In this case the predictor would be something like femur length (FL) relative to head size (biparietal diameter, BPD), so the variable captures whether the femur is relatively long or short for the fetus's overall size.
-(Note that [although relative femur length has historically been used as a way to try to identify pregnancies affected by trisomy 21, its value as a predictor has been called into question]((https://pubmed.ncbi.nlm.nih.gov/11117083/)), especially for early in pregnancy. 
-It's still a useful example of a model with a binary outcome, though!) 
+But what if you're interested in predicting not heart rate, but whether or not the patient is at risk for sepsis, a binary outcome?
 
-$$
-trisomy\_21\_dx = \beta_0 + \beta_{BPD/FL} * BPD/FL + e
-$$ 
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-<div class = "cool-fact">
-<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
+[Sepsis](https://www.chop.edu/conditions-diseases/sepsis) is a very complex condition and predicting it is much more difficult than just using a linear model based on a patient's temperature. 
+We're using a simplified model here so we can just focus on the mechanics of logistic regression, and we're using fake data to make the relationship easier to see. 
+In reality, predicting and diagnosing sepsis is enormously challenging and generally requires a range of predictors including vital signs, blood work, and additional scans and tests.
 
-Trisomy 21 is the most common chromosomal condition!
-Learn more about trisomy 21 at the [National Down Syndrome Society website](https://ndss.org/about). 
+For more context on the relationship between temperature and pediatric sepsis, read [Yehya et al. 2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9117394/).
 
 </div>
 
-Assume that `trisomy_21_dx` is coded as 0 (no) or 1 (yes) in the data.
+$$
+\text{sepsis} = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
+$$ 
+
+
+Assume that `sepsis` is coded as 0 (no) or 1 (yes) in the data.
 **What would happen if you just tried to estimate this as a regular linear model?**
 
 #### Trying a linear model 
@@ -242,32 +243,36 @@ set.seed(24601)
 # sample size
 n <- 100
 
-# random sampling of 0 and 1 for trisomy_21_dx
-# sample from a normal distribution for BPD/FL, but use a higher mean if trisomy_21_dx == 1
-data <- data.frame(trisomy_21_dx = sample(x = c(0,0,0,1), 
+# random sampling of 0 and 1 for sepsis
+# sample from a normal distribution for heart_rate and temp, but use a higher mean if sepsis == 1
+data <- data.frame(sepsis = sample(x = c(0,0,0,1), 
                                           size = n, 
                                           replace = TRUE)) |> 
-  mutate(`BPD/FL` = ifelse(trisomy_21_dx == 1, 
-                           rnorm(n, mean = 1.6, sd = .2),
-                           rnorm(n, mean = 1.5, sd = .2)))
+  mutate(heart_rate = ifelse(sepsis == 1, 
+                           rnorm(n, mean = 100, sd = 10),
+                           rnorm(n, mean = 95, sd = 10)),
+         temp = ifelse(sepsis == 1, 
+                           rnorm(n, mean = 102, sd = 1),
+                           rnorm(n, mean = 101, sd = 1)))    
 ```
 
-![Scatterplot showing BPD/FL on the x-axis (ranging from roughly 1 to 2) and `trisomy_21_dx` (0 or 1) on the y-axis. There are a range of BPD/FL values for both `trisomy_21_dx` = 1 and `trisomy_21_dx` = 0, but there appear to be more lower values of BPD/FL for `trisomy_21_dx` = 0. A straight line of best fit is overlaid on the data. It has a positive slope, starting at approximately `trisomy_21_dx` = -0.01 for BPD/FL values close to 1, and reaching `trisomy_21_dx` = 0.5 at a BPD/FL of approximately 1.9.](media/linear_prediction.png)
+![Scatterplot showing temperature on the x-axis (ranging from roughly 99 to 104) and sepsis (0 or 1) on the y-axis. There are a range of temperature values for both sepsis = 1 and sepsis = 0, but there appear to be more lower values of temperature for sepsis = 0. A straight line of best fit is overlaid on the data. It has a positive slope, starting at approximately sepsis = -0.01 for temperature values close to 1, and reaching sepsis = 0.6 at a temperature of approximately 104.](media/linear_prediction.png)
 
 ``` -R code for the above plot
-ggplot(data, aes(y=trisomy_21_dx, x=`BPD/FL`)) + 
+ggplot(data, aes(y=sepsis, x=heart_rate)) + 
   geom_point() + 
   theme_bw() + 
-  labs(y = "Trisomy 21 Dx") + 
+  labs(y = "Sepsis", x = "Temperature") + 
+  scale_y_continuous(breaks = c(0,1)) + 
   stat_smooth(method = "lm")
 ```
 
-This model shows the probability of trisomy 21 diagnosis on the y-axis (0 = no, 1 = yes), and ratio of BPD to femur length on the x-axis. 
-As we might expect, the probability of trisomy 21 diagnosis goes up as BPD/FL increases.
+This model shows the probability of sepsis on the y-axis (0 = no, 1 = yes), and temperature on the x-axis. 
+As we might expect, the probability of sepsis goes up as temperature increases.
 
 But there's one very serious problem with the above plot: 
-At very low values of BPD/FL, the predicted value for trisomy 21 diagnosis actually goes below 0. 
-What does it mean to have a negative probability of trisomy 21? 
+At the lowest values of temperature, the predicted value for sepsis actually goes below 0. 
+What does it mean to have a negative probability of sepsis? 
 That value doesn't make any sense.
 
 #### Transform with a link function
@@ -279,14 +284,14 @@ It runs from negative infinity to positive infinity --
 negative values indicate that the outcome is unlikely, and positive values indicate that the outcome is likely. 
 
 $$
-logit(trisomy\_21\_dx) = \beta_0 + \beta_{BPD/FL} * BPD/FL + e
+logit(\text{sepsis}) = \beta_0 + \beta_{\text{temp}}} * \text{temp} + e
 $$ 
 
 Now we can estimate a linear model on the transformed outcome.
-Then, after we get the estimates for the coefficients $\beta_0$ and $\beta_{BPD/FL}$, we can covert the equation back to the original scale to get predictions that will be probabilities (0-1).
+Then, after we get the estimates for the coefficients $\beta_0$ and $\beta_{\text{temp}}$, we can covert the equation back to the original scale to get predictions that will be probabilities (0-1).
 
 If we were to actually try to calculate this for our fake data by hand, though, we would quickly run into a problem. 
-The data are observed cases where the pregnancy either was or wasn't affected by trisomy 21, so they're all 0 or 1 exactly in the data. 
+The data are observed cases where the patient either did or did not have sepsis, so they're all 0 or 1 exactly in the data. 
 The log odds of 0 and 1 will be negative infinity and positive infinity, respectively. 
 We can't actually work with those numbers. 
 But the computer can!
@@ -301,13 +306,14 @@ But if you're curious, one of the most common methods is called [maximum likelih
 
 If we estimate the model with the logit link function, and then convert the predictions back to a 0-1 scale, we get something like this:
 
-![The same scatterplot showing `BPD/FL` on the x-axis and `trisomy_21_dx` (0 or 1) on the y-axis, but the line of best fit is now a sigmoidal curve, approaching but never reaching 0 for low values of `BPD/FL`, and then curving up gently as `BPD/FL` increases.](media/linear_prediction.png)
+![The same scatterplot showing temperature on the x-axis and sepsis (0 or 1) on the y-axis, but the line of best fit is now a sigmoidal curve, approaching but never reaching 0 for low values of temperature, and then curving up gently as temperature increases.](media/logit_prediction.png)
 
 ``` -R code for the above plot
-ggplot(data, aes(y=trisomy_21_dx, x=`BPD/FL`)) + 
+ggplot(data, aes(y=sepsis, x=temp)) + 
   geom_point() + 
   theme_bw() + 
-  labs(y = "Trisomy 21 Dx") + 
+  labs(y = "Sepsis", x = "Temperature") + 
+  scale_y_continuous(breaks = c(0,1))  + 
   stat_smooth(method = "glm", method.args = list(family = "binomial"))
 ```
 

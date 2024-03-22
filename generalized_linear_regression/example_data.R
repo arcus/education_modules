@@ -1,10 +1,10 @@
+library(tidyverse)
 # show the relationship between probability, odds, and logits
 logit_demo <- data.frame(Logit = c(-Inf, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, Inf)) |> 
   mutate(Odds = exp(Logit),
          Probability = ifelse(Odds < Inf, Odds / (1 + Odds), 1))
 knitr::kable(logit_demo, digits = 3)
 
-library(tidyverse)
 # set the random seed so results replicate exactly with the random number generators
 set.seed(24601)
 
@@ -24,10 +24,10 @@ data <- data.frame(sepsis = sample(x = c(0,0,0,1),
                            rnorm(n, mean = 101, sd = 1)))                           
 
 
-base_plot <- ggplot(data, aes(y=sepsis, x=heart_rate)) + 
+base_plot <- ggplot(data, aes(y=sepsis, x=temp)) + 
   geom_point() + 
   theme_bw() + 
-  labs(y = "Sepsis", x="Heart Rate")
+  labs(y = "Sepsis", x = "Temperature")
 
 # try plotting the data with just a linear model
 base_plot + 
