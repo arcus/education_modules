@@ -2,7 +2,7 @@
 module_id: bash_103_combining_commands
 author:   Elizabeth Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
-version: 1.4.2
+version: 1.4.3
 current_version_description: Added webinar links to additional resources
 module_type: standard
 docs_version: 2.0.0
@@ -42,6 +42,8 @@ previous_sequential_module: bash_command_line_102
 @end
 
 @depends_on_knowledge_available_in
+- directories_and_file_paths
+- demystifying_command_line
 - bash_command_line_101
 - bash_command_line_102
 @end
