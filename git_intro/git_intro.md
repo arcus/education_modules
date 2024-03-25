@@ -2,10 +2,10 @@
 module_id: git_intro
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.1.1
+version: 1.1.2
 current_version_description: Updated with information about GitHub
 module_type: standard
-docs_version: 1.2.0
+docs_version: 4.0.0
 language: en
 narrator: UK English Female
 title: Intro to Version Control
@@ -34,8 +34,14 @@ After completion of this module, learners will be able to:
 @end
 
 good_first_module: false
+data_task: data_management
+collection: infrastructure_and_technology
 coding_required: false
 sequence_name: git_basics
+
+@sets_you_up_for
+- git_cli_vs_gui
+@end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 
