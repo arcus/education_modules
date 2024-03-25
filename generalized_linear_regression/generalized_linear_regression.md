@@ -143,8 +143,9 @@ For an excellent review of continuous vs. categorical variables, see the [Khan A
 </div>
 
 We can coerce problematic outcome variables into nice, continuous ones so that we can still model them with a line.
-The strategy for transforming your outcome depends on what its distribution is like to begin with --- if it's binary (or bounded at 0 and 1), then a logit works well. 
-If it's count data, then a log is the right transformation, etc.
+The strategy for transforming your outcome depends on what its distribution is like to begin with --- if it's binary (or bounded at 0 and 1), then you'll need a different transformation than if it's count data, for example. 
+
+**The transformation you use to convert a problematic outcome variable (i.e. a variable that is not continuous and unbounded) into something you can use linear regression on is called a link function.**
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -162,12 +163,13 @@ Under the hood, though, your statistical software is doing something very differ
 Unlike linear models, there is not a single analytic solution to generalized linear models -- that means you couldn't (even if you wanted to) figure out the solution by solving the equation by hand. 
 Instead, the computer uses brute force to find a solution, iterating over tons of combinations of parameter estimates and seeing which gives the best model fit.
 
-This means the results are not exact --- they depend on the sampling algorithm being used --- so you might see very small changes if you run the model again, or if you run it on other software. There's also a risk that your model won't converge if it's too complicated and you don't have enough data.
+This means the results are not exact --- they depend on the sampling algorithm being used --- so you might see very small changes if you run the model again, or if you run it on other software. 
+There's also a risk that your model won't converge if it's too complicated and you don't have enough data.
 
 ## Logistic regression
 
 One of the most common kinds of generalized linear model is logistic regression. 
-That's a linear model using a [logit](https://en.wikipedia.org/wiki/Logit) transformation to convert the outcome that's binary (or continuous but bounded at 0 to 1, like a proportion).
+That's a linear model using a [logit](https://en.wikipedia.org/wiki/Logit) (LOH-jit) transformation to convert the outcome that's binary (or continuous but bounded at 0 to 1, like a proportion).
 
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
@@ -203,6 +205,35 @@ If an event is likely to happen, then the probability would be greater than .5, 
 
 </div>
 
+## Other kinds of GLMs
+
+Logistic regression (regression using a logit link function) works well for binary outcomes.
+But what about other kinds of outcome variables?
+
+If your outcome is counts of something, you can use a **Poisson** or **Negative Binomial** link function. 
+For example, perhaps your outcome is the number of [Adverse Childhood Experiences (ACEs)](https://www.cdc.gov/violenceprevention/aces/fastfact.html) per patient. 
+It's not possible for someone to have fewer than 0 ACEs, so that variable is bound at 0. 
+It's also measured as a count (how many total ACEs experienced), so no one will have 1.2 ACEs, for example. 
+
+For outcomes bounded at 0 and 1 (like a probability or proportion), you can use logistic regression, but a **beta** link function may be more appropriate.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+For more details on beta regression and when to use it, see [Analysing continuous proportions in ecology and evolution: A practical introduction to beta and Dirichlet regression](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13234) by Douma and Weedon (2019).
+
+</div>
+
+If your outcome is positively skewed, especially something bound at 0, then you can use a **Gamma** or **Inverse-Gaussian** link function. 
+These are especially useful for outcomes like cost, income, or length of stay -- continuous variables bound at 0 and usually positively skewed.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To learn more about how to talk about the shape of a variable, such as identifying positive and negative skew, see the [Khan Academy lesson on shapes of distributions](https://www.khanacademy.org/kmap/measurement-and-data-j/md231-data-distributions/md231-displays-of-distributions/v/shapes-of-distributions).
+
+</div>
+
 ### Example
 
 Let's return to the linear model example we were considering, predicting heart rate from temperature in febrile children. 
@@ -228,7 +259,6 @@ For more context on the relationship between temperature and pediatric sepsis, r
 $$
 \text{sepsis} = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
 $$ 
-
 
 Assume that `sepsis` is coded as 0 (no) or 1 (yes) in the data.
 **What would happen if you just tried to estimate this as a regular linear model?**
@@ -319,35 +349,6 @@ ggplot(data, aes(y=sepsis, x=temp)) +
 
 That looks much better!
 The predicted values now respect the boundaries on our outcome variable -- they can never go below 0 or above 1. 
-
-## Other kinds of GLMs
-
-Logistic regression (regression using a logit link function) works well for binary outcomes.
-But what about other kinds of outcome variables?
-
-If your outcome is counts of something, you can use a **Poisson** or **Negative Binomial** link function. 
-For example, perhaps your outcome is the number of [Adverse Childhood Experiences (ACEs)](https://www.cdc.gov/violenceprevention/aces/fastfact.html) per patient. 
-It's not possible for someone to have fewer than 0 ACEs, so that variable is bound at 0. 
-It's also measured as a count (how many total ACEs experienced), so no one will have 1.2 ACEs, for example. 
-
-For outcomes bounded at 0 and 1 (like a probability or proportion), you can use logistic regression, but a **beta** link function may be more appropriate.
-
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
-
-For more details on beta regression and when to use it, see [Analysing continuous proportions in ecology and evolution: A practical introduction to beta and Dirichlet regression](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13234) by Douma and Weedon (2019).
-
-</div>
-
-If your outcome is positively skewed, especially something bound at 0, then you can use a **Gamma** or **Inverse-Gaussian** link function. 
-These are especially useful for outcomes like cost, income, or length of stay -- continuous variables bound at 0 and usually positively skewed.
-
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
-
-To learn more about how to talk about the shape of a variable, such as identifying positive and negative skew, see the [Khan Academy lesson on shapes of distributions](https://www.khanacademy.org/kmap/measurement-and-data-j/md231-data-distributions/md231-displays-of-distributions/v/shapes-of-distributions).
-
-</div>
 
 ## Quiz
 
