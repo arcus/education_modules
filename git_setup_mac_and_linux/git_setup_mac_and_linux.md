@@ -17,7 +17,7 @@ long_description: If you're ready to start using the Git version control system,
 estimated_time_in_minutes: 15
 
 @pre_reqs
-- Have used the command line interface (CLI) on your computer before.  To acquire basic knowledge about command line interfaces, we recommend our [Demystifying the Command Line Interface](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md) module.  To practice using the command line, we recommend our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
+- Have used the [command line interface (CLI)](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md#1) on your computer before
 - Have Git installed on your computer (note that it is probably installed already even if you've never used it)
 - Have an account on github.com (you can [sign up now](https://github.com/signup) if you haven't yet --- it's free)
 @end
@@ -47,6 +47,7 @@ previous_sequential_module: git_cli_vs_gui
 @end
 
 @depends_on_knowledge_available_in
+- demystifying_command_line
 - git_intro
 - demystifying_command_line
 - git_cli_vs_gui

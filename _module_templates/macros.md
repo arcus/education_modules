@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.3.0
-current_version_description: Add module\_id to macros for creating the REDCap survey link
+version:  1.4.0
+current_version_description: Add text after Overview and Feedback that invites learners to the rest of the modules
 language: en
 narrator: UK English Female
 title: Module Macros
@@ -13,9 +13,9 @@ comment:  This is placeholder module to save macros used in other modules.
 
 Previous versions: 
 
+- [1.3.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/bbd9189b6c598c77059da184995c83b4037cbd73/_module_templates/macros.md#1) :Add module\_id to macros for creating the REDCap survey link
 - [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a9aa1b38fc51db4252c9547654d9e36dba7864e5/_module_templates/macros.md#1): make CSS come from GCS
 - [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ad25398d0eef884402cff0f0c4fb4ca360d3b8f4/_module_templates/macros.md#1): Add current\_version\_description and version\_history metadata.
-- [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/e983922162e6fbf971c03dc96052f68713cc72af/_module_templates/macros.md#1): Initial version 
 
 @end
 
@@ -44,6 +44,9 @@ This version (@version): @current_version_description
 @version_history
 
 </div>
+
+Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules/list_of_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
+
 @end
 
 @make_survey_url
@@ -77,6 +80,9 @@ We ask you to fill out a brief (5 minutes or less) survey to let us know:
 * If we gave you the experience you expected
 
 We gather this information in order to iteratively improve our work.  Thank you in advance for filling out @make_survey_url('@title', '@version', '@module_type', '@module_id')!
+
+Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules/list_of_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
+
 @end
 
 
@@ -142,4 +148,5 @@ script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
 @overview
 
 ## Feedback
+
 @feedback
