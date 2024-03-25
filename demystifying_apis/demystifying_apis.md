@@ -115,7 +115,7 @@ A better approach is to use a script that uses an API call. First of all, it's s
 
 How do you interact with an Application Programming Interface?  Well, first, someone (like the IT department at the New York Times or the developers who work behind the scenes at REDCap) needs to have written an API, a set of rules that allows you, or your computer system, to interrogate their server, which is always listening for HTTP messages. 
 
-You'll use your computer to send a message to the server asking for whatever you need from the API.  Then the server will send back some combination of a return code (such as 200, good, or 404, not found) and, if things went well, the data you requested in your message.
+You'll use your computer to send a message to the server asking for whatever you need from the API.  Then the server will send back some combination of a return code (such as 200, "good", or 404, "not found") and, if things went well, the data you requested in your message.
 
 But how?  How do you send this message to a server?  What goes inside this message?
 
@@ -159,13 +159,13 @@ Not every API can use this method!  Generally, the use of a URL is restricted to
 
 Let's look at an example!
 
-NCBI, the National Center for Biotechnology Information, has an API called "Entrez" that you can use for a number of purposes, including to get PubMed article IDs that meet your conditions.  They provide the following example on [their website](https://www.ncbi.nlm.nih.gov/books/NBK25500/):
+NCBI, the National Center for Biotechnology Information, has an API called "Entrez Programming Utilities", or "E-utilities",  that you can use for a number of purposes, including to get PubMed article IDs that meet your conditions.  They provide the following example in [the E-utilities Quick Start Guide](https://www.ncbi.nlm.nih.gov/books/NBK25500/):
 
 > Example: Get the PubMed IDs (PMIDs) for articles about breast cancer published in Science in 2008
 >
 > `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science[journal]+AND+breast+cancer+AND+2008[pdat]`
 
-Note that there are some terms added in the URL, parameters like `db` and `term`.  There are clearly some rules about how `term` is structured, and if we wanted to learn more about this API we could read their documentation to learn what parameters we could include in the URL.
+Note that there are some terms that are included in the URL, parameters like `db` and `term`.  There are clearly some rules about how `term` is structured, and if we wanted to learn more about this API we could read their documentation to learn what parameters we could include in the URL.
 
 Try opening that URL (<lia-keep><a href=https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science%5Bjournal%5D+AND+breast+cancer+AND+2008%5Bpdat%5D, target="blank">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science[journal]+AND+breast+cancer+AND+2008[pdat]</a></lia-keep>) in your browser and you'll get some text that's clearly formatted for computers, not for humans!  It will look something like this:
 
@@ -176,7 +176,7 @@ Sometimes you don't need to fully automate something, you're happy just to look 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-Entrez, like many APIs, has a limit to what you can do anonymously.  If you try to run this a few times in a row, you'll get an error message that starts with `{"error":"API rate limit exceeded"`...
+E-utilities, like many APIs, has a limit to what you can do anonymously.  If you try to run this a few times in a row, you'll get an error message that starts with `{"error":"API rate limit exceeded"`...
 
 </div>
 
@@ -240,7 +240,7 @@ We said on the last page that sometimes, specific APIs are very popular, and peo
 
 For example, `PyCap` is a Python library written to streamline access to the REDCap API.  Because "get all the records from a given database" is such a frequently used API request, it got its own functionality in `PyCap`.  Compare the code below with the code on the previous page.  It's much shorter and less intimidating!
 
-![Six lines of Python code which get all of the records from a REDCap database ](media/pycap.png)
+![Six lines of Python code which get all of the records from a REDCap database.](media/pycap.png)
 
 ## Quiz 
 
@@ -307,7 +307,7 @@ A number of libraries have lists of APIs that are useful for researchers, along 
 
 Some APIs (particularly those linked to social media applications) have changing rules relating to their use, due to monetization of data and data privacy.  Read more in [Shifting landscapes of social media data for research](https://www.timeshighereducation.com/campus/shifting-landscapes-social-media-data-research).
 
-The United States Office of the National Coordinator for Health Information Technology (ONC) is driving an effort to develop and standardize APIs related to electronic health information.  Read more about [their project](https://www.healthit.gov/topic/scientific-initiatives/accelerating-apis-scientific-discovery)!
+If you're interested in reading more about APIs in the biomedical and healthcare spaces, [the United States Office of the National Coordinator for Health Information Technology (ONC) is driving an effort to develop and standardize APIs related to electronic health information](https://www.healthit.gov/topic/scientific-initiatives/accelerating-apis-scientific-discovery). 
 
 If you're a REDCap user, you might enjoy our (award-winning, at REDCapCon!) module on [Using the REDCap API](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/using_redcap_api/using_redcap_api.md).
 
