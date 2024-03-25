@@ -19,7 +19,7 @@ Learners should know what version control is and why it's important and should a
 
 To acquire basic knowledge of version control, we recommend our [Introduction to Version Control](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_intro/git_intro.md#1) module. 
 
-To acquire basic knowledge about command line interfaces, we recommend our [Demystifying the Command Line Interface](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md) module.  
+To acquire basic knowledge about command line interfaces, we recommend our [Demystifying the Command Line Interface](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md#1) module.  
 
 No previous experience with git is required.
 @end
@@ -73,7 +73,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 You may already know what Git is and even use it for version control, but let's review.  We'll take on some of the text that Git uses to describe itself in its official website:
 
-[![Screenshot of the official git website, which states: "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows."](media/git_scm_com.png)](https://git-scm.com)
+[![Text from the official git website, which states: "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows."](media/git_scm_com.png)](https://git-scm.com)
 
 Git describes itself as a **distributed**, **open source** **version control** system. Let's talk about each of those terms:
 
@@ -329,7 +329,7 @@ That's right!  There are many Git GUIs available, and we showed GitHub Desktop, 
   - [Getting Started: About Version Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control), which talks about distributed versus centralized version control, and
   - [Appendix A: Git in Other Environments -- Graphical Interfaces](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Graphical-Interfaces), which talks about point-and-click graphical software to help you use Git.
 
-* If you'd like to learn more about working in a command line interface, our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module might be helpful!
+* If you'd like to learn more about working in a command line interface, our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) module might be helpful!
 
 * GitHub's [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf) is very useful with a number of commands to use in a CLI!
 
