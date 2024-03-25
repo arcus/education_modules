@@ -48,6 +48,7 @@ previous_sequential_module: git_creation_and_tracking
 @end
 
 @depends_on_knowledge_available_in
+- demystifying_command_line
 - git_intro
 - demystifying_command_line
 - git_cli_vs_gui
