@@ -199,7 +199,7 @@ In a GUI (here, GitHub Desktop), we have to put in the name of the repository, w
 
 <figure>
 
-  <img src="https://github.com/arcus/education_modules/blob/joy_git_cli_vs_gui/git_cli_vs_gui/media/git_init_gui.png?raw=true" height="756" width="540" alt="Adding a new repository using the GitHub Desktop graphical user interface" data-alt="https://github.com/arcus/education_modules/blob/joy_git_cli_vs_gui/git_cli_vs_gui/media/git_init_gui.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/education_modules/blob/main/git_cli_vs_gui/media/git_init_gui.png?raw=true" height="756" width="540" alt="Adding a new repository using the GitHub Desktop graphical user interface" data-alt="https://github.com/arcus/education_modules/blob/main/git_cli_vs_gui/media/git_init_gui.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">
 
