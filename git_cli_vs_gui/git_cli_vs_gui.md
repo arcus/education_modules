@@ -73,7 +73,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 You may already know what Git is and even use it for version control, but let's review.  We'll take on some of the text that Git uses to describe itself in its official website:
 
-[![Text from the official git website, which states: "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows."](media/git_scm_com.png)](https://git-scm.com)
+[![The official git website, which states: "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows."](media/git_scm_com.png)](https://git-scm.com)
 
 Git describes itself as a **distributed**, **open source** **version control** system. Let's talk about each of those terms:
 
@@ -159,9 +159,7 @@ Which is better when you use Git?  Graphical user interfaces, or a command line 
 
 Generally speaking, for everyday work in Git, you can choose whichever approach appeals to you more, so we'll present both the command line interface as well as a graphical user interface to allow you to see both. However, it's important to note that whichever interface you choose for daily work, you **might end up needing to use a command line interface for complex, out of the ordinary work** in Git.  Let's talk a bit about why this is the case.
 
-While most things you want to accomplish on your computer can be done using multiple interfaces, some of which may be more user-friendly and graphical, there **are some things that can only be done by command line**.  Things that people need to do frequently, like look at a list of files in a directory, may be able to be accomplished through many interfaces, because designers built easy-to-use GUIs to help with these popular tasks.  Designers can't include every task in their GUI design, however, which means that very specific or customized tasks that are done more rarely may **only** be able to be accomplished by command line.  
-
-Git has lots of commands and actions, and some of them can only be done by using the command line, because they're so niche and specific to certain circumstances that graphical software simply hasn't included that task.  There's a good chance that you might end up using Git for **years** before you run across a situation that requires the command line, but it's important to know that it's possible you'll need to use the command line interface at some point.
+Git has lots of features, and designers can't include every possible command in an easy-to-use point and click GUI.  That means some things you may need to do in Git can **only** be done by using the command line, because they're so niche and specific to certain circumstances that graphical software simply hasn't included that task.  Still, there's a good chance that you might end up using a Git GUI for **years** before you run across a situation that requires the command line. 
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
@@ -201,7 +199,7 @@ In a GUI (here, GitHub Desktop), we have to put in the name of the repository, w
 
 <figure>
 
-  <img src="https://github.com/arcus/education_modules/blob/git_cli_vs_gui/git_cli_vs_gui/media/git_init_gui.png?raw=true" height="756" width="540" alt="Adding a new repository using the GitHub Desktop graphical user interface" data-alt="https://github.com/arcus/education_modules/blob/git_cli_vs_gui/git_cli_vs_gui/media/git_init_gui.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
+  <img src="https://github.com/arcus/education_modules/blob/joy_git_cli_vs_gui/git_cli_vs_gui/media/git_init_gui.png?raw=true" height="756" width="540" alt="Adding a new repository using the GitHub Desktop graphical user interface" data-alt="https://github.com/arcus/education_modules/blob/joy_git_cli_vs_gui/git_cli_vs_gui/media/git_init_gui.gif?raw=true" style = "border: 1px solid rgb(var(--color-highlight));">
 
 <figcaption style = "font-size: 1em;">
 
