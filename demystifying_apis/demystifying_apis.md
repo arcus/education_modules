@@ -32,8 +32,9 @@ collection: demystifying, infrastructure_and_technology
 coding_required: false
 
 @sets_you_up_for
-
+- using_redcap_api
 @end
+
 
 @depends_on_knowledge_available_in
 
