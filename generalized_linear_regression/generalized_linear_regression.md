@@ -111,14 +111,16 @@ Linear models are so popular in statistics because equations for lines are compu
 It would be handy if linear models covered all possible research questions, but unfortunately they don't!
 **Generalized linear models are a way to extend the functionality of linear models to cover situations when they normally wouldn't work.**
 
-## Categorical Outcomes
-
-The question of whether a patient has sepsis is, statistically, a different sort of question than the question of what a patient's heart rate is. The patient either does or does not have sepsis, the outcome is **categorical**.
-
-### Why can't we use an ordinary linear model?
+## When Ordinary Linear Models Fail
 
 Linear models are only appropriate when your outcome variable(s) are **continuous** and **unbounded**. 
 If you want to model a categorical outcome, or one that's bounded (like a proportion or percent), then usually can't rely on regular linear modeling to get the job done. 
+
+### Example: Predicting Sepsis
+
+pull from the example, demonstrate that it is just nonsensical. What does it mean to have a number instead of "yes or no to sepsis"
+
+### Continuity
 
 A variable is **continuous** if it can take any value on a scale, not just discrete options. 
 For example, age is generally continuous because you can be 11 years old, or 11.5, or 11.476 years old, etc.
@@ -126,6 +128,10 @@ In contrast, experimental group (treatment vs. control) is not continuous; there
 Something like medication dose could be continuous or categorical depending on how it's used. 
 If patients are restricted to categorical levels of dose (e.g. high, med, or low dose groups) then it would be categorical. 
 But if it's something where their dose might theoretically be anywhere on the scale, then it's continuous.
+
+
+
+### Boundedness
 
 A variable is **unbounded** if it can theoretically extend from negative infinity at the low end to positive infinity at the high end. 
 We often have variables that aren't truly unbounded, but they're close enough for all practical purposes -- for example, IQ can't technically be negative, but in practice no measured IQs are close to 0 so the data stop naturally before they hit the scale boundary at 0. 
@@ -137,6 +143,11 @@ A variable like age might be unbounded or bounded depending on what ages you're 
 In a young pediatric population, age is bounded at 0 because you can't have any negative ages and a distribution of infant ages will get cutoff at that lower bound. 
 But if you're studying adults, then age might be functionally unbounded in your dataset.
 
+
+### Categorical Outcomes
+
+The question of whether a patient has sepsis is, statistically, a different sort of question than the question of what a patient's heart rate is. The patient either does or does not have sepsis, the outcome is **categorical**.
+
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
@@ -144,14 +155,8 @@ For an excellent review of continuous vs. categorical variables, see the [Khan A
 
 </div>
 
-### Probabilites and Odds
-Instead of trying to get an outcome like "yes this patient has sepsis" or "no this patient doesn't have sepsis" it is both easier and more useful to model the _likelihood_ that the patient has sepsis.
 
-There are two ways to talk about likelihood:
 
-**Probability** is ... a number between 0 and 1, a percentage that a statement like "this patient is experiencing sepsis." is true.
-
-**Odds** is ... a proportion, a number greater than equal to 0, a statement like "for every one patient with these symptoms who does not have sepsis, we expect n patients who do have sepsis."
 
 ## Link Functions
 
@@ -166,6 +171,18 @@ The strategy for transforming your outcome depends on what its distribution is l
 Generalized linear models are just linear models on data that's been transformed with a link function.
 
 </div>
+
+
+### Probabilites and Odds
+
+
+Instead of trying to get an outcome like "yes this patient has sepsis" or "no this patient doesn't have sepsis" it is both easier and more useful to model the _chance_ that the patient has sepsis.
+
+There are two ways to talk about chance:
+
+**Probability** is ... a number between 0 and 1, a percentage that a statement like "this patient is experiencing sepsis." is true.
+
+**Odds** is ... a proportion, a number greater than equal to 0, a statement like "for every one patient with these symptoms who does not have sepsis, we expect n patients who do have sepsis."
 
 
 ### Logistic regression
@@ -238,7 +255,7 @@ To learn more about how to talk about the shape of a variable, such as identifyi
 
 
 
-## Example
+## Example: Predicting Sepsis 
 
 Let's return to the linear model example we were considering, predicting heart rate from temperature in febrile children. 
 As a reminder, here's the linear equation for that model: 
