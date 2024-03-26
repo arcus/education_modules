@@ -82,19 +82,19 @@ For an approachable review of linear regression models, including a review of th
 For example, we could express a model [predicting heart rate from temperature in febrile children](https://www.frontiersin.org/articles/10.3389/fped.2020.548154/full) as the equation:
 
 $$
-\text{heart} \textunderscore \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
+\text{heart} \_ \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
 $$ 
 
 If we wanted to look at differences in heart rate by sex (a categorical predictor) instead, the equation would actually look quite similar (assuming that the sex variable was coded 0 and 1 in the data): 
 
 $$
-\text{heart} \textunderscore \text{rate} = \beta_0 + \beta_{\text{sex}} * \text{sex} + e
+\text{heart} \_ \text{rate} = \beta_0 + \beta_{\text{sex}} * \text{sex} + e
 $$ 
 
 What if you want to model sex and temperature together at the same time? No problem, you can add as many predictors to a linear model as you like: 
 
 $$
-\text{heart} \textunderscore \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + \beta_{\text{sex}} * \text{sex} + e
+\text{heart} \_ \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + \beta_{\text{sex}} * \text{sex} + e
 $$ 
 
 And you can allow quite a lot of complexity and nuance in a linear model as well, by including things like interaction terms or polynomial terms. 
@@ -240,7 +240,7 @@ Let's return to the linear model example we were considering, predicting heart r
 As a reminder, here's the linear equation for that model: 
 
 $$
-\text{heart} \textunderscore \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
+\text{heart} \_ \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
 $$ 
 
 But what if you're interested in predicting not heart rate, but whether or not the patient is at risk for sepsis, a binary outcome?
@@ -314,7 +314,7 @@ It runs from negative infinity to positive infinity --
 negative values indicate that the outcome is unlikely, and positive values indicate that the outcome is likely. 
 
 $$
-logit(\text{sepsis}) = \beta_0 + \beta_{\text{temp}}} * \text{temp} + e
+logit(\text{sepsis}) = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
 $$ 
 
 Now we can estimate a linear model on the transformed outcome.
