@@ -82,19 +82,19 @@ For an approachable review of linear regression models, including a review of th
 For example, we could express a model [predicting heart rate from temperature in febrile children](https://www.frontiersin.org/articles/10.3389/fped.2020.548154/full) as the equation:
 
 $$
-\text{heart} \textunderscore \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
+\text{heart} \_ \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
 $$ 
 
 If we wanted to look at differences in heart rate by sex (a categorical predictor) instead, the equation would actually look quite similar (assuming that the sex variable was coded 0 and 1 in the data): 
 
 $$
-\text{heart} \textunderscore \text{rate} = \beta_0 + \beta_{\text{sex}} * \text{sex} + e
+\text{heart} \_ \text{rate} = \beta_0 + \beta_{\text{sex}} * \text{sex} + e
 $$ 
 
 What if you want to model sex and temperature together at the same time? No problem, you can add as many predictors to a linear model as you like: 
 
 $$
-\text{heart} \textunderscore \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + \beta_{\text{sex}} * \text{sex} + e
+\text{heart} \_ \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + \beta_{\text{sex}} * \text{sex} + e
 $$ 
 
 And you can allow quite a lot of complexity and nuance in a linear model as well, by including things like interaction terms or polynomial terms. 
@@ -111,12 +111,16 @@ Linear models are so popular in statistics because equations for lines are compu
 It would be handy if linear models covered all possible research questions, but unfortunately they don't!
 **Generalized linear models are a way to extend the functionality of linear models to cover situations when they normally wouldn't work.**
 
-## Why do we need generalized linear models?
+## When Ordinary Linear Models Fail
 
 Linear models are only appropriate when your outcome variable(s) are **continuous** and **unbounded**. 
 If you want to model a categorical outcome, or one that's bounded (like a proportion or percent), then usually can't rely on regular linear modeling to get the job done. 
 
-<h3>What counts and continuous and unbounded?</h3>
+### Example: Predicting Sepsis
+
+pull from the example, demonstrate that it is just nonsensical. What does it mean to have a number instead of "yes or no to sepsis"
+
+### Continuity
 
 A variable is **continuous** if it can take any value on a scale, not just discrete options. 
 For example, age is generally continuous because you can be 11 years old, or 11.5, or 11.476 years old, etc.
@@ -124,6 +128,10 @@ In contrast, experimental group (treatment vs. control) is not continuous; there
 Something like medication dose could be continuous or categorical depending on how it's used. 
 If patients are restricted to categorical levels of dose (e.g. high, med, or low dose groups) then it would be categorical. 
 But if it's something where their dose might theoretically be anywhere on the scale, then it's continuous.
+
+
+
+### Boundedness
 
 A variable is **unbounded** if it can theoretically extend from negative infinity at the low end to positive infinity at the high end. 
 We often have variables that aren't truly unbounded, but they're close enough for all practical purposes -- for example, IQ can't technically be negative, but in practice no measured IQs are close to 0 so the data stop naturally before they hit the scale boundary at 0. 
@@ -135,12 +143,22 @@ A variable like age might be unbounded or bounded depending on what ages you're 
 In a young pediatric population, age is bounded at 0 because you can't have any negative ages and a distribution of infant ages will get cutoff at that lower bound. 
 But if you're studying adults, then age might be functionally unbounded in your dataset.
 
+
+### Categorical Outcomes
+
+The question of whether a patient has sepsis is, statistically, a different sort of question than the question of what a patient's heart rate is. The patient either does or does not have sepsis, the outcome is **categorical**.
+
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
 For an excellent review of continuous vs. categorical variables, see the [Khan Academy video on discrete and continuous random variables](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/discrete-and-continuous-random-variables).
 
 </div>
+
+
+
+
+## Link Functions
 
 We can coerce problematic outcome variables into nice, continuous ones so that we can still model them with a line.
 The strategy for transforming your outcome depends on what its distribution is like to begin with --- if it's binary (or bounded at 0 and 1), then you'll need a different transformation than if it's count data, for example. 
@@ -154,19 +172,20 @@ Generalized linear models are just linear models on data that's been transformed
 
 </div>
 
-## Special considerations for generalized linear models
 
-When you run generalized linear models, it feels very similar in many ways to running a regular linear model. 
-Your output will look largely similar (coefficient tests, measurement of overall model fit, etc.). 
-Under the hood, though, your statistical software is doing something very different.
+### Probabilites and Odds
 
-Unlike linear models, there is not a single analytic solution to generalized linear models -- that means you couldn't (even if you wanted to) figure out the solution by solving the equation by hand. 
-Instead, the computer uses brute force to find a solution, iterating over tons of combinations of parameter estimates and seeing which gives the best model fit.
 
-This means the results are not exact --- they depend on the sampling algorithm being used --- so you might see very small changes if you run the model again, or if you run it on other software. 
-There's also a risk that your model won't converge if it's too complicated and you don't have enough data.
+Instead of trying to get an outcome like "yes this patient has sepsis" or "no this patient doesn't have sepsis" it is both easier and more useful to model the _chance_ that the patient has sepsis.
 
-## Logistic regression
+There are two ways to talk about chance:
+
+**Probability** is ... a number between 0 and 1, a percentage that a statement like "this patient is experiencing sepsis." is true.
+
+**Odds** is ... a proportion, a number greater than equal to 0, a statement like "for every one patient with these symptoms who does not have sepsis, we expect n patients who do have sepsis."
+
+
+### Logistic regression
 
 One of the most common kinds of generalized linear model is logistic regression. 
 That's a linear model using a [logit](https://en.wikipedia.org/wiki/Logit) (LOH-jit) transformation to convert the outcome that's binary (or continuous but bounded at 0 to 1, like a proportion).
@@ -205,7 +224,7 @@ If an event is likely to happen, then the probability would be greater than .5, 
 
 </div>
 
-## Other kinds of GLMs
+### Other link functions
 
 Logistic regression (regression using a logit link function) works well for binary outcomes.
 But what about other kinds of outcome variables?
@@ -234,13 +253,15 @@ To learn more about how to talk about the shape of a variable, such as identifyi
 
 </div>
 
-### Example
+
+
+## Example: Predicting Sepsis 
 
 Let's return to the linear model example we were considering, predicting heart rate from temperature in febrile children. 
 As a reminder, here's the linear equation for that model: 
 
 $$
-\text{heart} \textunderscore \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
+\text{heart} \_ \text{rate} = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
 $$ 
 
 But what if you're interested in predicting not heart rate, but whether or not the patient is at risk for sepsis, a binary outcome?
@@ -263,7 +284,7 @@ $$
 Assume that `sepsis` is coded as 0 (no) or 1 (yes) in the data.
 **What would happen if you just tried to estimate this as a regular linear model?**
 
-#### Trying a linear model 
+### Trying a linear model 
 
 ``` -See the R code to generate some fake data
 library(tidyverse)
@@ -305,7 +326,7 @@ At the lowest values of temperature, the predicted value for sepsis actually goe
 What does it mean to have a negative probability of sepsis? 
 That value doesn't make any sense.
 
-#### Transform with a link function
+### Transform with a link function
 
 In order for our model to generate sensible predictions, we need to transform it with a link function. 
 
@@ -314,7 +335,7 @@ It runs from negative infinity to positive infinity --
 negative values indicate that the outcome is unlikely, and positive values indicate that the outcome is likely. 
 
 $$
-logit(\text{sepsis}) = \beta_0 + \beta_{\text{temp}}} * \text{temp} + e
+logit(\text{sepsis}) = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
 $$ 
 
 Now we can estimate a linear model on the transformed outcome.
@@ -349,6 +370,18 @@ ggplot(data, aes(y=sepsis, x=temp)) +
 
 That looks much better!
 The predicted values now respect the boundaries on our outcome variable -- they can never go below 0 or above 1. 
+
+## Special considerations for generalized linear models
+
+When you run generalized linear models, it feels very similar in many ways to running a regular linear model. 
+Your output will look largely similar (coefficient tests, measurement of overall model fit, etc.). 
+Under the hood, though, your statistical software is doing something very different.
+
+Unlike linear models, there is not a single analytic solution to generalized linear models -- that means you couldn't (even if you wanted to) figure out the solution by solving the equation by hand. 
+Instead, the computer uses brute force to find a solution, iterating over tons of combinations of parameter estimates and seeing which gives the best model fit.
+
+This means the results are not exact --- they depend on the sampling algorithm being used --- so you might see very small changes if you run the model again, or if you run it on other software. 
+There's also a risk that your model won't converge if it's too complicated and you don't have enough data.
 
 ## Quiz
 
