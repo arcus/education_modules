@@ -257,7 +257,7 @@ To learn more about regular expressions, we suggest some modules we created, tha
 | [Regular Expressions: Lookaheads](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_lookaheads/regular_expressions_lookaheads.md#1)| Use regular expressions, or regex, for complex pattern matching involving lookaheads. | 30 min|
 
 
-## Quiz: CASE, and LIKE
+## Quiz: CASE and LIKE
 
 In this quiz, we have some scenarios for you to consider as a researcher.  If you create the correct SQL query, you'll get the corresponding quiz answer (which appears below the code box) easily!  There is one question each for `CASE` and `LIKE`.
 
