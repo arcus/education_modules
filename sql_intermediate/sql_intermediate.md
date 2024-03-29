@@ -319,7 +319,9 @@ FROM alasql.patients;
 
 *********
 
-You'd like to research patients born in Massachusetts and care about how far they currently live from their birthplace.  Use a `LIKE` statement to enrich the query below and find the patient set you care about.  Below the code box, there's a question.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i> after the question, you'll see the code that we used to answer the question.
+You'd like to research patients born in Massachusetts.  You also want to know how far these patients currently live from their birthplace.  In this dataset, the `birthplace` field can include a city, state, and country (such as "Philadelphia Pennsylvania US"). 
+
+Use a `LIKE` statement to enrich the query below and find the group of patients you care about.  Below the code box, there's a question.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i> after the question, you'll see the code that we used to answer the question.
 
 ```sql
 SELECT
