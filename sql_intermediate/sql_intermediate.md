@@ -259,7 +259,7 @@ To learn more about regular expressions, we suggest some modules we created, tha
 
 ## Quiz: CASE, and LIKE
 
-In this quiz, we have some scenarios for you to consider as a researcher.  If you create the correct SQL query, you'll get the corresponding quiz answer (which appears below the code box) easily!  There is one question each for `CASE`, `LIKE`, and `REGEXP_LIKE`.
+In this quiz, we have some scenarios for you to consider as a researcher.  If you create the correct SQL query, you'll get the corresponding quiz answer (which appears below the code box) easily!  There is one question each for `CASE` and `LIKE`.
 
 You're studying attitudes about smoking and will issue a survey in phases.  Phase 1 will go out to residents of Plymouth County, Phase 2 will go out to residents of Essex County and Phase 3 will go out to Barnstable County.  Finish the following query such that you get the patient name, county, and a new column called `phase`.  Then scroll down to answer a simple question.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i>  after the question, you'll see the code that we used to answer the question.
 
