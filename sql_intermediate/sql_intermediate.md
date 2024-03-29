@@ -2,8 +2,8 @@
 module_id: sql_intermediate
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.2.4
-current_version_description: Correct typo, update metadata version
+version: 1.3.0
+current_version_description: Correct data types (numeric) and use NULL properly.
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -36,6 +36,7 @@ After completion of this module, learners will be able to:
 
 Previous versions: 
 
+- [1.2.4](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d5fb2a4bde809846b2d93f5e4df6488503cf87ef/sql_intermediate/sql_intermediate.md#1): Correct typo, update metadata version
 - [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9c77106b2074e1d51ce41ebaf0d849429b146c2b/sql_intermediate/sql_intermediate.md#1): Update with improvements to regular expressions, highlight boxes, correct typos
 - [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9e3ed69c5c70e4b6e116e2799329029e9542ca98/sql_intermediate/sql_intermediate.md#1): Initial version, then typo fixes, clarify group by aggregation troubleshooting, and feedback form improvements
 
@@ -65,7 +66,7 @@ previous_sequential_module: sql_basics
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_sql.md 
+import: https://raw.githubusercontent.com/arcus/education_modules/alasql_data_type_improvement/_module_templates/macros_sql.md
 -->
 
 # SQL, Intermediate Level
