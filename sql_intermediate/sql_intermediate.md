@@ -66,7 +66,7 @@ previous_sequential_module: sql_basics
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/alasql_data_type_improvement/_module_templates/macros_sql.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_sql.md
 -->
 
 # SQL, Intermediate Level
