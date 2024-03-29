@@ -2,8 +2,8 @@
 module_id: sql_intermediate
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.2.4
-current_version_description: Correct typo, update metadata version
+version: 1.3.0
+current_version_description: Correct data types (numeric), update quiz question, replace Regular Expression section with link to dedicated Regex modules.
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -26,7 +26,7 @@ Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this
 After completion of this module, learners will be able to:
 
 - Create new data classifications using `CASE` statements
-- Find text that matches a given pattern using `LIKE` and `REGEXP_LIKE` statements
+- Find text that matches a given pattern using `LIKE` statements
 - Use `GROUP BY` and `HAVING` statements along with aggregate functions to understand group characteristics
 - Use `WITH` to create sub queries
 
@@ -36,6 +36,7 @@ After completion of this module, learners will be able to:
 
 Previous versions: 
 
+- [1.2.4](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d5fb2a4bde809846b2d93f5e4df6488503cf87ef/sql_intermediate/sql_intermediate.md#1): Correct typo, update metadata version
 - [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9c77106b2074e1d51ce41ebaf0d849429b146c2b/sql_intermediate/sql_intermediate.md#1): Update with improvements to regular expressions, highlight boxes, correct typos
 - [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9e3ed69c5c70e4b6e116e2799329029e9542ca98/sql_intermediate/sql_intermediate.md#1): Initial version, then typo fixes, clarify group by aggregation troubleshooting, and feedback form improvements
 
@@ -65,7 +66,7 @@ previous_sequential_module: sql_basics
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_sql.md 
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_sql.md
 -->
 
 # SQL, Intermediate Level
@@ -238,74 +239,27 @@ Good eye!  You indeed **don't** need that second `LOWER`, but we want you to get
 
 </div>
 
-### REGEXP\_LIKE and Regular Expressions
+### More Pattern Matching
 
-**Regular expression functions** are a class of function that utilize [regular expressions](https://en.wikipedia.org/wiki/Regular_expression), including [metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended), to perform some kind of pattern matching on text data.  
+The `LIKE` operator can get you pretty far, but for more complicated queries, you may need to do more complicated pattern matching. Regular Expressions (regex) can allow you to build patterns to match data like email addresses, phone numbers, or particular addresses.
 
-A regular expression (or "regex", which you can pronounce either with "reg" rhyming with "beg" or "reg" rhyming with "wedge") is a coded description of a pattern, such as the pattern for a phone number in the United States.  
+Each flavor of SQL will have its own operator for matching regular expressions. For example Oracle uses `REGEXP_LIKE` while MySQL uses `REGEXP`.
 
-You might describe what an American phone number looks like written out by describing it as follows:
+To learn more about regular expressions, we suggest some modules we created, that go from very simple (what exactly **are** regular expressions?) to quite advanced!
 
-* Maybe a '+1' for the country code, then 
-* Optionally a space or some other separator like a dash or period or open parenthesis, then 
-* Three digits for the area code, 
-* Another optional space or separator (but this time it could be a closed parenthesis, not an open one), 
-* Three more digits, 
-* Another optional space or separator, and then 
-* The last four digits.  
+<!-- data-type="none" -->
+| Title  | Description  | Duration  |
+| :--------- | :--------- | :--------- |
+| [Demystifying Regular Expressions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#1)| Learn about pattern matching using regular expressions, or regex. | 30 min |
+| [Regular Expressions Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_basics/regular_expressions_basics.md#1)| Begin to use regular expressions, or regex, for simple pattern matching.| 60 min|
+| [Regular Expressions: Groups](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_groups/regular_expressions_groups.md#1) | Use regular expressions, or regex, for complex pattern matching involving capturing and non-capturing groups. | 30 min|
+| [Regular Expressions: Flags, Anchors, and Boundaries](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_boundaries_anchors/regular_expressions_boundaries_anchors.md#1)| Use flags, anchors, and boundaries in regular expressions, or regex, for complex pattern matching. | 45 min|
+| [Regular Expressions: Lookaheads](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_lookaheads/regular_expressions_lookaheads.md#1)| Use regular expressions, or regex, for complex pattern matching involving lookaheads. | 30 min|
 
-In a regular expression, we could write that like this:
 
-```
-(?:\+1)?[\s\(\-\.]?\d{3}[\s\)\-\.]?\d{3}[\s\-\.]?\d{4}
-```
+## Quiz: CASE and LIKE
 
-<div class = "care">
-<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
-
-Regular expressions can look intimidating, but learning regex can be a powerful way to find text needles in a haystack, helping you pull out useful text from clinical notes, Python code you've written, a pile of social media posts compiled for research, or other text.  If you'd like to learn regex, we suggest checking out our modules [Demystifying Regular Expressions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#1) or [Regular Expressions Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_basics/regular_expressions_basics.md#1) to get started!
-
-You don't need to memorize the information we share here about regular expressions.  In our regex quiz question, we provide you with the regular expression you need!  Our goal is to let you see and work with these powerful tools in a supported way, so they're less scary when you run across them later.
-
-</div>
-
-Regex can be thought of as a supercharged version of the the `LIKE` operator's "wildcard" characters.
-
-The most common set of regular expression metacharacters are listed below.
-
-| Metacharacter | Description                                                                                                                                                                                                          |
-| :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `^`             | Matches the starting position within the string.                                                                                                                                                                     |
-| `$`            | Matches the ending position within the string.                                                                                                                                                                       |
-| `.`             | Matches any single character (similar to the `_` wildcard in a `LIKE` statement).                                                                                                                                    |
-| `*`             | Matches 0 or more occurrences of the preceding character.                                                                                                                                                            |
-| `|`            | This character (known as the "choice operator") can be used to delimit multiple match patterns, and will provide a match on either the expression before or the expression after it is listed in your search string. |
-
-To experiment with regular expressions and learn more about them, we recommend using a regular expression tester or checker online, like [regular expressions 101](https://regex101.com).   A website like that will give you a lot of instant feedback and practice to help you understand regex.  We teach more about regular expression checkers in our [Demystifying Regular Expressions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_regular_expressions/demystifying_regular_expressions.md#1) module.
-
-In the SQL `REGEXP_LIKE()` function, you have to give two arguments or parameters.  The first argument is the string SQL should look at (normally, a SQL column), and the second argument is the pattern it should look for, to see if there's a match (this is what's written in regex code). The example below uses the `REGEXP_LIKE()` function to filter on records where the `allergies.description` field contains either the string "nu" or "fi".  
-
-```sql
-SELECT DISTINCT allergies.description
-FROM alasql.allergies
-WHERE
-  REGEXP_LIKE(LOWER(allergies.description), LOWER("nu|fi"))
-```
-@AlaSQL.eval("#dataTable6a")
-
-<table id="dataTable6a" border="1"></table><br>
-
-<div style = "display:none;">
-
-@AlaSQL.buildTable_allergies
-
-</div>
-
-As you can see from even just this simple example, regular expression functions can be much more useful & dynamic than the `LIKE` operator for filtering on complex text based data.
-
-### Quiz: CASE, LIKE, and REGEXP\_LIKE
-
-In this quiz, we have some scenarios for you to consider as a researcher.  If you create the correct SQL query, you'll get the corresponding quiz answer (which appears below the code box) easily!  There is one question each for `CASE`, `LIKE`, and `REGEXP_LIKE`.
+In this quiz, we have some scenarios for you to consider as a researcher.  If you create the correct SQL query, you'll get the corresponding quiz answer (which appears below the code box) easily!  There is one question each for `CASE` and `LIKE`.
 
 You're studying attitudes about smoking and will issue a survey in phases.  Phase 1 will go out to residents of Plymouth County, Phase 2 will go out to residents of Essex County and Phase 3 will go out to Barnstable County.  Finish the following query such that you get the patient name, county, and a new column called `phase`.  Then scroll down to answer a simple question.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i>  after the question, you'll see the code that we used to answer the question.
 
@@ -365,26 +319,30 @@ FROM alasql.patients;
 
 *********
 
-You'd like to research patients born in the 1970s (so any year starting 197\_ would work).  Use a `LIKE` statement to enrich the query below and find the patient set you care about.  Below the code box, there's a question.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i> after the question, you'll see the code that we used to answer the question.
+You'd like to research patients born in Massachusetts.  You also want to know how far these patients currently live from their birthplace.  In this dataset, the `birthplace` field can include a city, state, and country (such as "Philadelphia Pennsylvania US"). 
+
+Use a `LIKE` statement to enrich the query below and find the group of patients you care about.  Below the code box, there's a question.  Stuck?  No worries -- scroll ahead to where the question appears, and if you click the "check mark" button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i> after the question, you'll see the code that we used to answer the question.
 
 ```sql
 SELECT
   patients.id
-  ,patients.birthdate
-FROM alasql.patients;
+  ,patients.birthplace
+  ,patients.city
+FROM alasql.patients
+WHERE ...
+ORDER BY city;
 ```
 @AlaSQL.eval("#dataTable7c")
 
 <table id="dataTable7c" border="1"></table><br>
 
-Which of these years are represented in your query results?
+How many current residents of Boston in the dataset were born in Massachusetts?
 
-[[ ]] 1970
-[[X]] 1971
-[[ ]] 1972
-[[X]] 1973
-[[X]] 1974
-[[ ]] 1975
+[[ ]] 0
+[[ ]] 1, born in Boston
+[[X]] 1, born in Lowell
+[[ ]] 2, born in Wrentham and Southbridge
+[[?]] Hint: As a reminder, birthplaces in Massachusetts may also include text before and after the word "Massachusetts." You will need to use `%` symbols to allow for that.
 ***************
 
 <div class = "answer" style = "width: 100%">
@@ -394,9 +352,11 @@ This is the query we used to get the answer:
 ```
 SELECT
   patients.id
-  ,patients.birthdate
+  ,patients.birthplace
+  ,patients.city
 FROM alasql.patients
-WHERE patients.birthdate LIKE "197%"
+WHERE patients.birthplace LIKE "%Massachusetts%"
+ORDER BY city;
 ```
 @AlaSQL.eval("#dataTable7d")
 
@@ -407,66 +367,6 @@ WHERE patients.birthdate LIKE "197%"
 
 **************
 
-You're doing research involving patients who live in multi-tenant housing like apartment buildings or long term hotels.  You know that sometimes people use "apartment", other times "apt", sometimes "unit", or "suite", or "room", so to search for all of these might be tough.  What you want to try is looking for addresses where there's some number listed **after** the part of the string that's composed only of letters and spaces.  So, "123 Apple Street" wouldn't match, but "123 Apple Street, Apt. 10" would.
-
-In regex, "one or more lower case letters or spaces, in any combination" is written `[a-z\s]+` and the symbol `\d+` indicates "one or more digits."  Use that information to complete the following code, to pull out patient information you might be interested in.  
-
-<div class = "care">
-<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
-
-We know this is a tricky question, because regular expressions are hard.  Click on the light bulb <i aria-hidden="true" class="icon icon-hint lia-btn__icon"></i> after the answer choices to ask for a hint if you need it!
-
-As in the previous cases, if you get stuck, just scroll down and hit the check mark 
-button <i aria-hidden="true" class="icon icon-resolve lia-btn__icon"></i>  after the question.
-
-</div>
-
-```sql
-SELECT
-  patients.id
-  ,patients.birthdate
-  ,patients.address
-FROM alasql.patients
-WHERE REGEXP_LIKE();
-```
-@AlaSQL.eval("#dataTable7e")
-
-<table id="dataTable7e" border="1"></table><br>
-
-Which of the following is an address that appears in the output of your query?  Select all that apply! 
-
-[[ ]] 119 Apple Valley Road Unit 7
-[[X]] 958 Robel Run Unit 83
-[[X]] 604 Sipes Divide Unit 0
-[[ ]] 82 Marriott Way Room 1153
-[[?]] Hint: The regular expression for the address pattern is `[a-z\s]+\d+`.  You'll want to put that in quotes within your `REGEXP_LIKE` clause!
-***************
-
-<div class = "answer" style = "width: 100%">
-
-This is the query we used to get the answer:
-
-```
-SELECT
-  patients.id
-  ,patients.birthdate
-  ,patients.address
-FROM alasql.patients
-WHERE REGEXP_LIKE(LOWER(patients.address), "[a-z\s]+\d+");
-```
-@AlaSQL.eval("#dataTable7f")
-
-<table id="dataTable7f" border="1"></table><br>
-
-<div style = "display:none;">
-
-@AlaSQL.buildTable_patients
-
-</div>
-
-</div>
-
-**************
 
 ## Aggregate Functions
 
