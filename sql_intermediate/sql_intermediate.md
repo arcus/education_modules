@@ -342,7 +342,7 @@ How many current residents of Boston in the dataset were born in Massachusetts?
 [[ ]] 1, born in Boston
 [[X]] 1, born in Lowell
 [[ ]] 2, born in Wrentham and Southbridge
-[[?]] Hint: Birthplaces in Massachusetts may also include text before and after the word "Massachusetts." You will need to use `%` symbols to allow for that.
+[[?]] Hint: As a reminder, birthplaces in Massachusetts may also include text before and after the word "Massachusetts." You will need to use `%` symbols to allow for that.
 ***************
 
 <div class = "answer" style = "width: 100%">
