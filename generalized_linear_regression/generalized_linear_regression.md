@@ -69,6 +69,11 @@ $$
 Y = \beta_0 + \beta_1 * X_1 + \beta_2 * X_2 ... \beta_n * X_n + e 
 $$
 
+- $Y$ is the outcome variable, also sometimes called the response variable, or the dependent variable. It's the thing you're trying to predict.
+- $\beta_0$ is the y-intercept (also sometimes called the "bias term" or "bias parameter" in machine learning). It is what value you would, on average, expect $Y$ to be when all the predictors are at 0.
+- $X_1$, $X_2$, etc. are predictor variables, and $\beta_1$, $\beta_2$, etc. are the coefficients (also called "slopes") for each predictor. 
+- $e$ is the error term. It articulates the fact that, even after accounting for all the predictors, there will be a certain amount of random variability in $Y$, so we never expect our predictions to be completely perfect.
+
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
