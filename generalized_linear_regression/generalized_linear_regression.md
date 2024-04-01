@@ -118,7 +118,7 @@ It would be handy if linear models covered all possible research questions, but 
 
 ## When Ordinary Linear Models Fail
 
-Linear models are only appropriate when your outcome variable(s) are **continuous** and **unbounded**. 
+Linear models are only appropriate when your outcome variable(s) are **continuous** and **unbounded** (we'll cover the definitions of continuity and boundedness more thoroughly after the following example). 
 If you want to model a categorical outcome, or one that's bounded (like a proportion or percent), then you can't rely on regular linear models to get the job done. 
 
 For example, let's return to the linear model example we were considering, predicting heart rate from temperature in febrile children. 
@@ -153,6 +153,15 @@ Assume that `sepsis` is coded as 0 (no) or 1 (yes) in the data.
 
 ### Predicting Sepsis with a Linear Model
 
+Below is a plot showing (fake) temperature and sepsis data, corresponding to the model we want to run.
+The line overlaid on the plot shows the results of an ordinary linear regression model predicting sepsis from temperature. 
+You can read the plot by picking a temperature value along the x-axis, and then going straight up until you hit the regression line and looking across at the y-axis to see what the predicted value for sepsis is at that temperature.
+
+**What do you notice in the plot?**
+
+- For example, what are the values of temperature for which the predicted sepsis value is over .5? 
+- As a rough guess, what you would you say would be the approximate predicted value of sepsis at a normal body temperature (98.6)?
+
 ``` -See the R code to generate some fake data
 library(tidyverse)
 # set the random seed so results replicate exactly with the random number generators
@@ -177,7 +186,7 @@ data <- data.frame(sepsis = sample(x = c(0,0,0,1),
 ![Scatterplot showing temperature on the x-axis (ranging from roughly 99 to 104) and sepsis (0 or 1) on the y-axis. There are a range of temperature values for both sepsis = 1 and sepsis = 0, but there appear to be more lower values of temperature for sepsis = 0. A straight line of best fit is overlaid on the data. It has a positive slope, starting at approximately sepsis = -0.01 for temperature values close to 1, and reaching sepsis = 0.6 at a temperature of approximately 104.](media/linear_prediction.png)
 
 ``` -R code for the above plot
-ggplot(data, aes(y=sepsis, x=heart_rate)) + 
+ggplot(data, aes(y=sepsis, x=temp)) + 
   geom_point() + 
   theme_bw() + 
   labs(y = "Sepsis", x = "Temperature") + 
