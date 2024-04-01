@@ -151,7 +151,7 @@ The patient either does or does not have sepsis, the outcome is **binary**.
 Assume that `sepsis` is coded as 0 (no) or 1 (yes) in the data.
 **What would happen if you just tried to estimate this as a regular linear model?**
 
-### Predicting Sepsis with a Linear Model
+### Example: Predicting Sepsis with a Linear Model
 
 Below is a plot showing (fake) temperature and sepsis data, corresponding to the model we want to run.
 The line overlaid on the plot shows the results of an ordinary linear regression model predicting sepsis from temperature. 
@@ -300,6 +300,8 @@ We've never come across a variable like that, but if you have definitely write i
 
 ## Link Functions
 
+So if linear regression only works for outcome variables that are continuous and unbounded, how do you model other kinds of variables?
+
 We can coerce problematic outcome variables into nice, continuous ones so that we can still model them with a line.
 The strategy for transforming your outcome depends on what its distribution is like to begin with --- if it's binary, then you'll need a different transformation than if it's count data, for example. 
 
@@ -312,23 +314,30 @@ Generalized linear models are just linear models on data that's been transformed
 
 </div>
 
-
-### Probabilities and Odds
-
-
-Instead of trying to get an outcome like "yes this patient has sepsis" or "no this patient doesn't have sepsis" it is both easier and more useful to model the _chance_ that the patient has sepsis.
-
-There are two ways to talk about chance:
-
-**Probability** is ... a number between 0 and 1, a percentage that a statement like "this patient is experiencing sepsis." is true.
-
-**Odds** is ... a proportion, a number greater than equal to 0, a statement like "for every one patient with these symptoms who does not have sepsis, we expect n patients who do have sepsis."
-
-
-### Logistic regression
+## Logistic Regression
 
 One of the most common kinds of generalized linear model is logistic regression. 
-That's a linear model using a [logit](https://en.wikipedia.org/wiki/Logit) (LOH-jit) transformation to convert the outcome that's binary (or continuous but bounded at 0 to 1, like a proportion).
+That's a linear model using a [logit](https://en.wikipedia.org/wiki/Logit) (LOH-jit) transformation to convert an outcome that's binary.
+
+If you want to build a model predicting a binary outcome (e.g. yes or no, true or false, has or doesn't have a diagnosis, survives or dies, relapses or doesn't), then logistic regression is a great tool!
+
+### Talking About Chance
+
+Logistic regression is for binary outcomes (e.g. has sepsis or doesn't have sepsis). 
+But statistical models are always imperfect; each prediction will be a guess, with some expected error around that guess. 
+So we express the predictions from a model of a binary outcome in terms of the _chance_ of that outcome. 
+In our example, given a particular temperature, what is the predicted chance that patient has sepsis?
+
+There are a few different ways to talk about chance. 
+Two of the most commonly used are "probability" and "odds". 
+They are sometimes used interchangeably in casual speech, but in statistics each has a very specific meaning:
+
+- **Probability** is a number between 0 and 1, indicating how likely it is that a statement like "this patient has sepsis" is true. 0 means "impossible" and 1 means "definitely true". Some people prefer to multiple probability by 100 and talk in terms of percents (e.g. at this temperature, we predict a 60% chance of sepsis).
+- **Odds** is a proportion --- it is the probability of an outcome (e.g. probability of sepsis) divided by the probability of the other outcome (e.g. probability of not having sepsis). Odds of 0 means "impossible", odds of 1 means an even chance, and odds greater than 1 means the outcome is increasingly likely. You can express odds in statement like "for every one patient with this temperature who does not have sepsis, we expect n patients who do have sepsis." 
+
+### Logit Link Function
+
+To build a regression model predicting the chance of sepsis based on temperature, we'll transform the binary sepsis variable using a **logit** link function.
 
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Behind the scenes</b><br>
@@ -341,7 +350,8 @@ Data bounded at 0 and 1, like probabilities or binary outcomes, can be converted
 1. Probabilities can be converted to odds by dividing the probability by 1-(the probability). So a probability of .5 becomes $0.5/(1-0.5) = 1$.
 2. Odds are unbounded at the upper end (they can theoretically go to positive infinity), but they're still bounded at the lower end, at 0. We can fix that by taking the natural log of the odds. The natural log of the odds is called a logit. For a probability of .5, the logit would be $Ln(0.5/1-0.5) = 0$.
 
-| Logit|    Odds| Probability|
+<!-- data-type="none"-->
+| Logit (log-odds)|    Odds| Probability|
 |-----:|-------:|-----------:|
 |  -Inf|   0.000|       0.000|
 |    -5|   0.007|       0.007|
@@ -364,39 +374,10 @@ If an event is likely to happen, then the probability would be greater than .5, 
 
 </div>
 
-### Other link functions
-
-Logistic regression (regression using a logit link function) works well for binary outcomes.
-But what about other kinds of outcome variables?
-
-If your outcome is counts of something, you can use a **Poisson** or **Negative Binomial** link function. 
-For example, perhaps your outcome is the number of [Adverse Childhood Experiences (ACEs)](https://www.cdc.gov/violenceprevention/aces/fastfact.html) per patient. 
-It's not possible for someone to have fewer than 0 ACEs, so that variable is bound at 0. 
-It's also measured as a count (how many total ACEs experienced), so no one will have 1.2 ACEs, for example. 
-
-For outcomes bounded at 0 and 1 (like a probability or proportion), you can use logistic regression, but a **beta** link function may be more appropriate.
-
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
-
-For more details on beta regression and when to use it, see [Analysing continuous proportions in ecology and evolution: A practical introduction to beta and Dirichlet regression](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13234) by Douma and Weedon (2019).
-
-</div>
-
-If your outcome is positively skewed, especially something bound at 0, then you can use a **Gamma** or **Inverse-Gaussian** link function. 
-These are especially useful for outcomes like cost, income, or length of stay -- continuous variables bound at 0 and usually positively skewed.
-
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
-
-To learn more about how to talk about the shape of a variable, such as identifying positive and negative skew, see the [Khan Academy lesson on shapes of distributions](https://www.khanacademy.org/kmap/measurement-and-data-j/md231-data-distributions/md231-displays-of-distributions/v/shapes-of-distributions).
-
-</div>
-
-## Predicting Sepsis with a generalized linear model
+### Predicting Sepsis with a Generalized Linear Model
 
 Let's return to our example model, predicting whether or not patients have sepsis from their temperature. 
-We [tried running that with an ordinary linear model](#predicting-sepsis-with-a-linear-model), but because our outcome variable is **not** continuous and unbounded, the model didn't make a lot of sense.
+We [tried running that with an ordinary linear model](#example-predicting-sepsis-with-a-linear-model), but because our outcome variable is **not** continuous and unbounded, the model didn't make a lot of sense.
 
 In order for our model to generate sensible predictions, we need to transform the outcome variable first with a link function. 
 
@@ -441,7 +422,36 @@ ggplot(data, aes(y=sepsis, x=temp)) +
 That looks much better!
 The predicted values now respect the boundaries on our outcome variable -- they can never go below 0 or above 1. 
 
-## Special considerations for generalized linear models
+## Other Link Functions
+
+Logistic regression (regression using a logit link function) works well for binary outcomes.
+But what about other kinds of outcome variables?
+
+If your outcome is counts of something, you can use a **Poisson** or **Negative Binomial** link function. 
+For example, perhaps your outcome is the number of [Adverse Childhood Experiences (ACEs)](https://www.cdc.gov/violenceprevention/aces/fastfact.html) per patient. 
+It's not possible for someone to have fewer than 0 ACEs, so that variable is bound at 0. 
+It's also measured as a count (how many total ACEs experienced), so no one will have 1.2 ACEs, for example. 
+
+For outcomes bounded at 0 and 1 (like a probability or proportion), you can use logistic regression, but a **beta** link function may be more appropriate.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+For more details on beta regression and when to use it, see [Analysing continuous proportions in ecology and evolution: A practical introduction to beta and Dirichlet regression](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13234) by Douma and Weedon (2019).
+
+</div>
+
+If your outcome is positively skewed, especially something bound at 0, then you can use a **Gamma** or **Inverse-Gaussian** link function. 
+These are especially useful for outcomes like cost, income, or length of stay -- continuous variables bound at 0 and usually positively skewed.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To learn more about how to talk about the shape of a variable, such as identifying positive and negative skew, see the [Khan Academy lesson on shapes of distributions](https://www.khanacademy.org/kmap/measurement-and-data-j/md231-data-distributions/md231-displays-of-distributions/v/shapes-of-distributions).
+
+</div>
+
+## Special Considerations for Generalized Linear Models
 
 When you run generalized linear models, it feels very similar in many ways to running a regular linear model. 
 Your output will look largely similar (coefficient tests, measurement of overall model fit, etc.). 
@@ -453,7 +463,7 @@ Instead, the computer uses brute force to find a solution, iterating over tons o
 This means the results are not exact --- they depend on the sampling algorithm being used --- so you might see very small changes if you run the model again, or if you run it on other software. 
 There's also a risk that your model won't converge if it's too complicated and you don't have enough data.
 
-## Quiz: Generalized linear models
+## Quiz: Generalized Linear Models
 
 True or False: Generalized linear models actually still use a line for the model (like ordinary linear regression), they just transform the outcome variable first.
 
