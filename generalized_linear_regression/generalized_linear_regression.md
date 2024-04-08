@@ -521,7 +521,12 @@ So it's actually no transformation at all!
 
 There's an excellent [chapter on Logistic Regression](https://online.stat.psu.edu/stat504/lesson/6) published by Penn State.
 
-If you'd like to compare output from different kinds of statistical software, [UCLA's IDRE](https://stats.oarc.ucla.edu/other/dae/) has published data analysis examples for logistic regression in [R](https://stats.oarc.ucla.edu/r/dae/logit-regression/), [Stata](https://stats.oarc.ucla.edu/stata/dae/logistic-regression/), [SPSS](https://stats.oarc.ucla.edu/spss/dae/logit-regression/), [SAS](https://stats.oarc.ucla.edu/sas/dae/logit-regression/), and [MPlus](https://stats.oarc.ucla.edu/mplus/dae/logit-regression/). 
+If you'd like to compare output from different kinds of statistical software, [UCLA's IDRE](https://stats.oarc.ucla.edu/other/dae/) has published data analysis examples for logistic regression in a variety of softwares: 
+* [Logistic Regression in R](https://stats.oarc.ucla.edu/r/dae/logit-regression/) 
+* [Logistic Regression in Stata](https://stats.oarc.ucla.edu/stata/dae/logistic-regression/) 
+* [Logistic Regression in SPSS](https://stats.oarc.ucla.edu/spss/dae/logit-regression/)
+* [Logistic Regression in SAS](https://stats.oarc.ucla.edu/sas/dae/logit-regression/)
+* [Logistic Regression in MPlus](https://stats.oarc.ucla.edu/mplus/dae/logit-regression/). 
 
 ## Feedback
 
