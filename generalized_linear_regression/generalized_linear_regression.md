@@ -348,7 +348,7 @@ But if you'd like to get a better idea of how the math works, here goes!
 Data bounded at 0 and 1, like probabilities or binary outcomes, can be converted to unbounded data as follows:
 
 1. Probabilities can be converted to odds by dividing the probability by 1-(the probability). So a probability of .5 becomes $0.5/(1-0.5) = 1$.
-2. Odds are unbounded at the upper end (they can theoretically go to positive infinity), but they're still bounded at the lower end, at 0. We can fix that by taking the natural log of the odds. The natural log of the odds is called a logit. For a probability of .5, the logit would be $Ln(0.5/1-0.5) = 0$.
+2. Odds are unbounded at the upper end (they can theoretically go to positive infinity), but they're still bounded at the lower end at 0. We can fix that by taking the natural log of the odds. The natural log of the odds is called a logit. For a probability of .5, the logit would be $Ln(0.5/1-0.5) = 0$.
 
 <!-- data-type="none"-->
 | Logit (log-odds)|    Odds| Probability|
