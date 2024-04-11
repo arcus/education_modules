@@ -473,7 +473,7 @@ True or False: Generalized linear models actually still use a line for the model
 <div class = "answer">
 
 True! 
-We can only use ordinary linear regression when the outcome variable is continuous and unbounded, so if you have, for example, a binary outcome, then a regression model won't work unless you first transform the outcome to be continuous and unbounded -- that's what generalized linear models do! 
+We can only use ordinary linear regression when the outcome variable is continuous and unbounded. So if you have, for example, a binary outcome then a regression model won't work unless you first transform the outcome to be continuous and unbounded -- that's what generalized linear models do! 
 
 </div>
 ***
