@@ -461,7 +461,7 @@ Unlike linear models, there is not a single analytic solution to generalized lin
 Instead, the computer uses brute force to find a solution, iterating over tons of combinations of parameter estimates and seeing which gives the best model fit.
 
 This means the results are not exact --- they depend on the sampling algorithm being used --- so you might see very small changes if you run the model again, or if you run it on other software. 
-There's also a risk that your model won't converge if it's too complicated and you don't have enough data.
+There's also a risk that your model won't converge (meaning you won't get any results at all) if it's too complicated and you don't have enough data. 
 
 ## Quiz: Generalized Linear Models
 
