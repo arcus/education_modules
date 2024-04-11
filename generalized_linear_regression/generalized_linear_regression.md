@@ -114,7 +114,7 @@ To learn more about interaction terms in linear models, checkout this [article a
 Linear models are so popular in statistics because equations for lines are computationally simple (even if they're not simple to understand!) but still allow us to model pretty complex relationships.
 
 It would be handy if linear models covered all possible research questions, but unfortunately they don't!
-**Generalized linear models are a way to extend the functionality of linear models to cover situations when they normally wouldn't work.**
+This is where Generalized Linear Models come in. **Generalized linear models** are a way to extend the functionality of linear models to cover situations when they normally wouldn't work.**
 
 ## When Ordinary Linear Models Fail
 
