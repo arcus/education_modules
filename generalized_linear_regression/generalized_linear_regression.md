@@ -145,7 +145,7 @@ $$
 \text{sepsis} = \beta_0 + \beta_{\text{temp}} * \text{temp} + e
 $$ 
 
-The question of whether a patient has sepsis is, statistically, a different sort of question than the question of what a patient's heart rate is. 
+The question of whether a patient has sepsis is, statistically, a different type of question than the question of what a patient's heart rate is. 
 The patient either does or does not have sepsis, the outcome is **binary**.
 
 Assume that `sepsis` is coded as 0 (no) or 1 (yes) in the data.
