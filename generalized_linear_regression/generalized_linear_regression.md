@@ -489,8 +489,6 @@ A link function is a transformation to convert an outcome variable to a form tha
 ($b_0 + b_x * x$ is an example of a linear model, not a link function.)
 
 The transformation that will work depends on the shape of the outcome variable to start with. 
-For binary outcomes, a logit transformation works well. 
-A generalized linear model with a logit link function is often called "logistic regression" for short.
 
 </div>
 ***
