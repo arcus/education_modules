@@ -432,7 +432,7 @@ For example, perhaps your outcome is the number of [Adverse Childhood Experience
 It's not possible for someone to have fewer than 0 ACEs, so that variable is bound at 0. 
 It's also measured as a count (how many total ACEs experienced), so no one will have 1.2 ACEs, for example. 
 
-For outcomes bounded at 0 and 1 (like a probability or proportion), you can use logistic regression, but a **beta** link function may be more appropriate.
+For continuous outcomes bounded at 0 and 1 (like a probability or proportion), you can use logistic regression, but a **beta** link function may be more appropriate.
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
