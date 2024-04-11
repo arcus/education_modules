@@ -160,7 +160,7 @@ You can read the plot by picking a temperature value along the x-axis, and then 
 **What do you notice in the plot?**
 
 - For example, what are the values of temperature for which the predicted sepsis value is over .5? 
-- As a rough guess, what you would you say would be the approximate predicted value of sepsis at a normal body temperature (98.6)?
+- As a rough guess, what do you think the approximate predicted value of sepsis would be at a normal body temperature (98.6)?
 
 ``` -See the R code to generate some fake data
 library(tidyverse)
