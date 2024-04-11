@@ -457,7 +457,7 @@ When you run generalized linear models, it feels very similar in many ways to ru
 Your output will look largely similar (coefficient tests, measurement of overall model fit, etc.). 
 Under the hood, though, your statistical software is doing something very different.
 
-Unlike linear models, there is not a single analytic solution to generalized linear models -- that means you couldn't (even if you wanted to) figure out the solution by solving the equation by hand. 
+Unlike linear models, there is not a single analytic solution to generalized linear models -- that means you couldn't figure out the solution by solving the equation by hand, even if you wanted to. 
 Instead, the computer uses brute force to find a solution, iterating over tons of combinations of parameter estimates and seeing which gives the best model fit.
 
 This means the results are not exact --- they depend on the sampling algorithm being used --- so you might see very small changes if you run the model again, or if you run it on other software. 
