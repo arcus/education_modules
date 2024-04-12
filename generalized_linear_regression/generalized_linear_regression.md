@@ -251,7 +251,10 @@ It's not discrete categories of time, it's a continuous scale.
 
 But it's not unbounded! 
 Although there's no theoretical upper limit on length of stay, it would be impossible to have a length of stay less than 0 days, so the variable is bound at zero.
-And unless Dr. Jemison is studying a particular population that all have unusually long hospital stays, it's likely that the data will be effectively cutoff at 0 -- there will plenty of patients with a length of stay of 3 days, and 2 days, and 1 day, but then of course nothing below zero.
+And unless Dr. Jemison is studying a particular population that all have unusually long hospital stays, it's likely that the data will actually run right up to the boundary at 0 -- there will plenty of patients with a length of stay of 3 days, and 2 days, and 1 day, and then of course nothing below zero.
+That's why length of stay would have to be treated as bounded in this example.
+
+If Dr. Jemison was in fact studying a population with very long hospital stays (perhaps patients with a condition that nearly always requires hospital stays of weeks or months) and none of the lengths of stay in the data were close to 0, then it could be treated as unbounded -- even though there would still technically be a lower bound at 0, that doesn't matter statistically if the data don't approach it (just like in the IQ example earlier). 
 
 </div>
 ***
