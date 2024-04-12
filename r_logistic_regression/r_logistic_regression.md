@@ -72,29 +72,177 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 @overview
 
-## 
+## Lesson Preparation
 
-### The data
+@lesson_prep_r
 
-https://www.nejm.org/doi/full/10.1056/NEJMoa1111103
+## When to use Logistic Regression
 
-From the help documentation:
+Logistic regression is an extension of linear regression. 
+It's an example of what's known as a [generalized linear model](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/generalized_linear_regression/generalized_linear_regression.md#1).
+Regular linear regression only works when your outcome variable (the variable you want to predict) is [continuous and unbounded](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/generalized_linear_regression/generalized_linear_regression.md#when-ordinary-linear-models-fail); if you want to run a model predicting a variable that is **not** continuous an unbounded, then you need a generalized linear model instead, and the specific kind of model depends on the type of outcome variable you want to predict.
+
+**Logistic regression is used to model [binary](https://en.wiktionary.org/wiki/binary) (BI-na-ree) outcomes -- in other words, outcomes with two possible values.**
+
+Binary outcomes are extremely common in medical and health data!
+Any time you want to predict whether something happened or not (a particular diagnosis, hospitalization, complications after surgery, etc.), that is likely a binary outcome and logistic regression is probably the tool you need to analyze your data.
+
+Here are some examples of binary outcomes in biomedicine:
+
+- []()
+
+## Overview of Models in R
+
+Linear models (including generalized linear models like logistic regression) express the relationship between the predictor(s) and the outcome using the equation for a line, for example: 
+
+$$
+Y = \beta_0 + \beta_1 * X_1 + \beta_2 * X_2 + e 
+$$
+
+In this equation, $Y$ is the outcome variable, and $X_1$ and $X_2$ are the predictors.  
+
+R is built for statistics, and regression models is one area where it really shines!
+There's a consistent way to express equations like the above in R across many different modeling functions: a model formula. 
+
+A model formula for the equation above would look like this: `Y ~ X1 + X2`
+
+A few things to note about how to write a model formula in R: 
+
+- The `~` separates the outcome side of the equation (on the left) from the predictor side (on the right)
+- Use `+` between each predictor (if you want to include interactions or polynomial terms, things get a little more complicated, but we'll skip that for now)
+- You don't need to explicitly include the intercept in your model, R assumes you want one by default
+
+To run an ordinary least squares linear regression model, use the function `lm` (short for "linear model"). 
+In our example, the code would look like this (assuming the variables `Y`, `X1` and `X2` are all columns in a dataframe called `my_data`):
+
+```
+lm(Y ~ X1 + X2, data = my_data)
+```
+
+**What if `Y` is a binary variable, and I need to run a logistic regression instead of a regular linear model?**
+
+To run a logistic regression in R, the code looks very similar! 
+Here's how we would adapt the code above if `Y` were binary:
+
+```
+glm(Y ~ X1 + X2, family = binomial(link="logit"), data = my_data)
+```
+
+What's changed?
+
+- We're using the function `glm` (short for "generalized linear model") instead of `lm`.
+- We added the argument `family = binomial(link="logit")`. This tells R what kind of GLM we want to run (what [link function](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/generalized_linear_regression/generalized_linear_regression.md#link-functions) to use). In this case, we want to use a [logit](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/generalized_linear_regression/generalized_linear_regression.md#logit-link-function) (LOW-jit) link function, which is what defines logistic regression. 
+- That's it! Everything else about our code, including the model formula, is just like what we would use for a regular linear regression model.
+
+## Logistic Regression Example
+
+Let's try a real data analysis example!
+
+Start by loading these helpful R packages:
+
+```r
+library(medicaldata) 
+library(tidyverse)
+library(pander)
+```
+
+<div class = "help">
+<b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
+
+If you're working on your own computer, you may need to install these packages first if you've never used them before. 
+Try running `install.packages(c("medicaldata", "tidyverse", "pander"))`, then run the library commands again. 
+
+The `pander` package is sometimes a little tricky to install, depending on your computer's setup, because it requires another program called [pandoc](https://rapporter.github.io/pander/#pandoc) (not an R package, a separate program) for some of its functionality.
+If you have [RStudio](https://posit.co/products/open-source/rstudio/) installed, then pandoc will already be set up. 
+If not, and if you're having trouble with the `pander` installation, just skip it -- there are [other ways to print nice tables in R](https://bookdown.org/yihui/rmarkdown/r-code.html#tables). 
+
+</div>
+
+We'll work with the `indo_rct` data, which comes in the `medicaldata` R package. 
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+There are lots of great datasets available in the `medicaldata` package! 
+To learn more, checkout the [`medicaldata` website](https://higgi13425.github.io/medicaldata/). 
+
+Also, if you have medical data that can be anonymized and shared publicly, [please consider donating it](https://higgi13425.github.io/medicaldata/#please-donate-datasets)!
+It's a [great way to increase the visibility of any projects you have related to those data](https://elifesciences.org/articles/16800), and you can also take pride in contributing to a growing culture of data sharing and reuse. 
+
+</div>
+
+We'll also need to load two other packages for our analysis today: `tidyverse` and `pander`. 
+The [`tidyverse`](https://www.tidyverse.org/) is actually a whole set of related packages for doing data science in R. 
+We'll mostly use its data cleaning and transformation functions today, such as [`select` and `mutate`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md). 
+
+We'll use [`pander` package](https://rapporter.github.io/pander/) to convert R objects, especially our model output, into nicely formatted tables we can use in Word, HTML, PDF, etc. 
+
+### The Data
+
+We'll be analyzing the `ind_rct` data from the `medicaldata` package, data from a randomized control trial on the effectiveness of indomethacin in the prevention of post-ERCP pancreatitis ([Elmunzer, Higgins, et al., 2012](https://www.nejm.org/doi/full/10.1056/NEJMoa1111103)).
+From the `indo_rct` help documentation (you can pull this up by running `?indo_rct` in the console):
 
 > ERCP, or endoscopic retrograde cholangio-pancreatogram, is a procedure performed by threading an endoscope through the mouth to the opening in the duodenum where bile and pancreatic digestive juices are released into the intestine. ERCP is helpful for treating blockages of flow of bile (gallstones, cancer), or diagnosing cancers of the pancreas, but has a high rate of complications (15-25%).
 > The occurrence of post-ERCP pancreatitis is a common and feared complication, as pancreatitis can result in multisystem organ failure and death, and can occur in ~ 16% of ERCP procedures.
 > The inflammatory cytokine storm that can result from this procedural complication can be quite severe. Several small randomized trials suggested that anti-inflammatory NSAID therapies at the time of ERCP could reduce the rate of this complication, but all were rather small single-center studies, and were not sufficiently convincing to change practice.
 
+For our model, we'll be using the data from this randomized control trial (RTC) to predict whether or not patients got post-ERCP pancreatitis (yes or no, a binary variable) from their underlying risk score (a score from 1-5.5) and whether they received the treatment (indomethacin) or a placebo. 
 
-alternate data: 
+The results of the original trial were published in [Elmunzer, Higgins, et al. in 2012 in the New England Journal of Medicine](https://www.nejm.org/doi/full/10.1056/NEJMoa1111103). 
 
 
-article: https://peerj.com/articles/175/
+### Data Preparation
 
-available on GH: https://github.com/hpiwowar/citation11k/tree/master/analysis/data
+There are a few important data preparation steps before running a logistic regression. 
 
-Learn more about how open science practices impact researchers' careers: https://elifesciences.org/articles/16800#bib105
+#### Check the structure of your data, especially your binary outcome variable
+
+This dataset contains quite a few variables we won't actually need for our analysis, so let's save a version of the dataset that just includes the variables we want, to simplify output.
+
+```r
+indo_rct <- select(indo_rct, risk, rx, outcome)
+```
+
+Now we can use the `str()` command to get an overview of the variables in this dataframe, and whether each is continuous (numeric) or categorical (factor). 
+
+```r
+str(indo_rct)
+```
+
+We can see that `outcome` is indeed a binary variable: It's a factor with two levels, "0_no" and "1_yes", indicating that the patient didn't or did have post-ERCP pancreatitis, respectively.
+We can also see that `risk` is numeric, and `rx` is another factor, with two levels ("0_placebo" and "1_indomethacin") indicating whether the patient was assigned to receive the placebo or treatment.
+
+It's also a good idea to look at some basic summary statistics, and especially keep an eye out for any [missing values](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_missing_values/r_missing_values.md#1). 
+We can do that with the `summary()` function:
+
+```r
+summary(indo_rct)
+```
+
+There aren't any missing data on the variables we'll be looking at today. Yay!
+
+#### Center any continuous predictors
+
+Centering a continuous variable means subtracting the column mean from every observation.
+For example, if you had the following observations `2,1,2,4` (the mean of these numbers is 2.25), centering it would make it into `-0.25,-1.25,-0.25,1.75`.
+
+Why is centering important? 
+Centering continuous predictors can make your coefficients a little easier to interpret, which is handy, but the real reason it's important is because if you end up including interaction terms in your model failing to center continuous predictors can introduce multicolinearity (if you've never heard of multicolinearity before, no worries! Just know that we'd like to avoid it, and centering predictors is an easy preventative measure to take).
+
+If you know you won't have any interaction terms in your model, then you can decide to center continuous predictors or not, based on your preference. 
+But it does no harm to center continuous predictors "unnecessarily," so we recommend it as a general practice, especially for folks new to modeling.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To learn more about when centering predictors is (and isn't) useful, see  
+["When not to center a predictor" on the Analysis Factor blog](https://www.theanalysisfactor.com/when-not-to-center-a-predictor-variable-in-regression/).
+
+</div>
 
 ### Writing the formula
+
+
 
 ### Link functions
 
