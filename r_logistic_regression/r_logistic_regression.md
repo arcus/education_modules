@@ -1,3 +1,78 @@
+<!--
+module_id: r_logistic_regression
+author:   Rose Hartman
+email:    hartmanr1@chop.edu
+version:  1.0.0
+current_version_description: Initial version
+module_type: standard
+docs_version: 4.0.0
+language: en
+narrator: UK English Female
+mode: Textbook
+
+title: Logistic Regression in R
+
+comment:  
+
+long_description: 
+
+estimated_time_in_minutes: 60
+
+r_file: r\_logistic\_regression
+
+@pre_reqs
+Learners should already be familiar with the following concepts in statistics and math:
+
+- [linear regression](https://education.arcus.chop.edu/ordinary_linear_regression/) (also called "ordinary least squares (OLS) linear regression"), including how to interpret tests of model coefficients
+- [null hypothesis significance testing (NHST)](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_nhst/intro_to_nhst.md#1), also called "frequentist statistics" (this is the most commonly taught branch of statistics and includes techniques that use $p$ values to interpret results, like t-tests)
+
+This module also assumes some basic familiarity with R, including the following:
+
+- [installing and loading packages](https://r4ds.had.co.nz/data-visualisation.html#prerequisites-1)
+- manipulating data frames, including [selecting columns and calculating new columns](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md)
+- the difference between [numeric (continuous) and factor (categorical) variables](https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures) in a dataframe
+
+If you are brand new to R (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) first.
+
+@end
+
+@learning_objectives  
+After completion of this module, learners will be able to:
+
+- use the `glm` function in R to run a logistic regression model
+- interpret significance tests for individual predictors or sets of predictors in a logistic regression model
+- create a classification table (also called a confusion matrix) to assess model performance 
+@end
+
+good_first_module: false
+data_task: data_analysis
+collection: statistics
+coding_required: true
+coding_level: intermediate
+coding_language: r
+
+@sets_you_up_for
+
+@end
+
+@depends_on_knowledge_available_in
+- intro_to_nhst
+- generalized_linear_regression
+- r_basics_transform_data
+@end
+
+@version_history 
+No previous versions.
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+-->
+
+# Logistic Regression in R
+
+@overview
+
+## 
 
 ### The data
 
@@ -208,3 +283,18 @@ ggplot(osf.pois, aes(x=Number.of.experiments, fill=Journal)) +
 ```
 
 Try adding facet wrap by Journal as well, to put each density plot in its own facet.
+
+## Additional Resources
+
+There's an excellent [chapter on Logistic Regression](https://online.stat.psu.edu/stat504/lesson/6) published by Penn State.
+
+If you'd like to compare output from different kinds of statistical software, [UCLA's IDRE](https://stats.oarc.ucla.edu/other/dae/) has published data analysis examples for logistic regression in a variety of softwares: 
+* [Logistic Regression in R](https://stats.oarc.ucla.edu/r/dae/logit-regression/) 
+* [Logistic Regression in Stata](https://stats.oarc.ucla.edu/stata/dae/logistic-regression/) 
+* [Logistic Regression in SPSS](https://stats.oarc.ucla.edu/spss/dae/logit-regression/)
+* [Logistic Regression in SAS](https://stats.oarc.ucla.edu/sas/dae/logit-regression/)
+* [Logistic Regression in MPlus](https://stats.oarc.ucla.edu/mplus/dae/logit-regression/). 
+
+## Feedback
+
+@feedback
