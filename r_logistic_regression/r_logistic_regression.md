@@ -212,6 +212,16 @@ str(indo_rct)
 We can see that `outcome` is indeed a binary variable: It's a factor with two levels, "0_no" and "1_yes", indicating that the patient didn't or did have post-ERCP pancreatitis, respectively.
 We can also see that `risk` is numeric, and `rx` is another factor, with two levels ("0_placebo" and "1_indomethacin") indicating whether the patient was assigned to receive the placebo or treatment.
 
+<div class = "warning">
+<b style="color: rgb(var(--color-highlight));">Warning!</b><br>
+
+It's very important to double check that R is using the correct variable types (numeric or factor) for each variable you'll include in your model.
+If you have a categorical variable in your data that R mistakenly listed as numeric or vice versa, that can completely change your model results and ruin your analysis.
+
+Categorical variables should always be encoded as factors, and continuous variables should always be encoded as numeric.
+
+</div>
+
 It's also a good idea to look at some basic summary statistics, and especially keep an eye out for any [missing values](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_missing_values/r_missing_values.md#1). 
 We can do that with the `summary()` function:
 
