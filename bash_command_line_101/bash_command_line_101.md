@@ -1,8 +1,8 @@
 <!--
-
+module_id: bash_command_line_101
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version: 1.5.3
+version: 1.5.5
 current_version_description: Updated metadata and macros
 module_type: standard
 docs_version: 2.0.0
@@ -17,7 +17,7 @@ long_description: This course is designed to be both an introduction to bash / c
 estimated_time_in_minutes: 40
 
 @pre_reqs
-Learners should be familiar with locating files and folders stored in a directory system.  Our [Directories and File Paths](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#1) module can provide some help with gaining these skills.
+Learners should be familiar with [the command line interface](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md#1) and [locating files and folders stored in a directory system](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#1).
 @end
 
 @learning_objectives
@@ -40,6 +40,7 @@ sequence_name: bash_basics
 @end
 
 @depends_on_knowledge_available_in
+- demystifying_command_line
 - directories_and_file_paths
 @end
 

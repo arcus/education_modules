@@ -1,11 +1,11 @@
 <!--
-
+module_id: git_creation_and_tracking
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.9
-current_version_description: Initial version
+version: 1.1.2
+current_version_description: Add formal definition of repository and commit 
 module_type: standard
-docs_version: 3.0.0
+docs_version: 4.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
@@ -18,7 +18,7 @@ estimated_time_in_minutes: 60
 @pre_reqs
 Before you start this module, make sure you
 
-- Know how to access a command line interface (CLI) on your computer.
+- Know how to [access a command line interface (CLI) on your computer](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md).
 - Have Git configured on your computer. If Git is not yet configured, see the module on setting up Git on a [Mac, Linux](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md), or [Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md) machine.
 - Can edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file), one of many text editors that you can access directly from the command line interface (CLI).
 @end
@@ -49,14 +49,17 @@ previous_sequential_module: git_setup_mac_and_linux, git_setup_windows
 @end 
 
 @depends_on_knowledge_available_in
+- demystifying_command_line
 - git_intro
+- demystifying_command_line
+- git_cli_vs_gui
 - git_setup_windows
 - git_setup_mac_and_linux
 - bash_command_line_101
 @end
 
 @version_history 
-No previous versions.
+- [1.0.10](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/16a4a852199689a42f04555cb581cf2dcb90fb0f/git_creation_and_tracking/git_creation_and_tracking.md#1): Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -93,7 +96,9 @@ If you need to get Git configured on your computer there is a module to help you
 
 ## Creating a Repository
 
-Usually you will use Git to track the progress of a project. As we learn about Git, we will use the story of Wolfman and Dracula who are investigating if it
+Usually you will use Git to track the progress of a project. Each project is made up of a [**repository**](https://swcarpentry.github.io/git-novice/reference.html#repository) (sometimes also referred to as a "repo"), which is a directory that stores all of the files for the project, as well as all of the records of their changes (otherwise known as [**commits**](https://swcarpentry.github.io/git-novice/reference.html#commit)). 
+
+As we learn about Git, we will use the story of Wolfman and Dracula who are investigating if it
 is possible to send a planetary lander to Mars.
 
 In the examples, we will see code as if it is written by Vlad Dracula. If you are practicing these steps as you move through this module, your name and email address will appear instead of Dracula's.

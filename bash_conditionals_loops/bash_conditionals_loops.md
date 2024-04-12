@@ -1,8 +1,8 @@
 <!--
-
+module_id: bash_conditionals_loops
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.3
+version: 1.2.5
 current_version_description: Clarify `=` and `==` inside test functions
 module_type: standard
 docs_version: 1.2.1
@@ -50,7 +50,8 @@ previous_sequential_module: bash_103_combining_commands
 @end
 
 @depends_on_knowledge_available_in
-
+- directories_and_file_paths
+- demystifying_command_line
 - bash_command_line_101
 - bash_command_line_102
 

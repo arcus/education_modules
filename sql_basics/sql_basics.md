@@ -1,7 +1,8 @@
 <!--
+module_id: sql_basics
 author: Peter Camacho; Joy Payton
 email: camachop@chop.edu; paytonk@chop.edu
-version: 1.2.0
+version: 1.2.2
 current_version_description: Improve large table display with collapsible sections
 module_type: standard
 docs_version: 3.0.0
@@ -951,7 +952,7 @@ You also got to practice hands on, which probably meant you got to see some erro
 
 * Khan Academy's [Introduction to SQL](https://www.khanacademy.org/computing/computer-programming/sql) is high quality and easy to learn from.
 
-* To read more about the basic types of **operators** available for use in a SQL query, check out [tutorialspoint.com](https://www.tutorialspoint.com/sql/sql-operators.htm) for some helpful documentation.
+* Tutorials Point has some helpful documentation you may want to check out [about the basic types of operators available for use in a SQL query](https://www.tutorialspoint.com/sql/sql-operators.htm).
 
 ## Feedback
 @feedback

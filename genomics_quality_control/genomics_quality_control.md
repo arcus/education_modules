@@ -1,8 +1,8 @@
 <!--
-
+module_id: genomics_quality_control
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.2
+version:  1.1.4
 current_version_description: Add explanation about why we use AWS for genomics modules.
 module_type: standard
 docs_version: 2.0.0
@@ -48,6 +48,7 @@ sequence_name: genomics_tools_and_methods
 
 @depends_on_knowledge_available_in
 
+- demystifying_command_line
 - bash_103_combining_commands
 - bash_command_line_101
 - bash_command_line_102

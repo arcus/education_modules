@@ -1,11 +1,11 @@
 <!--
-
+module_id: git_setup_windows
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.1
+version: 1.2.4
 current_version_description: Updated metadata to latest standards
 module_type: standard
-docs_version: 2.0.0
+docs_version: 4.0.0
 language: en
 narrator: UK English Female
 title: Setting Up Git on Windows
@@ -18,6 +18,7 @@ estimated_time_in_minutes: 25
 
 @pre_reqs
 
+- Have used a [command line interface (CLI)](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md#1) on your computer before
 - Have an account on github.com (you can [sign up now](https://github.com/signup) if you haven't yet --- it's free)
 
 @end
@@ -38,7 +39,7 @@ coding_required: true
 coding_level: getting_started
 coding_language: git, bash
 sequence_name: git_basics
-previous_sequential_module: git_intro
+previous_sequential_module: git_cli_vs_gui
 
 @sets_you_up_for
 - git_creation_and_tracking
@@ -46,7 +47,10 @@ previous_sequential_module: git_intro
 @end
 
 @depends_on_knowledge_available_in
+- demystifying_command_line
 - git_intro
+- demystifying_command_line
+- git_cli_vs_gui
 @end
 
 @is_parallel_to

@@ -1,7 +1,8 @@
 <!--
+module_id: statistical_tests
 author: Rose Hartman
 email: hartmanr1@chop.edu
-version: 1.3.5
+version: 1.3.7
 current_version_description: Highlight box update, fix typos, front matter update, add some additional resources.
 module_type: standard
 docs_version: 2.0.0
@@ -40,8 +41,6 @@ coding_language: r, python
 @end
 
 @depends_on_knowledge_available_in
-- r_basics_introduction
-- python_basics_variables_functions_methods
 - intro_to_nhst
 @end
 
