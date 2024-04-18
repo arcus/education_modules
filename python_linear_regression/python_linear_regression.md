@@ -349,7 +349,12 @@ Linear regression is a powerful machine learning algorithm, but it has some limi
 ***
 <div class = "answer">
 
-This question is designed to test the test-taker's understanding of the concept of collinearity and its impact on linear regression models. Collinearity is a serious problem in linear regression because it can make it difficult to interpret the results of the model and can lead to inaccurate predictions.
+This is because of a condition called collinearity. Here's why it matters:  
+- Understanding the impact: When two or more of your predictor variables are highly correlated (meaning they change in similar ways), it becomes difficult for linear regression to figure out which variable is really affecting the outcome.  
+- Less reliable results: Collinearity can make the estimates for your model's coefficients less stable. A small change in your data might lead to big changes in how the model interprets the relationship between the variables.  
+- Tricky interpretation: It becomes harder to say with confidence how much a change in one specific predictor variable will impact the outcome you're trying to predict.  
+
+Key Takeaway: It's a good idea to be aware of collinearity and check for it before building a linear regression model.  
 
 </div>
 ***
@@ -363,8 +368,12 @@ This question is designed to test the test-taker's understanding of the concept 
 ***
 <div class = "answer">
 
-This question is designed to test the test-taker's understanding of the concept of overfitting and how to prevent it. Overfitting is a common problem in machine learning, and it is important to be able to identify and prevent it. Regularization techniques such as L1 and L2 regularization can be used to prevent overfitting in linear regression models.
+Regularization techniques are designed to combat overfitting. Let's break down why:  
 
+- Overfitting: Occurs when a machine learning model learns the training data too well, including the noise. This makes it perform well on the training set but poorly on new, unseen data. It's like memorizing answers instead of truly understanding a subject.  
+- Regularization: It adds a penalty term to the model's loss function. This penalty discourages overly complex models, forcing them to generalize better to new data.  
+
+Key takeaway:  Regularization techniques like L1 and L2 regularization help create models that are better at understanding the underlying patterns in data, not just the specific examples they were trained on.  
 </div>
 ***
 
