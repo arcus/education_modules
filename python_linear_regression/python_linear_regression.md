@@ -71,6 +71,21 @@ import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 - In the case of linear regression, the target variable is a continuous variable. In a supervised learning problem, the machine learning algorithm is given a set of training data and asked to learn a function that can map the input variables to the output variable. The training data consists of pairs of input and output variables. The algorithm learns the function by finding the best fit line to the data. Once the algorithm has learned the function, it can be used to make predictions on new data. To make a prediction, the algorithm simply plugs the values of the input variables into the function.
 - Linear regression is a popular supervised learning algorithm because it is simple to implement and understand. It is also a versatile algorithm that can be used to solve a variety of problems.
 
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
+
+As in many fields, machine learning involves a lot of technical language, some of which is unclear, redundant, or downright confusing.
+For example:
+
+**Outcome** variables are also called **response variables**, **dependent variables**, or **labels**.
+
+**Input** variables are also called **predictors**, **features**, **independent variables**, or even just **variables**.
+
+To make matters worse, sometimes the same words are used to mean different things in different subfields.
+If you find yourself stumbling on vocabulary as you read about machine learning, know you're not alone!
+
+</div>
+
 Which of the following is NOT a characteristic of linear regression?
 
 
@@ -82,28 +97,34 @@ Which of the following is NOT a characteristic of linear regression?
 ***
 <div class = "answer">
 
-This question is more difficult than the previous one because it requires the test-taker to have a deeper understanding of the characteristics of linear regression. The test-taker must be able to identify which of the answer choices is not a characteristic of linear regression, even though all of the other answer choices are valid characteristics.
+This question presents a deeper challenge as it requires a solid understanding of linear regression's characteristics. To answer correctly, you need to identify the feature that doesn't align with linear regression. The incorrect option, "Linear regression can be used to predict categorical variables," deviates from the typical usage of linear regression, which is primarily for continuous variables. Understanding this distinction enhances your comprehension of linear regression's scope and limitations.
 
 </div>
 ***
 
 
-### Applications of linear regression in machine learning
-Linear Regression can be used for a variety of tasks, such as: 
+### Applications of linear regression in biomedical research
+Linear regression finds extensive application in biomedical research, offering insights into various domains, such as:
 
--   **Prediction:**  Linear regression can be used to predict a wide range of continuous variables, such as house prices, stock prices, customer churn, and medical outcomes.
--   **Recommendation:**  Linear regression can be used to build recommender systems that recommend products, movies, or other items to users based on their past preferences.
--   **Fraud detection:**  Linear regression can be used to detect fraudulent transactions by identifying transactions that deviate from the expected behavior.
--   **Medical diagnosis:**  Linear regression can be used to help doctors diagnose diseases by identifying patterns in patient data.
--   **Scientific research:**  Linear regression can be used to identify relationships between variables in scientific data.
-### Examples of linear regression in real-world applications
--   **Predicting house prices:**  Linear regression can be used to predict the price of a house based on its square footage, number of bedrooms, number of bathrooms, and other factors.
--   **Predicting stock prices:**  Linear regression can be used to predict the price of a stock based on its historical prices, financial data, and other factors.
--   **Predicting customer churn:**  Linear regression can be used to predict whether a customer is likely to churn based on their past purchase history, demographics, and other factors.
--   **Predicting the risk of a customer defaulting on a loan:**  Linear regression can be used to predict the risk of a customer defaulting on a loan based on their credit score, income, and other factors.
--   **Predicting the likelihood of a patient having a particular disease:**  Linear regression can be used to predict the likelihood of a patient having a particular disease based on their medical history, symptoms, and other factors.
--   **Predicting the number of visitors to a website:**  Linear regression can be used to predict the number of visitors to a website based on the website's past traffic data, marketing campaigns, and other factors.
--   **Predicting the sales of a product:**  Linear regression can be used to predict the sales of a product based on its price, marketing campaigns, and other factors.
+- **Disease prognosis:** Linear regression aids in predicting the progression of diseases based on patient demographics, biomarkers, and clinical data. For instance, it can forecast the advancement of cancer stages or the deterioration of chronic conditions like diabetes.  
+    - A specific example of this in research can be found in ["A longitudinal study defined circulating microRNAs as reliable biomarkers for disease prognosis and progression in ALS human patients"](https://www.nature.com/articles/s41420-020-00397-6) In the realm of disease prognosis, longitudinal research has illuminated the potential of circulating microRNAs as dependable biomarkers for assessing disease progression and prognosis in ALS patients. By integrating patient demographics, biomarkers, and clinical data, linear regression models can be leveraged to forecast the trajectory of diseases, akin to predicting cancer stages or the progression of chronic ailments like diabetes.  
+
+- **Treatment efficacy:** Linear regression assists in evaluating the effectiveness of medical treatments by analyzing patient response data. Researchers can utilize it to assess the impact of medications, therapies, or interventions on disease outcomes and patient well-being.  
+    - ["Meta-analysis of the Age-Dependent Efficacy of Multiple Sclerosis Treatments"](https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2017.00577/full) demonstrates a specific application of linear regression.  This study uses linear regression to determine how the effectiveness of Multiple Sclerosis treatments changes as patients age.  
+
+
+- **Genetic studies:** Linear regression plays a pivotal role in genetic research by exploring associations between genetic variants and phenotypic traits. It helps identify genetic markers linked to disease susceptibility, treatment response, and disease progression, contributing to personalized medicine approaches.  
+    - The article ["Prediction of Gene Expression Patterns With Generalized Linear Regression Model"](https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2019.00120/full) describes a method using generalized linear regression to predict how gene expression levels change in response to the binding intensity of the Oct4 transcription factor. This model aids researchers in understanding the complex regulatory mechanisms behind cell reprogramming and development.  
+
+- **Public health analysis:** Linear regression facilitates the analysis of population-level health trends, aiding in the identification of risk factors, disease clusters, and health disparities. It enables researchers to model the impact of interventions, policies, and socio-economic factors on public health outcomes.  
+    - The article ["Regression Analysis for COVID-19 Infections and Deaths Based on Food Access and Health Issues"](https://www.mdpi.com/2227-9032/10/2/324) investigates the relationship between food access, pre-existing health conditions, and the severity of COVID-19 outcomes. Researchers used regression models to discover potential correlations that could inform future pandemic preparedness efforts.
+
+- **Epidemiological modeling:** Linear regression serves as a fundamental tool in epidemiology for modeling disease spread and understanding risk factors. It assists in forecasting disease outbreaks, estimating transmission rates, and evaluating interventions' effectiveness in controlling infectious diseases.  
+    - The article ["SEIR and Regression Model based COVID-19 outbreak predictions in India"](https://arxiv.org/abs/2004.00958) utilizes a combination of SEIR modeling and regression analysis to forecast COVID-19 outbreaks in India, providing valuable insights into disease spread dynamics. This approach contributes to epidemiological modeling by showcasing how linear regression, alongside SEIR models, aids in predicting disease outbreaks, estimating transmission rates, and assessing the effectiveness of interventions, thereby informing proactive measures to control infectious diseases.
+
+
+
+By leveraging linear regression in these contexts, biomedical researchers can glean valuable insights into disease mechanisms, treatment strategies, and public health interventions, ultimately advancing healthcare practices and improving patient outcomes.
 
 ## Linear Regression Algorithm
 Linear regression works by fitting a linear equation to the data.
@@ -123,6 +144,13 @@ where:
 
 The coefficients of the linear equation are estimated using the ordinary least squares (OLS) method. The OLS method minimizes the sum of the squared residuals, which are the differences between the predicted values and the actual values of the target variable. Once the linear regression model is trained, it can be used to make predictions on new data. To make a prediction, we simply plug the values of the predictor variables into the linear equation. 
 
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To learn more about Linear Regression and for a visual explanation, watch [Linear Regression, Clearly Explained!!!](https://www.youtube.com/watch?v=nk2CQITm_eo).
+
+</div>
+
 Which of the following is NOT a component of the linear regression formula?
 
 
@@ -139,7 +167,35 @@ The variance of the target variable is not a component of the linear regression 
 </div>
 ***
 
+### Understanding Machine Learning Techniques
 
+Before diving into the example, it's valuable to understand some key concepts used in machine learning. These techniques help us build more accurate and reliable models for prediction.
+
+- **Splitting Data (Training and Testing):**  Machine learning models 'learn' from data. We divide our dataset into two parts:  
+
+    - **Training set:** This part is used to train the model, allowing it to find patterns. 
+
+- **Testing set:** This is held-out data used to evaluate how well our model performs on unseen examples. This prevents overfitting, where the model becomes too specific to the training data and performs poorly on new data.  
+
+- **Recoding Categorical Predictors:** Many machine learning models work best with numerical data. Categorical features (like 'gender' or 'treatment group') need to be converted into numbers. Label encoding is a common technique, where each category is assigned a unique numerical label.  
+- **Scaling Continuous Predictors:** When features have vastly different scales (e.g., age vs. body temperature), some models might be biased towards features with larger ranges. Scaling brings features into a similar range, often between 0 and 1, or standardizing them to have a mean of 0 and a standard deviation of 1. This ensures all features are treated fairly during training.  
+- **Evaluating Model Predictions (MSE):** To assess the performance of a model, we use these metrics:  
+
+    - **Mean Squared Error (MSE):** This calculates the average of the squared differences between the model's predictions and the actual true values. A lower MSE indicates that a model's predictions are generally closer to the real targets.  
+    
+    - MSE and Outliers: MSE is sensitive to outliers because squaring the errors emphasizes larger deviations.
+    
+- **R-squared (R²):** This represents the proportion of the variance in the dependent variable that can be explained by the independent variables in the model.  It ranges from 0 to 1.  A higher R-squared value suggests a better model fit, meaning your model is doing a better job of explaining the variation in the data.  
+    
+    - R-squared and Additional Variables: R-squared tends to increase as you add more variables to your model, even if those variables don't actually improve the model's explanatory power. To address this, you can use the Adjusted R-squared, which takes the number of variables into account.
+
+#### Why do we use these techniques?
+
+- **Improved Accuracy:** These steps help our model identify true patterns and relationships within the data and not just memorize specific examples from the training set.  
+- **Preventing Overfitting:** By testing the model on unseen data, we ensure it generalizes well to new situations.  
+- **Fair Feature Influence:** Scaling makes sure no single feature dominates the model's predictions due to differences in measurement ranges.  
+
+Let's continue with our example, keeping these concepts in mind.
     
 ### Python Implementation of Linear Regression
 
@@ -178,69 +234,82 @@ data = pd.read_csv(file)
 data.info()
 ```
 
-3.  Split the data into training and testing sets:
-```python
 
-# Encode categorical data into numbers
+3.  This function performs one-hot encoding on a specified column within a Pandas DataFrame. One-hot encoding is a technique for transforming categorical data into a numerical format suitable for machine learning algorithms.
+```python
 def onehot_encode(df, column):
     df = df.copy()
     dummies = pd.get_dummies(df[column])
     df = pd.concat([df, dummies], axis=1)
     df = df.drop(column, axis=1)
     return df
-
-def preprocess_inputs(df):
-    df = df.copy()
-    
-    # One-hot encode Location column
-    df = onehot_encode(df, column='Location')
-    
-    # Split df into X and y
-    y = df['Hospital_Stay'].copy()
-    X = df.drop('Hospital_Stay', axis=1).copy()
-    
-    # Train-test split
-    X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.7, random_state=123)
-    
-    # Scale X with a standard scaler
-    scaler = StandardScaler()
-    scaler.fit(X_train)
-    
-    X_train = pd.DataFrame(scaler.transform(X_train), columns=X.columns)
-    X_test = pd.DataFrame(scaler.transform(X_test), columns=X.columns)
-    
-    return X_train, X_test, y_train, y_test
-
-X_train, X_test, y_train, y_test = preprocess_inputs(data)
-
 ```
 @Pyodide.eval
 
-4.  Train the linear regression model:
+4.  Make a copy of the dataframe to avoid modifying the original data
 ```python
-# Create a linear regression model
-model = LinearRegression()
+df = df.copy()
+```
 
-# Fit the model to the training data
+5.  One-hot encode the 'Location' column to convert categorical data into numerical form
+```python
+df = onehot_encode(df, column='Location')
+```
+
+6.  Separate the target variable 'Hospital_Stay' from the features
+```python
+y = df['Hospital_Stay'].copy()
+X = df.drop('Hospital_Stay', axis=1).copy()
+
+```
+
+
+7.  Split the dataset into training and testing sets. 70% of the data will be used for training, and the remaining 30% for testing
+```python
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.7, random_state=123)
+```
+
+8.  Standardize the features by scaling them using a StandardScaler. This helps in bringing all the feature values onto the same scale
+```python
+scaler = StandardScaler()
+scaler.fit(X_train)
+```
+
+9.  Transform both the training and testing features using the fitted scaler. This ensures that both sets of data are scaled in the same way
+```python
+X_train = pd.DataFrame(scaler.transform(X_train), columns=X.columns)
+X_test = pd.DataFrame(scaler.transform(X_test), columns=X.columns)
+```
+
+10.  Create a linear regression model instance
+```python
+model = LinearRegression()
+```
+@Pyodide.eval
+
+11.  Fit the linear regression model to the training data
+```python
 model.fit(X_train, y_train)
 ```
 @Pyodide.eval
 
-5.  Evaluate the model on the testing set:
+12.  Make predictions on the testing set
 ```python
-# Make predictions on the testing set
 y_pred = model.predict(X_test)
+```
 
-# Evaluate the model using the mean squared error (MSE)
+13.  Evaluate the model using the mean squared error (MSE)
+```python
 mse = np.mean((y_pred - y_test)**2)
 
 # Print the MSE
 print("MSE:", mse)
+```
 
-# Evaluate R^2 Score
+14.  Evaluate R^2 Score
+```python
 print(" R^2 Score: {:.5f}".format(model.score(X_test, y_test)))
 ```
-@Pyodide.eval
 
 
 This is a basic example of how to implement linear regression in Python using Scikit-learn. There are many other ways to implement linear regression in Python, but this is a good starting point.
@@ -329,7 +398,7 @@ diabetes = datasets.load_diabetes()
 print(diabetes)
 print(diabetes.DESCR)
 
-# Now we will split the data into the independent and independent variable
+# Now we will split the data into the independent and dependent variable
 X = diabetes.data
 Y = diabetes.target
 ```
@@ -366,7 +435,7 @@ While linear regression provides valuable insights into the relationship between
 
 ## Conclusion
 
-At the end of the lesson, students should have a good understanding of the concept of linear regression and how to implement the linear regression algorithm in Python. They should also be able to apply linear regression to real-world datasets to make predictions and insights.
+By the end of this module, you'll have gained a solid grasp of linear regression and its practical implementation in Python. You'll be equipped to apply linear regression techniques to real-world datasets, enabling you to make predictions and uncover valuable insights. With this knowledge, you'll be well-prepared to embark on your journey into the world of data analysis and machine learning.
 
 ## Additional Resources
 
