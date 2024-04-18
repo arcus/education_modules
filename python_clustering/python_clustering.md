@@ -75,7 +75,20 @@ import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 ### What is clustering?
 - Clustering is an unsupervised machine learning technique that groups unlabeled data points into clusters based on their similarity. The goal of clustering is to identify groups of data points that are similar to each other and dissimilar to data points in other groups. Clustering algorithms work by measuring the similarity between data points and then grouping similar data points together. There are many different clustering algorithms, each with its own strengths and weaknesses. Some of the most common clustering algorithms include K-Means clustering, hierarchical clustering, and Gaussian Mixture Models (GMMs). 
 
+<div class = "care">
+<b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>
 
+As in many fields, machine learning involves a lot of technical language, some of which is unclear, redundant, or downright confusing.
+For example:
+
+**Outcome** variables are also called **response variables**, **dependent variables**, or **labels**.
+
+**Input** variables are also called **predictors**, **features**, **independent variables**, or even just **variables**.
+
+To make matters worse, sometimes the same words are used to mean different things in different subfields.
+If you find yourself stumbling on vocabulary as you read about machine learning, know you're not alone!
+
+</div>
 
 
 [True/False] Clustering algorithms are always able to find the "correct" clusters in the data.
@@ -86,7 +99,11 @@ import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 ***
 <div class = "answer">
 
-This question is designed to test the test-taker's understanding of the limitations of clustering algorithms. Clustering algorithms are heuristics, which means that they do not guarantee to find the "correct" clusters in the data. The results of a clustering algorithm will depend on the distance metric used, the initialization of the algorithm, and the parameters of the algorithm.
+Clustering algorithms are helpful tools, but they're not magic. Here's why this statement is false:
+
+- Clustering isn't about "right" or "wrong": There's often no single "correct" way to group data. Clustering depends on how you measure similarity and the type of patterns you're interested in finding.  
+- Different setups, different results: The clusters you get can change based on the clustering algorithm you choose, how you measure distances between data points, and even the starting settings of the algorithm.  
+Key takeaway: Clustering is an exploratory process. It can suggest interesting groupings in your data, but it's up to you to decide if those groupings make sense and are useful for your analysis.
 
 
 </div>
@@ -101,7 +118,10 @@ This question is designed to test the test-taker's understanding of the limitati
 ***
 <div class = "answer">
 
-This question is designed to test the test-taker's understanding of the difference between clustering and anomaly detection. Clustering algorithms are used to group similar data points together, while anomaly detection algorithms are used to identify data points that are significantly different from the rest of the data.
+While clustering algorithms can sometimes help identify potential outliers, they are not specifically designed for this purpose. Here's why:  
+
+- Clustering focuses on grouping:  Clustering algorithms aim to find groups of similar data points. Outliers, by definition, don't fit well into any group.  
+- Outliers might influence clusters: A significant outlier might distort the clustering process, either by forming its own tiny cluster or being forced into a larger cluster where it doesn't truly belong.  
 
 
 </div>
@@ -140,18 +160,25 @@ Predicting the labels for new data points is a goal of supervised learning, not 
 Clustering can be used for a variety of tasks, such as: 
 
 -   **Customer segmentation:**  Clustering can be used to segment customers into different groups based on their demographics, purchase behavior, or other characteristics. This information can then be used to target marketing campaigns or product development efforts to specific customer segments.
--   **Product grouping:**  Clustering can be used to group products with similar characteristics, such as price, features, or customer reviews. This information can be used to improve product recommendations or to identify opportunities for cross-selling and up-selling.
--   **Image segmentation:**  Clustering can be used to segment images into different objects or regions. This information can be used in tasks such as object detection, image classification, and image compression.
--   **Anomaly detection:**  Clustering can be used to identify anomalous data points that are different from the rest of the data. This information can be used to detect fraud, identify errors in data collection, or predict future events.
--   **Medical diagnosis:**  Clustering can be used to group patients with similar symptoms or medical histories together. This information can be used to improve the accuracy of medical diagnosis and to develop more personalized treatment plans.
--   **Scientific research:**  Clustering can be used to identify patterns and relationships in scientific data. This information can be used to advance scientific knowledge and to develop new technologies. 
+### Applications of Clustering in Biomedical Research
 
-### Examples of clustering in real-world applications
--   **Netflix uses clustering to recommend movies and TV shows to its users.**  Netflix clusters its users based on their viewing history and then recommends movies and TV shows to users based on the clusters they belong to.
--   **Amazon uses clustering to recommend products to its customers.**  Amazon clusters its products based on customer reviews and purchase behavior. Amazon then recommends products to customers based on the clusters the products belong to and the customer's past purchase history.
--   **Google uses clustering to improve the accuracy of its search results.**  Google clusters search results based on the relevance of the results to the search query. Google then displays the most relevant results at the top of the search results page.
--   **Banks use clustering to detect fraudulent transactions.**  Banks cluster transactions based on their characteristics, such as the amount of money involved, the type of transaction, and the location of the transaction. Banks then flag anomalous transactions as potentially fraudulent.
--   **Medical researchers use clustering to identify new biomarkers for diseases.**  Medical researchers cluster patients based on their medical histories and symptoms. Researchers then look for patterns in the clusters to identify new biomarkers that can be used to diagnose and treat diseases.
+Clustering is an invaluable machine learning technique with wide-ranging applications in biomedical research. Here are some key areas where it can be used :
+
+- **Patient Stratification:** Identify distinct subgroups within patient populations based on gene expression profiles, clinical data, or disease biomarkers. This can lead to insights into disease subtypes and more personalized treatment options.  
+    - Specifically in research, ["Use of Latent Class Analysis and k-Means Clustering to Identify Complex Patient Profiles"](https://jamanetwork.com/journals/jamanetworkopen/article-abstract/2774074) employs statistical techniques to categorize patients into specific groups based on their gene expression profiles, clinical data, or biomarkers, allowing for the identification of unique disease subtypes and facilitating personalized treatment options. This approach aligns with patient stratification by utilizing clustering methods to segregate patients into distinct categories, enabling healthcare professionals to tailor interventions based on individualized characteristics and needs.  
+- **Drug Development:** Clustering can help group compounds based on chemical structure, efficacy, or target interactions. This facilitates the identification of novel drug candidates or the repurposing of existing drugs.  
+    - ["Integration of k-means clustering algorithm with network analysis for drug-target interactions network prediction"](https://www.inderscienceonline.com/doi/abs/10.1504/IJDMB.2018.094776) combines k-means clustering with network analysis to predict drug-target interactions, aiding in the identification of potential drug candidates or repurposing existing drugs by grouping compounds based on their interactions and properties. This study directly aligns with drug development goals by leveraging clustering to categorize compounds and enhance the understanding of their interactions, thereby facilitating the discovery and optimization of therapeutic agents.  
+
+- **Gene Expression Analysis:** Clustering genes with similar expression patterns across different conditions or time points can help uncover regulatory networks and potential therapeutic targets.  
+    - ["Clust: automatic extraction of optimal co-expressed gene clusters from gene expression data"](https://link.springer.com/article/10.1186/s13059-018-1536-8) automates the extraction of co-expressed gene clusters from gene expression data, aiding in the identification of regulatory networks and potential therapeutic targets by clustering genes with similar expression patterns across different conditions or time points. This tool directly aligns with gene expression analysis goals by utilizing clustering to group genes based on their expression profiles, facilitating the discovery of underlying biological mechanisms and potential targets for intervention.  
+
+- **Medical Image Analysis:** Segment medical images (MRI, CT scans) to differentiate tissues, identify tumors and other abnormalities. Clustering can aid in diagnosis and disease tracking.  
+    - ["Diagnosis of Brain Tumor Using Combination of K-Means Clustering and Genetic Algorithm"](http://www.ijmi.ir/index.php/IJMI/article/view/159) utilizes a combination of k-means clustering and genetic algorithms to accurately diagnose brain tumors by segmenting medical images, demonstrating how clustering techniques can aid in medical image analysis to differentiate tissues and identify abnormalities such as tumors, aligning with the objective of leveraging clustering for diagnosis and disease tracking in medical imaging.  
+
+- **Disease-Risk Prediction:** Analyze patient data to cluster individuals based on risk factors and medical history, enabling the prediction of susceptibility to various diseases.  
+    - ["A K-Means Approach to Clustering Disease Progressions"](https://ieeexplore.ieee.org/document/8031156) utilizes k-means clustering to categorize individuals based on disease progression patterns, facilitating disease-risk prediction by analyzing patient data to cluster individuals according to their risk factors and medical histories. This study directly relates to the objective of disease-risk prediction by employing clustering techniques to identify distinct groups of patients with similar disease progressions, thereby enabling more accurate predictions of susceptibility to various diseases based on individualized characteristics.
+
+
 
 ## K-Means Clustering Algorithm
 - The K-Means clustering algorithm works by iteratively assigning data points to clusters based on their distance to the cluster centroids. The cluster centroids are the average values of all the data points in a cluster. 
@@ -170,7 +197,12 @@ Clustering can be used for a variety of tasks, such as:
 5. Repeat steps 3 and 4 until the cluster assignments no longer change
 
 ```
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
+To learn more about Linear Regression and for a visual explanation, watch [StatQuest: K-means clustering](https://youtu.be/4b5d3muPQmA?si=KMQxx23Ru8w7GOFP).
+
+</div>
 
 
 What is the goal of the K-Means clustering algorithm?
@@ -191,6 +223,25 @@ The goal of the K-Means clustering algorithm is to group similar data points tog
 </div>
 ***
 
+
+
+
+
+### Understanding Machine Learning Techniques
+
+Before diving into the example, it's valuable to understand some key concepts used in machine learning. These techniques help us build more accurate and reliable models for clustering.
+
+- **Normalization:**  Normalization is crucial for scaling the features of the dataset to a uniform range, typically between 0 and 1, ensuring that each feature contributes equally to the clustering process.  
+
+        - By ensuring equitable treatment of all features, normalization prevents features with larger magnitudes from dominating distance calculations in clustering algorithms. This fosters the identification of clusters based on similarity across multiple dimensions and enhances the discovery of meaningful patterns and relationships within the data.   
+
+- **Computing Distance from Cluster Centroid:** Calculating the distance from each data point to its assigned cluster centroid provides a quantitative measure of the data point's fit within its cluster.  
+
+        - Distance metrics aid in assessing the compactness of clusters and the separation between clusters. In applications, distance calculations play a pivotal role in cluster validation and refinement, quantifying the similarity of data points within clusters and improving the overall efficacy of clustering algorithms in delineating coherent and distinct groups within the dataset.  
+     
+- **Visualization:** Visualizing clustering results facilitates intuitive interpretation and assessment of identified clusters.  
+
+        - Visual representations, such as scatter plots, enable the identification of inherent data patterns, outliers, and delineation of cluster boundaries. In applications, visualization aids in informed decision-making by providing stakeholders with insights into the data's structure and characteristics, fostering actionable insights and informed decisions.  
 
     
 ### Python Implementation of K-Means Clustering
@@ -244,17 +295,26 @@ plt.show()
 ```
 @Pyodide.eval
 
-3.  Split the data into training and testing sets:
+3.  This code defines a function called normalize that performs min-max scaling normalization on a DataFrame df, specifically on the features specified by the features parameter. The normalized DataFrame is returned as the output. Then, it calls this function to normalize all columns of a DataFrame data and assigns the result to a variable named normalized_data.
 ```python
 # Normalize dataframe
 def normalize(df, features):
+    # Create a copy of the DataFrame to avoid modifying the original data.
     result = df.copy()
+
+    # Iterate through each feature specified for normalization.
     for feature_name in features:
+        # Find the maximum and minimum values of the current feature.
         max_value = df[feature_name].max()
         min_value = df[feature_name].min()
+
+        # Normalize the current feature using min-max scaling formula.
+        # This ensures that all values of the feature are scaled between 0 and 1.
         result[feature_name] = (df[feature_name] - min_value) / (max_value - min_value)
     return result
 
+# Call the normalize function with the entire DataFrame 'data' and all its columns.
+# Store the result in 'normalized_data'.
 normalized_data = normalize(data, data.columns)
 ```
 @Pyodide.eval
@@ -263,15 +323,29 @@ normalized_data = normalize(data, data.columns)
 ```python
 # Run KMeans
 kmeans = KMeans(n_clusters = 2, max_iter = 500, n_init = 40, random_state = 2)
+```
+@Pyodide.eval
 
+5.  Train the clustering model and visualize:
+```python
 # Predict clusters
 identified_clusters = kmeans.fit_predict(normalized_data.values)
 results = normalized_data.copy()
 results['cluster'] = identified_clusters
+```
+@Pyodide.eval
 
-# Compute distance from cluster
+6.  Train the clustering model and visualize:
+```python
+# Compute distance from cluster. Loop through each data point and calculate the Euclidean distance between the data point and its assigned cluster centroid.
 distance_from_centroid = [distance.euclidean(val[:-1],kmeans.cluster_centers_[int(val[-1])]) for val in results.values]
 results['dist'] = distance_from_centroid
+```
+@Pyodide.eval
+
+
+7.  Train the clustering model and visualize. Scatter plot of 'chol' (Cholesterol) against 'trtbps' (Resting Blood Pressure), colored by cluster, with marker size proportional to the distance from the cluster centroid.
+```python
 results.plot.scatter(x='chol', y='trtbps', c='cluster', colormap='viridis', s='dist')
 plt.xlabel("Cholesterol")
 plt.ylabel("Resting Blood Pressure")
