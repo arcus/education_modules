@@ -21,10 +21,11 @@ estimated_time_in_minutes: 60
 r_file: r\_logistic\_regression
 
 @pre_reqs
-Learners should already be familiar with the following concepts in statistics and math:
+Learners should already be familiar with the following concepts in statistics and math (but not necessarily how to do them in R):
 
 - [linear regression](https://education.arcus.chop.edu/ordinary_linear_regression/) (also called "ordinary least squares (OLS) linear regression"), including how to interpret tests of model coefficients
 - [null hypothesis significance testing (NHST)](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/intro_to_nhst/intro_to_nhst.md#1), also called "frequentist statistics" (this is the most commonly taught branch of statistics and includes techniques that use $p$ values to interpret results, like t-tests)
+- [generalized linear models and link functions](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/generalized_linear_regression/generalized_linear_regression.m)
 
 This module also assumes some basic familiarity with R, including the following:
 
@@ -209,6 +210,15 @@ Now we can use the `str()` command to get an overview of the variables in this d
 str(indo_rct)
 ```
 
+```+output
+tibble [602 × 3] (S3: tbl_df/tbl/data.frame)
+ $ risk   : num [1:602] 2 1 1 2 3.5 3 1.5 1 2 2 ...
+  ..- attr(*, "label")= chr "risk score"
+  ..- attr(*, "format.stata")= chr "%8.0g"
+ $ rx     : Factor w/ 2 levels "0_placebo","1_indomethacin": 2 1 1 1 2 1 2 2 2 2 ...
+ $ outcome: Factor w/ 2 levels "0_no","1_yes": 2 1 1 2 1 1 1 1 1 1 ...
+```
+
 We can see that `outcome` is indeed a binary variable: It's a factor with two levels, "0_no" and "1_yes", indicating that the patient didn't or did have post-ERCP pancreatitis, respectively.
 We can also see that `risk` is numeric, and `rx` is another factor, with two levels ("0_placebo" and "1_indomethacin") indicating whether the patient was assigned to receive the placebo or treatment.
 
@@ -229,6 +239,16 @@ We can do that with the `summary()` function:
 summary(indo_rct)
 ```
 
+```+output
+      risk                    rx       outcome   
+ Min.   :1.000   0_placebo     :307   0_no :523  
+ 1st Qu.:1.500   1_indomethacin:295   1_yes: 79  
+ Median :2.500                                   
+ Mean   :2.381                                   
+ 3rd Qu.:3.000                                   
+ Max.   :5.500                
+```
+
 There aren't any missing data on the variables we'll be looking at today. Yay!
 
 #### Center any continuous predictors
@@ -236,7 +256,23 @@ There aren't any missing data on the variables we'll be looking at today. Yay!
 Centering a continuous variable means subtracting the column mean from every observation.
 For example, if you had the following observations `2,1,2,4` (the mean of these numbers is 2.25), centering it would make it into `-0.25,-1.25,-0.25,1.75`.
 
-Why is centering important? 
+We have one continuous predictor in our model: `risk`. 
+Let's center it now:
+
+```r
+indo_rct <- mutate(indo_rct, 
+                   risk = risk - mean(risk, na.rm = TRUE))
+```
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+Want a review of the `mutate()` function? 
+Check out [R Basics: Transforming Data with dplyr](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md).
+
+</div>
+
+**Why is centering important?** 
 Centering continuous predictors can make your coefficients a little easier to interpret, which is handy, but the real reason it's important is because if you end up including interaction terms in your model failing to center continuous predictors can introduce multicolinearity (if you've never heard of multicolinearity before, no worries! Just know that we'd like to avoid it, and centering predictors is an easy preventative measure to take).
 
 If you know you won't have any interaction terms in your model, then you can decide to center continuous predictors or not, based on your preference. 
@@ -250,11 +286,73 @@ To learn more about when centering predictors is (and isn't) useful, see
 
 </div>
 
-### Writing the formula
+### Running the model
 
 
+To run a logistic regression (or any generalized linear model) in R, we'll use the `glm()` (short for "generalized linear model") function. 
+In the arguments for `glm()`, we need to specify the model formula, provide the dataframe, and give the link function that should be used. 
+For our first model, predicting whether or not patients had post-ERCP pancreatitis (`outcome`) from their underlying risk score (`risk`), the command to run the model would look like this: 
 
-### Link functions
+```{r}
+model_risk <- glm(outcome ~ risk, 
+                  data = indo_rct,
+                  family = binomial(link="logit"),
+                  na.action = na.exclude)
+```
+
+Let's break that down. 
+
+#### Model formula and data
+
+The first argument in the `glm` function is the model formula.
+
+Recall from the [overview of models in R](#overview-of-models-in-r) that many statistical functions in R start with a formula, with the variable(s) you want to predict (the outcome) on the left side of the `~`, and the predictors on the right side.
+We want to predict whether or not patients had post-ERCP pancreatitis (`outcome`) from their underlying risk score (`risk`), so the formula looks like this: `outcome ~ risk`
+
+The second argument in `glm` is the dataframe to use. 
+Each of the variables in the forumla needs to be a column name in the dataframe you provide. 
+In this case, our dataframe is `indo_rct`.
+
+#### The link function
+
+The next argument for `glm` is the link function, specified by the `family` argument.
+
+A link function is the main thing that makes generalized linear models (like logistic regression) different from ordinary linear models.
+When your outcome variable is binary, as ours is here, a regular linear model doesn't make sense. 
+In order to run a regression model with a binary outcome, you need a function to transform the binary outcome into a continuous, unbounded variable -- that transformation is the link function. 
+There are many different kinds of link functions available, and the particular link function you need for a given model depends on the shape of your outcome variable. 
+
+For a binary variable (like `outcome`), the most typical link function is a [logit](https://en.wikipedia.org/wiki/Logit) (LOW-jit) transformation -- the term "logistic regression" means regression done with a logit link transformation. 
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+From a practical standpoint, it's not important for you to have a clear understanding of what a logit is or why it works as a link function for binary data. 
+If you're content to just make note of the fact that logistic regression works for binary outcomes and move on, great!
+
+If you're curious to learn more about why this works, though, check out [our explanation of the logit transformation](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/generalized_linear_regression/generalized_linear_regression.md#logit-link-function).
+
+</div>
+
+In R, you specify a logit link function with the argument `family = binomial(link="logit")`.
+
+#### Tell R how to handle missing data
+
+In this particular example, we actually don't have any missing data for the variables we're analyzing. 
+But that's unusual!
+It's good to be in the habit of specifically stating what action you want R to take with missing values when you run a model. 
+
+In general, `na.action = na.exclude` is a reasonable choice -- this will have R drop any cases (rows) in the dataframe you provide it that have missing data on any of the variables included in the model formula.
+
+<div class = "learn-more">
+<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
+
+To learn more about options for `na.action`, including examples with R code, check out our module on [Missing Values in R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_missing_values/r_missing_values.md#1).
+
+</div>
+
+Note that `na.action = na.exclude` will **not** drop cases that are missing on variables not in your model -- that means that, if you use different sets of predictors in different models, you can end up testing a slightly different dataset for each model. 
+To avoid that, you can [save a version of your data that filters out cases with missing values on all of the variables you use across all your models](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_missing_values/r_missing_values.md#filtering-out-missing-values).
 
 ### Summarize the results
 
