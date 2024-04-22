@@ -22,28 +22,17 @@ authors:
     family-names: Franzen
     email: franzenr@chop.edu
     affiliation: Children's Hospital of Philadelphia
+  - given-names: Nicole
+    family-names: Feldman
+    email: feldmanna@chop.edu
+    orcid: 'https://orcid.org/0009-0006-4762-6184'
 url: 'https://arcus.github.io/education_modules'
 abstract: >
-  The DART program provides free, open source educational
-  materials to help working biomedical researchers gain the
-  data science knowledge to expand and improve upon the work
-  they are already doing.
+  The DART program provides free, open source educational materials to help working biomedical researchers gain the data science knowledge to expand and improve upon the work they are already doing.
 
+  The program consists of instructional modules which teach data science and related skills to researchers, in alignment with the NIH emphasis on improving research reproducibility, transparency, and rigor.
 
-  The program consists of instructional modules which teach
-  data science and related skills to researchers, in
-  alignment with the NIH emphasis on improving research
-  reproducibility, transparency, and rigor.
+  Our team values a modular educational approach, where learners get just the training they need and can select from various modules to assemble their own learning pathway.
 
-
-  Our team values a modular educational approach, where
-  learners get just the training they need and can select
-  from various modules to assemble their own learning
-  pathway.
-
-
-  We invite you explore pre-made educational pathways or
-  build your own pathway with our prototype module discovery
-  application. You can also browse the full list of our
-  educational modules.
+  We invite you explore pre-made educational pathways or build your own pathway with our prototype module discovery application. You can also browse the full list of our educational modules.
 license: CC-BY-SA-4.0
