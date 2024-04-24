@@ -1,68 +1,59 @@
 <!--
 
+module_id: intro_linear_regression_ml
 author:   Daniel Schwartz
 email:    des338@drexel.edu
 version:  0.0.0
 current_version_description: Initial version
 module_type: standard
-docs_version: 3.0.0
+docs_version: 4.0.0
 language: en
 narrator: UK English Female
 mode: Textbook
 
-title: Python Lesson on Regression for Machine Learning
+title: Intro to Linear Regression for Machine Learning
 
-comment:  Understand the basics of linear regression, including how it works and when to use it in Python.
+comment:  Understand the basics of linear regression within the context of machine learning.
 
-long_description: Understand linear regression in Python as a powerful and versatile tool that can be used to solve a wide variety of problems. By understanding the key concepts and techniques involved in linear regression, you can build and deploy models that can accurately predict the target variable of interest.
+long_description: Understand linear regression is a powerful and versatile tool that can be used to solve a wide variety of problems. By understanding the key concepts and techniques involved in linear regression, you can build and deploy models that can accurately predict the target variable of interest.
 
 estimated_time_in_minutes: 20
 
 @pre_reqs
 
 This module assumes learners have been exposed to introductory statistics, Algebra, and probability.
-There are coding exercises in Python, so programming experience is required.
 
 @end
 
 @learning_objectives  
 
--   Understand the concept of linear regression and its applications in machine learning
--   Learn how to implement the linear regression algorithm in Python
--   Apply linear regression to a real-world dataset
+- Understand the concept of linear regression 
+- applications in machine learning
 
 @end
 
 good_first_module: false
 data_task: data_analysis
 collection: machine_learning
-coding_required: true
-coding_level: basic
-coding_language: python
+coding_required: false
 
 @sets_you_up_for
-
+- python_linear_regression
 @end
 
 @depends_on_knowledge_available_in
-
+- demystifying_machine_learning
+- intro_to_nhst
 @end
 
 @version_history 
-
-Previous versions: 
-
-- [x.x.x](link): that version's current version description
-- [x.x.x](link): that version's current version description
-- [x.x.x](link): that version's current version description
+No previous versions.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/pyodide_testing/_module_templates/macros_python.md
-import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 -->
 
-# Python Lesson on Regression for Machine Learning
+# Intro to Linear Regression for Machine Learning
 
 @overview
 
@@ -195,126 +186,7 @@ Before diving into the example, it's valuable to understand some key concepts us
 - **Preventing Overfitting:** By testing the model on unseen data, we ensure it generalizes well to new situations.  
 - **Fair Feature Influence:** Scaling makes sure no single feature dominates the model's predictions due to differences in measurement ranges.  
 
-Let's continue with our example, keeping these concepts in mind.
-    
-### Python Implementation of Linear Regression
-
-To implement linear regression in Python using Scikit-learn, we can follow these steps:
-
-
-
-1.  Import the necessary libraries:
-```python
-import numpy as np
-import pandas as pd
-
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LinearRegression
-```
-@Pyodide.eval
-
-
-2.  Load the data:
-```python @Pyodide.exec
-
-import pandas as pd
-import io
-from pyodide.http import open_url
-
-url = "https://raw.githubusercontent.com/arcus/education_modules/linear_regression/python_linear_regression/data/healthcare_investments_and_hospital_stay.csv"
-
-url_contents = open_url(url)
-text = url_contents.read()
-file = io.StringIO(text)
-
-data = pd.read_csv(file)
-
-# Analyze data and features
-data.info()
-```
-
-
-3.  This function performs one-hot encoding on a specified column within a Pandas DataFrame. One-hot encoding is a technique for transforming categorical data into a numerical format suitable for machine learning algorithms.
-```python
-def onehot_encode(df, column):
-    df = df.copy()
-    dummies = pd.get_dummies(df[column])
-    df = pd.concat([df, dummies], axis=1)
-    df = df.drop(column, axis=1)
-    return df
-```
-@Pyodide.eval
-
-4.  Make a copy of the dataframe to avoid modifying the original data
-```python
-df = df.copy()
-```
-
-5.  One-hot encode the 'Location' column to convert categorical data into numerical form
-```python
-df = onehot_encode(df, column='Location')
-```
-
-6.  Separate the target variable 'Hospital_Stay' from the features
-```python
-y = df['Hospital_Stay'].copy()
-X = df.drop('Hospital_Stay', axis=1).copy()
-
-```
-
-
-7.  Split the dataset into training and testing sets. 70% of the data will be used for training, and the remaining 30% for testing
-```python
-X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.7, random_state=123)
-```
-
-8.  Standardize the features by scaling them using a StandardScaler. This helps in bringing all the feature values onto the same scale
-```python
-scaler = StandardScaler()
-scaler.fit(X_train)
-```
-
-9.  Transform both the training and testing features using the fitted scaler. This ensures that both sets of data are scaled in the same way
-```python
-X_train = pd.DataFrame(scaler.transform(X_train), columns=X.columns)
-X_test = pd.DataFrame(scaler.transform(X_test), columns=X.columns)
-```
-
-10.  Create a linear regression model instance
-```python
-model = LinearRegression()
-```
-@Pyodide.eval
-
-11.  Fit the linear regression model to the training data
-```python
-model.fit(X_train, y_train)
-```
-@Pyodide.eval
-
-12.  Make predictions on the testing set
-```python
-y_pred = model.predict(X_test)
-```
-
-13.  Evaluate the model using the mean squared error (MSE)
-```python
-mse = np.mean((y_pred - y_test)**2)
-
-# Print the MSE
-print("MSE:", mse)
-```
-
-14.  Evaluate R^2 Score
-```python
-print(" R^2 Score: {:.5f}".format(model.score(X_test, y_test)))
-```
-
-
-This is a basic example of how to implement linear regression in Python using Scikit-learn. There are many other ways to implement linear regression in Python, but this is a good starting point.
-
-Here are some additional tips for implementing linear regression in Python:
+Here are some additional tips for implementing linear regression:
 
 -   Make sure to scale the data before training the model. This will help to ensure that all features have equal importance in the model.
 -   Use a validation set to evaluate the model and tune the hyperparameters. This will help to prevent overfitting.
@@ -377,74 +249,13 @@ Key takeaway:  Regularization techniques like L1 and L2 regularization help crea
 </div>
 ***
 
-
-
-
-### Real World Code Example
-
-The dataset comprises information on 442 diabetes patients, including their age, sex, body mass index (BMI), average blood pressure, and six blood serum measurements. Each patient's data includes ten baseline variables, with the first ten columns representing numeric predictive values. The eleventh column contains a quantitative measure of disease progression one year after baseline, serving as the target variable. Attributes include age in years, sex, BMI, average blood pressure, and measurements such as total serum cholesterol, low-density lipoproteins, high-density lipoproteins, total cholesterol/HDL ratio, possibly log of serum triglycerides level, and blood sugar level. Notably, each feature variable has been mean-centered and scaled by the standard deviation times the square root of the number of samples. This dataset is commonly used for predictive modeling and statistical analysis in the field of diabetes research. For more details, reference can be made to the original paper by Bradley Efron, Trevor Hastie, Iain Johnstone, and Robert Tibshirani titled "Least Angle Regression," published in the Annals of Statistics in 2004.
-
-
-
-1.  Install Packages:
-```python @Pyodide.exec
-
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn import datasets
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error, r2_score
-```
-
-2.  Load the data:
-```python
-# Load dataset and read to pandas dataframe
-diabetes = datasets.load_diabetes()
-
-
-# Analyze data and features
-print(diabetes)
-print(diabetes.DESCR)
-
-# Now we will split the data into the independent and dependent variable
-X = diabetes.data
-Y = diabetes.target
-```
-@Pyodide.eval
-
-
-3.  Compute Regression:
-```python
-model = LinearRegression()  # Create the regression model
-model.fit(X, Y)   # Train the model 
-```
-@Pyodide.eval
-
-
-4.  Evaluate Model:
-```python
-# Predict data
-predictions = model.predict(X) 
-
-# Check equation
-print('Coefficient', model.coef_)
-print('Intercept', model.intercept_)
-
-# Analyze predictions
-print('R-squared:', r2_score(Y, predictions))  
-print('Mean Squared Error:', mean_squared_error(Y, predictions))  
-```
-@Pyodide.eval
-
 While linear regression provides valuable insights into the relationship between the predictor variables and the target variable, it represents just the initial step in data analysis, particularly in the context of this diabetes dataset. The R-squared value of 0.518 indicates that approximately 51.8% of the variance in the response variable (disease progression) can be explained by the linear relationship with the predictor variables. Additionally, the mean squared error of 2859.70 suggests that the model's predictions deviate from the actual values by this amount, on average. However, it's essential to recognize that linear regression assumes a linear relationship between the predictors and the response, which may not always hold true. Further analysis is warranted to explore potential nonlinear relationships, assess the model's assumptions and limitations, evaluate the significance of each predictor variable, and possibly employ more sophisticated techniques such as feature selection, regularization, or non-linear regression methods to improve predictive accuracy and better understand the underlying patterns in the data. Additionally, validation techniques such as cross-validation should be employed to assess the model's generalizability and robustness. Therefore, while linear regression provides a foundational understanding, it is crucial to conduct comprehensive analyses to ensure robust and accurate modeling in the context of diabetes progression prediction.
-
-
-
 
 ## Conclusion
 
-By the end of this module, you'll have gained a solid grasp of linear regression and its practical implementation in Python. You'll be equipped to apply linear regression techniques to real-world datasets, enabling you to make predictions and uncover valuable insights. With this knowledge, you'll be well-prepared to embark on your journey into the world of data analysis and machine learning.
+By the end of this module, you'll have gained a solid grasp of linear regression as it is used in machine learning. 
+You'll be equipped to apply linear regression techniques to real-world datasets, enabling you to make predictions and uncover valuable insights. 
+With this knowledge, you'll be well-prepared to embark on your journey into the world of data analysis and machine learning.
 
 ## Additional Resources
 
