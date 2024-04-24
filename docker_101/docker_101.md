@@ -2,7 +2,7 @@
 module_id: docker_101
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.3
+version:  1.1.4
 current_version_description: Updated description and prerequisites to make it clearer that this is not a module for beginners; added troubleshooting box about creating a file with no extension. 
 module_type: wrapper
 docs_version: 1.0.0
@@ -415,7 +415,7 @@ They provide a suggested order of sections under [Rule 9: Order the instructions
 
 **Curious about the second half of that Docker 101 tutorial?**
 
-We prioritized the first half of the [Docker 101 tutorial](docker-101-tutorial) for this lesson because those are the sections that will be most directly relevant to a typical research workflow. 
+We prioritized the first half of the Docker 101 tutorial for this lesson because those are the sections that will be most directly relevant to a typical research workflow. 
 
 There's great content in the remaining sections, though, and you may wish to work through them as well, especially now that you have additional context about how Docker gets used in research after reading Nüst et al. (2020).
 The tutorial section on bind mounts ("Using Bind Mounts") may be particularly useful, as it gives you a chance to practice the approach Nüst et al. advocate for in [Rule 7: Mount datasets at runtime](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316#sec020).
