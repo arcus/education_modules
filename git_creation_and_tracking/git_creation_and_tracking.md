@@ -742,7 +742,7 @@ What if we have files that we do not want Git to track for us, like backup files
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
-It is likely that you will eventually share your repository.  This could be sharing it privately with a team, or publicly through [GitHub](github.com). When you do, everything that Git is tracking will become visible to everyone with access to the repository.  If there is an API key, password, sensitive data, or anything that requires any level of secrecy, make sure you tell Git to ignore it as soon as you create the file.
+It is likely that you will eventually share your repository.  This could be sharing it privately with a team, or publicly through [GitHub](https://github.com). When you do, everything that Git is tracking will become visible to everyone with access to the repository.  If there is an API key, password, sensitive data, or anything that requires any level of secrecy, make sure you tell Git to ignore it as soon as you create the file.
 
 Once information is committed and made public ("pushed" to GitHub), a record of it will persist even if you remove it in a later commit.
 

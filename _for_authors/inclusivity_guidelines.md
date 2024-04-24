@@ -22,7 +22,7 @@ The guidelines presented here are inspired by several other guides including the
   - Color should never be the sole method for distinguishing visual content
 * Provide clear, consistent organization and content structure to reduce cognitive load for users
   - Use clear, informative headers for each subsection. The resulting table of contents should give a good sense of the flow and structure of the module. Avoid titles and headers that sacrifice clarity for playfulness.
-  - Use informative link text (e.g. instead of "To learn more about python, click [here](www.example.com)", say "Read this article to [learn more about python](www.example.com).")
+  - Use informative link text (e.g. instead of "To learn more about python, click [here](https://www.example.com)", say "Read this article to [learn more about python](https://www.example.com).")
   - Use parallel structure across modules covering similar content.
   - Use consistent formatting (e.g. consistent page headers and footers, consistent style controlled by css file)
 * Reduce language barriers
