@@ -2,8 +2,8 @@
 module_id: sql_joins
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.7
-current_version_description: Typo fix; update metadata
+version: 1.2.0
+current_version_description: Add three new additional resources
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -54,6 +54,7 @@ If you need to develop basic SQL fluency we recommend our module [SQL Basics](ht
 
 Previous Versions:
 
+- [1.1.7](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3607dfd4824bc9fe39edbdc62a47e28d0a863c7a/sql_joins/sql_joins.md#1): Typo fix; update metadata
 - [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/sql_joins/sql_joins.md#1): Original version, with improved feedback link
 
 @end
@@ -634,7 +635,7 @@ When the conditions in your join criteria evaluate as TRUE for a row then a join
 
 As a reminder, SQL is a **relational database**, so it's not surprising that we talk about data relationships in this module.  Equality is one kind of relationship, when two data points are identical, but other relationships, like "less than" or "between" will also prove useful when we set up our join criteria.
 
-Join criteria will be some sort of relationship statement referencing data that occurs in both tables you want to join.  This relationship statment will be valuated to TRUE or FALSE when  your join is executed.  Often, the relationship is equality -- you're looking for a perfect match.  We'll start with equality, the most frequently used condition, on the next page. 
+Join criteria will be some sort of relationship statement referencing data that occurs in both tables you want to join.  This relationship statement will be valuated to TRUE or FALSE when  your join is executed.  Often, the relationship is equality -- you're looking for a perfect match.  We'll start with equality, the most frequently used condition, on the next page. 
 
 ### Equality, Example 1
 
@@ -865,7 +866,7 @@ Don't worry, we'll scaffold the code for you so you have the support you need to
 
 You'll use a `FROM` statement, which describes the type of join, and an `ON` statement, which describes the join criteria.
 
-Importantly, we will only presesent a few examples.  There are many combinations we could consider, at all levels of complexity.  Here are a few we **won't** do:
+Importantly, we will only present a few examples.  There are many combinations we could consider, at all levels of complexity.  Here are a few we **won't** do:
 
 * A `LEFT JOIN` involving tables which require a "between" type relationship (like a "spend" value between a "budget\_floor" value and a "budget\_ceiling" value)
 * An `INNER JOIN` involving equality matching on three fields: two identifiers and one date field
@@ -1226,9 +1227,19 @@ When there's no matching data from the one of the tables to join to the data you
 ## Additional Resources
 
 * A good tutorial to help you understand [the basics of boolean algebra](https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra.php)
+
 * The second part of this tutorial covers [some of the rules (like commutativity) of boolean algebra](https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra-laws.php)
+
 * The third part of the same tutorial may help you understand [the order of operations in boolean algebra](https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra-expressions.php) a bit more intuitively.
+
 * W3 Schools has a great page to [practice joins and visualize them in the form of Venn diagrams](https://www.w3schools.com/sql/sql_join.asp).
+
+* Enjoy learning with real-life, consequential examples?  You might enjoy [Select Star SQL](https://selectstarsql.com/), a free interactive book that allows you to run queries against real-world death row data.
+
+* Prefer a game?  The fun and engaging [SQL Murder Mystery](https://mystery.knightlab.com/) or [Lost at SQL](https://lost-at-sql.therobinlord.com/) might help you hone your skills.
+
+
+
 
 ## Feedback
 

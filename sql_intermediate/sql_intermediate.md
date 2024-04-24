@@ -2,8 +2,8 @@
 module_id: sql_intermediate
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.3.0
-current_version_description: Correct data types (numeric), update quiz question, replace Regular Expression section with link to dedicated Regex modules.
+version: 1.4.0
+current_version_description: Add three new additional resources
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -36,9 +36,9 @@ After completion of this module, learners will be able to:
 
 Previous versions: 
 
+- [1.3.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3607dfd4824bc9fe39edbdc62a47e28d0a863c7a/sql_intermediate/sql_intermediate.md#1): Correct data types (numeric), update quiz question, replace Regular Expression section with link to dedicated Regex modules.
 - [1.2.4](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d5fb2a4bde809846b2d93f5e4df6488503cf87ef/sql_intermediate/sql_intermediate.md#1): Correct typo, update metadata version
 - [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9c77106b2074e1d51ce41ebaf0d849429b146c2b/sql_intermediate/sql_intermediate.md#1): Update with improvements to regular expressions, highlight boxes, correct typos
-- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9e3ed69c5c70e4b6e116e2799329029e9542ca98/sql_intermediate/sql_intermediate.md#1): Initial version, then typo fixes, clarify group by aggregation troubleshooting, and feedback form improvements
 
 @end
 
@@ -739,6 +739,11 @@ FROM generations;
 * [regular expressions 101](https://regex101.com/) is extremely helpful in practicing regex skills, whether that's for use in SQL or elsewhere.
 
 * Tutorials Point has some helpful documentation you may want to check out [about the basic types of operators available for use in a SQL query](https://www.tutorialspoint.com/sql/sql-operators.htm).
+
+* Enjoy learning with real-life, consequential examples?  You might enjoy [Select Star SQL](https://selectstarsql.com/), a free interactive book that allows you to run queries against real-world death row data.
+
+* Prefer a game?  The fun and engaging [SQL Murder Mystery](https://mystery.knightlab.com/) or [Lost at SQL](https://lost-at-sql.therobinlord.com/) might help you hone your skills.
+
 
 
 ## Feedback
