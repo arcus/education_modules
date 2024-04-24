@@ -438,8 +438,8 @@
 "module_id": "demystifying_command_line",
 "author": "Joy Payton",
 "email": "paytonk@chop.edu",
-"version": "1.0.0",
-"current_version_description": "Initial version",
+"version": "1.0.1",
+"current_version_description": "Add link to Demystifying APIs",
 "module_type": "standard",
 "docs_version": "4.0.0",
 "language": "en",
@@ -463,7 +463,7 @@
 "sets_you_up_for": "\n",
 "depends_on_knowledge_available_in": "\n",
 "version_history": "\nPrevious versions: \n\nNo previous versions.\n\n",
-"Linked Course":"bash_command_line_101 "
+"Linked Course":"bash_command_line_101 demystifying_apis "
 },
 {
 "module_id": "demystifying_containers",
@@ -1802,8 +1802,8 @@
 "module_id": "sql_basics",
 "author": "Peter Camacho; Joy Payton",
 "email": "camachop@chop.edu; paytonk@chop.edu",
-"version": "1.2.2",
-"current_version_description": "Improve large table display with collapsible sections",
+"version": "1.3.0",
+"current_version_description": "Add three new additional resources",
 "module_type": "standard",
 "docs_version": "3.0.0",
 "language": "en",
@@ -1826,15 +1826,15 @@
 "learning_objectives": "After completion of this module, learners will be able to:\n\n- Use SELECT, FROM, and WHERE to do a basic query on a SQL table\n- Use IS NULL and IS NOT NULL operators to work with empty values\n- Explain the use of DISTINCT and how it can be useful\n- Use AS and ORDER BY to change how query results appear\n- Explain why the LIMIT keyword can be useful\n",
 "sets_you_up_for": "\n",
 "depends_on_knowledge_available_in": "\n",
-"version_history": "Previous versions: \n\n- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/1181e69889461e8a1cb887c9e7887c77c61d5a9d/sql_basics/sql_basics.md#1): Add solutions and definitions; update challenge solutions, after code blocks, highlight boxes, and metadata; fix typos.\n- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/sql_basics/sql_basics.md#1): Initial version.\n",
+"version_history": "Previous versions: \n\n- [1.2.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3607dfd4824bc9fe39edbdc62a47e28d0a863c7a/sql_basics/sql_basics.md#1): Improve large table display with collapsible sections\n- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/1181e69889461e8a1cb887c9e7887c77c61d5a9d/sql_basics/sql_basics.md#1): Add solutions and definitions; update challenge solutions, after code blocks, highlight boxes, and metadata; fix typos.\n- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/sql_basics/sql_basics.md#1): Initial version.\n",
 "Linked Course":"demystifying_sql "
 },
 {
 "module_id": "sql_intermediate",
 "author": "Peter Camacho; Joy Payton",
 "email": "camachop@chop.edu",
-"version": "1.3.0",
-"current_version_description": "Correct data types (numeric), update quiz question, replace Regular Expression section with link to dedicated Regex modules.",
+"version": "1.4.0",
+"current_version_description": "Add three new additional resources",
 "module_type": "standard",
 "docs_version": "2.0.0",
 "language": "en",
@@ -1857,15 +1857,15 @@
 "learning_objectives": "\nAfter completion of this module, learners will be able to:\n\n- Create new data classifications using `CASE` statements\n- Find text that matches a given pattern using `LIKE` statements\n- Use `GROUP BY` and `HAVING` statements along with aggregate functions to understand group characteristics\n- Use `WITH` to create sub queries\n\n",
 "sets_you_up_for": "\n- sql_joins\n\n",
 "depends_on_knowledge_available_in": "\n- demystifying_sql\n- sql_basics\n\n",
-"version_history": "\nPrevious versions: \n\n- [1.2.4](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d5fb2a4bde809846b2d93f5e4df6488503cf87ef/sql_intermediate/sql_intermediate.md#1): Correct typo, update metadata version\n- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9c77106b2074e1d51ce41ebaf0d849429b146c2b/sql_intermediate/sql_intermediate.md#1): Update with improvements to regular expressions, highlight boxes, correct typos\n- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9e3ed69c5c70e4b6e116e2799329029e9542ca98/sql_intermediate/sql_intermediate.md#1): Initial version, then typo fixes, clarify group by aggregation troubleshooting, and feedback form improvements\n\n",
+"version_history": "\nPrevious versions: \n\n- [1.3.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3607dfd4824bc9fe39edbdc62a47e28d0a863c7a/sql_intermediate/sql_intermediate.md#1): Correct data types (numeric), update quiz question, replace Regular Expression section with link to dedicated Regex modules.\n- [1.2.4](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d5fb2a4bde809846b2d93f5e4df6488503cf87ef/sql_intermediate/sql_intermediate.md#1): Correct typo, update metadata version\n- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/9c77106b2074e1d51ce41ebaf0d849429b146c2b/sql_intermediate/sql_intermediate.md#1): Update with improvements to regular expressions, highlight boxes, correct typos\n\n",
 "Linked Course":"demystifying_regular_expressions demystifying_sql regular_expressions_basics regular_expressions_boundaries_anchors regular_expressions_groups regular_expressions_lookaheads sql_basics sql_joins "
 },
 {
 "module_id": "sql_joins",
 "author": "Joy Payton",
 "email": "paytonk@chop.edu",
-"version": "1.1.7",
-"current_version_description": "Typo fix; update metadata",
+"version": "1.2.0",
+"current_version_description": "Add three new additional resources",
 "module_type": "standard",
 "docs_version": "2.0.0",
 "language": "en",
@@ -1888,7 +1888,7 @@
 "learning_objectives": "After completion of this module, learners will be able to:\n\n- Understand the parts of a JOIN\n- Describe the \"shapes\" of SQL JOINs: inner, left, right, and full\n- Explain what \"join criteria\" are\n\n",
 "sets_you_up_for": "\n",
 "depends_on_knowledge_available_in": "\n- sql_intermediate\n- database_normalization\n\n",
-"version_history": "\nPrevious Versions:\n\n- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/sql_joins/sql_joins.md#1): Original version, with improved feedback link\n\n",
+"version_history": "\nPrevious Versions:\n\n- [1.1.7](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3607dfd4824bc9fe39edbdc62a47e28d0a863c7a/sql_joins/sql_joins.md#1): Typo fix; update metadata\n- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/sql_joins/sql_joins.md#1): Original version, with improved feedback link\n\n",
 "Linked Course":"database_normalization sql_basics sql_intermediate "
 },
 {
