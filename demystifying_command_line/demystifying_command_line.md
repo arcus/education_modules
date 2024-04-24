@@ -2,8 +2,8 @@
 module_id: demystifying_command_line
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
-current_version_description: Initial version
+version:  1.0.1
+current_version_description: Add link to Demystifying APIs
 module_type: standard
 docs_version: 4.0.0
 language: en
@@ -80,7 +80,7 @@ We said on the last page that there are two main computer interfaces for human u
 
 This module demystifies the command line interface (CLI), but let's briefly describe what a GUI is.
 
-A **graphical user interface**, or **GUI** (pronounced "gooey") is meant to make things easier for a human user -- that's why the word *user* is in the name.  While some interfaces are meant to allow for interactions between two computer programs (that's what an **API**, or **application programming interface**, is for), a GUI is intended for human users, not programs.  A GUI is an interface that is highly visual and relies on graphics (shapes, images, icons, windows, and other kinds of visual cues), which for many users is helpful.  
+A **graphical user interface**, or **GUI** (pronounced "gooey") is meant to make things easier for a human user -- that's why the word *user* is in the name.  While some interfaces are meant to allow for interactions between two computer programs (that's what an [**API**, or **application programming interface**](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_apis/demystifying_apis.md#1), is for), a GUI is intended for human users, not programs.  A GUI is an interface that is highly visual and relies on graphics (shapes, images, icons, windows, and other kinds of visual cues), which for many users is helpful.  
 
 The operating system of your Windows or Mac computer has a highly complex graphical user interface, and so do most of the programs you might use as a consumer (things like Microsoft Word, Slack, Google Chrome, or Adobe Photoshop).  You use a mouse, not a keyboard, to click on pictures that represent programs in order to open them.  You use a mouse to click on words like "File" or "Window" to show a menu of options.  You might use a mouse to click and drag to select a portion of an image or a selection of words, and then delete or move your selection.
 
