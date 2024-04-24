@@ -2,8 +2,8 @@
 module_id: sql_joins
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.8
-current_version_description: Typo fix
+version: 1.2.0
+current_version_description: Add two new additional resources
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -54,6 +54,7 @@ If you need to develop basic SQL fluency we recommend our module [SQL Basics](ht
 
 Previous Versions:
 
+- [1.1.7](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3607dfd4824bc9fe39edbdc62a47e28d0a863c7a/sql_joins/sql_joins.md#1): Typo fix; update metadata
 - [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/sql_joins/sql_joins.md#1): Original version, with improved feedback link
 
 @end
@@ -1226,9 +1227,19 @@ When there's no matching data from the one of the tables to join to the data you
 ## Additional Resources
 
 * A good tutorial to help you understand [the basics of boolean algebra](https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra.php)
+
 * The second part of this tutorial covers [some of the rules (like commutativity) of boolean algebra](https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra-laws.php)
+
 * The third part of the same tutorial may help you understand [the order of operations in boolean algebra](https://ryanstutorials.net/boolean-algebra-tutorial/boolean-algebra-expressions.php) a bit more intuitively.
+
 * W3 Schools has a great page to [practice joins and visualize them in the form of Venn diagrams](https://www.w3schools.com/sql/sql_join.asp).
+
+* Enjoy learning with real-life, consequential examples?  You might enjoy [Select Star SQL](https://selectstarsql.com/), a free interactive book that allows you to run queries against real-world death row data.
+
+* Prefer a game?  The fun and engaging [SQL Murder Mystery](https://mystery.knightlab.com/) might help you hone your skills.
+
+
+
 
 ## Feedback
 
