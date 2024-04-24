@@ -1,8 +1,7 @@
 cff-version: 1.2.0
 title: Data and Analytics for Research Training (DART) Program
 message: >-
-  If you use this dataset, please cite it using the metadata
-  from this file.
+  If you use these educational modules, please cite either the individual module, or use the metadata from this file to cite the collection of modules.
 type: dataset
 authors:
   - given-names: Karen Joy
@@ -18,32 +17,37 @@ authors:
     family-names: Lee
     email: leemc@chop.edu
     affiliation: Children's Hospital of Philadelphia
+    orcid: 'https://orcid.org/0000-0002-9363-4787'
+  - given-names: Elizabeth
+    family-names: Drellich
+    email: drelliche@chop.edu
+    affiliation: Children's Hospital of Philadelphia
+    orcid: ''
+  - given-names: Nicole
+    family-names: Feldman
+    email: feldmanna@chop.edu
+    orcid: 'https://orcid.org/0009-0006-4762-6184'
+  - given-names: Peter
+    family-names: Camacho
+    email: camachop@chop.edu
+    affiliation: Children's Hospital of Philadelphia
+    orcid: 'https://orcid.org/0000-0002-7188-6422'
   - given-names: Rose
     family-names: Franzen
     email: franzenr@chop.edu
     affiliation: Children's Hospital of Philadelphia
+    orcid: 'https://orcid.org/0000-0001-5750-6473'
+  - given-names: Ene
+    family-names: Belleh
+    email: bellehe@chop.edu
+    orcid: 'https://orcid.org/0009-0003-3497-3820'
 url: 'https://arcus.github.io/education_modules'
 abstract: >
-  The DART program provides free, open source educational
-  materials to help working biomedical researchers gain the
-  data science knowledge to expand and improve upon the work
-  they are already doing.
+  The DART program provides free, open source educational materials to help working biomedical researchers gain the data science knowledge to expand and improve upon the work they are already doing.
 
+  The program consists of instructional modules which teach data science and related skills to researchers, in alignment with the NIH emphasis on improving research reproducibility, transparency, and rigor.
+  
+  Our team values a modular educational approach, where learners get just the training they need and can select from various modules to assemble their own learning pathway.
 
-  The program consists of instructional modules which teach
-  data science and related skills to researchers, in
-  alignment with the NIH emphasis on improving research
-  reproducibility, transparency, and rigor.
-
-
-  Our team values a modular educational approach, where
-  learners get just the training they need and can select
-  from various modules to assemble their own learning
-  pathway.
-
-
-  We invite you explore pre-made educational pathways or
-  build your own pathway with our prototype module discovery
-  application. You can also browse the full list of our
-  educational modules.
+  We invite you explore pre-made educational pathways or build your own pathway with our prototype module discovery application. You can also browse the full list of our educational modules.
 license: CC-BY-SA-4.0
