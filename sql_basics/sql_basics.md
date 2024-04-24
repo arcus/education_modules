@@ -3,7 +3,7 @@ module_id: sql_basics
 author: Peter Camacho; Joy Payton
 email: camachop@chop.edu; paytonk@chop.edu
 version: 1.3.0
-current_version_description: Add two new additional resources
+current_version_description: Add three new additional resources
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -957,7 +957,7 @@ You also got to practice hands on, which probably meant you got to see some erro
 
 * Enjoy learning with real-life, consequential examples?  You might enjoy [Select Star SQL](https://selectstarsql.com/), a free interactive book that allows you to run queries against real-world death row data.
 
-* Prefer a game?  The fun and engaging [SQL Murder Mystery](https://mystery.knightlab.com/) might help you hone your skills.
+* Prefer a game?  The fun and engaging [SQL Murder Mystery](https://mystery.knightlab.com/) or [Lost at SQL](https://lost-at-sql.therobinlord.com/) might help you hone your skills.
 
 ## Feedback
 @feedback
