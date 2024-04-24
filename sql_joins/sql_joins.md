@@ -2,8 +2,8 @@
 module_id: sql_joins
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.7
-current_version_description: Typo fix; update metadata
+version: 1.1.8
+current_version_description: Typo fix
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -634,7 +634,7 @@ When the conditions in your join criteria evaluate as TRUE for a row then a join
 
 As a reminder, SQL is a **relational database**, so it's not surprising that we talk about data relationships in this module.  Equality is one kind of relationship, when two data points are identical, but other relationships, like "less than" or "between" will also prove useful when we set up our join criteria.
 
-Join criteria will be some sort of relationship statement referencing data that occurs in both tables you want to join.  This relationship statment will be valuated to TRUE or FALSE when  your join is executed.  Often, the relationship is equality -- you're looking for a perfect match.  We'll start with equality, the most frequently used condition, on the next page. 
+Join criteria will be some sort of relationship statement referencing data that occurs in both tables you want to join.  This relationship statement will be valuated to TRUE or FALSE when  your join is executed.  Often, the relationship is equality -- you're looking for a perfect match.  We'll start with equality, the most frequently used condition, on the next page. 
 
 ### Equality, Example 1
 
@@ -865,7 +865,7 @@ Don't worry, we'll scaffold the code for you so you have the support you need to
 
 You'll use a `FROM` statement, which describes the type of join, and an `ON` statement, which describes the join criteria.
 
-Importantly, we will only presesent a few examples.  There are many combinations we could consider, at all levels of complexity.  Here are a few we **won't** do:
+Importantly, we will only present a few examples.  There are many combinations we could consider, at all levels of complexity.  Here are a few we **won't** do:
 
 * A `LEFT JOIN` involving tables which require a "between" type relationship (like a "spend" value between a "budget\_floor" value and a "budget\_ceiling" value)
 * An `INNER JOIN` involving equality matching on three fields: two identifiers and one date field
