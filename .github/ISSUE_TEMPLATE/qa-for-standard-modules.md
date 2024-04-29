@@ -11,13 +11,13 @@ assignees: ''
 ----
 Date: {yyyy-mm-dd}
 Reviewer: {your name}
-qa_template_version: 2.0.0
+qa_template_version: 2.0.1
 Name of Module: {take from the title of the main markdown in the PR}
 Current Liascript URL: {makes it easy for reviewers and authors to look at content as learners will}
 
 # Checklist Reports:
 
-## [Directory structure](how_to.md/#Begin-Writing)
+## Directory structure
 * [ ] Folder and file names use lowercase and underscores (no dashes)
 * [ ] Main module directory folder name is identical to the name of the module content markdown file.
 * [ ] Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
