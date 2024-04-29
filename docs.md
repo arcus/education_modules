@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  4.0.0
+version:  4.0.1
 current_version_description: Added module\_id as required frontmatter field for all modules
 language: en
 narrator: UK English Female
@@ -866,8 +866,6 @@ For example:
 
 Note: `version_history` should have **max** 3 previous versions recorded. 
 So when a module is on its 4+ version, every time you add a new entry to `version_history` you will also remove the oldest one.
-
-Additionally, while we are backfilling the version\_history field for modules which do not have `current_version_description` filled out for previous versions, there are [detailed instructions](https://chop365.sharepoint.com/:w:/r/teams/RSCH-Arcus/Shared%20Documents/Arcus%20Drive/Education/R25/Reconstructing%20Version%20Descriptions.docx?d=w400f6dc02dc745ad89fada5c0277ffdf&csf=1&web=1&e=75kLrP) available (for CHOP staff members only, as this is a temporary need that we don't anticipate needing to extend to outside contributors) on how to use the GitHub "blame" feature to read pertinent commit messages associated with new versions as well as constructing links for previous versions.
 
 For a brand new module (version 1.0.0), `version_history` should say only "No previous versions" (but not omitted --- this is a required field).
 It cannot be left empty because that will break the overview macro.
