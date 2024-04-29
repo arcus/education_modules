@@ -13,9 +13,9 @@ You're receiving this email because you've expressed interest in the DART (Data 
 
 Our second study wave had over 400 participants from all over the world. Thank you to those of you who participated! We have conducted our pre-registered analyses, and participants' self-reported confidence in their own data science abilities increased significantly. 
  
-![Map showing that the majority of the participants came from North America, with additional participants coming from Europe, Asia, Africa, and South America](../media/dart_geocodes.png) 
+![Map showing that the majority of the participants came from North America, with additional participants coming from Europe, Asia, Africa, and South America](./media/dart_geocodes.png) 
 
-![Boxplot of DART participants self-reported ability shows higher confidence after the intervention than before, on a scale from "1, I wouldn't know where to start" to "4, I am confident in my ability to do it". The pre-intervention boxplot concentrates around "2, I could struggle through but not confident I could do it," while the post-intervention boxplot concentrates around "3, I could probably do it with some trial error."](../media/ability_improvements.png)  
+![Boxplot of DART participants self-reported ability shows higher confidence after the intervention than before, on a scale from "1, I wouldn't know where to start" to "4, I am confident in my ability to do it". The pre-intervention boxplot concentrates around "2, I could struggle through but not confident I could do it," while the post-intervention boxplot concentrates around "3, I could probably do it with some trial error."](./media/ability_improvements.png)  
  
 We are preparing to publish our results and have already shared previews at two conferences: the C[ulminating Conference for the Year of Open Science](https://www.cos.io/yos-conference) (watch the recordings of the DART talks), and the [Katherine E. Welsh Symposium on Reforming Graduate Science Education at Johns Hopkins University](https://publichealth.jhu.edu/the-r3-center-for-innovation-in-science-education/events-at-the-r3-center).  
  
@@ -48,10 +48,10 @@ Want to learn more about DART, offer us feedback, or find out how to use our mat
 
 ## Older Updates
 
-### [October 2023 Newsletter](./2023_10.md)
+### [October 2023 Newsletter](./newsletters/2023_10.md)
 
-### [June 2023 Newsletter](./2023_03.md)
+### [June 2023 Newsletter](./newsletters/2023_03.md)
 
-### [March 2023 Newsletter](./2023_03.md)
+### [March 2023 Newsletter](.newsletters/2023_03.md)
 
 ### [DART is now on LinkedIn](./newsletters/linkedin_announcement.md)
