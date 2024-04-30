@@ -19,7 +19,7 @@ Experience working with rectangular data (data in rows and columns) is required,
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Use SELECT, FROM, and WHERE to do a basic query on a SQL table
 - Use IS NULL and IS NOT NULL operators to work with empty values

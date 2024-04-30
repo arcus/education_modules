@@ -24,8 +24,6 @@ Learners should be familiar with using [functions and methods](https://liascript
 
 @learning_objectives
 
-After completion of this module, learners will be able to:
-
 - Iterate through lists using loops
 - Utilize conditional statements
 

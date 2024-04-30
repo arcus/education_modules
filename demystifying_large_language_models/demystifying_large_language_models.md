@@ -23,7 +23,7 @@ None.
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Define "large language model" (LLM) 
 - Give a brief description of n-grams and word vectors

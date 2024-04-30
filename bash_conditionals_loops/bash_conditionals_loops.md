@@ -26,7 +26,7 @@ Only basic exposure to Bash is expected. The following is a list of actions and 
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Understand how a "for loop" works
 - Write a "for loop" in Bash  

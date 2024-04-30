@@ -22,7 +22,7 @@ It is helpful if learners have conducted research, are familiar with -- by readi
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Explain the benefits of conducting research that is **reproducible** (can be re-done by a different, unaffiliated scientist)
 - Describe how technological approaches can help research be more reproducible

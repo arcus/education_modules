@@ -36,7 +36,7 @@ This course is designed for R beginners with minimal experience and it is not an
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Write R code that creates basic data visualizations
 - Identify geometric plot types available in `ggplot2`

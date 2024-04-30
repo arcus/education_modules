@@ -28,7 +28,7 @@ To best learn from this module make sure that you:
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Identify and use the `HEAD` of a repository.
 - Identify and use Git commit numbers.

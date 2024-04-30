@@ -24,7 +24,7 @@ Learners should have some experience composing and using simple regular expressi
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Define a pattern in regex notation that uses a capturing group
 - Define a pattern in regex notation that uses the `|` symbol as a logical "Or" 

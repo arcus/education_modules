@@ -27,7 +27,7 @@ There are no coding exercises, and no programming experience is required.
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - list at least three potential applications of machine learning in biomedical science
 - describe three different statistical problems models can address and how they differ (e.g. prediction, anomaly detection, clustering, dimension reduction)

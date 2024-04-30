@@ -24,7 +24,7 @@ None.
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - list several ways members of the public can contribute to scientific projects
 - recognize several different factors that motivate people to volunteer in citizen science

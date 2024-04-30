@@ -22,7 +22,7 @@ estimated_time_in_minutes: 20
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Use four key questions to help determine which statistical tests will be most appropriate in a given situation
 - Discuss general differences between running statistical tests in R vs. python

@@ -19,7 +19,7 @@ The only pre-requisite suggested for this module is experience working in resear
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Define research data management
 - Explain why data management forms an important part of the responsible conduct of research

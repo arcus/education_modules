@@ -23,7 +23,7 @@ Learners should have some experience composing and using moderately complex regu
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Explain what a regular expression flag does
 - Use anchors and boundaries in regular expressions

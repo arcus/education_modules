@@ -20,7 +20,7 @@ None
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Understand the importance of geocoding addresses
 - Understand the latitude and longitude coordinate system

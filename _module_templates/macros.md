@@ -35,6 +35,8 @@ Previous versions:
 
 **Learning Objectives**
 
+After completion of this module, learners will be able to:
+
 @learning_objectives
 
 **Version History**
@@ -70,6 +72,8 @@ send.html(`<a href="${surveyURL}")">our brief survey</a>`)
 In the beginning, we stated some goals.
 
 **Learning Objectives:**
+
+After completion of this module, learners will be able to:
 
 @learning_objectives
 

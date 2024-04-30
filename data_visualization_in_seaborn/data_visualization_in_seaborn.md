@@ -35,7 +35,7 @@ If you are brand new to python (or want a refresher) consider starting with [Dem
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - use seaborn to create several common data visualizations
 - customize some elements of a plot, and know where to look to learn how to customize others

@@ -19,8 +19,6 @@ None.
 @end
 
 @learning_objectives
-After completion of this module, learners will be able to:
-
 - Define what omics is and explain why a researcher might choose an omics approach
 - Identify several popular omics domains
 - Describe some challenges and caveats of omics research

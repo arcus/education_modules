@@ -23,7 +23,7 @@ This module does not require any particular knowledge.  Anyone who has used a se
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Explain what a regular expression is 
 - Give an example of how regular expressions can be useful

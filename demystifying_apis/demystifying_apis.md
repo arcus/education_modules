@@ -19,7 +19,7 @@ No particular skills or experience are required for this module.
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Define the term *application programming interface* (API)
 - Explain why APIs can be useful to biomedical researchers

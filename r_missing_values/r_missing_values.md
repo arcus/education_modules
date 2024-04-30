@@ -29,7 +29,7 @@ When example functions for plotting or statistical tests appear in the module, t
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - check the number and location of missing values in a dataframe
 - mark values as missing

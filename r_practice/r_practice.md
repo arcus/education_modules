@@ -19,8 +19,6 @@ Learners should be familiar with [the basics of R coding](https://liascript.gith
 @end
 
 @learning_objectives
-After completion of this module, learners will be able to:
-
 - Import a dataset from an online database
 - Recode data and change variable types in a dataframe
 - Use exploratory data visualization to identify trends in data and generate hypotheses

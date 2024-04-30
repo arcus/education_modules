@@ -34,7 +34,7 @@ previous_sequential_module: sql_intermediate
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Understand the parts of a JOIN
 - Describe the "shapes" of SQL JOINs: inner, left, right, and full

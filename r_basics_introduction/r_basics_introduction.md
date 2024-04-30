@@ -17,7 +17,7 @@ estimated_time_in_minutes: 60
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Define and differentiate "R", "RStudio", and "R Markdown"
 - Install and load packages in R

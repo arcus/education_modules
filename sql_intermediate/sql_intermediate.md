@@ -23,7 +23,7 @@ Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Create new data classifications using `CASE` statements
 - Find text that matches a given pattern using `LIKE` statements

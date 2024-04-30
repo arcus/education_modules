@@ -24,7 +24,7 @@ No prior knowledge or experience of geospatial data is required.
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Define geospatial data
 - Describe some of the benefits of using geospatial data

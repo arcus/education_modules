@@ -20,8 +20,6 @@ None, this module is intended for all end users regardless of their technical sk
 
 @learning_objectives
 
-After completion of this module, learners will be able to:
-
 - Identify and describe different data storage solutions
 - Understand the benefits and the limitations of each covered storage solution
 - Describe what computational tasks are best suited to the described data storage types

@@ -23,7 +23,7 @@ Learners should have some experience composing and using simple regular expressi
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Explain the difference between "moving" ahead and "looking" ahead in regular expression parsing
 - Explain why a "lookahead" can be useful in a regular expression

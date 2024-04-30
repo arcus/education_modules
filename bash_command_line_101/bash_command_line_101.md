@@ -21,8 +21,6 @@ Learners should be familiar with [the command line interface](https://liascript.
 @end
 
 @learning_objectives
-After completion of this module, learners will be able to:
-
 - Describe what bash scripting is and why they might want to learn it for data management and research
 - Navigate their file system using the bash shell
 - View and edit the contents of a file from the bash shell

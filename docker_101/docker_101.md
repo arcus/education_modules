@@ -36,7 +36,7 @@ You'll also need to create an account on [Docker Hub](https://hub.docker.com/) (
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Use the command line to create and run a container from a Dockerfile
 - Share containers 

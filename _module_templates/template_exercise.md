@@ -11,7 +11,6 @@ narrator: UK English Female
 mode: Textbook
 
 title: Module Title
-
 comment:  This is a short, focused description of the module.
 
 long_description: This is a longer description, which should be understandable for a lay audience.
@@ -23,7 +22,7 @@ List any skills or knowledge needed to complete this module here.
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - identify key elements
 - create a product

@@ -28,9 +28,6 @@ Bash commands that will be used without explanation include:
 @end
 
 @learning_objectives
-
-After completion of this module, learners will be able to:
-
 - Identify the structure of a Bash script
 - Run existing Bash scripts
 - Write simple Bash scripts
