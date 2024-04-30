@@ -2,7 +2,7 @@
 module_id: demystifying_command_line
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.1
+version:  1.0.2
 current_version_description: Add link to Demystifying APIs
 module_type: standard
 docs_version: 4.0.0

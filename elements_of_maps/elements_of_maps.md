@@ -2,7 +2,7 @@
 module_id: elements_of_maps
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.5
+version: 1.0.6
 current_version_description: Initial version.
 module_type: standard
 docs_version: 2.0.0

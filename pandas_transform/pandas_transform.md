@@ -2,7 +2,7 @@
 module_id: pandas_transform
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 2.0.1
+version: 2.0.2
 current_version_description: Replaced SageMathCells with Pyodide cells for better usability
 module_type: standard
 docs_version: 2.0.0

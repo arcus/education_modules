@@ -2,7 +2,7 @@
 module_id: git_history_of_project
 author:  Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.3
+version: 1.1.4
 current_version_description: Correcting typos in quiz question answer.
 module_type: standard
 docs_version: 4.0.0

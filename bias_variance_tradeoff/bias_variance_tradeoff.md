@@ -2,7 +2,7 @@
 module_id: bias_variance_tradeoff
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.2
+version:  1.0.3
 current_version_description: Initial version.
 module_type: standard
 docs_version: 1.1.0

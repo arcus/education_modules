@@ -2,7 +2,7 @@
 module_id: demystifying_geospatial_data
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Improve hyperlink accessibility
 module_type: standard
 docs_version: 1.2.0

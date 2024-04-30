@@ -2,7 +2,7 @@
 module_id: r_reshape_long_wide
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.2.4
+version: 1.2.5
 current_version_description: Update highlight boxes, update metadata, and replace text with macros.
 module_type: standard
 docs_version: 2.0.0

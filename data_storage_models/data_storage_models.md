@@ -2,7 +2,7 @@
 module_id: data_storage_models
 author:   Nicole Feldman
 email:    feldmanna@chop.edu
-version: 1.1.5
+version: 1.1.6
 current_version_description: Updated quiz questions and metadata.
 module_type: standard
 docs_version: 2.0.0

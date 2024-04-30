@@ -2,7 +2,7 @@
 module_id: how_to_troubleshoot
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.4
+version: 1.1.5
 current_version_description: update highlight boxes and clarify instructions
 module_type: standard
 docs_version: 3.1.0

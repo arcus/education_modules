@@ -2,7 +2,7 @@
 module_id: geocode_lat_long
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.4
+version: 1.0.5
 current_version_description: Initial Version
 module_type: standard
 docs_version: 2.0.0

@@ -2,7 +2,7 @@
 module_id: database_normalization
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.7
+version: 1.0.8
 current_version_description: Initial Version.
 module_type: standard
 docs_version: 2.0.0

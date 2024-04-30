@@ -2,7 +2,7 @@
 module_id: python_basics_exercise
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.0.2
+version:  1.0.3
 current_version_description: Initial version. 
 module_type: exercise
 docs_version: 1.2.0

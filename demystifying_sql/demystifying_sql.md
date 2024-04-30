@@ -2,7 +2,7 @@
 module_id: demystifying_sql
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.2.3
+version: 1.2.4
 current_version_description: Update authorship, correct typo, add metadata
 docs_version: 2.0.0
 module_type: standard

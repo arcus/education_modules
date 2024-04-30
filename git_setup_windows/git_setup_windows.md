@@ -2,7 +2,7 @@
 module_id: git_setup_windows
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.4
+version: 1.2.5
 current_version_description: Updated metadata to latest standards
 module_type: standard
 docs_version: 4.0.0

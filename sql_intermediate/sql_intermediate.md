@@ -2,7 +2,7 @@
 module_id: sql_intermediate
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.4.0
+version: 1.4.1
 current_version_description: Add three new additional resources
 module_type: standard
 docs_version: 2.0.0

@@ -2,7 +2,7 @@
 module_id: r_basics_practice
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.0.1
+version: 1.0.2
 current_version_description: Initial version
 module_type: exercise
 docs_version: 3.0.0

@@ -2,7 +2,7 @@
 module_id: git_intro
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.1.2
+version: 1.1.3
 current_version_description: Updated with information about GitHub
 module_type: standard
 docs_version: 4.0.0

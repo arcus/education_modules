@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.4.0
+version:  1.4.1
 current_version_description: Add text after Overview and Feedback that invites learners to the rest of the modules
 language: en
 narrator: UK English Female

@@ -2,7 +2,7 @@
 module_id: sql_joins
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.2.0
+version: 1.2.1
 current_version_description: Add three new additional resources
 module_type: standard
 docs_version: 2.0.0

@@ -2,7 +2,7 @@
 module_id: r_basics_transform_data
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.4.0
+version: 1.4.1
 current_version_description: Improved boolean logic, pipe, and filter materials
 module_type: standard
 docs_version: 3.1.2
