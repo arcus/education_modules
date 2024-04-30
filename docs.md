@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  4.0.1
+version:  4.0.2
 current_version_description: Added module\_id as required frontmatter field for all modules
 language: en
 narrator: UK English Female
