@@ -24,7 +24,7 @@ Learners should have some knowledge about patterns in biomedical data and unders
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Define a simple alphanumeric pattern in regex notation
 - List common ranges and character groups in regex

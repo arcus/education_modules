@@ -19,7 +19,7 @@ This module is appropriate for anyone who is interested in continuing to learn d
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - recognize ways in which learning data science and coding may be different than other educational experiences
 - identify ways to extend their learning beyond module content

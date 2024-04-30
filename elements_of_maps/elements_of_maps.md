@@ -21,7 +21,7 @@ Some familiarity with latitude and longitude is required to get the most out of 
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - recognize the elements of maps
 - describe types of maps that focus on particular elements.

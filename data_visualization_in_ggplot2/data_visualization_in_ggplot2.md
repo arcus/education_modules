@@ -33,7 +33,7 @@ If you are brand new to R (or want a refresher) consider starting with [Intro to
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - use ggplot2 to create several common data visualizations
 - customize some elements of a plot, and know where to look to learn how to customize others

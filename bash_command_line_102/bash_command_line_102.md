@@ -19,8 +19,6 @@ Learners should be familiar with using a bash shell to navigate a directory syst
 @end
 
 @learning_objectives
-After completion of this module, learners will be able to:
-
 - Search existing files for particular character strings.
 - Search folders for files with certain titles.
 - Move files to new locations in a directory system.

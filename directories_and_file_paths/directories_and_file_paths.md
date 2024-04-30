@@ -20,7 +20,7 @@ None.
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Describe what a directory is
 - Distinguish between a relative file path and an absolute file path

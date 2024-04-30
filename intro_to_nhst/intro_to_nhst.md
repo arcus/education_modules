@@ -23,7 +23,7 @@ None.
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - identify the null hypothesis given a research question
 - define a p-value

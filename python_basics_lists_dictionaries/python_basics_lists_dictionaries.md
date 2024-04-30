@@ -23,7 +23,6 @@ Learners should be able to recognize functions, methods, and variables in Python
 @end
 
 @learning_objectives
-After completion of this module, learners will be able to:
 
 - Create and edit lists
 - Create and edit dictionaries

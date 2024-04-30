@@ -25,7 +25,7 @@ No previous experience with git is required.
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - List an advantage and a disadvantage of using Git via a **graphical user interface**
 - List an advantage and a disadvantage of using Git via a **command line interface**

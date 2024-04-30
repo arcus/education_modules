@@ -22,7 +22,7 @@ This module assumes that learners already have access to the REDCap application 
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Define what an API is and why it's useful to researchers
 - Enable API usage on REDCap projects

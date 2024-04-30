@@ -23,7 +23,7 @@ The module assumes no prior familiarity with containers and requires no coding e
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - understand when it might be useful to use containers for research
 - describe the basic concept of containerization

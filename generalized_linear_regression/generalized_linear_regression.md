@@ -27,7 +27,7 @@ Learners should already be familiar with the following concepts in statistics an
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - describe how generalized linear models are similar to and different from linear models
 - define a "link function"

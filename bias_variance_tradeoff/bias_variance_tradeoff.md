@@ -26,7 +26,7 @@ It's fine if you don't know how to conduct a regression analysis, but you should
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - define bias and variance as they apply to machine learning
 - explain the bias-variance tradeoff

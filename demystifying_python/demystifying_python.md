@@ -20,7 +20,7 @@ Learners should be familiar with tabular data (data stored in a rectangular form
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Describe what Python is and why they might want to use it for research
 - Identify several ways to write Python code

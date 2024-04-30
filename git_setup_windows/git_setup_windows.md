@@ -25,7 +25,7 @@ estimated_time_in_minutes: 25
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Configure `git` the first time it is used on a computer
 - Understand the meaning of the `--global` configuration flag

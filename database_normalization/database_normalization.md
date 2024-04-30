@@ -19,7 +19,7 @@ Learners should have experience working with data in tables.  This could include
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Explain the significance of "one to many" data relationships and how these relationships affect data organization
 - Describe how a normalized database is typically organized

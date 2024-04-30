@@ -28,7 +28,7 @@ Minimal experience of using the RStudio IDE and writing R code (specifically, wi
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Write R code that uses the `dplyr` package to select only desired columns from a data frame
 - Write R code that uses the `dplyr` package to filter only rows that meet a certain condition from a data frame

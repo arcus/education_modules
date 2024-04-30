@@ -38,7 +38,7 @@ If you are brand new to R (or want a refresher) consider starting with [Intro to
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - calculate common summary statistics in R, for both continuous and categorical variables
 - generate publication-ready tables of descriptive statistics using the gtsummary package

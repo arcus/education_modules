@@ -25,7 +25,7 @@ This module assumes familiarity with R basics, including ingesting .csv data and
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Define and differentiate "long data" and "wide data"
 - Use tidyr and dplyr tools to reshape data effectively

@@ -25,8 +25,6 @@ None. This lesson is appropriate for beginners with no experience using version 
 
 @learning_objectives
 
-After completion of this module, learners will be able to:
-
 - Understand the benefits of an automated version control system
 - Understand the basics of how automated version control systems work
 - Explain how git and GitHub differ

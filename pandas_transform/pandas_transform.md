@@ -28,7 +28,7 @@ Before starting this module it is useful for you to:
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Import `pandas` and use functions from the `pandas` package.
 - Load data into a `pandas` DataFrame.

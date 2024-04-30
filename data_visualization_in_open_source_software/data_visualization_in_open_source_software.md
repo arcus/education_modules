@@ -29,8 +29,6 @@ This module also assumes some basic familiarity with either R or python, but is 
 
 @learning_objectives
 
-After completion of this module, learners will be able to:
-
 - identify key elements in a plot that communicate information about the data
 - describe the role ggplot2 and seaborn play in the R and python programming languages, respectively
 - describe a typical data vizualization workflow

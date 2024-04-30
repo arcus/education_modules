@@ -25,7 +25,7 @@ If you aren’t familiar with the bash shell, please review our [Demystifying th
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Launch and terminate instances on AWS
 - Use the Data Carpentry Community AMI to set up an AMI set up for genomics analysis

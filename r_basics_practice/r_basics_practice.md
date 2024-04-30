@@ -31,8 +31,6 @@ Learners should also have access to R, either on their own computer or in the cl
 
 @learning_objectives
 
-After completion of this module, learners will be able to:
-
 - Import a csv dataset into R
 - Examine data in the Data Viewer
 - Use `dplyr` to filter data and select columns, as well as to create new columns

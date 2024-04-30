@@ -471,8 +471,6 @@ Note that `@pre_reqs` is a [block macro](https://liascript.github.io/course/?htt
 
 ```
 @learning_objectives  
-After completion of this module, learners will be able to:
-
 - identify key elements
 - create a product
 - do a task

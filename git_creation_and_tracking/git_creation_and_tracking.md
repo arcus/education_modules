@@ -25,8 +25,6 @@ Before you start this module, make sure you
 
 @learning_objectives
 
-After completion of this module, learners will be able to:
-
 - Create a Git repository
 - Add and make changes to files in the repository
 - Write short helpful descriptions, called "commit messages" to track the changes

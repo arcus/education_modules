@@ -16,7 +16,7 @@ estimated_time_in_minutes: 30
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Describe technical problems more effectively
 - Explain why a "reproducible example" is critical to asking for help

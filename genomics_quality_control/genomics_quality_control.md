@@ -27,7 +27,7 @@ It does not assume any experience with genomics analysis.
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Explain how a FASTQ file encodes per-base quality scores.
 - Interpret a FastQC plot summarizing per-base quality across all reads.

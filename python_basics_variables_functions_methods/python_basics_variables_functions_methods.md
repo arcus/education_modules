@@ -23,7 +23,6 @@ Learners should be familiar with [Python as a programming language](https://lias
 @end
 
 @learning_objectives
-After completion of this module, learners will be able to:
 
 - Assign values to variables
 - Identify and use functions 
