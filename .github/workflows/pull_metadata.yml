@@ -8,7 +8,7 @@ name: Process Module Metadata
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: "end_auto_links_with_#1" #CHANGE TO MAIN BEFORE MERGING
+    branches: "main" #CHANGE TO MAIN BEFORE MERGING
     paths-ignore:
       - 'assets/**'
       - '_for_authors/**'
@@ -152,7 +152,7 @@ jobs:
   generate_webpage_markdown:
     name: Website - Generate page
     runs-on: ubuntu-latest
-    #needs: metadata_changed_message
+    needs: metadata_changed_message
     steps:
       - uses: actions/checkout@v4
 
