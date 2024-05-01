@@ -60,7 +60,7 @@ do
         echo $domain
 
         
-        echo "| [$title](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/$FOLDER/$FOLDER.md) | $comment | $estimated_time_in_minutes min| $collection | $coding_language | $task | $domain |" >> $page
+        echo "| [$title](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/$FOLDER/$FOLDER.md#1) | $comment | $estimated_time_in_minutes min| $collection | $coding_language | $task | $domain |" >> $page
 
     fi
 done
