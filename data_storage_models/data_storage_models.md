@@ -43,7 +43,7 @@ coding_required: false
 @end
 
 @version_history 
-[1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/7bbdf70c88a08b47a3740d2facf84b5ecdea57c6/data_storage_models/data_storage_models.md): Initial Version.
+[1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/7bbdf70c88a08b47a3740d2facf84b5ecdea57c6/data_storage_models/data_storage_models.md#1): Initial Version.
 @end
 
 

@@ -15,7 +15,7 @@ long_description: When learning Python for data science, the ultimate goal is to
 estimated_time_in_minutes: 60
 
 @pre_reqs
-Learners should be familiar with the basics of Python coding, including [functions, methods, and variables](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md), [lists and dictionaries](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md), [loops and conditionals](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_loops_conditionals/python_basics_loops_conditionals.md), [data transformation with pandas](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md) and [data visualization with matplotlib and seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md). Learners should also have access to Python, either on their own computer or in the cloud. 
+Learners should be familiar with the basics of Python coding, including [functions, methods, and variables](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#1), [lists and dictionaries](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_lists_dictionaries/python_basics_lists_dictionaries.md#1), [loops and conditionals](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_loops_conditionals/python_basics_loops_conditionals.md#1), [data transformation with pandas](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md#1) and [data visualization with matplotlib and seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1). Learners should also have access to Python, either on their own computer or in the cloud. 
 @end
 
 @learning_objectives
@@ -91,7 +91,7 @@ Finding correlations and creating heat maps are not topics that you have learned
 
 For this practice module we will be using real, publicly-available cervical cancer data from [UC Irvine's machine learning data repository](http://archive.ics.uci.edu/). To download the data file, [follow this link to the cervical cancer risk factors dataset](http://archive.ics.uci.edu/dataset/383/cervical+cancer+risk+factors) and click the "Download" button, which you should see on the right of the page. 
 
-If you have done the [R Practice Module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_practice/r_practice.md), this dataset might be familiar! 
+If you have done the [R Practice Module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_practice/r_practice.md#1), this dataset might be familiar! 
 
 
 ## Practice Problem

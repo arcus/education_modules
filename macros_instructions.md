@@ -2,7 +2,7 @@
 
 ## Intro
 
-For an excellent overview, see the [liascript help documentation on macros](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md).
+For an excellent overview, see the [liascript help documentation on macros](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1).
 
 Basically, macros can be defined in the header of a liascript document and then you can use them throughout the document itself as a basic text substitution. So if you define `author: Octavia Butler` in the header, then every time you put `@author` in the document, it will be replaced by the text `Octavia Butler`.
 

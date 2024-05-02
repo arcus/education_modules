@@ -45,7 +45,7 @@ coding_required: false
 @version_history 
 Previous versions: 
 
-- [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/fa5f0b0df5a901d188e8c36bc303a1d39b771b72/directories_and_file_paths/directories_and_file_paths.md): add instructions for finding absolute file paths
+- [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/fa5f0b0df5a901d188e8c36bc303a1d39b771b72/directories_and_file_paths/directories_and_file_paths.md#1): add instructions for finding absolute file paths
 - [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/914714acfb6b30980e011ab09e087d4d2c5c918e/directories_and_file_paths/directories_and_file_paths.md#1): Fix "writing a file path" quiz answer and add definition of "directory" 
 - [1.0.0](https://raw.githubusercontent.com/arcus/education_modules/99375ea5b5b20c9ece7fc69e1fb14776b412e0ad/directories_and_file_paths/directories_and_file_paths.md): Initial version
 @end

@@ -84,7 +84,7 @@ Finding correlations and creating heat maps are not topics that you have learned
 
 For this practice module we will be using real, publicly-available cervical cancer data from [UC Irvine's machine learning data repository](http://archive.ics.uci.edu/). To download the data file, [follow this link to the cervical cancer risk factors dataset](http://archive.ics.uci.edu/dataset/383/cervical+cancer+risk+factors) and click the "Download" button, which you should see on the right of the page. 
 
- If you have done the [Python Practice Module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_practice/python_practice.md), this dataset might be familiar! 
+ If you have done the [Python Practice Module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_practice/python_practice.md#1), this dataset might be familiar! 
 
 ## Practice Problem
 

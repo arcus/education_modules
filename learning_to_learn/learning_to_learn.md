@@ -38,7 +38,7 @@ coding_required: false
 @version_history
 Previous versions:
 
-- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/learning_to_learn/learning_to_learn.md): Initial version.
+- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/learning_to_learn/learning_to_learn.md#1): Initial version.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md

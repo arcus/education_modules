@@ -28,7 +28,7 @@ Previous versions:
 - [3.1.2](): Updated definition of learn\_to\_code collection
 - [3.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cd0da90a30910c22d5502f509125892a761c3145/docs.md#1): Added collection as a front matter field, added text as a data\_domain, fixed typos
 - [2.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/89cadafc6f1f9c83e4de93e7d55cd9427866f9f2/docs.md#1): Made coding\_required a mandatory front matter field for all modules
-- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b453a05b5ac756fb5c7b183deae9d4fc91b3a617/docs.md): Clarified that version\_history cannot be blank but sets\_you\_up\_for and depends\_on\_knowledge\_available\_in can
+- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b453a05b5ac756fb5c7b183deae9d4fc91b3a617/docs.md#1): Clarified that version\_history cannot be blank but sets\_you\_up\_for and depends\_on\_knowledge\_available\_in can
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -46,7 +46,7 @@ LiaScript is a [markdown](https://en.wikipedia.org/wiki/Markdown) dialect, so wr
 
 To see this document as an interactive LiaScript rendered version, click on the following link/badge:
 
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md)
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md#1)
 
 </div>
 
@@ -459,7 +459,7 @@ This module assumes some familiarity with X and Y, in particular:
 * some familiarity with [a topic](https://education.arcus.chop.edu)
 * understanding of [one thing](https://education.arcus.chop.edu) and [another](https://education.arcus.chop.edu)
 
-If relevant, you can include recommendations for somewhere else to start if the learner doesn't have these prereqs. For example: If you are brand new to R or python (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md) first and then coming back here.
+If relevant, you can include recommendations for somewhere else to start if the learner doesn't have these prereqs. For example: If you are brand new to R or python (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#1) or [Intro to python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md#1) first and then coming back here.
 @end
 ```
 
@@ -1328,7 +1328,7 @@ For example:
 
 We're constantly improving our materials, and this module has had recent changes. Specifically, we added a new section at the end explaining how to protect your API token when using git and GitHub for your code.
 
-If you like, you can still access the [previous version of this module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/using_redcap_api/using_redcap_api.md). 
+If you like, you can still access the [previous version of this module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/using_redcap_api/using_redcap_api.md#1). 
 
 </div>
 ```
@@ -1338,7 +1338,7 @@ If you like, you can still access the [previous version of this module](https://
 
 We're constantly improving our materials, and this module has had recent changes. Specifically, we added a new section at the end explaining how to protect your API token when using git and GitHub for your code.
 
-If you like, you can still access the [previous version of this module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/using_redcap_api/using_redcap_api.md). 
+If you like, you can still access the [previous version of this module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/using_redcap_api/using_redcap_api.md#1). 
 
 </div>
 
@@ -1457,9 +1457,9 @@ ls -l -h
 
 We use three main approaches for interactive coding exercises: 
 
-- We can link to interactive notebooks hosted on Posit Cloud (see example notebooks in [our R notebook repository](https://github.com/arcus/education_r_environment)). This is our approach for most R modules, for example: [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) 
-- We can have interactive coding cells in modules themselves using sagemath. This is our approach for most python modules, for example: [Python Basics: Functions, Methods, and Variables](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md)
-- We can also have interactive coding cells in modules using AlaSQL, which is our approach for SQL modules, for example: [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md)
+- We can link to interactive notebooks hosted on Posit Cloud (see example notebooks in [our R notebook repository](https://github.com/arcus/education_r_environment)). This is our approach for most R modules, for example: [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#1) 
+- We can have interactive coding cells in modules themselves using sagemath. This is our approach for most python modules, for example: [Python Basics: Functions, Methods, and Variables](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#1)
+- We can also have interactive coding cells in modules using AlaSQL, which is our approach for SQL modules, for example: [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md#1)
 
 We don't have a way to include interactive code for git or bash. For those modules, we just instruct learners to work on their own machines.
 

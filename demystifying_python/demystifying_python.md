@@ -46,8 +46,8 @@ coding_language: python
 
 Previous versions: 
 
-- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/6f4ca2c54c2fc72a33e5319b20a2ac50562b9ea6/demystifying_python/demystifying_python.md): Removed references to Atom, now sunsetted.
-- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/466799a081d2cb74d155dc0a26951d3492b81f8c/demystifying_python/demystifying_python.md): Initial Version.
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/6f4ca2c54c2fc72a33e5319b20a2ac50562b9ea6/demystifying_python/demystifying_python.md#1): Removed references to Atom, now sunsetted.
+- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/466799a081d2cb74d155dc0a26951d3492b81f8c/demystifying_python/demystifying_python.md#1): Initial Version.
 
 
 @end
@@ -291,7 +291,7 @@ You can download Python directly to your computer, use Anaconda to download Pyth
 
 * If you're interested in practicing more with Google Colab, check out [this notebook looking at statistics](https://colab.research.google.com/drive/1zkW5Y0SoV3gMU6sQtlgnZsfR2GIXi6F_?usp=sharing).
 
-* If you are ready to actually write some Python code, check out the [Python Basics: Functions, Methods, and Variables](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md) module.
+* If you are ready to actually write some Python code, check out the [Python Basics: Functions, Methods, and Variables](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#1) module.
 
 ## Feedback
 

@@ -49,8 +49,8 @@ sequence_name: sql
 
 Previous versions: 
 
-- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/demystifying_sql/demystifying_sql.md):  Update highlight boxes
-- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/demystifying_sql/demystifying_sql.md): Original version with minor formatting updates and improved feedback form link 
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/d428e9f66a2161e96ea4ca32b42049fab2d27088/demystifying_sql/demystifying_sql.md#1):  Update highlight boxes
+- [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/b71760c8078ef96d1f18d66d21aa27c9ebe42c4b/demystifying_sql/demystifying_sql.md#1): Original version with minor formatting updates and improved feedback form link 
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md

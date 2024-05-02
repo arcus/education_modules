@@ -29,7 +29,7 @@ This module also assumes some basic familiarity with python, including
 - [reading in data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md#8)
 - [manipulating data frames, including calculating new columns](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/pandas_transform/pandas_transform.md#17)
 
-If you are brand new to python (or want a refresher) consider starting with [Demystifying Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md) first.
+If you are brand new to python (or want a refresher) consider starting with [Demystifying Python](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md#1) first.
 
 @end
 

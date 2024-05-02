@@ -52,7 +52,7 @@ coding_required: false
 @version_history
 Previous versions: 
 
-- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/demystifying_machine_learning/demystifying_machine_learning.md): Initial version
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/demystifying_machine_learning/demystifying_machine_learning.md#1): Initial version
 
 @end
 

@@ -19,7 +19,7 @@ long_description: Before using Python for data analysis, there are some basics t
 estimated_time_in_minutes: 20
 
 @pre_reqs
-Learners should be familiar with [Python as a programming language](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md), but experience with writing Python code is not required.
+Learners should be familiar with [Python as a programming language](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_python/demystifying_python.md#1), but experience with writing Python code is not required.
 @end
 
 @learning_objectives

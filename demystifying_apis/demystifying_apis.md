@@ -79,7 +79,7 @@ That feels very vague -- what about some examples?  We'll consider some on the n
 What kinds of APIs might you, a biomedical researcher, encounter?  Well, let's consider some practical use cases.
 
 * Instead of manually doing a literature review where you copy/paste the results from a hand-typed search result page into a Word document, you might want to use [a PubMed API](https://www.ncbi.nlm.nih.gov/pmc/tools/developers/) to give you a count or list of results instead, and try plugging different values of year, search terms, or other data elements to quickly measure the effectiveness of your search terms.
-* You might use the [REDCap API](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/using_redcap_api/using_redcap_api.md) to download today's latest recruitment numbers into a pre-made dashboard to share with your lab and encourage them to step up recruitment efforts in your weekly meeting.
+* You might use the [REDCap API](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/using_redcap_api/using_redcap_api.md#1) to download today's latest recruitment numbers into a pre-made dashboard to share with your lab and encourage them to step up recruitment efforts in your weekly meeting.
 * Perhaps you'd like to study newspaper coverage of a public health topic, and use a [New York Times API](https://developer.nytimes.com/apis) to give the the counts and references to articles written about your topic of interest, so you can visualize the change over time of public awareness and interest.
 * As someone interested in the social determinants of health, you want to use an [API from the U.S. Census Bureau](https://www.census.gov/data/developers/data-sets.html) to obtain economic data from the American Community Survey about the census tracts in Philadelphia.
 * Because you educate the public about infectious disease, you want to get the latest data about the popularity of posts and pages on your website, and analyze that data to see what kinds of articles get the most traction.
@@ -93,7 +93,7 @@ Why, then, create an automated way (these APIs we're describing) to work with sy
 
 ## Why Use APIs?
 
-We've written about the "whys" behind API usage as well in our module [Using the REDCap API](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/using_redcap_api/using_redcap_api.md), so we're going to borrow some language from that module.
+We've written about the "whys" behind API usage as well in our module [Using the REDCap API](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/using_redcap_api/using_redcap_api.md#1), so we're going to borrow some language from that module.
 
 Two important advantages to using an API are **data freshness** and **reproducibility**.
 
@@ -309,7 +309,7 @@ Some APIs (particularly those linked to social media applications) have changing
 
 If you're interested in reading more about APIs in the biomedical and healthcare spaces, [the United States Office of the National Coordinator for Health Information Technology (ONC) is driving an effort to develop and standardize APIs related to electronic health information](https://www.healthit.gov/topic/scientific-initiatives/accelerating-apis-scientific-discovery). 
 
-If you're a REDCap user, you might enjoy our (award-winning, at REDCapCon!) module on [Using the REDCap API](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/using_redcap_api/using_redcap_api.md).
+If you're a REDCap user, you might enjoy our (award-winning, at REDCapCon!) module on [Using the REDCap API](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/using_redcap_api/using_redcap_api.md#1).
 
 
 ## Feedback
