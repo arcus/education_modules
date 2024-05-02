@@ -2,8 +2,8 @@
 module_id: demystifying_machine_learning
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.1
-current_version_description: Added some new linked resources in learn-more boxes
+version:  1.1.2
+current_version_description: Added some new linked resources in learn-more boxes; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -52,7 +52,7 @@ coding_required: false
 @version_history
 Previous versions: 
 
-- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/demystifying_machine_learning/demystifying_machine_learning.md): Initial version
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/demystifying_machine_learning/demystifying_machine_learning.md#1): Initial version
 
 @end
 

@@ -2,8 +2,8 @@
 module_id: genomics_setup
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.2.2
-current_version_description: Updated link to the Data Carpentries instructions, which changed after an update to their website. 
+version:  1.2.3
+current_version_description: Updated link to the Data Carpentries instructions, which changed after an update to their website; make liascript link(s) point to first page
 module_type: wrapper
 docs_version: 2.0.0
 language: en
@@ -20,7 +20,7 @@ estimated_time_in_minutes: 30
 
 @pre_reqs
 This lesson assumes a working understanding of the bash shell.
-If you aren’t familiar with the bash shell, please review our [Demystifying the Command Line Interface](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md#1) and [Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) modules and/or the [Shell Genomics lesson by Data Carpentry](http://www.datacarpentry.org/shell-genomics/) before starting this lesson.
+If you aren’t familiar with the bash shell, please review our [Demystifying the Command Line Interface](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md#1) and [Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) modules and/or the [Shell Genomics lesson by Data Carpentry](http://www.datacarpentry.org/shell-genomics/) before starting this lesson.
 
 @end
 

@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  2.0.0
-current_version_description: Added Pyodide macros and lesson prep
+version:  2.0.1
+current_version_description: Added Pyodide macros and lesson prep; make liascript link(s) point to first page
 language: en
 narrator: UK English Female
 title: Python Module Macros
@@ -12,7 +12,7 @@ comment:  This is placeholder module to save macros used in other modules.
 @version_history 
 
 Previous versions: 
-- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3fba6b6cef5cb9477151c3f8c775951712867c12/_module_templates/macros_python.md): Added current\_version\_description and version\_history metadata
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3fba6b6cef5cb9477151c3f8c775951712867c12/_module_templates/macros_python.md#1): Added current\_version\_description and version\_history metadata
 - [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/e983922162e6fbf971c03dc96052f68713cc72af/_module_templates/macros_python.md#1): Initial version
 @end
 

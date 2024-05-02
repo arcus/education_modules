@@ -2,8 +2,8 @@
 module_id: r_reshape_long_wide
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.2.4
-current_version_description: Update highlight boxes, update metadata, and replace text with macros.
+version: 1.2.5
+current_version_description: Update highlight boxes, update metadata, and replace text with macros; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -19,7 +19,7 @@ r_file: r\_reshape\_long\_wide
 
 @pre_reqs
 
-This module assumes familiarity with R basics, including ingesting .csv data and using dplyr tools to do basic transformation including choosing only certain columns or rows of a data frame.  If you need to learn these basics, we suggest our [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) module and our [R Basics: Transform Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md) module.
+This module assumes familiarity with R basics, including ingesting .csv data and using dplyr tools to do basic transformation including choosing only certain columns or rows of a data frame.  If you need to learn these basics, we suggest our [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#1) module and our [R Basics: Transform Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#1) module.
 
 @end
 

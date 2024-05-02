@@ -2,8 +2,8 @@
 module_id: data_management_basics
 author:   Ene Belleh
 email:    bellehe@chop.edu
-version: 1.1.4
-current_version_description: Fixed mermaidchart error that was causing diagram to not render; updated metadata
+version: 1.1.5
+current_version_description: Fixed mermaidchart error that was causing diagram to not render; updated metadata; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -42,7 +42,7 @@ coding_required: false
 
 Previous versions: 
 
-- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/data_management_basics/data_management_basics.md):  First version with improved feedback survey
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/data_management_basics/data_management_basics.md#1):  First version with improved feedback survey
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -186,7 +186,7 @@ Additionally, it is crucial that researchers record the analysis processes, incl
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-If you haven't already had a chance to read our module on [Reproducibility, Generalizability, and Reuse](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/reproducibility/reproducibility.md), or it's been a while since you've read it, consider skimming some of the topics in that module to refresh your understanding of research reproducibility.  If your collaborators (including future **you**) know exactly each step you made in the journey from raw data to findings, you have a highly reproducible research effort.  
+If you haven't already had a chance to read our module on [Reproducibility, Generalizability, and Reuse](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/reproducibility/reproducibility.md#1), or it's been a while since you've read it, consider skimming some of the topics in that module to refresh your understanding of research reproducibility.  If your collaborators (including future **you**) know exactly each step you made in the journey from raw data to findings, you have a highly reproducible research effort.  
 
 </div>
 

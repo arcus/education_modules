@@ -2,8 +2,8 @@
 module_id: learning_to_learn
 author:   Rose Franzen
 email:    franzenr@chop.edu
-version: 1.1.2
-current_version_description: Updated metadata, removed linked cartoon that was behind a paywall, changed quiz question from open text to multiple choice.
+version: 1.1.3
+current_version_description: Updated metadata, removed linked cartoon that was behind a paywall, changed quiz question from open text to multiple choice; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -38,7 +38,7 @@ coding_required: false
 @version_history
 Previous versions:
 
-- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/learning_to_learn/learning_to_learn.md): Initial version.
+- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/learning_to_learn/learning_to_learn.md#1): Initial version.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md

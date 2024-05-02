@@ -2,8 +2,8 @@
 module_id: demystifying_command_line
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.1
-current_version_description: Add link to Demystifying APIs
+version:  1.0.2
+current_version_description: Add link to Demystifying APIs; make liascript link(s) point to first page
 module_type: standard
 docs_version: 4.0.0
 language: en
@@ -136,7 +136,7 @@ There are lots of places to learn commands.  One skill that will help is learnin
 
 ![A four-panel cartoon. People standing over a bomb with an attached keyboard yell "Rob! You use Unix! Come quick!".  The bomb display reads "To disarm the bomb, simply enter a valid `tar` command on your first try.  No googling.  You have ten seconds."  The group looks on in silence, until one person says, "Rob?".  Rob replies, "I'm so sorry."](https://imgs.xkcd.com/comics/tar.png "[Tar comic by xkcd](https://xkcd.com/1168/), [CC BY-NC 2.5](https://xkcd.com/license.html).")
 
-One place to learn the basics of working in the command line is in our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.  This is a good place to do some safe, easy command line practice so you feel more confident.
+One place to learn the basics of working in the command line is in our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) module.  This is a good place to do some safe, easy command line practice so you feel more confident.
 
 There are also `man` (short for *manual*) and `help` documentation pages that you can view within the command line.  For example, in a Linux-like CLI such as the Mac Terminal or Git Bash on Windows, typing `man ls` will give lots of instructions on how to use the `ls` command.
 
@@ -150,7 +150,7 @@ Of course, it makes sense to check what a command actually does before typing it
 Do I Really Need to Learn This?
 ---
 
-Most things you want to accomplish on your computer can be done using multiple interfaces, allowing you to choose which you prefer -- graphical or command line. However, as you get into very specific or customized tasks that are done more rarely, there **are some things that can only be done by command line**.  It might be helpful to get a little comfortable with the command line interface on your computer now, before you discover that you have to use it for a specialized task.  If that's something that interests you, our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module might be helpful!
+Most things you want to accomplish on your computer can be done using multiple interfaces, allowing you to choose which you prefer -- graphical or command line. However, as you get into very specific or customized tasks that are done more rarely, there **are some things that can only be done by command line**.  It might be helpful to get a little comfortable with the command line interface on your computer now, before you discover that you have to use it for a specialized task.  If that's something that interests you, our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) module might be helpful!
 
 
 
@@ -226,7 +226,7 @@ CLIs depend principally on typing text commands, not on visual cues like windows
 
 ## Additional Resources
 
-* If you'd like to learn more about working in a command line interface, our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module might be helpful!
+* If you'd like to learn more about working in a command line interface, our [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) module might be helpful!
 
 * The [Intro to Command Line](https://tutorial.djangogirls.org/en/intro_to_command_line/) tutorial by Django Girls walks you through opening the command line in Windows, Mac, and Linux, and shows you a few first commands.  While this tutorial is part of a series related to web development, and not data analytics or research, we like their simple, easy-to-understand approach.
 

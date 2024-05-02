@@ -2,8 +2,8 @@
 module_id: bash_conditionals_loops
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.5
-current_version_description: Clarify `=` and `==` inside test functions
+version: 1.2.6
+current_version_description: Clarify `=` and `==` inside test functions; make liascript link(s) point to first page
 module_type: standard
 docs_version: 1.2.1
 language: en
@@ -18,7 +18,7 @@ estimated_time_in_minutes: 60
 @pre_reqs
 Only basic exposure to Bash is expected. The following is a list of actions and commands that will be used without explanation in this module. Each includes a link to help you brush up on the commands or learn them for the first time.
 
-- [Navigating](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) a filesystem from a command line interface
+- [Navigating](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) a filesystem from a command line interface
 - Reading the contents of files with [`cat`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#15)
 - Writing text to files with [`echo` and `>>`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#14)
 - Matching character strings with the [character wildcard `*`](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_102/bash_command_line_102.md#4)
@@ -61,8 +61,8 @@ previous_sequential_module: bash_103_combining_commands
 
 Previous versions: 
 
-- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4347cd14c9f5a3fd110910ec09c0560a46e390bd/bash_conditionals_loops/bash_conditionals_loops.md): Clarify instructions in the getting started section.
-- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_conditionals_loops/bash_conditionals_loops.md): Initial version
+- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4347cd14c9f5a3fd110910ec09c0560a46e390bd/bash_conditionals_loops/bash_conditionals_loops.md#1): Clarify instructions in the getting started section.
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_conditionals_loops/bash_conditionals_loops.md#1): Initial version
 
 @end
 
@@ -78,7 +78,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 You will get the most out of this lesson if you follow along with the examples and try out the commands. In order to do that you need to have a bash shell open on your computer. Please follow the instructions appropriate for the computer you are using.
 
 **Open a bash shell.**
-If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
+If you are using a computer with running iOS (i.e. a Mac) you can use the **Terminal** program. If you are on a computer using Windows, open either **WLS** (Windows Linux Subsytem) or **Git Bash**. If you don't have these programs there are instructions for how to download and set them up in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) module.
 
 <div class = "care">
 <b style="color: rgb(var(--color-highlight));">A little encouragement...</b><br>

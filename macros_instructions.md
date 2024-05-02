@@ -1,4 +1,20 @@
-# Using macros in liascript
+<!--
+
+author:   DART Team
+email:    dart@chop.edu
+version:  1.0.0
+current_version_description: Initial version
+language: en
+narrator: UK English Female
+title: Using macros in LiaScript
+
+@version_history
+No previous versions: 
+@end
+
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+-->
+# Using macros in LiaScript
 
 ## Intro
 

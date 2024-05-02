@@ -2,8 +2,8 @@
 module_id: statistical_tests
 author: Rose Hartman
 email: hartmanr1@chop.edu
-version: 1.3.7
-current_version_description: Highlight box update, fix typos, front matter update, add some additional resources.
+version: 1.3.8
+current_version_description: Highlight box update, fix typos, front matter update, add some additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -17,7 +17,7 @@ estimated_time_in_minutes: 20
 @pre_reqs
 
 - Learners should already be familiar with the purpose and assumptions of any test they intend to run --- this module covers the "how" only, not the "why".
-- This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with our [R Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md) series first and then coming back here.
+- This module also assumes some basic familiarity with either R or python. If you are brand new to one or both (or want a refresher) consider starting with our [R Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#1) or [Python Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/python_basics_variables_functions_methods/python_basics_variables_functions_methods.md#1) series first and then coming back here.
 
 @end
 

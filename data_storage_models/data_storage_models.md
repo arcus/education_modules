@@ -2,8 +2,8 @@
 module_id: data_storage_models
 author:   Nicole Feldman
 email:    feldmanna@chop.edu
-version: 1.1.5
-current_version_description: Updated quiz questions and metadata.
+version: 1.1.6
+current_version_description: Updated quiz questions and metadata; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -43,7 +43,7 @@ coding_required: false
 @end
 
 @version_history 
-[1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/7bbdf70c88a08b47a3740d2facf84b5ecdea57c6/data_storage_models/data_storage_models.md): Initial Version.
+[1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/7bbdf70c88a08b47a3740d2facf84b5ecdea57c6/data_storage_models/data_storage_models.md#1): Initial Version.
 @end
 
 

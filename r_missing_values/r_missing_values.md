@@ -2,8 +2,8 @@
 module_id: r_missing_values
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.3
-current_version_description: Update with metadata, macros.  Remove reference to Binderhub.
+version: 1.2.4
+current_version_description: Update with metadata, macros.  Remove reference to Binderhub; make liascript link(s) point to first page
 module_type: standard
 docs_version: 1.0.0
 language: en
@@ -20,7 +20,7 @@ estimated_time_in_minutes: 45
 @pre_reqs
 
 This module assumes familiarity with R basics, including using dplyr tools to do basic transformation including choosing only certain columns or rows of a data frame and changing or adding columns.  
-If you need to learn these basics, we suggest our [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) module and our [R Basics: Transform Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md) module.
+If you need to learn these basics, we suggest our [R Basics: Introduction](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#1) module and our [R Basics: Transform Data](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#1) module.
 
 This module also uses several R functions as examples to demonstrate how missing values work across a variety of settings, but it's fine if you don't have any experience with the example functions used.
 When example functions for plotting or statistical tests appear in the module, there will be links provided for you to learn more about those functions if you're curious about them, but it's also fine to ignore that and just focus on how the missing values are handled.   
