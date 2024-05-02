@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  4.0.1
-current_version_description: Added module\_id as required frontmatter field for all modules
+version:  4.0.2
+current_version_description: Added module\_id as required frontmatter field for all modules; make liascript link(s) point to first page
 language: en
 narrator: UK English Female
 title: DART LiaScript docs
