@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  2.0.0
-current_version_description: Added Pyodide macros and lesson prep
+version:  2.0.1
+current_version_description: Added Pyodide macros and lesson prep; make liascript link(s) point to first page
 language: en
 narrator: UK English Female
 title: Python Module Macros

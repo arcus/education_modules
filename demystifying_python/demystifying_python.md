@@ -2,8 +2,8 @@
 module_id: demystifying_python
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.2.6
-current_version_description: Updated highlight boxes and metadata
+version: 1.2.7
+current_version_description: Updated highlight boxes and metadata; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en

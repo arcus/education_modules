@@ -2,8 +2,8 @@
 module_id: demystifying_command_line
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.1
-current_version_description: Add link to Demystifying APIs
+version:  1.0.2
+current_version_description: Add link to Demystifying APIs; make liascript link(s) point to first page
 module_type: standard
 docs_version: 4.0.0
 language: en

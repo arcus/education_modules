@@ -2,8 +2,8 @@
 module_id: data_visualization_in_seaborn
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.4.0
-current_version_description: Add Python Basics series and Transform data with pandas as additional prerequisites
+version: 1.4.1
+current_version_description: Add Python Basics series and Transform data with pandas as additional prerequisites; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
 language: en

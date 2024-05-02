@@ -2,8 +2,8 @@
 module_id: bash_command_line_101
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version: 1.5.5
-current_version_description: Updated metadata and macros
+version: 1.5.6
+current_version_description: Updated metadata and macros; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en

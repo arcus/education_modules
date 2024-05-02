@@ -2,8 +2,8 @@
 module_id: data_management_basics
 author:   Ene Belleh
 email:    bellehe@chop.edu
-version: 1.1.4
-current_version_description: Fixed mermaidchart error that was causing diagram to not render; updated metadata
+version: 1.1.5
+current_version_description: Fixed mermaidchart error that was causing diagram to not render; updated metadata; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
 language: en

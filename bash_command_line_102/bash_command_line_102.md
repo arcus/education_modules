@@ -2,8 +2,8 @@
 module_id: bash_command_line_102
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
-version: 1.3.2
-current_version_description: Add emphasis about the permanence of `rm`
+version: 1.3.3
+current_version_description: Add emphasis about the permanence of `rm`; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
 language: en

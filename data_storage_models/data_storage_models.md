@@ -2,8 +2,8 @@
 module_id: data_storage_models
 author:   Nicole Feldman
 email:    feldmanna@chop.edu
-version: 1.1.5
-current_version_description: Updated quiz questions and metadata.
+version: 1.1.6
+current_version_description: Updated quiz questions and metadata; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en

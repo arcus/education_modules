@@ -2,8 +2,8 @@
 module_id: bash_scripts
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.3.3
-current_version_description: Added webinar links to additional resources
+version: 1.3.4
+current_version_description: Added webinar links to additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en

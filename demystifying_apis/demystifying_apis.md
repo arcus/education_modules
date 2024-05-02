@@ -2,8 +2,8 @@
 module_id: demystifying_api
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
-current_version_description: Initial version
+version:  1.0.1
+current_version_description: Initial version; make liascript link(s) point to first page
 module_type: standard
 docs_version: 4.0.0
 language: en

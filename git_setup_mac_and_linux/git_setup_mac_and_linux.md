@@ -2,8 +2,8 @@
 module_id: git_setup_mac_and_linux
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.4
-current_version_description: Updated metadata to latest standards
+version: 1.2.5
+current_version_description: Updated metadata to latest standards; make liascript link(s) point to first page
 module_type: standard
 docs_version: 4.0.0
 language: en

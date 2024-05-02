@@ -2,8 +2,8 @@
 module_id: python_practice
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.5
-current_version_description: Initial version with updated links and metadata
+version: 1.0.6
+current_version_description: Initial version with updated links and metadata; make liascript link(s) point to first page
 module_type: exercise
 docs_version: 1.2.0
 language: en

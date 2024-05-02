@@ -2,8 +2,8 @@
 module_id: r_summary_stats
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.5
-current_version_description: Initial version
+version:  1.0.6
+current_version_description: Initial version; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en

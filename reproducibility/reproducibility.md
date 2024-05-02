@@ -2,8 +2,8 @@
 module_id: reproducibility
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.6.1
-current_version_description: Added new learn-more box linking to Demystifying Containers module and corrected some metadata issues
+version: 1.6.2
+current_version_description: Added new learn-more box linking to Demystifying Containers module and corrected some metadata issues; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
 language: en

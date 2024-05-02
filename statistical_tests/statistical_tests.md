@@ -2,8 +2,8 @@
 module_id: statistical_tests
 author: Rose Hartman
 email: hartmanr1@chop.edu
-version: 1.3.7
-current_version_description: Highlight box update, fix typos, front matter update, add some additional resources.
+version: 1.3.8
+current_version_description: Highlight box update, fix typos, front matter update, add some additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en

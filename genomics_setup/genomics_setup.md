@@ -2,8 +2,8 @@
 module_id: genomics_setup
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.2.2
-current_version_description: Updated link to the Data Carpentries instructions, which changed after an update to their website. 
+version:  1.2.3
+current_version_description: Updated link to the Data Carpentries instructions, which changed after an update to their website; make liascript link(s) point to first page
 module_type: wrapper
 docs_version: 2.0.0
 language: en

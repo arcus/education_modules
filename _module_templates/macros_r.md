@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.3.0
-current_version_description: Add instructions for avoiding the use of git if desired
+version:  1.3.1
+current_version_description: Add instructions for avoiding the use of git if desired; make liascript link(s) point to first page
 language: en
 narrator: UK English Female
 title: R Module Macros

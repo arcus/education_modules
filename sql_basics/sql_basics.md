@@ -2,8 +2,8 @@
 module_id: sql_basics
 author: Peter Camacho; Joy Payton
 email: camachop@chop.edu; paytonk@chop.edu
-version: 1.3.0
-current_version_description: Add three new additional resources
+version: 1.3.1
+current_version_description: Add three new additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
 language: en

@@ -2,8 +2,8 @@
 module_id: docker_101
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.4
-current_version_description: Updated description and prerequisites to make it clearer that this is not a module for beginners; added troubleshooting box about creating a file with no extension. 
+version:  1.1.5
+current_version_description: Updated description and prerequisites to make it clearer that this is not a module for beginners; added troubleshooting box about creating a file with no extension; make liascript link(s) point to first page
 module_type: wrapper
 docs_version: 1.0.0
 language: en

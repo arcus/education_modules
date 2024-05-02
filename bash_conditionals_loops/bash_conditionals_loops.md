@@ -2,8 +2,8 @@
 module_id: bash_conditionals_loops
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.5
-current_version_description: Clarify `=` and `==` inside test functions
+version: 1.2.6
+current_version_description: Clarify `=` and `==` inside test functions; make liascript link(s) point to first page
 module_type: standard
 docs_version: 1.2.1
 language: en

@@ -2,8 +2,8 @@
 module_id: sql_joins
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.2.0
-current_version_description: Add three new additional resources
+version: 1.2.1
+current_version_description: Add three new additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en
