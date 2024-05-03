@@ -2,7 +2,7 @@
 module_id: reproducibility
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.6.2
+version: 1.6.3
 current_version_description: Added new learn-more box linking to Demystifying Containers module and corrected some metadata issues
 module_type: standard
 docs_version: 3.0.0

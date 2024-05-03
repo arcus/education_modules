@@ -2,7 +2,7 @@
 module_id: sql_basics
 author: Peter Camacho; Joy Payton
 email: camachop@chop.edu; paytonk@chop.edu
-version: 1.3.1
+version: 1.3.2
 current_version_description: Add three new additional resources
 module_type: standard
 docs_version: 3.0.0

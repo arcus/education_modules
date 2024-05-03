@@ -2,7 +2,7 @@
 module_id: learning_to_learn
 author:   Rose Franzen
 email:    franzenr@chop.edu
-version: 1.1.3
+version: 1.1.4
 current_version_description: Updated metadata, removed linked cartoon that was behind a paywall, changed quiz question from open text to multiple choice.
 module_type: standard
 docs_version: 2.0.0

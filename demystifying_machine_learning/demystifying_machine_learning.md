@@ -2,7 +2,7 @@
 module_id: demystifying_machine_learning
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.2
+version:  1.1.3
 current_version_description: Added some new linked resources in learn-more boxes
 module_type: standard
 docs_version: 3.0.0

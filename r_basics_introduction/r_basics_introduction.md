@@ -2,7 +2,7 @@
 module_id: r_basics_introduction
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.4.3
+version: 1.4.4
 current_version_description: Added subsection explaining how to add new code chunks
 module_type: standard
 docs_version: 3.0.0

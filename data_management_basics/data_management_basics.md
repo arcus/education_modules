@@ -2,7 +2,7 @@
 module_id: data_management_basics
 author:   Ene Belleh
 email:    bellehe@chop.edu
-version: 1.1.5
+version: 1.1.6
 current_version_description: Fixed mermaidchart error that was causing diagram to not render; updated metadata
 module_type: standard
 docs_version: 3.0.0

@@ -2,7 +2,7 @@
 module_id: data_visualization_in_seaborn
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.4.1
+version: 1.4.2
 current_version_description: Add Python Basics series and Transform data with pandas as additional prerequisites
 module_type: standard
 docs_version: 3.0.0

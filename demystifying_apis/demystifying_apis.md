@@ -2,7 +2,7 @@
 module_id: demystifying_api
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.1
+version:  1.0.2
 current_version_description: Initial version
 module_type: standard
 docs_version: 4.0.0
