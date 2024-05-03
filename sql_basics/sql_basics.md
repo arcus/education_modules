@@ -3,7 +3,7 @@ module_id: sql_basics
 author: Peter Camacho; Joy Payton
 email: camachop@chop.edu; paytonk@chop.edu
 version: 1.3.2
-current_version_description: Add three new additional resources
+current_version_description: Add three new additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -15,7 +15,7 @@ long_description: Do you want to learn basic Structured Query Language (SQL) eit
 estimated_time_in_minutes: 60
 
 @pre_reqs
-Experience working with rectangular data (data in rows and columns) is required, as is some exposure to the idea of SQL and its use of tables with rows and columns.  No experience writing SQL code is expected or required for this module.  If you would like a code-free overview to SQL we recommend our module [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md).
+Experience working with rectangular data (data in rows and columns) is required, as is some exposure to the idea of SQL and its use of tables with rows and columns.  No experience writing SQL code is expected or required for this module.  If you would like a code-free overview to SQL we recommend our module [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md#1).
 @end
 
 @learning_objectives  
@@ -75,7 +75,7 @@ Sometimes we'll use the word "column" and sometimes we'll use the word "field". 
 
 SQL is great at working with rectangular data, data that is stored in tables with rows and columns / fields.  Its powerful SELECT - FROM - WHERE syntax makes SQL an ideal tool for isolating just the data you care about, whether that's specifying the columns you're interested in or limiting your data to just those rows that meet certain conditions.  However, it's not great for fine-tuned statistical, linguistic, or data visualization purposes.  SQL is therefore a tool that is often partnered with other tools like R or Python, which are better suited for work like statistical analysis.
 
-If you want to review SQL at a high level, consider our [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md) module.
+If you want to review SQL at a high level, consider our [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md#1) module.
 
 ## Lesson Preparation
 @lesson_prep_sql

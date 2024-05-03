@@ -3,7 +3,7 @@ module_id: git_setup_mac_and_linux
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version: 1.2.6
-current_version_description: Updated metadata to latest standards
+current_version_description: Updated metadata to latest standards; make liascript link(s) point to first page
 module_type: standard
 docs_version: 4.0.0
 language: en
@@ -61,8 +61,8 @@ previous_sequential_module: git_cli_vs_gui
 
 Previous versions: 
 
-- [1.1.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/7c27af1128f6e8d3d9bd842a3df7308adb0cc364/git_setup_mac_and_linux/git_setup_mac_and_linux.md): Removed references to Atom (now sunsetted) and updated highlight box visuals
-- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/466799a081d2cb74d155dc0a26951d3492b81f8c/git_setup_mac_and_linux/git_setup_mac_and_linux.md): Initial version. 
+- [1.1.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/7c27af1128f6e8d3d9bd842a3df7308adb0cc364/git_setup_mac_and_linux/git_setup_mac_and_linux.md#1): Removed references to Atom (now sunsetted) and updated highlight box visuals
+- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/466799a081d2cb74d155dc0a26951d3492b81f8c/git_setup_mac_and_linux/git_setup_mac_and_linux.md#1): Initial version. 
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -78,7 +78,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-Note that this module is written specifically for people working on Mac or Linux computers. If you are using a Windows machine, you should reference [Git Setup for Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md) instead.
+Note that this module is written specifically for people working on Mac or Linux computers. If you are using a Windows machine, you should reference [Git Setup for Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md#1) instead.
 </div>
 
 All of the commands for this lesson should be run in the command line interface (CLI) of your computer.

@@ -91,7 +91,7 @@ To start writing the main file that will make up your module, use one of our [te
 
 Make a copy of the appropriate template and save it within your new folder with an almost identical title to the folder, one that ends in `.md`, like `lasso_and_ridge_ml_in_r.md` or `bayesian_stats_in_python.md`.  
 
-Technical instructions for how to write a module in LiaScript are available in the [DART module docs](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md). The docs includes some boilerplate text to show you how to write in LiaScript flavored markdown (it's pretty similar to other markdown flavors, but with a few things added in), including lots of examples you can copy and paste. It also includes information about important elements needed to meet our requirements for a module, such as including formative assessments.
+Technical instructions for how to write a module in LiaScript are available in the [DART module docs](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md#1). The docs includes some boilerplate text to show you how to write in LiaScript flavored markdown (it's pretty similar to other markdown flavors, but with a few things added in), including lots of examples you can copy and paste. It also includes information about important elements needed to meet our requirements for a module, such as including formative assessments.
 
 Importantly, consider starting to write your module by beginning with the description and learning objectives.  This will help you scope your topic.  Three to five learning objectives are plenty for a module of about one hour's duration.
 

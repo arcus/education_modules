@@ -3,7 +3,7 @@ module_id: reproducibility
 author:   Joy Payton
 email:    paytonk@chop.edu
 version: 1.6.3
-current_version_description: Added new learn-more box linking to Demystifying Containers module and corrected some metadata issues
+current_version_description: Added new learn-more box linking to Demystifying Containers module and corrected some metadata issues; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -46,7 +46,7 @@ coding_required: false
 @version_history
 Previous versions: 
 
-- [1.5.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/16a4a852199689a42f04555cb581cf2dcb90fb0f/reproducibility/reproducibility.md): Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure
+- [1.5.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/16a4a852199689a42f04555cb581cf2dcb90fb0f/reproducibility/reproducibility.md#1): Fixed inaccurate acronym, added links to intro to version control, fixed additional resources structure
 - [1.4.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/2ba39cddbbe6436e18b04ff62f7dfff4406c5880/reproducibility/reproducibility.md#1): Updated quizzes, learner outcomes, highlight boxes
 - [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/bfbada6fa70c3c9ef0d027eb2e450990b7c7fac7/reproducibility/reproducibility.md#1): Update template, remove some CHOP-specific references, 
 
@@ -494,7 +494,7 @@ Dependency management is an approach that makes it easier to determine the preci
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
 The most complete way to manage dependencies is by using **containers**. 
-To get started, check out [Demystifying Containers](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_containers/demystifying_containers.md).
+To get started, check out [Demystifying Containers](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_containers/demystifying_containers.md#1).
 
 </div>
 

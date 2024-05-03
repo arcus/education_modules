@@ -3,7 +3,7 @@ module_id: genomics_quality_control
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version:  1.1.6
-current_version_description: Add explanation about why we use AWS for genomics modules.
+current_version_description: Add explanation about why we use AWS for genomics modules; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -20,7 +20,7 @@ estimated_time_in_minutes: 40
 
 @pre_reqs
 This lesson assumes a working understanding of the bash shell, including the following commands: `ls`, `cd`, `mkdir`, `grep`, `less`, `cat`, `ssh`, `scp`, and `for` loops.
-If you aren’t familiar with the bash shell, please review our [Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module and/or the [Shell Genomics lesson by Data Carpentry](http://www.datacarpentry.org/shell-genomics/) before starting this lesson.
+If you aren’t familiar with the bash shell, please review our [Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) module and/or the [Shell Genomics lesson by Data Carpentry](http://www.datacarpentry.org/shell-genomics/) before starting this lesson.
 
 This lesson also assumes some familiarity with biological concepts (including the structure of DNA, nucleotide abbreviations, and the concept of genomic variation within a population) and genomics (concepts like sequencing). 
 It does not assume any experience with genomics analysis. 

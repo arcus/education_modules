@@ -3,7 +3,7 @@ module_id: r_summary_stats
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version:  1.0.7
-current_version_description: Initial version
+current_version_description: Initial version; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -30,10 +30,10 @@ Minimal experience of using the RStudio IDE and writing R code (specifically, wi
 This module also assumes some basic familiarity with R, including
 
 - [installing and loading packages](https://r4ds.had.co.nz/data-visualisation.html#prerequisites-1)
-- manipulating data frames, including [selecting columns and calculating new columns](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md)
+- manipulating data frames, including [selecting columns and calculating new columns](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_transform_data/r_basics_transform_data.md#1)
 - the difference between [numeric (continuous) and factor (categorical) variables](https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures) in a dataframe
 
-If you are brand new to R (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) first.
+If you are brand new to R (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#1) first.
 @end
 
 @learning_objectives  

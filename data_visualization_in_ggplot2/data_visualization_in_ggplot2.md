@@ -3,7 +3,7 @@ module_id: data_visualization_in_ggplot2
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version: 1.4.9
-current_version_description: Updated with new metadata and to remove references to Binderhub
+current_version_description: Updated with new metadata and to remove references to Binderhub; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -18,16 +18,16 @@ r_file: data\_visualization\_in\_ggplot2
 
 @pre_reqs
 
-This module assumes some familiarity with principles of data visualizations as applied in the ggplot2 library. If you've used ggplot2 (or python's seaborn) a little already and are just looking to extend your skills, this module should be right for you. If you are brand new to ggplot2 and seaborn, start with the overview of [data visualizations in open source software](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md) first, and then come back here.
+This module assumes some familiarity with principles of data visualizations as applied in the ggplot2 library. If you've used ggplot2 (or python's seaborn) a little already and are just looking to extend your skills, this module should be right for you. If you are brand new to ggplot2 and seaborn, start with the overview of [data visualizations in open source software](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_open_source_software/data_visualization_in_open_source_software.md#1) first, and then come back here.
 
 This module also assumes some basic familiarity with R, including
 
 - [installing and loading packages](https://r4ds.had.co.nz/data-visualisation.html#prerequisites-1)
 - [reading in data](https://r4ds.had.co.nz/data-import.html)
 - manipulating data frames, including [calculating new columns](https://r4ds.had.co.nz/transform.html#add-new-variables-with-mutate), and [pivoting from wide format to long](https://r4ds.had.co.nz/tidy-data.html#longer)
-- some [statistical tests](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md), especially linear regression
+- some [statistical tests](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/statistical_tests/statistical_tests.md#1), especially linear regression
 
-If you are brand new to R (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md) first.
+If you are brand new to R (or want a refresher) consider starting with [Intro to R](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/r_basics_introduction/r_basics_introduction.md#1) first.
 
 @end
 
@@ -927,7 +927,7 @@ For an excellent quick reference, see the [ggplot2 cheatsheet](https://ggplot2.t
 
 For more detail on controlling color in ggplot2, refer to the [ggplot2 book](https://ggplot2-book.org/scale-colour.html), available for free online.
 
-To learn how to make plots in python using seaborn, see [data visualization in seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md).
+To learn how to make plots in python using seaborn, see [data visualization in seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1).
 
 ## Feedback
 

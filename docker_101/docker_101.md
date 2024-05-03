@@ -3,7 +3,7 @@ module_id: docker_101
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
 version:  1.1.6
-current_version_description: Updated description and prerequisites to make it clearer that this is not a module for beginners; added troubleshooting box about creating a file with no extension. 
+current_version_description: Updated description and prerequisites to make it clearer that this is not a module for beginners; added troubleshooting box about creating a file with no extension; make liascript link(s) point to first page
 module_type: wrapper
 docs_version: 1.0.0
 language: en
@@ -91,7 +91,7 @@ coding_language: bash
 @version_history
 Previous versions: 
 
-- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/docker_101/docker_101.md):  Initial version
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/docker_101/docker_101.md#1):  Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -115,7 +115,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 This is a hands-on module, and it jumps right into how to use Docker without much preamble. 
 
-If you'd prefer a more high-level overview of what containers are and when they're useful, check out our module on [Demystifying Containers](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_containers/demystifying_containers.md).
+If you'd prefer a more high-level overview of what containers are and when they're useful, check out our module on [Demystifying Containers](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_containers/demystifying_containers.md#1).
 
 </div>
 

@@ -3,7 +3,7 @@ module_id: bash_command_line_102
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
 version: 1.3.4
-current_version_description: Add emphasis about the permanence of `rm`
+current_version_description: Add emphasis about the permanence of `rm`; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -55,9 +55,9 @@ previous_sequential_module: bash_command_line_101
 @end
 
 @version_history
-- [1.2.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/bash_command_line_102/bash_command_line_102.md): Updated module metadata
-- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_command_line_102/bash_command_line_102.md) Improved Lesson Preparation instructions
-- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/738a57ce41189c219ae9288bed4fbde834bb46d4/bash_command_line_102/bash_command_line_102.md) Initial version
+- [1.2.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/bash_command_line_102/bash_command_line_102.md#1): Updated module metadata
+- [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_command_line_102/bash_command_line_102.md#1) Improved Lesson Preparation instructions
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/738a57ce41189c219ae9288bed4fbde834bb46d4/bash_command_line_102/bash_command_line_102.md#1) Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md

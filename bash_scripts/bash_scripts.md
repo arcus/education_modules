@@ -3,7 +3,7 @@ module_id: bash_scripts
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
 version: 1.3.5
-current_version_description: Added webinar links to additional resources
+current_version_description: Added webinar links to additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -60,7 +60,7 @@ previous_sequential_module: bash_conditionals_loops
 Previous versions: 
 
 - [1.2.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/bash_scripts/bash_scripts.md#1): Updated metadata and macros
-- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/bash_scripts/bash_scripts.md): Improved instructions for downloading learning_bash repository.
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/bash_scripts/bash_scripts.md#1): Improved instructions for downloading learning_bash repository.
 - [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/): Initial version.
 @end
 

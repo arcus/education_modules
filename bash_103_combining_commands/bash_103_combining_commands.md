@@ -3,7 +3,7 @@ module_id: bash_103_combining_commands
 author:   Elizabeth Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
 version: 1.4.5
-current_version_description: Added webinar links to additional resources
+current_version_description: Added webinar links to additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -15,9 +15,9 @@ long_description: This module is for learners who can use some basic Bash comman
 estimated_time_in_minutes: 30
 
 @pre_reqs
-Learners should be familiar with using a bash shell and [navigating a file system from the command line and look at the contents of a file](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md).
+Learners should be familiar with using a bash shell and [navigating a file system from the command line and look at the contents of a file](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1).
 
-The only commands that will be assumed are the navigation commands `cd`, `ls`, and `pwd` and `cat`, all of which are explained in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md) module.
+The only commands that will be assumed are the navigation commands `cd`, `ls`, and `pwd` and `cat`, all of which are explained in the [Bash / Command Line 101](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1) module.
 @end
 
 @learning_objectives
@@ -50,9 +50,9 @@ previous_sequential_module: bash_command_line_102
 Previous versions: 
 
 - [1.3.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/bash_103_combining_commands/bash_103_combining_commands.md#1): Restructured learning objectives.
-- [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/8e01732bc52d86e63c28ee8ef7abaed2c003cb3f/bash_103_combining_commands/bash_103_combining_commands.md): Corrected quiz answer
-- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ed49367f50018e9c32c206d30047cee5d4e24a92/bash_103_combining_commands/bash_103_combining_commands.md): Updated highlight boxes and clarified instructions
-- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_103_combining_commands/bash_103_combining_commands.md): Initial Version 
+- [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/8e01732bc52d86e63c28ee8ef7abaed2c003cb3f/bash_103_combining_commands/bash_103_combining_commands.md#1): Corrected quiz answer
+- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ed49367f50018e9c32c206d30047cee5d4e24a92/bash_103_combining_commands/bash_103_combining_commands.md#1): Updated highlight boxes and clarified instructions
+- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_103_combining_commands/bash_103_combining_commands.md#1): Initial Version 
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -201,7 +201,7 @@ We will use this command more in combination with some other commands, but in a 
 
 ### Writing output to a file
 
-If you did the [Bash / Command Line 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md), you have already written the output of one command, `echo` to a file. Now we are going to see how the same principles work with these new commands.
+If you did the [Bash / Command Line 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#1), you have already written the output of one command, `echo` to a file. Now we are going to see how the same principles work with these new commands.
 
 The commands we just saw give us information and insight through their outputs, but that output isn't actually preserved anywhere. If we want to see it again, or use it for something later without re-running the command, we need to save that output in a file. This process is called "writing output to a file" or "redirecting output to a file" because instead of the output being shown to us in the command line interface, it is instead going to be written and saved to the file we name.
 
@@ -384,7 +384,7 @@ This gives us the single numeric output `5`; there are five lines corresponding 
 
 What if we want to know which animal has the shortest scientific name? This also becomes a three step process:
 
-1. Count the characters in each `.txt` file with `wc -m *.txt`. For further explanation of how `*.txt` calls all of the `.txt.` files, see the [lesson on searching and organizing files](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_102/bash_command_line_102.md).
+1. Count the characters in each `.txt` file with `wc -m *.txt`. For further explanation of how `*.txt` calls all of the `.txt.` files, see the [lesson on searching and organizing files](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_102/bash_command_line_102.md#1).
 2. Sort the output by number with `sort -n`.
 3. Output the first line with `head -1`.
 

@@ -3,7 +3,7 @@ module_id: bash_command_line_101
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
 version: 1.5.7
-current_version_description: Updated metadata and macros
+current_version_description: Updated metadata and macros; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -46,9 +46,9 @@ sequence_name: bash_basics
 
 Previous versions: 
 
-- [1.4.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/bash_command_line_101/bash_command_line_101.md): Added less command and expanded on man and --help
-- [1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ba1dba7a4c1d4393ae8b42346fe5c69d587b8ee6/bash_command_line_101/bash_command_line_101.md): Removed references to sunsetted text editor Atom
-- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/466799a081d2cb74d155dc0a26951d3492b81f8c/bash_command_line_101/bash_command_line_101.md): Fixed quiz answer boxes
+- [1.4.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/bash_command_line_101/bash_command_line_101.md#1): Added less command and expanded on man and --help
+- [1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ba1dba7a4c1d4393ae8b42346fe5c69d587b8ee6/bash_command_line_101/bash_command_line_101.md#1): Removed references to sunsetted text editor Atom
+- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/466799a081d2cb74d155dc0a26951d3492b81f8c/bash_command_line_101/bash_command_line_101.md#1): Fixed quiz answer boxes
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
