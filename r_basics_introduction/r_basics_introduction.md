@@ -2,7 +2,7 @@
 module_id: r_basics_introduction
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.4.3
+version: 1.4.4
 current_version_description: Added subsection explaining how to add new code chunks; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
@@ -17,7 +17,7 @@ estimated_time_in_minutes: 60
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Define and differentiate "R", "RStudio", and "R Markdown"
 - Install and load packages in R

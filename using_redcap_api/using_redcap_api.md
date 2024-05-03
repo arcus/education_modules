@@ -2,7 +2,7 @@
 module_id: using_redcap_api
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 2.0.3
+version: 2.0.4
 current_version_description: Adds instructions for avoiding pushing API token to GitHub, adds information about environment variables, updates highlight boxes, and clarifies text editors
 module_type: standard 
 docs_version: 3.0.0
@@ -22,7 +22,7 @@ This module assumes that learners already have access to the REDCap application 
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Define what an API is and why it's useful to researchers
 - Enable API usage on REDCap projects

@@ -2,7 +2,7 @@
 module_id: elements_of_maps
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.5
+version: 1.0.6
 current_version_description: Initial version.
 module_type: standard
 docs_version: 2.0.0
@@ -21,7 +21,7 @@ Some familiarity with latitude and longitude is required to get the most out of 
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - recognize the elements of maps
 - describe types of maps that focus on particular elements.

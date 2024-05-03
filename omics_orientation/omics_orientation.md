@@ -2,7 +2,7 @@
 module_id: omics_orientation
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.1.5
+version: 1.1.6
 current_version_description: Update formatting for highlight boxes, fix typos, update front matter.
 module_type: standard
 docs_version: 2.0.0
@@ -19,8 +19,6 @@ None.
 @end
 
 @learning_objectives
-After completion of this module, learners will be able to:
-
 - Define what omics is and explain why a researcher might choose an omics approach
 - Identify several popular omics domains
 - Describe some challenges and caveats of omics research

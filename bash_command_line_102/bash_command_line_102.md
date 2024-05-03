@@ -2,7 +2,7 @@
 module_id: bash_command_line_102
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
-version: 1.3.3
+version: 1.3.4
 current_version_description: Add emphasis about the permanence of `rm`; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
@@ -19,8 +19,6 @@ Learners should be familiar with using a bash shell to navigate a directory syst
 @end
 
 @learning_objectives
-After completion of this module, learners will be able to:
-
 - Search existing files for particular character strings.
 - Search folders for files with certain titles.
 - Move files to new locations in a directory system.

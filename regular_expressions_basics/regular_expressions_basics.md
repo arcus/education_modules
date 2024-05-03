@@ -2,7 +2,7 @@
 module_id: regular_expressions_basics
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.2
+version:  1.0.3
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
@@ -24,7 +24,7 @@ Learners should have some knowledge about patterns in biomedical data and unders
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Define a simple alphanumeric pattern in regex notation
 - List common ranges and character groups in regex

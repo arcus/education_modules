@@ -2,7 +2,7 @@
 module_id: data_storage_models
 author:   Nicole Feldman
 email:    feldmanna@chop.edu
-version: 1.1.6
+version: 1.1.7
 current_version_description: Updated quiz questions and metadata; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -19,8 +19,6 @@ None, this module is intended for all end users regardless of their technical sk
 @end
 
 @learning_objectives
-
-After completion of this module, learners will be able to:
 
 - Identify and describe different data storage solutions
 - Understand the benefits and the limitations of each covered storage solution

@@ -2,7 +2,7 @@
 module_id: sql_intermediate
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.4.1
+version: 1.4.2
 current_version_description: Add three new additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -23,7 +23,7 @@ Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Create new data classifications using `CASE` statements
 - Find text that matches a given pattern using `LIKE` statements

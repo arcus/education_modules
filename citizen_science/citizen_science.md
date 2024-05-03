@@ -2,7 +2,7 @@
 module_id: citizen_science
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.0.5
+version: 1.0.6
 current_version_description: Initial version.
 module_type: standard
 docs_version: 1.0.0
@@ -24,7 +24,7 @@ None.
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - list several ways members of the public can contribute to scientific projects
 - recognize several different factors that motivate people to volunteer in citizen science

@@ -2,7 +2,7 @@
 module_id: python_basics_lists_dictionaries
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Replaced SageMathCells with Pyodide cells for better usability.
 module_type: standard
 docs_version: 3.0.0
@@ -23,7 +23,6 @@ Learners should be able to recognize functions, methods, and variables in Python
 @end
 
 @learning_objectives
-After completion of this module, learners will be able to:
 
 - Create and edit lists
 - Create and edit dictionaries

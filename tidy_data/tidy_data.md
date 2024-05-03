@@ -2,7 +2,7 @@
 module_id: tidy_data
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.1.7
+version: 1.1.8
 current_version_description: Updated highlight boxes
 module_type: standard
 docs_version: 3.0.0
@@ -21,7 +21,7 @@ Experience working with rectangular data (data in rows and columns) will be help
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Describe the three characteristics of tidy data
 - Describe how messy data could be transformed into tidy data

@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.4.0
+version:  1.4.1
 current_version_description: Add text after Overview and Feedback that invites learners to the rest of the modules
 language: en
 narrator: UK English Female
@@ -34,6 +34,8 @@ Previous versions:
 @pre_reqs
 
 **Learning Objectives**
+
+After completion of this module, learners will be able to:
 
 @learning_objectives
 
@@ -70,6 +72,8 @@ send.html(`<a href="${surveyURL}")">our brief survey</a>`)
 In the beginning, we stated some goals.
 
 **Learning Objectives:**
+
+After completion of this module, learners will be able to:
 
 @learning_objectives
 

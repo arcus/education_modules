@@ -2,7 +2,7 @@
 module_id: geocode_lat_long
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.4
+version: 1.0.5
 current_version_description: Initial Version
 module_type: standard
 docs_version: 2.0.0
@@ -20,7 +20,7 @@ None
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Understand the importance of geocoding addresses
 - Understand the latitude and longitude coordinate system

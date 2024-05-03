@@ -2,7 +2,7 @@
 module_id: genomics_setup
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.2.3
+version:  1.2.4
 current_version_description: Updated link to the Data Carpentries instructions, which changed after an update to their website; make liascript link(s) point to first page
 module_type: wrapper
 docs_version: 2.0.0
@@ -25,7 +25,7 @@ If you aren’t familiar with the bash shell, please review our [Demystifying th
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Launch and terminate instances on AWS
 - Use the Data Carpentry Community AMI to set up an AMI set up for genomics analysis

@@ -2,7 +2,7 @@
 module_id: regular_expressions_lookaheads
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.4
+version:  1.0.5
 current_version_description: Initial version; make liascript link(s) point to first page
 module_type: standard
 docs_version: 1.0.0
@@ -23,7 +23,7 @@ Learners should have some experience composing and using simple regular expressi
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Explain the difference between "moving" ahead and "looking" ahead in regular expression parsing
 - Explain why a "lookahead" can be useful in a regular expression

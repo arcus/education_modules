@@ -2,7 +2,7 @@
 module_id: regular_expressions_boundaries_anchors
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.3
+version:  1.0.4
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
@@ -23,7 +23,7 @@ Learners should have some experience composing and using moderately complex regu
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Explain what a regular expression flag does
 - Use anchors and boundaries in regular expressions

@@ -2,7 +2,7 @@
 module_id: demystifying_geospatial_data
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Improve hyperlink accessibility
 module_type: standard
 docs_version: 1.2.0
@@ -24,7 +24,7 @@ No prior knowledge or experience of geospatial data is required.
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Define geospatial data
 - Describe some of the benefits of using geospatial data

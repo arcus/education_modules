@@ -2,7 +2,7 @@
 module_id: genomics_quality_control
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.5
+version:  1.1.6
 current_version_description: Add explanation about why we use AWS for genomics modules; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -27,7 +27,7 @@ It does not assume any experience with genomics analysis.
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Explain how a FASTQ file encodes per-base quality scores.
 - Interpret a FastQC plot summarizing per-base quality across all reads.

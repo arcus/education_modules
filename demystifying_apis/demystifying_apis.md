@@ -2,7 +2,7 @@
 module_id: demystifying_api
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.1
+version:  1.0.2
 current_version_description: Initial version; make liascript link(s) point to first page
 module_type: standard
 docs_version: 4.0.0
@@ -19,7 +19,7 @@ No particular skills or experience are required for this module.
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Define the term *application programming interface* (API)
 - Explain why APIs can be useful to biomedical researchers

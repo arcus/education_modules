@@ -2,7 +2,7 @@
 module_id: data_management_basics
 author:   Ene Belleh
 email:    bellehe@chop.edu
-version: 1.1.5
+version: 1.1.6
 current_version_description: Fixed mermaidchart error that was causing diagram to not render; updated metadata; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
@@ -19,7 +19,7 @@ The only pre-requisite suggested for this module is experience working in resear
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Define research data management
 - Explain why data management forms an important part of the responsible conduct of research

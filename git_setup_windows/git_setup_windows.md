@@ -2,7 +2,7 @@
 module_id: git_setup_windows
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.5
+version: 1.2.6
 current_version_description: Updated metadata to latest standards; make liascript link(s) point to first page
 module_type: standard
 docs_version: 4.0.0
@@ -25,7 +25,7 @@ estimated_time_in_minutes: 25
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Configure `git` the first time it is used on a computer
 - Understand the meaning of the `--global` configuration flag

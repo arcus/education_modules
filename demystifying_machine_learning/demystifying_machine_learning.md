@@ -2,7 +2,7 @@
 module_id: demystifying_machine_learning
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.2
+version:  1.1.3
 current_version_description: Added some new linked resources in learn-more boxes; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
@@ -27,7 +27,7 @@ There are no coding exercises, and no programming experience is required.
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - list at least three potential applications of machine learning in biomedical science
 - describe three different statistical problems models can address and how they differ (e.g. prediction, anomaly detection, clustering, dimension reduction)

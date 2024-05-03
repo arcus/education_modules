@@ -2,7 +2,7 @@
 module_id: demystifying_sql
 author:   Peter Camacho; Joy Payton
 email:    camachop@chop.edu
-version: 1.2.4
+version: 1.2.5
 current_version_description: Update authorship, correct typo, add metadata; make liascript link(s) point to first page
 docs_version: 2.0.0
 module_type: standard
@@ -21,7 +21,7 @@ Experience working with rectangular data (data in rows and columns) will be help
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Define the acronym "SQL"
 - Explain the basic organization of data in relational databases

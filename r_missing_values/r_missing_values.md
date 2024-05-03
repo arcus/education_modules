@@ -2,7 +2,7 @@
 module_id: r_missing_values
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.4
+version: 1.2.5
 current_version_description: Update with metadata, macros.  Remove reference to Binderhub; make liascript link(s) point to first page
 module_type: standard
 docs_version: 1.0.0
@@ -29,7 +29,7 @@ When example functions for plotting or statistical tests appear in the module, t
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - check the number and location of missing values in a dataframe
 - mark values as missing

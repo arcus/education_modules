@@ -2,7 +2,7 @@
 module_id: git_creation_and_tracking
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.3
+version: 1.1.4
 current_version_description: Add formal definition of repository and commit; make liascript link(s) point to first page
 module_type: standard
 docs_version: 4.0.0
@@ -24,8 +24,6 @@ Before you start this module, make sure you
 @end
 
 @learning_objectives
-
-After completion of this module, learners will be able to:
 
 - Create a Git repository
 - Add and make changes to files in the repository

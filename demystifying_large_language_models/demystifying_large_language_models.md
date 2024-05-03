@@ -2,7 +2,7 @@
 module_id: demystifying_large_language_models
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.5
+version:  1.0.6
 current_version_description: Initial version
 module_type: standard
 docs_version: 2.0.0
@@ -23,7 +23,7 @@ None.
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Define "large language model" (LLM) 
 - Give a brief description of n-grams and word vectors

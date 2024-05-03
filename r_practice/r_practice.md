@@ -2,7 +2,7 @@
 module_id: r_practice
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.7
+version: 1.0.8
 current_version_description: Initial version, updated front matter; make liascript link(s) point to first page
 module_type: exercise
 docs_version: 2.0.0
@@ -19,8 +19,6 @@ Learners should be familiar with [the basics of R coding](https://liascript.gith
 @end
 
 @learning_objectives
-After completion of this module, learners will be able to:
-
 - Import a dataset from an online database
 - Recode data and change variable types in a dataframe
 - Use exploratory data visualization to identify trends in data and generate hypotheses

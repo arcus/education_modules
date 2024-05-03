@@ -2,7 +2,7 @@
 module_id: statistical_tests
 author: Rose Hartman
 email: hartmanr1@chop.edu
-version: 1.3.8
+version: 1.3.9
 current_version_description: Highlight box update, fix typos, front matter update, add some additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -22,7 +22,7 @@ estimated_time_in_minutes: 20
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Use four key questions to help determine which statistical tests will be most appropriate in a given situation
 - Discuss general differences between running statistical tests in R vs. python

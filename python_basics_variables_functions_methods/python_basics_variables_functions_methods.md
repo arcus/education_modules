@@ -2,7 +2,7 @@
 module_id: python_basics_variables_functions_methods
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.1.2
+version: 1.1.3
 current_version_description: Implemented code blocks in pyodide; make liascript link(s) point to first page
 module_type: standard
 docs_version: 1.2.0
@@ -23,7 +23,6 @@ Learners should be familiar with [Python as a programming language](https://lias
 @end
 
 @learning_objectives
-After completion of this module, learners will be able to:
 
 - Assign values to variables
 - Identify and use functions 

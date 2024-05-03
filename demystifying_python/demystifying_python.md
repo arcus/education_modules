@@ -2,7 +2,7 @@
 module_id: demystifying_python
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.2.7
+version: 1.2.8
 current_version_description: Updated highlight boxes and metadata; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -20,7 +20,7 @@ Learners should be familiar with tabular data (data stored in a rectangular form
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Describe what Python is and why they might want to use it for research
 - Identify several ways to write Python code

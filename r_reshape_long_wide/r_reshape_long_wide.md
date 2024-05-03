@@ -2,7 +2,7 @@
 module_id: r_reshape_long_wide
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.2.5
+version: 1.2.6
 current_version_description: Update highlight boxes, update metadata, and replace text with macros; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -25,7 +25,7 @@ This module assumes familiarity with R basics, including ingesting .csv data and
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Define and differentiate "long data" and "wide data"
 - Use tidyr and dplyr tools to reshape data effectively

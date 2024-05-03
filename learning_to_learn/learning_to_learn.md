@@ -2,7 +2,7 @@
 module_id: learning_to_learn
 author:   Rose Franzen
 email:    franzenr@chop.edu
-version: 1.1.3
+version: 1.1.4
 current_version_description: Updated metadata, removed linked cartoon that was behind a paywall, changed quiz question from open text to multiple choice; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -19,7 +19,7 @@ This module is appropriate for anyone who is interested in continuing to learn d
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - recognize ways in which learning data science and coding may be different than other educational experiences
 - identify ways to extend their learning beyond module content

@@ -2,7 +2,7 @@
 module_id: r_basics_transform_data
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.4.0
+version: 1.4.1
 current_version_description: Improved boolean logic, pipe, and filter materials
 module_type: standard
 docs_version: 3.1.2
@@ -28,7 +28,7 @@ Minimal experience of using the RStudio IDE and writing R code (specifically, wi
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Write R code that uses the `dplyr` package to select only desired columns from a data frame
 - Write R code that uses the `dplyr` package to filter only rows that meet a certain condition from a data frame

@@ -2,7 +2,7 @@
 module_id: python_practice
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.0.6
+version: 1.0.7
 current_version_description: Initial version with updated links and metadata; make liascript link(s) point to first page
 module_type: exercise
 docs_version: 1.2.0
@@ -19,8 +19,6 @@ Learners should be familiar with the basics of Python coding, including [functio
 @end
 
 @learning_objectives
-
-After completion of this module, learners will be able to:
 
 - Import a dataset from an online database
 - Recode data and change variable types in a dataframe

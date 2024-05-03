@@ -2,7 +2,7 @@
 module_id: sql_basics
 author: Peter Camacho; Joy Payton
 email: camachop@chop.edu; paytonk@chop.edu
-version: 1.3.1
+version: 1.3.2
 current_version_description: Add three new additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
@@ -19,7 +19,7 @@ Experience working with rectangular data (data in rows and columns) is required,
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Use SELECT, FROM, and WHERE to do a basic query on a SQL table
 - Use IS NULL and IS NOT NULL operators to work with empty values

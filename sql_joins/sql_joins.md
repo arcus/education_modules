@@ -2,7 +2,7 @@
 module_id: sql_joins
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Add three new additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -34,7 +34,7 @@ previous_sequential_module: sql_intermediate
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Understand the parts of a JOIN
 - Describe the "shapes" of SQL JOINs: inner, left, right, and full

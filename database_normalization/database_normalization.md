@@ -2,7 +2,7 @@
 module_id: database_normalization
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.7
+version: 1.0.8
 current_version_description: Initial Version.
 module_type: standard
 docs_version: 2.0.0
@@ -19,7 +19,7 @@ Learners should have experience working with data in tables.  This could include
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Explain the significance of "one to many" data relationships and how these relationships affect data organization
 - Describe how a normalized database is typically organized

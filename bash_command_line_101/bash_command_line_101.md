@@ -2,7 +2,7 @@
 module_id: bash_command_line_101
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version: 1.5.6
+version: 1.5.7
 current_version_description: Updated metadata and macros; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -21,8 +21,6 @@ Learners should be familiar with [the command line interface](https://liascript.
 @end
 
 @learning_objectives
-After completion of this module, learners will be able to:
-
 - Describe what bash scripting is and why they might want to learn it for data management and research
 - Navigate their file system using the bash shell
 - View and edit the contents of a file from the bash shell

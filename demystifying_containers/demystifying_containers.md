@@ -2,7 +2,7 @@
 module_id: demystifying_containers
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.0.3
+version:  1.0.4
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.0.0
@@ -23,7 +23,7 @@ The module assumes no prior familiarity with containers and requires no coding e
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - understand when it might be useful to use containers for research
 - describe the basic concept of containerization

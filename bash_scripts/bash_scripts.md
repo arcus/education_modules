@@ -2,7 +2,7 @@
 module_id: bash_scripts
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.3.4
+version: 1.3.5
 current_version_description: Added webinar links to additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -28,9 +28,6 @@ Bash commands that will be used without explanation include:
 @end
 
 @learning_objectives
-
-After completion of this module, learners will be able to:
-
 - Identify the structure of a Bash script
 - Run existing Bash scripts
 - Write simple Bash scripts

@@ -2,7 +2,7 @@
 module_id: python_basics_exercise
 author:   Meredith Lee
 email:    leemc@chop.edu
-version:  1.0.2
+version:  1.0.3
 current_version_description: Initial version. 
 module_type: exercise
 docs_version: 1.2.0
@@ -23,7 +23,7 @@ Learners should be familiar with using functions, methods, variables, lists, dic
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Run their own Python code, either on their own computer or in the cloud.
 - Loop through a dictionary and conditionally perform an iterative task based on the values in the dictionary. 

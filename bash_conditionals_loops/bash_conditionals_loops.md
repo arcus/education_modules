@@ -2,7 +2,7 @@
 module_id: bash_conditionals_loops
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.6
+version: 1.2.7
 current_version_description: Clarify `=` and `==` inside test functions; make liascript link(s) point to first page
 module_type: standard
 docs_version: 1.2.1
@@ -26,7 +26,7 @@ Only basic exposure to Bash is expected. The following is a list of actions and 
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Understand how a "for loop" works
 - Write a "for loop" in Bash  

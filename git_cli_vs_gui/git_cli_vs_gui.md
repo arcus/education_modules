@@ -2,7 +2,7 @@
 module_id: git_cli_vs_gui
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.0
+version:  1.0.1
 current_version_description: Initial version
 module_type: standard
 docs_version: 4.0.0
@@ -25,7 +25,7 @@ No previous experience with git is required.
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - List an advantage and a disadvantage of using Git via a **graphical user interface**
 - List an advantage and a disadvantage of using Git via a **command line interface**

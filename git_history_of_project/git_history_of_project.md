@@ -2,7 +2,7 @@
 module_id: git_history_of_project
 author:  Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.3
+version: 1.1.4
 current_version_description: Correcting typos in quiz question answer.
 module_type: standard
 docs_version: 4.0.0
@@ -28,7 +28,7 @@ To best learn from this module make sure that you:
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - Identify and use the `HEAD` of a repository.
 - Identify and use Git commit numbers.

@@ -2,7 +2,7 @@
 module_id: r_basics_visualize_data
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.6
+version: 1.3.7
 current_version_description: Added help boxes for color vs fill aesthetic mapping and how to get plots to show in the plot pane; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -36,7 +36,7 @@ This course is designed for R beginners with minimal experience and it is not an
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Write R code that creates basic data visualizations
 - Identify geometric plot types available in `ggplot2`

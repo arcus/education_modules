@@ -2,7 +2,7 @@
 module_id: r_basics_practice
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.0.1
+version: 1.0.2
 current_version_description: Initial version
 module_type: exercise
 docs_version: 3.0.0
@@ -30,8 +30,6 @@ Learners should also have access to R, either on their own computer or in the cl
 @end
 
 @learning_objectives
-
-After completion of this module, learners will be able to:
 
 - Import a csv dataset into R
 - Examine data in the Data Viewer

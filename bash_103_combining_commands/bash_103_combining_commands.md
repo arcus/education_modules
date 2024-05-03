@@ -2,7 +2,7 @@
 module_id: bash_103_combining_commands
 author:   Elizabeth Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
-version: 1.4.4
+version: 1.4.5
 current_version_description: Added webinar links to additional resources; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -21,9 +21,6 @@ The only commands that will be assumed are the navigation commands `cd`, `ls`, a
 @end
 
 @learning_objectives
-
-After completion of this module, learners will be able to:
-
 - Use the commands `wc`, `head`, `tail`,`sort`, and `uniq`
 - Redirect output to a file using `>` and `>>`
 - Chain commands directly using the pipe `|`

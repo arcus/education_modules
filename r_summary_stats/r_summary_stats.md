@@ -2,7 +2,7 @@
 module_id: r_summary_stats
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.6
+version:  1.0.7
 current_version_description: Initial version; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -38,7 +38,7 @@ If you are brand new to R (or want a refresher) consider starting with [Intro to
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - calculate common summary statistics in R, for both continuous and categorical variables
 - generate publication-ready tables of descriptive statistics using the gtsummary package

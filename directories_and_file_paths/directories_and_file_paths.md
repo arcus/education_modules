@@ -2,7 +2,7 @@
 module_id: directories_and_file_paths
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.3.8
+version: 1.3.9
 current_version_description: update to new highlight box styles; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
@@ -20,7 +20,7 @@ None.
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - Describe what a directory is
 - Distinguish between a relative file path and an absolute file path

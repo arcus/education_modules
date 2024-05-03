@@ -2,7 +2,7 @@
 module_id: git_intro
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.1.2
+version: 1.1.3
 current_version_description: Updated with information about GitHub
 module_type: standard
 docs_version: 4.0.0
@@ -24,8 +24,6 @@ None. This lesson is appropriate for beginners with no experience using version 
 @end
 
 @learning_objectives
-
-After completion of this module, learners will be able to:
 
 - Understand the benefits of an automated version control system
 - Understand the basics of how automated version control systems work

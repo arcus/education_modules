@@ -2,7 +2,7 @@
 module_id: data_visualization_in_seaborn
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.4.1
+version: 1.4.2
 current_version_description: Add Python Basics series and Transform data with pandas as additional prerequisites; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
@@ -35,7 +35,7 @@ If you are brand new to python (or want a refresher) consider starting with [Dem
 
 @learning_objectives  
 
-After completion of this module, learners will be able to:
+
 
 - use seaborn to create several common data visualizations
 - customize some elements of a plot, and know where to look to learn how to customize others

@@ -2,7 +2,7 @@
 module_id: python_basics_loops_conditionals
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.2.1
+version: 1.2.2
 current_version_description: Replaced SageMathCells with Pyodide cells for better usability
 module_type: standard
 docs_version: 1.2.0
@@ -23,8 +23,6 @@ Learners should be familiar with using [functions and methods](https://liascript
 @end
 
 @learning_objectives
-
-After completion of this module, learners will be able to:
 
 - Iterate through lists using loops
 - Utilize conditional statements

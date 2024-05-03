@@ -2,7 +2,7 @@
 module_id: data_visualization_in_open_source_software
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.3
+version: 1.2.4
 current_version_description: Update highlight boxes, update front matter, replace text with macros.
 module_type: standard
 docs_version: 1.0.0
@@ -28,8 +28,6 @@ This module also assumes some basic familiarity with either R or python, but is 
 @end
 
 @learning_objectives
-
-After completion of this module, learners will be able to:
 
 - identify key elements in a plot that communicate information about the data
 - describe the role ggplot2 and seaborn play in the R and python programming languages, respectively

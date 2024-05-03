@@ -3,7 +3,7 @@
 module_id: generalized_linear_regression
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.0
+version:  1.0.1
 current_version_description: Initial version
 module_type: standard
 docs_version: 4.0.0
@@ -27,7 +27,7 @@ Learners should already be familiar with the following concepts in statistics an
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - describe how generalized linear models are similar to and different from linear models
 - define a "link function"

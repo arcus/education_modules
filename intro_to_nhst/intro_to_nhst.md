@@ -2,7 +2,7 @@
 module_id: intro_to_nhst
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.3
+version:  1.0.4
 current_version_description: Initial version
 module_type: standard
 docs_version: 1.2.1
@@ -23,7 +23,7 @@ None.
 @end
 
 @learning_objectives  
-After completion of this module, learners will be able to:
+
 
 - identify the null hypothesis given a research question
 - define a p-value
