@@ -2,8 +2,8 @@
 module_id: bash_scripts
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.3.5
-current_version_description: Added webinar links to additional resources; make liascript link(s) point to first page
+version: 1.4.0
+current_version_description: Distinguish bash input and output code blocks
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -59,9 +59,9 @@ previous_sequential_module: bash_conditionals_loops
 
 Previous versions: 
 
+- [1.3.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d367a7d5a0e9b6abdf67883b31d4a8894a13b17a/bash_scripts/bash_scripts.md#1): Added webinar links to additional resources; make liascript link(s) point to first page
 - [1.2.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/bash_scripts/bash_scripts.md#1): Updated metadata and macros
 - [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/bash_scripts/bash_scripts.md#1): Improved instructions for downloading learning_bash repository.
-- [1.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/): Initial version.
 @end
 
 
@@ -112,7 +112,7 @@ Even if you don't care about reproducibility or reusability, putting a long comm
 
 Even the simplest of loops are easier handle as scripts than typed into the command line. Compare entering something like `bash scripts/identify_dat_files.sh` to entering this correctly:
 
-```
+```bash
 for file in *.dat
 do
   echo $file is a data file
@@ -133,7 +133,7 @@ First line
 
 Sometimes scripts contain a special first line that looks something like this:
 
-```
+```bash
 #! /usr/bin/bash
 ```
 
@@ -199,7 +199,7 @@ In this section we will learn how to use the pre-written scripts in the `scripts
 
 Navigate to the `scripts` folder and use `ls` to take a look at the example scripts there.
 
-```
+```+output
 count_mammals.sh
 count_type.sh
 interactive_count_type.sh
@@ -222,7 +222,7 @@ The command `bash` takes a file as its argument and executes all of the commands
 
 The `count_mammals.sh` script contains two lines of code:
 
-```
+```bash
 count=$(grep mammal Animals.csv | wc -l)
 
 echo There are $count mammals on the list.
@@ -244,19 +244,19 @@ The first line of code above assumes that there is a file called `Animals.csv` i
 
 Give it a try:
 
-```
+```bash
 count=$(grep mammal Animals.csv | wc -l)
 ```
 
 If you are in `scripts` you will get the message:
 
-```
+```+output
 No such file or directory
 ```
 
 But if you are in `learning_bash-main` you won't get any output at all. This is because the code is defining a variable, `count`. Try running the second line and see what happens:
 
-```
+```bash
 echo There are $count mammals on the list.
 ```
 
@@ -268,7 +268,7 @@ Try it yourself
 ---
 Use `pwd` to check that you are currently in the `learning_bash-main` directory, and if not, navigate there. Now you can call the script with the `bash` command:
 
-```
+```bash
 bash scripts/count_mammals.sh
 ```
 
@@ -278,7 +278,7 @@ The `bash` command takes only one argument, the name of a file, but that file ma
 
 The `count_type.sh` script takes one argument. Give it a try:
 
-```
+```bash
 bash scripts/count_type.sh mammal
 ```
 
@@ -290,7 +290,7 @@ The third script also takes an argument, but instead of getting that argument fr
 
 Try running it:
 
-```
+```bash
 bash scripts/interactive_count_type.sh
 ```
 
@@ -334,13 +334,17 @@ In this section you will be writing some scripts of your own. For consistency, p
 
 Let's start by making a file
 
-```
+```bash
 echo "echo This is my first script" > first_script.sh
 ```
 
-You should now have a file called `first_script.sh` which contains the single line
+You should now have a file called `first_script.sh` which contains a single line
 
+```bash
+cat first_script.sh
 ```
+
+```+output
 echo This is my first script
 ```
 
@@ -361,7 +365,7 @@ If your script has an argument, you need to be able to refer to that argument in
 
 Let's update `first_script.sh` to an argument:
 
-```
+```bash
 echo "echo My script can take an argument, like \$1" >> first_script.sh
 ```
 
@@ -376,7 +380,7 @@ Without that backslash, `$1` will be interpreted as a **variable**, which you pr
 
 Use `cat` to check that `first_script.sh` now contains two lines:
 
-```
+```+output
 echo This is my first script
 echo My script can take an argument, like $1
 ```
@@ -392,19 +396,19 @@ Using a text editor to write directly to your file `first_script.sh` can sometim
 
 Now that `first_script.sh` takes an argument, try running it and see what happens:
 
-```
+```bash
 bash first_script.sh my_argument
 ```
 
 The order in which you enter arguments into the command line matters. Let's make a new script that will take 3 arguments:
 
-```
+```bash
 echo "echo \$3 \$2 \$1" > reverse_three.sh
 ```
 
 The `reverse_three.sh` script takes three arguments, let's give it a try:
 
-```
+```bash
 bash reverse_three.sh alpha beta gamma
 ```
 
@@ -419,7 +423,7 @@ If you give a script arguments it doesn't use, it just ignores the extra argumen
 
 An argument could even have spaces in it, as long as you surround the argument with quotes. Consider the following commands, how do you think their output will differ? Run them and see if you were right.
 
-```
+```bash
 bash first_script.sh "I love Bash"
 bash first_script.sh I love Bash
 bash reverse_three.sh "I love Bash"
@@ -431,7 +435,7 @@ bash reverse_three.sh I love Bash
 
 Let's take a closer look at the scripts we saw in the previous section of the module. The first line of `count_mammals.sh` reads
 
-```
+```bash
 count=$(grep mammal Animals.csv | wc -l)
 ```
 
@@ -459,7 +463,7 @@ Why use variables?
 ---
 Consider another script that contains only one line:
 
-```
+```bash
 echo There are $(grep mammal Animals.csv | wc -l) mammals on the list.
 ```
 
@@ -486,7 +490,7 @@ If you look at older Bash scripts, you may see backticks `\`commands here\`` use
 
 While backticks will work to create a subshell, the `$()` construction has some advantages, namely that you can nest subshells like this:
 
-```
+```bash
 $(outer subshell depends on $(inner subshell))
 ```
 
@@ -501,7 +505,7 @@ You saw this in action when you called the script `interactive_count_type.sh` ea
 
 Interactive scripts are most powerful when they include useful prompts. Let's take a look at one:
 
-```
+```bash
 echo Enter your new variable here:
 read new_var
 echo You entered "$new_var"
@@ -526,7 +530,7 @@ An interactive script will execute each line in the order it appears. You can pr
 
 You are now going to create an interactive script that uses several of the techniques we have just learned. Since the script will contain several lines, it will be helpful to use a text editor. We suggest `nano` which you can open from the command line with
 
-```
+```bash
 nano my_interactive_script.sh
 ```
 
@@ -547,7 +551,7 @@ Now it is time to put some commands into this script. When you think your script
 
 Here is an example you can copy and experiment with by changing some of the lines to other commands you know. 
 
-```
+```bash
 echo What is your name?
 read name
 echo What is your favorite number $name?
@@ -562,7 +566,7 @@ echo That is an interesting answer $name. My favorite number is $(($number * 2 +
 
 Bash can do mathematical operations, including `+`, `-`, `*`, `/`, but they must be inside of a special [Arithmetic Expansion](https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html) subshell, surrounded by double parentheses:
 
-```
+```bash
 $((mathematical expression here))
 ```
 
@@ -571,7 +575,7 @@ $((mathematical expression here))
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-Each line of code must be on a single line inside the plain text file. For example if you insert a line break into the last line, the `echo` command will only know to print out the text on the same line as it, and Bash will try to treat the next line as a new command. This will result in an error message like "command not found"
+Each line of code must be on a single line inside the plain text file. For example if you insert a line break into the last line, the `echo` command will only know to print out the text on the same line as it, and Bash will try to treat the next line as a new command. This will result in an error message like "command not found."
 
 </div>
 
@@ -596,42 +600,37 @@ echo There are $count lines in Animals.csv that contain the string \"$string\".
 
 Without looking at the contents of the original file `interactive_count_type.sh`, what should go in the three blank spots in the code?
 
-1.
+1
+
 [[echo]]
 ***
-
 <div class = "answer">
 
 The  `echo` command tells Bash to print out the question "What string do you want to search for?"
 
 </div>
-
 ***
 
+2
 
-
-2.
 [[read]]
 ***
-
 <div class = "answer">
 
 The  `read` command tells Bash to expect user input and to save that input as a variable.
 
 </div>
-
 ***
 
-3.
+3
+
 [[string]]
 ***
-
 <div class = "answer">
 
 The variable `$string` is called in the last two lines of the script, so the user's input must be assigned to the variable `string`.
 
 </div>
-
 ***
 
 
