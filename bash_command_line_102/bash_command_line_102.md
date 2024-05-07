@@ -2,8 +2,8 @@
 module_id: bash_command_line_102
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu and drelliche@chop.edu
-version: 1.3.4
-current_version_description: Add emphasis about the permanence of `rm`; make liascript link(s) point to first page
+version: 1.4.0
+current_version_description: Distinguish bash input and output code blocks
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -55,9 +55,12 @@ previous_sequential_module: bash_command_line_101
 @end
 
 @version_history
+
+Previous Versions
+
+- [1.3.4](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d367a7d5a0e9b6abdf67883b31d4a8894a13b17a/bash_command_line_102/bash_command_line_102.md#1): Add emphasis about the permanence of `rm`; make liascript link(s) point to first page
 - [1.2.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/bash_command_line_102/bash_command_line_102.md#1): Updated module metadata
 - [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_command_line_102/bash_command_line_102.md#1) Improved Lesson Preparation instructions
-- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/738a57ce41189c219ae9288bed4fbde834bb46d4/bash_command_line_102/bash_command_line_102.md#1) Initial version
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -78,7 +81,7 @@ Before we start searching for specific things in this directory, let's navigate 
 
 Make sure to replace `~/your/file/path/here/` with the path to `learning_bash-main` on your own computer that you identified on the previous page.
 
-```
+```bash
 cd ~/your/file/path/here/learning_bash-main
 ls
 ```
@@ -104,8 +107,11 @@ It is also a good idea to take a look at what each type of file contains. We wou
 
 If we take a look at the contents of a `.txt` file, we see a few words in Latin.
 
-```
+```bash
 cat dog.txt
+```
+
+```+output
 Canis lupus familiaris
 ```
 
@@ -113,8 +119,11 @@ It looks like the `.txt` files contain the scientific names of the animals! Try 
 
 What is in the `.dat` files?
 
-```
+```bash
 cat blue_whale.dat
+```
+
+```+output
 Length: 29.9 m
 Weight: 190000 kg
 ```
@@ -174,12 +183,12 @@ The command `grep` (rhymes with "step") is a search function to locate a string 
 
 For example if you wanted to search for `bear` in `Animals.csv` you can run the following command:
 
-```
+```bash
 grep 'bear' Animals.csv
 ```
 This will print out each line of `Animals.csv` that contains the string `bear`:
 
-```
+```+output
 black bear,mammal
 grizzly bear,mammal
 panda bear,mammal
@@ -188,25 +197,25 @@ polar bear,mammal
 
 You could also search several files at a time by listing their file names one after another.
 
-```
+```bash
 grep 'Ursus' black_bear.txt grizzly_bear.txt panda_bear.txt
 ```
 
 This will return the files containing `Ursus` as well as each of the lines containing the word.
 
-```
+```+output
 black_bear.txt:Ursus americanus
 grizzly_bear.txt:Ursus arctos horribilis
 ```
 
 We can make `grep` more powerful by combining it with the `*` we used before. You might have noticed that we didn't search `polar_bear.txt` for the word `Ursus`. It would be a lot easier to just search all of the files that contain `bear` for the word `Ursus`. We can do that!
 
-```
+```bash
 grep 'Ursus' *bear*
 ```
 This output will include the files we saw before as well as the previously missing `polar_bear` file.
 
-```
+```+output
 black_bear.txt:Ursus americanus
 grizzly_bear.txt:Ursus arctos horribilis
 polar_bear.txt:Ursus maritimus
@@ -268,7 +277,7 @@ The `mv` command will move files from their current location to a new location. 
 
 To move `blue_jay.txt` to `blue_animals` run the command:
 
-```
+```bash
 mv blue_jay.txt blue_animals
 ```
 
@@ -278,7 +287,7 @@ Notice that we used the **relative** locations of `blue_animals` and the `blue_j
 
 **Tip: You can scroll sideways to see all of the text in the code block:**
 
-```
+```bash
 mv ~/your/file/path/here/learning_bash-main/blue_animals/blue_morpho.txt ~/your/file/path/here/learning_bash-main
 ```
 
@@ -290,7 +299,7 @@ Make sure to replace `~/your/file/path/here/` with the path to `learning_bash-ma
 
 You can also move multiple files at a time by entering them one after another, as long as the directory you want them to end up in is at the end.
 
-```
+```bash
 mv blue_and_yellow_macaw.txt blue_morpho.txt blue_animals
 ```
 
@@ -302,7 +311,7 @@ Did you get a message informing you that "No such file or directory" exists? Mak
 
 We can also use the `*` to move all files and folders matching a certain pattern to a new location. Let's make a new folder containing all files pertaining to blue whales:
 
-```
+```bash
 mkdir blue_whale_folder
 mv blue_whale.* blue_whale_folder
 ```
@@ -310,13 +319,13 @@ This will move both `blue_whale.txt` and `blue_whale.dat` into the folder `blue_
 
 Similarly we could move all of the files and folders that start with the word blue into `blue_animals`.
 
-```
+```bash
 mv blue* blue_animals
 ```
 
 You will get an output warning you that one of the things you asked for cannot be done:
 
-```
+```+output
 mv: rename blue_animals to blue_animals/blue_animals: Invalid argument
 ```
 
@@ -328,7 +337,7 @@ While there is a specific function for renaming files and folders, the easiest w
 
 Maybe we want to rename `koala.txt` to be `koala_bear.txt`. The `mv` function lets us do this by simply moving the file currently named `koala.txt` to a new file in the same location called `koala_bear.txt`:
 
-```
+```bash
 mv koala.txt koala_bear.txt
 ```
 
@@ -337,7 +346,7 @@ mv koala.txt koala_bear.txt
 
 You can also use the global location names for your files or folders. In the example above we could have gotten the same result with
 
-```
+```bash
 mv ~/your/file/path/here/learning_bash-main/koala.txt ~/your/file/path/here/learning_bash-main/koala_bear.txt
 ```
 
@@ -349,7 +358,7 @@ The benefit to using the global names is that you can run commands with global n
 
 The copy function `cp` has the same requirements as the `mv` function: **which file** you want to copy, and **where** you want the copy to go. For example maybe we want to make a new folder called `true_bears` for bears in the genus Ursus, and put copies of those files into the folder while keeping the originals.
 
-```
+```bash
 mkdir true_bears
 cp black_bear.txt true_bears
 ```
@@ -358,7 +367,7 @@ There are now two files with the name `black_bear.txt` but because they are in d
 
 You can also use `cp` to make a copy of a file with a new name. Brown bear is another name for a grizzly bear.
 
-```
+```bash
 cp grizzly_bear.txt brown_bear.txt
 ```
 
@@ -366,7 +375,7 @@ Now there are two files with the same contents but different names.
 
 You can also use the asterisk `*` to speed copy all files with certain patterns in their names.
 
-```
+```bash
 mkdir red_animals
 cp red* red_animals
 ```
@@ -379,20 +388,20 @@ In order to copy a directory using `cp` you need to include the flag `-r` which 
 
 Let's make a new directory for all of the animals with colors in their names.
 
-```
+```bash
 mkdir color_name_animals
 ```
 
 If we want to copy the entire directory of `blue_animals` into this new folder, we need to use the `-r` flag:
 
-```
+```bash
 cp -r blue_animals color_name_animals
 ```
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-Moving a directory with `mv` will move all of its contents to the new location.
+Moving a directory with `mv` will move all of its contents to the new location. 
 
 Copying a directory with `cp` requires the `-r` flag in order to copy all of its contents.
 </div>
@@ -440,7 +449,7 @@ If you are done with a file and sure you won't need it ever again, it might make
 
 The command `rm` **remove**s files listed after it from your computer. Maybe you don't actually want two different names for the same species of bear and want to delete the `brown_bear.txt` file we made earlier:
 
-```
+```bash
 rm brown_bear.txt
 ```
 
@@ -457,7 +466,7 @@ If you are sure you want to delete a directory, the recursive flag `-r` will rec
 
 Maybe you no longer want a `red_animals` folder since all of its contents are available elsewhere:
 
-```
+```bash
 rm -r red_animals
 ```
 
