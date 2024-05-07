@@ -2,8 +2,8 @@
 module_id: bash_command_line_101
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version: 1.5.7
-current_version_description: Updated metadata and macros; make liascript link(s) point to first page
+version: 1.6.0
+current_version_description: Distinguish bash input and output code blocks, clarify command prompts
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -46,9 +46,9 @@ sequence_name: bash_basics
 
 Previous versions: 
 
+- [1.5.7](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d367a7d5a0e9b6abdf67883b31d4a8894a13b17a/bash_command_line_101/bash_command_line_101.md#1): Updated metadata and macros; make liascript link(s) point to first page
 - [1.4.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/3cdfc807be26db43d837de9e325b66c9213a3d5c/bash_command_line_101/bash_command_line_101.md#1): Added less command and expanded on man and --help
 - [1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ba1dba7a4c1d4393ae8b42346fe5c69d587b8ee6/bash_command_line_101/bash_command_line_101.md#1): Removed references to sunsetted text editor Atom
-- [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/466799a081d2cb74d155dc0a26951d3492b81f8c/bash_command_line_101/bash_command_line_101.md#1): Fixed quiz answer boxes
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -173,9 +173,18 @@ Bash, or shell, scripting is a way to interface with your computer's operating s
 
 If you are new to bash scripting, it can take some adjustment to navigate by typing text. Once you get the hang of a few basic commands, this can be an easier way to deal with files and folders than dropdown menus and dragging icons from place to place. Even the language we use is a little different. In bash scripting you will hear folders referred to as **directories**.
 
-To enter a command into the shell, type it in where the blinking cursor appears and press `Enter` or `return` on your keyboard.
+When you first open a shell, you will see a [**Command Prompt**](https://en.wikipedia.org/wiki/Command-line_interface#Command_prompt). This may look different for everyone, for example the two authors of this module see different things. One of us sees:
+
+```
+(base) C02GM4SBQ05N:~ drelliche$ 
+```
+
+and the other sees: 
 
 ![Home directory of the shell in the default homebrew theme.](media/shell_home.png)
+
+To enter a command into the shell, type it in where the (possibly blinking) cursor appears and press `Enter` or `return` on your keyboard.
+
 
 ### Navigation Commands
 
@@ -183,18 +192,24 @@ Just like when you navigate any file system, it is important to know where you a
 
 **Where am I?**
 
-The command `pwd`, which stands for **p**resent **w**orking **d**irectory, will return the path through your directory system to your current location.
+The command `pwd`, which stands for **p**resent **w**orking **d**irectory, will return the path through your directory system to your current location. Here is what I see when I type the command `pwd`, you will see something similar:
 
-```
+```bash
 (base) C02GM4SBQ05N:~ drelliche$ pwd
+```
+
+```+output
 /Users/drelliche
 ```
 **What is here?**
 
-The bash shell doesn't show the icons of the files and directories in your present working directory. Instead you will need to ask for a list of the directory's contents with the command `ls`.
+The bash shell doesn't show the icons of the files and directories in your present working directory. Instead you will need to ask for a list of the directory's contents with the command `ls`. Here is what I see when I type the command `ls`, you will see something similar:
 
-```
+```bash
 (base) C02GM4SBQ05N:~ drelliche$ ls
+```
+
+```+output
 Applications
 Desktop
 Documents
@@ -205,6 +220,18 @@ Music
 OneDrive - Children's Hospital of Philadelphia
 Pictures
 Public
+```
+
+You can click on the word "output" to collapse the output boxes. Going forward, we will omit the command prompt from the input and just show you the code to enter, like:
+
+```bash
+pwd
+```
+
+or
+
+```bash
+ls
 ```
 
 **How do I navigate around?**
@@ -339,14 +366,14 @@ Make sure you are in your home directory with `pwd`. If not, `cd ~` will get you
 
 **Making a new directory**
 
-The command `mkdir` will create a new directory in your current location. Let's make a new directory called `learning_bash`:
+The command `mkdir` will create a new directory in your current location. Let's make a new directory called `learning_bash`. Enter these two lines of code into your CLI, and hit `Enter` or `Return` after each line to execute the code.
 
-```
+```bash
 cd ~
 mkdir learning_bash
 ```
 
-You will now see `learning_bash` when you ask for the list of files and directories with `ls`, and can use `cd` to navigate into it.
+These two lines won't give you any output, but you will now see `learning_bash` when you ask for the list of files and directories with `ls`, and can use `cd` to navigate into it.
 
 **Creating a new file**
 
@@ -354,14 +381,14 @@ The command `touch` creates a new file. You need to give your file a name.
 
 From your `learning_bash` directory create a new file called `my_file`:
 
-```
+```bash
 cd ~/learning_bash
 touch my_file
 ```
 
 You can also create multiple files at a time by listing their unique names one after another:
 
-```
+```bash
 cd ~/learning_bash
 touch file_1 file_2 file_3
 ```
@@ -393,19 +420,19 @@ The bash command `>>` is used to write the output of a command to the end of a f
 
 For example the following code will create a file called `my_sentences` and write the text `This is a sentence.` in that file.
 
-```
+```bash
 echo "This is a sentence." >> my_sentences
 ```
 
 If you then want to add an additional line to `my_sentences` you can use the same method.
 
-```
+```bash
 echo "This is another sentence." >> my_sentences
 ```
 
 Now the file `my_sentences` has two lines:
 
-```
+```+output
 This is a sentence.
 This is another sentence.
 ```
@@ -433,8 +460,13 @@ The easiest way to see the contents of a short file is the `cat` function. If yo
 
 **Give it a try:**
 
-```
+```bash
 cat my_sentences
+```
+
+```+output
+This is a sentence.
+This is another sentence.
 ```
 
 <div class = "learn-more">
@@ -584,7 +616,7 @@ Entering `man command_name` reveals the documentation for the function `command_
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-The bash manual is not available in Git Bash. If you are using Git Bash, an internet search for "`command_name` bash manual" will usually get you the same information.
+**The bash manual is not available in Git Bash.** If you are using Git Bash, an internet search for "`command_name` bash manual" will usually get you the same information.
 
 </div> 
 
