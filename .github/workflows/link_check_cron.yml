@@ -39,4 +39,4 @@ jobs:
         with:
           title: Link Checker Report
           content-filepath: issue_content.md
-          labels: report, automated issue, bug
+          labels: bug
