@@ -243,115 +243,6 @@ Before diving into the example, it's valuable to understand some key concepts us
 
         - Visual representations, such as scatter plots, enable the identification of inherent data patterns, outliers, and delineation of cluster boundaries. In applications, visualization aids in informed decision-making by providing stakeholders with insights into the data's structure and characteristics, fostering actionable insights and informed decisions.  
 
-    
-### Python Implementation of K-Means Clustering
-    
-
-This dataset contains various clinical attributes of patients, including their age, sex, chest pain type (cp), resting blood pressure (trtbps), serum cholesterol level (chol), fasting blood sugar (fbs) level, resting electrocardiographic results (restecg), maximum heart rate achieved (thalachh), exercise-induced angina (exng), ST depression induced by exercise relative to rest (oldpeak), slope of the peak exercise ST segment (slp), number of major vessels (caa) colored by fluoroscopy, thalassemia (thall) type, and the presence of heart disease (output). The data seems to be related to the diagnosis of heart disease, with the output variable indicating whether a patient has heart disease (1) or not (0). Each row represents a different patient, with their respective clinical characteristics recorded.
-
-To implement k-means clustering in Python using Scikit-learn, we can follow these steps:
-
-1.  Import the necessary libraries:
-```python
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-from sklearn.cluster import KMeans
-from scipy.spatial import distance
-```
-@Pyodide.eval
-
-
-2.  Load the data:
-```python @Pyodide.exec
-
-import pandas as pd
-import io
-from pyodide.http import open_url
-
-url = "https://raw.githubusercontent.com/arcus/education_modules/python_clustering/python_clustering/data/heart.csv"
-
-url_contents = open_url(url)
-text = url_contents.read()
-file = io.StringIO(text)
-
-data = pd.read_csv(file)
-
-
-# Analyze data and features
-data.info()
-```
-
-
-3.  Visualize data
-```python
-# Create the scatter plot
-data.plot.scatter(x='chol', y='trtbps', c='output', colormap='viridis')
-plt.xlabel("Cholesterol")
-plt.ylabel("Resting Blood Pressure")
-plt.title("Scatter Plot of Cholesterol vs. Blood Pressure")
-plt.show()
-```
-@Pyodide.eval
-
-3.  This code defines a function called normalize that performs min-max scaling normalization on a DataFrame df, specifically on the features specified by the features parameter. The normalized DataFrame is returned as the output. Then, it calls this function to normalize all columns of a DataFrame data and assigns the result to a variable named normalized_data.
-```python
-# Normalize dataframe
-def normalize(df, features):
-    # Create a copy of the DataFrame to avoid modifying the original data.
-    result = df.copy()
-
-    # Iterate through each feature specified for normalization.
-    for feature_name in features:
-        # Find the maximum and minimum values of the current feature.
-        max_value = df[feature_name].max()
-        min_value = df[feature_name].min()
-
-        # Normalize the current feature using min-max scaling formula.
-        # This ensures that all values of the feature are scaled between 0 and 1.
-        result[feature_name] = (df[feature_name] - min_value) / (max_value - min_value)
-    return result
-
-# Call the normalize function with the entire DataFrame 'data' and all its columns.
-# Store the result in 'normalized_data'.
-normalized_data = normalize(data, data.columns)
-```
-@Pyodide.eval
-
-4.  Train the clustering model and visualize:
-```python
-# Run KMeans
-kmeans = KMeans(n_clusters = 2, max_iter = 500, n_init = 40, random_state = 2)
-```
-@Pyodide.eval
-
-5.  Train the clustering model and visualize:
-```python
-# Predict clusters
-identified_clusters = kmeans.fit_predict(normalized_data.values)
-results = normalized_data.copy()
-results['cluster'] = identified_clusters
-```
-@Pyodide.eval
-
-6.  Train the clustering model and visualize:
-```python
-# Compute distance from cluster. Loop through each data point and calculate the Euclidean distance between the data point and its assigned cluster centroid.
-distance_from_centroid = [distance.euclidean(val[:-1],kmeans.cluster_centers_[int(val[-1])]) for val in results.values]
-results['dist'] = distance_from_centroid
-```
-@Pyodide.eval
-
-
-7.  Train the clustering model and visualize. Scatter plot of 'chol' (Cholesterol) against 'trtbps' (Resting Blood Pressure), colored by cluster, with marker size proportional to the distance from the cluster centroid.
-```python
-results.plot.scatter(x='chol', y='trtbps', c='cluster', colormap='viridis', s='dist')
-plt.xlabel("Cholesterol")
-plt.ylabel("Resting Blood Pressure")
-plt.show()
-```
-@Pyodide.eval
 
     
 
@@ -393,96 +284,15 @@ All of the above techniques can be used to mitigate the sensitivity of clusterin
 
 
 
-### Real World Code Example
-
-This dataset, derived and refined from a landmark study published in the New England Journal of Medicine in 1993, investigates the effectiveness of sulindac treatment in individuals with familial adenomatous polyposis (FAP), a hereditary condition characterized by the development of numerous adenomatous polyps in the colon and rectum. Enhanced from the original datasets "polyps" and "polyps3" in the {HSAUR} package, this dataset includes crucial variables such as participant ID, sex, age, baseline polyp count, assigned treatment (sulindac or placebo), and polyp counts at 3 and 12 months post-treatment. These enhancements involved meticulous referencing of the original paper and offer improved granularity and completeness for analyzing the impact of sulindac treatment on polyp progression in FAP patients. This dataset serves as a valuable resource for further research and analysis in the field of gastrointestinal medicine and pharmacology.
-
-1.  Install Packages:
-```python @Pyodide.exec
-
-import pandas as pd
-import io
-from pyodide.http import open_url
-from sklearn.cluster import KMeans
-from sklearn.preprocessing import StandardScaler
-import matplotlib.pyplot as plt
-```
-
-2.  Load the data:
-```python
-# Load dataset and read to pandas dataframe
-url = "https://raw.githubusercontent.com/arcus/education_modules/python_clustering/python_clustering/data/polyps.csv"
-url_contents = open_url(url)
-text = url_contents.read()
-file = io.StringIO(text)
-df = pd.read_csv(file)
-
-# Analyze data and features
-df.info()
-
-# Select features for clustering
-features = ['age', 'baseline', 'number3m', 'number12m']
-X = df[features]
-
-# Fill missing values with the mean of each column
-X.fillna(X.mean(), inplace=True)
-
-# Standardize the feature values
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
-```
-@Pyodide.eval
-
-
-3.  Cluster Data:
-```python
-# Define the number of clusters
-num_clusters = 3
-
-# Apply KMeans clustering
-kmeans = KMeans(n_clusters=num_clusters, random_state=42)
-kmeans.fit(X_scaled)
-
-# Assign cluster labels to the original dataframe
-df['cluster'] = kmeans.labels_
-```
-@Pyodide.eval
-
-
-4.  Visualize Clusters:
-```python
-# Visualize clusters for 'number3m' vs 'number12m'
-plt.figure(figsize=(10, 8))
-colors = ['red', 'blue', 'green']  # Change colors as needed for more clusters
-
-for i in range(num_clusters):
-    cluster_data = df[df['cluster'] == i]
-    plt.scatter(cluster_data['number3m'], cluster_data['number12m'], 
-                color=colors[i], label=f'Cluster {i}')
-
-plt.xlabel('Number of Polyps at 3 Months')
-plt.ylabel('Number of Polyps at 12 Months')
-plt.title('K-Means Clustering of Polyp Data: Number of Polyps at 3 Months vs Number of Polyps at 12 Months')
-plt.legend()
-plt.show()
-```
-@Pyodide.eval
-
-If the K-Means algorithm identified distinct clusters with minimal overlap, it suggests there might be three underlying patient groups regarding polyp count progression:
-
-- **Cluster 1 (Low Progression):** This cluster might represent participants who have a relatively low number of polyps at 3 months and a stable or slightly increased number at 12 months. This could be associated with effective treatment or naturally slow polyp growth.
-- **Cluster 2 (Moderate Progression):** This cluster could include participants with a moderate number of polyps at 3 months and a somewhat steeper increase by 12 months. This might indicate a less effective treatment or a faster natural growth rate for polyps.
-- **Cluster 3 (High Progression):** This cluster might contain participants with a high number of polyps at 3 months and a substantial increase by 12 months. This could be linked to factors like a particularly aggressive polyp type or treatment resistance.
-
-**While clustering provides valuable insights into potential patient subgroups, further analysis of treatment effects and other relevant features is necessary to fully understand the underlying factors influencing polyp count progression.**
-
-    
-
 
 
 ## Conclusion
 
-At the end of the lesson, students should have a good understanding of the concept of clustering and how to implement the K-Means clustering algorithm in Python. They should also be able to apply K-Means clustering to real-world datasets to identify patterns and insights.
+Through this lesson, we've explored the fundamental concept of clustering as an unsupervised machine learning technique. We've delved into the inner workings of the K-Means algorithm, seeing how it iteratively groups similar data points together. We've also applied this knowledge to real-world scenarios, showcasing the potential of clustering in fields like customer segmentation and biomedical research.
+
+However, clustering is not without its challenges. We've examined the importance of data preprocessing, including normalization, to ensure fair and accurate clustering results.  We've also discussed the limitations of clustering algorithms, such as sensitivity to initialization and the difficulty of determining the optimal number of clusters. By understanding these limitations, you're better equipped to make informed decisions and interpret clustering results with a critical eye.
+
+With this foundational knowledge, you're now prepared to explore the wider landscape of clustering techniques, including variations like hierarchical clustering and density-based clustering. As you continue your journey in machine learning, remember that clustering is a versatile tool with far-reaching applications in data analysis, pattern recognition, and decision-making across diverse domains.
 
 ## Additional Resources
 
