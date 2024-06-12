@@ -173,13 +173,13 @@ Bash, or shell, scripting is a way to interface with your computer's operating s
 
 If you are new to bash scripting, it can take some adjustment to navigate by typing text. Once you get the hang of a few basic commands, this can be an easier way to deal with files and folders than dropdown menus and dragging icons from place to place. Even the language we use is a little different. In bash scripting you will hear folders referred to as **directories**.
 
-When you first open a shell, you will see a [**Command Prompt**](https://en.wikipedia.org/wiki/Command-line_interface#Command_prompt). This may look different for everyone, for example the two authors of this module see different things. One of us sees:
+When you first open a shell, you will see a [**Command Prompt**](https://en.wikipedia.org/wiki/Command-line_interface#Command_prompt). This may look different for everyone, for example the two authors of this module see different things. One of us sees the name of their computer followed by a couple of symbols and then their username, all ending with a money symbol.
 
 ```
 (base) C02GM4SBQ05N:~ drelliche$ 
 ```
 
-and the other sees: 
+and the other sees similar information, but in a different order, with different extra symbols to separate the fields.
 
 ![Home directory of the shell in the default homebrew theme.](media/shell_home.png)
 
@@ -192,7 +192,7 @@ Just like when you navigate any file system, it is important to know where you a
 
 **Where am I?**
 
-The command `pwd`, which stands for **p**resent **w**orking **d**irectory, will return the path through your directory system to your current location. Here is what I see when I type the command `pwd`, you will see something similar:
+The command `pwd`, which stands for **p**resent **w**orking **d**irectory, will return the path through your directory system to your current location. Here is what I see when I type the command `pwd`.  Depending on your computer setup, you will probably see something similar:
 
 ```bash
 (base) C02GM4SBQ05N:~ drelliche$ pwd
@@ -203,7 +203,7 @@ The command `pwd`, which stands for **p**resent **w**orking **d**irectory, will 
 ```
 **What is here?**
 
-The bash shell doesn't show the icons of the files and directories in your present working directory. Instead you will need to ask for a list of the directory's contents with the command `ls`. Here is what I see when I type the command `ls`, you will see something similar:
+The bash shell isn't like a graphical file browser:  it doesn't show images or icons that represent the files and directories in your present working directory. Instead, you will need to ask for a **l**i**s**t of the directory's contents with the command `ls`. Here is what I see when I type the command `ls`, you will see something similar:
 
 ```bash
 (base) C02GM4SBQ05N:~ drelliche$ ls
@@ -222,7 +222,7 @@ Pictures
 Public
 ```
 
-You can click on the word "output" to collapse the output boxes. Going forward, we will omit the command prompt from the input and just show you the code to enter, like:
+At this point, you'll start to see output boxes that include the word "output", which show one example of the kind of output you might see when the command above is entered.  You can click on the word "output" to collapse the output boxes if you like. Going forward, we will omit the command prompt from the input and just show you the code to enter, like:
 
 ```bash
 pwd
