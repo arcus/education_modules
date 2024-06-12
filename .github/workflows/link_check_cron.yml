@@ -7,7 +7,7 @@ name: Link check cron job
 on:
   workflow_dispatch: #can also run on demand if desired
   schedule:
-    - cron: "05 7 */14 * 2" #run at 7:05 am every 14 days on Tuesday 
+    - cron: "05 7 13 * *" #run at 7:05 am on the 13th of every month. 
 
 jobs:
   linkChecker:
