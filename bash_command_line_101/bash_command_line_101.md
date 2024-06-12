@@ -195,18 +195,21 @@ Just like when you navigate any file system, it is important to know where you a
 The command `pwd`, which stands for **p**resent **w**orking **d**irectory, will return the path through your directory system to your current location. Here is what I see when I type the command `pwd`.  Depending on your computer setup, you will probably see something similar:
 
 ```bash
-(base) C02GM4SBQ05N:~ drelliche$ pwd
+(base) 1234567890AB:~ drelliche$ pwd
 ```
 
 ```+output
 /Users/drelliche
 ```
+
+The second of the two boxes above, which includes the word "output", shows one example of the kind of output you might see when the command above it is entered.  You can click on the word "output" to collapse the output box if you like. We will use this format for showing the output of commands throught this lesson.
+
 **What is here?**
 
 The bash shell isn't like a graphical file browser:  it doesn't show images or icons that represent the files and directories in your present working directory. Instead, you will need to ask for a **l**i**s**t of the directory's contents with the command `ls`. Here is what I see when I type the command `ls`, you will see something similar:
 
 ```bash
-(base) C02GM4SBQ05N:~ drelliche$ ls
+(base) 1234567890AB:~ drelliche$ ls
 ```
 
 ```+output
@@ -222,7 +225,7 @@ Pictures
 Public
 ```
 
-At this point, you'll start to see output boxes that include the word "output", which show one example of the kind of output you might see when the command above is entered.  You can click on the word "output" to collapse the output boxes if you like. Going forward, we will omit the command prompt from the input and just show you the code to enter, like:
+Going forward, we will omit the command prompt from the input and just show you the code to enter, like:
 
 ```bash
 pwd
