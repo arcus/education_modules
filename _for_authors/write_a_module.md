@@ -51,7 +51,7 @@ We believe that greater transparency leads to better science, and we aim to not 
 
 ### Inclusive Design
 
-We expect authors to design with a variety of ["edge" users](https://guide.inclusivedesign.ca/activities/inclusive-design-mapping/) in mind: those with limited access to visual content or auditory content, those with barriers related to attention, cognition, sensory processing, or language, and those with limited technology access and/or financial resources.  Wherever possible we encourage a multi-modal approach to education, such that no instruction relies solely on a single type of communication (text, video, audio, images, code) but provides several ways to engage with materials.  Please review our [inclusivity guidelines](inclusivity_guidelines.md).  We encourage you to avoid the mistake of writing a module and then attempting to remediate any accessibility issues after the module is written.  It is generally much more effective for module authors and for all learners if a widely inclusive design is considered at the outset, with pedagogical decisions always keeping a variety of learners in mind.
+We expect authors to design with a variety of ["edge" users](https://guide.inclusivedesign.ca/activities/inclusive-design-mapping/) in mind: those with limited access to visual content or auditory content, those with barriers related to attention, cognition, sensory processing, or language, and those with limited technology access and/or financial resources.  Wherever possible we encourage a multi-modal approach to education, such that no instruction relies solely on a single type of communication (text, video, audio, images, code) but provides several ways to engage with materials.  Please review our [inclusivity guidelines](https://github.com/arcus/education_modules/blob/main/_for_authors/inclusivity_guidelines.md).  We encourage you to avoid the mistake of writing a module and then attempting to remediate any accessibility issues after the module is written.  It is generally much more effective for module authors and for all learners if a widely inclusive design is considered at the outset, with pedagogical decisions always keeping a variety of learners in mind.
 
 ## Use GitHub
 
@@ -85,9 +85,9 @@ Begin your file structure by creating a folder with an expressive name, using lo
 
 To start writing the main file that will make up your module, use one of our [templates](https://github.com/arcus/education_modules/blob/main/_module_templates).  We have three templates:
 
-* Our [standard template](../_module_templates/template_standard.md) is for modules that teach a skill using mostly original material.
-* Our [wrapper template](../_module_templates/template_wrapper.md) is for modules that teach a skill using mostly existing material that we point learners to.  For example, a module teaching learners how to install RStudio will likely depend on Posit materials.
-* Our [exercise template](../_module_templates/template_exercise.md) is for modules that do not teach additional skills but offer a practical exercise / sample project.
+* Our [standard template](https://github.com/arcus/education_modules/blob/main/_module_templates/template_standard.md) is for modules that teach a skill using mostly original material.
+* Our [wrapper template](https://github.com/arcus/education_modules/blob/main/_module_templates/template_wrapper.md) is for modules that teach a skill using mostly existing material that we point learners to.  For example, a module teaching learners how to install RStudio will likely depend on Posit materials.
+* Our [exercise template](https://github.com/arcus/education_modules/blob/main/_module_templates/template_exercise.md) is for modules that do not teach additional skills but offer a practical exercise / sample project.
 
 Make a copy of the appropriate template and save it within your new folder with an almost identical title to the folder, one that ends in `.md`, like `lasso_and_ridge_ml_in_r.md` or `bayesian_stats_in_python.md`.  
 
