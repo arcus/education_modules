@@ -202,7 +202,7 @@ The command `pwd`, which stands for **p**resent **w**orking **d**irectory, will 
 /Users/drelliche
 ```
 
-The second of the two boxes above, which includes the word "output", shows one example of the kind of output you might see when the command above it is entered.  You can click on the word "output" to collapse the output box if you like. We will use this format for showing the output of commands throught this lesson.
+The second of the two boxes above, which includes the word **output**, shows one example of the kind of output you might see when the command above it is entered.  You can click on the word "output" to collapse the output box if you like. We will use this format for showing the output of commands throught this lesson.
 
 **What is here?**
 
