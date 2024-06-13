@@ -103,7 +103,7 @@ A few things we can see from this list of files:
 2. There are `.txt`, `.dat` and `.csv` files.
 3. The `.csv` file is named `Animals.csv` and each of the `.txt` and `.dat` files has the name of an animal.
 
-It is also a good idea to take a look at what each type of file contains. We would expect `Animals.csv` to be some sort of tabular data with rows and columns. You can use `cat` to display the file and confirm this.
+It is also a good idea to take a look at what each type of file contains. We would expect `Animals.csv` to be some sort of tabular data with rows and columns. You can use `cat` to display the file and confirm this. Throught this lesson, the results of each command will be shown in their own collapsible code block labeled **output**.
 
 If we take a look at the contents of a `.txt` file, we see a few words in Latin.
 
