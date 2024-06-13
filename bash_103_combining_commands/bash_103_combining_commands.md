@@ -295,7 +295,7 @@ The output of `tail -2 newfile.txt` is the last two lines of `newfile.txt`. Sinc
 
 We could link commands by writing the output of one command to a file, and then running another command on that file. However if we don't actually need that intermediate file it is possible to speed up the process by passing the output of one command directly to another using a "pipe."
 
-The vertical line `|` is called a **pipe**. On American qwerty keyboards symbol `|` is located on the same key as the backslash ` \ ` and can be typed by using the `shift` key with ` \ `.
+The vertical line `|` is called a **pipe**. On American qwerty keyboards the symbol `|` is located on the same key as the backslash ` \ ` and can be typed by using the `shift` key with ` \ `.
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
