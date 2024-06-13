@@ -43,7 +43,7 @@ In our use of the FAIR principles we prioritize whenever possible the use of and
 
 ### Licensing
 
-As part of our FAIR methodology, we give our materials away free of charge and free of limits on their use, as long as proper citation is given.  We do this via our use of the [Creative Commons Attribution-ShareAlike 4.0 International license](LICENSE). You may not include proprietary data or intellectual property in a  module you submit for inclusion in this project, nor may you limit your module's use to only your institution or promote commercial tools or resources that you have financial interest in.  By submitting materials for inclusion among these modules, you agree to donate your materials free of charge and agree to their use in accordance with our license.
+As part of our FAIR methodology, we give our materials away free of charge and free of limits on their use, as long as proper citation is given.  We do this via our use of the [Creative Commons Attribution-ShareAlike 4.0 International license](https://github.com/arcus/education_modules/blob/main/LICENSE). You may not include proprietary data or intellectual property in a  module you submit for inclusion in this project, nor may you limit your module's use to only your institution or promote commercial tools or resources that you have financial interest in.  By submitting materials for inclusion among these modules, you agree to donate your materials free of charge and agree to their use in accordance with our license.
 
 ### Transparency
 
@@ -83,7 +83,7 @@ A module in this project will be brief (one hour or less) and therefore of limit
 
 Begin your file structure by creating a folder with an expressive name, using lower case and underscores, like `lasso_and_ridge_ml_in_r` or `bayesian_stats_in_python`.  This will hold all of the files that are unique to your module.
 
-To start writing the main file that will make up your module, use one of our [templates](_module_templates).  We have three templates:
+To start writing the main file that will make up your module, use one of our [templates](https://github.com/arcus/education_modules/blob/main/_module_templates).  We have three templates:
 
 * Our [standard template](../_module_templates/template_standard.md) is for modules that teach a skill using mostly original material.
 * Our [wrapper template](../_module_templates/template_wrapper.md) is for modules that teach a skill using mostly existing material that we point learners to.  For example, a module teaching learners how to install RStudio will likely depend on Posit materials.
@@ -95,7 +95,7 @@ Technical instructions for how to write a module in LiaScript are available in t
 
 Importantly, consider starting to write your module by beginning with the description and learning objectives.  This will help you scope your topic.  Three to five learning objectives are plenty for a module of about one hour's duration.
 
-We know that this is a complex process, and you may have questions about how to use our [templates](../_module_templates/) or have other questions about any part of this process.  Please don't hesitate to reach out to ask questions or let us know if we haven't explained something fully.  This is how we improve!  If you send us an email at [dart@chop.edu](mailto:dart@chop.edu), we'll try to respond.  If we realize we need to improve the documentation, we may use your paraphrased email (stripped of all identifying information) to create an [issue](../issues) so that everyone using the repository knows we're working on a fix.  In fact, if you feel comfortable, you, too, can [create an issue](/../issues/new)!
+We know that this is a complex process, and you may have questions about how to use our [templates](https://github.com/arcus/education_modules/blob/main/_module_templates) or have other questions about any part of this process.  Please don't hesitate to reach out to ask questions or let us know if we haven't explained something fully.  This is how we improve!  If you send us an email at [dart@chop.edu](mailto:dart@chop.edu), we'll try to respond.  If we realize we need to improve the documentation, we may use your paraphrased email (stripped of all identifying information) to create an [issue](https://github.com/arcus/education_modules/issues) so that everyone using the repository knows we're working on a fix.  In fact, if you feel comfortable, you, too, can [create an issue](https://github.com/arcus/education_modules/issues/new/choose)!
 
 ### Save Assets Well
 
