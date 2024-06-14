@@ -2,8 +2,8 @@
 module_id: bash_103_combining_commands
 author:   Elizabeth Drellich and Nicole Feldman
 email:    drelliche@chop.edu and feldmanna@chop.edu
-version: 1.4.5
-current_version_description: Added webinar links to additional resources; make liascript link(s) point to first page
+version: 1.5.0
+current_version_description: Distinguish bash input and output code blocks
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -49,10 +49,9 @@ previous_sequential_module: bash_command_line_102
 
 Previous versions: 
 
+- [1.4.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d367a7d5a0e9b6abdf67883b31d4a8894a13b17a/bash_103_combining_commands/bash_103_combining_commands.md#1): Added webinar links to additional resources; make liascript link(s) point to first page
 - [1.3.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/768ecbb4a71dd338c90d78dab1ee5a6cc7b39581/bash_103_combining_commands/bash_103_combining_commands.md#1): Restructured learning objectives.
 - [1.2.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/8e01732bc52d86e63c28ee8ef7abaed2c003cb3f/bash_103_combining_commands/bash_103_combining_commands.md#1): Corrected quiz answer
-- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ed49367f50018e9c32c206d30047cee5d4e24a92/bash_103_combining_commands/bash_103_combining_commands.md#1): Updated highlight boxes and clarified instructions
-- [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_103_combining_commands/bash_103_combining_commands.md#1): Initial Version 
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -92,8 +91,11 @@ The `learning_bash` folder contains a few different types of files and folders f
 
 The word count command `wc` takes a file (or files) as input and returns some basic metadata:
 
-```
+```bash
 wc Animals.csv
+```
+
+```+output
       20      36     355 Animals.csv
 ```
 
@@ -122,8 +124,10 @@ For all of the files in this lesson, the number of bytes is the same as the numb
 
 You can also pass multiple files to the `wc` command. It will print out the word count for each, and then helpfully total each column for you at the bottom:
 
-```
+```bash
 wc wolf.txt dog.txt
+```
+```+output
       1       2      12 wolf.txt
       1       3      23 dog.txt
       2       5      35 total
@@ -134,13 +138,13 @@ You might also want to look at the contents of a file. The `cat` command lets yo
 
 The command `head` outputs the first 10 lines of a file. You can ask for the first `n` lines by using the flag `-n`:
 
-```
+```bash
 head -3 Animals.csv
 ```
 
 You should see these first three lines of `Animals.csv`:
 
-```
+```+output
 blue and yellow macaw,bird
 blue jay,bird
 blue whale,mammal
@@ -150,13 +154,13 @@ The `head` command is particularly useful when you know a certain type of inform
 
 The `tail` command is similarly used to output the last lines of a file:
 
-```
+```bash
 tail -4 Animals.csv
 ```
 
 You should see these last four lines of `Animals.csv`:
 
-```
+```+output
 tiger,mammal
 wolf,mammal
 blue morpho,insect
@@ -173,13 +177,13 @@ The `sort` command outputs the lines of a file in alphabetical order, the same o
 
 **Give it a try** in your command line interface:
 
-```
+```bash
 sort Animals.csv
 ```
 
 You can change how the lines are ordered using flags. The `-r` flag reverses the order. Try it out:
 
-```
+```bash
 sort -r Animals.csv
 ```
 <div class = "behind-the-scenes">
@@ -210,19 +214,19 @@ The "greater than" symbol, also known as an arrow or more specifically "right ar
 
 Try running the following code:
 
-```
+```bash
 wc Animals.csv > animals.txt
 ```
 
 You won't see any output because it was redirected to the newly created file `animals.txt`. Use `cat` or another program to check that the file `animals.txt` contains the text:
 
-```
+```+output
       20      36     355 Animals.csv
 ```
 
 A single arrow will replace anything that was already in the file with the new content. If we don't want to replace the content in `animals.txt` we can append (add new lines after the existing lines) to the end of the file using double arrows `>>`:
 
-```
+```bash
 sort Animals.csv >> animals.txt
 ```
 
@@ -239,7 +243,7 @@ In the Bash language, right arrows `>` redirect output, and left arrows `<` redi
 
 Suppose you have acquired a new file with the uninformative name `newfile.txt`. You look at its contents and see that `cat newfile.txt` returns
 
-```
+```+output
 Callinectes sapidus
 
 blue crab,crustacean
@@ -291,7 +295,7 @@ The output of `tail -2 newfile.txt` is the last two lines of `newfile.txt`. Sinc
 
 We could link commands by writing the output of one command to a file, and then running another command on that file. However if we don't actually need that intermediate file it is possible to speed up the process by passing the output of one command directly to another using a "pipe."
 
-The vertical line `|` is called a **pipe**. On American qwerty keyboards symbol `|` is located on the same key as the backslash ` \ ` and can be typed by using the `shift` key with ` \ `.
+The vertical line `|` is called a **pipe**. On American qwerty keyboards the symbol `|` is located on the same key as the backslash ` \ ` and can be typed by using the `shift` key with ` \ `.
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
@@ -308,7 +312,7 @@ The pipe symbol `|` is like the arrow symbols `>` and `>>` in that it redirects 
 
 In the previous section we learned how to sort the lines in the file `Animals.csv`. But maybe we only care about the last 3 animals listed alphabetically. With a pipe we can first `sort` and then immediately look at the `tail`. Give it a try:
 
-```
+```bash
 sort Animals.csv | tail -3
 ```
 
@@ -316,7 +320,7 @@ You get the last three animals of the alphabetically sorted list: red panda, tig
 
 What do you think will happen if you switch the order of `sort` and `tail`? Try it out:
 
-```
+```bash
 tail -3 Animals.csv | sort
 ```
 Now the blue morpho butterfly is first, instead of the red panda because the last three lines of `Animals.csv` were wolf, blue morpho, and koala.
@@ -325,7 +329,7 @@ Now the blue morpho butterfly is first, instead of the red panda because the las
 
 You can also pipe commands and then write the final output to a file. For example we could create a new file with just the last three alphabetical animals from `Animals.csv`.
 
-```
+```bash
 sort Animals.csv | tail -3 > last.txt
 ```
 
@@ -333,13 +337,17 @@ This command doesn't give any output, but take a look at the contents of your ne
 
 The double arrow `>>` which appends output to a file can also be combined with pipes. Try this line:
 
-```
+```bash
 tail -3 Animals.csv | sort >> last.txt
 ```
 
 Now the file `last.txt` should contain six lines:
 
+```bash
+cat last.txt
 ```
+
+```+output
 red panda,mammal
 tiger,mammal
 wolf,mammal
@@ -352,13 +360,13 @@ wolf,mammal
 
 Now that the file `last.txt` has some repeated lines in it, we can get useful information out of the command `uniq`. This command outputs the lines of a file, but only those lines that are distinct from the line directly above.
 
-```
+```bash
 uniq last.txt
 ```
 
 Since all lines in `last.txt` are different from the line immediately preceding them, this isn't particularly useful. However when combined with the `sort` function, we can eliminate repeated lines:
 
-```
+```bash
 sort last.txt | uniq
 ```
 
@@ -366,7 +374,7 @@ Now there are no repeated lines! They are also in alphabetical order since we fi
 
 If we want to know how many copies of each line were in the original file, the option `-c` for "count" will output the lines with each preceded by the number of occurrences:
 
-```
+```bash
 sort last.txt | uniq -c
 ```
 
@@ -376,7 +384,7 @@ Piping the output of one command into another is extremely powerful, and chainin
 
 Maybe you want to know how many unique animals are in the file `last.txt`. We saw on the last page how to output the list of unique lines using `sort` followed by `uniq`. If we want to know how many (unique) lines there are, we can use the word count function `wc` with the option `-l` for number of lines:
 
-```
+```bash
 sort last.txt | uniq | wc -l
 ```
 
@@ -390,8 +398,10 @@ What if we want to know which animal has the shortest scientific name? This also
 
 Putting these steps together:
 
-```
+```bash
 wc -m *.txt | sort -n | head -1
+```
+```+output
       10 indian_cobra.txt
 ```
 The Indian cobra, scientific name _Naja naja_ has the shortest character count of any of the animals listed here.
@@ -411,7 +421,7 @@ You can chain as many commands as you want into a pipeline, including search com
 
 Let's return to the uninformatively named `newfile.txt`:
 
-```
+```+output
 Callinectes sapidus
 
 blue crab,crustacean
@@ -437,7 +447,7 @@ What command would append the 3rd line, which reads `blue crab,crustacean` to th
 
 The first three lines are returned by `head -3 newfile.txt`:
 
-```
+```+output
 Callinectes sapidus
 
 blue crab,crustacean
@@ -445,7 +455,7 @@ blue crab,crustacean
 
 and the last line of that text is returned by `tail -1`:
 
-```
+```+output
 blue crab,crustacean
 ```
 
