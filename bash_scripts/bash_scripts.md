@@ -536,7 +536,7 @@ nano my_interactive_script.sh
 
 This will open the nano text editor inside of the shell where you will be able to edit the (currently empty) plain text file `my_interactive_script.sh`
 
-![The empty file my_interactive_script.sh opened in nano.](media/empty_nano_window.png)
+![The empty file my_interactive_script.sh opened in nano.](media/empty_nano_window.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
