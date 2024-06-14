@@ -1,0 +1,42 @@
+name: Link check cron job
+
+# the role of this link check workflow is to periodically look for links
+# that have died since last QA. If broken links are found, action still passes
+# and an issue is created
+
+on:
+  workflow_dispatch: #can also run on demand if desired
+  schedule:
+    - cron: "05 7 13 * *" #run at 7:05 am on the 13th of every month. 
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v1.9.0
+
+      - name: Remove files with known issues
+        run: |
+          awk '/^###/{printf $0; next} 1' ./lychee/out.md | awk 'BEGIN {RS="\n\n"; ORS="\n\n"} !/how_to_troubleshoot|macros\.md|macros_python\.md|demystifying_regular_expressions/' > issue_content.md
+         # remove all content for failed links in above files (which have necessary content that cause failures)
+
+      - name: Check for remaining issues
+        run: |
+          if grep -q "###" issue_content.md 
+            then 
+              echo "FILE_HAS_CONTENT=1" >> $GITHUB_ENV
+            else 
+              echo "FILE_HAS_CONTENT=0" >> $GITHUB_ENV
+          fi
+
+      - name: Create Issue From File
+        if: env.FILE_HAS_CONTENT != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Link Checker Report
+          content-filepath: issue_content.md
+          labels: bug
