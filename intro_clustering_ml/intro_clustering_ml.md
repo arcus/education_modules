@@ -2,7 +2,7 @@
 
 author:   Daniel Schwartz
 email:    des338@drexel.edu
-version:  0.0.0
+version:  1.0.0
 current_version_description: Initial version
 module_type: standard
 docs_version: 3.0.0
