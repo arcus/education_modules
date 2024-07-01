@@ -89,7 +89,7 @@ one of the first steps in any of those techniques is checking how much missing d
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-For an excellent introduction to different types of missing data, read Rubin's classic paper [Inference and Missing Data](http://math.wsu.edu/faculty/xchen/stat115/lectureNotes3/Rubin%20Inference%20and%20Missing%20Data.pdf).
+For an excellent introduction to different types of missing data, read Rubin's classic paper [Inference and Missing Data](https://www.jstor.org/stable/2335739?seq=5).
 
 </div>
 
