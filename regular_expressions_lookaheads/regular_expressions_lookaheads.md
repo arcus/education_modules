@@ -60,7 +60,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 A **regular expression** (also known as "regex") is a specific way to **express** a **rule** for a pattern.  Regular expressions are useful to biomedical researchers because they can allow you to find, replace, or extract text that matches patterns you define.  
 
-A good place to practice regular expressions is an online regex testing website.  We like **Regex 101**, at https://www.regex101.com.
+A good place to practice regular expressions is an online regex testing website.  We like [**Regex 101**](https://regex101.com).
 
 @regular_expression_checker_warning
 
