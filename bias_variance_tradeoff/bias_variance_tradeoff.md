@@ -382,7 +382,7 @@ For resources and links to learn more, go back to the section on [training data 
 
 For a more in-depth explanation of the bias-variance tradeoff, see [Chapter 2 of An Introduction to Statistical Learning (ISLR)](https://static1.squarespace.com/static/5ff2adbe3fe4fe33db902812/t/6062a083acbfe82c7195b27d/1617076404560/ISLR%2BSeventh%2BPrinting.pdf#page=43). 
 
-There is also a very popular (free!) [online course to accompany the ISLR book](https://www.statlearning.com/online-course), taught by two of the authors. It provides an excellent, practical introduction to machine learning techniques. 
+There is also a very popular (free!) [online course to accompany the ISLR book](https://www.statlearning.com/online-courses), taught by two of the authors. It provides an excellent, practical introduction to machine learning techniques. 
 
 The videos from the course are all also posted on youtube, so if you prefer you can access them individually there. For example, here is the video covering the bias-variance tradeoff:
 
