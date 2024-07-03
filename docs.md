@@ -1272,7 +1272,7 @@ To do this in R instead of python, see [this other module](https://example.com).
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-To do this in R instead of python, see [this other module](example.com).
+To do this in R instead of python, see [this other module](https://example.com).
 
 </div>
 
