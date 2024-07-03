@@ -137,7 +137,7 @@ A great way to keep resources close at hand is to use cheat sheets:
 
 - [Python Cheatsheet](https://www.pythoncheatsheet.org/) is a great resource for the basics of base Python.
 - [The pandas cheat sheet on pydata.org](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) is good to have available when you are using the pandas library-- a must for data science in Python!
-- There is also a good [seaborn cheat sheet](http://datacamp-community-prod.s3.amazonaws.com/263130e2-2c92-4348-a356-9ed9b5034247) provided by DataCamp. 
+- There is also a good [seaborn cheat sheet](https://images.datacamp.com/image/upload/v1676302629/Marketing/Blog/Seaborn_Cheat_Sheet.pdf) provided by DataCamp. 
 
 ## Feedback
 
