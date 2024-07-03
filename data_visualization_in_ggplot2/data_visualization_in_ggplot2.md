@@ -276,7 +276,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age, color = Class_factor,
 
 ### Changing background color with theme
 
-Finally, we can control the background (and other aspects of the plot's general appearance) by adjusting the theme. There are quite a lot of [pre-made themes available](https://ggplot2-book.org/themes.html#sec-themes), or you can [specify your own](https://ggplot2-book.org/polishing.html#modifying-theme-components). I'll use the theme called theme_bw().
+Finally, we can control the background (and other aspects of the plot's general appearance) by adjusting the theme. There are quite a lot of [pre-made themes available](https://ggplot2-book.org/themes.html#sec-themes), or you can [specify your own](https://ggplot2-book.org/themes#modifying-theme-components). I'll use the theme called theme_bw().
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
@@ -925,7 +925,7 @@ ggplot(breast_cancer_data, mapping = aes(y=Glucose, x=Age)) +
 
 For an excellent quick reference, see the [ggplot2 cheatsheet](https://ggplot2.tidyverse.org/#cheatsheet). It includes a tremendous amount of information in a very compact format, so it's not great for people just getting started with ggplot2, but it's a valuable reference to keep on hand for when you start making plots for your own analyses.
 
-For more detail on controlling color in ggplot2, refer to the [ggplot2 book](https://ggplot2-book.org/scale-colour.html), available for free online.
+For more detail on controlling color in ggplot2, refer to the [ggplot2 book](https://ggplot2-book.org/scales-colour.html), available for free online.
 
 To learn how to make plots in python using seaborn, see [data visualization in seaborn](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1).
 
