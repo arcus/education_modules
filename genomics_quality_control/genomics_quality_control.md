@@ -606,7 +606,7 @@ Open a new tab in your terminal program (you can use the pull down menu at the t
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
 You'll need to put in your own instance number in this command (the content that occurs right after `dcuser@`).
-For a reminder of how to find your instance's address, see the Data Carpentry instructions for [connecting to your AMI](https://datacarpentry.org/genomics-workshop/AMI-setup/#connect-to-your-amazon-instance-macoslinux).
+For a reminder of how to find your instance's address, see the Data Carpentry instructions for [connecting to your AMI](https://datacarpentry.org/genomics-workshop/AMI-setup#headingSpoiler1).
 
 </div>
 
@@ -898,7 +898,7 @@ What command would you use to see which samples failed at least one of FastQC's 
 <div class = "answer">
 
 We can get the list of all failed tests using `grep`.
-For a review of `grep` and how to use it, see the section on [searching files in the Shell Genomics lesson by Data Carpentries](https://datacarpentry.org/shell-genomics/04-redirection/index.html#searching-files).
+For a review of `grep` and how to use it, see the section on [searching files in the Shell Genomics lesson by Data Carpentries](https://datacarpentry.org/shell-genomics/04-redirection.html#searching-files).
 
 First, make sure you're in the correct directory:
 
