@@ -21,7 +21,7 @@ jobs:
 
       - name: Remove files with known issues
         run: |
-          awk '/^###/{printf $0; next} 1' ./lychee/out.md | awk 'BEGIN {RS="\n\n"; ORS="\n\n"} !/how_to_troubleshoot|macros\.md|macros_python\.md|demystifying_regular_expressions|module_development_plans/' > issue_content.md
+          awk '/^###/{printf $0; next} 1' ./lychee/out.md | awk 'BEGIN {RS="\n\n"; ORS="\n\n"} !/how_to_troubleshoot|macros\.md|macros_python\.md|demystifying_regular_expressions|module_development_plans|quality_assurance_guide/' > issue_content.md
          # remove all content for failed links in above files (which have necessary content that cause failures)
 
       - name: Check for remaining issues
