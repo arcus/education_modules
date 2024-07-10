@@ -2,7 +2,7 @@
 module_id: genomics_quality_control
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.6
+version:  1.1.7
 current_version_description: Add explanation about why we use AWS for genomics modules; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0

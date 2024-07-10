@@ -3,7 +3,7 @@
 module_id: generalized_linear_regression
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.1
+version:  1.0.2
 current_version_description: Initial version
 module_type: standard
 docs_version: 4.0.0

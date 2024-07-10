@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  4.0.3
+version:  4.0.4
 current_version_description: Added module\_id as required frontmatter field for all modules; make liascript link(s) point to first page; move standard learning_objectives language to macro;
 language: en
 narrator: UK English Female

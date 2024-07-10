@@ -2,7 +2,7 @@
 module_id: r_missing_values
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.5
+version: 1.2.6
 current_version_description: Update with metadata, macros.  Remove reference to Binderhub; make liascript link(s) point to first page
 module_type: standard
 docs_version: 1.0.0
