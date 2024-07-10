@@ -2,7 +2,7 @@
 module_id: regular_expressions_lookaheads
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.5
+version:  1.0.6
 current_version_description: Initial version; make liascript link(s) point to first page
 module_type: standard
 docs_version: 1.0.0
