@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  2.0.0
+version:  2.0.1
 current_version_description: Added macro aws_explanation to provide context for learners about why we're requiring them to set up an AWS account.
 language: en
 narrator: UK English Female
