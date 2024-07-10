@@ -11,7 +11,7 @@ assignees: ''
 ----
 Date: {yyyy-mm-dd}
 Reviewer: {your name}
-qa_template_version: 2.0.1
+qa_template_version: 2.0.2
 Name of Module: {take from the title of the main markdown in the PR}
 Current Liascript URL: {makes it easy for reviewers and authors to look at content as learners will}
 
