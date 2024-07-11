@@ -95,7 +95,7 @@ You can also see revisions and comments on [pull requests for other modules that
   * Folder and file names use lowercase and underscores (no dashes)
   * Main module directory folder name is identical to the name of the module content markdown file (this name is called the [module\_id](#module_id)).
   * Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
-  * Code files (including scripts, notebooks, etc.) are saved within a `src` folder within the module directory
+  * Code files (including scripts, notebooks, etc.) are saved within a `code` folder within the module directory
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
