@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  4.0.3
-current_version_description: Added module\_id as required frontmatter field for all modules; make liascript link(s) point to first page; move standard learning_objectives language to macro;
+version:  5.0.0
+current_version_description: Update module directory requirements
 language: en
 narrator: UK English Female
 title: DART LiaScript docs
@@ -25,10 +25,9 @@ try {
 @version_history
 Previous versions: 
 
+- [4.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d367a7d5a0e9b6abdf67883b31d4a8894a13b17a/docs.md): Added module\_id as required frontmatter field for all modules; make liascript link(s) point to first page; move standard learning_objectives language to macro;
 - [3.1.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d4409612159096b9f3bebfc2f7ddf795b92496cd/docs.md#1): Updated definition of learn\_to\_code collection
 - [3.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/cd0da90a30910c22d5502f509125892a761c3145/docs.md#1): Added collection as a front matter field, added text as a data\_domain, fixed typos
-- [2.0.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/89cadafc6f1f9c83e4de93e7d55cd9427866f9f2/docs.md#1): Made coding\_required a mandatory front matter field for all modules
-- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b453a05b5ac756fb5c7b183deae9d4fc91b3a617/docs.md#1): Clarified that version\_history cannot be blank but sets\_you\_up\_for and depends\_on\_knowledge\_available\_in can
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
