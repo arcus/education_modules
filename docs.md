@@ -94,9 +94,10 @@ You can also see revisions and comments on [pull requests for other modules that
 
   * Folder and file names use lowercase and underscores (no dashes)
   * Main module directory folder name is identical to the name of the module content markdown file (this name is called the [module\_id](#module_id)).
-  * Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
-  * Code files (including scripts, notebooks, etc.) are saved within a `code` folder within the module directory
-  * Data files are saved within a `data` folder within the module directory. 
+  * The module markdown file should be the only file on the first level of the module directory. All other files should be contained in one of the following folders. If you come across a need to include a file that does not neatly fit into one of these categories, [submit an issue](https://github.com/arcus/education_modules/issues/new) so we can create a new category if necessary:
+    *  Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
+    * Code files (including scripts, notebooks, etc.) are saved within a `code` folder within the module directory
+    * Data files are saved within a `data` folder within the module directory. 
 
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
