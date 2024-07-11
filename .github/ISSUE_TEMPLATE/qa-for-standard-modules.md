@@ -11,7 +11,7 @@ assignees: ''
 ----
 Date: {yyyy-mm-dd}
 Reviewer: {your name}
-qa_template_version: 2.0.1
+qa_template_version: 3.0.0
 Name of Module: {take from the title of the main markdown in the PR}
 Current Liascript URL: {makes it easy for reviewers and authors to look at content as learners will}
 
@@ -20,7 +20,11 @@ Current Liascript URL: {makes it easy for reviewers and authors to look at conte
 ## Directory structure
 * [ ] Folder and file names use lowercase and underscores (no dashes)
 * [ ] Main module directory folder name is identical to the name of the module content markdown file.
+* [ ] The module content markdown file is the only file on the first level of the directory. All other files are contained within subdirectories.
 * [ ] Images, videos, and other audio-visual assets are saved within a `media` folder within the module directory
+* [ ] Code files (including scripts, notebooks, etc.) are saved within a `code` folder within the module directory
+* [ ] Data files are saved within a `data` folder within the module directory. 
+* [ ] The only subdirectories that exist are `media`, `code`, and `data`.
 
 ## Module Organization
 * [ ] Front matter is at the very top of the file
