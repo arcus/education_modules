@@ -49,12 +49,7 @@ coding_language: python
 @end
 
 @version_history 
-
-Previous versions: 
-
-- [x.x.x](link): that version's current version description
-- [x.x.x](link): that version's current version description
-- [x.x.x](link): that version's current version description
+No previous versions.
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -62,21 +57,23 @@ import: https://raw.githubusercontent.com/arcus/education_modules/pyodide_testin
 import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 -->
 
-# Python Lesson on Clustering for Machine Learning
+# Clustering in Python
 
 @overview
 
 
 
-## Summary of Key Concepts in Clustering
+## Review of Clustering
 
-- **Clustering Definition:** Clustering is an unsupervised machine learning technique used to group unlabeled data points into clusters based on their similarity. The goal is to identify groups of data points that are similar to each other and dissimilar to data points in other groups. Common algorithms include K-Means, hierarchical clustering, and Gaussian Mixture Models.
+**Clustering** is a machine learning technique used to group unlabeled data points into clusters based on their similarity. The goal is to identify groups of data points that are similar to each other and dissimilar to data points in other groups. In this lesson we will work through an example of K-Means clustering. Other common algorithms hierarchical clustering, and Gaussian Mixture Models.
 
-- **Unsupervised vs. Supervised Learning:** Clustering falls under unsupervised learning, where algorithms are trained on unlabeled data to identify patterns and relationships without prior knowledge. Supervised learning, on the other hand, involves training on labeled data to predict labels for new data points.
+For a more in-depth look at what clustering is, see the [_other clustering module_](link).
+
+Clustering is a type of **unsupervised learning**.  Unsupervised learning algorithms are algorithms trained on unlabeled data to identify patterns and relationships without prior knowledge. This is different from supervised learning, where an algorithm is initially trained on labeled data in order to predict labels for new data points.
 
 - **Applications:** Clustering finds applications in various fields such as customer segmentation, biomedical research, drug development, gene expression analysis, medical image analysis, and disease-risk prediction.
 
-- **K-Means Clustering Algorithm:** K-Means works by iteratively assigning data points to clusters based on their distance to cluster centroids. Key steps include choosing the number of clusters (K), initializing centroids, assigning data points, recalculating centroids, and iterating until convergence.
+
 
 - **Understanding Techniques:** Techniques like normalization, computing distances from cluster centroids, and visualization aid in building accurate clustering models and interpreting results.
 
@@ -88,9 +85,19 @@ import: https://raw.githubusercontent.com/LiaTemplates/Pyodide/master/README.md
 
 
     
-## Python Implementation of K-Means Clustering
-    
+## The K-Means Clustering Algorithm
 
+The **K-Means Clustering Algorithm**, sometimes refered to as simply "K-Means," works by iteratively assigning data points to clusters based on their distance to cluster centroids. 
+
+The key steps of K-Means clustering are:
+1. choosing the number of clusters (K), 
+2. initializing centroids, assigning data points, 
+3. recalculating centroids, and 
+4. iterating until convergence.
+
+### Clustering Patients
+
+We are going to use use an dataset ***(add more details about its origin)*** 
 This dataset contains various clinical attributes of patients, including their age, sex, chest pain type (cp), resting blood pressure (trtbps), serum cholesterol level (chol), fasting blood sugar (fbs) level, resting electrocardiographic results (restecg), maximum heart rate achieved (thalachh), exercise-induced angina (exng), ST depression induced by exercise relative to rest (oldpeak), slope of the peak exercise ST segment (slp), number of major vessels (caa) colored by fluoroscopy, thalassemia (thall) type, and the presence of heart disease (output). The data seems to be related to the diagnosis of heart disease, with the output variable indicating whether a patient has heart disease (1) or not (0). Each row represents a different patient, with their respective clinical characteristics recorded.
 
 To implement k-means clustering in Python using Scikit-learn, we can follow these steps:
