@@ -2,7 +2,7 @@
 module_id: docker_101
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.6
+version:  1.1.7
 current_version_description: Updated description and prerequisites to make it clearer that this is not a module for beginners; added troubleshooting box about creating a file with no extension; make liascript link(s) point to first page
 module_type: wrapper
 docs_version: 1.0.0
@@ -268,7 +268,7 @@ In the command `docker build -t getting-started .` what does the `-t` flag stand
 It refers to a tag, a custom identifier you can use to refer to this image (instead of relying on the long, random IDs Docker assigns by default). 
 The tag in this example is `getting-started`, so if we want to run this container we just built we can use a command like `docker run getting-started` and Docker will know we're talking about the image we built and tagged above.
 
-To learn more, see the [Docker handbook section on tags](https://docker-handbook.farhan.dev/image-manipulation-basics#tagging-images).
+To learn more, see the [Docker handbook section on tags](https://docker-handbook.farhan.dev/en/image-manipulation-basics/#image-creation-basics).
 
 </div>
 ***
@@ -428,7 +428,7 @@ For an overview using containers with high performance computing (HPC) centers, 
 
 [Docker 101 for Reproducible Science](https://kordinglab.com/2022/10/28/LabTeaching-Docker-for-Science.html) by the Kording Lab
 
-[Docker for Reproducible Research](https://tilburgsciencehub.com/building-blocks/automate-and-execute-your-work/reproducible-work/docker/) by Tilburg Science Hub
+[Docker for Reproducible Research](https://tilburgsciencehub.com/topics/automation/replicability/docker/#docker-ezo) by Tilburg Science Hub
 
 ### Example Docker Images
 

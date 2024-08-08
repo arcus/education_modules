@@ -3,7 +3,7 @@
 module_id: generalized_linear_regression
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.0.1
+version:  1.0.2
 current_version_description: Initial version
 module_type: standard
 docs_version: 4.0.0
@@ -431,7 +431,7 @@ Logistic regression (regression using a logit link function) works well for bina
 But what about other kinds of outcome variables?
 
 If your outcome is counts of something, you can use a **Poisson** or **Negative Binomial** link function. 
-For example, perhaps your outcome is the number of [Adverse Childhood Experiences (ACEs)](https://www.cdc.gov/violenceprevention/aces/fastfact.html) per patient. 
+For example, perhaps your outcome is the number of [Adverse Childhood Experiences (ACEs)](https://www.cdc.gov/aces/about/index.html) per patient. 
 It's not possible for someone to have fewer than 0 ACEs, so that variable is bound at 0. 
 It's also measured as a count (how many total ACEs experienced), so no one will have 1.2 ACEs, for example. 
 

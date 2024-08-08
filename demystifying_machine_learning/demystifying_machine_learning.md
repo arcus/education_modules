@@ -2,7 +2,7 @@
 module_id: demystifying_machine_learning
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.1.3
+version:  1.1.4
 current_version_description: Added some new linked resources in learn-more boxes; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
@@ -512,8 +512,8 @@ Here are a few of our favorites:
 
 - [Google's Intro to Machine Learning](https://developers.google.com/machine-learning/intro-to-ml)
 - [DeepLearning.ai](https://www.deeplearning.ai/): Several world-class courses on machine learning topics ranging from intro to very advanced
-- [Introduction to Statistical Learning at Stanford](https://www.statlearning.com/online-course) (there is also a free [text book](https://hastie.su.domains/ISLR2/ISLRv2_website.pdf) and [R package](https://cran.r-project.org/web/packages/ISLR2/ISLR2.pdf) that go with this course)
-- [Introduction to Applied Machine Learning at the University of Wisconsin](https://dionysus.psych.wisc.edu/iaml/)
+- [Introduction to Statistical Learning at Stanford](https://www.statlearning.com/online-courses) (there is also a free [text book](https://hastie.su.domains/ISLR2/ISLRv2_corrected_June_2023.pdf.download.html) and [R package](https://cran.r-project.org/web/packages/ISLR2/ISLR2.pdf) that go with this course)
+
 
 For a fun and detailed introduction to machine learning, check out [Google's comic about AI and machine learning tools](https://cloud.google.com/products/ai/ml-comic-1).
 It follows the story of an engineer, Martha, as she learns about machine learning from a cat and a friendly flying robot.

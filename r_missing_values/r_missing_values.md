@@ -2,7 +2,7 @@
 module_id: r_missing_values
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.2.5
+version: 1.2.6
 current_version_description: Update with metadata, macros.  Remove reference to Binderhub; make liascript link(s) point to first page
 module_type: standard
 docs_version: 1.0.0
@@ -89,7 +89,7 @@ one of the first steps in any of those techniques is checking how much missing d
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-For an excellent introduction to different types of missing data, read Rubin's classic paper [Inference and Missing Data](http://math.wsu.edu/faculty/xchen/stat115/lectureNotes3/Rubin%20Inference%20and%20Missing%20Data.pdf).
+For an excellent introduction to different types of missing data, read Rubin's classic paper [Inference and Missing Data](https://www.jstor.org/stable/2335739?seq=5).
 
 </div>
 

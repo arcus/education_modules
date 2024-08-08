@@ -2,7 +2,7 @@
 module_id: elements_of_maps
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.0.6
+version: 1.0.7
 current_version_description: Initial version.
 module_type: standard
 docs_version: 2.0.0
@@ -77,7 +77,7 @@ The [World Wide Web Consortium (W3C)](https://www.w3.org) develops standards for
 
 ### Shapes
 
-How did the data about stations, train lines (from [SEPTA](https://gis-septa.hub.arcgis.com/search?tags=Highspeed)), and zip codes (from [OpenDataPhilly](https://www.opendataphilly.org/dataset/zip-codes)) become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
+How did the data about stations, train lines (from [SEPTA](https://gis-septa.hub.arcgis.com/search?tags=Highspeed)), and zip codes (from [OpenDataPhilly](https://www.opendataphilly.org/datasets/zip-codes)) become a map? Each of those attributes was stored as text, a string of numbers representing one of the following types:
 
 - Points (and Multipoints)
 - Lines (and Mulitlines)
@@ -183,7 +183,7 @@ Before we look at other ways to communicate data, let's take a look at what we c
 
 Dot Distribution Map
 -----------------
-A dot distribution map lets you display the location of many individual, related events. Using data from [OpenDataPhilly](https://www.opendataphilly.org/dataset/vehicular-crash-data) we can plot every reported vehicular crash in the city of Philadelphia from 2019:
+A dot distribution map lets you display the location of many individual, related events. Using [data on vehicular crashes from 2016 to 2020 in Philadelphia](https://hub.arcgis.com/datasets/e703eb63ec484aa6beae1268372efa53_0/explore), we can plot every reported vehicular crash in the city of Philadelphia from 2019:
 
 ![Dot distribution map.](media/2019_crashes.jpg "Notice how the blue dots representing crashes are mostly concentrated along large roadways and trace out partial street map of the city.")
 
@@ -226,7 +226,7 @@ Using color intensity rather than changing hues to show differences can make a m
 Heat Maps
 ---------
 
-A heat map is a useful way to show how points cluster together. This heat map uses the same [Philadelphia vehicle crash data](https://www.opendataphilly.org/dataset/vehicular-crash-data) from 2019 from before:
+A heat map is a useful way to show how points cluster together. This heat map uses the same [Philadelphia vehicle crash data](https://hub.arcgis.com/datasets/e703eb63ec484aa6beae1268372efa53_0/explore) from 2019 from before:
 
 ![Bright colors, ranging from red to blue, blur into each other across the map of Philadelphia.](media/2019_crashes_heat_map.png "The darkest red region in the middle of the map indicates that the highest concentration of crashes is in the center of the city. The light blue around the edge of the map indicates much lower concentrations of Philadelphia vehicle crashes.")<!-- style = "max-width:400px;" border = 5px solid -->
 

@@ -2,7 +2,7 @@
 module_id: using_redcap_api
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 2.0.4
+version: 2.0.5
 current_version_description: Adds instructions for avoiding pushing API token to GitHub, adds information about environment variables, updates highlight boxes, and clarifies text editors
 module_type: standard 
 docs_version: 3.0.0
@@ -674,7 +674,7 @@ By convention, environment variables are usually written in all caps, but you ca
 Edit the .Renviron file
 ---
 
-To open up the `.Renviron` file for editing, run the following R code in the [R Studio console](https://swcarpentry.github.io/r-novice-inflammation/09-supp-intro-rstudio/index.html#:~:text=The%20console%20window%20(in%20RStudio,when%20you%20close%20the%20session.):
+To open up the `.Renviron` file for editing, run the following R code in the [R Studio console](https://swcarpentry.github.io/r-novice-inflammation/09-supp-intro-rstudio.html#:~:text=The%20console%20window%20(in%20RStudio,when%20you%20close%20the%20session.):
 
 ```r
 file.edit("~/.Renviron")

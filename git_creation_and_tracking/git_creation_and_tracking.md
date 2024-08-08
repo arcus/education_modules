@@ -2,7 +2,7 @@
 module_id: git_creation_and_tracking
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.1.4
+version: 1.1.5
 current_version_description: Add formal definition of repository and commit; make liascript link(s) point to first page
 module_type: standard
 docs_version: 4.0.0
@@ -20,7 +20,7 @@ Before you start this module, make sure you
 
 - Know how to [access a command line interface (CLI) on your computer](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_command_line/demystifying_command_line.md#1).
 - Have Git configured on your computer. If Git is not yet configured, see the module on setting up Git on a [Mac, Linux](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_mac_and_linux/git_setup_mac_and_linux.md#1), or [Windows](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/git_setup_windows/git_setup_windows.md#1) machine.
-- Can edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create/#create-a-text-file), one of many text editors that you can access directly from the command line interface (CLI).
+- Can edit plain text `.txt` documents. A text editor is different from a word processor (i.e. Microsoft Word or Google Docs), in that text editors create files that consist only of text, no formatting at all. Here is a [tutorial on editing text files using `nano`](https://swcarpentry.github.io/shell-novice/03-create.html#create-a-text-file), one of many text editors that you can access directly from the command line interface (CLI).
 @end
 
 @learning_objectives
@@ -743,7 +743,7 @@ What if we have files that we do not want Git to track for us, like backup files
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
-It is likely that you will eventually share your repository.  This could be sharing it privately with a team, or publicly through [GitHub](github.com). When you do, everything that Git is tracking will become visible to everyone with access to the repository.  If there is an API key, password, sensitive data, or anything that requires any level of secrecy, make sure you tell Git to ignore it as soon as you create the file.
+It is likely that you will eventually share your repository.  This could be sharing it privately with a team, or publicly through [GitHub](https://github.com). When you do, everything that Git is tracking will become visible to everyone with access to the repository.  If there is an API key, password, sensitive data, or anything that requires any level of secrecy, make sure you tell Git to ignore it as soon as you create the file.
 
 Once information is committed and made public ("pushed" to GitHub), a record of it will persist even if you remove it in a later commit.
 
@@ -857,7 +857,7 @@ nothing to commit, working directory clean
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-For more details on how to use `.gitignore` to include or exclude particular files or folders check out Software Carpentry's [lesson on Ignoring Things](https://swcarpentry.github.io/git-novice/06-ignore/index.html).
+For more details on how to use `.gitignore` to include or exclude particular files or folders check out Software Carpentry's [lesson on Ignoring Things](https://swcarpentry.github.io/git-novice/06-ignore.html).
 
 </div>
 

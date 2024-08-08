@@ -11,7 +11,7 @@ assignees: ''
 ----
 Date: {yyyy-mm-dd}
 Reviewer: {your name}
-qa_template_version: 2.0.1
+qa_template_version: 2.0.2
 Name of Module: {take from the title of the main markdown in the PR}
 Current Liascript URL: {makes it easy for reviewers and authors to look at content as learners will}
 
@@ -25,7 +25,7 @@ Current Liascript URL: {makes it easy for reviewers and authors to look at conte
 ## Module Organization
 * [ ] Front matter is at the very top of the file
   * [ ] Check included front matter fields against the [front matter checklist](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/docs.md#your-front-matter-checklist) to make sure all necessary fields are included. In addition, check the following details:
-  * [ ] module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](versioning_guidelines.md)
+  * [ ] module version number of at least 1.0.0 if first public version or if this is an update then an [appropriately incremented version number](https://github.com/arcus/education_modules/blob/main/versioning_guidelines.md)
   * [ ] current_version_description is a short, present-tense text fragment without bullets, and gives a learner-centric quick overview of version changes from the learner perspective
   * [ ] module_type should be `standard`
   * [ ] estimated_time_in_minutes should be a number 0-60
@@ -52,7 +52,7 @@ Current Liascript URL: {makes it easy for reviewers and authors to look at conte
 * [ ] Unusual words, or words taking on a very specific meaning in context, are always defined for the learner, either on the page (e.g. using footnotes) or with links to a definition/glossary.
 * [ ] Provides pronunciation guides for any especially unusual words of particular importance (a common example is package names, such as dplyr)
 * [ ] Avoids unnecessarily gendered language (e.g. uses "they" singular rather than "he or she" for an unknown person).
-* [ ] Informative link text (e.g. instead of "To learn more about python, click [here](www.example.com)", say "Read this article to [learn more about python](www.example.com).")
+* [ ] Informative link text (e.g. instead of "To learn more about python, click [here](https://www.example.com)", say "Read this article to [learn more about python](https://www.example.com).")
 * [ ] Uses specially formatted highlight boxes consistently and appropriately
 * [ ] Short, digestible pieces --- avoids long paragraphs and breaks long sections up with sub-headers
 * [ ] All links work (See [Branch References to Change prior to PR Approval](#Branch-References-to-Change-prior-to-PR-Approval) for a place to keep track of internal references that will need to be updated.)

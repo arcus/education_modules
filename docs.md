@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  4.0.3
+version:  4.0.4
 current_version_description: Added module\_id as required frontmatter field for all modules; make liascript link(s) point to first page; move standard learning_objectives language to macro;
 language: en
 narrator: UK English Female
@@ -1264,7 +1264,7 @@ To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-To do this in R instead of python, see [this other module](example.com).
+To do this in R instead of python, see [this other module](https://example.com).
 
 </div>
 ```
@@ -1272,7 +1272,7 @@ To do this in R instead of python, see [this other module](example.com).
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-To do this in R instead of python, see [this other module](example.com).
+To do this in R instead of python, see [this other module](https://example.com).
 
 </div>
 

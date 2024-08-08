@@ -2,7 +2,7 @@
 module_id: genomics_setup
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version:  1.2.4
+version:  1.2.5
 current_version_description: Updated link to the Data Carpentries instructions, which changed after an update to their website; make liascript link(s) point to first page
 module_type: wrapper
 docs_version: 2.0.0
@@ -87,7 +87,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 <div class = "gratitude">
 <b style="color: rgb(var(--color-highlight));">Thank you!</b><br>
 
-We are grateful to the team of authors and maintainers at [Data Carpentry](https://datacarpentry.org/) for creating their Genomics Workshop and generously sharing it under a [CC-BY license](https://github.com/datacarpentry/genomics-workshop/blob/gh-pages/LICENSE.md): 
+We are grateful to the team of authors and maintainers at [Data Carpentry](https://datacarpentry.org/) for creating their Genomics Workshop and generously sharing it under a [CC-BY license](https://github.com/datacarpentry/genomics-workshop/blob/main/LICENSE.md): 
 
 Erin Alison Becker, Tracy Teal, François Michonneau, Maneesha Sane, Taylor Reiter, Jason Williams, et al. (2019, June). datacarpentry/genomics-workshop: Data Carpentry: Genomics Workshop Overview, June 2019 (Version v2019.06.1). Zenodo. http://doi.org/10.5281/zenodo.3260309
 
@@ -166,7 +166,7 @@ When you're done, return to this page to finish the module.
 AWS is one option for cloud computing, but you may prefer another platform, especially if your institution provides something they specifically support. 
 Reach out to research tech support and/or information services at your institution for details.
 
-Another popular platform is [Terra](https://terra.bio/resources/new-to-cloud/). 
+Another popular platform is [Terra](https://terra.bio/terra-details/). 
 
 ## Feedback
 
