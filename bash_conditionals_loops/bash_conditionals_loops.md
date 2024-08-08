@@ -2,8 +2,8 @@
 module_id: bash_conditionals_loops
 author:   Elizabeth Drellich
 email:    drelliche@chop.edu
-version: 1.2.7
-current_version_description: Clarify `=` and `==` inside test functions; make liascript link(s) point to first page
+version: 1.2.8
+current_version_description: Clarify `=` and `==` inside test functions; make liascript link(s) point to first page; format bash code blocks
 module_type: standard
 docs_version: 1.2.1
 language: en
@@ -59,7 +59,7 @@ previous_sequential_module: bash_103_combining_commands
 
 @version_history 
 
-Previous versions: 
+Previous versions:
 
 - [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/4347cd14c9f5a3fd110910ec09c0560a46e390bd/bash_conditionals_loops/bash_conditionals_loops.md#1): Clarify instructions in the getting started section.
 - [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_conditionals_loops/bash_conditionals_loops.md#1): Initial version
@@ -224,7 +224,7 @@ The `learning_bash` folder contains a few different types of files and folders f
 
 Try copying this code into your command line interface and see what happens:
 
-```
+```bash
 for file in *.dat
 do
   echo $file is a data file
@@ -244,13 +244,13 @@ In the first line `for file in *.dat` we are telling Bash that the variable "fil
 **Variable names**
 ===================
 
-You can name your variable anything you want as long as there are no spaces in the name, but the best practice is to name it something informative that helps you understand what your code is doing. For example both of  these have the same output as the code block above:
+You can name your variable anything you want as long as there are no spaces in the name, but the best practice is to name it something informative that helps you understand what your code is doing. For example both of these have the same output as the code block above:
 
-```
+```bash
 for z in *.dat; do echo $z; done
 ```
 
-```
+```bash
 for swivel_chair in *.dat; do echo $swivel_chair; done
 ```
 The first one doesn't give any context for what the variable `$z` represents, and the second will be extra confusing to you and anyone else who wants to know what your code does later!
@@ -261,7 +261,7 @@ Any command or sequence of commands can be repeated using a for loop.
 
 Maybe you to see all of the data files and all of their contents, and also want that information displayed with an empty line between each animal's data:
 
-```
+```bash
 for file in *.dat
 do
   echo $file
@@ -272,7 +272,7 @@ done
 
 Maybe you want to create a new file called `my_data` that contains all of that output you just printed. The best way to do that is to redirect each line of output to be appended to `my_data`:
 
-```
+```bash
 for file in *.dat
 do
   echo $file >> my_data
@@ -285,7 +285,7 @@ There isn't any output because you redirected it all, so use `cat my_data` to ch
 
 You can also create loops that redirect some output but while also showing you output. This can be a way to check that your code is working if you have a loop that takes a long time to run.
 
-```
+```bash
 for file in *.txt
 do
   echo $file >> my_animals
@@ -303,7 +303,7 @@ You can even put a loop inside of another loop! This is called **nesting** and n
 
 Perhaps you want to make some empty files for giant squid, elephant, and albatross. You just want each of these animals to have an empty `.txt` file and and empty `.dat` file. A nested loop can be a good way to do this:
 
-```
+```bash
 for animal in giant_squid elephant albatross
 do
   for filetype in .txt .dat
@@ -340,7 +340,7 @@ For loops are powerful tools in many programming languages because they let you 
 
 In a previous example you created files including `giant_squid.txt`, `elephant.txt`, and `albatross.txt`. If you now want to make each of these files contain their name, what should go in the three blanks in this code?
 
-```
+```bash
 ___1___ giant_squid elephant albatross
 ___2___
   echo $animal >> $animal.txt
@@ -356,7 +356,7 @@ ___3___
 
 The word `in` after defining the variable is important, and the command `do` comes before `done`. The correct code is:
 
-```
+```bash
 for animal in giant_squid elephant albatross
 do
   echo $animal >> $animal.txt
@@ -429,7 +429,7 @@ The three lines together make up the conditional statement.
 
 Let's see a working example:
 
-```
+```bash
 if [ 5 -eq 05 ]
 then echo "integer equality"
 fi
@@ -454,7 +454,7 @@ The statement `[ 5 -eq 05 ]` is checking if the numbers `5` and `05` are equal t
 
 You can also give instructions for what to do if the statement evaluates as false by adding a line starting with `else` after your `then` statement:
 
-```
+```bash
 if [ 5 -eq 05 ]
 then echo "integer equality"
 else echo "these numbers are not equal"
@@ -491,7 +491,7 @@ Variables in Bash are assigned values using the equals symbol `=` with **no spac
 
 You can have as many `elif` and `then` pairs as you want, but as soon as one statement is true, the code will do that action **and then stop**. It will not continue to check the remaining statements! Try to think about what this code will output, then run it and check if you were right:
 
-```
+```bash
 c=100
 if [ $c -lt 10 ]
 then echo "$c is a single digit number"
@@ -518,7 +518,7 @@ Each of these examples is based on the directory `learning_bash-main` that you d
 
 The test statement `[ -s FILE ]` is true if `FILE` exists is non-empty and false if `FILE` doesn't exist or exists but is empty.
 
-```
+```bash
 for file in *.txt
 do
    if [ -s $file ]
@@ -539,7 +539,7 @@ Also take a look at lines 5 and 6: both run whenever the statement `[ -s $file ]
 
 The test statement `[ STRING1 = STRING2 ]` is true if the two strings are the same, and false if they differ at all. For example `[ 5 = 05 ]` is false because the string `5` and the string `05` are not the same string of characters.
 
-```
+```bash
 for file in *.txt
 do
   if [[ "$file" = *bear* ]]
@@ -572,7 +572,7 @@ Bash can also think of all sorts of other commands as statements. In general a c
 
 </div>
 
-```
+```bash
 for file in *.txt
 do
   if grep Ursus $file
@@ -633,7 +633,7 @@ It is more important to know what types of commands are possible so that you can
 
 Without running this code, predict what it will do:
 
-```
+```bash
 for number in 1 2 3 4 5 6 7
 do
   if [ $number -gt 4 ]
