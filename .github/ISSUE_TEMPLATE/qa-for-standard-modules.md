@@ -52,7 +52,7 @@ Current Liascript URL: {makes it easy for reviewers and authors to look at conte
 * [ ] Unusual words, or words taking on a very specific meaning in context, are always defined for the learner, either on the page (e.g. using footnotes) or with links to a definition/glossary.
 * [ ] Provides pronunciation guides for any especially unusual words of particular importance (a common example is package names, such as dplyr)
 * [ ] Avoids unnecessarily gendered language (e.g. uses "they" singular rather than "he or she" for an unknown person).
-* [ ] Informative link text (e.g. instead of "To learn more about python, click [here](https://www.example.com)", say "Read this article to [learn more about python](www.example.com).")
+* [ ] Informative link text (e.g. instead of "To learn more about python, click [here](https://www.example.com)", say "Read this article to [learn more about python](https://www.example.com).")
 * [ ] Uses specially formatted highlight boxes consistently and appropriately
 * [ ] Short, digestible pieces --- avoids long paragraphs and breaks long sections up with sub-headers
 * [ ] All links work (See [Branch References to Change prior to PR Approval](#Branch-References-to-Change-prior-to-PR-Approval) for a place to keep track of internal references that will need to be updated.)
