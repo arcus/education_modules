@@ -2,7 +2,7 @@
 module_id: r_basics_visualize_data
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.3.7
+version: 1.3.8
 current_version_description: Added help boxes for color vs fill aesthetic mapping and how to get plots to show in the plot pane; make liascript link(s) point to first page
 module_type: standard
 docs_version: 2.0.0
@@ -475,7 +475,7 @@ Out of the list above, these are the visual elements that could be reasonably ma
 
 There are actually a lot of aesthetic mapping possibilities, and they depend on the kind of plot you're making. For example, for a line graph you can define line width and line type, and for scatter plots you can define the shape of the dots.
 
-Picking the best aesthetics for your graph is as much an art as it is a science. Claus Wilke's *[Fundamentals of Data Visualization](https://serialmentor.com/dataviz)* is a great introduction to this topic.
+Picking the best aesthetics for your graph is as much an art as it is a science. Claus Wilke's *[Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)* is a great introduction to this topic.
 
 ### Hands-On: Mapping Aesthetics
 
@@ -800,7 +800,7 @@ ggplot(data = data_frame) +                     # Required
 
 ![""](media/fundamentals.png)<!-- style = "max-width:400px;" -->
 
-If you'd like to learn more about which graphics are most effective in specific situations, we recommend taking a look at *Fundamentals of Data Visualizations* by Claus Wilke. This is a very readable and recent primer on data visualization and figure design, and it's [available for free!](https://serialmentor.com/dataviz).  Note that this is not a book about how to code in R.  Rather, it explains visual communication of data insights in a way that will help you regardless of the language you use.
+If you'd like to learn more about which graphics are most effective in specific situations, we recommend taking a look at [*Fundamentals of Data Visualizations* by Claus Wilke](https://clauswilke.com/dataviz/). This is a very readable and recent primer on data visualization and figure design, and it's available for free!  Note that this is not a book about how to code in R.  Rather, it explains visual communication of data insights in a way that will help you regardless of the language you use.
 
 <h4>R for Data Science</h4>
 

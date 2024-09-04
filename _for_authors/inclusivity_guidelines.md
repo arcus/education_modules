@@ -2,7 +2,7 @@
 
 This is a working document articulating our goals and standards for creating content that will be valuable and accessible to as wide a range of users as possible. Specifically, we are designing with a variety of ["edge" users](https://guide.inclusivedesign.ca/activities/inclusive-design-mapping/) in mind: those with limited access to visual content or auditory content, those with barriers related to attention, cognition, sensory processing, or language, and those with limited technology access and/or financial resources. A core principle is to allow users as much flexibility as possible to configure their learning experiences to meet their own needs and preferences.
 
-The guidelines presented here are inspired by several other guides including the [Web Content Accessibility Guidelines WCAG21](https://www.w3.org/WAI/WCAG21/quickref) and [The Inclusive Learning Design Handbook](https://handbook.floeproject.org/approachesoverview). Recommendations specific to educational videos can be found [here](https://ctl.wiley.com/how-to-ensure-accessibility-for-educational-videos/).
+The guidelines presented here are inspired by several other guides including the [Web Content Accessibility Guidelines WCAG21](https://www.w3.org/WAI/WCAG21/quickref) and [The Inclusive Learning Design Handbook](https://handbook.floeproject.org/approaches/). Recommendations specific to educational videos can be found [here](https://ctl.wiley.com/how-to-ensure-accessibility-for-educational-videos/).
 
 ## Guidelines
 
@@ -22,7 +22,7 @@ The guidelines presented here are inspired by several other guides including the
   - Color should never be the sole method for distinguishing visual content
 * Provide clear, consistent organization and content structure to reduce cognitive load for users
   - Use clear, informative headers for each subsection. The resulting table of contents should give a good sense of the flow and structure of the module. Avoid titles and headers that sacrifice clarity for playfulness.
-  - Use informative link text (e.g. instead of "To learn more about python, click [here](www.example.com)", say "Read this article to [learn more about python](www.example.com).")
+  - Use informative link text (e.g. instead of "To learn more about python, click [here](https://www.example.com)", say "Read this article to [learn more about python](https://www.example.com).")
   - Use parallel structure across modules covering similar content.
   - Use consistent formatting (e.g. consistent page headers and footers, consistent style controlled by css file)
 * Reduce language barriers

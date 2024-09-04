@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  2.0.0
+version:  2.0.1
 current_version_description: Added macro aws_explanation to provide context for learners about why we're requiring them to set up an AWS account.
 language: en
 narrator: UK English Female
@@ -36,14 +36,14 @@ We'll continue to look for a better solution, but in the meantime we wanted to m
 
 **What other options do you have?**
 
-You can try to download all of the relevant files and install the necessary software on your computer (there are instructions for doing so in the [Data Carpentry genomics setup instructions](https://datacarpentry.org/genomics-workshop/setup.html)).
+You can try to download all of the relevant files and install the necessary software on your computer (there are instructions for doing so in the [Data Carpentry genomics setup instructions](https://datacarpentry.org/genomics-workshop/#setup)).
 Please note that even for very small genomics analysis examples, the files required are large and it may take hours for you to download them. 
 Even after downloading everything, your computer might not be powerful enough to run the necessary commands without hanging. 
 
 You may have access to powerful cloud computing via your institution. 
 If so, that can be a great option for practicing genomics analysis without having to set up an AWS account. 
 Reach out to your IT team for help accessing and using computing resources at your institution. 
-It may be helpful to share the [Data Carpentry genomics setup instructions](https://datacarpentry.org/genomics-workshop/setup.html) with them to let them know what software you'll need.
+It may be helpful to share the [Data Carpentry genomics setup instructions](https://datacarpentry.org/genomics-workshop/#setup) with them to let them know what software you'll need.
 
 </div>
 
@@ -72,7 +72,7 @@ You will also need to use the username `dcuser` with the password `data4Carp`.
 <div class = "help">
 <b style="color: rgb(var(--color-highlight));">Troubleshooting help</b><br>
 
-For full instructions on how to connect to your instance, see the Data Carpentry instructions for connecting from a [MacOS/Linux computer](https://datacarpentry.org/genomics-workshop/AMI-setup/#connect-to-your-amazon-instance-macoslinux) or from a [Windows computer](https://datacarpentry.org/genomics-workshop/AMI-setup/#connect-to-your-amazon-instance-windows).
+For full instructions on how to connect to your instance, see the Data Carpentry instructions for connecting from a [MacOS/Linux computer](https://datacarpentry.org/genomics-workshop/AMI-setup#headingSpoiler1) or from a [Windows computer](https://datacarpentry.org/genomics-workshop/AMI-setup#headingSpoiler2).
 
 </div>
 
@@ -86,7 +86,7 @@ For full instructions on how to connect to your instance, see the Data Carpentry
 You will continue to be billed as long as your AWS instance is available, even if it is stopped. 
 To stop accumulating charges, you must **terminate** your instance.
 
-For more details, see the [Data Carpentry warning about AWS instances](https://datacarpentry.org/genomics-workshop/AMI-setup/#very-important-warning---avoid-unwanted-charges).
+For more details, see the [Data Carpentry warning about AWS instances](https://datacarpentry.org/genomics-workshop/AMI-setup#very-important-warning---avoid-unwanted-charges).
 
 Remember that when you terminate an AWS instance, any data on it is permenantly lost. 
 If there are files on your instance that you don't want to lose, be sure to move them to your own computer with `scp` before terminating the instance.

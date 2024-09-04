@@ -2,7 +2,7 @@
 module_id: r_basics_introduction
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.4.4
+version: 1.4.5
 current_version_description: Added subsection explaining how to add new code chunks; make liascript link(s) point to first page
 module_type: standard
 docs_version: 3.0.0
@@ -485,7 +485,7 @@ On our RStudio Server, you won't need to install any packages for this course (a
 > install.packages("tidyverse")
 Installing package into ‘/Users/paytonk/Library/R/x86_64/4.1/library’
 (as ‘lib’ is unspecified)
-trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.1/tidyverse_1.3.1.tgz'
+trying URL 'https://cran.r-project.org/src/contrib/Archive/tidyverse/tidyverse_1.3.1.tar.gz'
 Content type 'application/x-gzip' length 421072 bytes (411 KB)
 ==================================================
 downloaded 411 KB

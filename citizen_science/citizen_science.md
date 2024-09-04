@@ -2,7 +2,7 @@
 module_id: citizen_science
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.0.6
+version: 1.0.7
 current_version_description: Initial version.
 module_type: standard
 docs_version: 1.0.0
@@ -219,7 +219,7 @@ Here are a few common reasons:
 - to solve problems that are still too complex for computers to tackle effectively, especially [image analysis](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3285221/) and [problem solving](https://journals.plos.org/plosone/article/comment?id=10.1371/annotation/2271ef78-f7ef-4a0d-aa34-568e7054a32b)
 - to [replace expensive expert analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037245)
 - to do work that would traditionally be done by research staff but doesn't necessarily require any special knowledge or training, especially [collecting measurements or observations](https://malariajournal.biomedcentral.com/articles/10.1186/1475-2875-11-43) or [processing data](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0039808)
-- to access [larger and more diverse participant populations](http://cognitivehealth.tech/wp-content/uploads/2019/02/DodellFeder2019-SCZRes.pdf) than would otherwise be available through more traditional recruitment methods
+- to access [larger and more diverse participant populations](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6188518/pdf/sby044.pdf) than would otherwise be available through more traditional recruitment methods
 
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>

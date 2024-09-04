@@ -1265,7 +1265,7 @@ To learn more about the theory behind ggplot2, read [Hadley Wickham's article, "
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-To do this in R instead of python, see [this other module](example.com).
+To do this in R instead of python, see [this other module](https://example.com).
 
 </div>
 ```
@@ -1273,7 +1273,7 @@ To do this in R instead of python, see [this other module](example.com).
 <div class = "learn-more">
 <b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
 
-To do this in R instead of python, see [this other module](example.com).
+To do this in R instead of python, see [this other module](https://example.com).
 
 </div>
 
