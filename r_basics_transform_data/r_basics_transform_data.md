@@ -2,7 +2,7 @@
 module_id: r_basics_transform_data
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.4.1
+version: 1.4.2
 current_version_description: Improved boolean logic, pipe, and filter materials
 module_type: standard
 docs_version: 3.1.2
@@ -526,9 +526,7 @@ And for comparison, let's add parentheses around the OR clause to accurately cap
 #   col_rec_tat <dbl>, rec_ver_tat <dbl>
 ```
 
-
-
-## The "Pipe" Operator (`%>%`  or `|>`)
+## The Pipe Operator
 
 One of the most powerful concepts in the `tidyverse` suite of packages is the pipe operator, which is written in two possible ways:
 
