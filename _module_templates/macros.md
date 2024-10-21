@@ -22,7 +22,8 @@ Previous versions:
 @overview
 <div class = "overview">
 
-## Overview
+<h2>Overview</h2>
+
 @comment
 
 **Is this module right for me?** @long_description
