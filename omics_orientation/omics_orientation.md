@@ -19,6 +19,9 @@ None.
 @end
 
 @learning_objectives
+
+After completion of this module, learners will be able to:
+
 - Define what omics is and explain why a researcher might choose an omics approach
 - Identify several popular omics domains
 - Describe some challenges and caveats of omics research
@@ -44,10 +47,11 @@ Previous versions:
 - [1.0.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/914714acfb6b30980e011ab09e087d4d2c5c918e/omics_orientation/omics_orientation.md#1): Initial version.
 @end
 
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/overview_patch/_module_templates/macros.md
 -->
 
 # Omics Orientation
+
 @overview
 
 ## What is Omics?

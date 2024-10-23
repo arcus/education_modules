@@ -22,9 +22,7 @@ estimated_time_in_minutes: 45
 None.
 @end
 
-@learning_objectives  
-
-
+@learning_objectives
 
 - list several ways members of the public can contribute to scientific projects
 - recognize several different factors that motivate people to volunteer in citizen science

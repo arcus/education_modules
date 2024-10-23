@@ -20,9 +20,10 @@ Previous versions:
 @end
 
 @overview
+
 <div class = "overview">
 
-<h2>Overview</h2>
+##Overview: TEST
 
 @comment
 
@@ -34,9 +35,7 @@ Previous versions:
 
 @pre_reqs
 
-**Learning Objectives**
-
-After completion of this module, learners will be able to:
+**Learning Objectives**:
 
 @learning_objectives
 

@@ -17,16 +17,13 @@ estimated_time_in_minutes: 40
 The only pre-requisite suggested for this module is experience working in research in any capacity.
 @end
 
-@learning_objectives  
-
-
-
+@learning_objectives
 - Define research data management
 - Explain why data management forms an important part of the responsible conduct of research
 - Explain how various research stakeholders share responsibility for research data management
 - Give examples of research data management tasks within various stages of the research lifecycle
-
 @end
+
 good_first_module: true
 collection: intro_to_data_science
 data_task: data_management
