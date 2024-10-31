@@ -21,9 +21,10 @@ Previous versions:
 
 @overview
 
-<div class = "overview">
+<lia-keep><div class = "overview"></lia-keep>
 
 ## Overview
+
 
 @comment
 
@@ -47,7 +48,7 @@ This version (@version): @current_version_description
 
 @version_history
 
-</div>
+<lia-keep></div></lia-keep>
 
 Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules/list_of_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
 
