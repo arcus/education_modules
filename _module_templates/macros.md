@@ -2,7 +2,7 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.4.2
+version:  1.4.3
 current_version_description: Add text after Overview and Feedback that invites learners to the rest of the modules
 language: en
 narrator: UK English Female
@@ -20,7 +20,7 @@ Previous versions:
 @end
 
 @overview
-<lia-keep><div class = "overview"></lia-keep>
+<div class = "overview">
 
 ## Overview
 @comment
@@ -45,7 +45,7 @@ This version (@version): @current_version_description
 
 @version_history
 
-<lia-keep></div></lia-keep>
+</div>
 
 Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules/list_of_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
 
