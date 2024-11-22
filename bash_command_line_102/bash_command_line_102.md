@@ -63,7 +63,7 @@ Previous Versions
 - [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/82883e76e9b41dca4e6caea5734cd518805bd3fe/bash_command_line_102/bash_command_line_102.md#1) Improved Lesson Preparation instructions
 @end
 
-import: https://raw.githubusercontent.com/arcus/education_modules/joy-refix-liascript/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_bash.md
 -->
 
