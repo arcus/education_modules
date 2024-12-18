@@ -2,7 +2,7 @@
 module_id: demystifying_large_language_models
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.6
+version:  1.0.7
 current_version_description: Initial version
 module_type: standard
 docs_version: 2.0.0
@@ -281,9 +281,10 @@ Many of us already use digital assistants like Siri or Alexa.  These digital ass
 LLMs require significant energy (with its associated carbon burden) as well as other resources, such as water for data center cooling needs and materials for computer chips.  The extraction and use of these resources can harm the environment and directly and indirectly harm people.  People are also potentially harmed by other aspects of LLMs, including employment related risks as jobs are automated or made less creative by the use of LLMs.  Artists and authors, for example, are already contending with threats to their livelihood and the use of their works as training data.  Finally, there is a risk of widening the digital divide and exacerbating differences in access to the benefits of technology.
 
 <div class = "important">
-<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+<b style="color: rgb(var(--color-highlight));">Important note</b>
 
-![A one-panel cartoon. A person with a ponytail indicates some words projected onto a screen while saying "An analysis of our new AI hiring algorithm has raised some concerns."  On the screen is displayed "DeepAIHire Candidate Evaluation Algorithm, Inferred Internal Weightings. Below that is a table of various factors and the weights applied to them. There are four tiny weights of values less than 1, and one enormous weight of more than 750.  The factors with tiny weights are Educational Background, Past Experience, Recommendations,  and Interview Performance. The factor with a massive weight is listed as "Enthusiasm for developing and expanding the use of the DeepAIHire Algorithm."](https://imgs.xkcd.com/comics/ai_hiring_algorithm_2x.png "[AI Hiring Algorithm](https://xkcd.com/2237/) comic by xkcd, [CC BY-NC 2.5](https://xkcd.com/license.html).")<!-- style = "max-width: 280px;" -->This risk framework reflects a point in time, and you may think of risk types or examples that aren't reflected here. Suffice it to say, LLMs, like any laboratory tool, must be used with discretion and an awareness of the risks, costs, tradeoffs, and utility they provide.
+![A one-panel cartoon. A person with a ponytail indicates some words projected onto a screen while saying "An analysis of our new AI hiring algorithm has raised some concerns."  On the screen is displayed "DeepAIHire" Candidate Evaluation Algorithm, Inferred Internal Weightings. Below that is a table of various factors and the weights applied to them. There are four tiny weights of values less than 1, and one enormous weight of more than 750.  The factors with tiny weights are Educational Background, Past Experience, Recommendations,  and Interview Performance. The factor with a massive weight is listed as "Enthusiasm for developing and expanding the use of the DeepAIHire Algorithm."](https://imgs.xkcd.com/comics/ai_hiring_algorithm_2x.png "<a href='https://xkcd.com/2237/'>AI Hiring Algorithm</a> comic by xkcd, <a href='https://xkcd.com/license.html'>CC BY-NC 2.5</a>.")<!-- style = "max-width: 280px;" -->
+This risk framework reflects a point in time, and you may think of risk types or examples that aren't reflected here. Suffice it to say, LLMs, like any laboratory tool, must be used with discretion and an awareness of the risks, costs, tradeoffs, and utility they provide.
 
 </div>
 
