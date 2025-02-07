@@ -52,7 +52,7 @@ Looking for other modules on this topic or other topics related to data analytic
 
 @end
 
-@make_survey_url
+@make_survey_button
 <script modify="false">
 function makeURL(title, version, module_type, module_id) {
   let url = new URL('https://redcap.chop.edu/surveys');
@@ -65,12 +65,16 @@ function makeURL(title, version, module_type, module_id) {
 }
 var surveyURL = makeURL(@0, @1, @2, @3);
 
-send.html(`<a href="${surveyURL}")">our brief survey</a>`)
+send.html(`<a href="${surveyURL}" target="_blank">
+  <button class="survey-button">Provide Your Feedback</button>
+</a>`)
 </script>
 @end
 
 @feedback
-Please fill out @make_survey_url('@title', '@version', '@module_type', '@module_id') (takes just a few minutes). We use this information to fix and improve our content.Crucially, since our modules do not track user behavior, this is also the only way we can estimate how many learners are using our materials. 
+@make_survey_button('@title', '@version', '@module_type', '@module_id') 
+
+Our brief survey takes just a few minutes. We use this information to fix and improve our content. Crucially, since our modules do not track user behavior, this is also the only way we can estimate how many learners are using our materials. 
 
 One of the questions will ask if we achieved the learning objectives for the module. As a reminder, here's what those were: 
 
