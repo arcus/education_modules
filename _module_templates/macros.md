@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.4.3
-current_version_description: Add text after Overview and Feedback that invites learners to the rest of the modules
+version:  1.5.0
+current_version_description: Move feedback link to the top, some rewording
 language: en
 narrator: UK English Female
 title: Module Macros
