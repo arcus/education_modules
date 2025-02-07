@@ -69,21 +69,16 @@ send.html(`<a href="${surveyURL}")">our brief survey</a>`)
 @end
 
 @feedback
-In the beginning, we stated some goals.
+Please fill out @make_survey_url('@title', '@version', '@module_type', '@module_id') (takes just a few minutes). We use this information to fix and improve our content.Crucially, since our modules do not track user behavior, this is also the only way we can estimate how many learners are using our materials. 
+
+One of the questions will ask if we achieved the learning objectives for the module. As a reminder, here's what those were: 
+
 
 **Learning Objectives:**
 
 After completion of this module, learners will be able to:
 
 @learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out @make_survey_url('@title', '@version', '@module_type', '@module_id')!
 
 Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules/list_of_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
 
