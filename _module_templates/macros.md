@@ -13,9 +13,10 @@ comment:  This is placeholder module to save macros used in other modules.
 
 Previous versions: 
 
+- [1.4.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5d38321396c995da5c48ea80352fae31d5d8b806/_module_templates/macros.md#1): Add text after Overview and Feedback that invites learners to the rest of the modules
 - [1.3.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/bbd9189b6c598c77059da184995c83b4037cbd73/_module_templates/macros.md#1) :Add module\_id to macros for creating the REDCap survey link
 - [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a9aa1b38fc51db4252c9547654d9e36dba7864e5/_module_templates/macros.md#1): make CSS come from GCS
-- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ad25398d0eef884402cff0f0c4fb4ca360d3b8f4/_module_templates/macros.md#1): Add current\_version\_description and version\_history metadata.
+
 
 @end
 
