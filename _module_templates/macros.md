@@ -2,8 +2,8 @@
 
 author:   DART Team
 email:    dart@chop.edu
-version:  1.4.3
-current_version_description: Add text after Overview and Feedback that invites learners to the rest of the modules
+version:  1.5.0
+current_version_description: Move feedback link to the top, some rewording
 language: en
 narrator: UK English Female
 title: Module Macros
@@ -13,9 +13,10 @@ comment:  This is placeholder module to save macros used in other modules.
 
 Previous versions: 
 
+- [1.4.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/5d38321396c995da5c48ea80352fae31d5d8b806/_module_templates/macros.md#1): Add text after Overview and Feedback that invites learners to the rest of the modules
 - [1.3.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/bbd9189b6c598c77059da184995c83b4037cbd73/_module_templates/macros.md#1) :Add module\_id to macros for creating the REDCap survey link
 - [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a9aa1b38fc51db4252c9547654d9e36dba7864e5/_module_templates/macros.md#1): make CSS come from GCS
-- [1.1.0](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ad25398d0eef884402cff0f0c4fb4ca360d3b8f4/_module_templates/macros.md#1): Add current\_version\_description and version\_history metadata.
+
 
 @end
 
@@ -51,7 +52,7 @@ Looking for other modules on this topic or other topics related to data analytic
 
 @end
 
-@make_survey_url
+@make_survey_button
 <script modify="false">
 function makeURL(title, version, module_type, module_id) {
   let url = new URL('https://redcap.chop.edu/surveys');
@@ -64,26 +65,25 @@ function makeURL(title, version, module_type, module_id) {
 }
 var surveyURL = makeURL(@0, @1, @2, @3);
 
-send.html(`<a href="${surveyURL}")">our brief survey</a>`)
+send.html(`<a href="${surveyURL}" target="_blank">
+  <button class="survey-button">Provide Your Feedback</button>
+</a>`)
 </script>
 @end
 
 @feedback
-In the beginning, we stated some goals.
+@make_survey_button('@title', '@version', '@module_type', '@module_id') 
+
+Our brief survey takes just a few minutes. We use this information to fix and improve our content. Crucially, since our modules do not track user behavior, this is also the only way we can estimate how many learners are using our materials. 
+
+One of the questions will ask if we achieved the learning objectives for the module. As a reminder, here's what those were: 
+
 
 **Learning Objectives:**
 
 After completion of this module, learners will be able to:
 
 @learning_objectives
-
-We ask you to fill out a brief (5 minutes or less) survey to let us know:
-
-* If we achieved the learning objectives
-* If the module difficulty was appropriate
-* If we gave you the experience you expected
-
-We gather this information in order to iteratively improve our work.  Thank you in advance for filling out @make_survey_url('@title', '@version', '@module_type', '@module_id')!
 
 Looking for other modules on this topic or other topics related to data analytics and data science in biomedicine?  Please see [our complete list of educational modules](https://arcus.github.io/education_modules/list_of_modules) or consider trying our [prototype curriculum builder](https://learn.arcus.chop.edu).
 
