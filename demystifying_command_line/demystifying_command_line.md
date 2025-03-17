@@ -2,7 +2,7 @@
 module_id: demystifying_command_line
 author:   Joy Payton
 email:    paytonk@chop.edu
-version:  1.0.3
+version:  1.0.4
 current_version_description: Add link to Demystifying APIs; make liascript link(s) point to first page
 module_type: standard
 docs_version: 4.0.0
@@ -156,7 +156,7 @@ Most things you want to accomplish on your computer can be done using multiple i
 
 ## Quiz
 
-Which of the following could be described as an interface?
+Which of the following could be described as an interface? Check all that apply!
 
 [[X]] A method for two computer systems to interact
 [[X]] A series of switches and dials used to control a physical device
