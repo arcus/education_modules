@@ -2,8 +2,8 @@
 module_id: database_normalization
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.8
-current_version_description: Initial Version.
+version: 1.1.0
+current_version_description: Switched framing of the one-to-many quiz to avoid ambiguity about one-to-many v.s. many-to-many.
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -19,7 +19,6 @@ Learners should have experience working with data in tables.  This could include
 @end
 
 @learning_objectives  
-
 
 - Explain the significance of "one to many" data relationships and how these relationships affect data organization
 - Describe how a normalized database is typically organized
@@ -42,7 +41,10 @@ coding_required: false
 @end
 
 @version_history 
-No previous versions.
+Previous versions: 
+
+- [1.0.8](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d367a7d5a0e9b6abdf67883b31d4a8894a13b17a/database_normalization/database_normalization.md#1): Initial version.
+
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
@@ -110,19 +112,25 @@ It would be impossible to know ahead of time how many columns would be needed.  
 
 ### Quiz: One-to-Many 
 
-Which of the following relationships are likely to be one-to-many?  Select all the correct answers.
+Which of the following relationships are likely to be **one-to-one**?  Select all the correct answers.
 
-[[X]] Gym member to workout
-[[ ]] Street address to latitude and longitude coordinates
-[[X]] Patient to medical provider
-[[X]] Medical provider to patient
-[[ ]] Baseball team to mascot
+[[ ]] Gym member to workout
+[[X]] Street address to latitude and longitude coordinates
+[[ ]] Patient to medical provider
+[[ ]] Medical provider to patient
+[[X]] Baseball team to mascot
 [[?]] There are multiple correct answers!
 *********
 
 <div class = "answer">
 
-We hope that any gym member will have more than one recorded workout, so that relationship is one-to-many.  However, a particular street address will only be related to a single latitude and longitude. That's not a one-to-many relationship.  A patient can have multiple providers, so that's one-to-many, and providers can have many patients, so that's also one-to-many.  In fact you could more accurately call this relationship many-to-many!  Finally, a baseball team (we argue) should have only one mascot, so that's not a one-to-many relationship.
+The only one-to-one relationships in this list are "street address to latitude and longitude coordinates" and "baseball team to mascot".
+
+We hope that any gym member will have more than one recorded workout, so that relationship would be one-to-many; even if some members only record a single workout, the fact that any members have multiple workouts makes the relationship one-to-many. 
+However, a particular street address will only be related to a single latitude and longitude, so that is a one-to-one relationship. 
+A patient can have multiple providers, so that's one-to-many, and providers can have many patients, so that's also one-to-many. 
+In fact you could more accurately call this relationship many-to-many!  
+Finally, a baseball team (we argue) should have only one mascot, so that's a one-to-one relationship, not one-to-many.
 
 </div>
 
