@@ -2,8 +2,8 @@
 module_id: database_normalization
 author:   Joy Payton
 email:    paytonk@chop.edu
-version: 1.0.8
-current_version_description: Initial Version.
+version: 1.1.0
+current_version_description: Switched framing of the one-to-many quiz to avoid ambiguity about one-to-many v.s. many-to-many.
 module_type: standard
 docs_version: 2.0.0
 language: en
@@ -19,7 +19,6 @@ Learners should have experience working with data in tables.  This could include
 @end
 
 @learning_objectives  
-
 
 - Explain the significance of "one to many" data relationships and how these relationships affect data organization
 - Describe how a normalized database is typically organized
@@ -42,7 +41,10 @@ coding_required: false
 @end
 
 @version_history 
-No previous versions.
+Previous versions: 
+
+- [1.0.8](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/d367a7d5a0e9b6abdf67883b31d4a8894a13b17a/database_normalization/database_normalization.md#1): Initial version.
+
 @end
 
 import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
