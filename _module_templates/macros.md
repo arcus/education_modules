@@ -140,7 +140,7 @@ Looking for other modules on this topic or other topics related to data analytic
 </script>
 @end
 
-link:  https://cdn.jsdelivr.net/gh/arcus/education_modules@main/assets/styles.css
+link:  https://cdn.jsdelivr.net/gh/arcus/education_modules@bug-fixes/assets/styles.css
 
 script: https://kit.fontawesome.com/83b2343bd4.js
 script:  https://code.jquery.com/jquery-3.6.0.slim.min.js
