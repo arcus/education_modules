@@ -155,12 +155,6 @@ h2, h3, h4 {
     background: rgba(var(--lia-grey),0.2);
 }
 
-.lia-list--unordered
-  > li:before {
-    content: "\25CF";
-}
-
-
 .icon-compile-circle:before {
 content: "\f144";
 font-family: "Font Awesome 5 Free";
