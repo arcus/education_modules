@@ -230,33 +230,34 @@ The code cells above are linked, meaning that all of the cells "remember" the co
 
 1. Which of the following is FALSE about lists? Select all that apply.
 
-    [( )] Lists are changeable; items can be added, removed, or replaced after the list is created.
-    [( )] Lists can be assigned to variables.
-    [( )] Lists can contain a mix of data types.
-    [(X)] Lists are unordered; you cannot access an item in the list by its position.
-    ***
-    <div class = "answer">
 
-    Lists are changeable, can be stored in variables for later use (even though we didn't explicitly discuss it, the list on the previous page was assigned to the variable `produce`), can contain a mix of data types, and they are **ordered**, meaning that items remain in the position that they were put into the list. You can access or edit list items by value **or** position (also called the **index**).
+[( )] Lists are changeable; items can be added, removed, or replaced after the list is created.
+[( )] Lists can be assigned to variables.
+[( )] Lists can contain a mix of data types.
+[(X)] Lists are unordered; you cannot access an item in the list by its position.
+***
+<div class = "answer">
 
-    </div>
-    ***
+Lists are changeable, can be stored in variables for later use (even though we didn't explicitly discuss it, the list on the previous page was assigned to the variable `produce`), can contain a mix of data types, and they are **ordered**, meaning that items remain in the position that they were put into the list. You can access or edit list items by value **or** position (also called the **index**).
+
+</div>
+***
 
 2. Given the following list of numbers, what is the **index** of the number **15**?
 
     `[2, 14, 9, 101, 15, 37]`
 
-    [( )] 5
-    [(X)] 4
-    [( )] 15
-    [( )] 6
-    ***
-    <div class = "answer">
+[( )] 5
+[(X)] 4
+[( )] 15
+[( )] 6
+***
+<div class = "answer">
 
-    Indexing in Python begins with **0**, not 1, and so the index of 15, which is the fifth item in the list, is **4**.  
+Indexing in Python begins with **0**, not 1, and so the index of 15, which is the fifth item in the list, is **4**.  
 
-    </div>
-    ***
+</div>
+***
 
 ## Dictionaries
 
@@ -386,49 +387,49 @@ We've just gone through quite a few useful list and dictionary methods, and you 
 
 1. True or False: Duplicate key-value pairs are allowed in dictionaries.
 
-    [( )] True
-    [(X)] False
-    ***
-    <div class = "answer">
+[( )] True
+[(X)] False
+***
+<div class = "answer">
 
-    While **values** can be repeated in a dictionary, each **key** must be unique. However, you can have multiple values for a key by putting those values in a list.
+While **values** can be repeated in a dictionary, each **key** must be unique. However, you can have multiple values for a key by putting those values in a list.
 
-    </div>
-    ***
+</div>
+***
 
 2. How would you access all of the countries (the "keys") in the dictionary below? 
 
      `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
-    [[capital_cities.keys()]]
-    <script>
-  let input = "@'input".trim();
-  input == "capital_cities.keys()";
+[[capital_cities.keys()]]
+<script>
+let input = "@'input".trim();
+input == "capital_cities.keys()";
 </script>
-    ***
-    <div class = "answer">
+***
+<div class = "answer">
 
-    To return the keys of a dictionary, you use the `.keys()` dictionary method on the `capital_cities` dictionary. So the correct answer is `capital_cities.keys()`.
+To return the keys of a dictionary, you use the `.keys()` dictionary method on the `capital_cities` dictionary. So the correct answer is `capital_cities.keys()`.
 
-    </div>
-    ***
+</div>
+***
 
 3. How would you add the the country of Angola and its capital city of Luanda to the dictionary below?
 
     `capital_cities = {"Afghanistan" : "Kabul", "Albania" : "Tirana", "Algeria" : "Algiers", "Andorra" : "Andorra la Vella"}`
 
-    [[capital_cities["Angola"] = "Luanda"]]
-    <script>
-    let input = "@'input".replace(/\s/g, "");
-    input == 'capital_cities["Angola"]="Luanda"' || input == "capital_cities['Angola']='Luanda'";
-    </script>
-    ***
-    <div class = "answer">
+[[capital_cities["Angola"] = "Luanda"]]
+<script>
+let input = "@'input".replace(/\s/g, "");
+input == 'capital_cities["Angola"]="Luanda"' || input == "capital_cities['Angola']='Luanda'";
+</script>
+***
+<div class = "answer">
 
-    To add a new key-value pair to a dictionary, we use subsetting notation.
+To add a new key-value pair to a dictionary, we use subsetting notation.
 
-    </div>
-    ***
+</div>
+***
 
 
 ## Additional Resources
