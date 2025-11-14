@@ -2,7 +2,7 @@
 module_id: python_basics_variables_functions_methods
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.1.3
+version: 1.1.4
 current_version_description: Implemented code blocks in pyodide; make liascript link(s) point to first page
 module_type: standard
 docs_version: 1.2.0
