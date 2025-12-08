@@ -2,7 +2,7 @@
 module_id: python_basics_loops_conditionals
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.2.2
+version: 1.2.3
 current_version_description: Replaced SageMathCells with Pyodide cells for better usability
 module_type: standard
 docs_version: 1.2.0
@@ -296,32 +296,30 @@ print(candy2)
 
 1. If we wanted to add another conditional statement at line 6 of the code cell above that would give 1 piece of candy to children who start with between 10 to 15 pieces (inclusive), what keyword would we use to start that line?
 
-    [( )] `for`
-    [( )] `if`
-    [(X)] `elif`
-    [( )] `else`
-    ***
-    <div class = "answer">
+[( )] `for`
+[( )] `if`
+[(X)] `elif`
+[( )] `else`
+***
+<div class = "answer">
 
-    Because we're checking for multiple conditions, we use the `elif` keyword. We use `if` for the first condition that we are testing; `else` is used at the end to catch anything that hasn't been explicitly handled by our preceding conditions. And we know that `for` is the keyword to begin a loop!
+Because we're checking for multiple conditions, we use the `elif` keyword. We use `if` for the first condition that we are testing; `else` is used at the end to catch anything that hasn't been explicitly handled by our preceding conditions. And we know that `for` is the keyword to begin a loop!
 
-    </div>
-    ***
+</div>
+***
+ How could you write the comparison at line 6 so that each child gets the correct number of pieces of candy? Select all that apply.
 
+[[X]] `10 <= i <= 15`
+[[ ]] `10 < i < 15`
+[[ ]] `i >= 10`
+[[X]] `10 <= i < 16`
+***
+<div class = "answer">
 
-2. How could you write the comparison at line 6 so that each child gets the correct number of pieces of candy? Select all that apply.
+Because we want to give an additional piece of candy to any student who started with between 10 and 15 pieces, we want to test if `i` is greater than or equal to 10, but less than or equal to 15 (which could also be expressed as less than 16, since we're working with integers). So the first and last choices are correct.
 
-    [[X]] `10 <= i <= 15`
-    [[ ]] `10 < i < 15`
-    [[ ]] `i >= 10`
-    [[X]] `10 <= i < 16`
-    ***
-    <div class = "answer">
-
-    Because we want to give an additional piece of candy to any student who started with between 10 and 15 pieces, we want to test if `i` is greater than or equal to 10, but less than or equal to 15 (which could also be expressed as less than 16, since we're working with integers). So the first and last choices are correct.
-
-    </div>
-    ***
+</div>
+***
 
 ## Additional Resources
 
