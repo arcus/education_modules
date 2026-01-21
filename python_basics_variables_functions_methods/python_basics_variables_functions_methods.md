@@ -2,7 +2,7 @@
 module_id: python_basics_variables_functions_methods
 author:   Meredith Lee
 email:    leemc@chop.edu
-version: 1.1.3
+version: 1.1.4
 current_version_description: Implemented code blocks in pyodide; make liascript link(s) point to first page
 module_type: standard
 docs_version: 1.2.0
@@ -173,10 +173,10 @@ Notice that in the above example, we have passed the `type("Hello World!")` func
 
 1. Which of the following are valid examples of Python code? Select all that apply.
 
-    [[X]] `len("Python is awesome!")`
-    [[X]] `"python".upper()`
-    [[X]] `type("4.3")`
-    [[X]] `type(True)`
+[[X]] `len("Python is awesome!")`
+[[X]] `"python".upper()`
+[[X]] `type("4.3")`
+[[X]] `type(True)`
 ***
 <div class = "answer">
 
@@ -199,10 +199,10 @@ print(x)
 
 2. To check that the string "Python is awesome!" ends in an exclamation point, we can use the code ` "Python is awesome!".endswith("!")`. In this case, the boolean value `True` will be returned, since "Python is awesome!" does indeed end in an exclamation point. What is `.endswith()` an example of?
 
-    [(X)] A method
-    [( )] A function
-    [( )] A string
-    [( )] A float
+[(X)] A method
+[( )] A function
+[( )] A string
+[( )] A float
 ***
 <div class = "answer">
 

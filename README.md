@@ -33,13 +33,15 @@ If you do use these materials, we would love to hear from you!  Please [let us k
 ## For Contributors
 
 If you would like to create a module for inclusion here, please review our documentation on [how to write a module](_for_authors/write_a_module.md).
+
 ## A Few Notes and Caveats
 
 If you use .css or .js scripts, it's important to know that you can't supply these scripts directly from GitHub.  GitHub does not provide the appropriate metadata to indicate that the content of the files is of the correct type, which means that browsers won't include them.
 
 One solution is to use a CDN that re-packages GitHub contents for use in a web page.  For example, [Liascript itself suggests using a CDN](https://github.com/liaScript/custom-style/) to provide a CSS script from GitHub.
 
-Since CDNs generally have a refresh rate that doesn't meet the "let's try this really quickly" pace of development in GitHub, another option is to host your script in another publicly accessible location.  In our case, we've made use of the AWS S3 service to host a custom css file.  This means updating the S3 version of the file as well as the version hosted here, in this GitHub, but the extra headache is worth it.
+Since CDNs generally have a refresh rate that doesn't meet the "let's try this really quickly" pace of development in GitHub, another option is to host your script in another publicly accessible location, such as the AWS S3 service.  This means updating the S3 version of the file as well as the version hosted here, in this GitHub, but you may prefer that to enable faster development.
+We've opted to use a CDN, which means changes made to .css or .js files will not immediately propogate to liascript modules using those files. 
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
