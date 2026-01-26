@@ -2,8 +2,8 @@
 module_id: data_visualization_in_seaborn
 author:   Rose Hartman
 email:    hartmanr1@chop.edu
-version: 1.4.3
-current_version_description: Add Python Basics series and Transform data with pandas as additional prerequisites; make liascript link(s) point to first page
+version: 1.5.0
+current_version_description: Add `plt.close()` to code cells to prevent plot accumulation.
 module_type: standard
 docs_version: 3.0.0
 language: en
@@ -75,6 +75,7 @@ data_visualization_in_ggplot2
 @version_history
 Previous versions: 
 
+- [1.4.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/f1ae61c8da0b2fb145f1c3cdc0c886aed606a25e/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Add Python Basics series and Transform data with pandas as additional prerequisites; make liascript link(s) 
 - [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b9257316d82e99f51e1c1cb9819dc8c053aa1ed9/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Change executable code blocks from sagemath to pyodide.
 - [1.2.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/16a4a852199689a42f04555cb581cf2dcb90fb0f/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Update highlight boxes, update front matter, and replace text with macros.
 - [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Initial version, and fixed broken link to ggplot2 module. 
@@ -196,12 +197,15 @@ If you provide `relplot` with two continuous variables, it will default to makin
 ```python
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm")
+#display the plot
 plt.show()
+#close the plot
+plt.close()
 ```
 @Pyodide.eval
 
 Note that in the above code, the `sns.relplot()` command is the one that actually creates the plot, but by default python won't show you the plot unless you ask to print it.
-The `plt.show()` command (imported from the `matplotlib` module) tells it to print out the plot it just made.
+The `plt.show()` command (imported from the `matplotlib` module) tells it to print out the plot it just made. The `plt.close()` command clears the figure, so that the plots don't accumulate as you create and display more plots. 
 
 If the code ran correctly, you should have generated a scatterplot like the one below:
 
@@ -222,6 +226,7 @@ Let's try adding information about a third variable, weight, by using color.
 sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm", hue="val_weight_kg")
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -265,6 +270,7 @@ sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker")
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -298,6 +304,7 @@ sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker", style = "is_smoker")
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -321,6 +328,7 @@ sns.relplot(data = covid_data,
             hue="is_smoker", style = "is_smoker",
            palette = "colorblind")
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -374,6 +382,7 @@ sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker", style = "is_smoker")
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -408,6 +417,7 @@ sns.relplot(data = covid_data,
             x="val_age", y="val_height_cm",
             hue="is_smoker", style = "is_smoker")
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -468,6 +478,7 @@ sns.set_context("notebook")
 
 sns.displot(covid_data, x="val_age")
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -486,6 +497,7 @@ The appearance of a histogram can change a lot depending on the number of bins y
 ```python
 sns.displot(covid_data, x="val_age", binwidth=1)
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -499,6 +511,7 @@ plt.show()
 ```python
 sns.displot(covid_data, x="val_age", binwidth=10)
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -531,6 +544,7 @@ Note that seaborn is continuing to use the color palette we set when we were mak
 ```python
 sns.displot(covid_data, x="val_age", hue="is_smoker")
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -551,6 +565,7 @@ You can control how `seaborn` plots the distributions with the `multiple` argume
 ```python
 sns.displot(covid_data, x="val_age", hue="is_smoker", multiple="stack")
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -575,6 +590,7 @@ Sometimes you may wish to show a distribution as context for another plot, such 
 ```python
 sns.jointplot(data=covid_data, x="val_age", y="val_height_cm")
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -668,6 +684,7 @@ fmri = sns.load_dataset("fmri")
 ```python
 sns.relplot(x="timepoint", y="signal", kind="line", data=fmri)
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -689,6 +706,7 @@ If you want to show multiple lines on a single plot, you can achieve that by add
 ```python
 sns.relplot(x="timepoint", y="signal", hue="event", style="event", kind="line", data=fmri)
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -711,6 +729,7 @@ You can add facets to a `seaborn` plot by adding an argument for either `col` (f
 ```python
 sns.relplot(x="timepoint", y="signal", hue="event", style="event", col = "region", kind="line", data=fmri)
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -812,6 +831,7 @@ For more background on `regplot` vs. `lmplot`, see [the seaborn regression tutor
 sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm")
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -840,6 +860,7 @@ sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            alpha = .1)
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -874,6 +895,7 @@ sns.lmplot(data = covid_data,
             x="val_age", y="val_height_cm",
            scatter_kws={"alpha": .1})
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -898,6 +920,7 @@ sns.lmplot(data = covid_data,
            scatter_kws={"alpha": .1},
            order = 2)
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -938,6 +961,7 @@ sns.lmplot(data = covid_data,
            scatter_kws={"alpha": .1},
            lowess=True)
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -990,6 +1014,7 @@ sns.lmplot(data = covid_data,
            scatter_kws={"alpha": .1},
            lowess=True)
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
@@ -1019,6 +1044,7 @@ sns.lmplot(data = covid_data,
            scatter_kws={"alpha": .1},
            lowess=True)
 plt.show()
+plt.close()
 ```
 @Pyodide.eval
 
