@@ -344,8 +344,8 @@
 "module_id": "data_visualization_in_seaborn",
 "author": "Rose Hartman",
 "email": "hartmanr1@chop.edu",
-"version": "1.4.3",
-"current_version_description": "Add Python Basics series and Transform data with pandas as additional prerequisites; make liascript link(s) point to first page",
+"version": "1.5.0",
+"current_version_description": "Add `plt.close()` to code cells to prevent plot accumulation.",
 "module_type": "standard",
 "docs_version": "3.0.0",
 "language": "en",
@@ -369,7 +369,7 @@
 "sets_you_up_for": "\n- python_practice\n\n",
 "depends_on_knowledge_available_in": "\n- pandas_transform\n- data_visualization_in_open_source_software\n- python_basics_variables_functions_methods\n- python_basics_lists_dictionaries\n- python_basics_loops_conditionals\n- demystifying_python\n\n",
 "is_parallel_to": "data_visualization_in_ggplot2\n",
-"version_history": "Previous versions: \n\n- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b9257316d82e99f51e1c1cb9819dc8c053aa1ed9/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Change executable code blocks from sagemath to pyodide.\n- [1.2.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/16a4a852199689a42f04555cb581cf2dcb90fb0f/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Update highlight boxes, update front matter, and replace text with macros.\n- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Initial version, and fixed broken link to ggplot2 module. \n",
+"version_history": "Previous versions: \n\n- [1.4.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/f1ae61c8da0b2fb145f1c3cdc0c886aed606a25e/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Add Python Basics series and Transform data with pandas as additional prerequisites; make liascript link(s) \n- [1.3.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/b9257316d82e99f51e1c1cb9819dc8c053aa1ed9/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Change executable code blocks from sagemath to pyodide.\n- [1.2.5](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/16a4a852199689a42f04555cb581cf2dcb90fb0f/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Update highlight boxes, update front matter, and replace text with macros.\n- [1.0.3](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/data_visualization_in_seaborn/data_visualization_in_seaborn.md#1): Initial version, and fixed broken link to ggplot2 module. \n",
 "Linked Course":"data_visualization_in_ggplot2 data_visualization_in_open_source_software demystifying_python pandas_transform python_basics_lists_dictionaries python_basics_loops_conditionals python_basics_variables_functions_methods python_practice statistical_tests "
 },
 {
