@@ -1,18 +1,6 @@
-## Workday Description
+# Checklist for Creating a Gold-Standard Annotated Dataset for your Research Project
 
-Labeling, the process for adding annotations to data, helps us understand data in a more meaningful way by allowing us to better analyze and use it for our purposes. Consistent and correct data annotation preserves information integrity across different datasets and makes them interoperable with other AI systems, reducing errors that lead to misclassification or misinterpretation of data by AI algorithms.
-
-This training is designed to arm researchers and their study teams with industry identified best practices on achieving high-quality, gold-standard annotated data for your desired purpose, whether that be for model training, model validation, publication, secondary analysis, or archival reuse. It is encouraged to be taken prior to beginning a project that requires this knowledge but can be informational at any stage of the process.
-
-At the end of this module, you will emerge with the knowledge of:
-
-- The importance of accurate data annotation
-- The steps to be taken pre-, during-, and post-annotation for the annotated dataset to be considered gold-standard
-- How you can contribute to maximizing CHOP's return on investment for this work and help accelerate AI and Machine Learning research across the organization
-
-## Checklist for Creating a Gold-Standard Annotated Dataset for your Research Project
-
-**_Introduction_**
+### Introduction
 
 There is an ocean of data out there: clinical records, scans, sensor readings, research papers, and so much more, but there is the challenge of how to use it effectively. How do we turn this vast amount of data into something that can give us insight into a specific question or problem? Annotation is how by:
 
@@ -29,26 +17,26 @@ Through this work of adding labels, tags, notes, metadata, or other descriptive 
 - Validation of both automated systems and manual processes,
 - Accuracy in the biomedical research by the annotated data serving as gold-standard or ground-truth
 
-**_The Importance of Accurate Data Annotation_**
+### The Importance of Accurate Data Annotation
 
 Labeling, the process for adding annotations to data, helps us understand data in a more meaningful way by allowing us to better analyze and use it for our purposes. Consistent and correct data annotation preserves information integrity across different datasets and makes them interoperable with other AI systems, reducing errors that lead to misclassification or misinterpretation of data by AI algorithms.
 
 Important traits of high-quality, gold standard labeled data include:
 
-- Accurate: Data should be meticulously checked and labeled correctly against expert consensus or a ground truth.
-- Consistent: The same concepts must be labeled consistently across all examples
-- Diverse: Data should cover all known scenarios a future model must handle to account for ambiguities or class imbalances.
-- Unbiased: There must be no systemic skew toward a specific class or trend.
-- Contextual: Relationships between interconnected data points provide crucial context.
-- Performant: Data must help future models achieve key performance indicators around accuracy, sensitivity, specificity, etc.
+1. Accurate: Data should be meticulously checked and labeled correctly against expert consensus or a ground truth.
+2. Consistent: The same concepts must be labeled consistently across all examples
+3. Diverse: Data should cover all known scenarios a future model must handle to account for ambiguities or class imbalances.
+4. Unbiased: There must be no systemic skew toward a specific class or trend.
+5. Contextual: Relationships between interconnected data points provide crucial context.
+6. Performant: Data must help future models achieve key performance indicators around accuracy, sensitivity, specificity, etc.
 
-The best practices outlined below should direct you towards achieving this.
+The best practices outlined here should direct you towards achieving this.
 
 ## Best Practices
 
-**_Pre-Annotation_**
+### Pre-Annotation
 
-<u>1 Diverse, representative data</u>
+_1 Diverse, representative data_
 
 Make sure to choose the right data that is both relevant and representative of real-world scenarios. Diversity helps to minimize dataset bias by encompassing a variety of use cases, scenarios, and edge cases, but also allows for the data to align with project objectives. If the goal is to create a machine learning model, consider what specific tasks it needs to perform. This will help determine the kind of data it needs to learn from.
 
@@ -56,9 +44,10 @@ Ensure that the sample size of the data used in annotation is appropriate for th
 
 Once a dataset is obtained, consider any data preparation steps that need to be taken before annotation efforts begin to remove noise, duplicates, irrelevant information, etc., optimizing the data for annotation.
 
-<u>2 Privacy</u>
+_2 Privacy_
 
 Before using a dataset for annotation work, researchers should review the dataset to determine whether the data contains [Protected Health Information (PHI)](https://chop.policymedical.net/policymed/anonymous/docViewer?stoken=14de2fa8-d9f5-4188-983b-29545b20809f&dtoken=6d8d4887-3dec-4a76-8d83-14726c00d185) as defined by HIPAA. The HIPAA Privacy Rule establishes protections for identifiable health information created, received, maintained, or transmitted in research. A review of the dataset includes checking for the 18 HIPAA identifiers:
+![List of the 18 HIPAA Identifiers](media/Annotation_HIPAAPHI.png)
 
 If annotation work involves identifiable or potentially identifiable data, the activity likely must be covered by an Institutional Review Board (IRB) protocol. Even when annotation is part of secondary data use, IRB review is often necessary to confirm the appropriate regulatory pathway, document privacy safeguards, and establish data access conditions. When in doubt, consult the IRB. Additionally, all individuals who will access the data (including annotators) must abide by all applicable laws, regulations, policies, and agreements. This includes but is not limited to being named in the IRB protocol (where required), completing all required training, and, if accessing CHOP data, being an active Workforce member (e.g., a regular employee or non-traditional personnel (NTP)).
 
