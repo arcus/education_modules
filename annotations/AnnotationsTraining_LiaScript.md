@@ -47,13 +47,14 @@ Once a dataset is obtained, consider any data preparation steps that need to be 
 _2 Privacy_
 
 Before using a dataset for annotation work, researchers should review the dataset to determine whether the data contains [Protected Health Information (PHI)](https://chop.policymedical.net/policymed/anonymous/docViewer?stoken=14de2fa8-d9f5-4188-983b-29545b20809f&dtoken=6d8d4887-3dec-4a76-8d83-14726c00d185) as defined by HIPAA. The HIPAA Privacy Rule establishes protections for identifiable health information created, received, maintained, or transmitted in research. A review of the dataset includes checking for the 18 HIPAA identifiers:
-![List of the 18 HIPAA Identifiers](media/Annotation_HIPAAPHI.png)
+
+![List of the 18 HIPAA Identifiers incluing: names, social security numbers, device identifiers and serial numbers, addresses, medical record numbers, web URLs, elements of dates related to the individual, health plan beneficiary numbers, IP addresses, telephone numbers, account numbers, biometric identifiers, fax numbers, certificate/license numbers, full-face photographic images, email addresses, vehicle identifiers and serial numbers, any other unique identifying number, characteristic, or code.](media/Annotation_HIPAAPHI.png)
 
 If annotation work involves identifiable or potentially identifiable data, the activity likely must be covered by an Institutional Review Board (IRB) protocol. Even when annotation is part of secondary data use, IRB review is often necessary to confirm the appropriate regulatory pathway, document privacy safeguards, and establish data access conditions. When in doubt, consult the IRB. Additionally, all individuals who will access the data (including annotators) must abide by all applicable laws, regulations, policies, and agreements. This includes but is not limited to being named in the IRB protocol (where required), completing all required training, and, if accessing CHOP data, being an active Workforce member (e.g., a regular employee or non-traditional personnel (NTP)).
 
 Depending on the protocol and intended reuse, datasets may need to be de-identified or coded prior to annotation. De-identified data are no longer considered PHI under HIPAA, while coded datasets retain a re-linking key under controlled conditions and remain PHI for anyone with the key. Researchers should also assess whether free-text fields, images, or derived annotations could inadvertently reintroduce identifiable information.
 
-<u>3 Annotation Standards - A blueprint for consistent labeling</u>
+_3 Annotation Standards - A blueprint for consistent labeling_
 
 Begin defining clear annotation guidelines through the establishment of a set of instructions that are easy to understand and remain consistent across all data points. Begin by:
 
@@ -70,19 +71,19 @@ As the standards evolve, be sure to conduct consensus checks, where multiple ann
 
 General Overview of Annotation workflow (three phases):
 
-- Training: The training phase provides an initial look at sample data that will appear in the project. This stage will iterate on the ontology and annotation guidelines, so they accurately reflect the project scope and the data available. It will provide the annotators with examples, edge cases and practice tasks, and offer feedback to ensure consistent interpretation of labels
-- Validation: During the validation phrase, there is a focus on achieving consistent annotations across annotators. Having multiple annotators label the same items, calculate inter-annotator agreement (e.g. Cohen's Kappa, Krippendorff's alpha, etc.) and publish these scores. Iterate on guidelines and retrain annotators until agreement meets the predefined threshold. The disagreements can be resolved either through consensus meets or supervisor adjudication
-- Gold-standard Annotation: The gold-standard annotation phase produced the gold-standard dataset. Annotators may work in parallel on different subsets of the data but continue periodic consensus checks and spot audits to ensure ongoing consistency. This process should continue building out documentation and corner cases so that the gold standard data remains reproducible.
+1. Training: The training phase provides an initial look at sample data that will appear in the project. This stage will iterate on the ontology and annotation guidelines, so they accurately reflect the project scope and the data available. It will provide the annotators with examples, edge cases and practice tasks, and offer feedback to ensure consistent interpretation of labels
+2. Validation: During the validation phrase, there is a focus on achieving consistent annotations across annotators. Having multiple annotators label the same items, calculate inter-annotator agreement (e.g. Cohen's Kappa, Krippendorff's alpha, etc.) and publish these scores. Iterate on guidelines and retrain annotators until agreement meets the predefined threshold. The disagreements can be resolved either through consensus meets or supervisor adjudication
+3. Gold-standard Annotation: The gold-standard annotation phase produced the gold-standard dataset. Annotators may work in parallel on different subsets of the data but continue periodic consensus checks and spot audits to ensure ongoing consistency. This process should continue building out documentation and corner cases so that the gold standard data remains reproducible.
 
-<u>3.1 Annotation Guidelines - Template Outline</u>
+_3.1 Annotation Guidelines - Template Outline_
 
 Here is an example outline for annotation guidelines:
 
-- An introduction to the problem containing the most important information
-- A description of the possible labels that can be used
-- Detailed examples with realistic use cases
-- Instructions on how to handle ambiguous and edge cases
-- Instructions on how to navigate and use the annotation tool (Note that these can be separate from the annotation guidelines if that seems more appropriate)
+1. An introduction to the problem containing the most important information
+2. A description of the possible labels that can be used
+3. Detailed examples with realistic use cases
+4. Instructions on how to handle ambiguous and edge cases
+5. Instructions on how to navigate and use the annotation tool (Note that these can be separate from the annotation guidelines if that seems more appropriate)
 
 >Use Case Study: Annotation Guidelines for the "De-identification" project
 >
@@ -94,7 +95,7 @@ Here is an example outline for annotation guidelines:
 >
 >[Coding Clinical Notes for Deidentification Annotation Guidelines](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/Arcus_Labs_Orientation/deid_notes_instructions/deid_notes_annotation_guidelines.md#1)
 
-<u>4 Annotator Selection</u>
+_4 Annotator Selection_
 
 Annotators (sometimes known as labelers) are the people who provide the right context to the data, that will inform the end model or analysis. Depending on the needs of your project, annotators should either be subject experts that can be trained in annotation skills or experienced annotators that can learn about the subject.
 
