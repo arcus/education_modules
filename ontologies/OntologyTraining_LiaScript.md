@@ -1,16 +1,3 @@
-## Workday Description
-
-**Audience:** Researchers who will be creating an annotated dataset as part of their research project.
-**PreReq:** Checklist for Creating a Gold-Standard Annotated Dataset for your Research Project
-
-Labeling, the process for adding annotations to data, helps us understand data in a more meaningful way by allowing us to better analyze and use it for our purposes. Consistent and correct data annotation preserves information integrity across different datasets and makes them interoperable with other AI systems, reducing errors that lead to misclassification or misinterpretation of data by AI algorithms. Utilizing an existing or creating your own ontology is a key component of the best practices to follow in the creation of labeled data.
-
-This training is a supplemental training to the Checklist for Creating a Gold-Standard Annotated Dataset for your Research Project focusing specifically on ontologies. It is encouraged to be taken if, after completing the Checklist training, you need additional information on ontologies. At the end of this module, you will emerge with the knowledge of:
-
-- What an ontology is, and why it should be used instead of a taxonomy
-- Three existing ontologies that are available for use
-- How to create and manage your own ontology
-
 ## Ontologies
 
 To better understand ontologies and why we use them, as opposed to taxonomies, as part of the annotation process, it is best to zoom out a bit and broadly define not just what an ontology is but also review what a taxonomy is in relation to an ontology.
@@ -27,6 +14,8 @@ _Key Characteristics:_
 
 _Generic Taxonomy Diagram_
 
+![Example Diagram of a Taxonomy](media/Ontology_TaxonomyDesign.png)
+
 ### What is an ontology?
 
 An ontology is a complex, flexible framework used to model the relationships between entities and their properties, providing a rich, formal representation of knowledge within a domain, capturing not only the hierarchy, but also the various relationships between concepts. An ontology essentially connects taxonomies, capturing the interrelationships among entities to provide rich information.
@@ -39,7 +28,7 @@ _Key Characteristics:_
 
 _Generic Ontology Chart_
 
-
+![Example Diagram of an Ontology Chart](media/Ontology_OntologyChart.png)
 
 ### Why Ontology and Not Taxonomy
 
@@ -56,13 +45,13 @@ As determining key terms for labels is one of the first steps in creating Annota
 
 ## Existing Ontologies
 
-<u>1 HPO</u>
+### 1 HPO
 
 The [Human Phenotype Ontology (HPO)](https://hpo.jax.org/) project provides an ontology of medically relevant phenotypes, disease-phenotype annotations, and the algorithms that operate on these. The HPO can be used to support differential diagnostics, translational research, and a number of applications in computational biology by providing the means to _compute_ over the clinical phenotype. The HPO is being used for computational deep phenotyping and precision medicine as well as integration of clinical data into translational research. [Deep phenotyping](https://www.ncbi.nlm.nih.gov/pubmed/22504886) can be defined as the precise and comprehensive analysis of phenotypic abnormalities in which the individual components of the phenotype are observed and described. The HPO is being increasingly adopted as a standard for phenotypic abnormalities by diverse groups such as international rare disease organizations, registries, clinical labs, biomedical resources, and clinical software tools and will thereby contribute toward nascent efforts at global data exchange for identifying disease etiologies.
 
 The HPO currently contains over 18,000 terms arranged in a directed acyclic graph and are connected by is-a (subclass-of) edges, such that a term represents a more specific or limited instance of its parent term(s). All relationships in the HPO are is-a relationships, i.e. simple class-subclass relationships. For instance, [_Abnormal lens morphology_](https://hpo.jax.org/browse/term/HP:0000517) is-a [_Abnormal eye morphology_](https://hpo.jax.org/browse/term/HP:0012372). The relationships are transitive, meaning that they are inherited up all paths to the root. [_Phenotypic abnormality_](https://hpo.jax.org/browse/term/HP:0000118) is the main subontology of the HPO and contains descriptions of clinical abnormalities. Additional subontologies are provided to describe inheritance patterns, onset/clinical course, and modifiers of abnormalities.
 
-<u>2 SNOMED</u>
+### 2 SNOMED
 
 [SNOMED International](https://www.snomed.org/) is a not-for-profit organization that owns, administers, and develops SNOMED CT. SNOMED CT is a comprehensive, multilingual clinical healthcare terminology resource with scientifically validated clinical content, enabling consistent representation of clinical content in the electronic health records.
 
@@ -80,7 +69,7 @@ _Descriptions_
 
 Descriptions are the human readable terms that are associated with clinical ideas. Each description has a description type and may be marked "preferred for use" in particular languages or dialects. A fully specified name (FSN) is a type of description which uniquely and fully captures the meaning of the clinical idea. Synonyms are descriptions that allow the same concept to be expressed in different ways, each of which are associated with the same concept ID.
 
-<u>3 UMLS</u>
+### 3 UMLS
 
 The [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) is a collection of files and software developed by the National Library of Medicine that enables interoperability across biomedical computer systems. At its core, is the UMLS Metathesaurus, a large biomedical thesaurus organized by concept, which serves as a bridge connecting over [200 source vocabularies](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/), including SNOMED CT, HPO, ICD-10, RxNORM, etc., by linking synonymous terms to shared concepts. This means a clinician's SNOMED CT code, and a geneticist's HPO term can be recognized as referring to the same underlying concept, allowing seamless traversal across vocabularies. The Metathesaurus preserves each vocabulary's original meanings, concept meanings and relationships while surfacing cross vocabulary connections through a unified concept identifier (CUI) system. The [UMLS Metathesaurus Browser](https://uts.nlm.nih.gov/uts/umls/home) is a web interface for searching and exploring these linked concepts and their relationships interactively.
 
@@ -88,44 +77,49 @@ The [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/um
 
 There is no one-way or comprehensive methodology that you can always use that covers everything you could need when developing an ontology. Generally speaking, you can follow the below steps to guide you through the process:
 
-- Determine the domain and scope of the ontology
-  - To determine the domain and scope, start with a few basic questions such as:
-    - What is the domain of the ontology?
-    - What are we using the ontology for?
-    - What answers should the ontology provide us with?
-    - Who will use this ontology?
-- Consider reusing existing ontologies
-  - In some cases, you have the benefit of reusing an existing ontology that was developed by someone else for similar purposes to your own, in these cases you could simply extend those ontologies to better suit your needs.
-- Enumerate important terms in the ontology
-  - You need to understand the scope of the ontology in terms of what you want to define and work with. To this end, you need to come up with terms that you would like to make statements about or explain to users.
-- Define the classes and class hierarchy
-  - A class is a collection of instances.
-  - For the creation of a class hierarchy, there are three choices:
-    - Top-down
-      - Identify most general classes first and then work to specifics
-    - Botton-up
-      - Identify specifics first and then work to general classes
-    - Combination
-- Define the properties of classes
-  - Now that classes and high-level concepts have been defined, they need detail.
-  - By using properties, you are able to describe the internal structure of your classes
-  - Example
+1. Determine the domain and scope of the ontology
+    - To determine the domain and scope, start with a few basic questions such as:
+      - What is the domain of the ontology?
+      - What are we using the ontology for?
+      - What answers should the ontology provide us with?
+      - Who will use this ontology?
+2. Consider reusing existing ontologies
+    - In some cases, you have the benefit of reusing an existing ontology that was developed by someone else for similar purposes to your own, in these cases you could simply extend those ontologies to better suit your needs.
+3. Enumerate important terms in the ontology
+    - You need to understand the scope of the ontology in terms of what you want to define and work with. To this end, you need to come up with terms that you would like to make statements about or explain to users.
+4. Define the classes and class hierarchy
+    - A class is a collection of instances.
+    - For the creation of a class hierarchy, there are three choices:
+      - Top-down: Identify most general classes first and then work to specifics
+      - Botton-up: Identify specifics first and then work to general classes
+      - Combination
+5. Define the properties of classes
+    - Now that classes and high-level concepts have been defined, they need detail.
+    - By using properties, you are able to describe the internal structure of your classes
+    - Example: 
+
+![Classes and their properties/slots](media/Ontology_ClassProperties.png)
+
+6. Define the facts of the properties (Properties can also be referred to as slots)
+    - Important aspects to consider regarding the properties include:
+      - Value Type: Is it a string, number, Boolean, enumeration, instance of another class?
+      - Property cardinality: How many values does the property have?
+      - Range: Instance properties are when an instance of another class is used as a property in another class; these properties often only allow certain instances of another class, and these instances are specified in a range.
+      - Domain: Refers to the classes to which a property is attached or classes which a property describes.
+    - Example:
+
+![Properties](media/Ontology_Properties.png)
+
+7. Create Instances
+    - Create individual instances of the classes that were previously defined:
+      - Choose a class
+      - Create an individual instance of that class
+      - Fill in the property values
+    - Example:
 
 
-- Define the facts of the properties (Properties can also be referred to as slots)
-  - Important aspects to consider regarding the properties include:
-    - Value Type: Is it a string, number, Boolean, enumeration, instance of another class?
-    - Property cardinality: How many values does the property have?
-    - Range: Instance properties are when an instance of another class is used as a property in another class; these properties often only allow certain instances of another class, and these instances are specified in a range.
-    - Domain: Refers to the classes to which a property is attached or classes which a property describes.
-  - Example
-- Create Instances
-  - Create individual instances of the classes that were previously defined:
-    - Choose a class
-    - Create an individual instance of that class
-    - Fill in the property values
-  - Example
-  - Note: In ontologies, properties and classes form a hierarchy and inherit the properties/slots of the classes above them.
+
+    - Note: In ontologies, properties and classes form a hierarchy and inherit the properties/slots of the classes above them.
 
 For more detailed information on the steps outlined, view [Ontology Development 101: A Guide to Creating Your First Ontology](https://protege.stanford.edu/publications/ontology_development/ontology101.pdf).
 
