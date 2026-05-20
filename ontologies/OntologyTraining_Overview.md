@@ -13,5 +13,3 @@ This training is a supplemental training to the Checklist for Creating a Gold-St
 3. How to create and manage your own ontology
 
 To better understand ontologies and why we use them, as opposed to taxonomies, as part of the annotation process, it is best to zoom out a bit and broadly define not just what an ontology is but also review what a taxonomy is in relation to an ontology.  
-
-??[genially](https://view.genially.com/6a0dac7143a858048a8b71ba) 
