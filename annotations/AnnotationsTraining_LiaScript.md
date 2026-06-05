@@ -143,15 +143,18 @@ It is imperative that annotators are effectively trained. This includes hands-on
 A communication method for annotators should be set to track progress, report issues, and flag challenging cases and come to a consensus. This can be done through regular team meetings, team message systems, or project management software.
 
 >Use Case Study: Annotator Training Details for the "De-identification Project"  
-<br/>The Principal Investigators annotated a small subset of clinical notes which created a ground truth of annotations for the remaining annotators who were not experts in the subject to be trained on. The PIs created an ontology that would be used when applying annotations by other annotators. The annotators were then tasked with labeling the same clinical notes that the PIs annotated where they initially saw a range of Cohen-kappa, accuracy, and F1 scores (min:0.31, max:0.95) across annotators. That led the team to run another round of training and a reliability check. After this second round, the minimum Cohen-kappa score increased to 0.88 with similar patterns reflected with accuracy and F1 scores as well. At that point, the team felt confident in the training process and moved on to annotating additional clinical notes with occasional interventions.
+>
+>The Principal Investigators annotated a small subset of clinical notes which created a ground truth of annotations for the remaining annotators who were not experts in the subject to be trained on. The PIs created an ontology that would be used when applying annotations by other annotators. The annotators were then tasked with labeling the same clinical notes that the PIs annotated where they initially saw a range of Cohen-kappa, accuracy, and F1 scores (min:0.31, max:0.95) across annotators. That led the team to run another round of training and a reliability check. After this second round, the minimum Cohen-kappa score increased to 0.88 with similar patterns reflected with accuracy and F1 scores as well. At that point, the team felt confident in the training process and moved on to annotating additional clinical notes with occasional interventions.
 >
 >Annotation Application in BRAT from the defined ontology:
 >
->![De-identification Project Ontology](media/Annotation_DeIDOntology_1.png)![De-identification Project Ontology](media/Annotation_DeIDOntology_2.png)
+> <img src="media/Annotation_DeIDOntology_1.png" style="width: 35%; margin-right: 4%; display: inline-block; vertical-align: top;" />
+> <img src="media/Annotation_DeIDOntology_2.png" style="width: 35%; display: inline-block; vertical-align: top;" />
 
 It is important to remember that there is no one solution or one agreement-level score that should specifically be targeted. This number may be unknown and need continuous refinement through the course of the annotation process to meet that individual project's needs.
 
->Use Case Study: Annotator Training Details for the Mucositis and Cancer Research Study  
+>Use Case Study: Annotator Training Details for the Mucositis and Cancer Research Study 
+> 
 >The annotations were completed manually by PIs with subject matter expertise. Because the annotators were domain experts, no additional annotator training was conducted. Instead, they collaborated with each other regularly to review the applied annotations to ensure that they reached at least 80% level of agreement (F1 accuracy) before continuing to the next round.
 >
 >To develop a consensus-based gold standard dataset, the experts annotated three separate random batches of 100 notes each. For each batch, the experts first annotated the notes independently. After each round, they met to compare annotations, discuss areas of agreement, clarify definitions, and improve consistency in subsequent rounds. Once all three rounds were complete, they adjudicated all the remaining differences to produce a final gold standard set of 300 annotated notes.
