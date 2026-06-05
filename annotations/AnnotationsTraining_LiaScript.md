@@ -1,6 +1,28 @@
-# Checklist for Creating a Gold-Standard Annotated Dataset for your Research Project
+<!--
+title: Checklist for Creating a Gold-Standard Annotated Dataset for your Research Project
 
-### Introduction
+comment:  Labeling, the process for adding annotations to data, helps us understand data in a more meaningful way by allowing us to better analyze and use it for our purposes. Consistent and correct data annotation preserves information integrity across different datasets and makes them interoperable with other AI systems, reducing errors that lead to misclassification or misinterpretation of data by AI algorithms.  
+
+This training is designed to arm researchers and their study teams with industry identified best practices on achieving high-quality, gold-standard annotated data for your desired purpose, whether that be for model training, model validation, publication, secondary analysis, or archival reuse. It is encouraged to be taken prior to beginning a project that requires this knowledge but can be informational at any stage of the process.  
+
+
+@learning_objectives  
+
+At the end of this module, you will emerge with the knowledge of: 
+
+- The importance of accurate data annotation 
+- The steps to be taken pre-, during-, and post-annotation for the annotated dataset to be considered gold-standard 
+- How you can contribute to maximizing CHOP’s return on investment for this work and help accelerate AI and Machine Learning research across the organization 
+
+@end
+
+language: en
+mode: Textbook
+
+import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_templates/macros.md
+-->
+
+## Checklist for Creating a Gold-Standard Annotated Dataset for your Research Project
 
 There is an ocean of data out there: clinical records, scans, sensor readings, research papers, and so much more, but there is the challenge of how to use it effectively. How do we turn this vast amount of data into something that can give us insight into a specific question or problem? Annotation is how by:
 
@@ -30,9 +52,9 @@ Important traits of high-quality, gold standard labeled data include:
 5. Contextual: Relationships between interconnected data points provide crucial context.
 6. Performant: Data must help future models achieve key performance indicators around accuracy, sensitivity, specificity, etc.
 
-The best practices outlined here should direct you towards achieving this.
-
 ## Best Practices
+
+The best practices outlined here should direct you towards achieving high-quality, gold standard annotations.
 
 ### Pre-Annotation
 
