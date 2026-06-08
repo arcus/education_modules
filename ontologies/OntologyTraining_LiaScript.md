@@ -137,6 +137,118 @@ Managing ontology terms over time involves three core activities: adding new ter
 
 Within Arcus labs, it is recommended to maintain your ontology terms, relationships, and definitions in GitHub, a web-based platform that uses Git to track changes to files over time, including files edited collaboratively by a team. GitHub is particularly well suited to ontology management because every change is automatically recorded in the repository history, eliminating the need to manually number or rename files to track versions. When making changes, it is helpful to distinguish between major updates (such as significant restructuring of classes or relationships) and minor updates (such as small definition edits) noting these differences in your commit messages. Consistent file naming conventions should be established from the outset within GitHub that is useful, consistent and well documented, [see this resource](https://storage.googleapis.com/arcus-edu-libsci/Arcus%20RDM%20Resources/fileNaming_bestPractices_MIT.pdf) for more information.
 
+## Knowledge Check
+
+1. Which statement best distinguishes an ontology from a taxonomy?
+
+[( )] A. A taxonomy can express multiple relationship types, while an ontology cannot  
+[(X)] B. An ontology is a richer formal model that can express multiple relationship types and constraints; a taxonomy is typically a simple hierarchical classification  
+[( )] C. Taxonomies always include inference capabilities and OWL semantics  
+[( )] D. Ontologies are always flat lists of terms  
+
+---
+
+2. True or false: Ontologies improve computability and interoperability by providing formal definitions, relationships, and constraints.
+
+[(X)] True  
+[( )] False  
+
+---
+
+3. You should prefer an ontology over a simple label list when: (Select all that apply.)
+
+[[X]] A. Relationships between concepts (e.g., is-a, part-of) are important to downstream analysis  
+[[X]] B. You need computable definitions to support reasoning or mapping across vocabularies  
+[[ ]] C. The project only requires a short, fixed hierarchical label list with no relationships  
+[[X]] D. Reuse and interoperability with other datasets or EHR systems are goals  
+
+---
+
+4. Before building a new ontology, it is recommended to consider reusing or ______ an existing ontology.
+
+[[extending]]
+
+---
+
+5. Which resource aggregates many biomedical vocabularies and provides mappings across them via unified concept identifiers?
+
+[( )] A. HPO  
+[( )] B. SNOMED CT  
+[(X)] C. UMLS  
+[( )] D. Protégé  
+
+---
+
+6. True or false: SNOMED CT is primarily designed as a comprehensive clinical terminology for EHR interoperability.
+
+[(X)] True  
+[( )] False  
+
+---
+
+7. Which steps are important when creating a practical ontology for annotation projects? (Select all that apply.)
+
+[[X]] A. Define domain and scope  
+[[ ]] B. Omit documentation to keep the ontology compact  
+[[X]] C. Enumerate terms and build class hierarchy  
+[[X]] D. Define properties (domain, range, cardinality) and document semantics  
+
+---
+
+8. When constructing classes and properties, top-down, bottom-up, or ______ approaches are commonly used (one word).
+
+[[hybrid]]
+
+---
+
+9. Which of the following is the best practice when removing or changing terms that have already been used in annotations?
+
+[( )] A. Delete the old term immediately to prevent future use  
+[(X)] B. Mark the term obsolete/deprecated, retain it in version history, and document the change  
+[( )] C. Rename silently without notifying annotators  
+[( )] D. Remove all annotations that used the term  
+
+---
+
+10. Version control (e.g., GitHub) and clear commit messages are recommended for managing ontology files and changes.
+
+[(X)] True  
+[( )] False  
+
+---
+
+11. Which free/open-source tool is recommended for building and editing OWL ontologies?
+
+[( )] A. Excel  
+[(X)] B. Protégé  
+[( )] C. Photoshop  
+[( )] D. ArcGIS  
+
+---
+
+12. Which of the following is **not** an example of an interoperable file format suitable for exporting a created ontology?
+
+[(X)] PDF  
+[( )] OWL  
+[( )] SKOS  
+[( )] CSV  
+
+---
+
+13. Best practices for using ontologies in annotation projects include: (Select all that apply.)
+
+[[X]] A. Embedding ontology term definitions and examples in annotation guidelines  
+[[ ]] B. Updating the ontology without retraining annotators or revising guidelines  
+[[X]] C. Coordinating ontology updates with annotator retraining and guideline revisions  
+[[X]] D. Preferring reuse/extension of well-maintained ontologies over building new ones when possible  
+
+---
+
+14. True or false: Keeping ontology mappings and examples in the annotation guideline helps annotators choose consistent terms.
+
+[(X)] True  
+[( )] False  
+
 ## Sources
 
 Bice, B. (2025, July 28). Why ontology and not taxonomy. _International Legal Technology Association_. <https://www.iltanet.org/blogs/william-bice/2025/07/28/why-ontology-and-not-taxonomy>
