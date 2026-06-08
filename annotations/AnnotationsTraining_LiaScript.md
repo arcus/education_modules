@@ -294,6 +294,143 @@ As part of the [Arcus Annotation Initiative](https://forum.arcus.chop.edu/t/arcu
 - [ ] Archival Plan
 - [ ] Sharing Plan
 
+## Knowledge Check 
+
+1. What is the primary value of creating a gold standard annotated dataset?  
+
+[( )] A. Increasing dataset size 
+[(X)] B. Producing high-quality, expert‑validated labels to enable reliable model training and evaluation 
+[( )] C. Ensuring annotations are proprietary and non‑shareable 
+[( )] D. Automating all data cleaning steps 
+
+
+---
+
+2. Which of the following is **not** a quality of high-quality, gold-standard labeled data?
+[( )] A. Performant
+[( )] B. Consistent
+[(X)] C. Simple
+[( )] D. Unbiased
+
+---
+
+3. True or false: High-quality annotations can improve model performance, interoperability, and reproducibility.
+- [(x)] True
+- [( )] False
+
+---
+
+4. Which pre-annotation activity most directly reduces privacy risk before annotation begins?
+
+[( )] A. Choosing a larger sample size  
+[(X)] B. Deidentifying PHI or applying access controls and IRB review  
+[( )] C. Training annotators on the annotation tool  
+[( )] D. Creating detailed annotation guidelines  
+
+---
+
+5. True or false: It is best practice to pilot annotation guidelines on as large a sample as possible.
+
+[( )] True  
+[(X)] False  
+
+---
+
+6. During the validation phase, the primary purpose of having multiple annotators label the same items is to:
+
+[( )] A. Produce the final gold dataset directly  
+[(X)] B. Measure inter-annotator agreement and identify ambiguous guidelines  
+[( )] C. Increase annotator throughput by duplicating work  
+[( )] D. Train annotators to use the annotation software  
+
+---
+
+7. In which phase of the annotation workflow is there a focus on achieving consistent annotations across annotators?
+
+[( )] A.Assessment  
+[( )] B. Training  
+[(X)] C. Validation  
+[( )] D. Gold-standard annotation  
+
+---
+
+8. Which strategies help reduce annotator bias and improve annotation quality? (Select all that apply.)
+
+[[X]] A. Recruiting annotators with diverse backgrounds  
+[[X]] B. Providing ongoing training, examples, and feedback channels  
+[[ ]] C. Allowing annotators to develop private undocumented rules  
+[[X]] D. Using subject-matter experts for complex clinical judgments  
+
+---
+
+9. True or false: For highly technical clinical annotation tasks, untrained crowd annotators are as suitable as domain experts.
+
+[( )] True  
+[(X)] False  
+
+---
+
+10. Which QA technique is most useful for identifying systematic annotation errors concentrated in ambiguous cases?
+
+[( )] A. Random spot audits only  
+[( )] B. Increasing the number of annotators per item to 10  
+[( )] C. Deleting ambiguous items from the dataset  
+[(X)] D. Targeted audits focused on items with high annotator disagreement  
+
+---
+
+11. Embedding items with predetermined correct labels into annotation batches to monitor annotator performance would be an example of an ______ task.
+
+[[audit]]
+
+---
+
+12. Which IAA metrics are appropriate choices depending on task and number of annotators? (Select all that apply.)
+
+[[X]] A. Cohen’s kappa  
+[[X]] B. Fleiss’ kappa  
+[[X]] C. Krippendorff’s alpha  
+[[ ]] D. Bayesian Information Criterion (BIC)  
+
+---
+
+13. True or false: A very high percent agreement always implies a high kappa score.
+
+[( )] True  
+[(X)] False  
+
+---
+
+14. Which of the following should be included in the final data package for a gold dataset? (Select the best single answer.)
+
+[( )] A. Raw data only  
+[(X)] B. Machine-readable annotation files, README/technical docs, ontology exports, and provenance/QA metrics  
+[( )] C. Only a summary slide deck with results  
+[( )] D. Encrypted proprietary formats only  
+
+---
+
+15. The principles summarized by the acronym FAIR stand for Findable, Accessible, Interoperable, and ______.
+
+[[Reusable]]
+
+---
+
+16. Which of the following is a recommended archival practice for long-term dataset reuse?
+
+[(X)] A. Deposit in a trusted repository and include metadata/documentation  
+[( )] B. Store only on a local hard drive with no README  
+[( )] C. Use a proprietary undocumented file format  
+[( )] D. Avoid documenting version history to reduce complexity  
+
+---
+
+17. True or false: Before sharing a dataset externally, PHI must be removed or access must be restricted in accordance with IRB/HIPAA and organizational policies.
+
+[(X)] True  
+[( )] False 
+
+
 ## Key Terms
 
 Archive: A repository that collects, preserves, and provides access to scientific data, publications, and/or biospecimens to support, validate, and advance biomedical research.
