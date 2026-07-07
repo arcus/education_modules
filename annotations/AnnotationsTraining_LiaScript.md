@@ -52,13 +52,11 @@ Important traits of high-quality, gold standard labeled data include:
 5. Contextual: Relationships between interconnected data points provide crucial context.
 6. Performant: Data must help future models achieve key performance indicators around accuracy, sensitivity, specificity, etc.
 
-## Best Practices
-
 The best practices outlined here should direct you towards achieving high-quality, gold standard annotations.
 
-### Pre-Annotation
+## Best Practices: Pre-Annotation
 
-#### Diverse, representative data
+### Diverse, representative data
 
 Make sure to choose the right data that is both relevant and representative of real-world scenarios. Diversity helps to minimize dataset bias by encompassing a variety of use cases, scenarios, and edge cases, but also allows for the data to align with project objectives. If the goal is to create a machine learning model, consider what specific tasks it needs to perform. This will help determine the kind of data it needs to learn from.
 
@@ -66,7 +64,7 @@ Ensure that the sample size of the data used in annotation is appropriate for th
 
 Once a dataset is obtained, consider any data preparation steps that need to be taken before annotation efforts begin to remove noise, duplicates, irrelevant information, etc., optimizing the data for annotation.
 
-#### Privacy
+### Privacy
 
 Before using a dataset for annotation work, researchers should review the dataset to determine whether the data contains [Protected Health Information (PHI)](https://chop.policymedical.net/policymed/anonymous/docViewer?stoken=14de2fa8-d9f5-4188-983b-29545b20809f&dtoken=6d8d4887-3dec-4a76-8d83-14726c00d185) as defined by HIPAA. The HIPAA Privacy Rule establishes protections for identifiable health information created, received, maintained, or transmitted in research. A review of the dataset includes checking for the 18 HIPAA identifiers:
 
@@ -76,7 +74,7 @@ If annotation work involves identifiable or potentially identifiable data, the a
 
 Depending on the protocol and intended reuse, datasets may need to be de-identified or coded prior to annotation. De-identified data are no longer considered PHI under HIPAA, while coded datasets retain a re-linking key under controlled conditions and remain PHI for anyone with the key. Researchers should also assess whether free-text fields, images, or derived annotations could inadvertently reintroduce identifiable information.
 
-#### Annotation Standards - A blueprint for consistent labeling
+### Annotation Standards - A blueprint for consistent labeling
 
 Begin defining clear annotation guidelines through the establishment of a set of instructions that are easy to understand and remain consistent across all data points. Begin by:
 
@@ -97,7 +95,7 @@ General Overview of Annotation workflow (three phases):
 2. Validation: During the validation phrase, there is a focus on achieving consistent annotations across annotators. Having multiple annotators label the same items, calculate inter-annotator agreement (e.g. Cohen's Kappa, Krippendorff's alpha, etc.) and publish these scores. Iterate on guidelines and retrain annotators until agreement meets the predefined threshold. The disagreements can be resolved either through consensus meets or supervisor adjudication
 3. Gold-standard Annotation: The gold-standard annotation phase produced the gold-standard dataset. Annotators may work in parallel on different subsets of the data but continue periodic consensus checks and spot audits to ensure ongoing consistency. This process should continue building out documentation and corner cases so that the gold standard data remains reproducible.
 
-##### Annotation Guidelines - Template Outline
+#### Annotation Guidelines - Template Outline
 
 Here is an example outline for annotation guidelines:
 
@@ -117,13 +115,13 @@ Here is an example outline for annotation guidelines:
 >
 >[Coding Clinical Notes for Deidentification Annotation Guidelines](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/Arcus_Labs_Orientation/deid_notes_instructions/deid_notes_annotation_guidelines.md#1)
 
-#### Annotator Selection
+### Annotator Selection
 
 Annotators (sometimes known as labelers) are the people who provide the right context to the data, that will inform the end model or analysis. Depending on the needs of your project, annotators should either be subject experts that can be trained in annotation skills or experienced annotators that can learn about the subject.
 
 As annotators are human, their lived experiences and biases shape how they label data. For instance, individuals who have experienced online harassment may apply safety labels differently from those who have not. Considering the diversity, perspectives, and potential bias of annotators - along with providing training of unconscious bias when appropriate - can improve the overall quality of labels.
 
-#### Pre-Annotation Checklist
+### Pre-Annotation Checklist
 
 - [ ] Data selected is relevant to project objectives with diverse scenarios, stratified across key variables, use and edge cases
 - [ ] Dataset includes adequate sample size
@@ -134,9 +132,9 @@ As annotators are human, their lived experiences and biases shape how they label
 - [ ] Annotators with relevant domain expertise or annotation experience recruited and trained
 - [ ] Test annotations completed and reviewed
 
-### During Annotation
+## Best Practices: During Annotation
 
-_5 Annotator Training_
+### Annotator Training
 
 It is imperative that annotators are effectively trained. This includes hands-on exercises where they can practice with sample datasets to understand the guidelines thoroughly as well as be presented with realistic scenarios that will help them identify edge cases. Ongoing training and open communication are also important as it ensures everyone on the team is up to date as the standards and project needs evolve.
 
@@ -159,7 +157,7 @@ It is important to remember that there is no one solution or one agreement-level
 >
 >To develop a consensus-based gold standard dataset, the experts annotated three separate random batches of 100 notes each. For each batch, the experts first annotated the notes independently. After each round, they met to compare annotations, discuss areas of agreement, clarify definitions, and improve consistency in subsequent rounds. Once all three rounds were complete, they adjudicated all the remaining differences to produce a final gold standard set of 300 annotated notes.
 
-_5.1 QA Process_
+#### QA Process
 
 As part of training, there will need to be regular, continuous review of errors or inconsistencies among annotators through an established QA process that assesses the quality of the labels. Some ways to do that:
 
@@ -169,7 +167,7 @@ As part of training, there will need to be regular, continuous review of errors 
 
 These findings should be used to improve defined guidelines. Changes to the guidelines should be documented explaining the rationale for the changes. Any changes need to be version controlled, and annotators should be retrained when necessary.
 
-_6 Inter-Annotator Agreement_
+### Inter-Annotator Agreement
 
 Inter-Annotator Agreement (IAA) is a measure of the agreement or consistency between different annotators working on the same task or data set, as part of the preparation of a training, validation, or testing dataset for AI.
 
@@ -189,7 +187,7 @@ A few conditions should, minimally, be met to compute reliable inter-annotator a
 3. The annotators should be sampled from a well-defined population to understand better their interpretation of the guidelines (and the data).
 4. The subset of the data used for IAA calculation should be representative of the corpus to be annotated in terms of data types and categories.
 
-_6.1 Common Methods of Assessment_
+#### Common Methods of Assessment
 
 There are several common methods to assess the reliability of each annotation, including but not limited to:
 
@@ -204,7 +202,7 @@ When considering which metric to use, keep in mind that both the Cohen and Fleis
 >
 >In conventional surveys, when the task is to answer a set of (multi-choice) questions, the raters choose among a set of pre-defined choices, and their interrater agreement can be measured using Kappa metrics. For example, Cohen's Kappa can be used for exactly two raters and Fleiss' Kappa for three or more raters or when different sets of raters evaluate different items. However, an annotation project may be more complex than answering multi-choice questions. For example, in a phenotyping task where the rater is tasked to find the phrase associated with a specific symptom (e.g., Nausea) and then assign a severity level to it (e.g., Grade 3), each time, the rater is answering two questions (instead of one in conventional surveys). First, the rater is identifying the span/phrase in the text with marking begin index to end index, and then assigning a tag (here, the severity level) from the defined ontology. While you can still use Kappa metrics to measure the interrater agreement, note that you first need to map the raters' spans, and that by itself can showcase variability or otherwise disagreement among them. As a result, the standard Kappa value interpretation may be unrealistic to achieve.
 
-#### During Annotation Checklist
+### During Annotation Checklist
 
 - [ ] Iterative Quality Control Implemented
   - [ ] Disagreements and issues addressed and guidelines updated
@@ -213,9 +211,9 @@ When considering which metric to use, keep in mind that both the Cohen and Fleis
 - [ ] Inter-annotator agreement chosen and metrics tracked
 - [ ] Regular communication and progress tracking occurs
 
-### Post-Annotation
+## Best Practices: Post-Annotation
 
-_7 Final Quality Validation_
+### Final Quality Validation
 
 Before using the annotated data to train a model, or publishing the dataset for reuse, it needs to be validated for quality. There should be a final Inter Annotator Agreement score using the chosen method (Cohen's kappa, Fleis kappa, or Krippendorff's alpha, or F1 score). For a high degree of accuracy, a multi-metric approach can be used, with both a kappa score and F1 score. Gold standard annotations have a kappa score of 0.8 and a F1 score of 0.85, but this guideline is dependent on the complexity of the task, clinical requirements, and precedents.
 
@@ -224,7 +222,7 @@ A final quality audit should be performed, where a senior expert or the PI for t
 Generic Example of a Graphical Description of a Project Workflow Utilizing the Outlined Steps in this training:
 ![Graphical Description of a Project Workflow Utilizing the Outlined Steps](media/Annotation_ProjectWorkflow.png)
 
-_8 Data Preparation and Documentation_
+### Data Preparation and Documentation
 
 For archiving and sharing annotated datasets, create a final data package that includes the results along with all related contextual and reference information. The data, annotations, and contextual information should be packaged together in an organized file structure with a clear folder and file naming structure. See the [Arcus Project Template](https://github.research.chop.edu/arcus/arcus-project-template) for an example of this structure.
 
@@ -261,7 +259,7 @@ Include a README or configuration file that specifies: software and versions nee
 - [View here for a sample annotation card markdown file.](https://github.research.chop.edu/arcus/model-cards/blob/add-annotation-card/examples/annotation-card-AGV.md)
 - _Live examples in Gene, CHOP's Enterprise Data Catalog coming soon!_
 
-_9 Data Sharing and/or Archival Plan_
+### Data Sharing and/or Archival Plan
 
 Before sharing the annotations, a final review should be conducted to confirm that all technical, grant/funder, and privacy/compliance requirements have been met. Among other steps, this final review should include carefully checking the dataset for any identifiable or potentially identifiable information. If impermissible identifiers are present, they must be removed before release. If deidentification is not possible, the identifiers should be documented, and access restricted to approved users.
 
@@ -271,7 +269,7 @@ The annotated dataset should have a robust archival plan to ensure long-term pre
 
 The Arcus Library Science team can help with preparing annotated data for archiving and sharing, choosing an appropriate sharing method, and preparing a NIH Data Management and Sharing Plan (DMSP). To reach out to the Library Science team, see the [following website for more information](https://chop365.sharepoint.com/sites/ResearchDataManagementandSharingSupport/SitePages/Grants.aspx?csf=1&web=1&e=tXImlr).
 
-_9.1 Arcus Archives and the Gold Standard Annotation Data Repository_
+#### Arcus Archives and the Gold Standard Annotation Data Repository
 
 The Arcus Archives is an organized collection of contributed research data from across the Research Institute at CHOP. Data deposited in the Arcus Archives is subsequently made available to other Arcus Users for analysis in their own research projects. [View here](https://chop.alationcloud.com/app/document/18397/overview) for a current list of all available archived research data and reference cohorts in the Arcus Archives.
 
@@ -281,7 +279,7 @@ As part of the [Arcus Annotation Initiative](https://forum.arcus.chop.edu/t/arcu
 - Accelerate AI and Machine Learning research across CHOP.
 - Enable multimodal research by combining different types of annotated data.
 
-#### Post-Annotation Checklist
+### Post-Annotation Checklist
 
 - [ ] Final dataset quality score and select metric documented
   - [ ] IAA score
