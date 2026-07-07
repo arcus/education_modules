@@ -217,6 +217,8 @@ When considering which metric to use, keep in mind that both the Cohen and Fleis
 
 ## Best Practices: Post-Annotation
 
+The post-annotation phase ensures that annotated data is accurate, well-documented, compliant, and ready for use. Before datasets are used for model development, shared with collaborators, or archived for future research, they should undergo final quality validation, including inter-annotator agreement assessment, expert review, and bias evaluation. Equally important is the creation of comprehensive documentation that captures annotation methods, standards, ontologies, and quality assurance processes to support reproducibility and transparency. By preparing annotated data in structured, machine-readable formats and following FAIR (Findable, Accessible, Interoperable, and Reusable) principles, CHOP can maximize the value of researcher annotation efforts, facilitate data sharing and reuse, and ensure that high-quality datasets remain accessible for future research, AI development, and collaborative discovery.
+
 ### Final Quality Validation
 
 Before using the annotated data to train a model, or publishing the dataset for reuse, it needs to be validated for quality. There should be a final Inter Annotator Agreement score using the chosen method (Cohen's kappa, Fleis kappa, or Krippendorff's alpha, or F1 score). For a high degree of accuracy, a multi-metric approach can be used, with both a kappa score and F1 score. Gold-standard annotations have a kappa score of 0.8 and a F1 score of 0.85, but this guideline is dependent on the complexity of the task, clinical requirements, and precedents.
