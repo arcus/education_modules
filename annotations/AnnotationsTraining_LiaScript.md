@@ -253,10 +253,10 @@ If you created an ontology, export it in an interoperable file format: CSV, JSON
 
 Include a README or configuration file that specifies: software and versions needed to use the data, file format specifications, instructions for accessing and interpreting annotations.
 
-[**Annotation card**](https://github.research.chop.edu/arcus/model-cards/blob/add-annotation-card/templates/annotation-card.md)
+[**Annotation card**](https://github.research.chop.edu/arcus/model-cards/blob/main/templates/annotation-card.md))
 
 - Documented details include a summary of the overall goal and process of annotating the data, along with any associated model(s), dataset details, inputs and outputs, methods, standards and ontologies, reference files, ethical considerations, validation, evaluation, and quality assurance, publications and citations.
-- [View here for a sample annotation card markdown file.](https://github.research.chop.edu/arcus/model-cards/blob/add-annotation-card/examples/annotation-card-AGV.md)
+- [View here for a sample annotation card markdown file.](https://github.research.chop.edu/arcus/model-cards/blob/main/examples/annotation-card-AGV.md))
 - _Live examples in Gene, CHOP's Enterprise Data Catalog coming soon!_
 
 ### Data Sharing and/or Archival Plan
