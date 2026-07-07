@@ -43,7 +43,7 @@ Through this work of adding labels, tags, notes, metadata, or other descriptive 
 
 Labeling, the process for adding annotations to data, helps us understand data in a more meaningful way by allowing us to better analyze and use it for our purposes. Consistent and correct data annotation preserves information integrity across different datasets and makes them interoperable with other AI systems, reducing errors that lead to misclassification or misinterpretation of data by AI algorithms.
 
-Important traits of high-quality, gold standard labeled data include:
+Important traits of high-quality, gold-standard labeled data include:
 
 1. Accurate: Data should be meticulously checked and labeled correctly against expert consensus or a ground truth.
 2. Consistent: The same concepts must be labeled consistently across all examples
@@ -52,9 +52,11 @@ Important traits of high-quality, gold standard labeled data include:
 5. Contextual: Relationships between interconnected data points provide crucial context.
 6. Performant: Data must help future models achieve key performance indicators around accuracy, sensitivity, specificity, etc.
 
-The best practices outlined here should direct you towards achieving high-quality, gold standard annotations.
+The best practices outlined here should direct you towards achieving high-quality, gold-standard annotations.
 
 ## Best Practices: Pre-Annotation
+
+Successful gold-standard annotation projects begin long before labels are applied. The pre-annotation phase lays the foundation for high-quality, reliable annotated datasets by ensuring that data is representative, privacy requirements are addressed, annotation standards are clearly defined, and annotators are properly trained. Careful preparation helps reduce bias, improve consistency, and ensure that annotated data can effectively support downstream research, analytics, or machine learning objectives. This section outlines key pre-annotation best practices, including data selection and preparation, HIPAA and IRB considerations, development of annotation guidelines and ontologies, annotator recruitment and training, and quality assurance processes that support the creation of accurate, reproducible, and gold-standard datasets.
 
 ### Diverse, representative data
 
@@ -87,13 +89,13 @@ Establishing clear inclusion and exclusion guidelines for annotating a dataset a
 
 Note that developing these guidelines is not a one-time task. It is an iterative process that requires regular review and refinement as feedback is incorporated.
 
-As the standards evolve, be sure to conduct consensus checks, where multiple annotators independently label the same data, and discrepancies are resolved collaboratively or through a supervisor intervention / tiebreaker. It is imperative to track inter-annotator agreement and annotation error rates to monitor quality. These activities strengthen your standards and support the creation of gold standard annotations.
+As the standards evolve, be sure to conduct consensus checks, where multiple annotators independently label the same data, and discrepancies are resolved collaboratively or through a supervisor intervention / tiebreaker. It is imperative to track inter-annotator agreement and annotation error rates to monitor quality. These activities strengthen your standards and support the creation of gold-standard annotations.
 
 General Overview of Annotation workflow (three phases):
 
 1. Training: The training phase provides an initial look at sample data that will appear in the project. This stage will iterate on the ontology and annotation guidelines, so they accurately reflect the project scope and the data available. It will provide the annotators with examples, edge cases and practice tasks, and offer feedback to ensure consistent interpretation of labels
 2. Validation: During the validation phrase, there is a focus on achieving consistent annotations across annotators. Having multiple annotators label the same items, calculate inter-annotator agreement (e.g. Cohen's Kappa, Krippendorff's alpha, etc.) and publish these scores. Iterate on guidelines and retrain annotators until agreement meets the predefined threshold. The disagreements can be resolved either through consensus meets or supervisor adjudication
-3. Gold-standard Annotation: The gold-standard annotation phase produced the gold-standard dataset. Annotators may work in parallel on different subsets of the data but continue periodic consensus checks and spot audits to ensure ongoing consistency. This process should continue building out documentation and corner cases so that the gold standard data remains reproducible.
+3. Gold-standard Annotation: The gold-standard annotation phase produced the gold-standard dataset. Annotators may work in parallel on different subsets of the data but continue periodic consensus checks and spot audits to ensure ongoing consistency. This process should continue building out documentation and corner cases so that the gold-standard data remains reproducible.
 
 #### Annotation Guidelines - Template Outline
 
@@ -155,7 +157,7 @@ It is important to remember that there is no one solution or one agreement-level
 > 
 >The annotations were completed manually by PIs with subject matter expertise. Because the annotators were domain experts, no additional annotator training was conducted. Instead, they collaborated with each other regularly to review the applied annotations to ensure that they reached at least 80% level of agreement (F1 accuracy) before continuing to the next round.
 >
->To develop a consensus-based gold standard dataset, the experts annotated three separate random batches of 100 notes each. For each batch, the experts first annotated the notes independently. After each round, they met to compare annotations, discuss areas of agreement, clarify definitions, and improve consistency in subsequent rounds. Once all three rounds were complete, they adjudicated all the remaining differences to produce a final gold standard set of 300 annotated notes.
+>To develop a consensus-based gold-standard dataset, the experts annotated three separate random batches of 100 notes each. For each batch, the experts first annotated the notes independently. After each round, they met to compare annotations, discuss areas of agreement, clarify definitions, and improve consistency in subsequent rounds. Once all three rounds were complete, they adjudicated all the remaining differences to produce a final gold-standard set of 300 annotated notes.
 
 #### QA Process
 
@@ -194,7 +196,7 @@ There are several common methods to assess the reliability of each annotation, i
 1. Cohen's kappa\*: A statistical measure that assesses the agreement between two annotators corrected by the possibility of random agreement. It is calculated by comparing the observed frequency of agreement between annotators to the expected frequency of agreement by chance. This coefficient varies from -1 to 1, where 1 indicates perfect agreement, 0 indicates agreement equivalent to that obtained by chance, and -1 indicates perfect disagreement, although this is unlikely to happen in practice. This measure is widely used to assess the reliability of binary or categorical annotations, such as a presence or absence of annotation, or even a classification annotation in predefined categories. In most cases, a coefficient close to 0.8 is considered reliable, although the exact value may vary depending on the requirements of a particular project.
 2.  Fleiss' kappa\*: This method measures the consistency between a fixed number of annotators (but can be more than 2), an extension of the classic Cohen's kappa. Also, like Cohen's metric, Fleiss' ranges from 0 to 1, where 0 is equal to no agreement and 1 is equal to perfect agreement.
 3.  Krippendorff's alpha: An inter-annotator reliability measure that assesses agreement between multiple annotators for categorical, ordinal, or nominal data. It can be used to calculate inter-annotator reliability for incomplete data and can also account for scenarios in which annotators only partially agree. The Krippendorff alpha coefficient takes into account sample size, category diversity, and the possibility of agreement by chance. It varies from 0 to 1, where 1 indicates perfect agreement, and 0 indicates complete disagreement. This measure is particularly useful for evaluating the reliability of annotations in situations where multiple annotators are involved, such as in inter-annotator studies.
-4. F1 Score: This method measures the quality of labeling by calculating the harmonic mean between precision (the proportion of identified positive cases out of actual positive ones) and recall (the proportion of actual positive cases that were successfully identified) by the annotators. Scoring varies from 0 to 1, with 1 being perfect. While frequently used to compare an annotator against a ground truth or gold standard, in the strict context of IAA without a gold standard, it can be used to measure pairwise agreement by temporarily treating one annotator's labels as the reference.
+4. F1 Score: This method measures the quality of labeling by calculating the harmonic mean between precision (the proportion of identified positive cases out of actual positive ones) and recall (the proportion of actual positive cases that were successfully identified) by the annotators. Scoring varies from 0 to 1, with 1 being perfect. While frequently used to compare an annotator against a ground truth or gold-standard, in the strict context of IAA without a gold-standard, it can be used to measure pairwise agreement by temporarily treating one annotator's labels as the reference.
 
 >\* Kappa values are interpreted as follows:
 >![Chart of Kappa Values, Level of Agreement, and Percentage of Data Reliability](media/Annotation_KappaValueInterpretation.png) 
@@ -215,7 +217,7 @@ When considering which metric to use, keep in mind that both the Cohen and Fleis
 
 ### Final Quality Validation
 
-Before using the annotated data to train a model, or publishing the dataset for reuse, it needs to be validated for quality. There should be a final Inter Annotator Agreement score using the chosen method (Cohen's kappa, Fleis kappa, or Krippendorff's alpha, or F1 score). For a high degree of accuracy, a multi-metric approach can be used, with both a kappa score and F1 score. Gold standard annotations have a kappa score of 0.8 and a F1 score of 0.85, but this guideline is dependent on the complexity of the task, clinical requirements, and precedents.
+Before using the annotated data to train a model, or publishing the dataset for reuse, it needs to be validated for quality. There should be a final Inter Annotator Agreement score using the chosen method (Cohen's kappa, Fleis kappa, or Krippendorff's alpha, or F1 score). For a high degree of accuracy, a multi-metric approach can be used, with both a kappa score and F1 score. Gold-standard annotations have a kappa score of 0.8 and a F1 score of 0.85, but this guideline is dependent on the complexity of the task, clinical requirements, and precedents.
 
 A final quality audit should be performed, where a senior expert or the PI for the study reviews a random sample of the annotations and confirms they are correct. There should also be a review of any potential bias in the annotations, with a final explanation of the potential bias.
 
@@ -269,7 +271,7 @@ The annotated dataset should have a robust archival plan to ensure long-term pre
 
 The Arcus Library Science team can help with preparing annotated data for archiving and sharing, choosing an appropriate sharing method, and preparing a NIH Data Management and Sharing Plan (DMSP). To reach out to the Library Science team, see the [following website for more information](https://chop365.sharepoint.com/sites/ResearchDataManagementandSharingSupport/SitePages/Grants.aspx?csf=1&web=1&e=tXImlr).
 
-#### Arcus Archives and the Gold Standard Annotation Data Repository
+#### Arcus Archives and the Gold-Standard Annotation Data Repository
 
 The Arcus Archives is an organized collection of contributed research data from across the Research Institute at CHOP. Data deposited in the Arcus Archives is subsequently made available to other Arcus Users for analysis in their own research projects. [View here](https://chop.alationcloud.com/app/document/18397/overview) for a current list of all available archived research data and reference cohorts in the Arcus Archives.
 
@@ -294,7 +296,7 @@ As part of the [Arcus Annotation Initiative](https://forum.arcus.chop.edu/t/arcu
 
 ## Knowledge Check 
 
-1. What is the primary value of creating a gold standard annotated dataset?  
+1. What is the primary value of creating a gold-standard annotated dataset?  
 
 [( )] A. Increasing dataset size 
 [(X)] B. Producing high-quality, expert‑validated labels to enable reliable model training and evaluation 
