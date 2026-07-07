@@ -58,7 +58,7 @@ The best practices outlined here should direct you towards achieving high-qualit
 
 ### Pre-Annotation
 
-_1 Diverse, representative data_
+#### Diverse, representative data
 
 Make sure to choose the right data that is both relevant and representative of real-world scenarios. Diversity helps to minimize dataset bias by encompassing a variety of use cases, scenarios, and edge cases, but also allows for the data to align with project objectives. If the goal is to create a machine learning model, consider what specific tasks it needs to perform. This will help determine the kind of data it needs to learn from.
 
@@ -66,7 +66,7 @@ Ensure that the sample size of the data used in annotation is appropriate for th
 
 Once a dataset is obtained, consider any data preparation steps that need to be taken before annotation efforts begin to remove noise, duplicates, irrelevant information, etc., optimizing the data for annotation.
 
-_2 Privacy_
+#### Privacy
 
 Before using a dataset for annotation work, researchers should review the dataset to determine whether the data contains [Protected Health Information (PHI)](https://chop.policymedical.net/policymed/anonymous/docViewer?stoken=14de2fa8-d9f5-4188-983b-29545b20809f&dtoken=6d8d4887-3dec-4a76-8d83-14726c00d185) as defined by HIPAA. The HIPAA Privacy Rule establishes protections for identifiable health information created, received, maintained, or transmitted in research. A review of the dataset includes checking for the 18 HIPAA identifiers:
 
@@ -76,7 +76,7 @@ If annotation work involves identifiable or potentially identifiable data, the a
 
 Depending on the protocol and intended reuse, datasets may need to be de-identified or coded prior to annotation. De-identified data are no longer considered PHI under HIPAA, while coded datasets retain a re-linking key under controlled conditions and remain PHI for anyone with the key. Researchers should also assess whether free-text fields, images, or derived annotations could inadvertently reintroduce identifiable information.
 
-_3 Annotation Standards - A blueprint for consistent labeling_
+#### Annotation Standards - A blueprint for consistent labeling
 
 Begin defining clear annotation guidelines through the establishment of a set of instructions that are easy to understand and remain consistent across all data points. Begin by:
 
@@ -97,7 +97,7 @@ General Overview of Annotation workflow (three phases):
 2. Validation: During the validation phrase, there is a focus on achieving consistent annotations across annotators. Having multiple annotators label the same items, calculate inter-annotator agreement (e.g. Cohen's Kappa, Krippendorff's alpha, etc.) and publish these scores. Iterate on guidelines and retrain annotators until agreement meets the predefined threshold. The disagreements can be resolved either through consensus meets or supervisor adjudication
 3. Gold-standard Annotation: The gold-standard annotation phase produced the gold-standard dataset. Annotators may work in parallel on different subsets of the data but continue periodic consensus checks and spot audits to ensure ongoing consistency. This process should continue building out documentation and corner cases so that the gold standard data remains reproducible.
 
-_3.1 Annotation Guidelines - Template Outline_
+##### Annotation Guidelines - Template Outline
 
 Here is an example outline for annotation guidelines:
 
@@ -117,7 +117,7 @@ Here is an example outline for annotation guidelines:
 >
 >[Coding Clinical Notes for Deidentification Annotation Guidelines](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/Arcus_Labs_Orientation/deid_notes_instructions/deid_notes_annotation_guidelines.md#1)
 
-_4 Annotator Selection_
+#### Annotator Selection
 
 Annotators (sometimes known as labelers) are the people who provide the right context to the data, that will inform the end model or analysis. Depending on the needs of your project, annotators should either be subject experts that can be trained in annotation skills or experienced annotators that can learn about the subject.
 
