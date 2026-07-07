@@ -136,6 +136,8 @@ As annotators are human, their lived experiences and biases shape how they label
 
 ## Best Practices: During Annotation
 
+The annotation phase is where guidelines are put into practice and data is transformed into having high-quality, reliable labels. Success during this stage depends on well-trained annotators, clear communication channels, ongoing quality assurance, and continuous monitoring of annotation consistency. Annotation is an iterative process that requires regular feedback, guideline refinement, and consensus-building to address ambiguities and improve accuracy. By implementing structured training programs, conducting routine quality checks, tracking inter-annotator agreement, and documenting updates to annotation standards, teams can maintain consistency across annotators and produce reproducible, gold-standard datasets.
+
 ### Annotator Training
 
 It is imperative that annotators are effectively trained. This includes hands-on exercises where they can practice with sample datasets to understand the guidelines thoroughly as well as be presented with realistic scenarios that will help them identify edge cases. Ongoing training and open communication are also important as it ensures everyone on the team is up to date as the standards and project needs evolve.
