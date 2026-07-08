@@ -90,7 +90,7 @@ Establishing clear inclusion and exclusion guidelines for annotating a dataset a
 
 Note that developing these guidelines is not a one-time task. It is an iterative process that requires regular review and refinement as feedback is incorporated.
 
-As the standards evolve, be sure to conduct consensus checks, where multiple annotators independently label the same data, and discrepancies are resolved collaboratively or through a supervisor intervention / tiebreaker. It is imperative to track inter-annotator agreement (see the Inter-Annotator Agreement and Common Methods of Assessment sections under Best Practices: During Annotation for more information) and annotation error rates to monitor quality. These activities strengthen your standards and support the creation of gold-standard annotations.
+As the standards evolve, be sure to conduct consensus checks, where multiple annotators independently label the same data, and discrepancies are resolved collaboratively or through a supervisor intervention / tiebreaker. It is imperative to track inter-annotator agreement (see the [Inter-Annotator Agreement](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/virtual_library/refs/heads/annotations-ontologies/annotations/AnnotationsTraining_LiaScript.md#13) and [Common Methods of Assessment](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/virtual_library/refs/heads/annotations-ontologies/annotations/AnnotationsTraining_LiaScript.md#14) sections under Best Practices: During Annotation for more information) and annotation error rates to monitor quality. These activities strengthen your standards and support the creation of gold-standard annotations.
 
 General Overview of Annotation workflow (three phases):
 
