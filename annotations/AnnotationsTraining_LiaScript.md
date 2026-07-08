@@ -77,7 +77,9 @@ If annotation work involves identifiable or potentially identifiable data, the a
 
 Depending on the protocol and intended reuse, datasets may need to be de-identified or coded prior to annotation. De-identified data are no longer considered PHI under HIPAA, while coded datasets retain a re-linking key under controlled conditions and remain PHI for anyone with the key. Researchers should also assess whether free-text fields, images, or derived annotations could inadvertently reintroduce identifiable information.
 
-### Annotation Standards - A Blueprint for Consistent Labeling
+### Annotation Standards
+
+**A Blueprint for Consistent Labeling**
 
 Begin defining clear annotation guidelines through the establishment of a set of instructions that are easy to understand and remain consistent across all data points. Begin by:
 
