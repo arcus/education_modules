@@ -23,7 +23,7 @@ import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_tem
 -->
 
 ## Creating Gold-Standard Annotated Datasets
-**Checklist for your next Research Project**
+**Best Practices and Checklist for your next Research Project**
 
 There is an ocean of data out there: clinical records, scans, sensor readings, research papers, and so much more, but there is the challenge of how to use it effectively. How do we turn this vast amount of data into something that can give us insight into a specific question or problem? Annotation is how by:
 
