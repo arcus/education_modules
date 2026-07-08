@@ -438,7 +438,7 @@ As part of the [Arcus Annotation Initiative](https://forum.arcus.chop.edu/t/arcu
 
 ## Checklist
 
-
+![Full checklist for all three phases of annotations](media/GoldStandardAnnotationChecklist.pdf)
 
 ## Key Terms
 
