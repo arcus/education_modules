@@ -59,7 +59,7 @@ The best practices outlined here should direct you towards achieving high-qualit
 
 Successful gold-standard annotation projects begin before labels are applied. The pre-annotation phase lays the foundation for high-quality, reliable annotated datasets by ensuring that data is representative, privacy requirements are addressed, annotation standards are clearly defined, and annotators are properly trained. Careful preparation helps reduce bias, improve consistency, and ensure that annotated data can effectively support downstream research, analytics, or machine learning objectives. This section outlines key pre-annotation best practices, including data selection and preparation, HIPAA and IRB considerations, development of annotation guidelines and ontologies, and annotator recruitment and training that support the creation of accurate, reproducible, gold-standard datasets.
 
-### Diverse, representative data
+### Diverse, Representative Data
 
 Make sure to choose the right data that is both relevant and representative of real-world scenarios. Diversity helps to minimize dataset bias by encompassing a variety of use cases, scenarios, and edge cases, but also allows for the data to align with project objectives. If the goal is to create a machine learning model, consider what specific tasks it needs to perform. This will help determine the kind of data it needs to learn from.
 
@@ -77,7 +77,7 @@ If annotation work involves identifiable or potentially identifiable data, the a
 
 Depending on the protocol and intended reuse, datasets may need to be de-identified or coded prior to annotation. De-identified data are no longer considered PHI under HIPAA, while coded datasets retain a re-linking key under controlled conditions and remain PHI for anyone with the key. Researchers should also assess whether free-text fields, images, or derived annotations could inadvertently reintroduce identifiable information.
 
-### Annotation Standards - A blueprint for consistent labeling
+### Annotation Standards - A Blueprint for Consistent Labeling
 
 Begin defining clear annotation guidelines through the establishment of a set of instructions that are easy to understand and remain consistent across all data points. Begin by:
 
