@@ -438,7 +438,11 @@ As part of the [Arcus Annotation Initiative](https://forum.arcus.chop.edu/t/arcu
 
 ## Checklist
 
-![Full checklist for all three phases of annotations](media/GoldStandardAnnotationChecklist.pdf)
+<object data="/media/GoldStandardAnnotationChecklist.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/arcus/virtual_library/blob/annotations-ontologies/annotations/media/GoldStandardAnnotationChecklist.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/arcus/virtual_library/blob/annotations-ontologies/annotations/media/GoldStandardAnnotationChecklist.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
 ## Key Terms
 
