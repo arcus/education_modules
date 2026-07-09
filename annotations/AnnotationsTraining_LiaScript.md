@@ -202,7 +202,7 @@ There are several common methods to assess the reliability of each annotation, i
 3.  Krippendorff's alpha: An inter-annotator reliability measure that assesses agreement between multiple annotators for categorical, ordinal, or nominal data. It can be used to calculate inter-annotator reliability for incomplete data and can also account for scenarios in which annotators only partially agree. The Krippendorff alpha coefficient takes into account sample size, category diversity, and the possibility of agreement by chance. It varies from 0 to 1, where 1 indicates perfect agreement, and 0 indicates complete disagreement. This measure is particularly useful for evaluating the reliability of annotations in situations where multiple annotators are involved, such as in inter-annotator studies.
 4. F1 Score: This method measures the quality of labeling by calculating the harmonic mean between precision (the proportion of identified positive cases out of actual positive ones) and recall (the proportion of actual positive cases that were successfully identified) by the annotators. Scoring varies from 0 to 1, with 1 being perfect. While frequently used to compare an annotator against a ground truth or gold-standard, in the strict context of IAA without a gold-standard, it can be used to measure pairwise agreement by temporarily treating one annotator's labels as the reference.
 
-\* Kappa values are interpreted as follows:
+\*Kappa values are interpreted as follows:
 
 ![Chart of Kappa Values, Level of Agreement, and Percentage of Data Reliability](media/Annotation_KappaValueInterpretation.png) 
 
