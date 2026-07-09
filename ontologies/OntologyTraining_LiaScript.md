@@ -45,6 +45,8 @@ As determining key terms for labels is one of the first steps in creating Annota
 
 ## Existing Ontologies
 
+Detailed here are three existing ontologies that you could use as the ontology for the key terms for your labels in your annotation project: Human Phenotype Ontology (HPO), SNOMED CT, and the Unified Medical Language System (UMLS). 
+
 ### HPO
 
 The [Human Phenotype Ontology (HPO)](https://hpo.jax.org/) project provides an ontology of medically relevant phenotypes, disease-phenotype annotations, and the algorithms that operate on these. The HPO can be used to support differential diagnostics, translational research, and a number of applications in computational biology by providing the means to _compute_ over the clinical phenotype. The HPO is being used for computational deep phenotyping and precision medicine as well as integration of clinical data into translational research. [Deep phenotyping](https://www.ncbi.nlm.nih.gov/pubmed/22504886) can be defined as the precise and comprehensive analysis of phenotypic abnormalities in which the individual components of the phenotype are observed and described. The HPO is being increasingly adopted as a standard for phenotypic abnormalities by diverse groups such as international rare disease organizations, registries, clinical labs, biomedical resources, and clinical software tools and will thereby contribute toward nascent efforts at global data exchange for identifying disease etiologies.
