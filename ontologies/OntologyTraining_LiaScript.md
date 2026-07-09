@@ -2,7 +2,7 @@
 
 To better understand ontologies and why we use them, as opposed to taxonomies, as part of the annotation process, it is best to zoom out a bit and broadly define not just what an ontology is but also review what a taxonomy is in relation to an ontology.
 
-### What is a taxonomy?
+### What is a Taxonomy?
 
 A taxonomy is a hierarchical classification system used to categorize and organize information into groups and sub-groups. It is often thought of as a structured way of grouping entities based on shared characteristics represented as a tree-like structure where each note is a category or subcategory.
 
@@ -16,7 +16,7 @@ _Generic Taxonomy Diagram_
 
 ![Example Diagram of a Taxonomy](media/Ontology_TaxonomyDesign.png)
 
-### What is an ontology?
+### What is an Ontology?
 
 An ontology is a complex, flexible framework used to model the relationships between entities and their properties, providing a rich, formal representation of knowledge within a domain, capturing not only the hierarchy, but also the various relationships between concepts. An ontology essentially connects taxonomies, capturing the interrelationships among entities to provide rich information.
 
@@ -57,17 +57,17 @@ The HPO currently contains over 18,000 terms arranged in a directed acyclic grap
 
 [SNOMED International](https://www.snomed.org/) is a not-for-profit organization that owns, administers, and develops SNOMED CT. SNOMED CT is a comprehensive, multilingual clinical healthcare terminology resource with scientifically validated clinical content, enabling consistent representation of clinical content in the electronic health records.
 
-The SNOMED CT logical model defines the way in which each type of SNOMED CT component and derivative is related and represented. The core component types in SNOMED CT are concepts, descriptions, and relationships.
+The SNOMED CT logical model defines the way in which each type of SNOMED CT component and derivative is related and represented. The core component types in SNOMED CT are concepts, relationships, and descriptions.
 
-_Concepts_
+**_Concepts_**
 
 Every concept represents a unique clinical meaning, which is referenced using a unique, numeric, and machine-readable SNOMED CT identifier. The identifier provides an unambiguous unique reference to each concept and does not have any ascribed human interpretable meaning.
 
-_Relationships_
+**_Relationships_**
 
 A relationship represents an association between two concepts. Relationships are used to logically define the meaning of a concept in a way that can be processed by a computer. A third concept, called a relationship type (or attribute), is used to represent the meaning of the association between the source and destination concepts. There are different types of relationships available within SNOMED CT.
 
-_Descriptions_
+**_Descriptions_**
 
 Descriptions are the human readable terms that are associated with clinical ideas. Each description has a description type and may be marked "preferred for use" in particular languages or dialects. A fully specified name (FSN) is a type of description which uniquely and fully captures the meaning of the clinical idea. Synonyms are descriptions that allow the same concept to be expressed in different ways, each of which are associated with the same concept ID.
 
@@ -75,7 +75,7 @@ Descriptions are the human readable terms that are associated with clinical idea
 
 The [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) is a collection of files and software developed by the National Library of Medicine that enables interoperability across biomedical computer systems. At its core, is the UMLS Metathesaurus, a large biomedical thesaurus organized by concept, which serves as a bridge connecting over [200 source vocabularies](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/), including SNOMED CT, HPO, ICD-10, RxNORM, etc., by linking synonymous terms to shared concepts. This means a clinician's SNOMED CT code, and a geneticist's HPO term can be recognized as referring to the same underlying concept, allowing seamless traversal across vocabularies. The Metathesaurus preserves each vocabulary's original meanings, concept meanings and relationships while surfacing cross vocabulary connections through a unified concept identifier (CUI) system. The [UMLS Metathesaurus Browser](https://uts.nlm.nih.gov/uts/umls/home) is a web interface for searching and exploring these linked concepts and their relationships interactively.
 
-## Creating an ontology 
+## Creating an Ontology 
 
 There is no one-way or comprehensive methodology that you can always use that covers everything you could need when developing an ontology. Generally speaking, you can follow the below steps to guide you through the process:
 
