@@ -85,16 +85,16 @@ There is no one-way or comprehensive methodology that you can always use that co
       - What are we using the ontology for?
       - What answers should the ontology provide us with?
       - Who will use this ontology?
-        
-3. Consider reusing existing ontologies
+
+2. Consider reusing existing ontologies
    
     - In some cases, you have the benefit of reusing an existing ontology that was developed by someone else for similar purposes to your own, in these cases you could simply extend those ontologies to better suit your needs.
-      
-5. Enumerate important terms in the ontology
+
+3. Enumerate important terms in the ontology
    
     - You need to understand the scope of the ontology in terms of what you want to define and work with. To this end, you need to come up with terms that you would like to make statements about or explain to users.
-      
-7. Define the classes and class hierarchy
+
+4. Define the classes and class hierarchy
    
     - A class is a collection of instances.
     - For the creation of a class hierarchy, there are three choices:
@@ -102,8 +102,8 @@ There is no one-way or comprehensive methodology that you can always use that co
       - Top-down: Identify most general classes first and then work to specifics
       - Botton-up: Identify specifics first and then work to general classes
       - Combination
-        
-9. Define the properties of classes
+  
+5. Define the properties of classes
     
     - Now that classes and high-level concepts have been defined, they need detail.
     - By using properties, you are able to describe the internal structure of your classes
