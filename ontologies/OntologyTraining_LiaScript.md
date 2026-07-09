@@ -45,6 +45,8 @@ As determining key terms for labels is one of the first steps in creating Annota
 
 ## Existing Ontologies
 
+Detailed here are three existing ontologies that you could use as the ontology for the key terms for your labels in your annotation project: Human Phenotype Ontology (HPO), SNOMED CT, and the Unified Medical Language System (UMLS). 
+
 ### HPO
 
 The [Human Phenotype Ontology (HPO)](https://hpo.jax.org/) project provides an ontology of medically relevant phenotypes, disease-phenotype annotations, and the algorithms that operate on these. The HPO can be used to support differential diagnostics, translational research, and a number of applications in computational biology by providing the means to _compute_ over the clinical phenotype. The HPO is being used for computational deep phenotyping and precision medicine as well as integration of clinical data into translational research. [Deep phenotyping](https://www.ncbi.nlm.nih.gov/pubmed/22504886) can be defined as the precise and comprehensive analysis of phenotypic abnormalities in which the individual components of the phenotype are observed and described. The HPO is being increasingly adopted as a standard for phenotypic abnormalities by diverse groups such as international rare disease organizations, registries, clinical labs, biomedical resources, and clinical software tools and will thereby contribute toward nascent efforts at global data exchange for identifying disease etiologies.
@@ -142,13 +144,15 @@ For more detailed information on the steps outlined, view [Ontology Development 
 
 ## Managing an Ontology 
 
+Managing an ontology is an important part of the process whether you are utilizing an existing ontology or creating your own. Detailed here are widely used tools, including Protégé, PoolParty, and BRAT, to help you do this, in addition to noting the importance of adding, editing, and deprecating Terms.
+
 ### Tools
 
 Several ontology editing tools are available to support the creation and management of ontologies, with [Protégé](https://protege.stanford.edu/) and [PoolParty](https://www.poolparty.biz/) being among the most widely used. Both tools provide a visual interface for defining classes, relationships, and hierarchies, and support standard ontology formats such as [OWL](https://www.w3.org/TR/owl2-overview/) and [SKOS](https://www.w3.org/TR/skos-reference/). Protégé is a free, open-source option well suited to building and editing ontologies from scratch, while PoolParty offers additional enterprise features such as taxonomy management, version control, and integration with data pipelines.
 
 If you are using an ontology for clinical note annotation within an Arcus lab, you will need to integrate it with the [BRAT annotation tool](https://brat.nlplab.org/). BRAT provides a visual interface for annotating text spans with ontology terms and defining relationships between them. Your ontology terms and relationship types are managed through BRAT's configuration files, which must be updated whenever terms are added or changed in your ontology. [See this guide](https://forum.arcus.chop.edu/t/note-annotator-guidelines/221) for more information about using BRAT with clinical notes in Arcus.
 
-### Adding, Editing and Deprecating Terms
+### Adding, Editing, and Deprecating Terms
 
 Managing ontology terms over time involves three core activities: adding new terms, updating existing ones, and deprecating those that are no longer needed. New terms should only be added when they represent a clearly defined concept not already covered by the ontology, and should follow a consistent naming and definition convention established by your team. Updates to existing terms, such as revised definitions or relationships, should be documented with a rationale to maintain transparency. Rather than deleting outdated terms, deprecated terms should be marked as obsolete and retained in the ontology to preserve the integrity of any existing annotations that reference them.
 
