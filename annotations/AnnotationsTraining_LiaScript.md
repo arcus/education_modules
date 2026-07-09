@@ -203,6 +203,7 @@ There are several common methods to assess the reliability of each annotation, i
 4. F1 Score: This method measures the quality of labeling by calculating the harmonic mean between precision (the proportion of identified positive cases out of actual positive ones) and recall (the proportion of actual positive cases that were successfully identified) by the annotators. Scoring varies from 0 to 1, with 1 being perfect. While frequently used to compare an annotator against a ground truth or gold-standard, in the strict context of IAA without a gold-standard, it can be used to measure pairwise agreement by temporarily treating one annotator's labels as the reference.
 
 \* Kappa values are interpreted as follows:
+
 ![Chart of Kappa Values, Level of Agreement, and Percentage of Data Reliability](media/Annotation_KappaValueInterpretation.png) 
 
 When considering which metric to use, keep in mind that both the Cohen and Fleiss coefficients are subject to the kappa paradox. This is a complex phenomenon where, under certain conditions, the statistic assumes a low value (indicating less agreement) even when there is actually a high inter-annotator agreement.
