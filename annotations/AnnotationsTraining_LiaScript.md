@@ -229,7 +229,7 @@ Before using the annotated data to train a model, or publishing the dataset for 
 
 A final quality audit should be performed, where a senior expert or the PI for the study reviews a random sample of the annotations and confirms they are correct. There should also be a review of any potential bias in the annotations, with a final explanation of the potential bias.
 
-Generic Example of a Graphical Description of a Project Workflow Utilizing the Outlined Steps in this training:
+_Generic Example of a Graphical Description of a Project Workflow Utilizing the Outlined Steps in this training:_
 ![Graphical Description of a Project Workflow Utilizing the Outlined Steps](media/Annotation_ProjectWorkflow.png)
 
 ### Data Preparation and Documentation
@@ -263,7 +263,7 @@ If you created an ontology, export it in an interoperable file format: CSV, JSON
 
 Include a README or configuration file that specifies: software and versions needed to use the data, file format specifications, instructions for accessing and interpreting annotations.
 
-[**Annotation card**](https://github.research.chop.edu/arcus/model-cards/blob/main/templates/annotation-card.md)
+[**Annotation Card**](https://github.research.chop.edu/arcus/model-cards/blob/main/templates/annotation-card.md)
 
 - Documented details include a summary of the overall goal and process of annotating the data, along with any associated model(s), dataset details, inputs and outputs, methods, standards and ontologies, reference files, ethical considerations, validation, evaluation, and quality assurance, publications and citations.
 - [View here for a sample annotation card markdown file.](https://github.research.chop.edu/arcus/model-cards/blob/main/examples/annotation-card-AGV.md)
