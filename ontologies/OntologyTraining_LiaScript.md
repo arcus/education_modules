@@ -80,22 +80,22 @@ There is no one-way or comprehensive methodology that you can always use that co
 1. Determine the domain and scope of the ontology
 
     - To determine the domain and scope, start with a few basic questions such as:
-      
+
       - What is the domain of the ontology?
       - What are we using the ontology for?
       - What answers should the ontology provide us with?
       - Who will use this ontology?
 
 2. Consider reusing existing ontologies
-   
+
     - In some cases, you have the benefit of reusing an existing ontology that was developed by someone else for similar purposes to your own, in these cases you could simply extend those ontologies to better suit your needs.
 
 3. Enumerate important terms in the ontology
-   
+
     - You need to understand the scope of the ontology in terms of what you want to define and work with. To this end, you need to come up with terms that you would like to make statements about or explain to users.
 
 4. Define the classes and class hierarchy
-   
+
     - A class is a collection of instances.
     - For the creation of a class hierarchy, there are three choices:
       
@@ -104,7 +104,7 @@ There is no one-way or comprehensive methodology that you can always use that co
       - Combination
   
 5. Define the properties of classes
-    
+
     - Now that classes and high-level concepts have been defined, they need detail.
     - By using properties, you are able to describe the internal structure of your classes
     - Example: 
@@ -112,26 +112,26 @@ There is no one-way or comprehensive methodology that you can always use that co
 ![Classes and their properties/slots](media/Ontology_ClassProperties.png)
 
 6. Define the facts of the properties (Properties can also be referred to as slots)
-   
+
     - Important aspects to consider regarding the properties include:
-      
+
       - Value Type: Is it a string, number, Boolean, enumeration, instance of another class?
       - Property cardinality: How many values does the property have?
       - Range: Instance properties are when an instance of another class is used as a property in another class; these properties often only allow certain instances of another class, and these instances are specified in a range. 
       - Domain: Refers to the classes to which a property is attached or classes which a property describes.
-        
+
     - Example:
 
 ![Properties](media/Ontology_Properties.png)
 
 7. Create Instances
-   
+
     - Create individual instances of the classes that were previously defined:
-      
+
       - Choose a class
       - Create an individual instance of that class
       - Fill in the property values
-        
+
     - Example:
 
 ![Instances of classes](media/Ontology_ClassInstances.png)
