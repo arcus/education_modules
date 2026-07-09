@@ -448,39 +448,39 @@ As part of the [Arcus Annotation Initiative](https://forum.arcus.chop.edu/t/arcu
 
 ## Key Terms
 
-Archive: A repository that collects, preserves, and provides access to scientific data, publications, and/or biospecimens to support, validate, and advance biomedical research.
+**Archive**: A repository that collects, preserves, and provides access to scientific data, publications, and/or biospecimens to support, validate, and advance biomedical research.
 
-Annotation: The process of labeling, tagging, or adding metadata to raw data (text, images, video, or audio). It this context, it is used interchangeably with the term Labeling.
+**Annotation**: The process of labeling, tagging, or adding metadata to raw data (text, images, video, or audio). It this context, it is used interchangeably with the term Labeling.
 
-Annotator: The person or machine who is adding the annotations to raw data.
+**Annotator**: The person or machine who is adding the annotations to raw data.
 
-Class: In ontologies, a class is a named category or concept that groups together individuals sharing common characteristics, defined by the conditions something must meet to belong to it. Classes form the backbone of an ontology by representing the key concepts within a domain.
+**Class**: In ontologies, a class is a named category or concept that groups together individuals sharing common characteristics, defined by the conditions something must meet to belong to it. Classes form the backbone of an ontology by representing the key concepts within a domain.
 
-Gold-Standard Data: Refers to the benchmark dataset that is considered the most reliable and accurate in a specific context. It is used to evaluate the quality of work done by individuals or machines by comparing the results to the trusted dataset.
+**Gold-Standard Data**: Refers to the benchmark dataset that is considered the most reliable and accurate in a specific context. It is used to evaluate the quality of work done by individuals or machines by comparing the results to the trusted dataset.
 
-Ground Truth Data: Refers to the correct or definitive answers for a dataset, often used in comparing model predictions.
+**Ground Truth Data**: Refers to the correct or definitive answers for a dataset, often used in comparing model predictions.
 
-IAA: Inter Annotator Agreement: The measure of how well multiple annotators can make the same annotation decision for a certain label category or class.
+**IAA**: Inter Annotator Agreement: The measure of how well multiple annotators can make the same annotation decision for a certain label category or class.
 
-Labeling: Another way of referring to Annotation work. See Annotation.
+**Labeling**: Another way of referring to Annotation work. See Annotation.
 
-Metadata: A set of data that describes and gives information about other data. Essentially "data about data."
+**Metadata**: A set of data that describes and gives information about other data. Essentially "data about data."
 
-Ontology: A complex, flexible framework used to model the relationships between entities and their properties, providing a rich, formal representation of knowledge within a domain, capturing not only the hierarchy, but also the various relationships between concepts. An ontology essentially connects taxonomies, capturing the interrelationships among entities to provide rich information.
+**Ontology**: A complex, flexible framework used to model the relationships between entities and their properties, providing a rich, formal representation of knowledge within a domain, capturing not only the hierarchy, but also the various relationships between concepts. An ontology essentially connects taxonomies, capturing the interrelationships among entities to provide rich information.
 
-Taxonomy: A hierarchical classification system used to categorize and organize information into groups and sub-groups. It is often thought of as a structured way of grouping entities based on shared characteristics represented as a tree-like structure where each note is a category or subcategory.
+**Taxonomy**: A hierarchical classification system used to categorize and organize information into groups and sub-groups. It is often thought of as a structured way of grouping entities based on shared characteristics represented as a tree-like structure where each note is a category or subcategory.
 
-Relationship: A relationship in ontologies defines a named, directional link between two classes that expresses how they are logically or semantically connected within a domain.
+**Relationship**: A relationship in ontologies defines a named, directional link between two classes that expresses how they are logically or semantically connected within a domain.
 
-Parent-Child relationship: A parent-child relationship is a hierarchical link in which a child class inherits the properties of its parent class, representing an "is-a" relationship (e.g. Dog is a Mammal).
+**Parent-Child relationship**: A parent-child relationship is a hierarchical link in which a child class inherits the properties of its parent class, representing an "is-a" relationship (e.g. Dog is a Mammal).
 
-Many-to-Many relationship: A many-to-many relationship exists when multiple instances of one class can be associated with multiple instances of another class, such as an Author writing many Books, and a Book having many Authors.
+**Many-to-Many relationship**: A many-to-many relationship exists when multiple instances of one class can be associated with multiple instances of another class, such as an Author writing many Books, and a Book having many Authors.
 
-Reproducibility: Refers to the ability of a researcher to duplicate the results of a prior study using the same materials and procedures as were used by the original investigator.
+**Reproducibility**: Refers to the ability of a researcher to duplicate the results of a prior study using the same materials and procedures as were used by the original investigator.
 
-Schema: In the context of annotations, it is a guideline for annotators, ensuring that annotations are applied consistently and accurately. It specifies the types of annotations, the format of the labels, and the relationships between different annotated elements.
+**Schema**: In the context of annotations, it is a guideline for annotators, ensuring that annotations are applied consistently and accurately. It specifies the types of annotations, the format of the labels, and the relationships between different annotated elements.
 
-Tagging: Another way of referring to Annotation work. See Annotation.
+**Tagging**: Another way of referring to Annotation work. See Annotation.
 
 ## Annotation Sources
 
