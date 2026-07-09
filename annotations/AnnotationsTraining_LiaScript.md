@@ -441,7 +441,7 @@ As part of the [Arcus Annotation Initiative](https://forum.arcus.chop.edu/t/arcu
 
 ## Checklist
 
-<a href="virtual_library/annotations/media/GoldStandardAnnotationChecklist.pdf" target="_blank">Download the Gold Standard Annotation Checklist (PDF)</a>
+<a href="[virtual_library/annotations/media/GoldStandardAnnotationChecklist.pdf](https://github.com/arcus/virtual_library/blob/annotations-ontologies/annotations/media/GoldStandardAnnotationChecklist.pdf)" target="_blank">Download the Gold Standard Annotation Checklist (PDF)</a>
 
 ## Key Terms
 
