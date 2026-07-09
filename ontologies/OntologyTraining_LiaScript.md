@@ -144,13 +144,15 @@ For more detailed information on the steps outlined, view [Ontology Development 
 
 ## Managing an Ontology 
 
+Managing an ontology is an important part of the process whether you are utilizing an existing ontology or creating your own. Detailed here are widely used tools, including Protégé, PoolParty, and BRAT, to help you do this, in addition to noting the importance of adding, editing, and deprecating Terms.
+
 ### Tools
 
 Several ontology editing tools are available to support the creation and management of ontologies, with [Protégé](https://protege.stanford.edu/) and [PoolParty](https://www.poolparty.biz/) being among the most widely used. Both tools provide a visual interface for defining classes, relationships, and hierarchies, and support standard ontology formats such as [OWL](https://www.w3.org/TR/owl2-overview/) and [SKOS](https://www.w3.org/TR/skos-reference/). Protégé is a free, open-source option well suited to building and editing ontologies from scratch, while PoolParty offers additional enterprise features such as taxonomy management, version control, and integration with data pipelines.
 
 If you are using an ontology for clinical note annotation within an Arcus lab, you will need to integrate it with the [BRAT annotation tool](https://brat.nlplab.org/). BRAT provides a visual interface for annotating text spans with ontology terms and defining relationships between them. Your ontology terms and relationship types are managed through BRAT's configuration files, which must be updated whenever terms are added or changed in your ontology. [See this guide](https://forum.arcus.chop.edu/t/note-annotator-guidelines/221) for more information about using BRAT with clinical notes in Arcus.
 
-### Adding, Editing and Deprecating Terms
+### Adding, Editing, and Deprecating Terms
 
 Managing ontology terms over time involves three core activities: adding new terms, updating existing ones, and deprecating those that are no longer needed. New terms should only be added when they represent a clearly defined concept not already covered by the ontology, and should follow a consistent naming and definition convention established by your team. Updates to existing terms, such as revised definitions or relationships, should be documented with a rationale to maintain transparency. Rather than deleting outdated terms, deprecated terms should be marked as obsolete and retained in the ontology to preserve the integrity of any existing annotations that reference them.
 
