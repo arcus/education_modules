@@ -3,7 +3,7 @@
 Ontologies are a foundational component of the annotation process. While taxonomies and ontologies are both used to organize knowledge, they differ significantly in how they represent information and relationships between concepts. Understanding these differences is important when developing annotation guidelines, selecting terminology for labels, and preparing data for downstream analysis and AI applications. In this module, you will learn: 
 - How ontologies extend beyond simple hierarchical classification,
 - Why they are often preferred for annotation projects,
-- How to evaluate and use existing biomedical ontologies, and
+- How to evaluate and use existing ontologies, and
 - The key considerations involved in creating and maintaining your own ontology.
 
 ### What is a Taxonomy?
