@@ -1,6 +1,6 @@
 ## Ontologies
 
-Ontologies are a foundational component of the annotation process. While taxonomies and ontologies are both used to organize knowledge, they differ significantly in how they represent information and relationships between concepts. Understanding these differences is important when selecting terminology for labels as part of the development of annotation guidelines. 
+Ontologies are a foundational component of the annotation process. While taxonomies and ontologies are both used to organize knowledge, they differ significantly in how they represent information and relationships between concepts. Understanding these differences is important when selecting or creating terminology for labels as part of the development of annotation guidelines. 
 In this module, you will learn: 
 - How ontologies extend beyond simple hierarchical classification,
 - Why ontologies are preferred for annotation projects,
