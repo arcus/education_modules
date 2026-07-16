@@ -57,9 +57,13 @@ The best practices outlined here should direct you towards achieving high-qualit
 
 ## Best Practices: Pre-Annotation
 
+![Teal graphic showing the three different phases of annotating data; pre-annotation, during annotation and post-annotation. This graphic has a heavier shade on pre-annotation stating 'You are here'](media/Annotation_Pre.png)
+
 Successful gold-standard annotation projects begin before labels are applied. The pre-annotation phase lays the foundation for high-quality, reliable annotated datasets by ensuring that data is representative, privacy requirements are addressed, annotation standards are clearly defined, and annotators are properly trained. Careful preparation helps reduce bias, improve consistency, and ensure that annotated data can effectively support downstream research, analytics, or machine learning objectives. This section outlines key pre-annotation best practices, including data selection and preparation, HIPAA and IRB considerations, development of annotation guidelines and ontologies, and annotator recruitment and training that support the creation of accurate, reproducible, gold-standard datasets.
 
 ### Diverse, Representative Data
+
+![Teal graphic showing the three rules for good data in machine learning annotation; representative sourcing, adequate sample size, and data cleaning and prep. Each rule has a box with a representative graphic](media/Annotation_GoodData.png)
 
 Make sure to choose the right data that is both relevant and representative of real-world scenarios. Diversity helps to minimize dataset bias by encompassing a variety of use cases, scenarios, and edge cases, but also allows for the data to align with project objectives. If the goal is to create a machine learning model, consider what specific tasks it needs to perform. This will help determine the kind of data it needs to learn from.
 
@@ -137,6 +141,8 @@ As annotators are human, their lived experiences and biases shape how they label
 - [ ] Test annotations completed and reviewed
 
 ## Best Practices: During Annotation
+
+![Teal graphic showing the three different phases of annotating data; pre-annotation, during annotation and post-annotation. This graphic has a heavier shade on during annotation stating 'You are here'](media/Annotation_During.png)
 
 The annotation phase is where guidelines are put into practice and data is transformed into having high-quality, reliable labels. Success during this stage depends on well-trained annotators, clear communication channels, ongoing quality assurance, and continuous monitoring of annotation consistency. Annotation is an iterative process that requires regular feedback, guideline refinement, and consensus-building to address ambiguities and improve accuracy. By implementing structured training programs, conducting routine quality checks, tracking inter-annotator agreement, and documenting updates to annotation standards, teams can maintain consistency across annotators and produce reproducible, gold-standard datasets.
 
@@ -220,6 +226,8 @@ When considering which metric to use, keep in mind that both the Cohen and Fleis
 - [ ] Regular communication and progress tracking occurs
 
 ## Best Practices: Post-Annotation
+
+![Teal graphic showing the three different phases of annotating data; pre-annotation, during annotation and post-annotation. This graphic has a heavier shade on post-annotation stating 'You are here'](media/Annotation_Post.png)
 
 The post-annotation phase ensures that annotated data is accurate, well-documented, compliant, and ready for use. Before datasets are used for model development, shared with collaborators, or archived for future research, they should undergo final quality validation, including inter-annotator agreement assessment, expert review, and bias evaluation. Equally important is the creation of comprehensive documentation that captures annotation methods, standards, ontologies, and quality assurance processes to support reproducibility and transparency. By preparing annotated data in structured, machine-readable formats and following FAIR (Findable, Accessible, Interoperable, and Reusable) principles, we are able to maximize the value of researcher annotation efforts, facilitate data sharing and reuse, and ensure that high-quality datasets remain accessible for future research, AI development, and collaborative discovery.
 
