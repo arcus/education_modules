@@ -170,7 +170,8 @@ It is important to remember that there is no one solution or one agreement-level
 >To develop a consensus-based gold-standard dataset, the experts annotated three separate random batches of 100 notes each. For each batch, the experts first annotated the notes independently. After each round, they met to compare annotations, discuss areas of agreement, clarify definitions, and improve consistency in subsequent rounds. Once all three rounds were complete, they adjudicated all the remaining differences to produce a final gold-standard set of 300 annotated notes.
 
 #### QA Process
-
+ ![Teal and white flowchart showing the annotation QA cycle: three QA methods (Audit Tasks, Targeted QA, Random QA) feed into an Improve Guidelines step, which leads to Continue Annotation, forming a continuous feedback loop.](media/Annotation_QAProcess.png)
+ 
 As part of training, there will need to be regular, continuous review of errors or inconsistencies among annotators through an established QA process that assesses the quality of the labels. Some ways to do that:
 
 - Audit tasks: Include "audit" tasks among regular tasks to test the annotation work quality. These tasks should not differ from other work items to avoid bias.
