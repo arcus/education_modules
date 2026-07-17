@@ -125,6 +125,8 @@ Here is an example outline for annotation guidelines:
 
 ### Annotator Selection
 
+![Teal Diagram showing two paths to becoming a Qualified Annotator: a Subject Matter Expert who receives annotation training, or an Experienced Annotator who receives subject-matter training.](media/Annotation_Annotator.png)
+
 Annotators (sometimes known as labelers) are the people who provide the right context to the data, that will inform the end model or analysis. Depending on the needs of your project, annotators should either be subject experts that can be trained in annotation skills or experienced annotators that can learn about the subject.
 
 As annotators are human, their lived experiences and biases shape how they label data. For instance, individuals who have experienced online harassment may apply safety labels differently from those who have not. Considering the diversity, perspectives, and potential bias of annotators - along with providing training of unconscious bias when appropriate - can improve the overall quality of labels.
@@ -171,7 +173,7 @@ It is important to remember that there is no one solution or one agreement-level
 
 #### QA Process
  ![Teal and white flowchart showing the annotation QA cycle: three QA methods (Audit Tasks, Targeted QA, Random QA) feed into an Improve Guidelines step, which leads to Continue Annotation, forming a continuous feedback loop.](media/Annotation_QAProcess.png)
- 
+
 As part of training, there will need to be regular, continuous review of errors or inconsistencies among annotators through an established QA process that assesses the quality of the labels. Some ways to do that:
 
 - Audit tasks: Include "audit" tasks among regular tasks to test the annotation work quality. These tasks should not differ from other work items to avoid bias.
@@ -283,6 +285,8 @@ Include a README or configuration file that specifies: software and versions nee
 Before sharing the annotations, a final review should be conducted to confirm that all technical, grant/funder, and privacy/compliance requirements have been met. Among other steps, this final review should include carefully checking the dataset for any identifiable or potentially identifiable information. If impermissible identifiers are present, they must be removed before release. If deidentification is not possible, the identifiers should be documented, and access restricted to approved users.
 
 As with any publicly shared research data, the [Findable, Accessible, Interoperable, and Reusable (FAIR) principles](https://www.go-fair.org/fair-principles/) should guide the archiving and sharing of annotated data. These principles enhance the value of research outputs by ensuring data can be easily located, accessed, integrated, and reused by both people and machines. Adhering to FAIR principles fosters collaboration and innovation while supporting compliance with funder and publication requirements, including [NIH data sharing policies](https://grants.nih.gov/policy-and-compliance/policy-topics/sharing-policies/dms).
+
+![Diagram defining FAIR data with associated icons](media/Annotation_FAIR.png)
 
 The annotated dataset should have a robust archival plan to ensure long-term preservation and access. It should be preserved alongside sufficient documentation (see documentation section above) to support **reproducibility**. When preparing data for sharing, use non-proprietary, machine-readable formats whenever possible to promote **interoperability** across systems. To meet **findability** and **accessibility** standards, deposit data in trusted domain repositories (e.g., NIH-supported repositories, Arcus, or discipline-specific platforms) that provide persistent identifiers, enforce privacy protections, support clear data use terms, maintain structured metadata, and enable formal citation.
 
